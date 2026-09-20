@@ -207,3 +207,15 @@
   width:100%;
   text-align:center;
 }
+
+
+/* Internal heading typography: match homepage */
+.inner-hero h1,
+.article-wrap h2,
+.listing-hero h1,
+.list-card h2,
+.list-card h3,
+.publication-item h3{
+  font-family:Manrope,Arial,sans-serif;
+  font-weight:700;
+}
