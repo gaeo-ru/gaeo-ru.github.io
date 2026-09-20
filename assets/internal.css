@@ -32,11 +32,6 @@
 .page-cta{margin:64px 0;background:var(--navy);color:white;border-radius:24px;padding:38px}
 .page-cta h2{color:white;margin:0 0 16px}
 .page-cta p,.page-cta li{color:rgba(255,255,255,.86)}
-.page-cta .btn{display:inline-flex;margin-top:16px}
-.faq-list{border-top:1px solid var(--line)}
-.faq-item{padding:26px 0;border-bottom:1px solid var(--line)}
-.faq-item h3{margin:0 0 10px;font-size:20px}
-.faq-item p:last-child{margin-bottom:0}
 .backline{font-size:14px;color:var(--muted);margin:0 0 20px}
 @media(max-width:900px){
  .page-shell{padding-top:76px}
@@ -64,4 +59,15 @@
 .contact-block p{margin-bottom:8px}
 @media(max-width:720px){
  .profile-grid{grid-template-columns:1fr}
+}
+
+.page-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 34px}
+.page-actions .button{margin:0}
+.page-cta .button{display:inline-flex;margin-top:16px}
+.article-wrap>.button,.inner-hero .button{margin-top:22px}
+.article-wrap .faq{max-width:none;width:100%;margin-top:28px}
+.article-wrap .faq-a{font-size:14px;line-height:1.65;color:#566170}
+@media(max-width:640px){
+ .page-actions{flex-direction:column}
+ .page-actions .button{width:100%;white-space:normal}
 }
