@@ -111,7 +111,7 @@
 .list-card .button{margin-top:auto;align-self:flex-start}
 .review-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:28px 0 44px}
 .review-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px}
-.review-card blockquote{margin:0 0 22px;font:500 20px/1.55 Literata,Georgia,serif;color:var(--navy)}
+.review-card blockquote{margin:0 0 22px;font:500 20px/1.55 Manrope,Arial,sans-serif;color:var(--navy)}
 .review-meta{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:16px}
 .review-card .button{margin-top:0}
 .link-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 36px}
