@@ -35,7 +35,15 @@ if(toggle && mobileMenu){
   });
 }
 
-window.addEventListener('resize', fitHeader, {passive:true});
+let lastViewportWidth = window.innerWidth;
+
+window.addEventListener('resize', () => {
+  const currentWidth = window.innerWidth;
+  if(currentWidth === lastViewportWidth) return;
+  lastViewportWidth = currentWidth;
+  fitHeader();
+}, {passive:true});
+
 window.addEventListener('load', fitHeader);
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeader);
 fitHeader();
