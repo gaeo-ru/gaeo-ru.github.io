@@ -12,6 +12,7 @@ Status: migration working inventory, verified against the current public GAEO.ru
 - `/geo-prodvizhenie-nedvizhimosti/` — commercial landing for real-estate GEO.
 - `/cases/` — cases index.
 - `/articles/` — articles index.
+- `/privacy-policy/` — privacy and personal-data processing policy.
 
 ## Cases
 
