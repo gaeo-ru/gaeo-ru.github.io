@@ -222,14 +222,14 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Articles','/articles/'],
       ['Publications','/publications/'],
       ['Official external profiles','/en/professional-biography/#external-profiles'],
-      ['Privacy policy',null],
-      ['Personal data processing',null]
+      ['Privacy policy','/privacy-policy/'],
+      ['Personal data processing','/personal-data-consent/']
     ] : [
       ['Статьи','/articles/'],
       ['Публикации','/publications/'],
       ['Официальные внешние профили','/professional-biography/#external-profiles'],
-      ['Политика конфиденциальности',null],
-      ['Обработка персональных данных',null]
+      ['Политика конфиденциальности','/privacy-policy/'],
+      ['Обработка персональных данных','/personal-data-consent/']
     ];
 
     const fillColumn = (column, items) => {
