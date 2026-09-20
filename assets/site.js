@@ -58,6 +58,9 @@ const mobileMenu = document.getElementById('mobileMenu');
         width:calc(100vw - 32px)!important;
       }
     }
+    .footer-bottom{
+      margin-top:18px!important;
+    }
   `;
   document.head.appendChild(style);
 })();
