@@ -88,6 +88,108 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 });
 
 
+// Keep desktop, mobile and footer navigation in one canonical order.
+(function syncNavigationMenus(){
+  const isEn = document.documentElement.lang === 'en';
+
+  const desktopItems = isEn ? [
+    ['About me','/en/professional-biography/'],
+    ['How I work','/en/#process'],
+    ['Cases','/cases/'],
+    ['Reviews','/reviews/'],
+    ['Articles','/articles/'],
+    ['Publications','/publications/'],
+    ['Pricing','/en/#pricing']
+  ] : [
+    ['Обо мне','/professional-biography/'],
+    ['Как работаю','/#process'],
+    ['Кейсы','/cases/'],
+    ['Отзывы','/reviews/'],
+    ['Статьи','/articles/'],
+    ['Публикации','/publications/'],
+    ['Тарифы','/#pricing']
+  ];
+
+  const desktop = document.getElementById('desktopMenu');
+  if(desktop){
+    const langs = desktop.querySelector('.langs');
+    desktop.querySelectorAll(':scope > a').forEach(a => a.remove());
+    desktopItems.forEach(([label, href]) => {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = label;
+      desktop.insertBefore(a, langs || null);
+    });
+  }
+
+  const mobile = document.getElementById('mobileMenu');
+  if(mobile){
+    const langs = mobile.querySelector('.mobile-langs');
+    mobile.querySelectorAll(':scope > a').forEach(a => a.remove());
+    desktopItems.forEach(([label, href]) => {
+      const a = document.createElement('a');
+      a.href = href;
+      a.textContent = label;
+      mobile.insertBefore(a, langs || null);
+    });
+  }
+
+  const footerGrid = document.querySelector('footer .footer-grid');
+  if(footerGrid && footerGrid.children.length >= 3){
+    const left = footerGrid.children[1];
+    const right = footerGrid.children[2];
+    const footerLang = right.querySelector('.footer-lang');
+
+    const leftItems = isEn ? [
+      ['Professional biography','/en/professional-biography/'],
+      ['How I work','/en/#process'],
+      ['Cases','/cases/'],
+      ['Reviews','/reviews/'],
+      ['Pricing','/en/#pricing']
+    ] : [
+      ['Профессиональная биография','/professional-biography/'],
+      ['Как работаю','/#process'],
+      ['Кейсы','/cases/'],
+      ['Отзывы','/reviews/'],
+      ['Тарифы','/#pricing']
+    ];
+
+    const rightItems = isEn ? [
+      ['Articles','/articles/'],
+      ['Publications','/publications/'],
+      ['Official external profiles','/en/professional-biography/#external-profiles'],
+      ['Privacy policy',null],
+      ['Personal data processing',null]
+    ] : [
+      ['Статьи','/articles/'],
+      ['Публикации','/publications/'],
+      ['Официальные внешние профили','/professional-biography/#external-profiles'],
+      ['Политика конфиденциальности',null],
+      ['Обработка персональных данных',null]
+    ];
+
+    const fillColumn = (column, items) => {
+      column.querySelectorAll(':scope > a').forEach(a => a.remove());
+      items.forEach(([label, href]) => {
+        const a = document.createElement('a');
+        if(href) a.href = href;
+        a.textContent = label;
+        if(footerLang && column === right){
+          column.insertBefore(a, footerLang);
+        }else{
+          column.appendChild(a);
+        }
+      });
+    };
+
+    fillColumn(left, leftItems);
+    fillColumn(right, rightItems);
+  }
+
+  // Re-evaluate whether the desktop menu still fits after adding Reviews.
+  requestAnimationFrame(fitHeader);
+})();
+
 // Footer brand lockup: mirror header brand wording beside the footer logo.
 (function enhanceFooterBrand(){
   const brand = document.querySelector('.footer-brand');
