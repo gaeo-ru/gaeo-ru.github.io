@@ -1,5 +1,5 @@
 /* Internal GAEO pages. Built on approved v0.28 visual system. */
-.page-shell{padding:92px 0 0}
+.page-shell{padding:0}
 .inner-hero{background:var(--paper);border-bottom:1px solid var(--line)}
 .inner-hero__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:48px;align-items:center;padding:70px 0 64px}
 .inner-eyebrow{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
@@ -34,7 +34,6 @@
 .page-cta p,.page-cta li{color:rgba(255,255,255,.86)}
 .backline{font-size:14px;color:var(--muted);margin:0 0 20px}
 @media(max-width:900px){
- .page-shell{padding-top:76px}
  .inner-hero__grid{grid-template-columns:1fr;padding:48px 0 46px;gap:30px}
  .inner-hero__media{order:-1}
  .metric-grid{grid-template-columns:1fr}
