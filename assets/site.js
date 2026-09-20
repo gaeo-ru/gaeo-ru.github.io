@@ -99,13 +99,19 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const lockup = document.createElement('div');
   lockup.className = 'footer-brand-lockup';
 
+  const logoLink = document.createElement('a');
+  logoLink.className = 'footer-logo-link';
+  logoLink.href = '/';
+  logoLink.setAttribute('aria-label', 'GAEO.ru — главная');
+
   const tagline = document.createElement('a');
   tagline.className = 'footer-logo-tagline';
   tagline.href = '/';
   tagline.innerHTML = 'Generative &amp; Answer<br>Engine Optimization';
 
   logo.parentNode.insertBefore(lockup, logo);
-  lockup.appendChild(logo);
+  logoLink.appendChild(logo);
+  lockup.appendChild(logoLink);
   lockup.appendChild(tagline);
 
   const style = document.createElement('style');
@@ -114,6 +120,16 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       display:flex;
       align-items:center;
       gap:14px;
+    }
+    .footer-logo-link{
+      display:block!important;
+      margin:0!important;
+      line-height:0;
+      text-decoration:none!important;
+      flex:0 0 auto;
+    }
+    .footer-logo-link img{
+      display:block;
     }
     .footer-logo-tagline{
       display:block!important;
