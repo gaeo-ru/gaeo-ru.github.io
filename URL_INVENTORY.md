@@ -13,6 +13,7 @@ Status: migration working inventory, verified against the current public GAEO.ru
 - `/cases/` — cases index.
 - `/articles/` — articles index.
 - `/privacy-policy/` — privacy and personal-data processing policy.
+- `/personal-data-consent/` — separate consent to personal-data processing.
 
 ## Cases
 
