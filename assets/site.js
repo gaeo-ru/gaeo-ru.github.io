@@ -41,6 +41,12 @@ const mobileMenu = document.getElementById('mobileMenu');
       box-shadow:0 14px 32px rgba(2,22,65,.14)!important;
     }
     @media(max-width:720px){
+      .desktop-menu{
+        display:none!important;
+      }
+      .menu-toggle{
+        display:flex!important;
+      }
       .mobile-menu{
         right:20px!important;
         width:min(340px, calc(100vw - 40px))!important;
