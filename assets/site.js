@@ -205,13 +205,13 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const footerLang = right.querySelector('.footer-lang');
 
     const leftItems = isEn ? [
-      ['Professional biography','/en/professional-biography/'],
+      ['About me','/en/professional-biography/'],
       ['How I work','/en/#process'],
       ['Cases','/cases/'],
       ['Reviews','/reviews/'],
       ['Pricing','/en/#pricing']
     ] : [
-      ['Профессиональная биография','/professional-biography/'],
+      ['Обо мне','/professional-biography/'],
       ['Как работаю','/#process'],
       ['Кейсы','/cases/'],
       ['Отзывы','/reviews/'],
