@@ -86,3 +86,54 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     button.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 });
+
+
+// Footer brand lockup: mirror header brand wording beside the footer logo.
+(function enhanceFooterBrand(){
+  const brand = document.querySelector('.footer-brand');
+  if(!brand || brand.querySelector('.footer-logo-tagline')) return;
+
+  const logo = brand.querySelector('img');
+  if(!logo) return;
+
+  const lockup = document.createElement('div');
+  lockup.className = 'footer-brand-lockup';
+
+  const tagline = document.createElement('a');
+  tagline.className = 'footer-logo-tagline';
+  tagline.href = '/';
+  tagline.innerHTML = 'Generative &amp; Answer<br>Engine Optimization';
+
+  logo.parentNode.insertBefore(lockup, logo);
+  lockup.appendChild(logo);
+  lockup.appendChild(tagline);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .footer-brand-lockup{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .footer-logo-tagline{
+      display:block!important;
+      margin:0!important;
+      color:#f5f8ff!important;
+      font-family:Manrope,Arial,sans-serif;
+      font-size:14px!important;
+      line-height:1.16;
+      font-weight:600;
+      text-decoration:none!important;
+      white-space:nowrap;
+    }
+    .footer-logo-tagline:hover{
+      color:#fff!important;
+      text-decoration:underline!important;
+    }
+    @media(max-width:480px){
+      .footer-brand-lockup{gap:11px}
+      .footer-logo-tagline{font-size:13px!important}
+    }
+  `;
+  document.head.appendChild(style);
+})();
