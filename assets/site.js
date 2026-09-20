@@ -352,3 +352,15 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   `;
   document.head.appendChild(style);
 })();
+
+
+/* Keep the legal consent link working in pages whose footer HTML was generated
+   before the shared footer was updated. */
+(function linkPersonalDataConsent(){
+  document.querySelectorAll('footer a:not([href])').forEach(link => {
+    const label = link.textContent.trim();
+    if(label === 'Обработка персональных данных' || label === 'Personal Data Processing'){
+      link.href = '/personal-data-consent/';
+    }
+  });
+})();
