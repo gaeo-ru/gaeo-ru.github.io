@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+{{HEAD_EXTRA}}
+</head>
+<body>
+<!-- SITE_HEADER_START -->
+{{SITE_HEADER}}
+<!-- SITE_HEADER_END -->
+
+<main>
+{{PAGE_CONTENT}}
+</main>
+
+<!-- SITE_FOOTER_START -->
+{{SITE_FOOTER}}
+<!-- SITE_FOOTER_END -->
+<script src="/assets/site.js"></script>
+{{BODY_EXTRA}}
+</body>
+</html>
