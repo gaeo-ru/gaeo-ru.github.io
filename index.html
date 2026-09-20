@@ -21,7 +21,7 @@ a{color:inherit}.container{width:min(1240px,calc(100% - 112px));margin:auto}
 .eyebrow{font-size:12px;line-height:1.4;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
 .dark .eyebrow{color:var(--cyan)}
 h1,h2{margin:0;color:var(--navy);font-family:Manrope,Arial,sans-serif;font-weight:700;letter-spacing:-.04em}
-h1{font-size:66px;line-height:1.015;max-width:800px}
+h1{font-size:56px;line-height:1.015;max-width:800px}
 h2{font-size:48px;line-height:1.08;max-width:850px}
 h3{margin:0 0 10px;font-size:24px;line-height:1.25;color:var(--navy)}
 p{line-height:1.65}.lead{font-size:19px;line-height:1.6;color:#3d4858;max-width:720px}
@@ -124,7 +124,7 @@ header{height:78px;position:sticky;top:0;z-index:50;background:rgba(244,241,234,
 
 .publications{margin-top:48px;border-top:1px solid var(--line)}
 .pub{display:grid;grid-template-columns:150px 1fr 120px;gap:28px;padding:23px 0;border-bottom:1px solid var(--line);align-items:start}
-.pub .source{font-weight:700;color:var(--navy)}.pub .title{font:500 19px/1.4 Literata,Georgia,serif;color:var(--navy)}.pub .type{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pub .source{font-weight:700;color:var(--navy)}.pub .title{font:500 19px/1.4 Literata,Georgia,serif;color:var(--navy)}.pub a.title{text-decoration:none}.pub a.title:hover{text-decoration:underline;text-underline-offset:3px}.pub .type{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
 .review{background:#fff;padding:28px 28px 25px;border-top:3px solid var(--navy)}
@@ -170,7 +170,7 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
  .header-cta{min-height:42px;padding:10px 12px;font-size:12px}
  .menu-toggle{width:38px;height:38px}
  .container{width:calc(100% - 40px)}.section{padding:76px 0}.section-sm{padding:52px 0}
- h1{font-size:44px}h2{font-size:36px}.lead{font-size:17px}.hero{padding-top:44px}.hero-grid{gap:34px}
+ h1{font-size:40px}h2{font-size:36px}.lead{font-size:17px}.hero{padding-top:44px}.hero-grid{gap:34px}
  .portrait{height:420px}.portrait img{object-position:center 18%}.hero-proof{grid-template-columns:1fr 1fr 1fr}.hero-proof b{font-size:18px}
  .trust-grid{grid-template-columns:1fr}.trust-item{border-right:0!important;border-bottom:1px solid var(--line)}
  .geo-diagram{min-height:390px;grid-template-columns:1fr;padding:28px}.arrows{transform:rotate(90deg)}
@@ -351,7 +351,7 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
   }
 
   h1{
-    font-size:40px;
+    font-size:36px;
     line-height:1.03;
   }
   h2{
@@ -413,7 +413,7 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
   .container{
     width:calc(100% - 24px);
   }
-  h1{font-size:37px}
+  h1{font-size:34px}
   h2{font-size:31px}
 
   .actions{
@@ -1574,10 +1574,10 @@ details.price:last-child{
    <button class="mobile-fold-toggle" type="button" aria-expanded="false" aria-controls="publicationsFoldBody" aria-label="Показать публикации и упоминания">+</button>
   </div>
   <div class="publications mobile-fold-body" id="publicationsFoldBody">
-   <div class="pub"><div class="source">Workspace</div><div class="title">Какие источники используют нейросети при выборе GEO-специалистов: разбор 500+ ответов</div><div class="type">исследование</div></div>
-   <div class="pub"><div class="source">РБК Компании</div><div class="title">Как бизнесу выбрать подрядчика на GEO-продвижение в нейросетях</div><div class="type">экспертная статья</div></div>
-   <div class="pub"><div class="source">Workspace</div><div class="title">5 нейросетей за 5 дней: GEO-продвижение фулфилмента «Преп-Центр»</div><div class="type">публичный кейс</div></div>
-   <div class="pub"><div class="source">Sostav</div><div class="title">ТОП-10 специалистов по продвижению в нейросетях (не агентства) по версии ChatGPT</div><div class="type">внешнее сравнение</div></div>
+   <div class="pub"><div class="source">Workspace</div><a class="title" href="https://workspace.ru/blog/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov-razbor-500-otvetov/" target="_blank" rel="noopener">Какие источники используют нейросети при выборе GEO-специалистов: разбор 500+ ответов</a><div class="type">исследование</div></div>
+   <div class="pub"><div class="source">РБК Компании</div><a class="title" href="https://companies.rbc.ru/news/Uw5sPGQEvU/kak-biznesu-vyibrat-podryadchika-na-geo-prodvizhenie-v-nejrosetyah/" target="_blank" rel="noopener">Как бизнесу выбрать подрядчика на GEO-продвижение в нейросетях</a><div class="type">экспертная статья</div></div>
+   <div class="pub"><div class="source">Workspace</div><a class="title" href="https://workspace.ru/cases/5-neyrosetey-za-5-dney-keys-prodvizheniya-v-neyrosetyah-fulfilmenta-prep-centr/" target="_blank" rel="noopener">5 нейросетей за 5 дней: GEO-продвижение фулфилмента «Преп-Центр»</a><div class="type">публичный кейс</div></div>
+   <div class="pub"><div class="source">Sostav</div><a class="title" href="https://www.sostav.ru/blogs/292167/95669" target="_blank" rel="noopener">ТОП-10 специалистов по продвижению в нейросетях (не агентства) по версии ChatGPT</a><div class="type">внешнее сравнение</div></div>
   </div>
   <a class="text-link mobile-fold-all-link" href="/publications/">Все публикации →</a>
  </div>
