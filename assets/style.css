@@ -172,6 +172,9 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
  .case-kpis,.cards,.reviews,.pricing{grid-template-columns:1fr}.source-row,.fit,.pub{grid-template-columns:1fr;gap:8px}.pub .type{text-align:left}
  .audit-grid{grid-template-columns:1fr}.form{grid-template-columns:1fr}.field.wide{grid-column:auto}.footer-grid{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);column-gap:10px;row-gap:12px}.footer-grid>.footer-brand{grid-column:1/-1}.footer-grid>div:nth-child(2),.footer-grid>div:nth-child(3){min-width:0}.footer-grid>div:nth-child(3) .footer-lang{width:calc(156.25% + 10px);margin-left:calc(-56.25% - 10px)}
 }
+@media(min-width:341px) and (max-width:720px){
+ .footer-grid>div:nth-child(3)>a{white-space:nowrap}
+}
 @media(max-width:480px){
  header .container{width:calc(100% - 20px)}
  .nav{gap:6px}
