@@ -88,7 +88,7 @@
 .inner-hero .button:not(.outline){
   color:var(--cyan);
 }
-.page-cta .button{
+.page-cta .button:not(.outline){
   background:var(--cyan);
   border-color:var(--cyan);
   color:var(--navy);
