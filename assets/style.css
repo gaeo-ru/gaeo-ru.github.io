@@ -33,7 +33,7 @@ header{height:78px;position:sticky;top:0;z-index:50;background:rgba(244,241,234,
 
 .desktop-menu{display:flex;align-items:center;gap:19px;font-size:13px;white-space:nowrap;margin-left:auto;min-width:0}
 .desktop-menu>a{color:#22314a;text-decoration:none}
-.desktop-menu .langs{color:var(--muted);font-weight:600}.desktop-menu .langs a{color:inherit;text-decoration:none}.desktop-menu .langs a:hover{text-decoration:underline}
+.desktop-menu .langs{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font-weight:500}.desktop-menu .langs .lang-link{color:rgba(34,49,74,.46);font-weight:500;text-decoration:none;transition:color .18s ease}.desktop-menu .langs .lang-link:hover{text-decoration:underline}.desktop-menu .langs .lang-sep{color:rgba(34,49,74,.38)}html[lang="ru"] .desktop-menu .langs .lang-ru,html[lang="en"] .desktop-menu .langs .lang-en{color:#22314a;font-weight:700}
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;margin-left:auto}
 .header-cta{white-space:nowrap;min-height:46px;padding:12px 18px}
 .menu-toggle{display:none;width:42px;height:42px;border:1px solid rgba(2,22,65,.22);background:transparent;border-radius:8px;align-items:center;justify-content:center;flex:0 0 auto}
@@ -46,6 +46,7 @@ header{height:78px;position:sticky;top:0;z-index:50;background:rgba(244,241,234,
 .mobile-menu{display:none;position:absolute;top:78px;left:0;right:0;background:var(--warm);padding:16px 20px 22px;border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(2,22,65,.08)}
 .mobile-menu.open{display:block}
 .mobile-menu a{display:block;padding:12px 0;text-decoration:none;font-weight:600;color:var(--navy);border-bottom:1px solid rgba(2,22,65,.08)}
+.mobile-langs{display:flex;align-items:center;gap:5px;padding:12px 0;border-bottom:1px solid rgba(2,22,65,.08)}.mobile-menu .mobile-langs .lang-link{display:inline;padding:0;border:0;color:rgba(2,22,65,.46);font-weight:500}.mobile-langs .lang-sep{color:rgba(2,22,65,.38)}html[lang="ru"] .mobile-langs .lang-ru,html[lang="en"] .mobile-langs .lang-en{color:var(--navy);font-weight:700}
 
 .hero{padding:70px 0 64px}.hero-grid{display:grid;grid-template-columns:1.12fr .72fr;gap:62px;align-items:center}
 .hero-copy .lead{margin:24px 0 0}.actions{display:flex;gap:18px;align-items:center;margin:30px 0 42px}
@@ -136,11 +137,12 @@ header{height:78px;position:sticky;top:0;z-index:50;background:rgba(244,241,234,
 
 footer{background:var(--navy);color:white;padding:70px 0}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:60px}
 .footer-brand{display:flex;flex-direction:column;gap:16px}.footer-brand img{display:block;width:58px;height:58px;max-width:58px;max-height:58px;aspect-ratio:1/1;object-fit:contain;flex:0 0 58px}.footer-brand .brand-subtitle{color:#cfe7eb;font-size:13px;line-height:1.6;max-width:360px}
-.footer-contact{color:#bac8dc;font-size:13px;line-height:1.75}.footer-contact a{display:inline;color:#dbe5f3;text-decoration:none;margin:0}
+.footer-contact{color:#bac8dc;font-size:13px;line-height:1.75}.footer-contact a{display:inline;color:#dbe5f3;text-decoration:none;margin:0}.footer-contact .location-link{display:inline-flex;align-items:center;gap:7px}.footer-contact .location-link:hover{text-decoration:underline}.location-icon{position:relative;display:inline-block;width:12px;height:15px;flex:0 0 12px}.location-icon::before{content:"";position:absolute;left:1px;top:1px;width:8px;height:8px;border:1.5px solid currentColor;border-radius:50% 50% 50% 0;transform:rotate(-45deg)}.location-icon::after{content:"";position:absolute;left:4.2px;top:4.2px;width:2.5px;height:2.5px;background:currentColor;border-radius:50%}
 footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-size:13px}
-.footer-lang{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16)}
-.footer-lang a{font-weight:700;color:#02E5F9}
+.footer-lang{display:flex;align-items:center;gap:5px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16)}
+.footer-lang .lang-link{display:inline;margin:0;color:rgba(219,229,243,.52);font-weight:500}.footer-lang .lang-link:hover{text-decoration:underline}.footer-lang .lang-sep{color:rgba(219,229,243,.38)}html[lang="ru"] .footer-lang .lang-ru,html[lang="en"] .footer-lang .lang-en{color:#02E5F9;font-weight:800}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:46px;padding-top:22px;color:#8fa2bc;font-size:11px}
+#external-profiles{scroll-margin-top:98px}
 
 @media(max-width:1020px){
  .container{width:calc(100% - 56px)}
