@@ -175,3 +175,13 @@
 @media(max-width:760px){
  .list-card__cover{width:calc(100% + 52px)}
 }
+
+.biography-link{
+  text-align:center;
+  line-height:1.28;
+}
+.biography-link span{
+  display:block;
+  width:100%;
+  text-align:center;
+}
