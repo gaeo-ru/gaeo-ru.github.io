@@ -162,3 +162,16 @@
   border-color:rgba(2,22,65,.38);
   color:var(--navy);
 }
+
+.list-card__cover{
+  display:block;
+  width:calc(100% + 52px);
+  max-width:none;
+  margin:-26px -26px 22px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:19px 19px 0 0;
+}
+@media(max-width:760px){
+ .list-card__cover{width:calc(100% + 52px)}
+}
