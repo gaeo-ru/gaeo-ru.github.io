@@ -71,3 +71,14 @@
  .page-actions{flex-direction:column}
  .page-actions .button{width:100%;white-space:normal}
 }
+
+.profile-card .button{
+  margin-top:auto;
+  align-self:flex-start;
+  min-height:44px;
+  padding:10px 16px;
+  font-size:13px;
+}
+@media(max-width:640px){
+ .profile-card .button{width:100%;white-space:normal}
+}
