@@ -18,7 +18,7 @@
 .article-wrap p{margin:0 0 18px}
 .article-wrap ul{padding-left:24px;margin:0 0 24px}
 .article-wrap li+li{margin-top:7px}
-.article-wrap a:not(.btn){color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}
+.article-wrap a:not(.btn):not(.button){color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}
 .article-wrap strong{color:var(--navy)}
 .content-media{margin:38px 0 46px}
 .content-media img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 14px 44px rgba(2,22,65,.10)}
@@ -81,4 +81,20 @@
 }
 @media(max-width:640px){
  .profile-card .button{width:100%;white-space:normal}
+}
+
+/* Keep v0.28 CTA colors readable on internal pages */
+.article-wrap .button:not(.outline),
+.inner-hero .button:not(.outline){
+  color:var(--cyan);
+}
+.page-cta .button{
+  background:var(--cyan);
+  border-color:var(--cyan);
+  color:var(--navy);
+}
+.page-cta .button:hover{
+  background:#59f0fb;
+  border-color:#59f0fb;
+  color:var(--navy);
 }
