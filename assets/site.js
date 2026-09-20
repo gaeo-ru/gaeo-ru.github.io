@@ -3,11 +3,65 @@ const desktopMenu = document.getElementById('desktopMenu');
 const toggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
+
+/* Burger menu UI is injected here so the same behavior applies to the
+   homepage with inline CSS and to all internal pages with shared CSS. */
+(function installBurgerMenuStyles(){
+  if(document.getElementById('gaeo-burger-menu-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'gaeo-burger-menu-styles';
+  style.textContent = `
+    .menu-toggle{
+      cursor:pointer!important;
+    }
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after{
+      transition:transform .18s ease, top .18s ease, background-color .18s ease;
+    }
+    .menu-toggle[aria-expanded="true"] span{
+      background:transparent!important;
+    }
+    .menu-toggle[aria-expanded="true"] span::before{
+      top:0!important;
+      transform:rotate(45deg);
+    }
+    .menu-toggle[aria-expanded="true"] span::after{
+      top:0!important;
+      transform:rotate(-45deg);
+    }
+    .mobile-menu{
+      left:auto!important;
+      right:max(20px, calc((100vw - min(1240px, calc(100vw - 112px))) / 2))!important;
+      width:min(340px, calc(100vw - 40px))!important;
+      max-width:340px!important;
+      border:1px solid var(--line)!important;
+      border-top:0!important;
+      border-radius:0 0 12px 12px!important;
+      box-shadow:0 14px 32px rgba(2,22,65,.14)!important;
+    }
+    @media(max-width:720px){
+      .mobile-menu{
+        right:20px!important;
+        width:min(340px, calc(100vw - 40px))!important;
+      }
+    }
+    @media(max-width:400px){
+      .mobile-menu{
+        right:16px!important;
+        width:calc(100vw - 32px)!important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
+
 function setCollapsed(collapsed){
   mainNav.classList.toggle('menu-collapsed', collapsed);
   if(!collapsed && mobileMenu){
     mobileMenu.classList.remove('open');
     toggle?.setAttribute('aria-expanded','false');
+    toggle?.setAttribute('aria-label','Открыть меню');
   }
 }
 
@@ -32,6 +86,7 @@ if(toggle && mobileMenu){
   toggle.addEventListener('click',()=>{
     const open = mobileMenu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   });
 }
 
