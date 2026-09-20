@@ -48,6 +48,35 @@ window.addEventListener('load', fitHeader);
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeader);
 fitHeader();
 
+// Keep the physical bottom stable on mobile when the viewport or late-loading
+// resources change the document height just after the user reaches the footer.
+// There is no programmatic scroll-to-top on the site; this guards against
+// mobile Chrome reflow/clamping near the end of the document.
+let reachedBottomAt = -Infinity;
+const bottomDistance = () => {
+  const root = document.documentElement;
+  return Math.max(0, root.scrollHeight - (window.scrollY + window.innerHeight));
+};
+const markBottom = () => {
+  if(bottomDistance() <= 24) reachedBottomAt = performance.now();
+};
+const restoreBottomIfRecent = () => {
+  if(performance.now() - reachedBottomAt > 900) return;
+  requestAnimationFrame(() => {
+    window.scrollTo({top: document.documentElement.scrollHeight, left:0, behavior:'auto'});
+  });
+};
+
+window.addEventListener('scroll', markBottom, {passive:true});
+window.addEventListener('resize', restoreBottomIfRecent, {passive:true});
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize', restoreBottomIfRecent, {passive:true});
+}
+if(window.ResizeObserver){
+  const pageResizeObserver = new ResizeObserver(restoreBottomIfRecent);
+  pageResizeObserver.observe(document.body);
+}
+
 // Mobile-only folding for catalogue-like sections (articles and publications).
 document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const button = section.querySelector('.mobile-fold-toggle');
