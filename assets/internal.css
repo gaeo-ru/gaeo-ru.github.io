@@ -355,3 +355,20 @@
     white-space:normal;
   }
 }
+
+
+/* Logo-specific polish for external profiles */
+.profile-card__logo img{
+  image-rendering:auto;
+}
+.profile-card__logo--yandex img{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+}
+@media(max-width:720px){
+  .profile-card__logo--yandex img{
+    width:27px;
+    height:27px;
+  }
+}
