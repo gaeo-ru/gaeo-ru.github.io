@@ -140,3 +140,25 @@
  .publication-actions{flex-direction:column}
  .publication-actions .button{width:100%;white-space:normal}
 }
+
+/* Internal light navigation buttons */
+.article-wrap .button.outline,
+.list-card .button.outline,
+.profile-card .button.outline,
+.publication-actions .button.outline,
+.link-buttons .button.outline,
+.review-card .button.outline{
+  background:#fff;
+  border-color:rgba(2,22,65,.24);
+  color:var(--navy);
+}
+.article-wrap .button.outline:hover,
+.list-card .button.outline:hover,
+.profile-card .button.outline:hover,
+.publication-actions .button.outline:hover,
+.link-buttons .button.outline:hover,
+.review-card .button.outline:hover{
+  background:#f3f7fb;
+  border-color:rgba(2,22,65,.38);
+  color:var(--navy);
+}
