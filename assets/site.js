@@ -190,6 +190,48 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   requestAnimationFrame(fitHeader);
 })();
 
+// Link legal entity name in footer to RBC Companies profile.
+(function linkFooterLegalEntity(){
+  const footerBottom = document.querySelector('footer .footer-bottom');
+  if(!footerBottom || footerBottom.querySelector('.footer-rbc-link')) return;
+
+  const targetText = 'ИП Яковлев Алексей Леонидович';
+  const link = document.createElement('a');
+  link.className = 'footer-rbc-link';
+  link.href = 'https://companies.rbc.ru/persons/ogrnip/325774600017838-yakovlev-aleksej-leonidovich/';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = targetText;
+
+  for(const node of Array.from(footerBottom.childNodes)){
+    if(node.nodeType === Node.TEXT_NODE && node.nodeValue.includes(targetText)){
+      const parts = node.nodeValue.split(targetText);
+      const frag = document.createDocumentFragment();
+      if(parts[0]) frag.appendChild(document.createTextNode(parts[0]));
+      frag.appendChild(link);
+      if(parts[1]) frag.appendChild(document.createTextNode(parts[1]));
+      footerBottom.replaceChild(frag, node);
+      break;
+    }
+  }
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .footer-bottom .footer-rbc-link{
+      display:inline!important;
+      margin:0!important;
+      color:inherit!important;
+      font-size:inherit!important;
+      text-decoration:none!important;
+    }
+    .footer-bottom .footer-rbc-link:hover{
+      color:#dbe5f3!important;
+      text-decoration:underline!important;
+    }
+  `;
+  document.head.appendChild(style);
+})();
+
 // Footer brand lockup: mirror header brand wording beside the footer logo.
 (function enhanceFooterBrand(){
   const brand = document.querySelector('.footer-brand');
