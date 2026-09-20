@@ -38,3 +38,8 @@ Design assets extracted from approved v0.28:
 ## Final switch
 
 Only after all pages, analytics, forms, sitemap, robots, 404, metadata and internal links are checked do we connect `gaeo.ru` to GitHub Pages.
+
+
+## Locked wording notes
+
+- Prep-Center case: use **«6 оплативших клиентов из нейросетей за 1,5 месяца»** everywhere. Do not use «6 оплаченных клиентов».
