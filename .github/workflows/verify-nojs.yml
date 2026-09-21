@@ -1,0 +1,157 @@
+name: Verify no-JS semantic content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-nojs.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for public no-JS fallback
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://gaeo-ru.github.io"
+          ready=0
+          for attempt in $(seq 1 24); do
+            curl -fsS "$base/" -o /tmp/home-source.html || true
+            if grep -q '<noscript>' /tmp/home-source.html               && grep -q 'mobile-menu{display:block!important' /tmp/home-source.html               && grep -q 'cards.mobile-fold-body{display:grid!important' /tmp/home-source.html; then
+              ready=1
+              echo "Public Pages reached no-JS fallback on attempt $attempt."
+              break
+            fi
+            sleep 10
+          done
+          test "$ready" = "1"
+
+      - name: Prove Chrome JavaScript is disabled
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
+          cat > /tmp/js-check.html <<'HTML'
+          <!doctype html><html><body data-js="off">JS disabled
+          <script>document.body.setAttribute('data-js','on');document.body.firstChild.textContent='JS enabled';</script>
+          </body></html>
+          HTML
+          "$browser" --headless --no-sandbox --disable-gpu --disable-javascript             --dump-dom "file:///tmp/js-check.html" > /tmp/js-check-dom.html
+          grep -q 'data-js="off"' /tmp/js-check-dom.html
+          echo "JAVASCRIPT_DISABLED=PASS"
+
+      - name: Capture no-JS DOM for representative pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
+          base="https://gaeo-ru.github.io"
+          mkdir -p nojs-dom
+          dump() {
+            local name="$1"
+            local url="$2"
+            "$browser" --headless --no-sandbox --disable-gpu --disable-javascript               --virtual-time-budget=1500 --dump-dom "$url" > "nojs-dom/$name.html"
+          }
+          dump home-ru "$base/"
+          dump home-en "$base/en/"
+          dump articles "$base/articles/"
+          dump article "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
+          dump cases "$base/cases/"
+          dump case "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
+          dump biography "$base/professional-biography/"
+          dump commercial "$base/geo-prodvizhenie-nedvizhimosti/"
+
+      - name: Verify H1, text, articles, cases, FAQ, pricing, contacts and links
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          from html import unescape
+
+          root = Path("nojs-dom")
+
+          def clean(fragment):
+              fragment = re.sub(r"<script\b[\s\S]*?</script>", " ", fragment, flags=re.I)
+              fragment = re.sub(r"<style\b[\s\S]*?</style>", " ", fragment, flags=re.I)
+              fragment = re.sub(r"<[^>]+>", " ", fragment)
+              return re.sub(r"\s+", " ", unescape(fragment)).strip()
+
+          def read(name):
+              return (root / f"{name}.html").read_text(encoding="utf-8")
+
+          pages = {name: read(name) for name in (
+              "home-ru","home-en","articles","article","cases","case","biography","commercial"
+          )}
+
+          for name, text in pages.items():
+              assert len(re.findall(r"<h1\b", text, re.I)) == 1, (name, "H1")
+              main = re.search(r"<main\b[^>]*>([\s\S]*?)</main>", text, re.I)
+              assert main, (name, "main")
+              assert len(clean(main.group(1))) >= 120, (name, "text")
+              assert re.search(r'<a\b[^>]*href=["\'][^"\']+["\']', text, re.I), (name, "links")
+              assert 'href="mailto:ya@gaeo.ru"' in text, (name, "email")
+              assert 'href="tel:+79264242333"' in text, (name, "phone")
+
+          for name in ("home-ru","home-en"):
+              text = pages[name]
+              assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bprice\b', text, re.I)) >= 3
+              assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', text, re.I)) >= 5
+              assert len(re.findall(r'class=["\'][^"\']*\bmobile-fold-body\b', text, re.I)) >= 2
+              assert 'mobile-fold-section .cards.mobile-fold-body{display:grid!important}' in text
+              assert 'mobile-fold-section .publications.mobile-fold-body{display:block!important}' in text
+
+          assert len(re.findall(r"<article\b", pages["articles"], re.I)) >= 1
+          assert len(re.findall(r"<article\b", pages["cases"], re.I)) >= 1
+          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["article"], re.I).group(1))) > 3000
+          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["case"], re.I).group(1))) > 1500
+          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["biography"], re.I).group(1))) > 1000
+          assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', pages["commercial"], re.I)) >= 5
+
+          print("NOJS_H1=PASS")
+          print("NOJS_TEXT=PASS")
+          print("NOJS_ARTICLES=PASS")
+          print("NOJS_CASES=PASS")
+          print("NOJS_FAQ=PASS")
+          print("NOJS_PRICING=PASS")
+          print("NOJS_CONTACTS=PASS")
+          print("NOJS_LINKS=PASS")
+          PY
+
+      - name: Capture public no-JS screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
+          base="https://gaeo-ru.github.io"
+          mkdir -p shots
+          shot() {
+            local name="$1"
+            local size="$2"
+            local url="$3"
+            "$browser" --headless --no-sandbox --disable-gpu --disable-javascript               --hide-scrollbars --window-size="$size"               --screenshot="shots/$name.png" "$url"
+          }
+          shot home-desktop 1440,1000 "$base/"
+          shot home-mobile 390,1800 "$base/"
+          shot article-desktop 1440,1000 "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
+          shot article-mobile 390,1500 "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
+          shot case-desktop 1440,1000 "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
+          shot case-mobile 390,1500 "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
+          shot biography-mobile 390,1500 "$base/professional-biography/"
+          shot commercial-mobile 390,1800 "$base/geo-prodvizhenie-nedvizhimosti/"
+          file shots/*.png
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nojs-semantic-qa
+          path: shots/*.png
+          if-no-files-found: error
