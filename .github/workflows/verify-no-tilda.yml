@@ -1,0 +1,143 @@
+name: Verify no Tilda dependency
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-no-tilda.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit deployable files for Tilda dependencies
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlparse
+          import re
+          import sys
+
+          DEPLOYABLE_EXTS = {".html", ".css", ".js", ".json", ".xml", ".svg", ".webmanifest"}
+          SKIP_DIRS = {".git", ".github"}
+          TILDA_MARKERS = (
+              "static.tildacdn.com",
+              "tildacdn.com",
+              "tilda.cc",
+              "tilda.ws",
+              "tildaapi",
+              "tildastatic",
+          )
+
+          files = []
+          for p in Path(".").rglob("*"):
+              if not p.is_file() or p.suffix.lower() not in DEPLOYABLE_EXTS:
+                  continue
+              if any(part in SKIP_DIRS for part in p.parts):
+                  continue
+              files.append(p)
+
+          tilda_hits = []
+          external_hosts = set()
+          missing_local = []
+          checked_local_refs = 0
+
+          attr_re = re.compile(r'''\b(?:src|href)=["']([^"'#]+)["']''', re.I)
+          css_url_re = re.compile(r'''url\(\s*["']?([^"'()]+)["']?\s*\)''', re.I)
+          absolute_re = re.compile(r'''https?://[^"'\s<>)}]+''', re.I)
+
+          def record_ref(path, ref):
+              nonlocal checked_local_refs
+              ref = ref.strip()
+              if not ref or ref.startswith(("mailto:", "tel:", "javascript:", "data:")):
+                  return
+              if ref.startswith(("http://", "https://")):
+                  host = (urlparse(ref).hostname or "").lower()
+                  if host:
+                      external_hosts.add(host)
+                  return
+              if ref.startswith("//"):
+                  host = (urlparse("https:" + ref).hostname or "").lower()
+                  if host:
+                      external_hosts.add(host)
+                  return
+              if ref.startswith("#"):
+                  return
+
+              clean = ref.split("?", 1)[0].split("#", 1)[0]
+              if not clean:
+                  return
+              if clean.startswith("/"):
+                  target = Path(clean.lstrip("/"))
+              else:
+                  target = (path.parent / clean)
+
+              # Directory URLs are valid if they resolve to index.html.
+              if target.is_dir():
+                  target = target / "index.html"
+              elif not target.exists() and target.suffix == "":
+                  candidate = target / "index.html"
+                  if candidate.exists():
+                      target = candidate
+
+              checked_local_refs += 1
+              if not target.exists():
+                  missing_local.append((str(path), ref, str(target)))
+
+          for p in sorted(files):
+              text = p.read_text(encoding="utf-8", errors="replace")
+              lower = text.lower()
+              for marker in TILDA_MARKERS:
+                  if marker in lower:
+                      for lineno, line in enumerate(text.splitlines(), 1):
+                          if marker in line.lower():
+                              tilda_hits.append((str(p), lineno, marker, line.strip()[:500]))
+
+              for u in absolute_re.findall(text):
+                  host = (urlparse(u).hostname or "").lower()
+                  if host:
+                      external_hosts.add(host)
+
+              if p.suffix.lower() in {".html", ".css"}:
+                  for ref in attr_re.findall(text):
+                      record_ref(p, ref)
+                  for ref in css_url_re.findall(text):
+                      record_ref(p, ref)
+
+          print(f"DEPLOYABLE_FILES={len(files)}")
+          print(f"LOCAL_REFERENCES_CHECKED={checked_local_refs}")
+          print(f"EXTERNAL_HOSTS={len(external_hosts)}")
+          for host in sorted(external_hosts):
+              print("HOST", host)
+
+          if tilda_hits:
+              print("TILDA_DEPENDENCIES_FOUND")
+              for hit in tilda_hits:
+                  print("TILDA", *hit, sep="\t")
+              sys.exit(1)
+
+          if missing_local:
+              print("MISSING_LOCAL_DEPENDENCIES")
+              for item in missing_local[:100]:
+                  print("MISSING", *item, sep="\t")
+              sys.exit(1)
+
+          print("TILDA_DEPENDENCY_CHECK=PASS")
+          print("LOCAL_DEPENDENCY_CHECK=PASS")
+          PY
+
+      - name: Verify repository-level Tilda image remnants
+        shell: bash
+        run: |
+          set -e
+          if grep -RIniE --include='*.html' --include='*.css' --include='*.js' --include='*.json' --include='*.xml' --exclude-dir='.git' --exclude-dir='.github' 'tildacdn|static\.tildacdn|tilda\.cc|tilda\.ws' .; then
+            echo "Tilda reference remains in deployable source."
+            exit 1
+          fi
+          echo "NO_TILDA_REFERENCES=PASS"
