@@ -39,6 +39,9 @@ jobs:
       - name: Materialize shared RU/EN header and footer
         run: python scripts/ensure_site_chrome.py
 
+      - name: Normalize non-blocking web font loading
+        run: python scripts/ensure_font_loading.py
+
       - name: Normalize structured metadata and visible FAQ schema
         run: python scripts/ensure_site_metadata.py
 
