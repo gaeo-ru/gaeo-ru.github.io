@@ -15,6 +15,7 @@ import xml.etree.ElementTree as ET
 from ensure_site_chrome import render_chrome
 from ensure_asset_versions import asset_path_from_url, expected_version
 from indexnow_submit import KEY as INDEXNOW_KEY, KEY_FILE as INDEXNOW_KEY_FILE
+from ensure_article_dates import load_page_article, format_date, valid_iso
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
@@ -354,6 +355,44 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
 
     objects = jsonld_objects(text, page)
     types = schema_types(objects)
+
+    page_article = load_page_article(text)
+    if page_article is not None:
+        _, _, article = page_article
+        published = str(article.get("datePublished") or "")[:10]
+        modified = str(article.get("dateModified") or "")[:10]
+        if not valid_iso(published):
+            errors.append(f"{page}: Article.datePublished is invalid or missing: {published!r}.")
+        if not valid_iso(modified):
+            errors.append(f"{page}: Article.dateModified is invalid or missing: {modified!r}.")
+        if valid_iso(published) and valid_iso(modified):
+            if modified < published:
+                errors.append(f"{page}: dateModified {modified} is earlier than datePublished {published}.")
+            lang_code = expected_lang(path)
+            visible_meta = re.search(
+                r'<div\b[^>]*class=["\'][^"\']*\barticle-meta\b[^"\']*["\'][^>]*>([\s\S]*?)</div>',
+                text,
+                re.I,
+            )
+            if not visible_meta:
+                errors.append(f"{page}: Article page is missing visible .article-meta.")
+            else:
+                visible_text = clean_text(visible_meta.group(1))
+                pub_label = "Published" if lang_code == "en" else "Опубликовано"
+                mod_label = "Updated" if lang_code == "en" else "Обновлено"
+                expected_pub = f"{pub_label}: {format_date(published, lang_code)}"
+                expected_mod = f"{mod_label}: {format_date(modified, lang_code)}"
+                if expected_pub not in visible_text:
+                    errors.append(f"{page}: visible publication date does not match datePublished {published}.")
+                if expected_mod not in visible_text:
+                    errors.append(f"{page}: visible update date does not match dateModified {modified}.")
+
+            og_pub = meta_values(text, "property", "article:published_time")
+            og_mod = meta_values(text, "property", "article:modified_time")
+            if og_pub != [published]:
+                errors.append(f"{page}: article:published_time {og_pub!r} != [{published!r}].")
+            if og_mod != [modified]:
+                errors.append(f"{page}: article:modified_time {og_mod!r} != [{modified!r}].")
     if page not in LEGAL_NOINDEX and not objects:
         errors.append(f"{page}: missing Schema.org JSON-LD.")
 
@@ -628,7 +667,19 @@ def check_sitemap(mode: str) -> None:
         try:
             tree = ET.parse(preview)
             ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-            urls = [n.text.strip() for n in tree.findall(".//s:loc", ns) if n.text]
+            sitemap_rows = []
+            for url_node in tree.findall(".//s:url", ns):
+                loc_node = url_node.find("s:loc", ns)
+                lastmod_node = url_node.find("s:lastmod", ns)
+                if loc_node is not None and loc_node.text:
+                    sitemap_rows.append(
+                        (
+                            loc_node.text.strip(),
+                            lastmod_node.text.strip() if lastmod_node is not None and lastmod_node.text else "",
+                        )
+                    )
+            urls = [loc for loc, _ in sitemap_rows]
+            sitemap_lastmods = {loc: lastmod for loc, lastmod in sitemap_rows}
         except Exception as exc:
             errors.append(f"generated sitemap is invalid XML: {exc}")
             return
@@ -654,6 +705,19 @@ def check_sitemap(mode: str) -> None:
             errors.append("generated sitemap missing expected URLs: " + ", ".join(missing))
         if extra:
             errors.append("generated sitemap has unexpected URLs: " + ", ".join(extra))
+
+    for page_path in page_paths():
+        page_text = page_path.read_text(encoding="utf-8")
+        article_info = load_page_article(page_text)
+        if article_info is None:
+            continue
+        _, _, article = article_info
+        modified = str(article.get("dateModified") or article.get("datePublished") or "")[:10]
+        url = expected_url(page_path)
+        if sitemap_lastmods.get(url) != modified:
+            errors.append(
+                f"{relpath(page_path)}: sitemap lastmod {sitemap_lastmods.get(url)!r} != Article dateModified {modified!r}."
+            )
 
     actual = ROOT / "sitemap.xml"
     if mode == "staging":
