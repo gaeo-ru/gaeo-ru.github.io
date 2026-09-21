@@ -197,12 +197,21 @@ def schema_types(objects: list[dict]) -> dict[str, list[dict]]:
 
 
 def visible_summary_questions(text: str) -> list[str]:
-    return [
-        clean_text(x)
-        for x in re.findall(r"<summary\b[^>]*>([\s\S]*?)</summary>", text, re.I)
-        if clean_text(x)
-    ]
-
+    questions = []
+    blocks = re.findall(
+        r'<details\\b[^>]*class=["\\'][^"\\']*\\bfaq-item\\b[^"\\']*["\\'][^>]*>([\\s\\S]*?)</details>',
+        text,
+        re.I,
+    )
+    for block in blocks:
+        match = re.search(r"<summary\\b[^>]*>([\\s\\S]*?)</summary>", block, re.I)
+        if not match:
+            continue
+        question = clean_text(match.group(1))
+        question = re.sub(r"\\s*\\+\\s*$", "", question).strip()
+        if question:
+            questions.append(question)
+    return questions
 
 def faq_schema_questions(faq: dict) -> list[str]:
     result = []
@@ -380,9 +389,11 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             )
 
     for a in tags(text, "a"):
-        href = a.get("href")
-        if href is None or href == "":
-            errors.append(f"{page}: contains empty anchor href.")
+        if "href" not in a:
+            continue
+        href = a.get("href", "")
+        if href == "":
+            errors.append(f"{page}: contains empty href attribute.")
             continue
         target = internal_target(path, href)
         if target is not None and not target.exists():
