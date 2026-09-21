@@ -985,6 +985,25 @@ def route_file(route: str) -> Path:
     return target / "index.html"
 
 
+def check_custom_domain_preparation(mode: str) -> None:
+    prepared = ROOT / "CNAME.production"
+    active = ROOT / "CNAME"
+
+    if not prepared.exists():
+        errors.append("CNAME.production is missing; production custom domain is not prepared.")
+    elif prepared.read_text(encoding="utf-8").strip() != "gaeo.ru":
+        errors.append("CNAME.production must contain exactly gaeo.ru.")
+
+    if mode == "staging":
+        if active.exists():
+            errors.append("CNAME must not exist on staging; it would activate the production custom domain prematurely.")
+    else:
+        if not active.exists():
+            errors.append("Production mode requires root CNAME for gaeo.ru.")
+        elif active.read_text(encoding="utf-8").strip() != "gaeo.ru":
+            errors.append("Production root CNAME must contain exactly gaeo.ru.")
+
+
 def check_migration_url_contract() -> None:
     migration_map = ROOT / "MIGRATION_URL_MAP.md"
     if not migration_map.exists():
@@ -1036,6 +1055,7 @@ def main() -> int:
     check_analytics_bundle()
     check_indexnow_preparation()
     check_migration_url_contract()
+    check_custom_domain_preparation(args.mode)
     check_robots_files(args.mode)
     check_sitemap(args.mode)
 
