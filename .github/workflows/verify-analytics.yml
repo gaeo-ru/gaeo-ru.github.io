@@ -1,0 +1,142 @@
+name: Verify analytics implementation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-analytics.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Unit-test analytics initialization, UTM and lead goal
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const assert = require('assert');
+          const code = fs.readFileSync('assets/analytics.js','utf8');
+
+          function makeStorage(){
+            const map = new Map();
+            return {
+              getItem(k){ return map.has(k) ? map.get(k) : null; },
+              setItem(k,v){ map.set(k,String(v)); },
+              removeItem(k){ map.delete(k); }
+            };
+          }
+
+          const listeners = {};
+          const inserted = [];
+          const firstScript = { parentNode: { insertBefore(node){ inserted.push(node); } } };
+          const document = {
+            documentElement: { lang: "ru" },
+            head: { appendChild(node){ inserted.push(node); } },
+            querySelector(){ return null; },
+            createElement(){
+              return {
+                async: false,
+                src: "",
+                attrs: {},
+                setAttribute(k,v){ this.attrs[k]=v; }
+              };
+            },
+            getElementsByTagName(name){ return name === "script" ? [firstScript] : []; },
+            addEventListener(name, fn){ listeners[name] = fn; }
+          };
+          const sessionStorage = makeStorage();
+          const localStorage = makeStorage();
+          const window = {
+            document, sessionStorage, localStorage,
+            location: {
+              search: "?utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123",
+              pathname: "/articles/",
+              href: "https://gaeo-ru.github.io/articles/?utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123"
+            }
+          };
+          const context = { window, document, sessionStorage, localStorage, URLSearchParams, console };
+          vm.createContext(context);
+          vm.runInContext(code, context);
+
+          assert.strictEqual(window.GAEOAnalytics.counterId, 109744589);
+          assert.strictEqual(window.GAEOAnalytics.consentMode, "none");
+          assert.strictEqual(inserted.length, 1);
+          assert.strictEqual(inserted[0].src, "https://mc.yandex.ru/metrika/tag.js");
+
+          let queue = window.ym.a || [];
+          let init = queue.filter(args => args[0] === 109744589 && args[1] === "init");
+          assert.strictEqual(init.length, 1);
+          assert.strictEqual(init[0][2].trackLinks, true);
+          assert.strictEqual(init[0][2].clickmap, true);
+          assert.strictEqual(init[0][2].accurateTrackBounce, true);
+          assert.strictEqual(init[0][2].webvisor, true);
+
+          const params = queue.find(args => args[0] === 109744589 && args[1] === "params");
+          assert(params);
+          assert.strictEqual(params[2].gaeo_tracking.utm_source, "qa");
+          assert.strictEqual(params[2].gaeo_tracking.utm_medium, "test");
+          assert.strictEqual(params[2].gaeo_tracking.utm_campaign, "p28");
+          assert.strictEqual(params[2].gaeo_tracking.yclid, "123");
+
+          const stored = JSON.parse(sessionStorage.getItem("gaeo_tracking_v1"));
+          assert.strictEqual(stored.utm_source, "qa");
+          assert.strictEqual(window.GAEOAnalytics.getTracking().utm_campaign, "p28");
+
+          window.GAEOAnalytics.start();
+          queue = window.ym.a || [];
+          init = queue.filter(args => args[0] === 109744589 && args[1] === "init");
+          assert.strictEqual(init.length, 1, "start() must not duplicate init");
+
+          assert.strictEqual(typeof listeners["gaeo:lead-success"], "function");
+          listeners["gaeo:lead-success"]({detail:{mode:"inline",lang:"ru"}});
+          queue = window.ym.a || [];
+          const goals = queue.filter(args => args[0] === 109744589 && args[1] === "reachGoal" && args[2] === "lead_submit_success");
+          assert.strictEqual(goals.length, 1);
+          assert.strictEqual(goals[0][3].form_mode, "inline");
+          assert.strictEqual(goals[0][3].lang, "ru");
+          assert.strictEqual(goals[0][3].page_path, "/articles/");
+
+          const site = fs.readFileSync("assets/site.js","utf8");
+          assert.strictEqual((site.match(/gaeo:lead-success/g) || []).length, 1);
+          assert(site.indexOf("if(!response.ok)") < site.indexOf("gaeo:lead-success"));
+          assert(site.includes("gaeo_tracking_v1"));
+          console.log("ANALYTICS_UNIT_QA=PASS");
+          NODE
+
+      - name: Wait for GitHub Pages propagation
+        run: sleep 30
+
+      - name: Verify public include and runtime library request
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://gaeo-ru.github.io"
+          hash="$(sha256sum assets/analytics.js | cut -c1-12)"
+          curl -fsS "$base/" -o /tmp/home.html
+          curl -fsS "$base/articles/" -o /tmp/articles.html
+          test "$(grep -o "/assets/analytics.js?v=$hash" /tmp/home.html | wc -l)" = "1"
+          test "$(grep -o "/assets/analytics.js?v=$hash" /tmp/articles.html | wc -l)" = "1"
+          ! grep -q "mc.yandex.ru/metrika/tag.js" /tmp/home.html
+          ! grep -q "mc.yandex.ru/metrika/tag.js" /tmp/articles.html
+          curl -fsS "$base/assets/analytics.js?v=$hash" -o /tmp/analytics.js
+          grep -q "var COUNTER_ID = 109744589;" /tmp/analytics.js
+          grep -q "lead_submit_success" /tmp/analytics.js
+
+          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
+          "$browser" --headless --no-sandbox --disable-gpu --hide-scrollbars \
+            --host-resolver-rules="MAP mc.yandex.ru 127.0.0.1" \
+            --virtual-time-budget=7000 \
+            --log-net-log=/tmp/netlog.json \
+            "$base/?utm_source=qa&utm_medium=acceptance" >/tmp/chrome.log 2>&1 || true
+          grep -q "mc.yandex.ru/metrika/tag.js" /tmp/netlog.json
+          echo "PUBLIC_ANALYTICS_INCLUDE=PASS"
+          echo "PUBLIC_METRIKA_LIBRARY_REQUEST=PASS"
