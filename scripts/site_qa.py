@@ -16,6 +16,7 @@ from ensure_site_chrome import render_chrome
 from ensure_asset_versions import asset_path_from_url, expected_version
 from indexnow_submit import KEY as INDEXNOW_KEY, KEY_FILE as INDEXNOW_KEY_FILE
 from ensure_article_dates import load_page_article, format_date, valid_iso
+from ensure_social_preview import FALLBACK_URL, FALLBACK_PATH, jpeg_dimensions
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
@@ -336,6 +337,41 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         if len(values) != 1:
             errors.append(f"{page}: {prop} must appear exactly once; found {len(values)}.")
 
+    page_article_for_social = load_page_article(text)
+    og_image_values = meta_values(text, "property", "og:image")
+    og_alt_values = meta_values(text, "property", "og:image:alt")
+    if len(og_image_values) == 1:
+        og_image_value = og_image_values[0]
+        if page_article_for_social is None:
+            if og_image_value != FALLBACK_URL:
+                errors.append(
+                    f"{page}: non-Article page must use fallback social preview {FALLBACK_URL!r}; found {og_image_value!r}."
+                )
+            if meta_values(text, "property", "og:image:width") != ["1200"]:
+                errors.append(f"{page}: fallback og:image:width must be 1200.")
+            if meta_values(text, "property", "og:image:height") != ["630"]:
+                errors.append(f"{page}: fallback og:image:height must be 630.")
+            if meta_values(text, "property", "og:image:type") != ["image/jpeg"]:
+                errors.append(f"{page}: fallback og:image:type must be image/jpeg.")
+        elif og_image_value == FALLBACK_URL:
+            errors.append(f"{page}: Article page must keep its own social cover, not the fallback.")
+
+        twitter_card = meta_values(text, "name", "twitter:card")
+        twitter_title = meta_values(text, "name", "twitter:title")
+        twitter_desc = meta_values(text, "name", "twitter:description")
+        twitter_image = meta_values(text, "name", "twitter:image")
+        twitter_alt = meta_values(text, "name", "twitter:image:alt")
+        if twitter_card != ["summary_large_image"]:
+            errors.append(f"{page}: twitter:card must be summary_large_image exactly once.")
+        if len(twitter_title) != 1 or twitter_title != meta_values(text, "property", "og:title"):
+            errors.append(f"{page}: twitter:title must match og:title exactly.")
+        if len(twitter_desc) != 1 or twitter_desc != meta_values(text, "property", "og:description"):
+            errors.append(f"{page}: twitter:description must match og:description exactly.")
+        if twitter_image != [og_image_value]:
+            errors.append(f"{page}: twitter:image must match og:image exactly.")
+        if len(og_alt_values) == 1 and twitter_alt != [og_alt_values[0]]:
+            errors.append(f"{page}: twitter:image:alt must match og:image:alt exactly.")
+
     if page not in SERVICE_NOINDEX:
         alternates = [x for x in link_values(text, "alternate") if x.get("hreflang")]
         by_lang: dict[str, list[str]] = {}
@@ -563,6 +599,24 @@ def check_assets_css_js() -> None:
             errors.append(f"{relpath(path)}: contains Base64 image data.")
 
 
+def check_social_preview_bundle() -> None:
+    fallback = ROOT / FALLBACK_PATH.lstrip("/")
+    if not fallback.exists():
+        errors.append(f"Fallback social preview is missing: {FALLBACK_PATH}.")
+        return
+    try:
+        width, height = jpeg_dimensions(fallback)
+    except Exception as exc:
+        errors.append(f"Fallback social preview is not a valid JPEG: {exc}.")
+        return
+    if (width, height) != (1200, 630):
+        errors.append(f"Fallback social preview must be 1200x630; found {width}x{height}.")
+    if fallback.stat().st_size > 200 * 1024:
+        errors.append(
+            f"Fallback social preview is too heavy: {fallback.stat().st_size} bytes (>200 KiB)."
+        )
+
+
 def check_analytics_bundle() -> None:
     analytics = ROOT / "assets" / "analytics.js"
     site_js = ROOT / "assets" / "site.js"
@@ -755,6 +809,7 @@ def main() -> int:
 
     check_hreflang_reciprocity(page_texts)
     check_assets_css_js()
+    check_social_preview_bundle()
     check_analytics_bundle()
     check_indexnow_preparation()
     check_robots_files(args.mode)
