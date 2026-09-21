@@ -416,8 +416,13 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         errors.append(
             f"{page}: /assets/analytics.js must be included exactly once; found {len(analytics_scripts)}."
         )
-    elif "defer" not in analytics_scripts[0]:
-        errors.append(f"{page}: analytics.js include must use defer.")
+    analytics_defer = re.findall(
+        r'<script\b(?=[^>]*\bsrc=["\']/assets/analytics\.js(?:\?[^"\']*)?["\'])(?=[^>]*\bdefer\b)[^>]*>\s*</script>',
+        text,
+        re.I,
+    )
+    if len(analytics_defer) != 1:
+        errors.append(f"{page}: analytics.js include must use defer exactly once.")
 
     lower_html = text.lower()
     if "mc.yandex.ru/metrika/tag.js" in lower_html or re.search(r"\bym\s*\(", text):
