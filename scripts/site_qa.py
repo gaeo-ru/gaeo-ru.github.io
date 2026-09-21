@@ -12,6 +12,8 @@ import sys
 import tempfile
 import xml.etree.ElementTree as ET
 
+from ensure_site_chrome import render_chrome
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
 STAGING_HOST = "gaeo-ru.github.io"
@@ -250,25 +252,29 @@ def expected_lang(path: Path) -> str:
     return "en" if relpath(path).startswith("en/") else "ru"
 
 
-def check_shared_chrome(path: Path, text: str, header: str, footer: str) -> None:
+def check_shared_chrome(path: Path, text: str) -> None:
     page = relpath(path)
+    header, footer = render_chrome(text)
+    expected_header = f"<!-- SITE_HEADER_START -->\n{header}\n<!-- SITE_HEADER_END -->"
+    expected_footer = f"<!-- SITE_FOOTER_START -->\n{footer}\n<!-- SITE_FOOTER_END -->"
+
     if text.count("<!-- SITE_HEADER_START -->") != 1 or text.count("<!-- SITE_HEADER_END -->") != 1:
         errors.append(f"{page}: shared header markers must appear exactly once.")
-    elif f"<!-- SITE_HEADER_START -->\n{header}\n<!-- SITE_HEADER_END -->" not in text:
-        errors.append(f"{page}: shared header differs from templates/partials/site-header.html.")
+    elif expected_header not in text:
+        errors.append(f"{page}: shared header differs from canonical {expected_lang(path).upper()} partial.")
 
     if text.count("<!-- SITE_FOOTER_START -->") != 1 or text.count("<!-- SITE_FOOTER_END -->") != 1:
         errors.append(f"{page}: shared footer markers must appear exactly once.")
-    elif f"<!-- SITE_FOOTER_START -->\n{footer}\n<!-- SITE_FOOTER_END -->" not in text:
-        errors.append(f"{page}: shared footer differs from templates/partials/site-footer.html.")
+    elif expected_footer not in text:
+        errors.append(f"{page}: shared footer differs from canonical {expected_lang(path).upper()} partial.")
 
 
-def check_page(path: Path, mode: str, page_texts: dict[Path, str], header: str, footer: str) -> None:
+def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
     text = page_texts[path]
     page = relpath(path)
     target_url = expected_url(path)
 
-    check_shared_chrome(path, text, header, footer)
+    check_shared_chrome(path, text)
 
     title_matches = TITLE_RE.findall(text)
     if len(title_matches) != 1 or not clean_text(title_matches[0]):
@@ -550,18 +556,19 @@ def main() -> int:
     if not paths:
         errors.append("No deployable HTML pages found.")
 
-    header_path = ROOT / "templates" / "partials" / "site-header.html"
-    footer_path = ROOT / "templates" / "partials" / "site-footer.html"
-    if not header_path.exists() or not footer_path.exists():
-        errors.append("Shared header/footer partial is missing.")
-        header = footer = ""
-    else:
-        header = header_path.read_text(encoding="utf-8").strip()
-        footer = footer_path.read_text(encoding="utf-8").strip()
+    required_partials = [
+        ROOT / "templates" / "partials" / "site-header.html",
+        ROOT / "templates" / "partials" / "site-footer.html",
+        ROOT / "templates" / "partials" / "site-header-en.html",
+        ROOT / "templates" / "partials" / "site-footer-en.html",
+    ]
+    for partial in required_partials:
+        if not partial.exists():
+            errors.append(f"Missing shared partial: {partial.relative_to(ROOT)}.")
 
     page_texts = {p: p.read_text(encoding="utf-8") for p in paths}
     for path in paths:
-        check_page(path, args.mode, page_texts, header, footer)
+        check_page(path, args.mode, page_texts)
 
     check_hreflang_reciprocity(page_texts)
     check_assets_css_js()
