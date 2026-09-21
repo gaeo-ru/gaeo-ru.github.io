@@ -7,35 +7,34 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 SKIP_DIRS = {".git", ".github", "templates"}
 
-FONT_URL = (
-    "https://fonts.googleapis.com/css2?"
-    "family=Literata:opsz,wght@7..72,500;7..72,600&"
-    "family=Manrope:wght@400;500;600;700&"
-    "display=swap&subset=cyrillic"
-)
 START = "<!-- FONT_LOADING_START -->"
 END = "<!-- FONT_LOADING_END -->"
-
-BLOCK = f"""<!-- FONT_LOADING_START -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="{FONT_URL}" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{FONT_URL}"></noscript>
-<!-- FONT_LOADING_END -->"""
 
 MARKED_RE = re.compile(
     re.escape(START) + r"[\s\S]*?" + re.escape(END),
     re.I,
 )
 
+FONT_URL_RE = re.compile(
+    r'https://fonts\.googleapis\.com/css2\?[^"\']+',
+    re.I,
+)
+
 LEGACY_RE = re.compile(
     r'<link\s+rel=["\']preconnect["\']\s+href=["\']https://fonts\.googleapis\.com["\']\s*>\s*'
     r'<link\s+rel=["\']preconnect["\']\s+href=["\']https://fonts\.gstatic\.com["\']\s+crossorigin(?:=["\'][^"\']*["\'])?\s*>\s*'
-    r'<link\s+href=["\']'
-    + re.escape(FONT_URL)
-    + r'["\']\s+rel=["\']stylesheet["\']\s*>',
+    r'<link\s+href=["\'](?P<url>https://fonts\.googleapis\.com/css2\?[^"\']+)["\']\s+rel=["\']stylesheet["\']\s*>',
     re.I,
 )
+
+
+def render_block(font_url: str) -> str:
+    return f"""<!-- FONT_LOADING_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="{font_url}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{font_url}"></noscript>
+<!-- FONT_LOADING_END -->"""
 
 
 def normalize(path: Path) -> bool:
@@ -45,17 +44,23 @@ def normalize(path: Path) -> bool:
     if START in text or END in text:
         if not (START in text and END in text):
             raise RuntimeError(f"{path}: incomplete font loading markers.")
-        text, count = MARKED_RE.subn(BLOCK, text, count=1)
-        if count != 1:
-            raise RuntimeError(f"{path}: could not normalize marked font loading block.")
-    elif FONT_URL in text:
-        text, count = LEGACY_RE.subn(BLOCK, text, count=1)
-        if count != 1:
-            raise RuntimeError(
-                f"{path}: Google Fonts URL exists but legacy blocking block was not recognized."
-            )
+        marked = MARKED_RE.search(text)
+        if not marked:
+            raise RuntimeError(f"{path}: could not locate marked font loading block.")
+        url_match = FONT_URL_RE.search(marked.group(0))
+        if not url_match:
+            raise RuntimeError(f"{path}: marked font loading block has no Google Fonts CSS URL.")
+        text = text[:marked.start()] + render_block(url_match.group(0)) + text[marked.end():]
     else:
-        return False
+        legacy = LEGACY_RE.search(text)
+        if legacy:
+            text = text[:legacy.start()] + render_block(legacy.group("url")) + text[legacy.end():]
+        elif "fonts.googleapis.com/css2?" in text:
+            raise RuntimeError(
+                f"{path}: Google Fonts CSS exists but the blocking legacy block was not recognized."
+            )
+        else:
+            return False
 
     if text != original:
         path.write_text(text, encoding="utf-8")
