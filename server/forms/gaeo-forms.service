@@ -1,0 +1,24 @@
+[Unit]
+Description=GAEO lead form backend
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gaeo-forms
+Group=gaeo-forms
+WorkingDirectory=/opt/gaeo-forms
+EnvironmentFile=/etc/gaeo-forms.env
+ExecStart=/opt/gaeo-forms/gaeo-forms
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/gaeo-forms
+CapabilityBoundingSet=
+AmbientCapabilities=
+
+[Install]
+WantedBy=multi-user.target
