@@ -6,6 +6,8 @@ from urllib.parse import urlparse
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
+NOJS_PATH = ROOT / "templates" / "partials" / "nojs-fallback.html"
+
 PARTIALS = {
     "ru": (
         ROOT / "templates" / "partials" / "site-header.html",
@@ -21,9 +23,12 @@ HEADER_START = "<!-- SITE_HEADER_START -->"
 HEADER_END = "<!-- SITE_HEADER_END -->"
 FOOTER_START = "<!-- SITE_FOOTER_START -->"
 FOOTER_END = "<!-- SITE_FOOTER_END -->"
+NOJS_START = "<!-- NOJS_FALLBACK_START -->"
+NOJS_END = "<!-- NOJS_FALLBACK_END -->"
 
 HEADER_RE = re.compile(rf"{re.escape(HEADER_START)}[\s\S]*?{re.escape(HEADER_END)}")
 FOOTER_RE = re.compile(rf"{re.escape(FOOTER_START)}[\s\S]*?{re.escape(FOOTER_END)}")
+NOJS_RE = re.compile(rf"{re.escape(NOJS_START)}[\s\S]*?{re.escape(NOJS_END)}")
 HTML_LANG_RE = re.compile(r'<html\b[^>]*\blang=["\']([^"\']+)["\']', re.I)
 LINK_TAG_RE = re.compile(r"<link\b[^>]*>", re.I)
 ATTR_RE = re.compile(
@@ -102,6 +107,17 @@ def sync_file(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     original = text
     header, footer = render_chrome(text)
+    nojs = NOJS_PATH.read_text(encoding="utf-8").strip()
+    nojs_block = f"{NOJS_START}\n{nojs}\n{NOJS_END}"
+
+    if NOJS_START in text or NOJS_END in text:
+        text, n = NOJS_RE.subn(lambda _: nojs_block, text, count=1)
+        if n != 1:
+            raise RuntimeError(f"{path}: invalid no-JS fallback markers")
+    else:
+        if "</head>" not in text:
+            raise RuntimeError(f"{path}: missing </head> for no-JS fallback")
+        text = text.replace("</head>", nojs_block + "\n</head>", 1)
 
     if HEADER_START in text:
         block = f"{HEADER_START}\n{header}\n{HEADER_END}"
@@ -122,6 +138,9 @@ def sync_file(path: Path) -> bool:
 
 
 def main() -> None:
+    if not NOJS_PATH.exists():
+        raise SystemExit(f"Missing no-JS partial: {NOJS_PATH.relative_to(ROOT)}")
+
     for lang, pair in PARTIALS.items():
         for p in pair:
             if not p.exists():
@@ -134,7 +153,7 @@ def main() -> None:
         if sync_file(path):
             changed.append(str(path.relative_to(ROOT)))
 
-    print("Shared GAEO RU/EN header/footer synchronized.")
+    print("Shared GAEO RU/EN header/footer and no-JS fallback synchronized.")
     if changed:
         print("Updated:", ", ".join(changed))
     else:
