@@ -13,6 +13,7 @@ import tempfile
 import xml.etree.ElementTree as ET
 
 from ensure_site_chrome import render_chrome
+from ensure_asset_versions import asset_path_from_url, expected_version
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
@@ -402,6 +403,30 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             except ValueError:
                 shown = target
             errors.append(f"{page}: broken internal link {href!r} -> {shown}.")
+
+    # Local CSS/JS references must use the current content hash for cache-busting.
+    asset_refs = []
+    for link in tags(text, "link"):
+        rels = {x.lower() for x in link.get("rel", "").split()}
+        href = link.get("href", "")
+        if "stylesheet" in rels and asset_path_from_url(href):
+            asset_refs.append(("stylesheet", href))
+    for script in tags(text, "script"):
+        src = script.get("src", "")
+        if asset_path_from_url(src):
+            asset_refs.append(("script", src))
+
+    for kind, value in asset_refs:
+        parsed = urlparse(value)
+        params = dict(x.split("=", 1) if "=" in x else (x, "") for x in parsed.query.split("&") if x)
+        actual = params.get("v")
+        expected = expected_version(value)
+        if expected is None:
+            errors.append(f"{page}: {kind} points to missing local CSS/JS asset: {value}.")
+        elif actual != expected:
+            errors.append(
+                f"{page}: {kind} cache version for {parsed.path} is {actual!r}, expected {expected!r}."
+            )
 
     for img in tags(text, "img"):
         src = img.get("src", "")
