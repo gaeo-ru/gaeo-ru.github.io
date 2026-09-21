@@ -99,7 +99,7 @@ def verify():
         if "static.tildacdn.com" in text:
             leftovers.append(str(path))
         for ref in re.findall(r'(?:src|content)=["\'](/assets/[^"\']+)', text):
-            target = Path(ref.lstrip("/"))
+            clean_ref = ref.split("?", 1)[0].split("#", 1)[0]\n            target = Path(clean_ref.lstrip("/"))
             if not target.exists():
                 missing.append((str(path), ref))
     if leftovers:
