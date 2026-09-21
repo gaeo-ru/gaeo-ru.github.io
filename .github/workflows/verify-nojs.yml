@@ -54,6 +54,7 @@ jobs:
 
           from selenium import webdriver
           from selenium.webdriver.common.by import By
+          from selenium.webdriver.common.keys import Keys
           from selenium.webdriver.chrome.options import Options
 
           BASE = "https://gaeo-ru.github.io"
@@ -140,12 +141,12 @@ jobs:
               # Native HTML details must still open with JavaScript blocked.
               first_price = driver.find_element(By.CSS_SELECTOR, "details.price")
               assert first_price.get_attribute("open") is None
-              first_price.find_element(By.TAG_NAME, "summary").click()
+              first_price.find_element(By.TAG_NAME, "summary").send_keys(Keys.ENTER)
               assert first_price.get_attribute("open") is not None
 
               first_faq = driver.find_element(By.CSS_SELECTOR, "details.faq-item")
               assert first_faq.get_attribute("open") is None
-              first_faq.find_element(By.TAG_NAME, "summary").click()
+              first_faq.find_element(By.TAG_NAME, "summary").send_keys(Keys.ENTER)
               assert first_faq.get_attribute("open") is not None
 
               print("NOJS_H1=PASS")
