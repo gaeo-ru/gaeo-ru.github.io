@@ -27,9 +27,11 @@ jobs:
           internal="$(sha256sum assets/internal.css | cut -c1-12)"
           sitejs="$(sha256sum assets/site.js | cut -c1-12)"
           curl -fsS "$base/" -o home.html
-          grep -q "/assets/style.css?v=$style" home.html
-          grep -q "/assets/internal.css?v=$internal" home.html
+          curl -fsS "$base/articles/" -o articles.html
           grep -q "/assets/site.js?v=$sitejs" home.html
+          grep -q "/assets/style.css?v=$style" articles.html
+          grep -q "/assets/internal.css?v=$internal" articles.html
+          grep -q "/assets/site.js?v=$sitejs" articles.html
           curl -fsS "$base/assets/style.css?v=$style" -o style.css
           curl -fsS "$base/assets/internal.css?v=$internal" -o internal.css
           curl -fsS "$base/assets/site.js?v=$sitejs" -o site.js
