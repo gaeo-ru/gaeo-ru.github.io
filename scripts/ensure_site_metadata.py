@@ -183,6 +183,9 @@ def normalize(path: Path) -> bool:
     original = text
     page = path.relative_to(ROOT).as_posix()
 
+    # Repair accidental concatenation of the production base with an already absolute URL.
+    text = re.sub(r"https://gaeo\\.ru(?=https?://)", "", text)
+
     canonical = canonical_url(text)
     lang = html_lang(text)
     if canonical:
