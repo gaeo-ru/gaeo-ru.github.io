@@ -63,5 +63,18 @@ jobs:
 
           echo
           echo "===== LATEST PAGES BUILD ====="
+          for attempt in {1..18}; do
+            state="$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.status' 2>/dev/null || echo unknown)"
+            echo "Pages build state: $state (attempt $attempt/18)"
+            if [ "$state" != "building" ] && [ "$state" != "queued" ]; then
+              break
+            fi
+            sleep 10
+          done
           gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" \
             --jq '{status:.status,error:.error,message:.error.message,commit:.commit,created_at:.created_at,updated_at:.updated_at}' || true
+
+          echo
+          echo "===== GITHUB PAGES SETTINGS AFTER BUILD ====="
+          gh api "repos/${GITHUB_REPOSITORY}/pages" \
+            --jq '{url:.html_url,cname:.cname,https_enforced:.https_enforced,build_type:.build_type,source:.source,status:.status}'
