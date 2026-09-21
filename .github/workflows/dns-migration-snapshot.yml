@@ -49,3 +49,14 @@ jobs:
           q forms.gaeo.ru CNAME
 
           q _github-pages-challenge-gaeo-ru.gaeo.ru TXT
+
+      - name: Inspect GitHub Pages settings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo
+          echo "===== GITHUB PAGES SETTINGS ====="
+          gh api "repos/${GITHUB_REPOSITORY}/pages" \
+            --jq '{url:.html_url,cname:.cname,https_enforced:.https_enforced,build_type:.build_type,source:.source,status:.status}'
