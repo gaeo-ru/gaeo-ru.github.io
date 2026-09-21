@@ -363,14 +363,30 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         twitter_alt = meta_values(text, "name", "twitter:image:alt")
         if twitter_card != ["summary_large_image"]:
             errors.append(f"{page}: twitter:card must be summary_large_image exactly once.")
-        if len(twitter_title) != 1 or twitter_title != meta_values(text, "property", "og:title"):
-            errors.append(f"{page}: twitter:title must match og:title exactly.")
-        if len(twitter_desc) != 1 or twitter_desc != meta_values(text, "property", "og:description"):
-            errors.append(f"{page}: twitter:description must match og:description exactly.")
+        og_title_for_social = meta_values(text, "property", "og:title")
+        og_desc_for_social = meta_values(text, "property", "og:description")
+        if (
+            len(twitter_title) != 1
+            or len(og_title_for_social) != 1
+            or unescape(twitter_title[0]) != unescape(og_title_for_social[0])
+        ):
+            errors.append(f"{page}: twitter:title must match og:title semantically.")
+        if (
+            len(twitter_desc) != 1
+            or len(og_desc_for_social) != 1
+            or unescape(twitter_desc[0]) != unescape(og_desc_for_social[0])
+        ):
+            errors.append(f"{page}: twitter:description must match og:description semantically.")
         if twitter_image != [og_image_value]:
             errors.append(f"{page}: twitter:image must match og:image exactly.")
-        if len(og_alt_values) == 1 and twitter_alt != [og_alt_values[0]]:
-            errors.append(f"{page}: twitter:image:alt must match og:image:alt exactly.")
+        if (
+            len(og_alt_values) == 1
+            and (
+                len(twitter_alt) != 1
+                or unescape(twitter_alt[0]) != unescape(og_alt_values[0])
+            )
+        ):
+            errors.append(f"{page}: twitter:image:alt must match og:image:alt semantically.")
 
     if page not in SERVICE_NOINDEX:
         alternates = [x for x in link_values(text, "alternate") if x.get("hreflang")]
