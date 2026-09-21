@@ -5,6 +5,8 @@
   var CONSENT_MODE = 'none'; // Change to "required" when a consent banner is enabled.
   var CONSENT_KEY = 'gaeo_analytics_consent';
   var TRACKING_KEY = 'gaeo_tracking_v1';
+  var PRODUCTION_HOSTS = ['gaeo.ru','www.gaeo.ru'];
+  var DEBUG_PARAM = 'gaeo_analytics_debug';
   var TRACKING_KEYS = [
     'utm_source',
     'utm_medium',
@@ -78,6 +80,16 @@
     return CONSENT_MODE !== 'required' || consentValue() === 'granted';
   }
 
+  function environmentAllowsAnalytics() {
+    var host = (window.location.hostname || '').toLowerCase();
+    if (PRODUCTION_HOSTS.indexOf(host) !== -1) return true;
+    try {
+      return new URLSearchParams(window.location.search).get(DEBUG_PARAM) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
   function ensureQueue() {
     if (typeof window.ym === 'function') return;
     window.ym = function () {
@@ -101,7 +113,7 @@
   }
 
   function start() {
-    if (window.__gaeoMetrikaInitialized || !consentAllowsAnalytics()) return false;
+    if (window.__gaeoMetrikaInitialized || !environmentAllowsAnalytics() || !consentAllowsAnalytics()) return false;
     window.__gaeoMetrikaInitialized = true;
     window.mainMetrikaId = COUNTER_ID;
 
@@ -156,6 +168,7 @@
   window.GAEOAnalytics = {
     counterId: COUNTER_ID,
     consentMode: CONSENT_MODE,
+    environmentAllowed: environmentAllowsAnalytics,
     getTracking: function () {
       return Object.assign({}, storedTracking(), queryTracking());
     },
@@ -164,5 +177,5 @@
     start: start
   };
 
-  if (consentAllowsAnalytics()) start();
+  if (environmentAllowsAnalytics() && consentAllowsAnalytics()) start();
 })();
