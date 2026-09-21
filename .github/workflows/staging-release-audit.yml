@@ -68,7 +68,7 @@ jobs:
           for name in homepage article case biography commercial; do
             url="${pages[$name]}"
             echo "Mobile Lighthouse: $name $url"
-            lighthouse "$url" \
+            timeout 120s lighthouse "$url" \
               --quiet \
               --chrome-flags="--headless --no-sandbox" \
               --only-categories=performance \
@@ -76,7 +76,7 @@ jobs:
               --output-path="lighthouse-results/${name}-mobile.json"
 
             echo "Desktop Lighthouse: $name $url"
-            lighthouse "$url" \
+            timeout 120s lighthouse "$url" \
               --quiet \
               --chrome-flags="--headless --no-sandbox" \
               --preset=desktop \
