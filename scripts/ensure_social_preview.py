@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 import re
 import struct
@@ -125,10 +125,10 @@ def normalize(path: Path) -> bool:
         alt = og_alt[0] if len(og_alt) == 1 and og_alt[0] else og_title[0]
 
     text = set_meta(text, "name", "twitter:card", "summary_large_image")
-    text = set_meta(text, "name", "twitter:title", og_title[0])
-    text = set_meta(text, "name", "twitter:description", og_desc[0])
+    text = set_meta(text, "name", "twitter:title", unescape(og_title[0]))
+    text = set_meta(text, "name", "twitter:description", unescape(og_desc[0]))
     text = set_meta(text, "name", "twitter:image", image)
-    text = set_meta(text, "name", "twitter:image:alt", alt)
+    text = set_meta(text, "name", "twitter:image:alt", unescape(alt))
 
     if text != original:
         path.write_text(text, encoding="utf-8")
