@@ -1,0 +1,137 @@
+name: Staging release audit
+
+on:
+  workflow_run:
+    workflows: ["Site maintenance and QA"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gaeo-staging-release-audit
+  cancel-in-progress: true
+
+jobs:
+  crawl-and-lighthouse:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout audited revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Wait for GitHub Pages staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..18}; do
+            if curl -fsS --max-time 15 https://gaeo-ru.github.io/ >/dev/null; then
+              echo "Staging is reachable."
+              exit 0
+            fi
+            echo "Waiting for staging, attempt $attempt/18..."
+            sleep 10
+          done
+          echo "Staging did not become reachable."
+          exit 1
+
+      - name: Crawl deployed staging
+        run: python scripts/staging_crawl.py --origin https://gaeo-ru.github.io
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Lighthouse
+        run: npm install --global lighthouse
+
+      - name: Run Lighthouse on representative pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p lighthouse-results
+
+          declare -A pages=(
+            [homepage]="https://gaeo-ru.github.io/"
+            [article]="https://gaeo-ru.github.io/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+            [case]="https://gaeo-ru.github.io/cases/prep-center-6-klientov-iz-neyrosetey/"
+            [biography]="https://gaeo-ru.github.io/professional-biography/"
+            [commercial]="https://gaeo-ru.github.io/geo-prodvizhenie-nedvizhimosti/"
+          )
+
+          for name in homepage article case biography commercial; do
+            url="${pages[$name]}"
+            echo "Mobile Lighthouse: $name $url"
+            lighthouse "$url" \
+              --quiet \
+              --chrome-flags="--headless --no-sandbox" \
+              --only-categories=performance \
+              --output=json \
+              --output-path="lighthouse-results/${name}-mobile.json"
+
+            echo "Desktop Lighthouse: $name $url"
+            lighthouse "$url" \
+              --quiet \
+              --chrome-flags="--headless --no-sandbox" \
+              --preset=desktop \
+              --only-categories=performance \
+              --output=json \
+              --output-path="lighthouse-results/${name}-desktop.json"
+          done
+
+      - name: Summarize Lighthouse metrics
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          rows = []
+          for path in sorted(Path("lighthouse-results").glob("*.json")):
+              data = json.loads(path.read_text(encoding="utf-8"))
+              audits = data["audits"]
+              score = round(data["categories"]["performance"]["score"] * 100)
+              def metric(audit_id):
+                  a = audits[audit_id]
+                  return a.get("displayValue") or str(a.get("numericValue", ""))
+              rows.append((
+                  path.stem,
+                  score,
+                  metric("first-contentful-paint"),
+                  metric("largest-contentful-paint"),
+                  metric("cumulative-layout-shift"),
+                  metric("total-blocking-time"),
+                  metric("speed-index"),
+              ))
+
+          header = "| Page / mode | Performance | FCP | LCP | CLS | TBT | Speed Index |"
+          sep = "|---|---:|---:|---:|---:|---:|---:|"
+          lines = [header, sep]
+          print("LIGHTHOUSE RESULTS")
+          for row in rows:
+              name, score, fcp, lcp, cls, tbt, si = row
+              print(f"{name}: performance={score}; FCP={fcp}; LCP={lcp}; CLS={cls}; TBT={tbt}; SI={si}")
+              lines.append(f"| {name} | {score} | {fcp} | {lcp} | {cls} | {tbt} | {si} |")
+
+          summary = "\n".join(lines) + "\n"
+          Path("lighthouse-summary.md").write_text(summary, encoding="utf-8")
+          with open(Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]), "a", encoding="utf-8") as f:
+              f.write("## GAEO staging Lighthouse\n\n")
+              f.write(summary)
+              f.write("\nField CWV/INP are not expected to exist for prelaunch staging without sufficient CrUX traffic; Lighthouse provides lab LCP/CLS and TBT as the responsiveness proxy.\n")
+          PY
+
+      - name: Upload Lighthouse reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-staging-lighthouse
+          path: |
+            lighthouse-results/*.json
+            lighthouse-summary.md
+          retention-days: 14
