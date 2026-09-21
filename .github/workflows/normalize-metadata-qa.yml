@@ -1,0 +1,39 @@
+name: Normalize metadata and rerun QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/normalize-metadata-qa.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  normalize-and-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync latest main
+        run: git pull --rebase origin main
+      - name: Synchronize shared chrome
+        run: python scripts/ensure_site_chrome.py
+      - name: Normalize metadata
+        run: python scripts/ensure_site_metadata.py
+      - name: Commit normalized HTML
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' '**/*.html'
+          if git diff --cached --quiet; then
+            echo "No metadata changes."
+          else
+            git commit -m "Normalize GAEO metadata and FAQ schema"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Run staging QA
+        run: python scripts/site_qa.py --mode staging
