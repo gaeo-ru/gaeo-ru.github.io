@@ -5,8 +5,8 @@ import re
 
 MAX_CONTENT_WIDTH = 1200
 MAX_BIO_WIDTH = 1000
-TARGET_BYTES = 195 * 1024
-JPEG_QUALITIES = (90, 88, 86, 84, 82, 80, 78, 76)
+TARGET_BYTES = 180 * 1024
+JPEG_QUALITIES = (90, 88, 86, 84, 82, 80, 78, 76, 74, 72)
 
 def resize_to_width(im, max_width):
     if im.width <= max_width:
@@ -161,13 +161,13 @@ def verify(dim_map):
 
     oversize = []
     for p in list(Path("assets/articles").glob("*.jpg")) + list(Path("assets/cases").glob("*.jpg")):
-        if p.stat().st_size > 200 * 1024:
+        if p.stat().st_size > 180 * 1024:
             oversize.append((str(p), p.stat().st_size))
 
     if problems:
         raise RuntimeError("HTML image verification failed: " + repr(problems[:30]))
     if oversize:
-        raise RuntimeError("Content JPGs above 200 KB: " + repr(oversize))
+        raise RuntimeError("Content JPGs above 180 KB: " + repr(oversize))
     return local_count
 
 def main():
