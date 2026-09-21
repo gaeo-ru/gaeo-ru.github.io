@@ -90,7 +90,7 @@ def set_meta_property(text: str, prop: str, value: str) -> str:
 def set_meta_name(text: str, name: str, value: str) -> str:
     rendered = f'<meta name="{name}" content="{value}">'
     pattern = re.compile(
-        rf'<meta\\b(?=[^>]*\\bname=["\\']{re.escape(name)}["\\'])[^>]*>',
+        rf"""<meta\b(?=[^>]*\bname=["']{re.escape(name)}["'])[^>]*>""",
         re.I,
     )
     matches = list(pattern.finditer(text))
