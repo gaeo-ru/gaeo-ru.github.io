@@ -42,6 +42,9 @@ jobs:
       - name: Normalize structured metadata and visible FAQ schema
         run: python scripts/ensure_site_metadata.py
 
+      - name: Synchronize Article publication and update dates
+        run: python scripts/ensure_article_dates.py
+
       - name: Synchronize centralized Yandex Metrica include
         run: python scripts/ensure_analytics.py
 
