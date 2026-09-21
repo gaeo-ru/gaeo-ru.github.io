@@ -23,6 +23,8 @@ BASE = "https://gaeo.ru"
 STAGING_HOST = "gaeo-ru.github.io"
 METRIKA_COUNTER_ID = "109744589"
 ANALYTICS_PATH = "/assets/analytics.js"
+GOOGLE_VERIFICATION = "2nIA9bL_leEm2TniUtryyUUtEiKU5k9syCqxJRLELw0"
+YANDEX_VERIFICATION = "7936ae703c9ab353"
 
 SKIP_DIRS = {".git", ".github", "templates"}
 LEGAL_NOINDEX = {
@@ -347,6 +349,12 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
 
     check_shared_chrome(path, text)
     check_font_loading(path, text)
+
+    if page == "index.html":
+        if meta_values(text, "name", "google-site-verification") != [GOOGLE_VERIFICATION]:
+            errors.append(f"{page}: Google Search Console verification meta is missing or changed.")
+        if meta_values(text, "name", "yandex-verification") != [YANDEX_VERIFICATION]:
+            errors.append(f"{page}: Yandex Webmaster verification meta is missing or changed.")
 
     title_matches = TITLE_RE.findall(text)
     if len(title_matches) != 1 or not clean_text(title_matches[0]):
