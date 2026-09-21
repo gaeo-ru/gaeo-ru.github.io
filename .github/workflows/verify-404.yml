@@ -1,0 +1,35 @@
+name: Verify 404 page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-404.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Pages propagation
+        run: sleep 10
+      - name: Verify explicit 404 page and missing URL
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://gaeo-ru.github.io"
+          explicit_status="$(curl -L -sS -o /tmp/404-explicit.html -w '%{http_code}' "$base/404.html")"
+          missing_status="$(curl -L -sS -o /tmp/404-missing.html -w '%{http_code}' "$base/this-page-does-not-exist-404-check-20260921/")"
+          echo "EXPLICIT_404_HTML_STATUS=$explicit_status"
+          echo "MISSING_URL_STATUS=$missing_status"
+          grep -q '<meta name="robots" content="noindex,follow">' /tmp/404-explicit.html
+          grep -q '<title>Страница не найдена — GAEO.ru</title>' /tmp/404-explicit.html
+          grep -q 'Страница не найдена' /tmp/404-missing.html
+          grep -q '/articles/' /tmp/404-missing.html
+          grep -q '/cases/' /tmp/404-missing.html
+          test "$explicit_status" = "200"
+          test "$missing_status" = "404"
+          echo "CUSTOM_404_CONTENT=PASS"
+          echo "HTTP_404_STATUS=PASS"
