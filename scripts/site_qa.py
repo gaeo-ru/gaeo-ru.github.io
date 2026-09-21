@@ -199,16 +199,16 @@ def schema_types(objects: list[dict]) -> dict[str, list[dict]]:
 def visible_summary_questions(text: str) -> list[str]:
     questions = []
     blocks = re.findall(
-        r'<details\\b[^>]*class=["\\'][^"\\']*\\bfaq-item\\b[^"\\']*["\\'][^>]*>([\\s\\S]*?)</details>',
+        r"""<details\b[^>]*class=["'][^"']*\bfaq-item\b[^"']*["'][^>]*>([\s\S]*?)</details>""",
         text,
         re.I,
     )
     for block in blocks:
-        match = re.search(r"<summary\\b[^>]*>([\\s\\S]*?)</summary>", block, re.I)
+        match = re.search(r"<summary\b[^>]*>([\s\S]*?)</summary>", block, re.I)
         if not match:
             continue
         question = clean_text(match.group(1))
-        question = re.sub(r"\\s*\\+\\s*$", "", question).strip()
+        question = re.sub(r"\s*\+\s*$", "", question).strip()
         if question:
             questions.append(question)
     return questions
