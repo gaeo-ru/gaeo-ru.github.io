@@ -32,13 +32,24 @@ def analytics_tag() -> str:
 def normalize(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     original = text
+    tag = analytics_tag()
 
-    # Remove any old or duplicated local analytics include, then add exactly one.
+    existing = ANALYTICS_TAG_RE.findall(text)
+    has_legacy = bool(
+        LEGACY_METRIKA_SCRIPT_RE.search(text)
+        or LEGACY_METRIKA_NOSCRIPT_RE.search(text)
+        or "mc.yandex.ru/metrika/tag.js" in text
+    )
+
+    # Fast idempotent path: one correct include and no legacy inline counter.
+    if len(existing) == 1 and existing[0].strip() == tag and not has_legacy:
+        return False
+
+    # Otherwise normalize duplicates / old versions / legacy inline counters.
     text = ANALYTICS_TAG_RE.sub("", text)
     text = LEGACY_METRIKA_SCRIPT_RE.sub("", text)
     text = LEGACY_METRIKA_NOSCRIPT_RE.sub("", text)
 
-    tag = analytics_tag()
     if "</head>" not in text:
         raise RuntimeError(f"{path.relative_to(ROOT)}: missing </head>.")
     text = text.replace("</head>", tag + "\n</head>", 1)
