@@ -6,6 +6,11 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/verify-nojs.yml"
+      - "templates/partials/nojs-fallback.html"
+      - "templates/partials/site-header.html"
+      - "templates/partials/site-header-en.html"
+      - "scripts/ensure_site_chrome.py"
+      - "scripts/site_qa.py"
 
 permissions:
   contents: read
