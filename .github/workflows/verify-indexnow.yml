@@ -1,0 +1,100 @@
+name: Verify IndexNow preparation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-indexnow.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify full dry-run, key and staging guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="da791ac7b06753005d91601fa2c3a20fbf4be51db4dab804fa3a82d6335a229e"
+          test "$(tr -d '[:space:]' < "${key}.txt")" = "$key"
+          test "$(tr -d '[:space:]' < SITE_MODE)" = "staging"
+
+          python scripts/indexnow_submit.py --all --dry-run --json | tee /tmp/indexnow-all.txt
+          grep -q '^INDEXNOW_MODE=staging$' /tmp/indexnow-all.txt
+          grep -q '^INDEXNOW_DRY_RUN=yes$' /tmp/indexnow-all.txt
+          grep -q '^INDEXNOW_URLS=26$' /tmp/indexnow-all.txt
+          grep -q '"host": "gaeo.ru"' /tmp/indexnow-all.txt
+          grep -q '"keyLocation": "https://gaeo.ru/'"${key}"'.txt"' /tmp/indexnow-all.txt
+          grep -q '^INDEXNOW_SUBMISSION=SKIPPED_DRY_RUN$' /tmp/indexnow-all.txt
+
+          if python scripts/indexnow_submit.py --all >/tmp/indexnow-guard.txt 2>&1; then
+            echo "IndexNow unexpectedly allowed a network submission on staging."
+            exit 1
+          fi
+          grep -q 'Refusing IndexNow network submission because SITE_MODE is not production' /tmp/indexnow-guard.txt
+          echo "INDEXNOW_STAGING_GUARD=PASS"
+
+      - name: Verify deleted URL support using local-only Git commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "IndexNow QA"
+          git config user.email "indexnow-qa@example.invalid"
+
+          mkdir -p tmp-indexnow-delete
+          cat > tmp-indexnow-delete/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ru"><head>
+          <title>Temporary deletion test</title>
+          <meta name="description" content="Temporary IndexNow deletion test page used only inside the CI runner.">
+          <link rel="canonical" href="https://gaeo.ru/tmp-indexnow-delete/">
+          </head><body><h1>Temporary deletion test</h1></body></html>
+          HTML
+          git add tmp-indexnow-delete/index.html
+          git commit -m "Local IndexNow deletion fixture"
+          before="$(git rev-parse HEAD)"
+
+          git rm tmp-indexnow-delete/index.html
+          git commit -m "Local IndexNow deletion fixture removed"
+
+          python scripts/indexnow_submit.py --before "$before" --dry-run | tee /tmp/indexnow-delete.txt
+          grep -q '^INDEXNOW_URLS=1$' /tmp/indexnow-delete.txt
+          grep -q '^INDEXNOW_URL https://gaeo.ru/tmp-indexnow-delete/$' /tmp/indexnow-delete.txt
+          grep -q '^INDEXNOW_SUBMISSION=SKIPPED_DRY_RUN$' /tmp/indexnow-delete.txt
+          echo "INDEXNOW_DELETED_URL=PASS"
+
+      - name: Verify renamed URL support using local-only Git commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tmp-indexnow-old
+          cat > tmp-indexnow-old/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ru"><head>
+          <title>Temporary rename test</title>
+          <meta name="description" content="Temporary IndexNow rename test page used only inside the CI runner.">
+          <link rel="canonical" href="https://gaeo.ru/tmp-indexnow-old/">
+          </head><body><h1>Temporary rename test</h1></body></html>
+          HTML
+          git add tmp-indexnow-old/index.html
+          git commit -m "Local IndexNow rename fixture"
+          before="$(git rev-parse HEAD)"
+
+          mkdir -p tmp-indexnow-new
+          git mv tmp-indexnow-old/index.html tmp-indexnow-new/index.html
+          sed -i 's#https://gaeo.ru/tmp-indexnow-old/#https://gaeo.ru/tmp-indexnow-new/#' tmp-indexnow-new/index.html
+          git add tmp-indexnow-new/index.html
+          git commit -m "Local IndexNow rename fixture moved"
+
+          python scripts/indexnow_submit.py --before "$before" --dry-run | tee /tmp/indexnow-rename.txt
+          grep -q '^INDEXNOW_URLS=2$' /tmp/indexnow-rename.txt
+          grep -q '^INDEXNOW_URL https://gaeo.ru/tmp-indexnow-new/$' /tmp/indexnow-rename.txt
+          grep -q '^INDEXNOW_URL https://gaeo.ru/tmp-indexnow-old/$' /tmp/indexnow-rename.txt
+          grep -q '^INDEXNOW_SUBMISSION=SKIPPED_DRY_RUN$' /tmp/indexnow-rename.txt
+          echo "INDEXNOW_RENAMED_URL=PASS"
