@@ -112,17 +112,27 @@ jobs:
           console.log("ANALYTICS_UNIT_QA=PASS");
           NODE
 
-      - name: Wait for GitHub Pages propagation
-        run: sleep 30
-
       - name: Verify public include and runtime library request
         shell: bash
         run: |
           set -euo pipefail
           base="https://gaeo-ru.github.io"
           hash="$(sha256sum assets/analytics.js | cut -c1-12)"
-          curl -fsS "$base/" -o /tmp/home.html
-          curl -fsS "$base/articles/" -o /tmp/articles.html
+          ready=0
+          for attempt in $(seq 1 24); do
+            curl -fsS "$base/" -o /tmp/home.html || true
+            curl -fsS "$base/articles/" -o /tmp/articles.html || true
+            home_count="$(grep -o "/assets/analytics.js?v=$hash" /tmp/home.html 2>/dev/null | wc -l || true)"
+            articles_count="$(grep -o "/assets/analytics.js?v=$hash" /tmp/articles.html 2>/dev/null | wc -l || true)"
+            if [ "$home_count" = "1" ] && [ "$articles_count" = "1" ]; then
+              ready=1
+              echo "Public Pages reached analytics hash on attempt $attempt."
+              break
+            fi
+            echo "Waiting for Pages propagation ($attempt/24): home=$home_count articles=$articles_count"
+            sleep 10
+          done
+          test "$ready" = "1"
           test "$(grep -o "/assets/analytics.js?v=$hash" /tmp/home.html | wc -l)" = "1"
           test "$(grep -o "/assets/analytics.js?v=$hash" /tmp/articles.html | wc -l)" = "1"
           ! grep -q "mc.yandex.ru/metrika/tag.js" /tmp/home.html
