@@ -284,12 +284,39 @@ def check_shared_chrome(path: Path, text: str) -> None:
         errors.append(f"{page}: shared footer differs from canonical {expected_lang(path).upper()} partial.")
 
 
+def check_font_loading(path: Path, text: str) -> None:
+    page = relpath(path)
+    if "fonts.googleapis.com" not in text:
+        return
+
+    if text.count("<!-- FONT_LOADING_START -->") != 1 or text.count("<!-- FONT_LOADING_END -->") != 1:
+        errors.append(f"{page}: canonical non-blocking font loading markers must appear exactly once.")
+        return
+
+    preloads = [
+        item
+        for item in link_values(text, "preload")
+        if item.get("as", "").lower() == "style"
+        and item.get("href", "").startswith("https://fonts.googleapis.com/")
+    ]
+    if len(preloads) != 1:
+        errors.append(f"{page}: expected exactly one Google Fonts style preload; found {len(preloads)}.")
+
+    active = re.sub(r"<noscript\\b[\\s\\S]*?</noscript>", "", text, flags=re.I)
+    for item in tags(active, "link"):
+        rels = {x.lower() for x in item.get("rel", "").split()}
+        href = item.get("href", "")
+        if href.startswith("https://fonts.googleapis.com/") and "stylesheet" in rels:
+            errors.append(f"{page}: Google Fonts stylesheet is render-blocking outside <noscript>.")
+
+
 def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
     text = page_texts[path]
     page = relpath(path)
     target_url = expected_url(path)
 
     check_shared_chrome(path, text)
+    check_font_loading(path, text)
 
     title_matches = TITLE_RE.findall(text)
     if len(title_matches) != 1 or not clean_text(title_matches[0]):
@@ -573,6 +600,8 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         errors.append(f"{page}: contains Base64 image data.")
     if STAGING_HOST in lower:
         errors.append(f"{page}: contains staging hostname {STAGING_HOST}.")
+    if re.search(r"https://gaeo\\.ruhttps?://", lower):
+        errors.append(f"{page}: contains concatenated malformed absolute URL.")
 
 
 def check_hreflang_reciprocity(page_texts: dict[Path, str]) -> None:
