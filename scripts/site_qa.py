@@ -605,6 +605,93 @@ def check_hreflang_reciprocity(page_texts: dict[Path, str]) -> None:
                 )
 
 
+def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
+    # Navigation must remain usable on narrow screens when scripts are disabled.
+    for partial_name in (
+        "templates/partials/site-header.html",
+        "templates/partials/site-header-en.html",
+    ):
+        partial = ROOT / partial_name
+        if not partial.exists():
+            errors.append(f"{partial_name}: missing no-JS navigation source.")
+            continue
+        text = partial.read_text(encoding="utf-8")
+        if "<noscript>" not in text or ".mobile-menu{display:block!important" not in text:
+            errors.append(
+                f"{partial_name}: mobile navigation has no explicit no-JS fallback."
+            )
+
+    for path, text in page_texts.items():
+        page = relpath(path)
+        # Remove executable/stylesheet content before measuring semantic HTML text.
+        semantic = re.sub(r"<script\b[\s\S]*?</script>", " ", text, flags=re.I)
+        semantic = re.sub(r"<style\b[\s\S]*?</style>", " ", semantic, flags=re.I)
+        main = re.search(r"<main\b[^>]*>([\s\S]*?)</main>", semantic, re.I)
+        if not main:
+            errors.append(f"{page}: no static <main> content for no-JS rendering.")
+            continue
+        main_text = clean_text(main.group(1))
+        if len(main_text) < 120:
+            errors.append(
+                f"{page}: static <main> text is unexpectedly short ({len(main_text)} chars)."
+            )
+
+        href_count = len(re.findall(r"<a\b[^>]*\bhref=[\"'][^\"']+[\"']", semantic, re.I))
+        if href_count < 1:
+            errors.append(f"{page}: no ordinary static links remain without JavaScript.")
+
+        # Footer contacts are the guaranteed no-JS contact path on every page.
+        if 'href="mailto:ya@gaeo.ru"' not in text or 'href="tel:+79264242333"' not in text:
+            errors.append(f"{page}: static email/phone contacts are missing.")
+
+    def require(path_str: str, pattern: str, minimum: int, label: str) -> None:
+        path = ROOT / path_str
+        text = page_texts.get(path)
+        if text is None:
+            errors.append(f"{path_str}: missing page for no-JS {label} check.")
+            return
+        count = len(re.findall(pattern, text, re.I | re.S))
+        if count < minimum:
+            errors.append(
+                f"{path_str}: expected at least {minimum} static {label}; found {count}."
+            )
+
+    # Homepage: tariffs, FAQ, articles and cases must all exist in source HTML.
+    for home in ("index.html", "en/index.html"):
+        require(
+            home,
+            r'<details\b[^>]*class=[\"'][^\"']*\bprice\b',
+            3,
+            "pricing details",
+        )
+        require(
+            home,
+            r'<details\b[^>]*class=[\"'][^\"']*\bfaq-item\b',
+            5,
+            "FAQ details",
+        )
+        require(home, r'href=[\"']/articles/', 1, "article links")
+        require(home, r'href=[\"']/cases/', 1, "case links")
+
+    # Listing pages must expose their cards/links in static HTML.
+    for listing in ("articles/index.html", "en/articles/index.html"):
+        require(listing, r"<article\b", 1, "article cards")
+    for listing in ("cases/index.html", "en/cases/index.html"):
+        require(listing, r"<article\b", 1, "case cards")
+
+    # Representative commercial landing FAQ remains native <details>.
+    for landing in (
+        "geo-prodvizhenie-nedvizhimosti/index.html",
+        "en/geo-for-real-estate/index.html",
+    ):
+        require(
+            landing,
+            r'<details\b[^>]*class=[\"'][^\"']*\bfaq-item\b',
+            5,
+            "commercial FAQ details",
+        )
+
+
 def check_assets_css_js() -> None:
     for path in sorted(list((ROOT / "assets").glob("*.css")) + list((ROOT / "assets").glob("*.js"))):
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -824,6 +911,7 @@ def main() -> int:
         check_page(path, args.mode, page_texts)
 
     check_hreflang_reciprocity(page_texts)
+    check_nojs_static_content(page_texts)
     check_assets_css_js()
     check_social_preview_bundle()
     check_analytics_bundle()
