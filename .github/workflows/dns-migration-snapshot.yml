@@ -1,0 +1,51 @@
+name: DNS migration snapshot
+
+on:
+  push:
+    paths:
+      - ".github/workflows/dns-migration-snapshot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Install DNS tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq dnsutils
+
+      - name: Query GAEO DNS
+        shell: bash
+        run: |
+          set -euo pipefail
+          q() {
+            local name="$1"
+            local type="$2"
+            echo
+            echo "===== $name $type ====="
+            dig +noall +answer "$name" "$type" || true
+          }
+
+          q gaeo.ru A
+          q gaeo.ru AAAA
+          q gaeo.ru NS
+          q gaeo.ru SOA
+          q gaeo.ru MX
+          q gaeo.ru TXT
+          q gaeo.ru CAA
+
+          q www.gaeo.ru A
+          q www.gaeo.ru AAAA
+          q www.gaeo.ru CNAME
+
+          q _dmarc.gaeo.ru TXT
+          q mail._domainkey.gaeo.ru TXT
+
+          q forms.gaeo.ru A
+          q forms.gaeo.ru AAAA
+          q forms.gaeo.ru CNAME
+
+          q _github-pages-challenge-gaeo-ru.gaeo.ru TXT
