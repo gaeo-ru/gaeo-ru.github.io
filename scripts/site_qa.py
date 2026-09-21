@@ -19,6 +19,8 @@ from indexnow_submit import KEY as INDEXNOW_KEY, KEY_FILE as INDEXNOW_KEY_FILE
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
 STAGING_HOST = "gaeo-ru.github.io"
+METRIKA_COUNTER_ID = "109744589"
+ANALYTICS_PATH = "/assets/analytics.js"
 
 SKIP_DIRS = {".git", ".github", "templates"}
 LEGAL_NOINDEX = {
@@ -405,6 +407,22 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
                 shown = target
             errors.append(f"{page}: broken internal link {href!r} -> {shown}.")
 
+    analytics_scripts = []
+    for script in tags(text, "script"):
+        src = script.get("src", "")
+        if urlparse(src).path == ANALYTICS_PATH:
+            analytics_scripts.append(script)
+    if len(analytics_scripts) != 1:
+        errors.append(
+            f"{page}: /assets/analytics.js must be included exactly once; found {len(analytics_scripts)}."
+        )
+    elif "defer" not in analytics_scripts[0]:
+        errors.append(f"{page}: analytics.js include must use defer.")
+
+    lower_html = text.lower()
+    if "mc.yandex.ru/metrika/tag.js" in lower_html or re.search(r"\bym\s*\(", text):
+        errors.append(f"{page}: contains legacy/inline Yandex Metrica code outside analytics.js.")
+
     # Local CSS/JS references must use the current content hash for cache-busting.
     asset_refs = []
     for link in tags(text, "link"):
@@ -499,6 +517,51 @@ def check_assets_css_js() -> None:
             errors.append(f"{relpath(path)}: contains Tilda CDN reference.")
         if "data:image" in low or ";base64," in low:
             errors.append(f"{relpath(path)}: contains Base64 image data.")
+
+
+def check_analytics_bundle() -> None:
+    analytics = ROOT / "assets" / "analytics.js"
+    site_js = ROOT / "assets" / "site.js"
+    if not analytics.exists():
+        errors.append("assets/analytics.js is missing.")
+        return
+
+    text = analytics.read_text(encoding="utf-8")
+    required = [
+        f"var COUNTER_ID = {METRIKA_COUNTER_ID};",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "trackLinks: true",
+        "accurateTrackBounce: true",
+        "webvisor: true",
+        "lead_submit_success",
+        "gaeo:lead-success",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "gaeo_tracking_v1",
+    ]
+    for needle in required:
+        if needle not in text:
+            errors.append(f"assets/analytics.js missing required analytics feature: {needle!r}.")
+
+    init_calls = len(
+        re.findall(
+            rf"window\.ym\(COUNTER_ID,\s*['\"]init['\"]",
+            text,
+            re.I,
+        )
+    )
+    if init_calls != 1:
+        errors.append(f"assets/analytics.js must initialize Metrika exactly once; found {init_calls} init calls.")
+
+    if site_js.exists():
+        site_text = site_js.read_text(encoding="utf-8")
+        if "gaeo:lead-success" not in site_text:
+            errors.append("assets/site.js does not emit gaeo:lead-success after successful lead submit.")
+        if "gaeo_tracking_v1" not in site_text:
+            errors.append("assets/site.js does not preserve session campaign attribution for lead payloads.")
+    else:
+        errors.append("assets/site.js is missing.")
 
 
 def check_indexnow_preparation() -> None:
@@ -621,6 +684,7 @@ def main() -> int:
 
     check_hreflang_reciprocity(page_texts)
     check_assets_css_js()
+    check_analytics_bundle()
     check_indexnow_preparation()
     check_robots_files(args.mode)
     check_sitemap(args.mode)
