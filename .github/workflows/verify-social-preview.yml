@@ -73,7 +73,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
+          PYTHONPATH=scripts python - <<'PY'
           from pathlib import Path
           from scripts.ensure_social_preview import jpeg_dimensions
           p = Path("assets/gaeo-social-preview.jpg")
