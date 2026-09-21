@@ -34,6 +34,36 @@ LEGAL_NOINDEX = {
 SERVICE_NOINDEX = {"404.html"}
 INTENTIONAL_NOINDEX = LEGAL_NOINDEX | SERVICE_NOINDEX
 
+# Migration contract: every old public content URL remains unchanged.
+LEGACY_PUBLIC_ROUTES = {
+    "/",
+    "/articles/",
+    "/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+    "/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+    "/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+    "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+    "/cases/",
+    "/cases/gaeo-ru/",
+    "/cases/prep-center-6-klientov-iz-neyrosetey/",
+    "/geo-prodvizhenie-nedvizhimosti/",
+    "/professional-biography/",
+    "/publications/",
+    "/reviews/",
+    "/en/",
+    "/en/professional-biography/",
+}
+
+# Tilda-only header/footer documents must disappear rather than redirect to content.
+LEGACY_TILDA_TECHNICAL_ROUTES = {
+    "/header-gaeo",
+    "/page146690596.html",
+    "/page148769616.html",
+    "/footer-en-canonical",
+    "/header-en-canonical",
+    "/page202570109.html",
+    "/page202571309.html",
+}
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -933,6 +963,41 @@ def check_sitemap(mode: str) -> None:
             errors.append("production sitemap.xml differs from generator output.")
 
 
+def route_file(route: str) -> Path:
+    if route == "/":
+        return ROOT / "index.html"
+    relative = route.lstrip("/")
+    if route.endswith("/"):
+        return ROOT / relative / "index.html"
+    target = ROOT / relative
+    if target.suffix:
+        return target
+    if target.is_file():
+        return target
+    return target / "index.html"
+
+
+def check_migration_url_contract() -> None:
+    migration_map = ROOT / "MIGRATION_URL_MAP.md"
+    if not migration_map.exists():
+        errors.append("MIGRATION_URL_MAP.md is missing; migration URL decisions are no longer documented.")
+
+    for route in sorted(LEGACY_PUBLIC_ROUTES):
+        target = route_file(route)
+        if not target.is_file():
+            errors.append(
+                f"Legacy public URL was removed or renamed: {route} -> expected {target.relative_to(ROOT)}."
+            )
+
+    for route in sorted(LEGACY_TILDA_TECHNICAL_ROUTES):
+        target = route_file(route)
+        raw_target = ROOT / route.lstrip("/")
+        if target.exists() or raw_target.is_file():
+            errors.append(
+                f"Legacy Tilda technical URL must remain removed: {route}."
+            )
+
+
 def main() -> int:
     parser = ArgumentParser(description="Technical SEO/GEO QA for GAEO.ru.")
     parser.add_argument("--mode", choices=("staging", "production"), default="staging")
@@ -962,6 +1027,7 @@ def main() -> int:
     check_social_preview_bundle()
     check_analytics_bundle()
     check_indexnow_preparation()
+    check_migration_url_contract()
     check_robots_files(args.mode)
     check_sitemap(args.mode)
 
