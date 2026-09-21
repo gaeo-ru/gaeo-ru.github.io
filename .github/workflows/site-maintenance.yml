@@ -1,0 +1,103 @@
+name: Site maintenance and QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: gaeo-site-maintenance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  maintain-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve site mode
+        shell: bash
+        run: |
+          set -euo pipefail
+          mode="$(tr -d '[:space:]' < SITE_MODE)"
+          case "$mode" in
+            staging|production) ;;
+            *) echo "Invalid SITE_MODE: $mode"; exit 1 ;;
+          esac
+          echo "SITE_MODE=$mode" >> "$GITHUB_ENV"
+          echo "GAEO site mode: $mode"
+
+      - name: Materialize shared RU/EN header and footer
+        run: python scripts/ensure_site_chrome.py
+
+      - name: Normalize structured metadata and visible FAQ schema
+        run: python scripts/ensure_site_metadata.py
+
+      - name: Build or validate sitemap for current mode
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$SITE_MODE" = "production" ]; then
+            python scripts/build_sitemap.py --output sitemap.xml
+          else
+            python scripts/build_sitemap.py --preview-staging --output /tmp/gaeo-sitemap.xml
+            test -s /tmp/gaeo-sitemap.xml
+            test ! -e sitemap.xml
+          fi
+
+      - name: Run technical SEO/GEO QA
+        run: python scripts/site_qa.py --mode "$SITE_MODE"
+
+      - name: Require generated files to be committed on pull requests
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Maintenance scripts changed tracked output. Commit these generated changes before merging:"
+            git status --short
+            git diff -- '*.html' sitemap.xml || true
+            exit 1
+          fi
+
+      - name: Commit automatic maintenance changes on main
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No automatic maintenance changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html'
+          if [ "$SITE_MODE" = "production" ] && [ -f sitemap.xml ]; then
+            git add sitemap.xml
+          fi
+          if git diff --cached --quiet; then
+            echo "Only non-publishable working-tree changes detected; nothing to commit."
+            exit 0
+          fi
+          git commit -m "Auto-maintain GAEO site metadata"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Trigger GitHub Pages build after successful QA
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/tmp/pages-build.json
+          echo "GitHub Pages build requested after QA."
