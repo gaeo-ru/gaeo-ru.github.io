@@ -58,9 +58,10 @@ jobs:
           const window = {
             document, sessionStorage, localStorage,
             location: {
-              search: "?utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123",
+              search: "?gaeo_analytics_debug=1&utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123",
+              hostname: "gaeo-ru.github.io",
               pathname: "/articles/",
-              href: "https://gaeo-ru.github.io/articles/?utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123"
+              href: "https://gaeo-ru.github.io/articles/?gaeo_analytics_debug=1&utm_source=qa&utm_medium=test&utm_campaign=p28&yclid=123"
             }
           };
           const context = { window, document, sessionStorage, localStorage, URLSearchParams, console };
@@ -69,6 +70,7 @@ jobs:
 
           assert.strictEqual(window.GAEOAnalytics.counterId, 109744589);
           assert.strictEqual(window.GAEOAnalytics.consentMode, "none");
+          assert.strictEqual(window.GAEOAnalytics.environmentAllowed(), true);
           assert.strictEqual(inserted.length, 1);
           assert.strictEqual(inserted[0].src, "https://mc.yandex.ru/metrika/tag.js");
 
@@ -142,11 +144,22 @@ jobs:
           grep -q "lead_submit_success" /tmp/analytics.js
 
           browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
+
+          "$browser" --headless --no-sandbox --disable-gpu --hide-scrollbars \
+            --virtual-time-budget=5000 \
+            --log-net-log=/tmp/netlog-staging.json \
+            "$base/" >/tmp/chrome-staging.log 2>&1 || true
+          if grep -q "mc.yandex.ru/metrika/tag.js" /tmp/netlog-staging.json; then
+            echo "Production Metrica unexpectedly loaded on staging without debug flag."
+            exit 1
+          fi
+
           "$browser" --headless --no-sandbox --disable-gpu --hide-scrollbars \
             --host-resolver-rules="MAP mc.yandex.ru 127.0.0.1" \
             --virtual-time-budget=7000 \
-            --log-net-log=/tmp/netlog.json \
-            "$base/?utm_source=qa&utm_medium=acceptance" >/tmp/chrome.log 2>&1 || true
-          grep -q "mc.yandex.ru/metrika/tag.js" /tmp/netlog.json
+            --log-net-log=/tmp/netlog-debug.json \
+            "$base/?gaeo_analytics_debug=1&utm_source=qa&utm_medium=acceptance" >/tmp/chrome-debug.log 2>&1 || true
+          grep -q "mc.yandex.ru/metrika/tag.js" /tmp/netlog-debug.json
           echo "PUBLIC_ANALYTICS_INCLUDE=PASS"
+          echo "STAGING_ANALYTICS_GUARD=PASS"
           echo "PUBLIC_METRIKA_LIBRARY_REQUEST=PASS"
