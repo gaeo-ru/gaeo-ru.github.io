@@ -1,0 +1,15 @@
+# GAEO.ru production robots policy.
+# Keep robots.txt closed on staging. Replace robots.txt with this file only after gaeo.ru serves the new site.
+
+User-agent: *
+Allow: /
+
+# Technical repository files are not search content.
+Disallow: /.github/
+Disallow: /scripts/
+Disallow: /templates/
+Disallow: /README.md
+Disallow: /MIGRATION.md
+Disallow: /URL_INVENTORY.md
+
+Sitemap: https://gaeo.ru/sitemap.xml
