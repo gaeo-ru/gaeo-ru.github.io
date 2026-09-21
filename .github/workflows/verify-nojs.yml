@@ -131,6 +131,8 @@ jobs:
               driver.set_window_size(390, 1800)
               driver.get(BASE + "/")
               time.sleep(0.5)
+              desktop_menu = driver.find_element(By.ID, "desktopMenu")
+              assert not desktop_menu.is_displayed(), "desktop navigation remains visible in mobile no-JS mode"
               mobile_menu = driver.find_element(By.ID, "mobileMenu")
               assert mobile_menu.is_displayed(), "mobile no-JS menu is hidden"
               toggle = driver.find_element(By.CSS_SELECTOR, ".menu-toggle")
