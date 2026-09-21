@@ -104,3 +104,23 @@ jobs:
           set -euo pipefail
           gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/tmp/pages-build.json
           echo "GitHub Pages build requested after QA."
+
+      - name: Dry-run changed URLs for IndexNow on staging
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]' && env.SITE_MODE == 'staging'
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+        run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE" --dry-run
+
+      - name: Submit changed URLs to IndexNow in production
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]' && env.SITE_MODE == 'production'
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+        run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE"
+
+      - name: Dry-run all IndexNow URLs manually on staging
+        if: github.event_name == 'workflow_dispatch' && env.SITE_MODE == 'staging'
+        run: python scripts/indexnow_submit.py --all --dry-run
+
+      - name: Submit all IndexNow URLs manually in production
+        if: github.event_name == 'workflow_dispatch' && env.SITE_MODE == 'production'
+        run: python scripts/indexnow_submit.py --all
