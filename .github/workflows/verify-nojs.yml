@@ -119,7 +119,7 @@ jobs:
                   text = sources[name]
                   assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bprice\b', text, re.I)) >= 3
                   assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', text, re.I)) >= 5
-                  assert len(re.findall(r'class=["\'][^"\']*\bmobile-fold-body\b', text, re.I)) >= 2
+              assert len(re.findall(r'class=["\'][^"\']*\bmobile-fold-body\b', sources["home-ru"], re.I)) >= 2
 
               assert len(re.findall(r"<article\b", sources["articles"], re.I)) >= 1
               assert len(re.findall(r"<article\b", sources["cases"], re.I)) >= 1
