@@ -8,6 +8,8 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 SKIP_DIRS = {".git", ".github", "templates"}
+GOOGLE_VERIFICATION = "2nIA9bL_leEm2TniUtryyUUtEiKU5k9syCqxJRLELw0"
+YANDEX_VERIFICATION = "7936ae703c9ab353"
 
 JSONLD_RE = re.compile(
     r'(<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>)([\s\S]*?)(</script>)',
@@ -78,6 +80,30 @@ def set_meta_property(text: str, prop: str, value: str) -> str:
             return ""
         text = pattern.sub(dedupe, text)
         return text
+
+    marker = "</head>"
+    if marker in text:
+        return text.replace(marker, rendered + "\n" + marker, 1)
+    return text
+
+
+def set_meta_name(text: str, name: str, value: str) -> str:
+    rendered = f'<meta name="{name}" content="{value}">'
+    pattern = re.compile(
+        rf'<meta\\b(?=[^>]*\\bname=["\\']{re.escape(name)}["\\'])[^>]*>',
+        re.I,
+    )
+    matches = list(pattern.finditer(text))
+    if matches:
+        text = pattern.sub(rendered, text, count=1)
+        first = True
+        def dedupe(match):
+            nonlocal first
+            if first:
+                first = False
+                return match.group(0)
+            return ""
+        return pattern.sub(dedupe, text)
 
     marker = "</head>"
     if marker in text:
@@ -188,6 +214,11 @@ def normalize(path: Path) -> bool:
 
     canonical = canonical_url(text)
     lang = html_lang(text)
+
+    if page == "index.html":
+        text = set_meta_name(text, "google-site-verification", GOOGLE_VERIFICATION)
+        text = set_meta_name(text, "yandex-verification", YANDEX_VERIFICATION)
+
     if canonical:
         text = set_meta_property(text, "og:site_name", "GAEO.ru")
         text = set_meta_property(text, "og:locale", "en_US" if lang.startswith("en") else "ru_RU")
