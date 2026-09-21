@@ -302,7 +302,7 @@ def check_font_loading(path: Path, text: str) -> None:
     if len(preloads) != 1:
         errors.append(f"{page}: expected exactly one Google Fonts style preload; found {len(preloads)}.")
 
-    active = re.sub(r"<noscript\\b[\\s\\S]*?</noscript>", "", text, flags=re.I)
+    active = re.sub(r"<noscript\b[\s\S]*?</noscript>", "", text, flags=re.I)
     for item in tags(active, "link"):
         rels = {x.lower() for x in item.get("rel", "").split()}
         href = item.get("href", "")
@@ -600,7 +600,7 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         errors.append(f"{page}: contains Base64 image data.")
     if STAGING_HOST in lower:
         errors.append(f"{page}: contains staging hostname {STAGING_HOST}.")
-    if re.search(r"https://gaeo\\.ruhttps?://", lower):
+    if re.search(r"https://gaeo\.ruhttps?://", lower):
         errors.append(f"{page}: contains concatenated malformed absolute URL.")
 
 
