@@ -153,9 +153,11 @@ GitHub Pages при custom domain `gaeo.ru` должен автоматичес�
 - build type: `legacy`;
 - custom domain / cname: `null`;
 - HTTPS enforcement: `true`;
-- root-файл `CNAME`: отсутствует.
+- root-файл `CNAME`: отсутствует;
+- подготовлен неактивный `CNAME.production` со значением `gaeo.ru`;
+- после завершения Pages build API-статус: `built`.
 
-Это правильное staging-состояние. До фактического переключения DNS не добавлять root `CNAME` и не задавать custom domain `gaeo.ru`, чтобы `gaeo-ru.github.io` не начал преждевременно редиректить на production-домен.
+Это правильное staging-состояние. До фактического переключения DNS не добавлять root `CNAME` и не задавать custom domain `gaeo.ru`, чтобы `gaeo-ru.github.io` не начал преждевременно редиректить на production-домен. `site_qa.py` отдельно запрещает активный root `CNAME` в режиме staging и требует заготовку `CNAME.production`.
 
 ## 8. Порядок включения custom domain
 
