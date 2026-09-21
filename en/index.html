@@ -90,11 +90,114 @@
    <h2>AI should recommend the right brand among alternatives</h2>
    <p class="lead">GEO begins when a user asks “who should I choose?”, “which option is better?” or “recommend a provider”. At that point, the brand is already competing inside a generated answer.</p>
   </div>
-  <div class="geo-diagram">
-   <div class="node"><b>Website</b><br>facts · cases · content</div>
-   <div class="arrows">→</div>
-   <div class="node ai"><b>AI services</b><br>ChatGPT · Alice · Gemini</div>
-   <div class="diagram-caption">Your website establishes facts. External sources confirm them. AI compares both signal types and decides whether to include the brand in its recommendation.</div>
+  <div class="geo-diagram" role="img" aria-label="How a brand or expert reaches AI recommendations through its website and external sources">
+   <svg class="geo-svg geo-svg-desktop" viewBox="0 0 920 450" aria-hidden="true">
+    <defs>
+     <marker id="geoArrowDesktop" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 z" class="arrowhead"/>
+     </marker>
+    </defs>
+
+    <path class="wire" d="M190 215 H225 Q235 215 235 205 V120 Q235 110 245 110 H260" marker-end="url(#geoArrowDesktop)"/>
+    <path class="wire" d="M190 215 H225 Q235 215 235 225 V330 Q235 340 245 340 H260" marker-end="url(#geoArrowDesktop)"/>
+    <path class="wire" d="M460 110 H495 Q505 110 505 120 V198 Q505 208 515 208 H540" marker-end="url(#geoArrowDesktop)"/>
+    <path class="wire" d="M460 340 H495 Q505 340 505 330 V252 Q505 242 515 242 H540" marker-end="url(#geoArrowDesktop)"/>
+    <path class="wire" d="M740 225 H780" marker-end="url(#geoArrowDesktop)"/>
+
+    <path class="wire-accent" d="M190 215 H225 Q235 215 235 205 V120 Q235 110 245 110 H260"/>
+    <path class="wire-accent" d="M190 215 H225 Q235 215 235 225 V330 Q235 340 245 340 H260"/>
+    <path class="wire-accent" d="M460 110 H495 Q505 110 505 120 V198 Q505 208 515 208 H540"/>
+    <path class="wire-accent" d="M460 340 H495 Q505 340 505 330 V252 Q505 242 515 242 H540"/>
+    <path class="wire-accent" d="M740 225 H780"/>
+
+    <text x="365" y="34" class="flow-label">OWN FACTS</text>
+    <text x="365" y="424" class="flow-label" style="font-size:9.8px">INDEPENDENT EVIDENCE</text>
+
+    <rect x="20" y="170" width="170" height="90" rx="4" class="node-brand"/>
+    <text x="105" y="210" class="node-title-invert">Brand / expert</text>
+    <text x="105" y="231" class="node-copy" style="fill:#cbd8e9">what should be</text>
+    <text x="105" y="248" class="node-copy" style="fill:#cbd8e9">recommended</text>
+
+    <rect x="260" y="60" width="200" height="100" rx="4" class="node-box"/>
+    <text x="360" y="94" class="node-title">Website</text>
+    <text x="360" y="120" class="node-copy">cases · articles · facts</text>
+    <text x="360" y="141" class="node-copy">structured data</text>
+
+    <rect x="260" y="290" width="200" height="100" rx="4" class="node-box"/>
+    <text x="360" y="324" class="node-title" style="font-size:15.5px">External sources</text>
+    <text x="360" y="350" class="node-copy">media · profiles · reviews</text>
+    <text x="360" y="371" class="node-copy">rankings · directories</text>
+
+    <rect x="540" y="165" width="200" height="120" rx="4" class="node-ai"/>
+    <line x1="540" y1="165" x2="740" y2="165" class="ai-accent"/>
+    <text x="640" y="199" class="node-title">AI systems</text>
+    <text x="640" y="226" class="node-copy">ChatGPT · Alice</text>
+    <text x="640" y="248" class="node-copy">Gemini · Perplexity</text>
+    <text x="640" y="270" class="node-copy">and others</text>
+
+    <rect x="780" y="180" width="128" height="90" rx="4" class="node-output"/>
+    <text x="844" y="214" class="node-output-title">Brand</text>
+    <text x="844" y="236" class="node-output-title" style="font-size:13px">recommendation</text>
+    <text x="844" y="255" class="node-copy">in the answer</text>
+
+    <circle cx="235" cy="150" r="3" class="pulse"/>
+    <circle cx="505" cy="176" r="3" class="pulse p2"/>
+    <circle cx="765" cy="225" r="3" class="pulse p3"/>
+   </svg>
+
+   <svg class="geo-svg geo-svg-mobile" viewBox="0 0 360 660" aria-hidden="true">
+    <defs>
+     <marker id="geoArrowMobile" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 z" class="arrowhead"/>
+     </marker>
+    </defs>
+
+    <path class="wire" d="M180 92 V128 H95 V165" marker-end="url(#geoArrowMobile)"/>
+    <path class="wire" d="M180 92 V128 H265 V165" marker-end="url(#geoArrowMobile)"/>
+    <path class="wire" d="M95 265 V305 H180 V340" marker-end="url(#geoArrowMobile)"/>
+    <path class="wire" d="M265 265 V305 H180 V340" marker-end="url(#geoArrowMobile)"/>
+    <path class="wire" d="M180 450 V505" marker-end="url(#geoArrowMobile)"/>
+
+    <path class="wire-accent" d="M180 92 V128 H95 V165"/>
+    <path class="wire-accent" d="M180 92 V128 H265 V165"/>
+    <path class="wire-accent" d="M95 265 V305 H180 V340"/>
+    <path class="wire-accent" d="M265 265 V305 H180 V340"/>
+    <path class="wire-accent" d="M180 450 V505"/>
+
+    <rect x="70" y="20" width="220" height="72" rx="4" class="node-brand"/>
+    <text x="180" y="52" class="node-title-invert">Brand / expert</text>
+    <text x="180" y="75" class="node-copy" style="fill:#cbd8e9">what should be recommended</text>
+
+    <text x="95" y="151" class="flow-label">OWN FACTS</text>
+    <text x="265" y="151" class="flow-label">EVIDENCE</text>
+
+    <rect x="20" y="165" width="150" height="100" rx="4" class="node-box"/>
+    <text x="95" y="198" class="node-title">Website</text>
+    <text x="95" y="224" class="node-copy">cases · articles</text>
+    <text x="95" y="245" class="node-copy">facts · data</text>
+
+    <rect x="190" y="165" width="150" height="100" rx="4" class="node-box"/>
+    <text x="265" y="196" class="node-title" style="font-size:15px">External</text>
+    <text x="265" y="217" class="node-title" style="font-size:15px">sources</text>
+    <text x="265" y="241" class="node-copy">media · profiles</text>
+    <text x="265" y="259" class="node-copy">reviews · rankings</text>
+
+    <rect x="70" y="340" width="220" height="110" rx="4" class="node-ai"/>
+    <line x1="70" y1="340" x2="290" y2="340" class="ai-accent"/>
+    <text x="180" y="376" class="node-title">AI systems</text>
+    <text x="180" y="404" class="node-copy">ChatGPT · Alice</text>
+    <text x="180" y="427" class="node-copy">Gemini · Perplexity</text>
+
+    <rect x="70" y="505" width="220" height="82" rx="4" class="node-output"/>
+    <text x="180" y="538" class="node-title" style="font-size:15px">Brand recommendation</text>
+    <text x="180" y="564" class="node-copy">in the final answer</text>
+
+    <circle cx="180" cy="122" r="3" class="pulse"/>
+    <circle cx="180" cy="305" r="3" class="pulse p2"/>
+    <circle cx="180" cy="477" r="3" class="pulse p3"/>
+   </svg>
+
+   <div class="diagram-caption">The website establishes facts about the brand, while external sources confirm them. AI compares both signal types and decides whether to include the brand in its recommendation.</div>
   </div>
  </div>
 </section>
