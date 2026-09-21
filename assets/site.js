@@ -687,10 +687,18 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   function readTracking(){
     const qs = new URLSearchParams(location.search);
     const utm = {};
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','yclid'].forEach(function(k){
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','gclid','yclid','ysclid'].forEach(function(k){
       if(qs.get(k)) utm[k] = qs.get(k);
     });
-    return utm;
+    try{
+      if(window.GAEOAnalytics && typeof window.GAEOAnalytics.getTracking === 'function'){
+        return Object.assign({},window.GAEOAnalytics.getTracking(),utm);
+      }
+      const stored = JSON.parse(sessionStorage.getItem('gaeo_tracking_v1') || '{}');
+      return Object.assign({},stored,utm);
+    }catch(e){
+      return utm;
+    }
   }
 
   function buildForm(mode){
@@ -833,6 +841,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         });
         if(!response.ok) throw new Error('HTTP ' + response.status);
         setStatus(copy.success,'success');
+        document.dispatchEvent(new CustomEvent('gaeo:lead-success',{detail:{mode:mode,lang:lang}}));
         form.reset();
         phone.input.value = '';
       }catch(err){
