@@ -1,0 +1,45 @@
+name: Build favicons
+
+on:
+  push:
+    paths:
+      - "assets/gaeo-icon-512.png"
+      - "scripts/build_favicons.py"
+      - ".github/workflows/build-favicons.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate favicon files
+        run: python scripts/build_favicons.py
+
+      - name: Commit generated favicons
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add favicon.ico assets/favicon-16x16.png assets/favicon-32x32.png assets/apple-touch-icon.png assets/android-chrome-192x192.png assets/android-chrome-512x512.png
+          if git diff --cached --quiet; then
+            echo "Favicons already up to date."
+            exit 0
+          fi
+          git commit -m "Generate favicon sizes from GAEO icon"
+          git pull --rebase origin main
+          git push origin HEAD:main
