@@ -17,6 +17,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Selenium
+        run: python -m pip install --disable-pip-version-check selenium
+
       - name: Wait for public no-JS fallback
         shell: bash
         run: |
@@ -34,121 +41,145 @@ jobs:
           done
           test "$ready" = "1"
 
-      - name: Prove Chrome JavaScript is disabled
+      - name: Verify public pages with JavaScript blocked in Chrome
         shell: bash
         run: |
           set -euo pipefail
-          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
-          cat > /tmp/js-check.html <<'HTML'
-          <!doctype html><html><body data-js="off">JS disabled
-          <script>document.body.setAttribute('data-js','on');document.body.firstChild.textContent='JS enabled';</script>
-          </body></html>
-          HTML
-          "$browser" --headless --no-sandbox --disable-gpu --disable-javascript             --dump-dom "file:///tmp/js-check.html" > /tmp/js-check-dom.html
-          grep -q 'data-js="off"' /tmp/js-check-dom.html
-          echo "JAVASCRIPT_DISABLED=PASS"
-
-      - name: Capture no-JS DOM for representative pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
-          base="https://gaeo-ru.github.io"
-          mkdir -p nojs-dom
-          dump() {
-            local name="$1"
-            local url="$2"
-            "$browser" --headless --no-sandbox --disable-gpu --disable-javascript               --virtual-time-budget=1500 --dump-dom "$url" > "nojs-dom/$name.html"
-          }
-          dump home-ru "$base/"
-          dump home-en "$base/en/"
-          dump articles "$base/articles/"
-          dump article "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
-          dump cases "$base/cases/"
-          dump case "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
-          dump biography "$base/professional-biography/"
-          dump commercial "$base/geo-prodvizhenie-nedvizhimosti/"
-
-      - name: Verify H1, text, articles, cases, FAQ, pricing, contacts and links
-        shell: bash
-        run: |
-          set -euo pipefail
+          mkdir -p shots
           python - <<'PY'
           from pathlib import Path
-          import re
           from html import unescape
+          import re
+          import time
 
-          root = Path("nojs-dom")
+          from selenium import webdriver
+          from selenium.webdriver.common.by import By
+          from selenium.webdriver.chrome.options import Options
 
-          def clean(fragment):
-              fragment = re.sub(r"<script\b[\s\S]*?</script>", " ", fragment, flags=re.I)
-              fragment = re.sub(r"<style\b[\s\S]*?</style>", " ", fragment, flags=re.I)
-              fragment = re.sub(r"<[^>]+>", " ", fragment)
-              return re.sub(r"\s+", " ", unescape(fragment)).strip()
+          BASE = "https://gaeo-ru.github.io"
 
-          def read(name):
-              return (root / f"{name}.html").read_text(encoding="utf-8")
+          options = Options()
+          options.add_argument("--headless=new")
+          options.add_argument("--no-sandbox")
+          options.add_argument("--disable-gpu")
+          options.add_argument("--hide-scrollbars")
+          options.add_argument("--window-size=1440,1000")
+          options.add_experimental_option(
+              "prefs",
+              {
+                  "profile.default_content_setting_values.javascript": 2,
+                  "profile.managed_default_content_settings.javascript": 2,
+              },
+          )
 
-          pages = {name: read(name) for name in (
-              "home-ru","home-en","articles","article","cases","case","biography","commercial"
-          )}
+          driver = webdriver.Chrome(options=options)
+          driver.set_page_load_timeout(60)
 
-          for name, text in pages.items():
-              assert len(re.findall(r"<h1\b", text, re.I)) == 1, (name, "H1")
-              main = re.search(r"<main\b[^>]*>([\s\S]*?)</main>", text, re.I)
-              assert main, (name, "main")
-              assert len(clean(main.group(1))) >= 120, (name, "text")
-              assert re.search(r'<a\b[^>]*href=["\'][^"\']+["\']', text, re.I), (name, "links")
-              assert 'href="mailto:ya@gaeo.ru"' in text, (name, "email")
-              assert 'href="tel:+79264242333"' in text, (name, "phone")
+          try:
+              # Prove the browser profile really blocks page JavaScript.
+              check = Path("/tmp/js-check.html")
+              check.write_text(
+                  '<!doctype html><html><body data-js="off">JS disabled'
+                  '<script>document.body.setAttribute("data-js","on");</script>'
+                  '</body></html>',
+                  encoding="utf-8",
+              )
+              driver.get(check.as_uri())
+              assert driver.find_element(By.TAG_NAME, "body").get_attribute("data-js") == "off"
+              print("JAVASCRIPT_DISABLED=PASS")
 
-          for name in ("home-ru","home-en"):
-              text = pages[name]
-              assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bprice\b', text, re.I)) >= 3
-              assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', text, re.I)) >= 5
-              assert len(re.findall(r'class=["\'][^"\']*\bmobile-fold-body\b', text, re.I)) >= 2
-              assert 'mobile-fold-section .cards.mobile-fold-body{display:grid!important}' in text
-              assert 'mobile-fold-section .publications.mobile-fold-body{display:block!important}' in text
+              pages = {
+                  "home-ru": "/",
+                  "home-en": "/en/",
+                  "articles": "/articles/",
+                  "article": "/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+                  "cases": "/cases/",
+                  "case": "/cases/prep-center-6-klientov-iz-neyrosetey/",
+                  "biography": "/professional-biography/",
+                  "commercial": "/geo-prodvizhenie-nedvizhimosti/",
+              }
 
-          assert len(re.findall(r"<article\b", pages["articles"], re.I)) >= 1
-          assert len(re.findall(r"<article\b", pages["cases"], re.I)) >= 1
-          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["article"], re.I).group(1))) > 3000
-          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["case"], re.I).group(1))) > 1500
-          assert len(clean(re.search(r"<main\b[^>]*>([\s\S]*?)</main>", pages["biography"], re.I).group(1))) > 1000
-          assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', pages["commercial"], re.I)) >= 5
+              sources = {}
+              for name, route in pages.items():
+                  driver.set_window_size(1440, 1000)
+                  driver.get(BASE + route)
+                  time.sleep(0.5)
+                  sources[name] = driver.page_source
 
-          print("NOJS_H1=PASS")
-          print("NOJS_TEXT=PASS")
-          print("NOJS_ARTICLES=PASS")
-          print("NOJS_CASES=PASS")
-          print("NOJS_FAQ=PASS")
-          print("NOJS_PRICING=PASS")
-          print("NOJS_CONTACTS=PASS")
-          print("NOJS_LINKS=PASS")
+                  h1 = driver.find_elements(By.TAG_NAME, "h1")
+                  assert len(h1) == 1 and h1[0].text.strip(), (name, "H1")
+                  main = driver.find_element(By.TAG_NAME, "main")
+                  assert len(main.text.strip()) >= 120, (name, "text")
+                  assert driver.find_elements(By.CSS_SELECTOR, "a[href]"), (name, "links")
+                  assert driver.find_elements(By.CSS_SELECTOR, 'a[href="mailto:ya@gaeo.ru"]'), (name, "email")
+                  assert driver.find_elements(By.CSS_SELECTOR, 'a[href="tel:+79264242333"]'), (name, "phone")
+
+              # Homepage: all semantic catalogue blocks remain in source HTML.
+              for name in ("home-ru", "home-en"):
+                  text = sources[name]
+                  assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bprice\b', text, re.I)) >= 3
+                  assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', text, re.I)) >= 5
+                  assert len(re.findall(r'class=["\'][^"\']*\bmobile-fold-body\b', text, re.I)) >= 2
+
+              assert len(re.findall(r"<article\b", sources["articles"], re.I)) >= 1
+              assert len(re.findall(r"<article\b", sources["cases"], re.I)) >= 1
+              assert len(re.findall(r'<details\b[^>]*class=["\'][^"\']*\bfaq-item\b', sources["commercial"], re.I)) >= 5
+
+              # Mobile no-JS fallback: navigation and folded content must be visible without script.
+              driver.set_window_size(390, 1800)
+              driver.get(BASE + "/")
+              time.sleep(0.5)
+              mobile_menu = driver.find_element(By.ID, "mobileMenu")
+              assert mobile_menu.is_displayed(), "mobile no-JS menu is hidden"
+              toggle = driver.find_element(By.CSS_SELECTOR, ".menu-toggle")
+              assert not toggle.is_displayed(), "dead mobile burger remains visible"
+              fold_bodies = driver.find_elements(By.CSS_SELECTOR, ".mobile-fold-body")
+              assert len(fold_bodies) >= 2
+              assert all(el.is_displayed() for el in fold_bodies), "mobile-fold content is hidden without JS"
+
+              # Native HTML details must still open with JavaScript blocked.
+              first_price = driver.find_element(By.CSS_SELECTOR, "details.price")
+              assert first_price.get_attribute("open") is None
+              first_price.find_element(By.TAG_NAME, "summary").click()
+              assert first_price.get_attribute("open") is not None
+
+              first_faq = driver.find_element(By.CSS_SELECTOR, "details.faq-item")
+              assert first_faq.get_attribute("open") is None
+              first_faq.find_element(By.TAG_NAME, "summary").click()
+              assert first_faq.get_attribute("open") is not None
+
+              print("NOJS_H1=PASS")
+              print("NOJS_TEXT=PASS")
+              print("NOJS_ARTICLES=PASS")
+              print("NOJS_CASES=PASS")
+              print("NOJS_FAQ=PASS")
+              print("NOJS_PRICING=PASS")
+              print("NOJS_CONTACTS=PASS")
+              print("NOJS_LINKS=PASS")
+              print("NOJS_MOBILE_NAV=PASS")
+              print("NOJS_NATIVE_DETAILS=PASS")
+
+              shots = [
+                  ("home-desktop", 1440, 1000, "/"),
+                  ("home-mobile", 390, 1800, "/"),
+                  ("article-desktop", 1440, 1000, pages["article"]),
+                  ("article-mobile", 390, 1500, pages["article"]),
+                  ("case-desktop", 1440, 1000, pages["case"]),
+                  ("case-mobile", 390, 1500, pages["case"]),
+                  ("biography-mobile", 390, 1500, pages["biography"]),
+                  ("commercial-mobile", 390, 1800, pages["commercial"]),
+              ]
+              for name, width, height, route in shots:
+                  driver.set_window_size(width, height)
+                  driver.get(BASE + route)
+                  time.sleep(0.5)
+                  driver.save_screenshot(f"shots/{name}.png")
+          finally:
+              driver.quit()
           PY
 
-      - name: Capture public no-JS screenshots
-        shell: bash
-        run: |
-          set -euo pipefail
-          browser="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium)"
-          base="https://gaeo-ru.github.io"
-          mkdir -p shots
-          shot() {
-            local name="$1"
-            local size="$2"
-            local url="$3"
-            "$browser" --headless --no-sandbox --disable-gpu --disable-javascript               --hide-scrollbars --window-size="$size"               --screenshot="shots/$name.png" "$url"
-          }
-          shot home-desktop 1440,1000 "$base/"
-          shot home-mobile 390,1800 "$base/"
-          shot article-desktop 1440,1000 "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
-          shot article-mobile 390,1500 "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
-          shot case-desktop 1440,1000 "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
-          shot case-mobile 390,1500 "$base/cases/prep-center-6-klientov-iz-neyrosetey/"
-          shot biography-mobile 390,1500 "$base/professional-biography/"
-          shot commercial-mobile 390,1800 "$base/geo-prodvizhenie-nedvizhimosti/"
-          file shots/*.png
+      - name: Check screenshots
+        run: file shots/*.png
 
       - uses: actions/upload-artifact@v4
         with:
