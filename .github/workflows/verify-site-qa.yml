@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/verify-site-qa.yml"
+      - "scripts/site_qa.py"
+      - "scripts/ensure_site_metadata.py"
+      - "scripts/ensure_site_chrome.py"
 
 permissions:
   contents: read
