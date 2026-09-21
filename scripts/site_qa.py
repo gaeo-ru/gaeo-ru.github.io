@@ -14,6 +14,7 @@ import xml.etree.ElementTree as ET
 
 from ensure_site_chrome import render_chrome
 from ensure_asset_versions import asset_path_from_url, expected_version
+from indexnow_submit import KEY as INDEXNOW_KEY, KEY_FILE as INDEXNOW_KEY_FILE
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://gaeo.ru"
@@ -500,6 +501,18 @@ def check_assets_css_js() -> None:
             errors.append(f"{relpath(path)}: contains Base64 image data.")
 
 
+def check_indexnow_preparation() -> None:
+    key_path = ROOT / INDEXNOW_KEY_FILE
+    if not key_path.exists():
+        errors.append(f"IndexNow key file is missing: {INDEXNOW_KEY_FILE}.")
+        return
+    actual = key_path.read_text(encoding="utf-8").strip()
+    if actual != INDEXNOW_KEY:
+        errors.append(
+            f"IndexNow key file content does not match scripts/indexnow_submit.py: {INDEXNOW_KEY_FILE}."
+        )
+
+
 def check_robots_files(mode: str) -> None:
     robots = ROOT / "robots.txt"
     production = ROOT / "robots.production.txt"
@@ -608,6 +621,7 @@ def main() -> int:
 
     check_hreflang_reciprocity(page_texts)
     check_assets_css_js()
+    check_indexnow_preparation()
     check_robots_files(args.mode)
     check_sitemap(args.mode)
 
