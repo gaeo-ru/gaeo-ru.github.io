@@ -660,18 +660,18 @@ def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
     for home in ("index.html", "en/index.html"):
         require(
             home,
-            r'<details\b[^>]*class=[\"'][^\"']*\bprice\b',
+            r"""<details\b[^>]*class=["'][^"']*\bprice\b""",
             3,
             "pricing details",
         )
         require(
             home,
-            r'<details\b[^>]*class=[\"'][^\"']*\bfaq-item\b',
+            r"""<details\b[^>]*class=["'][^"']*\bfaq-item\b""",
             5,
             "FAQ details",
         )
-        require(home, r'href=[\"']/articles/', 1, "article links")
-        require(home, r'href=[\"']/cases/', 1, "case links")
+        require(home, r"""href=["']/articles/""", 1, "article links")
+        require(home, r"""href=["']/cases/""", 1, "case links")
 
     # Listing pages must expose their cards/links in static HTML.
     for listing in ("articles/index.html", "en/articles/index.html"):
