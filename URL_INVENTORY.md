@@ -2,6 +2,8 @@
 
 Status: migration working inventory, verified against the current public GAEO.ru on 2026-09-20.
 
+Canonical migration decisions are fixed in `MIGRATION_URL_MAP.md`. That file governs old URL preservation, Tilda technical URL removal and post-DNS acceptance checks.
+
 ## Core pages
 
 - `/` — homepage — source for new site: approved v0.28, not current Tilda homepage.
