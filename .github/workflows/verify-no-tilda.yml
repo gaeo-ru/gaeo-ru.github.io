@@ -46,14 +46,13 @@ jobs:
           tilda_hits = []
           external_hosts = set()
           missing_local = []
-          checked_local_refs = 0
+          checked_local_refs = [0]
 
           attr_re = re.compile(r'''\b(?:src|href)=["']([^"'#]+)["']''', re.I)
           css_url_re = re.compile(r'''url\(\s*["']?([^"'()]+)["']?\s*\)''', re.I)
           absolute_re = re.compile(r'''https?://[^"'\s<>)}]+''', re.I)
 
           def record_ref(path, ref):
-              nonlocal checked_local_refs
               ref = ref.strip()
               if not ref or ref.startswith(("mailto:", "tel:", "javascript:", "data:")):
                   return
@@ -86,7 +85,7 @@ jobs:
                   if candidate.exists():
                       target = candidate
 
-              checked_local_refs += 1
+              checked_local_refs[0] += 1
               if not target.exists():
                   missing_local.append((str(path), ref, str(target)))
 
@@ -111,7 +110,7 @@ jobs:
                       record_ref(p, ref)
 
           print(f"DEPLOYABLE_FILES={len(files)}")
-          print(f"LOCAL_REFERENCES_CHECKED={checked_local_refs}")
+          print(f"LOCAL_REFERENCES_CHECKED={checked_local_refs[0]}")
           print(f"EXTERNAL_HOSTS={len(external_hosts)}")
           for host in sorted(external_hosts):
               print("HOST", host)
