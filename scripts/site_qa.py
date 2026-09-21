@@ -686,7 +686,7 @@ def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
     ):
         require(
             landing,
-            r'<details\b[^>]*class=[\"'][^\"']*\bfaq-item\b',
+            r"""<details\b[^>]*class=["'][^"']*\bfaq-item\b""",
             5,
             "commercial FAQ details",
         )
