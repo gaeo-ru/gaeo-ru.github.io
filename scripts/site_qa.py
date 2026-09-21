@@ -544,6 +544,8 @@ def check_analytics_bundle() -> None:
         "utm_medium",
         "utm_campaign",
         "gaeo_tracking_v1",
+        "PRODUCTION_HOSTS",
+        "gaeo_analytics_debug",
     ]
     for needle in required:
         if needle not in text:
