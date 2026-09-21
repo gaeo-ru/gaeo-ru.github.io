@@ -1,0 +1,90 @@
+name: Verify public social preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-social-preview.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for Pages propagation and verify social metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://gaeo-ru.github.io"
+          fallback="https://gaeo.ru/assets/gaeo-social-preview.jpg"
+          ready=0
+          for attempt in $(seq 1 24); do
+            curl -fsS "$base/" -o /tmp/home.html || true
+            if grep -q "content=\"$fallback\"" /tmp/home.html; then
+              ready=1
+              echo "Public Pages reached social preview metadata on attempt $attempt."
+              break
+            fi
+            sleep 10
+          done
+          test "$ready" = "1"
+
+          curl -fsS "$base/professional-biography/" -o /tmp/bio.html
+          curl -fsS "$base/articles/" -o /tmp/articles.html
+          curl -fsS "$base/reviews/" -o /tmp/reviews.html
+          curl -fsS "$base/publications/" -o /tmp/publications.html
+          curl -fsS "$base/geo-prodvizhenie-nedvizhimosti/" -o /tmp/service.html
+          curl -fsS "$base/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/" -o /tmp/article.html
+          curl -fsS "$base/en/articles/ai-sources-for-geo-specialists/" -o /tmp/article-en.html
+
+          for f in /tmp/home.html /tmp/bio.html /tmp/articles.html /tmp/reviews.html /tmp/publications.html /tmp/service.html; do
+            grep -q "property=\"og:image\" content=\"$fallback\"" "$f"
+            grep -q 'property="og:image:width" content="1200"' "$f"
+            grep -q 'property="og:image:height" content="630"' "$f"
+            grep -q 'name="twitter:card" content="summary_large_image"' "$f"
+            grep -q "name=\"twitter:image\" content=\"$fallback\"" "$f"
+          done
+
+          if grep -q "property=\"og:image\" content=\"$fallback\"" /tmp/article.html; then
+            echo "Article unexpectedly uses fallback preview."
+            exit 1
+          fi
+          if grep -q "property=\"og:image\" content=\"$fallback\"" /tmp/article-en.html; then
+            echo "EN Article unexpectedly uses fallback preview."
+            exit 1
+          fi
+
+          grep -q 'Опубликовано: 14 августа 2026' /tmp/article.html
+          grep -q 'Обновлено: 14 августа 2026' /tmp/article.html
+          grep -q 'property="article:published_time" content="2026-08-14"' /tmp/article.html
+          grep -q 'property="article:modified_time" content="2026-08-14"' /tmp/article.html
+
+          echo "PUBLIC_FALLBACK_SOCIAL_PREVIEW=PASS"
+          echo "PUBLIC_ARTICLE_OWN_COVERS=PASS"
+          echo "PUBLIC_ARTICLE_DATES=PASS"
+
+      - name: Verify fallback image itself
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from scripts.ensure_social_preview import jpeg_dimensions
+          p = Path("assets/gaeo-social-preview.jpg")
+          assert p.exists()
+          assert jpeg_dimensions(p) == (1200, 630)
+          assert p.stat().st_size < 200 * 1024
+          print(f"SOCIAL_PREVIEW_FILE=PASS size={p.stat().st_size}")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-social-preview-qa
+          path: assets/gaeo-social-preview.jpg
+          if-no-files-found: error
