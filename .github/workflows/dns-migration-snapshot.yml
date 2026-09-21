@@ -60,3 +60,8 @@ jobs:
           echo "===== GITHUB PAGES SETTINGS ====="
           gh api "repos/${GITHUB_REPOSITORY}/pages" \
             --jq '{url:.html_url,cname:.cname,https_enforced:.https_enforced,build_type:.build_type,source:.source,status:.status}'
+
+          echo
+          echo "===== LATEST PAGES BUILD ====="
+          gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" \
+            --jq '{status:.status,error:.error,message:.error.message,commit:.commit,created_at:.created_at,updated_at:.updated_at}' || true
