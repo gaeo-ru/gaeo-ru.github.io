@@ -616,9 +616,17 @@ def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
             errors.append(f"{partial_name}: missing no-JS navigation source.")
             continue
         text = partial.read_text(encoding="utf-8")
-        if "<noscript>" not in text or ".mobile-menu{display:block!important" not in text:
+        required_nojs = (
+            "<noscript>",
+            ".desktop-menu{display:none!important",
+            ".mobile-menu{display:block!important",
+            ".cards.mobile-fold-body{display:grid!important",
+            ".publications.mobile-fold-body{display:block!important",
+        )
+        missing = [needle for needle in required_nojs if needle not in text]
+        if missing:
             errors.append(
-                f"{partial_name}: mobile navigation has no explicit no-JS fallback."
+                f"{partial_name}: incomplete no-JS fallback; missing: {', '.join(missing)}."
             )
 
     for path, text in page_texts.items():
