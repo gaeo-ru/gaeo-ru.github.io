@@ -12,7 +12,7 @@ import sys
 import tempfile
 import xml.etree.ElementTree as ET
 
-from ensure_site_chrome import render_chrome
+from ensure_site_chrome import render_chrome, NOJS_PATH, NOJS_START, NOJS_END
 from ensure_asset_versions import asset_path_from_url, expected_version
 from indexnow_submit import KEY as INDEXNOW_KEY, KEY_FILE as INDEXNOW_KEY_FILE
 from ensure_article_dates import load_page_article, format_date, valid_iso
@@ -606,16 +606,12 @@ def check_hreflang_reciprocity(page_texts: dict[Path, str]) -> None:
 
 
 def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
-    # Navigation must remain usable on narrow screens when scripts are disabled.
-    for partial_name in (
-        "templates/partials/site-header.html",
-        "templates/partials/site-header-en.html",
-    ):
-        partial = ROOT / partial_name
-        if not partial.exists():
-            errors.append(f"{partial_name}: missing no-JS navigation source.")
-            continue
-        text = partial.read_text(encoding="utf-8")
+    # Canonical no-JS CSS must be materialized in <head> on every public page.
+    if not NOJS_PATH.exists():
+        errors.append(f"{NOJS_PATH.relative_to(ROOT)}: missing no-JS fallback partial.")
+        nojs_block = None
+    else:
+        nojs = NOJS_PATH.read_text(encoding="utf-8").strip()
         required_nojs = (
             "<noscript>",
             ".desktop-menu{display:none!important",
@@ -623,13 +619,22 @@ def check_nojs_static_content(page_texts: dict[Path, str]) -> None:
             ".cards.mobile-fold-body{display:grid!important",
             ".publications.mobile-fold-body{display:block!important",
         )
-        missing = [needle for needle in required_nojs if needle not in text]
+        missing = [needle for needle in required_nojs if needle not in nojs]
         if missing:
             errors.append(
-                f"{partial_name}: incomplete no-JS fallback; missing: {', '.join(missing)}."
+                f"{NOJS_PATH.relative_to(ROOT)}: incomplete no-JS fallback; missing: {', '.join(missing)}."
             )
+        nojs_block = f"{NOJS_START}\n{nojs}\n{NOJS_END}"
 
     for path, text in page_texts.items():
+        page = relpath(path)
+        if text.count(NOJS_START) != 1 or text.count(NOJS_END) != 1:
+            errors.append(f"{page}: no-JS fallback markers must appear exactly once.")
+        else:
+            head_match = re.search(r"<head\b[^>]*>([\s\S]*?)</head>", text, re.I)
+            if not head_match or (nojs_block and nojs_block not in head_match.group(0)):
+                errors.append(f"{page}: canonical no-JS fallback is not materialized inside <head>.")
+
         page = relpath(path)
         # Remove executable/stylesheet content before measuring semantic HTML text.
         semantic = re.sub(r"<script\b[\s\S]*?</script>", " ", text, flags=re.I)
