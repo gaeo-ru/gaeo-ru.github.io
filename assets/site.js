@@ -941,3 +941,12 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 
   window.GAEOLeadForm = {open:openModal,close:closeModal};
 })();
+
+
+/* GAEO_EXTERNAL_TELEGRAM_LINK */
+document.querySelectorAll('a[href="https://t.me/ya_gaeo"]').forEach(function (link) {
+  link.setAttribute('target', '_blank');
+  var rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+  rel.add('noopener');
+  link.setAttribute('rel', Array.from(rel).join(' '));
+});
