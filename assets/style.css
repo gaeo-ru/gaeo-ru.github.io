@@ -1240,3 +1240,11 @@ details.price:last-child{
     align-self:flex-start;
   }
 }
+
+
+/* Pricing heading: use the full desktop content width */
+@media(min-width:1021px){
+  #pricing h2{
+    max-width:1180px;
+  }
+}
