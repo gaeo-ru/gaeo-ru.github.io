@@ -998,3 +998,33 @@ document.querySelectorAll('a[href="https://t.me/ya_gaeo"]').forEach(function (li
   rel.add('noopener');
   link.setAttribute('rel', Array.from(rel).join(' '));
 });
+
+
+/* Open all pricing accordions when navigating to #pricing. */
+(function openPricingForAnchor(){
+  const openAllPricing = () => {
+    if(window.location.hash !== '#pricing') return;
+    document.querySelectorAll('#pricing details.price').forEach(item => {
+      item.open = true;
+    });
+  };
+
+  openAllPricing();
+  window.addEventListener('hashchange', openAllPricing);
+
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href]');
+    if(!link) return;
+    let target;
+    try{
+      target = new URL(link.href, window.location.href);
+    }catch(_){
+      return;
+    }
+    if(target.origin === window.location.origin &&
+       target.pathname === window.location.pathname &&
+       target.hash === '#pricing'){
+      setTimeout(openAllPricing, 0);
+    }
+  });
+})();
