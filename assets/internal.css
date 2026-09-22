@@ -109,6 +109,8 @@
 .list-card h2,.list-card h3{font-family:Literata,Georgia,serif;font-size:26px;line-height:1.18;letter-spacing:-.02em;color:var(--navy);margin:0 0 14px}
 .list-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 20px}
 .list-card .button{margin-top:auto;align-self:flex-start}
+.case-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:auto}
+.case-actions .button{margin:0;align-self:auto}
 .review-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:28px 0 44px}
 .review-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px}
 .review-card blockquote{margin:0 0 22px;font:500 20px/1.55 Manrope,Arial,sans-serif;color:var(--navy)}
@@ -166,6 +168,8 @@
  .listing-hero h1{font-size:30px}
  .listing-grid{grid-template-columns:1fr}
  .list-card{min-height:0}
+ .case-actions{flex-direction:column;align-items:stretch}
+ .case-actions .button{width:100%;white-space:normal}
  .review-card{padding:22px}
  .review-card blockquote{font-size:18px}
  .review-actions{flex-direction:column;align-items:stretch}
