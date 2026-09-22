@@ -159,10 +159,10 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const desktopItems = isEn ? [
     ['About me','/en/professional-biography/'],
     ['How I work','/en/#process'],
-    ['Cases','/cases/'],
-    ['Reviews','/reviews/'],
-    ['Articles','/articles/'],
-    ['Publications','/publications/'],
+    ['Cases','/en/cases/'],
+    ['Reviews','/en/reviews/'],
+    ['Articles','/en/articles/'],
+    ['Publications','/en/publications/'],
     ['Pricing','/en/#pricing']
   ] : [
     ['Обо мне','/professional-biography/'],
@@ -207,8 +207,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const leftItems = isEn ? [
       ['About me','/en/professional-biography/'],
       ['How I work','/en/#process'],
-      ['Cases','/cases/'],
-      ['Reviews','/reviews/'],
+      ['Cases','/en/cases/'],
+      ['Reviews','/en/reviews/'],
       ['Pricing','/en/#pricing']
     ] : [
       ['Обо мне','/professional-biography/'],
@@ -219,11 +219,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ];
 
     const rightItems = isEn ? [
-      ['Articles','/articles/'],
-      ['Publications','/publications/'],
-      ['Official external profiles','/en/professional-biography/#external-profiles'],
-      ['Privacy policy','/privacy-policy/'],
-      ['Personal data processing','/personal-data-consent/']
+      ['Articles','/en/articles/'],
+      ['Publications','/en/publications/'],
+      ['Official external profiles','/en/professional-biography/#official-profiles'],
+      ['Privacy policy','/en/privacy-policy/'],
+      ['Personal data processing','/en/personal-data-consent/']
     ] : [
       ['Статьи','/articles/'],
       ['Публикации','/publications/'],
@@ -307,14 +307,17 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const lockup = document.createElement('div');
   lockup.className = 'footer-brand-lockup';
 
+  const isEn = document.documentElement.lang === 'en';
+  const homeHref = isEn ? '/en/' : '/';
+
   const logoLink = document.createElement('a');
   logoLink.className = 'footer-logo-link';
-  logoLink.href = '/';
-  logoLink.setAttribute('aria-label', 'GAEO.ru — главная');
+  logoLink.href = homeHref;
+  logoLink.setAttribute('aria-label', isEn ? 'GAEO.ru — home' : 'GAEO.ru — главная');
 
   const tagline = document.createElement('a');
   tagline.className = 'footer-logo-tagline';
-  tagline.href = '/';
+  tagline.href = homeHref;
   tagline.innerHTML = 'Generative &amp; Answer<br>Engine Optimization';
 
   logo.parentNode.insertBefore(lockup, logo);
@@ -366,10 +369,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 /* Keep the legal consent link working in pages whose footer HTML was generated
    before the shared footer was updated. */
 (function linkPersonalDataConsent(){
+  const isEn = document.documentElement.lang === 'en';
   document.querySelectorAll('footer a:not([href])').forEach(link => {
     const label = link.textContent.trim();
     if(label === 'Обработка персональных данных' || label === 'Personal Data Processing'){
-      link.href = '/personal-data-consent/';
+      link.href = isEn ? '/en/personal-data-consent/' : '/personal-data-consent/';
     }
   });
 })();
