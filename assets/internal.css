@@ -395,3 +395,12 @@
  .breadcrumbs+.inner-hero .inner-hero__grid{padding-top:26px}
  .breadcrumbs+.listing-hero .container{padding-top:26px}
 }
+
+
+/* Cases listing: tighter transition from H1 to cards */
+.cases-listing-content{padding-top:30px}
+.cases-listing-content .listing-grid{margin-top:18px}
+@media(max-width:760px){
+  .cases-listing-content{padding-top:24px}
+  .cases-listing-content .listing-grid{margin-top:14px}
+}
