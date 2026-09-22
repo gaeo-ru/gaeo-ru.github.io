@@ -1248,3 +1248,25 @@ details.price:last-child{
     max-width:1180px;
   }
 }
+
+
+/* Pricing CTA final desktop alignment */
+@media(min-width:721px){
+  #pricing .pricing{align-items:stretch!important}
+  #pricing .pricing>details.price[open]{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  #pricing .pricing>details.price[open]>.price-details{
+    display:flex!important;
+    flex:1 1 auto!important;
+    flex-direction:column!important;
+  }
+  #pricing .pricing>details.price[open]>.price-details>ul{
+    flex:1 1 auto!important;
+  }
+  #pricing .pricing>details.price[open]>.price-details>.button{
+    margin-top:auto!important;
+    align-self:flex-start!important;
+  }
+}
