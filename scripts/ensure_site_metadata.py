@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKIP_DIRS = {".git", ".github", "templates"}
 GOOGLE_VERIFICATION = "2nIA9bL_leEm2TniUtryyUUtEiKU5k9syCqxJRLELw0"
 YANDEX_VERIFICATION = "7936ae703c9ab353"
+GOOGLE_BUSINESS_MAP = "https://www.google.com/maps?cid=2392662518453919003"
 
 JSONLD_RE = re.compile(
     r'(<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>)([\s\S]*?)(</script>)',
@@ -162,6 +163,89 @@ def has_type(node, wanted: str) -> bool:
     return wanted in values
 
 
+def is_google_business_map_url(value) -> bool:
+    if not isinstance(value, str):
+        return False
+    value = value.lower()
+    return any(
+        marker in value
+        for marker in (
+            "google.com/maps",
+            "maps.google.",
+            "maps.app.goo.gl",
+            "goo.gl/maps",
+            "g.page/",
+            "google.com/search?cid=",
+        )
+    )
+
+
+def sync_business_map_schema(text: str) -> str:
+    def rewrite(match):
+        try:
+            data = json.loads(match.group(2))
+        except Exception:
+            return match.group(0)
+
+        if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+            nodes = data["@graph"]
+        elif isinstance(data, list):
+            nodes = data
+        elif isinstance(data, dict):
+            nodes = [data]
+        else:
+            return match.group(0)
+
+        changed = False
+        for node in nodes:
+            if not isinstance(node, dict):
+                continue
+
+            is_business = has_type(node, "ProfessionalService") or (
+                node.get("@id") == "https://gaeo.ru/#business"
+                and any(key in node for key in ("name", "url", "legalName", "address"))
+            )
+            if not is_business:
+                continue
+
+            if node.get("hasMap") != GOOGLE_BUSINESS_MAP:
+                node["hasMap"] = GOOGLE_BUSINESS_MAP
+                changed = True
+
+            same_as = node.get("sameAs")
+            if isinstance(same_as, str):
+                values = [same_as]
+            elif isinstance(same_as, list):
+                values = list(same_as)
+            else:
+                values = []
+
+            normalized = []
+            google_added = False
+            for value in values:
+                if is_google_business_map_url(value):
+                    if not google_added:
+                        normalized.append(GOOGLE_BUSINESS_MAP)
+                        google_added = True
+                    continue
+                normalized.append(value)
+
+            if not google_added:
+                normalized.append(GOOGLE_BUSINESS_MAP)
+
+            if normalized != values:
+                node["sameAs"] = normalized
+                changed = True
+
+        if not changed:
+            return match.group(0)
+
+        rendered = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        return match.group(1) + rendered + match.group(3)
+
+    return JSONLD_RE.sub(rewrite, text)
+
+
 def sync_faq_schema(text: str, page: str) -> str:
     items = visible_faq(text)
     match, data = load_jsonld(text)
@@ -224,6 +308,7 @@ def normalize(path: Path) -> bool:
         text = set_meta_property(text, "og:locale", "en_US" if lang.startswith("en") else "ru_RU")
         text = set_meta_property(text, "og:url", canonical)
 
+    text = sync_business_map_schema(text)
     text = sync_faq_schema(text, page)
 
     if text != original:
