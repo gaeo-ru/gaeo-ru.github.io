@@ -1217,3 +1217,26 @@ details.price:last-child{
   .sources-evidence-section .source-row b{font-size:18px}
   .sources-evidence-section .chip{font-size:12.5px;padding:8px 10px}
 }
+
+
+/* Pricing: align open CTA buttons on desktop */
+@media(min-width:721px){
+  .pricing{align-items:stretch!important}
+  .pricing details.price[open]{
+    display:flex!important;
+    flex-direction:column;
+    height:100%;
+  }
+  .pricing .price[open] .price-details{
+    display:flex;
+    flex:1 1 auto;
+    flex-direction:column;
+  }
+  .pricing .price[open] .price-details ul{
+    flex:1 1 auto;
+  }
+  .pricing .price[open] .price-details .button{
+    margin-top:auto!important;
+    align-self:flex-start;
+  }
+}
