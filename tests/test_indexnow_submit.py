@@ -1,4 +1,5 @@
 import io
+from contextlib import redirect_stdout
 import json
 import ssl
 import sys
@@ -12,6 +13,10 @@ import indexnow_submit as m
 
 
 class IndexNowTests(unittest.TestCase):
+    def setUp(self):
+        # Mocked network diagnostics must not emit fake Actions warnings/results.
+        self.enterContext(redirect_stdout(io.StringIO()))
+
     def response(self, body='', status=200, url=m.KEY_LOCATION):
         r = MagicMock()
         r.__enter__.return_value = r
