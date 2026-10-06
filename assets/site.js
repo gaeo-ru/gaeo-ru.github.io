@@ -379,7 +379,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 })();
 
 
-/* ===== Lead form + modal v1.4 =====
+/* ===== Lead form + modal v1.5 =====
    Shared client-side UI for GAEO lead forms.
    Country selector, mobile input modes and validation mirror IndexResearch.
    Delivery endpoint is configured separately from public UI code. */
@@ -521,6 +521,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-country-toggle{display:flex;align-items:center;gap:8px;flex:0 0 auto;max-width:142px;padding:0 10px;border:0;border-right:1px solid #dde1e4;background:#fff;color:#22314a;font:600 13px/1 Manrope,Arial,sans-serif;cursor:pointer}',
       '.gaeo-country-toggle:hover{background:#f7f8f9}',
       '.gaeo-country-flag{display:block;width:24px;height:18px;object-fit:cover;flex:0 0 24px;border:1px solid rgba(2,22,65,.10)}',
+      '.gaeo-country-flag-fallback{height:auto;border:0;font-size:20px;line-height:1;text-align:center}',
       '.gaeo-country-code{white-space:nowrap}',
       '.gaeo-country-chevron{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #7b8793;flex:0 0 auto}',
       '.gaeo-phone-input{border:0!important;box-shadow:none!important;height:54px!important;min-width:0;flex:1 1 auto;padding-left:13px!important}',
@@ -543,19 +544,21 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-hp{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}',
       'body.gaeo-modal-open{overflow:hidden!important}',
       '.gaeo-modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(2,22,65,.72);display:flex;align-items:center;justify-content:center;padding:24px;animation:gaeoFadeIn .14s ease-out}',
-      '.gaeo-modal{position:relative;width:min(760px,100%);max-height:calc(100dvh - 48px);overflow:auto;background:#f6f7f8;border-radius:16px;padding:42px 44px 38px;box-shadow:0 28px 80px rgba(0,0,0,.28);animation:gaeoModalIn .16s ease-out}',
+      '.gaeo-modal{position:relative;width:min(760px,100%);max-height:calc(100dvh - 48px);overflow:auto;background:#f6f7f8;border-radius:16px;padding:30px 44px 30px;box-shadow:0 28px 80px rgba(0,0,0,.28);animation:gaeoModalIn .16s ease-out}',
       '.gaeo-modal-close{position:absolute;right:18px;top:18px;width:42px;height:42px;border:0;background:transparent;color:#586579;cursor:pointer}',
       '.gaeo-modal-close:before,.gaeo-modal-close:after{content:"";position:absolute;left:10px;top:20px;width:22px;height:1.5px;background:currentColor}',
       '.gaeo-modal-close:before{transform:rotate(45deg)}',
       '.gaeo-modal-close:after{transform:rotate(-45deg)}',
       '.gaeo-modal-close:hover{color:#021641}',
-      '.gaeo-modal-head{padding-right:44px;margin-bottom:28px}',
+      '.gaeo-modal-head{padding-right:44px;margin-bottom:18px}',
       '.gaeo-modal-eyebrow{font-size:11px;line-height:1.4;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#0e5ed7;margin-bottom:11px}',
       '.gaeo-modal-title{margin:0;color:#021641;font:700 34px/1.12 Manrope,Arial,sans-serif;letter-spacing:-.035em}',
-      '.gaeo-modal-lead{margin:12px 0 0;color:#536071;font-size:14px;line-height:1.6;max-width:590px}',
+      '.gaeo-modal-lead{margin:8px 0 0;color:#536071;font-size:14px;line-height:1.55;max-width:590px}',
+      '.gaeo-modal .gaeo-lead-form{gap:12px}',
+      '.gaeo-modal .gaeo-form-textarea{height:104px;min-height:104px}',
       '@keyframes gaeoFadeIn{from{opacity:0}to{opacity:1}}',
       '@keyframes gaeoModalIn{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}',
-      '@media(max-width:720px){.gaeo-lead-form{grid-template-columns:1fr}.gaeo-preferred-options{grid-template-columns:repeat(2,minmax(0,1fr))}.gaeo-form-field--wide,.gaeo-form-actions,.gaeo-form-status,.gaeo-form-consent{grid-column:1}.gaeo-modal-overlay{padding:12px;align-items:flex-start;overflow:auto}.gaeo-modal{margin:auto 0;width:100%;max-height:none;border-radius:14px;padding:34px 20px 28px}.gaeo-modal-close{right:8px;top:8px}.gaeo-modal-head{padding-right:34px;margin-bottom:24px}.gaeo-modal-title{font-size:29px}.gaeo-country-menu{position:fixed;left:16px!important;right:16px!important;top:50%!important;transform:translateY(-50%);width:auto!important;max-height:min(440px,70dvh)}.gaeo-form-input,.gaeo-phone-wrap{height:58px}.gaeo-phone-input{height:56px!important}}',
+      '@media(max-width:720px){.gaeo-lead-form{grid-template-columns:1fr}.gaeo-preferred-options{grid-template-columns:repeat(2,minmax(0,1fr))}.gaeo-form-field--wide,.gaeo-form-actions,.gaeo-form-status,.gaeo-form-consent{grid-column:1}.gaeo-modal-overlay{padding:12px;align-items:flex-start;overflow:auto}.gaeo-modal{margin:auto 0;width:100%;max-height:none;border-radius:14px;padding:26px 20px 24px}.gaeo-modal-close{right:8px;top:8px}.gaeo-modal-head{padding-right:34px;margin-bottom:24px}.gaeo-modal-title{font-size:29px}.gaeo-country-menu{position:fixed;left:16px!important;right:16px!important;top:50%!important;transform:translateY(-50%);width:auto!important;max-height:min(440px,70dvh)}.gaeo-form-input,.gaeo-phone-wrap{height:58px}.gaeo-phone-input{height:56px!important}}',
       '@media(max-width:400px){.gaeo-modal-overlay{padding:8px}.gaeo-modal{border-radius:12px;padding:30px 16px 24px}.gaeo-modal-title{font-size:26px}.gaeo-country-toggle{max-width:132px;padding:0 9px}}'
     ].join('');
     document.head.appendChild(style);
@@ -564,7 +567,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   function maskParts(country){
     const full = country.mask || '';
     const rest = full.indexOf(country.dial) === 0 ? full.slice(country.dial.length) : full;
-    return {pattern:rest, digits:(rest.match(/9/g) || []).length};
+    // The international dial code is rendered in a separate control. Leading
+    // separators that belonged between dial code and national number should
+    // therefore not appear as "-0000..." or "-1" in the input.
+    const pattern = rest.replace(/^[\s-]+/, '');
+    return {pattern:pattern, digits:(pattern.match(/9/g) || []).length};
   }
 
   function formatNational(value, country){
@@ -619,6 +626,27 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     return 'https://flagcdn.com/' + width + 'x' + Math.round(width * .75) + '/' + iso + '.png';
   }
 
+  function flagEmoji(iso){
+    const code = String(iso || '').toUpperCase();
+    if(!/^[A-Z]{2}$/.test(code)) return '🏳️';
+    return String.fromCodePoint(
+      127397 + code.charCodeAt(0),
+      127397 + code.charCodeAt(1)
+    );
+  }
+
+  function installFlagFallback(img, iso){
+    if(!img) return;
+    img.addEventListener('error',function onFlagError(){
+      img.removeEventListener('error',onFlagError);
+      const fallback = document.createElement('span');
+      fallback.className = 'gaeo-country-flag gaeo-country-flag-fallback';
+      fallback.setAttribute('aria-hidden','true');
+      fallback.textContent = flagEmoji(iso);
+      img.replaceWith(fallback);
+    });
+  }
+
   function createPhoneField(formId){
     let selected = getCountry(defaultIso);
     const field = document.createElement('div');
@@ -636,6 +664,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const wrap = field.querySelector('.gaeo-phone-wrap');
     const toggle = field.querySelector('.gaeo-country-toggle');
     const flag = field.querySelector('.gaeo-country-flag');
+    installFlagFallback(flag,selected.iso2);
     const code = field.querySelector('.gaeo-country-code');
     const input = field.querySelector('.gaeo-phone-input');
     const menu = field.querySelector('.gaeo-country-menu');
@@ -643,7 +672,13 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 
     function applyCountry(country, focusInput){
       selected = country;
-      flag.src = flagUrl(country.iso2,24);
+      const currentFlag = field.querySelector('.gaeo-country-flag');
+      if(currentFlag && currentFlag.tagName === 'IMG'){
+        installFlagFallback(currentFlag,country.iso2);
+        currentFlag.src = flagUrl(country.iso2,24);
+      }else if(currentFlag){
+        currentFlag.textContent = flagEmoji(country.iso2);
+      }
       code.textContent = country.dial;
       input.placeholder = phonePlaceholder(country);
       input.value = formatNational(input.value,country);
@@ -668,9 +703,10 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         option.setAttribute('role','option');
         option.dataset.iso2 = country.iso2;
         option.innerHTML =
-          '<img class="gaeo-country-flag" alt="" loading="lazy" width="24" height="18" src="' + flagUrl(country.iso2,24) + '">' +
+          '<img class="gaeo-country-flag" alt="" width="24" height="18" src="' + flagUrl(country.iso2,24) + '">' +
           '<span>' + country.name + '</span>' +
           '<span class="gaeo-country-option-code">' + country.dial + '</span>';
+        installFlagFallback(option.querySelector('.gaeo-country-flag'),country.iso2);
         option.addEventListener('click',function(){ applyCountry(country,true); });
         frag.appendChild(option);
       });
@@ -1054,7 +1090,6 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '<div class="gaeo-modal" role="dialog" aria-modal="true" aria-labelledby="gaeo-modal-title">' +
         '<button type="button" class="gaeo-modal-close" aria-label="' + copy.close + '"></button>' +
         '<div class="gaeo-modal-head">' +
-          '<div class="gaeo-modal-eyebrow">' + copy.eyebrow + '</div>' +
           '<h2 class="gaeo-modal-title" id="gaeo-modal-title">' + copy.modalTitle + '</h2>' +
           '<p class="gaeo-modal-lead">' + copy.modalLead + '</p>' +
         '</div>' +
