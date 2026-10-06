@@ -379,7 +379,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 })();
 
 
-/* ===== Lead form + modal v1.2 =====
+/* ===== Lead form + modal v1.3 =====
    Shared client-side UI for GAEO lead forms.
    Country selector, mobile input modes and validation mirror IndexResearch.
    Delivery endpoint is configured separately from public UI code. */
@@ -513,6 +513,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-form-status{grid-column:1/-1;min-height:20px;margin:0;color:#6b7280;font-size:12px;line-height:1.5}',
       '.gaeo-form-status.is-error{color:#b42318}',
       '.gaeo-form-status.is-success{color:#147a45}',
+      '.gaeo-success-toast{position:fixed;left:50%;top:24px;z-index:1400;transform:translateX(-50%);max-width:min(560px,calc(100vw - 32px));padding:14px 18px;border:1px solid rgba(20,122,69,.28);border-radius:10px;background:#fff;color:#147a45;box-shadow:0 14px 32px rgba(2,22,65,.18);font:700 14px/1.4 Manrope,Arial,sans-serif;text-align:center}',
       '.gaeo-form-consent{grid-column:1/-1;color:#687281;font-size:12px;line-height:1.55}',
       '.gaeo-form-consent a{color:inherit;text-decoration:underline;text-underline-offset:2px}',
       '.gaeo-hp{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}',
@@ -560,6 +561,18 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       }
     }
     return out;
+  }
+
+  function caretAfterDigitCount(value,digitCount){
+    if(digitCount <= 0) return 0;
+    let seen = 0;
+    for(let i=0;i<value.length;i++){
+      if(/\d/.test(value[i])){
+        seen += 1;
+        if(seen === digitCount) return i + 1;
+      }
+    }
+    return value.length;
   }
 
   function phonePlaceholder(country){
@@ -651,9 +664,43 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       }
     });
 
+    input.addEventListener('keydown',function(e){
+      if(e.key !== 'Backspace') return;
+      const start = input.selectionStart == null ? 0 : input.selectionStart;
+      const end = input.selectionEnd == null ? start : input.selectionEnd;
+      if(start !== end || start <= 0) return;
+
+      // A formatting separator would otherwise be immediately restored by the mask,
+      // making Backspace appear "stuck". Skip over separators by deleting the
+      // previous digit and then rebuild the formatted value.
+      if(/\d/.test(input.value.charAt(start - 1))) return;
+
+      let previousDigitPos = start - 1;
+      while(previousDigitPos >= 0 && !/\d/.test(input.value.charAt(previousDigitPos))){
+        previousDigitPos -= 1;
+      }
+      if(previousDigitPos < 0) return;
+
+      e.preventDefault();
+      const digitsBefore = (input.value.slice(0,previousDigitPos + 1).match(/\d/g) || []).length;
+      let digits = input.value.replace(/\D/g,'');
+      const removeAt = digitsBefore - 1;
+      digits = digits.slice(0,removeAt) + digits.slice(removeAt + 1);
+      const formatted = formatNational(digits,selected);
+      input.value = formatted;
+      const caret = caretAfterDigitCount(formatted,digitsBefore - 1);
+      input.setSelectionRange(caret,caret);
+      wrap.classList.remove('is-invalid');
+    });
+
     input.addEventListener('input',function(){
-      const formatted = formatNational(input.value,selected);
+      const raw = input.value;
+      const currentCaret = input.selectionStart == null ? raw.length : input.selectionStart;
+      const digitsBeforeCaret = (raw.slice(0,currentCaret).match(/\d/g) || []).length;
+      const formatted = formatNational(raw,selected);
       if(input.value !== formatted) input.value = formatted;
+      const nextCaret = caretAfterDigitCount(formatted,digitsBeforeCaret);
+      try{ input.setSelectionRange(nextCaret,nextCaret); }catch(_){}
       wrap.classList.remove('is-invalid');
     });
 
@@ -711,6 +758,20 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     }
   }
 
+  function showSuccessNotice(){
+    const old = document.querySelector('.gaeo-success-toast');
+    if(old) old.remove();
+    const notice = document.createElement('div');
+    notice.className = 'gaeo-success-toast';
+    notice.setAttribute('role','status');
+    notice.setAttribute('aria-live','polite');
+    notice.textContent = copy.success;
+    document.body.appendChild(notice);
+    setTimeout(function(){
+      if(notice.isConnected) notice.remove();
+    },3500);
+  }
+
   function buildForm(mode){
     const shell = document.createElement('div');
     shell.className = 'gaeo-form-shell gaeo-form-' + mode;
@@ -766,6 +827,18 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       status.classList.toggle('is-success',type === 'success');
     }
 
+    function finishSuccess(){
+      setStatus(copy.success,'success');
+      showSuccessNotice();
+      if(mode === 'modal'){
+        setTimeout(closeModal,650);
+      }else{
+        setTimeout(function(){
+          shell.hidden = true;
+        },650);
+      }
+    }
+
     function validate(){
       nameInput.setAttribute('aria-invalid','false');
       emailInput.setAttribute('aria-invalid','false');
@@ -814,8 +887,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       if(!validate()) return;
 
       if(hpInput.value){
-        setStatus(copy.success,'success');
-        form.reset();
+        finishSuccess();
         return;
       }
 
@@ -842,6 +914,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 
       submit.disabled = true;
       setStatus(copy.sending,null);
+      let sent = false;
       try{
         const response = await fetch(FORM_ENDPOINT,{
           method:'POST',
@@ -850,14 +923,13 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
           body:JSON.stringify(payload)
         });
         if(!response.ok) throw new Error('HTTP ' + response.status);
-        setStatus(copy.success,'success');
+        sent = true;
         document.dispatchEvent(new CustomEvent('gaeo:lead-success',{detail:{mode:mode,lang:lang}}));
-        form.reset();
-        phone.input.value = '';
+        finishSuccess();
       }catch(err){
         setStatus(copy.serverError,'error');
       }finally{
-        submit.disabled = false;
+        if(!sent) submit.disabled = false;
       }
     });
 
