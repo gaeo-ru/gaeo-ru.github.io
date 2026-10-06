@@ -1,0 +1,159 @@
+name: Activate indexable prelaunch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/activate-prelaunch.yml']
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: gaeo-activate-prelaunch
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply reviewed changes and verify unchanged page content
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/gaeo-release-verification
+          git rev-parse HEAD > /tmp/gaeo-release-verification/base-commit.txt
+          python .github/scripts/prepare_indexable_prelaunch.py
+          python scripts/ensure_indexability.py
+          python scripts/build_sitemap.py --output sitemap.xml
+          python scripts/site_qa.py --mode prelaunch | tee /tmp/gaeo-release-verification/site-qa.txt
+          python scripts/indexnow_submit.py --all --dry-run | tee /tmp/gaeo-release-verification/indexnow-dry-run.txt
+          python - <<'PY'
+          from pathlib import Path
+          import re, subprocess, json, sys
+          sys.path.insert(0,'scripts')
+          from build_sitemap import is_deployable_html
+          checked=0
+          pattern=re.compile(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>',re.I)
+          for p in Path('.').rglob('*.html'):
+              if not is_deployable_html(p.resolve()): continue
+              before=subprocess.check_output(['git','show','HEAD:'+p.as_posix()],text=True)
+              after=p.read_text()
+              assert pattern.sub('',before)==pattern.sub('',after),f'Unexpected content/metadata change: {p}'
+              checked+=1
+          assert checked==33,checked
+          assert not Path('CNAME').exists(),'Domain must not be activated in this release'
+          print(f'PASS: all {checked} pages unchanged except robots meta; CNAME absent.')
+          Path('/tmp/gaeo-release-verification/content-preservation.txt').write_text(f'PASS: {checked} HTML files unchanged except robots meta. Title, description, schema, body and layout preserved.\n')
+          PY
+      - name: Commit the complete indexability release atomically
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/scripts/prepare_indexable_prelaunch.py .github/workflows/activate-prelaunch.yml
+          git add -u
+          git add scripts/ensure_indexability.py reports/metadata-selection-2026-10-06.md sitemap.xml
+          git commit -m 'Open GAEO indexing and publish sitemap before separate domain cutover'
+          python scripts/build_sitemap.py --output sitemap.xml >/tmp/gaeo-release-verification/sitemap-build.txt
+          if ! git diff --quiet -- sitemap.xml; then
+            git add sitemap.xml
+            git commit --amend --no-edit
+          fi
+          python scripts/site_qa.py --mode prelaunch | tee /tmp/gaeo-release-verification/site-qa.txt
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$(cat /tmp/gaeo-release-verification/base-commit.txt)"
+          git push origin HEAD:main
+          git rev-parse HEAD > /tmp/gaeo-release-verification/release-commit.txt
+      - name: Request publication after successful QA
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+      - name: Verify fresh public HTML, robots and sitemap
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request,urlopen
+          from concurrent.futures import ThreadPoolExecutor
+          from datetime import datetime,timezone
+          from urllib.error import HTTPError
+          import hashlib,json,re,subprocess,time,sys
+          sys.path.insert(0,'scripts')
+          from site_qa import page_paths,expected_url,relpath,INTENTIONAL_NOINDEX,meta_values,link_values,JSONLD_RE
+          origin='https://gaeo-ru.github.io'
+          sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          def fetch(route):
+              request=Request(origin+route+'?release='+sha,headers={'Cache-Control':'no-cache','User-Agent':'GAEO-Release-Verification/1.0'})
+              try:
+                  with urlopen(request,timeout=25) as r: return r.status,r.read().decode('utf-8'),dict(r.headers)
+              except HTTPError as e: return e.code,e.read().decode('utf-8'),dict(e.headers)
+          for attempt in range(24):
+              try:
+                  status,html,headers=fetch('/')
+                  if status==200 and meta_values(html,'name','robots')==['index,follow,max-image-preview:large']:
+                      status,xml,headers=fetch('/sitemap.xml')
+                      if status==200 and xml==Path('sitemap.xml').read_text(): break
+              except Exception as e: print('Publication check:',e)
+              time.sleep(5)
+          else: raise SystemExit('New release not yet publicly verifiable.')
+          def check(p):
+              rel=relpath(p)
+              route=expected_url(p).replace('https://gaeo.ru','',1)
+              status,text,headers=fetch(route)
+              expected=p.read_text()
+              value='noindex,follow' if rel in INTENTIONAL_NOINDEX else 'index,follow,max-image-preview:large'
+              assert status==200 or (rel=='404.html' and status==404),(route,status)
+              assert text==expected,f'Published HTML differs: {route}'
+              assert meta_values(text,'name','robots')==[value],route
+              assert link_values(text,'canonical')[0]['href']==expected_url(p),route
+              if rel not in INTENTIONAL_NOINDEX:
+                  assert not any(k.lower()=='x-robots-tag' and re.search(r'noindex|nofollow|noarchive',v,re.I) for k,v in headers.items()),route
+              blocks=JSONLD_RE.findall(text)
+              for block in blocks: json.loads(block)
+              return {'url':origin+route,'status':status,'robots':value,'canonical':expected_url(p),'html_matches_commit':True,'jsonld_blocks':len(blocks)}
+          with ThreadPoolExecutor(max_workers=6) as pool: pages=list(pool.map(check,page_paths()))
+          status,robots,headers=fetch('/robots.txt')
+          assert status==200 and robots==Path('robots.txt').read_text()
+          assert not re.search(r'^Disallow:\s*/\s*$',robots,re.M|re.I)
+          status,sitemap,headers=fetch('/sitemap.xml')
+          assert status==200 and sitemap==Path('sitemap.xml').read_text()
+          urls=re.findall(r'<loc>(.*?)</loc>',sitemap)
+          assert len(urls)==28 and all(u.startswith('https://gaeo.ru/') for u in urls)
+          report={'verified_at':datetime.now(timezone.utc).isoformat(),'release_commit':sha,'site_mode':'prelaunch','dns_changed':False,'root_cname_present':Path('CNAME').exists(),'pages_checked':len(pages),'indexable_pages':sum(p['robots'].startswith('index,') for p in pages),'sitemap_urls':len(urls),'robots_txt':robots,'pages':pages,'errors':[]}
+          out=Path('/tmp/gaeo-release-verification')
+          (out/'public-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({k:v for k,v in report.items() if k not in ('pages','robots_txt')},ensure_ascii=False))
+          PY
+      - name: Crawl published pages, resources and 404
+        run: python scripts/staging_crawl.py --origin https://gaeo-ru.github.io | tee /tmp/gaeo-release-verification/public-crawl.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser for desktop and mobile acceptance
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Check desktop and mobile page rendering
+        env:
+          GAEO_STAGING_ORIGIN: https://gaeo-ru.github.io
+          GAEO_VISUAL_OUT: /tmp/gaeo-release-verification/visual-smoke
+        run: node scripts/staging_visual_smoke.mjs
+      - name: Upload release verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-prelaunch-verification-2026-10-06
+          path: |
+            /tmp/gaeo-release-verification/
+            reports/metadata-selection-2026-10-06.md
+            reports/metadata-comparison-2026-10-06.json
+            sitemap.xml
+            robots.txt
+          retention-days: 14
