@@ -374,11 +374,10 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             if robot_value != expected:
                 errors.append(f"{page}: staging robots is {robots[0]!r}, expected {expected!r}.")
         else:
-            if page in INTENTIONAL_NOINDEX:
-                if "noindex" not in robot_value or "follow" not in robot_value:
-                    errors.append(f"{page}: production service/legal page must be noindex,follow.")
-            elif "noindex" in robot_value:
-                errors.append(f"{page}: production content page remains noindex.")
+            tokens = set(robot_value.split(","))
+            expected_tokens = {"noindex", "follow"} if page in INTENTIONAL_NOINDEX else {"index", "follow", "max-image-preview:large"}
+            if tokens != expected_tokens:
+                errors.append(f"{page}: {mode} robots is {robots[0]!r}, expected {sorted(expected_tokens)}.")
 
     canonicals = link_values(text, "canonical")
     if len(canonicals) != 1:
@@ -875,7 +874,9 @@ def check_robots_files(mode: str) -> None:
             errors.append("robots.txt: staging must contain Disallow: /.")
     else:
         if "Allow: /" not in current or f"Sitemap: {BASE}/sitemap.xml" not in current:
-            errors.append("robots.txt: production must Allow / and declare sitemap.")
+            errors.append("robots.txt: indexable mode must Allow / and declare sitemap.")
+        if re.search(r"^Disallow:\s*/\s*$", current, re.M | re.I):
+            errors.append("robots.txt: site-wide Disallow / is forbidden in indexable mode.")
 
     if not production.exists():
         errors.append("robots.production.txt is missing.")
@@ -994,9 +995,9 @@ def check_custom_domain_preparation(mode: str) -> None:
     elif prepared.read_text(encoding="utf-8").strip() != "gaeo.ru":
         errors.append("CNAME.production must contain exactly gaeo.ru.")
 
-    if mode == "staging":
+    if mode in {"staging", "prelaunch"}:
         if active.exists():
-            errors.append("CNAME must not exist on staging; it would activate the production custom domain prematurely.")
+            errors.append(f"CNAME must not exist in {mode}; the custom-domain switch is a separate step.")
     else:
         if not active.exists():
             errors.append("Production mode requires root CNAME for gaeo.ru.")
@@ -1027,7 +1028,7 @@ def check_migration_url_contract() -> None:
 
 def main() -> int:
     parser = ArgumentParser(description="Technical SEO/GEO QA for GAEO.ru.")
-    parser.add_argument("--mode", choices=("staging", "production"), default="staging")
+    parser.add_argument("--mode", choices=("staging", "prelaunch", "production"), default="staging")
     args = parser.parse_args()
 
     paths = page_paths()

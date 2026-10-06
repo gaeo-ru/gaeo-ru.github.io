@@ -1,5 +1,5 @@
 # GAEO.ru production robots policy.
-# Keep robots.txt closed on staging. Replace robots.txt with this file only after gaeo.ru serves the new site.
+# Activated by ensure_indexability.py in prelaunch and production modes.
 
 User-agent: *
 Allow: /
@@ -8,6 +8,8 @@ Allow: /
 Disallow: /.github/
 Disallow: /scripts/
 Disallow: /templates/
+Disallow: /reports/
+Disallow: /SITE_MODE
 Disallow: /README.md
 Disallow: /MIGRATION.md
 Disallow: /URL_INVENTORY.md

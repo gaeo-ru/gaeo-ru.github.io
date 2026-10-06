@@ -4,6 +4,8 @@ import path from 'node:path';
 
 const ORIGIN = process.env.GAEO_STAGING_ORIGIN || 'https://gaeo-ru.github.io';
 const OUT = process.env.GAEO_VISUAL_OUT || 'visual-smoke';
+const SITE_MODE = (await fs.readFile('SITE_MODE', 'utf8')).trim();
+if (!['staging', 'prelaunch', 'production'].includes(SITE_MODE)) throw new Error(`Invalid SITE_MODE: ${SITE_MODE}`);
 
 const pages = {
   homepage: '/',
@@ -97,8 +99,9 @@ for (const [modeName, viewport] of Object.entries(modes)) {
     if (audit.badImages.length) {
       failures.push(`${modeName}/${pageName}: broken images: ${audit.badImages.join(', ')}`);
     }
-    if (!audit.robots.toLowerCase().includes('noindex')) {
-      failures.push(`${modeName}/${pageName}: staging robots meta is not noindex: ${audit.robots}`);
+    const expectedRobots = SITE_MODE === 'staging' ? 'noindex,nofollow,noarchive' : 'index,follow,max-image-preview:large';
+    if (audit.robots.toLowerCase().replaceAll(' ', '') !== expectedRobots) {
+      failures.push(`${modeName}/${pageName}: ${SITE_MODE} robots meta mismatch: ${audit.robots}`);
     }
     if (pageErrors.length) {
       failures.push(`${modeName}/${pageName}: page errors: ${pageErrors.join(' | ')}`);

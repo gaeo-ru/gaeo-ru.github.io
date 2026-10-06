@@ -6,7 +6,22 @@
 - Internal pages: current public `https://gaeo.ru/` pages are the content source. Preserve their meaning and content during migration; apply the v0.28 design system.
 - Preserve existing public URLs 1:1 wherever technically possible.
 
-## Staging
+## Authorized prelaunch state, 6 October 2026
+
+The owner explicitly requested opening indexing and publishing the production
+sitemap BEFORE the separate DNS/custom-domain switch.
+
+- `SITE_MODE=prelaunch`: content pages are `index,follow,max-image-preview:large`;
+  the 404 and 4 legal pages stay `noindex,follow`.
+- `robots.txt` is open and `sitemap.xml` contains only canonical `gaeo.ru` URLs.
+- No root `CNAME` is added and DNS is not changed in this release.
+- IndexNow remains dry-run; sending URLs is blocked unless mode is `production`.
+- Next cutover: configure the custom domain and DNS, add root `CNAME` containing
+  `gaeo.ru`, set `SITE_MODE=production`, verify the new public domain and HTTPS.
+- Do not revert to `staging` automatically. This explicit decision supersedes
+  the earlier instruction to keep the preview blocked until the domain switch.
+
+## Original staging policy (superseded for this authorized prelaunch)
 
 - Staging URL: `https://gaeo-ru.github.io/`
 - Staging must remain blocked from indexing until the final domain switch.

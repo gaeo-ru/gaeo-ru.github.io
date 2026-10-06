@@ -39,7 +39,7 @@ def site_mode() -> str:
     if not path.exists():
         raise SystemExit("SITE_MODE is missing.")
     mode = path.read_text(encoding="utf-8").strip()
-    if mode not in {"staging", "production"}:
+    if mode not in {"staging", "prelaunch", "production"}:
         raise SystemExit(f"Invalid SITE_MODE: {mode!r}")
     return mode
 
@@ -281,7 +281,7 @@ def main() -> None:
     if mode != "production":
         raise SystemExit(
             "Refusing IndexNow network submission because SITE_MODE is not production. "
-            "Use --dry-run on staging."
+            "Use --dry-run before the production domain switch."
         )
 
     wait_for_key()
