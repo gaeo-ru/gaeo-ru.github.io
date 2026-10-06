@@ -40,6 +40,12 @@ ALLOWED_UTM = {
 EMAIL_RE = re.compile(r"^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,63}$")
 PHONE_RE = re.compile(r"^\+[1-9]\d{6,14}$")
 COUNTRY_RE = re.compile(r"^[a-z]{2}$")
+PREFERRED_CONTACT_LABELS = {
+    "phone": "Телефон",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+}
 
 
 def _headers(event: dict[str, Any]) -> dict[str, str]:
@@ -145,6 +151,7 @@ def _email_text(payload: dict[str, Any]) -> str:
         f"Телефон: {payload['phone'] or '—'}\n"
         f"Страна телефона: {payload['phone_country'] or '—'}\n"
         f"Email: {payload['email'] or '—'}\n"
+        f"Предпочитаемый способ связи: {PREFERRED_CONTACT_LABELS.get(payload['preferred_contact'], '—')}\n"
         f"Язык: {payload['lang']}\n\n"
         "Комментарий:\n"
         f"{payload['comment'] or '—'}\n\n"
@@ -255,6 +262,7 @@ def handler(event: dict[str, Any], context: Any):
         phone = _text(decoded.get("phone"), 32)
         phone_country = _text(decoded.get("phone_country"), 8).lower()
         email = _text(decoded.get("email"), 254).lower()
+        preferred_contact = _text(decoded.get("preferred_contact"), 32).lower()
         comment = _text(decoded.get("comment"), 3000)
         page_url = _text(decoded.get("page_url"), 2048)
         referrer = _text(decoded.get("referrer"), 2048)
@@ -272,6 +280,12 @@ def handler(event: dict[str, Any], context: Any):
             raise ValueError("invalid_phone_country")
         if email and ("\r" in email or "\n" in email or not EMAIL_RE.fullmatch(email)):
             raise ValueError("invalid_email")
+        if preferred_contact and preferred_contact not in PREFERRED_CONTACT_LABELS:
+            raise ValueError("invalid_preferred_contact")
+        if preferred_contact in {"phone", "telegram", "whatsapp"} and not phone:
+            raise ValueError("preferred_contact_requires_phone")
+        if preferred_contact == "email" and not email:
+            raise ValueError("preferred_contact_requires_email")
 
         started = _parse_iso(form_started_at)
         submitted = _parse_iso(submitted_at)
@@ -286,6 +300,7 @@ def handler(event: dict[str, Any], context: Any):
             "phone": phone,
             "phone_country": phone_country,
             "email": email,
+            "preferred_contact": preferred_contact,
             "comment": comment,
             "page_url": page_url,
             "referrer": referrer,
