@@ -30,11 +30,21 @@ jobs:
           set -euo pipefail
           mode="$(tr -d '[:space:]' < SITE_MODE)"
           case "$mode" in
-            staging|production) ;;
+            staging|prelaunch|production) ;;
             *) echo "Invalid SITE_MODE: $mode"; exit 1 ;;
           esac
           echo "SITE_MODE=$mode" >> "$GITHUB_ENV"
           echo "GAEO site mode: $mode"
+
+      - name: Synchronize indexability for current release mode
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f scripts/ensure_indexability.py ]; then
+            python scripts/ensure_indexability.py
+          else
+            test "$SITE_MODE" = "staging"
+          fi
 
       - name: Materialize shared RU/EN header and footer
         run: python scripts/ensure_site_chrome.py
@@ -61,7 +71,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ "$SITE_MODE" = "production" ]; then
+          if [ "$SITE_MODE" != "staging" ]; then
             python scripts/build_sitemap.py --output sitemap.xml
           else
             python scripts/build_sitemap.py --preview-staging --output /tmp/gaeo-sitemap.xml
@@ -96,7 +106,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- '*.html'
-          if [ "$SITE_MODE" = "production" ] && [ -f sitemap.xml ]; then
+          git add robots.txt
+          if [ "$SITE_MODE" != "staging" ] && [ -f sitemap.xml ]; then
             git add sitemap.xml
           fi
           if git diff --cached --quiet; then
@@ -117,8 +128,8 @@ jobs:
           gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/tmp/pages-build.json
           echo "GitHub Pages build requested after QA."
 
-      - name: Dry-run changed URLs for IndexNow on staging
-        if: github.event_name == 'push' && github.actor != 'github-actions[bot]' && env.SITE_MODE == 'staging'
+      - name: Dry-run changed URLs for IndexNow before domain cutover
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]' && env.SITE_MODE != 'production'
         env:
           INDEXNOW_BEFORE: ${{ github.event.before }}
         run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE" --dry-run
@@ -129,8 +140,8 @@ jobs:
           INDEXNOW_BEFORE: ${{ github.event.before }}
         run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE"
 
-      - name: Dry-run all IndexNow URLs manually on staging
-        if: github.event_name == 'workflow_dispatch' && env.SITE_MODE == 'staging'
+      - name: Dry-run all IndexNow URLs manually before domain cutover
+        if: github.event_name == 'workflow_dispatch' && env.SITE_MODE != 'production'
         run: python scripts/indexnow_submit.py --all --dry-run
 
       - name: Submit all IndexNow URLs manually in production
