@@ -57,9 +57,10 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm .github/scripts/prepare_indexable_prelaunch.py .github/workflows/activate-prelaunch.yml
+          git restore --source=HEAD --staged --worktree -- .github/workflows
           git add -u
           git add scripts/ensure_indexability.py reports/metadata-selection-2026-10-06.md sitemap.xml
+          test -z "$(git diff --cached --name-only -- .github/workflows)"
           git commit -m 'Open GAEO indexing and publish sitemap before separate domain cutover'
           python scripts/build_sitemap.py --output sitemap.xml >/tmp/gaeo-release-verification/sitemap-build.txt
           if ! git diff --quiet -- sitemap.xml; then
