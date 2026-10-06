@@ -1,0 +1,138 @@
+name: Pre-migration metadata inventory
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/metadata-inventory.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gaeo-metadata-inventory
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read current old-site HTML and repository metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError
+          from urllib.parse import urlsplit, urljoin, urlunsplit
+          from concurrent.futures import ThreadPoolExecutor
+          from datetime import datetime, timezone
+          import hashlib, json, re, subprocess
+          import xml.etree.ElementTree as ET
+
+          ROOT = Path('.')
+          BASE = 'https://gaeo.ru'
+          class Page(HTMLParser):
+              def __init__(self, text):
+                  super().__init__(convert_charrefs=True)
+                  self.titles=[]; self.descriptions=[]; self.robots=[]; self.canonical=''; self.h1=[]; self.h2=[]; self.links=[]; self.capture=None; self.buffer=[]; self.lang=''
+                  self.feed(text)
+              def handle_starttag(self, tag, attrs):
+                  a=dict(attrs)
+                  if tag == 'html': self.lang=a.get('lang','')
+                  if tag in ('title','h1','h2'):
+                      self.capture=tag; self.buffer=[]
+                  if tag == 'meta':
+                      name=(a.get('name') or '').lower()
+                      if name == 'description': self.descriptions.append(a.get('content',''))
+                      if name in ('robots','googlebot','yandex'): self.robots.append({'name':name,'content':a.get('content','')})
+                  if tag == 'link' and 'canonical' in (a.get('rel') or '').lower().split(): self.canonical=a.get('href','')
+                  if tag == 'a' and a.get('href'): self.links.append(a['href'])
+              def handle_data(self, data):
+                  if self.capture: self.buffer.append(data)
+              def handle_endtag(self, tag):
+                  if tag == self.capture:
+                      text=re.sub(r'\s+',' ',''.join(self.buffer)).strip()
+                      getattr(self, 'titles' if tag == 'title' else tag).append(text)
+                      self.capture=None; self.buffer=[]
+              def record(self):
+                  return {'title':self.titles[0] if self.titles else '', 'description':self.descriptions[0] if self.descriptions else '', 'title_count':len(self.titles),'description_count':len(self.descriptions),'canonical':self.canonical,'robots':self.robots,'lang':self.lang,'h1':self.h1,'h2':self.h2[:14]}
+          def page_url(value, base=BASE+'/'):
+              u=urlsplit(urljoin(base,value))
+              if u.scheme not in ('http','https') or u.hostname not in ('gaeo.ru','www.gaeo.ru'): return None
+              path=u.path or '/'
+              suffix=Path(path).suffix.lower()
+              if suffix and suffix not in ('.html','.htm'): return None
+              return urlunsplit(('https','gaeo.ru',path,'',''))
+          def fetch(url):
+              req=Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; GAEO-Migration-Audit/1.0)','Cache-Control':'no-cache'})
+              try:
+                  with urlopen(req,timeout=25) as r:
+                      raw=r.read(6000000)
+                      return r.status,r.geturl(),raw.decode(r.headers.get_content_charset() or 'utf-8',errors='replace'),dict(r.headers)
+              except HTTPError as e:
+                  return e.code,e.geturl(),e.read(1000000).decode('utf-8',errors='replace'),dict(e.headers)
+              except Exception as e:
+                  return 0,url,'',{'error':str(e)}
+          new=[]
+          for path in sorted(ROOT.rglob('*.html')):
+              if any(x in ('.git','.github','templates') for x in path.parts): continue
+              text=path.read_text(encoding='utf-8'); p=Page(text)
+              if not p.titles: continue
+              record=p.record(); record['file']=path.as_posix()
+              rel=path.as_posix()
+              record['route']='/'+(rel[:-10] if rel.endswith('index.html') else rel)
+              new.append(record)
+          sitemap_sources=[]; discovered=set(); maps=['https://gaeo.ru/sitemap.xml']; seen_maps=set()
+          while maps and len(seen_maps)<10:
+              url=maps.pop(0)
+              if url in seen_maps: continue
+              seen_maps.add(url)
+              status,final,text,headers=fetch(url)
+              sitemap_sources.append({'url':url,'status':status,'final_url':final})
+              try:
+                  xml=ET.fromstring(text)
+                  locs=[e.text.strip() for e in xml.iter() if e.tag.endswith('}loc') or e.tag=='loc']
+                  if xml.tag.endswith('sitemapindex'):
+                      maps.extend(u for u in locs if urlsplit(u).hostname in ('gaeo.ru','www.gaeo.ru'))
+                  else:
+                      discovered.update(u for u in (page_url(u) for u in locs) if u)
+              except Exception: pass
+          pending={BASE+'/'}|discovered
+          for p in new:
+              u=page_url(p.get('canonical') or BASE+p['route'])
+              if u and p['file']!='404.html': pending.add(u)
+          old=[]; seen=set()
+          def inspect(url):
+              status,final,text,headers=fetch(url)
+              p=Page(text); rec=p.record()
+              rec.update({'url':url,'final_url':final,'status':status,'sha256':hashlib.sha256(text.encode()).hexdigest(),'x_robots_tag':next((v for k,v in headers.items() if k.lower()=='x-robots-tag'),''),'error':headers.get('error',''),'in_old_sitemap':url in discovered})
+              return rec,[u for u in (page_url(h,final) for h in p.links) if u] if status==200 else []
+          while pending and len(seen)<100:
+              batch=sorted(pending-seen)[:100-len(seen)]
+              if not batch: break
+              pending=set(); seen.update(batch)
+              with ThreadPoolExecutor(max_workers=6) as pool:
+                  for rec,links in pool.map(inspect,batch):
+                      old.append(rec); pending.update(u for u in links if u not in seen)
+          report={'captured_at':datetime.now(timezone.utc).isoformat(),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'old_base':BASE,'sitemaps':sitemap_sources,'new_pages':new,'old_pages':sorted(old,key=lambda x:x['url']),'unfetched_urls':sorted(pending-seen)}
+          target=Path('reports/metadata-comparison-2026-10-06.json'); target.parent.mkdir(exist_ok=True)
+          target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('New pages:',len(new),'Old URLs:',len(old),'Old HTTP 200:',sum(x['status']==200 for x in old),'Not fetched:',len(report['unfetched_urls']))
+          if not any(x['status']==200 and x['url']==BASE+'/' for x in old): raise SystemExit('Old homepage unavailable; inspect errors in report.')
+          PY
+      - name: Save exact comparison snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/metadata-comparison-2026-10-06.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record live old-site and new-site metadata before migration'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
