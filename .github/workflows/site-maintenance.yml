@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Retry saved URLs only; do not resubmit the whole sitemap every hour.
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -13,16 +16,20 @@ permissions:
 
 concurrency:
   group: gaeo-site-maintenance-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   maintain-and-check:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Test IndexNow retry and queue behavior
+        run: python -m unittest discover -s tests -p 'test_indexnow*.py'
 
       - name: Resolve site mode
         shell: bash
@@ -141,7 +148,7 @@ jobs:
         if: github.event_name == 'push' && github.actor != 'github-actions[bot]' && env.SITE_MODE == 'production'
         env:
           INDEXNOW_BEFORE: ${{ github.event.before }}
-        run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE"
+        run: python scripts/indexnow_submit.py --before "$INDEXNOW_BEFORE" --defer-unavailable --pending-file .github/indexnow-pending.json
 
       - name: Dry-run all IndexNow URLs manually before domain cutover
         if: github.event_name == 'workflow_dispatch' && env.SITE_MODE != 'production'
@@ -149,4 +156,34 @@ jobs:
 
       - name: Submit all IndexNow URLs manually in production
         if: github.event_name == 'workflow_dispatch' && env.SITE_MODE == 'production'
-        run: python scripts/indexnow_submit.py --all
+        run: python scripts/indexnow_submit.py --all --defer-unavailable --pending-file .github/indexnow-pending.json
+
+
+      - name: Persist pending IndexNow URLs even after a submission error
+        if: always() && env.SITE_MODE == 'production' && github.actor != 'github-actions[bot]' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        run: bash scripts/persist_indexnow_queue.sh
+
+  retry-indexnow:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest production queue
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Retry saved production URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$(tr -d '[:space:]' < SITE_MODE)" != "production" ] || [ ! -f .github/indexnow-pending.json ]; then
+            echo "No pending production IndexNow URLs."
+            exit 0
+          fi
+          python scripts/indexnow_submit.py --pending-only --defer-unavailable --pending-file .github/indexnow-pending.json
+
+      - name: Persist retry queue
+        if: always()
+        run: bash scripts/persist_indexnow_queue.sh

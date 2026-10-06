@@ -25,23 +25,40 @@ jobs:
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
-      - name: Wait for GitHub Pages staging
+      - name: Select deployed origin for current site mode
+        shell: bash
+        run: |
+          set -euo pipefail
+          mode="$(tr -d '[:space:]' < SITE_MODE)"
+          case "$mode" in
+            production) origin="https://gaeo.ru" ;;
+            staging|prelaunch) origin="https://gaeo-ru.github.io" ;;
+            *) echo "Invalid SITE_MODE: $mode"; exit 1 ;;
+          esac
+          echo "AUDIT_ORIGIN=$origin" >> "$GITHUB_ENV"
+          echo "AUDIT_MODE=$mode" >> "$GITHUB_ENV"
+
+      - name: Wait for deployed GitHub Pages site
         shell: bash
         run: |
           set -euo pipefail
           for attempt in {1..18}; do
-            if curl -fsS --max-time 15 https://gaeo-ru.github.io/ >/dev/null; then
-              echo "Staging is reachable."
+            if curl -fsS --max-time 15 "$AUDIT_ORIGIN/" >/dev/null; then
+              echo "Deployed site is reachable."
               exit 0
             fi
-            echo "Waiting for staging, attempt $attempt/18..."
+            echo "Waiting for deployed site, attempt $attempt/18..."
             sleep 10
           done
-          echo "Staging did not become reachable."
+          echo "Deployed site did not become reachable."
           exit 1
 
-      - name: Crawl deployed staging
-        run: python scripts/staging_crawl.py --origin https://gaeo-ru.github.io
+      - name: Crawl deployed site
+        run: python scripts/staging_crawl.py --origin "$AUDIT_ORIGIN"
+
+      - name: Verify public production indexing and GitHub Pages redirects
+        if: env.AUDIT_MODE == 'production'
+        run: python scripts/verify_production.py
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -58,11 +75,11 @@ jobs:
           mkdir -p lighthouse-results
 
           declare -A pages=(
-            [homepage]="https://gaeo-ru.github.io/"
-            [article]="https://gaeo-ru.github.io/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
-            [case]="https://gaeo-ru.github.io/cases/prep-center-6-klientov-iz-neyrosetey/"
-            [biography]="https://gaeo-ru.github.io/professional-biography/"
-            [commercial]="https://gaeo-ru.github.io/geo-prodvizhenie-nedvizhimosti/"
+            [homepage]="${AUDIT_ORIGIN}/"
+            [article]="${AUDIT_ORIGIN}/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+            [case]="${AUDIT_ORIGIN}/cases/prep-center-6-klientov-iz-neyrosetey/"
+            [biography]="${AUDIT_ORIGIN}/professional-biography/"
+            [commercial]="${AUDIT_ORIGIN}/geo-prodvizhenie-nedvizhimosti/"
           )
 
           for name in homepage article case biography commercial; do
@@ -122,7 +139,7 @@ jobs:
           summary = "\n".join(lines) + "\n"
           Path("lighthouse-summary.md").write_text(summary, encoding="utf-8")
           with open(Path(__import__("os").environ["GITHUB_STEP_SUMMARY"]), "a", encoding="utf-8") as f:
-              f.write("## GAEO staging Lighthouse\n\n")
+              f.write("## GAEO deployed-site Lighthouse\n\n")
               f.write(summary)
               f.write("\nField CWV/INP are not expected to exist for prelaunch staging without sufficient CrUX traffic; Lighthouse provides lab LCP/CLS and TBT as the responsiveness proxy.\n")
           PY
@@ -135,3 +152,4 @@ jobs:
             lighthouse-results/*.json
             lighthouse-summary.md
           retention-days: 14
+

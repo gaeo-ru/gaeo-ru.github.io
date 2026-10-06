@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
 import time
 from pathlib import Path
 from urllib import error, request
+from urllib.parse import urlparse
 
 from build_sitemap import collect_pages
 
@@ -168,26 +170,36 @@ def changed_urls(before: str | None, force_all: bool, mode: str) -> list[str]:
     return sorted(urls)
 
 
+class TemporaryIndexNowError(RuntimeError):
+    """DNS, TLS propagation, timeouts or retryable HTTP responses."""
+
+
 def wait_for_key(max_attempts: int = 18, delay: int = 10) -> None:
+    last_error = "key not available"
     for attempt in range(1, max_attempts + 1):
         try:
             req = request.Request(
                 KEY_LOCATION,
                 headers={"User-Agent": "GAEO-IndexNow/1.0"},
             )
+            # Keep normal TLS verification: never submit through an invalid certificate.
             with request.urlopen(req, timeout=20) as resp:
                 body = resp.read().decode("utf-8", errors="replace").strip()
-                if resp.status == 200 and body == KEY:
-                    print(f"IndexNow key is publicly reachable: {KEY_LOCATION}")
-                    return
-        except Exception as exc:
-            print(f"Key check {attempt}/{max_attempts}: {exc}")
-
+                if resp.status != 200 or body != KEY or resp.geturl() != KEY_LOCATION:
+                    raise RuntimeError("IndexNow key response does not match the configured key/location.")
+                print(f"IndexNow key is publicly reachable: {KEY_LOCATION}")
+                return
+        except error.HTTPError as exc:
+            if exc.code not in (404, 408, 429, 500, 502, 503, 504):
+                raise
+            last_error = f"HTTP {exc.code}"
+        except (error.URLError, OSError) as exc:
+            last_error = str(exc)
+        print(f"Key check {attempt}/{max_attempts}: {last_error}")
         if attempt < max_attempts:
             time.sleep(delay)
-
-    raise SystemExit(
-        f"IndexNow key file is not publicly reachable after waiting: {KEY_LOCATION}"
+    raise TemporaryIndexNowError(
+        f"IndexNow key is temporarily unavailable: {KEY_LOCATION}: {last_error}"
     )
 
 
@@ -227,16 +239,51 @@ def post_indexnow(urls: list[str]) -> int:
             body = exc.read().decode("utf-8", errors="replace").strip()
             print(f"IndexNow HTTP error {exc.code}: {body}")
             last_error = exc
-            if exc.code not in (429, 500, 502, 503, 504):
+            if exc.code not in (408, 429, 500, 502, 503, 504):
                 raise
-        except Exception as exc:
+        except (error.URLError, OSError) as exc:
             print(f"IndexNow attempt {attempt}/3 failed: {exc}")
             last_error = exc
 
         if attempt < 3:
             time.sleep(10 * attempt)
 
-    raise SystemExit(f"IndexNow submission failed after retries: {last_error}")
+    raise TemporaryIndexNowError(f"IndexNow submission failed after retries: {last_error}")
+
+
+def load_pending(path: Path | None) -> list[str]:
+    if path is None or not path.exists():
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if any(payload.get(k) != v for k, v in payload_for([]).items() if k != "urlList"):
+        raise ValueError("Pending IndexNow queue belongs to a different host/key.")
+    urls = payload.get("urlList")
+    if not isinstance(urls, list) or any(
+        not isinstance(u, str) or urlparse(u).scheme != "https" or urlparse(u).netloc != HOST
+        for u in urls
+    ):
+        raise ValueError("Invalid pending IndexNow URLs.")
+    return urls
+
+
+def save_pending(path: Path | None, urls: list[str]) -> None:
+    if path is None:
+        return
+    if not urls:
+        path.unlink(missing_ok=True)
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(payload_for(urls), indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
+def report_submission(status: str, count: int, detail: str = "") -> None:
+    print(f"INDEXNOW_SUBMISSION={status} URLS={count} {detail}".rstrip())
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as summary:
+            summary.write(f"\nIndexNow: **{status}**, URLs: {count}. {detail}\n")
 
 
 def main() -> None:
@@ -253,10 +300,19 @@ def main() -> None:
         action="store_true",
         help="Print the IndexNow payload as JSON after the URL list.",
     )
+    parser.add_argument("--defer-unavailable", action="store_true",
+                        help="Queue temporary DNS/TLS/HTTP failures without failing the release.")
+    parser.add_argument("--pending-file", type=Path,
+                        help="Durable queue payload; merged with newly changed/deleted URLs.")
+    parser.add_argument("--pending-only", action="store_true", help="Retry only the saved queue.")
     args = parser.parse_args()
+    if (args.defer_unavailable or args.pending_only) and args.pending_file is None:
+        parser.error("--defer-unavailable and --pending-only require --pending-file")
 
     mode = site_mode()
-    urls = changed_urls(args.before or None, args.all, mode)
+    pending = load_pending(args.pending_file)
+    changed = [] if args.pending_only else changed_urls(args.before or None, args.all, mode)
+    urls = sorted(set(pending) | set(changed))
 
     if len(urls) > 10000:
         raise SystemExit("IndexNow urlList exceeds the 10,000 URL protocol limit.")
@@ -284,10 +340,21 @@ def main() -> None:
             "Use --dry-run before the production domain switch."
         )
 
-    wait_for_key()
-    code = post_indexnow(urls)
-    print(f"INDEXNOW_SUBMISSION=SUCCESS HTTP={code} URLS={len(urls)}")
+    # Save before any network operation; failures retain changed and removed URLs.
+    save_pending(args.pending_file, urls)
+    try:
+        wait_for_key()
+        code = post_indexnow(urls)
+    except TemporaryIndexNowError as exc:
+        if not args.defer_unavailable:
+            raise SystemExit(str(exc)) from exc
+        print(f"::warning title=IndexNow deferred::{exc}")
+        report_submission("DEFERRED", len(urls), "Saved for retry; production release is unaffected.")
+        return
+    save_pending(args.pending_file, [])
+    report_submission("SUCCESS", len(urls), f"HTTP={code}")
 
 
 if __name__ == "__main__":
     main()
+
