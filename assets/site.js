@@ -379,7 +379,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 })();
 
 
-/* ===== Lead form + modal v1.3 =====
+/* ===== Lead form + modal v1.4 =====
    Shared client-side UI for GAEO lead forms.
    Country selector, mobile input modes and validation mirror IndexResearch.
    Delivery endpoint is configured separately from public UI code. */
@@ -407,6 +407,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       name:'ФИО',
       phone:'Телефон',
       email:'Email',
+      preferredContact:'Предпочитаемый способ связи',
+      preferredPhone:'Телефон',
+      preferredTelegram:'Telegram',
+      preferredWhatsApp:'WhatsApp',
+      preferredEmail:'Email',
       comment:'Комментарий о бизнесе и задаче',
       submit:'Отправить заявку',
       consentPrefix:'Нажимая кнопку, пользователь соглашается с ',
@@ -431,6 +436,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       name:'Full name',
       phone:'Phone',
       email:'Email',
+      preferredContact:'Preferred contact method',
+      preferredPhone:'Phone',
+      preferredTelegram:'Telegram',
+      preferredWhatsApp:'WhatsApp',
+      preferredEmail:'Email',
       comment:'Comment about your business and task',
       submit:'Send request',
       consentPrefix:'By clicking the button, you agree to the ',
@@ -455,6 +465,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       name:'姓名',
       phone:'电话',
       email:'电子邮箱',
+      preferredContact:'首选联系方式',
+      preferredPhone:'电话',
+      preferredTelegram:'Telegram',
+      preferredWhatsApp:'WhatsApp',
+      preferredEmail:'电子邮箱',
       comment:'关于您的业务和任务的说明',
       submit:'提交申请',
       consentPrefix:'点击按钮即表示您同意',
@@ -493,6 +508,15 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-form-input::placeholder,.gaeo-form-textarea::placeholder{color:#7a8490;opacity:1}',
       '.gaeo-form-input:focus,.gaeo-form-textarea:focus,.gaeo-phone-wrap:focus-within{border-color:#0e5ed7;box-shadow:0 0 0 2px rgba(14,94,215,.10)}',
       '.gaeo-form-input[aria-invalid="true"],.gaeo-form-textarea[aria-invalid="true"],.gaeo-phone-wrap.is-invalid{border-color:#b42318}',
+      '.gaeo-preferred-contact{grid-column:1/-1;margin:0;padding:0;border:0;min-width:0}',
+      '.gaeo-preferred-contact legend{margin:0 0 9px;padding:0;color:#536071;font:600 12px/1.35 Manrope,Arial,sans-serif}',
+      '.gaeo-preferred-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}',
+      '.gaeo-contact-choice{position:relative;display:block;min-width:0}',
+      '.gaeo-contact-choice input{position:absolute;opacity:0;pointer-events:none}',
+      '.gaeo-contact-choice span{display:flex;align-items:center;justify-content:center;min-height:42px;padding:9px 10px;border:1px solid #cbd2d8;border-radius:8px;background:#fff;color:#30404f;font:600 12px/1.2 Manrope,Arial,sans-serif;cursor:pointer;transition:border-color .16s ease,background-color .16s ease,color .16s ease,opacity .16s ease}',
+      '.gaeo-contact-choice input:checked + span{border-color:#0e5ed7;background:#eef5ff;color:#0e5ed7;box-shadow:0 0 0 1px rgba(14,94,215,.08)}',
+      '.gaeo-contact-choice input:focus-visible + span{outline:2px solid rgba(14,94,215,.35);outline-offset:2px}',
+      '.gaeo-contact-choice input:disabled + span{background:#f4f5f6;color:#8f98a4;border-color:#e1e4e7;cursor:not-allowed;opacity:.55}',
       '.gaeo-phone-wrap{height:56px;display:flex;align-items:stretch;border:1px solid #b9c1c5;background:#fff;position:relative;transition:border-color .16s ease,box-shadow .16s ease}',
       '.gaeo-country-toggle{display:flex;align-items:center;gap:8px;flex:0 0 auto;max-width:142px;padding:0 10px;border:0;border-right:1px solid #dde1e4;background:#fff;color:#22314a;font:600 13px/1 Manrope,Arial,sans-serif;cursor:pointer}',
       '.gaeo-country-toggle:hover{background:#f7f8f9}',
@@ -531,7 +555,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-modal-lead{margin:12px 0 0;color:#536071;font-size:14px;line-height:1.6;max-width:590px}',
       '@keyframes gaeoFadeIn{from{opacity:0}to{opacity:1}}',
       '@keyframes gaeoModalIn{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}',
-      '@media(max-width:720px){.gaeo-lead-form{grid-template-columns:1fr}.gaeo-form-field--wide,.gaeo-form-actions,.gaeo-form-status,.gaeo-form-consent{grid-column:1}.gaeo-modal-overlay{padding:12px;align-items:flex-start;overflow:auto}.gaeo-modal{margin:auto 0;width:100%;max-height:none;border-radius:14px;padding:34px 20px 28px}.gaeo-modal-close{right:8px;top:8px}.gaeo-modal-head{padding-right:34px;margin-bottom:24px}.gaeo-modal-title{font-size:29px}.gaeo-country-menu{position:fixed;left:16px!important;right:16px!important;top:50%!important;transform:translateY(-50%);width:auto!important;max-height:min(440px,70dvh)}.gaeo-form-input,.gaeo-phone-wrap{height:58px}.gaeo-phone-input{height:56px!important}}',
+      '@media(max-width:720px){.gaeo-lead-form{grid-template-columns:1fr}.gaeo-preferred-options{grid-template-columns:repeat(2,minmax(0,1fr))}.gaeo-form-field--wide,.gaeo-form-actions,.gaeo-form-status,.gaeo-form-consent{grid-column:1}.gaeo-modal-overlay{padding:12px;align-items:flex-start;overflow:auto}.gaeo-modal{margin:auto 0;width:100%;max-height:none;border-radius:14px;padding:34px 20px 28px}.gaeo-modal-close{right:8px;top:8px}.gaeo-modal-head{padding-right:34px;margin-bottom:24px}.gaeo-modal-title{font-size:29px}.gaeo-country-menu{position:fixed;left:16px!important;right:16px!important;top:50%!important;transform:translateY(-50%);width:auto!important;max-height:min(440px,70dvh)}.gaeo-form-input,.gaeo-phone-wrap{height:58px}.gaeo-phone-input{height:56px!important}}',
       '@media(max-width:400px){.gaeo-modal-overlay{padding:8px}.gaeo-modal{border-radius:12px;padding:30px 16px 24px}.gaeo-modal-title{font-size:26px}.gaeo-country-toggle{max-width:132px;padding:0 9px}}'
     ].join('');
     document.head.appendChild(style);
@@ -772,6 +796,42 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     },3500);
   }
 
+  function createPreferredContactField(phoneInput,emailInput){
+    const field = document.createElement('fieldset');
+    field.className = 'gaeo-preferred-contact';
+    field.innerHTML =
+      '<legend>' + copy.preferredContact + '</legend>' +
+      '<div class="gaeo-preferred-options">' +
+        '<label class="gaeo-contact-choice"><input type="radio" name="preferred_contact" value="phone" disabled><span>' + copy.preferredPhone + '</span></label>' +
+        '<label class="gaeo-contact-choice"><input type="radio" name="preferred_contact" value="telegram" disabled><span>' + copy.preferredTelegram + '</span></label>' +
+        '<label class="gaeo-contact-choice"><input type="radio" name="preferred_contact" value="whatsapp" disabled><span>' + copy.preferredWhatsApp + '</span></label>' +
+        '<label class="gaeo-contact-choice"><input type="radio" name="preferred_contact" value="email" disabled><span>' + copy.preferredEmail + '</span></label>' +
+      '</div>';
+
+    const phoneChoices = Array.from(field.querySelectorAll('input[value="phone"],input[value="telegram"],input[value="whatsapp"]'));
+    const emailChoice = field.querySelector('input[value="email"]');
+
+    function update(){
+      const hasPhone = !!phoneInput.value.trim();
+      const hasEmail = !!emailInput.value.trim();
+      phoneChoices.forEach(function(input){
+        input.disabled = !hasPhone;
+        if(!hasPhone && input.checked) input.checked = false;
+      });
+      emailChoice.disabled = !hasEmail;
+      if(!hasEmail && emailChoice.checked) emailChoice.checked = false;
+    }
+
+    return {
+      field:field,
+      update:update,
+      value:function(){
+        const selected = field.querySelector('input[name="preferred_contact"]:checked');
+        return selected ? selected.value : '';
+      }
+    };
+  }
+
   function buildForm(mode){
     const shell = document.createElement('div');
     shell.className = 'gaeo-form-shell gaeo-form-' + mode;
@@ -789,6 +849,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const emailField = document.createElement('div');
     emailField.className = 'gaeo-form-field gaeo-form-field--wide';
     emailField.innerHTML = '<label class="gaeo-hp" for="' + formId + '-email">' + copy.email + '</label><input id="' + formId + '-email" class="gaeo-form-input" name="email" type="email" inputmode="email" autocomplete="email" placeholder="' + copy.email + '" maxlength="254">';
+    const emailInputElement = emailField.querySelector('input');
+    const preferredContact = createPreferredContactField(phone.input,emailInputElement);
 
     const commentField = document.createElement('div');
     commentField.className = 'gaeo-form-field gaeo-form-field--wide';
@@ -812,7 +874,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     status.setAttribute('role','status');
     status.setAttribute('aria-live','polite');
 
-    form.append(nameField,phone.field,emailField,commentField,hp,actions,status,createConsent());
+    form.append(nameField,phone.field,emailField,preferredContact.field,commentField,hp,actions,status,createConsent());
     shell.appendChild(form);
 
     const nameInput = form.elements.full_name;
@@ -880,7 +942,12 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     }
 
     nameInput.addEventListener('input',function(){ nameInput.setAttribute('aria-invalid','false'); });
-    emailInput.addEventListener('input',function(){ emailInput.setAttribute('aria-invalid','false'); });
+    phone.input.addEventListener('input',preferredContact.update);
+    emailInput.addEventListener('input',function(){
+      emailInput.setAttribute('aria-invalid','false');
+      preferredContact.update();
+    });
+    preferredContact.update();
 
     form.addEventListener('submit',async function(e){
       e.preventDefault();
@@ -903,6 +970,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         phone:phone.normalized(),
         phone_country:phone.getCountry().iso2,
         email:emailInput.value.trim(),
+        preferred_contact:preferredContact.value(),
         comment:commentInput.value.trim(),
         company_website:hpInput.value,
         page_url:location.href,
