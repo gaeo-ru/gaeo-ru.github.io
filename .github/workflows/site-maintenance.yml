@@ -64,6 +64,9 @@ jobs:
       - name: Synchronize centralized Yandex Metrica include
         run: python scripts/ensure_analytics.py
 
+      - name: Synchronize public form endpoint configuration include
+        run: python scripts/ensure_form_config.py
+
       - name: Synchronize CSS/JS content-hash cache versions
         run: python scripts/ensure_asset_versions.py
 
