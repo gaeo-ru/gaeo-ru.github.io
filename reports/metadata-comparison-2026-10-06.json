@@ -1,0 +1,1868 @@
+{
+  "captured_at": "2026-10-06T09:18:18.546688+00:00",
+  "source_commit": "2dd31999daaaa56d4a6aa76b7da2e7f5a87ac4a3",
+  "old_base": "https://gaeo.ru",
+  "sitemaps": [
+    {
+      "url": "https://gaeo.ru/sitemap.xml",
+      "status": 200,
+      "final_url": "https://gaeo.ru/sitemap.xml"
+    }
+  ],
+  "new_pages": [
+    {
+      "title": "Страница не найдена — GAEO.ru",
+      "description": "Страница GAEO.ru не найдена. Перейдите на главную, к статьям о GEO/AEO или к кейсам продвижения бизнеса в нейросетях.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/404.html",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,follow"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Страница не найдена"
+      ],
+      "h2": [],
+      "file": "404.html",
+      "route": "/404.html"
+    },
+    {
+      "title": "Статьи о GEO и AEO продвижении в нейросетях | Алексей Яковлев",
+      "description": "Статьи эксперта Алексея Яковлева о GEO/AEO-продвижении бизнеса в нейросетях: AI-видимость, выбор нейросетей, интенты, контент, внешние сигналы и репутация.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Статьи о GEO / AEO-продвижении в нейросетях"
+      ],
+      "h2": [
+        "Какие нейросети важны именно вашему бизнесу: приоритеты GEO-продвижения",
+        "Как продвигать личный бренд эксперта в нейросетях в 2026 году: практический гайд",
+        "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов",
+        "GEO-продвижение недвижимости: как жилому комплексу попасть в рекомендации нейросетей"
+      ],
+      "file": "articles/index.html",
+      "route": "/articles/"
+    },
+    {
+      "title": "Какие источники используют нейросети при выборе GEO-специалистов | Исследование GAEO.ru",
+      "description": "Исследование 500+ ответов 9 нейросетей: какие источники используют ChatGPT, Google AI Mode, Алиса, Perplexity, Gemini, DeepSeek, Grok и GigaChat при выборе GEO-специалистов.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов"
+      ],
+      "h2": [
+        "Что именно я исследовал",
+        "Почему нельзя просто взять BMR из системы мониторинга",
+        "Главный результат: у каждой нейросети свой набор источников",
+        "Собственный сайт остается базой",
+        "Sostav: 1 публикация стала источником сразу нескольких нейросетей",
+        "Значит, нужно штамповать рейтинги?",
+        "Workspace: кейс работает иначе, чем рейтинг",
+        "Яндекс.Услуги: Алиса живет в своей экосистеме",
+        "РБК Компании и DeepSeek: маленький естественный эксперимент",
+        "Perplexity: в одном замере почти весь рынок собрался из VC",
+        "Habr: общий источник сразу для нескольких нейросетей",
+        "ChatGPT: устойчивость появилась вместе с массивом подтверждений",
+        "Google AI Mode: сайт + структурированные внешние материалы",
+        "Поиск с Алисой и Чат с Алисой AI нужно измерять отдельно"
+      ],
+      "file": "articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/index.html",
+      "route": "/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/"
+    },
+    {
+      "title": "Какие нейросети важны именно вашему бизнесу: приоритеты GEO-продвижения | Статья Алексея Яковлева для GAEO.ru",
+      "description": "Как выбрать нейросети для GEO-продвижения бизнеса в России: Алиса AI, ChatGPT, DeepSeek, GigaChat, Perplexity, Google AI Overviews, Claude, Copilot, Qwen, Gemini и другие. Портреты аудиторий, матрица коммерческого интента и таблица по 25 сегментам бизнеса",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Какие нейросети важны именно вашему бизнесу: портреты пользователей ИИ в России и приоритеты GEO-продвижения"
+      ],
+      "h2": [
+        "Почему нельзя продвигаться сразу во всех нейросетях",
+        "Методика: откуда взяты выводы",
+        "Популярные нейросети в России и портреты их пользователей",
+        "Не все нейросети одинаково полезны для бизнеса",
+        "Как выбрать нейросети для GEO-продвижения",
+        "Приоритетные нейросети для GEO-продвижения по сегментам бизнеса",
+        "Выводы",
+        "Проверить, какие нейросети важны вашему бизнесу"
+      ],
+      "file": "articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/index.html",
+      "route": "/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/"
+    },
+    {
+      "title": "Продвижение личного бренда в нейросетях в 2026 году | GEO/AEO гайд",
+      "description": "Практический гайд Алексея Яковлева по продвижению личного бренда эксперта в ChatGPT, Алисе, Google и других нейросетях: сайт, профили, статьи, отзывы, кейсы, мониторинг и реальные результаты GEO-продвижения.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Как продвигать личный бренд эксперта в нейросетях в 2026 году: практический гайд"
+      ],
+      "h2": [
+        "Кому подойдет этот подход",
+        "Где теперь ищут лучших специалистов",
+        "Сначала подготовьте основу личного бренда",
+        "Сайт как центр информации об эксперте",
+        "Синхронизируйте информацию о себе в интернете",
+        "Профессиональные профили: присутствовать нужно шире привычной площадки",
+        "Отзывы нужны не только людям",
+        "Публикуйте кейсы",
+        "Участвуйте в профессиональной жизни отрасли",
+        "Главное оружие — экспертные статьи",
+        "Что я думаю о рейтингах «ТОП-10»",
+        "Где публиковать статьи",
+        "Изображения тоже нужно готовить нормально",
+        "Не забывайте связывать публикации между собой"
+      ],
+      "file": "articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/index.html",
+      "route": "/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/"
+    },
+    {
+      "title": "GEO-продвижение недвижимости: как ЖК попасть в нейроответы | GAEO.ru",
+      "description": "Как продвигать жилой комплекс в ChatGPT, Алисе и других нейросетях: BMR, небрендовые рекомендации, цифровой паспорт, источники, SEO и измерение результата.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "GEO-продвижение недвижимости: как жилому комплексу попасть в рекомендации нейросетей"
+      ],
+      "h2": [
+        "Что показал предаудит премиального ЖК в Москве",
+        "Знать объект и рекомендовать объект — разные вещи",
+        "8 кластеров покупательского пути для GEO недвижимости",
+        "48 промптов не означают 48 новых страниц сайта",
+        "Официальный сайт не контролирует всю картину",
+        "Сначала нужен цифровой паспорт объекта",
+        "Разделяйте стабильные и динамические факты",
+        "Абстрактное преимущество нужно превратить в проверяемый механизм",
+        "Архитектура доказательств: какой факт чем подтверждать",
+        "Не копируйте один и тот же текст на 20 площадок",
+        "GEO и SEO в недвижимости пересекаются, но не совпадают",
+        "Репутация — часть GEO",
+        "Какие метрики измерять",
+        "Как связать GEO с бизнес-результатом"
+      ],
+      "file": "articles/strategiya-geo-prodvizheniya-nedvizhimosti/index.html",
+      "route": "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+    },
+    {
+      "title": "Кейс Ada Tours: BMR вырос с 10% до 35% за 2 недели GEO-продвижения | GAEO.ru",
+      "description": "Как Ada Tours за 2 недели GEO-продвижения увеличила долю ответов нейросетей с упоминанием бренда с 10% до 35% на контрольной матрице 40 запросов × 5 нейросетей.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Как Ada Tours увеличила BMR с 10% до 35% за 2 недели: кейс GEO-продвижения туроператора"
+      ],
+      "h2": [
+        "Что именно измеряли",
+        "Что сделали за 2 недели",
+        "Результат по 8 сегментам",
+        "VIP Бразилия: 36% → 60%",
+        "Деловые поездки и делегации: 4% → 56%",
+        "3 сегмента вышли из абсолютного нуля",
+        "Текущая видимость по 5 нейросетям",
+        "Лучше всего растут запросы выбора конкретного организатора",
+        "Почему канонический результат 35%, а не 43,5%",
+        "Что считаю главным результатом первых 2 недель",
+        "Методологическая оговорка",
+        "Проверить видимость вашего бизнеса в нейросетях"
+      ],
+      "file": "cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/index.html",
+      "route": "/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/"
+    },
+    {
+      "title": "GEO-продвижение эксперта: рост нейровидимости с 22% до 48% | Кейс GAEO.ru",
+      "description": "Кейс GEO-продвижения Алексея Яковлева: как за месяц фактическая видимость по конкурентному запросу выросла с 22% до 48%, какие источники использовали ChatGPT, Google AI Mode, Алиса, Perplexity и другие нейросети.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/gaeo-ru/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Как я продвигал самого себя в ответах нейросетей: рост видимости с 22% до 48% за месяц"
+      ],
+      "h2": [
+        "Задача",
+        "Как измерял результат",
+        "Стартовая точка: 22%",
+        "Что я делал",
+        "Как менялась видимость",
+        "Какие источники начали работать",
+        "Результаты по отдельным нейросетям",
+        "Почему я не считаю отдельный день надежным показателем",
+        "Контрольный замер 11 августа",
+        "Какие еще выводы можно сделать из этого эксперимента",
+        "Что дальше",
+        "Итог",
+        "Проверить, рекомендуют ли нейросети ваш бизнес"
+      ],
+      "file": "cases/gaeo-ru/index.html",
+      "route": "/cases/gaeo-ru/"
+    },
+    {
+      "title": "Кейсы GEO и AEO продвижения в нейросетях | Алексей Яковлев",
+      "description": "Кейсы GEO/AEO-продвижения Алексея Яковлева: рост видимости брендов и экспертов в ответах ChatGPT, Google AI Mode, Алисы и других нейросетей.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Кейсы GEO / AEO-продвижения в нейросетях"
+      ],
+      "h2": [
+        "Ada Tours: BMR вырос с 10% до 35% за 2 недели GEO-продвижения",
+        "6 оплативших клиентов из нейросетей за 1,5 месяца: кейс Преп-Центра",
+        "Как я продвигал самого себя в ответах нейросетей: рост видимости с 22% до 48% за месяц"
+      ],
+      "file": "cases/index.html",
+      "route": "/cases/"
+    },
+    {
+      "title": "Кейс GEO-продвижения Преп-Центра: 6 клиентов из нейросетей, BMR 0–30% | GAEO.ru",
+      "description": "Как фулфилмент Преп-Центр за 1,5 месяца GEO-продвижения увеличил BMR с 0% до 30% и получил 6 оплативших клиентов из нейросетей. Реальные данные, источники, динамика и оценка бизнес-эффекта.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/prep-center-6-klientov-iz-neyrosetey/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Кейс GEO-продвижения Преп-Центра: 6 оплативших клиентов из нейросетей за 1,5 месяца, BMR вырос с 0% до 30%"
+      ],
+      "h2": [
+        "Самый важный результат теперь измеряется уже не только BMR",
+        "Что это может означать в деньгах",
+        "Что было на старте",
+        "Стратегия: сначала коммерчески сильные узкие интенты",
+        "Что сделали за 1,5 месяца",
+        "Как менялся BMR",
+        "К 31 августа результат уже распределился между 3 нейросетями",
+        "Что происходило с источниками",
+        "Где Преп-Центр виден лучше всего",
+        "Почему оплатившие клиенты для меня важнее BMR",
+        "Масштаб работы",
+        "Итог за 1,5 месяца",
+        "Методологическая оговорка",
+        "Проверить видимость вашего бизнеса в нейросетях"
+      ],
+      "file": "cases/prep-center-6-klientov-iz-neyrosetey/index.html",
+      "route": "/cases/prep-center-6-klientov-iz-neyrosetey/"
+    },
+    {
+      "title": "Which Sources AI Uses When Choosing GEO Specialists: 500+ Answers | GAEO.ru",
+      "description": "Research based on 500+ answers from 9 AI platforms: which sources ChatGPT, Google AI Mode, Yandex Alice, Perplexity, Gemini, DeepSeek, Grok and GigaChat use when recommending GEO specialists.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/articles/ai-sources-for-geo-specialists/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Which sources AI systems use when choosing GEO specialists: research based on 500+ answers"
+      ],
+      "h2": [
+        "What exactly I researched",
+        "Why you cannot simply take BMR from a monitoring system",
+        "Main result: each AI system uses its own source set",
+        "Your own website remains the foundation",
+        "Sostav: one publication became a source for several AI systems",
+        "So should you mass-produce rankings?",
+        "Workspace: a case study works differently from a ranking",
+        "Yandex Services: Alice lives in its own ecosystem",
+        "RBC Companies and DeepSeek: a small natural experiment",
+        "Perplexity: in one measurement, much of the market came from VC",
+        "Habr: one common source for several AI systems",
+        "ChatGPT: stability appeared together with a body of evidence",
+        "Google AI Mode: website + structured external materials",
+        "Yandex Search with Alice and Alice AI chat should be measured separately"
+      ],
+      "file": "en/articles/ai-sources-for-geo-specialists/index.html",
+      "route": "/en/articles/ai-sources-for-geo-specialists/"
+    },
+    {
+      "title": "GEO for Real Estate: How to Enter AI Recommendations | Alexey Yakovlev",
+      "description": "A practical GEO strategy for residential and real-estate projects: Brand Mention Rate, non-branded recommendations, entity data, sources, SEO and measurement in AI answers.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/articles/geo-for-real-estate/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "GEO for real estate: how a residential project can enter AI recommendations"
+      ],
+      "h2": [
+        "What a pre-audit of a premium Moscow residential project showed",
+        "Knowing a property and recommending a property are different things",
+        "8 buyer-journey clusters for real-estate GEO",
+        "48 prompts do not mean 48 new website pages",
+        "The official website does not control the whole picture",
+        "Start with a digital passport for the property",
+        "Separate stable and dynamic facts",
+        "Turn an abstract advantage into a verifiable mechanism",
+        "Evidence architecture: which source should confirm which fact",
+        "Do not copy the same text to 20 platforms",
+        "GEO and SEO in real estate overlap, but they are not the same",
+        "Reputation is part of GEO",
+        "Which metrics to measure",
+        "How to connect GEO with business results"
+      ],
+      "file": "en/articles/geo-for-real-estate/index.html",
+      "route": "/en/articles/geo-for-real-estate/"
+    },
+    {
+      "title": "GEO & AEO Articles: AI Search Visibility | Alexey Yakovlev",
+      "description": "Articles and research by Alexey Yakovlev on GEO/AEO, AI search visibility, intent and prompt strategy, content, reputation signals and business promotion in AI answers.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/articles/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Articles on GEO / AEO Optimization for AI Visibility"
+      ],
+      "h2": [
+        "Which AI platforms matter most for your business: GEO priorities",
+        "How to promote an expert's personal brand in AI in 2026: a practical guide",
+        "Which sources AI systems use when choosing GEO specialists: research based on 500+ answers",
+        "GEO optimization for real estate: how a residential project can enter AI recommendations"
+      ],
+      "file": "en/articles/index.html",
+      "route": "/en/articles/"
+    },
+    {
+      "title": "How to Promote an Expert Personal Brand in AI in 2026 | Alexey Yakovlev",
+      "description": "A practical guide by Alexey Yakovlev to promoting an expert's personal brand in ChatGPT, Yandex Alice, Google and other AI platforms through websites, profiles, publications, reviews, cases and monitoring.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/articles/personal-brand-promotion-in-ai/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "How to promote an expert's personal brand in AI in 2026: a practical guide"
+      ],
+      "h2": [
+        "Who this approach is for",
+        "Where people now look for the best specialists",
+        "First, prepare the foundation of your personal brand",
+        "Your website as the central source of information about the expert",
+        "Synchronize information about yourself across the web",
+        "Professional profiles: be present beyond your usual platform",
+        "Reviews are not only for people",
+        "Publish case studies",
+        "Participate in the professional life of your industry",
+        "The main weapon: expert articles",
+        "What I think about “Top 10” rankings",
+        "Where to publish articles",
+        "Prepare images properly too",
+        "Do not forget to connect your publications"
+      ],
+      "file": "en/articles/personal-brand-promotion-in-ai/index.html",
+      "route": "/en/articles/personal-brand-promotion-in-ai/"
+    },
+    {
+      "title": "Which AI Platforms Matter for Your Business: GEO Priorities in Russia | GAEO.ru",
+      "description": "How to choose the AI platforms that matter for your business: audience profiles and GEO priorities for ChatGPT, Yandex Alice, DeepSeek, GigaChat, Perplexity, Gemini, Claude, Copilot and Qwen.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/articles/which-ai-platforms-matter-for-your-business/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Which AI platforms matter most for your business: user profiles in Russia and GEO priorities"
+      ],
+      "h2": [
+        "Why you should not try to optimize for every AI platform at once",
+        "Methodology: where the conclusions come from",
+        "Popular AI platforms in Russia and their user profiles",
+        "Not every AI platform is equally useful for business",
+        "How to choose AI platforms for GEO optimization",
+        "Priority AI platforms for GEO by business segment",
+        "Conclusions",
+        "Find out which AI platforms matter for your business"
+      ],
+      "file": "en/articles/which-ai-platforms-matter-for-your-business/index.html",
+      "route": "/en/articles/which-ai-platforms-matter-for-your-business/"
+    },
+    {
+      "title": "Ada Tours GEO Case Study: BMR Grew from 10% to 35% in 2 Weeks | GAEO.ru",
+      "description": "Ada Tours GEO case study: Brand Mention Rate grew from 10% to 35% in 2 weeks on the same control matrix of 40 queries × 5 AI services = 200 answers.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/cases/ada-tours-bmr-growth-in-2-weeks/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "How Ada Tours Grew Brand Mention Rate from 10% to 35% in 2 Weeks"
+      ],
+      "h2": [
+        "What we measured",
+        "What changed during the 2 weeks",
+        "Results across all 8 segments",
+        "VIP Brazil: 36% → 60%",
+        "Business trips and delegations: 4% → 56%",
+        "3 segments moved up from absolute zero",
+        "Current visibility across the 5 AI services",
+        "Company-selection queries grew fastest",
+        "Why the canonical result is 35%, not 43.5%",
+        "What matters most after the first 2 weeks",
+        "Methodology note",
+        "Check your business visibility in AI answers"
+      ],
+      "file": "en/cases/ada-tours-bmr-growth-in-2-weeks/index.html",
+      "route": "/en/cases/ada-tours-bmr-growth-in-2-weeks/"
+    },
+    {
+      "title": "GEO Case Study: AI Visibility Grew from 22% to 48% in One Month | Alexey Yakovlev",
+      "description": "GAEO.ru case study: visibility for a competitive GEO query increased from 22% to 48% in 1 month, with source analysis across ChatGPT, Google AI Mode, Yandex Alice and other AI platforms.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/cases/gaeo-ru/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "How I promoted myself in AI answers: visibility grew from 22% to 48% in one month"
+      ],
+      "h2": [
+        "The task",
+        "How I measured the result",
+        "Baseline: 22%",
+        "What I did",
+        "How visibility changed",
+        "Which sources began to work",
+        "Results by AI system",
+        "Why I do not treat a single day as a reliable indicator",
+        "Control measurement on August 11",
+        "Other conclusions from the experiment",
+        "What comes next",
+        "Result",
+        "Check whether AI recommends your business"
+      ],
+      "file": "en/cases/gaeo-ru/index.html",
+      "route": "/en/cases/gaeo-ru/"
+    },
+    {
+      "title": "GEO & AEO Case Studies: AI Visibility Results | Alexey Yakovlev",
+      "description": "GEO/AEO case studies by Alexey Yakovlev: measurable growth in brand and expert visibility across ChatGPT, Google AI Mode, Yandex Alice and other AI platforms.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/cases/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "GEO / AEO Case Studies: AI Search and Answer Visibility"
+      ],
+      "h2": [
+        "Ada Tours: BMR grew from 10% to 35% in 2 weeks of GEO work",
+        "6 paying customers from AI in 1.5 months: the Prep-Center case study",
+        "How I promoted myself in AI answers: visibility grew from 22% to 48% in one month"
+      ],
+      "file": "en/cases/index.html",
+      "route": "/en/cases/"
+    },
+    {
+      "title": "Prep-Center GEO Case Study: 6 Paying Customers from AI, BMR 0–30% | GAEO.ru",
+      "description": "Prep-Center GEO case study: Brand Mention Rate grew from 0% to 30% in 1.5 months and generated 6 paying clients from AI platforms. Data, sources, dynamics and business impact.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/cases/prep-center-6-paying-clients-from-ai/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Prep-Center GEO case study: 6 paying customers from AI in 1.5 months, BMR grew from 0% to 30%"
+      ],
+      "h2": [
+        "The most important result is no longer measured only by BMR",
+        "What this may mean in monetary terms",
+        "Starting point",
+        "Strategy: start with commercially strong narrow intents",
+        "What we did in 1.5 months",
+        "How BMR changed",
+        "By August 31, the result was already distributed across 3 AI systems",
+        "What happened with the sources",
+        "Where Prep-Center was most visible",
+        "Why paying customers matter more to me than BMR",
+        "Scope of work",
+        "Result after 1.5 months",
+        "Methodological note",
+        "Check your business visibility in AI"
+      ],
+      "file": "en/cases/prep-center-6-paying-clients-from-ai/index.html",
+      "route": "/en/cases/prep-center-6-paying-clients-from-ai/"
+    },
+    {
+      "title": "GEO for Real Estate in AI Recommendations | Alexey Yakovlev",
+      "description": "GEO/AEO promotion for residential developments and real-estate projects in ChatGPT, Yandex Alice, Gemini and other AI platforms: audit, strategy, sources, SEO and measurable visibility.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/geo-for-real-estate/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "GEO optimization for real estate in AI answers"
+      ],
+      "h2": [
+        "An AI system may know your development very well and still almost never recommend it",
+        "What a real pre-audit of a premium Moscow residential project showed",
+        "What GEO for real estate actually optimizes",
+        "Real-estate GEO does not mean creating dozens of pages for queries",
+        "What real-estate GEO optimization includes",
+        "Source consensus instead of copy-paste",
+        "GEO and SEO for real estate should work together",
+        "Reputation is part of GEO",
+        "How I measure the result of GEO optimization",
+        "Real-estate GEO cannot be measured only by clicks from ChatGPT",
+        "A real premium Moscow residential case under NDA",
+        "Who real-estate GEO optimization is for",
+        "What you get at the start",
+        "Let's check whether AI systems recommend your property"
+      ],
+      "file": "en/geo-for-real-estate/index.html",
+      "route": "/en/geo-for-real-estate/"
+    },
+    {
+      "title": "GEO & AEO Consultant for AI Search Visibility | Alexey Yakovlev",
+      "description": "GEO and AEO consulting for businesses seeking visibility in ChatGPT, Google AI Overviews, Gemini, Perplexity, Yandex Alice and other AI answers.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Business visibility in ChatGPT and AI answers"
+      ],
+      "h2": [
+        "AI should recommend the right brand among alternatives",
+        "I build the strategy with you, then implement it myself",
+        "Measure first, then decide what to change",
+        "When AI visibility turns into customers",
+        "GEO optimization as a sequence of connected actions",
+        "Especially where customers compare options and take time to decide",
+        "What clients highlight",
+        "After the mini-audit, the required scope becomes clear",
+        "What usually needs to be clear before starting",
+        "Let’s check what AI recommends to your customers right now"
+      ],
+      "file": "en/index.html",
+      "route": "/en/"
+    },
+    {
+      "title": "Consent to Personal Data Processing — GAEO.ru",
+      "description": "Consent of a GAEO.ru user to personal data processing by Individual Entrepreneur Alexey Leonidovich Yakovlev.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/personal-data-consent/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Consent to Personal Data Processing"
+      ],
+      "h2": [
+        "1. Personal data operator",
+        "2. Personal data covered by this Consent",
+        "3. Purposes of processing",
+        "4. Actions involving personal data",
+        "5. Methods of processing",
+        "6. Transfer and entrusted processing",
+        "7. Term of Consent",
+        "8. Withdrawal of Consent",
+        "9. Confirmation of Consent",
+        "10. Contact"
+      ],
+      "file": "en/personal-data-consent/index.html",
+      "route": "/en/personal-data-consent/"
+    },
+    {
+      "title": "Personal Data Processing Policy — GAEO.ru",
+      "description": "Policy of Individual Entrepreneur Alexey Leonidovich Yakovlev on processing personal data of GAEO.ru users.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/privacy-policy/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Personal Data Processing Policy"
+      ],
+      "h2": [
+        "1. Personal data operator",
+        "2. Personal data that may be processed",
+        "3. Purposes of processing",
+        "4. Legal grounds for processing",
+        "5. Processing and transfer of personal data",
+        "6. Cookies and technical information",
+        "7. Retention periods",
+        "8. User rights",
+        "9. Personal data protection",
+        "10. Links to third-party websites",
+        "11. Changes to this Policy",
+        "12. Contact"
+      ],
+      "file": "en/privacy-policy/index.html",
+      "route": "/en/privacy-policy/"
+    },
+    {
+      "title": "Alexey Yakovlev — GEO, AEO & SEO Expert | Professional Biography",
+      "description": "Professional biography of Alexey Yakovlev, an independent GEO, AEO and SEO expert with experience in digital marketing, e-commerce, marketplaces and online business since 2008.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/professional-biography/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Professional Biography"
+      ],
+      "h2": [
+        "Official External Profiles",
+        "Contact"
+      ],
+      "file": "en/professional-biography/index.html",
+      "route": "/en/professional-biography/"
+    },
+    {
+      "title": "Publications, Case Studies & Media Mentions | Alexey Yakovlev, GAEO.ru",
+      "description": "Articles, public case studies, rankings and external publications by GEO/AEO expert Alexey Yakovlev and GAEO.ru across Workspace, RBC, Sostav, GEOMI and other platforms.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/publications/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Publications, case studies and media mentions of Alexey Yakovlev"
+      ],
+      "h2": [
+        "Rankings and external mentions",
+        "Interviews",
+        "Expert commentary",
+        "Public case studies",
+        "Articles and research",
+        "Why I collect external publications in one place",
+        "More about me and my work"
+      ],
+      "file": "en/publications/index.html",
+      "route": "/en/publications/"
+    },
+    {
+      "title": "Client Reviews of GEO/AEO Consultant Alexey Yakovlev | GAEO.ru",
+      "description": "Client reviews of Alexey Yakovlev and GAEO.ru on GEO audits and promotion in ChatGPT, Yandex Alice, Google and other AI platforms, with links to original reviews.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/reviews/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "en",
+      "h1": [
+        "Client Reviews of Alexey Yakovlev and GAEO.ru"
+      ],
+      "h2": [
+        "Client reviews",
+        "What clients highlight",
+        "Original reviews on external platforms",
+        "What else you can verify besides reviews",
+        "Leave a review"
+      ],
+      "file": "en/reviews/index.html",
+      "route": "/en/reviews/"
+    },
+    {
+      "title": "GEO-продвижение недвижимости в нейросетях — Алексей Яковлев",
+      "description": "GEO/AEO-продвижение ЖК и девелоперских проектов в ChatGPT, Алисе, Gemini и других нейросетях: аудит, стратегия, источники, SEO и измерение результата.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/geo-prodvizhenie-nedvizhimosti/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "GEO-продвижение недвижимости в ответах нейросетей"
+      ],
+      "h2": [
+        "Нейросеть может отлично знать ваш ЖК и почти никогда его не рекомендовать",
+        "Что показал реальный предаудит премиального ЖК в Москве",
+        "Что именно продвигается в GEO недвижимости",
+        "GEO недвижимости — это не создание десятков страниц под запросы",
+        "Что входит в GEO-продвижение недвижимости",
+        "Консенсус источников вместо копипаста",
+        "GEO и SEO недвижимости должны работать вместе",
+        "Репутация является частью GEO",
+        "Как измеряется результат GEO-продвижения",
+        "GEO недвижимости нельзя оценивать только переходами из ChatGPT",
+        "Реальный кейс премиального ЖК в Москве под NDA",
+        "Кому подходит GEO-продвижение недвижимости",
+        "Что вы получите на старте",
+        "Проверим, рекомендуют ли нейросети ваш объект"
+      ],
+      "file": "geo-prodvizhenie-nedvizhimosti/index.html",
+      "route": "/geo-prodvizhenie-nedvizhimosti/"
+    },
+    {
+      "title": "GEO и AEO продвижение брендов в нейросетях — GAEO.ru | Алексей Яковлев | Не агентство",
+      "description": "GAEO (Generative & Answer Engine Optimization) - личный проект Алексея Яковлева, эксперта в области GEO и AEO продвижения бизнеса в нейросетях, таких как: Яндекс с Алисой, ChatGPT, Google Gemini, DeepSeek, Perplexity, GigaChat, Claude",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "GEO / AEO-продвижение бизнеса в ответах нейросетей"
+      ],
+      "h2": [
+        "Нейросети должны рекомендовать нужный бренд среди альтернатив.",
+        "Выстраиваю с вами стратегию, а потом сам же ее реализую",
+        "Усиливаю сильное, выявляю причины у слабого",
+        "Когда видимость в нейросетях превращается в клиентов",
+        "У каждой нейросети свой набор источников",
+        "Как работает GEO-продвижение в нейросетях: последовательность связанных действий",
+        "Кому подходит GEO-продвижение: там, где клиент сравнивает и долго выбирает",
+        "Статьи и исследования о GEO/AEO-продвижении",
+        "Внешние публикации, публичные кейсы и аналитические статьи",
+        "Что клиенты отмечают в работе",
+        "Стоимость и тарифы GEO-продвижения: объем зависит от задачи",
+        "Вопросы и ответы о GEO/AEO-продвижении",
+        "Проверим, что нейросети рекомендуют вашим клиентам сейчас"
+      ],
+      "file": "index.html",
+      "route": "/"
+    },
+    {
+      "title": "Согласие на обработку персональных данных — GAEO.ru",
+      "description": "Согласие пользователя GAEO.ru на обработку персональных данных ИП Яковлевым Алексеем Леонидовичем.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/personal-data-consent/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Согласие на обработку персональных данных"
+      ],
+      "h2": [
+        "1. Оператор персональных данных",
+        "2. Персональные данные, на обработку которых дается согласие",
+        "3. Цели обработки",
+        "4. Действия с персональными данными",
+        "5. Способы обработки",
+        "6. Передача и поручение обработки",
+        "7. Срок действия согласия",
+        "8. Отзыв согласия",
+        "9. Подтверждение согласия",
+        "10. Контакты"
+      ],
+      "file": "personal-data-consent/index.html",
+      "route": "/personal-data-consent/"
+    },
+    {
+      "title": "Политика в отношении обработки персональных данных — GAEO.ru",
+      "description": "Политика ИП Яковлева Алексея Леонидовича в отношении обработки персональных данных пользователей сайта GAEO.ru.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/privacy-policy/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Политика в отношении обработки персональных данных"
+      ],
+      "h2": [
+        "1. Оператор персональных данных",
+        "2. Какие данные могут обрабатываться",
+        "3. Цели обработки",
+        "4. Правовые основания обработки",
+        "5. Порядок обработки и передачи данных",
+        "6. Файлы cookie и техническая информация",
+        "7. Сроки хранения",
+        "8. Права пользователя",
+        "9. Защита персональных данных",
+        "10. Ссылки на сторонние сайты",
+        "11. Изменения Политики",
+        "12. Контакты"
+      ],
+      "file": "privacy-policy/index.html",
+      "route": "/privacy-policy/"
+    },
+    {
+      "title": "Алексей Яковлев — биография эксперта GEO, AEO и SEO | GAEO.ru",
+      "description": "Профессиональная биография Алексея Яковлева: SEO с 2008 года, 1000+ бизнес-аудитов, опыт iSEOn, E-commerce, маркетплейсов и GEO/AEO-продвижения.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/professional-biography/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Профессиональная биография"
+      ],
+      "h2": [
+        "Официальные внешние профили"
+      ],
+      "file": "professional-biography/index.html",
+      "route": "/professional-biography/"
+    },
+    {
+      "title": "Публикации и кейсы GEO/AEO-эксперта Алексея Яковлева | GAEO.ru",
+      "description": "Авторские статьи, публичные кейсы, рейтинги и внешние публикации GEO/AEO-эксперта Алексея Яковлева и GAEO.ru на Workspace, РБК, Sostav, GEOMI и других площадках.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/publications/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Публикации, кейсы и упоминания Алексея Яковлева"
+      ],
+      "h2": [
+        "Рейтинги и внешние упоминания",
+        "Интервью",
+        "Экспертные комментарии",
+        "Публичные кейсы",
+        "Авторские публикации и исследования",
+        "Зачем я собираю внешние публикации в одном месте",
+        "Еще обо мне и моей работе"
+      ],
+      "file": "publications/index.html",
+      "route": "/publications/"
+    },
+    {
+      "title": "Отзывы о GEO/AEO-эксперте Алексее Яковлеве и GAEO.ru",
+      "description": "Отзывы клиентов о работе с Алексеем Яковлевым и GAEO.ru: GEO-аудиты, продвижение бизнеса и экспертов в ChatGPT, Алисе, Google и других нейросетях. Ссылки на оригиналы отзывов.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/reviews/",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex,nofollow,noarchive"
+        }
+      ],
+      "lang": "ru",
+      "h1": [
+        "Отзывы клиентов о работе с Алексеем Яковлевым и GAEO.ru"
+      ],
+      "h2": [
+        "Отзывы клиентов",
+        "Что клиенты отмечают в работе",
+        "Оригиналы отзывов на внешних площадках",
+        "Что можно проверить кроме отзывов",
+        "Оставить отзыв"
+      ],
+      "file": "reviews/index.html",
+      "route": "/reviews/"
+    }
+  ],
+  "old_pages": [
+    {
+      "title": "GEO и AEO продвижение брендов в нейросетях — GAEO.ru | Алексей Яковлев | Не агентство",
+      "description": "GAEO (Generative & Answer Engine Optimization) - личный проект Алексея Яковлева, эксперта в области GEO и AEO продвижения бизнеса в нейросетях, таких как: Яндекс с Алисой, ChatGPT, Google Gemini, DeepSeek, Perplexity, GigaChat, Claude",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "GEO / AEO - продвижение бизнеса в нейросетях"
+      ],
+      "h2": [
+        "Алексей Яковлев",
+        "Как ИИ-ответы влияют на спрос и продажи",
+        "Как работает GEO-продвижение?",
+        "Состав работ",
+        "Для кого подходит GEO",
+        "Тарифы",
+        "Отзывы клиентов",
+        "Публикации и упоминания",
+        "Вопросы и ответы",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/",
+      "final_url": "https://gaeo.ru/",
+      "status": 200,
+      "sha256": "d0256071f980c59aea79bdc4681234956217288af55c74bb6a0c59722b4ab85d",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Статьи о GEO и AEO продвижении в нейросетях | Алексей Яковлев",
+      "description": "Статьи эксперта Алексея Яковлева о GEO/AEO-продвижении бизнеса в нейросетях: AI-видимость, выбор нейросетей, интенты, контент, внешние сигналы и репутация.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Статьи о GEO / AEO-продвижении в нейросетях"
+      ],
+      "h2": [
+        "Какие нейросети важны именно вашему бизнесу: приоритеты GEO-продвижения",
+        "Как продвигать личный бренд эксперта в нейросетях в 2026 году: практический гайд",
+        "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов",
+        "GEO-продвижение недвижимости: как жилому комплексу попасть в рекомендации нейросетей",
+        "Какие нейросети важны именно вашему бизнесу: приоритеты GEO-продвижения",
+        "Как продвигать личный бренд эксперта в нейросетях в 2026 году: практический гайд",
+        "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов",
+        "GEO-продвижение недвижимости: как жилому комплексу попасть в рекомендации нейросетей",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/articles/",
+      "final_url": "https://gaeo.ru/articles/",
+      "status": 200,
+      "sha256": "453a1b487305ec525c05a0ae0cfcdd1ada28347ba2c399b1878427410eec35da",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Какие источники используют нейросети при выборе GEO-специалистов | Исследование GAEO.ru",
+      "description": "Исследование 500+ ответов 9 нейросетей: какие источники используют ChatGPT, Google AI Mode, Алиса, Perplexity, Gemini, DeepSeek, Grok и GigaChat при выборе GEO-специалистов.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов"
+      ],
+      "h2": [
+        "Что именно я исследовал",
+        "Почему нельзя просто взять BMR из системы мониторинга",
+        "Главный результат: у каждой нейросети свой набор источников",
+        "Собственный сайт остается базой",
+        "Sostav: 1 публикация стала источником сразу нескольких нейросетей",
+        "Значит, нужно штамповать рейтинги?",
+        "Workspace: кейс работает иначе, чем рейтинг",
+        "Яндекс.Услуги: Алиса живет в своей экосистеме",
+        "РБК Компании и DeepSeek: маленький естественный эксперимент",
+        "Perplexity: в одном замере почти весь рынок собрался из VC",
+        "Habr: общий источник сразу для нескольких нейросетей",
+        "ChatGPT: устойчивость появилась вместе с массивом подтверждений",
+        "Google AI Mode: сайт + структурированные внешние материалы",
+        "Поиск с Алисой и Чат с Алисой AI нужно измерять отдельно"
+      ],
+      "url": "https://gaeo.ru/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+      "final_url": "https://gaeo.ru/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+      "status": 200,
+      "sha256": "214bdedab923bea0830f85b3ddbce877b73b8c5fc152874b0451cc34801f2251",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Какие нейросети важны именно вашему бизнесу: приоритеты GEO-продвижения | Статья Алексея Яковлева для GAEO.ru",
+      "description": "Как выбрать нейросети для GEO-продвижения бизнеса в России: Алиса AI, ChatGPT, DeepSeek, GigaChat, Perplexity, Google AI Overviews, Claude, Copilot, Qwen, Gemini и другие. Портреты аудиторий, матрица коммерческого интента и таблица по 25 сегментам бизнеса",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Какие нейросети важны именно вашему бизнесу: портреты пользователей ИИ в России и приоритеты GEO-продвижения"
+      ],
+      "h2": [
+        "Почему нельзя продвигаться сразу во всех нейросетях",
+        "Методика: откуда взяты выводы",
+        "Популярные нейросети в России и портреты их пользователей",
+        "Не все нейросети одинаково полезны для бизнеса",
+        "Как выбрать нейросети для GEO-продвижения",
+        "Таблица. Приоритетные нейросети для GEO-продвижения по сегментам бизнеса",
+        "Выводы",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+      "final_url": "https://gaeo.ru/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+      "status": 200,
+      "sha256": "0d20a0dd6d91120755d2e9d1f6651f795566f48fd929724f2ce9118072b0f4aa",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Продвижение личного бренда в нейросетях в 2026 году | GEO/AEO гайд",
+      "description": "Практический гайд Алексея Яковлева по продвижению личного бренда эксперта в ChatGPT, Алисе, Google и других нейросетях: сайт, профили, статьи, отзывы, кейсы, мониторинг и реальные результаты GEO-продвижения.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Как продвигать личный бренд эксперта в нейросетях в 2026 году: практический гайд"
+      ],
+      "h2": [
+        "Кому подойдет этот подход",
+        "Где теперь ищут лучших специалистов",
+        "Сначала подготовьте основу личного бренда",
+        "Сайт как центр информации об эксперте",
+        "Синхронизируйте информацию о себе в интернете",
+        "Профессиональные профили: присутствовать нужно шире привычной площадки",
+        "Отзывы нужны не только людям",
+        "Публикуйте кейсы",
+        "Участвуйте в профессиональной жизни отрасли",
+        "Главное оружие - экспертные статьи",
+        "Что я думаю о рейтингах «ТОП-10»",
+        "Где публиковать статьи",
+        "Изображения тоже нужно готовить нормально",
+        "Не забывайте связывать публикации между собой"
+      ],
+      "url": "https://gaeo.ru/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+      "final_url": "https://gaeo.ru/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+      "status": 200,
+      "sha256": "42855631488156bddd397d4396ccda38a89c868753e48bd3e5f3e7764a074e47",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "GEO-продвижение недвижимости: как ЖК попасть в нейроответы | GAEO.ru",
+      "description": "Как продвигать жилой комплекс в ChatGPT, Алисе и других нейросетях: BMR, небрендовые рекомендации, цифровой паспорт, источники, SEO и измерение результата.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "GEO-продвижение недвижимости: как жилому комплексу попасть в рекомендации нейросетей"
+      ],
+      "h2": [
+        "Главная проблема: известность ЖК еще не означает присутствие в выборе",
+        "GEO недвижимости работает с покупательским выбором",
+        "8 типов вопросов, которые задает покупатель недвижимости",
+        "Контрольное GEO-ядро не равно структуре сайта",
+        "Официальный сайт не контролирует цифровой образ ЖК",
+        "До публикаций нужен цифровой паспорт объекта",
+        "Стабильные и динамические факты требуют разной стратегии",
+        "Абстрактное преимущество нужно превратить в механизм",
+        "Разные преимущества требуют разных доказательств",
+        "Почему копирование одной статьи на 20 сайтов дает слабый результат",
+        "GEO и SEO в недвижимости сильно пересекаются",
+        "Репутация тоже входит в GEO",
+        "Как измерять GEO-продвижение жилого комплекса",
+        "Почему запросы нужно замораживать"
+      ],
+      "url": "https://gaeo.ru/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "final_url": "https://gaeo.ru/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "status": 200,
+      "sha256": "45be161012e3bdea260204696faa6017e71031211faecc886621079e0e2f26c5",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Кейсы GEO и AEO продвижения в нейросетях | Алексей Яковлев",
+      "description": "Кейсы GEO/AEO-продвижения Алексея Яковлева: рост видимости брендов и экспертов в ответах ChatGPT, Google AI Mode, Алисы и других нейросетей.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Кейсы GEO / AEO-продвижения в нейросетях"
+      ],
+      "h2": [
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/cases/",
+      "final_url": "https://gaeo.ru/cases/",
+      "status": 200,
+      "sha256": "2cfe9ca3f7e735330a7683c5ba46ea8d844333e22b0bae09ba0d05aac13e98e6",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/",
+      "final_url": "https://gaeo.ru/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "GEO-продвижение эксперта: рост нейровидимости с 22% до 48% | Кейс GAEO.ru",
+      "description": "Кейс GEO-продвижения Алексея Яковлева: как за месяц фактическая видимость по конкурентному запросу выросла с 22% до 48%, какие источники использовали ChatGPT, Google AI Mode, Алиса, Perplexity и другие нейросети.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/gaeo-ru/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Как я продвигал самого себя в ответах нейросетей: рост видимости с 22% до 48% за месяц"
+      ],
+      "h2": [
+        "Задача",
+        "Как измерял результат",
+        "Стартовая точка: 22%",
+        "Что я делал",
+        "Как менялась видимость",
+        "Какие источники начали работать",
+        "Результаты по отдельным нейросетям",
+        "Почему я не считаю отдельный день надежным показателем",
+        "Контрольный замер 11 августа",
+        "Какие еще выводы можно сделать из этого эксперимента",
+        "Что дальше",
+        "Итог",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/cases/gaeo-ru/",
+      "final_url": "https://gaeo.ru/cases/gaeo-ru/",
+      "status": 200,
+      "sha256": "193e266631457a3e6436e1b84e79428c3b4f25f15914a9f8e014a9f79fd90fab",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Кейс GEO-продвижения Преп-Центра: 6 клиентов из нейросетей, BMR 0–30% | GAEO.ru",
+      "description": "Как фулфилмент Преп-Центр за 1,5 месяца GEO-продвижения увеличил BMR с 0% до 30% и получил 6 оплативших клиентов из нейросетей. Реальные данные, источники, динамика и оценка бизнес-эффекта.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/cases/prep-center-6-klientov-iz-neyrosetey/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Кейс GEO-продвижения Преп-Центра: 6 оплативших клиентов из нейросетей за 1,5 месяца, BMR вырос с 0% до 30%"
+      ],
+      "h2": [
+        "Самый важный результат теперь измеряется уже не только BMR",
+        "Что это может означать в деньгах",
+        "Что было на старте",
+        "Стратегия: сначала коммерчески сильные узкие интенты",
+        "Что сделали за 1,5 месяца",
+        "Как менялся BMR",
+        "К 31 августа результат уже распределился между 3 нейросетями",
+        "Что происходило с источниками",
+        "Где Преп-Центр виден лучше всего",
+        "Почему оплатившие клиенты для меня важнее BMR",
+        "Масштаб работы",
+        "Итог за 1,5 месяца",
+        "Методологическая оговорка",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/cases/prep-center-6-klientov-iz-neyrosetey/",
+      "final_url": "https://gaeo.ru/cases/prep-center-6-klientov-iz-neyrosetey/",
+      "status": 200,
+      "sha256": "d5551bf2b21abce7747993ba625b58a917efb96174e31e0f44c10e6328dfcd30",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "GEO & AEO Consultant for AI Search Visibility | Alexey Yakovlev",
+      "description": "GEO and AEO consulting for businesses seeking visibility in ChatGPT, Google AI Overviews, Gemini, Perplexity, Yandex Alice and other AI answers.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "GEO & AEO Consulting for Visibility in ChatGPT and AI Search"
+      ],
+      "h2": [
+        "Alexey Yakovlev",
+        "How AI Answers Affect Demand and Sales",
+        "How Does GEO Work?",
+        "What I Do",
+        "Who Is GEO For?",
+        "Pricing",
+        "Отзывы клиентов",
+        "Публикации и упоминания",
+        "Frequently Asked Questions",
+        "Contact"
+      ],
+      "url": "https://gaeo.ru/en/",
+      "final_url": "https://gaeo.ru/en/",
+      "status": 200,
+      "sha256": "e5dc8a12a65bf940e9cc72ae0fa431929c4e00c0d07546b3dff67b6594b28d92",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/articles/",
+      "final_url": "https://gaeo.ru/en/articles/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/articles/ai-sources-for-geo-specialists/",
+      "final_url": "https://gaeo.ru/en/articles/ai-sources-for-geo-specialists/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/articles/geo-for-real-estate/",
+      "final_url": "https://gaeo.ru/en/articles/geo-for-real-estate/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/articles/personal-brand-promotion-in-ai/",
+      "final_url": "https://gaeo.ru/en/articles/personal-brand-promotion-in-ai/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/articles/which-ai-platforms-matter-for-your-business/",
+      "final_url": "https://gaeo.ru/en/articles/which-ai-platforms-matter-for-your-business/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/cases/",
+      "final_url": "https://gaeo.ru/en/cases/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/cases/ada-tours-bmr-growth-in-2-weeks/",
+      "final_url": "https://gaeo.ru/en/cases/ada-tours-bmr-growth-in-2-weeks/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/cases/gaeo-ru/",
+      "final_url": "https://gaeo.ru/en/cases/gaeo-ru/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/cases/prep-center-6-paying-clients-from-ai/",
+      "final_url": "https://gaeo.ru/en/cases/prep-center-6-paying-clients-from-ai/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/geo-for-real-estate/",
+      "final_url": "https://gaeo.ru/en/geo-for-real-estate/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/personal-data-consent/",
+      "final_url": "https://gaeo.ru/en/personal-data-consent/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/privacy-policy/",
+      "final_url": "https://gaeo.ru/en/privacy-policy/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "Alexey Yakovlev — GEO, AEO & SEO Expert | Professional Biography",
+      "description": "Professional biography of Alexey Yakovlev, an independent GEO, AEO and SEO expert with experience in digital marketing, e-commerce, marketplaces and online business since 2008.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/en/professional-biography/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Professional Biography"
+      ],
+      "h2": [
+        "Official External ProfilesGAEO.ru | Alexey Yakovlev",
+        "Contact"
+      ],
+      "url": "https://gaeo.ru/en/professional-biography/",
+      "final_url": "https://gaeo.ru/en/professional-biography/",
+      "status": 200,
+      "sha256": "c27ff82bb1cf8b17714b4f5eecbb5b8f925999ce12aad39c73dcf72a4c850145",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/publications/",
+      "final_url": "https://gaeo.ru/en/publications/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/en/reviews/",
+      "final_url": "https://gaeo.ru/en/reviews/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "GEO-продвижение недвижимости в нейросетях — Алексей Яковлев",
+      "description": "GEO/AEO-продвижение ЖК и девелоперских проектов в ChatGPT, Алисе, Gemini и других нейросетях: аудит, стратегия, источники, SEO и измерение результата.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/geo-prodvizhenie-nedvizhimosti/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "GEO-продвижение недвижимости в ответах нейросетей"
+      ],
+      "h2": [
+        "Нейросеть может отлично знать ваш ЖК и почти никогда его не рекомендовать",
+        "Что показал реальный предаудит премиального ЖК в Москве",
+        "Что именно продвигается в GEO недвижимости",
+        "GEO недвижимости — это не создание десятков страниц под запросы",
+        "Что входит в GEO-продвижение недвижимости",
+        "Консенсус источников вместо копипаста",
+        "GEO и SEO недвижимости должны работать вместе",
+        "Репутация является частью GEO",
+        "Как измеряется результат GEO-продвижения",
+        "GEO недвижимости нельзя оценивать только переходами из ChatGPT",
+        "Реальный кейс премиального ЖК в Москве под NDA",
+        "Кому подходит GEO-продвижение недвижимости",
+        "Что вы получите на старте",
+        "Проверим, рекомендуют ли нейросети ваш объект"
+      ],
+      "url": "https://gaeo.ru/geo-prodvizhenie-nedvizhimosti/",
+      "final_url": "https://gaeo.ru/geo-prodvizhenie-nedvizhimosti/",
+      "status": 200,
+      "sha256": "e8fea6a14936ee4d9993f33a908f07019706fe0eed7aef18ea913032fedaecc7",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/personal-data-consent/",
+      "final_url": "https://gaeo.ru/personal-data-consent/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "404 Page Not Found.",
+      "description": "",
+      "title_count": 1,
+      "description_count": 0,
+      "canonical": "",
+      "robots": [
+        {
+          "name": "robots",
+          "content": "noindex"
+        }
+      ],
+      "lang": "en",
+      "h1": [],
+      "h2": [],
+      "url": "https://gaeo.ru/privacy-policy/",
+      "final_url": "https://gaeo.ru/privacy-policy/",
+      "status": 404,
+      "sha256": "afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": false
+    },
+    {
+      "title": "Алексей Яковлев — биография эксперта GEO, AEO и SEO | GAEO.ru",
+      "description": "Профессиональная биография Алексея Яковлева: SEO с 2008 года, 1000+ бизнес-аудитов, опыт iSEOn, E-commerce, маркетплейсов и GEO/AEO-продвижения.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/professional-biography/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Профессиональная биография"
+      ],
+      "h2": [
+        "Официальные внешние профилиGAEO.ru | Алексея Яковлева",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/professional-biography/",
+      "final_url": "https://gaeo.ru/professional-biography/",
+      "status": 200,
+      "sha256": "132b34ae062a142bae14177659eb229fb8a894bf90611abbae0da1aefbf06079",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Публикации и кейсы GEO/AEO-эксперта Алексея Яковлева | GAEO.ru",
+      "description": "Авторские статьи, публичные кейсы, рейтинги и внешние публикации GEO/AEO-эксперта Алексея Яковлева и GAEO.ru на Workspace, РБК, Sostav, GEOMI и других площадках.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/publications/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Публикации, кейсы и упоминания Алексея Яковлева"
+      ],
+      "h2": [
+        "Рейтинги и внешние упоминания",
+        "Интервью",
+        "Экспертные комментарии",
+        "Публичные кейсы",
+        "Авторские публикации и исследования",
+        "Зачем я собираю внешние публикации в одном месте",
+        "Еще обо мне и моей работе",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/publications/",
+      "final_url": "https://gaeo.ru/publications/",
+      "status": 200,
+      "sha256": "c2952ade331beff778240241eac896ac74ca639dcb622b8d5487302e8a218e48",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    },
+    {
+      "title": "Отзывы о GEO/AEO-эксперте Алексее Яковлеве и GAEO.ru",
+      "description": "Отзывы клиентов о работе с Алексеем Яковлевым и GAEO.ru: GEO-аудиты, продвижение бизнеса и экспертов в ChatGPT, Алисе, Google и других нейросетях. Ссылки на оригиналы отзывов.",
+      "title_count": 1,
+      "description_count": 1,
+      "canonical": "https://gaeo.ru/reviews/",
+      "robots": [],
+      "lang": "",
+      "h1": [
+        "Отзывы клиентов о работе с Алексеем Яковлевым и GAEO.ru"
+      ],
+      "h2": [
+        "Что клиенты отмечают в работе",
+        "Отзывы клиентов",
+        "Оригиналы отзывов на внешних площадках",
+        "Что можно проверить кроме отзывов",
+        "Оставить отзыв",
+        "Контакты"
+      ],
+      "url": "https://gaeo.ru/reviews/",
+      "final_url": "https://gaeo.ru/reviews/",
+      "status": 200,
+      "sha256": "3aef586240dac888367c79b18a7f7c72d01d1c5a48dbac1bd4d0b93a1a154ce0",
+      "x_robots_tag": "",
+      "error": "",
+      "in_old_sitemap": true
+    }
+  ],
+  "unfetched_urls": []
+}
