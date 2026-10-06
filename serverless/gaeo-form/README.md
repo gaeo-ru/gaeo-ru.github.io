@@ -17,12 +17,12 @@ Serverless handler for the public GAEO.ru lead form. It follows the same product
 ```text
 POSTBOX_FROM=form@gaeo.ru
 POSTBOX_TO=ya@gaeo.ru
-ALLOWED_ORIGINS=https://gaeo.ru,https://www.gaeo.ru,https://gaeo-ru.github.io
+ALLOWED_ORIGINS=https://gaeo.ru,https://www.gaeo.ru
 MAX_BODY_BYTES=32768
 MIN_FILL_SECONDS=1.5
 ```
 
-The GitHub Pages origin is intentionally allowed during the prelaunch acceptance. Remove it after the custom-domain cutover is stable if staging submissions are no longer needed.
+Production accepts submissions only from `https://gaeo.ru` and `https://www.gaeo.ru`.
 
 ## Postbox
 
