@@ -42,6 +42,7 @@ Expected payload fields:
 - normalized `phone`
 - `phone_country`
 - `email`
+- `preferred_contact` (`phone`, `telegram`, `whatsapp`, `email`; optional)
 - `comment`
 - honeypot
 - page URL and referrer
