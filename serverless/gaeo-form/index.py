@@ -19,7 +19,7 @@ ALLOWED_ORIGINS = {
     item.strip()
     for item in os.getenv(
         "ALLOWED_ORIGINS",
-        "https://gaeo.ru,https://www.gaeo.ru,https://gaeo-ru.github.io",
+        "https://gaeo.ru,https://www.gaeo.ru",
     ).split(",")
     if item.strip()
 }
