@@ -379,7 +379,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
 })();
 
 
-/* ===== Lead form + modal v1.1 =====
+/* ===== Lead form + modal v1.2 =====
    Shared client-side UI for GAEO lead forms.
    Country selector, mobile input modes and validation mirror IndexResearch.
    Delivery endpoint is configured separately from public UI code. */
@@ -500,7 +500,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '.gaeo-country-code{white-space:nowrap}',
       '.gaeo-country-chevron{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #7b8793;flex:0 0 auto}',
       '.gaeo-phone-input{border:0!important;box-shadow:none!important;height:54px!important;min-width:0;flex:1 1 auto;padding-left:13px!important}',
-      '.gaeo-country-menu{position:absolute;left:0;top:calc(100% + 7px);z-index:1200;width:min(430px,calc(100vw - 32px));max-height:310px;overflow:auto;background:#fff;border:1px solid #b9c1c5;box-shadow:0 16px 36px rgba(2,22,65,.16);display:none}',
+      '.gaeo-country-menu{position:absolute;right:0;left:auto;top:calc(100% + 7px);z-index:1200;width:min(430px,calc(100vw - 32px));max-height:310px;overflow:auto;background:#fff;border:1px solid #b9c1c5;box-shadow:0 16px 36px rgba(2,22,65,.16);display:none}',
       '.gaeo-country-menu.is-open{display:block}',
       '.gaeo-country-option{width:100%;display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:11px;align-items:center;padding:10px 12px;border:0;border-bottom:1px solid #edf0f2;background:#fff;color:#1f2937;text-align:left;font:500 13px/1.35 Manrope,Arial,sans-serif;cursor:pointer}',
       '.gaeo-country-option:last-child{border-bottom:0}',
