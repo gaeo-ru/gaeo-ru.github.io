@@ -61,6 +61,54 @@ for (const [modeName, viewport] of Object.entries(modes)) {
 
     await page.waitForTimeout(400);
 
+    let formAudit = null;
+    if (pageName === 'homepage') {
+      await page.waitForSelector('#lead .gaeo-lead-form', { state: 'attached', timeout: 10000 });
+      formAudit = await page.evaluate(() => {
+        const form = document.querySelector('#lead .gaeo-lead-form');
+        const name = form?.querySelector('input[name="full_name"]');
+        const phone = form?.querySelector('input[name="phone_national"]');
+        const email = form?.querySelector('input[name="email"]');
+        const comment = form?.querySelector('textarea[name="comment"]');
+        const flag = form?.querySelector('.gaeo-country-flag');
+        return {
+          formExists: !!form,
+          name: name ? { type: name.type, autocomplete: name.autocomplete } : null,
+          phone: phone ? { type: phone.type, inputmode: phone.inputMode, autocomplete: phone.autocomplete } : null,
+          email: email ? { type: email.type, inputmode: email.inputMode, autocomplete: email.autocomplete } : null,
+          commentExists: !!comment,
+          defaultFlag: flag?.src || '',
+        };
+      });
+      if (!formAudit.formExists || !formAudit.commentExists) failures.push(`${modeName}/homepage: real lead form did not mount`);
+      if (formAudit.name?.type !== 'text' || formAudit.name?.autocomplete !== 'name') failures.push(`${modeName}/homepage: name input attributes mismatch`);
+      if (formAudit.phone?.type !== 'tel' || formAudit.phone?.inputmode !== 'tel' || formAudit.phone?.autocomplete !== 'tel-national') failures.push(`${modeName}/homepage: phone keyboard/autocomplete attributes mismatch`);
+      if (formAudit.email?.type !== 'email' || formAudit.email?.inputmode !== 'email' || formAudit.email?.autocomplete !== 'email') failures.push(`${modeName}/homepage: email keyboard/autocomplete attributes mismatch`);
+      if (!/\/ru\.png(?:\?|$)/.test(formAudit.defaultFlag)) failures.push(`${modeName}/homepage: default RU phone flag missing`);
+
+      await page.locator('#lead .gaeo-country-toggle').click();
+      await page.waitForSelector('#lead .gaeo-country-menu.is-open [data-iso2="se"]', { timeout: 5000 });
+      const countryCount = await page.locator('#lead .gaeo-country-option').count();
+      if (countryCount !== 200) failures.push(`${modeName}/homepage: country selector expected 200 options, got ${countryCount}`);
+      await page.locator('#lead .gaeo-country-option[data-iso2="se"]').click();
+      await page.waitForFunction(() => {
+        const img = document.querySelector('#lead .gaeo-country-flag');
+        return !!img && /\/se\.png(?:\?|$)/.test(img.src) && img.complete && img.naturalWidth > 0;
+      }, null, { timeout: 10000 });
+      const sweden = await page.evaluate(() => ({
+        code: document.querySelector('#lead .gaeo-country-code')?.textContent || '',
+        flag: document.querySelector('#lead .gaeo-country-flag')?.src || '',
+      }));
+      if (sweden.code !== '+46' || !/\/se\.png(?:\?|$)/.test(sweden.flag)) failures.push(`${modeName}/homepage: country selection did not update flag/code`);
+
+      await page.locator('a.header-cta').click();
+      await page.waitForSelector('.gaeo-modal-overlay .gaeo-lead-form', { timeout: 5000 });
+      const modalFormCount = await page.locator('.gaeo-modal-overlay .gaeo-lead-form').count();
+      if (modalFormCount !== 1) failures.push(`${modeName}/homepage: CTA did not open exactly one lead modal`);
+      await page.locator('.gaeo-modal-close').click();
+      await page.waitForSelector('.gaeo-modal-overlay', { state: 'detached', timeout: 5000 });
+    }
+
     const audit = await page.evaluate(() => {
       const root = document.documentElement;
       const main = document.querySelector('main');
@@ -122,6 +170,7 @@ for (const [modeName, viewport] of Object.entries(modes)) {
       pageErrors,
       badResponses,
       screenshot,
+      formAudit,
     });
 
     await context.close();
