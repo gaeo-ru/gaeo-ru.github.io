@@ -153,7 +153,6 @@ def _email_text(payload: dict[str, Any]) -> str:
         f"Страна телефона: {payload['phone_country'] or '—'}\n"
         f"Email: {payload['email'] or '—'}\n"
         f"Способ связи: {PREFERRED_CONTACT_LABELS.get(payload['contact_method'], '—')}\n"
-        f"Предпочитаемый способ связи: {PREFERRED_CONTACT_LABELS.get(payload['preferred_contact'], '—')}\n"
         f"Язык: {payload['lang']}\n\n"
         "Комментарий:\n"
         f"{payload['comment'] or '—'}\n\n"
