@@ -11,6 +11,7 @@ from email.message import EmailMessage
 from email.policy import SMTP
 from email.utils import format_datetime, make_msgid
 from typing import Any
+from urllib.parse import urlparse
 
 POSTBOX_URL = "https://postbox.cloud.yandex.net/v2/email/outbound-emails"
 POSTBOX_FROM = os.getenv("POSTBOX_FROM", "form@gaeo.ru")
@@ -151,11 +152,14 @@ def _email_text(payload: dict[str, Any]) -> str:
         f"Телефон: {payload['phone'] or '—'}\n"
         f"Страна телефона: {payload['phone_country'] or '—'}\n"
         f"Email: {payload['email'] or '—'}\n"
+        f"Способ связи: {PREFERRED_CONTACT_LABELS.get(payload['contact_method'], '—')}\n"
         f"Предпочитаемый способ связи: {PREFERRED_CONTACT_LABELS.get(payload['preferred_contact'], '—')}\n"
         f"Язык: {payload['lang']}\n\n"
         "Комментарий:\n"
         f"{payload['comment'] or '—'}\n\n"
         f"Страница: {payload['page_url'] or '—'}\n"
+        f"Canonical: {payload['canonical_url'] or '—'}\n"
+        f"ID объекта: {payload['entity_id'] or '—'}\n"
         f"Referrer: {payload['referrer'] or '—'}\n\n"
         "UTM / источники:\n"
         f"{utm_text}\n\n"
@@ -263,6 +267,9 @@ def handler(event: dict[str, Any], context: Any):
         phone_country = _text(decoded.get("phone_country"), 8).lower()
         email = _text(decoded.get("email"), 254).lower()
         preferred_contact = _text(decoded.get("preferred_contact"), 32).lower()
+        contact_method = _text(decoded.get("contact_method") or preferred_contact, 32).lower()
+        entity_id = _text(decoded.get("entity_id"), 220)
+        canonical_url = _text(decoded.get("canonical_url"), 2048)
         comment = _text(decoded.get("comment"), 3000)
         page_url = _text(decoded.get("page_url"), 2048)
         referrer = _text(decoded.get("referrer"), 2048)
@@ -280,6 +287,14 @@ def handler(event: dict[str, Any], context: Any):
             raise ValueError("invalid_phone_country")
         if email and ("\r" in email or "\n" in email or not EMAIL_RE.fullmatch(email)):
             raise ValueError("invalid_email")
+        if preferred_contact and contact_method and preferred_contact != contact_method:
+            raise ValueError("conflicting_contact_method")
+        if contact_method and contact_method not in PREFERRED_CONTACT_LABELS:
+            raise ValueError("invalid_contact_method")
+        if canonical_url:
+            parsed = urlparse(canonical_url)
+            if parsed.scheme != "https" or (parsed.hostname or "").lower() not in {"gaeo.ru", "www.gaeo.ru"}:
+                raise ValueError("invalid_canonical_url")
         if preferred_contact and preferred_contact not in PREFERRED_CONTACT_LABELS:
             raise ValueError("invalid_preferred_contact")
         if preferred_contact in {"phone", "telegram", "whatsapp"} and not phone:
@@ -300,7 +315,10 @@ def handler(event: dict[str, Any], context: Any):
             "phone": phone,
             "phone_country": phone_country,
             "email": email,
-            "preferred_contact": preferred_contact,
+            "preferred_contact": contact_method,
+            "contact_method": contact_method,
+            "entity_id": entity_id,
+            "canonical_url": canonical_url,
             "comment": comment,
             "page_url": page_url,
             "referrer": referrer,
