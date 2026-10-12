@@ -297,9 +297,9 @@ def handler(event: dict[str, Any], context: Any):
                 raise ValueError("invalid_canonical_url")
         if preferred_contact and preferred_contact not in PREFERRED_CONTACT_LABELS:
             raise ValueError("invalid_preferred_contact")
-        if preferred_contact in {"phone", "telegram", "whatsapp"} and not phone:
+        if contact_method in {"phone", "telegram", "whatsapp"} and not phone:
             raise ValueError("preferred_contact_requires_phone")
-        if preferred_contact == "email" and not email:
+        if contact_method == "email" and not email:
             raise ValueError("preferred_contact_requires_email")
 
         started = _parse_iso(form_started_at)
