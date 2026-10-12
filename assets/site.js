@@ -412,6 +412,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       preferredTelegram:'Telegram',
       preferredWhatsApp:'WhatsApp',
       preferredEmail:'Email',
+      requiredMethod:'Выберите способ связи.',
       comment:'Комментарий о бизнесе и задаче',
       submit:'Отправить заявку',
       consentPrefix:'Нажимая кнопку, пользователь соглашается с ',
@@ -441,6 +442,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       preferredTelegram:'Telegram',
       preferredWhatsApp:'WhatsApp',
       preferredEmail:'Email',
+      requiredMethod:'Choose a contact method.',
       comment:'Comment about your business and task',
       submit:'Send request',
       consentPrefix:'By clicking the button, you agree to the ',
@@ -470,6 +472,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       preferredTelegram:'Telegram',
       preferredWhatsApp:'WhatsApp',
       preferredEmail:'电子邮箱',
+      requiredMethod:'请选择联系方式。',
       comment:'关于您的业务和任务的说明',
       submit:'提交申请',
       consentPrefix:'点击按钮即表示您同意',
@@ -973,7 +976,12 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         setStatus(copy.invalidEmail,'error');
         return false;
       }
-
+      if(!preferredContact.value()){
+        const first = preferredContact.field.querySelector('input[name="preferred_contact"]:not(:disabled)');
+        if(first) first.focus();
+        setStatus(copy.requiredMethod,'error');
+        return false;
+      }
       return true;
     }
 
