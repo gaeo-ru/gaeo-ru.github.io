@@ -821,6 +821,17 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     }
   }
 
+  function pageContext(){
+    const canonicalLink = document.querySelector('link[rel="canonical"][href]');
+    const canonical = canonicalLink ? canonicalLink.href : location.origin + location.pathname;
+    const element = document.querySelector('meta[name="entity_id"],meta[name="entity-id"],[data-lead-entity-id]');
+    let entityId = element ? (element.getAttribute('content') || element.getAttribute('data-lead-entity-id') || '').trim() : '';
+    if(!entityId){
+      try { entityId = 'gaeo:page:' + new URL(canonical).pathname; } catch(e) { entityId = ''; }
+    }
+    return {canonical_url:canonical,entity_id:entityId.length <= 220 ? entityId : ''};
+  }
+
   function showSuccessNotice(){
     const old = document.querySelector('.gaeo-success-toast');
     if(old) old.remove();
@@ -1017,8 +1028,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         preferred_contact:preferredContact.value(),
         contact_method:preferredContact.value(),
         comment:commentInput.value.trim(),
-        entity_id:'gaeo:page:' + location.pathname,
-        canonical_url:(document.querySelector('link[rel="canonical"][href]') || {}).href || (location.origin + location.pathname),
+        entity_id:pageContext().entity_id,
+        canonical_url:pageContext().canonical_url,
         company_website:hpInput.value,
         page_url:location.href,
         referrer:document.referrer || '',
