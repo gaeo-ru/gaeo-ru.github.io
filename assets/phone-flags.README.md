@@ -2,8 +2,10 @@ Phone country flags
 ===================
 
 Source: https://flagcdn.com/48x36/{iso2}.png (Flagpedia country flags).
-Downloaded 2026-10-13 for the 199 ISO codes in the lead form.
+Downloaded 2026-10-13 for all 199 ISO codes in the lead form.
+Each local PNG is 48 x 36 px, displayed at 24 x 18 px.
 
-The PNG contains 16 columns of 48 x 36 px tiles in alphabetical ISO order.
-CSS renders each tile at 24 x 18 px. FLAG_ISOS in site.js defines the order.
-All forms reuse this local asset, with no runtime requests to Flagcdn.
+On page load, site.js preloads the default flag and eight countries above
+and below it in the actual country list. Other images have data-flag-src
+until they enter the country menu viewport plus a 320 px scrolling buffer.
+No visitor requests are sent to Flagcdn.
