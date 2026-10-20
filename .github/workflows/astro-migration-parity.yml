@@ -1,0 +1,29 @@
+name: Astro parity preview (non-production)
+on:
+  push:
+    branches:
+      - astro-migration-parity-20261020
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  astro-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build GAEO pages with Astro
+        run: npm run build
+      - name: Compare all routes and static assets with legacy site
+        run: npm run check:parity
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: gaeo-astro-parity-preview
+          path: dist/
+          retention-days: 7
