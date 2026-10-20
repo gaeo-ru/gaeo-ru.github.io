@@ -12,6 +12,8 @@ for(const route of routes)for(const mobile of [true,false]){
 cases.push({route:'/publications/',mobile:true,view:{width:390,height:844},scenario:'menu'});
 cases.push({route:'/industries/tourism/',mobile:true,view:{width:390,height:844},scenario:'cta'});
 cases.push({route:'/strategies/measurement/',mobile:true,view:{width:390,height:844},scenario:'cta'});
+cases.push({route:'/industries/tourism/',mobile:true,view:{width:390,height:844},scenario:'form'});
+cases.push({route:'/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/',mobile:false,view:{width:1440,height:900},scenario:'form'});
 const server=spawn('python3',['-m','http.server','4321','--directory','dist'],{stdio:'ignore'});
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function ready(){
@@ -38,6 +40,12 @@ async function screenshot(browser,origin,test){
    const cta=page.locator('.page-cta');
    if(await cta.count()!==1)throw Error('Expected 1 CTA in '+test.route);
    await cta.scrollIntoViewIfNeeded({timeout:12000});
+  }
+  if(test.scenario==='form'){
+   const trigger=page.locator('.header-cta');
+   await trigger.click({timeout:12000});
+   await page.locator('.gaeo-modal[role="dialog"]').waitFor({state:'visible',timeout:12000});
+   if(await page.locator('.gaeo-modal').count()!==1)throw Error('Expected one lead modal');
   }
   await sleep(350);
   return await page.screenshot({type:'png',fullPage:false});
