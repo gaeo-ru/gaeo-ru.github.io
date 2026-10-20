@@ -1,0 +1,7 @@
+---
+import LegacyPage from '../components/LegacyPage.astro';
+import {listLegacyRoutes} from '../lib/legacy.mjs';
+export function getStaticPaths(){return listLegacyRoutes();}
+const {sourcePath}=Astro.props;
+---
+<LegacyPage sourcePath={sourcePath}/>

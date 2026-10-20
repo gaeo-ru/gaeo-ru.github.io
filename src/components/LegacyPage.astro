@@ -1,0 +1,15 @@
+---
+import {tokenizeLegacyPage} from '../lib/legacy.mjs';
+import SharedHeader from './SharedHeader.astro';
+import SharedFooter from './SharedFooter.astro';
+import LeadCTA from './LeadCTA.astro';
+const {sourcePath}=Astro.props;
+const tokens=tokenizeLegacyPage(sourcePath);
+---
+{tokens.map(t=>t.kind==='header'
+  ? <SharedHeader markup={t.content}/>
+  : t.kind==='footer'
+  ? <SharedFooter markup={t.content}/>
+  : t.kind==='cta'
+  ? <LeadCTA markup={t.content}/>
+  : <Fragment set:html={t.content}/>)}
