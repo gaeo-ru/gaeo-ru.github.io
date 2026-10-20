@@ -35,6 +35,10 @@ const mobileMenu = document.getElementById('mobileMenu');
       right:max(20px, calc((100vw - min(1240px, calc(100vw - 112px))) / 2))!important;
       width:min(340px, calc(100vw - 40px))!important;
       max-width:340px!important;
+      max-height:calc(100dvh - 92px)!important;
+      overflow-y:auto!important;
+      overscroll-behavior:contain;
+      -webkit-overflow-scrolling:touch;
       border:1px solid var(--line)!important;
       border-top:0!important;
       border-radius:0 0 12px 12px!important;
@@ -160,6 +164,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ['About me','/en/professional-biography/'],
     ['How I work','/en/#process'],
     ['Cases','/en/cases/'],
+    ['Industries','/en/industries/'],
+    ['Strategies','/en/strategies/'],
     ['Reviews','/en/reviews/'],
     ['Articles','/en/articles/'],
     ['Publications','/en/publications/'],
@@ -168,6 +174,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ['Обо мне','/professional-biography/'],
     ['Как работаю','/#process'],
     ['Кейсы','/cases/'],
+    ['Отрасли','/industries/'],
+    ['Стратегии','/strategies/'],
     ['Отзывы','/reviews/'],
     ['Статьи','/articles/'],
     ['Публикации','/publications/'],
@@ -208,12 +216,16 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['About me','/en/professional-biography/'],
       ['How I work','/en/#process'],
       ['Cases','/en/cases/'],
+      ['Industries','/en/industries/'],
+      ['Strategies','/en/strategies/'],
       ['Reviews','/en/reviews/'],
       ['Pricing','/en/#pricing']
     ] : [
       ['Обо мне','/professional-biography/'],
       ['Как работаю','/#process'],
       ['Кейсы','/cases/'],
+      ['Отрасли','/industries/'],
+      ['Стратегии','/strategies/'],
       ['Отзывы','/reviews/'],
       ['Тарифы','/#pricing']
     ];
@@ -250,7 +262,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     fillColumn(right, rightItems);
   }
 
-  // Re-evaluate whether the desktop menu still fits after adding Reviews.
+  // Re-evaluate available desktop width after updating the shared navigation.
   requestAnimationFrame(fitHeader);
 })();
 
