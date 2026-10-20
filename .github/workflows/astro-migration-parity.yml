@@ -21,6 +21,16 @@ jobs:
         run: npm run build
       - name: Compare all routes and static assets with legacy site
         run: npm run check:parity
+      - name: Install browser for visual parity
+        run: npx playwright install --with-deps chromium
+      - name: Compare mobile and desktop against production
+        run: npm run check:visual
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gaeo-astro-visual-comparison
+          path: visual-parity/
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         if: success()
         with:
