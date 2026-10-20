@@ -1,0 +1,87 @@
+name: Build Astro and safely publish to GAEO.ru
+on:
+  push:
+    branches: [astro-source]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  actions: write
+concurrency:
+  group: gaeo-astro-source-publishing
+  cancel-in-progress: false
+jobs:
+  build-verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install and build Astro source
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          npm run check:parity
+      - name: Check out existing public GitHub Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Prevent overwriting parallel changes on main
+        id: safety
+        run: node scripts/publish-astro-to-main.mjs preflight
+      - name: Install browser for first release
+        if: steps.safety.outputs.initial == 'true'
+        run: npx playwright install --with-deps chromium
+      - name: Pixel-compare with production before first release
+        if: steps.safety.outputs.initial == 'true'
+        run: npm run check:visual
+      - name: Copy checked Astro build to published branch
+        run: node scripts/publish-astro-to-main.mjs publish
+      - name: Run existing GAEO production QA on generated pages
+        working-directory: published
+        run: python scripts/site_qa.py --mode production
+      - name: Commit and publish generated HTML/assets only
+        id: commit
+        working-directory: published
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html' assets/ robots.txt sitemap.xml CNAME favicon.ico '.nojekyll' 'astro-release-manifest.json'
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Site content is already exactly published."
+            exit 0
+          fi
+          git commit -m "Publish verified Astro build to GAEO.ru"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Request branch-based GitHub Pages build
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in {1..8}; do
+            if gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null; then
+              echo "GitHub Pages build requested."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Astro output committed; Pages build request needs retry."
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: astro-cutover-evidence
+          path: visual-parity/
+          if-no-files-found: ignore
+          retention-days: 14
