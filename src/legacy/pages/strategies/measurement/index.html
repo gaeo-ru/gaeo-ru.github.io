@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Как измерять GEO: BMR, Share of Voice и рекомендации нейросетей | GAEO</title>
+<meta name="description" content="Методика измерения GEO: фиксированные запросы, BMR, Share of Voice, пропуски ответов, источники и качество рекомендаций.">
+<!-- SOCIAL_AND_ICONS_START -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GAEO.ru">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Как измерять GEO: BMR, Share of Voice и рекомендации нейросетей | GAEO">
+<meta property="og:description" content="Методика измерения GEO: фиксированные запросы, BMR, Share of Voice, пропуски ответов, источники и качество рекомендаций.">
+<meta property="og:url" content="https://gaeo.ru/strategies/measurement/">
+<meta property="og:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg">
+<meta property="og:image:alt" content="GAEO.ru — Generative &amp; Answer Engine Optimization">
+<meta name="theme-color" content="#021641">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+<!-- SOCIAL_AND_ICONS_END -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://gaeo.ru/#website","url":"https://gaeo.ru/","name":"GAEO.ru","publisher":{"@id":"https://gaeo.ru/#business"}},{"@type":"WebPage","@id":"https://gaeo.ru/strategies/measurement/#webpage","url":"https://gaeo.ru/strategies/measurement/","name":"Как измерять GEO: BMR, Share of Voice и рекомендации","description":"Методика измерения GEO: фиксированные запросы, BMR, Share of Voice, пропуски ответов, источники и качество рекомендаций.","inLanguage":"ru","isPartOf":{"@id":"https://gaeo.ru/#website"},"dateModified":"2026-10-20","breadcrumb":{"@id":"https://gaeo.ru/strategies/measurement/#breadcrumb"},"mainEntity":{"@id":"https://gaeo.ru/strategies/measurement/#methodology"}},{"@type":"BreadcrumbList","@id":"https://gaeo.ru/strategies/measurement/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://gaeo.ru/"},{"@type":"ListItem","position":2,"name":"Как измерять GEO: BMR, Share of Voice и рекомендации","item":"https://gaeo.ru/strategies/measurement/"}]},{"@type":"CreativeWork","@id":"https://gaeo.ru/strategies/measurement/#methodology","name":"Как измерять GEO: BMR, Share of Voice и рекомендации","url":"https://gaeo.ru/strategies/measurement/","author":{"@id":"https://gaeo.ru/#person"},"datePublished":"2026-10-20","dateModified":"2026-10-20"}]}</script>
+
+<link rel="canonical" href="https://gaeo.ru/strategies/measurement/">
+<link rel="alternate" hreflang="ru" href="https://gaeo.ru/strategies/measurement/">
+<link rel="alternate" hreflang="en" href="https://gaeo.ru/en/strategies/measurement/">
+<link rel="alternate" hreflang="x-default" href="https://gaeo.ru/strategies/measurement/">
+<!-- FONT_LOADING_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic"></noscript>
+<!-- FONT_LOADING_END -->
+<link rel="stylesheet" href="/assets/style.css?v=8e28c0044e4e">
+<link rel="stylesheet" href="/assets/internal.css?v=3272aae178d7">
+<style data-fix="page-shell-gap">.page-shell{padding-top:0!important}</style>
+
+
+<script src="/assets/analytics.js?v=2a1e1d12d83c" defer></script>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как измерять GEO: BMR, Share of Voice и рекомендации нейросетей | GAEO">
+<meta name="twitter:description" content="Методика измерения GEO: фиксированные запросы, BMR, Share of Voice, пропуски ответов, источники и качество рекомендаций.">
+<meta name="twitter:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg">
+<meta name="twitter:image:alt" content="GAEO.ru — Generative &amp; Answer Engine Optimization">
+<!-- NOJS_FALLBACK_START -->
+<noscript>
+<style>
+@media(max-width:720px){
+  header{height:auto!important;position:relative!important}
+  header .nav{height:72px!important}
+  header .desktop-menu{display:none!important}
+  header .menu-toggle{display:none!important}
+  header .mobile-menu{display:block!important;position:static!important;box-shadow:none!important}
+  .mobile-fold-toggle{display:none!important}
+  .mobile-fold-section .content-head>.text-link{display:inline-block!important}
+  .mobile-fold-section .cards.mobile-fold-body{display:grid!important}
+  .mobile-fold-section .publications.mobile-fold-body{display:block!important}
+  .mobile-fold-all-link{display:inline-block!important;margin-top:24px}
+}
+</style>
+</noscript>
+<!-- NOJS_FALLBACK_END -->
+</head>
+<body>
+<!-- SITE_HEADER_START -->
+<header>
+ <div class="container">
+  <div class="nav" id="mainNav">
+   <div class="brand-wrap">
+    <a class="logo" href="/"><img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="eager"></a>
+    <a class="logo-tagline" href="/">Generative &amp; Answer<br>Engine Optimization</a>
+   </div>
+
+   <nav class="desktop-menu" id="desktopMenu" aria-label="Основная навигация">
+    <a href="/professional-biography/">Обо мне</a>
+    <a href="/#process">Как работаю</a>
+    <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+    <a href="/articles/">Статьи</a>
+    <a href="/publications/">Публикации</a>
+    <a href="/#pricing">Тарифы</a>
+    <span class="langs" aria-label="Язык"><a class="lang-link lang-ru" href="/strategies/measurement/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/strategies/measurement/">EN</a></span>
+   </nav>
+
+   <div class="header-actions">
+    <a class="button header-cta" href="/#lead">Мини-аудит</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+   </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="/professional-biography/">Обо мне</a>
+   <a href="/#process">Как работаю</a>
+   <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+   <a href="/articles/">Статьи</a>
+   <a href="/publications/">Публикации</a>
+   <a href="/#pricing">Тарифы</a>
+   <div class="mobile-langs" aria-label="Язык"><a class="lang-link lang-ru" href="/strategies/measurement/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/strategies/measurement/">EN</a></div>
+  </div>
+ </div>
+</header>
+<!-- SITE_HEADER_END -->
+<main class="page-shell"><!-- VISIBLE_BREADCRUMBS_START --><nav class="breadcrumbs" aria-label="Хлебные крошки"><div class="container breadcrumbs__inner"><a href="/">Главная</a><span class="breadcrumbs__sep" aria-hidden="true">›</span><span class="breadcrumbs__current" aria-current="page">Как измерять GEO: BMR, Share of Voice и рекомендации</span></div></nav><!-- VISIBLE_BREADCRUMBS_END --><section class="inner-hero case-detail-hero"><div class="container inner-hero__grid"><div><div class="inner-eyebrow">Методика GEO-измерений</div><h1>Как измерять GEO: BMR, Share of Voice и рекомендации</h1><p class="inner-hero__lead">Рост процента не всегда означает рост числа рекомендаций. Сравниваю одинаковые наборы запросов и сохраняю исходные ответы.</p></div></div></section><section class="inner-content"><div class="article-wrap"><p>Первое правило GEO-измерения: любой итоговый процент должен опираться на исходные ответы, точные запросы и список нейросетей. Без этого сложно отделить изменение видимости бренда от изменения самой выборки.</p><h2>Что показывают BMR и Share of Voice</h2>
+<p><strong>BMR</strong> (Brand Mention Rate) – доля полученных ответов, где назван исследуемый бренд. <strong>Share of Voice</strong> – доля бренда среди упоминаний заранее заданной группы конкурентов. Это разные метрики. Вторая зависит от состава конкурентного списка и правил подсчета.</p>
+<p>Само название в ответе не обязательно означает рекомендацию. Отдельно оцениваю, предлагает ли нейросеть компанию для конкретной задачи, какую позицию она занимает и на какие источники ссылается.</p>
+<h2>Формула BMR</h2><p><strong>BMR = ответы с упоминанием бренда / все полученные ответы × 100%.</strong> Если бренд встречается 3 раза внутри одного ответа, это 1 положительный ответ. Брендовые вопросы, где компания названа в запросе, измеряю отдельно от небрендовых.</p>
+<div class="metric-grid"><div class="metric-card"><b>20</b><span>Фиксированных коммерческих промптов</span></div><div class="metric-card"><b>5</b><span>Нейросетей на промпт</span></div><div class="metric-card"><b>100</b><span>Ожидаемых ответов на замер</span></div></div>
+<p>Пример условный: 25 упоминаний из 100 ответов дают BMR 25%. Для сравнения через месяц сохраняю те же 20 промптов и те же 5 нейросетей.</p>
+<h2>Ошибка 1: изменился состав запросов</h2><p>При расширении с 40 до 52 вопросов общий BMR измеряет уже другой набор задач. Чтобы понимать динамику, исходные 40 запросов надо сохранять в отдельном контрольном ядре, а новые темы измерять дополнительной серией.</p>
+<h2>Ошибка 2: ответов стало меньше</h2><p>10 упоминаний из 20 ответов дают 50%. Если нейросети вернули только 18 ответов, но бренд снова назвали 10 раз, итог станет 55,6%. Упоминаний не прибавилось. В отчете всегда должны быть ожидаемый объем, фактическое число ответов и список пропусков.</p>
+<h2>Ошибка 3: ссылку приняли за рекомендацию</h2><p>Домен в списке источников может присутствовать без названия компании в основном тексте. Автоматическую классификацию нужно проверять вручную, особенно для неоднозначных брендов и близких названий.</p>
+<h2>Пример из практики: MethodLab</h2><p>На одинаковой матрице из 6 запросов и 7 нейросетей <a href="/cases/methodlab-rost-neyrovidimosti-19-52-procenta/">BMR MethodLab вырос с 19,0% до 52,4%</a>. При этом Google AI Mode, Gemini и Perplexity достигли 6 из 6, но Поиск с Алисой остался на 0 из 6. Среднее значение не передает эти различия.</p>
+<h2>Как делаю повторные замеры</h2><ol><li>Фиксирую точные небрендовые запросы, связанные с выбором подрядчика.</li><li>Сохраняю ответы, даты, модели и источники.</li><li>Считаю BMR и Share of Voice, отдельно проверяю качество рекомендаций.</li><li>Сравниваю только сопоставимые выборки; обращения и выручку проверяю по отдельным источникам данных.</li></ol>
+<p>Отраслевые примеры собраны в <a href="/industries/">каталоге GEO-продвижения по отраслям</a>.</p><div class="page-cta"><h2>Проверить видимость вашего бизнеса в нейросетях</h2><p>Проверю коммерческие промпты вашей аудитории, конкурентов и источники, которыми пользуются ChatGPT, Алиса, Google и другие нейросети.</p><a class="button" href="/#lead">Получить мини-аудит</a></div></div></section></main>
+<!-- SITE_FOOTER_START -->
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="lazy">
+    <div class="footer-contact">Алексей Яковлев<br>Независимый GEO/AEO-эксперт<br><br><a href="mailto:ya@gaeo.ru">ya@gaeo.ru</a> · <a href="tel:+79264242333">+7 (926) 42-42-333</a><br>Telegram: <a href="https://t.me/ya_gaeo" target="_blank" rel="noopener">@ya_gaeo</a><br><a class="location-link" href="https://yandex.ru/maps/org/gaeo_prodvizheniye_v_neyrosetyakh/45723529742/" target="_blank" rel="noopener"><span class="location-icon" aria-hidden="true"></span>Москва, Россия</a></div>
+   </div>
+   <div><a href="/professional-biography/">Обо мне</a><a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a><a href="/articles/">Статьи</a><a href="/publications/">Публикации</a><a href="/reviews/">Отзывы</a></div>
+   <div><a href="/professional-biography/#external-profiles">Официальные внешние профили</a><a href="/privacy-policy/">Политика конфиденциальности</a><a href="/personal-data-consent/">Обработка персональных данных</a><div class="footer-lang" aria-label="Язык"><a class="lang-link lang-ru" href="/strategies/measurement/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/strategies/measurement/">EN</a></div></div>
+  </div>
+  <div class="footer-bottom">ИП Яковлев Алексей Леонидович<br>© 2025–2026<br>GAEO.ru · Generative &amp; Answer Engine Optimization</div>
+ </div>
+</footer>
+<!-- SITE_FOOTER_END -->
+<script src="/assets/form-config.js?v=dee21cb376d3"></script>
+<script src="/assets/site.js?v=ccbe856a67c7"></script>
+</body>
+</html>
