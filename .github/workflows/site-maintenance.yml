@@ -56,6 +56,9 @@ jobs:
       - name: Materialize shared RU/EN header and footer
         run: python scripts/ensure_site_chrome.py
 
+      - name: Synchronize hub lead CTA with shared Ada Tours reference
+        run: python scripts/ensure_hub_cta.py
+
       - name: Normalize non-blocking web font loading
         run: python scripts/ensure_font_loading.py
 
