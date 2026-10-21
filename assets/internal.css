@@ -574,3 +574,6 @@
   .industry-about>img{width:110px;height:110px}
 }
 
+/* The pharma hero illustration is a purpose-made square image. */
+.industry-hero--pharma .industry-hero__media img{aspect-ratio:1/1;object-fit:cover;object-position:center}
+@media(max-width:720px){.industry-hero--pharma .industry-hero__media img{aspect-ratio:1/1;max-height:none}}
