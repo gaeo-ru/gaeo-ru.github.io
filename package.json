@@ -10,7 +10,8 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "check:parity": "node scripts/astro-parity.mjs",
-    "check:visual": "node scripts/astro-visual-parity.mjs"
+    "check:visual": "node scripts/astro-visual-parity.mjs",
+    "check:industry": "node scripts/astro-industry-browser-qa.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",
