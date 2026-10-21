@@ -15,7 +15,9 @@ const problems=[];
 // Preserve and verify their SEO shell while retaining exact parity for untouched routes.
 const commercialRoutes=new Set([
  'geo-prodvizhenie-nedvizhimosti/index.html',
- 'en/geo-for-real-estate/index.html'
+ 'en/geo-for-real-estate/index.html',
+ 'industries/pharma/index.html',
+ 'en/industries/pharma/index.html'
 ]);
 
 for(const original of originals){

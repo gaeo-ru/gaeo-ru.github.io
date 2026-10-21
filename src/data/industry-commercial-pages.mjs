@@ -583,5 +583,591 @@ export const industryCommercialPages = {
       },
       "note": "One independent consultant, direct communication and a verifiable method. No promise of a guaranteed AI ranking."
     }
+  },
+  "industries/pharma/index.html": {
+  "language": "ru",
+  "eyebrow": "GEO-продвижение по отраслям / Фармацевтика",
+  "h1": "GEO-продвижение фармацевтических брендов в нейросетях",
+  "lead": "Люди спрашивают нейросети о лекарственных препаратах, сравнении вариантов и медицинской информации. Помогаю фармпроизводителям понять, почему их бренд пропускают в релевантных ответах, какие ошибки допускают нейросети и какие источники нужно привести в порядок.",
+  "secondLead": "В фармацевтике недостаточно добиться упоминания. Рекомендация должна соответствовать инструкции, доказательствам и требованиям медицинской и юридической проверки. Начинаю работу с проверяемого аудита, а не с обещания «попасть в ChatGPT».",
+  "heroProof": [
+    "Исследования реальных ответов нескольких нейросетей, а не одиночные скриншоты",
+    "Проверка источников, точности утверждений и роли бренда в ответе",
+    "Личная работа эксперта, согласование медицинских фактов с профильными специалистами"
+  ],
+  "heroImage": {
+    "src": "/assets/articles/neural-networks-for-business.jpg",
+    "alt": "Иллюстрация анализа рекомендаций нейросетей для разных видов бизнеса",
+    "width": 1200,
+    "height": 675
+  },
+  "primaryCta": {
+    "href": "/#lead",
+    "text": "Проверить видимость фармбренда"
+  },
+  "secondaryCta": {
+    "href": "#evidence",
+    "text": "Что выявляет реальный аудит"
+  },
+  "problem": {
+    "eyebrow": "Проблемы фарммаркетинга",
+    "title": "Нейросети говорят о препаратах, но не всегда корректно показывают ваш бренд",
+    "intro": "Для директора по маркетингу и медицинского отдела это одновременно вопрос видимости и безопасности информации. Даже высокий BMR может скрывать отсутствие реальных рекомендаций и существенные ошибки.",
+    "items": [
+      {
+        "title": "Бренд не попадает в уместные сравнения",
+        "body": "В запросах без торгового названия нейросеть может упоминать действующее вещество или целую терапевтическую категорию, но не связывать их с конкретным брендом."
+      },
+      {
+        "title": "Упоминание принимают за рекомендацию",
+        "body": "Препарат назван вскользь, в исторической справке или с оговоркой, но такой ответ механически записывают как успешное GEO-присутствие."
+      },
+      {
+        "title": "Факты обрастают опасными ошибками",
+        "body": "Модели могут смешивать показания, формы выпуска, возрастные ограничения, сведения из исследований и зарегистрированной инструкции."
+      },
+      {
+        "title": "Сайт и внешние источники расходятся",
+        "body": "Инструкции, публикации, справочники и коммерческие страницы дают разные формулировки. Нейросети воспроизводят эти противоречия, даже если официальный сайт хорошо индексируется."
+      }
+    ],
+    "closing": "Для фармбренда правильная цель GEO: заметность в релевантных информационных сценариях вместе с медицинской точностью, подтвержденными источниками и контролем рисков."
+  },
+  "study": {
+    "eyebrow": "Обезличенное исследование GAEO · август 2026",
+    "title": "Что показал аудит популярного противовирусного препарата",
+    "intro": "В августе 2026 года я исследовал 120 ответов 6 нейросетевых интерфейсов на 20 заранее зафиксированных вопросов: 15 без названия бренда и 5 брендовых. Препарат и производитель намеренно не называются. Это диагностическое исследование, не кейс реализованного продвижения.",
+    "metrics": [
+      {
+        "value": "120",
+        "label": "полных ответов на 20 вопросов в 6 интерфейсах, без пропусков в исходной матрице"
+      },
+      {
+        "value": "16 из 90",
+        "label": "небрендовых ответов содержали торговое название: BMR 17,8%"
+      },
+      {
+        "value": "4 из 90",
+        "label": "небрендовых ответов содержали самостоятельную уместную рекомендацию: 4,4%"
+      }
+    ],
+    "findings": [
+      "В 14 разных ответах зафиксировано 16 существенных рисков и медицинских неточностей. Рост числа упоминаний не отменяет требования к корректности.",
+      "Знание действующего вещества и узнаваемость торгового бренда оказались разными показателями. Их нельзя суммировать как одну метрику.",
+      "Пять брендовых вопросов использовались для проверки полноты и точности, но не входили в расчет BMR."
+    ],
+    "findingsTitle": "Что обнаружила диагностика",
+    "note": "Срез относится к одному препарату и конкретным интерфейсам на 6–9 августа 2026 года. Не показывает рыночную долю или клиническую эффективность, не подтверждает проведенные внедрения и не является прогнозом результатов для других брендов.",
+    "image": {
+      "src": "/assets/articles/geo-source-structure.jpg",
+      "alt": "Иллюстрация структуры источников для анализа ответов нейросетей",
+      "width": 1200,
+      "height": 675
+    },
+    "caption": "Иллюстрация работы с источниками. Числа из исследовательского аудита приведены отдельно в проверяемом тексте.",
+    "links": [
+      {
+        "href": "/strategies/measurement/",
+        "label": "Методика BMR и самостоятельных рекомендаций"
+      }
+    ]
+  },
+  "scenarios": {
+    "eyebrow": "Типовые коммерческие и медицинские интенты",
+    "title": "Какие вопросы должны быть раскрыты в ответах нейросетей",
+    "intro": "Запросы выбираются по аудитории, типу продукта и допустимой медицинской коммуникации. Это модель анализа ответов, не инструкция по выбору или приему лекарств.",
+    "columns": [
+      "Ситуация пользователя",
+      "Какой ответ допустим",
+      "Что входит в GEO-аудит"
+    ],
+    "rows": [
+      [
+        "Покупатель или фармацевт сравнивает препараты",
+        "Корректное разграничение препаратов, их зарегистрированных сведений и применимости",
+        "Контекст рекомендаций, сравнения по единым критериям, ошибки и недостающие источники"
+      ],
+      [
+        "Пользователь спрашивает о конкретном бренде",
+        "Проверенные сведения из актуальной инструкции без домыслов об эффективности и безопасности",
+        "Согласованность формы выпуска, ограничений, официальных документов и внешних описаний"
+      ],
+      [
+        "Специалист ищет доказательную базу",
+        "Разделение клинических рекомендаций, исследований, инструкций и предварительных данных",
+        "Первичные источники, даты, уровень доказательности и корректные атрибуции"
+      ],
+      [
+        "Нейросеть выдает противоречивый ответ",
+        "Исправление фактического источника и прозрачная фиксация ограничений, а не скрытая реклама",
+        "Карточка ошибки, степень медицинского риска, план исправления и повторная проверка"
+      ]
+    ],
+    "link": {
+      "href": "/strategies/measurement/",
+      "label": "Как измерять упоминания и рекомендации корректно"
+    }
+  },
+  "services": {
+    "eyebrow": "Процесс работы",
+    "title": "6 этапов GEO-продвижения фармацевтического бренда",
+    "intro": "В фармацевтике работа начинается с согласованной границы медицинских утверждений. SEO, AEO, внешние публикации и измерения строятся вокруг единой проверенной базы фактов, а не вокруг рекламных обещаний.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Фиксирую исходную картину",
+        "body": "Проверяю реальные ответы целевых нейросетей, различаю небрендовые и брендовые вопросы, фиксирую источники и альтернативы.",
+        "result": "Результат: матрица вопросов и исходный отчет."
+      },
+      {
+        "number": "02",
+        "title": "Размечаю упоминания и риски",
+        "body": "Отделяю упоминание от самостоятельной рекомендации, отмечаю ошибки, противоречия и потенциально небезопасные формулировки.",
+        "result": "Результат: проверяемый реестр ответов и ошибок."
+      },
+      {
+        "number": "03",
+        "title": "Формирую карту разрешенных фактов",
+        "body": "Сопоставляю утверждения с утвержденной инструкцией, нормативными материалами и доступными первичными исследованиями.",
+        "result": "Результат: утверждения со ссылками, ограничениями и датами."
+      },
+      {
+        "number": "04",
+        "title": "Даю задания официальным ресурсам",
+        "body": "Готовлю контентные и технические рекомендации по сайту: структура страниц, корректные сущности, ответы, метаданные и поддерживаемая актуальность.",
+        "result": "Результат: ТЗ для сайта и критерии приемки."
+      },
+      {
+        "number": "05",
+        "title": "Планирую независимые подтверждения",
+        "body": "Предлагаю темы и форматы экспертных материалов там, где это оправдано источниками и правилами площадок; медицинские тезисы проходят согласование.",
+        "result": "Результат: редакционный план без скрытого продвижения и неподтвержденных заявлений."
+      },
+      {
+        "number": "06",
+        "title": "Повторяю контрольные замеры",
+        "body": "Сравниваю одинаковые матрицы запросов и интерфейсов, качество рекомендаций, медицинскую точность и появление новых ошибок.",
+        "result": "Результат: отчет о динамике с ограничениями и приоритетами."
+      }
+    ],
+    "inlineCtaTitle": "Сначала проверим, насколько корректно нейросети описывают ваш препарат",
+    "inlineCtaNote": "Покажу, где у бренда пробелы, откуда берутся сведения и какие ответы требуют медицинской проверки."
+  },
+  "deliverables": {
+    "eyebrow": "Что получает фармкомпания",
+    "title": "Данные, ТЗ и контроль точности вместо набора красивых скриншотов",
+    "note": "Работаю с маркетингом, медицинской функцией и техническими подрядчиками заказчика. Публикация медицинских сведений возможна только после предусмотренного согласования.",
+    "items": [
+      "Контрольная матрица промптов, интерфейсов и исходных ответов",
+      "Раздельные показатели BMR, самостоятельных рекомендаций и медицинских ошибок",
+      "Реестр источников, утвержденных фактов и требований к их актуальности",
+      "Приоритетные ТЗ по сайту, FAQ, контенту и внешним публикациям",
+      "Повторные замеры с сопоставимыми условиями и отчетом об изменениях"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Кому подходит",
+    "title": "Когда фармацевтическому бренду нужен GEO-аудит",
+    "items": [
+      {
+        "title": "Руководителю маркетинга фармкомпании",
+        "body": "Бренд узнаваем, но в ответах нейросетей по релевантным сценариям чаще появляются другие препараты или только действующее вещество."
+      },
+      {
+        "title": "Медицинскому отделу",
+        "body": "В ответах встречаются устаревшие или недоказанные формулировки, путаница в противопоказаниях и научных источниках."
+      },
+      {
+        "title": "Команде продукта и цифрового маркетинга",
+        "body": "Официальный сайт, информационные ресурсы и независимые публикации противоречат друг другу; сложно определить приоритет исправлений."
+      },
+      {
+        "title": "Производителю с развитой SEO-командой",
+        "body": "Нужно дополнить действующее SEO независимым контролем нейросетевых ответов, не заменяя существующего подрядчика без необходимости."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Стоимость и формат",
+    "title": "От стартовой диагностики к согласованной программе работ",
+    "intro": "Объем зависит от числа препаратов, рынков, интерфейсов, медицинского согласования и количества официальных ресурсов. Начинаем с проверки актуальной диспозиции и обсуждения границ проекта.",
+    "offers": [
+      {
+        "name": "Полный GEO-аудит",
+        "price": "29 900 ₽",
+        "items": [
+          "Базовый тариф GAEO: до 50 промптов и 7 интерфейсов",
+          "Анализ ответов, источников и конкурентного контекста",
+          "Особые медицинские проверки оцениваются отдельно"
+        ]
+      },
+      {
+        "name": "GEO-продвижение",
+        "price": "от 49 900 ₽/мес.",
+        "items": [
+          "Стратегия и приоритеты сайта и источников",
+          "ТЗ и контроль согласованных внедрений",
+          "Ежемесячный мониторинг; медицинское согласование отдельно"
+        ]
+      },
+      {
+        "name": "GEO + контент",
+        "price": "от 79 900 ₽/мес.",
+        "items": [
+          "Контент и публикационный план по допустимым темам",
+          "Работа с редакциями и источниками",
+          "Медицинская и юридическая проверка до публикации"
+        ]
+      }
+    ],
+    "note": "Это общие тарифы GAEO, а не фиксированная стоимость регулируемого фармацевтического проекта. Итоговый состав работ и медицинская экспертиза согласовываются индивидуально.",
+    "link": {
+      "href": "/#pricing",
+      "label": "Актуальные тарифы GAEO"
+    }
+  },
+  "faqTitle": "Частые вопросы о GEO-продвижении фармацевтики",
+  "faq": [
+    {
+      "question": "Можно ли гарантировать, что нейросеть порекомендует конкретный препарат?",
+      "answer": "Нет. Рекомендации зависят от контекста, доступных источников и правил нейросети. В фармацевтике целью не может быть рекомендация вопреки зарегистрированным показаниям или достоверным ограничениям. Я фиксирую согласованную методику и сравниваю реальные ответы."
+    },
+    {
+      "question": "Чем GEO фармацевтических брендов отличается от обычного SEO?",
+      "answer": "GEO проверяет не только доступность страниц в поиске, но и содержание готовых ответов нейросетей: узнавание бренда, самостоятельную рекомендацию, точность, источники и ошибки. SEO остается важным источником фактов, но не заменяет анализ нейроответов."
+    },
+    {
+      "question": "Можно ли публиковать материалы без медицинского согласования?",
+      "answer": "Нет, если материалы содержат медицинские утверждения или относятся к регулируемой рекламе. Страницы и публикации проходят предусмотренную медицинскую и юридическую проверку. Клинические выводы нельзя выводить из маркетингового аудита нейросетей."
+    },
+    {
+      "question": "Как сравнивать BMR и самостоятельные рекомендации?",
+      "answer": "Использовать фиксированный набор запросов, одинаковые интерфейсы, правила подсчета и даты измерений. Упоминание бренда не является автоматически рекомендацией, а торговое название не следует без проверки приравнивать к действующему веществу."
+    },
+    {
+      "question": "Можно ли использовать данные анонимного исследования как кейс?",
+      "answer": "Только в пределах подтвержденных фактов. Обезличенный диагностический срез может демонстрировать метод проверки, но не должен выдаваться за клиентский договор, внедрение рекомендаций или достигнутый коммерческий результат."
+    },
+    {
+      "question": "Что делать, если нейросеть приводит опасную медицинскую ошибку?",
+      "answer": "Зафиксировать полный ответ и исходный запрос, оценить риск с медицинским специалистом, проверить первоисточники и согласовать корректирующие действия. При сведениях, потенциально относящихся к фармаконадзору, действуют внутренние процедуры ответственной организации."
+    }
+  ],
+  "about": {
+    "photo": "/assets/alexey-yakovlev-biography.jpg",
+    "name": "Алексей Яковлев",
+    "role": "Независимый GEO/AEO-эксперт",
+    "text": "С 2008 года занимаюсь SEO, интернет-маркетингом и развитием онлайн-бизнеса. Лично исследую нейросетевые ответы, разрабатываю план работы с цифровыми источниками и контролирую измерения. Медицинские выводы и регуляторные формулировки должны проходить профильное согласование.",
+    "link": {
+      "href": "/professional-biography/",
+      "label": "Профессиональная биография"
+    }
+  },
+  "final": {
+    "title": "Проверим, как нейросети описывают ваш фармацевтический бренд",
+    "text": "Расскажите, какой препарат или группа продуктов вас интересует, какие рынки приоритетны и что вызывает вопросы в ответах нейросетей. Начнем с выборки запросов, источников и фактических ошибок, затем обсудим обоснованные действия.",
+    "cta": {
+      "href": "/#lead",
+      "text": "Заказать мини-аудит нейровидимости"
+    },
+    "secondary": {
+      "href": "/strategies/measurement/",
+      "text": "Как измеряется GEO"
+    },
+    "note": "Без обещаний клинической эффективности или гарантированной рекомендации. Названия и результаты других объектов не раскрываю."
   }
+},
+  "en/industries/pharma/index.html": {
+  "language": "en",
+  "eyebrow": "GEO by industry / Pharmaceuticals",
+  "h1": "GEO optimization for pharmaceutical brands in AI answers",
+  "lead": "Patients and professionals ask AI assistants about medicines, therapeutic alternatives and product information. I help pharmaceutical marketing teams analyze whether their brands appear in relevant answers, where AI invents or distorts facts, and which sources need attention.",
+  "secondLead": "For pharmaceuticals, an AI mention is not enough. Appropriate information must be grounded in approved labeling and evidence and pass medical/legal review. The work starts with a reproducible audit, not a promise of ChatGPT placement.",
+  "heroProof": [
+    "Real multi-platform answer audits rather than isolated screenshots",
+    "Separate brand mentions, appropriate recommendations, sourcing and errors",
+    "Direct expert work with dedicated medical and legal review where required"
+  ],
+  "heroImage": {
+    "src": "/assets/articles/neural-networks-for-business.jpg",
+    "alt": "Illustration of how AI platforms respond to business and product questions",
+    "width": 1200,
+    "height": 675
+  },
+  "primaryCta": {
+    "href": "/en/#lead",
+    "text": "Audit your pharma brand's AI visibility"
+  },
+  "secondaryCta": {
+    "href": "#evidence",
+    "text": "Review anonymized audit findings"
+  },
+  "problem": {
+    "eyebrow": "The pharmaceutical marketing challenge",
+    "title": "AI assistants discuss medicines without always representing your brand correctly",
+    "intro": "For brand, marketing and medical-affairs leaders, GEO combines visibility and information safety. A seemingly high mention rate may conceal missing recommendations and significant factual errors.",
+    "items": [
+      {
+        "title": "Missing from relevant comparisons",
+        "body": "An assistant may recognize a generic ingredient or product category without accurately linking it to the applicable branded product."
+      },
+      {
+        "title": "Mentions are mistaken for endorsements",
+        "body": "A brand is listed incidentally or only as a warning, yet automated monitoring can count that as successful promotion."
+      },
+      {
+        "title": "Medical statements drift or become unsafe",
+        "body": "AI may mix labeling indications, formulations, patient restrictions, evidence levels and preliminary research."
+      },
+      {
+        "title": "Official and independent sources disagree",
+        "body": "Outdated instructions, reference pages and editorial articles may contain incompatible wording that AI repeats."
+      }
+    ],
+    "closing": "Effective pharmaceutical GEO requires relevant discoverability together with medically accurate explanations, evidence-based sourcing and risk controls."
+  },
+  "study": {
+    "eyebrow": "Anonymized GAEO research · August 2026",
+    "title": "What an audit of a popular antiviral medicine revealed",
+    "intro": "In August 2026, I reviewed 120 responses from six AI interfaces to 20 predefined questions: 15 unbranded and five branded. The medicine and manufacturer are intentionally anonymous. This is an initial diagnostic study, not an implemented client-promotion case.",
+    "metrics": [
+      {
+        "value": "120",
+        "label": "complete answers to 20 questions in six interfaces, with no missing answers in the measured set"
+      },
+      {
+        "value": "16 of 90",
+        "label": "unbranded answers contained the trade name: BMR 17.8%"
+      },
+      {
+        "value": "4 of 90",
+        "label": "unbranded answers made a contextually relevant standalone recommendation: 4.4%"
+      }
+    ],
+    "findings": [
+      "Sixteen material risks or medical inaccuracies were documented across 14 distinct responses. Brand visibility cannot substitute for accuracy.",
+      "Recognition of an active ingredient and recognition of its trade name were separate findings and must not be added together.",
+      "The five branded questions tested completeness and accuracy but were excluded from the unbranded BMR denominator."
+    ],
+    "findingsTitle": "What the audit found",
+    "note": "The 6–9 August 2026 snapshot concerns one anonymized medicine. It says nothing about clinical effectiveness or overall market share, and does not establish completed promotion or predict other brands' results.",
+    "image": {
+      "src": "/assets/articles/geo-source-structure.jpg",
+      "alt": "Illustration of how information sources contribute to AI answers",
+      "width": 1200,
+      "height": 675
+    },
+    "caption": "Illustration of source analysis; the audit data are provided separately as accessible text.",
+    "links": [
+      {
+        "href": "/en/strategies/measurement/",
+        "label": "How to measure brand mentions and recommendations"
+      }
+    ]
+  },
+  "scenarios": {
+    "eyebrow": "Medical and commercial question types",
+    "title": "What AI assistants need to answer accurately",
+    "intro": "Prompts should reflect the product, audience and permissible medical communication. The examples below describe an audit framework, not guidance to take or select medication.",
+    "columns": [
+      "Information need",
+      "What a responsible answer requires",
+      "What the GEO audit checks"
+    ],
+    "rows": [
+      [
+        "Someone compares product alternatives",
+        "Clear distinctions based on approved details and clinically applicable context",
+        "Consistent comparison criteria, recommendation context and missing sources"
+      ],
+      [
+        "A user asks about a trade-name product",
+        "Verified current labeling rather than inferred efficacy or safety",
+        "Product identity, restrictions, official information and third-party consistency"
+      ],
+      [
+        "A healthcare professional seeks evidence",
+        "Separation of clinical guidelines, primary trials, approved labeling and preliminary data",
+        "Original documents, dates, evidence tiers and attribution"
+      ],
+      [
+        "An AI answer makes a material mistake",
+        "Correction of the underlying source with medical review and traceable limits",
+        "Error log, risk categorization, remediation priorities and repeat checks"
+      ]
+    ],
+    "link": {
+      "href": "/en/strategies/measurement/",
+      "label": "A reproducible approach to AI visibility metrics"
+    }
+  },
+  "services": {
+    "eyebrow": "Working process",
+    "title": "Six stages of pharmaceutical GEO work",
+    "intro": "For regulated products, verified medical information is the foundation. The website, relevant independent sources, review workflow and measurement all follow a single agreed source of truth.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Establish the baseline",
+        "body": "Test relevant unbranded and branded questions, AI interfaces, competing products, cited sources and factual errors.",
+        "result": "Deliverable: reproducible query matrix and initial report."
+      },
+      {
+        "number": "02",
+        "title": "Separate mentions, recommendations and errors",
+        "body": "Classify the brand's role, recommendation suitability, unsupported claims and potentially unsafe content.",
+        "result": "Deliverable: reviewed answer and risk register."
+      },
+      {
+        "number": "03",
+        "title": "Create a verified facts register",
+        "body": "Match each statement to current approved labeling, regulatory documentation and applicable clinical evidence.",
+        "result": "Deliverable: sourced claims with scope, limitations and dates."
+      },
+      {
+        "number": "04",
+        "title": "Prepare work for official sites",
+        "body": "Specify site structure, FAQs, technical and content changes, entity consistency and maintenance of current medical facts.",
+        "result": "Deliverable: website specifications and acceptance checks."
+      },
+      {
+        "number": "05",
+        "title": "Plan appropriate independent coverage",
+        "body": "Propose useful editorial and expert materials where credible evidence and platform rules support them. Medical claims require approval.",
+        "result": "Deliverable: compliant content and source plan."
+      },
+      {
+        "number": "06",
+        "title": "Repeat comparable measurement",
+        "body": "Use identical prompts and interfaces to review mentions, recommendations, factual accuracy, sources and emerging errors.",
+        "result": "Deliverable: transparent progress report and next priorities."
+      }
+    ],
+    "inlineCtaTitle": "Start by examining what AI gets right or wrong about your product",
+    "inlineCtaNote": "We will identify the most important sourcing gaps and claims that need medical review."
+  },
+  "deliverables": {
+    "eyebrow": "Deliverables",
+    "title": "Verifiable data, specifications and medical accuracy controls",
+    "note": "I coordinate with the brand, marketing, medical-affairs and development teams. All relevant medical claims remain subject to the client's established approval process.",
+    "items": [
+      "Fixed AI prompt/interface matrix and original response inventory",
+      "Separate BMR, standalone recommendation and medical-error metrics",
+      "Evidence sources and up-to-date approved product facts register",
+      "Prioritized website, FAQ and independent-content work briefs",
+      "Comparable measurement and regular progress reporting"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Who it serves",
+    "title": "When a pharmaceutical company needs an AI-answer audit",
+    "items": [
+      {
+        "title": "Pharma marketing leadership",
+        "body": "The brand is recognized but rarely appears in relevant unprompted answers, or AI mentions only the active ingredient."
+      },
+      {
+        "title": "Medical affairs",
+        "body": "Answers contain outdated statements, disputed claims or confusion about indications, restrictions and evidence."
+      },
+      {
+        "title": "Product and digital marketing teams",
+        "body": "Official pages and trusted external resources use inconsistent wording and teams need a prioritized correction plan."
+      },
+      {
+        "title": "Companies with an existing SEO agency",
+        "body": "The business needs independent AI-answer assessment while keeping effective existing search and web delivery teams."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Scope and pricing",
+    "title": "Start with diagnosis. A regulated program is scoped separately",
+    "intro": "Scope depends on products, markets, AI interfaces, medical review and official web assets. We begin with an initial check and agree the research boundary.",
+    "offers": [
+      {
+        "name": "Full GEO audit",
+        "price": "RUB 29,900",
+        "items": [
+          "GAEO base tariff: up to 50 prompts and seven interfaces",
+          "Website, AI sources and competitor analysis",
+          "Specialized medical review priced separately"
+        ]
+      },
+      {
+        "name": "GEO promotion",
+        "price": "from RUB 49,900/month",
+        "items": [
+          "Strategy and approved work briefs",
+          "Implementation and publication coordination",
+          "Monthly measurement; medical review separately scoped"
+        ]
+      },
+      {
+        "name": "GEO + content",
+        "price": "from RUB 79,900/month",
+        "items": [
+          "Evidence-backed expert content",
+          "Publication planning and distribution",
+          "Medical/legal approval before publication"
+        ]
+      }
+    ],
+    "note": "These are GAEO's general rates, not a fixed quote for a regulated pharma engagement. Medical review and exact scope are agreed individually.",
+    "link": {
+      "href": "/en/#pricing",
+      "label": "GAEO pricing"
+    }
+  },
+  "faqTitle": "Frequently asked questions about pharmaceutical GEO",
+  "faq": [
+    {
+      "question": "Can AI recommendations of a medicine be guaranteed?",
+      "answer": "No. Appropriate AI answers depend on context, available evidence and the model's rules. Pharmaceutical GEO must not seek recommendations that conflict with approved indications or genuine safety constraints. I work with a fixed measurement framework and documented limitations."
+    },
+    {
+      "question": "How does pharmaceutical GEO differ from SEO?",
+      "answer": "GEO evaluates the content of AI answers, not just whether official pages appear in search: trade-name recognition, appropriate standalone recommendations, accuracy, sourcing and errors. Technical SEO remains essential but cannot replace direct answer inspection."
+    },
+    {
+      "question": "Can health-related content be published without medical review?",
+      "answer": "No, where regulated medical claims or advertising are involved. The client's established medical/legal approval process must apply. A marketing audit does not establish clinical effectiveness."
+    },
+    {
+      "question": "How should BMR and recommendations be compared?",
+      "answer": "Use a stable question list, interfaces, counting rules and sampling periods. A mention is not automatically a recommendation, and a generic ingredient name must not be counted as a trade-name mention without verification."
+    },
+    {
+      "question": "Can an anonymized audit be called a client success story?",
+      "answer": "Not without evidence of contracted work, implementation and results. An anonymized diagnostic snapshot can illustrate the research method, but it must not suggest that the recommendations were implemented or produced business growth."
+    },
+    {
+      "question": "What if an AI assistant gives unsafe medical information?",
+      "answer": "Preserve the exact response and prompt, assess the medical risk with a qualified reviewer, trace the evidence and agree corrective actions. Potential pharmacovigilance information must follow the relevant organization's procedures."
+    }
+  ],
+  "about": {
+    "photo": "/assets/alexey-yakovlev-biography.jpg",
+    "name": "Alexey Yakovlev",
+    "role": "Independent GEO/AEO consultant",
+    "text": "I have worked in SEO, online marketing and digital businesses since 2008. I personally analyze AI answers, design the evidence and web plan, and review measurements. Medical and regulatory statements require qualified specialists' approval.",
+    "link": {
+      "href": "/en/professional-biography/",
+      "label": "Professional biography"
+    }
+  },
+  "final": {
+    "title": "Find out how AI describes your pharmaceutical brand",
+    "text": "Tell me which product or category is relevant, which markets matter and where AI answers raise concerns. We will review a representative question set and sources, then discuss actionable findings.",
+    "cta": {
+      "href": "/en/#lead",
+      "text": "Request a preliminary GEO audit"
+    },
+    "secondary": {
+      "href": "/en/strategies/measurement/",
+      "text": "Measurement method"
+    },
+    "note": "No claims of clinical efficacy or guaranteed placement. No disclosure of other research subjects."
+  }
+}
 };

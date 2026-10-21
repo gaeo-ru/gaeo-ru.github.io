@@ -58,7 +58,7 @@ const en = page.language === 'en';
     </div>
     <div class="industry-evidence-layout">
       <div>
-        <h3>{en ? 'What the audit revealed' : 'Что обнаружилось при проверке'}</h3>
+        <h3>{page.study.findingsTitle || (en ? 'What the audit revealed' : 'Что обнаружилось при проверке')}</h3>
         <ul class="industry-check-list">{page.study.findings.map(item=><li>{item}</li>)}</ul>
         <p class="industry-note">{page.study.note}</p>
         <div class="industry-links">
@@ -67,7 +67,7 @@ const en = page.language === 'en';
       </div>
       <figure class="industry-evidence-figure">
         <img src={page.study.image.src} alt={page.study.image.alt} width={page.study.image.width} height={page.study.image.height} loading="lazy" decoding="async" />
-        <figcaption>{en ? 'Anonymized, project-specific pre-audit. No claim of achieved growth.' : 'Анонимизированный предаудит одного ЖК. Здесь нет заявлений о достигнутом росте.'}</figcaption>
+        <figcaption>{page.study.caption || (en ? 'Anonymized, project-specific pre-audit. No claim of achieved growth.' : 'Анонимизированный предаудит одного ЖК. Здесь нет заявлений о достигнутом росте.')}</figcaption>
       </figure>
     </div>
   </div>
@@ -104,7 +104,7 @@ const en = page.language === 'en';
       )}
     </ol>
     <div class="industry-inline-cta">
-      <div><strong>{en ? 'Start with your actual AI visibility' : 'Начнем с реальных рекомендаций вашего ЖК'}</strong><p>{en ? 'We will discuss the most commercially relevant gaps first.' : 'Сначала обсудим наиболее значимые для продаж проблемы.'}</p></div>
+      <div><strong>{page.services.inlineCtaTitle || (en ? 'Start with your actual AI visibility' : 'Начнем с реальных рекомендаций вашего ЖК')}</strong><p>{page.services.inlineCtaNote || (en ? 'We will discuss the most commercially relevant gaps first.' : 'Сначала обсудим наиболее значимые для продаж проблемы.')}</p></div>
       <a class="button" href={page.primaryCta.href}>{page.primaryCta.text}</a>
     </div>
   </div>
@@ -164,7 +164,7 @@ const en = page.language === 'en';
 <section class="industry-section industry-faq-section" aria-labelledby="industry-faq-title">
   <div class="container industry-faq-container">
     <div class="industry-eyebrow">FAQ</div>
-    <h2 id="industry-faq-title">{en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости'}</h2>
+    <h2 id="industry-faq-title">{page.faqTitle || (en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости')}</h2>
     <div class="faq">
       {page.faq.map(entry=><details class="faq-item">
         <summary class="faq-q"><span>{entry.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
