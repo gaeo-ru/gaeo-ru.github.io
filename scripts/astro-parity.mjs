@@ -11,13 +11,15 @@ const normalize=s=>s.replace(/\r\n/g,'\n').replace(/>\s+</g,'><').trim();
 const originals=walk(ORIGINAL).filter(p=>p.endsWith('.html'));
 const assets=walk(PUBLIC);
 const problems=[];
-// Two real-estate landing pages now intentionally render a structured Astro component.
+// Evidence-led RU/EN industry pages intentionally render a shared structured Astro component.
 // Preserve and verify their SEO shell while retaining exact parity for untouched routes.
 const commercialRoutes=new Set([
  'geo-prodvizhenie-nedvizhimosti/index.html',
  'en/geo-for-real-estate/index.html',
  'industries/pharma/index.html',
- 'en/industries/pharma/index.html'
+ 'en/industries/pharma/index.html',
+ 'industries/ecommerce/index.html',
+ 'en/industries/ecommerce/index.html'
 ]);
 
 for(const original of originals){

@@ -1169,5 +1169,693 @@ export const industryCommercialPages = {
       },
       "note": "No claims of clinical efficacy or guaranteed placement. No disclosure of other research subjects."
     }
+  },
+  "industries/ecommerce/index.html": {
+    "language": "ru",
+    "eyebrow": "GEO-продвижение по отраслям / Интернет-магазины и маркетплейсы",
+    "h1": "GEO-продвижение интернет-магазинов и товарных брендов",
+    "lead": "Нейросеть порекомендовала ваш товар. Покупатель нашел ту же модель на маркетплейсе и оформил заказ там. Я помогаю интернет-магазинам и производителям разобраться, как нейросети выбирают товары, продавцов и условия покупки, затем готовлю план усиления рекомендаций и цифровых источников.",
+    "secondLead": "Разбираю конкретные покупательские запросы: что купить, какой бренд выбрать и где выгоднее заказать нужный SKU. Проверяю цены, наличие, гарантию, сервис и источники фактов. Обнаруженные пробелы превращаю в задачи для сайта и маркетинга.",
+    "heroProof": [
+      "Опыт SEO, интернет-маркетинга и электронной торговли с 2008 года",
+      "Автор опубликованной методики PRR, SCR, RAR, RRR и PPSR",
+      "Лично провожу GEO-аудиты и проверяю ответы нескольких нейросетей"
+    ],
+    "heroImage": {
+      "src": "/assets/articles/ecommerce-recommendation-purchase.jpg",
+      "alt": "Авторская иллюстрация: нейросеть рекомендует кофемашину, покупатель сравнивает предложения разных продавцов; цены условные",
+      "caption": "Иллюстрация покупательского сценария. Цены условные, актуальные предложения проверяются отдельно.",
+      "width": 1200,
+      "height": 675
+    },
+    "primaryCta": {
+      "href": "/#lead",
+      "text": "Проверить рекомендации товаров и магазина"
+    },
+    "secondaryCta": {
+      "href": "#evidence",
+      "text": "Посмотреть результаты аудитов"
+    },
+    "problem": {
+      "eyebrow": "Проблемы собственника и директора по маркетингу",
+      "title": "Товар попал в рекомендации. Кому достанется заказ?",
+      "intro": "Для магазина со сторонним ассортиментом появление модели в ответе ChatGPT еще не означает выручку. Для производителя важно, чтобы покупатель узнал бренд и смог выбрать подходящий канал покупки.",
+      "items": [
+        {
+          "title": "Нейросеть советует товар конкурента",
+          "body": "Покупатель описывает задачу: «кофемашина до 100 000 рублей с удобным обслуживанием». В ответ попадают несколько моделей, а ваш ассортимент остается за пределами выбора."
+        },
+        {
+          "title": "Товар назван, продавец остался неизвестным",
+          "body": "Нейросеть рекомендует подходящий SKU. Покупатель отдельно ищет продавца и выбирает маркетплейс, потому что не увидел фактов о гарантии, сервисе и условиях вашего магазина."
+        },
+        {
+          "title": "Цена сравнивается с другой комплектацией",
+          "body": "Разные объемы, фасовки, модели или продавцы попадают в одно сравнение. Ссылка на категорию может ошибочно восприниматься как цена конкретного SKU."
+        },
+        {
+          "title": "Преимущества магазина не подтверждены",
+          "body": "Доставка, консультация, программа лояльности и собственная гарантия могут быть ценными. Нейросети нужны проверяемые сведения об этих условиях на сайте и в авторитетных внешних источниках."
+        }
+      ],
+      "closing": "Цель GEO в e-commerce: чтобы покупатель получал точную рекомендацию товара и обоснованное сравнение продавцов. Результат проверяем по ответам нейросетей и по коммерческим показателям сайта."
+    },
+    "study": {
+      "eyebrow": "Из исследований GAEO · диагностика товарного поиска",
+      "title": "Как исследования обнаруживают потерю рекомендаций",
+      "intro": "Разбирал выбор электроники и продуктов повседневного спроса в разных нейросетях. Публикую обезличенные выводы: данные о клиентах и коммерческих условиях требуют отдельного разрешения. Здесь показаны стартовые ошибки, обнаруженные при аудите.",
+      "metrics": [
+        {
+          "value": "2 аудита",
+          "label": "Два разных товарных бизнеса: проверка рекомендаций, конкурентов и источников"
+        },
+        {
+          "value": "SKU",
+          "label": "Сравниваю один и тот же товар, продавца, цену, наличие и условия заказа"
+        },
+        {
+          "value": "E2",
+          "label": "Подтвержденная диагностика; результаты внедренного продвижения оцениваются отдельно"
+        }
+      ],
+      "findings": [
+        "В одном исследовании упоминания интернет-магазина заметно различались по товарным категориям. Одного набора общих запросов для всего каталога недостаточно.",
+        "В другом тесте нейросеть предложила цену на маркетплейсе, опираясь на страницу целой товарной категории. Цена конкретного SKU этой ссылкой не подтверждалась.",
+        "Иногда покупка через маркетплейс действительно выгоднее. В таком случае ищем реальные преимущества официального магазина или выбираем другую коммерческую задачу."
+      ],
+      "findingsTitle": "Что показали разборы",
+      "note": "Это анонимизированные стартовые наблюдения из разных проектов. Выборки и методы не объединялись в один BMR. Они показывают типовые проблемы, без заявлений о росте продаж после внедрения.",
+      "image": {
+        "src": "/assets/articles/ecommerce-scenario-pages.jpg",
+        "alt": "Схема сценарных страниц для выбора кофемашины: для офиса, дома, капучино и удобного обслуживания",
+        "width": 1200,
+        "height": 675
+      },
+      "caption": "Сценарные страницы помогают связывать реальные потребности покупателя с товарными категориями. Авторская иллюстрация из статьи GAEO.",
+      "links": [
+        {
+          "href": "https://habr.com/ru/articles/1087822/",
+          "label": "Моя статья о выборе интернет-магазина и маркетплейса",
+          "external": true
+        },
+        {
+          "href": "https://oborot.ru/blogs/geo-dlya-internet-magazina-kak-poluchat-prodazhi-iz-nejrosetej-esli-na-marketplejse-tot-zhe-tovar-deshevle-i279922.html",
+          "label": "Практический разбор для e-commerce на Oborot.ru",
+          "external": true
+        }
+      ]
+    },
+    "scenarios": {
+      "eyebrow": "Путь покупателя",
+      "title": "На каких этапах магазин теряет рекомендацию и заказ",
+      "intro": "Для каждого этапа подбираю коммерческие запросы и проверяю реальные ответы. Матрица охватывает путь покупателя от выбора категории до продавца конкретной товарной позиции.",
+      "columns": [
+        "Вопрос покупателя",
+        "Что проверяю в ответе",
+        "Что получает магазин"
+      ],
+      "rows": [
+        [
+          "Какой товар решит мою задачу?",
+          "Подходит ли модель, названы ли характеристики и ограничения",
+          "Список приоритетных сценариев и требования к товарным страницам"
+        ],
+        [
+          "Какой бренд выбрать?",
+          "Присутствует ли нужный бренд в рекомендациях по характеристикам",
+          "Разбор конкурентных рекомендаций и подтверждаемых преимуществ"
+        ],
+        [
+          "Где купить эту модель?",
+          "Назван ли продавец, какие основания приведены для выбора",
+          "Карта пробелов в информации о магазине и внешних источниках"
+        ],
+        [
+          "Где выгоднее заказать тот же SKU?",
+          "Совпадают ли артикул, цена, наличие, комплектация и условия",
+          "Задачи по Product/Offer, фидам, сервису и актуальности цен"
+        ],
+        [
+          "Как оформить заказ или связаться с продавцом?",
+          "Может ли покупатель перейти к нужному предложению и понять условия",
+          "Рекомендации по маршруту до покупки и измерению обращений"
+        ]
+      ],
+      "link": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "label": "Подробный авторский разбор этой покупательской цепочки"
+      }
+    },
+    "framework": {
+      "eyebrow": "Методика Алексея Яковлева",
+      "title": "5 показателей GEO для товарного бизнеса",
+      "intro": "BMR показывает, как часто встречается название бренда. Для интернет-магазина я дополнительно исследую путь к рекомендации товара и продавца по 5 показателям. Это авторская рабочая методика, описанная в опубликованной статье.",
+      "metrics": [
+        {
+          "code": "PRR",
+          "name": "Рекомендация товара",
+          "description": "Как часто нейросеть советует подходящую модель или линейку."
+        },
+        {
+          "code": "SCR",
+          "name": "Критерии продавца",
+          "description": "Появляются ли в ответе цена, гарантия, сервис или условия получения."
+        },
+        {
+          "code": "RAR",
+          "name": "Связь преимущества с магазином",
+          "description": "Указывает ли нейросеть, какому продавцу принадлежит нужное преимущество."
+        },
+        {
+          "code": "RRR",
+          "name": "Рекомендация продавца",
+          "description": "Как часто магазин появляется среди вариантов покупки."
+        },
+        {
+          "code": "PPSR",
+          "name": "Устойчивость к разнице цен",
+          "description": "Сохраняется ли рекомендация магазина, когда у другого продавца дешевле тот же SKU."
+        }
+      ],
+      "image": {
+        "src": "/assets/articles/ecommerce-five-metrics.jpg",
+        "alt": "Авторская схема из пяти показателей PRR, SCR, RAR, RRR, PPSR и связи с продажей",
+        "width": 1200,
+        "height": 675
+      },
+      "caption": "Авторская схема последовательных показателей GEO для интернет-магазинов.",
+      "note": "Для точного расчета согласуем список запросов, нейросети, правило подсчета и сравнимые даты. Дополнительно используем данные об обращениях и заказах.",
+      "link": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "label": "Прочитать методику в авторской статье"
+      }
+    },
+    "services": {
+      "eyebrow": "Как я работаю",
+      "title": "6 этапов GEO-продвижения интернет-магазина",
+      "intro": "Начинаю с коммерческих запросов по вашим товарам и реальных ответов нейросетей. Рекомендации для каталога и внешних источников зависят от бизнес-модели, качества данных и преимуществ магазина.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Измеряю стартовые рекомендации",
+          "body": "Проверяю запросы без названия бренда, конкретные модели, цены и выбор продавца в целевых нейросетях.",
+          "result": "Матрица вопросов, ответы, конкуренты и исходные показатели."
+        },
+        {
+          "number": "02",
+          "title": "Разбираю выбор товара и продавца",
+          "body": "Классифицирую рекомендации, выявляю неправильные SKU и цены, источники, отсутствующие критерии и сильные стороны конкурентов.",
+          "result": "Карта покупательского пути и причин потери рекомендации."
+        },
+        {
+          "number": "03",
+          "title": "Проверяю каталог и товарные данные",
+          "body": "Сверяю названия, артикулы, Product/Offer, актуальность наличия, цены, условия доставки, гарантию и доступность страниц для роботов.",
+          "result": "Технические задания для каталога и товарных фидов."
+        },
+        {
+          "number": "04",
+          "title": "Проектирую сценарные страницы",
+          "body": "Отбираю задачи покупателей, которые заслуживают отдельного URL. Готовлю структуру страницы и правила обновления рекомендуемых товаров.",
+          "result": "ТЗ на страницы с полезным контентом и проверяемым ассортиментом."
+        },
+        {
+          "number": "05",
+          "title": "Усиливаю независимые источники",
+          "body": "Подбираю профессиональные обзоры, каталоги, карты и публикации с фактами о товарах и преимуществах магазина.",
+          "result": "Редакционный план и проверка согласованных публикаций."
+        },
+        {
+          "number": "06",
+          "title": "Повторяю измерения",
+          "body": "На той же матрице оцениваю PRR, SCR, RAR, RRR, PPSR, точность источников и динамику обращений.",
+          "result": "Отчет об изменениях и приоритетах следующего периода."
+        }
+      ],
+      "inlineCtaTitle": "Проверим, кто получает рекомендации по вашим товарным запросам",
+      "inlineCtaNote": "Возьмем несколько приоритетных категорий и посмотрим, какие магазины нейросети предлагают покупателям."
+    },
+    "deliverables": {
+      "eyebrow": "Состав результата",
+      "title": "Конкретные задачи для маркетинга и интернет-магазина",
+      "note": "Объем подбирается под ассортимент, каналы продаж и возможности вашей команды. На согласовании участвуют маркетинг, e-commerce и разработка.",
+      "items": [
+        "Матрица товарных и коммерческих вопросов, стартовые ответы и конкуренты",
+        "Рекомендации по товарам, продавцам и источникам с ручной проверкой",
+        "Перечень расхождений по SKU, цене, наличию и коммерческим условиям",
+        "ТЗ на товарные страницы, структурированные данные и сценарные подборки",
+        "План внешних подтверждений и повторные сопоставимые замеры"
+      ]
+    },
+    "audiences": {
+      "eyebrow": "Для какого бизнеса",
+      "title": "Единая методика для 4 моделей электронной торговли",
+      "items": [
+        {
+          "title": "Интернет-магазин со сторонним ассортиментом",
+          "body": "Работаем над попаданием в выбор продавца конкретного SKU: гарантия, доставка, сервис, наличие и сравнимые предложения."
+        },
+        {
+          "title": "Производитель собственного бренда",
+          "body": "Разбираем сценарии, где нейросеть выбирает бренд и подходящий товар, затем проверяем рекомендации магазинов и маркетплейсов."
+        },
+        {
+          "title": "Селлер на Ozon, Wildberries или Яндекс Маркете",
+          "body": "Исследуем брендовый спрос и товарные вопросы за пределами поисковой выдачи маркетплейса, качество описаний и внешние подтверждения."
+        },
+        {
+          "title": "Производитель с оптовыми и B2B-заказами",
+          "body": "Отдельно проверяем выбор поставщика, закупку партии, изготовление под требования и комплектование корпоративного заказа."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Стоимость услуг",
+      "title": "Сколько стоит GEO-аудит и продвижение товарного бизнеса",
+      "intro": "Первый шаг: диагностика приоритетных категорий и каналов продаж. Затем согласовываем состав работ по каталогу, контенту, внешним источникам и измерениям.",
+      "offers": [
+        {
+          "name": "Полный GEO-аудит",
+          "price": "29 900 ₽",
+          "items": [
+            "До 50 запросов и 7 нейросетей",
+            "Анализ упоминаний, рекомендаций и источников",
+            "Отчет с приоритетными задачами"
+          ]
+        },
+        {
+          "name": "GEO-продвижение",
+          "price": "от 49 900 ₽/мес.",
+          "items": [
+            "Стратегия и ТЗ для сайта и каталога",
+            "Контроль внедрений и внешних публикаций",
+            "Повторные замеры по согласованной матрице"
+          ]
+        },
+        {
+          "name": "GEO + контент",
+          "price": "от 79 900 ₽/мес.",
+          "items": [
+            "Сопровождение GEO-продвижения",
+            "Подготовка сценарных и экспертных материалов",
+            "Редактура и организация публикаций"
+          ]
+        }
+      ],
+      "note": "Базовые тарифы GAEO. Объем работ зависит от числа категорий, языков и товарных источников. Точные условия определяются после диагностики.",
+      "link": {
+        "href": "/#pricing",
+        "label": "Смотреть действующие тарифы"
+      }
+    },
+    "faqTitle": "Частые вопросы о GEO-продвижении интернет-магазинов",
+    "faq": [
+      {
+        "question": "Как GEO помогает интернет-магазину получать заказы из нейросетей?",
+        "answer": "Сначала выявляем, какие товары нейросети рекомендуют по покупательским вопросам. Затем проверяем выбор продавца, источники о магазине, точность цен и путь до оформления заказа. Результаты измерений связываем с доступными данными о переходах, обращениях и продажах."
+      },
+      {
+        "question": "Можно ли обойти маркетплейс, если у него тот же товар дешевле?",
+        "answer": "В некоторых сценариях покупатели готовы учитывать гарантию, сервис, настройку, доставку и надежность продавца. Эти преимущества должны реально существовать. Если по всем важным условиям маркетплейс выигрывает, аудит поможет пересмотреть коммерческое предложение магазина."
+      },
+      {
+        "question": "Нужно ли производителю продвигать собственный сайт и страницы на маркетплейсах одновременно?",
+        "answer": "Состав каналов зависит от бизнес-модели. Производителю важно присутствие бренда и конкретных моделей в ответах, а дальше покупателю нужны актуальные предложения продавцов. Проверяем оба этапа и выбираем подходящие точки роста."
+      },
+      {
+        "question": "Что нужно исправлять в товарном каталоге для GEO?",
+        "answer": "Проверяем характеристики и артикулы, Product/Offer, наличие, цену, доставку, гарантию, микроразметку и видимость ключевого контента для поисковых роботов. Сценарные подборки должны содержать проверяемые товары и обновляемые предложения."
+      },
+      {
+        "question": "Какие показатели измеряются помимо BMR?",
+        "answer": "Использую 5 дополнительных показателей из своей методики: PRR, SCR, RAR, RRR и PPSR. Они описывают рекомендации товара, критерии выбора продавца, связь преимуществ с магазином, прямую рекомендацию продавца и устойчивость рекомендации при разнице цен. Правила подсчета согласовываем заранее."
+      },
+      {
+        "question": "Когда появятся первые результаты GEO-продвижения?",
+        "answer": "Это зависит от стартового положения, конкуренции, объема изменений на сайте и появления независимых подтверждений. Начальные ответы можно зафиксировать сразу в рамках аудита. Динамику оцениваем на сопоставимой выборке в следующих измерениях; гарантированных позиций у нейросетей нет."
+      }
+    ],
+    "about": {
+      "photo": "/assets/alexey-yakovlev-biography.jpg",
+      "name": "Алексей Яковлев",
+      "role": "Независимый GEO/AEO-эксперт",
+      "text": "С 2008 года работаю с SEO, интернет-маркетингом и электронной торговлей. Лично исследую ответы нейросетей, проектирую стратегию для сайта и источников. Опубликовал на Habr и Oborot исследования выбора товаров, продавцов и развития агентной торговли.",
+      "link": {
+        "href": "/professional-biography/",
+        "label": "Профессиональная биография"
+      }
+    },
+    "final": {
+      "title": "Узнайте, где нейросети предлагают покупать ваши товары",
+      "text": "Напишите адрес интернет-магазина, приоритетные категории и основные каналы продаж. Я проверю несколько покупательских сценариев и покажу, какие проблемы имеют смысл исследовать в полном GEO-аудите.",
+      "cta": {
+        "href": "/#lead",
+        "text": "Получить мини-аудит GEO-видимости"
+      },
+      "secondary": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "text": "Изучить авторскую методику"
+      },
+      "note": "Прямой контакт с экспертом. Проверяемые исходные данные, прозрачная методика и согласованный план работы."
+    }
+  },
+  "en/industries/ecommerce/index.html": {
+    "language": "en",
+    "eyebrow": "GEO by industry / Online stores and marketplaces",
+    "h1": "GEO optimization for online stores and consumer brands",
+    "lead": "An AI assistant recommends your product, yet the customer buys the same model on a marketplace. I help online retailers and manufacturers understand how AI answers select products, merchants and offers, then plan improvements to the website and the evidence available online.",
+    "secondLead": "I study actual customer questions: what to buy, which brand fits the need, and where to order a specific SKU. Product facts, price, availability, warranty, service and cited sources are checked before priorities are agreed.",
+    "heroProof": [
+      "SEO, online retail and digital marketing experience since 2008",
+      "Author of the PRR, SCR, RAR, RRR and PPSR measurement framework",
+      "Personally review real answers from multiple AI interfaces"
+    ],
+    "heroImage": {
+      "src": "/assets/articles/ecommerce-recommendation-purchase.jpg",
+      "alt": "Author illustration of an AI product recommendation followed by a competing retailer offer; prices are illustrative",
+      "caption": "Illustrative buying scenario. Displayed prices are hypothetical, not current offers.",
+      "width": 1200,
+      "height": 675
+    },
+    "primaryCta": {
+      "href": "/en/#lead",
+      "text": "Audit product and retailer recommendations"
+    },
+    "secondaryCta": {
+      "href": "#evidence",
+      "text": "Review diagnostic findings"
+    },
+    "problem": {
+      "eyebrow": "Challenges for retailers and marketing directors",
+      "title": "The product is recommended. Which merchant receives the order?",
+      "intro": "A product mention does not establish who captures the sale. Manufacturers also need to know whether AI connects a suitable product to its brand and to the right purchase options.",
+      "items": [
+        {
+          "title": "AI recommends competing products",
+          "body": "A buyer asks for a coffee machine under a specific budget with reliable after-sales support. AI recommends suitable alternatives, while your range is missing from the shortlist."
+        },
+        {
+          "title": "The product appears without your store",
+          "body": "AI recommends a relevant SKU, but customers look for a seller separately. Warranty, service and shipping benefits of your online store may never enter the decision."
+        },
+        {
+          "title": "An incorrect variant drives the price comparison",
+          "body": "Different sizes, packs or models appear in the same comparison. A broad marketplace category page may be mistaken for the price of an exact SKU."
+        },
+        {
+          "title": "Your advantages lack verifiable evidence",
+          "body": "Delivery, support, loyalty benefits and merchant warranties influence buying decisions when facts are accessible through your site and credible third-party sources."
+        }
+      ],
+      "closing": "The objective is to improve relevant product recommendations and give buyers a well-grounded merchant comparison, measured against actual AI answers and business outcomes."
+    },
+    "study": {
+      "eyebrow": "From GAEO research · anonymized retail audits",
+      "title": "What initial audits reveal about lost recommendations",
+      "intro": "Two separate diagnostic projects examined consumer electronics and everyday retail products. The observations below are anonymized and represent baseline findings. Client identities and commercial details are withheld.",
+      "metrics": [
+        {
+          "value": "2 audits",
+          "label": "Different product businesses, questions and recommendation contexts"
+        },
+        {
+          "value": "SKU",
+          "label": "Exact product, merchant, verified price, availability and delivery"
+        },
+        {
+          "value": "E2",
+          "label": "Baseline diagnostic evidence; implementation outcomes are tracked separately"
+        }
+      ],
+      "findings": [
+        "In one retail audit, product categories differed markedly in brand mentions and shortlist presence.",
+        "In another, an AI assistant quoted a marketplace price supported only by a broad category link. The exact SKU price had not been established.",
+        "Some marketplace offers genuinely win on value. The resulting work should focus on real strengths and accurate information."
+      ],
+      "findingsTitle": "Findings from the diagnostics",
+      "note": "The original samples used different questions and methods, so they are kept separate. These are baseline observations, with no claim of resulting revenue growth.",
+      "image": null,
+      "caption": "",
+      "links": [
+        {
+          "href": "https://habr.com/ru/articles/1087822/",
+          "label": "My detailed article on product and retailer choice (Russian)",
+          "external": true
+        },
+        {
+          "href": "https://oborot.ru/blogs/geo-dlya-internet-magazina-kak-poluchat-prodazhi-iz-nejrosetej-esli-na-marketplejse-tot-zhe-tovar-deshevle-i279922.html",
+          "label": "Practical e-commerce analysis on Oborot (Russian)",
+          "external": true
+        }
+      ]
+    },
+    "scenarios": {
+      "eyebrow": "The customer journey",
+      "title": "Where product and merchant recommendations can fail",
+      "intro": "A question set covers the buyer journey from selecting a suitable item to finding the right seller and offer. Each stage is measured separately.",
+      "columns": [
+        "Buyer's question",
+        "What I check in the AI answer",
+        "What your team receives"
+      ],
+      "rows": [
+        [
+          "Which product solves my problem?",
+          "Product fit, technical features, use cases and limitations",
+          "Priority buyer scenarios and product-content briefs"
+        ],
+        [
+          "Which brand should I choose?",
+          "Whether the relevant brand appears in context",
+          "Brand comparison findings and evidence gaps"
+        ],
+        [
+          "Where can I buy this model?",
+          "Merchant visibility and reasons for recommending a seller",
+          "A review of retailer facts and cited sources"
+        ],
+        [
+          "Where is this exact SKU a better offer?",
+          "Matching model, verified price, delivery, warranty and availability",
+          "Work briefs for Product/Offer, feeds and merchant terms"
+        ],
+        [
+          "How do I complete the order?",
+          "Whether buyers can reach the appropriate product offer",
+          "Recommendations on purchase flow and conversion tracking"
+        ]
+      ],
+      "link": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "label": "Detailed buyer-journey methodology (Russian)"
+      }
+    },
+    "framework": {
+      "eyebrow": "Alexey Yakovlev's measurement framework",
+      "title": "Five GEO metrics for online retail",
+      "intro": "Brand Mention Rate is useful, but it cannot describe the entire purchasing decision. These five author-defined indicators evaluate how AI progresses from product selection to a retailer recommendation.",
+      "metrics": [
+        {
+          "code": "PRR",
+          "name": "Product Recommendation Rate",
+          "description": "Frequency with which the target product or range is recommended."
+        },
+        {
+          "code": "SCR",
+          "name": "Seller Criterion Rate",
+          "description": "Whether AI independently adds criteria for choosing a seller."
+        },
+        {
+          "code": "RAR",
+          "name": "Retailer Association Rate",
+          "description": "Whether the relevant merchant is linked to the right benefit."
+        },
+        {
+          "code": "RRR",
+          "name": "Retailer Recommendation Rate",
+          "description": "Direct inclusion of a merchant among purchase options."
+        },
+        {
+          "code": "PPSR",
+          "name": "Price Premium Survival Rate",
+          "description": "Whether the recommendation holds when the exact item is cheaper elsewhere."
+        }
+      ],
+      "image": null,
+      "caption": "",
+      "note": "The sample, measurement rules, price comparisons and observation dates are agreed before the baseline is calculated. Conversion and order data help interpret the result.",
+      "link": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "label": "Read the published methodology (Russian)"
+      }
+    },
+    "services": {
+      "eyebrow": "How I work",
+      "title": "Six stages of GEO for online stores and brands",
+      "intro": "I begin with commercial product queries and actual AI answers, then work through catalog data, buyer-focused pages and evidence sources. The plan reflects your business model and available resources.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Measure the baseline",
+          "body": "Test unbranded product searches, brand and model comparisons, pricing and seller selection across agreed AI interfaces.",
+          "result": "Deliverable: prompt matrix, baseline answers and competitor set."
+        },
+        {
+          "number": "02",
+          "title": "Map product and seller choice",
+          "body": "Classify product recommendations, incorrect SKUs and prices, cited sources and merchant advantages.",
+          "result": "Deliverable: buyer-journey diagnosis and prioritized gaps."
+        },
+        {
+          "number": "03",
+          "title": "Audit catalog information",
+          "body": "Check identifiers, Product/Offer data, stock, shipping, pricing, warranty and accessibility for search crawlers.",
+          "result": "Deliverable: technical briefs for the catalog and feeds."
+        },
+        {
+          "number": "04",
+          "title": "Design intent-focused pages",
+          "body": "Choose buyer tasks that deserve a stable page with useful selection guidance and maintainable product offers.",
+          "result": "Deliverable: page structures and content specifications."
+        },
+        {
+          "number": "05",
+          "title": "Strengthen credible sources",
+          "body": "Identify relevant specialist publications, comparison services, reviews and catalog references based on verified facts.",
+          "result": "Deliverable: a sourcing and editorial action plan."
+        },
+        {
+          "number": "06",
+          "title": "Repeat comparable measurements",
+          "body": "Track PRR, SCR, RAR, RRR, PPSR and accuracy using the same question set, with referral and order data where available.",
+          "result": "Deliverable: a progress report and the next priorities."
+        }
+      ],
+      "inlineCtaTitle": "See which stores AI suggests for your product queries",
+      "inlineCtaNote": "We can start with a small set of important categories and real buyer questions."
+    },
+    "deliverables": {
+      "eyebrow": "What you receive",
+      "title": "Actionable work for marketing and e-commerce teams",
+      "note": "The scope is tailored to the range, sales channels and implementation capacity. Marketing and development teams take part in the review.",
+      "items": [
+        "Product and merchant question matrix with original answers and competitors",
+        "Reviewed product and seller recommendations with traceable citations",
+        "A list of discrepancies in SKUs, prices, stock and merchant conditions",
+        "Website briefs covering product pages, structured data and buyer scenarios",
+        "A publication plan and comparable follow-up measurements"
+      ]
+    },
+    "audiences": {
+      "eyebrow": "Business models",
+      "title": "One commercial framework, four different retail needs",
+      "items": [
+        {
+          "title": "Multi-brand online retailers",
+          "body": "Improve inclusion in merchant comparisons for exact SKUs, shipping, warranty, support and available stock."
+        },
+        {
+          "title": "Manufacturers and product brands",
+          "body": "Analyze brand and model recommendations, then verify the purchasing options buyers receive."
+        },
+        {
+          "title": "Marketplace-first sellers",
+          "body": "Build recognition in AI-generated product advice while improving trustworthy product descriptions and external evidence."
+        },
+        {
+          "title": "Manufacturers with B2B orders",
+          "body": "Study supplier selection, bulk purchasing, customization and corporate procurement questions."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "GEO audits and ongoing optimization for online retail",
+      "intro": "A focused audit of priority products and channels comes first. Then we agree the work on catalog data, editorial content, third-party evidence and measurement.",
+      "offers": [
+        {
+          "name": "Full GEO audit",
+          "price": "RUB 29,900",
+          "items": [
+            "Up to 50 questions and 7 AI interfaces",
+            "Mention, recommendation and source analysis",
+            "A prioritized report and work plan"
+          ]
+        },
+        {
+          "name": "GEO optimization",
+          "price": "from RUB 49,900/month",
+          "items": [
+            "Strategy, briefs and catalog recommendations",
+            "Implementation and publication review",
+            "Repeat measurements on the agreed question set"
+          ]
+        },
+        {
+          "name": "GEO + content",
+          "price": "from RUB 79,900/month",
+          "items": [
+            "Ongoing GEO optimization",
+            "Buyer-scenario and expert content",
+            "Editing and publication coordination"
+          ]
+        }
+      ],
+      "note": "GAEO's published base prices. Exact scope depends on product categories, languages and catalog complexity.",
+      "link": {
+        "href": "/en/#pricing",
+        "label": "Current GAEO rates"
+      }
+    },
+    "faqTitle": "Frequently asked questions about e-commerce GEO",
+    "faq": [
+      {
+        "question": "How does GEO help an online store generate orders?",
+        "answer": "The audit identifies which products AI recommends and how it chooses merchants. We review catalog facts, prices, cited sources and the path to a sale, then compare later results with available referral, inquiry and order data."
+      },
+      {
+        "question": "What if a marketplace sells the same SKU for less?",
+        "answer": "Some shoppers value warranty, after-sales service, reliable delivery and product guidance. The advantages must be real and documented. If a marketplace wins on the important purchase conditions, the business may need to improve its commercial offer."
+      },
+      {
+        "question": "Should product brands work on both their website and marketplace offers?",
+        "answer": "The right balance depends on the business model. Brands first need to appear in relevant product recommendations; buyers then compare current offers from different sellers. Both steps can be measured."
+      },
+      {
+        "question": "Which catalog improvements matter for GEO?",
+        "answer": "Consistent identifiers, complete specifications, Product/Offer data, current prices and stock, shipping and warranty terms, and crawlable product details. Buyer-scenario pages should include maintained recommendations and accurate product references."
+      },
+      {
+        "question": "What do PRR, SCR, RAR, RRR and PPSR measure?",
+        "answer": "They are five additional metrics in my published framework: product recommendations, seller criteria, correct benefit-to-merchant association, retailer recommendations and recommendation stability when competing offers cost less."
+      },
+      {
+        "question": "How quickly can e-commerce GEO deliver results?",
+        "answer": "Baseline answers can be documented during the initial audit. Changes depend on competition, data quality and the speed of website and source improvements. Follow-up measurements use comparable prompts and methods; AI recommendation positions cannot be guaranteed."
+      }
+    ],
+    "about": {
+      "photo": "/assets/alexey-yakovlev-biography.jpg",
+      "name": "Alexey Yakovlev",
+      "role": "Independent GEO/AEO consultant",
+      "text": "I have worked in SEO, online marketing and e-commerce since 2008. I personally research AI answers, plan source and website improvements, and authored published work on product choice, merchant recommendations and agentic commerce.",
+      "link": {
+        "href": "/en/professional-biography/",
+        "label": "Professional biography"
+      }
+    },
+    "final": {
+      "title": "Find out where AI recommends buying your products",
+      "text": "Share your online store, priority categories and sales channels. I will review representative buyer questions and recommend the next diagnostic steps.",
+      "cta": {
+        "href": "/en/#lead",
+        "text": "Request a preliminary GEO audit"
+      },
+      "secondary": {
+        "href": "https://habr.com/ru/articles/1087822/",
+        "text": "Read my e-commerce methodology (RU)"
+      },
+      "note": "Direct consultant contact, verifiable evidence and an agreed measurement approach."
+    }
   }
 };
