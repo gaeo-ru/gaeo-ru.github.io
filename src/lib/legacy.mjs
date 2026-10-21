@@ -49,7 +49,7 @@ export function tokenizeLegacyPage(rel){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
   const part=m[0];
   if(part.startsWith('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT'))out.push({kind:'industry-commercial'});
-  if(part.startsWith('<!-- SITE_HEADER_START'))out.push({kind:'header',content:chrome(src,'header',lang)});
+  else if(part.startsWith('<!-- SITE_HEADER_START'))out.push({kind:'header',content:chrome(src,'header',lang)});
   else if(part.startsWith('<!-- SITE_FOOTER_START'))out.push({kind:'footer',content:chrome(src,'footer',lang)});
   else if(sharedCta){
    const t=readFileSync(resolve(PARTIALS,'hub-cta-'+lang+'.html'),'utf8').trim();
