@@ -52,13 +52,13 @@ const mobileMenu = document.getElementById('mobileMenu');
         display:flex!important;
       }
       .mobile-menu{
-        right:20px!important;
+        right:12px!important;
         width:min(340px, calc(100vw - 40px))!important;
       }
     }
     @media(max-width:400px){
       .mobile-menu{
-        right:16px!important;
+        right:8px!important;
         width:calc(100vw - 32px)!important;
       }
     }
