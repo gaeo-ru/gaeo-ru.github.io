@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "205c94b177bc2043a9f966e272b4cba423a7440b",
-  "releasedAt": "2026-10-21T08:29:27.340Z",
+  "sourceCommit": "29b399f11deb1c781efa23b64ddc194ae298a9c1",
+  "releasedAt": "2026-10-21T10:18:13.621Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1398,7 +1398,12 @@
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "b76aaa3fad8cc5ee0d6281e602f0e26a2773b6d7e5ae09044a05289ecb595a1e"
+      "sha256": "4b462dcf920e3917cffa45c2d429dd851b7bff89583aa5a8737f7e07cdbb1bfe"
+    },
+    {
+      "path": "en/industries/pharma/index.html",
+      "kind": "html",
+      "sha256": "ee10999ae4a298af88c55a8cb8e65151bfaf9937b1ffaa0f366a631383bba4b7"
     },
     {
       "path": "en/industries/tourism/index.html",
@@ -1473,7 +1478,12 @@
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "f65363c4cd829e99e82d87ddac6d45269a30238cddd0cfbc78c946d2a22bea7a"
+      "sha256": "9b61a47c50d172a913d514c588aa31bf1f4e8bf6edc2ec797e5ae2f8614cb0cc"
+    },
+    {
+      "path": "industries/pharma/index.html",
+      "kind": "html",
+      "sha256": "aabdc3e482565f3f4def3589899faa7e4ecf6ef8209bc93521d02ef5f6fa747a"
     },
     {
       "path": "industries/tourism/index.html",
@@ -1518,7 +1528,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "9ea2935bf7b09f5ddf296333d2e3cd4fb51584ba8b73fd3a66ea423f1f90bb28"
+      "sha256": "a73f5af718d320c27be0d3e69afaa994b8da45f7102988fc7bac5b1bef5b52ab"
     },
     {
       "path": "strategies/index.html",
