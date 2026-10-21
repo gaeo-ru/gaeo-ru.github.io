@@ -8,7 +8,9 @@ const CASES = [
   {route:'/geo-prodvizhenie-nedvizhimosti/', lang:'ru'},
   {route:'/en/geo-for-real-estate/', lang:'en'},
   {route:'/industries/pharma/', lang:'ru'},
-  {route:'/en/industries/pharma/', lang:'en'}
+  {route:'/en/industries/pharma/', lang:'en'},
+  {route:'/industries/ecommerce/', lang:'ru', ecommerce:true},
+  {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true}
 ];
 const VIEWPORTS = [
   {width:1440,height:900},
@@ -56,6 +58,11 @@ try {
     assert.equal(await page.locator('.industry-step').count(),6,'Commercial steps missing');
     assert.equal(await page.locator('.faq-item').count(),6,'FAQ questions missing');
     assert.equal(await page.locator('.industry-price').count(),3,'Rates missing');
+    if(entry.ecommerce){
+      assert.equal(await page.locator('.industry-framework-card').count(),5,'Five ecommerce framework indicators missing');
+      assert.equal(await page.locator('.industry-scenario-table tbody tr').count(),5,'Five buying stages missing');
+      assert.equal(await page.locator('a[href*="1087822"]').count()>0,true,'Author methodology source missing');
+    }
     assert.equal(await page.locator('.industry-hero__media img').count(),1,'Hero image missing');
     assert.equal(await page.locator('.industry-hero .button[href$="#lead"]').count(),1,'Lead trigger missing');
     const width = await page.evaluate(()=>document.documentElement.scrollWidth);
@@ -77,7 +84,8 @@ try {
     assert.ok(afterWidth<=viewport.width+2,'Overflow after opening form');
     assert.equal(errors.length,0,'Runtime errors: '+errors.join('; '));
     await page.evaluate(()=>scrollTo(0,0));
-    await page.screenshot({path:'visual-industry/'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    const slug=entry.route.replace(/^\/|\/$/g,'').replaceAll('/','-');
+    await page.screenshot({path:'visual-industry/'+slug+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
     checks.push(entry.lang+' '+viewport.width+'px H1/4 problems/3 evidence/6 steps/6 FAQ/3 prices/images/lead-dialog/overflow PASS');
     await page.close();
   }
