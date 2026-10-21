@@ -81,7 +81,7 @@ const en = page.language === 'en';
     <div class="industry-table-scroll">
       <table class="industry-scenario-table">
         <thead><tr>{page.scenarios.columns.map(label=><th scope="col">{label}</th>)}</tr></thead>
-        <tbody>{page.scenarios.rows.map(row=><tr>{row.map((cell,i)=><td>{i===0 ? <strong>{cell}</strong> : cell}</td>)}</tr>)}</tbody>
+        <tbody>{page.scenarios.rows.map(row=><tr>{row.map((cell,i)=><td data-label={page.scenarios.columns[i]}>{i===0 ? <strong>{cell}</strong> : cell}</td>)}</tr>)}</tbody>
       </table>
     </div>
     <a class="industry-text-link" href={page.scenarios.link.href}>{page.scenarios.link.label} <span aria-hidden="true">↗</span></a>
