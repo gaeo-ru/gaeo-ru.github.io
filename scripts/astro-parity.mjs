@@ -33,8 +33,8 @@ for(const original of originals){
   for(const marker of ['rel="canonical"','hreflang="ru"','hreflang="en"','type="application/ld+json"']){
     if(!after.includes(marker))problems.push('Missing SEO metadata '+marker+' in '+path);
   }
-  if((after.match(/<h1\\b/g)||[]).length!==1)problems.push('Commercial page requires exactly one H1 in '+path);
-  if((after.match(/<details\\b/g)||[]).length<6)problems.push('Commercial FAQ requires at least six questions in '+path);
+  if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Commercial page requires exactly one H1 in '+path);
+  if((after.match(/<details\b/g)||[]).length<6)problems.push('Commercial FAQ requires at least six questions in '+path);
   if(!after.includes('href="/#lead"')&&!after.includes('href="/en/#lead"'))problems.push('Commercial CTA missing in '+path);
   continue;
  }
