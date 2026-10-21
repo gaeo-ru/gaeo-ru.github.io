@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "4593df7eb7ea0d82b29f4da02ee9bfbe713f8a64",
-  "releasedAt": "2026-10-21T05:21:50.453Z",
+  "sourceCommit": "748e095f0ea4214ab19553c22b65338a2f39b009",
+  "releasedAt": "2026-10-21T06:08:53.291Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -13,32 +13,32 @@
     {
       "path": "404.html",
       "kind": "html",
-      "sha256": "f377f8d4088f7b4686cdb1b96d05c80c5eefa3d707aaa3e453be55de5031bc6c"
+      "sha256": "149067ce24318126961c2a9a4e8797121418f54a09ad55156c7499b51788a5df"
     },
     {
       "path": "articles/index.html",
       "kind": "html",
-      "sha256": "c475d723e7a31e32dc07abb01dba9500b1b06d9e6a7af1bacb63cca42479614e"
+      "sha256": "c6abc14b0b08ac7b379ad6361361e58b69d8682e6a3a9af3cf5e73d9f53c7911"
     },
     {
       "path": "articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/index.html",
       "kind": "html",
-      "sha256": "cacb1b68910c154d0f5a1783a3c0d926741176294cc1f5097e39f582238fd3b6"
+      "sha256": "50fffabaa498fb50da12edc1202a0144d19111b57f35148269f23647447bd119"
     },
     {
       "path": "articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/index.html",
       "kind": "html",
-      "sha256": "e59c8d4f99b5c2b65320111f76028e38aea5d571fa38359dcbb4aa65018b4d9a"
+      "sha256": "91ab5a851d448c0eaa6654e519b9d498aefb65a19573e7c32b14be2d6cfdf853"
     },
     {
       "path": "articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/index.html",
       "kind": "html",
-      "sha256": "3957b806baee3befb703b3f0213176db925e837246afc9b8b75b9446eb2f974b"
+      "sha256": "03b4cbfd4662f66a1c4093c008254bdd203858b65979a2196fd22adb5c3a0863"
     },
     {
       "path": "articles/strategiya-geo-prodvizheniya-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "a31d610a5abc32d9693ec884f9e249a6ac565d9895b9e5658bd19e43db719802"
+      "sha256": "50ae89ba958ecfd4eb287a55f30397694c2ffa6395f0cc2a0f7b203f08a128d7"
     },
     {
       "path": "assets/alexey-yakovlev-biography.jpg",
@@ -1278,37 +1278,37 @@
     {
       "path": "assets/site.js",
       "kind": "asset",
-      "sha256": "ccbe856a67c79dc85455f6ab0ca08dc36376ede5c2e6d44041aa98e7a38e6a68"
+      "sha256": "1c36725edd9d9556754a0aac9df10436766732c19531228c054481719c46ae75"
     },
     {
       "path": "assets/style.css",
       "kind": "asset",
-      "sha256": "8e28c0044e4e9ef6871888a0e667c5924bffa6576bb7306fa68a104c359352b4"
+      "sha256": "00dbb0e0e0e480bbab8d58b5a32fc0bcb6b75bfee2551eb573cae736cc410bc9"
     },
     {
       "path": "cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/index.html",
       "kind": "html",
-      "sha256": "320cb30a3ac9399aa5191507bba8a6fee1a78718dfdeeda72fba98d073adcfcc"
+      "sha256": "3d03293831e64f9ada93259a494e464658d77e45b2d49720385d9a19425db5cc"
     },
     {
       "path": "cases/gaeo-ru/index.html",
       "kind": "html",
-      "sha256": "db40c4b4f4b24aeb61373ad703cbf00c724ac59664b509c6fc9e3237465450dc"
+      "sha256": "f2ea463cd31d87438ee13b554427642c58fb58f3b6c1cde91ee8b3a3e10e1fb0"
     },
     {
       "path": "cases/index.html",
       "kind": "html",
-      "sha256": "e84bebe85448452c1ee4bb059d5f8240ee1ed0e2f9e18f376bc0e3ceebc839ab"
+      "sha256": "d269b0eafd7b711b517e133bb1ed3eae7ddce26bebdc4f02a19a9e552246635b"
     },
     {
       "path": "cases/methodlab-rost-neyrovidimosti-19-52-procenta/index.html",
       "kind": "html",
-      "sha256": "7cbf2dc856f845da4c145d04fb21026f3bd6b2e135116db674a05c7713a49427"
+      "sha256": "22a0f558bd4acf2b19882facad3284f12ff33b42f112dc13d9400c2d81026c94"
     },
     {
       "path": "cases/prep-center-6-klientov-iz-neyrosetey/index.html",
       "kind": "html",
-      "sha256": "83401373fe07607019238991a800ca3a074737698e5c360961965082b340039d"
+      "sha256": "28e37fc3c1cba453fc7a8ddb73401971a08d4740bb6d31efe548349374f76ba7"
     },
     {
       "path": "CNAME",
@@ -1328,117 +1328,117 @@
     {
       "path": "en/articles/ai-sources-for-geo-specialists/index.html",
       "kind": "html",
-      "sha256": "8d91cbd1da4f9af02370964e4caf5a18c7d775b14886eaa0767ce8ab4032e6a3"
+      "sha256": "d4c86f63325cb17c9503184fc629a6c3a59ff50f2efcb0faa22f6ec6fa0b816f"
     },
     {
       "path": "en/articles/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "3bb3fe8792256581a8c420dbc3bafe3e7f892f9fafd489d23f9b686648fb9332"
+      "sha256": "b35a9b155e3102905f2897e0c4212a7c0c36d463a0fdf6b71ace1a5ff000901f"
     },
     {
       "path": "en/articles/index.html",
       "kind": "html",
-      "sha256": "5ca5b60ae93fbc35fed227be3e9c98bd6aa3d5760975775e91e0042481d996a8"
+      "sha256": "1c84a1cb2ff1cce147f037769ef8e635e0be26843ac8b42ccf9e28cbe9c7b404"
     },
     {
       "path": "en/articles/personal-brand-promotion-in-ai/index.html",
       "kind": "html",
-      "sha256": "25a1991ee0831a22c0a64a7245f6194fc2213198bcdfcc728a63ad3e531d8fb7"
+      "sha256": "0450405ac0d4ffb543ceb6216e1426e037d7238edaa87594f8093f60579771db"
     },
     {
       "path": "en/articles/which-ai-platforms-matter-for-your-business/index.html",
       "kind": "html",
-      "sha256": "3ae9b2b2919b1c6c20f96fe656bf505843ea175638777ced67e97bad68802db6"
+      "sha256": "d73c9bc833665b730f26e95e7e5079b0324cd34030b2e7aae367f86bc9d947ba"
     },
     {
       "path": "en/cases/ada-tours-bmr-growth-in-2-weeks/index.html",
       "kind": "html",
-      "sha256": "b4d8984bea962b442df74bf1427d65af9b0c1ba6a00d9b462bb23fba16355600"
+      "sha256": "d875fc7a05e782902ebdfc148bfa5affd191249661266766ef1fe4e8e36217c4"
     },
     {
       "path": "en/cases/gaeo-ru/index.html",
       "kind": "html",
-      "sha256": "8f7126da7f4cf9420f34191539237e136a5589a7e4f1ca2ae37c4ba7d9fe0ec8"
+      "sha256": "f53c56d0f60ffb7d4de26237f7c68de135bfa03568e1146a5adc1734249f8d95"
     },
     {
       "path": "en/cases/index.html",
       "kind": "html",
-      "sha256": "2c1fef289388e9d05133e01a45d2b152bb4a57864df03abbe3cdeb0e9605102c"
+      "sha256": "6eb3fd384d908e30e9b99f0c5b55c1e1a86516201e3c36e8911b33b9114b4068"
     },
     {
       "path": "en/cases/methodlab-ai-visibility-growth/index.html",
       "kind": "html",
-      "sha256": "515aaa78414dd79e4e5e6e9ea48bc470a6a807b527988b470128352e3788a8e7"
+      "sha256": "d79540328b333ad8ebf7fe9ad522b4460a3cfb7365e048d4abe937933ab72a63"
     },
     {
       "path": "en/cases/prep-center-6-paying-clients-from-ai/index.html",
       "kind": "html",
-      "sha256": "29a2c283960a66088e69aa3fc8548fab34aa97978e1f4af5f316d74a6ed073be"
+      "sha256": "c9231ab91b1e5851c8f20e3e704233f10f15d2b53019e07516e1a10f960bcb51"
     },
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "2f5b689990ebfdbbb4f5b078eb016dff8494c29e2823db7dc5908b62f009ab51"
+      "sha256": "0f6ee1072fe26ab060795b20031f39094bf038d4e6d9e8995aa65bc0139d2796"
     },
     {
       "path": "en/index.html",
       "kind": "html",
-      "sha256": "d79d7506bbf286d2d940438b0a96ec86002a010f08a21b319f6b401719cdb0ac"
+      "sha256": "dd847978fca6f08bca6688c9af5ff07998d4e4f64c6b5d0ed0da74a8060ec808"
     },
     {
       "path": "en/industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "f5517ab248f54a566f4bdb519afbf870a31c38626b242b0a0e337e94891681ba"
+      "sha256": "ebabe97296e52ff5edd2bd4635bf0c253b8fbe089a4c439e9c95c4fbb4082017"
     },
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "113941d31926f71fbd0b2e657f81a28a7918d83669fa1ea5079bcedc5069c5dc"
+      "sha256": "e493ac2c20db0bac1a0b053091555f8a4550e0b504a3f9416914c615938aab18"
     },
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "6864ea7901dc27fa3059cc2576585a6d9a639a3cc4771401bcb9ad8ecc947027"
+      "sha256": "7ac8e5626aaa89c8f475d5728d0f0dfefa574f2c847958f5cbe0ba07ff1de4d0"
     },
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "9e794fafb8661c9ec6a385a98997d185a0af3a18809b00652d4b56efb7031947"
+      "sha256": "3e4dcb50a34bf0b6c2beb09a97771e0d9a69ac4a2e69711c634b3369a884bbaa"
     },
     {
       "path": "en/personal-data-consent/index.html",
       "kind": "html",
-      "sha256": "c550abe8c6754febb8604423f7c85022e5a67f5695380c1eaf2b05b9087ad96a"
+      "sha256": "167298136503bee7637cc27430a5041af0e43ead574bc7a253fd54ecf3f6f8ee"
     },
     {
       "path": "en/privacy-policy/index.html",
       "kind": "html",
-      "sha256": "bd1063bc14f6333be78471debc11c05ecfcc8428c6e7fd62a181ed4189dc2dd3"
+      "sha256": "bd6532d0e4222594850bcaf72b376bdf7bb5ef13d53e3ed69a1cec9668bd011b"
     },
     {
       "path": "en/professional-biography/index.html",
       "kind": "html",
-      "sha256": "6fde22da74ad7a443344d8e3b2e7aeb8230fd8a7e8afe82bab48b576c8609bdc"
+      "sha256": "1b6c230c98a7c9a86562395d3f38bb767631551806280bf643863c5f21700962"
     },
     {
       "path": "en/publications/index.html",
       "kind": "html",
-      "sha256": "c90345b19ce6aa548a3d7f2fe5d57b86dc937cc838117d8487357f857a092005"
+      "sha256": "aa68a3219160035e8f22864aa77126edf89856e37c6ae5d620b63b18c735ea28"
     },
     {
       "path": "en/reviews/index.html",
       "kind": "html",
-      "sha256": "e3cbb3ccdbea258a2e79274c281ff7140eea44a821fd0a813230e4a342ca679b"
+      "sha256": "3b32b0df14dee4f075f4223dac0763028d158059bbec541081953d0b5923aff6"
     },
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "7aeaffa81160cdc5dc381584d783c34b07fe3d798b4d1d57b74ceb877980a715"
+      "sha256": "a0929a0bd34ab9f7597b6101b73e566dd34313a579827935056de8b969cce58c"
     },
     {
       "path": "en/strategies/measurement/index.html",
       "kind": "html",
-      "sha256": "a37fcd1947ad44d05407abe577f831eaa22a5c002b27d7c87bbc82601c151c96"
+      "sha256": "a19e27179522b297fb92cc227384821d02bef1cdb7847b133eacbcb2a18b89f2"
     },
     {
       "path": "favicon.ico",
@@ -1453,57 +1453,57 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "dc528785016d34802730fc9e6fc142400fd3ff228957360ab232cb8c1f1fff02"
+      "sha256": "23551cbae2f8d76af759fcec47c5260c0d3e80b5e0dbffd4692ac24c9c3d9a25"
     },
     {
       "path": "index.html",
       "kind": "html",
-      "sha256": "3c081e7f2017d3cc5e039a98d7a0fe2efc0d36e450bff3e4405057fe2e8acb87"
+      "sha256": "0f50a71197deaae1b4ee5d0d6e4433c09be76c5a601fe742576c8df42c7be1b6"
     },
     {
       "path": "industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "4c7fe0f47094f1fd5812e1dcd602a26faef9ea0fbc99814213991cce4c769b70"
+      "sha256": "1f336095355beb08f2e7971ce6d3efae1ad1a20416e3bc6b5da9cfd14d48efca"
     },
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "8074932100d25e6c629f57d832103f66e367797cf577cfb9b6e9a5ef943dc5f1"
+      "sha256": "e4d61f968500f37749044d3f3a0b336f7ae98be2ed272862c1fb38a5bf54c1bf"
     },
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "3853910f48d4f93086fe082189aa0fc8cf0fd6e26729d02213e63e034b53c40d"
+      "sha256": "de86812f7c59a1692fae6bf82f122211dc0b406ac094a006a068b8bf62647933"
     },
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "bebda457afa4fac20a13408abfaf7cdd919d0b3a697f9d3b5c0c14e95cb2742a"
+      "sha256": "76a58255ae1edb00b4304bdc5af71b2e19b0f2a87a059195bcd7f43daad24346"
     },
     {
       "path": "personal-data-consent/index.html",
       "kind": "html",
-      "sha256": "1fefa36437eb48171182d9036d6a211e1e59fdf648eed73232c51310cb9ea972"
+      "sha256": "5587ff207d4abace4a7e6910d4c9eb459e490ff9a67fac5dfdf755c58bec4900"
     },
     {
       "path": "privacy-policy/index.html",
       "kind": "html",
-      "sha256": "c9e47eb865cc3477a74e43f8932e971a0c87a1a536ad3bae99a8022f5ff5586f"
+      "sha256": "a3cbfc0fb6b5980a6ab833890d67fba1a432af1c646566138569e54923f95505"
     },
     {
       "path": "professional-biography/index.html",
       "kind": "html",
-      "sha256": "fadee8e48691a1e0bb5131bce2fcdd04180ece1c1fc56a42b4220aa37feff285"
+      "sha256": "3806f3a20965a87f2790fde4d810ab5c531b226f486429884362c115c7afad2e"
     },
     {
       "path": "publications/index.html",
       "kind": "html",
-      "sha256": "4a3519d348324df5427f2ce8f14334a15d18c5e9367ee224287e669a9dcf8362"
+      "sha256": "74a65968bb117293f561dcdec3d72932268d9fe2760394f2197ef71d4f942407"
     },
     {
       "path": "reviews/index.html",
       "kind": "html",
-      "sha256": "fc3afa083d60effd1640036ee16f5db1b05dff9fd791b4599622b61b8e919fbd"
+      "sha256": "a10dc2acedc26fb3ff50d5e185de0c01995fdf41b25968bd65d5ad82163d6947"
     },
     {
       "path": "robots.production.txt",
@@ -1523,12 +1523,12 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "65f2317d955151870fc7118cef59f98bafccd4174987bc371eca7ec2ccc43f1d"
+      "sha256": "8008090ea93ceee382b4ff3346336595321cba69ec40278d16fa93b704e8e906"
     },
     {
       "path": "strategies/measurement/index.html",
       "kind": "html",
-      "sha256": "6329f74f06c4a7e7bf9448d9d08411bbbed1935d295ca14c62dec251f0f5b9c6"
+      "sha256": "9dbd43536d79563dcc326f6278ded63801acae62deb573f6409bf2556475d6a1"
     }
   ]
 }
