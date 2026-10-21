@@ -6,7 +6,7 @@ if (!page) throw new Error('Missing industry commercial landing data: ' + source
 const en = page.language === 'en';
 ---
 
-<section class="inner-hero industry-hero" id="industry-overview">
+<section class={`inner-hero industry-hero${sourcePath.includes('/pharma/') ? ' industry-hero--pharma' : ''}`} id="industry-overview">
   <div class="container industry-hero__grid">
     <div class="industry-hero__copy">
       <div class="inner-eyebrow">{page.eyebrow}</div>
