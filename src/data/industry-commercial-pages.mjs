@@ -1184,6 +1184,7 @@ export const industryCommercialPages = {
     "heroImage": {
       "src": "/assets/articles/ecommerce-recommendation-purchase.jpg",
       "alt": "Авторская иллюстрация: нейросеть рекомендует кофемашину, покупатель сравнивает предложения разных продавцов; цены условные",
+      "caption": "Иллюстрация покупательского сценария. Цены условные, актуальные предложения проверяются отдельно.",
       "width": 1200,
       "height": 675
     },
@@ -1532,6 +1533,7 @@ export const industryCommercialPages = {
     "heroImage": {
       "src": "/assets/articles/ecommerce-recommendation-purchase.jpg",
       "alt": "Author illustration of an AI product recommendation followed by a competing retailer offer; prices are illustrative",
+      "caption": "Illustrative buying scenario. Displayed prices are hypothetical, not current offers.",
       "width": 1200,
       "height": 675
     },
