@@ -51,6 +51,9 @@ for(const f of files){
 execFileSync('python', ['scripts/ensure_asset_versions.py'], {cwd:target,stdio:'inherit'});
 const available=new Set(files.map(f=>f.path));
 if(prior)for(const f of prior.files)if(!available.has(f.path))rmSync(resolve(target,f.path),{force:true});
+// Regenerate the production sitemap from the actual published pages after cleanup.
+// Git-derived fallback lastmod dates can change after a prior release.
+execFileSync('python', ['scripts/build_sitemap.py'], {cwd:target,stdio:'inherit'});
 const updated={
  schema:1,engine:'Astro',sourceBranch:'astro-source',
  sourceCommit:process.env.GITHUB_SHA||'unknown',releasedAt:new Date().toISOString(),
