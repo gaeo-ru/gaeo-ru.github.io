@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Check GAEO editorial rules
+        run: node scripts/qa_editorial_contrasts.mjs
       - name: Install and build Astro source
         run: |
           npm install --no-audit --no-fund
