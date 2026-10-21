@@ -577,3 +577,26 @@
 /* The pharma hero illustration is a purpose-made square image. */
 .industry-hero--pharma .industry-hero__media img{aspect-ratio:1/1;object-fit:cover;object-position:center}
 @media(max-width:720px){.industry-hero--pharma .industry-hero__media img{aspect-ratio:1/1;max-height:none}}
+
+/* Ecommerce industry commercial page, own authored e-commerce illustrations. */
+.industry-hero--ecommerce .industry-hero__media img{aspect-ratio:16/9;object-fit:contain;object-position:center;background:#061940;max-height:none;border:1px solid rgba(2,22,65,.14)}
+.industry-evidence-layout--single{grid-template-columns:minmax(0,1fr);max-width:850px}
+.industry-framework-section{background:#eaf0f5}
+.industry-framework-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.industry-framework-card{min-width:0;background:#fff;border:1px solid #d8e2ea;border-radius:12px;padding:22px 18px}
+.industry-framework-code{display:block;font-size:23px;letter-spacing:-.02em;color:#026d85;margin-bottom:17px}
+.industry-framework-card h3{font-size:15px;color:#021641;margin:0 0 10px;line-height:1.34}
+.industry-framework-card p{font-size:13px;color:#4c5d70;line-height:1.58;margin:0}
+.industry-framework-figure{margin:30px auto 0;max-width:900px}
+.industry-framework-figure img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:13px}
+.industry-framework-figure figcaption{font-size:12px;color:#58677c;margin-top:12px;line-height:1.6}
+.industry-framework-note{font-size:14px;color:#405369;margin:24px 0 6px;max-width:950px}
+@media(max-width:1100px){.industry-framework-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){
+ .industry-hero--ecommerce .industry-hero__media img{aspect-ratio:16/9}
+ .industry-framework-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .industry-framework-card{padding:17px 15px}
+ .industry-framework-code{font-size:20px;margin-bottom:10px}
+}
+@media(max-width:390px){.industry-framework-grid{grid-template-columns:1fr}}
+
