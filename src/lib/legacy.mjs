@@ -1,7 +1,7 @@
 import {readdirSync,readFileSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 const ROOT=process.cwd(),PAGES=resolve(ROOT,'src/legacy/pages'),PARTIALS=resolve(ROOT,'templates/partials');
-const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>/g;
+const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->/g;
 function walk(dir){
  const out=[];
  for(const entry of readdirSync(dir,{withFileTypes:true})){
@@ -48,6 +48,7 @@ export function tokenizeLegacyPage(rel){
  for(const m of src.matchAll(MARKERS)){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
   const part=m[0];
+  if(part.startsWith('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT'))out.push({kind:'industry-commercial'});
   if(part.startsWith('<!-- SITE_HEADER_START'))out.push({kind:'header',content:chrome(src,'header',lang)});
   else if(part.startsWith('<!-- SITE_FOOTER_START'))out.push({kind:'footer',content:chrome(src,'footer',lang)});
   else if(sharedCta){
@@ -59,5 +60,6 @@ export function tokenizeLegacyPage(rel){
  if(cursor<src.length)out.push({kind:'raw',content:src.slice(cursor)});
  for(const kind of ['header','footer'])if(out.filter(x=>x.kind===kind).length!==1)throw Error('Unexpected '+kind+' in '+rel);
  if(sharedCta&&out.filter(x=>x.kind==='cta').length!==1)throw Error('Expected one CTA in '+rel);
+ if(src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')&&out.filter(x=>x.kind==='industry-commercial').length!==1)throw Error('Expected exactly one commercial slot in '+rel);
  return out;
 }
