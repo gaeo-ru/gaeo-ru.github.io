@@ -6,7 +6,7 @@ if (!page) throw new Error('Missing industry commercial landing data: ' + source
 const en = page.language === 'en';
 ---
 
-<section class={`inner-hero industry-hero${sourcePath.includes('/pharma/') ? ' industry-hero--pharma' : ''}`} id="industry-overview">
+<section class={`inner-hero industry-hero${sourcePath.includes('/pharma/') ? ' industry-hero--pharma' : sourcePath.includes('/ecommerce/') ? ' industry-hero--ecommerce' : ''}`} id="industry-overview">
   <div class="container industry-hero__grid">
     <div class="industry-hero__copy">
       <div class="inner-eyebrow">{page.eyebrow}</div>
@@ -65,10 +65,10 @@ const en = page.language === 'en';
           {page.study.links.map(link => <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener' : undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
         </div>
       </div>
-      <figure class="industry-evidence-figure">
+{page.study.image && <figure class="industry-evidence-figure">
         <img src={page.study.image.src} alt={page.study.image.alt} width={page.study.image.width} height={page.study.image.height} loading="lazy" decoding="async" />
         <figcaption>{page.study.caption || (en ? 'Anonymized, project-specific pre-audit. No claim of achieved growth.' : 'Анонимизированный предаудит одного ЖК. Здесь нет заявлений о достигнутом росте.')}</figcaption>
-      </figure>
+      </figure>}
     </div>
   </div>
 </section>
@@ -87,6 +87,27 @@ const en = page.language === 'en';
     <a class="industry-text-link" href={page.scenarios.link.href}>{page.scenarios.link.label} <span aria-hidden="true">↗</span></a>
   </div>
 </section>
+
+{page.framework && <section class="industry-section industry-framework-section" id="industry-framework" aria-labelledby="industry-framework-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.framework.eyebrow}</div>
+    <h2 id="industry-framework-title">{page.framework.title}</h2>
+    <p class="industry-section__lead">{page.framework.intro}</p>
+    <div class="industry-framework-grid">
+      {page.framework.metrics.map(item=><article class="industry-framework-card">
+        <strong class="industry-framework-code">{item.code}</strong>
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
+      </article>)}
+    </div>
+    {page.framework.image && <figure class="industry-framework-figure">
+      <img src={page.framework.image.src} alt={page.framework.image.alt} width={page.framework.image.width} height={page.framework.image.height} loading="lazy" decoding="async" />
+      <figcaption>{page.framework.caption}</figcaption>
+    </figure>}
+    <p class="industry-framework-note">{page.framework.note}</p>
+    <a class="industry-text-link" href={page.framework.link.href} target="_blank" rel="noopener">{page.framework.link.label} <span aria-hidden="true">↗</span></a>
+  </div>
+</section>}
 
 <section class="industry-section industry-process-section" id="industry-process" aria-labelledby="industry-process-title">
   <div class="container">
