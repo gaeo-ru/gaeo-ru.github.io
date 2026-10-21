@@ -43,7 +43,7 @@ const exceptions=[
   reason:'Пример коммерческого запроса с реальным выбором модели подрядчика'
  }
 ];
-const contrast=/(?<![\\p{L}])а(?:\\s|&nbsp;)+не(?![\\p{L}])/giu;
+const contrast=/(?<![\p{L}])а(?:\s|&nbsp;)+не(?![\p{L}])/giu;
 const issues=[];
 let found=0,approved=0;
 for(const absolute of files){
@@ -54,11 +54,11 @@ for(const absolute of files){
   const accepted=exceptions.some(e=>{
    if(e.path!==path)return false;
    const at=html.indexOf(e.phrase);
-   const inPhrase=e.phrase.search(/а\\s+не/i);
+   const inPhrase=e.phrase.search(/а\s+не/i);
    return at>=0&&inPhrase>=0&&m.index===at+inPhrase;
   });
   if(accepted)approved++;
-  else issues.push(path+': '+JSON.stringify(html.slice(Math.max(0,m.index-85),m.index+125).replace(/\\s+/g,' ')));
+  else issues.push(path+': '+JSON.stringify(html.slice(Math.max(0,m.index-85),m.index+125).replace(/\s+/g,' ')));
  }
  if(html.includes('Цифры аудита опубликованы текстом.'))issues.push(path+': leftover internal image caption');
  if(html.includes('вместо набора красивых скриншотов'))issues.push(path+': banned empty marketing phrase');
