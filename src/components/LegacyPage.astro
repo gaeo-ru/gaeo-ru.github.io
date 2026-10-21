@@ -3,6 +3,7 @@ import {tokenizeLegacyPage} from '../lib/legacy.mjs';
 import SharedHeader from './SharedHeader.astro';
 import SharedFooter from './SharedFooter.astro';
 import LeadCTA from './LeadCTA.astro';
+import IndustryCommercialLanding from './IndustryCommercialLanding.astro';
 const {sourcePath}=Astro.props;
 const tokens=tokenizeLegacyPage(sourcePath);
 ---
@@ -10,6 +11,8 @@ const tokens=tokenizeLegacyPage(sourcePath);
   ? <SharedHeader markup={t.content}/>
   : t.kind==='footer'
   ? <SharedFooter markup={t.content}/>
+  : t.kind==='industry-commercial'
+  ? <IndustryCommercialLanding sourcePath={sourcePath}/>
   : t.kind==='cta'
   ? <LeadCTA markup={t.content}/>
   : <Fragment set:html={t.content}/>)}
