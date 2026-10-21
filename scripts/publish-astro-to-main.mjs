@@ -1,6 +1,7 @@
 import {readFileSync,existsSync,readdirSync,copyFileSync,mkdirSync,writeFileSync,appendFileSync,rmSync} from 'node:fs';
 import {resolve,relative,dirname,sep} from 'node:path';
 import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 const base=process.cwd(),dist=resolve(base,'dist'),target=resolve(base,'published');
 const marker=resolve(target,'astro-release-manifest.json');
 const mode=process.argv[2];
@@ -45,6 +46,9 @@ for(const f of files){
  mkdirSync(dirname(dest),{recursive:true});
  copyFileSync(resolve(dist,f.path),dest);
 }
+// Keep every HTML cache key consistent with the actual CSS/JS copied from Astro.
+// Run before writing the release manifest so the recorded HTML hashes match production.
+execFileSync('python', ['scripts/ensure_asset_versions.py'], {cwd:target,stdio:'inherit'});
 const available=new Set(files.map(f=>f.path));
 if(prior)for(const f of prior.files)if(!available.has(f.path))rmSync(resolve(target,f.path),{force:true});
 const updated={
