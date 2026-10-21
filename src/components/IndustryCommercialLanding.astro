@@ -24,6 +24,7 @@ const en = page.language === 'en';
     </div>
     <figure class="industry-hero__media">
       <img src={page.heroImage.src} alt={page.heroImage.alt} width={page.heroImage.width} height={page.heroImage.height} loading="eager" decoding="async" fetchpriority="high" />
+      {page.heroImage.caption && <figcaption class="industry-hero__caption">{page.heroImage.caption}</figcaption>}
     </figure>
   </div>
 </section>
