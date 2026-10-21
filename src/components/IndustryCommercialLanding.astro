@@ -1,0 +1,190 @@
+---
+import { industryCommercialPages } from '../data/industry-commercial-pages.mjs';
+const { sourcePath } = Astro.props;
+const page = industryCommercialPages[sourcePath];
+if (!page) throw new Error('Missing industry commercial landing data: ' + sourcePath);
+const en = page.language === 'en';
+---
+
+<section class="inner-hero industry-hero" id="industry-overview">
+  <div class="container industry-hero__grid">
+    <div class="industry-hero__copy">
+      <div class="inner-eyebrow">{page.eyebrow}</div>
+      <h1>{page.h1}</h1>
+      <p class="industry-hero__lead">{page.lead}</p>
+      <p class="industry-hero__note">{page.secondLead}</p>
+      <ul class="industry-hero__proof">
+        {page.heroProof.map(item => <li>{item}</li>)}
+      </ul>
+      <div class="industry-actions">
+        <a class="button" href={page.primaryCta.href}>{page.primaryCta.text}</a>
+        <a class="button outline" href={page.secondaryCta.href}>{page.secondaryCta.text}</a>
+      </div>
+      <p class="industry-hero__byline">{en ? 'Personally led by' : 'Лично ведет'} <a href={page.about.link.href}>{page.about.name}</a>, {en ? 'GEO/AEO consultant' : 'независимый GEO/AEO-эксперт'}</p>
+    </div>
+    <figure class="industry-hero__media">
+      <img src={page.heroImage.src} alt={page.heroImage.alt} width={page.heroImage.width} height={page.heroImage.height} loading="eager" decoding="async" fetchpriority="high" />
+    </figure>
+  </div>
+</section>
+
+<section class="industry-section industry-problem-section" id="industry-problem" aria-labelledby="industry-problem-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.problem.eyebrow}</div>
+    <h2 id="industry-problem-title">{page.problem.title}</h2>
+    <p class="industry-section__lead">{page.problem.intro}</p>
+    <div class="industry-problem-grid">
+      {page.problem.items.map((item, i) =>
+        <article class="industry-problem">
+          <div class="industry-problem__number">{String(i+1).padStart(2, '0')}</div>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
+      )}
+    </div>
+    <p class="industry-takeaway">{page.problem.closing}</p>
+  </div>
+</section>
+
+<section class="industry-section industry-evidence-section" id="evidence" aria-labelledby="industry-evidence-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.study.eyebrow}</div>
+    <h2 id="industry-evidence-title">{page.study.title}</h2>
+    <p class="industry-section__lead">{page.study.intro}</p>
+    <div class="industry-metrics">
+      {page.study.metrics.map(metric =>
+        <div class="industry-metric"><strong>{metric.value}</strong><p>{metric.label}</p></div>
+      )}
+    </div>
+    <div class="industry-evidence-layout">
+      <div>
+        <h3>{en ? 'What the audit revealed' : 'Что обнаружилось при проверке'}</h3>
+        <ul class="industry-check-list">{page.study.findings.map(item=><li>{item}</li>)}</ul>
+        <p class="industry-note">{page.study.note}</p>
+        <div class="industry-links">
+          {page.study.links.map(link => <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener' : undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+        </div>
+      </div>
+      <figure class="industry-evidence-figure">
+        <img src={page.study.image.src} alt={page.study.image.alt} width={page.study.image.width} height={page.study.image.height} loading="lazy" decoding="async" />
+        <figcaption>{en ? 'Anonymized, project-specific pre-audit. No claim of achieved growth.' : 'Анонимизированный предаудит одного ЖК. Здесь нет заявлений о достигнутом росте.'}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="industry-section industry-scenarios-section" id="industry-scenarios" aria-labelledby="industry-scenarios-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.scenarios.eyebrow}</div>
+    <h2 id="industry-scenarios-title">{page.scenarios.title}</h2>
+    <p class="industry-section__lead">{page.scenarios.intro}</p>
+    <div class="industry-table-scroll">
+      <table class="industry-scenario-table">
+        <thead><tr>{page.scenarios.columns.map(label=><th scope="col">{label}</th>)}</tr></thead>
+        <tbody>{page.scenarios.rows.map(row=><tr>{row.map((cell,i)=><td>{i===0 ? <strong>{cell}</strong> : cell}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+    <a class="industry-text-link" href={page.scenarios.link.href}>{page.scenarios.link.label} <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<section class="industry-section industry-process-section" id="industry-process" aria-labelledby="industry-process-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.services.eyebrow}</div>
+    <h2 id="industry-process-title">{page.services.title}</h2>
+    <p class="industry-section__lead">{page.services.intro}</p>
+    <ol class="industry-step-grid">
+      {page.services.steps.map(step=>
+        <li class="industry-step">
+          <span class="industry-step__num" aria-hidden="true">{step.number}</span>
+          <h3>{step.title}</h3>
+          <p>{step.body}</p>
+          <p class="industry-step__result">{step.result}</p>
+        </li>
+      )}
+    </ol>
+    <div class="industry-inline-cta">
+      <div><strong>{en ? 'Start with your actual AI visibility' : 'Начнем с реальных рекомендаций вашего ЖК'}</strong><p>{en ? 'We will discuss the most commercially relevant gaps first.' : 'Сначала обсудим наиболее значимые для продаж проблемы.'}</p></div>
+      <a class="button" href={page.primaryCta.href}>{page.primaryCta.text}</a>
+    </div>
+  </div>
+</section>
+
+<section class="industry-section industry-deliverables-section" id="industry-deliverables" aria-labelledby="industry-deliverables-title">
+  <div class="container industry-two-column">
+    <div>
+      <div class="industry-eyebrow">{page.deliverables.eyebrow}</div>
+      <h2 id="industry-deliverables-title">{page.deliverables.title}</h2>
+      <p class="industry-section__lead">{page.deliverables.note}</p>
+    </div>
+    <ul class="industry-deliverables-list">{page.deliverables.items.map(item=><li>{item}</li>)}</ul>
+  </div>
+</section>
+
+<section class="industry-section industry-audience-section" id="industry-audience" aria-labelledby="industry-audience-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.audiences.eyebrow}</div>
+    <h2 id="industry-audience-title">{page.audiences.title}</h2>
+    <div class="industry-audience-grid">
+      {page.audiences.items.map(item=><article><h3>{item.title}</h3><p>{item.body}</p></article>)}
+    </div>
+  </div>
+</section>
+
+<section class="industry-section industry-pricing-section" id="industry-pricing" aria-labelledby="industry-pricing-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.pricing.eyebrow}</div>
+    <h2 id="industry-pricing-title">{page.pricing.title}</h2>
+    <p class="industry-section__lead">{page.pricing.intro}</p>
+    <div class="industry-pricing-grid">
+      {page.pricing.offers.map(offer=><article class="industry-price">
+        <h3>{offer.name}</h3>
+        <div class="industry-price__amount">{offer.price}</div>
+        <ul>{offer.items.map(item=><li>{item}</li>)}</ul>
+        <a class="button outline" href={page.primaryCta.href}>{en ? 'Discuss this project' : 'Обсудить проект'}</a>
+      </article>)}
+    </div>
+    <p class="industry-note">{page.pricing.note} <a href={page.pricing.link.href}>{page.pricing.link.label}</a>.</p>
+  </div>
+</section>
+
+<section class="industry-section industry-about-section" aria-label={en ? 'About the consultant' : 'Об эксперте'}>
+  <div class="container industry-about">
+    <img src={page.about.photo} alt={page.about.name} width="300" height="300" loading="lazy" decoding="async" />
+    <div>
+      <div class="industry-eyebrow">{en ? 'Who is responsible for the work' : 'Кто отвечает за работу'}</div>
+      <h2>{page.about.name}</h2>
+      <p class="industry-about__role">{page.about.role}</p>
+      <p>{page.about.text}</p>
+      <a class="industry-text-link" href={page.about.link.href}>{page.about.link.label} <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="industry-section industry-faq-section" aria-labelledby="industry-faq-title">
+  <div class="container industry-faq-container">
+    <div class="industry-eyebrow">FAQ</div>
+    <h2 id="industry-faq-title">{en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости'}</h2>
+    <div class="faq">
+      {page.faq.map(entry=><details class="faq-item">
+        <summary class="faq-q"><span>{entry.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+        <div class="faq-a"><p>{entry.answer}</p></div>
+      </details>)}
+    </div>
+  </div>
+</section>
+
+<section class="industry-section industry-final-section" id="industry-contact">
+  <div class="container">
+    <div class="industry-final-panel">
+      <div class="industry-eyebrow">{en ? 'Next step' : 'Следующий шаг'}</div>
+      <h2>{page.final.title}</h2>
+      <p>{page.final.text}</p>
+      <div class="industry-actions">
+        <a class="button" href={page.final.cta.href}>{page.final.cta.text}</a>
+        <a class="button outline" href={page.final.secondary.href}>{page.final.secondary.text}</a>
+      </div>
+      <p class="industry-final__note">{page.final.note}</p>
+    </div>
+  </div>
+</section>
