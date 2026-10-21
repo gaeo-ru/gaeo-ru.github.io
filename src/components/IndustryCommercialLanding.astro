@@ -164,7 +164,7 @@ const en = page.language === 'en';
 <section class="industry-section industry-faq-section" aria-labelledby="industry-faq-title">
   <div class="container industry-faq-container">
     <div class="industry-eyebrow">FAQ</div>
-    <h2 id="industry-faq-title">{en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости'}</h2>
+    <h2 id="industry-faq-title">{page.faqTitle || (en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости')}</h2>
     <div class="faq">
       {page.faq.map(entry=><details class="faq-item">
         <summary class="faq-q"><span>{entry.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
