@@ -6,7 +6,9 @@ import assert from 'node:assert/strict';
 const BASE = 'http://127.0.0.1:4329';
 const CASES = [
   {route:'/geo-prodvizhenie-nedvizhimosti/', lang:'ru'},
-  {route:'/en/geo-for-real-estate/', lang:'en'}
+  {route:'/en/geo-for-real-estate/', lang:'en'},
+  {route:'/industries/pharma/', lang:'ru'},
+  {route:'/en/industries/pharma/', lang:'en'}
 ];
 const VIEWPORTS = [
   {width:1440,height:900},
