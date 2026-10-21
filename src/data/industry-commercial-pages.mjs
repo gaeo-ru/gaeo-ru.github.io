@@ -826,6 +826,7 @@ export const industryCommercialPages = {
       "label": "Актуальные тарифы GAEO"
     }
   },
+  "faqTitle": "Частые вопросы о GEO-продвижении фармацевтики",
   "faq": [
     {
       "question": "Можно ли гарантировать, что нейросеть порекомендует конкретный препарат?",
@@ -1118,6 +1119,7 @@ export const industryCommercialPages = {
       "label": "GAEO pricing"
     }
   },
+  "faqTitle": "Frequently asked questions about pharmaceutical GEO",
   "faq": [
     {
       "question": "Can AI recommendations of a medicine be guaranteed?",
