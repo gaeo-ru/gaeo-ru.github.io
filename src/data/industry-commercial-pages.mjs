@@ -1234,8 +1234,8 @@ export const industryCommercialPages = {
           "label": "Сравниваю один и тот же товар, продавца, цену, наличие и условия заказа"
         },
         {
-          "value": "E2",
-          "label": "Подтвержденная диагностика; результаты внедренного продвижения оцениваются отдельно"
+          "value": "Проверено",
+          "label": "Проверены реальные ответы нейросетей. Подтвержденных результатов продвижения пока нет."
         }
       ],
       "findings": [
@@ -1507,7 +1507,7 @@ export const industryCommercialPages = {
     },
     "final": {
       "title": "Узнайте, где нейросети предлагают покупать ваши товары",
-      "text": "Напишите адрес интернет-магазина, приоритетные категории и основные каналы продаж. Я проверю несколько покупательских сценариев и покажу, какие проблемы имеют смысл исследовать в полном GEO-аудите.",
+      "text": "Напишите адрес интернет-магазина, приоритетные категории и основные каналы продаж. Я проверю несколько покупательских сценариев и покажу, какие проблемы имеет смысл исследовать в полном GEO-аудите.",
       "cta": {
         "href": "/#lead",
         "text": "Получить мини-аудит GEO-видимости"
@@ -1583,8 +1583,8 @@ export const industryCommercialPages = {
           "label": "Exact product, merchant, verified price, availability and delivery"
         },
         {
-          "value": "E2",
-          "label": "Baseline diagnostic evidence; implementation outcomes are tracked separately"
+          "value": "Verified",
+          "label": "Findings are based on saved AI answers. There are no confirmed results from subsequent promotion yet."
         }
       ],
       "findings": [
