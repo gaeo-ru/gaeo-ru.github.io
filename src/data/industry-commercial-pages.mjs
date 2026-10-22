@@ -1302,9 +1302,9 @@ export const industryCommercialPages = {
         ]
       ],
       "link": {
-        "href": "https://habr.com/ru/articles/1087822/",
-        "label": "Подробный авторский разбор этой покупательской цепочки"
-      }
+      "href": "/strategies/ecommerce-catalog/",
+      "label": "Как подготовить сценарные страницы и товарные данные"
+    }
     },
     "framework": {
       "eyebrow": "Методика Алексея Яковлева",
@@ -1646,9 +1646,9 @@ export const industryCommercialPages = {
         ]
       ],
       "link": {
-        "href": "https://habr.com/ru/articles/1087822/",
-        "label": "Detailed buyer-journey methodology (Russian)"
-      }
+      "href": "/en/strategies/ecommerce-catalog/",
+      "label": "How to build buyer-intent pages and product catalog data"
+    }
     },
     "framework": {
       "eyebrow": "Alexey Yakovlev's measurement framework",
