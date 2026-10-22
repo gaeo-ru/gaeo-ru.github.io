@@ -643,3 +643,6 @@
  .ecommerce-method .ecommerce-metric-step{flex-direction:row;align-items:center}
  .ecommerce-method .ecommerce-metric-step strong{min-width:55px}
 }
+
+.ecommerce-method .method-faq-item summary{font-family:Manrope,Arial,sans-serif;font-size:17px;font-weight:700;color:#092446;cursor:pointer;line-height:1.4}
+.ecommerce-method .method-faq-item .faq-a p{margin:12px 0 0;color:#425367}
