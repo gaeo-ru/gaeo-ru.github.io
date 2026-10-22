@@ -671,3 +671,26 @@
  .catalog-guide .catalog-checklist li{padding:14px 14px 14px 45px}
  .catalog-guide .catalog-checklist li:before{left:12px}
 }
+
+/* Original 2026 article: operational readiness for agentic commerce */
+.agent-commerce-article .agent-commerce-lead{background:#edf5f8;border-left:4px solid #087e93;padding:20px 24px;border-radius:0 12px 12px 0;margin:25px 0}
+.agent-commerce-article .agent-commerce-lead strong{display:block;font-size:17px;color:#021641;margin-bottom:8px}
+.agent-commerce-article .agent-commerce-lead p{margin:0}
+.agent-commerce-article .agent-commerce-scroll{overflow-x:auto;max-width:100%;margin:25px 0 12px}
+.agent-commerce-article .agent-commerce-table{border-collapse:collapse;width:100%;min-width:680px;border:1px solid #d5dee8}
+.agent-commerce-article .agent-commerce-table th{background:#021641;color:#fff;text-align:left;padding:17px;font-size:14px}
+.agent-commerce-article .agent-commerce-table td{border-bottom:1px solid #dce4eb;padding:17px;font-size:14px;line-height:1.6;vertical-align:top}
+.agent-commerce-article .agent-commerce-table tr:nth-child(even) td{background:#f3f6f8}
+.agent-commerce-article .agent-commerce-caption{font-size:12px;color:#5c6b7b;line-height:1.65}
+.agent-commerce-article .agent-commerce-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0}
+.agent-commerce-article .agent-commerce-steps>div{border:1px solid #dce4ea;border-radius:13px;background:#f6f8f9;padding:18px 17px}
+.agent-commerce-article .agent-commerce-steps b{font-size:15px;color:#021641}
+.agent-commerce-article .agent-commerce-steps p{font-size:13px;line-height:1.55;margin:12px 0 0}
+.agent-commerce-article .agent-commerce-checks{padding-left:25px;margin:15px 0 28px}
+.agent-commerce-article .agent-commerce-checks li{margin:0 0 12px;padding-left:7px;line-height:1.65}
+.agent-commerce-article .agent-commerce-weeks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:25px 0}
+.agent-commerce-article .agent-commerce-weeks>div{background:#f1f5f7;border:1px solid #e0e7ed;border-radius:12px;padding:19px}
+.agent-commerce-article .agent-commerce-weeks b{color:#02667b}
+.agent-commerce-article .agent-commerce-weeks p{margin:11px 0 0;font-size:14px;line-height:1.6}
+.agent-commerce-article .content-media img{max-width:100%;height:auto}
+@media(max-width:700px){.agent-commerce-article .agent-commerce-steps,.agent-commerce-article .agent-commerce-weeks{grid-template-columns:1fr}.agent-commerce-article .agent-commerce-lead{padding:18px}.agent-commerce-article .agent-commerce-table{min-width:650px}}
