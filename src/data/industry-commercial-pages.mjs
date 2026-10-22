@@ -1346,8 +1346,8 @@ export const industryCommercialPages = {
       "caption": "Авторская схема последовательных показателей GEO для интернет-магазинов.",
       "note": "Для точного расчета согласуем список запросов, нейросети, правило подсчета и сравнимые даты. Дополнительно используем данные об обращениях и заказах.",
       "link": {
-        "href": "https://habr.com/ru/articles/1087822/",
-        "label": "Прочитать методику в авторской статье"
+        "href": "/strategies/ecommerce-measurement/",
+        "label": "Методика PRR, SCR, RAR, RRR и PPSR с формулами"
       }
     },
     "services": {
@@ -1685,8 +1685,8 @@ export const industryCommercialPages = {
       "caption": "",
       "note": "The sample, measurement rules, price comparisons and observation dates are agreed before the baseline is calculated. Conversion and order data help interpret the result.",
       "link": {
-        "href": "https://habr.com/ru/articles/1087822/",
-        "label": "Read the published methodology (Russian)"
+        "href": "/en/strategies/ecommerce-measurement/",
+        "label": "Measurement rules for PRR, SCR, RAR, RRR and PPSR"
       }
     },
     "services": {
