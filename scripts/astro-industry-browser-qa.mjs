@@ -10,7 +10,9 @@ const CASES = [
   {route:'/industries/pharma/', lang:'ru'},
   {route:'/en/industries/pharma/', lang:'en'},
   {route:'/industries/ecommerce/', lang:'ru', ecommerce:true},
-  {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true}
+  {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true},
+  {route:'/strategies/ecommerce-measurement/', lang:'ru', methodology:true},
+  {route:'/en/strategies/ecommerce-measurement/', lang:'en', methodology:true}
 ];
 const VIEWPORTS = [
   {width:1440,height:900},
@@ -52,6 +54,45 @@ try {
     const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
     assert.equal(response?.status(),200,'Page did not return HTTP 200');
     assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Wrong document language');
+    if(entry.methodology){
+      assert.equal(await page.locator('h1').count(),1,'Methodology requires exactly one H1');
+      assert.equal(await page.locator('.ecommerce-metric-step').count(),5,'Five measurement stages missing');
+      assert.equal(await page.locator('.ecommerce-method-table').count(),2,'Metric and price experiment tables missing');
+      assert.equal(await page.locator('.method-faq-item').count(),5,'Five metric FAQ entries missing');
+      assert.equal(await page.locator('details.faq-item summary').count(),5,'Visible native FAQs missing');
+      assert.ok(await page.locator('a[href$="/industries/ecommerce/"]').count()>0,'Commercial ecommerce page link missing');
+      const schemaOkay=await page.evaluate(()=>{
+        const parts=[...document.querySelectorAll('script[type="application/ld+json"]')];
+        const graphs=parts.flatMap(x=>{try{const j=JSON.parse(x.textContent);return j['@graph']||[j]}catch{return []}});
+        const f=graphs.find(x=>x['@type']==='FAQPage');
+        const visible=[...document.querySelectorAll('details.faq-item summary')].map(x=>x.textContent.trim());
+        return f?.mainEntity?.length===5 && f.mainEntity.every((q,i)=>q.name===visible[i]);
+      });
+      assert.ok(schemaOkay,'FAQPage structured data differs from visible questions');
+      const imageCount=await page.locator('.ecommerce-method-figure img').count();
+      if(entry.lang==='ru')assert.equal(imageCount,1,'Original author illustration missing');
+      for(const img of await page.locator('main img').all()){
+        await img.scrollIntoViewIfNeeded();
+        const loaded=await img.evaluate(async el=>{
+          if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,4500)});
+          return el.complete && el.naturalWidth>0;
+        });
+        assert.ok(loaded,'Broken methodology image: '+await img.getAttribute('src'));
+      }
+      const pageWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+      assert.ok(pageWidth<=viewport.width+2,'Methodology horizontal overflow '+pageWidth+' at '+viewport.width);
+      await page.locator('.page-cta .button[href$="#lead"]').click();
+      await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+      await page.locator('.gaeo-modal-close').click();
+      assert.equal(await page.locator('[role="dialog"]').count(),0,'Methodology lead dialog remained open');
+      assert.equal(errors.length,0,'JS errors: '+errors.join('; '));
+      await page.evaluate(()=>scrollTo(0,0));
+      const id=entry.route.replace(/^\\/|\\/$/g,'').replaceAll('/','-');
+      await page.screenshot({path:'visual-industry/'+id+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+      checks.push(entry.lang+' '+viewport.width+'px ecommerce methodology/metrics/FAQ/images/lead-dialog/overflow PASS');
+      await page.close();
+      continue;
+    }
     assert.equal(await page.locator('h1').count(),1,'Expected exactly one H1');
     assert.equal(await page.locator('.industry-problem').count(),4,'Problem cards missing');
     assert.equal(await page.locator('.industry-metric').count(),3,'Evidence statistics missing');
