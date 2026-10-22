@@ -107,6 +107,7 @@ const en = page.language === 'en';
     </figure>}
     <p class="industry-framework-note">{page.framework.note}</p>
     <a class="industry-text-link" href={page.framework.link.href} target={page.framework.link.href.startsWith("http") ? "_blank" : undefined} rel={page.framework.link.href.startsWith("http") ? "noopener" : undefined}>{page.framework.link.label} <span aria-hidden="true">↗</span></a>
+    {page.framework.extraLink && <p class="industry-framework-extra"><a href={page.framework.extraLink.href}>{page.framework.extraLink.label} <span aria-hidden="true">↗</span></a></p>}
   </div>
 </section>}
 
