@@ -1,0 +1,76 @@
+name: GAEO Postbox email delivery smoke test
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/gaeo-postbox-smoke.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  email-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Validate Yandex Cloud function and send one labelled QA email
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timedelta, timezone
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+
+          endpoint = "https://functions.yandexcloud.net/d4e4pnqbpn3vgojr383g"
+          origin = "https://gaeo.ru"
+
+          def execute(request):
+              try:
+                  with urlopen(request, timeout=20) as response:
+                      return response.status, dict(response.headers), response.read().decode("utf-8")
+              except HTTPError as exc:
+                  print("Cloud function HTTP error:", exc.code)
+                  raise
+              except URLError as exc:
+                  print("Cloud function network error:", type(exc.reason).__name__)
+                  raise
+
+          status, headers, _ = execute(Request(
+              endpoint,
+              method="OPTIONS",
+              headers={"Origin": origin,
+                       "Access-Control-Request-Method": "POST",
+                       "Access-Control-Request-Headers": "Content-Type"},
+          ))
+          print("Preflight status:", status)
+          assert status == 204, "Cloud function CORS preflight failed"
+          assert headers.get("Access-Control-Allow-Origin") == origin, "Origin not allowed"
+
+          now = datetime.now(timezone.utc)
+          iso = lambda x: x.isoformat().replace("+00:00", "Z")
+          payload = {
+              "site": "gaeo",
+              "lang": "ru",
+              "full_name": "AUTOTEST GAEO EMAIL 2026-10-22",
+              "phone": "",
+              "phone_country": "",
+              "email": "ya@gaeo.ru",
+              "preferred_contact": "email",
+              "contact_method": "email",
+              "comment": "Техническая проверка возврата доставки заявок в email 22.10.2026. Не клиентская заявка.",
+              "company_website": "",
+              "entity_id": "email-switch-qa-20261022",
+              "canonical_url": "https://gaeo.ru/",
+              "page_url": "https://gaeo.ru/",
+              "referrer": "",
+              "utm": {},
+              "form_started_at": iso(now - timedelta(seconds=30)),
+              "submitted_at": iso(now)
+          }
+          request = Request(endpoint, method="POST", data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+                            headers={"Origin": origin, "Content-Type": "application/json"})
+          status, _, body = execute(request)
+          print("Submission status:", status)
+          result = json.loads(body)
+          assert status == 200 and result.get("ok") is True, "Cloud Postbox delivery failed"
+          print("EMAIL_SMOKE_PASS: accepted by Yandex Cloud Function and Postbox; check recipient inbox for QA-labelled mail.")
+          PY
