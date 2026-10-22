@@ -602,3 +602,47 @@
 
 .industry-hero--ecommerce .industry-hero__media{display:block;align-self:center}
 .industry-hero--ecommerce .industry-hero__caption{font-size:12px;color:#596b7d;line-height:1.5;margin-top:11px}
+
+/* Ecommerce GEO methodology. Kept scoped to the new strategy article. */
+.ecommerce-method .ecommerce-metric-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:28px 0 16px}
+.ecommerce-method .ecommerce-metric-step{display:flex;min-width:0;flex-direction:column;gap:12px;border:1px solid #d5e2eb;border-radius:11px;background:#edf5f8;padding:18px 14px}
+.ecommerce-method .ecommerce-metric-step strong{font-size:25px;line-height:1.05;color:#046c83}
+.ecommerce-method .ecommerce-metric-step span{font-weight:600;font-size:12px;line-height:1.48;color:#163b55}
+.ecommerce-method .ecommerce-table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;margin:23px 0 16px;border:1px solid #d4e1ea;border-radius:12px}
+.ecommerce-method .ecommerce-method-table{width:100%;min-width:750px;border-collapse:collapse;table-layout:fixed}
+.ecommerce-method .ecommerce-method-table th,.ecommerce-method .ecommerce-method-table td{padding:13px 15px;text-align:left;vertical-align:top;border-bottom:1px solid #e0e9f0;font-size:13px;line-height:1.58}
+.ecommerce-method .ecommerce-method-table thead th{color:#fff;background:#051e40;font-weight:700}
+.ecommerce-method .ecommerce-method-table tbody th{width:100px;background:#edf6f8;color:#075b75;font-weight:800;font-size:15px}
+.ecommerce-method .ecommerce-method-table tbody tr:last-child th,.ecommerce-method .ecommerce-method-table tbody tr:last-child td{border-bottom:0}
+.ecommerce-method .ecommerce-method-table td{color:#253b51;background:#fff}
+.ecommerce-method .method-formula,.ecommerce-method .method-source-notice{padding:18px 21px;border-left:4px solid #04a9c4;border-radius:0 10px 10px 0;background:#edf7f9;margin:22px 0;color:#1b334d}
+.ecommerce-method .method-note{color:#50647b;font-size:14px}
+.ecommerce-method .ecommerce-method-figure{margin:30px 0 22px}
+.ecommerce-method .ecommerce-method-figure img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:12px}
+.ecommerce-method .ecommerce-method-figure figcaption{font-size:12px;color:#617185;margin-top:12px;line-height:1.5}
+.ecommerce-method .ecommerce-method-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:26px 0}
+.ecommerce-method .ecommerce-method-controls section{padding:20px 23px;border:1px solid #d9e3ec;background:#f7fafb;border-radius:12px}
+.ecommerce-method .ecommerce-method-controls h3{font-family:Manrope,Arial,sans-serif;font-size:17px;color:#082345;margin:0 0 11px}
+.ecommerce-method .ecommerce-method-controls p{font-size:14px;color:#425970;line-height:1.6;margin:0}
+.ecommerce-method .method-faq-item{padding:20px 0;border-bottom:1px solid #dce5ec}
+.ecommerce-method .method-faq-item h3{font-family:Manrope,Arial,sans-serif;font-size:17px;line-height:1.4;color:#092446;margin:0 0 9px}
+.ecommerce-method .method-faq-item p{margin:0;color:#425367}
+.ecommerce-method .page-cta{margin-top:46px}
+@media(max-width:860px){
+ .ecommerce-method .ecommerce-metric-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .ecommerce-method .ecommerce-method-controls{grid-template-columns:1fr}
+}
+@media(max-width:500px){
+ .ecommerce-method .ecommerce-metric-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ecommerce-method .ecommerce-metric-step{padding:15px}
+ .ecommerce-method .ecommerce-metric-step strong{font-size:22px}
+ .ecommerce-method .ecommerce-method-controls section{padding:19px}
+}
+@media(max-width:360px){
+ .ecommerce-method .ecommerce-metric-flow{grid-template-columns:1fr}
+ .ecommerce-method .ecommerce-metric-step{flex-direction:row;align-items:center}
+ .ecommerce-method .ecommerce-metric-step strong{min-width:55px}
+}
+
+.ecommerce-method .method-faq-item summary{font-family:Manrope,Arial,sans-serif;font-size:17px;font-weight:700;color:#092446;cursor:pointer;line-height:1.4}
+.ecommerce-method .method-faq-item .faq-a p{margin:12px 0 0;color:#425367}
