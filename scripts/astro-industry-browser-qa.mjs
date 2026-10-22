@@ -210,6 +210,38 @@ try {
     checks.push(item.route+' clean #'+item.hash+' URL + preserved original attribution PASS');
     await page.close();
   }
+  const articleCases=[
+    {route:'/articles/agentnaya-torgovlya-gotovnost-internet-magazina/',lang:'ru'},
+    {route:'/en/articles/agentic-commerce-readiness/',lang:'en'}
+  ];
+  for(const entry of articleCases)for(const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',err=>errors.push(String(err)));
+    const response=await page.goto(BASE+entry.route+'?utm_source=chatgpt.com',{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Agent commerce article HTTP 200');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Wrong article language');
+    assert.equal(await page.locator('h1').count(),1,'Agent commerce requires one H1');
+    assert.equal(await page.locator('.agent-commerce-table tbody tr').count(),3,'YCP ACP UCP comparison incomplete');
+    assert.equal(await page.locator('.agent-commerce-checks li').count(),12,'Twelve readiness checks missing');
+    assert.equal(await page.locator('.faq-item').count(),6,'Six article FAQ items expected');
+    assert.equal(await page.locator('a[href*="developers.openai.com/commerce"]').count()>0,true,'Official commerce sources missing');
+    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+    assert.ok(canonical.endsWith(entry.route),'Article canonical mismatch');
+    await page.locator('.inner-hero__media img').scrollIntoViewIfNeeded();
+    const img=page.locator('.inner-hero__media img');
+    await img.evaluate(async el=>{if(!el.complete)await new Promise(resolve=>{el.addEventListener('load',resolve,{once:true});el.addEventListener('error',resolve,{once:true});setTimeout(resolve,5000)})});
+    assert.equal(await img.evaluate(el=>el.naturalWidth>0),true,'Article hero WebP failed to load');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Article horizontal overflow');
+    await page.locator('.page-cta a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(errors.length,0,'Article page runtime errors: '+errors.join('; '));
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/agent-commerce-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('agent-commerce '+entry.lang+' '+viewport.width+'px HTTP/H1/12-checks/6-FAQ/3-protocols/WebP/CTA/overflow PASS');
+    await page.close();
+  }
   console.log(checks.join('\n'));
   console.log('INDUSTRY_BROWSER_QA=PASS; cases='+checks.length);
 } finally {
