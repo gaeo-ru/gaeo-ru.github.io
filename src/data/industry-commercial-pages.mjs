@@ -1348,7 +1348,8 @@ export const industryCommercialPages = {
       "link": {
         "href": "/strategies/ecommerce-measurement/",
         "label": "Методика PRR, SCR, RAR, RRR и PPSR с формулами"
-      }
+      },
+      "extraLink": {"href": "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/", "label": "12 проверок готовности магазина к покупкам через AI-агентов"}
     },
     "services": {
       "eyebrow": "Как я работаю",
@@ -1687,7 +1688,8 @@ export const industryCommercialPages = {
       "link": {
         "href": "/en/strategies/ecommerce-measurement/",
         "label": "Measurement rules for PRR, SCR, RAR, RRR and PPSR"
-      }
+      },
+      "extraLink": {"href": "/en/articles/agentic-commerce-readiness/", "label": "12 online-store readiness checks for AI-agent shopping"}
     },
     "services": {
       "eyebrow": "How I work",
