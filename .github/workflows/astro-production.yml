@@ -26,6 +26,7 @@ jobs:
           npm install --no-audit --no-fund
           npm run build
           npm run check:parity
+          npm run check:anchors
       - name: Install Chromium for industry landing browser QA
         run: npx playwright install --with-deps chromium
       - name: Check industry landings at desktop and mobile widths
