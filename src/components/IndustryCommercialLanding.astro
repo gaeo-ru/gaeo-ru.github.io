@@ -106,7 +106,7 @@ const en = page.language === 'en';
       <figcaption>{page.framework.caption}</figcaption>
     </figure>}
     <p class="industry-framework-note">{page.framework.note}</p>
-    <a class="industry-text-link" href={page.framework.link.href} target="_blank" rel="noopener">{page.framework.link.label} <span aria-hidden="true">↗</span></a>
+    <a class="industry-text-link" href={page.framework.link.href} target={page.framework.link.href.startsWith("http") ? "_blank" : undefined} rel={page.framework.link.href.startsWith("http") ? "noopener" : undefined}>{page.framework.link.label} <span aria-hidden="true">↗</span></a>
   </div>
 </section>}
 
