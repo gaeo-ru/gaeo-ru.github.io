@@ -183,6 +183,33 @@ try {
     await page.close();
   }
 
+  // Incoming ChatGPT UTM data must not carry into navigational fragments.
+  // Initial attribution remains available in sessionStorage after the navigation.
+  const anchorCases = [
+    {route:'/strategies/ecommerce-catalog/', hash:'catalog-data'},
+    {route:'/en/strategies/ecommerce-catalog/', hash:'catalog-data'},
+    {route:'/industries/ecommerce/', hash:'evidence'},
+    {route:'/en/industries/ecommerce/', hash:'evidence'},
+  ];
+  for(const item of anchorCases){
+    const page=await browser.newPage({viewport:{width:390,height:844}});
+    const inbound=BASE+item.route+'?utm_source=chatgpt.com&utm_medium=smoke';
+    const response=await page.goto(inbound,{waitUntil:'load'});
+    assert.equal(response?.status(),200,'Incoming UTM page failed');
+    const href=item.route+'#'+item.hash;
+    const anchor=page.locator('a[href="'+href+'"]').first();
+    assert.equal(await anchor.count(),1,'Clean internal anchor missing '+href);
+    assert.equal(await page.locator('#'+item.hash).count(),1,'Anchor target missing '+item.hash);
+    await anchor.click();
+    await page.waitForURL(url=>url.pathname===item.route&&url.hash==='#'+item.hash&&!url.searchParams.has('utm_source')&&!url.searchParams.has('utm_medium'),{timeout:10000});
+    const attribution=await page.evaluate(()=>{
+      try{return JSON.parse(sessionStorage.getItem('gaeo_tracking_v1')||'{}')}
+      catch{return {}}
+    });
+    assert.equal(attribution.utm_source,'chatgpt.com','Referral attribution lost for '+item.route);
+    checks.push(item.route+' clean #'+item.hash+' URL + preserved original attribution PASS');
+    await page.close();
+  }
   console.log(checks.join('\n'));
   console.log('INDUSTRY_BROWSER_QA=PASS; cases='+checks.length);
 } finally {

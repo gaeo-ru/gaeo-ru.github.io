@@ -22,7 +22,7 @@ export const industryCommercialPages = {
       "text": "Проверить, рекомендуют ли ваш ЖК"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/geo-prodvizhenie-nedvizhimosti/#evidence",
       "text": "Посмотреть результаты предаудита"
     },
     "problem": {
@@ -314,7 +314,7 @@ export const industryCommercialPages = {
       "text": "Check whether AI recommends your project"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/en/geo-for-real-estate/#evidence",
       "text": "See a real pre-audit"
     },
     "problem": {
@@ -606,7 +606,7 @@ export const industryCommercialPages = {
       "text": "Проверить видимость фармбренда"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/industries/pharma/#evidence",
       "text": "Что выявляет реальный аудит"
     },
     "problem": {
@@ -899,7 +899,7 @@ export const industryCommercialPages = {
       "text": "Audit your pharma brand's AI visibility"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/en/industries/pharma/#evidence",
       "text": "Review anonymized audit findings"
     },
     "problem": {
@@ -1193,7 +1193,7 @@ export const industryCommercialPages = {
       "text": "Проверить рекомендации товаров и магазина"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/industries/ecommerce/#evidence",
       "text": "Посмотреть результаты аудитов"
     },
     "problem": {
@@ -1542,7 +1542,7 @@ export const industryCommercialPages = {
       "text": "Audit product and retailer recommendations"
     },
     "secondaryCta": {
-      "href": "#evidence",
+      "href": "/en/industries/ecommerce/#evidence",
       "text": "Review diagnostic findings"
     },
     "problem": {
