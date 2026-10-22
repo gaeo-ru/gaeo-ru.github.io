@@ -7,7 +7,43 @@ on:
 permissions:
   contents: read
 jobs:
+  check-live-route:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Verify deployed GAEO.ru loads the email endpoint with a versioned script
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re
+          import time
+          from urllib.request import Request, urlopen
+          from urllib.parse import urljoin
+
+          expected = "https://functions.yandexcloud.net/d4e4pnqbpn3vgojr383g"
+          last = "not checked"
+          for attempt in range(8):
+              try:
+                  with urlopen(Request("https://gaeo.ru/", headers={"Cache-Control": "no-cache"}), timeout=20) as response:
+                      html = response.read().decode("utf-8")
+                  match = re.search(r'<script\\b[^>]*\\bsrc=["\\\'](/assets/form-config\\.js\\?v=[a-f0-9]+)["\\\']', html)
+                  assert match, "Production HTML lacks versioned form configuration"
+                  url = urljoin("https://gaeo.ru", match.group(1))
+                  with urlopen(Request(url, headers={"Cache-Control": "no-cache"}), timeout=20) as response:
+                      source = response.read().decode("utf-8")
+                  assert expected in source, "Production form still points to a non-email endpoint"
+                  assert "forms-backup.gaeo.ru" not in source, "Telegram backup is still configured"
+                  print("LIVE_FORM_ROUTE_PASS: publicly deployed GAEO.ru uses Yandex Cloud Postbox.")
+                  break
+              except Exception as exc:
+                  last = type(exc).__name__ + ": " + str(exc)[:200]
+                  print("Attempt", attempt + 1, "pending:", last)
+                  if attempt == 7:
+                      raise
+                  time.sleep(10)
+          PY
   email-smoke:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
