@@ -44,7 +44,9 @@ export function tokenizeLegacyPage(rel){
  if(!file.startsWith(PAGES+sep))throw Error('Invalid legacy path '+rel);
  const src=readFileSync(file,'utf8'),lang=rel.startsWith('en/')?'en':'ru';
  const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->');
- const sharedCta=(!hasIndustrySlot&&/^(?:en\/)?(?:industries|strategies)\//.test(rel))||/(?:^|\/)cases\/methodlab-/.test(rel);
+ // Ecommerce measurement uses the same CTA layout with copy tailored to product and retailer recommendations.
+ const customMeasurementCta=/^(?:en\/)?strategies\/ecommerce-measurement\/index\.html$/.test(rel);
+ const sharedCta=(!customMeasurementCta&&!hasIndustrySlot&&/^(?:en\/)?(?:industries|strategies)\//.test(rel))||/(?:^|\/)cases\/methodlab-/.test(rel);
  const out=[];let cursor=0;
  for(const m of src.matchAll(MARKERS)){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
