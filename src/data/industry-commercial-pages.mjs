@@ -1262,6 +1262,10 @@ export const industryCommercialPages = {
           "href": "https://oborot.ru/blogs/geo-dlya-internet-magazina-kak-poluchat-prodazhi-iz-nejrosetej-esli-na-marketplejse-tot-zhe-tovar-deshevle-i279922.html",
           "label": "Практический разбор для e-commerce на Oborot.ru",
           "external": true
+        },
+        {
+          "href": "/industries/fulfillment/",
+          "label": "Связанное направление: GEO-продвижение фулфилмента для маркетплейсов"
         }
       ]
     },
@@ -1607,6 +1611,10 @@ export const industryCommercialPages = {
           "href": "https://oborot.ru/blogs/geo-dlya-internet-magazina-kak-poluchat-prodazhi-iz-nejrosetej-esli-na-marketplejse-tot-zhe-tovar-deshevle-i279922.html",
           "label": "Practical e-commerce analysis on Oborot (Russian)",
           "external": true
+        },
+        {
+          "href": "/en/industries/fulfillment/",
+          "label": "Related industry: GEO for fulfillment and marketplace logistics"
         }
       ]
     },
