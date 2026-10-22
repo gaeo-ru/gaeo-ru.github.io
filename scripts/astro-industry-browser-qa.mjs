@@ -130,6 +130,59 @@ try {
     checks.push(entry.lang+' '+viewport.width+'px H1/4 problems/3 evidence/6 steps/6 FAQ/3 prices/images/lead-dialog/overflow PASS');
     await page.close();
   }
+
+  // E-commerce catalog methodology: technical guide parity, images, mobile tables and lead form.
+  for (const entry of [
+    {route:'/strategies/ecommerce-catalog/',lang:'ru'},
+    {route:'/en/strategies/ecommerce-catalog/',lang:'en'}
+  ]) for (const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',err=>errors.push(String(err)));
+    const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Catalog guide HTTP status');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Catalog guide language');
+    assert.equal(await page.locator('h1').count(),1,'Catalog guide one H1');
+    assert.ok(await page.locator('.catalog-guide h2').count()>=10,'Guide must have substantive chapters');
+    assert.equal(await page.locator('.catalog-example-grid section').count(),4,'Scenario and rendering comparisons missing');
+    assert.equal(await page.locator('.catalog-code code').count(),1,'Product/Offer example missing');
+    assert.equal(await page.locator('.catalog-checklist li').count(),10,'Ten point acceptance list missing');
+    assert.equal(await page.locator('.faq-item').count(),6,'Catalog guide FAQ count');
+    assert.equal(await page.locator('.catalog-guide .ecommerce-method-figure img').count(),2,'Relevant illustrations missing');
+    const tags=await page.locator('script[type="application/ld+json"]').allTextContents();
+    const ld=tags.map(t=>JSON.parse(t));
+    const faq=ld.flatMap(o=>o['@graph']||[]).find(x=>x['@type']==='FAQPage');
+    const visible=await page.locator('.faq-item summary > span:first-child').allTextContents();
+    assert.ok(faq?.mainEntity?.length===6,'Catalog FAQPage schema count');
+    assert.ok(faq.mainEntity.every((x,i)=>x.name===visible[i].trim()),'FAQPage questions match visible FAQ');
+    assert.ok(await page.locator('a[href*="ecommerce-measurement/"]').count()>=1,'Metrics cross-link missing');
+    assert.ok(await page.locator('a[href*="industries/ecommerce/"]').count()>=1,'Commercial landing cross-link missing');
+    for(const img of await page.locator('main img').all()){
+      await img.scrollIntoViewIfNeeded();
+      await img.evaluate(async el=>{
+        if(!el.complete)await new Promise(done=>{
+          el.addEventListener('load',done,{once:true});
+          el.addEventListener('error',done,{once:true});
+          setTimeout(done,4500);
+        });
+      });
+      assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0),'Catalog broken image');
+    }
+    let width=await page.evaluate(()=>document.documentElement.scrollWidth);
+    assert.ok(width<=viewport.width+2,'Catalog horizontal overflow '+width+'px at '+viewport.width+'px');
+    await page.locator('.catalog-guide .page-cta a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(await page.locator('[role="dialog"]').count(),0,'Catalog lead dialog did not close');
+    width=await page.evaluate(()=>document.documentElement.scrollWidth);
+    assert.ok(width<=viewport.width+2,'Catalog modal caused horizontal overflow');
+    assert.deepEqual(errors,[],'Catalog runtime errors');
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/catalog-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('catalog '+entry.lang+' '+viewport.width+'px SEO/chapters/images/FAQ/code/lead/overflow PASS');
+    await page.close();
+  }
+
   console.log(checks.join('\n'));
   console.log('INDUSTRY_BROWSER_QA=PASS; cases='+checks.length);
 } finally {

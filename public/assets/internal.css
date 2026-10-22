@@ -646,3 +646,28 @@
 
 .ecommerce-method .method-faq-item summary{font-family:Manrope,Arial,sans-serif;font-size:17px;font-weight:700;color:#092446;cursor:pointer;line-height:1.4}
 .ecommerce-method .method-faq-item .faq-a p{margin:12px 0 0;color:#425367}
+
+/* Buyer-intent catalog guide for GEO e-commerce, scoped to its strategy pages. */
+.catalog-guide .catalog-guide-intro{display:flex;align-items:center;flex-wrap:wrap;gap:11px 16px;border:1px solid #d7e6ef;background:#edf7fa;border-radius:12px;padding:17px 19px;margin:0 0 35px}
+.catalog-guide .catalog-guide-intro strong{font-size:13px;color:#092946;margin-right:8px}
+.catalog-guide .catalog-guide-intro a{font-size:13px;font-weight:700;color:#086e83;text-underline-offset:3px}
+.catalog-guide .catalog-example-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:26px 0 20px}
+.catalog-guide .catalog-example-grid section{border:1px solid #d8e4ed;background:#f8fafc;border-radius:12px;padding:22px;min-width:0}
+.catalog-guide .catalog-example-grid h3{font-family:Manrope,Arial,sans-serif;font-size:18px;line-height:1.4;margin:0 0 12px}
+.catalog-guide .catalog-example-grid p{font-size:14px;line-height:1.6;margin:0;color:#354b61}
+.catalog-guide .catalog-code{display:block;max-width:100%;overflow-x:auto;background:#082040;color:#e9f7ff;border-radius:12px;padding:22px 24px;font-size:13px;line-height:1.6;tab-size:2;white-space:pre;word-break:normal;margin:23px 0 24px;overscroll-behavior-x:contain}
+.catalog-guide .catalog-code code{font:inherit;color:inherit}
+.catalog-guide .catalog-checklist{counter-reset:catalogcheck;list-style:none;padding:0;margin:20px 0 30px;display:grid;gap:9px}
+.catalog-guide .catalog-checklist li{counter-increment:catalogcheck;padding:14px 16px 14px 52px;border:1px solid #dee7ee;border-radius:10px;position:relative;background:#f8fafc;font-size:15px;line-height:1.55}
+.catalog-guide .catalog-checklist li:before{content:counter(catalogcheck,decimal-leading-zero);position:absolute;left:17px;top:14px;font-size:13px;font-weight:800;color:#08778c}
+.catalog-guide .catalog-figure img{aspect-ratio:16/9;object-fit:contain}
+.catalog-guide .page-cta{margin:48px 0 15px}
+.catalog-guide-hero .inner-hero__lead{max-width:900px}
+@media(max-width:700px){
+ .catalog-guide .catalog-example-grid{grid-template-columns:1fr;gap:10px}
+ .catalog-guide .catalog-example-grid section{padding:19px}
+ .catalog-guide .catalog-code{font-size:12px;padding:17px 16px}
+ .catalog-guide .catalog-guide-intro{gap:9px 13px;padding:16px}
+ .catalog-guide .catalog-checklist li{padding:14px 14px 14px 45px}
+ .catalog-guide .catalog-checklist li:before{left:12px}
+}
