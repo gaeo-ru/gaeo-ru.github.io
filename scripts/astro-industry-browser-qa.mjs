@@ -87,7 +87,7 @@ try {
       assert.equal(await page.locator('[role="dialog"]').count(),0,'Methodology lead dialog remained open');
       assert.equal(errors.length,0,'JS errors: '+errors.join('; '));
       await page.evaluate(()=>scrollTo(0,0));
-      const id=entry.route.replace(/^\\/|\\/$/g,'').replaceAll('/','-');
+      const id=entry.route.split('/').filter(Boolean).join('-');
       await page.screenshot({path:'visual-industry/'+id+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
       checks.push(entry.lang+' '+viewport.width+'px ecommerce methodology/metrics/FAQ/images/lead-dialog/overflow PASS');
       await page.close();
