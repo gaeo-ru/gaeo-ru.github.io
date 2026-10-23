@@ -11,6 +11,8 @@ const CASES = [
   {route:'/en/industries/pharma/', lang:'en'},
   {route:'/industries/ecommerce/', lang:'ru', ecommerce:true},
   {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true},
+  {route:'/industries/legal/', lang:'ru'},
+  {route:'/en/industries/legal/', lang:'en'},
   {route:'/strategies/ecommerce-measurement/', lang:'ru', methodology:true},
   {route:'/en/strategies/ecommerce-measurement/', lang:'en', methodology:true}
 ];
