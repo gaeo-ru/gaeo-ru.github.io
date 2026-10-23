@@ -153,7 +153,7 @@ try {
       });
       console.error('AFTER_MODAL_OVERFLOW_DEBUG route='+entry.route+' viewport='+viewport.width+
         ' before='+width+' after='+afterWidth+' '+JSON.stringify(diagnostics));
-      const slug=entry.route.replace(/^\\/|\\/$/g,'').replaceAll('/','-');
+      const slug=entry.route.split('/').filter(Boolean).join('-');
       await page.screenshot({path:'visual-industry/overflow-'+slug+'-'+viewport.width+'.png',
         fullPage:true,animations:'disabled'});
     }
