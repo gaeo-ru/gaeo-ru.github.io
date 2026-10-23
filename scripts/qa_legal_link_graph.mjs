@@ -48,8 +48,10 @@ for(const [route,destinations] of Object.entries(cases)){
  for(const [,json] of scripts){try{let j=JSON.parse(json);list.push(...(j['@graph']||[j]));}catch{errors.push('Bad JSON-LD '+route)}}
  const faq=list.find(x=>x['@type']==='FAQPage');
  if(faq?.mainEntity?.length!==6)errors.push('FAQPage does not contain 6 questions '+route);
- for(const l of main.matchAll(/<a\b[^>]*href="(https?:\/\/[^"]+)"/g)){
-   if(!l[1].startsWith(origin) && !l[0].includes('target="_blank"'))errors.push('External link missing new tab '+route+' '+l[1]);
+ for(const tag of main.matchAll(/<a\b[^>]*>/g)){
+   const opening=tag[0],href=opening.match(/\bhref="([^"]+)"/)?.[1];
+   if(href && /^https?:\/\//.test(href) && !href.startsWith(origin) && !/\btarget="_blank"/.test(opening))
+      errors.push('External link missing new tab '+route+' '+href);
  }
 }
 for(const [ru,en] of pairs)for(const route of [ru,en]){
