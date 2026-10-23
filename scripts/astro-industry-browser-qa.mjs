@@ -111,6 +111,12 @@ try {
     assert.equal(await page.locator('.industry-hero__media img').count(),1,'Hero image missing');
     assert.equal(await page.locator('.industry-hero .button[href$="#lead"]').count(),1,'Lead trigger missing');
     const width = await page.evaluate(()=>document.documentElement.scrollWidth);
+    if(width>viewport.width+2){
+      const offenders=await page.evaluate(()=>[...document.body.querySelectorAll('*')]
+        .map(el=>{const r=el.getBoundingClientRect();return {tag:el.tagName,classes:String(el.className||'').slice(0,120),right:Math.round(r.right),left:Math.round(r.left),width:Math.round(r.width),text:(el.textContent||'').trim().slice(0,90)}})
+        .filter(r=>r.right>innerWidth+2 || r.left<-2).sort((a,b)=>b.right-a.right).slice(0,18));
+      console.error('LAYOUT_OVERFLOW_DEBUG '+entry.route+' '+viewport.width+'px '+JSON.stringify(offenders));
+    }
     assert.ok(width<=viewport.width+2,'Horizontal overflow '+width+'px at '+viewport.width+'px');
     // Load all images using actual scrolling before checking image decode and screenshots.
     for(const img of await page.locator('main img').all()){
