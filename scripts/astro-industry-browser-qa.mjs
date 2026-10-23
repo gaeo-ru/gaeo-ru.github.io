@@ -131,8 +131,34 @@ try {
     await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
     await page.locator('.gaeo-modal-close').click();
     assert.equal(await page.locator('[role="dialog"]').count(),0,'Lead dialog did not close');
-    const afterWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
-    assert.ok(afterWidth<=viewport.width+2,'Overflow after opening form');
+    // Scroll restoration and modal teardown can be asynchronous. Report the real cause.
+    let afterWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+    if(afterWidth>viewport.width+2){
+      // First allow the modal's layout cleanup to settle instead of taking a transient frame as a defect.
+      await page.waitForTimeout(200);
+      afterWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+    }
+    if(afterWidth>viewport.width+2){
+      const diagnostics=await page.evaluate(()=>{
+        const objects=[...document.body.querySelectorAll('*')].map(el=>{
+          const r=el.getBoundingClientRect();
+          return {tag:el.tagName,cls:String(el.className||'').slice(0,100),
+            right:Math.round(r.right),left:Math.round(r.left),width:Math.round(r.width),
+            text:(el.textContent||'').trim().slice(0,75)};
+        }).filter(v=>v.right>innerWidth+2||v.left< -2)
+          .sort((a,b)=>b.right-a.right).slice(0,16);
+        return {innerWidth,docWidth:document.documentElement.scrollWidth,
+          bodyWidth:document.body.scrollWidth,bodyStyle:document.body.getAttribute('style'),
+          documentStyle:document.documentElement.getAttribute('style'),overflowing:objects};
+      });
+      console.error('AFTER_MODAL_OVERFLOW_DEBUG route='+entry.route+' viewport='+viewport.width+
+        ' before='+width+' after='+afterWidth+' '+JSON.stringify(diagnostics));
+      const slug=entry.route.replace(/^\\/|\\/$/g,'').replaceAll('/','-');
+      await page.screenshot({path:'visual-industry/overflow-'+slug+'-'+viewport.width+'.png',
+        fullPage:true,animations:'disabled'});
+    }
+    assert.ok(afterWidth<=viewport.width+2,
+      'Overflow after opening form '+entry.route+' '+viewport.width+'px: '+afterWidth);
     assert.equal(errors.length,0,'Runtime errors: '+errors.join('; '));
     await page.evaluate(()=>scrollTo(0,0));
     const slug=entry.route.replace(/^\/|\/$/g,'').replaceAll('/','-');
