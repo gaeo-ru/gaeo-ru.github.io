@@ -21,7 +21,9 @@ const commercialRoutes=new Set([
  'industries/ecommerce/index.html',
  'en/industries/ecommerce/index.html',
  'industries/legal/index.html',
- 'en/industries/legal/index.html'
+ 'en/industries/legal/index.html',
+ 'industries/metal-structures/index.html',
+ 'en/industries/metal-structures/index.html'
 ]);
 
 for(const original of originals){
