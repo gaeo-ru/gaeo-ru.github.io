@@ -29,6 +29,8 @@ jobs:
           npm run check:anchors
       - name: Check e-commerce article, methodology, and conversion links
         run: node scripts/qa_ecommerce_link_graph.mjs
+      - name: Validate legal GEO pages and cross-links
+        run: node scripts/qa_legal_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
         run: npx playwright install --with-deps chromium
       - name: Check industry landings at desktop and mobile widths

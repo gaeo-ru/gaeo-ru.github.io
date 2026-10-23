@@ -11,6 +11,8 @@ const CASES = [
   {route:'/en/industries/pharma/', lang:'en'},
   {route:'/industries/ecommerce/', lang:'ru', ecommerce:true},
   {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true},
+  {route:'/industries/legal/', lang:'ru'},
+  {route:'/en/industries/legal/', lang:'en'},
   {route:'/strategies/ecommerce-measurement/', lang:'ru', methodology:true},
   {route:'/en/strategies/ecommerce-measurement/', lang:'en', methodology:true}
 ];
@@ -208,6 +210,44 @@ try {
     });
     assert.equal(attribution.utm_source,'chatgpt.com','Referral attribution lost for '+item.route);
     checks.push(item.route+' clean #'+item.hash+' URL + preserved original attribution PASS');
+    await page.close();
+  }
+  // Legal GEO guides: bilingual methodological content, sources, FAQs and lead interaction.
+  for(const entry of [
+    {route:'/strategies/legal-recommendations/',lang:'ru'},
+    {route:'/en/strategies/legal-recommendations/',lang:'en'}
+  ])for(const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',e=>errors.push(String(e)));
+    const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Legal guide HTTP');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Legal guide language');
+    assert.equal(await page.locator('h1').count(),1,'Legal guide single H1');
+    assert.ok(await page.locator('.legal-guide h2').count()>=9,'Legal guide substantive sections');
+    assert.equal(await page.locator('.legal-guide .faq-item').count(),6,'Legal guide six FAQs');
+    assert.equal(await page.locator('.legal-guide .industry-scenario-table tbody tr').count(),6,'Legal guide six scenarios');
+    assert.ok(await page.locator('a[href*="minjust.gov.ru"]').count()>0,'Legal guide official register');
+    assert.ok((await page.locator('link[rel="canonical"]').getAttribute('href')).endsWith(entry.route),'Legal canonical');
+    const ld=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(x=>JSON.parse(x)).flatMap(o=>o['@graph']||[]);
+    assert.ok(ld.some(x=>x['@type']==='Article'),'Legal guide article schema');
+    const faq=ld.find(x=>x['@type']==='FAQPage');
+    const visible=(await page.locator('.legal-guide .faq-item summary > span:first-child').allTextContents()).map(x=>x.trim());
+    assert.ok(faq?.mainEntity?.length===6 && faq.mainEntity.every((q,i)=>q.name===visible[i]),'Legal FAQ schema matches visible FAQ');
+    for(const img of await page.locator('.legal-guide img').all()){
+      await img.scrollIntoViewIfNeeded();
+      await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,4500)})});
+      assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0),'Broken legal guide image');
+    }
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Legal guide horizontal overflow');
+    await page.locator('.legal-guide .page-cta a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(await page.locator('[role="dialog"]').count(),0,'Legal guide dialog not closed');
+    assert.deepEqual(errors,[],'Legal guide JS errors');
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/legal-guide-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('legal-guide '+entry.lang+' '+viewport.width+'px SEO/6-scenarios/6-FAQ/Article/sources/lead/overflow PASS');
     await page.close();
   }
   const articleCases=[
