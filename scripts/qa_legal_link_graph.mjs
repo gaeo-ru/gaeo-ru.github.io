@@ -85,6 +85,13 @@ for(const r of ['/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/','/en/ar
   if(!main.includes(ext))errors.push('Missing primary source '+ext+' '+r);
  }
 }
+// Guard against mismatched article image descriptions across social previews.
+for(const r of ['/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/','/en/articles/legal-website-geo-12-checks/']){
+ const h=readFileSync(pathFor(r),'utf8');
+ const og=h.match(/<meta property="og:image:alt" content="([^"]+)"/i)?.[1];
+ const tw=h.match(/<meta name="twitter:image:alt" content="([^"]+)"/i)?.[1];
+ if(!og || !tw || og!==tw)errors.push('Social preview image alt mismatch '+r);
+}
 console.log('LEGAL_CLUSTER_PAGES='+pages.size);
 console.log('LEGAL_CLUSTER_CONTEXTUAL_LINKS='+edges);
 console.log('LEGAL_CLUSTER_ERRORS='+errors.length);
