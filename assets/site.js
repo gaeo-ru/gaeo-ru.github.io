@@ -1120,7 +1120,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     old.remove();
     document.body.classList.remove('gaeo-modal-open');
     document.removeEventListener('keydown',onModalKeydown);
-    if(lastOpener && typeof lastOpener.focus === 'function') lastOpener.focus();
+    if(lastOpener && typeof lastOpener.focus === 'function') lastOpener.focus({preventScroll:true});
     lastOpener = null;
   }
 
