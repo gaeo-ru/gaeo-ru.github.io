@@ -9,16 +9,21 @@ const cases={
  '/industries/':['/industries/legal/'],
  '/en/industries/':['/en/industries/legal/'],
  '/strategies/':['/strategies/legal-recommendations/'],
+ '/articles/':['/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/'],
+ '/en/articles/':['/en/articles/legal-website-geo-12-checks/'],
  '/en/strategies/':['/en/strategies/legal-recommendations/'],
- '/industries/legal/':['/strategies/legal-recommendations/'],
- '/en/industries/legal/':['/en/strategies/legal-recommendations/'],
- '/strategies/legal-recommendations/':['/industries/legal/','/strategies/measurement/'],
- '/en/strategies/legal-recommendations/':['/en/industries/legal/','/en/strategies/measurement/']
+ '/industries/legal/':['/strategies/legal-recommendations/','/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/'],
+ '/en/industries/legal/':['/en/strategies/legal-recommendations/','/en/articles/legal-website-geo-12-checks/'],
+ '/strategies/legal-recommendations/':['/industries/legal/','/strategies/measurement/','/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/'],
+ '/en/strategies/legal-recommendations/':['/en/industries/legal/','/en/strategies/measurement/','/en/articles/legal-website-geo-12-checks/'],
+ '/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/':['/industries/legal/','/strategies/legal-recommendations/'],
+ '/en/articles/legal-website-geo-12-checks/':['/en/industries/legal/','/en/strategies/legal-recommendations/']
 };
-const pages=new Set(['/industries/legal/','/en/industries/legal/','/strategies/legal-recommendations/','/en/strategies/legal-recommendations/']);
+const pages=new Set(['/industries/legal/','/en/industries/legal/','/strategies/legal-recommendations/','/en/strategies/legal-recommendations/','/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/','/en/articles/legal-website-geo-12-checks/']);
 const pairs=[
  ['/industries/legal/','/en/industries/legal/'],
- ['/strategies/legal-recommendations/','/en/strategies/legal-recommendations/']
+ ['/strategies/legal-recommendations/','/en/strategies/legal-recommendations/'],
+ ['/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/','/en/articles/legal-website-geo-12-checks/']
 ];
 const pathFor=r=>resolve(dist,r.slice(1),'index.html');
 const errors=[];
@@ -68,6 +73,17 @@ for(const r of ['/strategies/legal-recommendations/','/en/strategies/legal-recom
   if(!html.includes(url))errors.push(r+' missing official source '+url);
  }
  if(!html.includes('"@type":"Article"'))errors.push(r+' missing Article structured data');
+}
+for(const r of ['/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/','/en/articles/legal-website-geo-12-checks/']){
+ const html=readFileSync(pathFor(r),'utf8');
+ const main=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1]||'';
+ if((main.match(/class="legal-proof-check"/g)||[]).length!==12)errors.push('Expected 12 distinct checklist items '+r);
+ if((main.match(/<h2\b/g)||[]).length<7)errors.push('Insufficient source-backed sections '+r);
+ if(!html.includes('"@type":"Article"'))errors.push('Missing Article schema '+r);
+ if(!main.includes('class="article-meta"'))errors.push('Missing article author and dates '+r);
+ for(const ext of ['https://www.nalog.gov.ru/donline/','https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/','https://fparf.ru/documents/fpa-rf/the-documents-of-the-council/','https://developers.google.com/search/docs/appearance/ai-features']){
+  if(!main.includes(ext))errors.push('Missing primary source '+ext+' '+r);
+ }
 }
 console.log('LEGAL_CLUSTER_PAGES='+pages.size);
 console.log('LEGAL_CLUSTER_CONTEXTUAL_LINKS='+edges);

@@ -250,6 +250,48 @@ try {
     checks.push('legal-guide '+entry.lang+' '+viewport.width+'px SEO/6-scenarios/6-FAQ/Article/sources/lead/overflow PASS');
     await page.close();
   }
+  // Legal services website GEO checklist: all editorial evidence and responsive components.
+  for(const entry of [
+    {route:'/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/',lang:'ru'},
+    {route:'/en/articles/legal-website-geo-12-checks/',lang:'en'}
+  ])for(const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',e=>errors.push(String(e)));
+    const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Legal checklist HTTP');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Legal checklist language');
+    assert.equal(await page.locator('h1').count(),1,'Legal checklist H1');
+    assert.equal(await page.locator('.legal-proof-check').count(),12,'Legal checklist 12 evidence checks');
+    assert.equal(await page.locator('.legal-proof-summary>div').count(),3,'Legal checklist summary');
+    assert.equal(await page.locator('.legal-proof-table').count(),2,'Legal source and prompt tables');
+    assert.equal(await page.locator('.legal-proof-example').count(),2,'Legal copy examples');
+    assert.equal(await page.locator('.legal-proof-code code').count(),1,'LegalService schema example');
+    assert.equal(await page.locator('.legal-proof-article .faq-item').count(),6,'Legal checklist FAQs');
+    assert.ok(await page.locator('a[href*="fparf.ru"]').count()>0,'Federal bar ethics source');
+    assert.ok(await page.locator('a[href*="developers.google.com/search/docs/appearance/ai-features"]').count()>0,'Official Google source');
+    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+    assert.ok(canonical.endsWith(entry.route),'Legal checklist canonical');
+    const ld=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(v=>JSON.parse(v)).flatMap(v=>v['@graph']||[]);
+    assert.ok(ld.some(o=>o['@type']==='Article'),'Legal checklist Article JSON-LD');
+    const faq=ld.find(o=>o['@type']==='FAQPage');
+    const visible=(await page.locator('.legal-proof-article .faq-item summary > span:first-child').allTextContents()).map(x=>x.trim());
+    assert.ok(faq?.mainEntity?.length===6 && faq.mainEntity.every((q,i)=>q.name===visible[i]),'Legal FAQ schema parity');
+    const hero=page.locator('.legal-proof-article .inner-hero__media img');
+    await hero.scrollIntoViewIfNeeded();
+    await hero.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,5000)})});
+    assert.ok(await hero.evaluate(el=>el.complete&&el.naturalWidth>0),'Legal checklist broken hero image');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Legal checklist overflow');
+    await page.locator('.legal-proof-article .page-cta a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(await page.locator('[role="dialog"]').count(),0,'Legal checklist lead modal did not close');
+    assert.equal(errors.length,0,'Legal checklist JS errors');
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/legal-checklist-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('legal-checklist '+entry.lang+' '+viewport.width+'px 12-checks/6-FAQ/2-tables/Schema.org/CTA/overflow PASS');
+    await page.close();
+  }
   const articleCases=[
     {route:'/articles/agentnaya-torgovlya-gotovnost-internet-magazina/',lang:'ru'},
     {route:'/en/articles/agentic-commerce-readiness/',lang:'en'}

@@ -5,6 +5,8 @@ on:
     paths:
       - 'src/legacy/pages/industries/**'
       - 'src/legacy/pages/strategies/**'
+      - 'src/legacy/pages/articles/**'
+      - 'src/legacy/pages/en/articles/**'
       - 'src/legacy/pages/en/industries/**'
       - 'src/legacy/pages/en/strategies/**'
       - 'src/data/industry-commercial-pages.mjs'
@@ -29,6 +31,7 @@ jobs:
         with:
           node-version: '22'
       - run: npm install --no-audit --no-fund
+      - run: node scripts/qa_editorial_contrasts.mjs
       - run: npm run build
       - run: npm run check:parity
       - run: npm run check:anchors
