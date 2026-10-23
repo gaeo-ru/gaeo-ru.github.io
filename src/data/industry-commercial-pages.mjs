@@ -2539,5 +2539,683 @@ export const industryCommercialPages = {
     },
     "note": "A direct expert relationship and confidential, evidence-led analysis."
   }
+},
+"industries/metal-structures/index.html": {
+  "language": "ru",
+  "eyebrow": "Отрасли / Стальные строительные конструкции / Промышленный B2B",
+  "h1": "GEO-продвижение производителей металлоконструкций в нейросетях",
+  "lead": "Проектировщики, генподрядчики и закупщики спрашивают нейросети, какой завод изготовит металлоконструкции по КМ/КМД, кто работает со складами, производственными зданиями и сложными объектами. Я исследую, кого AI включает в такие подборки и какими фактами объясняет выбор.",
+  "secondLead": "Начинаю с разделения проектирования, деталировки, изготовления и монтажа. Затем проверяю реальные рекомендации, технические страницы и достоверность отраслевых доказательств. Это позволяет подготовить GEO/SEO-план под конкретный этап B2B-закупки.",
+  "heroProof": [
+    "Лично выполнял предварительную GEO-диагностику производителя металлоконструкций",
+    "Сравниваю отраслевые интенты: КМ, КМД, изготовление, отраслевые объекты",
+    "Опираюсь на документы и нормативную базу, не приписывая заводу непроверенные мощности"
+  ],
+  "heroImage": {
+    "src": "/assets/articles/industrial-steel-evidence.svg",
+    "alt": "Техническая схема стальных строительных конструкций: каркас, узлы и проверяемые сведения о подрядчике",
+    "width": 1200,
+    "height": 675,
+    "caption": "Авторская схема GAEO. Она иллюстрирует структуру проверки и не является чертежом конкретного объекта."
+  },
+  "primaryCta": {
+    "href": "/#lead",
+    "text": "Проверить нейровидимость производства"
+  },
+  "secondaryCta": {
+    "href": "/strategies/industrial-supplier-evidence/",
+    "text": "Методика GEO промышленного B2B"
+  },
+  "problem": {
+    "eyebrow": "Проблема на длинном цикле сделки",
+    "title": "Инженерные компетенции есть, но AI предлагает других изготовителей",
+    "intro": "Закупщик или проектировщик описывает требование техническими терминами. Если сайт производителя раскрывает лишь перечень объектов или общие обещания, нейросети трудно установить, какие работы реально выполняет компания, для каких сооружений и с какой документацией.",
+    "items": [
+      {
+        "title": "Поставщик не входит в shortlist",
+        "body": "По запросу «завод металлоконструкций полного цикла» AI перечисляет известные фирмы; локальный производитель с релевантным опытом может отсутствовать."
+      },
+      {
+        "title": "Путаница между КМ и КМД",
+        "body": "На сайте нет ясного указания, какие чертежи предприятие разрабатывает, какие получает от заказчика, когда готовит деталировку и кто согласует изменения."
+      },
+      {
+        "title": "Отраслевой опыт остается в портфолио",
+        "body": "Реальные работы по складам или промышленным зданиям показаны фотографиями, но не связаны со страницами услуг, характеристиками, условиями и техническими ограничениями."
+      },
+      {
+        "title": "Смешиваются изготовление и монтаж",
+        "body": "Нейросеть может приписывать заводу проектирование или монтаж, если этапы, ответственность и география поставки описаны нечетко."
+      }
+    ],
+    "closing": "Цель отраслевого GEO — сделать компетенцию промышленного подрядчика проверяемой по типу конструкции, документации, отрасли и этапу работ."
+  },
+  "study": {
+    "eyebrow": "Анонимизированный опыт GAEO / предварительная диагностика",
+    "title": "Проверка 4 типов производственных запросов выявила пробелы в рекомендациях",
+    "intro": "В октябре 2026 года для производителя стальных металлоконструкций я проверил 4 коммерческих интента в 4 нейросетевых интерфейсах. После ручной проверки варианты написания бренда оказалось возможным подтвердить 1 упоминание из 16 ответов; автоматическая разметка первоначально показывала ноль. Имя заказчика и частные детали здесь не публикую.",
+    "metrics": [
+      {
+        "value": "4 × 4",
+        "label": "Коммерческие сценарии и нейросетевые интерфейсы в исходном срезе"
+      },
+      {
+        "value": "1 из 16",
+        "label": "Ответов с подтвержденным упоминанием после ручной сверки"
+      },
+      {
+        "value": "Диагностика",
+        "label": "Разовый стартовый срез; внедрения и рост не подтверждены"
+      }
+    ],
+    "findingsTitle": "Какие ошибки видны в таком исследовании",
+    "findings": [
+      "Общие запросы на изготовление, КМ/КМД, отраслевые сооружения и склады дают разные списки кандидатов. Их нельзя объединять в одну «универсальную» семантику.",
+      "Ручное прочтение ответов критично: кириллическая транскрипция бренда может отсутствовать в машинном отчете, хотя компания действительно названа.",
+      "Вывод о потребности в отдельных технических кейсах и проверке дублирующихся URL формирует задания для следующего аудита. Он не доказывает, что указанные проблемы уже исправлены или что продвижение принесло результат."
+    ],
+    "note": "Выборка мала; 1/16 — наблюдение об одной компании в одной диагностике. Повторных сопоставимых замеров и подтверждения эффекта SEO/GEO-работ в изученных документах нет.",
+    "links": [
+      {
+        "href": "/strategies/industrial-supplier-evidence/",
+        "label": "Как подготовить доказательства для промышленной рекомендации"
+      },
+      {
+        "href": "https://protect.gost.ru/gost/details/57d18a56-0d60-4071-8f93-053f789060ad",
+        "label": "ГОСТ 21.502-2016: состав и правила КМ-документации",
+        "external": true
+      },
+      {
+        "href": "https://protect.gost.ru/gost/details/a139fae5-836f-498f-9490-22aa98f70e03",
+        "label": "ГОСТ 23118-2019: общие условия для стальных конструкций",
+        "external": true
+      }
+    ]
+  },
+  "scenarios": {
+    "eyebrow": "Как технический заказчик формулирует потребность",
+    "title": "Разные этапы проекта — разные рекомендации подрядчика",
+    "intro": "Нейросеть должна выбирать исполнителя по точной стадии. Для наглядности разбираю типовые промпты без ссылки на конкретный завод: их следует адаптировать под реальные услуги и рынки заказчика.",
+    "columns": [
+      "Формулировка потенциального заказчика",
+      "Что проверять в AI-ответе",
+      "Какие факты нужны поставщику"
+    ],
+    "rows": [
+      [
+        "Кто изготовит металлоконструкции по готовым КМД?",
+        "Не подменяет ли завод изготовителя проектной организацией",
+        "Реальный перечень операций, работа по документации заказчика, приемка и ответственность"
+      ],
+      [
+        "К кому обратиться с чертежами КМ для изготовления и деталировки?",
+        "Различает ли исполнитель компетенции по КМ и КМД",
+        "Описание этапов, согласования изменений и примеры соответствующей документации"
+      ],
+      [
+        "Посоветуй производителей конструкций для складского комплекса",
+        "Есть ли релевантные складские проекты и сроки поставки по запросу",
+        "Типы конструкций, описание аналогичных объектов с разрешенными фактами"
+      ],
+      [
+        "Кто производит металлоконструкции для нефтегазовых объектов?",
+        "Не причисляет ли обычные здания к технологическому оборудованию",
+        "Точный класс изделий, сфера применения норм, подтвержденные объекты и ограничения"
+      ],
+      [
+        "Как выбрать завод для крупного заказа по проектной документации?",
+        "Объясняет ли нейросеть критерии квалификации и комплектности",
+        "Загрузка и мощности в проверяемых пределах, логистика, документы о качестве"
+      ],
+      [
+        "Кому поручить монтаж конструкций в регионе?",
+        "Не приписывает ли монтаж поставщику, который только производит",
+        "Фактическая география, бригады и допуски при применимости, границы услуг"
+      ]
+    ],
+    "link": {
+      "href": "/strategies/industrial-supplier-evidence/",
+      "label": "Перейти к методике выбора и проверки производственного подрядчика"
+    }
+  },
+  "framework": {
+    "eyebrow": "Инженерная структура доверия",
+    "title": "4 составляющих доказательной рекомендации производителя",
+    "intro": "Для промышленного B2B недостаточно назвать марку изделия. AI должен связать задачу покупателя с видом документации, операциями, подтвержденной областью применения и конкретными данными подрядчика.",
+    "metrics": [
+      {
+        "code": "01",
+        "name": "Объект",
+        "description": "Склад, производственный корпус или иная подтвержденная категория сооружений."
+      },
+      {
+        "code": "02",
+        "name": "Этап",
+        "description": "КМ, КМД, изготовление, контроль качества, поставка или монтаж."
+      },
+      {
+        "code": "03",
+        "name": "Подтверждение",
+        "description": "Тип изделия, рабочая документация, заводские возможности и допустимые материалы о проектах."
+      },
+      {
+        "code": "04",
+        "name": "Рекомендация",
+        "description": "Кого назвала нейросеть и насколько ответ соответствует технической задаче."
+      }
+    ],
+    "note": "ГОСТ 21.502-2016 описывает КМ и прямо отделяет его от деталировочных чертежей КМД. ГОСТ 23118-2019 имеет область применения и исключения, поэтому нельзя применять его ко всем металлоизделиям без уточнений.",
+    "link": {
+      "href": "/strategies/industrial-supplier-evidence/",
+      "label": "Подробнее об источниках, КМ/КМД и карте отраслевых интентов"
+    }
+  },
+  "services": {
+    "eyebrow": "Рабочий процесс GAEO",
+    "title": "6 этапов GEO и SEO для производителя металлоконструкций",
+    "intro": "Начинаю с документирования фактов производства. Массовая генерация похожих посадочных страниц не нужна.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Собираю матрицу потребностей",
+        "body": "Разделяю проектирование, КМД, изготовление, поставку, монтаж и ключевые отрасли, включаю типовые B2B-запросы.",
+        "result": "Карта технических интентов и приоритетных направлений."
+      },
+      {
+        "number": "02",
+        "title": "Проверяю исходные AI-рекомендации",
+        "body": "Сохраняю ответы выбранных нейросетей, сравниваю shortlist конкурентов, ссылки и фактические ошибки.",
+        "result": "Стартовые данные с явными правилами подсчета."
+      },
+      {
+        "number": "03",
+        "title": "Сверяю сайт и документацию",
+        "body": "Проверяю реальные страницы услуг, структуру проектов, индексацию, canonical и корректность утверждений о мощностях.",
+        "result": "Приоритетное ТЗ по сайту без непроверенных выводов."
+      },
+      {
+        "number": "04",
+        "title": "Подготавливаю отраслевые доказательства",
+        "body": "Связываю реальные объекты с этапами производства, документами качества и понятными ограничениями раскрытия.",
+        "result": "Редакционные задания и подтвержденные профили компетенций."
+      },
+      {
+        "number": "05",
+        "title": "Усиливаю внешние источники",
+        "body": "Планирую профессиональные публикации и справочную информацию, согласуя технические утверждения с инженерами.",
+        "result": "Публикационный план и перечень независимых проверяемых источников."
+      },
+      {
+        "number": "06",
+        "title": "Повторно сверяю видимость",
+        "body": "Использую ту же матрицу запросов и интерфейсов, отдельно рассматриваю обращения и квалификацию заказов.",
+        "result": "Сопоставимый отчет по рекомендациям и качеству B2B-лидов."
+      }
+    ],
+    "inlineCtaTitle": "Проверим, кого AI советует по вашей категории металлоконструкций",
+    "inlineCtaNote": "Нужны реальные виды работ, целевые отрасли и описание документации."
+  },
+  "deliverables": {
+    "eyebrow": "Результат для производства",
+    "title": "Что входит в технически ориентированный GEO-проект",
+    "note": "Смысл исследования — помочь закупщику найти квалифицированного подрядчика, сохраняя коммерческую и техническую точность.",
+    "items": [
+      "Матрица небрендовых запросов: назначение конструкции, стадия, отрасль, география",
+      "Сохраненные ответы нейросетей с прямыми рекомендациями, конкурентами и источниками",
+      "Аудит URL и карта страниц услуг, объектов, категорий изделий и инженерных компетенций",
+      "ТЗ на технические кейсы, подтверждение документации и сведения о компании",
+      "Повторяемая схема контроля GEO вместе с показателями SEO и квалифицированных B2B-заявок"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Сегменты рынка",
+    "title": "Кому подходит такой подход",
+    "items": [
+      {
+        "title": "Заводы строительных металлоконструкций",
+        "body": "Изготовление по проектной и деталировочной документации, контроль качества и поставка."
+      },
+      {
+        "title": "Проектные и инжиниринговые организации",
+        "body": "Позиционирование стадии КМ/КМД и связь проектной компетенции с объектами."
+      },
+      {
+        "title": "Производители для складских и промышленных зданий",
+        "body": "Подтвержденные объекты, типы несущих конструкций и условия сотрудничества."
+      },
+      {
+        "title": "Подрядчики с монтажной компетенцией",
+        "body": "Точный перечень монтажных работ и реальных регионов присутствия, без приписывания несуществующих услуг."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Стоимость работ",
+    "title": "От диагностики отраслевой видимости к программе GEO/SEO",
+    "intro": "Базовые тарифы GAEO применимы к анализу и подготовке плана. Объем технической проверки, работа с инженерами, чертежами и материалами о производстве рассчитываются индивидуально.",
+    "offers": [
+      {
+        "name": "Полный GEO-аудит",
+        "price": "29 900 ₽",
+        "items": [
+          "Базовая диагностика до 50 промптов и 7 интерфейсов",
+          "Рекомендации, источники и контекст конкурентов",
+          "ТЗ на приоритетные страницы и доказательства"
+        ]
+      },
+      {
+        "name": "GEO-продвижение",
+        "price": "от 49 900 ₽/мес.",
+        "items": [
+          "Стратегия по типам изделий и отраслей",
+          "Контроль задач по сайту и внешним источникам",
+          "Измерения по согласованному набору запросов"
+        ]
+      },
+      {
+        "name": "GEO + контент",
+        "price": "от 79 900 ₽/мес.",
+        "items": [
+          "Технические статьи и материалы после инженерной проверки",
+          "Подготовка внешних экспертных публикаций",
+          "Общий контроль сайта и AI-видимости"
+        ]
+      }
+    ],
+    "note": "Тарифы базовые; технические съемки, проектная документация и специфические согласования вне стандартного объема.",
+    "link": {
+      "href": "/#pricing",
+      "label": "Актуальные тарифы GAEO"
+    }
+  },
+  "faqTitle": "FAQ о GEO-продвижении производителей металлоконструкций",
+  "faq": [
+    {
+      "question": "Чем GEO металлургического и строительного производства отличается от SEO?",
+      "answer": "GEO дополнительно исследует содержимое готовых AI-ответов: кого рекомендуют по конкретной стадии заказа, почему и на какие технические данные опираются. SEO остается базой доступности сайта и поиска."
+    },
+    {
+      "question": "Почему важно различать чертежи КМ и КМД?",
+      "answer": "ГОСТ 21.502-2016 устанавливает правила рабочей документации марки КМ и не регулирует выполнение деталировочных чертежей КМД. Это разные задачи. Сайт должен точно отражать, какие виды документации выполняет или принимает организация."
+    },
+    {
+      "question": "Можно ли продвигаться по запросам нефтегазовых конструкций без реальных объектов?",
+      "answer": "Недопустимо заявлять неподтвержденную специализацию. Стандарт ГОСТ 23118-2019 распространяется на определенные стальные строительные конструкции, но исключает ряд видов технологического оборудования. Классы изделий и выполненные работы нужно проверять отдельно."
+    },
+    {
+      "question": "Можно ли использовать фотографии и чертежи заказчиков?",
+      "answer": "Только в пределах согласованного права раскрытия. Для полезного технического материала часто можно описать тип задачи и этапы работ без коммерческих деталей, личных данных и чужой интеллектуальной собственности."
+    },
+    {
+      "question": "Какие цифры можно назвать в кейсе производства?",
+      "answer": "Только подтвержденные данные об объеме, массе, типе объекта и сроках, с указанием роли исполнителя. Числа из рекламных обещаний и коммерческого предложения не становятся проверенным результатом автоматически."
+    },
+    {
+      "question": "Когда появятся рекомендации нашего завода в ChatGPT?",
+      "answer": "Срок и наличие рекомендаций нельзя гарантировать. Сначала фиксируются исходные ответы и недостающие доказательства, затем согласованные улучшения; эффект оценивается повторной сопоставимой выборкой."
+    }
+  ],
+  "about": {
+    "photo": "/assets/alexey-yakovlev-biography.jpg",
+    "name": "Алексей Яковлев",
+    "role": "Независимый эксперт по GEO/AEO и SEO",
+    "text": "С 2008 года работаю с SEO и интернет-проектами. Для промышленного B2B проводил предварительный GEO-аудит производителя металлоконструкций, включая ручную проверку рекомендаций по КМ/КМД, складам и отраслевым заказам. Инженерные утверждения перед публикацией сверяются с компетентной стороной.",
+    "link": {
+      "href": "/professional-biography/",
+      "label": "Обо мне и опыте"
+    }
+  },
+  "final": {
+    "title": "Проверим, предлагают ли нейросети ваш завод проектировщикам и закупщикам",
+    "text": "Пришлите сайт, основные виды изделий, типы чертежей, целевые отрасли и регионы. Начну с релевантных вопросов выбора подрядчика и сформирую обоснованный следующий шаг.",
+    "cta": {
+      "href": "/#lead",
+      "text": "Обсудить GEO-аудит производства"
+    },
+    "secondary": {
+      "href": "/strategies/industrial-supplier-evidence/",
+      "text": "Изучить промышленную методику"
+    },
+    "note": "Первичная диагностика не означает завершенное продвижение. Работа строится на документации и разрешенных к раскрытию фактах."
+  }
+},
+  "en/industries/metal-structures/index.html": {
+  "language": "en",
+  "eyebrow": "Industries / Steel structures / Industrial B2B",
+  "h1": "GEO optimization for steel structure manufacturers in AI recommendations",
+  "lead": "Engineers, general contractors and procurement teams increasingly ask AI assistants who manufactures steel structures to project drawings, which factories can supply warehouse frames, and which firms support industrial construction. I study the supplier shortlists these AI answers produce and the evidence behind their choices.",
+  "secondLead": "The process starts by separating engineering design, fabrication details, manufacturing, quality control and installation. I then check the actual AI responses, relevant service pages and verified company facts, creating a scope-specific GEO and SEO plan.",
+  "heroProof": [
+    "Personally examined an initial GEO diagnostic for a steel-structure manufacturer",
+    "Distinguish KM and KMD drawings, fabrication, industrial project types and procurement intent",
+    "Base claims on verifiable capabilities rather than invented factory capacity"
+  ],
+  "heroImage": {
+    "src": "/assets/articles/industrial-steel-evidence.svg",
+    "alt": "Industrial steel frame drawing with technical nodes, KM/KMD and evidence verification",
+    "width": 1200,
+    "height": 675,
+    "caption": "GAEO technical illustration, not a drawing of a client project."
+  },
+  "primaryCta": {
+    "href": "/en/#lead",
+    "text": "Check the manufacturer's AI visibility"
+  },
+  "secondaryCta": {
+    "href": "/en/strategies/industrial-supplier-evidence/",
+    "text": "Industrial B2B GEO methodology"
+  },
+  "problem": {
+    "eyebrow": "The long industrial buying journey",
+    "title": "The production capability exists, but AI recommends other suppliers",
+    "intro": "The buyer describes a technical need. When a manufacturer displays only broad marketing statements or a photo gallery, an assistant may not be able to identify the exact services, design inputs, industry experience or contract stages.",
+    "items": [
+      {
+        "title": "The factory is absent from the shortlist",
+        "body": "General requests for a full-cycle steel-frame manufacturer can surface famous brands, while a suitable regional factory remains unmentioned."
+      },
+      {
+        "title": "KM and KMD are confused",
+        "body": "The website does not make clear which documentation the supplier designs, accepts or details, and which changes require project-designer approval."
+      },
+      {
+        "title": "Project evidence lacks context",
+        "body": "Warehouse and industrial-building photographs are not linked to the relevant services, construction type and confirmed role in the project."
+      },
+      {
+        "title": "Fabrication and installation get mixed up",
+        "body": "AI can attribute on-site installation or engineering work to a business that actually supplies fabricated members only."
+      }
+    ],
+    "closing": "The GEO objective is verifiable matching between an industrial buyer's requirements and the manufacturer's real capabilities."
+  },
+  "study": {
+    "eyebrow": "GAEO practice / anonymized initial diagnostic",
+    "title": "Four industrial search intents led to very different supplier recommendations",
+    "intro": "In October 2026 I examined four commercial buyer prompts across four AI interfaces for a steel-structure manufacturer. Manual verification established one genuine company mention among 16 answers; an automatic brand matcher initially missed it because of a name variation. The buyer and specific business data remain confidential.",
+    "metrics": [
+      {
+        "value": "4 × 4",
+        "label": "Commercial procurement intents and AI services in the original sample"
+      },
+      {
+        "value": "1 of 16",
+        "label": "Answers containing a manually confirmed company mention"
+      },
+      {
+        "value": "Baseline",
+        "label": "One preliminary test; completed GEO work and measured growth are not claimed"
+      }
+    ],
+    "findingsTitle": "What this kind of diagnostic establishes",
+    "findings": [
+      "General fabrication, KM/KMD, industry-specific and warehouse queries surface different candidates. The prompt matrix should follow the actual purchasing process.",
+      "Name transliteration and spelling variants require manual review; automated classification is insufficient on its own.",
+      "Potential website duplication and insufficiently described technical projects become hypotheses for subsequent verification, not proof that specific SEO defects have already been confirmed and corrected."
+    ],
+    "note": "A small single-project sample; 1/16 is not an industry benchmark. No comparable repeat measurement or documented uplift is available in the materials reviewed.",
+    "links": [
+      {
+        "href": "/en/strategies/industrial-supplier-evidence/",
+        "label": "How to substantiate a manufacturer's AI recommendations"
+      },
+      {
+        "href": "https://protect.gost.ru/gost/details/57d18a56-0d60-4071-8f93-053f789060ad",
+        "label": "GOST 21.502-2016: KM working drawings",
+        "external": true
+      },
+      {
+        "href": "https://protect.gost.ru/gost/details/a139fae5-836f-498f-9490-22aa98f70e03",
+        "label": "GOST 23118-2019: steel building structures",
+        "external": true
+      }
+    ]
+  },
+  "scenarios": {
+    "eyebrow": "Technical procurement intent",
+    "title": "Different project stages demand different suppliers",
+    "intro": "The test questions must reflect actual capabilities and the target industry. These examples illustrate how manufacturer selection changes across project stages.",
+    "columns": [
+      "Procurement question",
+      "What to verify in an AI answer",
+      "Evidence the supplier should show"
+    ],
+    "rows": [
+      [
+        "Who fabricates steel structures to finished KMD drawings?",
+        "Does AI recommend a fabricator, rather than a design-only bureau?",
+        "Manufacturing scope, acceptance of client drawings and quality-control process"
+      ],
+      [
+        "Who can detail and fabricate a frame from KM drawings?",
+        "Does the answer distinguish KM and KMD responsibilities?",
+        "Document handoff, change approval and specific design/detailing capability"
+      ],
+      [
+        "Suggest steel-frame manufacturers for warehouses",
+        "Are warehouse structures and relevant project references identified?",
+        "Verified structural types and lawful project descriptions"
+      ],
+      [
+        "Which suppliers fabricate steel members for oil and gas sites?",
+        "Does the AI confuse building structures with process equipment?",
+        "Precise product scope, standard applicability and relevant industrial references"
+      ],
+      [
+        "How do I qualify a plant for a large fabricated steel order?",
+        "Does the assistant explain realistic supplier qualification?",
+        "Documented processes, quality records, delivery terms and proven capacity"
+      ],
+      [
+        "Who can erect steel frames in our region?",
+        "Does the candidate truly provide installation?",
+        "Actual regional coverage and documented installation scope"
+      ]
+    ],
+    "link": {
+      "href": "/en/strategies/industrial-supplier-evidence/",
+      "label": "Technical procurement and evidence methodology"
+    }
+  },
+  "framework": {
+    "eyebrow": "Evidence chain",
+    "title": "Four elements behind a credible industrial supplier recommendation",
+    "intro": "The answer should connect the buyer's exact task to the correct documentation stage, verified manufacturing work and a relevant supplier.",
+    "metrics": [
+      {
+        "code": "01",
+        "name": "Project",
+        "description": "Warehouse, industrial building or another substantiated structural application."
+      },
+      {
+        "code": "02",
+        "name": "Stage",
+        "description": "KM, KMD, fabrication, quality control, delivery or erection."
+      },
+      {
+        "code": "03",
+        "name": "Evidence",
+        "description": "Relevant drawing responsibilities, real projects and applicable quality documentation."
+      },
+      {
+        "code": "04",
+        "name": "Answer",
+        "description": "Which supplier AI proposed, the justification and source trail."
+      }
+    ],
+    "note": "GOST 21.502-2016 covers KM working drawings and explicitly excludes KMD detailing. GOST 23118-2019 has a defined scope and excludes several classes of process equipment; not every steel item falls under it.",
+    "link": {
+      "href": "/en/strategies/industrial-supplier-evidence/",
+      "label": "Technical evidence and industrial shortlist methodology"
+    }
+  },
+  "services": {
+    "eyebrow": "GAEO process",
+    "title": "Six stages of GEO and SEO for steel structure manufacturers",
+    "intro": "Evidence gathering comes before large-scale publication of service pages.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Map procurement needs",
+        "body": "Separate engineering design, detail drawings, fabrication, shipping, installation and project applications.",
+        "result": "Technical-intent map and content priorities."
+      },
+      {
+        "number": "02",
+        "title": "Establish AI visibility",
+        "body": "Record responses and supplier recommendations from agreed AI platforms, noting sources and factual errors.",
+        "result": "A traceable baseline and shortlist."
+      },
+      {
+        "number": "03",
+        "title": "Verify the site and documentation",
+        "body": "Examine service pages, project descriptions, crawlability, canonical URLs and capacity claims.",
+        "result": "Prioritized tasks based on confirmed facts."
+      },
+      {
+        "number": "04",
+        "title": "Build project evidence",
+        "body": "Connect allowed industrial references, product types and documentation stages with actual supplier qualifications.",
+        "result": "Verified capabilities and editorial briefs."
+      },
+      {
+        "number": "05",
+        "title": "Develop external sources",
+        "body": "Prepare technical publications and credible third-party references with competent engineering review.",
+        "result": "Evidence-led publication and source roadmap."
+      },
+      {
+        "number": "06",
+        "title": "Measure consistently",
+        "body": "Repeat equivalent prompts while tracking qualified procurement inquiries separately.",
+        "result": "Comparable recommendation and lead-quality reporting."
+      }
+    ],
+    "inlineCtaTitle": "Identify the manufacturers AI suggests for your type of steel structure",
+    "inlineCtaNote": "Start with actual products, scope of work and priority industries."
+  },
+  "deliverables": {
+    "eyebrow": "Project deliverables",
+    "title": "A scope-specific GEO plan for industrial production",
+    "note": "The goal is to help procurement teams find the right qualified supplier without overstating technical capabilities.",
+    "items": [
+      "Nonbranded AI prompt matrix covering project type, documentation stage and location",
+      "Recorded assistant responses, competing manufacturers and cited sources",
+      "Website audit with URL, manufacturing-service and engineering-project mapping",
+      "Briefs for technical case studies and verifiable factory capabilities",
+      "Repeatable measurement framework linked to SEO and qualified procurement leads"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Relevant market segments",
+    "title": "Industrial teams this methodology serves",
+    "items": [
+      {
+        "title": "Steel building structure fabricators",
+        "body": "Manufacturing against real design/detailed drawings, quality checks and logistics."
+      },
+      {
+        "title": "Engineering and detailing companies",
+        "body": "Clear separation of KM/KMD competencies and substantiated project services."
+      },
+      {
+        "title": "Warehouse and industrial-building suppliers",
+        "body": "Credible industrial references and structural-type specialization."
+      },
+      {
+        "title": "Fabrication and installation contractors",
+        "body": "Accurate statement of erection capabilities, geographic coverage and service boundaries."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Scope and pricing",
+    "title": "From initial diagnosis to an industrial GEO/SEO program",
+    "intro": "GAEO's base packages cover AI research and website planning. Engineering reviews, project documentation and specialist production assets require a separate scope.",
+    "offers": [
+      {
+        "name": "Full GEO audit",
+        "price": "RUB 29,900",
+        "items": [
+          "Base sample up to 50 prompts and 7 AI interfaces",
+          "Competitor, source and content review",
+          "Prioritized action plan"
+        ]
+      },
+      {
+        "name": "GEO optimization",
+        "price": "from RUB 49,900/month",
+        "items": [
+          "Industry-specific GEO strategy",
+          "Website and source work briefs",
+          "Comparable scheduled measurements"
+        ]
+      },
+      {
+        "name": "GEO + content",
+        "price": "from RUB 79,900/month",
+        "items": [
+          "Technical content subject to engineering review",
+          "Expert and third-party publications",
+          "Integrated AI-visibility and website improvements"
+        ]
+      }
+    ],
+    "note": "Base pricing only; specialist engineering review, drawings and media production are scoped separately.",
+    "link": {
+      "href": "/en/#pricing",
+      "label": "Current GAEO rates"
+    }
+  },
+  "faqTitle": "FAQ: GEO for steel structure manufacturers",
+  "faq": [
+    {
+      "question": "How is industrial GEO different from ordinary SEO?",
+      "answer": "Beyond crawlability, GEO inspects which real suppliers AI recommends for specific fabrication, drawing or project requirements and checks whether the cited technical evidence supports the choice."
+    },
+    {
+      "question": "Why must KM and KMD be distinguished?",
+      "answer": "GOST 21.502-2016 regulates KM working drawings and explicitly excludes KMD detailed drawings. They are separate stages, and a company's actual responsibility should be stated accurately."
+    },
+    {
+      "question": "Can a factory claim oil and gas expertise based on general building projects?",
+      "answer": "Only verified projects and product scope may be claimed. GOST 23118-2019 covers certain steel building structures and excludes multiple types of process equipment. Standard applicability must be checked for each product."
+    },
+    {
+      "question": "May we publish customer drawings and project images?",
+      "answer": "Only where publication rights and confidentiality permit it. A technical case can be made useful without exposing a client's drawings or nonpublic commercial specifications."
+    },
+    {
+      "question": "Which numerical claims are suitable for a manufacturer case?",
+      "answer": "Confirmed project dimensions, type, quantities, timing and the supplier's actual role, with the appropriate context. Promotional claims do not become verified results merely by appearing in a proposal."
+    },
+    {
+      "question": "Can GAEO guarantee our factory will appear in ChatGPT shortlists?",
+      "answer": "No. Baselines and supporting source gaps can be documented; effects need to be checked by repeat measurements using equivalent prompts and assistants."
+    }
+  ],
+  "about": {
+    "photo": "/assets/alexey-yakovlev-biography.jpg",
+    "name": "Alexey Yakovlev",
+    "role": "Independent GEO/AEO and SEO consultant",
+    "text": "Working in SEO and online business since 2008, I personally carried out a preliminary GEO diagnostic for a steel-structure manufacturer. The study separated drawing and fabrication intent from warehouses and other industrial applications. Technical claims are reviewed with the competent company team.",
+    "link": {
+      "href": "/en/professional-biography/",
+      "label": "Professional biography"
+    }
+  },
+  "final": {
+    "title": "Find out which industrial suppliers AI recommends instead of your factory",
+    "text": "Send the manufacturer's website, actual products, drawing requirements and target project types. I will outline the most relevant questions and a practical next step.",
+    "cta": {
+      "href": "/en/#lead",
+      "text": "Discuss an industrial GEO audit"
+    },
+    "secondary": {
+      "href": "/en/strategies/industrial-supplier-evidence/",
+      "text": "Explore the method"
+    },
+    "note": "An initial diagnostic is not a completed promotion case. All public claims must be backed by verifiable facts."
+  }
 }
 };

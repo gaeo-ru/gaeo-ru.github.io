@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="title desc">
+<title id="title">Техническая схема металлоконструкций и проверки компетенций подрядчика</title>
+<desc id="desc">Техническая иллюстрация индустриального каркаса: фермы, колонны, узлы, чертежные оси и отметки проверки документации.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#051a34"/><stop offset="1" stop-color="#0d4c68"/></linearGradient>
+<pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse"><path d="M45 0H0V45" fill="none" stroke="#447d91" stroke-width=".8" opacity=".28"/></pattern>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4f7fa"/><stop offset=".58" stop-color="#90cbd8"/><stop offset="1" stop-color="#3f899a"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+<circle cx="965" cy="150" r="190" fill="#47c7cd" opacity=".09" filter="url(#blur)"/>
+<g fill="none" stroke="#88c9d6" stroke-width="2.2" opacity=".86">
+<path d="M160 528 L400 432 L700 490 L980 397"/>
+<path d="M160 528 L160 274 L400 168 L400 432 M400 168 L700 228 L700 490 M700 228 L980 139 L980 397"/>
+<path d="M160 274 L455 326 L700 228 L980 139"/>
+<path d="M160 274 L400 168 L700 228 L455 326 Z M455 326 L455 566"/>
+<path d="M160 274 L400 432 M400 168 L160 528 M455 326 L700 490 M700 228 L455 566 M700 228 L980 397 M980 139 L700 490"/>
+</g>
+<g fill="none" stroke="url(#steel)" stroke-width="7" stroke-linejoin="round">
+<path d="M160 528 L160 274 L400 168 L700 228 L980 139 L980 397"/>
+<path d="M400 168 L400 432 M700 228 L700 490 M455 326 L455 566"/>
+<path d="M160 274 L455 326 L700 228 M160 528 L400 432 L700 490 L980 397"/>
+</g>
+<g stroke="#b2f4ee" stroke-width="1.2" fill="none" opacity=".8">
+<path d="M105 585H1035 M105 585v-14 M1035 585v-14 M115 280V585 M115 280h-10 M115 585h-10"/>
+<path d="M350 430v205 M700 490v145 M980 400v235 M160 615h820"/>
+<path d="M160 610v10 M400 610v10 M700 610v10 M980 610v10"/>
+<path d="M160 595v30 M400 595v30 M700 595v30 M980 595v30"/>
+<path stroke-dasharray="8 6" d="M400 115v520 M700 110v525 M980 110v525"/>
+</g>
+<g fill="#f5ffff" font-family="DejaVu Sans,sans-serif" font-size="18" opacity=".95">
+<text x="146" y="646">A</text><text x="388" y="646">B</text><text x="688" y="646">C</text><text x="968" y="646">D</text>
+</g>
+<g fill="#2df0cd" stroke="#f4ffff" stroke-width="2">
+<circle cx="160" cy="274" r="6"/><circle cx="400" cy="168" r="6"/><circle cx="700" cy="228" r="6"/><circle cx="980" cy="139" r="6"/><circle cx="700" cy="490" r="6"/>
+</g>
+<g stroke="#2bd4c0" stroke-width="1.4" fill="#082f46" opacity=".96">
+<rect x="798" y="44" width="324" height="170" rx="17"/><rect x="36" y="43" width="296" height="78" rx="14"/>
+</g>
+<g fill="#fff" font-family="DejaVu Sans,sans-serif">
+<text x="58" y="76" font-size="21" font-weight="bold">B2B • ENGINEERING</text><text x="58" y="104" font-size="14" fill="#83e7df">Industrial steel structures</text>
+<text x="820" y="81" font-size="18" font-weight="bold">TECHNICAL EVIDENCE</text>
+<text x="820" y="114" font-size="17" fill="#96f6ea">KM / KMD documentation</text>
+<text x="820" y="143" font-size="17" fill="#96f6ea">Manufacturing &amp; QA</text>
+<text x="820" y="172" font-size="17" fill="#96f6ea">Scope &amp; references</text>
+</g>
+<g opacity=".85"><path d="M814 196h283" stroke="#83e7df" stroke-width="2" stroke-dasharray="7 6"/></g>
+</svg>

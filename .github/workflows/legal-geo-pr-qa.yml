@@ -1,4 +1,4 @@
-name: Legal GEO cluster PR quality checks
+name: Industry GEO cluster PR quality checks
 on:
   pull_request:
     branches: [astro-source]
@@ -12,6 +12,8 @@ on:
       - 'src/data/industry-commercial-pages.mjs'
       - 'src/components/**'
       - 'scripts/qa_legal_link_graph.mjs'
+      - 'scripts/qa_industrial_link_graph.mjs'
+      - 'public/assets/articles/industrial-steel-evidence.svg'
       - 'scripts/astro-industry-browser-qa.mjs'
       - 'public/assets/internal.css'
       - '.github/workflows/legal-geo-pr-qa.yml'
@@ -37,5 +39,6 @@ jobs:
       - run: npm run check:anchors
       - run: node scripts/qa_ecommerce_link_graph.mjs
       - run: node scripts/qa_legal_link_graph.mjs
+      - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install --with-deps chromium
       - run: npm run check:industry
