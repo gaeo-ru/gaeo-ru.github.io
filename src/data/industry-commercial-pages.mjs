@@ -1944,6 +1944,10 @@ export const industryCommercialPages = {
     "note": "Это исходная диагностика. Работы по продвижению и их результаты здесь не заявлены. Клиентские данные и точная матрица не публикуются.",
     "links": [
       {
+        "href": "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/",
+        "label": "12 проверок сайта юридической компании: адвокатский статус, источники, Schema.org"
+      },
+      {
         "href": "/strategies/legal-recommendations/",
         "label": "Методика измерения рекомендаций юридических компаний"
       },
@@ -2275,6 +2279,10 @@ export const industryCommercialPages = {
     ],
     "note": "This is initial diagnostic work, not proof of completed GEO promotion. No confidential client materials are published.",
     "links": [
+      {
+        "href": "/en/articles/legal-website-geo-12-checks/",
+        "label": "12 checks for a law firm's website, credentials, sources and structured data"
+      },
       {
         "href": "/en/strategies/legal-recommendations/",
         "label": "The methodology for legal AI recommendations"
