@@ -1920,7 +1920,7 @@ export const industryCommercialPages = {
   "study": {
     "eyebrow": "Из практики GAEO / обезличенная диагностика",
     "title": "Почему известность названия фирмы не равна рекомендациям",
-    "intro": "В одном из мини-аудитов юридической компании я сопоставила ответы на запросы с названием фирмы и открытые вопросы о выборе юристов. Есть сохраненные промпты, полные ответы и источники. Клиент не дал разрешения раскрывать имя и детали, поэтому здесь приведены только общие наблюдения из диагностики.",
+    "intro": "В одном из мини-аудитов юридической компании я сопоставил ответы на запросы с названием фирмы и открытые вопросы о выборе юристов. Есть сохраненные промпты, полные ответы и источники. Клиент не дал разрешения раскрывать имя и детали, поэтому здесь приведены только общие наблюдения из диагностики.",
     "metrics": [
       {
         "value": "2 режима",
@@ -2198,6 +2198,338 @@ export const industryCommercialPages = {
       "text": "Изучить методику"
     },
     "note": "Личный контакт со специалистом, проверенные факты и конфиденциальность клиентских материалов."
+  }
+},
+"en/industries/legal/index.html": {
+  "language": "en",
+  "eyebrow": "GEO by industry / Legal services",
+  "h1": "GEO optimization for law firms and lawyers in AI recommendations",
+  "lead": "Clients ask ChatGPT and other AI assistants which lawyer or law firm can help with debt, family law or a business dispute. I research whether a practice is recommended for its actual specialties when clients do not already know its name.",
+  "secondLead": "The work starts with recorded AI responses: who is recommended, what evidence supports each choice and where publicly verifiable information about a legal practice is missing.",
+  "heroProof": [
+    "Personally led GEO audits; SEO and business experience since 2008",
+    "Separate brand familiarity from unprompted recommendations by legal matter",
+    "Examine saved answers, professional credentials and primary sources"
+  ],
+  "heroImage": {
+    "src": "/assets/articles/geo-sources-research.jpg",
+    "alt": "Иллюстрация исследования источников в ответах нейросетей",
+    "width": 1200,
+    "height": 675
+  },
+  "primaryCta": {
+    "href": "/en/#lead",
+    "text": "Check your law firm's AI recommendations"
+  },
+  "secondaryCta": {
+    "href": "/en/strategies/legal-recommendations/",
+    "text": "Read the methodology"
+  },
+  "problem": {
+    "eyebrow": "The challenge for legal practices",
+    "title": "AI knows a firm's name but recommends other lawyers",
+    "intro": "An answer to a branded query shows awareness, not whether the firm appears when someone asks for help with a legal problem. The matter, location, professional status and evidence all affect the answer.",
+    "items": [
+      {
+        "title": "Missing from the shortlist",
+        "body": "People ask for help with bankruptcy involving a mortgage, debt collection or commercial litigation. Other providers appear instead of a relevant firm."
+      },
+      {
+        "title": "Unclear practice evidence",
+        "body": "Broad claims of experience are not connected to specific legal matters, the scope of services or verified practitioner credentials."
+      },
+      {
+        "title": "Confused names and status",
+        "body": "Answers can confuse similarly named people or organizations, or present an ordinary lawyer as an advocate without checking official records."
+      },
+      {
+        "title": "Unclear location and format",
+        "body": "Clients need local or remote services, but current locations, offices or consultation terms may be hard to confirm."
+      }
+    ],
+    "closing": "GEO should enable a substantiated recommendation matching the client's legal needs and verifiable information about the provider."
+  },
+  "study": {
+    "eyebrow": "GAEO practice / anonymized diagnostic",
+    "title": "Why brand recognition does not equal a recommendation",
+    "intro": "In one legal-practice mini-audit, I compared questions naming the firm with unbranded requests to choose counsel. The prompts, full AI answers and cited sources were preserved. The client's identity and identifying details remain confidential.",
+    "metrics": [
+      {
+        "value": "2 modes",
+        "label": "Recognition by name versus independent recommendations"
+      },
+      {
+        "value": "Context",
+        "label": "Legal matter, region, type of service and choice criteria"
+      },
+      {
+        "value": "Baseline",
+        "label": "Original responses checked; subsequent GEO growth is not claimed"
+      }
+    ],
+    "findingsTitle": "What the audit examines",
+    "findings": [
+      "A firm can receive detailed answers when named but rarely appear in open-ended shortlists. These must be measured separately.",
+      "Specialization and location matter. Generic prompts are insufficient to assess a real legal-practice market.",
+      "Mentioning a firm, linking its website and explicitly recommending it are different response types that require manual review."
+    ],
+    "note": "This is initial diagnostic work, not proof of completed GEO promotion. No confidential client materials are published.",
+    "links": [
+      {
+        "href": "/en/strategies/legal-recommendations/",
+        "label": "The methodology for legal AI recommendations"
+      },
+      {
+        "href": "/en/strategies/measurement/",
+        "label": "BMR and Share of Voice measurement"
+      },
+      {
+        "href": "https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/",
+        "label": "Official register of advocates (Russian Ministry of Justice)",
+        "external": true
+      }
+    ]
+  },
+  "scenarios": {
+    "eyebrow": "Client decision questions",
+    "title": "How people select a legal provider in AI answers",
+    "intro": "The prompt matrix follows the practice's real specialties. Personal bankruptcy and corporate litigation require distinct evidence.",
+    "columns": [
+      "Client question",
+      "What I check",
+      "What the firm must establish"
+    ],
+    "rows": [
+      [
+        "Who helps with bankruptcy and a mortgage?",
+        "Does the answer recognize the relevant legal circumstances?",
+        "Practice area, scope of service and accurate limitations"
+      ],
+      [
+        "Recommend counsel for a corporate dispute",
+        "Are relevant lawyers or firms proposed with evidence?",
+        "Verified specialization and appropriate professional materials"
+      ],
+      [
+        "Which firm works in my region?",
+        "Are location and online service facts accurate?",
+        "Consistent offices, service regions and contact details"
+      ],
+      [
+        "How can I verify advocate status?",
+        "Does the answer distinguish lawyers and advocates?",
+        "Official status where claimed"
+      ],
+      [
+        "Which bankruptcy firm offers a clear contract?",
+        "Does the answer check terms, rather than repeating promises?",
+        "Service scope, contractual information and sources"
+      ]
+    ],
+    "link": {
+      "href": "/en/strategies/legal-recommendations/",
+      "label": "Legal-intent research methodology"
+    }
+  },
+  "framework": {
+    "eyebrow": "Evidence chain",
+    "title": "Four elements behind a justified legal recommendation",
+    "intro": "Each element needs verifiable supporting material.",
+    "metrics": [
+      {
+        "code": "01",
+        "name": "Matter",
+        "description": "Legal problem, location and situation."
+      },
+      {
+        "code": "02",
+        "name": "Provider",
+        "description": "Practice, named professionals and actual status."
+      },
+      {
+        "code": "03",
+        "name": "Sources",
+        "description": "Public records and permitted practice evidence."
+      },
+      {
+        "code": "04",
+        "name": "Answer",
+        "description": "Who was recommended, why and with what citations."
+      }
+    ],
+    "note": "The existence of a public case record does not itself justify publishing a client's story or imply the quality of legal representation.",
+    "link": {
+      "href": "/en/strategies/legal-recommendations/",
+      "label": "Complete method and verified sources"
+    }
+  },
+  "services": {
+    "eyebrow": "How I work",
+    "title": "Six stages of law-firm GEO",
+    "intro": "Public statements are checked with the practice before publication.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Establish baseline",
+        "body": "Record unbranded legal questions, locations, AI answers and competitors.",
+        "result": "Prompt set and source list."
+      },
+      {
+        "number": "02",
+        "title": "Identify client criteria",
+        "body": "Distinguish practice areas, status, service scope and constraints.",
+        "result": "Prioritized intents."
+      },
+      {
+        "number": "03",
+        "title": "Check verifiable facts",
+        "body": "Confirm legal-entity information, advocate status where relevant and permitted experience.",
+        "result": "Approved fact sheet."
+      },
+      {
+        "number": "04",
+        "title": "Specify website work",
+        "body": "Prepare service pages, practitioner profiles, FAQs, semantic data and linking.",
+        "result": "Testable technical briefs."
+      },
+      {
+        "number": "05",
+        "title": "Improve third-party sources",
+        "body": "Publish approved expert materials without breaching confidentiality.",
+        "result": "Evidence-led editorial plan."
+      },
+      {
+        "number": "06",
+        "title": "Measure again",
+        "body": "Review comparable answers, unprompted recommendations and factual accuracy.",
+        "result": "Progress report and next priorities."
+      }
+    ],
+    "inlineCtaTitle": "Find out whether AI recommends your legal practice",
+    "inlineCtaNote": "Start with representative unbranded client questions."
+  },
+  "deliverables": {
+    "eyebrow": "Your deliverables",
+    "title": "An auditable process and practical briefs",
+    "note": "I work directly with the owner or decision maker, with legal review of sensitive content.",
+    "items": [
+      "Matrix of client questions and preserved AI responses",
+      "Competing recommendations, source evidence and inaccuracies",
+      "Map of professional expertise and publishable facts",
+      "Website and editorial briefs for individual legal practices",
+      "Comparable follow-up measurements with limitations"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Who this fits",
+    "title": "Legal practices with a clear specialty",
+    "items": [
+      {
+        "title": "Personal bankruptcy firms",
+        "body": "Client needs differ by debts, property, region and service arrangements."
+      },
+      {
+        "title": "Advocates and independent lawyers",
+        "body": "Verified status, relevant matters and personal credentials require care."
+      },
+      {
+        "title": "Business law firms",
+        "body": "Clients compare providers for corporate, tax and litigation matters."
+      },
+      {
+        "title": "Regional legal firms",
+        "body": "Local choices and remote consultations affect recommendations."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Price and first step",
+    "title": "Begin with a diagnosis; choose scope by the practice's needs",
+    "intro": "I first review representative responses, then agree an audit or ongoing work. No fixed AI placement can be guaranteed.",
+    "offers": [
+      {
+        "name": "Full GEO audit",
+        "price": "RUB 29,900",
+        "items": [
+          "Up to 50 prompts and 7 AI interfaces",
+          "Website, competitors and source analysis",
+          "Prioritized report"
+        ]
+      },
+      {
+        "name": "GEO optimization",
+        "price": "from RUB 49,900/month",
+        "items": [
+          "Industry strategy and technical briefs",
+          "Expert sources and publishing checks",
+          "Monthly AI visibility assessment"
+        ]
+      },
+      {
+        "name": "GEO + content",
+        "price": "from RUB 79,900/month",
+        "items": [
+          "Ongoing GEO activities",
+          "Legally reviewed expert content",
+          "Publication management and measurement"
+        ]
+      }
+    ],
+    "note": "Rates are agreed after reviewing the project. Current prices:",
+    "link": {
+      "href": "/en/#pricing",
+      "label": "GAEO pricing"
+    }
+  },
+  "faqTitle": "Frequently asked questions about legal GEO",
+  "faq": [
+    {
+      "question": "How does GEO for law firms differ from SEO?",
+      "answer": "SEO improves search discoverability; GEO also inspects actual AI answers, whether a firm is recommended for relevant matters and which sources support that suggestion."
+    },
+    {
+      "question": "Can an AI recommendation be guaranteed?",
+      "answer": "No. Models and sources change. I establish a baseline, deliver the agreed work and measure comparable outcomes rather than promise a particular position."
+    },
+    {
+      "question": "Is an advocate the same as a lawyer?",
+      "answer": "The professional status of an advocate is regulated and can be checked in a government register. A general legal professional must not be called an advocate without valid grounds."
+    },
+    {
+      "question": "Can court cases and client histories be used in content?",
+      "answer": "Only where permitted after confidentiality, personal-data and legal checks. A public court record alone is not blanket permission to publish a client story."
+    },
+    {
+      "question": "What bankruptcy-related prompts are tested?",
+      "answer": "Questions involving debts, property, region, service scope and provider comparison. Branded queries are measured separately."
+    },
+    {
+      "question": "When can GEO results be evaluated?",
+      "answer": "Results require repeated measurements using comparable prompts and AI interfaces. More brand mentions alone do not prove more sales or cases."
+    }
+  ],
+  "about": {
+    "photo": "/assets/alexey-yakovlev-biography.jpg",
+    "name": "Alexey Yakovlev",
+    "role": "Independent GEO/AEO and SEO consultant",
+    "text": "I have worked in SEO, online marketing and entrepreneurship since 2008. I personally inspect AI responses, plan content and technical improvements and check implemented changes. For legal practices, evidence and professional statements receive special scrutiny.",
+    "link": {
+      "href": "/en/professional-biography/",
+      "label": "Professional biography"
+    }
+  },
+  "final": {
+    "title": "See which law firms AI recommends instead of yours",
+    "text": "Send your firm's website, practice areas and target regions. I will examine representative client questions and suggest the next step.",
+    "cta": {
+      "href": "/en/#lead",
+      "text": "Request a GEO mini-audit"
+    },
+    "secondary": {
+      "href": "/en/strategies/legal-recommendations/",
+      "text": "Read the methodology"
+    },
+    "note": "A direct expert relationship and confidential, evidence-led analysis."
   }
 }
 };
