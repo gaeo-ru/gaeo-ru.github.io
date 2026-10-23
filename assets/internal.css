@@ -694,3 +694,16 @@
 .agent-commerce-article .agent-commerce-weeks p{margin:11px 0 0;font-size:14px;line-height:1.6}
 .agent-commerce-article .content-media img{max-width:100%;height:auto}
 @media(max-width:700px){.agent-commerce-article .agent-commerce-steps,.agent-commerce-article .agent-commerce-weeks{grid-template-columns:1fr}.agent-commerce-article .agent-commerce-lead{padding:18px}.agent-commerce-article .agent-commerce-table{min-width:650px}}
+
+
+/* Legal GEO strategy guides: scoped editorial blocks with mobile-safe diagrams and tables. */
+.legal-guide .article-wrap blockquote{margin:0 0 24px;padding:20px 24px;border-left:4px solid #117d8b;background:#edf8fa;border-radius:0 12px 12px 0;color:#143850}
+.legal-guide .article-wrap blockquote p{margin:0;font-size:17px;line-height:1.65;font-weight:650}
+.legal-guide .article-wrap>p{line-height:1.72}
+.legal-guide .article-wrap>h2{margin-top:38px;scroll-margin-top:95px}
+.legal-guide .industry-table-scroll{margin:24px 0 26px;max-width:100%;overflow-x:auto}
+.legal-guide .industry-scenario-table{width:100%;min-width:620px}
+.legal-guide .ecommerce-method-figure{margin:28px 0 32px;max-width:100%}
+.legal-guide .ecommerce-method-figure img{display:block;max-width:100%;height:auto;border-radius:12px}
+.legal-guide .ecommerce-method-figure figcaption{font-size:13px;line-height:1.5;color:#506579;margin-top:9px}
+@media(max-width:700px){.legal-guide .article-wrap blockquote{padding:16px 18px}.legal-guide .article-wrap blockquote p{font-size:15px}.legal-guide .article-wrap>h2{margin-top:30px}}
