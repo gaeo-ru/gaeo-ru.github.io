@@ -13,6 +13,8 @@ const CASES = [
   {route:'/en/industries/ecommerce/', lang:'en', ecommerce:true},
   {route:'/industries/legal/', lang:'ru'},
   {route:'/en/industries/legal/', lang:'en'},
+  {route:'/industries/metal-structures/', lang:'ru'},
+  {route:'/en/industries/metal-structures/', lang:'en'},
   {route:'/strategies/ecommerce-measurement/', lang:'ru', methodology:true},
   {route:'/en/strategies/ecommerce-measurement/', lang:'en', methodology:true}
 ];
@@ -210,6 +212,45 @@ try {
     });
     assert.equal(attribution.utm_source,'chatgpt.com','Referral attribution lost for '+item.route);
     checks.push(item.route+' clean #'+item.hash+' URL + preserved original attribution PASS');
+    await page.close();
+  }
+  // Industrial supplier methodology: KM/KMD engineering sources and technical procurement tables.
+  for(const entry of [
+    {route:'/strategies/industrial-supplier-evidence/',lang:'ru'},
+    {route:'/en/strategies/industrial-supplier-evidence/',lang:'en'}
+  ])for(const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',e=>errors.push(String(e)));
+    const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Industrial GEO methodology HTTP');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Industrial GEO methodology language');
+    assert.equal(await page.locator('h1').count(),1,'Industrial methodology H1');
+    assert.ok(await page.locator('.industrial-b2b-guide h2').count()>=9,'Industrial methodology chapters');
+    assert.equal(await page.locator('.industrial-b2b-guide .industry-scenario-table tbody tr').count(),6,'Industrial six procurement intents');
+    assert.equal(await page.locator('.industrial-b2b-guide .faq-item').count(),6,'Industrial FAQ');
+    assert.ok(await page.locator('.industrial-b2b-guide a[href*="protect.gost.ru"]').count()>=3,'Rostandard citations');
+    assert.ok(await page.locator('.industrial-b2b-guide a[href*="industries/metal-structures"]').count()>0,'Industrial commercial crosslink');
+    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+    assert.ok(canonical?.endsWith(entry.route),'Industrial methodology canonical');
+    const ld=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(x=>JSON.parse(x)).flatMap(x=>x['@graph']||[]);
+    assert.ok(ld.some(x=>x['@type']==='Article'),'Industrial methodology Article schema');
+    const faq=ld.find(x=>x['@type']==='FAQPage');
+    const questions=(await page.locator('.industrial-b2b-guide .faq-item summary > span:first-child').allTextContents()).map(x=>x.trim());
+    assert.ok(faq?.mainEntity?.length===6 && faq.mainEntity.every((x,i)=>x.name===questions[i]),'Industrial FAQ schema parity');
+    const img=page.locator('.industrial-b2b-guide .ecommerce-method-figure img');
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,5000)})});
+    assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth===1200),'Industrial technical diagram not decoded');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Industrial methodology overflow');
+    await page.locator('.industrial-b2b-guide .page-cta a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(await page.locator('[role="dialog"]').count(),0,'Industrial lead dialog remained open');
+    assert.deepEqual(errors,[],'Industrial JavaScript errors');
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/industrial-method-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('industrial-method '+entry.lang+' '+viewport.width+'px 6-intents/3-GOST-sources/6-FAQ/diagram/CTA/overflow PASS');
     await page.close();
   }
   // Legal GEO guides: bilingual methodological content, sources, FAQs and lead interaction.
