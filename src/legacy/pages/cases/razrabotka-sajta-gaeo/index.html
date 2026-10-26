@@ -1,0 +1,126 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Разработка GAEO.ru: переезд с Tilda на Astro, SEO и GEO | Кейс</title>
+<meta name="description" content="Как GAEO.ru переехал с Tilda на Astro и GitHub Pages: RU/EN-страницы, отраслевые материалы, Schema.org, техническая приемка и проверяемые релизы.">
+
+<!-- SOCIAL_AND_ICONS_START -->
+<meta property="og:type" content="article"><meta property="og:site_name" content="GAEO.ru"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Разработка GAEO.ru: переезд с Tilda на Astro, SEO и GEO | Кейс"><meta property="og:description" content="Как GAEO.ru переехал с Tilda на Astro и GitHub Pages: RU/EN-страницы, отраслевые материалы, Schema.org, техническая приемка и проверяемые релизы."><meta property="og:url" content="https://gaeo.ru/cases/razrabotka-sajta-gaeo/">
+<meta property="og:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg"><meta property="og:image:alt" content="Собственный кейс GAEO.ru: рост видимости Алексея Яковлева в ответах нейросетей с 22% до 48% за месяц">
+<meta property="article:published_time" content="2026-10-26">
+<meta property="article:modified_time" content="2026-10-26">
+<meta name="theme-color" content="#021641"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+<!-- SOCIAL_AND_ICONS_END -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://gaeo.ru/#website","name":"GAEO.ru","url":"https://gaeo.ru/"},{"@type":"ProfessionalService","@id":"https://gaeo.ru/#business","name":"GAEO.ru","url":"https://gaeo.ru/","founder":{"@id":"https://gaeo.ru/#person"}},{"@type":"Person","@id":"https://gaeo.ru/#person","name":"Алексей Яковлев","url":"https://gaeo.ru/professional-biography/"},{"@type":"WebPage","@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#webpage","url":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/","name":"Разработка GAEO.ru: переезд с Tilda на Astro и создание отраслевого GEO-хаба","inLanguage":"ru","description":"Как GAEO.ru переехал с Tilda на Astro и GitHub Pages: RU/EN-страницы, отраслевые материалы, Schema.org, техническая приемка и проверяемые релизы.","mainEntity":{"@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#article"},"breadcrumb":{"@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#breadcrumb"}},{"@type":"Article","@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#article","headline":"Разработка GAEO.ru: переезд с Tilda на Astro и создание отраслевого GEO-хаба","description":"Как GAEO.ru переехал с Tilda на Astro и GitHub Pages: RU/EN-страницы, отраслевые материалы, Schema.org, техническая приемка и проверяемые релизы.","inLanguage":"ru","datePublished":"2026-10-26","dateModified":"2026-10-26","author":{"@id":"https://gaeo.ru/#person"},"publisher":{"@id":"https://gaeo.ru/#business"},"mainEntityOfPage":{"@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#webpage"},"citation":["https://gaeo.ru/","https://github.com/gaeo-ru/gaeo-ru.github.io/tree/astro-source","https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/40283546930"]},{"@type":"BreadcrumbList","@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://gaeo.ru/"},{"@type":"ListItem","position":2,"name":"Кейсы","item":"https://gaeo.ru/cases/"},{"@type":"ListItem","position":3,"name":"Разработка GAEO.ru: переезд с Tilda на Astro и создание отраслевого GEO-хаба","item":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/"}]},{"@type":"FAQPage","@id":"https://gaeo.ru/cases/razrabotka-sajta-gaeo/#faq","mainEntity":[{"@type":"Question","name":"Почему выбрали Astro?","acceptedAnswer":{"@type":"Answer","text":"Для статического экспертного сайта с десятками связанных материалов нужны общие шаблоны и воспроизводимые проверки перед публикацией."}},{"@type":"Question","name":"Можно ли проверить результат?","acceptedAnswer":{"@type":"Answer","text":"Да. Доступны публичный сайт, ветка astro-source, манифест production-сборки и журналы GitHub Actions."}},{"@type":"Question","name":"Доказан ли рост продаж именно после миграции?","acceptedAnswer":{"@type":"Answer","text":"Нет. Технический релиз и бизнес-результаты оцениваются отдельно."}}]}]}</script>
+<link rel="canonical" href="https://gaeo.ru/cases/razrabotka-sajta-gaeo/">
+<link rel="alternate" hreflang="ru" href="https://gaeo.ru/cases/razrabotka-sajta-gaeo/">
+<link rel="alternate" hreflang="en" href="https://gaeo.ru/en/cases/gaeo-ru/">
+<link rel="alternate" hreflang="x-default" href="https://gaeo.ru/cases/razrabotka-sajta-gaeo/">
+<!-- FONT_LOADING_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic"></noscript>
+<!-- FONT_LOADING_END -->
+<link rel="stylesheet" href="/assets/style.css?v=8e28c0044e4e"><link rel="stylesheet" href="/assets/internal.css?v=3272aae178d7">
+<style data-fix="page-shell-gap">.page-shell{padding-top:0!important}</style>
+
+
+<script src="/assets/analytics.js?v=2a1e1d12d83c" defer></script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Разработка GAEO.ru: переезд с Tilda на Astro, SEO и GEO | Кейс">
+<meta name="twitter:description" content="Как GAEO.ru переехал с Tilda на Astro и GitHub Pages: RU/EN-страницы, отраслевые материалы, Schema.org, техническая приемка и проверяемые релизы.">
+<meta name="twitter:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg">
+<meta name="twitter:image:alt" content="Собственный кейс GAEO.ru: рост видимости Алексея Яковлева в ответах нейросетей с 22% до 48% за месяц">
+<!-- NOJS_FALLBACK_START -->
+<noscript>
+<style>
+@media(max-width:720px){
+  header{height:auto!important;position:relative!important}
+  header .nav{height:72px!important}
+  header .desktop-menu{display:none!important}
+  header .menu-toggle{display:none!important}
+  header .mobile-menu{display:block!important;position:static!important;box-shadow:none!important}
+  .mobile-fold-toggle{display:none!important}
+  .mobile-fold-section .content-head>.text-link{display:inline-block!important}
+  .mobile-fold-section .cards.mobile-fold-body{display:grid!important}
+  .mobile-fold-section .publications.mobile-fold-body{display:block!important}
+  .mobile-fold-all-link{display:inline-block!important;margin-top:24px}
+}
+</style>
+</noscript>
+<!-- NOJS_FALLBACK_END -->
+</head><body>
+<!-- SITE_HEADER_START -->
+<header>
+ <div class="container">
+  <div class="nav" id="mainNav">
+   <div class="brand-wrap">
+    <a class="logo" href="/"><img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="eager"></a>
+    <a class="logo-tagline" href="/">Generative &amp; Answer<br>Engine Optimization</a>
+   </div>
+
+   <nav class="desktop-menu" id="desktopMenu" aria-label="Основная навигация">
+    <a href="/professional-biography/">Обо мне</a>
+    <a href="/#process">Как работаю</a>
+    <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+    <a href="/articles/">Статьи</a>
+    <a href="/publications/">Публикации</a>
+    <a href="/#pricing">Тарифы</a>
+    <span class="langs" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/gaeo-ru/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/gaeo-ru/">EN</a></span>
+   </nav>
+
+   <div class="header-actions">
+    <a class="button header-cta" href="/#lead">Мини-аудит</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+   </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="/professional-biography/">Обо мне</a>
+   <a href="/#process">Как работаю</a>
+   <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+   <a href="/articles/">Статьи</a>
+   <a href="/publications/">Публикации</a>
+   <a href="/#pricing">Тарифы</a>
+   <div class="mobile-langs" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/gaeo-ru/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/gaeo-ru/">EN</a></div>
+  </div>
+ </div>
+</header>
+<!-- SITE_HEADER_END -->
+<main class="page-shell dev-case">
+<!-- VISIBLE_BREADCRUMBS_START --><nav class="breadcrumbs" aria-label="Хлебные крошки"><div class="container breadcrumbs__inner"><a href="/">Главная</a><span class="breadcrumbs__sep">›</span><a href="/cases/">Кейсы</a><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current" aria-current="page">Кейс разработки собственного сайта</span></div></nav><!-- VISIBLE_BREADCRUMBS_END -->
+<section class="listing-hero"><div class="container"><div class="inner-eyebrow">Кейс разработки собственного сайта</div><h1>Разработка GAEO.ru: переезд с Tilda на Astro и создание отраслевого GEO-хаба</h1><div class="article-meta"><span>Алексей Яковлев</span><span>Опубликовано: 26 октября 2026</span></div></div></section>
+<section class="inner-content"><div class="article-wrap"><blockquote><p>GAEO.ru перенесен с Tilda на Astro и GitHub Pages: RU/EN, отраслевые страницы, единые шаблоны и автоматическая приемка.</p></blockquote><p>В собственном проекте GAEO.ru я решала не задачу смены дизайна, а задачу масштабирования экспертного сайта: сохранить накопленные URL и материалы, развивать отраслевые страницы, а каждую публикацию проверять до выхода в production.</p>
+<section class="dev-case__chapter"><h2>Задача: от персонального сайта к отраслевому хабу</h2><p>Исходный сайт работал на Tilda. По мере появления отраслевых посадочных, методик и кейсов ручное сопровождение страниц становилось все менее рациональным: требовались единые компоненты, управляемые языковые версии и проверка ссылок.</p><p>В новой структуре <a href="/industries/">коммерческие отраслевые страницы</a> связываются с <a href="/strategies/">методиками</a>, статьями, кейсами и <a href="/professional-biography/">биографией Алексея Яковлева</a>. Каждая группа должна подтверждать конкретную компетенцию, без вымышленных клиентов или результатов.</p></section>
+<section class="dev-case__chapter"><h2>Astro, GitHub Pages и исходники</h2><p>Сайт генерируется Astro и публикуется как статический HTML на GitHub Pages. Каноническая ветка <code>astro-source</code> хранит исходники и компоненты, <code>main</code> - опубликованную сборку. Общие шапка, подвал и CTA формируются централизованно. Часть старых HTML-страниц сохранена в гибридной архитектуре и постепенно переводится на общие шаблоны.</p><p>Основной контент доступен без клиентского JavaScript. Форма заявки обслуживается отдельно через Yandex Cloud Functions и Postbox.</p></section>
+<section class="dev-case__chapter"><h2>Как устроены SEO и GEO</h2><p>Для каждой новой индексируемой страницы проверяются Title, description, один H1, canonical, взаимные hreflang существующих языковых версий, Schema.org и внутренняя перелинковка. Отраслевые страницы используют реальные коммерческие интенты и самостоятельную фактуру. В качестве примеров доступны <a href="/industries/ecommerce/">e-commerce</a> и <a href="/industries/metal-structures/">промышленный B2B</a>.</p><p>Идентификаторы эксперта и проекта помогают связывать GAEO с конкретными методиками. Одной микроразметки для рекомендаций нейросетей недостаточно: необходимы проверяемые утверждения и внешние источники.</p></section>
+<section class="dev-case__chapter"><h2>Как проверяется выпуск</h2><p>Изменения проходят через PR, сборку Astro, проверки структуры, метаданных и ссылок, затем браузерные тесты на ширинах 1440, 390 и 320 px. В тестах проверяются изображения, работа формы заявки и отсутствие переполнения экрана. После успешных проверок исходники объединяются с <code>astro-source</code>, а отдельный workflow публикует их в <code>main</code>.</p><p>По <a href="https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/40283546930" target="_blank" rel="noopener">журналу production-релиза от 26 октября 2026 года</a> успешно прошли 70 браузерных сценариев. QA обработал 67 HTML-файлов, sitemap содержал 62 индексируемых URL. Эти цифры относятся к данному релизу и не подтверждают индексацию поисковиками.</p></section>
+<section class="dev-case__chapter"><h2>Моя роль, результат и ограничения</h2><p>Я задаю позиционирование, структуру разделов, редакционные правила и критерии приемки, применяя также автоматизацию и агентские инструменты разработки. Приписывать себе ручное написание каждого файла было бы неверно. Подтвержден технический результат: опубликованный сайт, связанная архитектура и воспроизводимая процедура релиза.</p><p>Рост нейровидимости GAEO с 22% до 48% описан в <a href="/cases/gaeo-ru/">отдельном кейсе продвижения</a> за другой период. Его нельзя выдавать за эффект миграции с Tilda на Astro.</p></section>
+<section class="dev-case__chapter"><h2>Публичные подтверждения</h2><ul><li><a href="https://gaeo.ru/" target="_blank" rel="noopener">Сайт</a></li><li><a href="https://github.com/gaeo-ru/gaeo-ru.github.io/tree/astro-source" target="_blank" rel="noopener">Исходники Astro</a></li><li><a href="https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/40283546930" target="_blank" rel="noopener">Релиз и тесты</a></li></ul></section>
+<section class="dev-case__chapter"><h2>Частые вопросы</h2><details class="faq-item"><summary><span>Почему выбрали Astro?</span></summary><p>Для статического экспертного сайта с десятками связанных материалов нужны общие шаблоны и воспроизводимые проверки перед публикацией.</p></details><details class="faq-item"><summary><span>Можно ли проверить результат?</span></summary><p>Да. Доступны публичный сайт, ветка astro-source, манифест production-сборки и журналы GitHub Actions.</p></details><details class="faq-item"><summary><span>Доказан ли рост продаж именно после миграции?</span></summary><p>Нет. Технический релиз и бизнес-результаты оцениваются отдельно.</p></details></section>
+<div class="page-cta"><div><strong>Обсудить структуру и задачи сайта</strong><p>Начинаю с бизнес-задачи, структуры контента и технических ограничений.</p></div><a class="button" href="/#lead">Оставить заявку</a></div>
+</div></section></main>
+<!-- SITE_FOOTER_START -->
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="lazy">
+    <div class="footer-contact">Алексей Яковлев<br>Независимый GEO/AEO-эксперт<br><br><a href="mailto:ya@gaeo.ru">ya@gaeo.ru</a> · <a href="tel:+79264242333">+7 (926) 42-42-333</a><br>Telegram: <a href="https://t.me/ya_gaeo" target="_blank" rel="noopener">@ya_gaeo</a><br><a class="location-link" href="https://yandex.ru/maps/org/gaeo_prodvizheniye_v_neyrosetyakh/45723529742/" target="_blank" rel="noopener"><span class="location-icon" aria-hidden="true"></span>Москва, Россия</a></div>
+   </div>
+   <div><a href="/professional-biography/">Обо мне</a><a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a><a href="/articles/">Статьи</a><a href="/publications/">Публикации</a><a href="/reviews/">Отзывы</a></div>
+   <div><a href="/professional-biography/#external-profiles">Официальные внешние профили</a><a href="/privacy-policy/">Политика конфиденциальности</a><a href="/personal-data-consent/">Обработка персональных данных</a><div class="footer-lang" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/razrabotka-sajta-gaeo/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/razrabotka-sajta-gaeo/">EN</a></div></div>
+  </div>
+  <div class="footer-bottom">ИП Яковлев Алексей Леонидович<br>© 2025–2026<br>GAEO.ru · Generative &amp; Answer Engine Optimization</div>
+ </div>
+</footer>
+<!-- SITE_FOOTER_END --><script src="/assets/form-config.js?v=dee21cb376d3"></script>
+<script src="/assets/site.js?v=ccbe856a67c7"></script></body></html>
