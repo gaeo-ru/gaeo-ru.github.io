@@ -1284,3 +1284,16 @@ details.price:last-child{
     align-self:flex-start!important;
   }
 }
+
+/* Case studies: two category links in shared desktop/mobile navigation. */
+.desktop-menu .nav-cases{position:relative;display:flex;align-items:center;align-self:stretch;padding:12px 0;margin:-12px 0}
+.desktop-menu .nav-cases__parent{color:#22314a;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.desktop-menu .nav-cases__parent::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+.desktop-menu .nav-cases__submenu{position:absolute;z-index:70;top:100%;left:-18px;min-width:216px;display:flex;flex-direction:column;gap:3px;background:#fff;border:1px solid rgba(2,22,65,.15);box-shadow:0 16px 36px rgba(2,22,65,.14);border-radius:12px;padding:9px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .14s ease,visibility .14s ease}
+.desktop-menu .nav-cases:hover .nav-cases__submenu,.desktop-menu .nav-cases:focus-within .nav-cases__submenu{opacity:1;visibility:visible;pointer-events:auto}
+.desktop-menu .nav-cases__submenu a{display:block;padding:11px 12px;border-radius:7px;color:#1c3650;text-decoration:none;font-size:13px;line-height:1.35;font-weight:600}
+.desktop-menu .nav-cases__submenu a:hover,.desktop-menu .nav-cases__submenu a:focus-visible{background:#eaf5f7;color:#062d4b;outline-offset:2px}
+.desktop-menu .nav-cases__parent:hover,.desktop-menu .nav-cases__parent:focus-visible{text-decoration:underline;text-underline-offset:4px}
+.mobile-menu .mobile-cases__submenu{display:grid;gap:0;padding:0 0 8px 9px}
+.mobile-menu .mobile-cases__submenu a{margin-left:7px;padding:8px 0 8px 13px;border-left:2px solid #b7d6dc;border-bottom:0;font-size:13px;font-weight:600;line-height:1.4;color:#344c67}
+.mobile-menu .mobile-cases__submenu a:hover,.mobile-menu .mobile-cases__submenu a:focus-visible{color:#06596d;background:rgba(210,236,241,.4);outline-offset:2px}
