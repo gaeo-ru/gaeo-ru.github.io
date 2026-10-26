@@ -39,6 +39,8 @@ jobs:
         run: npm run check:industry
       - name: Check bilingual website development cases
         run: node scripts/qa_development_cases.mjs
+      - name: Check GEO website development service pages and navigation
+        run: node scripts/qa_site_development_service.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
