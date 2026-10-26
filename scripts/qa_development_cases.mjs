@@ -106,7 +106,8 @@ try{
   await mainCategory.waitFor({state:'visible'});
   await mainCategory.hover();
   const sub=desktop.locator('.desktop-menu .nav-cases__submenu');
-  const submenuVisible=await sub.isVisible();
+  let submenuVisible=false;
+  try{await sub.waitFor({state:'visible',timeout:2200});submenuVisible=true;}catch{}
   if(!submenuVisible){
    const details=await desktop.evaluate(()=>{
     const root=document.querySelector('.desktop-menu .nav-cases');
