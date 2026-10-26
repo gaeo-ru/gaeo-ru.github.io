@@ -46,6 +46,8 @@ for(const lang of ['ru','en']){
  }
  assert.equal((listing.match(/id="geo-promotion"/g)||[]).length,1,'One GEO section '+lang);
  assert.equal((listing.match(/id="website-development"/g)||[]).length,1,'One development section '+lang);
+ const expectedHeading=lang==='en'?'Website Development for GEO Promotion in AI Search':'Разработка сайтов под GEO-продвижение в нейросетях';
+ assert.ok(listing.includes('<h2 id="dev-case-listing-title">'+expectedHeading+'</h2>'),'Development heading '+lang);
  assert.ok(listing.indexOf('id="geo-promotion"')<listing.indexOf('id="website-development"'),'Promotion should come first '+lang);
  const data=listing.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
  assert.ok(data,'Collection JSON-LD missing '+lang);
