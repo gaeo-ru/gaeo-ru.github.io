@@ -51,5 +51,5 @@ jobs:
       - run: node scripts/qa_legal_link_graph.mjs
       - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install --with-deps chromium
-      - run: npm run check:industry
       - run: node scripts/qa_development_cases.mjs
+      - run: npm run check:industry
