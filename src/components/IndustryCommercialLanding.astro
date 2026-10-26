@@ -6,7 +6,7 @@ if (!page) throw new Error('Missing industry commercial landing data: ' + source
 const en = page.language === 'en';
 ---
 
-<section class={`inner-hero industry-hero${sourcePath.includes('/pharma/') ? ' industry-hero--pharma' : sourcePath.includes('/ecommerce/') ? ' industry-hero--ecommerce' : ''}`} id="industry-overview">
+<section class={`inner-hero industry-hero${sourcePath.includes('/pharma/') ? ' industry-hero--pharma' : sourcePath.includes('/ecommerce/') ? ' industry-hero--ecommerce' : sourcePath.includes('/metal-structures/') ? ' industry-hero--industrial' : ''}`} id="industry-overview">
   <div class="container industry-hero__grid">
     <div class="industry-hero__copy">
       <div class="inner-eyebrow">{page.eyebrow}</div>
@@ -23,7 +23,20 @@ const en = page.language === 'en';
       <p class="industry-hero__byline">{en ? 'Personally led by' : 'Лично ведет'} <a href={page.about.link.href}>{page.about.name}</a>, {en ? 'GEO/AEO consultant' : 'независимый GEO/AEO-эксперт'}</p>
     </div>
     <figure class="industry-hero__media">
-      <img src={page.heroImage.src} alt={page.heroImage.alt} width={page.heroImage.width} height={page.heroImage.height} loading="eager" decoding="async" fetchpriority="high" />
+      {page.heroImage.native ? (
+        <div class="industrial-hero-art" role="group" aria-label={page.heroImage.alt}>
+          <div class="industrial-hero-art__intro">
+            <span>{en ? 'GAEO / INDUSTRIAL B2B' : 'GAEO / ПРОМЫШЛЕННЫЙ B2B'}</span>
+            <strong>{en ? 'Verified capabilities matter' : 'Проверяем реальные компетенции'}</strong>
+          </div>
+          <div class="industrial-hero-art__grid">
+            {page.heroImage.nativeSteps.map(([code,meaning]) => <div class="industrial-hero-art__card"><span>{code}</span><strong>{meaning}</strong></div>)}
+          </div>
+          <p>{en ? 'Distinct supplier roles · evidence for each stage' : 'Разные роли подрядчика · доказательства каждого этапа'}</p>
+        </div>
+      ) : (
+        <img src={page.heroImage.src} alt={page.heroImage.alt} width={page.heroImage.width} height={page.heroImage.height} loading="eager" decoding="async" fetchpriority="high" />
+      )}
       {page.heroImage.caption && <figcaption class="industry-hero__caption">{page.heroImage.caption}</figcaption>}
     </figure>
   </div>

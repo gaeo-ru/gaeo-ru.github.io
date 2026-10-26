@@ -2552,10 +2552,9 @@ export const industryCommercialPages = {
     "Опираюсь на документы и нормативную базу, не приписывая заводу непроверенные мощности"
   ],
   "heroImage": {
-    "src": "/assets/articles/industrial-steel-evidence.svg",
+    "native": true,
+    "nativeSteps": [["КМ","Проектирование"],["КМД","Деталировка"],["Завод","Изготовление"],["Объект","Монтаж"]],
     "alt": "Техническая схема стальных строительных конструкций: каркас, узлы и проверяемые сведения о подрядчике",
-    "width": 1200,
-    "height": 675,
     "caption": "Авторская схема GAEO. Она иллюстрирует структуру проверки и не является чертежом конкретного объекта."
   },
   "primaryCta": {
@@ -2891,10 +2890,9 @@ export const industryCommercialPages = {
     "Base claims on verifiable capabilities rather than invented factory capacity"
   ],
   "heroImage": {
-    "src": "/assets/articles/industrial-steel-evidence.svg",
+    "native": true,
+    "nativeSteps": [["KM","Design drawings"],["KMD","Fabrication details"],["Plant","Fabrication"],["Site","Erection"]],
     "alt": "Industrial steel frame drawing with technical nodes, KM/KMD and evidence verification",
-    "width": 1200,
-    "height": 675,
     "caption": "GAEO technical illustration, not a drawing of a client project."
   },
   "primaryCta": {

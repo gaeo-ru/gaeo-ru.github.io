@@ -53,9 +53,14 @@ for(const [route,destinations] of Object.entries(edges)){
   const altOG=html.match(/<meta property="og:image:alt" content="([^"]+)"/)?.[1];
   const altTW=html.match(/<meta name="twitter:image:alt" content="([^"]+)"/)?.[1];
   if(!altOG||altOG!==altTW)errors.push('Social image descriptions differ '+route);
-  if(!main.includes('assets/articles/industrial-steel-evidence.svg'))errors.push('Missing technical illustration '+route);
+  if(!main.includes('class="industrial-evidence-flow"')||!main.includes('industrial-evidence-flow__grid'))errors.push('Native technical responsibility diagram missing '+route);
+  if((main.match(/class="industrial-evidence-flow__step"/g)||[]).length!==4)errors.push('Native diagram must have four distinct responsibility steps '+route);
+  if(main.includes('industrial-steel-evidence.svg'))errors.push('Disallowed SVG illustration referenced '+route);
  }
  if(route.includes('/industries/')){
+  if(!main.includes('class="industrial-hero-art"') || (main.match(/class="industrial-hero-art__card"/g)||[]).length!==4)
+   errors.push('Native industrial hero does not expose four supplier stages '+route);
+  if(main.includes('industrial-steel-evidence.svg'))errors.push('Industrial hero still references obsolete SVG '+route);
   for(const id of ['industry-hero','industry-evidence-section','industry-scenarios-section','industry-process-section','industry-pricing-section'])
    if(!main.includes(id))errors.push('Missing commercial module '+id+' '+route);
  }
@@ -79,8 +84,8 @@ for(const route of pages){
   'https://protect.gost.ru/gost/details/a139fae5-836f-498f-9490-22aa98f70e03'
  ])if(!html.includes(source))errors.push('Missing official standard '+route+' '+source);
 }
-if(!existsSync(resolve(root,'assets/articles/industrial-steel-evidence.svg')))
- errors.push('Industrial SVG asset missing in dist');
+if(existsSync(resolve(root,'assets/articles/industrial-steel-evidence.svg')))
+ errors.push('Obsolete industrial SVG still included in published assets');
 console.log('INDUSTRIAL_CLUSTER_PAGES='+pages.length);
 console.log('INDUSTRIAL_CLUSTER_LINKS='+edgeCount);
 console.log('INDUSTRIAL_CLUSTER_ERRORS='+errors.length);
