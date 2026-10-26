@@ -635,7 +635,9 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         errors.append(f"{page}: contains Tilda CDN reference.")
     if "data:image" in lower or ";base64," in lower:
         errors.append(f"{page}: contains Base64 image data.")
-    if STAGING_HOST in lower:
+    # Match the actual staging URL host, not a GitHub repository *path* which
+    # may legitimately include the repository name 'gaeo-ru.github.io'.
+    if re.search(r"(?:https?:)?//(?:www\.)?gaeo-ru\.github\.io(?=$|[^a-z0-9.-])", lower):
         errors.append(f"{page}: contains staging hostname {STAGING_HOST}.")
     if re.search(r"https://gaeo\.ruhttps?://", lower):
         errors.append(f"{page}: contains concatenated malformed absolute URL.")

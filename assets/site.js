@@ -2,6 +2,8 @@ const mainNav = document.getElementById('mainNav');
 const desktopMenu = document.getElementById('desktopMenu');
 const toggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuOpenLabel = document.documentElement.lang === 'en' ? 'Open menu' : 'Открыть меню';
+const menuCloseLabel = document.documentElement.lang === 'en' ? 'Close menu' : 'Закрыть меню';
 
 
 /* Burger menu UI is injected here so the same behavior applies to the
@@ -74,14 +76,16 @@ function setCollapsed(collapsed){
   if(!collapsed && mobileMenu){
     mobileMenu.classList.remove('open');
     toggle?.setAttribute('aria-expanded','false');
-    toggle?.setAttribute('aria-label','Открыть меню');
+    toggle?.setAttribute('aria-label',menuOpenLabel);
   }
 }
 
 function fitHeader(){
   if(!mainNav || !desktopMenu) return;
 
-  setCollapsed(false);
+  // Measure the full desktop navigation without closing an open mobile menu.
+  // Fonts and late load events can re-run this while the user is navigating.
+  mainNav.classList.remove('menu-collapsed');
 
   requestAnimationFrame(() => {
     const navWidth = mainNav.getBoundingClientRect().width;
@@ -91,7 +95,8 @@ function fitHeader(){
 
     // Collapse shortly before visual collision.
     const requiredWidth = brandWidth + menuWidth + actionsWidth + 48;
-    setCollapsed(requiredWidth > navWidth);
+    // Small screens always use the mobile menu, even if the desktop links fit.
+    setCollapsed(window.matchMedia('(max-width:720px)').matches || requiredWidth > navWidth);
   });
 }
 
@@ -99,7 +104,18 @@ if(toggle && mobileMenu){
   toggle.addEventListener('click',()=>{
     const open = mobileMenu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    toggle.setAttribute('aria-label', open ? menuCloseLabel : menuOpenLabel);
+  });
+}
+
+
+// Category links can target a section of the current page; close the mobile overlay after navigation.
+if(mobileMenu){
+  mobileMenu.addEventListener('click', event => {
+    if(!(event.target instanceof Element) || !event.target.closest('a[href]')) return;
+    mobileMenu.classList.remove('open');
+    toggle?.setAttribute('aria-expanded','false');
+    toggle?.setAttribute('aria-label',menuOpenLabel);
   });
 }
 
@@ -185,8 +201,15 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const desktop = document.getElementById('desktopMenu');
   if(desktop){
     const langs = desktop.querySelector('.langs');
+    const casesGroup = desktop.querySelector(':scope > .nav-cases');
+    const casesUrl = isEn ? '/en/cases/' : '/cases/';
     desktop.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
+      // Keep the single shared submenu instead of adding a duplicate Cases link.
+      if(casesGroup && href === casesUrl){
+        desktop.insertBefore(casesGroup, langs || null);
+        return;
+      }
       const a = document.createElement('a');
       a.href = href;
       a.textContent = label;
@@ -197,8 +220,14 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const mobile = document.getElementById('mobileMenu');
   if(mobile){
     const langs = mobile.querySelector('.mobile-langs');
+    const casesGroup = mobile.querySelector(':scope > .mobile-cases');
+    const casesUrl = isEn ? '/en/cases/' : '/cases/';
     mobile.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
+      if(casesGroup && href === casesUrl){
+        mobile.insertBefore(casesGroup, langs || null);
+        return;
+      }
       const a = document.createElement('a');
       a.href = href;
       a.textContent = label;
