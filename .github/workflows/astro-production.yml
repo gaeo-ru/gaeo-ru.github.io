@@ -37,6 +37,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Check industry landings at desktop and mobile widths
         run: npm run check:industry
+      - name: Check bilingual website development cases
+        run: node scripts/qa_development_cases.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:

@@ -762,3 +762,21 @@
 .industry-hero--industrial .industry-hero__caption{font-size:12px;color:#596b7d;line-height:1.5;margin-top:11px}
 @media(max-width:720px){.industry-hero--industrial .industrial-hero-art__intro{margin-bottom:18px}.industry-hero--industrial .industrial-hero-art__card{min-height:93px;padding:15px 12px}}
 @media(max-width:350px){.industry-hero--industrial .industrial-hero-art__grid{gap:7px}.industry-hero--industrial .industrial-hero-art__card{padding:12px 10px}}
+
+/* Website development cases, scoped to avoid modifying other pages. */
+.dev-case .article-wrap>blockquote{margin:0 0 25px;background:#edf7f8;border-left:4px solid #087d8b;padding:20px 24px}
+.dev-case .article-wrap>blockquote p{font-weight:650;font-size:17px;line-height:1.6}
+.dev-case .dev-case__chapter{margin:28px 0 40px;min-width:0}
+.dev-case .dev-case__chapter h2{margin:0 0 19px;scroll-margin-top:94px}
+.dev-case .dev-case__chapter p,.dev-case .dev-case__chapter li{overflow-wrap:anywhere}
+.dev-case .dev-case__chapter .faq-item{padding:16px 0;border-bottom:1px solid #dce6ea}
+.dev-case .dev-case__chapter .faq-item summary{cursor:pointer;font-weight:700;line-height:1.5}
+.dev-case .dev-case__chapter .faq-item p{margin:12px 0 0;font-size:16px}
+.dev-case .page-cta{box-sizing:border-box;max-width:100%}
+.dev-case .page-cta strong{font-size:20px;line-height:1.4;color:#fff}
+.dev-case-listing>h2,.dev-case-listing__other{font-family:Literata,Georgia,serif;font-size:clamp(25px,3vw,34px);line-height:1.25;margin:0 0 18px}
+.dev-case-listing>p{font-size:16px;line-height:1.6}
+.dev-case-listing .list-card--development{min-width:0;background:#f6fafb}
+.dev-case-listing .list-card--development h3{font-size:22px;overflow-wrap:anywhere}
+.dev-case-listing__other{margin-top:40px}
+@media(max-width:720px){.dev-case .article-wrap>blockquote{padding:16px 18px}.dev-case .article-wrap>blockquote p{font-size:15px}.dev-case .dev-case__chapter{margin:25px 0 32px}.dev-case .page-cta strong{font-size:18px}.dev-case-listing .list-card--development h3{font-size:20px}}
