@@ -83,7 +83,9 @@ function setCollapsed(collapsed){
 function fitHeader(){
   if(!mainNav || !desktopMenu) return;
 
-  setCollapsed(false);
+  // Measure the full desktop navigation without closing an open mobile menu.
+  // Fonts and late load events can re-run this while the user is navigating.
+  mainNav.classList.remove('menu-collapsed');
 
   requestAnimationFrame(() => {
     const navWidth = mainNav.getBoundingClientRect().width;
@@ -93,7 +95,8 @@ function fitHeader(){
 
     // Collapse shortly before visual collision.
     const requiredWidth = brandWidth + menuWidth + actionsWidth + 48;
-    setCollapsed(requiredWidth > navWidth);
+    // Small screens always use the mobile menu, even if the desktop links fit.
+    setCollapsed(window.matchMedia('(max-width:720px)').matches || requiredWidth > navWidth);
   });
 }
 
@@ -198,8 +201,15 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const desktop = document.getElementById('desktopMenu');
   if(desktop){
     const langs = desktop.querySelector('.langs');
+    const casesGroup = desktop.querySelector(':scope > .nav-cases');
+    const casesUrl = isEn ? '/en/cases/' : '/cases/';
     desktop.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
+      // Keep the single shared submenu instead of adding a duplicate Cases link.
+      if(casesGroup && href === casesUrl){
+        desktop.insertBefore(casesGroup, langs || null);
+        return;
+      }
       const a = document.createElement('a');
       a.href = href;
       a.textContent = label;
@@ -210,8 +220,14 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   const mobile = document.getElementById('mobileMenu');
   if(mobile){
     const langs = mobile.querySelector('.mobile-langs');
+    const casesGroup = mobile.querySelector(':scope > .mobile-cases');
+    const casesUrl = isEn ? '/en/cases/' : '/cases/';
     mobile.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
+      if(casesGroup && href === casesUrl){
+        mobile.insertBefore(casesGroup, langs || null);
+        return;
+      }
       const a = document.createElement('a');
       a.href = href;
       a.textContent = label;
