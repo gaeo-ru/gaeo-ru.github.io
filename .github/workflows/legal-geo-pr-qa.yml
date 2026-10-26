@@ -9,6 +9,9 @@ on:
       - 'src/legacy/pages/en/articles/**'
       - 'src/legacy/pages/en/industries/**'
       - 'src/legacy/pages/en/strategies/**'
+      - 'src/legacy/pages/cases/**'
+      - 'src/legacy/pages/en/cases/**'
+      - 'scripts/qa_development_cases.mjs'
       - 'src/data/industry-commercial-pages.mjs'
       - 'src/components/**'
       - 'scripts/qa_legal_link_graph.mjs'
@@ -42,3 +45,4 @@ jobs:
       - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install --with-deps chromium
       - run: npm run check:industry
+      - run: node scripts/qa_development_cases.mjs
