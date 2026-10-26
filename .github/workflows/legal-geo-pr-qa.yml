@@ -19,6 +19,13 @@ on:
       - 'public/assets/articles/industrial-steel-evidence.svg'
       - 'scripts/astro-industry-browser-qa.mjs'
       - 'public/assets/internal.css'
+      - 'templates/partials/site-header.html'
+      - 'templates/partials/site-header-en.html'
+      - 'public/assets/style.css'
+      - 'public/assets/site.js'
+      - 'scripts/astro-parity.mjs'
+      - 'scripts/site_qa.py'
+      - '.github/workflows/astro-production.yml'
       - '.github/workflows/legal-geo-pr-qa.yml'
   workflow_dispatch:
 permissions:
@@ -44,5 +51,5 @@ jobs:
       - run: node scripts/qa_legal_link_graph.mjs
       - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install --with-deps chromium
-      - run: npm run check:industry
       - run: node scripts/qa_development_cases.mjs
+      - run: npm run check:industry

@@ -2,6 +2,8 @@ const mainNav = document.getElementById('mainNav');
 const desktopMenu = document.getElementById('desktopMenu');
 const toggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuOpenLabel = document.documentElement.lang === 'en' ? 'Open menu' : 'Открыть меню';
+const menuCloseLabel = document.documentElement.lang === 'en' ? 'Close menu' : 'Закрыть меню';
 
 
 /* Burger menu UI is injected here so the same behavior applies to the
@@ -74,7 +76,7 @@ function setCollapsed(collapsed){
   if(!collapsed && mobileMenu){
     mobileMenu.classList.remove('open');
     toggle?.setAttribute('aria-expanded','false');
-    toggle?.setAttribute('aria-label','Открыть меню');
+    toggle?.setAttribute('aria-label',menuOpenLabel);
   }
 }
 
@@ -99,7 +101,18 @@ if(toggle && mobileMenu){
   toggle.addEventListener('click',()=>{
     const open = mobileMenu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    toggle.setAttribute('aria-label', open ? menuCloseLabel : menuOpenLabel);
+  });
+}
+
+
+// Category links can target a section of the current page; close the mobile overlay after navigation.
+if(mobileMenu){
+  mobileMenu.addEventListener('click', event => {
+    if(!(event.target instanceof Element) || !event.target.closest('a[href]')) return;
+    mobileMenu.classList.remove('open');
+    toggle?.setAttribute('aria-expanded','false');
+    toggle?.setAttribute('aria-label',menuOpenLabel);
   });
 }
 

@@ -780,3 +780,17 @@
 .dev-case-listing .list-card--development h3{font-size:22px;overflow-wrap:anywhere}
 .dev-case-listing__other{margin-top:40px}
 @media(max-width:720px){.dev-case .article-wrap>blockquote{padding:16px 18px}.dev-case .article-wrap>blockquote p{font-size:15px}.dev-case .dev-case__chapter{margin:25px 0 32px}.dev-case .page-cta strong{font-size:18px}.dev-case-listing .list-card--development h3{font-size:20px}}
+
+/* Case listing taxonomy: direct links match the shared Cases dropdown. */
+.cases-listing-content .case-types-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:3px 0 36px}
+.article-wrap .case-types-nav a:not(.btn):not(.button){display:flex;flex-direction:column;gap:5px;min-width:0;padding:19px 21px;border:1px solid #cadbe3;border-radius:12px;background:#fff;color:#0c3650;text-decoration:none;transition:border-color .15s,background-color .15s}
+.case-types-nav a span{font-size:17px;line-height:1.3;font-weight:750;overflow-wrap:anywhere}
+.case-types-nav a small{font-size:12px;line-height:1.5;color:#637487;overflow-wrap:anywhere}
+.article-wrap .case-types-nav a:not(.btn):not(.button):hover,.article-wrap .case-types-nav a:not(.btn):not(.button):focus-visible{border-color:#0e7484;background:#eef8fa;outline-offset:3px}
+.cases-listing-content .cases-category{scroll-margin-top:110px;margin-bottom:47px}
+.cases-listing-content .cases-category+.cases-category{padding-top:32px;border-top:1px solid #dce5e8}
+.cases-listing-content .cases-category--geo .listing-grid{margin-top:20px}
+.cases-listing-content .cases-category .dev-case-listing__other{margin:0 0 10px}
+.cases-listing-content .cases-category--geo .list-card{min-width:0}
+@media(max-width:720px){.cases-listing-content .case-types-nav{gap:9px;margin-bottom:28px}.article-wrap .case-types-nav a:not(.btn):not(.button){padding:14px 13px}.case-types-nav a span{font-size:15px}.case-types-nav a small{font-size:11px}.cases-listing-content .cases-category{scroll-margin-top:86px;margin-bottom:35px}.cases-listing-content .cases-category+.cases-category{padding-top:24px}}
+@media(max-width:355px){.cases-listing-content .case-types-nav{grid-template-columns:minmax(0,1fr)}}
