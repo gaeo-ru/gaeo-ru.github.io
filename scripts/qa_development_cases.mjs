@@ -102,6 +102,7 @@ try{
   const route='/'+prefix+'cases/';
   const desktop=await browser.newPage({viewport:{width:1680,height:900}});
   await desktop.goto(base+route,{waitUntil:'domcontentloaded'});
+  assert.equal(await desktop.locator('.desktop-menu a[href="'+route+'"]').count(),1,'Exactly one desktop Cases link '+lang);
   const mainCategory=desktop.locator('.desktop-menu .nav-cases__parent');
   await mainCategory.waitFor({state:'visible'});
   await mainCategory.hover();
@@ -137,8 +138,15 @@ try{
    const mobile=await browser.newPage({viewport:{width,height:760}});
    await mobile.goto(base+route,{waitUntil:'domcontentloaded'});
    const hamburger=mobile.locator('.menu-toggle');
+   assert.equal(await mobile.locator('.mobile-menu a[href="'+route+'"]').count(),1,'Exactly one mobile Cases link '+lang);
    await hamburger.click();
-   assert.ok(await mobile.locator('.mobile-menu').evaluate(el=>el.classList.contains('open')),'Mobile menu did not open '+lang);
+   await mobile.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3000});
+   assert.equal(await hamburger.getAttribute('aria-expanded'),'true','Hamburger should report open '+lang);
+   // Late load/font measurements must not close an already open mobile menu.
+   await mobile.evaluate(()=>window.dispatchEvent(new Event('load')));
+   await mobile.waitForTimeout(160);
+   assert.ok(await mobile.locator('.mobile-menu').evaluate(el=>el.classList.contains('open')),'Mobile menu closed after late header sizing '+lang);
+   assert.equal(await hamburger.getAttribute('aria-expanded'),'true','Hamburger reset by late sizing '+lang);
    await mobile.locator('.mobile-cases__submenu a[href$="#geo-promotion"]').click();
    await mobile.waitForURL(url=>url.hash==='#geo-promotion');
    assert.ok(!await mobile.locator('.mobile-menu').evaluate(el=>el.classList.contains('open')),'Mobile menu remained open '+lang);
