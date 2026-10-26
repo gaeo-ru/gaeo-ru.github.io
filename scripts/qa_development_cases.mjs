@@ -47,7 +47,7 @@ for(const lang of ['ru','en']){
  assert.equal((listing.match(/id="geo-promotion"/g)||[]).length,1,'One GEO section '+lang);
  assert.equal((listing.match(/id="website-development"/g)||[]).length,1,'One development section '+lang);
  assert.ok(listing.indexOf('id="geo-promotion"')<listing.indexOf('id="website-development"'),'Promotion should come first '+lang);
- const data=listing.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/);
+ const data=listing.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
  assert.ok(data,'Collection JSON-LD missing '+lang);
  const nodes=JSON.parse(data[1])['@graph'];
  const list=nodes.find(x=>x['@type']==='ItemList');
