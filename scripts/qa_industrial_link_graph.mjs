@@ -58,6 +58,9 @@ for(const [route,destinations] of Object.entries(edges)){
   if(main.includes('industrial-steel-evidence.svg'))errors.push('Disallowed SVG illustration referenced '+route);
  }
  if(route.includes('/industries/')){
+  if(!main.includes('class="industrial-hero-art"') || (main.match(/class="industrial-hero-art__card"/g)||[]).length!==4)
+   errors.push('Native industrial hero does not expose four supplier stages '+route);
+  if(main.includes('industrial-steel-evidence.svg'))errors.push('Industrial hero still references obsolete SVG '+route);
   for(const id of ['industry-hero','industry-evidence-section','industry-scenarios-section','industry-process-section','industry-pricing-section'])
    if(!main.includes(id))errors.push('Missing commercial module '+id+' '+route);
  }

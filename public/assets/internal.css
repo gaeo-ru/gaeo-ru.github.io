@@ -747,3 +747,18 @@
 .industrial-b2b-guide .industrial-evidence-flow__step p{color:#e5f2f6;font-size:14px;line-height:1.65;margin:0}
 .industrial-b2b-guide .industrial-evidence-flow figcaption{color:#c3d9e3;font-size:13px;line-height:1.55;margin-top:17px}
 @media(max-width:640px){.industrial-b2b-guide .industrial-evidence-flow__grid{grid-template-columns:minmax(0,1fr);gap:10px}.industrial-b2b-guide .industrial-evidence-flow__step{padding:16px}.industrial-b2b-guide .industrial-evidence-flow__step h3{font-size:17px}}
+
+/* Industrial landing native hero: text-first evidence visual, no SVG or raster download. */
+.industry-hero--industrial .industry-hero__media{display:block;align-self:center}
+.industry-hero--industrial .industrial-hero-art{width:100%;min-width:0;box-sizing:border-box;border-radius:17px;padding:clamp(18px,2.5vw,29px);background:radial-gradient(circle at 88% 8%,rgba(61,209,204,.24),transparent 35%),linear-gradient(145deg,#061a36,#0b435f);box-shadow:0 24px 50px rgba(2,22,65,.13);color:#fff}
+.industry-hero--industrial .industrial-hero-art__intro{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;min-width:0}
+.industry-hero--industrial .industrial-hero-art__intro span{font-size:11px;line-height:1.5;font-weight:750;letter-spacing:.09em;color:#95eadf}
+.industry-hero--industrial .industrial-hero-art__intro strong{font-size:clamp(21px,2.2vw,30px);line-height:1.18;letter-spacing:-.035em;overflow-wrap:anywhere}
+.industry-hero--industrial .industrial-hero-art__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.industry-hero--industrial .industrial-hero-art__card{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:8px;border:1px solid rgba(164,241,230,.35);border-radius:11px;background:rgba(255,255,255,.08);padding:19px 14px;min-height:108px;box-sizing:border-box}
+.industry-hero--industrial .industrial-hero-art__card span{font-size:12px;line-height:1.35;color:#a9f3ea;font-weight:750}
+.industry-hero--industrial .industrial-hero-art__card strong{font-size:15px;line-height:1.4;font-weight:650;color:#fff;overflow-wrap:anywhere}
+.industry-hero--industrial .industrial-hero-art>p{color:#d8ebf2;font-size:13px;line-height:1.6;margin:21px 0 0}
+.industry-hero--industrial .industry-hero__caption{font-size:12px;color:#596b7d;line-height:1.5;margin-top:11px}
+@media(max-width:720px){.industry-hero--industrial .industrial-hero-art__intro{margin-bottom:18px}.industry-hero--industrial .industrial-hero-art__card{min-height:93px;padding:15px 12px}}
+@media(max-width:350px){.industry-hero--industrial .industrial-hero-art__grid{gap:7px}.industry-hero--industrial .industrial-hero-art__card{padding:12px 10px}}

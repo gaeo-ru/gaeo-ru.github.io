@@ -108,7 +108,13 @@ try {
       assert.equal(await page.locator('.industry-scenario-table tbody tr').count(),5,'Five buying stages missing');
       assert.equal(await page.locator('a[href*="1087822"]').count()>0,true,'Author methodology source missing');
     }
-    assert.equal(await page.locator('.industry-hero__media img').count(),1,'Hero image missing');
+    if(entry.route.includes('/metal-structures/')){
+      assert.equal(await page.locator('.industry-hero__media .industrial-hero-art').count(),1,'Native industrial hero missing');
+      assert.equal(await page.locator('.industry-hero__media .industrial-hero-art__card').count(),4,'Industrial hero requires four evidence cards');
+      assert.equal(await page.locator('.industry-hero__media img').count(),0,'Industrial hero still references obsolete SVG image');
+    }else{
+      assert.equal(await page.locator('.industry-hero__media img').count(),1,'Hero image missing');
+    }
     assert.equal(await page.locator('.industry-hero .button[href$="#lead"]').count(),1,'Lead trigger missing');
     const width = await page.evaluate(()=>document.documentElement.scrollWidth);
     if(width>viewport.width+2){
