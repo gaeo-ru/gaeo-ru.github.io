@@ -102,18 +102,7 @@ try{
   const route='/'+prefix+'cases/';
   const desktop=await browser.newPage({viewport:{width:1680,height:900}});
   await desktop.goto(base+route,{waitUntil:'domcontentloaded'});
-  const desktopCaseLinks=await desktop.locator('.desktop-menu a[href="'+route+'"]').count();
-  if(desktopCaseLinks!==1){
-   const debug=await desktop.evaluate(()=>{
-    const n=document.querySelector('.desktop-menu');
-    const group=n?.querySelector(':scope > .nav-cases');
-    return {navHtml:n?.outerHTML.slice(0,4000),groupPresent:!!group,
-      casesLinks:[...n.querySelectorAll('a')].filter(a=>a.getAttribute('href')==='/cases/'||a.getAttribute('href')==='/en/cases/').map(a=>a.outerHTML),
-      scriptTags:[...document.querySelectorAll('script[src]')].map(x=>x.getAttribute('src'))};
-   });
-   console.error('CASE_LINK_DEBUG '+lang+' '+JSON.stringify(debug));
-  }
-  assert.equal(desktopCaseLinks,1,'Exactly one desktop Cases link '+lang);
+  assert.equal(await desktop.locator('.desktop-menu > a[href="'+route+'"], .desktop-menu > .nav-cases > a[href="'+route+'"]').count(),1,'Exactly one desktop Cases parent, excluding language links '+lang);
   const mainCategory=desktop.locator('.desktop-menu .nav-cases__parent');
   await mainCategory.waitFor({state:'visible'});
   await mainCategory.hover();
@@ -149,7 +138,7 @@ try{
    const mobile=await browser.newPage({viewport:{width,height:760}});
    await mobile.goto(base+route,{waitUntil:'domcontentloaded'});
    const hamburger=mobile.locator('.menu-toggle');
-   assert.equal(await mobile.locator('.mobile-menu a[href="'+route+'"]').count(),1,'Exactly one mobile Cases link '+lang);
+   assert.equal(await mobile.locator('.mobile-menu > a[href="'+route+'"], .mobile-menu > .mobile-cases > a[href="'+route+'"]').count(),1,'Exactly one mobile Cases parent, excluding language links '+lang);
    await hamburger.click();
    await mobile.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3000});
    assert.equal(await hamburger.getAttribute('aria-expanded'),'true','Hamburger should report open '+lang);
