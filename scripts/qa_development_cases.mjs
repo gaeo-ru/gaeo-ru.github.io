@@ -125,6 +125,9 @@ try{
   }
   assert.ok(submenuVisible,'Desktop cases submenu invisible '+lang);
   assert.equal(await sub.locator('a').count(),2,'Two submenu entries '+lang);
+  await mainCategory.focus();
+  await sub.waitFor({state:'visible',timeout:2200});
+  assert.ok(await sub.isVisible(),'Keyboard focus must reveal case submenu '+lang);
   await sub.locator('a[href$="#website-development"]').click();
   await desktop.waitForURL(url=>url.hash==='#website-development');
   assert.equal(await desktop.locator('#website-development .list-card').count(),3,'Development group '+lang);
