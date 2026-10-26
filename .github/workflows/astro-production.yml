@@ -34,11 +34,13 @@ jobs:
       - name: Validate industrial B2B GEO pages and source evidence
         run: node scripts/qa_industrial_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
       - name: Check industry landings at desktop and mobile widths
         run: npm run check:industry
       - name: Check bilingual website development cases
         run: node scripts/qa_development_cases.mjs
+      - name: Check GEO website development service pages and navigation
+        run: node scripts/qa_site_development_service.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
@@ -51,7 +53,7 @@ jobs:
         run: node scripts/publish-astro-to-main.mjs preflight
       - name: Install browser for first release
         if: steps.safety.outputs.initial == 'true'
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
       - name: Pixel-compare with production before first release
         if: steps.safety.outputs.initial == 'true'
         run: npm run check:visual
@@ -61,6 +63,8 @@ jobs:
         run: |
           cp templates/partials/site-header.html published/templates/partials/site-header.html
           cp templates/partials/site-header-en.html published/templates/partials/site-header-en.html
+          cp templates/partials/site-footer.html published/templates/partials/site-footer.html
+          cp templates/partials/site-footer-en.html published/templates/partials/site-footer-en.html
           cp scripts/site_qa.py published/scripts/site_qa.py
       - name: Run existing GAEO production QA on generated pages
         working-directory: published
@@ -73,7 +77,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.html' assets/ robots.txt sitemap.xml CNAME favicon.ico '.nojekyll' 'astro-release-manifest.json' templates/partials/site-header.html templates/partials/site-header-en.html scripts/site_qa.py
+          git add -A -- '*.html' assets/ robots.txt sitemap.xml CNAME favicon.ico '.nojekyll' 'astro-release-manifest.json' templates/partials/site-header.html templates/partials/site-header-en.html templates/partials/site-footer.html templates/partials/site-footer-en.html scripts/site_qa.py
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Site content is already exactly published."
