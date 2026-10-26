@@ -270,19 +270,26 @@ try {
     const faq=ld.find(x=>x['@type']==='FAQPage');
     const questions=(await page.locator('.industrial-b2b-guide .faq-item summary > span:first-child').allTextContents()).map(x=>x.trim());
     assert.ok(faq?.mainEntity?.length===6 && faq.mainEntity.every((x,i)=>x.name===questions[i]),'Industrial FAQ schema parity');
-    const img=page.locator('.industrial-b2b-guide .ecommerce-method-figure img');
-    await img.scrollIntoViewIfNeeded();
-    await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,5000)})});
-    assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth===1200),'Industrial technical diagram not decoded');
+    const diagram=page.locator('.industrial-b2b-guide .industrial-evidence-flow');
+    assert.equal(await diagram.count(),1,'Industrial native evidence diagram missing');
+    assert.equal(await diagram.locator('.industrial-evidence-flow__step').count(),4,'Four distinct responsibilities missing');
+    assert.equal(await page.locator('img[src$=".svg"]').count(),0,'SVG illustration prohibited in industrial methodology');
+    await diagram.scrollIntoViewIfNeeded();
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Industrial methodology overflow');
     await page.locator('.industrial-b2b-guide .page-cta a[href$="#lead"]').click();
     await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
     await page.locator('.gaeo-modal-close').click();
     assert.equal(await page.locator('[role="dialog"]').count(),0,'Industrial lead dialog remained open');
+    let afterModalWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+    if(afterModalWidth>viewport.width+2){
+      await page.waitForTimeout(200);
+      afterModalWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+    }
+    assert.ok(afterModalWidth<=viewport.width+2,'Industrial page overflow after closing modal '+entry.route+' at '+viewport.width+'px: '+afterModalWidth);
     assert.deepEqual(errors,[],'Industrial JavaScript errors');
     await page.evaluate(()=>scrollTo(0,0));
     await page.screenshot({path:'visual-industry/industrial-method-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
-    checks.push('industrial-method '+entry.lang+' '+viewport.width+'px 6-intents/3-GOST-sources/6-FAQ/diagram/CTA/overflow PASS');
+    checks.push('industrial-method '+entry.lang+' '+viewport.width+'px 6-intents/3-GOST-sources/6-FAQ/native-diagram/CTA/post-close-overflow PASS');
     await page.close();
   }
   // Legal GEO guides: bilingual methodological content, sources, FAQs and lead interaction.

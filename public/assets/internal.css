@@ -736,3 +736,14 @@
 .legal-proof-code pre{overflow:auto;margin:0;font-size:13px;line-height:1.6;white-space:pre}
 .legal-proof-code code{color:inherit;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 @media(max-width:700px){.legal-proof-summary{grid-template-columns:1fr;gap:8px}.legal-proof-summary>div{padding:14px 16px}.legal-proof-check{grid-template-columns:37px minmax(0,1fr);gap:10px;padding:16px 14px}.legal-proof-number{font-size:18px}.legal-proof-check h3{font-size:17px}.legal-proof-check .legal-proof-mistake{padding:10px}.legal-proof-example-grid{grid-template-columns:1fr;gap:10px}.legal-proof-example{padding:18px}}
+
+/* Industrial B2B: native, indexable evidence graphic (no SVG/media asset). */
+.industrial-b2b-guide .industrial-evidence-flow{margin:30px 0 34px;padding:clamp(18px,3vw,30px);max-width:100%;background:linear-gradient(135deg,#061d38 0%,#104963 100%);border-radius:16px;color:#fff;box-sizing:border-box}
+.industrial-b2b-guide .industrial-evidence-flow__eyebrow{font-size:13px;line-height:1.5;font-weight:750;text-transform:uppercase;letter-spacing:.045em;color:#a7efe7;margin:0 0 18px}
+.industrial-b2b-guide .industrial-evidence-flow__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.industrial-b2b-guide .industrial-evidence-flow__step{min-width:0;margin:0;padding:20px;border:1px solid rgba(167,239,231,.35);border-radius:12px;background:rgba(255,255,255,.08)}
+.industrial-b2b-guide .industrial-evidence-flow__step>span{display:block;color:#a7efe7;font-size:12px;letter-spacing:.07em;font-weight:800;line-height:1.5;margin:0 0 9px}
+.industrial-b2b-guide .industrial-evidence-flow__step h3{color:#fff;font-size:18px;line-height:1.35;margin:0 0 9px;overflow-wrap:anywhere}
+.industrial-b2b-guide .industrial-evidence-flow__step p{color:#e5f2f6;font-size:14px;line-height:1.65;margin:0}
+.industrial-b2b-guide .industrial-evidence-flow figcaption{color:#c3d9e3;font-size:13px;line-height:1.55;margin-top:17px}
+@media(max-width:640px){.industrial-b2b-guide .industrial-evidence-flow__grid{grid-template-columns:minmax(0,1fr);gap:10px}.industrial-b2b-guide .industrial-evidence-flow__step{padding:16px}.industrial-b2b-guide .industrial-evidence-flow__step h3{font-size:17px}}
