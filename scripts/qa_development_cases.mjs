@@ -60,6 +60,85 @@ for(const lang of ['ru','en']){
  assert.equal(list.itemListElement[0].position,1,'List starts at 1 '+lang);
 }
 
+// Editorial and technical SEO checks for all six development cases and both catalogs.
+// Compare rendered content with metadata and JSON-LD to catch stale titles after edits.
+function readMeta(html,key){
+ const tag=[...html.matchAll(/<meta\b[^>]*>/g)].map(m=>m[0])
+   .filter(s=>s.includes('name="'+key+'"')||s.includes('property="'+key+'"'));
+ assert.equal(tag.length,1,'Exactly one meta '+key);
+ return tag[0].match(/\bcontent="([^"]*)"/)?.[1]||'';
+}
+function readGraph(html){
+ const entries=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+ assert.equal(entries.length,1,'Exactly one JSON-LD block');
+ return JSON.parse(entries[0][1])['@graph'];
+}
+function caseSeoAudit(route,listing=false){
+ const html=readFileSync(resolve(root,route.slice(1),'index.html'),'utf8');
+ const title=html.match(/<title>([^<]+)<\/title>/)?.[1]||'';
+ const desc=readMeta(html,'description');
+ const h1s=[...html.matchAll(/<h1\b[^>]*>([^<]+)<\/h1>/g)].map(m=>m[1]);
+ assert.equal(h1s.length,1,'One H1 '+route);
+ assert.ok(title.length>=40&&title.length<=90,'Reasonable unique title length '+route);
+ assert.ok(desc.length>=105&&desc.length<=180,'Useful meta description length '+route);
+ assert.ok(readMeta(html,'robots').startsWith('index,follow'),'Indexable page '+route);
+ assert.equal(readMeta(html,'og:title'),title,'Open Graph title '+route);
+ assert.equal(readMeta(html,'twitter:title'),title,'Twitter title '+route);
+ assert.equal(readMeta(html,'og:description'),desc,'Open Graph description '+route);
+ assert.equal(readMeta(html,'twitter:description'),desc,'Twitter description '+route);
+ assert.equal(readMeta(html,'og:url'),'https://gaeo.ru'+route,'Open Graph URL '+route);
+ assert.equal(readMeta(html,'twitter:card'),'summary_large_image','Social preview format '+route);
+ assert.equal(readMeta(html,'twitter:image'),readMeta(html,'og:image'),'Social image consistency '+route);
+ const image=readMeta(html,'og:image');
+ assert.ok(image.startsWith('https://gaeo.ru/assets/')&&existsSync(resolve(root,new URL(image).pathname.slice(1))),'Social image exists '+route);
+ assert.ok(readMeta(html,'og:image:alt').length>10,'Meaningful social image ALT '+route);
+ assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+route+'"'),'Self canonical '+route);
+ assert.ok(html.includes('hreflang="ru"')&&html.includes('hreflang="en"')&&html.includes('hreflang="x-default"'),'All language links '+route);
+ const graph=readGraph(html);
+ const breadcrumb=graph.find(n=>n['@type']==='BreadcrumbList');
+ assert.ok(breadcrumb,'Breadcrumb schema '+route);
+ if(listing){
+  const collection=graph.find(n=>n['@type']==='CollectionPage');
+  const list=graph.find(n=>n['@type']==='ItemList');
+  assert.equal(collection.name,h1s[0],'Catalog schema name '+route);
+  assert.equal(collection.description,desc,'Catalog schema description '+route);
+  assert.equal(list.name,h1s[0],'Catalog list schema name '+route);
+  assert.equal(list.numberOfItems,7,'Catalog item count '+route);
+  assert.equal((html.match(/<h2\b/g)||[]).length,2,'Two category H2 only '+route);
+  assert.equal((html.match(/<h3\b/g)||[]).length,7,'Seven case H3 '+route);
+  for(const item of list.itemListElement){
+   const path=new URL(item.url).pathname;
+   assert.ok(html.includes('href="'+path+'"'),'Visible case matches schema '+path);
+   assert.ok(existsSync(resolve(root,path.slice(1),'index.html')),'Catalog links to built case '+path);
+  }
+  assert.equal(collection.hasPart.length,7,'Catalog collection membership '+route);
+ }else{
+  const article=graph.find(n=>n['@type']==='Article');
+  const webPage=graph.find(n=>n['@type']==='WebPage');
+  const faq=graph.find(n=>n['@type']==='FAQPage');
+  assert.equal(article.headline,h1s[0],'Article headline matches H1 '+route);
+  assert.equal(webPage.name,h1s[0],'WebPage name matches H1 '+route);
+  assert.equal(article.description,desc,'Article description '+route);
+  assert.equal(webPage.description,desc,'WebPage description '+route);
+  assert.equal(breadcrumb.itemListElement.at(-1).name,h1s[0],'Breadcrumb name '+route);
+  assert.equal(article.image,image,'Article image matches social preview '+route);
+  assert.equal(readMeta(html,'article:published_time'),article.datePublished,'Publication date '+route);
+  assert.equal(readMeta(html,'article:modified_time'),article.dateModified,'Modified date '+route);
+  const headings=[...html.matchAll(/<h2\b[^>]*>([^<]+)<\/h2>/g)].map(m=>m[1]);
+  assert.equal(headings.length,7,'Seven editorial sections '+route);
+  assert.ok(!headings.some(x=>/границы доказанного|пределы кейса|evidence limits|verifiable public output|моя роль/i.test(x)),'No artificial editorial headings '+route);
+  const visibleFaq=[...html.matchAll(/<summary><span>([^<]+)<\/span><\/summary>/g)].map(m=>m[1]);
+  assert.equal(visibleFaq.length,3,'Three visible FAQ questions '+route);
+  assert.deepEqual(faq.mainEntity.map(x=>x.name),visibleFaq,'FAQ schema equals visible questions '+route);
+ }
+}
+for(const lang of ['ru','en']){
+ const prefix=lang==='en'?'/en':'';
+ caseSeoAudit(prefix+'/cases/',true);
+ for(const slug of slugs)caseSeoAudit(prefix+'/cases/'+slug+'/');
+}
+console.log('CASE_SEO_QA=PASS; pages=8');
+
 console.log('DEVELOPMENT_CASE_QA=PASS; pages='+count);
 
 const base='http://127.0.0.1:4333';
