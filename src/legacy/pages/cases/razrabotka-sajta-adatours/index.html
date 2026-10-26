@@ -1,0 +1,114 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Разработка AdaTours.ru: туристический сайт на Astro | Кейс GAEO</title>
+<meta name="description" content="Кейс разработки AdaTours.ru: Astro, туры, страны, места, экскурсии, многострановые маршруты, Pagefind, микроразметка и автоматические GEO/SEO-проверки.">
+
+<!-- SOCIAL_AND_ICONS_START -->
+<meta property="og:type" content="article"><meta property="og:site_name" content="GAEO.ru"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Разработка AdaTours.ru: туристический сайт на Astro | Кейс GAEO"><meta property="og:description" content="Кейс разработки AdaTours.ru: Astro, туры, страны, места, экскурсии, многострановые маршруты, Pagefind, микроразметка и автоматические GEO/SEO-проверки."><meta property="og:url" content="https://gaeo.ru/cases/razrabotka-sajta-adatours/">
+<meta property="og:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg"><meta property="og:image:alt" content="GAEO.ru — Generative &amp; Answer Engine Optimization">
+<meta property="article:published_time" content="2026-10-26">
+<meta property="article:modified_time" content="2026-10-26">
+<meta name="theme-color" content="#021641"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
+<!-- SOCIAL_AND_ICONS_END -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://gaeo.ru/#website","name":"GAEO.ru","url":"https://gaeo.ru/"},{"@type":"ProfessionalService","@id":"https://gaeo.ru/#business","name":"GAEO.ru","url":"https://gaeo.ru/","founder":{"@id":"https://gaeo.ru/#person"}},{"@type":"Person","@id":"https://gaeo.ru/#person","name":"Алексей Яковлев"},{"@type":"WebPage","@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#webpage","url":"https://gaeo.ru/cases/razrabotka-sajta-adatours/","name":"Разработка AdaTours.ru на Astro: туры, страны, места, экскурсии и SEO/GEO","description":"Кейс разработки AdaTours.ru: Astro, туры, страны, места, экскурсии, многострановые маршруты, Pagefind, микроразметка и автоматические GEO/SEO-проверки.","inLanguage":"ru","mainEntity":{"@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#article"}},{"@type":"Article","@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#article","headline":"Разработка AdaTours.ru на Astro: туры, страны, места, экскурсии и SEO/GEO","description":"Кейс разработки AdaTours.ru: Astro, туры, страны, места, экскурсии, многострановые маршруты, Pagefind, микроразметка и автоматические GEO/SEO-проверки.","datePublished":"2026-10-26","dateModified":"2026-10-26","inLanguage":"ru","author":{"@id":"https://gaeo.ru/#person"},"publisher":{"@id":"https://gaeo.ru/#business"},"mainEntityOfPage":{"@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#webpage"},"citation":["https://adatours.ru/","https://github.com/alexyakovlev79/adatours.ru"]},{"@type":"BreadcrumbList","@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://gaeo.ru/"},{"@type":"ListItem","position":2,"name":"Кейсы","item":"https://gaeo.ru/cases/"},{"@type":"ListItem","position":3,"name":"Разработка AdaTours.ru на Astro: туры, страны, места, экскурсии и SEO/GEO","item":"https://gaeo.ru/cases/razrabotka-sajta-adatours/"}]},{"@type":"FAQPage","@id":"https://gaeo.ru/cases/razrabotka-sajta-adatours/#faq","mainEntity":[{"@type":"Question","name":"Зачем делать отдельные страницы экскурсий и мест?","acceptedAnswer":{"@type":"Answer","text":"Чтобы один объект мог связываться с несколькими турами, сохраняя корректные описания и маршруты."}},{"@type":"Question","name":"Есть ли автоматические SEO-проверки?","acceptedAnswer":{"@type":"Answer","text":"Да. В цепочке сборки предусмотрены проверки Schema.org, метаданных, ссылок и маршрутов."}},{"@type":"Question","name":"Подтвержден ли рост продаж именно из-за разработки?","acceptedAnswer":{"@type":"Answer","text":"Нет. Для коммерческого вывода нужны отдельные данные по обращениям и продажам с проверкой атрибуции."}}]}]}</script>
+<link rel="canonical" href="https://gaeo.ru/cases/razrabotka-sajta-adatours/">
+<link rel="alternate" hreflang="ru" href="https://gaeo.ru/cases/razrabotka-sajta-adatours/">
+<link rel="alternate" hreflang="en" href="https://gaeo.ru/en/cases/razrabotka-sajta-adatours/">
+<link rel="alternate" hreflang="x-default" href="https://gaeo.ru/cases/razrabotka-sajta-adatours/">
+<!-- FONT_LOADING_START -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic"></noscript>
+<!-- FONT_LOADING_END -->
+<link rel="stylesheet" href="/assets/style.css?v=8e28c0044e4e"><link rel="stylesheet" href="/assets/internal.css?v=3272aae178d7">
+<style data-fix="page-shell-gap">.page-shell{padding-top:0!important}</style>
+
+
+<script src="/assets/analytics.js?v=2a1e1d12d83c" defer></script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Разработка AdaTours.ru: туристический сайт на Astro | Кейс GAEO">
+<meta name="twitter:description" content="Кейс разработки AdaTours.ru: Astro, туры, страны, места, экскурсии, многострановые маршруты, Pagefind, микроразметка и автоматические GEO/SEO-проверки.">
+<meta name="twitter:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg">
+<meta name="twitter:image:alt" content="GAEO.ru — Generative &amp; Answer Engine Optimization">
+<!-- NOJS_FALLBACK_START -->
+<noscript>
+<style>
+@media(max-width:720px){
+  header{height:auto!important;position:relative!important}
+  header .nav{height:72px!important}
+  header .desktop-menu{display:none!important}
+  header .menu-toggle{display:none!important}
+  header .mobile-menu{display:block!important;position:static!important;box-shadow:none!important}
+  .mobile-fold-toggle{display:none!important}
+  .mobile-fold-section .content-head>.text-link{display:inline-block!important}
+  .mobile-fold-section .cards.mobile-fold-body{display:grid!important}
+  .mobile-fold-section .publications.mobile-fold-body{display:block!important}
+  .mobile-fold-all-link{display:inline-block!important;margin-top:24px}
+}
+</style>
+</noscript>
+<!-- NOJS_FALLBACK_END -->
+</head><body>
+<!-- SITE_HEADER_START -->
+<header>
+ <div class="container">
+  <div class="nav" id="mainNav">
+   <div class="brand-wrap">
+    <a class="logo" href="/"><img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="eager"></a>
+    <a class="logo-tagline" href="/">Generative &amp; Answer<br>Engine Optimization</a>
+   </div>
+
+   <nav class="desktop-menu" id="desktopMenu" aria-label="Основная навигация">
+    <a href="/professional-biography/">Обо мне</a>
+    <a href="/#process">Как работаю</a>
+    <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+    <a href="/articles/">Статьи</a>
+    <a href="/publications/">Публикации</a>
+    <a href="/#pricing">Тарифы</a>
+    <span class="langs" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/gaeo-ru/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/gaeo-ru/">EN</a></span>
+   </nav>
+
+   <div class="header-actions">
+    <a class="button header-cta" href="/#lead">Мини-аудит</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+   </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="/professional-biography/">Обо мне</a>
+   <a href="/#process">Как работаю</a>
+   <a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a>
+   <a href="/articles/">Статьи</a>
+   <a href="/publications/">Публикации</a>
+   <a href="/#pricing">Тарифы</a>
+   <div class="mobile-langs" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/gaeo-ru/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/gaeo-ru/">EN</a></div>
+  </div>
+ </div>
+</header>
+<!-- SITE_HEADER_END -->
+<main class="page-shell dev-case"><!-- VISIBLE_BREADCRUMBS_START --><nav class="breadcrumbs" aria-label="Хлебные крошки"><div class="container breadcrumbs__inner"><a href="/">Главная</a><span class="breadcrumbs__sep">›</span><a href="/cases/">Кейсы</a><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current" aria-current="page">Кейс разработки сайта туроператора</span></div></nav><!-- VISIBLE_BREADCRUMBS_END --><section class="listing-hero"><div class="container"><div class="inner-eyebrow">Кейс разработки сайта туроператора</div><h1>Разработка AdaTours.ru на Astro: туры, страны, места, экскурсии и SEO/GEO</h1><div class="article-meta"><span>Алексей Яковлев</span><span>Опубликовано: 26 октября 2026</span></div></div></section><section class="inner-content"><div class="article-wrap"><blockquote><p>AdaTours.ru построен на Astro с отдельными моделями туров, стран, мест и экскурсий, связанной навигацией и SEO/GEO-проверками.</p></blockquote><p>Туристический сайт должен показывать путешествие клиенту и одновременно хранить точный продаваемый продукт: страну, маршрут, программу по дням, экскурсии и условия. Для Ada Tours мы развиваем единую контентную модель, чтобы связанные страницы не редактировались как независимые копии.</p><section class="dev-case__chapter"><h2>Задача и типы туристического контента</h2><p>Ada Tours организует путешествия в Бразилию и Латинскую Америку, включая индивидуальные и групповые туры и DMC/B2B-направления. В каталоге одна и та же страна, достопримечательность или экскурсия может входить в множество туров, а многострановой маршрут требует особой навигации. Контентную архитектуру нужно строить вокруг этих связей, иначе возникают дубли и противоречия.</p><p>Отдельные сценарии представлены для VIP, MICE, делегаций, тематических путешествий и многострановых маршрутов.</p></section><section class="dev-case__chapter"><h2>Astro и 8 типов контентных коллекций</h2><p>Сайт построен на <strong>Astro</strong> со статическим выводом и Astro Content Collections. В <a href="https://github.com/alexyakovlev79/adatours.ru/blob/main/src/content.config.ts" target="_blank" rel="noopener">схеме данных</a> определены страны, места, туры, экскурсии, тематики, кейсы, люди и статьи. У тура могут быть страны и места маршрута, даты, продолжительность, описание каждого дня, включенные услуги и структурированные поля стоимости.</p><p>Наличие раздельных полей цены, валюты, основания расчета и комментария помогает избегать ситуации, когда цена на человека ошибочно подается как цена всего тура.</p></section><section class="dev-case__chapter"><h2>Связанные страницы и поиск</h2><p>В репозитории есть маршруты <code>/country/</code>, <code>/interests/</code>, <code>/multi-country/</code>, <code>/dmc/</code>, <code>/vip/</code> и другие типы страниц. Связи туров с местами и экскурсиями проверяются автоматически, а каталог рассчитан на несколько вариантов пользовательского выбора.</p><p>Поиск по статическому сайту собирается средствами Pagefind. Это позволяет не превращать основной контент в тяжелое клиентское приложение. Публичная точка входа - <a href="https://adatours.ru/" target="_blank" rel="noopener">AdaTours.ru</a>.</p></section><section class="dev-case__chapter"><h2>Техническое SEO/GEO и приемка</h2><p>Конфигурация Astro создает статические страницы и sitemap, исключая архивные или перенаправляемые маршруты по установленным правилам. В <a href="https://github.com/alexyakovlev79/adatours.ru/blob/main/package.json" target="_blank" rel="noopener">сборке проекта</a> предусмотрены проверки метаданных, Schema.org, структурированных ссылок, меню многострановых маршрутов, изображений и социальных превью.</p><p>Модель допускает RU, EN и CN, но техническая поддержка локали не доказывает, что каждый тур опубликован на всех 3 языках. Точные числа действующих туров, скорость загрузки и конверсию нельзя устанавливать по одному лишь коду.</p></section><section class="dev-case__chapter"><h2>Моя роль и границы доказанного</h2><p>Я участвую в проектировании сайта, информационной архитектуре, SEO/GEO-модели, формировании задач на разработку, подготовке контента и проверке результатов. Сведения о программах, ценах и обязательствах перед туристами подтверждает Ada Tours. Код и медиа готовятся также с использованием автоматизации; я не заявляю единоличного ручного авторства.</p><p>Это кейс <strong>разработки туристического сайта</strong>. Ранее опубликованный <a href="/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/">кейс GEO-продвижения Ada Tours</a> посвящен динамике BMR. Рост рекомендаций нельзя автоматически приписывать только изменению сайта.</p></section><section class="dev-case__chapter"><h2>Подтверждающие материалы</h2><ul><li><a href="https://adatours.ru/" target="_blank" rel="noopener">Сайт Ada Tours</a></li><li><a href="https://github.com/alexyakovlev79/adatours.ru" target="_blank" rel="noopener">Репозиторий Astro</a></li><li><a href="/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/">Кейс GEO-продвижения</a></li></ul></section><section class="dev-case__chapter"><h2>Частые вопросы</h2><details class="faq-item"><summary><span>Зачем делать отдельные страницы экскурсий и мест?</span></summary><p>Чтобы один объект мог связываться с несколькими турами, сохраняя корректные описания и маршруты.</p></details><details class="faq-item"><summary><span>Есть ли автоматические SEO-проверки?</span></summary><p>Да. В цепочке сборки предусмотрены проверки Schema.org, метаданных, ссылок и маршрутов.</p></details><details class="faq-item"><summary><span>Подтвержден ли рост продаж именно из-за разработки?</span></summary><p>Нет. Для коммерческого вывода нужны отдельные данные по обращениям и продажам с проверкой атрибуции.</p></details></section><div class="page-cta"><div><strong>Обсудить сайт для сложного каталога</strong><p>Начинаю с модели продукта, задач продаж и структуры контента.</p></div><a class="button" href="/#lead">Обратиться</a></div></div></section></main>
+<!-- SITE_FOOTER_START -->
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <img src="/assets/gaeo-logo-128.png" alt="GAEO" width="128" height="128" decoding="async" loading="lazy">
+    <div class="footer-contact">Алексей Яковлев<br>Независимый GEO/AEO-эксперт<br><br><a href="mailto:ya@gaeo.ru">ya@gaeo.ru</a> · <a href="tel:+79264242333">+7 (926) 42-42-333</a><br>Telegram: <a href="https://t.me/ya_gaeo" target="_blank" rel="noopener">@ya_gaeo</a><br><a class="location-link" href="https://yandex.ru/maps/org/gaeo_prodvizheniye_v_neyrosetyakh/45723529742/" target="_blank" rel="noopener"><span class="location-icon" aria-hidden="true"></span>Москва, Россия</a></div>
+   </div>
+   <div><a href="/professional-biography/">Обо мне</a><a href="/cases/">Кейсы</a>
+    <a href="/industries/">Отрасли</a>
+    <a href="/strategies/">Стратегии</a><a href="/articles/">Статьи</a><a href="/publications/">Публикации</a><a href="/reviews/">Отзывы</a></div>
+   <div><a href="/professional-biography/#external-profiles">Официальные внешние профили</a><a href="/privacy-policy/">Политика конфиденциальности</a><a href="/personal-data-consent/">Обработка персональных данных</a><div class="footer-lang" aria-label="Язык"><a class="lang-link lang-ru" href="/cases/razrabotka-sajta-adatours/">RU</a><span class="lang-sep">/</span><a class="lang-link lang-en" href="/en/cases/razrabotka-sajta-adatours/">EN</a></div></div>
+  </div>
+  <div class="footer-bottom">ИП Яковлев Алексей Леонидович<br>© 2025–2026<br>GAEO.ru · Generative &amp; Answer Engine Optimization</div>
+ </div>
+</footer>
+<!-- SITE_FOOTER_END --><script src="/assets/form-config.js?v=dee21cb376d3"></script>
+<script src="/assets/site.js?v=ccbe856a67c7"></script></body></html>
