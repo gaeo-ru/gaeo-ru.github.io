@@ -8,6 +8,11 @@ const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(x=>{
 });
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const normalize=s=>s.replace(/\r\n/g,'\n').replace(/>\s+</g,'><').trim();
+// Site-wide header/footer are rebuilt from canonical partials, and may intentionally
+// differ from the legacy HTML copies. Compare all other content exactly.
+const withoutSharedChrome=s=>s
+ .replace(/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->/g,'<!-- SHARED_HEADER -->')
+ .replace(/<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->/g,'<!-- SHARED_FOOTER -->');
 const originals=walk(ORIGINAL).filter(p=>p.endsWith('.html'));
 const assets=walk(PUBLIC);
 const problems=[];
@@ -46,9 +51,10 @@ for(const original of originals){
   if(!after.includes('href="/#lead"')&&!after.includes('href="/en/#lead"'))problems.push('Commercial CTA missing in '+path);
   continue;
  }
- if(before!==after){
-  let i=0;while(i<before.length&&i<after.length&&before[i]===after[i])i++;
-  problems.push('HTML mismatch '+path+' at '+i+', source='+JSON.stringify(before.slice(i,i+100))+', astro='+JSON.stringify(after.slice(i,i+100)));
+ const plainBefore=withoutSharedChrome(before),plainAfter=withoutSharedChrome(after);
+ if(plainBefore!==plainAfter){
+  let i=0;while(i<plainBefore.length&&i<plainAfter.length&&plainBefore[i]===plainAfter[i])i++;
+  problems.push('HTML mismatch '+path+' at '+i+', source='+JSON.stringify(plainBefore.slice(i,i+100))+', astro='+JSON.stringify(plainAfter.slice(i,i+100)));
  }
 }
 for(const asset of assets){
