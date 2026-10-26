@@ -57,6 +57,11 @@ jobs:
         run: npm run check:visual
       - name: Copy checked Astro build to published branch
         run: node scripts/publish-astro-to-main.mjs publish
+      - name: Synchronize canonical navigation and QA rules for production validation
+        run: |
+          cp templates/partials/site-header.html published/templates/partials/site-header.html
+          cp templates/partials/site-header-en.html published/templates/partials/site-header-en.html
+          cp scripts/site_qa.py published/scripts/site_qa.py
       - name: Run existing GAEO production QA on generated pages
         working-directory: published
         run: python scripts/site_qa.py --mode production
@@ -68,7 +73,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.html' assets/ robots.txt sitemap.xml CNAME favicon.ico '.nojekyll' 'astro-release-manifest.json'
+          git add -A -- '*.html' assets/ robots.txt sitemap.xml CNAME favicon.ico '.nojekyll' 'astro-release-manifest.json' templates/partials/site-header.html templates/partials/site-header-en.html scripts/site_qa.py
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Site content is already exactly published."
