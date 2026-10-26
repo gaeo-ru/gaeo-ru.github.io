@@ -106,7 +106,23 @@ try{
   await mainCategory.waitFor({state:'visible'});
   await mainCategory.hover();
   const sub=desktop.locator('.desktop-menu .nav-cases__submenu');
-  assert.ok(await sub.isVisible(),'Desktop cases submenu invisible '+lang);
+  const submenuVisible=await sub.isVisible();
+  if(!submenuVisible){
+   const details=await desktop.evaluate(()=>{
+    const root=document.querySelector('.desktop-menu .nav-cases');
+    const main=document.querySelector('.desktop-menu');
+    const menu=document.querySelector('.desktop-menu .nav-cases__submenu');
+    const nav=document.querySelector('#mainNav');
+    const styles=menu?getComputedStyle(menu):null;
+    return {navClasses:nav?.className,menuDisplay:main&&getComputedStyle(main).display,
+      wrapperHovered:root?.matches(':hover'),wrapperFocused:root?.matches(':focus-within'),
+      submenuDisplay:styles?.display,submenuVisibility:styles?.visibility,
+      submenuOpacity:styles?.opacity,submenuWidth:menu?.getBoundingClientRect().width,
+      rootHtml:root?.outerHTML.slice(0,260),viewport:innerWidth};
+   });
+   console.error('CASE_NAV_DEBUG '+lang+' '+JSON.stringify(details));
+  }
+  assert.ok(submenuVisible,'Desktop cases submenu invisible '+lang);
   assert.equal(await sub.locator('a').count(),2,'Two submenu entries '+lang);
   await sub.locator('a[href$="#website-development"]').click();
   await desktop.waitForURL(url=>url.hash==='#website-development');
