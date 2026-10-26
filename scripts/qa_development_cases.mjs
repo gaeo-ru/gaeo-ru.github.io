@@ -102,7 +102,18 @@ try{
   const route='/'+prefix+'cases/';
   const desktop=await browser.newPage({viewport:{width:1680,height:900}});
   await desktop.goto(base+route,{waitUntil:'domcontentloaded'});
-  assert.equal(await desktop.locator('.desktop-menu a[href="'+route+'"]').count(),1,'Exactly one desktop Cases link '+lang);
+  const desktopCaseLinks=await desktop.locator('.desktop-menu a[href="'+route+'"]').count();
+  if(desktopCaseLinks!==1){
+   const debug=await desktop.evaluate(()=>{
+    const n=document.querySelector('.desktop-menu');
+    const group=n?.querySelector(':scope > .nav-cases');
+    return {navHtml:n?.outerHTML.slice(0,4000),groupPresent:!!group,
+      casesLinks:[...n.querySelectorAll('a')].filter(a=>a.getAttribute('href')==='/cases/'||a.getAttribute('href')==='/en/cases/').map(a=>a.outerHTML),
+      scriptTags:[...document.querySelectorAll('script[src]')].map(x=>x.getAttribute('src'))};
+   });
+   console.error('CASE_LINK_DEBUG '+lang+' '+JSON.stringify(debug));
+  }
+  assert.equal(desktopCaseLinks,1,'Exactly one desktop Cases link '+lang);
   const mainCategory=desktop.locator('.desktop-menu .nav-cases__parent');
   await mainCategory.waitFor({state:'visible'});
   await mainCategory.hover();
