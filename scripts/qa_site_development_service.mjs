@@ -116,6 +116,19 @@ try{
   let docWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
   if(docWidth>width+2){await page.waitForTimeout(230);docWidth=await page.evaluate(()=>document.documentElement.scrollWidth);}
   assert.ok(docWidth<=width+2,'Horizontal overflow '+route+' '+width+': '+docWidth);
+  // Match homepage: neutral sections, separator lines, no decorative panel background.
+  const flat=await page.locator('.site-service__card, .site-service__step, .site-service__case').evaluateAll(items=>
+    items.map(el=>{const css=getComputedStyle(el);return {background:css.backgroundColor,radius:css.borderRadius,bottom:css.borderBottomWidth};}));
+  assert.ok(flat.length>=2,'Comparable service sections exist '+route);
+  for(const item of flat){
+   assert.ok(item.background==='rgba(0, 0, 0, 0)'||item.background==='transparent','No added colored card fill '+route+' '+width+': '+item.background);
+   assert.equal(item.radius,'0px','Homepage-style flat card '+route+' '+width);
+   assert.equal(item.bottom,'1px','Homepage-style row divider '+route+' '+width);
+  }
+  const finalContact=page.locator('#contact');
+  assert.equal(await finalContact.locator('a.button').count(),1,'One canonical contact button '+route);
+  const finalBackground=await finalContact.evaluate(el=>getComputedStyle(el).backgroundColor);
+  assert.ok(finalBackground==='rgba(0, 0, 0, 0)'||finalBackground==='transparent','No colored contact panel '+route+' '+width);
   if(route.includes('website-development')){
    assert.equal(await page.locator('details.faq-item').count(),5,'FAQ count '+route);
    const faqRoot=page.locator('#faq .faq');
