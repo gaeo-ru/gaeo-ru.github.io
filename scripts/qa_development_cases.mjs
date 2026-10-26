@@ -127,9 +127,12 @@ function caseSeoAudit(route,listing=false){
   const headings=[...html.matchAll(/<h2\b[^>]*>([^<]+)<\/h2>/g)].map(m=>m[1]);
   assert.equal(headings.length,7,'Seven editorial sections '+route);
   assert.ok(!headings.some(x=>/границы доказанного|пределы кейса|evidence limits|verifiable public output|моя роль/i.test(x)),'No artificial editorial headings '+route);
-  const visibleFaq=[...html.matchAll(/<summary><span>([^<]+)<\/span><\/summary>/g)].map(m=>m[1]);
-  assert.equal(visibleFaq.length,3,'Three visible FAQ questions '+route);
-  assert.deepEqual(faq.mainEntity.map(x=>x.name),visibleFaq,'FAQ schema equals visible questions '+route);
+  const visibleFaq=[...html.matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
+  assert.equal(visibleFaq.length,3,'Three homepage-style FAQ rows '+route);
+  assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'FAQ label like homepage '+route);
+  assert.ok(html.includes('<div class="faq">'),'FAQ wrapper like homepage '+route);
+  assert.deepEqual(faq.mainEntity.map(x=>x.name),visibleFaq.map(x=>x[1]),'FAQ schema equals visible questions '+route);
+  assert.deepEqual(faq.mainEntity.map(x=>x.acceptedAnswer.text),visibleFaq.map(x=>x[2]),'FAQ answers equal schema '+route);
  }
 }
 for(const lang of ['ru','en']){
@@ -164,9 +167,13 @@ try{
   assert.equal(await page.locator('details.faq-item').count(),3,'FAQ '+route);
   const before=await page.evaluate(()=>document.documentElement.scrollWidth);
   assert.ok(before<=width+2,'Overflow before modal '+route+' at '+width+'='+before);
-  const faq=page.locator('details.faq-item').first();
-  await faq.locator('summary').click();
+  const faqRoot=page.locator('.dev-case__chapter .faq');
+  assert.equal(await faqRoot.locator('details.faq-item').count(),3,'Homepage FAQ structure '+route);
+  assert.equal(await faqRoot.locator('.faq-q .faq-toggle').count(),3,'Homepage FAQ plus icons '+route);
+  const faq=faqRoot.locator('details.faq-item').first();
+  await faq.locator('.faq-q').click();
   assert.ok(await faq.evaluate(el=>el.open),'FAQ interaction '+route);
+  assert.equal(await faq.locator('.faq-toggle').textContent(),'+','FAQ icon '+route);
   await page.locator('.page-cta .button[href$="#lead"]').click();
   await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
   await page.locator('.gaeo-modal-close').click();
