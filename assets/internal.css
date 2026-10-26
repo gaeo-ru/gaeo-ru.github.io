@@ -794,3 +794,8 @@
 .cases-listing-content .cases-category--geo .list-card{min-width:0}
 @media(max-width:720px){.cases-listing-content .case-types-nav{gap:9px;margin-bottom:28px}.article-wrap .case-types-nav a:not(.btn):not(.button){padding:14px 13px}.case-types-nav a span{font-size:15px}.case-types-nav a small{font-size:11px}.cases-listing-content .cases-category{scroll-margin-top:86px;margin-bottom:35px}.cases-listing-content .cases-category+.cases-category{padding-top:24px}}
 @media(max-width:355px){.cases-listing-content .case-types-nav{grid-template-columns:minmax(0,1fr)}}
+
+/* Next step from website development case catalog to the actual service. */
+.cases-listing-content .dev-case-listing__service{margin:10px 0 20px;padding:18px 21px;border-radius:13px;background:#eef8fa;border:1px solid #c5e0e3;color:#15354d;font-size:16px;line-height:1.68}
+.cases-listing-content .dev-case-listing__service a{font-weight:750}
+@media(max-width:720px){.cases-listing-content .dev-case-listing__service{padding:16px;font-size:15px}}
