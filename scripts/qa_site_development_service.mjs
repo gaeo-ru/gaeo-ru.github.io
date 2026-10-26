@@ -42,6 +42,11 @@ for(const route of routes){
  assert.ok(html.includes('href="mailto:ya@gaeo.ru"'),'Email '+route);
  assert.ok(html.includes('href="'+(dir==='en'?'/en/':'/')+'#lead"'),'Inquiry button '+route);
  assert.ok(html.includes('/assets/site-development.css'),'Scoped site-service styles '+route);
+ assert.ok(html.includes('id="contact"'),'Shared light contact section '+route);
+ assert.ok(!html.includes('site-service__cta'),'No bespoke dark CTA '+route);
+ assert.ok(!html.includes('Расскажи,')&&!html.includes('Напиши, какой сайт'),'No unapproved copy '+route);
+ const expectedCta=dir==='en'?'Get a mini-audit':'Получить мини-аудит';
+ assert.ok(html.includes('href="'+(dir==='en'?'/en/':'/')+'#lead">'+expectedCta+'</a>'),'Canonical lead CTA '+route);
  const page=nodes.find(n=>n['@type']===(isLanding?'WebPage':'CollectionPage'));
  assert.ok(page,'Page JSON-LD type '+route);
  assert.equal(page.name,h1,'Schema title '+route);
@@ -52,10 +57,14 @@ for(const route of routes){
   const service=nodes.find(n=>n['@type']==='Service');
   assert.ok(service&&service.provider['@id']==='https://gaeo.ru/#business','Service provider '+route);
   assert.equal(service.url,'https://gaeo.ru'+route,'Service URL '+route);
-  const visible=[...html.matchAll(/<details class="faq-item"><summary><span>([^<]+)<\/span>/g)].map(m=>m[1]);
+  const visible=[...html.matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
+  assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'Homepage FAQ eyebrow '+route);
+  assert.ok(html.includes('id="faq"><div class="eyebrow">FAQ</div>'),'FAQ section structure '+route);
+  assert.ok(!html.includes('site-service__faq'),'Remove bespoke FAQ component '+route);
   const faq=nodes.find(n=>n['@type']==='FAQPage');
   assert.equal(visible.length,5,'Five visible FAQs '+route);
-  assert.deepEqual(faq?.mainEntity?.map(n=>n.name),visible,'FAQ/schema parity '+route);
+  assert.deepEqual(faq?.mainEntity?.map(n=>n.name),visible.map(x=>x[1]),'FAQ/schema question parity '+route);
+  assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>x[2]),'FAQ/schema answer parity '+route);
   for(const slug of ['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours']){
    const link=(dir==='en'?'/en':'')+'/cases/'+slug+'/';
    assert.ok(html.includes('href="'+link+'"'),'Missing evidence case link '+link);
@@ -107,10 +116,27 @@ try{
   let docWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
   if(docWidth>width+2){await page.waitForTimeout(230);docWidth=await page.evaluate(()=>document.documentElement.scrollWidth);}
   assert.ok(docWidth<=width+2,'Horizontal overflow '+route+' '+width+': '+docWidth);
+  // Match homepage: neutral sections, separator lines, no decorative panel background.
+  const flat=await page.locator('.site-service__card, .site-service__step, .site-service__case').evaluateAll(items=>
+    items.map(el=>{const css=getComputedStyle(el);return {background:css.backgroundColor,radius:css.borderRadius,bottom:css.borderBottomWidth};}));
+  assert.ok(flat.length>=2,'Comparable service sections exist '+route);
+  for(const item of flat){
+   assert.ok(item.background==='rgba(0, 0, 0, 0)'||item.background==='transparent','No added colored card fill '+route+' '+width+': '+item.background);
+   assert.equal(item.radius,'0px','Homepage-style flat card '+route+' '+width);
+   assert.equal(item.bottom,'1px','Homepage-style row divider '+route+' '+width);
+  }
+  const finalContact=page.locator('#contact');
+  assert.equal(await finalContact.locator('a.button').count(),1,'One canonical contact button '+route);
+  const finalBackground=await finalContact.evaluate(el=>getComputedStyle(el).backgroundColor);
+  assert.ok(finalBackground==='rgba(0, 0, 0, 0)'||finalBackground==='transparent','No colored contact panel '+route+' '+width);
   if(route.includes('website-development')){
    assert.equal(await page.locator('details.faq-item').count(),5,'FAQ count '+route);
-   await page.locator('details.faq-item summary').first().click();
-   assert.ok(await page.locator('details.faq-item').first().evaluate(el=>el.open),'Native FAQ toggles '+route);
+   const faqRoot=page.locator('#faq .faq');
+   assert.equal(await faqRoot.locator('details.faq-item').count(),5,'Homepage FAQ wrappers '+route);
+   assert.equal(await faqRoot.locator('.faq-q .faq-toggle').count(),5,'FAQ plus controls '+route);
+   await faqRoot.locator('.faq-q').first().click();
+   assert.ok(await faqRoot.locator('details.faq-item').first().evaluate(el=>el.open),'Native FAQ toggles '+route);
+   assert.equal(await faqRoot.locator('.faq-q .faq-toggle').first().textContent(),'+','FAQ icon text '+route);
    assert.equal(await page.locator('.site-service__case').count(),3,'Three case links '+route);
   }else{
    assert.equal(await page.locator('.site-service__directory-cards article').count(),2,'Two services '+route);
@@ -123,7 +149,11 @@ try{
    await toggle.click();
    await page.locator('.mobile-menu').waitFor({state:'hidden',timeout:3500});
    if(route.includes('website-development')){
-    await page.locator('.site-service__cta .button').first().click();
+    const contact=page.locator('#contact');
+    assert.ok(await contact.isVisible(),'Final contact visible '+route);
+    const background=await contact.evaluate(el=>getComputedStyle(el).backgroundColor);
+    assert.ok(background==='rgba(0, 0, 0, 0)'||background==='transparent','Final contact has no custom fill '+route+': '+background);
+    await contact.locator('.button[href$="#lead"]').click();
     await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6500});
     await page.locator('.gaeo-modal-close').click();
     assert.equal(await page.locator('[role="dialog"]').count(),0,'Lead modal teardown '+route);
