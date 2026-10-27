@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "0d8d010730bfe07d021c769d6508f7bde17c5552",
-  "releasedAt": "2026-10-27T14:01:33.502Z",
+  "sourceCommit": "2d60ed6913f54bd6f4d7551dcf6d632e1d26fc4f",
+  "releasedAt": "2026-10-27T16:23:31.117Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1353,7 +1353,7 @@
     {
       "path": "cases/methodlab-rost-neyrovidimosti-19-52-procenta/index.html",
       "kind": "html",
-      "sha256": "f1bac1c7e7fb35daa4ce6115884582e0960b23d6692042c4159d178f912fb021"
+      "sha256": "3661fa1b8eeceb9f93aedbcfa9cf705586eef75d1bd2b0836afe980fdde4ca52"
     },
     {
       "path": "cases/prep-center-6-klientov-iz-neyrosetey/index.html",
@@ -1443,7 +1443,7 @@
     {
       "path": "en/cases/methodlab-ai-visibility-growth/index.html",
       "kind": "html",
-      "sha256": "5a6d5af017092c4dc6ae38a193542877eddda61150432343d894bb28d2ee958e"
+      "sha256": "427c11f07ea86d308e4dd9edbff6fa0ecdf111ddc345a2cafad8ea3455acee66"
     },
     {
       "path": "en/cases/prep-center-6-paying-clients-from-ai/index.html",
@@ -1488,7 +1488,7 @@
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "33b14358637e10dab34949d2e88d89acb83d3c632b1f492ef6819a8811d93375"
+      "sha256": "3b18eca722fa12ee9a41af437096c4c8dd76b55c7ddc7778fa4b8ce914af5cc6"
     },
     {
       "path": "en/industries/index.html",
@@ -1568,7 +1568,7 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "8cdff20e00f91ad0692b27b78e0b33c6e56bba4374630a44807e35fbe567fe11"
+      "sha256": "da09c14f5a2779d646da6ab75a01a8b2503661b9dfc13f662e461e146c78fbf4"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -1584,6 +1584,11 @@
       "path": "en/strategies/measurement/index.html",
       "kind": "html",
       "sha256": "5d539900230c9690ba873e0ed3fbcf8b6d15cfd664c6d38a8db066d6aaa5af64"
+    },
+    {
+      "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
+      "kind": "html",
+      "sha256": "592885e081d169abce4740170d7e553ffd5ebba8701acbfeea87520c06606c6a"
     },
     {
       "path": "en/strategies/tourism-dmc-recommendations/index.html",
@@ -1623,7 +1628,7 @@
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "c69289e7095f2742272512f4c08e977fd71180b2c8aab4e96f932d1c4e89825e"
+      "sha256": "a48274c88ab3f052efe7515fc21ea5630a0b12b06142d08fee91be97157529d2"
     },
     {
       "path": "industries/index.html",
@@ -1698,7 +1703,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "96f42393e8e853c3e0d2a305bc6ba4b3a30621f59c2a1c990c14fe80aa2dfc31"
+      "sha256": "4b71500bf05c13d7b2e917ffd8310c2a9fa7303d923403994aed37524116cee1"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -1718,7 +1723,7 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "4394363fc746d7e0fee55bdf16df5d753b4877ddf65ac3fbea2634167c19773a"
+      "sha256": "dd6f272f6a2cd2cd26125947153ddef9e57f0c10cc1ee8ef3093fed962902805"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -1734,6 +1739,11 @@
       "path": "strategies/measurement/index.html",
       "kind": "html",
       "sha256": "4c73fdcbe2f977582f97be712f53291b2b0d20657bbf3aedbf42d5f44ff232bf"
+    },
+    {
+      "path": "strategies/technical-b2b-vendor-evidence/index.html",
+      "kind": "html",
+      "sha256": "7799ce0b43bf3debb1fc76f9333f6bd3af0e40c9d942810177f83f6d84ed1afb"
     },
     {
       "path": "strategies/tourism-dmc-recommendations/index.html",
