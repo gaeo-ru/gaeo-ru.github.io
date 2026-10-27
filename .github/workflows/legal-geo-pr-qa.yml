@@ -20,6 +20,11 @@ on:
       - 'templates/partials/site-footer.html'
       - 'templates/partials/site-footer-en.html'
       - 'scripts/qa_development_cases.mjs'
+      - 'scripts/qa_approved_design_system.mjs'
+      - 'src/lib/approved-design-system.mjs'
+      - 'src/lib/legacy.mjs'
+      - 'src/data/approved-design-content.mjs'
+      - 'src/data/preexisting-legacy-routes.mjs'
       - 'src/data/industry-commercial-pages.mjs'
       - 'src/components/**'
       - 'scripts/qa_legal_link_graph.mjs'
@@ -55,6 +60,7 @@ jobs:
       - run: npm run build
       - run: npm run check:parity
       - run: npm run check:anchors
+      - run: npm run check:design
       - run: node scripts/qa_ecommerce_link_graph.mjs
       - run: node scripts/qa_legal_link_graph.mjs
       - run: node scripts/qa_industrial_link_graph.mjs

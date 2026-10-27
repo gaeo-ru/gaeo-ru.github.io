@@ -1,0 +1,16 @@
+---
+import FAQAccordion from './FAQAccordion.astro';
+import LightLead from './LightLead.astro';
+import ApprovedCards from './ApprovedCards.astro';
+import {faqItemsFor,approvedLeadFor,approvedCardsFor,DESIGN_BLOCKS} from '../../lib/approved-design-system.mjs';
+const {sourcePath,block}=Astro.props;
+if(!DESIGN_BLOCKS.includes(block))throw new Error('Unsupported approved design block: '+block);
+const faq=block==='FAQ'?faqItemsFor(sourcePath):null;
+const lead=block==='CONTACT'?approvedLeadFor(sourcePath):null;
+const cards=['SERVICES','WHEN','STEPS','CASES'].includes(block)?approvedCardsFor(sourcePath,block):null;
+---
+<Fragment set:html={`<!-- GAEO_DESIGN:${block}_START -->`}/>
+{block==='FAQ'&&<FAQAccordion items={faq}/>}
+{block==='CONTACT'&&<LightLead {...lead}/>}
+{cards&&<ApprovedCards variant={block.toLowerCase()} items={cards}/>}
+<Fragment set:html={`<!-- GAEO_DESIGN:${block}_END -->`}/>

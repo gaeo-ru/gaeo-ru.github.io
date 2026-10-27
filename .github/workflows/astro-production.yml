@@ -27,6 +27,7 @@ jobs:
           npm run build
           npm run check:parity
           npm run check:anchors
+          npm run check:design
       - name: Check e-commerce article, methodology, and conversion links
         run: node scripts/qa_ecommerce_link_graph.mjs
       - name: Validate legal GEO pages and cross-links

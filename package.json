@@ -12,7 +12,8 @@
     "check:parity": "node scripts/astro-parity.mjs",
     "check:visual": "node scripts/astro-visual-parity.mjs",
     "check:industry": "node scripts/astro-industry-browser-qa.mjs",
-    "check:anchors": "node scripts/qa_internal_anchor_links.mjs"
+    "check:anchors": "node scripts/qa_internal_anchor_links.mjs",
+    "check:design": "node scripts/qa_approved_design_system.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",

@@ -127,7 +127,7 @@ function caseSeoAudit(route,listing=false){
   const headings=[...html.matchAll(/<h2\b[^>]*>([^<]+)<\/h2>/g)].map(m=>m[1]);
   assert.equal(headings.length,7,'Seven editorial sections '+route);
   assert.ok(!headings.some(x=>/границы доказанного|пределы кейса|evidence limits|verifiable public output|моя роль/i.test(x)),'No artificial editorial headings '+route);
-  const visibleFaq=[...html.matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
+  const visibleFaq=[...html.replace(/>\s+</g,'><').matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
   assert.equal(visibleFaq.length,3,'Three homepage-style FAQ rows '+route);
   assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'FAQ label like homepage '+route);
   assert.ok(html.includes('<div class="faq">'),'FAQ wrapper like homepage '+route);

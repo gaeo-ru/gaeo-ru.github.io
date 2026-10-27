@@ -1,0 +1,12 @@
+---
+const {items,paragraphAnswers=false}=Astro.props;
+if(!Array.isArray(items)||items.length===0)throw new Error('FAQAccordion requires questions');
+---
+<div class="faq">
+  {items.map(item=>
+    <details class="faq-item">
+      <summary class="faq-q"><span>{item.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+      <div class="faq-a">{paragraphAnswers?<p>{item.answer}</p>:item.answer}</div>
+    </details>
+  )}
+</div>

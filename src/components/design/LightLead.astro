@@ -1,0 +1,9 @@
+---
+const {title,description,href,label}=Astro.props;
+if(!title||!description||!href||!label)throw new Error('LightLead: missing canonical content');
+---
+<section class="site-service__section" id="contact">
+  <h2>{title}</h2>
+  <p>{description}</p>
+  <a class="button" href={href}>{label}</a>
+</section>

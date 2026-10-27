@@ -57,14 +57,15 @@ for(const route of routes){
   const service=nodes.find(n=>n['@type']==='Service');
   assert.ok(service&&service.provider['@id']==='https://gaeo.ru/#business','Service provider '+route);
   assert.equal(service.url,'https://gaeo.ru'+route,'Service URL '+route);
-  const visible=[...html.matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
+  const visible=[...html.replace(/>\s+</g,'><').matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
   assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'Homepage FAQ eyebrow '+route);
   assert.ok(html.includes('id="faq"><div class="eyebrow">FAQ</div>'),'FAQ section structure '+route);
   assert.ok(!html.includes('site-service__faq'),'Remove bespoke FAQ component '+route);
   const faq=nodes.find(n=>n['@type']==='FAQPage');
   assert.equal(visible.length,5,'Five visible FAQs '+route);
   assert.deepEqual(faq?.mainEntity?.map(n=>n.name),visible.map(x=>x[1]),'FAQ/schema question parity '+route);
-  assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>x[2]),'FAQ/schema answer parity '+route);
+  const decodeHtmlEntities=s=>s.replace(/&#39;|&#x27;/gi,"'").replace(/&quot;/g,'"').replace(/&amp;/g,'&');
+  assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>decodeHtmlEntities(x[2])),'FAQ/schema answer parity '+route);
   for(const slug of ['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours']){
    const link=(dir==='en'?'/en':'')+'/cases/'+slug+'/';
    assert.ok(html.includes('href="'+link+'"'),'Missing evidence case link '+link);

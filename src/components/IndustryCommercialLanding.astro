@@ -1,5 +1,6 @@
 ---
 import { industryCommercialPages } from '../data/industry-commercial-pages.mjs';
+import FAQAccordion from './design/FAQAccordion.astro';
 const { sourcePath } = Astro.props;
 const page = industryCommercialPages[sourcePath];
 if (!page) throw new Error('Missing industry commercial landing data: ' + sourcePath);
@@ -201,12 +202,7 @@ const en = page.language === 'en';
   <div class="container industry-faq-container">
     <div class="industry-eyebrow">FAQ</div>
     <h2 id="industry-faq-title">{page.faqTitle || (en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости')}</h2>
-    <div class="faq">
-      {page.faq.map(entry=><details class="faq-item">
-        <summary class="faq-q"><span>{entry.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
-        <div class="faq-a"><p>{entry.answer}</p></div>
-      </details>)}
-    </div>
+    <FAQAccordion items={page.faq} paragraphAnswers={true}/>
   </div>
 </section>
 
