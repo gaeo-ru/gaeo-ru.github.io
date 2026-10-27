@@ -4,6 +4,7 @@ import SharedHeader from './SharedHeader.astro';
 import SharedFooter from './SharedFooter.astro';
 import LeadCTA from './LeadCTA.astro';
 import IndustryCommercialLanding from './IndustryCommercialLanding.astro';
+import ApprovedDesignSlot from './design/ApprovedDesignSlot.astro';
 const {sourcePath}=Astro.props;
 const tokens=tokenizeLegacyPage(sourcePath);
 ---
@@ -15,4 +16,6 @@ const tokens=tokenizeLegacyPage(sourcePath);
   ? <IndustryCommercialLanding sourcePath={sourcePath}/>
   : t.kind==='cta'
   ? <LeadCTA markup={t.content}/>
+  : t.kind==='design'
+  ? <ApprovedDesignSlot sourcePath={sourcePath} block={t.block}/>
   : <Fragment set:html={t.content}/>)}
