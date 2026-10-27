@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "de94c84734be72ddf46d3e6e7abe3ed55d00157e",
-  "releasedAt": "2026-10-27T09:47:28.973Z",
+  "sourceCommit": "60fc22f520413033aad9363696d0424c53344e0c",
+  "releasedAt": "2026-10-27T11:23:00.553Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1483,7 +1483,7 @@
     {
       "path": "en/industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "7c4bc5d5ac18af8d90c039be411d38582503d764d641d855bef5b8605bb42284"
+      "sha256": "9ea1449befc7ab0655a4026e2af1e860cc397ba1d4e676b7edf7ff6d41f12df3"
     },
     {
       "path": "en/industries/highload-it/index.html",
@@ -1561,9 +1561,14 @@
       "sha256": "c049d8ea2065ccb967760082709868d140541162391e3c08a4837ded637ec3e0"
     },
     {
+      "path": "en/strategies/fulfillment-provider-selection/index.html",
+      "kind": "html",
+      "sha256": "5017a21978509af4452b6614b794b45032c1004564151423422142552d073799"
+    },
+    {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "fb1f975a3cec0c6281acb918632c2fcffcbbf701a8e6375ea0a9199ef77675e0"
+      "sha256": "2422c4185567516967307ac50b8723669006aa15b392e40f064daa34c32ee294"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -1608,7 +1613,7 @@
     {
       "path": "industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "a5339f630efaa9333877f17d55c9c40dd4df60e2ea152a4e201f10f7f8dd04ae"
+      "sha256": "e7a1e523439ed9950e015c9389f69ca65dc5ddf0e8a48e8ad6b34c4fbcbfb673"
     },
     {
       "path": "industries/highload-it/index.html",
@@ -1688,7 +1693,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "c0ea924b6df3b0f69c072d94c29645326131b540e5e27bdd33fbcd8a1280577a"
+      "sha256": "b16f749926281a45427cc5b3678f3ed764418747bb9892ce3b1258f3217033bb"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -1701,9 +1706,14 @@
       "sha256": "1f0fae46a653a341db6c7eb57b2e240708c5fb774effea66d8f0679495ac72a1"
     },
     {
+      "path": "strategies/fulfillment-provider-selection/index.html",
+      "kind": "html",
+      "sha256": "08380f6e93b5afff0c0c08584a6e818e62e770f1972c0196df22ebe1bfb688e0"
+    },
+    {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "13a10259133ccdd9251fc39b6f5b794c2f2502235c64a3338aed62af700d1066"
+      "sha256": "d0d4213e8c59a33d7b9eedfcd37fbd5bdf465de8ef08ba9203e80de42ed37f51"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
