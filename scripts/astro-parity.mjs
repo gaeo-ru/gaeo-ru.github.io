@@ -12,7 +12,10 @@ const normalize=s=>s.replace(/\r\n/g,'\n').replace(/>\s+</g,'><').trim();
 // differ from the legacy HTML copies. Compare all other content exactly.
 const withoutSharedChrome=s=>s
  .replace(/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->/g,'<!-- SHARED_HEADER -->')
- .replace(/<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->/g,'<!-- SHARED_FOOTER -->');
+ .replace(/<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->/g,'<!-- SHARED_FOOTER -->')
+ // Only approved Astro slots can differ from the hybrid HTML source.
+ // Every slot is separately verified by qa_approved_design_system.mjs.
+ .replace(/<!-- GAEO_DESIGN:(FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES)_START -->[\s\S]*?<!-- GAEO_DESIGN:\\1_END -->/g,(_,kind)=>'<!-- GAEO_DESIGN:'+kind+' -->');
 const originals=walk(ORIGINAL).filter(p=>p.endsWith('.html'));
 const assets=walk(PUBLIC);
 const problems=[];
