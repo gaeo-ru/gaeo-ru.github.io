@@ -13,6 +13,8 @@ const approved={
  'en/strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
  'strategies/tourism-dmc-recommendations/index.html':['FAQ','CONTACT'],
  'en/strategies/tourism-dmc-recommendations/index.html':['FAQ','CONTACT'],
+ 'strategies/technical-b2b-vendor-evidence/index.html':['FAQ','CONTACT'],
+ 'en/strategies/technical-b2b-vendor-evidence/index.html':['FAQ','CONTACT'],
  'services/index.html':['CONTACT','SERVICES'],
  'en/services/index.html':['CONTACT','SERVICES'],
  'services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES'],
