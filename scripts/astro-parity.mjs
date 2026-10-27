@@ -15,7 +15,7 @@ const withoutSharedChrome=s=>s
  .replace(/<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->/g,'<!-- SHARED_FOOTER -->')
  // Only approved Astro slots can differ from the hybrid HTML source.
  // Every slot is separately verified by qa_approved_design_system.mjs.
- .replace(/<!-- GAEO_DESIGN:(FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES)_START -->[\s\S]*?<!-- GAEO_DESIGN:\\1_END -->/g,(_,kind)=>'<!-- GAEO_DESIGN:'+kind+' -->');
+ .replace(/<!-- GAEO_DESIGN:(FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES)_START -->[\s\S]*?<!-- GAEO_DESIGN:\1_END -->/g,(_,kind)=>'<!-- GAEO_DESIGN:'+kind+' -->');
 const originals=walk(ORIGINAL).filter(p=>p.endsWith('.html'));
 const assets=walk(PUBLIC);
 const problems=[];
