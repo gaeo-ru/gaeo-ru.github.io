@@ -1,0 +1,28 @@
+---
+const {items,variant}=Astro.props;
+if(!Array.isArray(items)||!items.length||!['services','when','steps','cases'].includes(variant))
+  throw new Error('ApprovedCards requires a supported variant and content');
+---
+{variant==='services'&&<div class="site-service__directory-cards">
+  {items.map(item=><article class="site-service__card">
+    <h2>{item.title}</h2><p>{item.text}</p>
+    <ul>{item.features.map(feature=><li>{feature}</li>)}</ul>
+    <a class="button" href={item.href}>{item.cta}</a>
+  </article>)}
+</div>}
+{variant==='when'&&<div class="site-service__grid">
+  {items.map(item=><article class="site-service__card">
+    <h3>{item.title}</h3><p>{item.text}</p>
+  </article>)}
+</div>}
+{variant==='steps'&&<div class="site-service__steps">
+  {items.map(item=><article class="site-service__step">
+    <h3>{item.title}</h3><p>{item.text}</p>
+  </article>)}
+</div>}
+{variant==='cases'&&<div class="site-service__cases">
+  {items.map(item=><article class="site-service__case">
+    <h3>{item.title}</h3><p>{item.text}</p>
+    <a href={item.href}>{item.cta}</a>
+  </article>)}
+</div>}
