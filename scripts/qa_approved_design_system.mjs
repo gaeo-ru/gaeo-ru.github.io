@@ -9,6 +9,8 @@ const src=resolve(ROOT,'src/legacy/pages'),dist=resolve(ROOT,'dist');
 const caseSlugs=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
 const approved={
  'index.html':['FAQ'],'en/index.html':['FAQ'],
+ 'strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
+ 'en/strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
  'services/index.html':['CONTACT','SERVICES'],
  'en/services/index.html':['CONTACT','SERVICES'],
  'services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES'],
