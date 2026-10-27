@@ -500,6 +500,7 @@ try {
     assert.ok(faq?.mainEntity?.length===6&&faq.mainEntity.every((q,i)=>q.name===qs[i]),'Pharma schema parity');
     const img=page.locator('.pharma-geo-guide .content-media img');
     await img.scrollIntoViewIfNeeded();
+    await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,4500)})});
     assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0),'Pharma evidence image');
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Pharma overflow');
     await page.locator('.pharma-geo-guide #contact a[href$="#lead"]').click();
