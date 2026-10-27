@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "60fc22f520413033aad9363696d0424c53344e0c",
-  "releasedAt": "2026-10-27T11:23:00.553Z",
+  "sourceCommit": "0d8d010730bfe07d021c769d6508f7bde17c5552",
+  "releasedAt": "2026-10-27T14:01:33.502Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1513,7 +1513,7 @@
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "575ef97c45d492c92089a3ebd207df7436d57f1bf252e35445509f51d21d2d83"
+      "sha256": "b976c65c27760590a28df0114e4c96f1c8732168832986be46b91d31f46ff00e"
     },
     {
       "path": "en/personal-data-consent/index.html",
@@ -1568,7 +1568,7 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "2422c4185567516967307ac50b8723669006aa15b392e40f064daa34c32ee294"
+      "sha256": "8cdff20e00f91ad0692b27b78e0b33c6e56bba4374630a44807e35fbe567fe11"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -1584,6 +1584,11 @@
       "path": "en/strategies/measurement/index.html",
       "kind": "html",
       "sha256": "5d539900230c9690ba873e0ed3fbcf8b6d15cfd664c6d38a8db066d6aaa5af64"
+    },
+    {
+      "path": "en/strategies/tourism-dmc-recommendations/index.html",
+      "kind": "html",
+      "sha256": "7e707148d3dbd668a7cc4b895b97edf707408cb7f5857ab3e6c5d2b25c5857df"
     },
     {
       "path": "favicon.ico",
@@ -1643,7 +1648,7 @@
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "54b635ab35d346a56d14f0e7ba0120ee9d05c558a9af72c1dacf9c3b340c0033"
+      "sha256": "d06b32a7b877082ee68a1032e203ec50a79c5d3611e591bfe792b341b6f71380"
     },
     {
       "path": "personal-data-consent/index.html",
@@ -1693,7 +1698,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "b16f749926281a45427cc5b3678f3ed764418747bb9892ce3b1258f3217033bb"
+      "sha256": "96f42393e8e853c3e0d2a305bc6ba4b3a30621f59c2a1c990c14fe80aa2dfc31"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -1713,7 +1718,7 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "d0d4213e8c59a33d7b9eedfcd37fbd5bdf465de8ef08ba9203e80de42ed37f51"
+      "sha256": "4394363fc746d7e0fee55bdf16df5d753b4877ddf65ac3fbea2634167c19773a"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -1729,6 +1734,11 @@
       "path": "strategies/measurement/index.html",
       "kind": "html",
       "sha256": "4c73fdcbe2f977582f97be712f53291b2b0d20657bbf3aedbf42d5f44ff232bf"
+    },
+    {
+      "path": "strategies/tourism-dmc-recommendations/index.html",
+      "kind": "html",
+      "sha256": "928804e86d8987e3cddbd6c4795c7510dee4f48c129bae28fe120a998079468a"
     }
   ]
 }
