@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "2d60ed6913f54bd6f4d7551dcf6d632e1d26fc4f",
-  "releasedAt": "2026-10-27T16:23:31.117Z",
+  "sourceCommit": "5c538ea882dc162467fe0a82419c7877cf2b169b",
+  "releasedAt": "2026-10-27T17:24:57.013Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1508,7 +1508,7 @@
     {
       "path": "en/industries/pharma/index.html",
       "kind": "html",
-      "sha256": "9bb12206ba732c813b9cedbb982649b2feaa44b5a892052c44d598a6d5eb826c"
+      "sha256": "e19eaf97d1292cdf35c6cc2b1587086d4cab123029b9d450e10608b2763e21e6"
     },
     {
       "path": "en/industries/tourism/index.html",
@@ -1568,7 +1568,7 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "da09c14f5a2779d646da6ab75a01a8b2503661b9dfc13f662e461e146c78fbf4"
+      "sha256": "40b9c26b31330eb8a90f7e0a8150a3b492737e39881387f753d1033a79e28120"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -1584,6 +1584,11 @@
       "path": "en/strategies/measurement/index.html",
       "kind": "html",
       "sha256": "5d539900230c9690ba873e0ed3fbcf8b6d15cfd664c6d38a8db066d6aaa5af64"
+    },
+    {
+      "path": "en/strategies/pharma-geo-evidence/index.html",
+      "kind": "html",
+      "sha256": "9ad47c167ccd08eddb5ab5c7092b229a0e51bb40d5f51b6a633e4794a7ba59e7"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
@@ -1648,7 +1653,7 @@
     {
       "path": "industries/pharma/index.html",
       "kind": "html",
-      "sha256": "1880b575f9f278565bfdaa3d345ca5f3dcc6c654a27e902c41e54624bd25d1f4"
+      "sha256": "e44f2cecde53c3a52f3e49fed5b347b47c57db02e71b5d60084f1c53f6e80638"
     },
     {
       "path": "industries/tourism/index.html",
@@ -1703,7 +1708,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "4b71500bf05c13d7b2e917ffd8310c2a9fa7303d923403994aed37524116cee1"
+      "sha256": "1a72546bfe300b599ed8524394bb94819dd243c12c92e5bc908f19535d682fc3"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -1723,7 +1728,7 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "dd6f272f6a2cd2cd26125947153ddef9e57f0c10cc1ee8ef3093fed962902805"
+      "sha256": "87eab0bd70422775ed63c4a858ae96f584ab098657ef69242ee2758da977c639"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -1739,6 +1744,11 @@
       "path": "strategies/measurement/index.html",
       "kind": "html",
       "sha256": "4c73fdcbe2f977582f97be712f53291b2b0d20657bbf3aedbf42d5f44ff232bf"
+    },
+    {
+      "path": "strategies/pharma-geo-evidence/index.html",
+      "kind": "html",
+      "sha256": "86e9c109e609fe184a515e2ace296759fbd1faa3c8a9137a5550a9926f70321a"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
