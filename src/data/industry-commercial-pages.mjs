@@ -667,6 +667,10 @@ export const industryCommercialPages = {
       "caption": "Иллюстрация структуры источников: официальный сайт, инструкция, исследования и профессиональные справочники.",
       "links": [
         {
+          "href": "/strategies/pharma-geo-evidence/",
+          "label": "Методика безопасности и доказательств в GEO фармацевтики"
+        },
+        {
           "href": "/strategies/measurement/",
           "label": "Методика BMR и самостоятельных рекомендаций"
         }
@@ -959,6 +963,10 @@ export const industryCommercialPages = {
       },
       "caption": "Illustration of source relationships. Verified audit figures are stated separately in text.",
       "links": [
+        {
+          "href": "/en/strategies/pharma-geo-evidence/",
+          "label": "Pharmaceutical GEO evidence and medical safety methodology"
+        },
         {
           "href": "/en/strategies/measurement/",
           "label": "How to measure brand mentions and recommendations"
