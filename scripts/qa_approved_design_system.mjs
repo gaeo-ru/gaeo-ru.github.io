@@ -11,6 +11,8 @@ const approved={
  'index.html':['FAQ'],'en/index.html':['FAQ'],
  'strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
  'en/strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
+ 'strategies/tourism-dmc-recommendations/index.html':['FAQ','CONTACT'],
+ 'en/strategies/tourism-dmc-recommendations/index.html':['FAQ','CONTACT'],
  'services/index.html':['CONTACT','SERVICES'],
  'en/services/index.html':['CONTACT','SERVICES'],
  'services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES'],

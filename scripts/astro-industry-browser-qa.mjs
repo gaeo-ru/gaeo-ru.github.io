@@ -378,6 +378,57 @@ try {
     checks.push('legal-checklist '+entry.lang+' '+viewport.width+'px 12-checks/6-FAQ/2-tables/Schema.org/CTA/overflow PASS');
     await page.close();
   }
+  // Evidence-based GEO methodology for tourism: same RU/EN components and mobile behaviour.
+  for(const entry of [
+    {route:'/strategies/tourism-dmc-recommendations/',lang:'ru'},
+    {route:'/en/strategies/tourism-dmc-recommendations/',lang:'en'}
+  ])for(const viewport of VIEWPORTS){
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const errors=[];
+    page.on('pageerror',e=>errors.push(String(e)));
+    const response=await page.goto(BASE+entry.route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Tourism GEO method HTTP');
+    assert.equal(await page.locator('html').getAttribute('lang'),entry.lang,'Tourism GEO method language');
+    assert.equal(await page.locator('h1').count(),1,'Tourism GEO H1');
+    assert.ok(await page.locator('.tourism-dmc-guide h2').count()>=8,'Tourism methodology chapters');
+    assert.equal(await page.locator('.tourism-dmc-guide .industry-scenario-table tbody tr').count(),8,'Eight distinct tourism buyer intents');
+    assert.equal(await page.locator('.tourism-dmc-guide .faq-item').count(),6,'Tourism methodology FAQ count');
+    assert.equal(await page.locator('.tourism-dmc-guide .content-media img').count(),2,'Two genuine published case images');
+    for(const src of ['iata.org','gov.br','ats.aq','developers.google.com']){
+      assert.ok(await page.locator('.tourism-dmc-guide a[href*="'+src+'"]').count()>0,'Missing official travel source: '+src);
+    }
+    assert.ok(await page.locator('.tourism-dmc-guide a[href*="/industries/tourism/"]').count()>0,'Missing industry crosslink');
+    assert.ok(await page.locator('.tourism-dmc-guide a[href*="/cases/ada-tours"]').count()>0,'Missing measured case crosslink');
+    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+    assert.equal(canonical,'https://gaeo.ru'+entry.route,'Tourism canonical');
+    for(const lang of ['ru','en']){
+      const alternate=await page.locator('link[rel="alternate"][hreflang="'+lang+'"]').getAttribute('href');
+      const expected='https://gaeo.ru/'+(lang==='en'?'en/':'')+'strategies/tourism-dmc-recommendations/';
+      assert.equal(alternate,expected,'Tourism hreflang '+lang);
+    }
+    const objects=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(s=>JSON.parse(s)).flatMap(s=>s['@graph']||[]);
+    assert.ok(objects.some(x=>x['@type']==='Article'),'Tourism Article schema');
+    const faq=objects.find(x=>x['@type']==='FAQPage');
+    const questions=(await page.locator('.tourism-dmc-guide .faq-item summary > span:first-child').allTextContents()).map(s=>s.trim());
+    assert.ok(faq?.mainEntity?.length===6&&faq.mainEntity.every((q,i)=>q.name===questions[i]),'Tourism FAQ JSON-LD parity');
+    const modified=objects.find(x=>x['@type']==='Article')?.dateModified;
+    assert.equal(modified,'2026-10-27','Tourism Article modified date');
+    for(const img of await page.locator('.tourism-dmc-guide .content-media img').all()){
+      await img.scrollIntoViewIfNeeded();
+      await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,4500)})});
+      assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0),'Tourism case evidence image failed');
+    }
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Tourism page horizontal overflow '+entry.route+' '+viewport.width);
+    await page.locator('.tourism-dmc-guide #contact a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    assert.equal(await page.locator('[role="dialog"]').count(),0,'Tourism lead dialog remained');
+    assert.deepEqual(errors,[],'Tourism page JavaScript errors');
+    await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:'visual-industry/tourism-method-'+entry.lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('tourism-method '+entry.lang+' '+viewport.width+'px/8-intents/6-FAQ/4-sources/2-images/canonical/lead PASS');
+    await page.close();
+  }
   const articleCases=[
     {route:'/articles/agentnaya-torgovlya-gotovnost-internet-magazina/',lang:'ru'},
     {route:'/en/articles/agentic-commerce-readiness/',lang:'en'}
