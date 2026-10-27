@@ -64,7 +64,8 @@ for(const route of routes){
   const faq=nodes.find(n=>n['@type']==='FAQPage');
   assert.equal(visible.length,5,'Five visible FAQs '+route);
   assert.deepEqual(faq?.mainEntity?.map(n=>n.name),visible.map(x=>x[1]),'FAQ/schema question parity '+route);
-  assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>x[2]),'FAQ/schema answer parity '+route);
+  const decodeHtmlEntities=s=>s.replace(/&#39;|&#x27;/gi,"'").replace(/&quot;/g,'"').replace(/&amp;/g,'&');
+  assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>decodeHtmlEntities(x[2])),'FAQ/schema answer parity '+route);
   for(const slug of ['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours']){
    const link=(dir==='en'?'/en':'')+'/cases/'+slug+'/';
    assert.ok(html.includes('href="'+link+'"'),'Missing evidence case link '+link);
