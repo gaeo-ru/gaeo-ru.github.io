@@ -57,7 +57,7 @@ for(const route of routes){
   const service=nodes.find(n=>n['@type']==='Service');
   assert.ok(service&&service.provider['@id']==='https://gaeo.ru/#business','Service provider '+route);
   assert.equal(service.url,'https://gaeo.ru'+route,'Service URL '+route);
-  const visible=[...html.matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
+  const visible=[...html.replace(/>\s+</g,'><').matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
   assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'Homepage FAQ eyebrow '+route);
   assert.ok(html.includes('id="faq"><div class="eyebrow">FAQ</div>'),'FAQ section structure '+route);
   assert.ok(!html.includes('site-service__faq'),'Remove bespoke FAQ component '+route);
