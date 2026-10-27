@@ -44,9 +44,11 @@ export function tokenizeLegacyPage(rel){
  if(!file.startsWith(PAGES+sep))throw Error('Invalid legacy path '+rel);
  const src=readFileSync(file,'utf8'),lang=rel.startsWith('en/')?'en':'ru';
  const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->');
- // Ecommerce strategy pages use tailored conversion CTAs alongside the standard shared site chrome.
+ const hasApprovedContact=src.includes('<!-- GAEO_DESIGN:CONTACT -->');
+ // A managed Astro contact component is the sole lead block on new pages.
+ // Existing hybrid pages still use the shared legacy CTA partial.
  const customEcommerceCta=/^(?:en\/)?strategies\/ecommerce-(?:measurement|catalog)\/index\.html$/.test(rel);
- const sharedCta=(!customEcommerceCta&&!hasIndustrySlot&&/^(?:en\/)?(?:industries|strategies)\//.test(rel))||/(?:^|\/)cases\/methodlab-/.test(rel);
+ const sharedCta=!hasApprovedContact&&((!customEcommerceCta&&!hasIndustrySlot&&/^(?:en\/)?(?:industries|strategies)\//.test(rel))||/(?:^|\/)cases\/methodlab-/.test(rel));
  const out=[];let cursor=0;
  for(const m of src.matchAll(MARKERS)){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
