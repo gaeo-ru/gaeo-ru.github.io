@@ -480,6 +480,36 @@ try {
     checks.push('technical-b2b '+entry.lang+' '+viewport.width+'px/8-intents/6-FAQ/5-sources/MethodLab-WebP/CTA PASS');
     await page.close();
   }
+  // Pharma GEO pages: official sources, shared FAQ, safe copy and responsive CTA.
+  for(const lang of ['ru','en'])for(const viewport of VIEWPORTS){
+    const route='/'+(lang==='en'?'en/':'')+'strategies/pharma-geo-evidence/';
+    const page=await browser.newPage({viewport,deviceScaleFactor:1});
+    const response=await page.goto(BASE+route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Pharma method HTTP');
+    assert.equal(await page.locator('html').getAttribute('lang'),lang,'Pharma language');
+    assert.equal(await page.locator('h1').count(),1,'Pharma H1');
+    assert.equal(await page.locator('.pharma-geo-guide .industry-scenario-table tbody tr').count(),11,'Pharma tables: 8 scenarios and 3 baseline outcomes');
+    assert.equal(await page.locator('.pharma-geo-guide details.faq-item').count(),6,'Pharma FAQ count');
+    for(const host of ['grls.rosminzdrav.ru','cr.minzdrav.gov.ru','roszdravnadzor.gov.ru','consultant.ru','ema.europa.eu','who.int','developers.google.com']){
+      assert.ok(await page.locator('.pharma-geo-guide a[href*="'+host+'"]').count()>0,'Missing pharma source '+host);
+    }
+    assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://gaeo.ru'+route,'Pharma canonical');
+    const nodes=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(s=>JSON.parse(s)).flatMap(s=>s['@graph']||[]);
+    const faq=nodes.find(x=>x['@type']==='FAQPage');
+    const qs=(await page.locator('.pharma-geo-guide details.faq-item summary > span:first-child').allTextContents()).map(s=>s.trim());
+    assert.ok(faq?.mainEntity?.length===6&&faq.mainEntity.every((q,i)=>q.name===qs[i]),'Pharma schema parity');
+    const img=page.locator('.pharma-geo-guide .content-media img');
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(async el=>{if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});setTimeout(done,4500)})});
+    assert.ok(await img.evaluate(el=>el.complete&&el.naturalWidth>0),'Pharma evidence image');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=viewport.width+2,'Pharma overflow');
+    await page.locator('.pharma-geo-guide #contact a[href$="#lead"]').click();
+    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
+    await page.locator('.gaeo-modal-close').click();
+    await page.screenshot({path:'visual-industry/pharma-geo-'+lang+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
+    checks.push('pharma '+lang+' '+viewport.width+'px/FAQ/sources/CTA PASS');
+    await page.close();
+  }
   const articleCases=[
     {route:'/articles/agentnaya-torgovlya-gotovnost-internet-magazina/',lang:'ru'},
     {route:'/en/articles/agentic-commerce-readiness/',lang:'en'}

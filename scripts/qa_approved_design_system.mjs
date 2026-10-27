@@ -15,6 +15,8 @@ const approved={
  'en/strategies/tourism-dmc-recommendations/index.html':['FAQ','CONTACT'],
  'strategies/technical-b2b-vendor-evidence/index.html':['FAQ','CONTACT'],
  'en/strategies/technical-b2b-vendor-evidence/index.html':['FAQ','CONTACT'],
+ 'strategies/pharma-geo-evidence/index.html':['FAQ','CONTACT'],
+ 'en/strategies/pharma-geo-evidence/index.html':['FAQ','CONTACT'],
  'services/index.html':['CONTACT','SERVICES'],
  'en/services/index.html':['CONTACT','SERVICES'],
  'services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES'],
