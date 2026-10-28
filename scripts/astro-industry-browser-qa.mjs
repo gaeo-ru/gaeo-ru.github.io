@@ -499,7 +499,7 @@ try {
     assert.equal(await page.locator('h1').count(),1,'Pharma H1');
     assert.equal(await page.locator('.pharma-geo-guide .industry-scenario-table tbody tr').count(),18,'Pharma tables: 11 scenarios, 3 medicine outcomes and 4 supplement outcomes');
     assert.equal(await page.locator('.pharma-geo-guide details.faq-item').count(),6,'Pharma FAQ count');
-    assert.equal(await page.locator('.pharma-geo-guide h2').count(),10,'Nine chapters and one FAQ header');
+    assert.equal(await page.locator('.pharma-geo-guide .article-wrap > h2').count(),10,'Nine chapters and one FAQ header');
     assert.ok(await page.locator('.pharma-geo-guide a[href*="ods.nih.gov"]').count()>=2,'Supplement composition evidence missing');
     assert.ok(await page.locator('.pharma-geo-guide a[href*="consultant.ru"]').count()>=2,'Separate medicine and supplement advertising rules missing');
     assert.ok(!/Zubareva|Зубарева|Триазавирин|риамиловир|Медсинтез|Эвалар|doctorzubareva/i.test(await page.locator('.pharma-geo-guide').innerText()),'Pharma guide anonymization failed');
