@@ -99,7 +99,7 @@ try {
     }
     assert.equal(await page.locator('h1').count(),1,'Expected exactly one H1');
     assert.equal(await page.locator('.industry-problem').count(),4,'Problem cards missing');
-    assert.equal(await page.locator('.industry-metric').count(),3,'Evidence statistics missing');
+    assert.equal(await page.locator('.industry-metric').count(),entry.route.includes('/industries/pharma/')?6:3,'Evidence statistics missing');
     assert.equal(await page.locator('.industry-step').count(),6,'Commercial steps missing');
     assert.equal(await page.locator('.faq-item').count(),6,'FAQ questions missing');
     assert.equal(await page.locator('.industry-price').count(),3,'Rates missing');
@@ -107,6 +107,15 @@ try {
       assert.equal(await page.locator('.industry-framework-card').count(),5,'Five ecommerce framework indicators missing');
       assert.equal(await page.locator('.industry-scenario-table tbody tr').count(),5,'Five buying stages missing');
       assert.equal(await page.locator('a[href*="1087822"]').count()>0,true,'Author methodology source missing');
+    }
+    if(entry.route.includes('/industries/pharma/')){
+      assert.equal(await page.locator('#supplement-evidence .industry-metric').count(),3,'Supplement metrics missing');
+      assert.equal(await page.locator('#supplement-evidence .industry-scenario-table tbody tr').count(),4,'Four supplement query families missing');
+      assert.equal(await page.locator('#industry-scenarios .industry-scenario-table tbody tr').count(),7,'Seven medicine/supplement scenarios missing');
+      const evidenceText=await page.locator('#supplement-evidence').innerText();
+      assert.ok(evidenceText.includes('24')&&evidenceText.includes('18'),'New anonymized supplement study not rendered');
+      const fullText=await page.locator('main').innerText();
+      assert.ok(!/Zubareva|Зубарева|Триазавирин|риамиловир|Медсинтез|Эвалар|doctorzubareva/i.test(fullText),'Protected client or product identity leaked');
     }
     if(entry.route.includes('/metal-structures/')){
       assert.equal(await page.locator('.industry-hero__media .industrial-hero-art').count(),1,'Native industrial hero missing');
@@ -488,13 +497,19 @@ try {
     assert.equal(response?.status(),200,'Pharma method HTTP');
     assert.equal(await page.locator('html').getAttribute('lang'),lang,'Pharma language');
     assert.equal(await page.locator('h1').count(),1,'Pharma H1');
-    assert.equal(await page.locator('.pharma-geo-guide .industry-scenario-table tbody tr').count(),11,'Pharma tables: 8 scenarios and 3 baseline outcomes');
+    assert.equal(await page.locator('.pharma-geo-guide .industry-scenario-table tbody tr').count(),18,'Pharma tables: 11 scenarios, 3 medicine outcomes and 4 supplement outcomes');
     assert.equal(await page.locator('.pharma-geo-guide details.faq-item').count(),6,'Pharma FAQ count');
+    assert.equal(await page.locator('.pharma-geo-guide h2').count(),10,'Nine chapters and one FAQ header');
+    assert.ok(await page.locator('.pharma-geo-guide a[href*="ods.nih.gov"]').count()>=2,'Supplement composition evidence missing');
+    assert.ok(await page.locator('.pharma-geo-guide a[href*="consultant.ru"]').count()>=2,'Separate medicine and supplement advertising rules missing');
+    assert.ok(!/Zubareva|Зубарева|Триазавирин|риамиловир|Медсинтез|Эвалар|doctorzubareva/i.test(await page.locator('.pharma-geo-guide').innerText()),'Pharma guide anonymization failed');
+
     for(const host of ['grls.rosminzdrav.ru','cr.minzdrav.gov.ru','roszdravnadzor.gov.ru','consultant.ru','ema.europa.eu','who.int','developers.google.com']){
       assert.ok(await page.locator('.pharma-geo-guide a[href*="'+host+'"]').count()>0,'Missing pharma source '+host);
     }
     assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://gaeo.ru'+route,'Pharma canonical');
     const nodes=(await page.locator('script[type="application/ld+json"]').allTextContents()).map(s=>JSON.parse(s)).flatMap(s=>s['@graph']||[]);
+    assert.equal(nodes.find(x=>x['@type']==='Article')?.dateModified,'2026-10-28','Pharma article modified date');
     const faq=nodes.find(x=>x['@type']==='FAQPage');
     const qs=(await page.locator('.pharma-geo-guide details.faq-item summary > span:first-child').allTextContents()).map(s=>s.trim());
     assert.ok(faq?.mainEntity?.length===6&&faq.mainEntity.every((q,i)=>q.name===qs[i]),'Pharma schema parity');
