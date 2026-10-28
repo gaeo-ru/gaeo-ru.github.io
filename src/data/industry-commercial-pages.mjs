@@ -587,13 +587,13 @@ export const industryCommercialPages = {
   "industries/pharma/index.html": {
     "language": "ru",
     "eyebrow": "GEO-продвижение по отраслям / Фармацевтика",
-    "h1": "GEO-продвижение фармацевтических брендов в нейросетях",
-    "lead": "Покупатели и специалисты обращаются к нейросетям за сведениями о лекарствах. Для фармпроизводителя важны видимость бренда по релевантным запросам и точность медицинских фактов. Я изучаю, что рекомендуют нейросети, какие источники цитируют и где допускают ошибки.",
-    "secondLead": "Начинаю с фиксированной матрицы вопросов. Показываю, по каким темам нейросети называют бренд, как используют официальные инструкции и какие сведения требуют исправления. Затем готовлю план для маркетинга и медицинской команды.",
+    "h1": "GEO-продвижение фармацевтических брендов и БАД в нейросетях",
+    "lead": "Лекарственные препараты, БАД и медицинские изделия получают рекомендации по разным правилам. Изучаю, какие бренды нейросети называют в ответах без подсказки, верно ли описывают состав и медицинские сведения и какие источники помогают проверить утверждения.",
+    "secondLead": "Опираюсь на 2 реальных обезличенных диагностики: 120 ответов о лекарственном препарате и 24 ответа о БАДах. Раздельно измеряю упоминания, самостоятельные рекомендации и точность фактов. Медицинские и рекламные утверждения согласуются профильными специалистами клиента.",
     "heroProof": [
-      "Сопоставляю реальные ответы нескольких нейросетей на одинаковые запросы",
-      "Раздельно измеряю упоминания, рекомендации и медицинские ошибки",
-      "Лично провожу аудит и готовлю задачи для команды заказчика"
+      "2 анонимных исследования: лекарственный препарат и бренд БАДов",
+      "Раздельно проверяю упоминания, рекомендации и фактические ошибки",
+      "Лично веду GEO-диагностику и готовлю задачи для команды заказчика"
     ],
     "heroImage": {
       "src": "/assets/articles/pharma-geo-hero-square.webp",
@@ -612,11 +612,11 @@ export const industryCommercialPages = {
     "problem": {
       "eyebrow": "Проблемы фарммаркетинга",
       "title": "Бренд теряется в рекомендациях, медицинские ошибки становятся публичными",
-      "intro": "Маркетинговой команде нужны данные о видимости бренда. Медицинскому отделу важно знать содержание ответов и качество источников. Одного показателя BMR для этих задач недостаточно.",
+      "intro": "Лекарственные препараты проверяют по регистрационным документам и медицинским сведениям. Для БАДов отдельно важны этикетка, масса действующих веществ, документы на конкретный продукт и пределы допустимых обещаний. В обоих случаях одного BMR недостаточно.",
       "items": [
         {
           "title": "Бренд не попадает в уместные сравнения",
-          "body": "Нейросети могут знать действующее вещество и терапевтическую категорию, но не связывать их с торговой маркой в релевантных сравнениях."
+          "body": "Нейросети могут узнавать торговую марку в брендовых вопросах, но почти не включать ее в выбор по категории. Такой разрыв выявляется отдельными запросами о препаратах и БАДах."
         },
         {
           "title": "Упоминания завышают оценку присутствия",
@@ -624,19 +624,19 @@ export const industryCommercialPages = {
         },
         {
           "title": "Факты обрастают опасными ошибками",
-          "body": "Нейросети смешивают показания, формы выпуска, ограничения и данные клинических исследований. Ошибки требуют приоритетной проверки профильными специалистами."
+          "body": "В лекарственном ответе могут перепутать показания или ограничения. В ответе о БАДе нейросеть иногда принимает массу соединения за количество элементарного минерала. Оба типа ошибок требуют проверки первоисточника."
         },
         {
           "title": "Сайт и внешние источники расходятся",
-          "body": "Официальные страницы, справочники и публикации иногда содержат разные формулировки. Эти противоречия переходят в ответы нейросетей."
+          "body": "Инструкции, этикетки, исследования и независимые обзоры решают разные задачи. Их даты, контекст и применимость следует сверять перед публикацией."
         }
       ],
-      "closing": "В фармацевтическом GEO я работаю над 2 связанными задачами: присутствием бренда в релевантных ответах и достоверностью информации о препарате."
+      "closing": "Доказательная фармацевтическая GEO-методика учитывает 2 разные группы продуктов: для лекарств приоритетом становится точность медицинской информации, для БАДов также проверяются состав, товарные характеристики и доказательства качества."
     },
     "study": {
       "eyebrow": "Обезличенное исследование GAEO · август 2026",
-      "title": "Что показал аудит популярного противовирусного препарата",
-      "intro": "В августе 2026 года я проанализировал 120 ответов 6 нейросетевых интерфейсов на 20 фиксированных запросов по популярному противовирусному препарату. Из них 15 запросов были небрендовыми, еще 5 проверяли качество ответов по торговому названию. Бренд и производитель в публикации обезличены.",
+      "title": "Диагностика №1: лекарственный препарат, 120 ответов",
+      "intro": "6–9 августа 2026 года я исследовал 20 запросов × 6 нейросетевых интерфейсов: 120 полных ответов. В 90 небрендовых ответах проверены упоминания и самостоятельные рекомендации, еще 30 брендовых ответов использованы для проверки точности. Данные об одном препарате и его производителе опубликованы обезличенно.",
       "metrics": [
         {
           "value": "120",
@@ -657,7 +657,7 @@ export const industryCommercialPages = {
         "5 брендовых запросов дали 30 ответов, которые проверялись на полноту и точность сведений. В расчет BMR вошли 90 небрендовых ответов."
       ],
       "findingsTitle": "Что обнаружила диагностика",
-      "note": "Данные относятся к одному препарату и конкретным интерфейсам на 6–9 августа 2026 года. Показатели отражают исходную диагностику. Динамику можно оценить после повторного сопоставимого замера.",
+      "note": "Это отдельный стартовый срез лекарственного препарата за 6–9 августа 2026 года. Повторного сопоставимого замера нет. Срез по БАДам ниже относится к другому продукту, дате и набору вопросов.",
       "image": {
         "src": "/assets/articles/pharma-geo-sources.webp",
         "alt": "Схема связи медицинских инструкций, клинических публикаций, профессиональных справочников и ответов нейросетей",
@@ -678,8 +678,8 @@ export const industryCommercialPages = {
     },
     "scenarios": {
       "eyebrow": "Типовые коммерческие и медицинские интенты",
-      "title": "Какие сведения о препаратах люди ищут в нейросетях",
-      "intro": "Запросы выбираются по продукту и аудитории: пациентам, врачам и фармацевтам. В них входят вопросы о зарегистрированных показаниях, доказательной базе, ограничениях и сравнениях. Медицинские формулировки согласуются со специалистами.",
+      "title": "Какие вопросы о лекарствах, БАДах и медицинских изделиях проверяю",
+      "intro": "Формирую отдельные серии для лекарственного выбора, сравнения состава БАДов и подтверждения качества производителя. Запросы разделяю по цели покупателя и правовому статусу продукта.",
       "columns": [
         "Ситуация пользователя",
         "Какой ответ допустим",
@@ -705,17 +705,32 @@ export const industryCommercialPages = {
           "Нейросеть выдает противоречивый ответ",
           "Исправление ошибок в источниках и прозрачное описание медицинских ограничений",
           "Карточка ошибки, степень медицинского риска, план исправления и повторная проверка"
+        ],
+        [
+          "Покупатель сравнивает магний и витамин B6",
+          "Точное различие массы соединения и элементарного магния, количества на капсулу и порцию",
+          "Состав, этикетка, регистрация БАД, при необходимости лабораторные документы"
+        ],
+        [
+          "Покупатель выбирает омега-3",
+          "Сопоставимые значения ЭПК/ДГК по продуктам, корректное указание порции и проверяемых отличий",
+          "Этикетка, документы на продукт, реальные исследования и независимые испытания при наличии"
+        ],
+        [
+          "Пользователь ищет надежного производителя БАДов",
+          "Разделение бренда, изготовителя и продавца, факты о качестве без рекламных гарантий",
+          "Государственная регистрация, сведения о производстве, проверяемые протоколы партий при наличии"
         ]
       ],
       "link": {
-        "href": "/strategies/measurement/",
-        "label": "Как измерять упоминания и рекомендации корректно"
+        "href": "/strategies/pharma-geo-evidence/",
+        "label": "Методика выбора проверяемых лекарственных и товарных источников"
       }
     },
     "services": {
       "eyebrow": "Процесс работы",
-      "title": "GEO-продвижение фармацевтического бренда: 6 этапов",
-      "intro": "Начальный аудит определяет приоритеты программы. На его основе формирую реестр подтвержденных фактов, ТЗ для сайта и план работы с источниками. Медицинская и юридическая проверки входят в согласование материалов по требованиям заказчика.",
+      "title": "GEO для лекарств и БАДов: 6 этапов",
+      "intro": "Общий процесс начинается с фиксации ответов и разделения продуктов по регулируемым категориям. Для лекарств источником служит утвержденная инструкция, для БАДов изучаются этикетка и документы регистрации. Медицинские и рекламные формулировки согласуются.",
       "steps": [
         {
           "number": "01",
@@ -732,7 +747,7 @@ export const industryCommercialPages = {
         {
           "number": "03",
           "title": "Формирую карту разрешенных фактов",
-          "body": "Сопоставляю утверждения с утвержденной инструкцией, нормативными материалами и доступными первичными исследованиями.",
+          "body": "Сопоставляю лекарственные утверждения с утвержденной инструкцией, а сведения о БАДах с этикеткой, регистрационными документами и применимыми исследованиями.",
           "result": "Результат: утверждения со ссылками, ограничениями и датами."
         },
         {
@@ -842,15 +857,15 @@ export const industryCommercialPages = {
       },
       {
         "question": "Как проверяется медицинская информация перед публикацией?",
-        "answer": "Каждое значимое утверждение должно опираться на актуальную инструкцию, официальный документ или исследование с корректно изложенными ограничениями. Материал проходит медицинскую и юридическую проверку по процедурам заказчика."
+        "answer": "Для лекарств проверяют инструкцию и соответствующие клинические документы. Для БАДов сверяют этикетку, документы государственной регистрации и единицы состава, например содержание элементарного минерала. Утверждения проходят медицинское и юридическое согласование по процедурам заказчика."
       },
       {
         "question": "Как сравнивать BMR и самостоятельные рекомендации?",
         "answer": "Использую одинаковые матрицы запросов и нейросетей для сопоставимых периодов. Для каждого ответа отдельно фиксирую упоминание, самостоятельную рекомендацию и медицинскую точность. Действующее вещество учитывается отдельно от торгового названия."
       },
       {
-        "question": "Что можно публиковать из обезличенного аудита?",
-        "answer": "Для публикации подходят проверенные сводные показатели и методика при сохранении конфиденциальности объекта. Полноценный кейс требует подтвержденных работ и измеренных результатов. Здесь представлены результаты диагностики."
+        "question": "Почему нельзя сравнить 17,8% у лекарства с 11,1% у БАДа?",
+        "answer": "Это два разных исходных исследования: 90 ответов о лекарственном препарате в августе и 18 небрендовых ответов о БАДах в октябре. Различаются вопросы и состав интерфейсов. Показатели описывают только соответствующие выборки, а не разницу в эффективности GEO."
       },
       {
         "question": "Что делать, если нейросеть приводит опасную медицинскую ошибку?",
@@ -868,8 +883,8 @@ export const industryCommercialPages = {
       }
     },
     "final": {
-      "title": "Проверим, как нейросети описывают ваш фармацевтический бренд",
-      "text": "Расскажите, какой препарат или группа продуктов вас интересует, какие рынки приоритетны и что вызывает вопросы в ответах нейросетей. Начнем с выборки запросов, источников и фактических ошибок, затем обсудим обоснованные действия.",
+      "title": "Проверим, как нейросети описывают препараты и БАДы вашего бренда",
+      "text": "Расскажи, какие лекарственные продукты или БАДы в приоритете, какие рынки важны и где нейросети ошибаются. Сначала соберу исходную матрицу и проверю источники, затем подготовлю обоснованный план.",
       "cta": {
         "href": "/#lead",
         "text": "Заказать мини-аудит нейровидимости"
@@ -879,18 +894,79 @@ export const industryCommercialPages = {
         "text": "Как измеряется GEO"
       },
       "note": "В аудите фиксирую исходные запросы, источники и ограничения. Медицинские формулировки проверяются до публикации."
+    },
+    "supplementStudy": {
+      "eyebrow": "Обезличенный мини-аудит GAEO · БАДы · 27 октября 2026",
+      "title": "Диагностика №2: выбор БАДов, 24 ответа нейросетей",
+      "intro": "В 1 запуске получены 24 из 24 ответов: 4 вопроса × 6 нейросетевых интерфейсов. Три вопроса проверяли выбор без названия бренда (магний с B6, омега-3 и российские производители БАДов). Четвертый содержал название бренда и проверял репутационные сведения и официальный магазин. Компания, товары, конкуренты и домены обезличены.",
+      "metrics": [
+        {
+          "value": "2 из 18",
+          "label": "небрендовых ответов с торговым названием: BMR 11,1%"
+        },
+        {
+          "value": "0 из 6",
+          "label": "упоминаний бренда в вопросе о выборе омега-3"
+        },
+        {
+          "value": "6 из 6",
+          "label": "брендовых ответов правильно назвали официальный магазин; эта группа исключена из BMR"
+        }
+      ],
+      "columns": [
+        "Группа запроса",
+        "Бренд в ответах",
+        "Наблюдение"
+      ],
+      "rows": [
+        [
+          "Магний с витамином B6",
+          "1 из 6",
+          "Товар поставлен первым в 1 подборке; в том же ответе перепутаны масса соединения и количество элементарного магния"
+        ],
+        [
+          "Омега-3",
+          "0 из 6",
+          "Продукт не попал в выборку при данной формулировке; другие производители присутствовали"
+        ],
+        [
+          "Российские производители БАДов",
+          "1 из 6",
+          "Бренд появился на 3-м месте в 1 пронумерованном ответе"
+        ],
+        [
+          "Репутация и официальный магазин (брендовый вопрос)",
+          "6 из 6",
+          "Название и официальный магазин распознаны; эти 6 ответов не входят в небрендовые 18"
+        ]
+      ],
+      "findingsTitle": "Где находятся основные пробелы",
+      "findings": [
+        "Знание торговой марки при прямом вопросе еще не означает попадание в небрендовый выбор. Это 6/6 брендовых ответов против 2/18 небрендовых.",
+        "В ответе о магнии масса химического соединения ошибочно представлена как количество элементарного магния. Для корректного сравнения нужны данные этикетки на капсулу и порцию.",
+        "Ответы по омега-3 требуют проверки состава ЭПК/ДГК, происхождения утверждений и сопоставимости единиц. Наличие конкурентов в ответах не устанавливает качество их продукции.",
+        "Источники включали сайты производителей, товарные страницы, обзоры и документы о качестве. Перечень ссылок сам по себе не доказывает независимую рекомендацию или влияние источника."
+      ],
+      "note": "Разовый мини-аудит от 27.10.2026: 4 точных запроса × 6 интерфейсов, без пропусков. Вопросы и панели 2 исследований различаются, поэтому проценты 17,8% и 11,1% нельзя представлять сравнением эффективности брендов. Повторного среза, данных о продажах и доказанного влияния публикаций нет.",
+      "conclusion": "Два независимых исследования показывают общую методическую проблему: видимость бренда и правильность рекомендации требуют раздельной оценки. Для лекарства важны клинические ограничения, для БАДов также принципиальны точные единицы состава, регистрация пищевой продукции и документированное качество.",
+      "links": [
+        {
+          "href": "/strategies/pharma-geo-evidence/",
+          "label": "Методика GEO для лекарств и БАДов"
+        }
+      ]
     }
   },
   "en/industries/pharma/index.html": {
     "language": "en",
     "eyebrow": "GEO by industry / Pharmaceuticals",
-    "h1": "GEO optimization for pharmaceutical brands in AI answers",
-    "lead": "People ask AI assistants about medicines, product comparisons and medical information. Pharmaceutical marketers need accurate brand visibility and reliable medical facts. I assess recommendations, sources and factual errors before preparing an action plan.",
-    "secondLead": "The baseline uses a fixed question set. I examine brand mentions, approved product information and gaps in the sources AI cites, then prepare priorities for marketing and medical-affairs teams.",
+    "h1": "GEO optimization for pharmaceutical and supplement brands in AI answers",
+    "lead": "Medicine, supplement and medical-device buyers ask different questions. I evaluate which brands AI assistants name without a prompt, how accurately they describe ingredients and restrictions, and which documents support those claims.",
+    "secondLead": "Two anonymized baseline studies now inform this service: 120 responses about a medicine and 24 about dietary supplements. Mentions, active recommendations and factual accuracy are measured separately; qualified client reviewers approve medical and promotional claims.",
     "heroProof": [
-      "Compare actual answers to consistent questions across AI interfaces",
-      "Measure brand mentions, appropriate recommendations and factual errors separately",
-      "Personally conduct the audit and brief the client team"
+      "Two anonymized studies: a medicine and a supplement brand",
+      "Separate brand mentions, active recommendations and factual accuracy",
+      "Personally audit AI answers and prepare evidence-led tasks"
     ],
     "heroImage": {
       "src": "/assets/articles/pharma-geo-hero-square.webp",
@@ -909,11 +985,11 @@ export const industryCommercialPages = {
     "problem": {
       "eyebrow": "The pharmaceutical marketing challenge",
       "title": "AI recommendation gaps and medical errors affect pharmaceutical brands",
-      "intro": "For brand, marketing and medical-affairs leaders, GEO combines visibility and information safety. A seemingly high mention rate may conceal missing recommendations and significant factual errors.",
+      "intro": "Medicines require accurate registration and clinical information. Supplement claims depend on their food-product registration, labels and exact amounts of ingredients. Both need more than one brand mention metric.",
       "items": [
         {
           "title": "Missing from relevant comparisons",
-          "body": "An assistant may recognize a generic ingredient or product category without accurately linking it to the applicable branded product."
+          "body": "AI assistants may recognize a brand when its name is supplied but rarely select it in an unbranded category answer. This gap can be measured separately for medicines and supplements."
         },
         {
           "title": "Mentions are mistaken for endorsements",
@@ -921,19 +997,19 @@ export const industryCommercialPages = {
         },
         {
           "title": "Medical statements drift or become unsafe",
-          "body": "AI may mix labeling indications, formulations, patient restrictions, evidence levels and preliminary research."
+          "body": "Medicine answers can misstate indications or contraindications. In supplement answers, the weight of a magnesium compound can be mistaken for the amount of elemental magnesium."
         },
         {
           "title": "Official and independent sources disagree",
-          "body": "Outdated instructions, reference pages and editorial articles may contain incompatible wording that AI repeats."
+          "body": "Labels, clinical documents, reviews and independent tests have different purposes. Their dates and actual relevance must be checked."
         }
       ],
-      "closing": "Effective pharmaceutical GEO requires relevant discoverability together with medically accurate explanations, evidence-based sourcing and risk controls."
+      "closing": "Pharmaceutical GEO needs a category-specific standard: clinical accuracy for medicines, plus ingredient quantities, product registration and quality evidence for supplements."
     },
     "study": {
       "eyebrow": "Anonymized GAEO research · August 2026",
-      "title": "What an audit of a popular antiviral medicine revealed",
-      "intro": "In August 2026, I analyzed 120 answers from six AI interfaces to 20 fixed questions about a popular antiviral medicine. Fifteen questions were unbranded and five tested the accuracy of branded answers. The product and manufacturer remain anonymous.",
+      "title": "Study A: 120 AI answers about a medicine",
+      "intro": "Between August 6 and 9, 2026, I reviewed 20 questions across 6 interfaces: 120 complete responses. Ninety unbranded answers were used to measure brand visibility and contextual recommendations. The other 30, to branded questions, were checked for factual accuracy. The drug and manufacturer remain anonymous.",
       "metrics": [
         {
           "value": "120",
@@ -954,7 +1030,7 @@ export const industryCommercialPages = {
         "The five branded questions tested completeness and accuracy but were excluded from the unbranded BMR denominator."
       ],
       "findingsTitle": "What the audit found",
-      "note": "The baseline concerns a single product and AI interfaces sampled on 6–9 August 2026. A comparable repeat measurement is needed to assess change.",
+      "note": "This is one diagnostic baseline from August 2026, without a matched follow-up. The October supplement sample below concerns a different product class, date and question set.",
       "image": {
         "src": "/assets/articles/pharma-geo-sources.webp",
         "alt": "Diagram connecting labeling, medical research, clinical resources and AI answers",
@@ -975,8 +1051,8 @@ export const industryCommercialPages = {
     },
     "scenarios": {
       "eyebrow": "Medical and commercial question types",
-      "title": "What AI assistants need to answer accurately",
-      "intro": "Prompts should reflect the product, audience and permissible medical communication. The examples below describe an audit framework, not guidance to take or select medication.",
+      "title": "AI buyer questions for medicines, supplements and medical devices",
+      "intro": "I separate clinical information about medicines from supplement product comparisons and questions about manufacturers. Each product type has its own evidence and legal requirements.",
       "columns": [
         "Information need",
         "What a responsible answer requires",
@@ -1002,17 +1078,32 @@ export const industryCommercialPages = {
           "An AI answer makes a material mistake",
           "Correction of the underlying source with medical review and traceable limits",
           "Error log, risk categorization, remediation priorities and repeat checks"
+        ],
+        [
+          "A shopper compares magnesium with B6 products",
+          "Compound mass versus elemental magnesium; amounts per capsule and serving",
+          "Verified label, supplement registration and, where available, laboratory records"
+        ],
+        [
+          "A shopper evaluates omega-3 supplements",
+          "Comparable EPA/DHA quantities per serving and substantiated differences",
+          "Label, registration documents and applicable independent testing"
+        ],
+        [
+          "Someone asks about reliable supplement manufacturers",
+          "Distinguish the brand, actual manufacturer and retailer without unverified rankings",
+          "Product registrations, manufacturing facts and attributable quality records"
         ]
       ],
       "link": {
-        "href": "/en/strategies/measurement/",
-        "label": "A reproducible approach to AI visibility metrics"
+        "href": "/en/strategies/pharma-geo-evidence/",
+        "label": "How to verify medical and supplement recommendations"
       }
     },
     "services": {
       "eyebrow": "Working process",
-      "title": "Six stages of pharmaceutical GEO work",
-      "intro": "For regulated products, verified medical information is the foundation. The website, relevant independent sources, review workflow and measurement all follow a single agreed source of truth.",
+      "title": "A six-stage GEO process for medicines and supplements",
+      "intro": "Begin by auditing actual AI answers and identifying the legal product class. Medicines are checked against approved labeling; dietary supplements require product labels, applicable registration and verifiable ingredient quantities.",
       "steps": [
         {
           "number": "01",
@@ -1029,7 +1120,7 @@ export const industryCommercialPages = {
         {
           "number": "03",
           "title": "Create a verified facts register",
-          "body": "Match each statement to current approved labeling, regulatory documentation and applicable clinical evidence.",
+          "body": "Verify medicine-related claims against approved labeling. Check dietary supplements against their current labels, food-product registrations and relevant scientific evidence.",
           "result": "Deliverable: sourced claims with scope, limitations and dates."
         },
         {
@@ -1139,15 +1230,15 @@ export const industryCommercialPages = {
       },
       {
         "question": "How are medical statements reviewed before publishing?",
-        "answer": "Each material statement is verified against approved labeling, an applicable official document or a properly qualified research source. The client’s medical and legal teams complete the required review."
+        "answer": "Medicine claims require approved labeling and relevant clinical documentation. Supplement comparisons require current product labels, registration records and correct serving units such as elemental mineral content. The client's medical and legal specialists review proposed publication claims."
       },
       {
         "question": "How should BMR and recommendations be compared?",
         "answer": "Use a stable question list, interfaces, counting rules and sampling periods. A mention is not automatically a recommendation, and a generic ingredient name must not be counted as a trade-name mention without verification."
       },
       {
-        "question": "Which anonymized audit results may be shared publicly?",
-        "answer": "Verified aggregated findings and the method may be shared when the research subject remains confidential. A client success case additionally requires evidence of implementation and measured outcomes. The figures here describe a diagnostic audit."
+        "question": "Can a medicine's 17.8% BMR be compared directly with a supplement's 11.1%?",
+        "answer": "No. These are separate initial studies: 90 unbranded medicine answers from August and 18 supplement answers from October. Product categories, prompts and interface sets differ, so neither percentage demonstrates better GEO performance."
       },
       {
         "question": "What if an AI assistant gives unsafe medical information?",
@@ -1165,8 +1256,8 @@ export const industryCommercialPages = {
       }
     },
     "final": {
-      "title": "Find out how AI describes your pharmaceutical brand",
-      "text": "Tell me which product or category is relevant, which markets matter and where AI answers raise concerns. We will review a representative question set and sources, then discuss actionable findings.",
+      "title": "Find out what AI says about your medicines or supplements",
+      "text": "Tell me which medicines or supplement products you want to examine, your priority markets and the inaccuracies or missing recommendations you have observed. I will build a baseline and evidence-led plan.",
       "cta": {
         "href": "/en/#lead",
         "text": "Request a preliminary GEO audit"
@@ -1176,6 +1267,67 @@ export const industryCommercialPages = {
         "text": "Measurement method"
       },
       "note": "No claims of clinical efficacy or guaranteed placement. No disclosure of other research subjects."
+    },
+    "supplementStudy": {
+      "eyebrow": "Anonymized GAEO mini-audit · dietary supplements · October 27, 2026",
+      "title": "Study B: 24 AI answers about dietary supplements",
+      "intro": "One run returned all 24 expected responses: 4 exact questions across 6 AI interfaces. Three unbranded queries concerned magnesium with B6, omega-3 and domestic supplement manufacturers. The fourth was a branded question about reputation and the official online store. The company, products, competitors and domains are anonymized.",
+      "metrics": [
+        {
+          "value": "2 of 18",
+          "label": "unbranded answers with the trade name: BMR 11.1%"
+        },
+        {
+          "value": "0 of 6",
+          "label": "brand mentions in the omega-3 product-selection question"
+        },
+        {
+          "value": "6 of 6",
+          "label": "branded answers identified the official store correctly; these are excluded from BMR"
+        }
+      ],
+      "columns": [
+        "Query family",
+        "Brand mentions",
+        "What the answers showed"
+      ],
+      "rows": [
+        [
+          "Magnesium and vitamin B6",
+          "1 of 6",
+          "The product ranked first in one list, but the same response confused compound weight with elemental magnesium content"
+        ],
+        [
+          "Omega-3 product choice",
+          "0 of 6",
+          "The tested question did not yield a brand mention; competing manufacturers appeared"
+        ],
+        [
+          "Domestic supplement brands",
+          "1 of 6",
+          "The brand appeared third in one explicit numbered list"
+        ],
+        [
+          "Reputation and official store (branded)",
+          "6 of 6",
+          "Brand and correct official store recognized; excluded from the 18 unbranded answers"
+        ]
+      ],
+      "findingsTitle": "Evidence gaps and accuracy risks",
+      "findings": [
+        "Recognition in a branded question does not imply selection in unbranded purchase recommendations: 6/6 branded answers versus 2/18 unbranded.",
+        "One magnesium answer treated the mass of the chemical compound as elemental magnesium. Product comparisons must distinguish label amounts per capsule and per serving.",
+        "Omega-3 claims need EPA/DHA amounts, comparable serving units and substantiated sources. Mentioning a rival does not establish that product's clinical superiority.",
+        "Cited material included manufacturer sites, retailer listings, independent reviews and quality documents. A citation is not, by itself, proof of an independent recommendation or causal ranking effect."
+      ],
+      "note": "This is a single 4-question × 6-interface baseline on October 27, 2026, with no missing answers. Different products, prompts and AI panels prevent treating 17.8% and 11.1% as comparative brand-performance metrics. Follow-up measurements and verified sales attribution are absent.",
+      "conclusion": "Both studies reveal a recurring methodological distinction: brand visibility and the correctness of a recommendation must be assessed separately. Drug information needs clinical constraints; supplements also require exact ingredient units, food-product registration and substantiated quality evidence.",
+      "links": [
+        {
+          "href": "/en/strategies/pharma-geo-evidence/",
+          "label": "Methodology for medicines and supplement GEO"
+        }
+      ]
     }
   },
   "industries/ecommerce/index.html": {
