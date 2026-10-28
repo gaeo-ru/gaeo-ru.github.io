@@ -88,6 +88,37 @@ const en = page.language === 'en';
   </div>
 </section>
 
+
+{page.supplementStudy && <section class="industry-section industry-evidence-section" id="supplement-evidence" aria-labelledby="supplement-evidence-title">
+  <div class="container">
+    <div class="industry-eyebrow">{page.supplementStudy.eyebrow}</div>
+    <h2 id="supplement-evidence-title">{page.supplementStudy.title}</h2>
+    <p class="industry-section__lead">{page.supplementStudy.intro}</p>
+    <div class="industry-metrics">
+      {page.supplementStudy.metrics.map(item=>
+        <div class="industry-metric"><strong>{item.value}</strong><p>{item.label}</p></div>
+      )}
+    </div>
+    <div class="industry-table-scroll">
+      <table class="industry-scenario-table">
+        <thead><tr>{page.supplementStudy.columns.map(heading=><th scope="col">{heading}</th>)}</tr></thead>
+        <tbody>{page.supplementStudy.rows.map(row=><tr>{row.map((cell,i)=><td data-label={page.supplementStudy.columns[i]}>{i===0?<strong>{cell}</strong>:cell}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+    <div class="industry-evidence-layout industry-evidence-layout--single">
+      <div>
+        <h3>{page.supplementStudy.findingsTitle}</h3>
+        <ul class="industry-check-list">{page.supplementStudy.findings.map(text=><li>{text}</li>)}</ul>
+        <p class="industry-note">{page.supplementStudy.note}</p>
+        <div class="industry-links">
+          {page.supplementStudy.links.map(link=><a href={link.href} target={link.href.startsWith('http')?'_blank':undefined} rel={link.href.startsWith('http')?'noopener':undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>)}
+        </div>
+      </div>
+    </div>
+    <p class="industry-takeaway">{page.supplementStudy.conclusion}</p>
+  </div>
+</section>}
+
 <section class="industry-section industry-scenarios-section" id="industry-scenarios" aria-labelledby="industry-scenarios-title">
   <div class="container">
     <div class="industry-eyebrow">{page.scenarios.eyebrow}</div>
