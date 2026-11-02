@@ -68,3 +68,11 @@ jobs:
       - run: node scripts/qa_development_cases.mjs
       - run: node scripts/qa_site_development_service.mjs
       - run: npm run check:industry
+      - run: npm run check:research
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: geo-research-visual-checks
+          path: visual-research/
+          if-no-files-found: ignore
+          retention-days: 7
