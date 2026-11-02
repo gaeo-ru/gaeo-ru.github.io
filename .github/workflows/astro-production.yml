@@ -42,6 +42,8 @@ jobs:
         run: node scripts/qa_development_cases.mjs
       - name: Check GEO website development service pages and navigation
         run: node scripts/qa_site_development_service.mjs
+      - name: Verify bilingual research article responsive layout
+        run: npm run check:research
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
