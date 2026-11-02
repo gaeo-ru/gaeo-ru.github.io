@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "8f44f918264527109bbb4a4bc716dc440aec4781",
-  "releasedAt": "2026-11-02T05:02:44.106Z",
+  "sourceCommit": "f3edbb9a3c62413bff1d4ae317c8d37a7fab5526",
+  "releasedAt": "2026-11-02T11:07:09.375Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -21,9 +21,14 @@
       "sha256": "4a80c57d665e249e95ee135eff8112ec9b9e15280f9fac44dcc73fbc67a587e2"
     },
     {
+      "path": "articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/index.html",
+      "kind": "html",
+      "sha256": "25665acb056d8bc1f230b96a5c1cd1421933350fa84b18c8f18d639954412a4b"
+    },
+    {
       "path": "articles/index.html",
       "kind": "html",
-      "sha256": "029096a60e09739d8eb6244a9139a3e4c2bd46bf54f5995de2867bdcc9c5d914"
+      "sha256": "9cc3ab0353375d1a3df384e710e114e4aef1a2c140373e296415d02401be6c5f"
     },
     {
       "path": "articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/index.html",
@@ -124,6 +129,11 @@
       "path": "assets/articles/geo-cost-factors.jpg",
       "kind": "asset",
       "sha256": "48cfcd22490de51a880102622a1946e7920a2554933ecfc341ee03faee589756"
+    },
+    {
+      "path": "assets/articles/geo-experts-bmr-frs-2026.jpg",
+      "kind": "asset",
+      "sha256": "0a6100c84b0d61cadeb47fa14faa095e32cf3c191745cc71a7937b8a197d6b06"
     },
     {
       "path": "assets/articles/geo-real-estate.jpg",
@@ -1401,6 +1411,11 @@
       "sha256": "802768a63b430ea9a46ac0ee8d02564f63e669aa9a7e8b33b76228f6b75bc2c9"
     },
     {
+      "path": "en/articles/geo-experts-110-ai-responses-bmr-frs-2026/index.html",
+      "kind": "html",
+      "sha256": "815529cbf8a16344ec96b1d5ba102bb165f959c9647ad8e7b01dccb70697bb52"
+    },
+    {
       "path": "en/articles/geo-for-real-estate/index.html",
       "kind": "html",
       "sha256": "4e9652bd148fba09debd4d6b19dce56f36a52bd5e5b4e69c765b3244055fa4ab"
@@ -1408,7 +1423,7 @@
     {
       "path": "en/articles/index.html",
       "kind": "html",
-      "sha256": "68f89637424cb9cd6550c24ff0781360105dd409376dc47f075321a98fadd3a6"
+      "sha256": "b542c5a8b8e962fb1f441bf820363df0856510249181902ae7af3390c0701950"
     },
     {
       "path": "en/articles/legal-website-geo-12-checks/index.html",
@@ -1708,7 +1723,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "cc8a868bc2c2b4ee2e5574166d841d4b817912b4d17f9036fae8098df48815db"
+      "sha256": "cc32f2dbd9292a695db213e238bfdc1badd3a33f019318dc5ae4f9389af1d030"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
