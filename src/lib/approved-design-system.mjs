@@ -25,7 +25,7 @@ export function faqItemsFor(sourcePath){
     if(!Array.isArray(citations))throw new Error('FAQ citations must be an array on '+sourcePath);
     const answerSegments=[];
     if(citations.length){
-      const markers=[...answer.matchAll(/\\((\\d+)\\)/g)].map(m=>Number(m[1]));
+      const markers=[...answer.matchAll(/\((\d+)\)/g)].map(m=>Number(m[1]));
       if(markers.length!==citations.length || markers.some((n,j)=>n!==j+1))
         throw new Error('FAQ citation markers must be numbered (1)..('+citations.length+') on '+sourcePath);
       const sources=citations.map((reference,j)=>{
@@ -35,8 +35,8 @@ export function faqItemsFor(sourcePath){
         if(typeof label!=='string' || !label.trim())throw new Error('Missing FAQ source label on '+sourcePath);
         return {href,label};
       });
-      for(const part of answer.split(/(\\(\\d+\\))/g).filter(Boolean)){
-        const m=part.match(/^\\((\\d+)\\)$/);
+      for(const part of answer.split(/(\(\d+\))/g).filter(Boolean)){
+        const m=part.match(/^\((\d+)\)$/);
         answerSegments.push(m?{text:part,...sources[Number(m[1])-1]}:{text:part});
       }
     }else answerSegments.push({text:answer});
