@@ -112,5 +112,6 @@ jobs:
           path: |
             visual-parity/
             visual-industry/
+            visual-research/
           if-no-files-found: ignore
           retention-days: 14
