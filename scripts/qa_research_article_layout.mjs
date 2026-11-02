@@ -54,6 +54,24 @@ try{
    assert.deepEqual(info.navMissing,[],'Broken in-page links');
    assert.equal(info.faq,5,'Structured FAQ consistency');
    assert.ok(info.sourceLinks>=2,'Original studies linked');
+
+   const answerLinks=await page.locator('details.faq-item').last().locator('.faq-a a').evaluateAll(
+     links=>links.map(el=>({text:el.textContent?.trim(),href:el.href,label:el.getAttribute('aria-label')||''}))
+   );
+   assert.deepEqual(answerLinks.map(x=>x.text),['(1)','(2)'],'Numbered FAQ source links');
+   assert.deepEqual(answerLinks.map(x=>x.href),[
+     'https://github.com/IndexResearch-ru/geo-experts-bmr-russia-2026/blob/main/reproduce.py',
+     'https://github.com/IndexResearch-ru/geo-experts-first-recommendation-russia-2026/blob/main/reproduce_frs.py'
+   ],'Exact BMR and FRS Python source files');
+   assert.ok(answerLinks.every(x=>x.label),'Accessible descriptions for numbered links');
+   const textConsistent=await page.evaluate(()=>{
+     const json=JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent);
+     const questions=json['@graph'].find(x=>x['@type']==='FAQPage')?.mainEntity;
+     const visible=document.querySelector('details.faq-item:last-child .faq-a')?.textContent;
+     const normalized=s=>String(s||'').replace(/\s+/g,' ').trim();
+     return normalized(questions?.at(-1)?.acceptedAnswer?.text)===normalized(visible);
+   });
+   assert.ok(textConsistent,'The visible FAQ answer must equal its JSON-LD text');
    assert.ok(info.htmlWidth<=viewport.width+2,'Page horizontal overflow at '+viewport.width+': '+info.htmlWidth);
    if(viewport.width<500)assert.ok(info.tableScroll>info.tableClient+40,'Mobile table scroll missing');
    const img=page.locator('.geo-study-hero-figure img');

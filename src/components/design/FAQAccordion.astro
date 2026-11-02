@@ -6,7 +6,13 @@ if(!Array.isArray(items)||items.length===0)throw new Error('FAQAccordion require
   {items.map(item=>
     <details class="faq-item">
       <summary class="faq-q"><span>{item.question}</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
-      <div class="faq-a">{paragraphAnswers?<p>{item.answer}</p>:item.answer}</div>
+      <div class="faq-a">{paragraphAnswers
+        ? <p>{(item.answerSegments??[{text:item.answer}]).map(part=>part.href
+          ? <a href={part.href} target="_blank" rel="noopener noreferrer" aria-label={part.label} title={part.label}>{part.text}</a>
+          : part.text)}</p>
+        : (item.answerSegments??[{text:item.answer}]).map(part=>part.href
+          ? <a href={part.href} target="_blank" rel="noopener noreferrer" aria-label={part.label} title={part.label}>{part.text}</a>
+          : part.text)}</div>
     </details>
   )}
 </div>

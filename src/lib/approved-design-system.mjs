@@ -19,7 +19,28 @@ export function faqItemsFor(sourcePath){
     const question=q.name,answer=q.acceptedAnswer?.text;
     if(typeof question!=='string'||!question.trim()||typeof answer!=='string'||!answer.trim())
       throw new Error('Invalid FAQ question '+(i+1)+' on '+sourcePath);
-    return {question,answer};
+    // FAQ citations can turn numbered markers in the canonical answer into
+    // accessible source-file links without changing the visible or JSON-LD text.
+    const citations=q.citation??[];
+    if(!Array.isArray(citations))throw new Error('FAQ citations must be an array on '+sourcePath);
+    const answerSegments=[];
+    if(citations.length){
+      const markers=[...answer.matchAll(/\((\d+)\)/g)].map(m=>Number(m[1]));
+      if(markers.length!==citations.length || markers.some((n,j)=>n!==j+1))
+        throw new Error('FAQ citation markers must be numbered (1)..('+citations.length+') on '+sourcePath);
+      const sources=citations.map((reference,j)=>{
+        const href=reference?.url, label=reference?.name;
+        if(typeof href!=='string' || !/^https:\/\/github\.com\/[\w-]+\/[\w.-]+\/blob\/[\w.-]+\/[\w./-]+$/.test(href))
+          throw new Error('Invalid FAQ source URL '+(j+1)+' on '+sourcePath);
+        if(typeof label!=='string' || !label.trim())throw new Error('Missing FAQ source label on '+sourcePath);
+        return {href,label};
+      });
+      for(const part of answer.split(/(\(\d+\))/g).filter(Boolean)){
+        const m=part.match(/^\((\d+)\)$/);
+        answerSegments.push(m?{text:part,...sources[Number(m[1])-1]}:{text:part});
+      }
+    }else answerSegments.push({text:answer});
+    return {question,answer,answerSegments};
   });
 }
 
