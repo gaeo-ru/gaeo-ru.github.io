@@ -214,6 +214,71 @@ def inspect_visible_slider(page) -> None:
             PROBE["captcha_slider_dom_unavailable"] = True
 
 
+
+def drag_visible_yandex_slider_once(page) -> bool:
+    """One normal GUI mouse gesture on a visible Yandex slider; no token injection."""
+    def boxes(frame, selectors):
+        matches = []
+        for selector in selectors:
+            try:
+                nodes = frame.locator(selector)
+                for idx in range(min(nodes.count(), 12)):
+                    node = nodes.nth(idx)
+                    if not node.is_visible():
+                        continue
+                    box = node.bounding_box(timeout=1500)
+                    if box and box["width"] > 0 and box["height"] > 0:
+                        matches.append(box)
+            except Exception:
+                pass
+        return matches
+
+    for frame in page.frames:
+        parsed = urlparse(frame.url)
+        host = (parsed.hostname or "").lower()
+        if not (
+            (host == "yandex.ru" or host.endswith(".yandex.ru") or host.endswith(".yandex.net"))
+            and "captcha" in (host + parsed.path)
+        ):
+            continue
+        try:
+            if not frame.frame_element().is_visible():
+                continue
+            thumbs = boxes(frame, ('[class*="thumb" i]', '[class*="handle" i]', '[role="slider"]'))
+            tracks = boxes(frame, ('[class*="track" i]', '[class*="slider" i]'))
+            # Match a short draggable thumb to a longer horizontal track in
+            # roughly the same row; reject uncertain geometry, never click blind.
+            for thumb in sorted(thumbs, key=lambda b: b["width"]):
+                if not (9 <= thumb["width"] <= 105 and 8 <= thumb["height"] <= 110):
+                    continue
+                cx = thumb["x"] + thumb["width"] / 2
+                cy = thumb["y"] + thumb["height"] / 2
+                for track in sorted(tracks, key=lambda b: b["width"], reverse=True):
+                    if track["width"] < max(120, thumb["width"] * 2.3):
+                        continue
+                    if not (track["x"] - 10 <= cx <= track["x"] + track["width"] + 10):
+                        continue
+                    if not (track["y"] - 55 <= cy <= track["y"] + track["height"] + 55):
+                        continue
+                    target_x = track["x"] + track["width"] - thumb["width"] / 2 - 3
+                    if target_x - cx < 55:
+                        continue
+                    PROBE["captcha_slider_geometry_valid"] = True
+                    page.mouse.move(cx, cy)
+                    page.mouse.down()
+                    try:
+                        page.mouse.move(target_x, cy, steps=40)
+                    finally:
+                        page.mouse.up()
+                    PROBE["captcha_slider_mouse_drag_performed"] = True
+                    return True
+        except Exception:
+            PROBE["captcha_slider_mouse_drag_failed"] = True
+            return False
+    PROBE["captcha_slider_geometry_valid"] = False
+    return False
+
+
 def diagnose() -> int:
     """Exercise the same public UI without reading or receiving any secrets."""
     try:
@@ -261,6 +326,11 @@ def diagnose() -> int:
             page.wait_for_timeout(3000)
             PROBE["submit_enabled_after_typing"] = submit.is_enabled()
             PROBE["native_form_valid_after_typing"] = form.evaluate("(el) => el.checkValidity()")
+            if "--slider-drag" in sys.argv:
+                inspect_visible_slider(page)
+                PROBE["captcha_slider_drag_attempted"] = drag_visible_yandex_slider_once(page)
+                page.wait_for_timeout(3500)
+                PROBE["submit_enabled_after_slider_drag"] = submit.is_enabled()
             username.fill("")
             password.fill("")
             PROBE["submit_enabled"] = submit.is_enabled()
