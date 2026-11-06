@@ -183,9 +183,51 @@ def diagnose() -> int:
             browser = playwright.chromium.launch(headless=True)
             context = browser.new_context(locale="ru-RU", viewport={"width": 1440, "height": 900})
             page = context.new_page()
+            captcha_statuses = []
+            captcha_failures = []
+            def is_captcha_resource(url):
+                parsed = urlparse(url)
+                return "captcha" in ((parsed.hostname or "") + parsed.path).lower()
+            page.on("response", lambda response: captcha_statuses.append(response.status)
+                    if is_captcha_resource(response.url) else None)
+            page.on("requestfailed", lambda request: captcha_failures.append(True)
+                    if is_captcha_resource(request.url) else None)
             page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
             activate_login_control(page, context, "home")
             probe_ui(page, "home_after")
+            try:
+                page.wait_for_function("""() => {
+                  const b=document.querySelector('#alternate_form button[type=submit]');
+                  return b && !b.disabled;
+                }""", timeout=20000)
+            except Exception:
+                pass
+            PROBE["submit_enabled"] = page.locator('#alternate_form button[type=submit]').is_enabled()
+            PROBE["captcha_visible"] = visible_challenge(page)
+            PROBE["captcha_network_failed"] = bool(captcha_failures)
+            PROBE["captcha_http_error"] = any(status >= 400 for status in captcha_statuses)
+            PROBE["captcha_http_success"] = any(200 <= status < 300 for status in captcha_statuses)
+            for frame in page.frames:
+                parsed = urlparse(frame.url)
+                if "captcha" not in ((parsed.hostname or "") + parsed.path).lower():
+                    continue
+                PROBE["captcha_yandex"] = PROBE.get("captcha_yandex", False) or "yandex" in (parsed.hostname or "")
+                try:
+                    owner = frame.frame_element()
+                    if not owner.is_visible():
+                        continue
+                    PROBE["captcha_frame_visible"] = True
+                    text = frame.locator('body').inner_text(timeout=3000).casefold()
+                    PROBE["captcha_robot_checkbox_prompt"] = PROBE.get("captcha_robot_checkbox_prompt", False) or any(
+                        marker in text for marker in ("я не робот", "i'm not a robot", "i am not a robot"))
+                    PROBE["captcha_interactive_prompt"] = PROBE.get("captcha_interactive_prompt", False) or any(
+                        marker in text for marker in ("введите", "выберите", "нажмите", "перетащите", "select", "enter the", "drag", "click"))
+                    PROBE["captcha_error_text"] = PROBE.get("captcha_error_text", False) or any(
+                        marker in text for marker in ("ошибка", "не удалось", "error", "failed"))
+                    PROBE["captcha_checkbox_visible"] = PROBE.get("captcha_checkbox_visible", False) or bool(first_visible(frame, ('input[type=checkbox]', '[role=checkbox]')))
+                    PROBE["captcha_input_visible"] = PROBE.get("captcha_input_visible", False) or bool(first_visible(frame, ('input:not([type=hidden])',)))
+                except Exception:
+                    PROBE["captcha_frame_inspection_failed"] = True
             context.close()
             browser.close()
         finish("DIAGNOSTICS_COMPLETE", "diagnostics")
