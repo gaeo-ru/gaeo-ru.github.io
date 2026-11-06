@@ -284,41 +284,52 @@ def run() -> int:
                 return finish("LOGIN_FIELD_NOT_FOUND", "login_form")
 
             submit = scope.locator('button[type="submit"]')
-            # Let Sostav's own optional invisible SmartCaptcha finish normally.
-            # No checkbox/challenge is clicked, and no CAPTCHA response is injected.
-            try:
-                tab.wait_for_function("""() => {
-                  const b=document.querySelector('#alternate_form button[type=submit]');
-                  return b && !b.disabled;
-                }""", timeout=20000)
-            except Exception:
-                PROBE["captcha_visible"] = visible_challenge(tab)
-                PROBE["captcha_present"] = bool(tab.locator('[class*="captcha" i], [id*="captcha" i], iframe[src*="captcha" i]').count())
-                return finish("CAPTCHA_REQUIRED" if PROBE["captcha_present"] else "LOGIN_SUBMIT_FAILED", "login_form")
-            PROBE["submit_enabled"] = submit.is_enabled()
-            if visible_challenge(tab):
-                PROBE["captcha_visible"] = True
-                return finish("CAPTCHA_REQUIRED", "login_form")
-
+            if submit.count() != 1:
+                return finish("LOGIN_SUBMIT_FAILED", "login_form")
+            # Sostav may disable Submit while the *required username and password
+            # fields are still empty*. A loaded SmartCaptcha iframe alone is not
+            # evidence that the captcha has blocked an otherwise valid form.
+            PROBE["submit_enabled_before_fill"] = submit.is_enabled()
             try:
                 login_input.fill(login, timeout=7000)
                 password_input.fill(password, timeout=7000)
+                PROBE["credentials_filled"] = True
             except Exception:
                 return finish("LOGIN_FIELDS_NOT_EDITABLE", "login_form")
 
+            # Allow the site's own input validation and ordinary, invisible
+            # SmartCaptcha callbacks to run. Never enable the button ourselves,
+            # invoke CAPTCHA APIs, inject responses, or force a hidden click.
             try:
-                PROBE["credential_submit_once"] = True
+                tab.wait_for_function("""() => {
+                  const b=document.querySelector('#alternate_form button[type=submit]');
+                  return !!b && !b.disabled;
+                }""", timeout=20000)
+            except Exception:
+                pass
+            PROBE["submit_enabled_after_fill"] = submit.is_enabled()
+            if not PROBE["submit_enabled_after_fill"]:
+                PROBE["captcha_present"] = bool(
+                    tab.locator('[class*="captcha" i], [id*="captcha" i], iframe[src*="captcha" i]').count()
+                )
+                # This is not automatically a CAPTCHA challenge: a form may also
+                # remain disabled because of native validation or a site-side bug.
+                return finish("SUBMIT_DISABLED_AFTER_FILL", "filled_form")
+
+            try:
+                # Exactly one normal, user-equivalent submit through the site's UI.
                 submit.click(timeout=10000)
+                PROBE["credential_submit_once"] = True
                 try:
-                    tab.locator('#auth_user').wait_for(state="visible", timeout=20000)
+                    tab.locator('#auth_user').wait_for(state="visible", timeout=12000)
                 except Exception:
                     pass
             except Exception:
                 return finish("LOGIN_SUBMIT_FAILED", "submit")
 
-            if visible_challenge(tab):
-                return finish("CAPTCHA_REQUIRED", "post_submit")
-
+            # The SmartCaptcha iframe may be present even after a successful
+            # invisible check. Verify actual login outcome instead of declaring
+            # CAPTCHA_REQUIRED solely because an iframe is on the page.
             try:
                 content = tab.locator("body").inner_text(timeout=4000).lower()
                 if any(
@@ -337,6 +348,18 @@ def run() -> int:
 
             # Verify in a fresh page sharing only this ephemeral browser context.
             result = profile_status(context.new_page())
+            if result != "AUTHENTICATED_INDEXRESEARCH":
+                # Only a genuine visible interactive challenge, not the widget
+                # shell, may justify a CAPTCHA_REQUIRED result.
+                PROBE["captcha_present"] = bool(
+                    tab.locator('[class*="captcha" i], [id*="captcha" i], iframe[src*="captcha" i]').count()
+                )
+                PROBE["captcha_interaction_detected"] = any(
+                    bool(first_visible(f, ('input[type="checkbox"]', '[role="checkbox"]')))
+                    for f in tab.frames if "captcha" in f.url.lower()
+                )
+                if PROBE["captcha_interaction_detected"]:
+                    result = "CAPTCHA_REQUIRED"
             context.close()
             browser.close()
             return finish(result, "profile")
