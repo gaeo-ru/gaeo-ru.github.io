@@ -194,6 +194,9 @@ def diagnose() -> int:
         page = context.new_page()
         errors = []
         page.on("pageerror", lambda error: errors.append(str(error).splitlines()[0][:200]))
+        network = []
+        page.on("response", lambda response: network.append({"path": urlparse(response.url).path, "status": response.status})
+                if sostav_origin(response.url) and "auth" in urlparse(response.url).path else None)
         page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
         page.wait_for_timeout(4000)
         def inspect(phase):
@@ -204,7 +207,7 @@ def diagnose() -> int:
                 opacity:s.opacity,width:Math.round(r.width),height:Math.round(r.height)}};
               const pass=[...document.querySelectorAll('input[type=password]')];
               return {triggers:[...document.querySelectorAll('a,button,div,span')]
-                .filter(e=>e.childElementCount===0 && e.textContent.trim()==='Войти').map(info),
+                .filter(e=>e.childElementCount===0 && e.textContent.trim()==='Войти').map(e=>({self:info(e),parent:info(e.parentElement)})),
                 passwords:pass.map(e=>{const chain=[];for(let p=e;p&&chain.length<8;p=p.parentElement)chain.push(info(p));return chain}),
                 scripts:[...document.scripts].map(s=>s.getAttribute('src')).filter(Boolean)
                  .filter(s=>s.includes('sostav.ru')||s.startsWith('/')).map(s=>s.split('?')[0])};
@@ -212,9 +215,19 @@ def diagnose() -> int:
             print("AUTH_DIAG_" + phase + "=" + json.dumps(data, ensure_ascii=False))
         inspect("before")
         trigger = page.get_by_text("Войти", exact=True).first
-        trigger.click(timeout=10000)
+        try:
+            trigger.click(timeout=35000)
+        except Exception:
+            print("AUTH_DIAG_click_timeout=1")
         page.wait_for_timeout(5000)
         inspect("after")
+        print("AUTH_DIAG_network=" + json.dumps(network))
+        # Only a public, static first-party resource; no session data or form HTML.
+        source = context.request.get("https://cdn.sostav.ru/js/front/karkas.js?v=202050126").text()
+        lines = source.splitlines()
+        for i, line in enumerate(lines):
+            if any(term in line.lower() for term in ("auth", "vex.", "login")):
+                print("AUTH_DIAG_static_js=" + "\\n".join(lines[max(0, i-2):i+4])[:3000])
         # Error categories only; no error messages or source URLs.
         print("AUTH_DIAG_errors=" + json.dumps({
             "count": len(errors), "jquery_undefined": any("jQuery is not defined" in e or "$ is not defined" in e for e in errors),
@@ -223,7 +236,8 @@ def diagnose() -> int:
         }))
         context.close()
         browser.close()
-    return finish("DIAGNOSTICS_COMPLETE", "diagnostics")
+    finish("DIAGNOSTICS_COMPLETE", "diagnostics")
+    return 0
 
 
 def run() -> int:
