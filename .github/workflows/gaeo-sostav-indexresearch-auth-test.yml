@@ -107,7 +107,7 @@ jobs:
                 'register_after_login_text', 'register_after_login_locator', 'register_after_password',
                 'register_after_frame', 'register_after_body_login_word'
               ];
-              keys.push('home_click_succeeded', 'register_click_succeeded');
+              keys.push('home_trigger_success', 'register_trigger_success', 'home_some_click', 'register_some_click');
               for (const p of ['home','home_after','profile','register_after']) {
                 keys.push(p + '_password_any_frame', p + '_password_dom', p + '_cross_origin_frame');
               }
