@@ -49,7 +49,7 @@ jobs:
 
       - name: Test one visible mouse drag without login or secrets
         if: contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]')
-        run: python .github/gaeo-auth/sostav_indexresearch_auth_test.py --diagnose --slider-drag
+        run: xvfb-run -a python .github/gaeo-auth/sostav_indexresearch_auth_test.py --diagnose --slider-drag --headed
 
       - name: Check authorization once
         id: auth
@@ -137,6 +137,7 @@ jobs:
                 'captcha_slider_aria_changed', 'captcha_token_present_after_drag',
                 'captcha_slider_role_handle_used', 'captcha_slider_role_is_wide',
                 'captcha_slider_handle_pointer_interactive', 'captcha_slider_thumb_moved_while_held',
+                'captcha_slider_top_hit_iframe', 'captcha_slider_hit_target', 'captcha_slider_hit_test_unavailable',
                 'submit_enabled_before_fill', 'submit_enabled_after_fill',
                 'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
