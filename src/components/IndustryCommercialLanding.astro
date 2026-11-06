@@ -205,10 +205,10 @@ const en = page.language === 'en';
     <h2 id="industry-pricing-title">{page.pricing.title}</h2>
     <p class="industry-section__lead">{page.pricing.intro}</p>
     <div class="industry-pricing-grid">
-      {page.pricing.offers.map(offer=><article class="industry-price">
+      {page.pricing.offers.map((offer, index)=><article class="industry-price">
         <h3>{offer.name}</h3>
         <div class="industry-price__amount">{offer.price}</div>
-        <ul>{offer.items.map(item=><li>{item}</li>)}</ul>
+        <ul>{index > 0 && <li>{en ? 'From 50 prompts' : 'От 50 промптов'}</li>}{index > 0 && <li>{en ? 'From 5 AI platforms' : 'От 5 нейросетей'}</li>}{offer.items.map(item=><li>{item}</li>)}</ul>
         <a class="button outline" href={page.primaryCta.href}>{en ? 'Discuss this project' : 'Обсудить проект'}</a>
       </article>)}
     </div>
