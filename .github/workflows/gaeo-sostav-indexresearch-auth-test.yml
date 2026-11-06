@@ -132,7 +132,9 @@ jobs:
                 'captcha_slider_canvas_present', 'captcha_slider_canvas_visible',
                 'captcha_slider_geometry_valid', 'captcha_slider_mouse_drag_performed',
                 'captcha_slider_mouse_drag_failed', 'captcha_slider_drag_attempted',
-                'submit_enabled_after_slider_drag',
+                'submit_enabled_after_slider_drag', 'captcha_slider_thumb_moved_right',
+                'captcha_slider_thumb_near_end', 'captcha_slider_thumb_disappeared',
+                'captcha_slider_aria_changed', 'captcha_token_present_after_drag',
                 'submit_enabled_before_fill', 'submit_enabled_after_fill',
                 'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
