@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: sostav-indexresearch-auth-test
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   auth-test:
@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check that both secrets exist
+        if: ${{ !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') }}
         id: secrets
         shell: bash
         env:
@@ -39,8 +40,12 @@ jobs:
           fi
 
       - name: Install Python Playwright client (browsers supplied by pinned container)
-        if: steps.secrets.outputs.ready == 'yes'
+        if: steps.secrets.outputs.ready == 'yes' || contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]')
         run: python -m pip install --disable-pip-version-check playwright==1.56.0
+
+      - name: Diagnose public login UI without secrets
+        if: contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]')
+        run: python .github/gaeo-auth/sostav_indexresearch_auth_test.py --diagnose
 
       - name: Check authorization once
         id: auth
@@ -64,7 +69,7 @@ jobs:
               'CAPTCHA_REQUIRED', 'LOGIN_FORM_NOT_FOUND', 'LOGIN_FIELD_NOT_FOUND',
               'UNTRUSTED_LOGIN_DESTINATION', 'LOGIN_FIELDS_NOT_EDITABLE',
               'LOGIN_SUBMIT_FAILED', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
-              'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR',
+              'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR', 'DIAGNOSTICS_COMPLETE',
           }
           try:
               status = json.loads(Path('auth_result.json').read_text())['status']
@@ -89,7 +94,7 @@ jobs:
               'CAPTCHA_REQUIRED', 'LOGIN_FORM_NOT_FOUND', 'LOGIN_FIELD_NOT_FOUND',
               'UNTRUSTED_LOGIN_DESTINATION', 'LOGIN_FIELDS_NOT_EDITABLE',
               'LOGIN_SUBMIT_FAILED', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
-              'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR',
+              'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR', 'DIAGNOSTICS_COMPLETE',
             ]);
             let status = 'INTERNAL_ERROR';
             let signals = '';
@@ -98,7 +103,7 @@ jobs:
               const result = JSON.parse(fs.readFileSync('auth_result.json', 'utf8'));
               if (allowed.has(result.status)) status = result.status;
               const allowedStages = new Set(['configuration', 'home', 'pre_login', 'login_form',
-                'profile_entry', 'register_entry', 'alternate_entry', 'post_submit', 'submit', 'profile', 'runtime']);
+                'diagnostics', 'profile_entry', 'register_entry', 'alternate_entry', 'post_submit', 'submit', 'profile', 'runtime']);
               if (allowedStages.has(result.stage)) stage = result.stage;
               const keys = [
                 'home_login_text', 'home_login_locator', 'home_password', 'home_frame', 'home_body_login_word',
@@ -127,5 +132,5 @@ jobs:
             });
 
       - name: Fail if not verified
-        if: always() && (steps.secrets.outputs.ready != 'yes' || steps.auth.outcome != 'success')
+        if: always() && !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') && (steps.secrets.outputs.ready != 'yes' || steps.auth.outcome != 'success')
         run: exit 1

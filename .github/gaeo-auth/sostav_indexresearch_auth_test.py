@@ -186,6 +186,46 @@ def profile_status(page) -> str:
     return "AUTHENTICATED_PROFILE_UNVERIFIED"
 
 
+def diagnose() -> int:
+    """Unauthenticated DOM diagnostics; no secrets are read or supplied."""
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(locale="ru-RU", viewport={"width": 1440, "height": 900})
+        page = context.new_page()
+        errors = []
+        page.on("pageerror", lambda error: errors.append(str(error).splitlines()[0][:200]))
+        page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_timeout(4000)
+        def inspect(phase):
+            # Never include field values, hidden inputs, page text, HTML or query strings.
+            data = page.evaluate("""() => {
+              const info=e=>{const s=getComputedStyle(e),r=e.getBoundingClientRect();return {
+                tag:e.tagName,id:e.id,cls:e.className,display:s.display,visibility:s.visibility,
+                opacity:s.opacity,width:Math.round(r.width),height:Math.round(r.height)}};
+              const pass=[...document.querySelectorAll('input[type=password]')];
+              return {triggers:[...document.querySelectorAll('a,button,div,span')]
+                .filter(e=>e.childElementCount===0 && e.textContent.trim()==='Войти').map(info),
+                passwords:pass.map(e=>{const chain=[];for(let p=e;p&&chain.length<8;p=p.parentElement)chain.push(info(p));return chain}),
+                scripts:[...document.scripts].map(s=>s.getAttribute('src')).filter(Boolean)
+                 .filter(s=>s.includes('sostav.ru')||s.startsWith('/')).map(s=>s.split('?')[0])};
+            }""")
+            print("AUTH_DIAG_" + phase + "=" + json.dumps(data, ensure_ascii=False))
+        inspect("before")
+        trigger = page.get_by_text("Войти", exact=True).first
+        trigger.click(timeout=10000)
+        page.wait_for_timeout(5000)
+        inspect("after")
+        # Error categories only; no error messages or source URLs.
+        print("AUTH_DIAG_errors=" + json.dumps({
+            "count": len(errors), "jquery_undefined": any("jQuery is not defined" in e or "$ is not defined" in e for e in errors),
+            "require_undefined": any("require is not defined" in e for e in errors),
+            "type_error": any("is not a function" in e for e in errors),
+        }))
+        context.close()
+        browser.close()
+    return finish("DIAGNOSTICS_COMPLETE", "diagnostics")
+
+
 def run() -> int:
     login = os.environ.get("SOSTAV_INDEXRESEARCH_LOGIN", "")
     password = os.environ.get("SOSTAV_INDEXRESEARCH_PASSWORD", "")
@@ -315,4 +355,5 @@ def run() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(run())
+    sys.exit(diagnose() if "--diagnose" in sys.argv else run())
+
