@@ -195,14 +195,27 @@ def diagnose() -> int:
             page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
             activate_login_control(page, context, "home")
             probe_ui(page, "home_after")
-            try:
-                page.wait_for_function("""() => {
-                  const b=document.querySelector('#alternate_form button[type=submit]');
-                  return b && !b.disabled;
-                }""", timeout=20000)
-            except Exception:
-                pass
-            PROBE["submit_enabled"] = page.locator('#alternate_form button[type=submit]').is_enabled()
+            form = page.locator('#alternate_form')
+            username = form.locator('#input_username')
+            password = form.locator('#input_password')
+            submit = form.locator('button[type="submit"]')
+            # Purely local, non-secret form validation probe. Do not click Submit;
+            # no authentication request is sent. This cannot validate the real
+            # credentials and is never used for an actual sign-in.
+            PROBE["submit_enabled_before_dummy"] = submit.is_enabled()
+            PROBE["native_form_valid_before_dummy"] = form.evaluate("(el) => el.checkValidity()")
+            username.fill("gaeo-ui-probe@example.invalid")
+            password.fill("UiProbeOnlyNotARealPassword2026!")
+            PROBE["dummy_fields_valid"] = (
+                username.evaluate("(el) => el.checkValidity()")
+                and password.evaluate("(el) => el.checkValidity()")
+            )
+            PROBE["native_form_valid_after_dummy"] = form.evaluate("(el) => el.checkValidity()")
+            page.wait_for_timeout(3000)
+            PROBE["submit_enabled_after_dummy"] = submit.is_enabled()
+            username.fill("")
+            password.fill("")
+            PROBE["submit_enabled"] = submit.is_enabled()
             PROBE["captcha_visible"] = visible_challenge(page)
             PROBE["captcha_network_failed"] = bool(captcha_failures)
             PROBE["captcha_http_error"] = any(status >= 400 for status in captcha_statuses)
