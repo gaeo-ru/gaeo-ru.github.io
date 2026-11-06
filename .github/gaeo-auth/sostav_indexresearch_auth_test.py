@@ -176,6 +176,44 @@ def profile_status(page) -> str:
     return "AUTHENTICATED_PROFILE_UNVERIFIED"
 
 
+
+def inspect_visible_slider(page) -> None:
+    """Inspect only boolean UI affordances of a legitimate SmartCaptcha iframe."""
+    selectors = {
+        "role": ('[role="slider"]', 'input[type="range"]'),
+        "slider": ('[class*="slider" i]',),
+        "thumb": ('[class*="thumb" i]', '[class*="handle" i]'),
+        "track": ('[class*="track" i]',),
+        "draggable": ('[draggable="true"]', '[style*="touch-action"]'),
+        "canvas": ('canvas',),
+    }
+    for frame in page.frames:
+        parsed = urlparse(frame.url)
+        host = (parsed.hostname or "").lower()
+        if not (
+            (host == "yandex.ru" or host.endswith(".yandex.ru") or host.endswith(".yandex.net"))
+            and "captcha" in (host + parsed.path)
+        ):
+            continue
+        PROBE["captcha_slider_frame_found"] = True
+        try:
+            owner = frame.frame_element()
+            if not owner.is_visible():
+                continue
+            PROBE["captcha_slider_frame_visible"] = True
+            for key, options in selectors.items():
+                PROBE["captcha_slider_" + key + "_present"] = (
+                    PROBE.get("captcha_slider_" + key + "_present", False)
+                    or any(frame.locator(option).count() > 0 for option in options)
+                )
+                PROBE["captcha_slider_" + key + "_visible"] = (
+                    PROBE.get("captcha_slider_" + key + "_visible", False)
+                    or first_visible(frame, options) is not None
+                )
+        except Exception:
+            PROBE["captcha_slider_dom_unavailable"] = True
+
+
 def diagnose() -> int:
     """Exercise the same public UI without reading or receiving any secrets."""
     try:
@@ -227,6 +265,7 @@ def diagnose() -> int:
             password.fill("")
             PROBE["submit_enabled"] = submit.is_enabled()
             PROBE["captcha_visible"] = visible_challenge(page)
+            inspect_visible_slider(page)
             PROBE["captcha_network_failed"] = bool(captcha_failures)
             PROBE["captcha_http_error"] = any(status >= 400 for status in captcha_statuses)
             PROBE["captcha_http_success"] = any(200 <= status < 300 for status in captcha_statuses)
