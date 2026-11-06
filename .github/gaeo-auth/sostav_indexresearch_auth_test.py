@@ -21,6 +21,14 @@ def probe_ui(page, phase: str) -> None:
         PROBE[phase + "_login_locator"] = bool(first_visible(page, LOGIN_LINK_SELECTORS))
         PROBE[phase + "_password"] = bool(first_visible(page, ('input[type="password"]',)))
         PROBE[phase + "_frame"] = bool(len(page.frames) > 1)
+        PROBE[phase + "_password_any_frame"] = any(
+            bool(frame.locator('input[type="password"]').count()) for frame in page.frames
+        )
+        PROBE[phase + "_password_dom"] = bool(page.locator('input[type="password"]').count())
+        PROBE[phase + "_cross_origin_frame"] = any(
+            bool(frame.url and not sostav_origin(frame.url) and not frame.url.startswith("about:"))
+            for frame in page.frames
+        )
         PROBE[phase + "_body_login_word"] = "войти" in page.locator("body").inner_text(timeout=3000).lower()
     except Exception:
         PROBE[phase + "_probe_error"] = True
@@ -183,9 +191,10 @@ def run() -> int:
                 if login_button is not None:
                     try:
                         login_button.click(timeout=7000)
+                        PROBE["home_click_succeeded"] = True
                         page.wait_for_timeout(2300)
                     except Exception:
-                        pass
+                        PROBE["home_click_succeeded"] = False
                 probe_ui(page, "home_after")
                 login_form = find_password_form(context)
 
@@ -216,9 +225,10 @@ def run() -> int:
                     login_button = first_visible(page, LOGIN_LINK_SELECTORS)
                     if login_button is not None:
                         login_button.click(timeout=7000)
+                        PROBE["register_click_succeeded"] = True
                         page.wait_for_timeout(2200)
                 except Exception:
-                    pass
+                    PROBE["register_click_succeeded"] = False
                 probe_ui(page, "register_after")
                 login_form = find_password_form(context)
 
