@@ -190,9 +190,9 @@ export const industryCommercialPages = {
           "name": "Полный GEO-аудит",
           "price": "29 900 ₽",
           "items": [
-            "До 50 промптов и до 7 нейросетей",
+            "До 100 промптов и до 11 нейросетей",
             "Анализ сайта, источников и конкурентов",
-            "Отчет 20–30 страниц и план работ"
+            "Отчет 25–35 страниц и план работ"
           ]
         },
         {
@@ -482,9 +482,9 @@ export const industryCommercialPages = {
           "name": "Full GEO audit",
           "price": "RUB 29,900",
           "items": [
-            "Up to 50 prompts and 7 AI interfaces",
+            "Up to 100 prompts and 11 AI interfaces",
             "Website, sources and competitor analysis",
-            "A 20–30 page report and action plan"
+            "A 25–35-page report and action plan"
           ]
         },
         {
@@ -815,9 +815,9 @@ export const industryCommercialPages = {
           "name": "Полный GEO-аудит",
           "price": "29 900 ₽",
           "items": [
-            "Базовый тариф GAEO: до 50 промптов и 7 интерфейсов",
+            "Базовый тариф GAEO: до 100 промптов и 11 нейросетей",
             "Анализ ответов, источников и конкурентного контекста",
-            "Особые медицинские проверки оцениваются отдельно"
+            "Отчет 25–35 страниц; особые медицинские проверки оцениваются отдельно"
           ]
         },
         {
@@ -1188,9 +1188,9 @@ export const industryCommercialPages = {
           "name": "Full GEO audit",
           "price": "RUB 29,900",
           "items": [
-            "GAEO base tariff: up to 50 prompts and seven interfaces",
+            "GAEO base tariff: up to 100 prompts and 11 AI interfaces",
             "Website, AI sources and competitor analysis",
-            "Specialized medical review priced separately"
+            "25–35-page report; specialized medical review priced separately"
           ]
         },
         {
@@ -1603,9 +1603,9 @@ export const industryCommercialPages = {
           "name": "Полный GEO-аудит",
           "price": "29 900 ₽",
           "items": [
-            "До 50 запросов и 7 нейросетей",
+            "До 100 промптов и до 11 нейросетей",
             "Анализ упоминаний, рекомендаций и источников",
-            "Отчет с приоритетными задачами"
+            "Отчет 25–35 страниц с приоритетными задачами"
           ]
         },
         {
@@ -1947,9 +1947,9 @@ export const industryCommercialPages = {
           "name": "Full GEO audit",
           "price": "RUB 29,900",
           "items": [
-            "Up to 50 questions and 7 AI interfaces",
+            "Up to 100 prompts and 11 AI interfaces",
             "Mention, recommendation and source analysis",
-            "A prioritized report and work plan"
+            "A prioritized 25–35-page report and work plan"
           ]
         },
         {
@@ -2283,9 +2283,9 @@ export const industryCommercialPages = {
         "name": "Полный GEO-аудит",
         "price": "29 900 ₽",
         "items": [
-          "До 50 промптов и до 7 нейросетей",
+          "До 100 промптов и до 11 нейросетей",
           "Конкуренты, источники и сайт",
-          "Отчет с планом работ"
+          "Отчет 25–35 страниц с планом работ"
         ]
       },
       {
@@ -2619,9 +2619,9 @@ export const industryCommercialPages = {
         "name": "Full GEO audit",
         "price": "RUB 29,900",
         "items": [
-          "Up to 50 prompts and 7 AI interfaces",
+          "Up to 100 prompts and 11 AI interfaces",
           "Website, competitors and source analysis",
-          "Prioritized report"
+          "Prioritized 25–35-page report"
         ]
       },
       {
@@ -2957,9 +2957,9 @@ export const industryCommercialPages = {
         "name": "Полный GEO-аудит",
         "price": "29 900 ₽",
         "items": [
-          "Базовая диагностика до 50 промптов и 7 интерфейсов",
+          "Базовая диагностика: до 100 промптов и 11 нейросетей",
           "Рекомендации, источники и контекст конкурентов",
-          "ТЗ на приоритетные страницы и доказательства"
+          "Отчет 25–35 страниц; ТЗ на приоритетные страницы и доказательства"
         ]
       },
       {
@@ -3295,9 +3295,9 @@ export const industryCommercialPages = {
         "name": "Full GEO audit",
         "price": "RUB 29,900",
         "items": [
-          "Base sample up to 50 prompts and 7 AI interfaces",
+          "Base sample: up to 100 prompts and 11 AI interfaces",
           "Competitor, source and content review",
-          "Prioritized action plan"
+          "25–35-page report and prioritized action plan"
         ]
       },
       {
