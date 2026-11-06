@@ -107,6 +107,10 @@ jobs:
                 'register_after_login_text', 'register_after_login_locator', 'register_after_password',
                 'register_after_frame', 'register_after_body_login_word'
               ];
+              keys.push('home_click_succeeded', 'register_click_succeeded');
+              for (const p of ['home','home_after','profile','register_after']) {
+                keys.push(p + '_password_any_frame', p + '_password_dom', p + '_cross_origin_frame');
+              }
               signals = keys.filter(k => typeof result.probe?.[k] === 'boolean')
                 .map(k => k + '=' + (result.probe[k] ? '1' : '0')).join('; ');
             } catch (_) {}
