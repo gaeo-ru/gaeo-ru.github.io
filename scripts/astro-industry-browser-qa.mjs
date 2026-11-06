@@ -103,6 +103,11 @@ try {
     assert.equal(await page.locator('.industry-step').count(),6,'Commercial steps missing');
     assert.equal(await page.locator('.faq-item').count(),6,'FAQ questions missing');
     assert.equal(await page.locator('.industry-price').count(),3,'Rates missing');
+    for (const offer of (await page.locator('.industry-price').all()).slice(1)) {
+      const terms = (await offer.locator('li').allTextContents()).map(s => s.trim());
+      assert.equal(terms[0], entry.lang === 'ru' ? 'От 50 промптов' : 'From 50 prompts', 'Monthly tariff prompt scope missing');
+      assert.equal(terms[1], entry.lang === 'ru' ? 'От 5 нейросетей' : 'From 5 AI platforms', 'Monthly tariff AI coverage missing');
+    }
     if(entry.ecommerce){
       assert.equal(await page.locator('.industry-framework-card').count(),5,'Five ecommerce framework indicators missing');
       assert.equal(await page.locator('.industry-scenario-table tbody tr').count(),5,'Five buying stages missing');
