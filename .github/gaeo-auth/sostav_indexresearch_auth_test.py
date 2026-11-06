@@ -273,6 +273,24 @@ def drag_visible_yandex_slider_once(page) -> bool:
                     if target_x - cx < 55:
                         continue
                     PROBE["captcha_slider_geometry_valid"] = True
+                    # Ensure a genuine on-screen hit reaches the Yandex iframe
+                    # and the actual control, rather than an overlay.
+                    try:
+                        PROBE["captcha_slider_top_hit_iframe"] = page.evaluate(
+                            "(p) => document.elementFromPoint(p.x,p.y)?.tagName === 'IFRAME'",
+                            {"x": cx, "y": cy},
+                        )
+                        iframe_box = frame.frame_element().bounding_box(timeout=1500)
+                        if iframe_box:
+                            PROBE["captcha_slider_hit_target"] = thumb_node.evaluate(
+                                """(el, p) => {
+                                  const hit = document.elementFromPoint(p.x,p.y);
+                                  return !!hit && (hit === el || el.contains(hit));
+                                }""",
+                                {"x": cx - iframe_box["x"], "y": cy - iframe_box["y"]},
+                            )
+                    except Exception:
+                        PROBE["captcha_slider_hit_test_unavailable"] = True
                     role = first_visible(frame, ('[role="slider"]',))
                     aria_before = role.get_attribute("aria-valuenow") if role else None
                     try:
@@ -339,7 +357,7 @@ def diagnose() -> int:
     """Exercise the same public UI without reading or receiving any secrets."""
     try:
         with sync_playwright() as playwright:
-            browser = playwright.chromium.launch(headless=True)
+            browser = playwright.chromium.launch(headless=("--headed" not in sys.argv))
             context = browser.new_context(locale="ru-RU", viewport={"width": 1440, "height": 900})
             page = context.new_page()
             captcha_statuses = []
