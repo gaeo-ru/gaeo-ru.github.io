@@ -228,7 +228,7 @@ def drag_visible_yandex_slider_once(page) -> bool:
                         continue
                     box = node.bounding_box(timeout=1500)
                     if box and box["width"] > 0 and box["height"] > 0:
-                        matches.append(box)
+                        matches.append((box, node))
             except Exception:
                 pass
         return matches
@@ -246,14 +246,12 @@ def drag_visible_yandex_slider_once(page) -> bool:
                 continue
             thumbs = boxes(frame, ('[class*="thumb" i]', '[class*="handle" i]', '[role="slider"]'))
             tracks = boxes(frame, ('[class*="track" i]', '[class*="slider" i]'))
-            # Match a short draggable thumb to a longer horizontal track in
-            # roughly the same row; reject uncertain geometry, never click blind.
-            for thumb in sorted(thumbs, key=lambda b: b["width"]):
+            for thumb, thumb_node in sorted(thumbs, key=lambda item: item[0]["width"]):
                 if not (9 <= thumb["width"] <= 105 and 8 <= thumb["height"] <= 110):
                     continue
                 cx = thumb["x"] + thumb["width"] / 2
                 cy = thumb["y"] + thumb["height"] / 2
-                for track in sorted(tracks, key=lambda b: b["width"], reverse=True):
+                for track, _ in sorted(tracks, key=lambda item: item[0]["width"], reverse=True):
                     if track["width"] < max(120, thumb["width"] * 2.3):
                         continue
                     if not (track["x"] - 10 <= cx <= track["x"] + track["width"] + 10):
@@ -264,6 +262,8 @@ def drag_visible_yandex_slider_once(page) -> bool:
                     if target_x - cx < 55:
                         continue
                     PROBE["captcha_slider_geometry_valid"] = True
+                    role = first_visible(frame, ('[role="slider"]',))
+                    aria_before = role.get_attribute("aria-valuenow") if role else None
                     page.mouse.move(cx, cy)
                     page.mouse.down()
                     try:
@@ -271,6 +271,35 @@ def drag_visible_yandex_slider_once(page) -> bool:
                     finally:
                         page.mouse.up()
                     PROBE["captcha_slider_mouse_drag_performed"] = True
+                    page.wait_for_timeout(1200)
+                    try:
+                        after = thumb_node.bounding_box(timeout=1500)
+                        if after:
+                            PROBE["captcha_slider_thumb_moved_right"] = (
+                                after["x"] > thumb["x"] + 12
+                            )
+                            PROBE["captcha_slider_thumb_near_end"] = (
+                                after["x"] + after["width"] / 2
+                                >= track["x"] + track["width"] - max(14, thumb["width"])
+                            )
+                    except Exception:
+                        PROBE["captcha_slider_thumb_disappeared"] = True
+                    try:
+                        if role:
+                            aria_after = role.get_attribute("aria-valuenow")
+                            if aria_before is not None and aria_after is not None:
+                                PROBE["captcha_slider_aria_changed"] = aria_before != aria_after
+                    except Exception:
+                        pass
+                    # Do not read or persist the SmartCaptcha token itself.
+                    try:
+                        PROBE["captcha_token_present_after_drag"] = bool(
+                            page.locator('input[name="smart-token"]').evaluate_all(
+                                "(nodes) => nodes.some(n => !!n.value)"
+                            )
+                        )
+                    except Exception:
+                        pass
                     return True
         except Exception:
             PROBE["captcha_slider_mouse_drag_failed"] = True
