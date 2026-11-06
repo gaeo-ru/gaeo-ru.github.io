@@ -112,6 +112,9 @@ jobs:
                 'register_after_login_text', 'register_after_login_locator', 'register_after_password',
                 'register_after_frame', 'register_after_body_login_word'
               ];
+              keys.push('login_modal_visible', 'native_toggle_visible', 'native_form_visible', 'native_form_active',
+                'submit_enabled', 'credential_submit_once', 'profile_edit_loaded',
+                'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
               keys.push('home_trigger_success', 'register_trigger_success', 'home_some_click', 'register_some_click');
               for (const p of ['home','home_after','profile','register_after']) {
                 keys.push(p + '_password_any_frame', p + '_password_dom', p + '_cross_origin_frame');

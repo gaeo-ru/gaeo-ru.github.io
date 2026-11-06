@@ -1,6 +1,6 @@
 # Sostav.ru / IndexResearch: pilot login via GitHub Secrets
 
-Status (2026-11-06): infrastructure repaired (pinned Playwright Chromium container); secrets detected. **Successful Sostav login has NOT been verified.** See existing Issue #60: https://github.com/gaeo-ru/gaeo-ru.github.io/issues/60. The login control is visible and clickable but the site's password form stays hidden (LOGIN_FORM_NOT_FOUND after multiple safe entry-point checks). No credential validation was performed. Do not silently retry or claim login success.
+Status (2026-11-06): root cause identified and fixed; the single credentialed control run is pending. The Sostav login modal intentionally hides native-password entry until **«Ввести логин / пароль»** (`a.alternate-enter`) is clicked. Public diagnostics used no credentials. Existing Issue #60: https://github.com/gaeo-ru/gaeo-ru.github.io/issues/60.
 No global ChatGPT rule is enabled. No passwords are present in source code.
 The Actions job runs in this GAEO repository only; GitHub does not automatically share its secrets with other repositories or ChatGPT Work.
 
@@ -40,12 +40,12 @@ Manual alternative: GitHub -> Actions -> Sostav IndexResearch authentication tes
 
 | Status | Meaning |
 | --- | --- |
-| `AUTHENTICATED_INDEXRESEARCH` | The Sostav profile page confirms a logged-in session and displays IndexResearch |
+| `AUTHENTICATED_INDEXRESEARCH` | A fresh `/auth/user/edit` page exposes the authenticated profile form; its first/last name and the account header both exactly match IndexResearch (ignoring whitespace/case) |
 | `AUTHENTICATED_PROFILE_UNVERIFIED` | Login is confirmed but the exact author identity was not visible on the profile page; do not assume IndexResearch author was selected |
 | `CAPTCHA_REQUIRED` | The site demanded an interactive anti-bot challenge; no automated circumvention is attempted |
 | `CREDENTIALS_REJECTED` | Sostav rejected the credential pair |
 | `MISSING_SECRETS` | At least one of the two secrets was missing or empty |
-| `LOGIN_FORM_NOT_FOUND` | Sostav's password field is present in the DOM but hidden after the available login controls are clicked (confirmed in Issue #60). Requires targeted UI/JavaScript diagnosis before a further login attempt |
+| `LOGIN_FORM_NOT_FOUND` | The actual native-password controls did not become visible after the two normal site clicks; do not submit hidden fields or force CSS visibility |
 | `ACCESS_BLOCKED` / `SITE_UNAVAILABLE` | Site blocked the runner or could not be opened |
 | Other status | Inspect the workflow, **without** exporting credentials or cookies |
 
@@ -56,3 +56,18 @@ Manual alternative: GitHub -> Actions -> Sostav IndexResearch authentication tes
 Sostav may challenge a GitHub-hosted runner, particularly when connecting from a data-center IP. CAPTCHA/2FA cannot be assumed solvable automatically. Do not attempt to circumvent access controls, leak session cookies, or store plaintext credentials in repository files.
 
 This pilot is intentionally separate from GAEO site deployment and publishing workflows. Its files are confined to `.github/`. It never commits web pages or artifacts.
+
+## 5. Diagnosis and targeted repair — 2026-11-06
+
+- The original infrastructure error was Playwright 1.56.0 on an unsupported newer Ubuntu host. The existing pinned `mcr.microsoft.com/playwright/python:v1.56.0-noble` container resolves this; it is retained.
+- Work cloud browser already had an unrelated signed-in account. No logout or account switch was performed. The actual current profile route and form structure were inspected without submitting any changes.
+- Secret-free runner diagnostics: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42198515485 and https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42198784243.
+- `#auth .auth-login` loads `/auth/login/form` and the site's `auth.js`. Requests succeeded and no page JavaScript errors were observed. The modal was open, but `#alternate_form` was inside `.native-login .form` with `display:none` and zero-size password control.
+- The visible second control is **«Ввести логин / пароль»** (`a.alternate-enter`). Sostav's own listener expands the native form. The previous script repeatedly clicked «Войти» and never activated this control. This is the cause of `LOGIN_FORM_NOT_FOUND`, not missing Chromium or an iframe.
+- A timed advertising overlay can intercept the initial click. Normal Playwright actionability waiting now allows it to expire; no ad removal, forced clicks, CSS overrides, CAPTCHA bypass or internal-handler calls are used.
+- The existing Python script now follows the two normal clicks, waits for visible/editable native fields, submits at most once, and verifies a fresh authenticated profile page. The obsolete `/tools/user_tools.php?part=profile` fallback is removed.
+- Exact identity verification uses the protected `#user_edit_form` on `/auth/user/edit`, its profile name fields and `#auth_user` together. Only boolean results leave the runner.
+- Workflow retains the pinned container, permits a secret-free `[AUTH-DIAG-NO-SECRETS]` mode in the same runner, and serializes runs instead of cancelling a potentially submitted login. Normal control runs still receive secrets only inside their sign-in step.
+- Pending: one credentialed control run through the existing Issue #60 after this fix. No articles, drafts or profile changes are authorized or performed.
+
+The optional `--diagnose` mode now reports only approved booleans/status, with no raw DOM, public script snippets or network data. It does not read credential environment variables. Do not mix its Issue-body marker into a real control run.

@@ -34,7 +34,7 @@ def probe_ui(page, phase: str) -> None:
         PROBE[phase + "_probe_error"] = True
 
 HOME_URL = "https://www.sostav.ru/"
-PROFILE_URL = "https://www.sostav.ru/tools/user_tools.php?part=profile"
+PROFILE_URL = "https://www.sostav.ru/auth/user/edit"
 
 LOGIN_FIELD_SELECTORS = (
     'input[type="email"]',
@@ -100,29 +100,23 @@ def first_visible(scope, selectors):
 
 
 def activate_login_control(page, context, phase: str) -> None:
-    """Try each visible login trigger; stop as soon as the form becomes visible."""
-    seen = 0
-    for selector in LOGIN_LINK_SELECTORS:
-        try:
-            nodes = page.locator(selector)
-            count = min(nodes.count(), 10)
-        except Exception:
-            continue
-        for idx in range(count):
-            try:
-                node = nodes.nth(idx)
-                if not node.is_visible():
-                    continue
-                seen += 1
-                node.click(timeout=4000)
-                page.wait_for_timeout(650)
-                if find_password_form(context) is not None:
-                    PROBE[phase + "_trigger_success"] = True
-                    return
-            except Exception:
-                continue
-    PROBE[phase + "_trigger_success"] = False
-    PROBE[phase + "_some_click"] = bool(seen)
+    """Use both real site controls; never change CSS or call internal handlers."""
+    trigger = page.locator('#auth .auth-login')
+    trigger.wait_for(state="visible", timeout=30000)
+    # The site's timed advertising overlay can intercept a normal click.
+    trigger.click(timeout=45000)
+    modal = page.locator('.vex-content .modal-auth').last
+    alternate = modal.locator('a.alternate-enter')
+    alternate.wait_for(state="visible", timeout=30000)
+    PROBE["login_modal_visible"] = True
+    PROBE["native_toggle_visible"] = True
+    alternate.click(timeout=10000)
+    form = modal.locator('#alternate_form')
+    form.locator('#input_username').wait_for(state="visible", timeout=15000)
+    form.locator('#input_password').wait_for(state="visible", timeout=15000)
+    PROBE["native_form_visible"] = True
+    PROBE["native_form_active"] = "active" in (modal.locator('.native-login .form').get_attribute('class') or '').split()
+    PROBE[phase + "_trigger_success"] = find_password_form(context) is not None
 
 
 def visible_challenge(page) -> bool:
@@ -164,86 +158,40 @@ def profile_status(page) -> str:
         response = page.goto(PROFILE_URL, wait_until="domcontentloaded", timeout=30000)
         if response is not None and response.status in (403, 429):
             return "ACCESS_BLOCKED"
-        page.wait_for_timeout(1000)
-        body = page.locator("body").inner_text(timeout=10000).lower()
+        if not sostav_origin(page.url) or urlparse(page.url).path != "/auth/user/edit":
+            return "AUTHENTICATION_NOT_CONFIRMED"
+        form = page.locator('form#user_edit_form[action="/auth/user/edit"]')
+        form.wait_for(state="visible", timeout=15000)
+        page.locator('#auth_user').wait_for(state="visible", timeout=15000)
+        PROBE["profile_edit_loaded"] = True
+        # Account-specific profile fields, never generic page text or public articles.
+        name = form.locator('input[name="firstName"]').input_value() + form.locator('input[name="lastName"]').input_value()
+        normalize = lambda value: "".join(value.split()).casefold()
+        PROBE["profile_identity_matches"] = normalize(name) == "indexresearch"
+        PROBE["header_identity_matches"] = normalize(page.locator('#auth_user').inner_text()) == "indexresearch"
     except Exception:
         return "PROFILE_UNAVAILABLE"
-    logged_in = any(
-        marker in body
-        for marker in (
-            "вы уже авторизованы под логином",
-            "вы авторизованы под логином",
-            "выйти из аккаунта",
-            "мой профиль",
-        )
-    )
-    if not logged_in:
-        # Login form or site home with "Войти" does not prove an authenticated session.
-        return "AUTHENTICATION_NOT_CONFIRMED"
-    # Expected publishing identity must be confirmed separately from the login itself.
-    if "indexresearch" in body.replace(" ", "") or "index research" in body:
+    if PROBE["profile_identity_matches"] and PROBE["header_identity_matches"]:
         return "AUTHENTICATED_INDEXRESEARCH"
     return "AUTHENTICATED_PROFILE_UNVERIFIED"
 
 
 def diagnose() -> int:
-    """Unauthenticated DOM diagnostics; no secrets are read or supplied."""
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
-        context = browser.new_context(locale="ru-RU", viewport={"width": 1440, "height": 900})
-        page = context.new_page()
-        errors = []
-        page.on("pageerror", lambda error: errors.append(str(error).splitlines()[0][:200]))
-        network = []
-        page.on("response", lambda response: network.append({"path": urlparse(response.url).path, "status": response.status})
-                if sostav_origin(response.url) and "auth" in urlparse(response.url).path else None)
-        page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
-        page.wait_for_timeout(4000)
-        def inspect(phase):
-            # Never include field values, hidden inputs, page text, HTML or query strings.
-            data = page.evaluate("""() => {
-              const info=e=>{const s=getComputedStyle(e),r=e.getBoundingClientRect();return {
-                tag:e.tagName,id:e.id,cls:e.className,display:s.display,visibility:s.visibility,
-                opacity:s.opacity,width:Math.round(r.width),height:Math.round(r.height)}};
-              const pass=[...document.querySelectorAll('input[type=password]')];
-              return {triggers:[...document.querySelectorAll('a,button,div,span')]
-                .filter(e=>e.childElementCount===0 && e.textContent.trim()==='Войти').map(e=>({self:info(e),parent:info(e.parentElement)})),
-                passwords:pass.map(e=>{const chain=[];for(let p=e;p&&chain.length<8;p=p.parentElement)chain.push(info(p));return chain}),
-                scripts:[...document.scripts].map(s=>s.getAttribute('src')).filter(Boolean)
-                 .filter(s=>s.includes('sostav.ru')||s.startsWith('/')).map(s=>s.split('?')[0])};
-            }""")
-            print("AUTH_DIAG_" + phase + "=" + json.dumps(data, ensure_ascii=False))
-        inspect("before")
-        trigger = page.get_by_text("Войти", exact=True).first
-        try:
-            trigger.click(timeout=35000)
-        except Exception:
-            print("AUTH_DIAG_click_timeout=1")
-        page.wait_for_timeout(5000)
-        inspect("after")
-        print("AUTH_DIAG_network=" + json.dumps(network))
-        print("AUTH_DIAG_modal=" + json.dumps(page.locator('.vex-content').evaluate("""e => ({
-          text:e.innerText,
-          controls:[...e.querySelectorAll('a,button,input:not([type=hidden])')].map(c=>({
-            tag:c.tagName,id:c.id,cls:c.className,type:c.getAttribute('type'),name:c.getAttribute('name'),
-            text:c.tagName==='INPUT'?'':c.textContent.trim(),visible:!!c.getBoundingClientRect().height
-          }))})"""), ensure_ascii=False))
-        # Only a public, static first-party resource; no session data or form HTML.
-        source = context.request.get("https://www.sostav.ru/assets/karkas/src/js/auth.js?v=2").text()
-        lines = source.splitlines()
-        for i, line in enumerate(lines):
-            if any(term in line.lower() for term in ("native-login", "alternate", "slidetoggle", "slideup", "slidedown", "toggle", "show(")):
-                print("AUTH_DIAG_static_js=" + "\\n".join(lines[max(0, i-2):i+4])[:3000])
-        # Error categories only; no error messages or source URLs.
-        print("AUTH_DIAG_errors=" + json.dumps({
-            "count": len(errors), "jquery_undefined": any("jQuery is not defined" in e or "$ is not defined" in e for e in errors),
-            "require_undefined": any("require is not defined" in e for e in errors),
-            "type_error": any("is not a function" in e for e in errors),
-        }))
-        context.close()
-        browser.close()
-    finish("DIAGNOSTICS_COMPLETE", "diagnostics")
-    return 0
+    """Exercise the same public UI without reading or receiving any secrets."""
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            context = browser.new_context(locale="ru-RU", viewport={"width": 1440, "height": 900})
+            page = context.new_page()
+            page.goto(HOME_URL, wait_until="domcontentloaded", timeout=45000)
+            activate_login_control(page, context, "home")
+            probe_ui(page, "home_after")
+            context.close()
+            browser.close()
+        finish("DIAGNOSTICS_COMPLETE", "diagnostics")
+        return 0
+    except Exception:
+        return finish("LOGIN_FORM_NOT_FOUND", "diagnostics")
 
 
 def run() -> int:
@@ -268,54 +216,19 @@ def run() -> int:
                 return finish("SITE_UNAVAILABLE", "home")
             if response is not None and response.status in (403, 429):
                 return finish("ACCESS_BLOCKED", "home")
-            page.wait_for_timeout(1200)
             probe_ui(page, "home")
-
+            try:
+                activate_login_control(page, context, "home")
+            except Exception:
+                if visible_challenge(page):
+                    return finish("CAPTCHA_REQUIRED", "pre_login")
+                return finish("LOGIN_FORM_NOT_FOUND", "login_form")
+            probe_ui(page, "home_after")
             login_form = find_password_form(context)
             if login_form is None:
-                activate_login_control(page, context, "home")
-                probe_ui(page, "home_after")
-                login_form = find_password_form(context)
-
-            if login_form is None and visible_challenge(page):
-                return finish("CAPTCHA_REQUIRED", "pre_login")
-
-            # Sostav also exposes a legacy profile/login entry point, independent
-            # of the homepage login modal. Try it before declaring the form absent.
-            if login_form is None:
-                try:
-                    response = page.goto(PROFILE_URL, wait_until="domcontentloaded", timeout=25000)
-                    if response is not None and response.status in (403, 429):
-                        return finish("ACCESS_BLOCKED", "profile_entry")
-                    page.wait_for_timeout(2000)
-                except Exception:
-                    pass
-                probe_ui(page, "profile")
-                login_form = find_password_form(context)
-
-            # Registration has the same header login trigger but does not itself
-            # ask for a password; safe fallback on the verified Sostav origin.
-            if login_form is None:
-                try:
-                    response = page.goto("https://www.sostav.ru/auth/register", wait_until="domcontentloaded", timeout=25000)
-                    if response is not None and response.status in (403, 429):
-                        return finish("ACCESS_BLOCKED", "register_entry")
-                    page.wait_for_timeout(1200)
-                    activate_login_control(page, context, "register")
-                except Exception:
-                    PROBE["register_trigger_success"] = False
-                probe_ui(page, "register_after")
-                login_form = find_password_form(context)
-
-            if login_form is None:
-                if visible_challenge(page):
-                    return finish("CAPTCHA_REQUIRED", "alternate_entry")
-                return finish("LOGIN_FORM_NOT_FOUND", "alternate_entry")
+                return finish("LOGIN_FORM_NOT_FOUND", "login_form")
 
             tab, frame, password_input = login_form
-            if visible_challenge(tab):
-                return finish("CAPTCHA_REQUIRED", "login_form")
-
             form = password_input.locator("xpath=ancestor::form[1]")
             scope = form if form.count() else frame
             if form.count():
@@ -324,11 +237,26 @@ def run() -> int:
                 if not sostav_origin(destination):
                     return finish("UNTRUSTED_LOGIN_DESTINATION", "login_form")
 
-            # With no form element, never confuse the site-wide search box with a login input.
-            selectors = LOGIN_FIELD_SELECTORS if form.count() else LOGIN_FIELD_SELECTORS[:-1]
-            login_input = first_visible(scope, selectors)
+            login_input = first_visible(scope, ('input#input_username[name="username"]',))
             if login_input is None:
                 return finish("LOGIN_FIELD_NOT_FOUND", "login_form")
+
+            submit = scope.locator('button[type="submit"]')
+            # Let Sostav's own optional invisible SmartCaptcha finish normally.
+            # No checkbox/challenge is clicked, and no CAPTCHA response is injected.
+            try:
+                tab.wait_for_function("""() => {
+                  const b=document.querySelector('#alternate_form button[type=submit]');
+                  return b && !b.disabled;
+                }""", timeout=20000)
+            except Exception:
+                PROBE["captcha_visible"] = visible_challenge(tab)
+                PROBE["captcha_present"] = bool(tab.locator('[class*="captcha" i], [id*="captcha" i], iframe[src*="captcha" i]').count())
+                return finish("CAPTCHA_REQUIRED" if PROBE["captcha_present"] else "LOGIN_SUBMIT_FAILED", "login_form")
+            PROBE["submit_enabled"] = submit.is_enabled()
+            if visible_challenge(tab):
+                PROBE["captcha_visible"] = True
+                return finish("CAPTCHA_REQUIRED", "login_form")
 
             try:
                 login_input.fill(login, timeout=7000)
@@ -336,13 +264,13 @@ def run() -> int:
             except Exception:
                 return finish("LOGIN_FIELDS_NOT_EDITABLE", "login_form")
 
-            submit = first_visible(scope, SUBMIT_SELECTORS)
             try:
-                if submit is not None:
-                    submit.click(timeout=10000)
-                else:
-                    password_input.press("Enter", timeout=10000)
-                tab.wait_for_timeout(3300)
+                PROBE["credential_submit_once"] = True
+                submit.click(timeout=10000)
+                try:
+                    tab.locator('#auth_user').wait_for(state="visible", timeout=20000)
+                except Exception:
+                    pass
             except Exception:
                 return finish("LOGIN_SUBMIT_FAILED", "submit")
 
@@ -365,7 +293,8 @@ def run() -> int:
             except Exception:
                 pass
 
-            result = profile_status(tab)
+            # Verify in a fresh page sharing only this ephemeral browser context.
+            result = profile_status(context.new_page())
             context.close()
             browser.close()
             return finish(result, "profile")
