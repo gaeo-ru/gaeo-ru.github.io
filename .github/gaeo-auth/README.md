@@ -103,3 +103,21 @@ The earlier control path classified the presence of an invisible CAPTCHA iframe 
 Yandex documentation explains that an invisible SmartCaptcha widget may be rendered without an interactive checkbox and verifies users at a site-chosen event, frequently form submission. The mere presence of its iframe is therefore not proof of an active challenge. The safe next step is to inspect the site's own native event/submit logic using a controlled browser that already has a legitimate session, or to choose a persistent browser profile. Do not disable CAPTCHA, synthesize verification tokens, or submit hidden forms.
 
 **Architecture note:** GitHub-hosted Actions browser contexts are temporary. Even if the account logs in once, that alone does not authorize the independently running ChatGPT Work cloud browser and does not preserve a signed-in session across future GitHub jobs. A persistent, user-approved browser session (or a self-hosted runner with protected session state) is a separate architecture; its success for Sostav has not been tested. No global auto-login rule should be adopted until a signed-in IndexResearch profile is verifiably available to the actual publishing agent.
+
+## 8. Native Yandex SmartCaptcha slider trials - 2026-11-06
+
+Owner clarified that Sostav shows a Yandex SmartCaptcha slider which needs to be dragged from left to right. Official Yandex Cloud documentation confirms the slider is a normal SmartCaptcha task type. Playwright provides native mouse down/move/up and cross-frame element bounding boxes, so TinyFish is not technically necessary merely to send mouse events.
+
+- Read-only, no-secrets UI inspection: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42203066564. Inside a visible Yandex iframe the runner found a visible role=slider, slider/track/thumb classes and draggable elements. This corrected the earlier claim that the challenge had no ordinary control.
+- First bounded drag with synthetic local-only inputs: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42203513188. Geometry was valid and mouse gesture sent; Sostav submit remained disabled.
+- Position verification: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42203896028. The thumb did not move right or near the end, role=slider aria value did not change, no verification token was found.
+- Targeted role=slider handle: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42204239487. The handle was visible and pointer-events enabled, but it did not move even while the left mouse button remained held.
+- Headed Chromium with official Playwright Xvfb: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42204618202. The main-frame mouse hit-test confirmed an iframe at the selected coordinates, but the slider still did not move. Inner-frame hit-test was unavailable. No login submission was attempted.
+
+**Verified outcome:** normal Playwright GUI gestures were attempted in isolated browsers without credentials, but no accepted Yandex slider movement was observed. No Sostav submit button became enabled and IndexResearch authorization remains unverified. This does not prove GUI automation is universally impossible or identify the root cause of the ignored event. No stealth/fingerprint modification, token fabrication, network bypass, cookie/session export or brute-force CAPTCHA attempts were performed.
+
+### Safe pause and architecture
+
+Existing Issue #60 is set to [AUTH-HOLD]. The workflow job now requires an explicit marker [AUTH-CONTROL-ONCE], [AUTH-DIAG-NO-SECRETS] or [AUTH-SLIDER-TEST-NO-SECRETS] to start from an Issue edit. A harmless edit was verified to produce only a skipped run: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42204891542. Manual workflow_dispatch remains available to the repository owner.
+
+For actual content publishing, the more reliable route to investigate is a persistent, owner-authorized browser profile in the publishing environment. Initial legitimate interactive verification may still require user action; subsequent publishing could reuse an existing authenticated session only until it expires. GitHub-hosted Actions runners discard their ephemeral browser profile, and Actions Secrets cannot automatically authorize the separate Work cloud browser.
