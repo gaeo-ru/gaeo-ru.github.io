@@ -3,7 +3,7 @@ name: Sostav IndexResearch authentication test
 on:
   workflow_dispatch:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 permissions:
   contents: read
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   auth-test:
     if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'issues' && github.event.issue.title == '[AUTH-TEST] Sostav IndexResearch' && github.event.issue.user.login == 'alexyakovlev79') }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:
       - name: Checkout
