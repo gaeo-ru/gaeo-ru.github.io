@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "e3732ab2e598d050f12a215bca3fb656ec48d36e",
-  "releasedAt": "2026-11-06T05:51:31.818Z",
+  "sourceCommit": "91517afdba366301ce6778d45e3c0688ed2ea787",
+  "releasedAt": "2026-11-06T06:14:51.390Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1488,17 +1488,17 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "c229a01240af01c2550778f72266caaf71fdc71b4c8b95c6c918dffabd74c672"
+      "sha256": "51122f5879a00fc420f3b8e784648c260c0ac6ad1de83f7643de150c1a08373b"
     },
     {
       "path": "en/index.html",
       "kind": "html",
-      "sha256": "ab3ee140e8aa311771d76967e7a5d1425ea46657dcca779c94d1c86266c66d73"
+      "sha256": "5730a6d57b0c55b8c4cdc4156961a736724376d46e66fbb1738fb638f84c3be7"
     },
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "d30e7f8ddee5d4dbe327842c91055f7b9e009100474fb28158ffaf1dfac66704"
+      "sha256": "76aee936b3205c8a6b906edcf162f479f034d5f27c573ca7b6f9b25607a42251"
     },
     {
       "path": "en/industries/fulfillment/index.html",
@@ -1518,17 +1518,17 @@
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "8a325bb3b3124ec33e07e7edc0ab0e3f01b24c85df63ef4d7ce6e96fc4a9b339"
+      "sha256": "bcf79174872e99e6f55fdfb15869ed1dc5c1208f95c949824cc5d092532f89d4"
     },
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "5ea2d74fae2b0ad0f8151a19cc2bdb1873b22780f774af5dd43a00372fc10434"
+      "sha256": "49b7d55cec0faf28754049dc4a6634a1306295b40c1666aaa7a156db16f4009f"
     },
     {
       "path": "en/industries/pharma/index.html",
       "kind": "html",
-      "sha256": "0649fb982e7ace4d3f2b245645d7d16505bd5e22f6b9f03b8204897f82a30a4a"
+      "sha256": "82d6d641cff7a290c86496377a6c398b388b98966be1618e1eee23df182419f1"
     },
     {
       "path": "en/industries/tourism/index.html",
@@ -1628,22 +1628,22 @@
     {
       "path": "gaeo-services.yml.xml",
       "kind": "asset",
-      "sha256": "36bb84ba1e30c14ad4fa6356d5b85b86e61fe87b73203ce94c43a98b7e44504c"
+      "sha256": "1f1d7daae5c75110c651a1b8ccb0d86e51cc757832cf2773e6116ede4d09de7f"
     },
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "f5855e9dd1676b4573333edb8b0b8c40f6b4c9aca540111b7e1e473776006b0f"
+      "sha256": "76b2645f9055a688c1bc3b2a399d31f4cd3ccd232ee6d2ebe115e32b03d9e194"
     },
     {
       "path": "index.html",
       "kind": "html",
-      "sha256": "cff112b47ef85bd2aa075df632bea0087b8d71891240a914df3c17f8b304509a"
+      "sha256": "7ae0856c3b2d16e5afd6197cce47df705b45bd135bfba6ccb6a68d63134b8c2f"
     },
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "ea91cd3db71f255b05d36a4789cd07a5e42ef5d15c966b5117c97e7f3b108ca3"
+      "sha256": "b658b58443bb501f5d2df90a16659c286290147279407a8e864b889e3e8ec83f"
     },
     {
       "path": "industries/fulfillment/index.html",
@@ -1663,17 +1663,17 @@
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "6a72bf8a3403a5afd670a151687f5785874fcac75f72683bfaf51d15347cd2de"
+      "sha256": "c6da2cfd331e631a442b8309b9e539eb42c16444f86748c8a2814e8f6c9fcb8a"
     },
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "a3fe49365d2d81e9e2b345177b3c38f6bd159829f98650def3d285f0e085df95"
+      "sha256": "132fcd429e1549f87b4b0a1e3df5be06dc09c1184694bf13e1521c0ae725ed47"
     },
     {
       "path": "industries/pharma/index.html",
       "kind": "html",
-      "sha256": "70932ee8bc6ac1d2bec111b5642ede88e13c9c5edf1bfe14d6e3936f86c684ed"
+      "sha256": "233ca9e5d004aeb296b77cfda4b9b51a6d5c0f0a7bceeaee5bdc53c0317afe43"
     },
     {
       "path": "industries/tourism/index.html",
@@ -1728,7 +1728,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "9d3d47882c8b09352e0db4120c1cb25259b20b81e8350c32ff5129a5d69772d3"
+      "sha256": "09423edd669bde25ebb41ddaed44c0ee75f643cf79abee1708f64fcb98719f17"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
