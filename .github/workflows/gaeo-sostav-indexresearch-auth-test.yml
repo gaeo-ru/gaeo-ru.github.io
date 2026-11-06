@@ -92,9 +92,23 @@ jobs:
               'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR',
             ]);
             let status = 'INTERNAL_ERROR';
+            let signals = '';
+            let stage = '';
             try {
               const result = JSON.parse(fs.readFileSync('auth_result.json', 'utf8'));
               if (allowed.has(result.status)) status = result.status;
+              const allowedStages = new Set(['configuration', 'home', 'pre_login', 'login_form',
+                'profile_entry', 'register_entry', 'alternate_entry', 'post_submit', 'submit', 'profile', 'runtime']);
+              if (allowedStages.has(result.stage)) stage = result.stage;
+              const keys = [
+                'home_login_text', 'home_login_locator', 'home_password', 'home_frame', 'home_body_login_word',
+                'home_after_login_text', 'home_after_login_locator', 'home_after_password', 'home_after_frame', 'home_after_body_login_word',
+                'profile_login_text', 'profile_login_locator', 'profile_password', 'profile_frame', 'profile_body_login_word',
+                'register_after_login_text', 'register_after_login_locator', 'register_after_password',
+                'register_after_frame', 'register_after_body_login_word'
+              ];
+              signals = keys.filter(k => typeof result.probe?.[k] === 'boolean')
+                .map(k => k + '=' + (result.probe[k] ? '1' : '0')).join('; ');
             } catch (_) {}
             const url = context.serverUrl + '/' + context.repo.owner + '/' +
               context.repo.repo + '/actions/runs/' + context.runId;
@@ -102,7 +116,9 @@ jobs:
               ...context.repo,
               issue_number: context.issue.number,
               body: 'Sostav IndexResearch authentication check: **' + status +
-                '**\n\nWorkflow run: ' + url +
+                '**\n\nStage: ' + stage +
+                '\n\nUI flags (booleans only): ' + signals +
+                '\n\nWorkflow run: ' + url +
                 '\n\nNo passwords, cookies or browser-session files were saved.',
             });
 
