@@ -215,6 +215,16 @@ def diagnose() -> int:
             PROBE["submit_enabled_after_dummy"] = submit.is_enabled()
             username.fill("")
             password.fill("")
+            # Check whether legacy site's handlers require keyboard events
+            # (keydown/keyup) rather than Playwright's input-only fill().
+            # Deliberately fake data, no click on Submit, no authentication POST.
+            username.press_sequentially("gaeo-ui-probe@example.invalid", delay=5)
+            password.press_sequentially("UiProbeOnlyNotARealPassword2026!", delay=5)
+            page.wait_for_timeout(3000)
+            PROBE["submit_enabled_after_typing"] = submit.is_enabled()
+            PROBE["native_form_valid_after_typing"] = form.evaluate("(el) => el.checkValidity()")
+            username.fill("")
+            password.fill("")
             PROBE["submit_enabled"] = submit.is_enabled()
             PROBE["captcha_visible"] = visible_challenge(page)
             PROBE["captcha_network_failed"] = bool(captcha_failures)
