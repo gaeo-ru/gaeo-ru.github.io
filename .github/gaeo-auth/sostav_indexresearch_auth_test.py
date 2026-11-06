@@ -99,6 +99,32 @@ def first_visible(scope, selectors):
     return None
 
 
+def activate_login_control(page, context, phase: str) -> None:
+    """Try each visible login trigger; stop as soon as the form becomes visible."""
+    seen = 0
+    for selector in LOGIN_LINK_SELECTORS:
+        try:
+            nodes = page.locator(selector)
+            count = min(nodes.count(), 10)
+        except Exception:
+            continue
+        for idx in range(count):
+            try:
+                node = nodes.nth(idx)
+                if not node.is_visible():
+                    continue
+                seen += 1
+                node.click(timeout=4000)
+                page.wait_for_timeout(650)
+                if find_password_form(context) is not None:
+                    PROBE[phase + "_trigger_success"] = True
+                    return
+            except Exception:
+                continue
+    PROBE[phase + "_trigger_success"] = False
+    PROBE[phase + "_some_click"] = bool(seen)
+
+
 def visible_challenge(page) -> bool:
     for frame in page.frames:
         if not sostav_origin(frame.url):
@@ -187,14 +213,7 @@ def run() -> int:
 
             login_form = find_password_form(context)
             if login_form is None:
-                login_button = first_visible(page, LOGIN_LINK_SELECTORS)
-                if login_button is not None:
-                    try:
-                        login_button.click(timeout=7000)
-                        PROBE["home_click_succeeded"] = True
-                        page.wait_for_timeout(2300)
-                    except Exception:
-                        PROBE["home_click_succeeded"] = False
+                activate_login_control(page, context, "home")
                 probe_ui(page, "home_after")
                 login_form = find_password_form(context)
 
@@ -222,13 +241,9 @@ def run() -> int:
                     if response is not None and response.status in (403, 429):
                         return finish("ACCESS_BLOCKED", "register_entry")
                     page.wait_for_timeout(1200)
-                    login_button = first_visible(page, LOGIN_LINK_SELECTORS)
-                    if login_button is not None:
-                        login_button.click(timeout=7000)
-                        PROBE["register_click_succeeded"] = True
-                        page.wait_for_timeout(2200)
+                    activate_login_control(page, context, "register")
                 except Exception:
-                    PROBE["register_click_succeeded"] = False
+                    PROBE["register_trigger_success"] = False
                 probe_ui(page, "register_after")
                 login_form = find_password_form(context)
 
