@@ -11,6 +11,20 @@ from urllib.parse import urljoin, urlparse
 from playwright.sync_api import sync_playwright
 
 RESULT_FILE = Path("auth_result.json")
+PROBE = {}
+
+
+def probe_ui(page, phase: str) -> None:
+    """Record only booleans, never text, HTML, URL, email or cookies."""
+    try:
+        PROBE[phase + "_login_text"] = bool(page.get_by_text("Войти", exact=True).count())
+        PROBE[phase + "_login_locator"] = bool(first_visible(page, LOGIN_LINK_SELECTORS))
+        PROBE[phase + "_password"] = bool(first_visible(page, ('input[type="password"]',)))
+        PROBE[phase + "_frame"] = bool(len(page.frames) > 1)
+        PROBE[phase + "_body_login_word"] = "войти" in page.locator("body").inner_text(timeout=3000).lower()
+    except Exception:
+        PROBE[phase + "_probe_error"] = True
+
 HOME_URL = "https://www.sostav.ru/"
 PROFILE_URL = "https://www.sostav.ru/tools/user_tools.php?part=profile"
 
@@ -52,7 +66,7 @@ CHALLENGE_SELECTORS = (
 def finish(status: str, stage: str) -> int:
     # Controlled, non-secret values only. No URL, email, page contents or exception.
     RESULT_FILE.write_text(
-        json.dumps({"status": status, "stage": stage}, ensure_ascii=False) + "\n",
+        json.dumps({"status": status, "stage": stage, "probe": PROBE}, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     return 0 if status == "AUTHENTICATED_INDEXRESEARCH" else 1
@@ -161,6 +175,7 @@ def run() -> int:
             if response is not None and response.status in (403, 429):
                 return finish("ACCESS_BLOCKED", "home")
             page.wait_for_timeout(1200)
+            probe_ui(page, "home")
 
             login_form = find_password_form(context)
             if login_form is None:
@@ -171,6 +186,7 @@ def run() -> int:
                         page.wait_for_timeout(2300)
                     except Exception:
                         pass
+                probe_ui(page, "home_after")
                 login_form = find_password_form(context)
 
             if login_form is None and visible_challenge(page):
@@ -186,6 +202,7 @@ def run() -> int:
                     page.wait_for_timeout(2000)
                 except Exception:
                     pass
+                probe_ui(page, "profile")
                 login_form = find_password_form(context)
 
             # Registration has the same header login trigger but does not itself
@@ -202,6 +219,7 @@ def run() -> int:
                         page.wait_for_timeout(2200)
                 except Exception:
                     pass
+                probe_ui(page, "register_after")
                 login_form = find_password_form(context)
 
             if login_form is None:
