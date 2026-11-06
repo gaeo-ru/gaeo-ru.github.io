@@ -244,8 +244,19 @@ def drag_visible_yandex_slider_once(page) -> bool:
         try:
             if not frame.frame_element().is_visible():
                 continue
-            thumbs = boxes(frame, ('[class*="thumb" i]', '[class*="handle" i]', '[role="slider"]'))
-            tracks = boxes(frame, ('[class*="track" i]', '[class*="slider" i]'))
+            role_handles = boxes(frame, ('[role="slider"]',))
+            decorative_handles = boxes(frame, ('[class*="thumb" i]', '[class*="handle" i]'))
+            # Prefer the actual accessible slider control, when it is a small
+            # draggable thumb. A small decorative child may be non-interactive.
+            role_small = [item for item in role_handles if 9 <= item[0]["width"] <= 105]
+            thumbs = role_small if role_small else decorative_handles
+            tracks = boxes(frame, ('[class*="track" i]',))
+            if not tracks:
+                tracks = boxes(frame, ('[class*="slider" i]',))
+            PROBE["captcha_slider_role_handle_used"] = bool(role_small)
+            PROBE["captcha_slider_role_is_wide"] = bool(
+                role_handles and all(item[0]["width"] > 105 for item in role_handles)
+            )
             for thumb, thumb_node in sorted(thumbs, key=lambda item: item[0]["width"]):
                 if not (9 <= thumb["width"] <= 105 and 8 <= thumb["height"] <= 110):
                     continue
@@ -264,10 +275,26 @@ def drag_visible_yandex_slider_once(page) -> bool:
                     PROBE["captcha_slider_geometry_valid"] = True
                     role = first_visible(frame, ('[role="slider"]',))
                     aria_before = role.get_attribute("aria-valuenow") if role else None
+                    try:
+                        PROBE["captcha_slider_handle_pointer_interactive"] = (
+                            thumb_node.evaluate("(el) => getComputedStyle(el).pointerEvents !== 'none'")
+                        )
+                    except Exception:
+                        pass
                     page.mouse.move(cx, cy)
                     page.mouse.down()
                     try:
                         page.mouse.move(target_x, cy, steps=40)
+                        # Observe live movement while held; sliders may snap back
+                        # after mouseup if the normal provider check rejects input.
+                        try:
+                            held = thumb_node.bounding_box(timeout=1500)
+                            if held:
+                                PROBE["captcha_slider_thumb_moved_while_held"] = (
+                                    held["x"] > thumb["x"] + 12
+                                )
+                        except Exception:
+                            pass
                     finally:
                         page.mouse.up()
                     PROBE["captcha_slider_mouse_drag_performed"] = True
