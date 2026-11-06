@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check that both secrets exist
-        if: ${{ !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') }}
+        if: ${{ !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') && !contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]') }}
         id: secrets
         shell: bash
         env:
@@ -40,12 +40,16 @@ jobs:
           fi
 
       - name: Install Python Playwright client (browsers supplied by pinned container)
-        if: steps.secrets.outputs.ready == 'yes' || contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]')
+        if: steps.secrets.outputs.ready == 'yes' || contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') || contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]')
         run: python -m pip install --disable-pip-version-check playwright==1.56.0
 
       - name: Diagnose public login UI without secrets
-        if: contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]')
+        if: contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') && !contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]')
         run: python .github/gaeo-auth/sostav_indexresearch_auth_test.py --diagnose
+
+      - name: Test one visible mouse drag without login or secrets
+        if: contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]')
+        run: python .github/gaeo-auth/sostav_indexresearch_auth_test.py --diagnose --slider-drag
 
       - name: Check authorization once
         id: auth
@@ -126,6 +130,9 @@ jobs:
                 'captcha_slider_track_present', 'captcha_slider_track_visible',
                 'captcha_slider_draggable_present', 'captcha_slider_draggable_visible',
                 'captcha_slider_canvas_present', 'captcha_slider_canvas_visible',
+                'captcha_slider_geometry_valid', 'captcha_slider_mouse_drag_performed',
+                'captcha_slider_mouse_drag_failed', 'captcha_slider_drag_attempted',
+                'submit_enabled_after_slider_drag',
                 'submit_enabled_before_fill', 'submit_enabled_after_fill',
                 'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
@@ -149,5 +156,5 @@ jobs:
             });
 
       - name: Fail if not verified
-        if: always() && !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') && (steps.secrets.outputs.ready != 'yes' || steps.auth.outcome != 'success')
+        if: always() && !contains(github.event.issue.body, '[AUTH-DIAG-NO-SECRETS]') && !contains(github.event.issue.body, '[AUTH-SLIDER-TEST-NO-SECRETS]') && (steps.secrets.outputs.ready != 'yes' || steps.auth.outcome != 'success')
         run: exit 1
