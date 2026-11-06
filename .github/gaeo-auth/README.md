@@ -1,6 +1,6 @@
 # Sostav.ru / IndexResearch: pilot login via GitHub Secrets
 
-Status (2026-11-06): native-password form opening is fixed and verified. **Autonomous sign-in as IndexResearch is NOT verified: the single control run stopped at the Yandex SmartCaptcha gate before filling or submitting credentials.** Existing Issue #60: https://github.com/gaeo-ru/gaeo-ru.github.io/issues/60. Do not retry blindly or assume credentials were rejected.
+Status (2026-11-06): native-password form opening is fixed and verified. **Autonomous sign-in as IndexResearch is NOT verified.** A later controlled run correctly filled the secret-backed credentials, but Sostav kept its native submit button disabled; no login POST was sent. It is not established whether the blocking condition is the SmartCaptcha callback or other site JavaScript. Existing Issue #60: https://github.com/gaeo-ru/gaeo-ru.github.io/issues/60. Do not retry blindly or assume credentials were rejected.
 No global ChatGPT rule is enabled. No passwords are present in source code.
 The Actions job runs in this GAEO repository only; GitHub does not automatically share its secrets with other repositories or ChatGPT Work.
 
@@ -43,6 +43,7 @@ Manual alternative: GitHub -> Actions -> Sostav IndexResearch authentication tes
 | `AUTHENTICATED_INDEXRESEARCH` | A fresh `/auth/user/edit` page exposes the authenticated profile form; its first/last name and the account header both exactly match IndexResearch (ignoring whitespace/case) |
 | `AUTHENTICATED_PROFILE_UNVERIFIED` | Login is confirmed but the exact author identity was not visible on the profile page; do not assume IndexResearch author was selected |
 | `CAPTCHA_REQUIRED` | The site demanded an interactive anti-bot challenge; no automated circumvention is attempted |
+| `SUBMIT_DISABLED_AFTER_FILL` | Real credentials were filled into the visible native form, but Sostav did not enable its submit button; no login attempt was sent and the underlying JavaScript / CAPTCHA state is not conclusively known |
 | `CREDENTIALS_REJECTED` | Sostav rejected the credential pair |
 | `MISSING_SECRETS` | At least one of the two secrets was missing or empty |
 | `LOGIN_FORM_NOT_FOUND` | The actual native-password controls did not become visible after the two normal site clicks; do not submit hidden fields or force CSS visibility |
@@ -87,3 +88,18 @@ Control evidence (approved booleans only):
 - No additional credentialed control run was made. Do not edit Issue #60 for another attempt without a justified code change or explicit new authorization.
 
 Changed files remain confined to the original authentication script, its workflow and this README. No credentials, cookies, tokens, browser-session files or screenshots were written to repository files, Issues, logs or artifacts. The ephemeral status JSON contains only approved statuses/stages and boolean probes.
+
+## 7. Follow-up findings: input validation vs SmartCaptcha (2026-11-06)
+
+The earlier control path classified the presence of an invisible CAPTCHA iframe as `CAPTCHA_REQUIRED` **before entering credentials**. This was not sufficient to diagnose an active user challenge. The sequence was corrected: fill native fields first, then check whether the normal submit button is enabled. The site is not modified, the button is never forced, and CAPTCHA tokens are never injected.
+
+- Code fix: https://github.com/gaeo-ru/gaeo-ru.github.io/commit/f16c23c4d262948124bdca238cd543bb26146fa4
+- Credentialed control (exactly one after this change): https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42200993264. Comment in existing Issue #60 reports `credentials_filled=1`, `submit_enabled_before_fill=0`, `submit_enabled_after_fill=0`, `captcha_present=1`, status `SUBMIT_DISABLED_AFTER_FILL`. No submit POST occurred. The password pair was not accepted or rejected because the button never enabled.
+- Non-secret form validation check: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42201504114. With purely synthetic unsent fields, `dummy_fields_valid=1` and `native_form_valid_after_dummy=1`, but `submit_enabled_after_dummy=0`.
+- Non-secret keystroke check: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42201984850. `press_sequentially()` also generated native keyboard events, `native_form_valid_after_typing=1`, and `submit_enabled_after_typing=0`. The blocker is not attributable merely to Playwright `fill()` omitting keydown/keyup.
+
+**Confirmed:** browser launches; both configured secrets are detected; native Sostav form opens; credential inputs can be filled; form submission never happens because the website keeps the submit control disabled. The visible CAPTCHA iframe loaded successfully in prior diagnostics, with no recognized ordinary checkbox/challenge control or network failures. **Unconfirmed:** exact JS/CAPTCHA condition responsible for disabling Submit; successful sign-in; protected IndexResearch profile; reusable publication authorization.
+
+Yandex documentation explains that an invisible SmartCaptcha widget may be rendered without an interactive checkbox and verifies users at a site-chosen event, frequently form submission. The mere presence of its iframe is therefore not proof of an active challenge. The safe next step is to inspect the site's own native event/submit logic using a controlled browser that already has a legitimate session, or to choose a persistent browser profile. Do not disable CAPTCHA, synthesize verification tokens, or submit hidden forms.
+
+**Architecture note:** GitHub-hosted Actions browser contexts are temporary. Even if the account logs in once, that alone does not authorize the independently running ChatGPT Work cloud browser and does not preserve a signed-in session across future GitHub jobs. A persistent, user-approved browser session (or a self-hosted runner with protected session state) is a separate architecture; its success for Sostav has not been tested. No global auto-login rule should be adopted until a signed-in IndexResearch profile is verifiably available to the actual publishing agent.
