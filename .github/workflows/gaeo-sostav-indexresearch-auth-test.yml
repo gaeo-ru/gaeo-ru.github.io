@@ -68,7 +68,7 @@ jobs:
               'MISSING_SECRETS', 'ACCESS_BLOCKED', 'SITE_UNAVAILABLE',
               'CAPTCHA_REQUIRED', 'LOGIN_FORM_NOT_FOUND', 'LOGIN_FIELD_NOT_FOUND',
               'UNTRUSTED_LOGIN_DESTINATION', 'LOGIN_FIELDS_NOT_EDITABLE',
-              'LOGIN_SUBMIT_FAILED', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
+              'LOGIN_SUBMIT_FAILED', 'SUBMIT_DISABLED_AFTER_FILL', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
               'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR', 'DIAGNOSTICS_COMPLETE',
           }
           try:
@@ -93,7 +93,7 @@ jobs:
               'MISSING_SECRETS', 'ACCESS_BLOCKED', 'SITE_UNAVAILABLE',
               'CAPTCHA_REQUIRED', 'LOGIN_FORM_NOT_FOUND', 'LOGIN_FIELD_NOT_FOUND',
               'UNTRUSTED_LOGIN_DESTINATION', 'LOGIN_FIELDS_NOT_EDITABLE',
-              'LOGIN_SUBMIT_FAILED', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
+              'LOGIN_SUBMIT_FAILED', 'SUBMIT_DISABLED_AFTER_FILL', 'CREDENTIALS_REJECTED', 'PROFILE_UNAVAILABLE',
               'AUTHENTICATION_NOT_CONFIRMED', 'UNEXPECTED_ERROR', 'DIAGNOSTICS_COMPLETE',
             ]);
             let status = 'INTERNAL_ERROR';
@@ -103,7 +103,7 @@ jobs:
               const result = JSON.parse(fs.readFileSync('auth_result.json', 'utf8'));
               if (allowed.has(result.status)) status = result.status;
               const allowedStages = new Set(['configuration', 'home', 'pre_login', 'login_form',
-                'diagnostics', 'profile_entry', 'register_entry', 'alternate_entry', 'post_submit', 'submit', 'profile', 'runtime']);
+                'diagnostics', 'filled_form', 'profile_entry', 'register_entry', 'alternate_entry', 'post_submit', 'submit', 'profile', 'runtime']);
               if (allowedStages.has(result.stage)) stage = result.stage;
               const keys = [
                 'home_login_text', 'home_login_locator', 'home_password', 'home_frame', 'home_body_login_word',
@@ -116,7 +116,8 @@ jobs:
                 'captcha_network_failed', 'captcha_http_error', 'captcha_http_success', 'captcha_yandex',
                 'captcha_frame_visible', 'captcha_robot_checkbox_prompt', 'captcha_interactive_prompt',
                 'captcha_error_text', 'captcha_checkbox_visible', 'captcha_input_visible', 'captcha_frame_inspection_failed',
-                'submit_enabled', 'credential_submit_once', 'profile_edit_loaded',
+                'submit_enabled', 'submit_enabled_before_fill', 'submit_enabled_after_fill',
+                'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
               keys.push('home_trigger_success', 'register_trigger_success', 'home_some_click', 'register_some_click');
               for (const p of ['home','home_after','profile','register_after']) {
