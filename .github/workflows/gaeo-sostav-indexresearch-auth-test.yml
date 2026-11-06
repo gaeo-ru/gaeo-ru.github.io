@@ -118,6 +118,7 @@ jobs:
                 'captcha_error_text', 'captcha_checkbox_visible', 'captcha_input_visible', 'captcha_frame_inspection_failed',
                 'submit_enabled', 'submit_enabled_before_dummy', 'submit_enabled_after_dummy',
                 'native_form_valid_before_dummy', 'native_form_valid_after_dummy', 'dummy_fields_valid',
+                'submit_enabled_after_typing', 'native_form_valid_after_typing',
                 'submit_enabled_before_fill', 'submit_enabled_after_fill',
                 'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
