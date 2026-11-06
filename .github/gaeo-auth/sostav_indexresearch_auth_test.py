@@ -222,11 +222,17 @@ def diagnose() -> int:
         page.wait_for_timeout(5000)
         inspect("after")
         print("AUTH_DIAG_network=" + json.dumps(network))
+        print("AUTH_DIAG_modal=" + json.dumps(page.locator('.vex-content').evaluate("""e => ({
+          text:e.innerText,
+          controls:[...e.querySelectorAll('a,button,input:not([type=hidden])')].map(c=>({
+            tag:c.tagName,id:c.id,cls:c.className,type:c.getAttribute('type'),name:c.getAttribute('name'),
+            text:c.tagName==='INPUT'?'':c.textContent.trim(),visible:!!c.getBoundingClientRect().height
+          }))})"""), ensure_ascii=False))
         # Only a public, static first-party resource; no session data or form HTML.
-        source = context.request.get("https://cdn.sostav.ru/js/front/karkas.js?v=202050126").text()
+        source = context.request.get("https://www.sostav.ru/assets/karkas/src/js/auth.js?v=2").text()
         lines = source.splitlines()
         for i, line in enumerate(lines):
-            if any(term in line.lower() for term in ("auth", "vex.", "login")):
+            if any(term in line.lower() for term in ("native-login", "alternate", "slidetoggle", "slideup", "slidedown", "toggle", "show(")):
                 print("AUTH_DIAG_static_js=" + "\\n".join(lines[max(0, i-2):i+4])[:3000])
         # Error categories only; no error messages or source URLs.
         print("AUTH_DIAG_errors=" + json.dumps({
