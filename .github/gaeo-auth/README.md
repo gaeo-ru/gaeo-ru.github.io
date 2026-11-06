@@ -1,6 +1,6 @@
 # Sostav.ru / IndexResearch: pilot login via GitHub Secrets
 
-Status: pilot created 2026-11-06. **Successful login has not yet been verified.**
+Status (2026-11-06): infrastructure repaired (pinned Playwright Chromium container); secrets detected. **Successful Sostav login has NOT been verified.** See existing Issue #60: https://github.com/gaeo-ru/gaeo-ru.github.io/issues/60. The login control is visible and clickable but the site's password form stays hidden (LOGIN_FORM_NOT_FOUND after multiple safe entry-point checks). No credential validation was performed. Do not silently retry or claim login success.
 No global ChatGPT rule is enabled. No passwords are present in source code.
 The Actions job runs in this GAEO repository only; GitHub does not automatically share its secrets with other repositories or ChatGPT Work.
 
@@ -23,13 +23,13 @@ No quotes, JSON or prefixes; paste the raw values. Never send the values through
 
 ## 2. Work chat test
 
-Ask Work to use the connected GitHub app, fetch this document, and create **one Issue** in this repository with the **exact title**:
+Ask Work to use the connected GitHub app and fetch this document. **Issue #60 already exists. Do not create another Issue.** For future independent login-test cases only, create one Issue with the **exact title**:
 
 `[AUTH-TEST] Sostav IndexResearch`
 
 Issue body may say `One-shot login test, no publication.`; it must contain no credentials.
 
-Opening the Issue triggers `.github/workflows/gaeo-sostav-indexresearch-auth-test.yml`.
+Opening or editing an Issue with the exact title triggers `.github/workflows/gaeo-sostav-indexresearch-auth-test.yml`. Reuse Issue #60 for controlled retries only when code changes justify one; avoid blind repeated logins.
 This is limited to an Issue created by `alexyakovlev79` with the exact title. The workflow reads only the two Sostav Secrets, opens Sostav in an isolated Playwright browser and attempts one normal sign-in. It does **not** publish, save cookies, screenshot password fields, upload artifacts or transfer a browser session to Work.
 
 Work must follow the **same Issue** and its GitHub Actions run. After the run completes, read its status comment. Do not create a second Issue simply because the first result was delayed or unclear.
@@ -45,7 +45,7 @@ Manual alternative: GitHub -> Actions -> Sostav IndexResearch authentication tes
 | `CAPTCHA_REQUIRED` | The site demanded an interactive anti-bot challenge; no automated circumvention is attempted |
 | `CREDENTIALS_REJECTED` | Sostav rejected the credential pair |
 | `MISSING_SECRETS` | At least one of the two secrets was missing or empty |
-| `LOGIN_FORM_NOT_FOUND` | The site's current login interface differs from the automation |
+| `LOGIN_FORM_NOT_FOUND` | Sostav's password field is present in the DOM but hidden after the available login controls are clicked (confirmed in Issue #60). Requires targeted UI/JavaScript diagnosis before a further login attempt |
 | `ACCESS_BLOCKED` / `SITE_UNAVAILABLE` | Site blocked the runner or could not be opened |
 | Other status | Inspect the workflow, **without** exporting credentials or cookies |
 
