@@ -135,6 +135,8 @@ jobs:
                 'submit_enabled_after_slider_drag', 'captcha_slider_thumb_moved_right',
                 'captcha_slider_thumb_near_end', 'captcha_slider_thumb_disappeared',
                 'captcha_slider_aria_changed', 'captcha_token_present_after_drag',
+                'captcha_slider_role_handle_used', 'captcha_slider_role_is_wide',
+                'captcha_slider_handle_pointer_interactive', 'captcha_slider_thumb_moved_while_held',
                 'submit_enabled_before_fill', 'submit_enabled_after_fill',
                 'credentials_filled', 'captcha_interaction_detected', 'credential_submit_once', 'profile_edit_loaded',
                 'profile_identity_matches', 'header_identity_matches', 'captcha_visible', 'captcha_present');
