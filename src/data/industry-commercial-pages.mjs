@@ -197,7 +197,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO-продвижение",
-          "price": "от 49 900 ₽/мес.",
+          "price": "от 79 900 ₽/мес.",
           "items": [
             "Стратегия, задачи по сайту и внешним источникам",
             "Контроль публикаций и внедрений",
@@ -206,7 +206,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + контент",
-          "price": "от 79 900 ₽/мес.",
+          "price": "от 99 900 ₽/мес.",
           "items": [
             "Все работы по GEO-продвижению",
             "Подготовка экспертного контента",
@@ -489,7 +489,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO promotion",
-          "price": "from RUB 49,900/month",
+          "price": "from RUB 79,900/month",
           "items": [
             "Strategy, website briefs and independent sources",
             "Implementation and publication review",
@@ -498,7 +498,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + content",
-          "price": "from RUB 79,900/month",
+          "price": "from RUB 99,900/month",
           "items": [
             "GEO promotion scope included",
             "Expert content preparation",
@@ -822,7 +822,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO-продвижение",
-          "price": "от 49 900 ₽/мес.",
+          "price": "от 79 900 ₽/мес.",
           "items": [
             "Стратегия и приоритеты сайта и источников",
             "ТЗ и контроль согласованных внедрений",
@@ -831,7 +831,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + контент",
-          "price": "от 79 900 ₽/мес.",
+          "price": "от 99 900 ₽/мес.",
           "items": [
             "Контент и публикационный план по допустимым темам",
             "Работа с редакциями и источниками",
@@ -1195,7 +1195,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO promotion",
-          "price": "from RUB 49,900/month",
+          "price": "from RUB 79,900/month",
           "items": [
             "Strategy and approved work briefs",
             "Implementation and publication coordination",
@@ -1204,7 +1204,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + content",
-          "price": "from RUB 79,900/month",
+          "price": "from RUB 99,900/month",
           "items": [
             "Evidence-backed expert content",
             "Publication planning and distribution",
@@ -1610,7 +1610,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO-продвижение",
-          "price": "от 49 900 ₽/мес.",
+          "price": "от 79 900 ₽/мес.",
           "items": [
             "Стратегия и ТЗ для сайта и каталога",
             "Контроль внедрений и внешних публикаций",
@@ -1619,7 +1619,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + контент",
-          "price": "от 79 900 ₽/мес.",
+          "price": "от 99 900 ₽/мес.",
           "items": [
             "Сопровождение GEO-продвижения",
             "Подготовка сценарных и экспертных материалов",
@@ -1954,7 +1954,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO optimization",
-          "price": "from RUB 49,900/month",
+          "price": "from RUB 79,900/month",
           "items": [
             "Strategy, briefs and catalog recommendations",
             "Implementation and publication review",
@@ -1963,7 +1963,7 @@ export const industryCommercialPages = {
         },
         {
           "name": "GEO + content",
-          "price": "from RUB 79,900/month",
+          "price": "from RUB 99,900/month",
           "items": [
             "Ongoing GEO optimization",
             "Buyer-scenario and expert content",
@@ -2290,7 +2290,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO-продвижение",
-        "price": "от 49 900 ₽/мес.",
+        "price": "от 79 900 ₽/мес.",
         "items": [
           "План GEO и технические задания",
           "Работа с экспертными источниками",
@@ -2299,7 +2299,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO + контент",
-        "price": "от 79 900 ₽/мес.",
+        "price": "от 99 900 ₽/мес.",
         "items": [
           "Все работы по сопровождению",
           "Экспертные материалы после юридической проверки",
@@ -2626,7 +2626,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO optimization",
-        "price": "from RUB 49,900/month",
+        "price": "from RUB 79,900/month",
         "items": [
           "Industry strategy and technical briefs",
           "Expert sources and publishing checks",
@@ -2635,7 +2635,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO + content",
-        "price": "from RUB 79,900/month",
+        "price": "from RUB 99,900/month",
         "items": [
           "Ongoing GEO activities",
           "Legally reviewed expert content",
@@ -2964,7 +2964,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO-продвижение",
-        "price": "от 49 900 ₽/мес.",
+        "price": "от 79 900 ₽/мес.",
         "items": [
           "Стратегия по типам изделий и отраслей",
           "Контроль задач по сайту и внешним источникам",
@@ -2973,7 +2973,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO + контент",
-        "price": "от 79 900 ₽/мес.",
+        "price": "от 99 900 ₽/мес.",
         "items": [
           "Технические статьи и материалы после инженерной проверки",
           "Подготовка внешних экспертных публикаций",
@@ -3302,7 +3302,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO optimization",
-        "price": "from RUB 49,900/month",
+        "price": "from RUB 79,900/month",
         "items": [
           "Industry-specific GEO strategy",
           "Website and source work briefs",
@@ -3311,7 +3311,7 @@ export const industryCommercialPages = {
       },
       {
         "name": "GEO + content",
-        "price": "from RUB 79,900/month",
+        "price": "from RUB 99,900/month",
         "items": [
           "Technical content subject to engineering review",
           "Expert and third-party publications",
