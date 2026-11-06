@@ -168,15 +168,46 @@ def run() -> int:
                 if login_button is not None:
                     try:
                         login_button.click(timeout=7000)
-                        page.wait_for_timeout(1700)
+                        page.wait_for_timeout(2300)
                     except Exception:
                         pass
                 login_form = find_password_form(context)
 
+            if login_form is None and visible_challenge(page):
+                return finish("CAPTCHA_REQUIRED", "pre_login")
+
+            # Sostav also exposes a legacy profile/login entry point, independent
+            # of the homepage login modal. Try it before declaring the form absent.
+            if login_form is None:
+                try:
+                    response = page.goto(PROFILE_URL, wait_until="domcontentloaded", timeout=25000)
+                    if response is not None and response.status in (403, 429):
+                        return finish("ACCESS_BLOCKED", "profile_entry")
+                    page.wait_for_timeout(2000)
+                except Exception:
+                    pass
+                login_form = find_password_form(context)
+
+            # Registration has the same header login trigger but does not itself
+            # ask for a password; safe fallback on the verified Sostav origin.
+            if login_form is None:
+                try:
+                    response = page.goto("https://www.sostav.ru/auth/register", wait_until="domcontentloaded", timeout=25000)
+                    if response is not None and response.status in (403, 429):
+                        return finish("ACCESS_BLOCKED", "register_entry")
+                    page.wait_for_timeout(1200)
+                    login_button = first_visible(page, LOGIN_LINK_SELECTORS)
+                    if login_button is not None:
+                        login_button.click(timeout=7000)
+                        page.wait_for_timeout(2200)
+                except Exception:
+                    pass
+                login_form = find_password_form(context)
+
             if login_form is None:
                 if visible_challenge(page):
-                    return finish("CAPTCHA_REQUIRED", "pre_login")
-                return finish("LOGIN_FORM_NOT_FOUND", "pre_login")
+                    return finish("CAPTCHA_REQUIRED", "alternate_entry")
+                return finish("LOGIN_FORM_NOT_FOUND", "alternate_entry")
 
             tab, frame, password_input = login_form
             if visible_challenge(tab):
