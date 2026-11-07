@@ -7,14 +7,14 @@ import {industrySpecializations} from '../src/data/industry-specializations.mjs'
 import {getIndustryCatalog} from '../src/data/industry-catalog.mjs';
 import {pricingHref} from '../src/data/pricing.mjs';
 const read=path=>readFileSync(resolve('dist',path.slice(1),'index.html'),'utf8');
-const graph=html=>[...html.matchAll(/<script\\b[^>]*type="application\\/ld\\+json"[^>]*>([\\s\\S]*?)<\\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
+const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const urls=[];
 for(const item of industrySpecializations){
  assert.ok([2,35,81,84].includes(item.id),'Only batch 2A categories');
  for(const lang of ['ru','en']){
   const path=item.routes[lang],html=read(path),url='https://gaeo.ru'+path,c=item.content[lang];
   const equivalent='https://gaeo.ru'+item.routes[lang==='en'?'ru':'en'];
-  assert.equal((html.match(/<h1\\b/g)||[]).length,1,'One H1 '+path);
+  assert.equal((html.match(/<h1\b/g)||[]).length,1,'One H1 '+path);
   assert.ok(html.includes('<html lang="'+lang+'"'),'Correct language '+path);
   assert.ok(html.includes('rel="canonical" href="'+url+'"'),'Canonical '+path);
   assert.ok(html.includes('hreflang="'+(lang==='en'?'ru':'en')+'" href="'+equivalent+'"'),'Mutual hreflang '+path);
