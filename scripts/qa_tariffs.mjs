@@ -112,7 +112,11 @@ try{
     assert.match(await calculator.locator('[data-total]').innerText(),/144[\s,\u00a0\u202f]?900/,'Interactive formula');
     await calculator.locator('[data-quote-inquiry]').click();
     await page.locator('.gaeo-modal textarea[name="comment"]').waitFor();
+    assert.equal(await page.locator('.gaeo-modal-title').innerText(),route.startsWith('/en/')?'Discuss your project':'Обсудить проект','A paid scope opens the project inquiry');
     const message=await page.locator('.gaeo-modal textarea[name="comment"]').inputValue();assert.match(message,/144[\s,\u00a0\u202f]?900/,'Quote is transferred to the real inquiry form');
+    await page.locator('.gaeo-modal-close').click();
+    await page.locator('[data-plan="free"] .button').click();
+    assert.equal(await page.locator('.gaeo-modal-title').innerText(),route.startsWith('/en/')?'Request a mini-audit':'Получить мини-аудит','The free audit retains its own inquiry title');
     await page.locator('.gaeo-modal-close').click();
     const catalog=page.locator('[data-industry-catalog]');
     await catalog.locator('[data-catalog-search]').fill('WMS');

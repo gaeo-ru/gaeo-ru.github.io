@@ -110,7 +110,7 @@ const copy = en ? {
         </details>
         <div class="industry-catalog__card-actions">
           {item.hubLink && <a class="industry-catalog__hub" href={item.hubLink.href}>{item.hubLink.label} <span aria-hidden="true">↗</span></a>}
-          <a class="button outline industry-catalog__contact" href={leadHref} data-gaeo-request={`${item.serviceName}. ${en ? 'Industry' : 'Отрасль'}: ${item.groupName}. ${prices.map(offer => `${offer.label}: ${copy.from} ${price(offer.value)} ${copy.period}`).join('; ')}.`}>{copy.contact}</a>
+          <a class="button outline industry-catalog__contact" href={leadHref} data-gaeo-intent="service" data-gaeo-request={`${item.serviceName}. ${en ? 'Industry' : 'Отрасль'}: ${item.groupName}. ${prices.map(offer => `${offer.label}: ${copy.from} ${price(offer.value)} ${copy.period}`).join('; ')}.`}>{copy.contact}</a>
         </div>
       </article>)}
     </div>
@@ -120,7 +120,7 @@ const copy = en ? {
       <p>{copy.noResultsText}</p>
       <div class="industry-catalog__empty-actions">
         <button type="reset" form={`${id}-filters`} class="button outline">{copy.reset}</button>
-        <a href={leadHref}>{copy.noResultsContact}</a>
+        <a href={leadHref} data-gaeo-intent="service">{copy.noResultsContact}</a>
       </div>
     </div>
     <p class="industry-catalog__terms">{copy.terms}</p>

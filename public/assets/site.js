@@ -419,6 +419,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ru: {
       eyebrow:'Мини-аудит',
       modalTitle:'Получить мини-аудит',
+      serviceModalTitle:'Обсудить проект',
       modalLead:'Оставьте контакты и коротко расскажите о бизнесе и задаче.',
       name:'ФИО',
       phone:'Телефон',
@@ -449,6 +450,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     en: {
       eyebrow:'Mini-audit',
       modalTitle:'Request a mini-audit',
+      serviceModalTitle:'Discuss your project',
       modalLead:'Leave your contact details and briefly describe your business and task.',
       name:'Full name',
       phone:'Phone',
@@ -1147,6 +1149,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   function openModal(opener){
     if(overlay) return;
     lastOpener = opener || document.activeElement;
+    const serviceIntent = !!(opener && opener.dataset && opener.dataset.gaeoIntent === 'service');
+    const modalTitle = serviceIntent && copy.serviceModalTitle ? copy.serviceModalTitle : copy.modalTitle;
 
     overlay = document.createElement('div');
     overlay.className = 'gaeo-modal-overlay';
@@ -1154,7 +1158,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       '<div class="gaeo-modal" role="dialog" aria-modal="true" aria-labelledby="gaeo-modal-title">' +
         '<button type="button" class="gaeo-modal-close" aria-label="' + copy.close + '"></button>' +
         '<div class="gaeo-modal-head">' +
-          '<h2 class="gaeo-modal-title" id="gaeo-modal-title">' + copy.modalTitle + '</h2>' +
+          '<h2 class="gaeo-modal-title" id="gaeo-modal-title">' + modalTitle + '</h2>' +
           '<p class="gaeo-modal-lead">' + copy.modalLead + '</p>' +
         '</div>' +
       '</div>';

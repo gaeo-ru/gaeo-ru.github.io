@@ -6,6 +6,6 @@ const en=lang==='en';
 <div class="pricing tariff-plans">
  {ids.map(id=>{const plan=getPlan(id,lang);return <details class="price tariff-plan" open={open} data-plan={id}>
   <summary class="price-summary"><div><span class="tariff-period">{plan.kind==='monthly'?(en?'Monthly service':'Ежемесячно'):(en?'One-time service':'Разово')}</span><h3>{plan.name}</h3><div class="amount">{priceLabel(plan,lang)}</div><p class="tariff-summary">{plan.summary}</p></div><span class="price-toggle" aria-hidden="true">+</span></summary>
-  <div class="price-details"><ul>{plan.items.map(item=><li>{item}</li>)}</ul><div class="tariff-actions"><a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-request={plan.name+' · '+priceLabel(plan,lang)}>{plan.cta}</a><a class="tariff-text-link" href={plan.href}>{en?'Scope and conditions':'Состав и условия'} →</a></div></div>
+  <div class="price-details"><ul>{plan.items.map(item=><li>{item}</li>)}</ul><div class="tariff-actions"><a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-intent={plan.id==='free'?'audit':'service'} data-gaeo-request={plan.name+' · '+priceLabel(plan,lang)}>{plan.cta}</a><a class="tariff-text-link" href={plan.href}>{en?'Scope and conditions':'Состав и условия'} →</a></div></div>
  </details>})}
 </div>
