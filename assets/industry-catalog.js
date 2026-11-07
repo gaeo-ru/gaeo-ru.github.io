@@ -45,6 +45,24 @@
       empty.hidden = visible > 0;
     };
 
+    // On multi-column grids, opening one summary opens the whole visual row.
+    // On single-column mobile layouts, native details remain independent.
+    root.querySelector('[data-catalog-results]').addEventListener('click', event => {
+      const summary = event.target.closest('summary');
+      if (!summary || !window.matchMedia('(min-width: 701px)').matches) return;
+      const details = summary.parentElement;
+      if (!details?.matches('.industry-catalog__examples')) return;
+      const card = details.closest('[data-catalog-item]');
+      if (!card || card.hidden) return;
+      const rowTop = card.getBoundingClientRect().top;
+      const row = cards
+        .filter(item => !item.element.hidden && Math.abs(item.element.getBoundingClientRect().top - rowTop) < 2)
+        .map(item => item.element.querySelector('.industry-catalog__examples'));
+      event.preventDefault();
+      const expand = !details.open;
+      row.forEach(element => { element.open = expand; });
+    });
+
     let timer;
     search.addEventListener('input', () => {
       window.clearTimeout(timer);
