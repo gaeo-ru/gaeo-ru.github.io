@@ -1,5 +1,5 @@
 /**
- * Batch 2A: four substantive RU/EN GEO specializations.
+ * Batches 2A and 2B: eight substantive RU/EN GEO specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -1811,6 +1811,273 @@ export const industrySpecializations = [
       "ctaTitle": "Discover which CRM and ERP providers AI recommends",
       "ctaText": "Share product editions, integrations, buyer industries and your official site. I will propose a suitable baseline.",
       "request": "CRM/ERP GEO: sales, finance, migration, 1C integrations, licences and AI recommendations."
+    }
+  }
+},
+{
+  "id": 36,
+  "slug": "systems-integrators-it-outsourcers",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/systems-integrators-it-outsourcers/",
+    "en": "/en/industries/systems-integrators-it-outsourcers/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика подтверждения IT-компетенций",
+      "Контроль рекомендаций нейросетей"
+    ],
+    "en": [
+      "Technical B2B expertise evidence",
+      "AI recommendations measurement"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1305/final",
+      "ru": "NIST SP 1305: риски технологических поставщиков",
+      "en": "NIST SP 1305: supplier cybersecurity risk"
+    },
+    {
+      "href": "https://www.nist.gov/cyberframework/faqs",
+      "ru": "NIST CSF: роли и ответственность подрядчиков",
+      "en": "NIST CSF: provider and customer responsibilities"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для системных интеграторов и IT-аутсорсинга | GAEO.ru",
+      "h1": "GEO-продвижение системных интеграторов и IT-аутсорсеров",
+      "description": "GEO для IT-подрядчиков: интеграция 1С, инфраструктура, миграция, поддержка, SLA, безопасность, подтвержденные компетенции и ответы нейросетей.",
+      "eyebrow": "IT и корпоративное ПО / Интеграция и сопровождение",
+      "lead": "Для внедрения 1С или миграции серверов компания ищет проектную команду, а для регулярной поддержки - подрядчика с договорными условиями обслуживания. Проверяю, каких исполнителей нейросети рекомендуют в каждом сценарии и подтверждены ли реальные компетенции.",
+      "heroPoints": [
+        "Отдельные матрицы спроса для внедрения и регулярной поддержки",
+        "Подтверждение технологий, зоны ответственности и разрешенных кейсов",
+        "Различие SLA, безопасности, миграции и обслуживания"
+      ],
+      "problemTitle": "Почему перечисление всех IT-услуг не отвечает на запрос заказчика",
+      "problemIntro": "Технический руководитель сравнивает подрядчиков по стеку, масштабу задачи, ответственности и подтвержденному процессу. Общие обещания заменяют слишком мало фактов.",
+      "problems": [
+        {
+          "title": "Внедрение и поддержка смешиваются",
+          "body": "Проектная интеграция, 1С, перенос серверов и обслуживание рабочих мест требуют разных компетенций, сроков и приемки."
+        },
+        {
+          "title": "SLA без измеримых условий",
+          "body": "Часы поддержки, реакция, приоритеты обращений, исключения и сроки восстановления определяются контрактом. Нельзя обещать единый результат всем клиентам."
+        },
+        {
+          "title": "Компетенции заявлены без проверки",
+          "body": "Статусы партнеров, сертификаты, технологии и количество реализованных проектов должны подтверждаться действительными документами и разрешениями."
+        }
+      ],
+      "scenarioTitle": "По каким задачам выбирают IT-интегратора",
+      "scenarioIntro": "Разделяю запросы IT-директора, руководителя бизнеса и закупок. Контрольные формулировки привязываются к фактическому стеку подрядчика.",
+      "columns": [
+        "Вопрос заказчика",
+        "Что подтвердить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто внедрит 1С с обменом со складом и интернет-магазином?",
+          "Конфигурации, схема обмена, границы проекта, приемка и поддержка",
+          "Страница интеграционного сценария с проверяемыми условиями"
+        ],
+        [
+          "Кто поможет перенести серверы в облако без потери данных?",
+          "Обследование, резервные копии, тестовый перенос, план отката и допуски",
+          "Описание конкретной методики миграции и ее ограничений"
+        ],
+        [
+          "Кому передать IT-поддержку сети офисов?",
+          "География, каналы заявок, время работы, SLA, выездная поддержка",
+          "Сервисные страницы и договорные параметры"
+        ],
+        [
+          "Кого привлечь для проверки резервного копирования?",
+          "Методика аудита, права доступа, ответственность, согласованные RTO/RPO",
+          "Разграничить аудит, внедрение и гарантию восстановления"
+        ]
+      ],
+      "proofTitle": "Какие сведения дают основания рекомендовать технического подрядчика",
+      "proofIntro": "NIST CSF 2.0 и руководство по рискам технологических поставщиков описывают важность требований к подрядчикам и распределения ответственности. Это полезные критерии для сравнения, но не сертификат конкретного интегратора.",
+      "checks": [
+        "Реальная область работы: версии и платформы, фактические компетенции, доступные регионы и модель сотрудничества",
+        "Проектная реализация: обследование, план внедрения, критерии тестов, условия приемки и публичные примеры только с разрешением",
+        "Сопровождение и безопасность: график поддержки, соглашение об уровне обслуживания, обработка инцидентов, управление доступом и резервированием"
+      ],
+      "proofNote": "Опыт GAEO в техническом B2B дает методику проверки источников. Кейс MethodLab про ускорение сайта нельзя выдавать за завершенное продвижение IT-аутсорсера.",
+      "workTitle": "Как строю GEO для интегратора и IT-аутсорсера",
+      "workIntro": "Проверяю реальные рекомендации по типам услуг, затем согласовываю, какие доказательства можно раскрыть и где они нужны.",
+      "steps": [
+        {
+          "title": "Матрица коммерческих запросов",
+          "body": "Разделяю системную интеграцию, 1С, серверы, миграцию, поддержку и информационную безопасность."
+        },
+        {
+          "title": "Проверка доказательств",
+          "body": "Уточняю стек, партнерские статусы, реальные договорные SLA и разрешенные к публикации результаты проектов."
+        },
+        {
+          "title": "ТЗ на сайт и публикации",
+          "body": "Проектирую страницы услуг, квалификаций и технологий, FAQ о сотрудничестве и экспертные материалы."
+        },
+        {
+          "title": "Повторное измерение",
+          "body": "Сравниваю BMR и корректность рекомендаций по одному набору вопросов и выбранным нейросетям."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Нужно ли разделить системную интеграцию и IT-аутсорсинг на сайте?",
+          "answer": "Да, когда это самостоятельные предложения. Проектное внедрение и постоянная поддержка отличаются критериями выбора и договорной ответственностью."
+        },
+        {
+          "question": "Можно ли размещать логотип производителя как доказательство партнерства?",
+          "answer": "Само изображение не доказывает партнерский статус. Проверяем действительность статуса и права использования обозначений."
+        },
+        {
+          "question": "Что писать про SLA?",
+          "answer": "Только реальные условия: часы поддержки, приоритеты, сроки реакции, измеряемые показатели и исключения. Фактическое восстановление зависит от проекта и договора."
+        },
+        {
+          "question": "Ссылка на NIST подтверждает сертификацию интегратора?",
+          "answer": "Нет. Руководства NIST описывают подходы и рекомендации, а не подтверждают компетенции конкретной компании."
+        },
+        {
+          "question": "Сколько стоит GEO для IT-аутсорсера?",
+          "answer": "Применяются действующие тарифы GAEO на аудит и продвижение. Объем зависит от услуг, географии, технических отраслей и контрольных запросов."
+        }
+      ],
+      "ctaTitle": "Проверить, каких интеграторов рекомендуют нейросети по вашим услугам",
+      "ctaText": "Пришли сайт компании, список подтвержденных компетенций, регионы и разрешенные примеры работ. Я предложу стартовую матрицу GEO.",
+      "request": "GEO системный интегратор и IT-аутсорсинг: 1С, инфраструктура, миграция, SLA, IT-поддержка и рекомендации."
+    },
+    "en": {
+      "title": "GEO for IT integrators and outsourcing providers | GAEO.ru",
+      "h1": "GEO for systems integrators and IT outsourcing firms",
+      "description": "GEO for IT service providers: 1C integration, infrastructure, migrations, SLAs, support, verifiable expertise and AI vendor recommendations.",
+      "eyebrow": "IT services / Systems integration and managed support",
+      "lead": "A cloud migration calls for a project team, while ongoing office support calls for a service provider with documented response terms. I assess which suppliers AI recommends in each case and whether the sources match their actual capabilities.",
+      "heroPoints": [
+        "Separate implementation projects from managed support",
+        "Verify technology expertise, responsibilities and publishable projects",
+        "Distinguish SLAs, migration conditions and security requirements"
+      ],
+      "problemTitle": "Generic IT-service claims are too broad for supplier selection",
+      "problemIntro": "IT leaders compare providers by supported platforms, project scope, accountability and delivery evidence. Promises of universal service often lack useful specifics.",
+      "problems": [
+        {
+          "title": "Implementation and support are conflated",
+          "body": "ERP integration, cloud migrations, workplace support and monitoring require different skills, agreements and acceptance tests."
+        },
+        {
+          "title": "SLAs lack measurable terms",
+          "body": "Support hours, escalation, response and recovery depend on the agreed service scope. One universal promise cannot cover every project."
+        },
+        {
+          "title": "Credentials and work history are unsupported",
+          "body": "Partner badges, certifications, staff counts and outcomes must be checked against real current evidence."
+        }
+      ],
+      "scenarioTitle": "IT provider selection queries worth measuring",
+      "scenarioIntro": "Distinct query groups cover project buyers, IT directors and procurement; examples are adapted to a supplier's actual stack.",
+      "columns": [
+        "Buyer question",
+        "Evidence needed",
+        "GEO content"
+      ],
+      "scenarios": [
+        [
+          "Who can deploy 1C and connect it to our warehouse and shop?",
+          "Supported editions, integration boundaries, testing and handover",
+          "A precise implementation workflow"
+        ],
+        [
+          "Who can migrate servers to cloud without data loss?",
+          "Discovery, backups, pilot migration, rollback and access requirements",
+          "Documented migration method with realistic limitations"
+        ],
+        [
+          "Which company supports several offices?",
+          "Geographic reach, ticket handling, hours, escalation and SLA",
+          "Comparable managed-support offering"
+        ],
+        [
+          "Who can assess our backup recovery readiness?",
+          "Audit methodology, access rights and contractually agreed recovery objectives",
+          "Differentiate assessment from implementation and operations"
+        ]
+      ],
+      "proofTitle": "Evidence that supports a technical supplier recommendation",
+      "proofIntro": "NIST guidance on technology-supplier risks describes clear supplier requirements and responsibilities. It supports buyer evaluation but does not certify a named provider.",
+      "checks": [
+        "Scope: genuine platform experience, technology stack, location coverage and engagement model",
+        "Delivery: discovery, implementation, acceptance criteria, handover and approved examples",
+        "Operations: service hours, incident management, SLA terms, access controls and backup responsibilities"
+      ],
+      "proofNote": "GAEO's technical B2B methodology applies here. The website-performance work for MethodLab does not prove an IT-outsourcing GEO result.",
+      "workTitle": "An evidence-led GEO programme for IT providers",
+      "workIntro": "First measure vendor recommendations by service need, then improve the evidence that buyers and AI can check.",
+      "steps": [
+        {
+          "title": "Segment demand",
+          "body": "Separate integration, 1C, migration, cloud operations, support and security questions."
+        },
+        {
+          "title": "Review capabilities",
+          "body": "Verify platform expertise, active partner credentials, SLAs and permission to publish cases."
+        },
+        {
+          "title": "Build the information base",
+          "body": "Prepare service and technology pages, FAQ, carefully scoped case studies and specialist articles."
+        },
+        {
+          "title": "Recheck recommendations",
+          "body": "Repeat the same prompts across selected AI platforms and track BMR and factual accuracy."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Should integration and managed IT services have different pages?",
+          "answer": "Yes when they are separate commercial services. Project buyers and support customers evaluate different responsibilities and evidence."
+        },
+        {
+          "question": "Is a technology badge proof of a partnership?",
+          "answer": "No. Partner status must be genuine and current, and the right to display a manufacturer's marks should be verified."
+        },
+        {
+          "question": "What belongs in an SLA description?",
+          "answer": "Actual support hours, response priorities, escalation, measurement rules and exclusions. Recovery guarantees require a defined contractual scope."
+        },
+        {
+          "question": "Does NIST guidance certify a vendor?",
+          "answer": "No. It provides evaluation and risk-management methods, not proof of a named supplier's competence."
+        },
+        {
+          "question": "How does GAEO price IT-provider GEO?",
+          "answer": "Standard GAEO audit and monthly prices apply. Scope is determined by service lines, locations, technical depth and queries."
+        }
+      ],
+      "ctaTitle": "See which IT providers AI recommends to your buyers",
+      "ctaText": "Share the provider site, verified capabilities, locations and approved project examples. I will propose a suitable baseline.",
+      "request": "IT integrator and outsourcing GEO: 1C, migrations, SLAs, infrastructure, managed support and AI recommendations."
     }
   }
 }
