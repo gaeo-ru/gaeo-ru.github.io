@@ -3673,6 +3673,273 @@ export const industrySpecializations = [
       "request": "Property transaction law GEO: resale, new build, EGRN, contracts, registration and AI recommendations."
     }
   }
+},
+{
+  "id": 37,
+  "slug": "cybersecurity-providers",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/cybersecurity-providers/",
+    "en": "/en/industries/cybersecurity-providers/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как подтверждать компетенции технического B2B-поставщика",
+      "Методика измерения ответов нейросетей"
+    ],
+    "en": [
+      "Evidence for technical B2B supplier qualifications",
+      "Measuring AI recommendations"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1299/final",
+      "ru": "NIST CSF 2.0: структура управления киберрисками",
+      "en": "NIST Cybersecurity Framework 2.0"
+    },
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1326/final",
+      "ru": "NIST SP 1326 (2026): проверка поставщиков ИКТ",
+      "en": "NIST SP 1326 (2026): supplier due diligence"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение компаний по кибербезопасности | GAEO.ru",
+      "h1": "GEO-продвижение компаний по кибербезопасности в нейросетях",
+      "description": "Продвижение ИБ-подрядчиков в нейросетях: аудит защиты, тесты на проникновение, SOC, реагирование, лицензии, реальные компетенции и проверяемые рекомендации.",
+      "eyebrow": "IT и корпоративное ПО / Кибербезопасность",
+      "lead": "Заказчик может искать аудит информационной безопасности, разовую проверку защищенности или круглосуточный мониторинг инцидентов. Эти услуги требуют разных процессов и компетенций. Проверяю, каких ИБ-подрядчиков нейросети рекомендуют по конкретным задачам и обоснованы ли их публичные заявления.",
+      "heroPoints": [
+        "Самостоятельные запросы для аудита, тестирования, SOC/MDR и реагирования",
+        "Проверка реально оказываемых услуг, компетенций и применимых разрешений",
+        "Корректное описание SLA, конфиденциальности и границ проверки"
+      ],
+      "problemTitle": "Почему лозунг «защитим от всех атак» не раскрывает квалификацию",
+      "problemIntro": "Кибербезопасность - управление рисками, а не абсолютная гарантия. Покупатель должен понимать, какие системы, виды работ и результаты входят в договор, как обрабатываются уязвимости и кто отвечает за изменения.",
+      "problems": [
+        {
+          "title": "Пентест, аудит и SOC названы одной услугой",
+          "body": "Оценка защищенности, моделирование атак в согласованных границах и постоянный мониторинг требуют разных процессов, допусков и форматов отчета."
+        },
+        {
+          "title": "Лицензии и стандарты приписаны без проверки",
+          "body": "Применимость требований ФСТЭК или ФСБ зависит от вида деятельности. Ссылка на NIST не является сертификатом подрядчика, а чужие партнерские статусы нельзя использовать без оснований."
+        },
+        {
+          "title": "Обещана стопроцентная защита",
+          "body": "Количество атак, реакция на инцидент и итоговые риски зависят от среды клиента и распределения ответственности. Универсальные обещания невозможности взлома необоснованны."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам компании выбирают ИБ-подрядчика",
+      "scenarioIntro": "Запросы разделяются по виду работ, размеру организации, отраслевому регулированию и доступным доказательствам.",
+      "columns": [
+        "Вопрос заказчика",
+        "Что подтверждать",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто проверит защищенность веб-приложения перед запуском?",
+          "Согласованный объем работ, правила тестирования, методика, отчет и повторная проверка",
+          "Страница проверки приложений без публичных опасных деталей"
+        ],
+        [
+          "Кому передать мониторинг событий безопасности 24/7?",
+          "Фактический режим SOC/MDR, источники событий, SLA, эскалация и роль клиента",
+          "Сервис мониторинга с измеримыми условиями"
+        ],
+        [
+          "Кто проведет аудит ИБ компании и подготовит план улучшений?",
+          "Компетенции, охват систем, методика, требования к документам и рекомендации",
+          "Отдельный аудит, не подмененный рекламой пентеста"
+        ],
+        [
+          "Кто поможет после выявления инцидента?",
+          "Порядок обращения, дежурства, сохранность данных, полномочия и ограничения",
+          "Описание реагирования и ответственности без обещаний полного восстановления"
+        ]
+      ],
+      "proofTitle": "Какие сведения позволяют обоснованно рекомендовать ИБ-провайдера",
+      "proofIntro": "NIST CSF 2.0 задает направления управления киберрисками, а руководство NIST SP 1326 (2026) описывает проверку поставщиков информационных технологий. Эти документы полезны для требований к исполнителю, но сами по себе не удостоверяют компетенцию или соответствие конкретной компании.",
+      "checks": [
+        "Подтвержденные услуги: аудит, тестирование, мониторинг, реагирование, охват платформ, форматы отчетов и границы доступа",
+        "Профессиональные факты: реальные роли специалистов, действительные партнерские статусы и применимые к деятельности лицензии только после документальной сверки",
+        "Сервисные обязательства: фактические часы поддержки, процедуры эскалации, конфиденциальность, обработка результатов и условия SLA"
+      ],
+      "proofNote": "Опыт MethodLab касается производительности сайтов. Он не доказывает результаты GEO в информационной безопасности. Нельзя приписывать ИБ-компаниям несуществующие сертификаты, устраненные уязвимости или предотвращенные инциденты.",
+      "workTitle": "Как организую GEO для подрядчика по кибербезопасности",
+      "workIntro": "Сначала фиксирую, кого рекомендуют нейросети по разным задачам защиты. Затем выстраиваю проверяемые сведения без публикации чувствительных подробностей инфраструктуры заказчиков.",
+      "steps": [
+        {
+          "title": "Исследую задачи покупки",
+          "body": "Разделяю аудит, тестирование, SOC/MDR, реагирование, обучение и требования отдельных отраслей."
+        },
+        {
+          "title": "Проверяю доказательства",
+          "body": "Сверяю описание услуг, квалификаций, применимости разрешений, методик, SLA и режима конфиденциальности."
+        },
+        {
+          "title": "Готовлю материалы и связи",
+          "body": "Составляю ТЗ на страницы услуг и процессов, профессиональные профили, безопасные FAQ и экспертные публикации."
+        },
+        {
+          "title": "Повторяю измерения",
+          "body": "Сравниваю BMR, точность характеристик и источники рекомендаций по неизменной матрице запросов."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли гарантировать полную защиту от кибератак?",
+          "answer": "Нет универсальной гарантии. Договор может определять конкретные услуги, сроки реакции, измеримые показатели и ответственность, но не отсутствие любых инцидентов."
+        },
+        {
+          "question": "Пентест и постоянный мониторинг SOC - одно и то же?",
+          "answer": "Нет. Пентест - согласованная проверка определенных систем и периода, SOC/MDR - сервис регулярного наблюдения, выявления и обработки событий в заданном объеме."
+        },
+        {
+          "question": "Любой ИБ-подрядчик обязан иметь одинаковый набор лицензий?",
+          "answer": "Нет. Нормативные требования зависят от вида услуг и деятельности. Публичные заявления о лицензиях ФСТЭК или ФСБ нужно сверять с конкретным исполнителем и актуальным документом."
+        },
+        {
+          "question": "Можно ли публиковать подробности найденных у заказчика уязвимостей?",
+          "answer": "Только в рамках полномочий и разрешений, без раскрытия сведений, создающих риски для клиента. Для GEO достаточно корректного описания методики и согласованных итогов."
+        },
+        {
+          "question": "Сколько стоит GEO для ИБ-компании?",
+          "answer": "Действуют общие тарифы GAEO на аудит и сопровождение. Состав направлений и запросов определяется реальными услугами, рынком и исходной видимостью."
+        }
+      ],
+      "ctaTitle": "Проверить, каких ИБ-подрядчиков рекомендуют нейросети",
+      "ctaText": "Пришли сайт компании, услуги, целевые сегменты и сведения, разрешенные к публикации. Я подготовлю контрольные запросы для GEO-аудита.",
+      "request": "GEO кибербезопасность: аудит, пентест, SOC/MDR, лицензии, SLA, реагирование и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for cybersecurity service providers | GAEO.ru",
+      "h1": "GEO for cybersecurity companies in AI recommendations",
+      "description": "GEO for cybersecurity vendors: security assessments, penetration testing, SOC/MDR, incident response, verifiable service capabilities and AI visibility.",
+      "eyebrow": "IT services / Cybersecurity",
+      "lead": "A business may need a one-off security assessment, a scoped penetration test or continuous incident monitoring. Those services require different competencies and delivery models. I examine which providers AI recommends for each need and which verifiable facts support the recommendations.",
+      "heroPoints": [
+        "Distinct intents for audit, penetration testing, SOC/MDR and response",
+        "Verified scope, expertise and legally applicable credentials",
+        "Careful treatment of service levels, confidentiality and testing permission"
+      ],
+      "problemTitle": "Why a promise to prevent every cyberattack is not evidence",
+      "problemIntro": "Cybersecurity involves managing risks rather than guaranteeing their elimination. Buyers need to know what systems, tests, monitoring and incident tasks the vendor actually contracts to perform.",
+      "problems": [
+        {
+          "title": "Different security services are conflated",
+          "body": "An assessment, an authorised attack simulation and continuous monitoring have different goals, reporting and responsibilities."
+        },
+        {
+          "title": "Certification and licence claims are unsupported",
+          "body": "Applicable national requirements depend on the type of work. Referencing NIST does not certify a service provider; claimed authorisations must be confirmed."
+        },
+        {
+          "title": "Total security is guaranteed",
+          "body": "Risk, incident outcomes and recovery depend on the environment and shared responsibilities. No blanket assertion of impossibility of intrusion is substantiated."
+        }
+      ],
+      "scenarioTitle": "Cybersecurity buying questions worth monitoring",
+      "scenarioIntro": "Separate service needs, business size and regulated-sector requirements using a stable non-brand prompt matrix.",
+      "columns": [
+        "Potential buyer question",
+        "Evidence required",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Who can assess our web application before launch?",
+          "Authorised scope, test methodology, reporting, remediation review and limits",
+          "A precise application security assessment page"
+        ],
+        [
+          "Who can monitor security events around the clock?",
+          "Actual SOC/MDR hours, data feeds, escalation, roles and service terms",
+          "A documented monitoring service description"
+        ],
+        [
+          "Which firm can audit our security posture and recommend improvements?",
+          "Coverage, assessment methods, practitioner roles and deliverables",
+          "Distinguish security auditing from penetration tests"
+        ],
+        [
+          "Who can respond to an incident affecting company systems?",
+          "Availability, triage process, evidence handling and contractual authority",
+          "Describe incident response without unsupported recovery promises"
+        ]
+      ],
+      "proofTitle": "Evidence for selecting a cybersecurity supplier",
+      "proofIntro": "NIST Cybersecurity Framework 2.0 describes risk-management functions, while the final NIST SP 1326 (2026) explains due diligence of ICT suppliers. These are procurement frameworks, not certifications of an individual company.",
+      "checks": [
+        "Actual security services and scope: testing, assessment, monitoring, incident handling, platforms and deliverables",
+        "Verified practitioner credentials, partner statuses and any sector-specific licences when the work requires them",
+        "Real service hours, response rules, confidentiality, responsibility split and contractually defined performance measures"
+      ],
+      "proofNote": "GAEO's MethodLab website-performance case does not establish a completed GEO result for a cybersecurity firm. Avoid fabricated certifications, thwarted intrusions or remediation statistics.",
+      "workTitle": "An evidence-led GEO programme for cybersecurity firms",
+      "workIntro": "Start with actual recommendations for defined security services, then improve trustworthy public evidence without exposing clients' sensitive infrastructure.",
+      "steps": [
+        {
+          "title": "Segment buyer needs",
+          "body": "Separate security assessments, penetration tests, SOC/MDR, response and industry-specific duties."
+        },
+        {
+          "title": "Check actual vendor claims",
+          "body": "Review available expertise, licence scope where relevant, methods, SLAs and confidentiality restrictions."
+        },
+        {
+          "title": "Improve public sources",
+          "body": "Specify service pages, biographies, safe FAQ and specialist industry publications."
+        },
+        {
+          "title": "Measure again",
+          "body": "Repeat the same prompts and track BMR, cited sources and accuracy of descriptions."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a cybersecurity vendor promise zero incidents?",
+          "answer": "No unconditional promise is reasonable. A contract can define services, response targets and liabilities, not the absence of all security events."
+        },
+        {
+          "question": "Is a penetration test the same as SOC monitoring?",
+          "answer": "No. A test examines an authorised scope over a defined period, while SOC/MDR provides ongoing event monitoring and handling under agreed terms."
+        },
+        {
+          "question": "Does every cybersecurity firm require the same licences?",
+          "answer": "No. Requirements depend on the activities and jurisdiction. Claims about specific FSTEC or FSB authorisations must be checked against the actual work."
+        },
+        {
+          "question": "Can client vulnerability details be published in GEO materials?",
+          "answer": "Only where permissions and security restrictions allow it, and never in a way that exposes the customer's systems or creates additional risk."
+        },
+        {
+          "question": "What does GAEO charge for cybersecurity GEO?",
+          "answer": "The current GAEO audit and monthly plans apply. Work scope follows actual services, sectors and baseline query coverage."
+        }
+      ],
+      "ctaTitle": "See which cybersecurity providers AI recommends to clients",
+      "ctaText": "Share your company site, real service lines and publicly verifiable evidence. I will propose an initial audit.",
+      "request": "Cybersecurity GEO: audit, penetration testing, SOC/MDR, incident response, licensing and AI recommendations."
+    }
+  }
 }
 ];
 
