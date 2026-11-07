@@ -64,43 +64,6 @@ const menuCloseLabel = document.documentElement.lang === 'en' ? 'Close menu' : '
         width:calc(100vw - 32px)!important;
       }
     }
-    /* Accordion-style two-level navigation, inspired by the AdaTours burger flow.
-       Keep the Cases sublinks out of the main list until the visitor opens them. */
-    .mobile-menu .mobile-cases{border-bottom:1px solid rgba(2,22,65,.08)}
-    .mobile-menu .mobile-cases__toggle{
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-      min-height:52px;padding:12px 0;box-sizing:border-box;list-style:none;cursor:pointer;
-      font-family:inherit;font-size:inherit;font-weight:600;line-height:inherit;color:var(--navy)
-    }
-    .mobile-menu .mobile-cases__toggle::-webkit-details-marker{display:none}
-    .mobile-menu .mobile-cases__toggle::marker{content:""}
-    .mobile-menu .mobile-cases__chevron{
-      display:block;flex:0 0 auto;width:9px;height:9px;margin-right:6px;
-      border-right:2px solid #47627b;border-bottom:2px solid #47627b;
-      transform:rotate(-45deg);transition:transform .18s ease,border-color .18s ease
-    }
-    .mobile-menu .mobile-cases[open] .mobile-cases__chevron{
-      transform:rotate(45deg);border-color:#06748b
-    }
-    .mobile-menu .mobile-cases__toggle:hover,
-    .mobile-menu .mobile-cases[open]>.mobile-cases__toggle{color:#066779}
-    .mobile-menu .mobile-cases__toggle:focus-visible{outline:2px solid #06748b;outline-offset:3px;border-radius:3px}
-    .mobile-menu .mobile-cases__submenu{
-      display:none;gap:0;margin:0 0 12px;padding:4px 12px;
-      background:rgba(2,22,65,.035);border:1px solid rgba(2,22,65,.075);border-radius:10px
-    }
-    .mobile-menu .mobile-cases[open]>.mobile-cases__submenu{display:grid}
-    .mobile-menu .mobile-cases__submenu a{
-      margin:0;padding:11px 6px;border:0;color:#344c67;
-      font-size:14px;font-weight:600;line-height:1.4
-    }
-    .mobile-menu .mobile-cases__submenu a+a{border-top:1px solid rgba(2,22,65,.09)}
-    .mobile-menu .mobile-cases__submenu .mobile-cases__overview{font-weight:700;color:var(--navy)}
-    .mobile-menu .mobile-cases__submenu a:hover,
-    .mobile-menu .mobile-cases__submenu a:focus-visible{
-      color:#06596d;background:rgba(210,236,241,.6);outline-offset:2px
-    }
-    @media(prefers-reduced-motion:reduce){.mobile-menu .mobile-cases__chevron{transition:none}}
     .footer-bottom{
       margin-top:18px!important;
     }
@@ -108,15 +71,17 @@ const menuCloseLabel = document.documentElement.lang === 'en' ? 'Close menu' : '
   document.head.appendChild(style);
 })();
 
-function resetCasesDisclosure(){
-  mobileMenu?.querySelector('details.mobile-cases[open]')?.removeAttribute('open');
+function resetNavigationDisclosures(){
+  mobileMenu?.querySelectorAll('details.mobile-cases[open], details.mobile-publications[open]').forEach(disclosure => {
+    disclosure.open = false;
+  });
 }
 
 function setCollapsed(collapsed){
   mainNav.classList.toggle('menu-collapsed', collapsed);
   if(!collapsed && mobileMenu){
     mobileMenu.classList.remove('open');
-    resetCasesDisclosure();
+    resetNavigationDisclosures();
     toggle?.setAttribute('aria-expanded','false');
     toggle?.setAttribute('aria-label',menuOpenLabel);
   }
@@ -145,7 +110,7 @@ function fitHeader(){
 if(toggle && mobileMenu){
   toggle.addEventListener('click',()=>{
     const open = mobileMenu.classList.toggle('open');
-    if(!open) resetCasesDisclosure();
+    if(!open) resetNavigationDisclosures();
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? menuCloseLabel : menuOpenLabel);
   });
@@ -157,17 +122,20 @@ if(mobileMenu){
   mobileMenu.addEventListener('click', event => {
     if(!(event.target instanceof Element) || !event.target.closest('a[href]')) return;
     mobileMenu.classList.remove('open');
-    resetCasesDisclosure();
+    resetNavigationDisclosures();
     toggle?.setAttribute('aria-expanded','false');
     toggle?.setAttribute('aria-label',menuOpenLabel);
   });
 }
 
-// Escape first collapses the Cases group, then closes the burger menu.
+// Escape first collapses an open navigation group, then closes the burger menu.
 if(mobileMenu && toggle){
   document.addEventListener('keydown', event => {
     if(event.key !== 'Escape' || !mobileMenu.classList.contains('open')) return;
-    const disclosure = mobileMenu.querySelector('details.mobile-cases[open]');
+    const openGroups = 'details.mobile-cases[open], details.mobile-publications[open]';
+    const focusedGroup = document.activeElement?.closest(openGroups);
+    const disclosure = focusedGroup && mobileMenu.contains(focusedGroup) ? focusedGroup : mobileMenu.querySelector(openGroups);
+    event.preventDefault();
     if(disclosure){
       disclosure.open = false;
       disclosure.querySelector('summary')?.focus();
@@ -237,11 +205,17 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const langs = desktop.querySelector('.langs');
     const casesGroup = desktop.querySelector(':scope > .nav-cases');
     const casesUrl = isEn ? '/en/cases/' : '/cases/';
+    const publicationsGroup = desktop.querySelector(':scope > .nav-publications');
+    const publicationsUrl = isEn ? '/en/publications/' : '/publications/';
     desktop.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
-      // Keep the single shared submenu instead of adding a duplicate Cases link.
+      // Keep the shared submenus instead of adding duplicate parent links.
       if(casesGroup && href === casesUrl){
         desktop.insertBefore(casesGroup, langs || null);
+        return;
+      }
+      if(publicationsGroup && href === publicationsUrl){
+        desktop.insertBefore(publicationsGroup, langs || null);
         return;
       }
       const a = document.createElement('a');
@@ -256,10 +230,16 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const langs = mobile.querySelector('.mobile-langs');
     const casesGroup = mobile.querySelector(':scope > .mobile-cases');
     const casesUrl = isEn ? '/en/cases/' : '/cases/';
+    const publicationsGroup = mobile.querySelector(':scope > .mobile-publications');
+    const publicationsUrl = isEn ? '/en/publications/' : '/publications/';
     mobile.querySelectorAll(':scope > a').forEach(a => a.remove());
     desktopItems.forEach(([label, href]) => {
       if(casesGroup && href === casesUrl){
         mobile.insertBefore(casesGroup, langs || null);
+        return;
+      }
+      if(publicationsGroup && href === publicationsUrl){
+        mobile.insertBefore(publicationsGroup, langs || null);
         return;
       }
       const a = document.createElement('a');
@@ -298,12 +278,20 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const rightItems = isEn ? [
       ['Articles','/en/articles/'],
       ['Publications','/en/publications/'],
+      ['Rankings and External Mentions','/en/publications/ratings/'],
+      ['Interviews and Expert Commentary','/en/publications/interviews/'],
+      ['Public Case Studies','/en/publications/cases/'],
+      ['Authored Publications and Research','/en/publications/articles/'],
       ['Official external profiles','/en/professional-biography/#official-profiles'],
       ['Privacy policy','/en/privacy-policy/'],
       ['Personal data processing','/en/personal-data-consent/']
     ] : [
       ['Статьи','/articles/'],
       ['Публикации','/publications/'],
+      ['Рейтинги и внешние упоминания','/publications/ratings/'],
+      ['Интервью и экспертные комментарии','/publications/interviews/'],
+      ['Публичные кейсы','/publications/cases/'],
+      ['Авторские публикации и исследования','/publications/articles/'],
       ['Официальные внешние профили','/professional-biography/#external-profiles'],
       ['Политика конфиденциальности','/privacy-policy/'],
       ['Обработка персональных данных','/personal-data-consent/']
@@ -315,6 +303,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         const a = document.createElement('a');
         if(href) a.href = href;
         a.textContent = label;
+        if(/^\/(?:en\/)?publications\/[^/]+\/$/.test(href)) a.className = 'footer-publication-link';
         if(footerLang && column === right){
           column.insertBefore(a, footerLang);
         }else{

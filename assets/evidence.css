@@ -1,0 +1,62 @@
+.evidence-page .evidence-lead{max-width:880px;font-size:19px;line-height:1.65;color:var(--muted);margin:24px 0 0}
+.evidence-summary,.evidence-updated{font-size:13px;color:var(--muted);line-height:1.7;margin:20px 0}
+.publication-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 0 64px}
+.publication-directory__card{display:flex;flex-direction:column;min-width:0;padding:32px;background:var(--paper);border:1px solid var(--line);border-radius:18px;color:var(--navy);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+.publication-directory__card:hover{border-color:#08788d;box-shadow:0 8px 24px rgba(2,22,65,.06)}
+.publication-directory__card:focus-visible{outline:3px solid #08788d;outline-offset:4px}
+.publication-directory__number{font-size:13px;letter-spacing:.1em;color:#086e80;font-weight:700}
+.publication-directory__card h2{font-size:30px;line-height:1.25;margin:16px 0}
+.publication-directory__card p{font-size:16px;line-height:1.65;color:var(--muted);margin:0 0 24px}
+.publication-directory__link{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:auto;border-top:1px solid var(--line);padding-top:18px;font-size:14px;font-weight:700}
+.publication-directory__link>span{font-size:23px}
+.evidence-latest,.evidence-note,.evidence-related{margin:0 0 56px}
+.evidence-latest h2,.evidence-note h2,.evidence-related h2{margin:0 0 24px;font-size:34px;line-height:1.25}
+.evidence-latest .eyebrow{margin-bottom:12px}
+.evidence-latest__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.evidence-latest__list article{padding:24px 0;border-top:1px solid var(--line);min-width:0}
+.evidence-latest__list h3{font-family:Manrope,Arial,sans-serif;font-size:20px;line-height:1.45;margin:12px 0 18px}
+.evidence-latest__list h3 a{color:var(--navy);text-decoration:none}
+.evidence-latest__list h3 a:hover{text-decoration:underline}
+.evidence-latest__list .text-link{font-size:13px;line-height:1.5}
+.evidence-note p{max-width:960px;font-size:16px;line-height:1.75;color:var(--muted)}
+.evidence-list-wrap{max-width:1000px}
+.publication-category-nav{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.publication-category-nav a,.review-platforms a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:9px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--navy);font-size:13px;line-height:1.5;text-decoration:none}
+.publication-category-nav a[aria-current=page],.publication-category-nav a:hover,.review-platforms a:hover{background:#eaf5f7;border-color:#87bec7;color:#075767}
+.publication-category-nav a:focus-visible,.review-platforms a:focus-visible{outline:2px solid #08788d;outline-offset:3px}
+.evidence-editorial-note{background:#f2f7f7;border-left:3px solid #127d89;padding:18px 22px;font-size:15px;line-height:1.65}
+.evidence-page .publication-item{scroll-margin-top:110px}
+.evidence-page .publication-item h2{font-family:Manrope,Arial,sans-serif;font-weight:650;font-size:23px;line-height:1.45;margin:12px 0 16px}
+.evidence-page .publication-item p{font-size:16px;line-height:1.7}
+.evidence-page .publication-actions .button{white-space:normal;text-align:center;max-width:100%}
+.review-summary{display:grid;grid-template-columns:auto minmax(0,1fr);gap:30px;align-items:center;padding:28px 32px;background:#f2f7f7;border:1px solid var(--line);border-radius:18px;margin-bottom:28px}
+.review-summary__score{white-space:nowrap;color:var(--navy)}
+.review-summary__score strong{font:600 58px/1.1 Literata,Georgia,serif}
+.review-summary__score span{font-size:20px;color:var(--muted)}
+.review-summary>div>strong{font-size:18px;color:var(--navy)}
+.review-summary p{margin:10px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}
+.review-platforms{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 16px}
+.review-card{scroll-margin-top:110px}
+.review-card__head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:12px}
+.review-card__head h3{font:700 18px/1.4 Manrope,Arial,sans-serif;margin:0;overflow-wrap:anywhere}
+.review-card__rating{font-size:14px;white-space:nowrap;color:#086779;font-weight:700}
+.evidence-page .review-card__context{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 20px}
+.evidence-page .review-card blockquote{font-size:18px;line-height:1.65}
+.review-meta time{font-size:13px}
+.evidence-page .review-actions .button{font-size:13px;white-space:normal;max-width:100%}
+@media(max-width:720px){
+ .evidence-page .evidence-lead{font-size:17px;margin-top:20px}
+ .publication-directory,.evidence-latest__list{grid-template-columns:1fr;gap:16px}
+ .publication-directory{margin-bottom:42px}
+ .publication-directory__card{padding:24px}
+ .publication-directory__card h2{font-size:26px}
+ .evidence-latest h2,.evidence-note h2,.evidence-related h2{font-size:28px}
+ .evidence-latest,.evidence-note,.evidence-related{margin-bottom:40px}
+ .evidence-page .publication-item h2{font-size:20px}
+ .review-summary{padding:22px;gap:16px;grid-template-columns:1fr}
+ .review-summary__score strong{font-size:48px}
+ .publication-category-nav a{font-size:12px;padding:9px 12px}
+ .evidence-page .review-card blockquote{font-size:16px}
+ .evidence-editorial-note{padding:16px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.publication-directory__card{transition:none}}
