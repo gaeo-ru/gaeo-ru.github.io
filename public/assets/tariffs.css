@@ -133,3 +133,9 @@
  .tariff-comparison tbody th:first-child{width:140px;padding-left:10px;padding-right:10px;overflow-wrap:break-word}
  .tariff-comparison thead th:not(:first-child){width:auto}
 }
+
+/* Desktop plan cards: align actions through flexible remaining space, regardless of list length. */
+@media(min-width:721px){
+ .tariff-plans details.tariff-plan[open] .price-details{display:flex;flex-direction:column}
+ .tariff-plans details.tariff-plan[open] .tariff-actions{margin-top:auto}
+}
