@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "0a6e1bedb18970859abd2fe051fa4f5fecb7d1a2",
-  "releasedAt": "2026-11-07T23:03:33.448Z",
+  "sourceCommit": "ac31e6972eb7fa43b70936f386e32c272ebe5ec7",
+  "releasedAt": "2026-11-07T23:17:26.706Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2926,6 +2926,11 @@
       "sha256": "1e5ecfc0eae4e9f5d21ec4bfbd15e786d621fbc147c1a9660621cee3214056d7"
     },
     {
+      "path": "en/industries/electrical-cable-product-suppliers/index.html",
+      "kind": "html",
+      "sha256": "b2a51353ff8e5bc675d696dbf39975611ac806992d0710b9d1d3aa907a535bcd"
+    },
+    {
       "path": "en/industries/electronic-document-flow/index.html",
       "kind": "html",
       "sha256": "8d52912d1fc41b9249441e96009b138c015f23bac1742f234e852115b7a6e346"
@@ -3021,6 +3026,11 @@
       "sha256": "f15942ad389308c8c3b41dacf55a6eeb7406f122750f6671b889cf4dc066a1d4"
     },
     {
+      "path": "en/industries/laboratory-measurement-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "84cd3861cb760fd3460f26c1384b71511f63f259d00d5598952151dd796cc9c0"
+    },
+    {
       "path": "en/industries/legal/index.html",
       "kind": "html",
       "sha256": "da8dc0805be4fe0f863794b2d6dcc7846313ee713ba8bc660cbc748a2758186a"
@@ -3038,12 +3048,17 @@
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "b78a8ff72f2ae87479896995dd3ddf2b6ca14173850a60dd75f3191e0cbe899a"
+      "sha256": "dbddbd0c44787c2c40bd13bdb50fdf271ff8e2b52cd406601bb0e49682956f1c"
     },
     {
       "path": "en/industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "042351dc6b2d2f2d0ba85641c0ae3996a2b0c65a31bc013d505ff3d30bca4c0a"
+    },
+    {
+      "path": "en/industries/packaging-container-label-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "f4f8346b04d814f1745912cb28b18824e79a514955a140df389a356de76530f4"
     },
     {
       "path": "en/industries/pet-supplies-online-stores/index.html",
@@ -3123,7 +3138,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "723f3d917eaeb30601dfd8e947f9e51bfacd2e50553db5de8fd1170f258994a8"
+      "sha256": "f0738808ae10fd597618b9e31e1e66673fdac52506cbed657a6a5a0c55e47250"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3336,6 +3351,11 @@
       "sha256": "ed52d5a6179f5bb52af43b543384e303a1e78ff9c4a609ab983ff5f0d23339eb"
     },
     {
+      "path": "industries/electrical-cable-product-suppliers/index.html",
+      "kind": "html",
+      "sha256": "88511815f1f85923262c0a73cc209aa3d163afa5a6bb1a63413ccbd6a17b6512"
+    },
+    {
       "path": "industries/electronic-document-flow/index.html",
       "kind": "html",
       "sha256": "611531372a0e2b4741fe1ef49ecd2b26e9bcc8c6ac10c4b857c77e748bd1f7c8"
@@ -3431,6 +3451,11 @@
       "sha256": "ddb511cb25a0f70d70e85c08def02dd87010941370435f2282a3655315d1456a"
     },
     {
+      "path": "industries/laboratory-measurement-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "dcc8cb830073c477d8dd6f543f344dcc55928ee39d26b7b4759cae2d83b0bd9d"
+    },
+    {
       "path": "industries/legal/index.html",
       "kind": "html",
       "sha256": "ffc5ab7517f4b42de6bc8848d12d9aa5dea96f1d62d4f8ecae3042e2e822c4e8"
@@ -3448,12 +3473,17 @@
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "1d54a2a9d3e72a9fbe39b7b1040603a78521cd89ee4aa233b756f5d961b61a38"
+      "sha256": "f467d17d3967d6f95aca147da6ff058b5208a842547b0589c6ebd26e3a8bbc50"
     },
     {
       "path": "industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "13d3d8d7b1dccfa65b3c03722a0898687ba9f5870a32b0795130fa246be8cf3f"
+    },
+    {
+      "path": "industries/packaging-container-label-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "e891ed0040fa45112604a2cb1efdb5fad63d141dd59df8414b3398b6d8b70251"
     },
     {
       "path": "industries/pet-supplies-online-stores/index.html",
@@ -3608,7 +3638,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "2a8c2259a3ded6c1ba313ea06df2c09984567f9f8f5fd3338940dd7078fe671f"
+      "sha256": "9973437c7624c98575b233ecd3ac37da93d1750da6306adff95d78d7fde9e130"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3663,7 +3693,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "28918ae310c823e19839cebc31c722dcbb3fd09f1320c4aabde0015972423545"
+      "sha256": "b32aa320e5679b8d40bc8b7528060a2081b6ec84291aac9b746070269945f2d7"
     }
   ]
 }
