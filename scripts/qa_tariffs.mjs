@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync,existsSync,mkdirSync,statSync} from 'node:fs';
+import {readFileSync,readdirSync,existsSync,mkdirSync,statSync} from 'node:fs';
 import {resolve,extname} from 'node:path';
 import {createServer} from 'node:http';
 import {once} from 'node:events';
@@ -95,6 +95,41 @@ for(const route of allRoutes){
   const url=m[1],file=resolve(dist,url.slice(1),url.endsWith('/')?'index.html':'');assert.ok(existsSync(file),'Broken local resource '+url+' from '+route);
  }
 }
+// Audit every generated use of the shared pricing cards, not just /tarify/.
+// All industry hubs and individual specializations reuse PlanCards.
+const htmlFiles=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(entry=>{
+ const item=resolve(dir,entry.name);
+ return entry.isDirectory()?htmlFiles(item):entry.isFile()&&entry.name.endsWith('.html')?[item]:[];
+});
+const pricingPaths=htmlFiles(dist).filter(path=>readFileSync(path,'utf8').includes('class="pricing tariff-plans"'));
+const industryPricingPaths=pricingPaths.filter(path=>path.includes('/industries/'));
+assert.ok(industryPricingPaths.length>=24,'All industry hub and specialization tariff rows must be present');
+for(const path of pricingPaths){
+ const html=readFileSync(path,'utf8');
+ assert.ok(html.includes('/assets/tariffs.css'),'Every PlanCards instance loads shared desktop alignment rules: '+path);
+ if(path.includes('/industries/'))assert.ok(html.includes('/assets/tariffs.js'),'Every industry pricing grid loads CTA alignment script: '+path);
+ assert.ok(html.includes('class="tariff-actions"'),'Tariff CTAs exist on '+path);
+ const details=(html.match(/<details class="price tariff-plan"/g)||[]).length;
+ assert.ok(details===3||details===6,'Expected 3 industry or 6 pricing plan cards on '+path);
+}
+for(const [route,lang] of [['/','ru'],['/en/','en']]){
+ const html=read(route);
+ const business=graph(html).filter(node=>node['@id']==='https://gaeo.ru/#business');
+ assert.equal(business.length,1,'One canonical GAEO business entity '+route);
+ assert.equal(business[0].taxID,'771915175562','Official INN in '+route);
+ assert.deepEqual(business[0].identifier,{'@type':'PropertyValue',propertyID:'OGRNIP',value:'325774600017838'},'Official OGRNIP in '+route);
+ assert.equal(business[0].legalName,'ИП Яковлев Алексей Леонидович','Registered legal name in '+route);
+}
+for(const lang of ['ru','en']){
+ const html=read(lang==='ru'?'/industries/metal-structures/':'/en/industries/metal-structures/');
+ assert.ok(html.includes('class="pricing tariff-plans"'),'Metal structure page uses common tariff cards '+lang);
+ const identity=lang==='ru'?'ИНН 771915175562 · ОГРНИП 325774600017838':'INN 771915175562 · OGRNIP 325774600017838';
+ for(const route of [lang==='ru'?'/':'/en/',lang==='ru'?'/tarify/':'/en/pricing/',lang==='ru'?'/industries/metal-structures/':'/en/industries/metal-structures/']){
+  assert.equal(read(route).split(identity).length-1,1,'Business IDs shown exactly once in shared footer '+route);
+ }
+}
+console.log('GAEO_SHARED_TARIFF_AND_IDENTITY_QA=PASS; priced pages='+pricingPaths.length+'; industry pages='+industryPricingPaths.length);
+
 console.log('TARIFF_STATIC_QA=PASS; 6 plans; 2 extras; 13 platforms; 107 categories; RU/EN; prices; schema; links');
 if(process.argv.includes('--static'))process.exit(0);
 
@@ -234,6 +269,41 @@ try{
     await page.locator('.tariff-guarantee').scrollIntoViewIfNeeded();
     if(width!==320)await page.screenshot({path:'visual-tariffs/guarantee-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
    }
+  }
+ }
+ // Cross-template desktop checks. Earlier assertions only tested /tarify/;
+ // these routes include both hub and specialization PlanCards templates.
+ for(const width of [1440,1100,900,390]){
+  await page.setViewportSize({width,height:900});
+  for(const route of [
+   '/industries/metal-structures/','/en/industries/metal-structures/',
+   '/industries/legal/','/en/industries/legal/',
+   '/industries/bankruptcy-lawyers/','/en/industries/bankruptcy-lawyers/'
+  ]){
+   await page.goto(origin+route,{waitUntil:'domcontentloaded'});
+   await page.locator('.industry-pricing-section .tariff-plans, .tariff-plans').first().waitFor();
+   await page.evaluate(()=>document.fonts.ready);
+   await page.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+   const rows=await page.evaluate(()=>{
+    const cards=[...document.querySelectorAll('.tariff-plans > details.tariff-plan[open]')];
+    const out=[];
+    for(const card of cards){
+     const top=card.getBoundingClientRect().top;
+     let row=out.find(x=>Math.abs(x.top-top)<2);
+     if(!row){row={top,buttonTops:[],actions:[]};out.push(row);}
+     const button=card.querySelector('.tariff-actions .button');
+     row.buttonTops.push(button.getBoundingClientRect().top);
+     row.actions.push(getComputedStyle(card.querySelector('.tariff-actions')).marginTop);
+    }
+    return {cards:cards.length,rows:out,docWidth:document.documentElement.scrollWidth,viewport:innerWidth};
+   });
+   assert.equal(rows.cards,3,'Three industry plans on '+route);
+   if(width>720)for(const row of rows.rows){
+    if(row.buttonTops.length<2)continue;
+    assert.ok(Math.max(...row.buttonTops)-Math.min(...row.buttonTops)<=3,
+     'Aligned desktop CTAs '+width+' '+route+' '+JSON.stringify(row.buttonTops));
+   }
+   if(width===390)assert.ok(rows.docWidth<=rows.viewport+2,'No overflow '+route+' '+width);
   }
  }
  assert.deepEqual(errors,[],'No browser runtime errors');
