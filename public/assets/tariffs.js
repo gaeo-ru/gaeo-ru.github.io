@@ -32,4 +32,45 @@
   root.addEventListener('change',()=>{blocksInput.value=String(clampBlocks());update();});
   update();
  });
+
+ /* Align both CTA controls in each desktop row with the longest tariff card.
+    The baseline is recalculated after font loading, resizing, and card toggles. */
+ const alignTariffRows=()=>{
+  for(const grid of document.querySelectorAll('.tariff-plans')){
+   const cards=[...grid.children].filter(el=>el.matches('details.tariff-plan[open]'));
+   for(const card of cards)card.querySelector('.tariff-actions').style.marginTop='';
+   if(window.innerWidth>720){
+    const rows=[];
+    for(const card of cards){
+     const top=card.getBoundingClientRect().top;
+     let row=rows.find(items=>Math.abs(items[0].getBoundingClientRect().top-top)<2);
+     if(!row){row=[];rows.push(row)}
+     row.push(card);
+    }
+    for(const row of rows){
+     if(row.length<2)continue;
+     const buttons=row.map(card=>card.querySelector('.tariff-actions .button'));
+     const tops=buttons.map(button=>button.getBoundingClientRect().top);
+     const lowest=Math.max(...tops);
+     row.forEach((card,i)=>{
+      const offset=Math.max(0,lowest-tops[i]);
+      if(offset>.5)card.querySelector('.tariff-actions').style.marginTop=offset+'px';
+     });
+    }
+   }
+   grid.dataset.ctaAligned='true';
+  }
+ };
+ let alignQueued=false;
+ const scheduleAlignment=()=>{
+  if(alignQueued)return;
+  alignQueued=true;
+  window.requestAnimationFrame(()=>{alignQueued=false;alignTariffRows()});
+ };
+ scheduleAlignment();
+ document.fonts?.ready.then(scheduleAlignment);
+ window.addEventListener('resize',scheduleAlignment);
+ document.querySelectorAll('.tariff-plans details.tariff-plan').forEach(card=>{
+  card.addEventListener('toggle',scheduleAlignment);
+ });
 })();
