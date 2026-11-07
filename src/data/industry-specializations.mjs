@@ -1274,6 +1274,278 @@ export const industrySpecializations = [
       "request": "Residential agency GEO: agent selection, service areas, fees, buying and selling, AI recommendations."
     }
   }
+},
+{
+  "id": 21,
+  "slug": "family-inheritance-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/family-inheritance-lawyers/",
+    "en": "/en/industries/family-inheritance-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как измерять рекомендации юридических специалистов",
+      "12 проверок сайта юридической компании"
+    ],
+    "en": [
+      "Method for legal-provider AI recommendations",
+      "Twelve website checks for legal GEO"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://minjust.gov.ru/ru/appeals/faq/623/",
+      "ru": "Минюст: порядок оформления наследства",
+      "en": "Ministry of Justice: probate process"
+    },
+    {
+      "href": "https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/",
+      "ru": "Минюст: Единый государственный реестр адвокатов",
+      "en": "Ministry of Justice: advocates register"
+    },
+    {
+      "href": "https://minjust.gov.ru/ru/documents/7900/",
+      "ru": "Минюст: законодательство о нотариате",
+      "en": "Ministry of Justice: notaries legislation"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение семейных и наследственных юристов | GAEO.ru",
+      "h1": "GEO-продвижение семейных и наследственных юристов в нейросетях",
+      "description": "GEO для юристов по разводу, разделу имущества, алиментам, спорам о детях и наследству: подтвержденная квалификация, рекомендации и тарифы GAEO.",
+      "eyebrow": "Юридические услуги / Семья и наследство",
+      "lead": "Человек ищет семейного или наследственного юриста в деликатной ситуации. Нейросети сравнивают специализации, профили, содержание услуг и репутационные источники. Проверяю, каких специалистов они рекомендуют и насколько верны основания такого выбора.",
+      "heroPoints": [
+        "Отдельные запросы по семейным делам, наследству и нотариальным действиям",
+        "Проверка реальной специализации и заявленного статуса адвоката",
+        "Конфиденциальность клиентов и отказ от вымышленных судебных побед"
+      ],
+      "problemTitle": "Почему общая юридическая страница не закрывает деликатные запросы",
+      "problemIntro": "Семейные и наследственные вопросы различаются по процедуре, документам и роли специалиста. Публичные сведения должны быть проверяемыми и не раскрывать обстоятельств частной жизни.",
+      "problems": [
+        {
+          "title": "Смешаны услуги с разными процедурами",
+          "body": "Раздел имущества, алименты, споры о детях, принятие наследства и оспаривание завещания имеют разный предмет. Нужны самостоятельные описания помощи."
+        },
+        {
+          "title": "Юрист ошибочно представлен адвокатом",
+          "body": "Статус адвоката проверяется в официальном реестре Минюста. Если такого статуса нет, нельзя его приписывать специалисту."
+        },
+        {
+          "title": "Описание подменено обещаниями исхода",
+          "body": "Судебное решение и наследственные права зависят от конкретных обстоятельств. Без подтверждения нельзя заявлять гарантированные победы, процент успешных дел или личный опыт по чужим делам."
+        }
+      ],
+      "scenarioTitle": "В каких вопросах люди выбирают юридического специалиста",
+      "scenarioIntro": "Матрица запросов формируется по виду дела и региону. Общие сведения о праве не заменяют консультацию по документам клиента.",
+      "columns": [
+        "Вопрос клиента",
+        "Что необходимо проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кого выбрать для раздела имущества при разводе?",
+          "Специализацию, формат консультации, условия представительства и предмет спора",
+          "Раздел услуги с реальными этапами и ограничениями"
+        ],
+        [
+          "Где найти юриста по алиментам и спору о детях?",
+          "Подтвержденную практику по семейным делам и соблюдение конфиденциальности",
+          "Деликатные FAQ и профессиональные профили"
+        ],
+        [
+          "Кто помогает оформить наследство и обратиться к нотариусу?",
+          "Роль юриста и нотариуса, порядок заявлений, реальные услуги",
+          "Разъяснить процесс с официальными источниками Минюста"
+        ],
+        [
+          "Кто ведет спор о завещании или доле в наследстве?",
+          "Профиль практики, роль исполнителя, предмет и условия ведения спора",
+          "Показать специализацию без раскрытия сведений наследников"
+        ]
+      ],
+      "proofTitle": "Какие факты подтверждают юридическую компетенцию",
+      "proofIntro": "Минюст публикует сведения о порядке оформления наследства, нотариальных действиях и реестр адвокатов. Статус, виды помощи и юрисдикция должны соответствовать фактической работе специалиста.",
+      "checks": [
+        "Личность, реальная специализация и профессиональный статус; реестр адвокатов использовать только при заявленном статусе",
+        "Состав услуг: консультации, документы, представительство, взаимодействие с нотариусом и пределы полномочий",
+        "Разрешенные к раскрытию публикации, профессиональные материалы и данные, без сведений о детях и частных делах клиентов"
+      ],
+      "proofNote": "Опубликованная юридическая методика GAEO применима к этой нише. Опыт работы с корпоративными юристами не равен завершенному GEO-кейсу семейной или наследственной практики.",
+      "workTitle": "Как организую GEO-продвижение семейного и наследственного юриста",
+      "workIntro": "Работа начинается с реальных рекомендательных запросов, затем приводит в порядок подтверждения профессиональных возможностей.",
+      "steps": [
+        {
+          "title": "Выбираю группы запросов",
+          "body": "Разделяю развод, раздел имущества, вопросы детей, алименты, наследство и нотариальную процедуру."
+        },
+        {
+          "title": "Проверяю факты",
+          "body": "Сверяю специализацию, публичные профили, статусы, ограничения рекламы и доступность подтверждений."
+        },
+        {
+          "title": "Готовлю сайт и публикации",
+          "body": "Проектирую страницы услуг, профили специалистов и FAQ с первичными правовыми источниками, без персональных данных."
+        },
+        {
+          "title": "Измеряю изменения",
+          "body": "Повторяю контрольные запросы в выбранных нейросетях и сравниваю BMR, описания специалистов и ссылки на источники."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать семейного юриста без публичных судебных решений?",
+          "answer": "Да. Можно подтвердить квалификацию, состав услуг и профессиональные публикации без раскрытия дел клиентов и обещаний исхода."
+        },
+        {
+          "question": "Юрист и адвокат - одно и то же?",
+          "answer": "Нет. При обозначении специалиста как адвоката нужно проверить его статус по государственному реестру. Описание должно соответствовать действительным полномочиям."
+        },
+        {
+          "question": "Можно ли обещать получение наследства или выигрыш суда?",
+          "answer": "Результат зависит от документов, закона и обстоятельств дела. Универсальные гарантии исхода и неподтвержденные проценты побед не использовать."
+        },
+        {
+          "question": "Как сохранить конфиденциальность в кейсах?",
+          "answer": "Не раскрывать сведения о детях, семейном положении, адресах, финансах и наследстве без законного основания. Полезная методика возможна без таких подробностей."
+        },
+        {
+          "question": "Какова стоимость GEO для семейного юриста?",
+          "answer": "Общие тарифы GAEO включают мини-аудит, полный аудит и ежемесячное сопровождение. Состав запросов, источников и контента определяется исходным замером."
+        }
+      ],
+      "ctaTitle": "Проверить, каких семейных и наследственных юристов рекомендуют нейросети",
+      "ctaText": "Пришли сайт, город, реальные направления практики и публичные профили. Я предложу первичную матрицу запросов и аудит.",
+      "request": "GEO семейные и наследственные юристы: развод, имущество, дети, алименты, наследство, квалификация и рекомендации."
+    },
+    "en": {
+      "title": "GEO for family and inheritance lawyers | GAEO.ru",
+      "h1": "GEO for family and inheritance lawyers in AI recommendations",
+      "description": "GEO for family and inheritance law professionals: divorce, property disputes, maintenance, probate, verified credentials and AI visibility measurement.",
+      "eyebrow": "Legal services / Family and inheritance law",
+      "lead": "Someone seeking help with divorce or inheritance needs a professional whose actual scope and credentials fit a sensitive matter. I review which practitioners AI recommends, the evidence cited and the gaps in their public profiles.",
+      "heroPoints": [
+        "Separate family disputes, probate and notarial procedures",
+        "Check professional specialisation and registered advocate status when claimed",
+        "Protect client confidentiality and avoid unsupported case outcomes"
+      ],
+      "problemTitle": "Generic legal claims fail to resolve sensitive professional choices",
+      "problemIntro": "The procedures, documents and roles differ across family and inheritance matters. Public descriptions must be verifiable without exposing private client information.",
+      "problems": [
+        {
+          "title": "Distinct matters are lumped together",
+          "body": "Matrimonial property, child arrangements, maintenance, succession and contested wills require different expertise and process explanations."
+        },
+        {
+          "title": "Professional titles are overstated",
+          "body": "An advocate designation in Russia must reflect actual registration. A general legal practitioner should not be described as a registered advocate without evidence."
+        },
+        {
+          "title": "A promised outcome replaces service details",
+          "body": "Court and probate outcomes depend on the case. Unsupported win rates and universal guarantees are not reliable proof of expertise."
+        }
+      ],
+      "scenarioTitle": "Legal needs that drive recommendations",
+      "scenarioIntro": "The baseline distinguishes matters and jurisdictions; informational pages cannot replace advice based on client documents.",
+      "columns": [
+        "Client question",
+        "Evidence to check",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Who can help with matrimonial property division?",
+          "Relevant scope, consultation, representation and terms",
+          "Explain the service and its limits"
+        ],
+        [
+          "Who handles child or maintenance disputes?",
+          "Verified family-practice expertise and privacy safeguards",
+          "Topic-specific service pages and responsible FAQ"
+        ],
+        [
+          "Who can assist with probate and notarial steps?",
+          "Different responsibilities of the lawyer and notary",
+          "Link procedural explanations to authoritative sources"
+        ],
+        [
+          "Who represents a contested inheritance matter?",
+          "Actual specialisation, duties and engagement terms",
+          "Present credible professional evidence without private case details"
+        ]
+      ],
+      "proofTitle": "Verifiable evidence for family and inheritance law",
+      "proofIntro": "Russia's Ministry of Justice publishes guidance on succession, notarial acts and the advocate register. Content must distinguish general legal information from individually scoped services.",
+      "checks": [
+        "Verified names, jurisdictions and professional status; check the register when advocate status is claimed",
+        "Actual consultation, document, representation and notarial-support services with clear boundaries",
+        "Publishable professional materials and lawful disclosures, protecting children and client privacy"
+      ],
+      "proofNote": "GAEO's legal-provider methodology is relevant, but corporate-law work does not establish a completed GEO result for family-law or inheritance specialists.",
+      "workTitle": "A practical GEO programme for legal practitioners",
+      "workIntro": "Start from actual AI recommendations and then build evidence that correctly describes the practice.",
+      "steps": [
+        {
+          "title": "Segment client intents",
+          "body": "Separate divorce, assets, child matters, maintenance, succession and notarial processes."
+        },
+        {
+          "title": "Verify claims",
+          "body": "Review practice areas, professional status, permissions and confidentiality constraints."
+        },
+        {
+          "title": "Improve sources",
+          "body": "Specify practice pages, biographies and FAQ supported by authoritative legal material."
+        },
+        {
+          "title": "Repeat measurements",
+          "body": "Track BMR, practitioner descriptions and references with stable non-brand questions."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can GEO work without public court decisions?",
+          "answer": "Yes. Accurate credentials, service scope and professional explanations can be useful without disclosing confidential cases."
+        },
+        {
+          "question": "Can any lawyer be presented as an advocate?",
+          "answer": "No. Advocate status in Russia is a specific registered designation. The public profile must use the correct professional title."
+        },
+        {
+          "question": "Can a practitioner promise to win a case?",
+          "answer": "A universal outcome promise cannot reflect the facts of each case. Describe actual service terms without unsupported results."
+        },
+        {
+          "question": "How should family-case privacy be handled?",
+          "answer": "Do not disclose personal family circumstances, children's data or estate documents without a lawful basis and appropriate rights."
+        },
+        {
+          "question": "How does GAEO pricing apply?",
+          "answer": "Published audit and monthly GEO plans apply. The final query and content scope depends on practice areas and the baseline."
+        }
+      ],
+      "ctaTitle": "Find out which family and inheritance lawyers AI recommends",
+      "ctaText": "Share the practice website, region, actual specialist services and professional profiles. I will suggest an initial audit.",
+      "request": "Family and inheritance law GEO: divorce, assets, children, probate, credentials and AI recommendations."
+    }
+  }
 }
 ];
 
