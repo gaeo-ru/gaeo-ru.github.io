@@ -15,7 +15,15 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
     <label class="tariff-field"><span>{en?'Monthly plan':'Тариф продвижения'}</span><select name="plan">{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select></label>
     <fieldset class="tariff-platforms"><legend>{en?'AI platforms and search interfaces':'Нейросети и поисковые интерфейсы'}</legend><div class="tariff-platform-options">{platforms.map((p,i)=><label><input type="checkbox" name="platform" value={p.id} checked={i<5}/><span>{en?p.nameEn:p.name}</span></label>)}</div></fieldset>
     <p class="tariff-note" data-platform-count>{en?'5 selected. No platform surcharge.':'Выбрано 5. Доплаты за нейросети нет.'}</p>
-    <label class="tariff-field tariff-prompts"><span>{en?'Additional blocks of 10 prompts':'Дополнительные пакеты по 10 запросов'}</span><input type="number" name="blocks" value="0" min="0" max="100" step="1" inputmode="numeric"/><small>{en?'50 prompts included. Each additional block: '+money(PRICES.prompts,lang)+'/month.':'50 запросов входят в тариф. Каждый дополнительный пакет: +'+money(PRICES.prompts,lang)+'/мес.'}</small></label>
+    <div class="tariff-field tariff-prompts">
+     <label for={'tariff-prompt-blocks-'+lang}>{en?'Additional blocks of 10 prompts':'Дополнительные пакеты по 10 запросов'}</label>
+     <div class="tariff-quantity" role="group" aria-label={en?'Number of additional prompt packs':'Количество дополнительных пакетов запросов'}>
+      <button type="button" data-prompt-adjust="-1" aria-label={en?'Remove one pack of 10 prompts':'Убрать 1 пакет из 10 запросов'} disabled>−</button>
+      <input id={'tariff-prompt-blocks-'+lang} type="number" name="blocks" value="0" min="0" max="100" step="1" inputmode="numeric"/>
+      <button type="button" data-prompt-adjust="1" aria-label={en?'Add one pack of 10 prompts':'Добавить 1 пакет из 10 запросов'}>+</button>
+     </div>
+     <small>{en?'50 prompts included. Each additional block: '+money(PRICES.prompts,lang)+'/month.':'50 запросов входят в тариф. Каждый дополнительный пакет: +'+money(PRICES.prompts,lang)+'/мес.'}</small>
+    </div>
     <p class="tariff-note"><a href={serviceHref('additional-platforms',lang)}>{en?'Platform option details':'Условия дополнительных нейросетей'}</a> · <a href={serviceHref('additional-prompts',lang)}>{en?'Prompt block details':'Условия дополнительных запросов'}</a></p>
    </div>
    <div class="tariff-calculator__result" aria-live="polite" aria-atomic="true">
