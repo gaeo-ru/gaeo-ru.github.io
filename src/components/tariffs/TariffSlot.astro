@@ -20,7 +20,7 @@ const schema=service?{'@context':'https://schema.org','@graph':[
 ]}:pricingGraph(lang);
 if(!service&&(sourcePath==='tarify/index.html'||sourcePath==='en/pricing/index.html')){
  const url='https://gaeo.ru'+pricingHref(lang);
- schema['@graph'].push({'@type':'ItemList','@id':url+'#industry-list',name:lang==='en'?'107 GEO business categories':'107 направлений GEO-продвижения',numberOfItems:107,itemListElement:getIndustryCatalog(lang).map((item,i)=>({'@type':'ListItem',position:i+1,url:url+'#'+item.id,item:{'@type':'Service','@id':url+'#'+item.id,url:url+'#'+item.id,name:item.serviceName,description:item.description,image:'https://gaeo.ru'+item.image.large,provider:{'@id':'https://gaeo.ru/#business'},offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}}))});
+ schema['@graph'].push({'@type':'ItemList','@id':url+'#industry-list',name:lang==='en'?'107 GEO business categories':'107 направлений GEO-продвижения',numberOfItems:107,itemListElement:getIndustryCatalog(lang).map((item,i)=>({'@type':'ListItem',position:i+1,url:item.detailLink?'https://gaeo.ru'+item.detailLink:url+'#'+item.id,item:{'@type':'Service','@id':item.detailLink?'https://gaeo.ru'+item.detailLink+'#service':url+'#'+item.id,url:item.detailLink?'https://gaeo.ru'+item.detailLink:url+'#'+item.id,name:item.serviceName,description:item.description,image:'https://gaeo.ru'+item.image.large,provider:{'@id':'https://gaeo.ru/#business'},offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}}))});
 }
 ---
 <Fragment set:html={'<!-- GAEO_TARIFF:'+block+'_START -->'}/>
@@ -28,7 +28,7 @@ if(!service&&(sourcePath==='tarify/index.html'||sourcePath==='en/pricing/index.h
 {block==='CALCULATOR'&&<PricingCalculator lang={lang}/>}
 {block==='COMPARISON'&&<Comparison lang={lang}/>}
 {block==='CATALOG'&&<IndustryCatalog lang={lang}/>}
-{block==='INDUSTRY'&&<IndustryPricing lang={lang}/>}
+{block==='INDUSTRY'&&<IndustryPricing lang={lang} sourcePath={sourcePath}/>}
 {block==='DETAIL'&&<ServiceDetail lang={lang} slug={slug}/>}
 {block==='DEVELOPMENT'&&<DevelopmentOffer lang={lang}/>}
 {block==='SCHEMA'&&<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>}

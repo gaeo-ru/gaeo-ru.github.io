@@ -94,7 +94,7 @@ const copy = en ? {
           </a>
           <div class="industry-catalog__card-heading">
             <p class="industry-catalog__group">{item.groupName}</p>
-            <h3 id={`${item.id}-title`}><a href={`${pricingHref(lang)}#${item.id}`} aria-label={item.serviceName}>{item.name}</a></h3>
+            <h3 id={`${item.id}-title`}><a href={item.detailLink || `${pricingHref(lang)}#${item.id}`} aria-label={item.serviceName}>{item.name}</a></h3>
           </div>
         </div>
         <p class="industry-catalog__description">{item.description}</p>

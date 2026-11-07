@@ -204,7 +204,7 @@ const en = page.language === 'en';
   <div class="container">
     <div class="industry-eyebrow">{page.pricing.eyebrow}</div>
     <h2 id="industry-pricing-title">{page.pricing.title}</h2>
-    <IndustryPricing lang={en ? 'en' : 'ru'} intro={page.pricing.intro} scopeNote={/\/(pharma|ecommerce|metal-structures)\//.test('/' + sourcePath) ? page.pricing.note : undefined} />
+    <IndustryPricing lang={en ? 'en' : 'ru'} sourcePath={sourcePath} intro={page.pricing.intro} scopeNote={/\/(pharma|ecommerce|metal-structures)\//.test('/' + sourcePath) ? page.pricing.note : undefined} />
   </div>
 </section>
 
