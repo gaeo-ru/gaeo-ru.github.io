@@ -262,6 +262,15 @@ try{
    assert.equal(response?.status(),200,'Styled menu route '+route);
    await page.locator('#gaeo-burger-menu-styles').waitFor({state:'attached'});
    const hamburger=page.locator('.menu-toggle');
+   // Desktop navigation can fit at 1100px, leaving the mobile toggle
+   // deliberately hidden; test the visible desktop navigation instead.
+   if(!(await hamburger.isVisible())){
+    assert.ok(await page.locator('.desktop-menu').isVisible(),'Desktop navigation visible '+route+' '+width);
+    assert.equal(await page.locator('#mobileMenu details.mobile-cases').count(),1,'Exactly one mobile Cases disclosure '+route+' '+width);
+    assert.deepEqual(errors,[],'No JS errors '+route+' '+width);
+    await page.close();
+    continue;
+   }
    await hamburger.click();
    await page.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3500});
    const cases=page.locator('#mobileMenu details.mobile-cases');
