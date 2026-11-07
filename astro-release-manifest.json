@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "bff290e51c964f02c13216508323e23abddf6514",
-  "releasedAt": "2026-11-07T17:59:31.416Z",
+  "sourceCommit": "1049f01f7c3a629542d326f30996a3738568bd51",
+  "releasedAt": "2026-11-07T18:16:33.265Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -23,7 +23,7 @@
     {
       "path": "articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/index.html",
       "kind": "html",
-      "sha256": "a281a840ddeca5c56ae2923ddd2de30ffb9ccd0adbac27102b01a91f5c16db24"
+      "sha256": "ae7d708b5bf5638a663092d16303b730ee741eb25246a2cce0d1dd2002be15e4"
     },
     {
       "path": "articles/index.html",
@@ -2733,17 +2733,17 @@
     {
       "path": "cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "ae02332ce50b74ff57a35ca07839c64d3beee428f08370070bacf30320adde2d"
+      "sha256": "98b77933ddeda3e4cb3efdce4460417c3714e376e303f3fd5f11b4134b004855"
     },
     {
       "path": "cases/razrabotka-sajta-gaeo/index.html",
       "kind": "html",
-      "sha256": "1b84de11377639b54177dc10f0cb7fff39ac3a5944de4d9223f30581d7b3dc74"
+      "sha256": "88d860c998adb63efd025fb1d05361f06c5a68cb1798772b0fc56e5741ab0c3d"
     },
     {
       "path": "cases/razrabotka-sajta-indexresearch/index.html",
       "kind": "html",
-      "sha256": "8d950ed6f2c86daaf305c5e62a1eaa43ec9540230c96f0533d86b82c0a8dc2a0"
+      "sha256": "7c12bf27a5c91ca075c4ce69aaa44aeeed204581b31290e9bab1f1d967178781"
     },
     {
       "path": "CNAME",
@@ -2773,7 +2773,7 @@
     {
       "path": "en/articles/geo-experts-110-ai-responses-bmr-frs-2026/index.html",
       "kind": "html",
-      "sha256": "2bae584807d29660848eeb44a9a5bd4f3d16d50e9bddb8fd96d9e2267c55f923"
+      "sha256": "fb5fcffabd7e552c86e8883cd0b2344c2c0c83ead30905678804352091630522"
     },
     {
       "path": "en/articles/geo-for-real-estate/index.html",
@@ -2828,42 +2828,57 @@
     {
       "path": "en/cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "d1e1e272e8dbd37d23d859d7eb39fae5d680244be659f09c843fa32afae80ba0"
+      "sha256": "cca7ff85117c9f73d1194a8d54a75d57693722f6c8c579cc104e6a04ab7f017a"
     },
     {
       "path": "en/cases/razrabotka-sajta-gaeo/index.html",
       "kind": "html",
-      "sha256": "10dd7a8fec48266180b7b5fa6368c80f94972aec7ba712d9fcc516a9f2223a91"
+      "sha256": "6b4b7dcda915bc606d529e5e7a76f950c5217ad45776f3e1b4da6de2688e5b00"
     },
     {
       "path": "en/cases/razrabotka-sajta-indexresearch/index.html",
       "kind": "html",
-      "sha256": "43e0dbd03a13121d7539de4be2572756e7c74355e2f7e4f98e88d2b6772a2be6"
+      "sha256": "e162c91a0fd220d530555e49a5f70f1e264b0af0633a412eaab8f10305376b05"
     },
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "fb8b0a96cdafd7deee889c66caed2928e6ab99bdf7988f3b0da87baeb53bc84f"
+      "sha256": "6b6fff01c3a20a70c8c8813cfc7ae541594a607b44678788717eaa6730f818cf"
     },
     {
       "path": "en/index.html",
       "kind": "html",
-      "sha256": "a7d4eecc470800718d8172671c3bc9fc08be395dc568cc7cc2adc8efb77fbc1d"
+      "sha256": "85b03dcf2d88c4e96805573b5d8db3f70f403d5bfbeba25bd4a4c987935420b6"
+    },
+    {
+      "path": "en/industries/corporate-travel-mice/index.html",
+      "kind": "html",
+      "sha256": "bbb9157926731449569e040011319fd861c74576f629f01c5df6a330d142a01d"
+    },
+    {
+      "path": "en/industries/cottage-communities/index.html",
+      "kind": "html",
+      "sha256": "440010d4c6dadc3f0355bae6d8af9e17aa24b61e71f1d39d44ee9e2e61b3942e"
     },
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "eefd0f489f4b5c9c3d8e9eae60e1473611b783a8c1a215b5d728eb5e5b7a5184"
+      "sha256": "9e31d6cbb7bda4bdeee4dbd730ebf77d04ae59a3be97a9a74aa16386b988fca3"
     },
     {
       "path": "en/industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "8ccff7f6900740b6aca266c5cea38d282c40f1dca33386d218ff941a54dcd946"
+      "sha256": "224f63b7cbfad33615d14138783d727251a16e3133c15919191c9ee86df02916"
+    },
+    {
+      "path": "en/industries/furniture/index.html",
+      "kind": "html",
+      "sha256": "fc67d5b44743994ac45a7c93bc6d6e3f06648a543a7d3ace33a3979cbea727c7"
     },
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "f3021ee9c107aae1a3cbd68e842f11e8cc3544b635489762350dc54cb9d35243"
+      "sha256": "0836b1a9b2697dc44c202d19c707c00e4c2548dd60a3790776807df194a582b7"
     },
     {
       "path": "en/industries/index.html",
@@ -2873,22 +2888,27 @@
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "36b35ca899c1c2ee485eefe2e27eeda7016528f00a6e30df1b2c0f5612fe47ff"
+      "sha256": "50ab5e2d71edcd195b4028fd5d749ceab442bfa5250197ba2a1f83e469dca8b2"
     },
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "0332c8a5199fd208453d40280f88cda7baefe973d9bdb2cbf9eb0e7821d6a13e"
+      "sha256": "e11d6f047c2c3aaed114b40102af795d819564dc9faf33fa946797237eb96f07"
     },
     {
       "path": "en/industries/pharma/index.html",
       "kind": "html",
-      "sha256": "fa0ced4a661f873b49f2e2504308ce09c20043179ab052e8b4c487c89249baf4"
+      "sha256": "b36b8c24d90cf38ce230f1c9d851197acf4f0d9465cdf144a4e6908683a2b946"
     },
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "093c266febf1e76003f72ff35629a32ac378385f05bb745f08f9056a2a799617"
+      "sha256": "3f7352c92bfa3c0c921f87aa6c110393ef7f59c92f64ae72d8e16d65dbf42d89"
+    },
+    {
+      "path": "en/industries/wms-tms/index.html",
+      "kind": "html",
+      "sha256": "08a529c689d29a4df199c467a2ad96eba52533b171cbdeae0511d9d3651d45d3"
     },
     {
       "path": "en/personal-data-consent/index.html",
@@ -2898,7 +2918,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "11aa98c5990bcc9b0bb0f825c016c4b9732e7380d891055f6798af46441d13de"
+      "sha256": "aeb1534edf929d859146841a6c365089452a976507212cff1c2148b70538a86b"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -2923,47 +2943,47 @@
     {
       "path": "en/services/additional-platforms/index.html",
       "kind": "html",
-      "sha256": "652f0d410031e444c92daea489c4e23930647adde46c6f67468273604495d422"
+      "sha256": "52f4c1a38a6621a5a7b717083bd52c7a0a0467d49075e2270f217f795c3d2440"
     },
     {
       "path": "en/services/additional-prompts/index.html",
       "kind": "html",
-      "sha256": "ed0f7077df52316cf93a91884f37289d5049b95684f7ed4d79c15773b129c597"
+      "sha256": "eac9fe5d9a9bff8a7a23a1570978b7335a08799c7a818218eea781d20b703195"
     },
     {
       "path": "en/services/free-audit/index.html",
       "kind": "html",
-      "sha256": "f4d0a8780b5b52151dca9e460c807ba1f23f782c7959d204bc1a4773759b869b"
+      "sha256": "7a8f37119a180487397e9b0f97a302c506199d5d0d6697fbd137e32563b9d379"
     },
     {
       "path": "en/services/geo-audit/index.html",
       "kind": "html",
-      "sha256": "4321120aa1383daa8488e6e5a92f10b569ffc53e3e99046b166fbd4b8d7511c0"
+      "sha256": "ecb209910c3f6ae747a8abc70420a1c8031a478a5b6dbe23e1d81b9b23a86cd4"
     },
     {
       "path": "en/services/geo-content/index.html",
       "kind": "html",
-      "sha256": "ae7e85c6c531dd2b084bb21e11f85dc96672b8852fff6cca2df7abcdb39ba413"
+      "sha256": "794aaa873aa33a8eddb60e9fa1a07ddc917f3943b5367e0d4e28130e9da0cbf8"
     },
     {
       "path": "en/services/geo-guarantee/index.html",
       "kind": "html",
-      "sha256": "7b417cf1ad172552084da1a106d9d2b4e1d8506e2a5ab30795a86390b8f1fec7"
+      "sha256": "b7ddc2116fe7c7bf5458d8233b720159b828e0049b456af4c257eadb5ded2d92"
     },
     {
       "path": "en/services/geo-promotion/index.html",
       "kind": "html",
-      "sha256": "59db1fedaf2c63396e078020f3fb82e378b64f66c923a6662ab70c2f1767aca2"
+      "sha256": "5521b2d9c15c6bc601430714df569e2e21e04f2fcbb9eed712e3eb87908f88de"
     },
     {
       "path": "en/services/index.html",
       "kind": "html",
-      "sha256": "0b23293912fedff59a65468661dba9eaf69f39433556408b515ade069101b5e8"
+      "sha256": "dedd02c0c8d67ca6eafaef1ee4501501c93663138c7c60fbff1bac9178c4886b"
     },
     {
       "path": "en/services/website-development/index.html",
       "kind": "html",
-      "sha256": "8c80838faf3d2ecff7072f3a702b54cdf4a43286efbadc6516f23ef7cc3a9b2d"
+      "sha256": "d40e00d87aad59ed7ec45996233ff76c0461e0005ea647b27fe74d2146132adc"
     },
     {
       "path": "en/strategies/ecommerce-catalog/index.html",
@@ -2978,7 +2998,7 @@
     {
       "path": "en/strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
-      "sha256": "0bf0226797d131c202e1e0ad2098487795ddaec1dee3af576f73cd0c8bee3515"
+      "sha256": "ec4283326ca09d44ade785a83c91986cffe45e430aab575a5e0b55d966f74210"
     },
     {
       "path": "en/strategies/index.html",
@@ -3003,17 +3023,17 @@
     {
       "path": "en/strategies/pharma-geo-evidence/index.html",
       "kind": "html",
-      "sha256": "3b8e33b5127635b88a6f971dfd03f495c67cc7cf2154e47e1f15d0076f5aabbd"
+      "sha256": "7a5802f1f97813b9de10a165472625de80c75057f1723cd97042399427b645ab"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
       "kind": "html",
-      "sha256": "f10714d6f7f2f50e642ca5045199298e9794d73f20d00b1ed8d81a70cebed38f"
+      "sha256": "cca7865087e30e58fe15ea47f6a3bf91cbb9ff93611445ca670da06c88f57252"
     },
     {
       "path": "en/strategies/tourism-dmc-recommendations/index.html",
       "kind": "html",
-      "sha256": "1a3ac5c7b1508ead7814864b835e59b105a462220970b08e609eac51c6729ebb"
+      "sha256": "f67941dc330a9de67c42580b97fb570adac806e14cb9d6775423548c4e0cf5a8"
     },
     {
       "path": "favicon.ico",
@@ -3028,27 +3048,42 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "b3893f643b42769f1d36a005f3adf4c6c1dc2bd4ec9c6e115a7d4ca18db0bb1e"
+      "sha256": "53724fed67e2db036f41a2ea2f2ea94be26664a88161f489db812f59842aac1a"
     },
     {
       "path": "index.html",
       "kind": "html",
-      "sha256": "d7002fca748145f6807cfbb9e651528bbe4abfa49086600f911f8e2cf74fb8a1"
+      "sha256": "094cdc0e226a7b59ef4a97f14e5da49852174e7965b5e1e9b0c9ba304dd14387"
+    },
+    {
+      "path": "industries/corporate-travel-mice/index.html",
+      "kind": "html",
+      "sha256": "a1d69048532dbc7755a0b8dfd8fae92fced23adb130da359da3f9deac3573153"
+    },
+    {
+      "path": "industries/cottage-communities/index.html",
+      "kind": "html",
+      "sha256": "610cef1ae6aa5ad07da0ba954b6845b690020b9d7318168d613ef9cd5a2305d1"
     },
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "443af4bde58641af235cdb67c67fc99f8cd6eadfcde60a7a8abd43824640a9b5"
+      "sha256": "1438ac9d8c50b449f3f883b618ea152cecc0583ee57034aea8f1bf86ea2142cb"
     },
     {
       "path": "industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "a2287bc6618fc1f93ec76caa10d794559148903b755a1c8b75ab80dc13b7c240"
+      "sha256": "cdb0045e9f40c0c40cf964655e26f30cb5452ccda71658992b01ed05e2d47bb6"
+    },
+    {
+      "path": "industries/furniture/index.html",
+      "kind": "html",
+      "sha256": "e79e30c20be3e69543de3013f8a92f9480a0a3bcdee5260dab23bb4272a1f93e"
     },
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "c9b1a19c8cf990d8483db2984c76aaa31d6fd1489f1c9cb0cf0397095dd96103"
+      "sha256": "83d4cd676b336f955a8024034f8aa2549dd9a491da1c2493f825208350ada76e"
     },
     {
       "path": "industries/index.html",
@@ -3058,22 +3093,27 @@
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "5d42ceb4866e27fd9f139cf50080616e75fc3d439c8e0610a2f6fac8f5e2ea37"
+      "sha256": "1bd0a4a9ee5469611f3c379be7ba96f8d7944e0d4d6be94a08883119dcc3cd86"
     },
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "2a840b92700a7ee157ca233e49733075ec708629de0bd5f918ce10f160ec0e4a"
+      "sha256": "07fb2ab70ca1d470581119d4441b2ae1658c82c0929ee1972c686308830e7ae2"
     },
     {
       "path": "industries/pharma/index.html",
       "kind": "html",
-      "sha256": "c5ad034f7aab3ac3e6bc509f297a45bd4e44fcfd63954370cf6794cbe55bbec2"
+      "sha256": "e5924d21d276e3c7ae9a89cf1f18f584610d64e76dee5d1c5650e8b1763a834f"
     },
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "0694a455a03f194ecd9df768512f4aa8fb30431d3c74d1f6f747868d800c4167"
+      "sha256": "301f25eec09222168876516eba7bbc72839f2bb175a660e63d581ba91f310799"
+    },
+    {
+      "path": "industries/wms-tms/index.html",
+      "kind": "html",
+      "sha256": "6572edd1e6cf07a01fe99b6547ce56d6e9a52386fa8b98d714347e365d3bc652"
     },
     {
       "path": "personal-data-consent/index.html",
@@ -3113,52 +3153,52 @@
     {
       "path": "services/additional-platforms/index.html",
       "kind": "html",
-      "sha256": "ec07b0c73455d834682896668247bcad7f31421a068a3f7976c60245c8670e31"
+      "sha256": "ce417537b8a6dbffe188fa270e1915297354fb63cfd838332cbc4c6944fefbd2"
     },
     {
       "path": "services/additional-prompts/index.html",
       "kind": "html",
-      "sha256": "e4deaa77e4c834a21f3f85f881703615665fb16c3a4349b5331102240c59976a"
+      "sha256": "b2acbc8c57d47847ff2f483ab2a897ed3b33205dd3e9c733e5ed6a885b9e015e"
     },
     {
       "path": "services/free-audit/index.html",
       "kind": "html",
-      "sha256": "61aaa0c74a9fcaa65c3e25783f661ce829beabb9ccd81887048aad6e38667699"
+      "sha256": "fe2cd39dc0e03efafb5b8708b80534cd955597b565823d085aea3413628a363c"
     },
     {
       "path": "services/geo-audit/index.html",
       "kind": "html",
-      "sha256": "029e1e732391884180093012437ff10a413eb17e8d8499088efcaa36ad91be64"
+      "sha256": "3bbbad34e21091787aa0c868864ccc69b81a4652d877e205b7eae7e6b9ef358a"
     },
     {
       "path": "services/geo-content/index.html",
       "kind": "html",
-      "sha256": "135a295a1ecf21f3cb5da99b30699c0c6de68c357fdafb3bcc19abd5790ecf5e"
+      "sha256": "bae64b106727c45c28ed87cb12d82e1bf615ce635f1be5e060e89a794f2a6580"
     },
     {
       "path": "services/geo-guarantee/index.html",
       "kind": "html",
-      "sha256": "e71c95b9643c0b97516769e66134dc8c25b41efd06d0e5fbcecc18df82746ab4"
+      "sha256": "58a1ceef9c9be2a828371b5788a20978e3d6827bfeacb82ab2b7399dec74c8fd"
     },
     {
       "path": "services/geo-promotion/index.html",
       "kind": "html",
-      "sha256": "090200392d128179645c63dc8944635252260389d0395c85e641efbb68dc07c4"
+      "sha256": "9a6f22427acb1710f95cf3f0a0fabc1de32b617a876543513e3988b694cf4480"
     },
     {
       "path": "services/index.html",
       "kind": "html",
-      "sha256": "6a4076f0a32c35dd6c47c2e3b928c23163b63f1187f5875be45cafc4f84945d3"
+      "sha256": "62b5340e8ce9b41c67a3fff1c8f85969a3e1866ffffcfe92ff3525fce9ac1260"
     },
     {
       "path": "services/website-development/index.html",
       "kind": "html",
-      "sha256": "f5997735dca214df3ce1eaa01093e9b83abe890fadf37073f6fe8ecc857fdfd5"
+      "sha256": "f3079bffa19f9a10d4ab2664014be62065b2c56610d0071108724374f598f13c"
     },
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "2e1c769b9a57881e54ecc14f91d8157f21478e8e7693bf78cd8dc5577c0ea4a6"
+      "sha256": "d3c3d8ac3c78c646811a4278f8d88d30517fbcc04352a628ddf62ff83c857122"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3173,7 +3213,7 @@
     {
       "path": "strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
-      "sha256": "8476e53922257e96c5fa7f17c959c6eb358482e4b8fa3d7c88ca7242e82c206f"
+      "sha256": "f4eb8b36d2c5339dc4432c283551943457a08e2eda153cfe0d0153112dd2c80a"
     },
     {
       "path": "strategies/index.html",
@@ -3198,22 +3238,22 @@
     {
       "path": "strategies/pharma-geo-evidence/index.html",
       "kind": "html",
-      "sha256": "4d9fc9333f69d8e63a2a8132fe5df632ec4197b32f37d265bee4ec5c6ffee4cf"
+      "sha256": "e63983b7b4e73647f799d599b5c2ea2482435392b88abe209b2c6a3a65574a38"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
       "kind": "html",
-      "sha256": "250ad75648b8751eafbff84a069b28c003671325efe51e2fdb4ad021b368e2a8"
+      "sha256": "fb27a1019be6bc81d4de6f7cc3d16c1fc88d0bbf4bdba65386c9ace5281f6d67"
     },
     {
       "path": "strategies/tourism-dmc-recommendations/index.html",
       "kind": "html",
-      "sha256": "0e79b5a62069460d17cb3debb316bc293bb3b92e7f11afc3e5efa288062a2459"
+      "sha256": "a3a1abe0ed81aa551afc0db2de03cda01a45798ffd0dcbd6815aa263410e7868"
     },
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "7697ffc6107613845cf4faf35088fdb5c2b7bb2e67e69c2a14ee12ae4c36d189"
+      "sha256": "21f617fb41520fdbe20cce88932f3356435e6050b71b8fbbc8887533968c06e6"
     }
   ]
 }
