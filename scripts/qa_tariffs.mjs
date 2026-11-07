@@ -32,7 +32,8 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/\bdata-gaeo-request=/g)||[]).length>=107,true,'Industry context is passed to inquiry form');
  for(const item of getIndustryCatalog(lang)){
   assert.ok(html.includes('id="'+item.id+'"'),'Addressable category '+item.id);
-  assert.ok(html.includes('href="'+catalogue+'#'+item.id+'"'),'Canonical category fragment');
+  if(item.detailLink)assert.ok(html.includes('href="'+item.detailLink+'"'),'Specialized category page '+item.id);
+  else assert.ok(html.includes('href="'+catalogue+'#'+item.id+'"'),'Canonical category fragment');
   for(const image of [item.image.small,item.image.large])assert.ok(existsSync(resolve(dist,image.slice(1))),'Missing image '+image);
  }
  for(const route of [lang==='en'?'/en/':'/',catalogue]){

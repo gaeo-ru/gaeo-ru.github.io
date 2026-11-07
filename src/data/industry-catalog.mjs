@@ -4,6 +4,8 @@
  * Source Drive references are recorded in docs/industry-catalog-source-manifest.json.
  * Prices are intentionally absent here: consume PRICES from pricing.mjs.
  */
+import {industrySpecializations} from './industry-specializations.mjs';
+
 export const groups = [
   {
     "id": "real-estate",
@@ -4328,6 +4330,7 @@ export function getIndustryCatalog(lang = 'ru') {
     description: en ? industry.introEn : industry.intro,
     groupName: en ? industry.groupEn : industry.group,
     examples: en ? industry.specialtiesEn : industry.specialties,
+    detailLink: industrySpecializations.find(page=>page.id===industry.number)?.routes[lang] || null,
     hubLink: industry.hub ? {
       href: en ? industry.hub.hrefEn : industry.hub.href,
       label: en ? industry.hub.labelEn : industry.hub.label,

@@ -1,7 +1,7 @@
 import {readdirSync,readFileSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 const ROOT=process.cwd(),PAGES=resolve(ROOT,'src/legacy/pages'),PARTIALS=resolve(ROOT,'templates/partials');
-const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->|<!-- GAEO_DESIGN:(?:FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES) -->|<!-- GAEO_TARIFF:(?:OVERVIEW|CALCULATOR|COMPARISON|CATALOG|DETAIL|SCHEMA|INDUSTRY|DEVELOPMENT) -->/g;
+const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->|<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->|<!-- GAEO_DESIGN:(?:FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES) -->|<!-- GAEO_TARIFF:(?:OVERVIEW|CALCULATOR|COMPARISON|CATALOG|DETAIL|SCHEMA|INDUSTRY|DEVELOPMENT) -->/g;
 function walk(dir){
  const out=[];
  for(const entry of readdirSync(dir,{withFileTypes:true})){
@@ -43,7 +43,7 @@ export function tokenizeLegacyPage(rel){
  const file=resolve(PAGES,rel);
  if(!file.startsWith(PAGES+sep))throw Error('Invalid legacy path '+rel);
  const src=readFileSync(file,'utf8'),lang=rel.startsWith('en/')?'en':'ru';
- const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->');
+ const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')||src.includes('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->');
  const hasApprovedContact=src.includes('<!-- GAEO_DESIGN:CONTACT -->');
  // A managed Astro contact component is the sole lead block on new pages.
  // Existing hybrid pages still use the shared legacy CTA partial.
@@ -54,6 +54,7 @@ export function tokenizeLegacyPage(rel){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
   const part=m[0];
   if(part.startsWith('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT'))out.push({kind:'industry-commercial'});
+  else if(part.startsWith('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT'))out.push({kind:'industry-specialization'});
   else if(part.startsWith('<!-- GAEO_TARIFF:'))out.push({kind:'tariff',block:part.match(/GAEO_TARIFF:([A-Z]+)/)[1]});
   else if(part.startsWith('<!-- SITE_HEADER_START'))out.push({kind:'header',content:chrome(src,'header',lang)});
   else if(part.startsWith('<!-- SITE_FOOTER_START'))out.push({kind:'footer',content:chrome(src,'footer',lang)});
@@ -72,5 +73,6 @@ export function tokenizeLegacyPage(rel){
  if(new Set(designBlocks.map(x=>x.block)).size!==designBlocks.length)throw Error('Duplicate approved design blocks in '+rel);
  if(sharedCta&&out.filter(x=>x.kind==='cta').length!==1)throw Error('Expected one CTA in '+rel);
  if(src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')&&out.filter(x=>x.kind==='industry-commercial').length!==1)throw Error('Expected exactly one commercial slot in '+rel);
+ if(src.includes('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->')&&out.filter(x=>x.kind==='industry-specialization').length!==1)throw Error('Expected exactly one specialization slot in '+rel);
  return out;
 }

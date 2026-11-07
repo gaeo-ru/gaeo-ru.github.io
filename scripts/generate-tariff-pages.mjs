@@ -1,13 +1,14 @@
 import {readFileSync,writeFileSync,mkdirSync,readdirSync} from 'node:fs';
 import {dirname,resolve} from 'node:path';
 import {serviceDetails} from '../src/data/service-detail-content.mjs';
+import {industrySpecializations} from '../src/data/industry-specializations.mjs';
 import {getPlan,priceLabel,pricingHref,serviceNodes,UPDATED} from '../src/data/pricing.mjs';
 const root=resolve('src/legacy/pages');
 const nojsFallback=readFileSync(resolve('templates/partials/nojs-fallback.html'),'utf8').trim();
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const json=d=>JSON.stringify(d).replace(/</g,'\\u003c');
 function save(path,body){mkdirSync(dirname(path),{recursive:true});let prior;try{prior=readFileSync(path,'utf8')}catch{}if(prior!==body)writeFileSync(path,body);}
-function shell({lang,route,equivalent,title,description,h1,body,collection=false}){
+function shell({lang,route,equivalent,title,description,h1,body,collection=false,schemaMarker=true}){
  const en=lang==='en',ru=en?equivalent:route,english=en?route:equivalent,url='https://gaeo.ru'+route;
  const crumbs=[{name:en?'Home':'Главная',item:'https://gaeo.ru'+(en?'/en/':'/')}];
  if(route!==pricingHref(lang))crumbs.push({name:en?'Pricing':'Тарифы',item:'https://gaeo.ru'+pricingHref(lang)});
@@ -39,7 +40,7 @@ function shell({lang,route,equivalent,title,description,h1,body,collection=false
 <link rel="stylesheet" href="/assets/style.css?v=0"><link rel="stylesheet" href="/assets/internal.css?v=0"><link rel="stylesheet" href="/assets/site-development.css?v=0"><link rel="stylesheet" href="/assets/tariffs.css?v=0">
 <script src="/assets/analytics.js?v=0" defer></script>
 <script type="application/ld+json">${json(ld)}</script>
-<!-- GAEO_TARIFF:SCHEMA -->
+${schemaMarker?'<!-- GAEO_TARIFF:SCHEMA -->':''}
 <!-- NOJS_FALLBACK_START -->
 ${nojsFallback}
 <!-- NOJS_FALLBACK_END -->
@@ -70,6 +71,14 @@ for(const lang of ['ru','en']){
 <!-- GAEO_TARIFF:CATALOG -->
 <section class="section-sm"><div class="container"><!-- GAEO_DESIGN:CONTACT --></div></section></main>`;
  save(resolve(root,route.slice(1),'index.html'),shell({lang,route,equivalent,title,description,h1,body,collection:true}));
+}
+// Industry specializations are generated from a single bilingual source, not hand-maintained HTML.
+for(const specialization of industrySpecializations){
+ for(const lang of ['ru','en']){
+  const route=specialization.routes[lang],equivalent=specialization.routes[lang==='ru'?'en':'ru'];
+  const content=specialization.content[lang];
+  save(resolve(root,route.slice(1),'index.html'),shell({lang,route,equivalent,title:content.title,description:content.description,h1:content.h1,body:'<main><!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT --></main>',schemaMarker:false}));
+ }
 }
 // Managed existing pages retain their URL, expert content and original schema graph.
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(resolve(dir,e.name)):e.name.endsWith('.html')?[resolve(dir,e.name)]:[]);
