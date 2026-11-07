@@ -107,7 +107,7 @@ const browser=await chromium.launch({headless:true,
 mkdirSync('visual-tariffs',{recursive:true});
 try{
  const page=await browser.newPage();const errors=[];page.on('pageerror',error=>errors.push(error.message));
- for(const width of [1440,900,390,320]){
+ for(const width of [1440,1100,390,320]){
   await page.setViewportSize({width,height:900});
   for(const route of ['/','/en/','/tarify/','/en/pricing/','/services/geo-guarantee/','/en/services/geo-guarantee/','/services/additional-platforms/','/services/website-development/','/industries/legal/']){
    await page.goto(origin+route,{waitUntil:'domcontentloaded'});
