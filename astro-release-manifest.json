@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "95010642d3f017303985ef9259ed8a4e4fc1f283",
-  "releasedAt": "2026-11-07T21:01:54.772Z",
+  "sourceCommit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+  "releasedAt": "2026-11-07T21:08:06.421Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2866,6 +2866,11 @@
       "sha256": "672cd95661f4a2b78ffea18d4791f5d3288a68321fd4d9f21bfd57ee1b9298d3"
     },
     {
+      "path": "en/industries/childrens-products-toys-online-stores/index.html",
+      "kind": "html",
+      "sha256": "4a9f4b576a0cb60d629a0a870ea4688dec1b063e66022ca632562cc4a01b8bab"
+    },
+    {
       "path": "en/industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "344aedeb0ac30882eae793d2d09d5a54d4d5c3d9ef3f17ad666c375b94e64de8"
@@ -2874,6 +2879,11 @@
       "path": "en/industries/corporate-travel-mice/index.html",
       "kind": "html",
       "sha256": "28d54238bd00bb7218f7519c231f25f1bf0d98fb00e7899ab8a84f94453e350d"
+    },
+    {
+      "path": "en/industries/cosmetics-perfume-online-stores/index.html",
+      "kind": "html",
+      "sha256": "89a3f67743ce13943e97603113f54020db60fe97dc7cedeef2bbc4f28bd861ae"
     },
     {
       "path": "en/industries/cottage-communities/index.html",
@@ -2893,12 +2903,17 @@
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "dcfa0872dd7737d475b5d0c95cba6e8784209b4fcfda107c7ba63a785db1f85f"
+      "sha256": "263e1b2529a541c3413191fb8f8db616d90b92a29ccb6f1b732cc62d58471107"
     },
     {
       "path": "en/industries/electronic-document-flow/index.html",
       "kind": "html",
       "sha256": "686fe1359054c233f63debba68e18fd8811235ac4a48fdee99bd80c948a822f1"
+    },
+    {
+      "path": "en/industries/electronics-appliances-online-stores/index.html",
+      "kind": "html",
+      "sha256": "11468b6fa5f2b95c8d97de734ad049e7f85cf56a3f05bcd1a63694c6c7e4f39f"
     },
     {
       "path": "en/industries/employment-migration-lawyers/index.html",
@@ -2943,7 +2958,7 @@
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "971cd30068e20cb2a1dd4b9ee9b32d91fc34cc1120a229e26c0d1187095ab589"
+      "sha256": "73af848a17bf8213cf883492dc182d20aafb2ab5b7a444eef9b27a0e111d9635"
     },
     {
       "path": "en/industries/luxury-real-estate-agencies/index.html",
@@ -2959,6 +2974,11 @@
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
       "sha256": "89b3a98c018b8d0bb37ee90904d144d6bf0fdbf2a0282cab2aad5242353e165f"
+    },
+    {
+      "path": "en/industries/motor-insurance-lawyers/index.html",
+      "kind": "html",
+      "sha256": "2f3c95acf9a97c3a548b05975124b52a63c942ceae53d5d0b9ef0f79fd06dd63"
     },
     {
       "path": "en/industries/pharma/index.html",
@@ -3008,7 +3028,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "7bc01df6d0a3d48de9b7b8b5f6d9dc6979a502c9377be7cd7ce85da4ece8ae68"
+      "sha256": "a898f88e2340bdd53eccb947504ad7c3ac3e648b911f187b3d5b3f18c080ec68"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3161,6 +3181,11 @@
       "sha256": "0ede204c0ca62caea3220c0f40446fb9f7663d9fa68c42891d9ff7ada152f2d4"
     },
     {
+      "path": "industries/childrens-products-toys-online-stores/index.html",
+      "kind": "html",
+      "sha256": "11f012f7adc11224f90f88f0b31eaa885acc7ab03c3647d11ba6b10844a3f372"
+    },
+    {
       "path": "industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "039e7e428c465affb8c0f26dd496ade112d94bd21c132554ce33688c60c25ac3"
@@ -3169,6 +3194,11 @@
       "path": "industries/corporate-travel-mice/index.html",
       "kind": "html",
       "sha256": "a30f5204cdf7d49b229f70ee6152af7f88bd8022fcd704472e2e2853ab556616"
+    },
+    {
+      "path": "industries/cosmetics-perfume-online-stores/index.html",
+      "kind": "html",
+      "sha256": "d5b1d5a7b94b0a390a372de83c8dac3649afd1aa9016bd419cb233a360caab1e"
     },
     {
       "path": "industries/cottage-communities/index.html",
@@ -3188,12 +3218,17 @@
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "879ea7f42bcfed35714c874cf91140c6930fa584f1e8ee9a9345a22ea33400ec"
+      "sha256": "377d71d11eff2a62d7f121d637941ba6e12c0e810b4d14be0e1844d4dfed82db"
     },
     {
       "path": "industries/electronic-document-flow/index.html",
       "kind": "html",
       "sha256": "3419700641763efe68d1fd0055281d853c7036c926cd23d827793d79bdcc702a"
+    },
+    {
+      "path": "industries/electronics-appliances-online-stores/index.html",
+      "kind": "html",
+      "sha256": "1a9337099043b140e96c12ee0c668a3adcf1bb7d15c66ddaf448fd82602ce740"
     },
     {
       "path": "industries/employment-migration-lawyers/index.html",
@@ -3238,7 +3273,7 @@
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "2ee62b235e02b341196e29849fe4ffbc5779ef8f43425ef3242159057567e9c4"
+      "sha256": "fe607fc3db7e1e21f7c2bbb552159bb80beb6ab2bf163662d318cc9a2c0ff075"
     },
     {
       "path": "industries/luxury-real-estate-agencies/index.html",
@@ -3254,6 +3289,11 @@
       "path": "industries/metal-structures/index.html",
       "kind": "html",
       "sha256": "3d4a60d052e29efe1f79b13828cf6bb1702e4536e095d1cc0342c2c47541fbaf"
+    },
+    {
+      "path": "industries/motor-insurance-lawyers/index.html",
+      "kind": "html",
+      "sha256": "71b7de8fac7ce7ab5b61fc83c19f9c456ce861e305309a8158f0bf260d7640d8"
     },
     {
       "path": "industries/pharma/index.html",
@@ -3378,7 +3418,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "854a4ccc180983ae494adcc632c0d6d061b79814e59816c2b54eb96cdd0b87bd"
+      "sha256": "469b8362046654efb9bfd758a5490e8d89d6aa045d8c01e5c17c7fc707e177c3"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3433,7 +3473,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "99dcdf80e5426d61ed4d1fbbac1dee413ec0f04abf60c8cf2d5fb2a8c6baefbe"
+      "sha256": "67c405aa6ec73544400709487f4e946bb5cb35949b18c515653d75f6735a6d69"
     }
   ]
 }
