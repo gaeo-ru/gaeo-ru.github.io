@@ -107,6 +107,7 @@ assert.ok(industryPricingPaths.length>=24,'All industry hub and specialization t
 for(const path of pricingPaths){
  const html=readFileSync(path,'utf8');
  assert.ok(html.includes('/assets/tariffs.css'),'Every PlanCards instance loads shared desktop alignment rules: '+path);
+ if(path.includes('/industries/'))assert.ok(html.includes('/assets/tariffs.js'),'Every industry pricing grid loads CTA alignment script: '+path);
  assert.ok(html.includes('class="tariff-actions"'),'Tariff CTAs exist on '+path);
  const details=(html.match(/<details class="price tariff-plan"/g)||[]).length;
  assert.ok(details===3||details===6,'Expected 3 industry or 6 pricing plan cards on '+path);
