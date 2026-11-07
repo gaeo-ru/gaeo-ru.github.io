@@ -557,6 +557,65 @@
       "main_html_pages_verified": 6,
       "main_sitemap_urls_verified": 6,
       "blocker": "Direct external HTTPS/browser access to gaeo.ru is unavailable from the checking environment; do not assert mobile live review or search indexing."
+    },
+    "phase_2o": {
+      "phase": 2,
+      "batch": "2O",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        55,
+        56,
+        57
+      ],
+      "work_branch": "feat/industry-specializations-batch-2o-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "hub_routes": {
+        "ru": "/industries/international-logistics/",
+        "en": "/en/industries/international-logistics/"
+      },
+      "new_industry_landing_pairs": 3,
+      "new_specialization_html_pages": 6,
+      "new_hub_html_pages": 2,
+      "total_new_html_pages": 8,
+      "source_status": "content_and_qa_committed_on_work_branch",
+      "pr_ci_status": "full_pass_on_2n_base_followup_after_2p_and_concurrent_docs_pending",
+      "source_merged": false,
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "preserving_other_batches": [
+        "2K: 92,93,94 PR89",
+        "2L: 7,9,11 PR91",
+        "2N: independent concurrent branch"
+      ],
+      "last_completed_step": "source_content_ru_en_hubs_backlinks_qa_prepared",
+      "next_required_step": "PR95: reconcile latest astro-source documentation, check combined PR CI after all parallel merges, merge only with full PASS; then production main Pages 8 URL HTTPS",
+      "sources_by_id": {
+        "55": [
+          "https://mintrans.gov.ru/activities/297/436",
+          "https://www.nalog.gov.ru/rn77/related_activities/el_doc/el_bus_entities/edotransp/"
+        ],
+        "56": [
+          "https://www.consultant.ru/document/cons_doc_LAW_215315/aa98ab898e1930b5be07f66a09b34a690d51d519/",
+          "https://www.consultant.ru/document/cons_doc_LAW_543965/541d53cd1861c1b4608b2b7d257b559bba792980/"
+        ],
+        "57": [
+          "https://www.nalog.gov.ru/rn77/related_activities/spot/",
+          "https://www.nalog.gov.ru/rn50/news/tax_doc_news/16641276/"
+        ]
+      },
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/95",
+      "pr_ci_runs": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421876449",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422065694",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422844620"
+      ],
+      "initial_pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421876449",
+      "integrated_base_sha": "90b10d6babf3b24a4d453ce8a6fa7f512275fe88",
+      "integrated_content_commit": "3c4f9ce9dd9fef6c38da4cbd1a6a1826c6b62fd3",
+      "last_pr_ci_success": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422065694",
+      "last_pr_ci_success_sha": "f43433c6394c0fce0cd59a6c9143bd9b8f68296c",
+      "latest_source_sha_at_checkpoint": "13ed1c5bdd25d437d874f8de93a0272a57c33242"
     }
   },
   "status_definitions": {
@@ -593,7 +652,7 @@
     "main_manifest_file_count": 732,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
-    "phase_2_counts_note": "Latest confirmed main 65a5fff46b9b (source merge 7115377e) includes 45 unique specialization pairs/90 RU/EN URLs, 193 HTML, 188 sitemap URLs and 732 manifest files. 2P #42-44 PR/CI/production/Pages PASS, main 6 HTML and sitemap URL verified. Direct public HTTPS/browser still unverified. 2K, 2L, 2O are parallel pending PRs; their pages are not included. Older prepared counts describe previous checkpoints, not current unmerged PR totals.",
+    "phase_2_counts_note": "Latest confirmed main 65a5fff46b9b (source merge 7115377e) includes 45 unique specialization pairs/90 RU/EN URLs, 193 HTML, 188 sitemap URLs and 732 manifest files. 2P #42-44 PR/CI/production/Pages PASS, main 6 HTML and sitemap URL verified. Direct public HTTPS/browser still unverified. 2K, 2L, 2O are parallel pending PRs; their pages are not included. Older prepared counts describe previous checkpoints, not current unmerged PR totals. 2O prepared: 3 RU/EN specializations and 2 bilingual hub pages in PR95; still not deployed or live verified.",
     "total_specialization_pairs_prepared_including_2m": 39,
     "total_specialization_urls_prepared_including_2m": 78,
     "phase_2n_prepared_pairs": 3,
@@ -602,7 +661,11 @@
     "total_specialization_pairs_prepared_including_2p": 45,
     "total_specialization_urls_prepared_including_2p": 90,
     "phase_2p_deployed_pairs": 3,
-    "phase_2p_deployed_ru_en_urls": 6
+    "phase_2p_deployed_ru_en_urls": 6,
+    "total_specialization_pairs_prepared_including_2o_without_parallel_bases": 42,
+    "total_specialization_urls_prepared_including_2o_without_parallel_bases": 84,
+    "total_new_logistics_hub_urls_prepared_in_2o": 2,
+    "batch_2o_standalone_urls_prepared_not_published": 8
   },
   "candidate_batches": [
     {
@@ -695,11 +758,10 @@
       "ids": [
         42,
         48,
-        55,
         59
       ],
       "label": "Промышленность, логистика и медицина",
-      "condition": "Следующая очередь исследования по приоритету 1. Проверять данные и ограничения конкретного сегмента; не переносить кейсы металлоконструкций, фулфилмента или фармы как доказанный результат этой категории."
+      "condition": "Следующая очередь исследования по приоритету 1. Проверять данные и ограничения конкретного сегмента; не переносить кейсы металлоконструкций, фулфилмента или фармы как доказанный результат этой категории. №55 перенесен в 2O."
     },
     {
       "batch": "2F",
@@ -831,6 +893,25 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422852356",
       "published_commit": "65a5fff46b9b58b29af8c87f98781b9e9981a916",
       "public_https_browser_verified": false
+    },
+    {
+      "phase": 2,
+      "batch": "2O",
+      "kind": "content_candidates",
+      "ids": [
+        55,
+        56,
+        57
+      ],
+      "label": "Международная логистика, таможенные представители и сопровождение импорта",
+      "condition": "3 самостоятельные RU/EN специализации плюс 2 языковые страницы хаба международной логистики; официальный статус и договорные роли разграничивать, не переносить кейсы фулфилмента, цены и BMR не изменять.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2o-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "hub_ru": "/industries/international-logistics/",
+      "hub_en": "/en/industries/international-logistics/",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/95",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421876449"
     }
   ],
   "records": [
@@ -2764,13 +2845,17 @@
       "industry_group": "Логистика и ВЭД",
       "business_category": "Международные транспортно-логистические компании",
       "service_name": "Продвижение в ответах нейросетей для международных логистических компаний",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "international-logistics",
+      "existing_cluster_url": "/industries/international-logistics/",
+      "mapping_type": "specialization_under_new_cluster_pending",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "new_bilingual_industry_hub_pending_release",
+      "existing_cluster_url_en": "/en/industries/international-logistics/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-055",
       "sheet_row": 56,
       "priority": 1,
@@ -2778,24 +2863,36 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_2o_content_prepared",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "pr_ci_then_safe_merge_astro_source_production_main_pages_direct_live_https",
+      "work_branch": "feat/industry-specializations-batch-2o-2026-11-08",
+      "batch": "2O",
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "planned_routes": {
+        "ru": "/industries/international-freight-forwarders/",
+        "en": "/en/industries/international-freight-forwarders/"
+      },
+      "last_completed_step": "bilingual_original_source_hub_linking_and_qa_added"
     },
     {
       "id": 56,
       "industry_group": "Логистика и ВЭД",
       "business_category": "Таможенные представители",
       "service_name": "Продвижение в ответах нейросетей для таможенных представителей",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "international-logistics",
+      "existing_cluster_url": "/industries/international-logistics/",
+      "mapping_type": "specialization_under_new_cluster_pending",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "new_bilingual_industry_hub_pending_release",
+      "existing_cluster_url_en": "/en/industries/international-logistics/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-056",
       "sheet_row": 57,
       "priority": 1,
@@ -2803,24 +2900,36 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_2o_content_prepared",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "pr_ci_then_safe_merge_astro_source_production_main_pages_direct_live_https",
+      "work_branch": "feat/industry-specializations-batch-2o-2026-11-08",
+      "batch": "2O",
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "planned_routes": {
+        "ru": "/industries/customs-representatives/",
+        "en": "/en/industries/customs-representatives/"
+      },
+      "last_completed_step": "bilingual_original_source_hub_linking_and_qa_added"
     },
     {
       "id": 57,
       "industry_group": "Логистика и ВЭД",
       "business_category": "Компании по импорту и сопровождению ВЭД",
       "service_name": "Продвижение в ответах нейросетей для импортеров и компаний по ВЭД",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "international-logistics",
+      "existing_cluster_url": "/industries/international-logistics/",
+      "mapping_type": "specialization_under_new_cluster_pending",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "new_bilingual_industry_hub_pending_release",
+      "existing_cluster_url_en": "/en/industries/international-logistics/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-057",
       "sheet_row": 58,
       "priority": 1,
@@ -2828,11 +2937,19 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_2o_content_prepared",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "pr_ci_then_safe_merge_astro_source_production_main_pages_direct_live_https",
+      "work_branch": "feat/industry-specializations-batch-2o-2026-11-08",
+      "batch": "2O",
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "planned_routes": {
+        "ru": "/industries/import-trade-support/",
+        "en": "/en/industries/import-trade-support/"
+      },
+      "last_completed_step": "bilingual_original_source_hub_linking_and_qa_added"
     },
     {
       "id": 58,
