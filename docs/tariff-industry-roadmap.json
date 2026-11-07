@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2D_after_2C_release_and_live_check",
+    "next_batch": "2D_after_2A_2B_2C_live_check",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -123,15 +123,15 @@
     "phase_2c": {
       "phase": 2,
       "batch": "2C",
-      "status": "source_merged_production_in_progress",
+      "status": "deployed_ci_and_pages_pass_live_https_unverified",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
       "ci_status": "pass",
-      "production_status": "in_progress",
-      "pages_status": "not_checked",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
       "records": [
         4,
@@ -140,7 +140,16 @@
         58
       ],
       "new_industry_landing_pairs": 4,
-      "new_html_pages": 8
+      "new_html_pages": 8,
+      "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554",
+      "released_at": "2026-11-07T19:53:06.572Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961",
+      "main_html_pages_verified": 8,
+      "main_sitemap_urls": 122,
+      "main_sitemap_new_urls_present": 8,
+      "main_total_html_pages": 127,
+      "main_total_files": 666,
+      "public_https_limitation": "Direct gaeo.ru web access unavailable from this chat; 24 specialization URLs need fresh public desktop/mobile browser verification before live_verified."
     }
   },
   "status_definitions": {
@@ -160,11 +169,11 @@
     "catalog_published": 107,
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
-    "new_industry_landings_in_phase_2_deployed": 8,
+    "new_industry_landings_in_phase_2_deployed": 12,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 119,
-    "total_new_specialization_pairs_in_phase_2": 8,
-    "total_new_specialization_urls_in_phase_2": 16
+    "total_generated_html_pages_current_release": 127,
+    "total_new_specialization_pairs_in_phase_2": 12,
+    "total_new_specialization_urls_in_phase_2": 24
   },
   "candidate_batches": [
     {
@@ -207,7 +216,7 @@
       ],
       "label": "Элитная недвижимость, интеллектуальная собственность, облака и складское хранение",
       "condition": "После контроля публичного результата 2A/2B собрать самостоятельные покупательские интенты, первичные источники и доказательства. Выпустить только готовые RU/EN страницы без переносов чужих кейсов.",
-      "work_status": "source_merged_production_in_progress"
+      "work_status": "deployed_live_https_check_pending"
     },
     {
       "batch": "2D",
@@ -393,13 +402,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "source_merged_production_pending",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_production_pending",
-      "next_required_step": "verify_production_release",
+      "work_status": "deployed_pages_pass_live_unverified",
+      "next_required_step": "verify_live_deployment",
       "planned_landing_url_ru": "/industries/luxury-real-estate-agencies/",
       "planned_landing_url_en": "/en/industries/luxury-real-estate-agencies/",
-      "last_completed_step": "phase_2c_pr_ci_pass_source_merged",
+      "last_completed_step": "phase_2c_build_ci_and_pages_pass",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
@@ -408,8 +417,10 @@
       ],
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961"
+      ],
+      "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554"
     },
     {
       "id": 5,
@@ -906,13 +917,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "source_merged_production_pending",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_production_pending",
-      "next_required_step": "verify_production_release",
+      "work_status": "deployed_pages_pass_live_unverified",
+      "next_required_step": "verify_live_deployment",
       "planned_landing_url_ru": "/industries/intellectual-property-lawyers/",
       "planned_landing_url_en": "/en/industries/intellectual-property-lawyers/",
-      "last_completed_step": "phase_2c_pr_ci_pass_source_merged",
+      "last_completed_step": "phase_2c_build_ci_and_pages_pass",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
@@ -922,8 +933,10 @@
       ],
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961"
+      ],
+      "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554"
     },
     {
       "id": 23,
@@ -1448,13 +1461,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "source_merged_production_pending",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_production_pending",
-      "next_required_step": "verify_production_release",
+      "work_status": "deployed_pages_pass_live_unverified",
+      "next_required_step": "verify_live_deployment",
       "planned_landing_url_ru": "/industries/cloud-providers-data-centres/",
       "planned_landing_url_en": "/en/industries/cloud-providers-data-centres/",
-      "last_completed_step": "phase_2c_pr_ci_pass_source_merged",
+      "last_completed_step": "phase_2c_build_ci_and_pages_pass",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
@@ -1464,8 +1477,10 @@
       ],
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961"
+      ],
+      "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554"
     },
     {
       "id": 39,
@@ -2011,13 +2026,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "source_merged_production_pending",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_production_pending",
-      "next_required_step": "verify_production_release",
+      "work_status": "deployed_pages_pass_live_unverified",
+      "next_required_step": "verify_live_deployment",
       "planned_landing_url_ru": "/industries/warehouse-storage-3pl/",
       "planned_landing_url_en": "/en/industries/warehouse-storage-3pl/",
-      "last_completed_step": "phase_2c_pr_ci_pass_source_merged",
+      "last_completed_step": "phase_2c_build_ci_and_pages_pass",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
@@ -2027,8 +2042,10 @@
       ],
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961"
+      ],
+      "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554"
     },
     {
       "id": 59,
