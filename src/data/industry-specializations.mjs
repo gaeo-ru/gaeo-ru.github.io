@@ -10,6 +10,7 @@ import {industrySpecializationsBatch2J} from './industry-specializations-batch-2
 import {industrySpecializationsBatch2I} from './industry-specializations-batch-2i.mjs';
 import {industrySpecializationsBatch2M} from './industry-specializations-batch-2m.mjs';
 import {industrySpecializationsBatch2N} from './industry-specializations-batch-2n.mjs';
+import {industrySpecializationsBatch2P} from './industry-specializations-batch-2p.mjs';
 
 export const industrySpecializations = [
   {
@@ -5032,7 +5033,8 @@ export const industrySpecializations = [
   ...industrySpecializationsBatch2J,
   ...industrySpecializationsBatch2I,
   ...industrySpecializationsBatch2M,
-  ...industrySpecializationsBatch2N
+  ...industrySpecializationsBatch2N,
+  ...industrySpecializationsBatch2P
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
