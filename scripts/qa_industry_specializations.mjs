@@ -10,7 +10,7 @@ const read=path=>readFileSync(resolve('dist',path.slice(1),'index.html'),'utf8')
 const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const urls=[];
 for(const item of industrySpecializations){
- assert.ok([2,35,81,84].includes(item.id),'Only batch 2A categories');
+ assert.ok([2,3,21,34,35,36,81,84].includes(item.id),'Only approved phase 2 industry categories');
  for(const lang of ['ru','en']){
   const path=item.routes[lang],html=read(path),url='https://gaeo.ru'+path,c=item.content[lang];
   const equivalent='https://gaeo.ru'+item.routes[lang==='en'?'ru':'en'];
@@ -35,8 +35,9 @@ for(const item of industrySpecializations){
   urls.push({path,lang});
  }
 }
-assert.equal(urls.length,8,'Batch 2A must have eight RU/EN pages');
-if(process.argv.includes('--static')){console.log('Batch 2A static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
+assert.deepEqual(industrySpecializations.map(x=>x.id).sort((a,b)=>a-b),[2,3,21,34,35,36,81,84],'Expected distinct industry records for batches 2A/2B');
+assert.equal(urls.length,16,'Both batches must have sixteen RU/EN specialization pages');
+if(process.argv.includes('--static')){console.log('Phase 2A+2B static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
 const base='http://127.0.0.1:4378';const server=spawn('./node_modules/.bin/astro',['preview','--host','127.0.0.1','--port','4378'],{stdio:'ignore'});
 const pause=ms=>new Promise(res=>setTimeout(res,ms));let browser;
 try{
@@ -59,8 +60,8 @@ try{
   assert.ok(overflow<=2,'Horizontal overflow '+row.path+' at '+width+': '+overflow);
   assert.equal(errors.length,0,'JS errors '+row.path+' '+errors.join('; '));
   if(width===390){await page.locator('.industry-specialization__hero .button[data-gaeo-intent="service"]').click();await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});await page.locator('.gaeo-modal-close').click();}
-  await page.screenshot({path:'visual-industry/industry-2a-'+row.path.split('/').filter(Boolean).join('-')+'-'+width+'.png',fullPage:true,animations:'disabled'});
+  await page.screenshot({path:'visual-industry/industry-specialization-'+row.path.split('/').filter(Boolean).join('-')+'-'+width+'.png',fullPage:true,animations:'disabled'});
   await page.close();
  }
- console.log('Batch 2A browser QA PASS: '+urls.length+' pages at 1440/390/320, hero images, FAQ, pricing, form and overflow');
+ console.log('Phase 2A+2B browser QA PASS: '+urls.length+' pages at 1440/390/320, hero images, FAQ, pricing, form and overflow');
 }finally{await browser?.close();server.kill('SIGTERM')}
