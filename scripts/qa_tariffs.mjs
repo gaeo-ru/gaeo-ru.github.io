@@ -152,7 +152,7 @@ try{
    if(route==='/tarify/'||route==='/en/pricing/'){
     const visual=await page.evaluate(()=>{
       const terms=document.querySelector('.industry-catalog__terms')?.getBoundingClientRect();
-      const lead=document.querySelector('.tariff-page > .industry-catalog + .section-sm #contact h2')?.getBoundingClientRect();
+      const lead=document.querySelector('.tariff-page > .tariff-page__contact #contact h2')?.getBoundingClientRect();
       const cards=[...document.querySelectorAll('#pricing .tariff-plans > details.tariff-plan[open]')];
       const groups=[];
       for(const card of cards){
