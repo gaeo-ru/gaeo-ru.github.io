@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234",
-  "releasedAt": "2026-11-07T22:29:16.706Z",
+  "sourceCommit": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
+  "releasedAt": "2026-11-07T22:45:41.502Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2843,7 +2843,7 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "e3ef9a0794d697b966ba13b749bfebb9bfa983091a316ccbd7e722f6668c6157"
+      "sha256": "ad6112d53167ac3f92e906663bb26c6a236bc5bc6e3500ebe872322e0c436b32"
     },
     {
       "path": "en/index.html",
@@ -2879,6 +2879,11 @@
       "path": "en/industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "ae66d8facee28e6f93535c71fbf0b54b6e38e71c50e8c8517660d59406f23f85"
+    },
+    {
+      "path": "en/industries/commercial-industrial-general-contractors/index.html",
+      "kind": "html",
+      "sha256": "944689327061751469b0903353443a69fcc04dbd1cfb7460d5e24cc961b6512d"
     },
     {
       "path": "en/industries/commercial-property-agencies/index.html",
@@ -2996,6 +3001,11 @@
       "sha256": "007043b092f1f6913c559d86b7e385b47131891fda74d7bb6802872db00c8b1a"
     },
     {
+      "path": "en/industries/interior-design-studios/index.html",
+      "kind": "html",
+      "sha256": "e350a78d409e2fc931909a40f80ceac72e32437cc251efc152dc30730c7f2953"
+    },
+    {
       "path": "en/industries/jewelry-brands-workshops/index.html",
       "kind": "html",
       "sha256": "cb4156306f17c4f26ef8bda19a0914b3c0972fba3a54d323faa6be0ad0a21f9e"
@@ -3046,6 +3056,11 @@
       "sha256": "3cbdd4f1d781a73361e323fa7efebaeed00f134dccd60c43049b87bc556cbc06"
     },
     {
+      "path": "en/industries/residential-renovation-contractors/index.html",
+      "kind": "html",
+      "sha256": "042c048ab7943b17d0349122c356d5cc813b43c05a4b9909de217c8b4c452ef6"
+    },
+    {
       "path": "en/industries/restaurants-coffee-chains/index.html",
       "kind": "html",
       "sha256": "51cea8de14f9956e9a52089d8ff963e5ef72475869576a1bd6b6266631f6b82d"
@@ -3093,7 +3108,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "c905d2994da7e4bf640df9995c443b5fb3c41e0bc0ccb469792b353c72c784cf"
+      "sha256": "486bf39dab3d6296443c12bdb41d72faf6e0567c60f7c7887be574a8d602a8d6"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3223,7 +3238,7 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "32b55a46c774a05a212ec48f3069ab38c16abd47435a9256765fe27da4c29c35"
+      "sha256": "f72a9c9bade542dc85cb3b92b68805f707d1f94913d33c47f8013d5a021c6b1d"
     },
     {
       "path": "index.html",
@@ -3259,6 +3274,11 @@
       "path": "industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "62d4d49c6fcf72d10cc76960b775079a1951c2ce8c3548e159cb9f8eb7e6c6ba"
+    },
+    {
+      "path": "industries/commercial-industrial-general-contractors/index.html",
+      "kind": "html",
+      "sha256": "825a1aa4e5d85b26cb6e0181646b11677dc343c0a827db8050165fa41a0b0969"
     },
     {
       "path": "industries/commercial-property-agencies/index.html",
@@ -3376,6 +3396,11 @@
       "sha256": "9dfecef2558242fd3385d4503aa65bcca11e18478dfd53533e6a80438f739b55"
     },
     {
+      "path": "industries/interior-design-studios/index.html",
+      "kind": "html",
+      "sha256": "95ee3600e3e5cc195251ce15de43f68646e59aab9310e7c9587e9dd8e0ff0a71"
+    },
+    {
       "path": "industries/jewelry-brands-workshops/index.html",
       "kind": "html",
       "sha256": "cc67bd1e2a385dfb8c238403d802c6e734b32a9c397d03b6c1b8a08e8485ea09"
@@ -3424,6 +3449,11 @@
       "path": "industries/residential-property-agencies/index.html",
       "kind": "html",
       "sha256": "a791a6aa2b57f0933f08ac1c71e46d4cfeb239e7bc8ce825eb449f7463a752c8"
+    },
+    {
+      "path": "industries/residential-renovation-contractors/index.html",
+      "kind": "html",
+      "sha256": "0fbba611b8c35036cde1cebe0163d8e9e9bae476d94dcf3da63caa92508deafe"
     },
     {
       "path": "industries/restaurants-coffee-chains/index.html",
@@ -3548,7 +3578,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "91ecc61261281d6a5391adb4feb2e9689ee8bd6d711bda8727234e11eb0de348"
+      "sha256": "477cb6d39dade151ec79ccdd6193a6b53e3b002867882a31114f5fe639146386"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3603,7 +3633,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "c36eaacd7f0b30c022f4a2eb404eeb7c914a927f5a423ddb67e14a3fb763c349"
+      "sha256": "412f1f47a7a8d163b6f5ca5051dab456527e58f05b0e543d0db8f85ff0c9a880"
     }
   ]
 }
