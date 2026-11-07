@@ -1359,7 +1359,14 @@ details.price:last-child{
   <div class="mobile-menu" id="mobileMenu">
    <a href="/professional-biography/">Обо мне</a>
    <a href="/#process">Как работаю</a>
-   <div class="mobile-cases"><a href="/cases/">Кейсы</a><div class="mobile-cases__submenu"><a href="/cases/#geo-promotion">GEO-продвижение</a><a href="/cases/#website-development">Разработка сайтов</a></div></div>
+   <details class="mobile-cases">
+    <summary class="mobile-cases__toggle">Кейсы<span class="mobile-cases__chevron" aria-hidden="true"></span></summary>
+    <div class="mobile-cases__submenu">
+     <a class="mobile-cases__overview" href="/cases/">Все кейсы</a>
+     <a href="/cases/#geo-promotion">GEO-продвижение</a>
+     <a href="/cases/#website-development">Разработка сайтов</a>
+    </div>
+   </details>
     <a href="/services/">Услуги</a>
     <a href="/industries/">Отрасли</a>
     <a href="/strategies/">Стратегии</a>
@@ -1773,7 +1780,7 @@ details.price:last-child{
 <!-- SITE_FOOTER_END -->
 
 <script src="/assets/form-config.js?v=f4512c0bfa3c"></script>
-<script src="/assets/site.js?v=ed4f4fea835e"></script>
+<script src="/assets/site.js?v=0943cea21f03"></script>
 <script src="/assets/tariffs.js?v=3c08efded242" defer></script>
 </body>
 </html>
