@@ -609,9 +609,10 @@
 
 /* Ecommerce GEO methodology. Kept scoped to the new strategy article. */
 .ecommerce-method .ecommerce-metric-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:28px 0 16px}
-.ecommerce-method .ecommerce-metric-step{display:flex;min-width:0;flex-direction:column;gap:12px;border:1px solid #d5e2eb;border-radius:11px;background:#edf5f8;padding:18px 14px}
+.ecommerce-method .ecommerce-metric-step{display:flex;min-width:0;flex-direction:column;gap:8px;border:1px solid #d5e2eb;border-radius:11px;background:#edf5f8;padding:18px 14px}
 .ecommerce-method .ecommerce-metric-step strong{font-size:25px;line-height:1.05;color:#046c83}
 .ecommerce-method .ecommerce-metric-step span{font-weight:600;font-size:12px;line-height:1.48;color:#163b55}
+.ecommerce-method .ecommerce-metric-step .ecommerce-metric-full{font-size:11px;line-height:1.35;font-weight:600;color:#557086;overflow-wrap:break-word}
 .ecommerce-method .ecommerce-table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;margin:23px 0 16px;border:1px solid #d4e1ea;border-radius:12px}
 .ecommerce-method .ecommerce-method-table{width:100%;min-width:750px;border-collapse:collapse;table-layout:fixed}
 .ecommerce-method .ecommerce-method-table th,.ecommerce-method .ecommerce-method-table td{padding:13px 15px;text-align:left;vertical-align:top;border-bottom:1px solid #e0e9f0;font-size:13px;line-height:1.58}
@@ -632,6 +633,11 @@
 .ecommerce-method .method-faq-item h3{font-family:Manrope,Arial,sans-serif;font-size:17px;line-height:1.4;color:#092446;margin:0 0 9px}
 .ecommerce-method .method-faq-item p{margin:0;color:#425367}
 .ecommerce-method .page-cta{margin-top:46px}
+@media(max-width:640px){
+ .ecommerce-method .ecommerce-method-table--metrics thead th:first-child,
+ .ecommerce-method .ecommerce-method-table--metrics tbody th:first-child{width:96px;padding-left:8px;padding-right:8px}
+ .ecommerce-method .ecommerce-method-table--metrics thead th:first-child{font-size:12px}
+}
 @media(max-width:860px){
  .ecommerce-method .ecommerce-metric-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
  .ecommerce-method .ecommerce-method-controls{grid-template-columns:1fr}
@@ -644,8 +650,7 @@
 }
 @media(max-width:360px){
  .ecommerce-method .ecommerce-metric-flow{grid-template-columns:1fr}
- .ecommerce-method .ecommerce-metric-step{flex-direction:row;align-items:center}
- .ecommerce-method .ecommerce-metric-step strong{min-width:55px}
+ .ecommerce-method .ecommerce-metric-step{flex-direction:column;align-items:flex-start;gap:6px}
 }
 
 .ecommerce-method .method-faq-item summary{font-family:Manrope,Arial,sans-serif;font-size:17px;font-weight:700;color:#092446;cursor:pointer;line-height:1.4}
@@ -861,4 +866,29 @@
  .geo-study-article .geo-study-table td{font-size:13px;line-height:1.55}
  .geo-study-article .geo-study-sources{padding:16px 16px 1px}
  .geo-study-article .geo-study-sources p{font-size:14px}
+}
+
+/* Narrow the leading columns in genuinely horizontally scrollable tables on mobile. */
+@media(max-width:700px){
+ /* e-commerce measurement and catalog: long explanations need the width, not the row label. */
+ .ecommerce-method .ecommerce-method-table thead th:first-child,
+ .ecommerce-method .ecommerce-method-table tbody th:first-child{width:132px;padding-left:9px;padding-right:9px}
+ .ecommerce-method .ecommerce-method-table--metrics thead th:first-child,
+ .ecommerce-method .ecommerce-method-table--metrics tbody th:first-child{width:96px;padding-left:8px;padding-right:8px}
+ /* Agentic commerce and the BMR/FRS research keep their scrollable, tabular layout. */
+ .agent-commerce-article .agent-commerce-table{table-layout:fixed}
+ .agent-commerce-article .agent-commerce-table thead th:first-child,
+ .agent-commerce-article .agent-commerce-table tbody td:first-child{width:142px;padding-left:11px;padding-right:11px;overflow-wrap:break-word}
+ .geo-study-article .geo-study-table--comparison thead th:first-child,
+ .geo-study-article .geo-study-table--comparison tbody td:first-child{width:148px}
+ .geo-study-article .geo-study-table--providers thead th:first-child,
+ .geo-study-article .geo-study-table--providers tbody td:first-child{width:128px}
+ .geo-study-article .geo-study-table--providers thead th:nth-child(2),
+ .geo-study-article .geo-study-table--providers tbody td:nth-child(2){width:140px}
+ /* Legal reference tables: free up room for source and explanation cells. */
+ .legal-proof-table{table-layout:fixed}
+ .legal-proof-table thead th:first-child,
+ .legal-proof-table tbody td:first-child{width:170px;padding-left:10px;padding-right:10px;overflow-wrap:break-word}
+ /* The legal strategy table already becomes stacked cards; remove a stale 620px minimum. */
+ .legal-guide .industry-scenario-table{min-width:0}
 }

@@ -125,3 +125,11 @@
   .tariff-page > .tariff-page__contact{padding-top:12px}
   .tariff-page > .tariff-page__contact .site-service__section#contact>h2{margin-top:18px}
 }
+
+/* Mobile-first: shorter scope column reveals more of the three plan columns. */
+@media(max-width:700px){
+ .tariff-comparison table{table-layout:fixed}
+ .tariff-comparison thead th:first-child,
+ .tariff-comparison tbody th:first-child{width:140px;padding-left:10px;padding-right:10px;overflow-wrap:break-word}
+ .tariff-comparison thead th:not(:first-child){width:auto}
+}

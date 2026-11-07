@@ -50,6 +50,8 @@ jobs:
         run: node scripts/qa_site_development_service.mjs
       - name: Verify bilingual research article responsive layout
         run: npm run check:research
+      - name: Verify narrow labels in mobile scrollable tables across site
+        run: node scripts/qa_mobile_scroll_tables.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
@@ -120,6 +122,7 @@ jobs:
             visual-parity/
             visual-industry/
             visual-research/
+            visual-mobile-tables/
             visual-tariffs/
           if-no-files-found: ignore
           retention-days: 14
