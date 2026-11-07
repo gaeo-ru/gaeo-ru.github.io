@@ -150,6 +150,32 @@
       "main_total_html_pages": 127,
       "main_total_files": 666,
       "public_https_limitation": "Direct gaeo.ru web access unavailable from this chat; 24 specialization URLs need fresh public desktop/mobile browser verification before live_verified."
+    },
+    "phase_2f": {
+      "phase": 2,
+      "batch": "2F",
+      "status": "content_prepared_in_isolated_branch_not_published",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "records": [
+        26,
+        41,
+        88
+      ],
+      "new_industry_landing_pairs_prepared": 3,
+      "new_ru_en_urls_prepared": 6,
+      "content_commits": [
+        "93f896081b462fa818c5bdb352bf83f98ae750a7",
+        "6d89b8f4e97a3bbf80e57851ee80afa3e0d1b9a8",
+        "b2ba2b577bcaf4f7ffee3f95a44a504ada7e083d"
+      ],
+      "qa_commit": "aa4eafa1ae796ce9a7537b9d55e808357a8a9769",
+      "base_source_sha": "5d0544f647b01ee788926e629ddf43764437599c",
+      "status_note": "The observed astro-source has phase 2A–2C only. Separate 2D branch exists with 4 unsmerged specialization objects, and no 2E branch or PR was present at inspection. Do not claim those releases are done.",
+      "pr_ci_status": "not_run_before_pr",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "next_required_step": "Create PR to astro-source, pass build/static/browser tests, resolve interactions with parallel 2D/2E, merge only when safe, then verify production/main/Pages and direct HTTPS."
     }
   },
   "status_definitions": {
@@ -173,7 +199,9 @@
     "new_industry_landings_in_phase_2_live_verified": 0,
     "total_generated_html_pages_current_release": 127,
     "total_new_specialization_pairs_in_phase_2": 12,
-    "total_new_specialization_urls_in_phase_2": 24
+    "total_new_specialization_urls_in_phase_2": 24,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 3,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 6
   },
   "candidate_batches": [
     {
@@ -257,6 +285,20 @@
       ],
       "label": "Промышленность, логистика и медицина",
       "condition": "Следующая очередь исследования по приоритету 1. Проверять данные и ограничения конкретного сегмента; не переносить кейсы металлоконструкций, фулфилмента или фармы как доказанный результат этой категории."
+    },
+    {
+      "batch": "2F",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        26,
+        41,
+        88
+      ],
+      "label": "Трудовые и миграционные юристы, BI-платформы и интернет-магазины автозапчастей",
+      "condition": "Изолированный пакет параллельно с незавершенной 2D; проверить качество RU/EN, CI, автоматические ссылки и итоговую публикацию. Не выдавать подготовленный исходник за live-страницу. Не переносить результаты из смежных кейсов.",
+      "work_status": "content_prepared_on_isolated_branch_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07"
     }
   ],
   "records": [
@@ -1065,10 +1107,20 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr_ci_build_browser_qa_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/employment-migration-lawyers/",
+      "planned_landing_url_en": "/en/industries/employment-migration-lawyers/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_34683/",
+        "https://www.consultant.ru/document/cons_doc_LAW_37868/"
+      ],
+      "content_commit": "93f896081b462fa818c5bdb352bf83f98ae750a7",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection."
     },
     {
       "id": 27,
@@ -1577,10 +1629,20 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr_ci_build_browser_qa_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/bi-analytics-platforms/",
+      "planned_landing_url_en": "/en/industries/bi-analytics-platforms/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+        "https://learn.microsoft.com/en-us/power-bi/desktop-rls"
+      ],
+      "content_commit": "6d89b8f4e97a3bbf80e57851ee80afa3e0d1b9a8",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection."
     },
     {
       "id": 42,
@@ -2885,10 +2947,21 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr_ci_build_browser_qa_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/auto-parts-online-stores/",
+      "planned_landing_url_en": "/en/industries/auto-parts-online-stores/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://www.autocare.org/aces",
+        "https://www.autocare.org/pies",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ],
+      "content_commit": "b2ba2b577bcaf4f7ffee3f95a44a504ada7e083d",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection."
     },
     {
       "id": 89,
