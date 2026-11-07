@@ -4207,7 +4207,817 @@ export const industrySpecializations = [
       "request": "Medical device manufacturer GEO: registration, intended purpose, models, product specifications and B2B procurement recommendations."
     }
   }
-}
+},
+  {
+    "id": 26,
+    "slug": "employment-migration-lawyers",
+    "group": "legal",
+    "routes": {
+      "ru": "/industries/employment-migration-lawyers/",
+      "en": "/en/industries/employment-migration-lawyers/"
+    },
+    "parent": {
+      "ru": "/industries/legal/",
+      "en": "/en/industries/legal/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/legal-recommendations/",
+        "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+      ],
+      "en": [
+        "/en/strategies/legal-recommendations/",
+        "/en/articles/legal-website-geo-12-checks/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Методика проверки рекомендаций юридических услуг",
+        "12 проверок юридического сайта для GEO"
+      ],
+      "en": [
+        "How legal-service recommendations are measured",
+        "Twelve GEO checks for law firm websites"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_34683/",
+        "ru": "Трудовой кодекс РФ: трудовые отношения, споры и гарантии",
+        "en": "Russian Labour Code: employment relations and disputes"
+      },
+      {
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_37868/",
+        "ru": "Федеральный закон №115-ФЗ: правовое положение иностранных граждан",
+        "en": "Federal Law 115-FZ: foreign nationals' legal status"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение юристов по трудовому и миграционному праву | GAEO.ru",
+        "h1": "Продвижение трудовых и миграционных юристов в ответах нейросетей",
+        "description": "Как юристам по трудовым спорам и миграционным вопросам попадать в обоснованные рекомендации ChatGPT и Алисы: типы дел, подтверждение практики, исходный BMR и тарифы GAEO.",
+        "eyebrow": "Юридические услуги / Трудовое и миграционное право",
+        "lead": "Работодатель с трудовым конфликтом, сотрудник после увольнения и компания, оформляющая иностранного специалиста, ищут разные юридические компетенции. Я проверяю, кого нейросети рекомендуют по каждому сценарию, какие факты подтверждают квалификацию исполнителя и где описание услуг вводит в заблуждение.",
+        "heroPoints": [
+          "Отдельные измерения по трудовым спорам и миграционному сопровождению",
+          "Проверка специализации и юридического статуса по публичным источникам",
+          "Сопоставимые повторные замеры BMR по согласованной матрице"
+        ],
+        "problemTitle": "Почему общая фраза «юридические услуги» не отвечает на вопрос клиента",
+        "problemIntro": "В этих направлениях различаются клиент, документы, применимое право и этап обращения. Нейросеть может рекомендовать юриста по гражданским делам на запрос бизнеса о найме иностранного работника, если специализация на сайте описана слишком широко.",
+        "problems": [
+          {
+            "title": "Смешаны работник и работодатель",
+            "body": "Оспаривание увольнения, разработка локальных актов и сопровождение проверок имеют разные стороны спора и набор доказательств. Нужно показывать фактические роли и виды услуг."
+          },
+          {
+            "title": "Устаревшие миграционные условия",
+            "body": "Разрешения, патенты, уведомления и основания пребывания зависят от статуса иностранного гражданина и действующей редакции правил. Публикации без даты проверки быстро создают ошибочные ожидания."
+          },
+          {
+            "title": "Неподтвержденная юридическая практика",
+            "body": "Общие обещания «решим любой спор» не раскрывают компетенцию. Публичные сведения о статусе специалиста, специализации и допустимых примерах работы полезнее непроверяемых гарантий."
+          }
+        ],
+        "scenarioTitle": "Какие запросы разделять в GEO-замере",
+        "scenarioIntro": "Формулировки ниже служат стартовыми образцами коммерческих запросов. География, роль доверителя и конкретные категории дел согласуются после диагностики; универсальных обещаний исхода дела нет.",
+        "columns": [
+          "Запрос потенциального доверителя",
+          "Что нужно подтвердить",
+          "Содержательная задача"
+        ],
+        "scenarios": [
+          [
+            "Кого выбрать для спора о незаконном увольнении в Москве?",
+            "Опыт трудовых споров, процессуальная роль, порядок консультации и документы для оценки дела",
+            "Создать отдельное описание услуг для работников и критериев обращения"
+          ],
+          [
+            "Какой юрист помогает работодателю при трудовой проверке?",
+            "Сфера кадрового сопровождения, виды проверок, актуальные нормы и границы ответственности",
+            "Отделить превентивный аудит от судебного представительства"
+          ],
+          [
+            "Кто сопровождает прием иностранных сотрудников в российскую компанию?",
+            "Статусы работников, виды разрешительных документов, уведомления и перечень действий по договору",
+            "Разложить миграционную услугу по статусам и сценариям найма"
+          ],
+          [
+            "Куда обратиться при споре о патенте или разрешении на работу?",
+            "Наличие соответствующей практики, актуальная правовая процедура, география и сроки, подтвержденные документами",
+            "Не подменять юридическую оценку автоматическим советом нейросети"
+          ]
+        ],
+        "proofTitle": "Какие сведения проверяю до публикации",
+        "proofIntro": "Трудовой кодекс РФ регулирует трудовые отношения и способы защиты прав, а 115-ФЗ устанавливает режим пребывания и работы иностранных граждан. Ссылки на эти законы подтверждают правовую основу вопроса, но сами по себе не доказывают опыт определенного юридического бюро.",
+        "checks": [
+          "Статус и полномочия исполнителей, реальная специализация, разрешенные к раскрытию кейсы и границы конфиденциальности",
+          "Точные категории трудовых споров и миграционных процедур, применимая юрисдикция и дата правовой проверки",
+          "Структура услуги: первичная оценка, документы, судебное/административное представительство, цена и условия договора"
+        ],
+        "proofNote": "Опыт GAEO по анализу юридических компаний относится к общей методике GEO. Завершенный кейс продвижения юристов именно по трудовому и миграционному праву здесь не заявлен.",
+        "workTitle": "Как выстраивается работа над нейровидимостью юридической практики",
+        "workIntro": "Начинаю с запросов реальных клиентов и разграничения направлений права; каждый следующий шаг опирается на проверенные сведения юридической команды.",
+        "steps": [
+          {
+            "title": "Разделить аудитории",
+            "body": "Выбираю отдельные группы небрендовых вопросов для работников, работодателей и иностранных специалистов. Фиксирую нейросети, регион и исходный BMR."
+          },
+          {
+            "title": "Проверить содержание",
+            "body": "Сверяю перечень услуг с документами, квалификацией и актуальной редакцией применимого права; отмечаю то, что требует проверки юристом."
+          },
+          {
+            "title": "Подготовить страницы и публикации",
+            "body": "Формирую ТЗ на отдельные страницы практик, FAQ по процедурам, профили специалистов и проверяемые экспертные объяснения."
+          },
+          {
+            "title": "Проверить изменения",
+            "body": "Повторяю согласованные запросы, сверяю рекомендации, источники и неточности. Цели роста BMR применяются только по условиям выбранного договора."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Можно ли на одной странице продвигать трудовые и миграционные услуги?",
+            "answer": "Можно обозначить оба направления, если у компании действительно есть соответствующие компетенции. Для отдельных коммерческих сценариев полезны самостоятельные страницы с подтверждаемыми процедурами и специалистами."
+          },
+          {
+            "question": "Нужно ли публиковать сведения о конкретных судебных делах?",
+            "answer": "Нет. Использовать можно только разрешенные к раскрытию и проверяемые сведения; персональные данные доверителей и закрытые документы не раскрываются ради GEO."
+          },
+          {
+            "question": "Может ли нейросеть дать окончательную миграционную консультацию?",
+            "answer": "Ответ нейросети не заменяет проверку действующего закона и ситуации квалифицированным юристом. В материалах нужно указывать условия применимости, дату и ограничения."
+          },
+          {
+            "question": "Как считается видимость юридической практики?",
+            "answer": "Отдельно фиксируются небрендовые запросы работников, работодателей и миграционных клиентов. Динамика BMR измеряется сопоставимым набором запросов и нейросетей."
+          },
+          {
+            "question": "Какие тарифы GAEO применяются к этой специализации?",
+            "answer": "Действуют опубликованные общие тарифы GAEO на аудит и ежемесячное сопровождение. Итоговый состав работ согласуется после начального замера и проверки специфики практики."
+          }
+        ],
+        "ctaTitle": "Проверить, каких юристов нейросети рекомендуют по вашим делам",
+        "ctaText": "Пришли адрес сайта, направления права, регионы работы и публичные подтверждения квалификации. Подготовлю основу стартового аудита без предположений об исходах дел.",
+        "request": "GEO для трудовых и миграционных юристов: проверка практик, небрендовых запросов, юридических источников и BMR."
+      },
+      "en": {
+        "title": "GEO for employment and immigration lawyers | GAEO.ru",
+        "h1": "GEO visibility for employment and immigration law practices",
+        "description": "GEO for employment and immigration lawyers: practice-specific buyer questions, verifiable credentials, reliable legal sources, AI recommendations and GAEO pricing.",
+        "eyebrow": "Legal services / Employment and immigration",
+        "lead": "An employee challenging dismissal, an HR team preparing for a labour inspection and an employer hiring a foreign national need different lawyers. I examine which providers AI recommends in each scenario, what evidence supports their qualifications and where service descriptions are too broad.",
+        "heroPoints": [
+          "Separate measurement for labour disputes and immigration procedures",
+          "Verification of legal specialisation and publicly supportable professional claims",
+          "Comparable non-branded prompt measurements and follow-up BMR"
+        ],
+        "problemTitle": "Why a generic legal-services page misses the buyer's intent",
+        "problemIntro": "Different parties, procedures and sources of law shape the decision. A generic recommendation can point a business hiring foreign staff to a provider whose verified practice is limited to unrelated civil litigation.",
+        "problems": [
+          {
+            "title": "Employee and employer needs are mixed",
+            "body": "Unfair dismissal, HR compliance reviews and representation during inspections involve different roles and evidence. A law firm should state its actual scope rather than imply it handles every dispute."
+          },
+          {
+            "title": "Immigration details become outdated",
+            "body": "Permits, notifications, immigration status and applicable procedures depend on current law and individual circumstances. An undated page can mislead both companies and workers."
+          },
+          {
+            "title": "Practice claims lack evidence",
+            "body": "A promise to win every case cannot establish qualifications. Accurate practitioner information, recognised specialisations and authorised examples of work make service comparisons more useful."
+          }
+        ],
+        "scenarioTitle": "Separate buyer questions for a reliable measurement",
+        "scenarioIntro": "These are candidate commercial prompts, not asserted search volumes or measured rankings. Scope, language, region and specific legal tasks are agreed at baseline.",
+        "columns": [
+          "Potential client's question",
+          "Evidence to check",
+          "GEO content action"
+        ],
+        "scenarios": [
+          [
+            "Who can help challenge an unfair dismissal in Moscow?",
+            "Employment litigation scope, relevant practitioner experience, intake steps and document requirements",
+            "Create an employee-side service page and clear intake guidance"
+          ],
+          [
+            "Which lawyer can support an employer during a labour inspection?",
+            "HR compliance experience, inspection type, service scope and currently applicable rules",
+            "Separate compliance support from courtroom representation"
+          ],
+          [
+            "Who advises a Russian business employing foreign nationals?",
+            "Work and residence statuses, notification obligations, permits and contractual responsibilities",
+            "Describe real immigration processes by worker status"
+          ],
+          [
+            "Where can I get advice on a disputed work permit?",
+            "Verified practitioner expertise, up-to-date legal process, jurisdiction and necessary evidence",
+            "Explain when individual legal advice is essential"
+          ]
+        ],
+        "proofTitle": "What must be checked before a legal claim is made",
+        "proofIntro": "The Russian Labour Code covers employment relationships and rights protection; Federal Law 115-FZ addresses foreign nationals' legal status. These are references for legal content, not evidence that any named firm has successfully handled a case.",
+        "checks": [
+          "Professional status, actual service specialisation, publication permissions and client confidentiality",
+          "Distinct employment disputes and immigration procedures, relevant jurisdiction and date of legal review",
+          "Transparent service stages, documents, representation scope, contracts and verified pricing conditions"
+        ],
+        "proofNote": "GAEO has general legal-sector methodology; no completed GEO performance result for an employment or immigration law practice is claimed on this page.",
+        "workTitle": "How I would develop this practice's GEO visibility",
+        "workIntro": "The work starts by separating the groups of clients and validating facts with the legal team, not by inventing practice outcomes.",
+        "steps": [
+          {
+            "title": "Segment requests",
+            "body": "Build distinct non-branded prompt sets for employees, employers and immigration clients; record platforms, geography and baseline BMR."
+          },
+          {
+            "title": "Verify the practice",
+            "body": "Review real services, professional evidence and current legal conditions with the lawyers responsible."
+          },
+          {
+            "title": "Specify public content",
+            "body": "Create briefs for practice pages, clearly scoped FAQs, professional profiles and legally reviewed explanatory materials."
+          },
+          {
+            "title": "Repeat the measurement",
+            "body": "Compare identical prompts, sources and recommendation accuracy. Contractual BMR targets apply only if the corresponding plan is chosen."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Can one page cover both employment and immigration services?",
+            "answer": "Yes, where both are genuine practice areas. Separate service pages may better answer different client intents, provided that their information is original and verifiable."
+          },
+          {
+            "question": "Must a law firm publish client case files?",
+            "answer": "No. Confidential files and personal information should remain private; use only verified examples authorised for publication."
+          },
+          {
+            "question": "Can an AI answer replace immigration legal advice?",
+            "answer": "No. An AI-generated answer should be checked against current legal rules and the client's circumstances by an appropriately qualified adviser."
+          },
+          {
+            "question": "How is AI visibility measured for this practice?",
+            "answer": "Non-branded employment, employer-side and immigration questions are measured separately under a fixed assistant and prompt matrix, with comparable BMR follow-ups."
+          },
+          {
+            "question": "What are GAEO's fees for this specialisation?",
+            "answer": "GAEO's existing audit and monthly GEO plans apply. The final scope follows the baseline, locations, services and available evidence."
+          }
+        ],
+        "ctaTitle": "Find out which employment and immigration lawyers AI recommends",
+        "ctaText": "Share the firm's website, real practice areas, jurisdictions and publicly verifiable credentials. I will outline the most useful initial audit.",
+        "request": "GEO for employment and immigration lawyers: practice segmentation, legal sources, non-brand prompts and BMR baseline."
+      }
+    }
+  },
+  {
+    "id": 41,
+    "slug": "bi-analytics-platforms",
+    "group": "it",
+    "routes": {
+      "ru": "/industries/bi-analytics-platforms/",
+      "en": "/en/industries/bi-analytics-platforms/"
+    },
+    "parent": {
+      "ru": "/industries/highload-it/",
+      "en": "/en/industries/highload-it/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/technical-b2b-vendor-evidence/",
+        "/strategies/measurement/"
+      ],
+      "en": [
+        "/en/strategies/technical-b2b-vendor-evidence/",
+        "/en/strategies/measurement/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Методика проверки IT-поставщиков",
+        "Методика повторных замеров видимости"
+      ],
+      "en": [
+        "Evidence-based selection of B2B IT vendors",
+        "Measuring AI recommendations consistently"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+        "ru": "Microsoft Learn: моделирование данных и схема «звезда» для BI",
+        "en": "Microsoft Learn: star-schema design for semantic models"
+      },
+      {
+        "href": "https://learn.microsoft.com/en-us/power-bi/desktop-rls",
+        "ru": "Microsoft Learn: разграничение доступа к строкам данных (RLS)",
+        "en": "Microsoft Learn: row-level security and access controls"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение BI-платформ и аналитических сервисов | GAEO.ru",
+        "h1": "Продвижение BI-платформ и аналитических сервисов в нейросетях",
+        "description": "GEO для BI-систем и аналитических платформ: запросы выбора по источникам данных, модели показателей, разграничению доступа, внедрению и обновлению данных. Тарифы GAEO.",
+        "eyebrow": "IT и корпоративное ПО / BI и аналитика",
+        "lead": "Финансовый директор выбирает аналитику по согласованности показателей, IT-директор проверяет интеграции и безопасность, руководитель продаж хочет быстро увидеть данные по воронке. Я исследую, какие BI-платформы нейросети предлагают под эти задачи и какие факты на сайтах поставщиков реально позволяют их сравнить.",
+        "heroPoints": [
+          "Отдельные интенты для BI-платформы, внедрения и готовых аналитических сервисов",
+          "Проверка архитектуры данных, свежести, прав доступа и доказательств внедрения",
+          "Сопоставимые замеры BMR и корректности рекомендаций поставщиков"
+        ],
+        "problemTitle": "Где ответы нейросетей упрощают сложный выбор BI",
+        "problemIntro": "Фраза «делаем красивые дашборды» не объясняет, откуда берется выручка, почему два отчета показывают разные цифры и как соблюдаются права доступа. Рекомендацию следует привязывать к действующим возможностям продукта и условиям внедрения.",
+        "problems": [
+          {
+            "title": "Визуализация вместо модели данных",
+            "body": "Скриншоты диаграмм не показывают источники, правила расчета метрик, преобразования и обновления. Разным компаниям нужны разные уровни подготовки данных."
+          },
+          {
+            "title": "Общие слова об интеграциях",
+            "body": "Надпись «подключаемся к 1С и CRM» не раскрывает поддерживаемые версии, режим обновления, двусторонний обмен, ограничения API и ответственность исполнителя."
+          },
+          {
+            "title": "Обещания безопасности без контекста",
+            "body": "Права пользователей, изоляция клиентов и аудит действий нужно описывать по фактической архитектуре. Наличие функции RLS в одном продукте не доказывает, что она настроена в каждом проекте."
+          }
+        ],
+        "scenarioTitle": "Как руководители формулируют запросы на BI",
+        "scenarioIntro": "Таблица задает четыре самостоятельных сценария проверки ответов. Реальные инструменты и объем работ должны подтверждаться документацией конкретного поставщика.",
+        "columns": [
+          "Коммерческий запрос",
+          "Что покупатель проверяет",
+          "Какой контент нужен"
+        ],
+        "scenarios": [
+          [
+            "Какую BI-платформу выбрать для отчетов из 1С и CRM?",
+            "Поддерживаемые источники, частота загрузки, ограничения коннекторов и модель владения данными",
+            "Сравнимая матрица интеграций, архитектура и пример схемы обмена"
+          ],
+          [
+            "Кто внедрит сквозную аналитику по продажам и маркетингу?",
+            "Единые определения воронки и выручки, атрибуция, качество исходных данных, процесс приемки",
+            "Описание методики проекта, контрольных показателей и ответственности сторон"
+          ],
+          [
+            "Какой аналитический сервис подойдет для филиальной сети?",
+            "Права на данные филиалов, единые KPI, фильтры, обновление, стоимость масштабирования",
+            "Подтвержденная модель доступа, роли пользователей и ограничения тарифа"
+          ],
+          [
+            "Что выбрать: готовый BI или собственные отчеты в хранилище?",
+            "Стоимость владения, компетенции команды, объем данных, эксплуатация и срок развертывания",
+            "Содержательное сравнение сценариев без обещания универсально лучшего решения"
+          ]
+        ],
+        "proofTitle": "Какие технические факты нужны для рекомендации",
+        "proofIntro": "Документация Microsoft по моделированию данных показывает роль фактов, измерений и связей в BI-модели, а руководство по RLS объясняет разграничение доступа для разных ролей. Эти материалы дают критерии проверки, но не подтверждают функциональность произвольного BI-продукта.",
+        "checks": [
+          "Источники, коннекторы, подготовка данных, семантическая модель, определения KPI, задержка обновления и наблюдаемость ошибок",
+          "Реальные возможности доступа, разделение ролей, аудит изменений, размещение данных и требования информационной безопасности",
+          "Воспроизводимые демонстрации, документы внедрения, состав работ, стоимость лицензий и интеграций, подтвержденные клиентские примеры"
+        ],
+        "proofNote": "Кейс MethodLab относится к ускорению сайтов и выбору технического подрядчика. Он не подтверждает результат GEO-продвижения BI-платформ или реализацию BI-систем силами GAEO.",
+        "workTitle": "Как строю GEO-программу для BI-поставщика",
+        "workIntro": "Сначала определяю, продает компания продукт, внедрение или аналитический сервис. Затем проверяю факты, которые нейросеть вправе использовать при сравнении поставщиков.",
+        "steps": [
+          {
+            "title": "Разложить спрос",
+            "body": "Собираю запросы по отраслям, источникам данных, ролям, метрикам и ограничениям внедрения. Фиксирую нейросети и исходный BMR."
+          },
+          {
+            "title": "Сверить возможности",
+            "body": "Совместно с продуктовой и технической командой проверяю реальные коннекторы, масштаб, безопасность и условия поставки."
+          },
+          {
+            "title": "Подготовить доказательства",
+            "body": "Формирую ТЗ на страницы интеграций, объяснение модели показателей, безопасность, методику внедрения, FAQ и разрешенные кейсы."
+          },
+          {
+            "title": "Измерить результат",
+            "body": "Повторяю ту же матрицу запросов, проверяю названных поставщиков и точность утверждений об интеграциях и лицензиях."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Нужно ли отдельное GEO для поставщика BI и интегратора?",
+            "answer": "Часто да: покупатель лицензии сравнивает продукт, а заказчик внедрения оценивает методику, ответственность, миграцию данных и сопровождение. Матрицу запросов лучше разделять."
+          },
+          {
+            "question": "Достаточно ли перечислить известные коннекторы?",
+            "answer": "Нет. Нужны актуальные версии, режим обмена, ограничения и подтверждение того, что интеграция доступна в предлагаемом продукте или услуге."
+          },
+          {
+            "question": "Можно ли публиковать внутренние аналитические отчеты заказчика?",
+            "answer": "Только при наличии прав и разрешений. Полезную методику можно объяснить на обезличенных или демонстрационных данных без раскрытия коммерческой информации."
+          },
+          {
+            "question": "Какие метрики оценивает GAEO?",
+            "answer": "BMR и корректность рекомендаций по фиксированным небрендовым запросам. Производительность BI, качество данных и внедренческие KPI нужно проверять отдельно, по собственной методике проекта."
+          },
+          {
+            "question": "Сколько стоит GEO-продвижение BI-платформы?",
+            "answer": "Используются общие тарифы GAEO на аудит, продвижение и контент. Состав технических материалов и число групп запросов определяются после анализа продукта."
+          }
+        ],
+        "ctaTitle": "Узнать, какие BI-решения нейросети рекомендуют вместо вашего",
+        "ctaText": "Пришли сайт продукта или интегратора, документацию по поддерживаемым источникам и 2–3 типичных сценария клиента. Подготовлю матрицу диагностики и план улучшений.",
+        "request": "GEO для BI-платформы: источники данных, метрики, интеграции, модель доступа, запросы выбора и BMR."
+      },
+      "en": {
+        "title": "GEO for BI and analytics platform vendors | GAEO.ru",
+        "h1": "GEO for BI platforms and analytics service providers",
+        "description": "AI recommendation visibility for BI vendors: data models, connectors, metric definitions, access control, implementation scope and comparable GEO measurements.",
+        "eyebrow": "IT and enterprise software / Business intelligence",
+        "lead": "A CFO wants trusted definitions of margin, an IT director evaluates connectors and security, and a sales leader needs usable funnel analytics. I examine which BI providers AI recommends for these distinct tasks and whether the public product evidence supports the comparison.",
+        "heroPoints": [
+          "Separate buyer intents for BI software, implementation and managed analytics",
+          "Verification of data models, refresh, permissions and delivery evidence",
+          "Repeatable BMR measurement and factual checks of recommendations"
+        ],
+        "problemTitle": "Where generic AI answers fail BI procurement",
+        "problemIntro": "A screenshot of a dashboard says little about data definitions, source systems or how errors are handled. A useful recommendation must reflect actual product capabilities and implementation constraints.",
+        "problems": [
+          {
+            "title": "Dashboards substitute for data models",
+            "body": "Charts alone cannot explain the grain of facts, dimensions, calculations, reconciliation or refresh. Buyers need evidence about the full data path."
+          },
+          {
+            "title": "Integration claims are too broad",
+            "body": "A generic statement about connecting ERP and CRM does not specify connectors, supported versions, refresh schedules, API limitations or delivery ownership."
+          },
+          {
+            "title": "Security features lack context",
+            "body": "Access restrictions, tenant separation and audit functions vary by product and deployment. The existence of RLS as a feature does not prove that every customer instance is configured securely."
+          }
+        ],
+        "scenarioTitle": "Four distinct BI purchasing questions",
+        "scenarioIntro": "These prompts define possible commercial intent, not claimed search demand or market rankings. Every capability is checked against the vendor's current documentation.",
+        "columns": [
+          "Buyer question",
+          "Evidence required",
+          "GEO content opportunity"
+        ],
+        "scenarios": [
+          [
+            "Which BI platform works with our ERP and CRM data?",
+            "Source compatibility, data refresh frequency, connectors, API constraints and ownership",
+            "Publish a verified integration matrix and technical architecture"
+          ],
+          [
+            "Who can implement sales and marketing analytics end to end?",
+            "Consistent funnel metrics, data quality, attribution definitions and acceptance criteria",
+            "Explain project method and responsibilities with permitted examples"
+          ],
+          [
+            "What analytics platform supports regional branches?",
+            "Row-level access, shared KPI definitions, filtering, refresh and licence implications",
+            "Document role-based permissions and scaling assumptions"
+          ],
+          [
+            "Should we buy BI software or build reporting on our warehouse?",
+            "Total ownership cost, in-house capabilities, data volume and operational support",
+            "Compare options by scenario without asserting one universal winner"
+          ]
+        ],
+        "proofTitle": "Technical facts behind a credible BI recommendation",
+        "proofIntro": "Microsoft's star-schema guidance explains facts, dimensions and semantic models. Its row-level security documentation describes role-based filtering. These are evaluation references, not proof of features implemented by an unrelated vendor.",
+        "checks": [
+          "Supported sources, ETL/ELT, semantic models, KPI definitions, refresh latency, monitoring and reconciliation",
+          "Actual role permissions, tenant isolation, audit trails, data residency and relevant security controls",
+          "Reproducible demos, delivery stages, licence and integration costs, authorised customer results and support conditions"
+        ],
+        "proofNote": "GAEO's MethodLab case concerns website performance and technical supplier selection; it is not a completed BI implementation or proven GEO outcome for BI software.",
+        "workTitle": "How I would improve a BI vendor's AI visibility",
+        "workIntro": "First identify whether the offer is a licensed platform, integration project or managed analytics service. Then prepare evidence matched to each decision.",
+        "steps": [
+          {
+            "title": "Map buying decisions",
+            "body": "Build non-branded prompts around roles, industries, source systems and constraints; record platforms and baseline BMR."
+          },
+          {
+            "title": "Validate product claims",
+            "body": "Review connectors, scale, data governance and procurement conditions with the product and engineering teams."
+          },
+          {
+            "title": "Specify evidence-rich content",
+            "body": "Prepare briefs for integration pages, KPI definitions, governance, implementation process, FAQs and publishable cases."
+          },
+          {
+            "title": "Repeat comparable tests",
+            "body": "Check the same AI prompts, recommended providers, source citations and accuracy of feature and licensing claims."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Should BI vendors and implementation partners have the same GEO page?",
+            "answer": "They can share an overview, but licences and delivery services answer different buyer questions. Separate useful pages generally improve clarity when the supplier genuinely offers both."
+          },
+          {
+            "question": "Is a connector logo sufficient evidence of integration?",
+            "answer": "No. Buyers also need current compatibility, exchange mode, limitations and a description of how the connector is supported."
+          },
+          {
+            "question": "Can customer dashboards be shown publicly?",
+            "answer": "Only with the right permissions. An explanation can use synthetic or anonymised information without exposing sensitive customer records."
+          },
+          {
+            "question": "Does GAEO test analytics accuracy itself?",
+            "answer": "GEO measures recommendation presence and factual claims. Data accuracy, dashboard performance and implementation acceptance need their own technical tests."
+          },
+          {
+            "question": "What is the GEO price for a BI provider?",
+            "answer": "The same published GAEO audit and monthly plans apply. Scope is determined by the product, integrations, buyer segments and starting query set."
+          }
+        ],
+        "ctaTitle": "See which BI tools AI recommends to your buyers",
+        "ctaText": "Share your platform or integration website, supported sources and representative buying scenarios. I will outline a focused baseline audit.",
+        "request": "BI platform GEO: integrations, semantic models, KPIs, data security, selection prompts and baseline BMR."
+      }
+    }
+  },
+  {
+    "id": 88,
+    "slug": "auto-parts-online-stores",
+    "group": "ecommerce",
+    "routes": {
+      "ru": "/industries/auto-parts-online-stores/",
+      "en": "/en/industries/auto-parts-online-stores/"
+    },
+    "parent": {
+      "ru": "/industries/ecommerce/",
+      "en": "/en/industries/ecommerce/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/ecommerce-catalog/",
+        "/strategies/ecommerce-measurement/",
+        "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/"
+      ],
+      "en": [
+        "/en/strategies/ecommerce-catalog/",
+        "/en/strategies/ecommerce-measurement/",
+        "/en/articles/agentic-commerce-readiness/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Каталог товаров для рекомендаций нейросетей",
+        "Как измерять видимость интернет-магазина",
+        "Готовность каталога к агентной торговле"
+      ],
+      "en": [
+        "Product catalogue readiness for AI answers",
+        "E-commerce recommendation measurement",
+        "Preparing a store for agentic commerce"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://www.autocare.org/aces",
+        "ru": "Auto Care Association: ACES, стандартизация применимости запчастей",
+        "en": "Auto Care Association: ACES vehicle fitment data"
+      },
+      {
+        "href": "https://www.autocare.org/pies",
+        "ru": "Auto Care Association: PIES, стандартизация данных о запчастях",
+        "en": "Auto Care Association: PIES parts product data"
+      },
+      {
+        "href": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+        "ru": "Google Search Central: разметка Product и Offer для интернет-магазинов",
+        "en": "Google Search Central: Product and Offer merchant data"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение интернет-магазинов автозапчастей | GAEO.ru",
+        "h1": "Продвижение интернет-магазинов автозапчастей в ответах нейросетей",
+        "description": "GEO для магазинов автозапчастей: подбор по автомобилю и артикулу, OEM-номера, совместимость, остатки, доставка и точность товарного каталога. Тарифы GAEO.",
+        "eyebrow": "Электронная коммерция / Автозапчасти",
+        "lead": "Покупатель ищет тормозные колодки для конкретной модификации автомобиля, комплект для ТО или замену детали по артикулу. Если каталог не различает совместимость, оригинал и аналог, нейросеть может предложить неподходящий товар. Я проверяю рекомендации магазинов по таким запросам и составляю план улучшения проверяемых товарных данных.",
+        "heroPoints": [
+          "Разделение запросов по VIN, артикулу, модели и назначению детали",
+          "Проверка применимости запчастей, наличия и условий покупки",
+          "Повторные замеры BMR и точности рекомендаций магазинов"
+        ],
+        "problemTitle": "Почему ассортимент сам по себе не обеспечивает рекомендацию магазина",
+        "problemIntro": "Для автозапчастей недостаточно совпадения названия товара. Выбор зависит от модификации, года выпуска, двигателя, комплектации и подтвержденной применимости. Ошибка может привести к лишней покупке и проблемам с безопасностью.",
+        "problems": [
+          {
+            "title": "Похожий номер не равен совместимости",
+            "body": "Код аналога, номер производителя, OEM-номер и номер комплекта имеют разные назначения. Одного совпадения символов недостаточно для уверенного подбора."
+          },
+          {
+            "title": "Каталог не объясняет модификацию",
+            "body": "Запрос «фильтр для модели X» часто слишком широк: различаются двигатель, год и комплектация. Нужна проверяемая матрица применимости с указанием ограничений."
+          },
+          {
+            "title": "Остатки и условия покупки расходятся",
+            "body": "Нейросеть может процитировать устаревшую цену или наличие. Важно различать складской остаток, заказ у поставщика, срок доставки и правила возврата конкретной категории товара."
+          }
+        ],
+        "scenarioTitle": "Типовые покупательские интенты интернет-магазина автозапчастей",
+        "scenarioIntro": "Примеры показывают разные траектории выбора. Приоритетные марки, регионы и ассортимент определяются по данным магазина; ни один запрос не обещает автоматическую точность подбора.",
+        "columns": [
+          "Вопрос покупателя",
+          "Какие факты нужны",
+          "Задача каталога и GEO"
+        ],
+        "scenarios": [
+          [
+            "Где купить колодки для конкретного автомобиля и двигателя?",
+            "Модификация, год, двигатель, ось, артикул и проверенная применимость",
+            "Связать фильтрацию автомобиля с товарной страницей и ограничениями"
+          ],
+          [
+            "Как найти аналог по OEM-номеру с доставкой сегодня?",
+            "Перекрестные номера, подтвержденная заменяемость, реальный остаток и регион доставки",
+            "Развести кросс-артикулы, совместимость и доступность"
+          ],
+          [
+            "Какой магазин продает набор для планового ТО моей модели?",
+            "Состав набора, требования производителя, комплектация и применимость каждой позиции",
+            "Показывать набор как составной продукт, а не набор неподтвержденных замен"
+          ],
+          [
+            "Где заказать запчасть для редкой комплектации без ошибки?",
+            "Параметры авто, возможность ручной проверки, порядок возврата и срок поставки",
+            "Объяснить ограничения автоматического подбора и способ проверки менеджером"
+          ]
+        ],
+        "proofTitle": "Что должно подтверждать рекомендацию магазина",
+        "proofIntro": "Отраслевой стандарт ACES описывает обмен данными о применимости деталей к автомобилям, а PIES относится к характеристикам товарных позиций. Google Search Central описывает свойства Product и Offer для товарных страниц. Эти стандарты помогают проверить структуру данных, но их упоминание не подтверждает, что конкретный российский магазин уже соответствует им.",
+        "checks": [
+          "Стабильные идентификаторы товара и производителя, кросс-номера, модель автомобиля, модификация, применимость и ограничения",
+          "Актуальность наличия, цены, склада, региона доставки и условий заказа; корректные данные Product/Offer на странице товара",
+          "Подтвержденные сведения о продавце, гарантиях, способах проверки совместимости, возврате и поддержке покупателя"
+        ],
+        "proofNote": "Методики GAEO для e-commerce применимы к исследованию товарного каталога. Завершенный кейс GEO-продвижения именно интернет-магазина автозапчастей здесь не заявлен. Стандарты ACES/PIES приведены как технический ориентир, а не как обязательная сертификация магазина.",
+        "workTitle": "Как выстрою продвижение магазина автозапчастей",
+        "workIntro": "Сначала определяю группы деталей и способы подбора, по которым нейросети действительно сравнивают продавцов. Затем связываю поисковые интенты с подтверждаемыми данными каталога.",
+        "steps": [
+          {
+            "title": "Составить матрицу выбора",
+            "body": "Отдельно измеряю запросы по артикулу, модели, назначению детали, оригиналам и аналогам, с учетом географии и канала покупки."
+          },
+          {
+            "title": "Проверить данные каталога",
+            "body": "Сверяю карточки товара, применимость, номера замен, остатки, цену и правила покупки с источниками магазина и поставщиков."
+          },
+          {
+            "title": "Подготовить SEO/GEO-требования",
+            "body": "Формирую ТЗ на фильтры совместимости, страницы категорий, Product/Offer, инструкции подбора и подтвержденные экспертные материалы."
+          },
+          {
+            "title": "Оценить повторные ответы",
+            "body": "Сопоставляю ответы той же выборки нейросетей, BMR, точность идентификации товара и источники рекомендаций."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Достаточно ли указать OEM-номер на товарной странице?",
+            "answer": "Нет. Для подбора важны тип детали, применимость к конкретной модификации автомобиля и проверенные кросс-номера. Совместимость следует подтверждать исходными каталогами."
+          },
+          {
+            "question": "Поможет ли разметка Product автоматически попасть в рекомендации ChatGPT?",
+            "answer": "Нет. Она делает товарные сведения структурированнее и может помогать отдельным поисковым сервисам, но не гарантирует упоминание в ответах какой-либо нейросети."
+          },
+          {
+            "question": "Что делать с деталями под заказ?",
+            "answer": "Отдельно показывать фактическое наличие и заказ с ожидаемым сроком. Нельзя выдавать доступность у поставщика за подтвержденный остаток магазина."
+          },
+          {
+            "question": "Можно ли продвигать магазин только по артикульным запросам?",
+            "answer": "Это лишь один сегмент. Отдельно стоит проверять подбор по автомобилю, категориям работ, региону, срокам доставки и вариантам замены."
+          },
+          {
+            "question": "Какие тарифы действуют для магазина автозапчастей?",
+            "answer": "Применяются опубликованные тарифы GAEO. Объем определяется размерами каталога, группами товаров, географией и количеством запросов в исходном замере."
+          }
+        ],
+        "ctaTitle": "Выяснить, каких продавцов запчастей нейросети рекомендуют покупателям",
+        "ctaText": "Пришли сайт, основные марки и группы запчастей, способ подбора и регионы доставки. Я определю стартовые запросы и проблемы, которые необходимо проверить в каталоге.",
+        "request": "GEO интернет-магазина автозапчастей: применимость, OEM и аналоги, товарные данные, регионы доставки и BMR."
+      },
+      "en": {
+        "title": "GEO for online auto parts stores | GAEO.ru",
+        "h1": "GEO visibility for online auto parts and accessories retailers",
+        "description": "Auto parts e-commerce GEO: vehicle fitment, part numbers, interchange, inventory, delivery, Product/Offer data and evidence-based AI retailer recommendations.",
+        "eyebrow": "E-commerce / Auto parts",
+        "lead": "A buyer searches for brake pads matching a particular engine, a service kit or an alternative part number. If a catalogue confuses interchange with verified fitment, an AI recommendation may lead to the wrong product. I examine these retailer recommendations and identify what trusted product data is missing.",
+        "heroPoints": [
+          "Buyer prompts by vehicle, part number, part function and fitment",
+          "Validation of compatibility, availability and buying conditions",
+          "Repeatable retailer BMR measurement with accuracy checks"
+        ],
+        "problemTitle": "Why a large parts catalogue does not guarantee suitable recommendations",
+        "problemIntro": "Part-name matching is not enough. Model year, engine, trim and supplier fitment rules can all affect the correct choice. An inaccurate recommendation can create cost and safety risks.",
+        "problems": [
+          {
+            "title": "Similar part numbers imply too much",
+            "body": "Original-equipment numbers, supplier SKUs, interchange references and kit identifiers play different roles. A similar string does not prove a part is interchangeable."
+          },
+          {
+            "title": "Vehicle variants are under-described",
+            "body": "A search for a filter by model name may omit the relevant engine, model year or trim. Fitment rules and exceptions must be traceable to authorised product data."
+          },
+          {
+            "title": "Stock and purchase terms go stale",
+            "body": "A recommendation may cite last week's price or a supplier's stock instead of the retailer's. Clear distinction among in-stock, special order, delivery period and return conditions matters."
+          }
+        ],
+        "scenarioTitle": "Four purchasing intents for automotive e-commerce",
+        "scenarioIntro": "These illustrate different paths to purchase rather than verified ranking or demand figures. Actual vehicles, regions and inventory groups are scoped for each retailer.",
+        "columns": [
+          "Customer question",
+          "Evidence to verify",
+          "Catalogue and GEO response"
+        ],
+        "scenarios": [
+          [
+            "Where can I buy brake pads for my engine and model year?",
+            "Vehicle variant, front/rear fitment, manufacturer number and compatibility rules",
+            "Connect vehicle lookup to precise product fitment information"
+          ],
+          [
+            "Who stocks an alternative to this OEM part today?",
+            "Cross references, validated interchange, real availability and destination",
+            "Distinguish interchange relationships from inventory claims"
+          ],
+          [
+            "Which store offers a service kit for my vehicle?",
+            "Contents of the kit, manufacturer requirements and fitment of each component",
+            "Publish accurate bundles and component data"
+          ],
+          [
+            "Where can I order a rare variant without a fitment mistake?",
+            "Vehicle parameters, manual verification process, lead time and returns",
+            "Explain limits of automated fitment and human confirmation"
+          ]
+        ],
+        "proofTitle": "Evidence behind a credible auto-parts store recommendation",
+        "proofIntro": "The ACES standard concerns automotive fitment data exchange, while PIES describes automotive product information. Google's merchant-listing guidance specifies structured Product and Offer data. These are useful evaluation frameworks, not proof that any individual retailer has implemented them.",
+        "checks": [
+          "Stable manufacturer and product IDs, interchange numbers, vehicle variants, fitment qualifiers and exceptions",
+          "Current stock, prices, warehouses, delivery locations and Product/Offer details displayed on the actual product page",
+          "Retailer identity, warranty terms, confirmation of fitment, returns and available customer support"
+        ],
+        "proofNote": "GAEO has general e-commerce GEO methodology but no completed auto-parts retailer GEO result is claimed. ACES and PIES are technical references, not certification requirements for every store.",
+        "workTitle": "How I would build an auto-parts GEO programme",
+        "workIntro": "The first question is how customers identify the part, then whether the catalogue can support an accurate supplier and product recommendation.",
+        "steps": [
+          {
+            "title": "Measure buyer routes",
+            "body": "Separate prompts by part number, vehicle, component purpose, OEM alternatives and region; record baseline AI responses."
+          },
+          {
+            "title": "Audit product evidence",
+            "body": "Check fitment, interchange, SKU, availability and ordering information against the retailer's authoritative systems."
+          },
+          {
+            "title": "Prepare catalogue improvements",
+            "body": "Write briefs for vehicle filters, category pages, merchant data, fitment guidance and specialist explanatory content."
+          },
+          {
+            "title": "Recheck recommendations",
+            "body": "Compare the same prompts, source citations and BMR, including whether suggested parts fit the stated vehicle."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Is an OEM reference number sufficient for accurate fitment?",
+            "answer": "No. Product type, vehicle variant and validated interchange information are still necessary. Manufacturer and catalogue evidence must support the selection."
+          },
+          {
+            "question": "Does Product structured data guarantee inclusion in ChatGPT?",
+            "answer": "No. Structured data can improve how product facts are represented to services that use it; it does not guarantee an AI recommendation."
+          },
+          {
+            "question": "How should special-order items be shown?",
+            "answer": "Distinguish actual retailer stock from supplier availability and make the expected order and delivery terms explicit."
+          },
+          {
+            "question": "Should GEO focus only on part numbers?",
+            "answer": "No. Vehicle-based searches, maintenance tasks, delivery time, local availability and validated alternatives are separate commercial intents."
+          },
+          {
+            "question": "What does GAEO charge auto-parts retailers?",
+            "answer": "The published GAEO plans apply. Scope depends on catalogue size, vehicle and part categories, regions and the baseline prompt matrix."
+          }
+        ],
+        "ctaTitle": "Find out which parts retailers AI recommends to your customers",
+        "ctaText": "Share your store URL, leading vehicle brands, part categories, fitment process and delivery regions. I will identify a useful baseline audit.",
+        "request": "Auto-parts retailer GEO: vehicle fitment, OEM references, interchange, inventory, delivery and AI recommendation BMR."
+      }
+    }
+  }
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>

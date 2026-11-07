@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "3A_research_after_2D_release_and_external_live_check",
+    "next_batch": "2F_pr78_ci_and_release_pending",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -182,6 +182,56 @@
       "main_total_html_pages": 135,
       "main_total_files": 674,
       "public_https_limitation": "Web tool cannot directly fetch gaeo.ru pages or /tarify/ in this chat; successful main/Pages are not direct live HTTPS/browser verification. Check 32 pages 2A–2D externally before status promotion."
+    },
+    "phase_2f": {
+      "phase": 2,
+      "batch": "2F",
+      "status": "pr_open_ci_in_progress_not_published",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "records": [
+        26,
+        41,
+        88
+      ],
+      "new_industry_landing_pairs_prepared": 3,
+      "new_ru_en_urls_prepared": 6,
+      "content_commits": [
+        "93f896081b462fa818c5bdb352bf83f98ae750a7",
+        "6d89b8f4e97a3bbf80e57851ee80afa3e0d1b9a8",
+        "b2ba2b577bcaf4f7ffee3f95a44a504ada7e083d"
+      ],
+      "qa_commit": "aa4eafa1ae796ce9a7537b9d55e808357a8a9769",
+      "base_source_sha": "5d0544f647b01ee788926e629ddf43764437599c",
+      "status_note": "2D is confirmed deployed to main b77b9ecbb4d14cfebbb1a3f5059195f51e101ad3 via PR #76, PR CI, production and Pages PASS; separate direct public HTTPS inspection of 32 URL is open. 2F PR #78 adds three original RU/EN pairs; live publication is not confirmed. 2E was not observed in branches or PRs at inspection.",
+      "pr_ci_status": "in_progress",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "next_required_step": "Wait for fresh PR #78 CI after rebasing onto 2D handoff; review code and tests, merge only if all green; verify generated main/Pages and direct HTTPS, then update both docs and counts.",
+      "rebased_onto_source_sha": "a8fd3de8fd184ba23ef5759c84babdb6e6fd8676",
+      "rebased_specialization_ids": [
+        2,
+        35,
+        81,
+        84,
+        3,
+        21,
+        34,
+        36,
+        4,
+        22,
+        38,
+        58,
+        20,
+        24,
+        37,
+        66,
+        26,
+        41,
+        88
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42411625394"
     }
   },
   "status_definitions": {
@@ -205,7 +255,9 @@
     "new_industry_landings_in_phase_2_live_verified": 0,
     "total_generated_html_pages_current_release": 135,
     "total_new_specialization_pairs_in_phase_2": 16,
-    "total_new_specialization_urls_in_phase_2": 32
+    "total_new_specialization_urls_in_phase_2": 32,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 3,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 6
   },
   "candidate_batches": [
     {
@@ -290,6 +342,21 @@
       ],
       "label": "Промышленность, логистика и медицина",
       "condition": "Следующая очередь исследования по приоритету 1. Проверять данные и ограничения конкретного сегмента; не переносить кейсы металлоконструкций, фулфилмента или фармы как доказанный результат этой категории."
+    },
+    {
+      "batch": "2F",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        26,
+        41,
+        88
+      ],
+      "label": "Трудовые и миграционные юристы, BI-платформы и интернет-магазины автозапчастей",
+      "condition": "Изолированный пакет параллельно с незавершенной 2D; проверить качество RU/EN, CI, автоматические ссылки и итоговую публикацию. Не выдавать подготовленный исходник за live-страницу. Не переносить результаты из смежных кейсов.",
+      "work_status": "pr78_ci_in_progress_source_not_published",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78"
     }
   ],
   "records": [
@@ -1132,10 +1199,21 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr78_ci_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/employment-migration-lawyers/",
+      "planned_landing_url_en": "/en/industries/employment-migration-lawyers/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_34683/",
+        "https://www.consultant.ru/document/cons_doc_LAW_37868/"
+      ],
+      "content_commit": "93f896081b462fa818c5bdb352bf83f98ae750a7",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78"
     },
     {
       "id": 27,
@@ -1661,10 +1739,21 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr78_ci_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/bi-analytics-platforms/",
+      "planned_landing_url_en": "/en/industries/bi-analytics-platforms/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+        "https://learn.microsoft.com/en-us/power-bi/desktop-rls"
+      ],
+      "content_commit": "6d89b8f4e97a3bbf80e57851ee80afa3e0d1b9a8",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78"
     },
     {
       "id": 42,
@@ -2986,10 +3075,22 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "source_prepared_not_published",
+      "next_required_step": "pr78_ci_then_deploy_and_verify_live",
+      "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
+      "planned_landing_url_ru": "/industries/auto-parts-online-stores/",
+      "planned_landing_url_en": "/en/industries/auto-parts-online-stores/",
+      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "evidence_sources": [
+        "https://www.autocare.org/aces",
+        "https://www.autocare.org/pies",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ],
+      "content_commit": "b2ba2b577bcaf4f7ffee3f95a44a504ada7e083d",
+      "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78"
     },
     {
       "id": 89,
