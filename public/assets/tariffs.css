@@ -134,8 +134,11 @@
  .tariff-comparison thead th:not(:first-child){width:auto}
 }
 
-/* Desktop plan cards: align actions through flexible remaining space, regardless of list length. */
+/* Industry desktop tariff actions occupy the same bottom-anchored slot in equal-height cards.
+   Reserve space after the plan list so actions never cover the published scope. */
 @media(min-width:721px){
- .tariff-plans details.tariff-plan[open] .price-details{display:flex;flex-direction:column}
- .tariff-plans details.tariff-plan[open] .tariff-actions{margin-top:auto}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open]{position:relative}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .price-details{padding-bottom:135px!important}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions{position:absolute;left:26px;right:26px;bottom:26px;margin:0;transform:none!important}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions .button{display:flex;align-items:center;justify-content:center;height:56px;min-height:56px;padding:8px 10px;line-height:1.25}
 }
