@@ -30,6 +30,7 @@ on:
       - 'src/data/service-detail-content.mjs'
       - 'src/data/industry-catalog.mjs'
       - 'src/data/industry-specializations.mjs'
+      - 'src/data/industry-specializations-batch-*.mjs'
       - 'scripts/qa_industry_specializations.mjs'
       - 'src/legacy/pages/tarify/**'
       - 'src/legacy/pages/en/pricing/**'
