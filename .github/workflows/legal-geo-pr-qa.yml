@@ -29,6 +29,8 @@ on:
       - 'src/data/pricing.mjs'
       - 'src/data/service-detail-content.mjs'
       - 'src/data/industry-catalog.mjs'
+      - 'src/data/industry-specializations.mjs'
+      - 'scripts/qa_industry_specializations.mjs'
       - 'src/legacy/pages/tarify/**'
       - 'src/legacy/pages/en/pricing/**'
       - 'public/assets/tariffs/**'
