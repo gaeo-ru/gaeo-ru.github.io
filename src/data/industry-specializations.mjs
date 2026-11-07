@@ -3406,6 +3406,273 @@ export const industrySpecializations = [
         "request": "GEO for employment and immigration lawyers: practice segmentation, legal sources, non-brand prompts and BMR baseline."
       }
     }
+  },
+  {
+    "id": 41,
+    "slug": "bi-analytics-platforms",
+    "group": "it",
+    "routes": {
+      "ru": "/industries/bi-analytics-platforms/",
+      "en": "/en/industries/bi-analytics-platforms/"
+    },
+    "parent": {
+      "ru": "/industries/highload-it/",
+      "en": "/en/industries/highload-it/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/technical-b2b-vendor-evidence/",
+        "/strategies/measurement/"
+      ],
+      "en": [
+        "/en/strategies/technical-b2b-vendor-evidence/",
+        "/en/strategies/measurement/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Методика проверки IT-поставщиков",
+        "Методика повторных замеров видимости"
+      ],
+      "en": [
+        "Evidence-based selection of B2B IT vendors",
+        "Measuring AI recommendations consistently"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+        "ru": "Microsoft Learn: моделирование данных и схема «звезда» для BI",
+        "en": "Microsoft Learn: star-schema design for semantic models"
+      },
+      {
+        "href": "https://learn.microsoft.com/en-us/power-bi/desktop-rls",
+        "ru": "Microsoft Learn: разграничение доступа к строкам данных (RLS)",
+        "en": "Microsoft Learn: row-level security and access controls"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение BI-платформ и аналитических сервисов | GAEO.ru",
+        "h1": "Продвижение BI-платформ и аналитических сервисов в нейросетях",
+        "description": "GEO для BI-систем и аналитических платформ: запросы выбора по источникам данных, модели показателей, разграничению доступа, внедрению и обновлению данных. Тарифы GAEO.",
+        "eyebrow": "IT и корпоративное ПО / BI и аналитика",
+        "lead": "Финансовый директор выбирает аналитику по согласованности показателей, IT-директор проверяет интеграции и безопасность, руководитель продаж хочет быстро увидеть данные по воронке. Я исследую, какие BI-платформы нейросети предлагают под эти задачи и какие факты на сайтах поставщиков реально позволяют их сравнить.",
+        "heroPoints": [
+          "Отдельные интенты для BI-платформы, внедрения и готовых аналитических сервисов",
+          "Проверка архитектуры данных, свежести, прав доступа и доказательств внедрения",
+          "Сопоставимые замеры BMR и корректности рекомендаций поставщиков"
+        ],
+        "problemTitle": "Где ответы нейросетей упрощают сложный выбор BI",
+        "problemIntro": "Фраза «делаем красивые дашборды» не объясняет, откуда берется выручка, почему два отчета показывают разные цифры и как соблюдаются права доступа. Рекомендацию следует привязывать к действующим возможностям продукта и условиям внедрения.",
+        "problems": [
+          {
+            "title": "Визуализация вместо модели данных",
+            "body": "Скриншоты диаграмм не показывают источники, правила расчета метрик, преобразования и обновления. Разным компаниям нужны разные уровни подготовки данных."
+          },
+          {
+            "title": "Общие слова об интеграциях",
+            "body": "Надпись «подключаемся к 1С и CRM» не раскрывает поддерживаемые версии, режим обновления, двусторонний обмен, ограничения API и ответственность исполнителя."
+          },
+          {
+            "title": "Обещания безопасности без контекста",
+            "body": "Права пользователей, изоляция клиентов и аудит действий нужно описывать по фактической архитектуре. Наличие функции RLS в одном продукте не доказывает, что она настроена в каждом проекте."
+          }
+        ],
+        "scenarioTitle": "Как руководители формулируют запросы на BI",
+        "scenarioIntro": "Таблица задает четыре самостоятельных сценария проверки ответов. Реальные инструменты и объем работ должны подтверждаться документацией конкретного поставщика.",
+        "columns": [
+          "Коммерческий запрос",
+          "Что покупатель проверяет",
+          "Какой контент нужен"
+        ],
+        "scenarios": [
+          [
+            "Какую BI-платформу выбрать для отчетов из 1С и CRM?",
+            "Поддерживаемые источники, частота загрузки, ограничения коннекторов и модель владения данными",
+            "Сравнимая матрица интеграций, архитектура и пример схемы обмена"
+          ],
+          [
+            "Кто внедрит сквозную аналитику по продажам и маркетингу?",
+            "Единые определения воронки и выручки, атрибуция, качество исходных данных, процесс приемки",
+            "Описание методики проекта, контрольных показателей и ответственности сторон"
+          ],
+          [
+            "Какой аналитический сервис подойдет для филиальной сети?",
+            "Права на данные филиалов, единые KPI, фильтры, обновление, стоимость масштабирования",
+            "Подтвержденная модель доступа, роли пользователей и ограничения тарифа"
+          ],
+          [
+            "Что выбрать: готовый BI или собственные отчеты в хранилище?",
+            "Стоимость владения, компетенции команды, объем данных, эксплуатация и срок развертывания",
+            "Содержательное сравнение сценариев без обещания универсально лучшего решения"
+          ]
+        ],
+        "proofTitle": "Какие технические факты нужны для рекомендации",
+        "proofIntro": "Документация Microsoft по моделированию данных показывает роль фактов, измерений и связей в BI-модели, а руководство по RLS объясняет разграничение доступа для разных ролей. Эти материалы дают критерии проверки, но не подтверждают функциональность произвольного BI-продукта.",
+        "checks": [
+          "Источники, коннекторы, подготовка данных, семантическая модель, определения KPI, задержка обновления и наблюдаемость ошибок",
+          "Реальные возможности доступа, разделение ролей, аудит изменений, размещение данных и требования информационной безопасности",
+          "Воспроизводимые демонстрации, документы внедрения, состав работ, стоимость лицензий и интеграций, подтвержденные клиентские примеры"
+        ],
+        "proofNote": "Кейс MethodLab относится к ускорению сайтов и выбору технического подрядчика. Он не подтверждает результат GEO-продвижения BI-платформ или реализацию BI-систем силами GAEO.",
+        "workTitle": "Как строю GEO-программу для BI-поставщика",
+        "workIntro": "Сначала определяю, продает компания продукт, внедрение или аналитический сервис. Затем проверяю факты, которые нейросеть вправе использовать при сравнении поставщиков.",
+        "steps": [
+          {
+            "title": "Разложить спрос",
+            "body": "Собираю запросы по отраслям, источникам данных, ролям, метрикам и ограничениям внедрения. Фиксирую нейросети и исходный BMR."
+          },
+          {
+            "title": "Сверить возможности",
+            "body": "Совместно с продуктовой и технической командой проверяю реальные коннекторы, масштаб, безопасность и условия поставки."
+          },
+          {
+            "title": "Подготовить доказательства",
+            "body": "Формирую ТЗ на страницы интеграций, объяснение модели показателей, безопасность, методику внедрения, FAQ и разрешенные кейсы."
+          },
+          {
+            "title": "Измерить результат",
+            "body": "Повторяю ту же матрицу запросов, проверяю названных поставщиков и точность утверждений об интеграциях и лицензиях."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Нужно ли отдельное GEO для поставщика BI и интегратора?",
+            "answer": "Часто да: покупатель лицензии сравнивает продукт, а заказчик внедрения оценивает методику, ответственность, миграцию данных и сопровождение. Матрицу запросов лучше разделять."
+          },
+          {
+            "question": "Достаточно ли перечислить известные коннекторы?",
+            "answer": "Нет. Нужны актуальные версии, режим обмена, ограничения и подтверждение того, что интеграция доступна в предлагаемом продукте или услуге."
+          },
+          {
+            "question": "Можно ли публиковать внутренние аналитические отчеты заказчика?",
+            "answer": "Только при наличии прав и разрешений. Полезную методику можно объяснить на обезличенных или демонстрационных данных без раскрытия коммерческой информации."
+          },
+          {
+            "question": "Какие метрики оценивает GAEO?",
+            "answer": "BMR и корректность рекомендаций по фиксированным небрендовым запросам. Производительность BI, качество данных и внедренческие KPI нужно проверять отдельно, по собственной методике проекта."
+          },
+          {
+            "question": "Сколько стоит GEO-продвижение BI-платформы?",
+            "answer": "Используются общие тарифы GAEO на аудит, продвижение и контент. Состав технических материалов и число групп запросов определяются после анализа продукта."
+          }
+        ],
+        "ctaTitle": "Узнать, какие BI-решения нейросети рекомендуют вместо вашего",
+        "ctaText": "Пришли сайт продукта или интегратора, документацию по поддерживаемым источникам и 2–3 типичных сценария клиента. Подготовлю матрицу диагностики и план улучшений.",
+        "request": "GEO для BI-платформы: источники данных, метрики, интеграции, модель доступа, запросы выбора и BMR."
+      },
+      "en": {
+        "title": "GEO for BI and analytics platform vendors | GAEO.ru",
+        "h1": "GEO for BI platforms and analytics service providers",
+        "description": "AI recommendation visibility for BI vendors: data models, connectors, metric definitions, access control, implementation scope and comparable GEO measurements.",
+        "eyebrow": "IT and enterprise software / Business intelligence",
+        "lead": "A CFO wants trusted definitions of margin, an IT director evaluates connectors and security, and a sales leader needs usable funnel analytics. I examine which BI providers AI recommends for these distinct tasks and whether the public product evidence supports the comparison.",
+        "heroPoints": [
+          "Separate buyer intents for BI software, implementation and managed analytics",
+          "Verification of data models, refresh, permissions and delivery evidence",
+          "Repeatable BMR measurement and factual checks of recommendations"
+        ],
+        "problemTitle": "Where generic AI answers fail BI procurement",
+        "problemIntro": "A screenshot of a dashboard says little about data definitions, source systems or how errors are handled. A useful recommendation must reflect actual product capabilities and implementation constraints.",
+        "problems": [
+          {
+            "title": "Dashboards substitute for data models",
+            "body": "Charts alone cannot explain the grain of facts, dimensions, calculations, reconciliation or refresh. Buyers need evidence about the full data path."
+          },
+          {
+            "title": "Integration claims are too broad",
+            "body": "A generic statement about connecting ERP and CRM does not specify connectors, supported versions, refresh schedules, API limitations or delivery ownership."
+          },
+          {
+            "title": "Security features lack context",
+            "body": "Access restrictions, tenant separation and audit functions vary by product and deployment. The existence of RLS as a feature does not prove that every customer instance is configured securely."
+          }
+        ],
+        "scenarioTitle": "Four distinct BI purchasing questions",
+        "scenarioIntro": "These prompts define possible commercial intent, not claimed search demand or market rankings. Every capability is checked against the vendor's current documentation.",
+        "columns": [
+          "Buyer question",
+          "Evidence required",
+          "GEO content opportunity"
+        ],
+        "scenarios": [
+          [
+            "Which BI platform works with our ERP and CRM data?",
+            "Source compatibility, data refresh frequency, connectors, API constraints and ownership",
+            "Publish a verified integration matrix and technical architecture"
+          ],
+          [
+            "Who can implement sales and marketing analytics end to end?",
+            "Consistent funnel metrics, data quality, attribution definitions and acceptance criteria",
+            "Explain project method and responsibilities with permitted examples"
+          ],
+          [
+            "What analytics platform supports regional branches?",
+            "Row-level access, shared KPI definitions, filtering, refresh and licence implications",
+            "Document role-based permissions and scaling assumptions"
+          ],
+          [
+            "Should we buy BI software or build reporting on our warehouse?",
+            "Total ownership cost, in-house capabilities, data volume and operational support",
+            "Compare options by scenario without asserting one universal winner"
+          ]
+        ],
+        "proofTitle": "Technical facts behind a credible BI recommendation",
+        "proofIntro": "Microsoft's star-schema guidance explains facts, dimensions and semantic models. Its row-level security documentation describes role-based filtering. These are evaluation references, not proof of features implemented by an unrelated vendor.",
+        "checks": [
+          "Supported sources, ETL/ELT, semantic models, KPI definitions, refresh latency, monitoring and reconciliation",
+          "Actual role permissions, tenant isolation, audit trails, data residency and relevant security controls",
+          "Reproducible demos, delivery stages, licence and integration costs, authorised customer results and support conditions"
+        ],
+        "proofNote": "GAEO's MethodLab case concerns website performance and technical supplier selection; it is not a completed BI implementation or proven GEO outcome for BI software.",
+        "workTitle": "How I would improve a BI vendor's AI visibility",
+        "workIntro": "First identify whether the offer is a licensed platform, integration project or managed analytics service. Then prepare evidence matched to each decision.",
+        "steps": [
+          {
+            "title": "Map buying decisions",
+            "body": "Build non-branded prompts around roles, industries, source systems and constraints; record platforms and baseline BMR."
+          },
+          {
+            "title": "Validate product claims",
+            "body": "Review connectors, scale, data governance and procurement conditions with the product and engineering teams."
+          },
+          {
+            "title": "Specify evidence-rich content",
+            "body": "Prepare briefs for integration pages, KPI definitions, governance, implementation process, FAQs and publishable cases."
+          },
+          {
+            "title": "Repeat comparable tests",
+            "body": "Check the same AI prompts, recommended providers, source citations and accuracy of feature and licensing claims."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Should BI vendors and implementation partners have the same GEO page?",
+            "answer": "They can share an overview, but licences and delivery services answer different buyer questions. Separate useful pages generally improve clarity when the supplier genuinely offers both."
+          },
+          {
+            "question": "Is a connector logo sufficient evidence of integration?",
+            "answer": "No. Buyers also need current compatibility, exchange mode, limitations and a description of how the connector is supported."
+          },
+          {
+            "question": "Can customer dashboards be shown publicly?",
+            "answer": "Only with the right permissions. An explanation can use synthetic or anonymised information without exposing sensitive customer records."
+          },
+          {
+            "question": "Does GAEO test analytics accuracy itself?",
+            "answer": "GEO measures recommendation presence and factual claims. Data accuracy, dashboard performance and implementation acceptance need their own technical tests."
+          },
+          {
+            "question": "What is the GEO price for a BI provider?",
+            "answer": "The same published GAEO audit and monthly plans apply. Scope is determined by the product, integrations, buyer segments and starting query set."
+          }
+        ],
+        "ctaTitle": "See which BI tools AI recommends to your buyers",
+        "ctaText": "Share your platform or integration website, supported sources and representative buying scenarios. I will outline a focused baseline audit.",
+        "request": "BI platform GEO: integrations, semantic models, KPIs, data security, selection prompts and baseline BMR."
+      }
+    }
   }
 ];
 
