@@ -71,10 +71,15 @@ const menuCloseLabel = document.documentElement.lang === 'en' ? 'Close menu' : '
   document.head.appendChild(style);
 })();
 
+function resetCasesDisclosure(){
+  mobileMenu?.querySelector('details.mobile-cases[open]')?.removeAttribute('open');
+}
+
 function setCollapsed(collapsed){
   mainNav.classList.toggle('menu-collapsed', collapsed);
   if(!collapsed && mobileMenu){
     mobileMenu.classList.remove('open');
+    resetCasesDisclosure();
     toggle?.setAttribute('aria-expanded','false');
     toggle?.setAttribute('aria-label',menuOpenLabel);
   }
@@ -103,6 +108,7 @@ function fitHeader(){
 if(toggle && mobileMenu){
   toggle.addEventListener('click',()=>{
     const open = mobileMenu.classList.toggle('open');
+    if(!open) resetCasesDisclosure();
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? menuCloseLabel : menuOpenLabel);
   });
@@ -114,8 +120,26 @@ if(mobileMenu){
   mobileMenu.addEventListener('click', event => {
     if(!(event.target instanceof Element) || !event.target.closest('a[href]')) return;
     mobileMenu.classList.remove('open');
+    resetCasesDisclosure();
     toggle?.setAttribute('aria-expanded','false');
     toggle?.setAttribute('aria-label',menuOpenLabel);
+  });
+}
+
+// Escape first collapses the Cases group, then closes the burger menu.
+if(mobileMenu && toggle){
+  document.addEventListener('keydown', event => {
+    if(event.key !== 'Escape' || !mobileMenu.classList.contains('open')) return;
+    const disclosure = mobileMenu.querySelector('details.mobile-cases[open]');
+    if(disclosure){
+      disclosure.open = false;
+      disclosure.querySelector('summary')?.focus();
+      return;
+    }
+    mobileMenu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label',menuOpenLabel);
+    toggle.focus();
   });
 }
 
