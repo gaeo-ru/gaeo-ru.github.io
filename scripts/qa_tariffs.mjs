@@ -122,6 +122,10 @@ try{
     const plus=control.locator('[data-prompt-adjust="1"]');
     assert.equal(await minus.isVisible(),true,'Minus button shown '+width+' '+route);
     assert.equal(await plus.isVisible(),true,'Plus button shown '+width+' '+route);
+    const quantityBounds=await control.locator('.tariff-quantity').evaluate(el=>{
+     const r=el.getBoundingClientRect();return {left:r.left,right:r.right,width:window.innerWidth};
+    });
+    assert.ok(quantityBounds.left>=0&&quantityBounds.right<=quantityBounds.width+1,'Stepper fits in viewport '+width+' '+route+' '+JSON.stringify(quantityBounds));
     assert.equal(await minus.isDisabled(),true,'Minus disabled at zero');
     await plus.click();
     await plus.click();
