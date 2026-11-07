@@ -2605,6 +2605,273 @@ export const industrySpecializations = [
       "request": "IP law GEO: trademarks, patents, copyright, licensing, disputes and professional qualifications."
     }
   }
+},
+{
+  "id": 38,
+  "slug": "cloud-providers-data-centres",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/cloud-providers-data-centres/",
+    "en": "/en/industries/cloud-providers-data-centres/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Подтверждение компетенций технического B2B-подрядчика",
+      "Методика сравнимых GEO-замеров"
+    ],
+    "en": [
+      "Verifying technical B2B vendor evidence",
+      "Comparable AI visibility measurements"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/800/145/final",
+      "ru": "NIST SP 800-145: модели облачных услуг",
+      "en": "NIST SP 800-145: definition of cloud service models"
+    },
+    {
+      "href": "https://uptimeinstitute.com/uptime-institute-awards/list",
+      "ru": "Uptime Institute: реестр наград конкретных дата-центров",
+      "en": "Uptime Institute: verified data centre awards"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение облачных провайдеров и дата-центров | GAEO.ru",
+      "h1": "GEO-продвижение облачных провайдеров и дата-центров",
+      "description": "Продвижение облачных провайдеров и ЦОД в нейросетях: IaaS, размещение серверов, SLA, резервирование, сертификаты, безопасность и измерение рекомендаций.",
+      "eyebrow": "IT / Облачная инфраструктура и ЦОД",
+      "lead": "Компании выбирают провайдера облачной инфраструктуры по доступности, размещению данных, ресурсам и модели ответственности, а дата-центр для colocation - по условиям площадки, сетям и отказоустойчивости. Я разделяю эти запросы, проверяю источники и измеряю, каких поставщиков рекомендуют нейросети.",
+      "heroPoints": [
+        "Раздельные сценарии IaaS, colocation, резервного копирования и миграции",
+        "Подтверждение SLA, площадок, сертификации и реальной инфраструктуры",
+        "Проверяемые требования к безопасности, доступности и размещению данных"
+      ],
+      "problemTitle": "Почему фраза «надежное облако Tier III» требует уточнений",
+      "problemIntro": "Облачная услуга и физическая площадка - разные объекты проверки. Нельзя переносить статус одного дата-центра на весь парк провайдера или объявлять проектную сертификацию подтверждением готового объекта.",
+      "problems": [
+        {
+          "title": "Облако смешано с арендой стойки",
+          "body": "IaaS предполагает предоставление вычислений и хранения с управляемым выделением ресурсов, colocation - размещение оборудования клиента. Услуги различаются ответственностью и параметрами."
+        },
+        {
+          "title": "Tier и отказоустойчивость заявлены некорректно",
+          "body": "Сертификация проектной документации не равна сертификации построенного объекта. Для точного утверждения нужны площадка, тип награды, орган и дата."
+        },
+        {
+          "title": "SLA скрывает фактические исключения",
+          "body": "Доступность зависит от измерения, договорной зоны ответственности, резервирования и исключений; нельзя обещать нулевые простои или универсальное восстановление."
+        }
+      ],
+      "scenarioTitle": "В каких ситуациях бизнес выбирает облако или ЦОД",
+      "scenarioIntro": "Группирую запросы по нагрузкам, размещению данных и модели сервиса. Промпты о выборе провайдера и требования к конкретной услуге измеряются отдельно.",
+      "columns": [
+        "Запрос заказчика",
+        "Какие данные нужны",
+        "Как усиливать GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое облако подойдет для интернет-магазина с сезонными пиками?",
+          "Модель IaaS, масштабирование ресурсов, сеть, резервирование, SLA и ограничения",
+          "Страница вычислительных ресурсов с доказуемыми сценариями нагрузки"
+        ],
+        [
+          "Где арендовать стойку в дата-центре в Москве?",
+          "Адрес и площадка, мощность, условия подключения, доступ, безопасность, договор",
+          "Сопоставимые технические параметры конкретного ЦОД"
+        ],
+        [
+          "Кого выбрать для резервной площадки и восстановления сервисов?",
+          "Расположение, отдельные зоны, RPO/RTO по договору, тесты восстановления",
+          "Разделить резервное хранение, катастрофоустойчивость и реально гарантируемое"
+        ],
+        [
+          "Какой провайдер поддерживает нужное местоположение данных?",
+          "Конкретная услуга, юрисдикция, размещение, условия субподрядчиков, документы",
+          "Фактическая карта географии услуг без абстрактных обещаний соответствия"
+        ]
+      ],
+      "proofTitle": "Какие подтверждения нужны для инфраструктурного B2B",
+      "proofIntro": "NIST SP 800-145 определяет облачные модели IaaS, PaaS и SaaS. Uptime Institute публикует список конкретных наград для проектов ЦОД, разделяя проектную и построенную инфраструктуру. Эти определения помогают сформировать критерии, но не доказывают характеристики неизвестного поставщика.",
+      "checks": [
+        "Конкретные услуги: IaaS, управление облаком, аренда оборудования и colocation с точной моделью ответственности и доступными ресурсами",
+        "Инфраструктура: адреса площадок, характеристики, сети, зоны отказа, подтвержденные Tier-награды и актуальность сертификации",
+        "Контракт и безопасность: реальная формула SLA, периоды обслуживания, правила доступа, территориальные ограничения и проверяемые процедуры восстановления"
+      ],
+      "proofNote": "Методика технического B2B GAEO применима к выбору инфраструктуры, но кейс ускорения сайтов MethodLab не является доказанным результатом GEO-продвижения облачного провайдера или ЦОД.",
+      "workTitle": "Как организую GEO-продвижение провайдера",
+      "workIntro": "Работа начинается с того, какие предложения нейросети дают в ответах под конкретную инфраструктурную задачу. Затем устраняются технические и содержательные пробелы.",
+      "steps": [
+        {
+          "title": "Сегментация задач",
+          "body": "Разделяю облако, серверы, colocation, резервирование, миграцию, отраслевые нагрузки и географию."
+        },
+        {
+          "title": "Проверка фактуры",
+          "body": "Сверяю SLA, сертификаты, параметры площадок, роли провайдера и заказчика, актуальные тарифы и документацию."
+        },
+        {
+          "title": "Технические страницы и публикации",
+          "body": "Готовлю ТЗ на сравнимые спецификации услуг, FAQ, требования к миграции и доказательные экспертные материалы."
+        },
+        {
+          "title": "Повторный BMR",
+          "body": "Измеряю ту же матрицу запросов, состав рекомендаций, упоминаемые характеристики и цитируемые источники."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли указывать Tier III для всех дата-центров компании?",
+          "answer": "Только когда статус подтвержден для каждого указанного объекта и типа сертификации. Награда по проектной документации не равна сертификации построенной площадки."
+        },
+        {
+          "question": "Чем облако отличается от colocation для GEO?",
+          "answer": "У облачного предложения основные критерии включают выделение ресурсов, модель сервиса и управление. Для colocation оценивают физическую площадку, размещение оборудования, питание и сети."
+        },
+        {
+          "question": "Можно ли обещать 100% доступность облака?",
+          "answer": "Публичные обещания должны точно соответствовать действующему договору и правилам измерения SLA. Универсальная гарантия отсутствия простоев не подтверждается одним рекламным утверждением."
+        },
+        {
+          "question": "Обязателен ли отдельный тариф для каждого дата-центра?",
+          "answer": "Нужны точные условия по реально различающимся площадкам или услугам. Не следует автоматически плодить почти одинаковые страницы без самостоятельного содержания."
+        },
+        {
+          "question": "Сколько стоит GEO для облачного провайдера?",
+          "answer": "Применяются общие тарифы GAEO на аудит и ежемесячное сопровождение. Объем зависит от продуктовой линейки, регионов, нейросетей и запросов."
+        }
+      ],
+      "ctaTitle": "Узнать, какие облака и ЦОД рекомендуют нейросети заказчикам",
+      "ctaText": "Пришли сайт провайдера, перечень фактических услуг и документы по доступности или сертификации. Я подготовлю направления для исходного замера.",
+      "request": "GEO облачного провайдера и ЦОД: IaaS, colocation, SLA, Tier, резервирование, безопасность и рекомендации."
+    },
+    "en": {
+      "title": "GEO for cloud providers and data centres | GAEO.ru",
+      "h1": "GEO for cloud providers and data centres in AI recommendations",
+      "description": "GEO for cloud hosting and data centre providers: IaaS, colocation, SLAs, Tier certifications, disaster recovery, security and AI recommendations.",
+      "eyebrow": "IT / Cloud and data centre services",
+      "lead": "Businesses choosing cloud infrastructure assess available resources, availability, data placement and contractual responsibility. Those choosing colocation assess a facility, power and connectivity. I measure which providers AI recommends for these separate scenarios and verify the evidence behind those recommendations.",
+      "heroPoints": [
+        "Separate IaaS, colocation, backup and migration intents",
+        "Evidence for actual facilities, SLAs, awards and infrastructure",
+        "Clear boundaries for availability, security and data locations"
+      ],
+      "problemTitle": "Why 'reliable Tier III cloud' is an incomplete claim",
+      "problemIntro": "A cloud service and a physical facility are different subjects of verification. A design award must not be described as certification of an operational building.",
+      "problems": [
+        {
+          "title": "Cloud and colocation are conflated",
+          "body": "IaaS supplies configurable compute and storage resources while colocation houses customer equipment. The responsibilities differ."
+        },
+        {
+          "title": "Tier claims lack exact scope",
+          "body": "A Tier Certification of Design Documents is not equivalent to a Certification of Constructed Facility. Check facility and award type before making claims."
+        },
+        {
+          "title": "Service levels omit exceptions",
+          "body": "Availability depends on the measurement definition, scope, maintenance rules and responsibility model. A promise of zero downtime is not supported by marketing alone."
+        }
+      ],
+      "scenarioTitle": "Infrastructure buyer questions that matter for AI recommendations",
+      "scenarioIntro": "Segment by workload, contractual model, geography and provider role. The baseline uses stable prompts for comparable future measurements.",
+      "columns": [
+        "Business question",
+        "Evidence needed",
+        "GEO improvement"
+      ],
+      "scenarios": [
+        [
+          "Which cloud fits a retailer with seasonal load spikes?",
+          "Service model, resource scaling, network, redundancy, SLA limits",
+          "Document actual resource and load capabilities"
+        ],
+        [
+          "Where can we colocate equipment near Moscow?",
+          "Facility details, power, access, network, physical security and terms",
+          "Facility-specific, comparable technical specifications"
+        ],
+        [
+          "Who can offer a disaster recovery site?",
+          "Distinct fault domains, tested recovery methods and contractually defined RPO/RTO",
+          "Separate backups from tested recovery services"
+        ],
+        [
+          "Which provider can place our data in a required jurisdiction?",
+          "Exact locations, subcontractors, contract and documented operational limits",
+          "Accurate geographic and contractual facts rather than broad compliance claims"
+        ]
+      ],
+      "proofTitle": "Evidence for cloud and data centre supplier selection",
+      "proofIntro": "NIST SP 800-145 defines cloud service models including IaaS, PaaS and SaaS. Uptime Institute publishes awards for specific facilities and distinguishes design from constructed-facility certifications. Neither source establishes the characteristics of an unnamed vendor.",
+      "checks": [
+        "Actual service models and capabilities: IaaS, managed cloud, equipment rental and colocation, with responsibilities",
+        "Facilities, addresses, networks, zones, relevant Tier awards and their verified scope",
+        "Contractual availability, maintenance, access controls, geographic limitations and recovery responsibilities"
+      ],
+      "proofNote": "GAEO's technical B2B methodology supports the evaluation approach. The MethodLab website performance case does not prove a GEO outcome for a cloud or colocation business.",
+      "workTitle": "A practical GEO programme for infrastructure providers",
+      "workIntro": "Start from actual shortlists in AI answers and improve the source evidence relevant to technical procurement.",
+      "steps": [
+        {
+          "title": "Map workloads and service needs",
+          "body": "Separate cloud resources, servers, colocation, backups, DR, migration and location-related questions."
+        },
+        {
+          "title": "Audit factual claims",
+          "body": "Review SLAs, exact facility awards, service boundaries, supported resources and public documentation."
+        },
+        {
+          "title": "Create useful technical evidence",
+          "body": "Specify pages for services, facilities, migration, FAQ and sector publications with verified details."
+        },
+        {
+          "title": "Recheck recommendations",
+          "body": "Compare equivalent prompts and BMR and inspect incorrect claims and cited sources."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a company claim Tier III for every facility?",
+          "answer": "Only if the relevant award and its scope are verified for every named facility. Design and constructed facility awards differ."
+        },
+        {
+          "question": "How is IaaS different from colocation in GEO?",
+          "answer": "Cloud questions target on-demand service capabilities and management, while colocation questions target physical site characteristics and contracts."
+        },
+        {
+          "question": "Can a provider guarantee 100% uptime?",
+          "answer": "The public terms must match the actual contracted service level, measurement and exceptions. Generic zero-downtime promises are not substantiated."
+        },
+        {
+          "question": "Does every data centre require a separate landing page?",
+          "answer": "Only where its verified facilities, service terms or geography justify distinct information. Avoid duplicating generic pages."
+        },
+        {
+          "question": "How much does cloud provider GEO cost?",
+          "answer": "GAEO's standard audit and monthly plans apply, with project scope depending on products, locations and prompts."
+        }
+      ],
+      "ctaTitle": "See which cloud and colocation providers AI recommends",
+      "ctaText": "Share the provider site, actual services, supported locations and verified SLA or facility awards. I will identify the baseline query groups.",
+      "request": "Cloud and data centre GEO: IaaS, colocation, Tier, SLA, backups, facilities and AI recommendations."
+    }
+  }
 }
 ];
 
