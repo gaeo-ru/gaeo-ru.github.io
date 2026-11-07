@@ -20,7 +20,7 @@ for(const item of industrySpecializations){
   assert.ok(html.includes('hreflang="'+(lang==='en'?'ru':'en')+'" href="'+equivalent+'"'),'Mutual hreflang '+path);
   assert.ok(html.includes('id="industry-pricing"'),'IndustryPricing '+path);
   assert.ok(html.includes('href="'+pricingHref(lang)+'#industry-'+String(item.id).padStart(3,'0')+'"'),'Catalogue backlink '+path);
-  assert.equal((html.match(/<tr>/g)||[]).length,5,'Scenario table header and four rows '+path);
+  assert.equal((html.match(/<tr\b/g)||[]).length,5,'Scenario table header and four rows '+path);
   assert.equal((html.match(/<details class="faq-item">/g)||[]).length,5,'Five visible FAQ '+path);
   const faq=graph(html).find(n=>n['@type']==='FAQPage');
   assert.deepEqual(faq?.mainEntity?.map(q=>q.name),c.faq.map(x=>x.question),'FAQ schema equals source '+path);
