@@ -5560,6 +5560,282 @@ export const industrySpecializations = [
       "request": "Electronics retail GEO: product models, specifications, variant data, inventory, delivery and AI recommendations."
     }
   }
+},
+{
+  "id": 89,
+  "slug": "cosmetics-perfume-online-stores",
+  "group": "ecommerce",
+  "routes": {
+    "ru": "/industries/cosmetics-perfume-online-stores/",
+    "en": "/en/industries/cosmetics-perfume-online-stores/"
+  },
+  "parent": {
+    "ru": "/industries/ecommerce/",
+    "en": "/en/industries/ecommerce/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/ecommerce-catalog/",
+      "/strategies/ecommerce-measurement/",
+      "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/"
+    ],
+    "en": [
+      "/en/strategies/ecommerce-catalog/",
+      "/en/strategies/ecommerce-measurement/",
+      "/en/articles/agentic-commerce-readiness/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Доказательная товарная номенклатура для GEO",
+      "Измерение рекомендаций интернет-магазина",
+      "Готовность к агентной торговле"
+    ],
+    "en": [
+      "Evidence-led product catalogues",
+      "Measuring shopping recommendations",
+      "Agentic commerce preparation"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://protect.gost.ru/tr/details/c99ec20c-e44d-43bc-8dd6-1e9af5fb3002",
+      "ru": "Росстандарт: ТР ТС 009/2011 о косметике и парфюмерии",
+      "en": "Rosstandart: TR TS 009/2011 cosmetics and perfumery safety"
+    },
+    {
+      "href": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+      "ru": "Google Search Central: данные Product и Offer",
+      "en": "Google: product and merchant listing data"
+    },
+    {
+      "href": "https://developers.google.com/search/docs/appearance/structured-data/product-variants/",
+      "ru": "Google: моделирование вариантов ProductGroup",
+      "en": "Google: ProductGroup variants"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение магазинов косметики и парфюмерии | GAEO.ru",
+      "h1": "GEO-продвижение интернет-магазинов косметики и парфюмерии",
+      "description": "GEO для интернет-магазинов косметики и парфюмерии: состав INCI, концентрация, объем, оттенки, оригинальность, наличие, доставка и рекомендации нейросетей.",
+      "eyebrow": "Электронная коммерция / Косметика и парфюмерия",
+      "lead": "Покупатель выбирает уход по составу и типу применения, а парфюм по нотам, концентрации и формату флакона. Для точной рекомендации нужны проверяемые сведения производителя, актуальные варианты товара и условия доставки. Я измеряю, какие магазины нейросети называют по таким запросам и где источники недостаточно точны.",
+      "heroPoints": [
+        "Разные запросы на уходовую косметику, декоративные средства и парфюмерию",
+        "Проверка состава, назначения, оттенков, объема и концентрации",
+        "Точные сведения об оригинальности, продавце, остатках и условиях покупки"
+      ],
+      "problemTitle": "Что мешает нейросети корректно рекомендовать косметику",
+      "problemIntro": "Одинаковое название линейки может относиться к нескольким версиям продукта. Рекламные обещания лечебного эффекта и скопированные составы разных оттенков мешают покупателю оценить реальный товар.",
+      "problems": [
+        {
+          "title": "Перемешаны варианты и назначение",
+          "body": "Духи, парфюмированная и туалетная вода имеют собственные характеристики. Оттенок помады, концентрация активных компонентов и объем флакона должны соответствовать продаваемому варианту."
+        },
+        {
+          "title": "Состав и эффект описаны неточно",
+          "body": "Список ингредиентов и разрешенное назначение берутся из проверенных источников. Нельзя превращать обычную косметику в средство лечения заболеваний без соответствующего статуса."
+        },
+        {
+          "title": "Вместо фактов об оригинальности даны лозунги",
+          "body": "Заявления о поставщике, подлинности, партиях и сроке годности требуют документов и реальных процессов. Сам текст «100% оригинал» не служит доказательством."
+        }
+      ],
+      "scenarioTitle": "Какие запросы приводят к выбору косметики и продавца",
+      "scenarioIntro": "Разделяю поиск по параметрам продукта, выбор бренда и выбор магазина. Запросы не должны подменять консультацию врача при заболеваниях кожи.",
+      "columns": [
+        "Вопрос покупателя",
+        "Что нужно проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Где купить крем с конкретным составом без отдушки?",
+          "Полный INCI, версия формулы, назначение, объем, доступность",
+          "Отдельные проверяемые свойства в описании товара"
+        ],
+        [
+          "Какой оттенок тонального средства есть в доставке по Москве?",
+          "Маркировка оттенка, точное название, фотографии, остатки и срок доставки",
+          "Достоверная связь Product/Offer с вариантом SKU"
+        ],
+        [
+          "Где сравнить парфюмерную воду определенной концентрации?",
+          "Концентрация, объем, официальное описание аромата, происхождение и цена",
+          "Точные страницы объема и выпуска, сопоставимые сведения"
+        ],
+        [
+          "У какого магазина косметики есть подтвержденный поставщик и возврат?",
+          "Документы на товар, условия дистанционной продажи, данные продавца",
+          "Сведения о поставках и правилах заказа без ложных обещаний"
+        ]
+      ],
+      "proofTitle": "Какие сведения можно использовать в GEO для косметики",
+      "proofIntro": "ТР ТС 009/2011 регулирует безопасность парфюмерно-косметической продукции на соответствующем рынке, включая требования к характеристикам и маркировке. Требования применяются по конкретному виду товара, поэтому формулировки о составе и назначении нужно проверять по актуальным документам.",
+      "checks": [
+        "Товар: бренд и полное название, INCI, назначение, оттенок или концентрация, объем, срок годности и идентификатор варианта",
+        "Подтверждения: применимые декларации либо иные документы, сведения изготовителя, законные основания заявлять подлинность и свойства",
+        "Продажа: актуальная цена и остатки, регион доставки, условия возврата, ссылка на конкретный товар, Product/Offer и корректные изображения"
+      ],
+      "proofNote": "Методика GAEO для интернет-магазинов и данные Product/Offer помогают подготовить информацию для поиска, но не подтверждают достигнутый GEO-результат отдельного магазина косметики и не гарантируют рекомендации нейросетей.",
+      "workTitle": "Как выстраиваю GEO-продвижение косметического интернет-магазина",
+      "workIntro": "Работа начинается с покупательских запросов, по которым нейросеть подбирает свойства и продавца. Затем сверяю публичные сведения с фактической номенклатурой.",
+      "steps": [
+        {
+          "title": "Разделяю спрос",
+          "body": "Создаю группы по уходу, декоративным средствам, парфюмерии, составу, оттенкам и конкретным брендам."
+        },
+        {
+          "title": "Проверяю данные",
+          "body": "Сверяю обозначения вариантов, реальные свойства, документы, наличие и сроки, исключаю неподтвержденные медицинские утверждения."
+        },
+        {
+          "title": "Дорабатываю сайт и публикации",
+          "body": "Готовлю задания на ассортимент, характеристики, сравнения, FAQ, политику доставки и машиночитаемые предложения."
+        },
+        {
+          "title": "Повторяю измерение",
+          "body": "Проверяю BMR и точность рекомендаций по тем же запросам, фиксирую ошибки в составе, вариантах и источниках."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли использовать отзывы покупателей как доказательство лечебного эффекта?",
+          "answer": "Отзывы не заменяют разрешенных доказательств свойств продукта. На сайте косметики не следует заявлять лечение заболеваний без надлежащих оснований."
+        },
+        {
+          "question": "Зачем указывать INCI и объем на каждой странице?",
+          "answer": "Они помогают идентифицировать конкретный продукт и отличить версии. Данные должны соответствовать фактической упаковке и информации изготовителя."
+        },
+        {
+          "question": "Нужны ли разные страницы для оттенков и объемов?",
+          "answer": "Если варианты существенно различаются, им нужны точные сведения и связь с основной моделью товара. Не следует создавать одинаковые страницы ради числа URL."
+        },
+        {
+          "question": "Можно ли обещать оригинальность без документов?",
+          "answer": "Происхождение товара и цепочка поставок должны иметь проверяемые основания. Универсальный рекламный лозунг не подтверждает подлинность."
+        },
+        {
+          "question": "Как рассчитывается GEO для магазина косметики?",
+          "answer": "Используются общие тарифы GAEO на аудит и сопровождение. Состав запросов зависит от брендов, товарных линеек и географии."
+        }
+      ],
+      "ctaTitle": "Узнать, какие магазины косметики нейросети рекомендуют покупателям",
+      "ctaText": "Пришли сайт, основные бренды, категории и доступные данные о товарах. Я предложу запросы и проверку рекомендательных ответов.",
+      "request": "GEO косметика и парфюмерия: INCI, оттенки, концентрации, Product/Offer, подлинность, доставка и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for cosmetics and fragrance online shops | GAEO.ru",
+      "h1": "GEO for online cosmetics and fragrance retailers",
+      "description": "GEO for beauty shops: INCI ingredients, fragrance concentration, product shades, authentic sourcing, inventory and AI shopping recommendations.",
+      "eyebrow": "E-commerce / Cosmetics and fragrance",
+      "lead": "Skincare shoppers look for ingredients and intended use; perfume buyers compare fragrance notes, concentration and bottle sizes. Accurate recommendations need verifiable product details, current variants and honest purchase terms. I examine which retailers AI selects and where the evidence is incomplete.",
+      "heroPoints": [
+        "Distinct skincare, make-up and fragrance queries",
+        "Verifiable ingredients, shades, volume and concentration",
+        "Reliable sourcing, stock, seller identity and delivery details"
+      ],
+      "problemTitle": "What weakens an AI recommendation for beauty products",
+      "problemIntro": "A product family may contain several different formulas and variants. Unsupported therapeutic promises or copied ingredient lists make it harder to identify what a shopper will actually receive.",
+      "problems": [
+        {
+          "title": "Product versions are merged incorrectly",
+          "body": "Parfum, eau de parfum, eau de toilette, shades and bottle sizes need model- or variant-specific information that matches the actual product."
+        },
+        {
+          "title": "Ingredient and performance claims are inaccurate",
+          "body": "Full ingredient lists and intended uses should follow manufacturer and applicable product documentation. A cosmetic should not be promoted as a treatment without an appropriate basis."
+        },
+        {
+          "title": "Authenticity is asserted without evidence",
+          "body": "Supplier, batch, shelf-life and original-product claims require verifiable processes and documentation. Slogans do not independently prove authenticity."
+        }
+      ],
+      "scenarioTitle": "Beauty questions that drive retailer selection",
+      "scenarioIntro": "Separate product-attribute questions, brand comparisons and retailer selection. The material does not provide patient-specific dermatological advice.",
+      "columns": [
+        "Shopper question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Where can I buy an unscented moisturiser with specified ingredients?",
+          "Current INCI list, formula, intended use, size and availability",
+          "Accurate ingredient and use information on the product page"
+        ],
+        [
+          "Which shop delivers a specific foundation shade?",
+          "Shade code, full product name, imagery, actual stock and shipping",
+          "Variant-specific SKU and Product/Offer evidence"
+        ],
+        [
+          "Where can I compare a certain fragrance concentration?",
+          "Concentration, volume, scent profile from official materials, seller and pricing",
+          "Precise fragrance and bottle-variant descriptions"
+        ],
+        [
+          "Which retailer can substantiate product origin and terms?",
+          "Approved origin evidence, seller identity, distance-sale rules",
+          "Responsible sourcing and returns information"
+        ]
+      ],
+      "proofTitle": "What evidence supports a cosmetic product recommendation",
+      "proofIntro": "EAEU Technical Regulation TR TS 009/2011 addresses the safety of perfumery and cosmetic products within its scope. Product labels, permitted claims and regulatory evidence must be checked for the precise category and market.",
+      "checks": [
+        "Exact product identity: brand, INCI list, intended use, colour or concentration, volume, expiry and SKU",
+        "Compliance and sourcing: applicable declarations or records, producer documentation and legitimate grounds for origin and performance claims",
+        "Merchant data: current price, delivery and returns, truthful Product/Offer data, actual photography and purchase page"
+      ],
+      "proofNote": "GAEO's general e-commerce content methodology helps evaluate products, but no measured beauty-retailer GEO success is claimed. Structured data does not guarantee a recommendation.",
+      "workTitle": "An evidence-led GEO programme for beauty retailers",
+      "workIntro": "The workflow starts from product and seller recommendations, then checks whether the available catalogue data is actually correct.",
+      "steps": [
+        {
+          "title": "Segment product demand",
+          "body": "Separate skincare, decorative cosmetics, fragrance, ingredients, variants and brand searches."
+        },
+        {
+          "title": "Verify product facts",
+          "body": "Check formulas, shades, packaging, permitted claims, inventory and authentic product documentation."
+        },
+        {
+          "title": "Improve sources and offers",
+          "body": "Specify product pages, comparisons, useful FAQ, delivery policy and structured offer data."
+        },
+        {
+          "title": "Repeat recommendations",
+          "body": "Measure BMR and factual accuracy with unchanged questions, tracking incorrect ingredients or variants."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do customer reviews prove therapeutic efficacy?",
+          "answer": "No. Reviews cannot replace appropriate evidence and authorisation for medicinal claims. Public descriptions must reflect the product's actual regulatory scope."
+        },
+        {
+          "question": "Why provide INCI and bottle size on every product page?",
+          "answer": "They identify the actual product version and allow accurate comparisons when the underlying packaging differs."
+        },
+        {
+          "question": "Should colour and size variants get separate pages?",
+          "answer": "Variants need precise information and connections to the parent product, not unnecessary duplicate landing pages."
+        },
+        {
+          "question": "Can a shop promise that every item is authentic without evidence?",
+          "answer": "Claims about origin and supply must be supported by real procurement and documentation."
+        },
+        {
+          "question": "How does GAEO price GEO for a cosmetics retailer?",
+          "answer": "The published audit and monthly plans apply. Scope depends on brands, product lines and shopping intents."
+        }
+      ],
+      "ctaTitle": "See which beauty retailers AI recommends",
+      "ctaText": "Share your beauty catalogue, main brands and available product evidence. I will propose a useful baseline.",
+      "request": "Beauty e-commerce GEO: INCI, shades, fragrance concentration, authentic products and AI recommendations."
+    }
+  }
 }
 ];
 
