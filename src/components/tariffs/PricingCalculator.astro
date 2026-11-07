@@ -23,7 +23,7 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
     <dl><div><dt>{en?'Plan, from':'Тариф, от'}</dt><dd data-base>{money(PRICES.geo,lang)}</dd></div><div><dt>{en?'Additional platforms':'Дополнительные нейросети'}</dt><dd data-platform-price>{money(0,lang)}</dd></div><div><dt>{en?'Additional prompts':'Дополнительные запросы'}</dt><dd data-prompt-price>{money(0,lang)}</dd></div></dl>
     <div class="tariff-total"><span>{en?'Total, from':'Итого от'}</span><output data-total>{money(PRICES.geo,lang)}</output><span>{en?'per month':'в месяц'}</span></div>
     <p class="tariff-note" data-scope>{en?'50 prompts · 5 platforms':'50 запросов · 5 нейросетей'}</p>
-    <a class="button" href={en?'/en/#lead':'/#lead'} data-quote-inquiry>{en?'Discuss this scope':'Обсудить этот расчет'}</a>
+    <a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-intent="service" data-quote-inquiry>{en?'Discuss this scope':'Обсудить этот расчет'}</a>
     <p class="tariff-note">{en?'This is a scope estimate. The agreed plan, prompt set, platforms and financial guarantee conditions are recorded in the contract. Website development and the full audit are one-time services.':'Это расчет выбранного объема. Состав работ, запросы, нейросети и условия финансовых гарантий закрепляем в договоре. Разработка сайта и полный аудит оплачиваются разово.'}</p>
    </div>
   </div>
