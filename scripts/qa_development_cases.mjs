@@ -252,25 +252,16 @@ try{
   }
  }
 
- // Test the actual rendered design on both homepages and internal RU/EN pages.
- // Russian homepage has inline legacy CSS; its Cases styling must not regress.
+ // Test the rendered mobile accordion on RU/EN homepages and internal pages.
+ // Desktop navigation is covered separately; never tap a hidden mobile control at 1100px.
  for(const route of ['/','/en/','/services/','/en/services/']){
-  for(const width of [1100,390,320]){
+  for(const width of [390,320]){
    const page=await browser.newPage({viewport:{width,height:800}});
    const errors=[];page.on('pageerror',error=>errors.push(String(error)));
    const response=await page.goto(base+route,{waitUntil:'domcontentloaded'});
    assert.equal(response?.status(),200,'Styled menu route '+route);
    await page.locator('#gaeo-burger-menu-styles').waitFor({state:'attached'});
    const hamburger=page.locator('.menu-toggle');
-   // Desktop navigation can fit at 1100px, leaving the mobile toggle
-   // deliberately hidden; test the visible desktop navigation instead.
-   if(!(await hamburger.isVisible())){
-    assert.ok(await page.locator('.desktop-menu').isVisible(),'Desktop navigation visible '+route+' '+width);
-    assert.equal(await page.locator('#mobileMenu details.mobile-cases').count(),1,'Exactly one mobile Cases disclosure '+route+' '+width);
-    assert.deepEqual(errors,[],'No JS errors '+route+' '+width);
-    await page.close();
-    continue;
-   }
    await hamburger.click();
    await page.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3500});
    const cases=page.locator('#mobileMenu details.mobile-cases');

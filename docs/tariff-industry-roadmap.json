@@ -445,7 +445,7 @@
     "phase_2l": {
       "phase": 2,
       "batch": "2L",
-      "status": "source_ready_ci_fix_pending_recheck",
+      "status": "code_ready_two_ci_failures_shared_mobile_menu_QA_fixed_again",
       "records": [
         7,
         9,
@@ -457,11 +457,11 @@
       "qa_file": "scripts/qa_industry_specializations.mjs",
       "new_industry_landing_pairs_prepared": 3,
       "new_ru_en_urls_prepared": 6,
-      "ci_status": "first_run_failed_unrelated_desktop_menu_QA",
+      "ci_status": "retry_after_removing_desktop_width_from_mobile_disclosure_test",
       "production_status": "not_published",
       "pages_status": "not_published",
       "public_https_browser_verified": false,
-      "next_required_step": "Re-run whole CI after responsive menu QA correction; on PASS merge, verify production/main/Pages, then external HTTPS",
+      "next_required_step": "Run new whole PR CI, after PASS merge and verify production, Pages, direct HTTPS",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91",
       "rebased_onto_source_sha": "985994ae71688c344a470a2493579663d9bd5edc",
       "parallel_batch_2i": "Merged in astro-source; preserve 95–98 and related records.",
@@ -469,7 +469,8 @@
       "specializations_qa": "pass_all_80_RU_EN_pages_1440_390_320",
       "base_sha": "3ad206807c23a635ccb6d5bb2a0b6adea1c07bde",
       "parallel_2k": "PR #89 owns 92,93,94",
-      "parallel_2m": "PR #90 owns 8,83 and excludes #7"
+      "parallel_2m": "PR #90 owns 8,83 and excludes #7",
+      "pr_ci_run_second": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42419191285"
     }
   },
   "status_definitions": {
@@ -984,7 +985,7 @@
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/",
-      "last_completed_step": "2L_bilingual_80page_QA_pass_menu_test_corrected"
+      "last_completed_step": "2L_specializations_80_urls_pass_mobile_navigation_test_width_fixed"
     },
     {
       "id": 8,
@@ -1045,7 +1046,7 @@
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/",
-      "last_completed_step": "2L_bilingual_80page_QA_pass_menu_test_corrected"
+      "last_completed_step": "2L_specializations_80_urls_pass_mobile_navigation_test_width_fixed"
     },
     {
       "id": 10,
@@ -1106,7 +1107,7 @@
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/",
-      "last_completed_step": "2L_bilingual_80page_QA_pass_menu_test_corrected"
+      "last_completed_step": "2L_specializations_80_urls_pass_mobile_navigation_test_width_fixed"
     },
     {
       "id": 12,
