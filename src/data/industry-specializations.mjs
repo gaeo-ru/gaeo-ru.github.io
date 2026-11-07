@@ -4209,8 +4209,8 @@ export const industrySpecializations = [
       "request": "Medical device manufacturer GEO: registration, intended purpose, models, product specifications and B2B procurement recommendations."
     }
   }
-}
-  ,...industrySpecializationsBatch2E
+},
+  ...industrySpecializationsBatch2E
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
