@@ -38,7 +38,7 @@
  const alignTariffRows=()=>{
   for(const grid of document.querySelectorAll('.tariff-plans')){
    const cards=[...grid.children].filter(el=>el.matches('details.tariff-plan[open]'));
-   for(const card of cards)card.querySelector('.tariff-actions').style.marginTop='';
+   for(const card of cards)card.querySelector('.tariff-actions').style.transform='';
    if(window.innerWidth>720){
     const rows=[];
     for(const card of cards){
@@ -54,7 +54,7 @@
      const lowest=Math.max(...tops);
      row.forEach((card,i)=>{
       const offset=Math.max(0,lowest-tops[i]);
-      if(offset>.5)card.querySelector('.tariff-actions').style.marginTop=offset+'px';
+      if(offset>.5)card.querySelector('.tariff-actions').style.transform='translateY('+offset+'px)';
      });
     }
    }
