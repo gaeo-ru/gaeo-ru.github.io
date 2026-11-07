@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "31b51e7b9cb5b6dcbb1b11ddf95bbfe24d252142",
-  "releasedAt": "2026-11-06T16:19:45.093Z",
+  "sourceCommit": "8039de634be7e71a5b5fa9edb09b6ea26a30a822",
+  "releasedAt": "2026-11-07T11:57:47.925Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -13,47 +13,47 @@
     {
       "path": "404.html",
       "kind": "html",
-      "sha256": "af2aa2d76d49915ed6080c92317069cce028970524d2c6ae9e9d24029c98d57d"
+      "sha256": "2572eb9ebd35c5a6ece75cb8e70c88b59f35e7081d280ecc305c3964424ae53e"
     },
     {
       "path": "articles/agentnaya-torgovlya-gotovnost-internet-magazina/index.html",
       "kind": "html",
-      "sha256": "c66546d16f4900084e7884a96cb7ff534d3cdd1d18eeb3d412c74828f3216f42"
+      "sha256": "469d019fce89a8ede3d0781d0deaea31bc863d9c99ce5d38c0b69ca1ded2ed26"
     },
     {
       "path": "articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/index.html",
       "kind": "html",
-      "sha256": "e1ef8781848b93ebfe78c2db02b6a2d373245c8d4a7f7e85c12c6f11c2fb8cbc"
+      "sha256": "a281a840ddeca5c56ae2923ddd2de30ffb9ccd0adbac27102b01a91f5c16db24"
     },
     {
       "path": "articles/index.html",
       "kind": "html",
-      "sha256": "74cfb4a4826b000ab413f2b03b1184818d45135dd9f05e8b8df9f00d547c8523"
+      "sha256": "94d9fbb10f152a5615ef31ab14ea4d30fd41a63d0993e45343589ddd43478379"
     },
     {
       "path": "articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/index.html",
       "kind": "html",
-      "sha256": "616484c47b5cbdd368e5a460e15d2a8c7f3cdddc18cf786da5b6aa318108fb1f"
+      "sha256": "07c07712584640a81e0137b1e20efd27e089347c5540bb2cd75cecbbedaceb27"
     },
     {
       "path": "articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/index.html",
       "kind": "html",
-      "sha256": "a8903ef820de08608f35c88d0b9bc3cd80bea8a7c5a01bdef89c3adb1032b79c"
+      "sha256": "fa6697fccf28805731c2e1e808291f4ae44c222918037114469c6ad5fd0d8f1a"
     },
     {
       "path": "articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/index.html",
       "kind": "html",
-      "sha256": "4c9e9dd5d014dc428c1b07184ffad02e4d638228dff25f1f16eba5db381fe4c7"
+      "sha256": "1bd78a32f0c75e5c36df11ace490fbc2dfeb3d2ad13d51b5201ec09e71978bfc"
     },
     {
       "path": "articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/index.html",
       "kind": "html",
-      "sha256": "6b0ef779e6102103ffe6c7475fe752b0c8131d5e5893b7506930c22e2288529c"
+      "sha256": "21e2957c7bb04dc8d91bd83ec64135ca3e1063e5bc3d52dffebb1180ecad5ceb"
     },
     {
       "path": "articles/strategiya-geo-prodvizheniya-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "c4ba530613625ace101475f1f973f94ae2b7c674a7ac65079f39b012b9bd8831"
+      "sha256": "ec03107890b74ac2d54da3ea2a444a518ffe7dade6cb267597136a2140be9e63"
     },
     {
       "path": "assets/alexey-yakovlev-biography.jpg",
@@ -329,6 +329,16 @@
       "path": "assets/gaeo-social-preview.jpg",
       "kind": "asset",
       "sha256": "530ab9e5e14937928d753befe2c30a8e1adbc45f04d11e1568a4ace21f6439b1"
+    },
+    {
+      "path": "assets/industry-catalog.css",
+      "kind": "asset",
+      "sha256": "f56b71cab43521f6a2ddf56e10974f337739c0e66dbce1ae328a76b080419944"
+    },
+    {
+      "path": "assets/industry-catalog.js",
+      "kind": "asset",
+      "sha256": "d5abefdc145d6789813d4f37ed0556c42873348566c822e0b26d1c2b5e7536b8"
     },
     {
       "path": "assets/internal.css",
@@ -1343,52 +1353,1397 @@
     {
       "path": "assets/site.js",
       "kind": "asset",
-      "sha256": "825dd71eb273479160daa371d30c611116ad64f6a7341ed6f4ecc5ffd8b47770"
+      "sha256": "ed4f4fea835e43bd68c09ca7a127384a44ef6c7ec854943490c75f87ab33ce3c"
     },
     {
       "path": "assets/style.css",
       "kind": "asset",
-      "sha256": "a2f00e70cd816898ebd6d4919548014a16d190ed9db7f911eaab9f839df76f8a"
+      "sha256": "d2c919c3b556c2654a0fff59ff11b0303b22904215bd02a18201ec43563fbbea"
+    },
+    {
+      "path": "assets/tariffs.css",
+      "kind": "asset",
+      "sha256": "0c5ceef5e7bfe19f01e7ec612e6c28cad251d9bfba53df4d089c9ad1a4d6a4b2"
+    },
+    {
+      "path": "assets/tariffs.js",
+      "kind": "asset",
+      "sha256": "8f7516200849e31a8936fe94be5cc93d7bbde7fec62e8b14e672041502282568"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-001-480.webp",
+      "kind": "asset",
+      "sha256": "40577de5518e8f1f1c668cf37cfc7910d06df5205d7c0e4623c5e8ac90582f06"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-001-960.webp",
+      "kind": "asset",
+      "sha256": "17146b49231122362927d477e038457a7100078da03b63e00a2c3792f6eb381c"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-002-480.webp",
+      "kind": "asset",
+      "sha256": "0d463177a2676d6936497d212db2f9696920c8dc5d4306e262ce4e9e919e386e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-002-960.webp",
+      "kind": "asset",
+      "sha256": "a622b4a78bbeb996b343033800a6b9ef5ca99fff9f19b6eaf72f4f031f88cdf3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-003-480.webp",
+      "kind": "asset",
+      "sha256": "a536b1495ab7398f13c8cc6aa9d16541b67c397f264ec3b6e0a2874e67f41fcc"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-003-960.webp",
+      "kind": "asset",
+      "sha256": "58735e10876552e1dc64a1ff8cff3ea72ea2df394d9e4b620c370369006a4ed4"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-004-480.webp",
+      "kind": "asset",
+      "sha256": "b31a3f3d8a9b048ee2a1ec3d695661ff312e21ab5230066c4d590dd1f854c49e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-004-960.webp",
+      "kind": "asset",
+      "sha256": "c1566b40998894b25c25cc004cc506f5ea52c353df9c2eb65193807b2d912472"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-005-480.webp",
+      "kind": "asset",
+      "sha256": "3c28b3789461b00122446c7bd49a951f789b5e31c8d39c626dbce1f12c0541b4"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-005-960.webp",
+      "kind": "asset",
+      "sha256": "5d93ac2c4679bf76f09063003057a3a244a820b1aff92beeb2ec35dfd397e238"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-006-480.webp",
+      "kind": "asset",
+      "sha256": "5c8dab33788b1017bd194f474248aafabc4329e97037eb8f4a010fc9f009ace8"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-006-960.webp",
+      "kind": "asset",
+      "sha256": "7e329ffaa4acc21bf3bc1bda795de74c049d78be2b94c9a65c200c98b3e7fb21"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-007-480.webp",
+      "kind": "asset",
+      "sha256": "71a643eaea1debd99bd013b4a7aae3bb04cf0d78df3fd847b4d87fb4dcb1f1cc"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-007-960.webp",
+      "kind": "asset",
+      "sha256": "fb746f7e90fa4585a4b10b4c931e730b163e92a26e3fbaa5bdc98da839970cbe"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-008-480.webp",
+      "kind": "asset",
+      "sha256": "1a21d98fccc99e99aeca3a6097a8cee36e2c0fb737de26dacbeabc9f659b9203"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-008-960.webp",
+      "kind": "asset",
+      "sha256": "cc98354afd11b149c14f5072097d818404432b2f8db706d880ed6ae7b1c6078b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-009-480.webp",
+      "kind": "asset",
+      "sha256": "a72ff37aca6a89584fc29a69c86f2a68a45902c7fecbab426bd0e8250386b8b1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-009-960.webp",
+      "kind": "asset",
+      "sha256": "3f6a7790f6fd2a2c82ba5766e00de72071897ec43493c07c3a3478056fb9f416"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-010-480.webp",
+      "kind": "asset",
+      "sha256": "497164d6dec6aa7c401f7b51e2884eefa68c6b78a7916f3bd485165c2338969b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-010-960.webp",
+      "kind": "asset",
+      "sha256": "f9b561a137bc323440a6102da111a9c26eaf462880957de1982562b1bff47c26"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-011-480.webp",
+      "kind": "asset",
+      "sha256": "d58fa8dafc9678e243afb2e1580529604efcdacfdc7b92861fcbb0540a1ecc1c"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-011-960.webp",
+      "kind": "asset",
+      "sha256": "5472feca53f7fbbadcd7a782cfcd5dcca40e15900bedeac57fc09d4a8fac01bb"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-012-480.webp",
+      "kind": "asset",
+      "sha256": "99b3a88947bfd9756c7cb0fa2beb0fe44d3c00c4c7f41e6bee4ae731ee223200"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-012-960.webp",
+      "kind": "asset",
+      "sha256": "ad7f9e4cbf23681d55f5e00083deaa83f471031ab3b09f92eb230a2a922bd8cd"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-013-480.webp",
+      "kind": "asset",
+      "sha256": "85a50706fa31768c4e7563635b452fb009874d451213da902793996c5f6b8cf6"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-013-960.webp",
+      "kind": "asset",
+      "sha256": "9672946728bf457afac5c2384bf4989cc67655c487eeb185d260326517fdaae4"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-014-480.webp",
+      "kind": "asset",
+      "sha256": "b9fe6c309286e1085a370c376f19231171e33565b3ae8bc41b42ca3bbce1f15d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-014-960.webp",
+      "kind": "asset",
+      "sha256": "228d5a3047e3aca9a6e1457bd21112d3e07ff17a4736504511f63afbcc944cbf"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-015-480.webp",
+      "kind": "asset",
+      "sha256": "063108b58e10f05037e289af39b4f857a38812f83129283533ae92db6d1b3a00"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-015-960.webp",
+      "kind": "asset",
+      "sha256": "8eb7e645aeab11d55239b1f027391b22e935ba8f8079ae26d5965657cd530db3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-016-480.webp",
+      "kind": "asset",
+      "sha256": "70896e93b2ed51f95495c0009395fc6d19208572094953784856abc201c8f4b5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-016-960.webp",
+      "kind": "asset",
+      "sha256": "7d75fa2ca899cc12a93a10cabb31ead33d74bc476724f7313df831b43c23d576"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-017-480.webp",
+      "kind": "asset",
+      "sha256": "b979c81c1c8af68078f65d8ca92b55a3da1bb39edaccc355ff4ed211d7231ef1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-017-960.webp",
+      "kind": "asset",
+      "sha256": "662f694160e2f473e42ab39a97bde38f051d925b11899def271a8f0b1782445b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-018-480.webp",
+      "kind": "asset",
+      "sha256": "0848cc07396ef4dce8f812a1769e183c57b40bc519d88529feb64516140c6901"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-018-960.webp",
+      "kind": "asset",
+      "sha256": "97c0b3d2a1504f012ecbb12abaaa5cbd712e21dffbbad5e20a088daceb5178e9"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-019-480.webp",
+      "kind": "asset",
+      "sha256": "5627d9985aaa09f737fe048c469397cdbcb28087c1dc19a027270a288b2fda55"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-019-960.webp",
+      "kind": "asset",
+      "sha256": "3ea84d1af11901d34b54a90651c3b8ed08009485e8f4186a87ee4f1d38d262cd"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-020-480.webp",
+      "kind": "asset",
+      "sha256": "62068a4e6556c98e3951d708b3c1a85b925324a0cc13ddb4d4f01d63af59455e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-020-960.webp",
+      "kind": "asset",
+      "sha256": "f3f2ea20bc8f98e17a85c9b70ebb99441f864f6dcf8622725af69178a93fa6da"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-021-480.webp",
+      "kind": "asset",
+      "sha256": "208ff0225b6d848a40b6a4f0b730f933f32a3105e14f5c0458b736146f629c35"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-021-960.webp",
+      "kind": "asset",
+      "sha256": "c6a737de1a4e1aa728b0b08657b4441094a1134291c20fc897a09d01ef609312"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-022-480.webp",
+      "kind": "asset",
+      "sha256": "c5327dd6de47131ae40ff94390104efd13f6059d6ef46bf13414a11e137a4d14"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-022-960.webp",
+      "kind": "asset",
+      "sha256": "729a00a4b4a2d72d6b77a3228b4b9829b04ffb2348615ea86b8f5f55c8a371fb"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-023-480.webp",
+      "kind": "asset",
+      "sha256": "6d50739ed2e028062306c70c7b68ef9cd7cf7ae210fdc54b36dbfaf14aaef474"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-023-960.webp",
+      "kind": "asset",
+      "sha256": "413efad67e2328ca47eff73d34dd6f5fe398715e84449c167caf297dcab31dd9"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-024-480.webp",
+      "kind": "asset",
+      "sha256": "b4517cf1e14c5a5bec33c0bd48657c1d09d9200500505484c42a7dcbd4a2d3c0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-024-960.webp",
+      "kind": "asset",
+      "sha256": "144c384c809594c8cded5f032351b4c5756f34f123bd9ed700bca8555aceb3c7"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-025-480.webp",
+      "kind": "asset",
+      "sha256": "533771e6a3df93c216a47e623f95f81dc660108d1c6f80a0997501d7370da1ea"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-025-960.webp",
+      "kind": "asset",
+      "sha256": "6caae7045c34b494586f402a8597a3e68f9800d9e27094db51578506f9d81fed"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-026-480.webp",
+      "kind": "asset",
+      "sha256": "80870665b0eb94e7cedb82aa0ae667008841074af3707735903c2c45d515fbde"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-026-960.webp",
+      "kind": "asset",
+      "sha256": "6c53f2954caff0898648f797b661326afe3ca456664b99b228b29f60b1437856"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-027-480.webp",
+      "kind": "asset",
+      "sha256": "d1285ba47c0af1f774495c9bca119f27a0d2e1d5fe5efab3593ba12a0ecc2f1f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-027-960.webp",
+      "kind": "asset",
+      "sha256": "950f4290fd7d4142ca20059ac96b2d8735f7efeb4631384e5a5fb24c4373d829"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-028-480.webp",
+      "kind": "asset",
+      "sha256": "213649e98b47c60292d56ccbd605effff2a35900cee1a928cd5a5e701aad0215"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-028-960.webp",
+      "kind": "asset",
+      "sha256": "b60012c6e170f16e7ceb68367c28d2ca96cacae5a2a54d44192d307411df37f1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-029-480.webp",
+      "kind": "asset",
+      "sha256": "684d968500347489f8cf59b7cd705c8398b5fe4fe739520f36a4447c6aa570f3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-029-960.webp",
+      "kind": "asset",
+      "sha256": "c630db161a58baf09e77644b8fb62fc1eda3030d81a07f131bb9e203e3d13e57"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-030-480.webp",
+      "kind": "asset",
+      "sha256": "9cc503ed5a24b09cffe4ed87dbe27d9e53dccd0bee1b197b2df8472c3331f894"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-030-960.webp",
+      "kind": "asset",
+      "sha256": "0583e5b8dd611cfb93147cde8758810817eb7d73bcf551920833234b899a4ffa"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-031-480.webp",
+      "kind": "asset",
+      "sha256": "6ccb217bef4fe639afecd42e0a216e76483bc11543e37b7a9b4c82501c53af1e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-031-960.webp",
+      "kind": "asset",
+      "sha256": "24204891ee65c5a5f864d82d0a04d81a7c1b4142a65ceb3a2256309632929cfd"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-032-480.webp",
+      "kind": "asset",
+      "sha256": "2105555b87e476e25dbfa6be01cefdbf2ad90ac95189d3fc9b1ccfbf68999271"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-032-960.webp",
+      "kind": "asset",
+      "sha256": "3fe4b060ab4cfc07c9215c02ec5cb8d186e5b3730a7726bc9bb6dfc0b939e438"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-033-480.webp",
+      "kind": "asset",
+      "sha256": "6ccd97a324bd2c404c0a37fbf264edda29f644d4244be7941fcc38fa129e1c85"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-033-960.webp",
+      "kind": "asset",
+      "sha256": "c843ad7db1ee4e0ecea4e27590d49b6bbdbc9f96a8bf2f8c5878870996cdc744"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-034-480.webp",
+      "kind": "asset",
+      "sha256": "bd38ee946caa0021aaa6f5bb20e9e676cb853cfad37914d12aafe61938a355c3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-034-960.webp",
+      "kind": "asset",
+      "sha256": "313ddb678dab983e7d785b9e563be59c11f5151870890a275f2cfc3827e7204d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-035-480.webp",
+      "kind": "asset",
+      "sha256": "4ce9e4163610d4217cd63b6534e14fdb107c2e5b90d6cd84ca7bf6e8611b48a3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-035-960.webp",
+      "kind": "asset",
+      "sha256": "0ed9991da5f504cef01c5470fcc077ba17f20579aad664a036d35a16d16da819"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-036-480.webp",
+      "kind": "asset",
+      "sha256": "fa5e6a228c33715c9c243823591fdc8aba43cce49076d04139b904b5fc34fece"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-036-960.webp",
+      "kind": "asset",
+      "sha256": "98b9d85065b84cfa5b65d683e10baf6023b3c1408026f22620ad310847d7d967"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-037-480.webp",
+      "kind": "asset",
+      "sha256": "50a86f5fb0601eabda9ac5d2395291f8284b2499f7a03a3aa7b0d6846970b490"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-037-960.webp",
+      "kind": "asset",
+      "sha256": "7b4d4e48bc6d9ebb49e1de28eb97b75e19068c1cc7fcfa81d742d8655b6fe7e8"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-038-480.webp",
+      "kind": "asset",
+      "sha256": "4e3e546e2b8578cf6ae5a491b4812b05a9348784d10e11bebbb7f07f928859c6"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-038-960.webp",
+      "kind": "asset",
+      "sha256": "c5e514753ec4a5d5ea897d23001291c6e279f26670c55689136f8b29638faf07"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-039-480.webp",
+      "kind": "asset",
+      "sha256": "46f63b63955893359b3faa302a09bf8b9022a1fd0c3adbe42f727780d5fd25b0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-039-960.webp",
+      "kind": "asset",
+      "sha256": "c9ce4f4a10181c2c0f8187956a034efbb1c6ad4f3ff33493aad6596899a5478f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-040-480.webp",
+      "kind": "asset",
+      "sha256": "2b36ad0c78b8dff12b0bd1a3b75e1f10410f625ea665d1365db16f8ecc34508c"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-040-960.webp",
+      "kind": "asset",
+      "sha256": "df713a76e7d013314aea6941750e17442f7d8ee50a07d0e62f779a25d31c2462"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-041-480.webp",
+      "kind": "asset",
+      "sha256": "b8284fdd88749c6bd0f4e22b45b63057c3e78036080453b6f25c5589c658ae28"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-041-960.webp",
+      "kind": "asset",
+      "sha256": "d9a436c27fce76ccf033ac9a83e074ad17966cdbb2f2e942c8d13fea79e3f46d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-042-480.webp",
+      "kind": "asset",
+      "sha256": "6341e54feea57158050fb3a05e39dd9085cb826d19ed65cdbcc0c21c4c197084"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-042-960.webp",
+      "kind": "asset",
+      "sha256": "bc33ed53bc32f27f1f8841d57f4abdaf24a5a328d2e6109ca399b2983c3c7310"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-043-480.webp",
+      "kind": "asset",
+      "sha256": "6321de1f796c607b6cb3e426f69756bd76344ab05bd34631ffc172e6b492d6aa"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-043-960.webp",
+      "kind": "asset",
+      "sha256": "a534f94a0eb89bc7ffb05a26710eb6c98bb1793af69a78fa5f37932a75f171fb"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-044-480.webp",
+      "kind": "asset",
+      "sha256": "45a8a540bd8f627520f4428d357bba1f7994c04850e6b5823da316c84c953aae"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-044-960.webp",
+      "kind": "asset",
+      "sha256": "e4924a57f8a8619b6a42d06205a760973125cdb27009dd5839aaad4fbe59d8ef"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-045-480.webp",
+      "kind": "asset",
+      "sha256": "6051c6bb9307784d756845bf512a643700c07834e0a95ad0d09fa3bcfe0cbc06"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-045-960.webp",
+      "kind": "asset",
+      "sha256": "aada10a27732c37ee175a6f374ea5e27815faddb72615a8a6039c9b4b9f7d577"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-046-480.webp",
+      "kind": "asset",
+      "sha256": "bff7b7625733e344e9b0a7e7c95f3bf521002ea4b2ccf5050a5ce6274f97ca34"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-046-960.webp",
+      "kind": "asset",
+      "sha256": "e3072faa14b181f8541d52673bf128e9784ab969421b5686a2f92807b94cb311"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-047-480.webp",
+      "kind": "asset",
+      "sha256": "0c1fc1030299bbf88e639a12cbbbb0d45272a272720667cd495beb71cc85a8f4"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-047-960.webp",
+      "kind": "asset",
+      "sha256": "844d9fc4fe16a679fc516e095bf1289856be1bedeb622f410e61205170e399ea"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-048-480.webp",
+      "kind": "asset",
+      "sha256": "869480ee1ad60998aa3fed28c630ecdcf5d068992d6b1128b046303fd226dda2"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-048-960.webp",
+      "kind": "asset",
+      "sha256": "04e2d1cc25cc4cc03c77158880bc0d690c2a4684afc2bfb247ca8c90f68a8554"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-049-480.webp",
+      "kind": "asset",
+      "sha256": "3182ed145cdd79c2388b9fd3abfe08556b38a876a5052cc5999b932dbf21f41d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-049-960.webp",
+      "kind": "asset",
+      "sha256": "ddcb3f52e11200ed145a304a3947e5b70088ed29f88eeea56e9225cfa9a6d5ca"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-050-480.webp",
+      "kind": "asset",
+      "sha256": "56d183031c64574efaf91c8831b92abec6f5ab0061f3796977083d1e11571572"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-050-960.webp",
+      "kind": "asset",
+      "sha256": "2e22caae42d40b9ed91ae2337134b02902d73afb50f72f3607c0b36f290b3819"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-051-480.webp",
+      "kind": "asset",
+      "sha256": "08360981dae3c18bf7c2b305dbf5661482edd39d025b98ba4d0c0f0c2c30a051"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-051-960.webp",
+      "kind": "asset",
+      "sha256": "02abc1ec021801a5ae67567d9594e6f6eabd630426c87978a95188185dcb83cf"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-052-480.webp",
+      "kind": "asset",
+      "sha256": "00ca3d5124ae76096f0d89a4a308f231e0ee1d9f9a35947bbd868f042566be6b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-052-960.webp",
+      "kind": "asset",
+      "sha256": "52e926e0e04dda25226d411bc4ccd0ca05932ae2de9aefd1ab4e5f1d998ba625"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-053-480.webp",
+      "kind": "asset",
+      "sha256": "13c31d54f0465837f8f33c8844278012f5ad324b612617e7a5e36d0b1de117c5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-053-960.webp",
+      "kind": "asset",
+      "sha256": "92286fc204928e7c968bdfb5d068c52b89b22a14ddff3c248e6639ab920ff910"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-054-480.webp",
+      "kind": "asset",
+      "sha256": "d59b5bc3c908305a387acd7e23459800d75513643122bd24769dae87a8521a9e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-054-960.webp",
+      "kind": "asset",
+      "sha256": "7b51972c1c83b316a92f41542a8fba8301dedbf2ada1e3664fca034032e88b8b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-055-480.webp",
+      "kind": "asset",
+      "sha256": "01a12804f5d3be9d1b47e73a090adc0b88355e8bc7b19f716605509f74307ccb"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-055-960.webp",
+      "kind": "asset",
+      "sha256": "274ad1abaae0692b446d9e2acd0540f77540ec2d623e5eac7f7daf846596a00d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-056-480.webp",
+      "kind": "asset",
+      "sha256": "bc84aaaf045c0f875dc258c055b57e2a3ea2b47fc3488581eaf3fabe804be095"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-056-960.webp",
+      "kind": "asset",
+      "sha256": "c43cc0e5218efabd803c2286d0596d072f7c855003de5cf7a4f29ec3d806692d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-057-480.webp",
+      "kind": "asset",
+      "sha256": "a6d7a2a656b11b7502ac3f13817a9f0ed248d631678beffb3ee185c5f7b4f8a5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-057-960.webp",
+      "kind": "asset",
+      "sha256": "e714e43ffbbd184f4579a5ecb4973c0a52d70343f21021a238ec2afa2184da63"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-058-480.webp",
+      "kind": "asset",
+      "sha256": "28aadc72132bf442ef3f7e7502be1509c034075463070daa7437b39d8678ebc3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-058-960.webp",
+      "kind": "asset",
+      "sha256": "ee429367fab55b67a64b7ce3d1cbc19bba2c008495d939f1573fc1dd403d6ddf"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-059-480.webp",
+      "kind": "asset",
+      "sha256": "55bafe97210d63d6a482b8b101d356578abdf3644a5b9f580c9bfab5240bbd37"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-059-960.webp",
+      "kind": "asset",
+      "sha256": "66a0b01bd2c776603237cf3cc9417b97574c910dbdcdb786f5dc015601f62f2f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-060-480.webp",
+      "kind": "asset",
+      "sha256": "cc199c6ec46e865d996e8a8cf2342a67498867b91042ff23de0ae4962ef4275f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-060-960.webp",
+      "kind": "asset",
+      "sha256": "062c2c891be345d114e76da99f634454fa6d955f75b0169b8b8a2b4ffc685650"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-061-480.webp",
+      "kind": "asset",
+      "sha256": "f7306bc248f51066daf8d47e7bdbe6e141ed1d00b9615e7e11dac520271a3103"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-061-960.webp",
+      "kind": "asset",
+      "sha256": "6a68e8f3cee84159009904926b056bbf558244860a4a2cf01137593101424e16"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-062-480.webp",
+      "kind": "asset",
+      "sha256": "bc5afbc18765a81a75e91ac0523d512ac79c030fb85d83c87e4002f5068701ea"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-062-960.webp",
+      "kind": "asset",
+      "sha256": "57a4992edf835fed63c952cfa75f807dc2741903c63a36974e8c6b77b2ced77a"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-063-480.webp",
+      "kind": "asset",
+      "sha256": "b99b0f0f5bafdb533dea309d052b38c7da1d93a971f7abe94ceb3310769ebe5d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-063-960.webp",
+      "kind": "asset",
+      "sha256": "a117a85f8aeb7709fc8c448e856ff95019c53af27474b3197f3c188a31f1511f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-064-480.webp",
+      "kind": "asset",
+      "sha256": "a677a73d8f73d8a8b79959748f236eaee0649d5021114adb4974d901c2ec4a03"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-064-960.webp",
+      "kind": "asset",
+      "sha256": "ed0e05199cc169635609c5e0e6eb4f79cb0be543a10d246d5e164f8b679dbcb5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-065-480.webp",
+      "kind": "asset",
+      "sha256": "932f9ecbe8879cf256767a9045c564bcd39b72d7eeee88b507400bb0316e7185"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-065-960.webp",
+      "kind": "asset",
+      "sha256": "749a436bf763cc063f9b8b50222264b1ed8e968ff5b7a289b057b9104f049560"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-066-480.webp",
+      "kind": "asset",
+      "sha256": "45fb579ca7dfcd3f50c091a3f09e9b53c5c63fbf9bee26c6461053fe0b50928b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-066-960.webp",
+      "kind": "asset",
+      "sha256": "5b1ed203905ca6101094ab01075816e6fe7965b4c8024b0c8ba4f945a5822ba0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-067-480.webp",
+      "kind": "asset",
+      "sha256": "4a41b298c3a1e0b90be64c44b2532c3332c297ce18c5efe5575cfd2895850086"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-067-960.webp",
+      "kind": "asset",
+      "sha256": "553507b3231c1f2d2ddd8db7a230ee818f630b3f7968dbe4ee35d3ae479100c0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-068-480.webp",
+      "kind": "asset",
+      "sha256": "b4d4e02566456dff6234589a36eb70dd00d6328da1fd58d51b4126000a421270"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-068-960.webp",
+      "kind": "asset",
+      "sha256": "b1618679737f37afbab328d286cfdd1f58b44343994c4093115a13dda832fac1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-069-480.webp",
+      "kind": "asset",
+      "sha256": "1516c2d5147e1eddecf6c9e735a0ac5259c3233bcd53981fbd4533e3ac085427"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-069-960.webp",
+      "kind": "asset",
+      "sha256": "28c1bd093c3836a8eb95c8d13a00385650f0eae33e33fa074fa3e4becd4c47b2"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-070-480.webp",
+      "kind": "asset",
+      "sha256": "139b02401d7fa1371ff87014e630acb96087442ed8bd0512d1b55c8f5f0ffc39"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-070-960.webp",
+      "kind": "asset",
+      "sha256": "678fdf80cacd3dca288f3ad8a59794eac2ba9b0d94ceeb56f5a2981e66c4aa18"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-071-480.webp",
+      "kind": "asset",
+      "sha256": "d0196e4b7d32fd785182ec2c1f2a02db19b78074dc91b4082fd446fa4b2cad49"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-071-960.webp",
+      "kind": "asset",
+      "sha256": "3e767dddc5a25792b5b8bcbdf25e117dbb83cf93d1f5893ff067e7ddddef9e24"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-072-480.webp",
+      "kind": "asset",
+      "sha256": "3a7abc819543fe0c28c87bd1468f19e215f7749a80ee5b4f14755e5b5c00e013"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-072-960.webp",
+      "kind": "asset",
+      "sha256": "81ee7c7b8b688fdbbeff40314b703019f691825f9c6113ccc0497d96b6a5fd7e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-073-480.webp",
+      "kind": "asset",
+      "sha256": "71954e5ded0f2830d95c6dc3a264bbda3a83b2b022772988fd3e03e7ada7c7ac"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-073-960.webp",
+      "kind": "asset",
+      "sha256": "11efd1805ad8d9413f473ece5adb770efddc9385884a0d3bc7d796632c1a2d3e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-074-480.webp",
+      "kind": "asset",
+      "sha256": "a2ac9109503700e455a6d1d64443da4dc1b0d38a97ab08761a1c0abae246aa62"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-074-960.webp",
+      "kind": "asset",
+      "sha256": "4832ef0899380c2336cff11228b3d0d9920ed62885835702abc4f0f7e5a678cc"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-075-480.webp",
+      "kind": "asset",
+      "sha256": "4db8a99173d1a26d86a5cbc5a3da957377696a0aeb3aa830a58f3402ba1f7cd0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-075-960.webp",
+      "kind": "asset",
+      "sha256": "fb6940ce48b4c69bd389a8bb7208a61c0903878117d4de567cf2c6a29d368b06"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-076-480.webp",
+      "kind": "asset",
+      "sha256": "9a74af9be862260fbce5c10d40d79e5378491e2d9efaa0379ed1448e5b272765"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-076-960.webp",
+      "kind": "asset",
+      "sha256": "01143eb1aa57bfcfbd9e786c45dfbfa375e450aeea02f4035529419950e83665"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-077-480.webp",
+      "kind": "asset",
+      "sha256": "342a545850c4ec389abe8a5824a5a2545ab655a06e48f8a27bf165ecf89ff081"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-077-960.webp",
+      "kind": "asset",
+      "sha256": "f392755252a1c3ae29902fc96b845c3751d16889e51e6749529875728c882f72"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-078-480.webp",
+      "kind": "asset",
+      "sha256": "16d3c838a797a02d19ca5ecb406c6edfee10fd04d48f002f7baebdbda19c90b3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-078-960.webp",
+      "kind": "asset",
+      "sha256": "f56b24fa0c406a3dc9d64b98c0e042a6d39f75d7c31e857c83970a9b9a2d9d2d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-079-480.webp",
+      "kind": "asset",
+      "sha256": "fb492e4cc5f54cd68745e7fa483991df5a568979d1e4491dc121984c5bcdccb7"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-079-960.webp",
+      "kind": "asset",
+      "sha256": "abc537650d238032f04fc4e364f20e32222e5bd7a93a68a4bf37b476f84cc86b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-080-480.webp",
+      "kind": "asset",
+      "sha256": "3dff35ac4daed16840313b6287c30d59f9025774e4f9919bb6f80fb7ce4bca28"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-080-960.webp",
+      "kind": "asset",
+      "sha256": "687c509247d284b8a75f17b6093133d339d6ee5fd1d4777733287c1819ca50ce"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-081-480.webp",
+      "kind": "asset",
+      "sha256": "e21e9c7b9435718029d1bcaa8f8d5587878f73838d81d1daa7b785f0662db876"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-081-960.webp",
+      "kind": "asset",
+      "sha256": "6e77ecff26403ce0cfeedca3741dd01a9d53cca4dce6ea13c447da961244b2b0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-082-480.webp",
+      "kind": "asset",
+      "sha256": "91958e4808d19810ee23ae6203b7ad942f9a4904cbb3410c31010cbd02ed713e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-082-960.webp",
+      "kind": "asset",
+      "sha256": "03f9ed715a95202d37add6274e2e6ef3e604ebb6563622b8728fb13bb913a292"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-083-480.webp",
+      "kind": "asset",
+      "sha256": "4a3ca68fa6f987017e8bda5c05328c72d38b5d13b288b030082bbff1fa5c4df3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-083-960.webp",
+      "kind": "asset",
+      "sha256": "20f352b04d2a84bf326bc6866a1e3c5dfbc0149f58ce0c68b41a425b8c2063f5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-084-480.webp",
+      "kind": "asset",
+      "sha256": "8c65eb47abecb88c2fbecb3ea3f6af5c350cfe2f03f7971523a57bc71708a94d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-084-960.webp",
+      "kind": "asset",
+      "sha256": "6764a442f22525bc137afcf2425f846a503f4bce0687be61ad05c67605c6a752"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-085-480.webp",
+      "kind": "asset",
+      "sha256": "d84b569612d8dd276ef50ca63cfa62c5939e1784859161a619195760f06137dd"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-085-960.webp",
+      "kind": "asset",
+      "sha256": "da0d47f9c0de7e0d8b84173e9aa6c86ef4841d2dc78230c1761d877aecebabf2"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-086-480.webp",
+      "kind": "asset",
+      "sha256": "4e8e5e9ae825144436055cb4d0a55f5da96c77f7642f41d72a3c39e479b5b7d1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-086-960.webp",
+      "kind": "asset",
+      "sha256": "f8b1feca078efaa5f5e32a854a29860b97fddd2d63f384e7311d623a78ec8e90"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-087-480.webp",
+      "kind": "asset",
+      "sha256": "cf24675519ef71e15e7108ce1ace97b115d1b0eaba627f19fa7e75cd6b556095"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-087-960.webp",
+      "kind": "asset",
+      "sha256": "0eeecdf95efc608e8746d3aa16ede85fbb21714d6302a325f87bfe60c5f8f7cf"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-088-480.webp",
+      "kind": "asset",
+      "sha256": "47d150ce855f15ad86d00d4a7d050890a3ae411585a85cdcbd34e5df576fdaee"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-088-960.webp",
+      "kind": "asset",
+      "sha256": "7b0d834dfc24fe0e5b52d65cdc076b55a4050398087c0d1051aef20a2430f16f"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-089-480.webp",
+      "kind": "asset",
+      "sha256": "f3d9c308aab6b40ac77577ea534400287646935ab473af26b2bf13e3a19d9fbd"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-089-960.webp",
+      "kind": "asset",
+      "sha256": "e0724cece8548655a99a7b30f548d3da833248c3b99b2487cf09d2caf7c2de54"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-090-480.webp",
+      "kind": "asset",
+      "sha256": "96b37c9796296377f2422d8b4912101cc3f910ab9f179ce8e8d8fac4eeb38cb0"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-090-960.webp",
+      "kind": "asset",
+      "sha256": "74f9f84176fcf02403c2ff7f762ad1b461e5e43ac818a1faa7a020579f97b66e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-091-480.webp",
+      "kind": "asset",
+      "sha256": "6b2894a09714a225858bec9803539ab22d3d46b8cdf2408bf21f26751a0170f8"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-091-960.webp",
+      "kind": "asset",
+      "sha256": "f4c613da505ae985c981593ba799ce7ea777cb30cad35c513924378bd5a3d133"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-092-480.webp",
+      "kind": "asset",
+      "sha256": "d6e72f9e9ffedddcac4eb48caf304a9c53f86eadbec8f30d6609d35c3b551d40"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-092-960.webp",
+      "kind": "asset",
+      "sha256": "5d7a8ff6b2dafe6b309b32a5945d8bad6c1cb0185c31d093ba31fd230a057e08"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-093-480.webp",
+      "kind": "asset",
+      "sha256": "55e3bf8385b4641d150c792e2f457a2cb094fe14a7057359ed3e8773e2b19d4d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-093-960.webp",
+      "kind": "asset",
+      "sha256": "a80b8b30bf68d241693a659d2d1d74af220c93be1a3c62794a5573a97e8e4d4b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-094-480.webp",
+      "kind": "asset",
+      "sha256": "dac598154a6158eda8fd8678964f464e4510b9b29ef4b9b5d4c477d2c90f507c"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-094-960.webp",
+      "kind": "asset",
+      "sha256": "9fc040a6ce1efe2d2f097fd4d7b0ee1ae8d75acacc6ba57ac2f7970cf8dd467c"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-095-480.webp",
+      "kind": "asset",
+      "sha256": "0fe4325760d3d7d5f363d830f4c3be9219bd3cb799e386298c83085058ebce1d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-095-960.webp",
+      "kind": "asset",
+      "sha256": "ed9b2ed368d694fe458881f6f2873e2b83206fd7e416da7731e2dc9879bcd65d"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-096-480.webp",
+      "kind": "asset",
+      "sha256": "a370852849761632aa28417cafb5e9cec12e8b1c2c0606cfec0191a1a50b8b41"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-096-960.webp",
+      "kind": "asset",
+      "sha256": "9dc8ab843ecc5e1ff45a450912556edc85c06fc890fbe63773ed159c53bbf4a5"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-097-480.webp",
+      "kind": "asset",
+      "sha256": "b13af24cbd46aebe8843e2ebb373a92543288533faaa2c6d1c4b035189193cf8"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-097-960.webp",
+      "kind": "asset",
+      "sha256": "ac60587357028d6801ca8b4980694536a1fe6eebe751f19e887d4f9917a26479"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-098-480.webp",
+      "kind": "asset",
+      "sha256": "2fb06e517f8bb03233d9226a30f55833b6967807e7a5bb060aec672759abbe28"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-098-960.webp",
+      "kind": "asset",
+      "sha256": "3c87fa2e6f0d1a69ee59e5ba510eb6222444cab8505abd32e6c8691a817a5f97"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-099-480.webp",
+      "kind": "asset",
+      "sha256": "027050ce5cef7008f8abc76c6b5e8a0ff50d4ef570fc06084d72b3125525f538"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-099-960.webp",
+      "kind": "asset",
+      "sha256": "f1839c9ff64dd5d784ba17ed192cc069915cdbcff01f28c08d74419b9e6e0719"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-100-480.webp",
+      "kind": "asset",
+      "sha256": "b7aa46553e4b1b90bd58687c22fb3b985088ef95a63ac80bdef1c34b621efe21"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-100-960.webp",
+      "kind": "asset",
+      "sha256": "b5fbfa53c0d16ba6e77c6f7e8fc8e51e970c72a57e751cf521e52d5ec6e979b1"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-101-480.webp",
+      "kind": "asset",
+      "sha256": "068b92d3fba6e662eef42fa94eee4c1b698109eabc537413add36bc71756c672"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-101-960.webp",
+      "kind": "asset",
+      "sha256": "9df8703fbebf344e64727a89f156ac819ec1d41b850da30087c38778639fc656"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-102-480.webp",
+      "kind": "asset",
+      "sha256": "048b054b1f0a3499db2be66dcb5150596eb706c280c6d60dc07125954e3962e9"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-102-960.webp",
+      "kind": "asset",
+      "sha256": "b29ac64168f4a9b3efbf7acc47d70f2825c7f5f744d64ea2d4ddcb5b2847563b"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-103-480.webp",
+      "kind": "asset",
+      "sha256": "3d604cb925f324b89a00523c7547745cd6408f414f70bcefc471d5ce1c6438b3"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-103-960.webp",
+      "kind": "asset",
+      "sha256": "6bd4dc5f9be734d46d6c69828ca5bb5795f0440cb359871b1520d654cceb7c3e"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-104-480.webp",
+      "kind": "asset",
+      "sha256": "6e74d20d59530221a6fe4d65a20df54fe3ad1d6228594cabd4ddeb7d3963cc98"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-104-960.webp",
+      "kind": "asset",
+      "sha256": "0bffd4da58c420c9a050981baf67adee0d6ea957c90810c95cfee508d600faca"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-105-480.webp",
+      "kind": "asset",
+      "sha256": "f425ea6afc569794e6b49cb71ba5331433d661670cd316fa7a95859c510acdb4"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-105-960.webp",
+      "kind": "asset",
+      "sha256": "8cb35b8b5189ebcb69adac7f5b64eb56b335c5f8c4b72da00f2f4f7923028a35"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-106-480.webp",
+      "kind": "asset",
+      "sha256": "129f6c26b0e602fcde0da335a2e67cc8804c7ba06e15d642f6fc9fdc719c47aa"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-106-960.webp",
+      "kind": "asset",
+      "sha256": "fda42cfb41e0ed682007d5303c27bdb08930a7485a52eda4587f6c42999025c8"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-107-480.webp",
+      "kind": "asset",
+      "sha256": "c57327bd4bfdae5f60cd92c2df45eb048eac5f7b008515373473086afdd6ac37"
+    },
+    {
+      "path": "assets/tariffs/industries/industry-107-960.webp",
+      "kind": "asset",
+      "sha256": "70703997496f477405e3bc7a2736b9032136bef9f91b09f5082ed207fa4fa03d"
+    },
+    {
+      "path": "assets/tariffs/services/01-480.webp",
+      "kind": "asset",
+      "sha256": "8e569f31748e303b6eb361216be5511c14cc24b3898ea06ff99a0fa7fdff77b0"
+    },
+    {
+      "path": "assets/tariffs/services/01-960.webp",
+      "kind": "asset",
+      "sha256": "ceecf442a988743a303481baaed978d0d4ee2abce5bffbc55dfc3bd5538d630b"
+    },
+    {
+      "path": "assets/tariffs/services/02-480.webp",
+      "kind": "asset",
+      "sha256": "6f380c7966fd6ee96e68b311560e32050cba5ec317223f7e8f6bad8241a8a365"
+    },
+    {
+      "path": "assets/tariffs/services/02-960.webp",
+      "kind": "asset",
+      "sha256": "f1d73b102ff3f70e34862140ea2e6613afe70f9f14079d1be9c20efad6704ff7"
+    },
+    {
+      "path": "assets/tariffs/services/03-480.webp",
+      "kind": "asset",
+      "sha256": "c9ebeeb8868d9413bf6c8a6f4356e6ca84156a6bf0db1298c11da86a8014dd7f"
+    },
+    {
+      "path": "assets/tariffs/services/03-960.webp",
+      "kind": "asset",
+      "sha256": "0bffdc729273ae73c60d4b8d6b5b67b923cb2cbb58c98160502973c3e8915b48"
+    },
+    {
+      "path": "assets/tariffs/services/03.jpg",
+      "kind": "asset",
+      "sha256": "a30b4ef5062cb8711e71d1b8ace6ba54431ab8836fec2c470c693c777ffccc83"
+    },
+    {
+      "path": "assets/tariffs/services/04-480.webp",
+      "kind": "asset",
+      "sha256": "c629509c54e5edc3794c53e9a34899f141a2ef972ffcadba88c72b138ec2cdb8"
+    },
+    {
+      "path": "assets/tariffs/services/04-960.webp",
+      "kind": "asset",
+      "sha256": "bf74b04b2fc1d2d104a3b639b07be334493c82ed3087713c79181f1f91d92019"
+    },
+    {
+      "path": "assets/tariffs/services/04.jpg",
+      "kind": "asset",
+      "sha256": "ce6f8ae1a22a3caf5133f3ce9951c174814efd1d213009c319949a0a7659ae56"
+    },
+    {
+      "path": "assets/tariffs/services/05-480.webp",
+      "kind": "asset",
+      "sha256": "b53bb633b267cb7abe1d39ce728a5b7c8d35d0181ac8542f89d626f3f2068048"
+    },
+    {
+      "path": "assets/tariffs/services/05-960.webp",
+      "kind": "asset",
+      "sha256": "b98d168dc6130919761335849e75057377b8c06d0f4c21358c626df06a23a1aa"
+    },
+    {
+      "path": "assets/tariffs/services/05.jpg",
+      "kind": "asset",
+      "sha256": "67764bebd6b5b36165c2eeef959c8a0b7d40f6df60aa3189aaa1cb33c20acbfc"
+    },
+    {
+      "path": "assets/tariffs/services/06-480.webp",
+      "kind": "asset",
+      "sha256": "6778b0c46c7e570aa7155430f112bad50dc5dfc596a22b31d3e887ef62f0f3f7"
+    },
+    {
+      "path": "assets/tariffs/services/06-960.webp",
+      "kind": "asset",
+      "sha256": "4e8468c24d7fbd69a545a8a6a74086bf71838d294539312e12e30b209a5d8129"
+    },
+    {
+      "path": "assets/tariffs/services/06.jpg",
+      "kind": "asset",
+      "sha256": "3d09094f07d2f39f360ce6c64442b9263c31d24e5bfa48d92b91179fbf56ae78"
+    },
+    {
+      "path": "assets/tariffs/services/07-480.webp",
+      "kind": "asset",
+      "sha256": "91ac8b2ecb1212ab847a8740c60a344e428dad3acd81c78e7fd83ec3d09f053a"
+    },
+    {
+      "path": "assets/tariffs/services/07-960.webp",
+      "kind": "asset",
+      "sha256": "2a6d9de9f323b7302f1832fdecd2fc450cf072b2fbb81d03ac3081ee41229784"
+    },
+    {
+      "path": "assets/tariffs/services/07.jpg",
+      "kind": "asset",
+      "sha256": "a674577cfe2d84cffb1db49ffcf044178656fb9d16b2b52ebd7d5e4400c289a8"
+    },
+    {
+      "path": "assets/tariffs/services/08-480.webp",
+      "kind": "asset",
+      "sha256": "ee15c19a23c182b6b96642c37f2cc231adde8fe477c206b35c84ebd4799bc866"
+    },
+    {
+      "path": "assets/tariffs/services/08-960.webp",
+      "kind": "asset",
+      "sha256": "6f7e507b681d87a2c6764390c6f63b466c2ab32a8623ace6fdbd5d639e527407"
+    },
+    {
+      "path": "assets/tariffs/services/08.jpg",
+      "kind": "asset",
+      "sha256": "355398a52391e2fb86d2cd9d4bc788852f7190017e497cb9197932da81b64bf3"
+    },
+    {
+      "path": "assets/tariffs/services/09-480.webp",
+      "kind": "asset",
+      "sha256": "5d49adf73c1048e534a48ab2cd48b8853a7ee5baa1fa0f1b1a5edfb2f892c63e"
+    },
+    {
+      "path": "assets/tariffs/services/09-960.webp",
+      "kind": "asset",
+      "sha256": "f8b07d5fd2bd58386ac969c49705cf89632fb588e87663b72f69bef18da4498f"
+    },
+    {
+      "path": "assets/tariffs/services/10-480.webp",
+      "kind": "asset",
+      "sha256": "a85fbcfd50a1f4a09011200e7f64f95e2698f4fe830d7d2d03d869cf9ee8bfad"
+    },
+    {
+      "path": "assets/tariffs/services/10-960.webp",
+      "kind": "asset",
+      "sha256": "092bde31e15f49daeee10f7c9f5caccedfc210b58f92187697d6068f39bf0c3c"
+    },
+    {
+      "path": "assets/tariffs/services/10.jpg",
+      "kind": "asset",
+      "sha256": "e241117c4fd3da94fbf5560f16e84c2846ac839275c932b1b2cf89b0944ca0ce"
+    },
+    {
+      "path": "assets/tariffs/services/11-480.webp",
+      "kind": "asset",
+      "sha256": "232748c5214d754a869899ed1d4136a90ac6140a210b6cbad7c3aa0bef1ed1e3"
+    },
+    {
+      "path": "assets/tariffs/services/11-960.webp",
+      "kind": "asset",
+      "sha256": "1ef598795065d7290b89647fe3e18fdaf9b7dfa0f1ce8d570fe13cb897d1f764"
+    },
+    {
+      "path": "assets/tariffs/services/11.jpg",
+      "kind": "asset",
+      "sha256": "11b82bb886a931c5ac1b49068dde2f28175b04ce9a698e36ee30f94a840c78d9"
+    },
+    {
+      "path": "assets/tariffs/services/12-480.webp",
+      "kind": "asset",
+      "sha256": "badc8b055ff55da090c081bdb25fdf7cd102c625e53269ce5384d6e886aef4c3"
+    },
+    {
+      "path": "assets/tariffs/services/12-960.webp",
+      "kind": "asset",
+      "sha256": "5d814500dc872e24d18ac2fb206549a246aba816b07eb1b7f119a98e8eacacee"
+    },
+    {
+      "path": "assets/tariffs/services/12.jpg",
+      "kind": "asset",
+      "sha256": "8b09dceccc69c9a412749b9294c5229dc9971861af345e6727c69c59ea03c1fd"
+    },
+    {
+      "path": "assets/tariffs/services/13-480.webp",
+      "kind": "asset",
+      "sha256": "7f8cd86647875bbbd392f33f267359b03ff90529ebbf58f394474f4f09c1a17a"
+    },
+    {
+      "path": "assets/tariffs/services/13-960.webp",
+      "kind": "asset",
+      "sha256": "c423f8eb43a319bda585421a91f4bd28b8a37cc0e3032f26cef0120d658076e2"
+    },
+    {
+      "path": "assets/tariffs/services/13.jpg",
+      "kind": "asset",
+      "sha256": "da5b7b0a9e4429ec5ab054f08c765cf642065621957e1ecd4cfa5b8d6e3a842d"
+    },
+    {
+      "path": "assets/tariffs/services/14-480.webp",
+      "kind": "asset",
+      "sha256": "2362e7b783e5459b981ac755fde013fef6460d11b86994baa2777b99a8f6501e"
+    },
+    {
+      "path": "assets/tariffs/services/14-960.webp",
+      "kind": "asset",
+      "sha256": "15154b0b3939370354a1c1b7011b38c82fdc07b707ecab043f3ae7ae87fa500f"
+    },
+    {
+      "path": "assets/tariffs/services/14.jpg",
+      "kind": "asset",
+      "sha256": "a1a203608804577d3339e19c557b01c27473325a911186192e0ade4931b27328"
+    },
+    {
+      "path": "assets/tariffs/services/15-480.webp",
+      "kind": "asset",
+      "sha256": "b2a8ce69bb94bd64e7db8f4d7329df54951ae1e6698d84354c3adb98ffa6fa79"
+    },
+    {
+      "path": "assets/tariffs/services/15-960.webp",
+      "kind": "asset",
+      "sha256": "ab4e1d6878e095f939fbf8f56b8c158dc0a6a799e0f936508a138508e86dac82"
+    },
+    {
+      "path": "assets/tariffs/services/15.jpg",
+      "kind": "asset",
+      "sha256": "b31d88cd60e2a6d4d9dc24e04e6aad71cb760fa44aa0842a46fb32ae5120277b"
+    },
+    {
+      "path": "assets/tariffs/services/16-480.webp",
+      "kind": "asset",
+      "sha256": "34c80d78d6c9619417d794d194b389dc4b736d72cad9b908ab289d4103512649"
+    },
+    {
+      "path": "assets/tariffs/services/16-960.webp",
+      "kind": "asset",
+      "sha256": "a80337ef2a4b0e18636ea40f4e136fbacf444026cbd5dfc57f40ca01bc8e5976"
+    },
+    {
+      "path": "assets/tariffs/services/16.jpg",
+      "kind": "asset",
+      "sha256": "c86212a779f7c792c728e5526b9ae9f73b224ebb1461dcfe7be5d59df4d280d9"
+    },
+    {
+      "path": "assets/tariffs/services/17-480.webp",
+      "kind": "asset",
+      "sha256": "b6689933c8b99a23fade50e35de8c3dc17c5fdef70d1824edeaa76a0c671081f"
+    },
+    {
+      "path": "assets/tariffs/services/17-960.webp",
+      "kind": "asset",
+      "sha256": "df7a21ee704cba21a9b29c5075a3702fff810ee49f08d109b8294ac344533d1c"
+    },
+    {
+      "path": "assets/tariffs/services/18-480.webp",
+      "kind": "asset",
+      "sha256": "a69f4a808509a0a5ab84c6b75dbf30fe664346ed854fd493398edc82bcf7473d"
+    },
+    {
+      "path": "assets/tariffs/services/18-960.webp",
+      "kind": "asset",
+      "sha256": "b988b6437f5e236113c8ea1e35e12d5ad1e1b060533291374856c218770e090f"
+    },
+    {
+      "path": "assets/tariffs/services/18.jpg",
+      "kind": "asset",
+      "sha256": "612170a4f497855d45a3b191d0b954356d525cc22af4c35fddfbaa89963ba2c9"
+    },
+    {
+      "path": "assets/tariffs/services/19-480.webp",
+      "kind": "asset",
+      "sha256": "9d977c025e35fa8d53b323e1de6719a9a151d71b0229b4c006dd09235444cd9a"
+    },
+    {
+      "path": "assets/tariffs/services/19-960.webp",
+      "kind": "asset",
+      "sha256": "fbe83a3a49e910eddf446096f1e1e2350b8ddc0ea7a5c34aa88a8d181f09c6b0"
+    },
+    {
+      "path": "assets/tariffs/services/19.jpg",
+      "kind": "asset",
+      "sha256": "e2ca83648e6fe47672085caa87627395dc681b9f00cfec63c3932b9f3ec2a300"
     },
     {
       "path": "cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/index.html",
       "kind": "html",
-      "sha256": "f215f4814373a71520b382979dddf835efe068c20920061806e46bee8200389e"
+      "sha256": "5932d2820e90a3e9ba275ade6421611a63e6400fe441302f0413b581963fd89c"
     },
     {
       "path": "cases/gaeo-ru/index.html",
       "kind": "html",
-      "sha256": "ca96dbdd35e7b05677ad51a7262bf35849d8085c4594fe1031bbb61963113211"
+      "sha256": "ff066bd7dca8546f20b9069f5df96e46cf6e6ca8a0fd60ace3e5467988edceec"
     },
     {
       "path": "cases/index.html",
       "kind": "html",
-      "sha256": "87f1d7144568dc1cee5a5b3ae61b654a5596be843ceaea94ce13024e614e4a23"
+      "sha256": "7be18c31322005c1b16a3500281010c372e6603731f762737739af99f2e4e14e"
     },
     {
       "path": "cases/methodlab-rost-neyrovidimosti-19-52-procenta/index.html",
       "kind": "html",
-      "sha256": "add6412d221a96cbcb30884dd1004d18d70362c0513ebd150e55064a535ec3f2"
+      "sha256": "f8945a7ab5a0044b4d7fdb038f9b17494e676f9996705cb10b95e257116d684c"
     },
     {
       "path": "cases/prep-center-6-klientov-iz-neyrosetey/index.html",
       "kind": "html",
-      "sha256": "c7bb1b4dfb6bdf5caa03138356e591e299f4d5b88cce969512973303dce1685b"
+      "sha256": "34619704085c4e5180d3dbf86b7f319a8ee5f0ddb8d520da0c516fca8209d410"
     },
     {
       "path": "cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "ee29a337f94413e14fb9706f647d1ef6faddc959360a6cf6c991603ff65c0177"
+      "sha256": "ae02332ce50b74ff57a35ca07839c64d3beee428f08370070bacf30320adde2d"
     },
     {
       "path": "cases/razrabotka-sajta-gaeo/index.html",
       "kind": "html",
-      "sha256": "1a284e86ed2079b9bc78b09b4bdc5a1e189448a931515d1c079954117126026c"
+      "sha256": "1b84de11377639b54177dc10f0cb7fff39ac3a5944de4d9223f30581d7b3dc74"
     },
     {
       "path": "cases/razrabotka-sajta-indexresearch/index.html",
       "kind": "html",
-      "sha256": "c0bc04f94ebba1c1faafc2386031e781488e6744684a7bc594c978af902feace"
+      "sha256": "8d950ed6f2c86daaf305c5e62a1eaa43ec9540230c96f0533d86b82c0a8dc2a0"
     },
     {
       "path": "CNAME",
@@ -1408,217 +2763,257 @@
     {
       "path": "en/articles/agentic-commerce-readiness/index.html",
       "kind": "html",
-      "sha256": "86756c66d646520012be2a8e8bdeea84388e3b0f125f46a1663a34aa8a6b6149"
+      "sha256": "294171050ce53b21ce7063a72166cbdd1eba7ba3a41838f761f9881d946e6866"
     },
     {
       "path": "en/articles/ai-sources-for-geo-specialists/index.html",
       "kind": "html",
-      "sha256": "5ff103ad3ef88c682f3abe2ce59047b1e016ad2475c1e85ac77352770ad842a7"
+      "sha256": "a65bb8b7a264257d90af8ef5f2c20f09adaf51eff5b76b4fe6034cb37984c87c"
     },
     {
       "path": "en/articles/geo-experts-110-ai-responses-bmr-frs-2026/index.html",
       "kind": "html",
-      "sha256": "84906689f036fe901984a057ea2118e1939bdfba1b090958f37b09d630099dd7"
+      "sha256": "2bae584807d29660848eeb44a9a5bd4f3d16d50e9bddb8fd96d9e2267c55f923"
     },
     {
       "path": "en/articles/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "a028ef88825e5b721b1723564968c5993b0f26e3a896d6e42146949d83105c21"
+      "sha256": "e218bf107218d802971313c23e86559496f2e42f29073564a589dd3a6bf83ba9"
     },
     {
       "path": "en/articles/index.html",
       "kind": "html",
-      "sha256": "316776c65f1845082ec3954f361a1649ca1a28b0c81a8d6741cffd63c5a56df3"
+      "sha256": "ea20ed5a0fa0ac2e81d5ccd71e51396fc9d62104f6495977eaac09e5796ab75c"
     },
     {
       "path": "en/articles/legal-website-geo-12-checks/index.html",
       "kind": "html",
-      "sha256": "711d5e91485daac05ab0aa160dd895e50d395f903493de47dd36ab5bddbb1c1a"
+      "sha256": "be60553ca3530936254c8457a17b56a0a8f8eded276caa365857f663786bfe71"
     },
     {
       "path": "en/articles/personal-brand-promotion-in-ai/index.html",
       "kind": "html",
-      "sha256": "37fe6213cf81a2dd3a3465c2daf9ba80ed1217510bfdb3a4a4a80461a14c8eaf"
+      "sha256": "473ff7336faf07997e5d7c67e7fa0dcf7011f453835b516b4907f6d43619a36c"
     },
     {
       "path": "en/articles/which-ai-platforms-matter-for-your-business/index.html",
       "kind": "html",
-      "sha256": "4c24543b0614525fedc4b5dbf5ec07be274ea7130e4ae20d6a3ece52c88b8315"
+      "sha256": "1af4cabf2f43dd6c29eba9f94a6afbe12ad636ccba83852fcdc8a5d3f857972b"
     },
     {
       "path": "en/cases/ada-tours-bmr-growth-in-2-weeks/index.html",
       "kind": "html",
-      "sha256": "51806222ad2ee9b5055070877666599a725ea6d3f6dc2223b3bb23ee7b8d0a55"
+      "sha256": "2acd34e714c3decc2492db271f47c2dc1a1aa6d0b341d65adde1dac10777ad0a"
     },
     {
       "path": "en/cases/gaeo-ru/index.html",
       "kind": "html",
-      "sha256": "0fd18bab5b86348312fa78fe8de8fea437d676557039bf63fc654cd752df4cd1"
+      "sha256": "c2bdc4d829da7d4680fa7407af989ccc174c9d6156b3f38c3c7b8408014182a7"
     },
     {
       "path": "en/cases/index.html",
       "kind": "html",
-      "sha256": "c77b2eb51ec2bef23cdaec0b90fbd84098c90e5315483d55cc2007387b09992e"
+      "sha256": "693b8e4d29dda614b7142f86653f977d365ae32f2ac2996758c9dc821577ef2f"
     },
     {
       "path": "en/cases/methodlab-ai-visibility-growth/index.html",
       "kind": "html",
-      "sha256": "b1e2801d0e847257d42be522e9062d077b2dbc4c2998212cabb80ab464eb59e8"
+      "sha256": "0fca758b6c429bee61059e0f05542fd9a849aab7bf7d4ee3e1a1c873193f9d77"
     },
     {
       "path": "en/cases/prep-center-6-paying-clients-from-ai/index.html",
       "kind": "html",
-      "sha256": "bfbcc9cebb60539d2f91ba653e938aa40b57e1f680d7609247e0054f5473d34b"
+      "sha256": "842e5e5c8dd458a41dcabe428b0572be788f10a90cde0fd6136a8d1c50356e7f"
     },
     {
       "path": "en/cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "a5e790ff01c047c92de869e99ffe58edb972e044e9e46e3bf7f85397273a9d06"
+      "sha256": "d1e1e272e8dbd37d23d859d7eb39fae5d680244be659f09c843fa32afae80ba0"
     },
     {
       "path": "en/cases/razrabotka-sajta-gaeo/index.html",
       "kind": "html",
-      "sha256": "3bc6805c802c358a6a00ad870bb4e449b67fff9d0e06e83ff3aad78232b526c7"
+      "sha256": "10dd7a8fec48266180b7b5fa6368c80f94972aec7ba712d9fcc516a9f2223a91"
     },
     {
       "path": "en/cases/razrabotka-sajta-indexresearch/index.html",
       "kind": "html",
-      "sha256": "9ad1289d1c7b8752333b718f20d3e6fae0874a31a1d2e116b048e341faf87964"
+      "sha256": "43e0dbd03a13121d7539de4be2572756e7c74355e2f7e4f98e88d2b6772a2be6"
     },
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "463bf95390bbfd678eee6b688ff613d7c82c790d6f769dd7e1b8fa7e1212104d"
+      "sha256": "c89fbb9cc9477d852b8e175798d598fc5481b09011fbd7f84ed927ee3343fbe9"
     },
     {
       "path": "en/index.html",
       "kind": "html",
-      "sha256": "49f96949d6efd6b9eb98ee1c64558e7a361d1fc2db40b1a7a88383e4ef0ba4c5"
+      "sha256": "de889d2e5f484ba05bc1938df9c6565089d977d27748a52ba743887fc6bf8251"
     },
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "b77ee5147450ce2327823964ad2971066ec21910470915587cff3bf44f3824c0"
+      "sha256": "53e1d80fcb10248dd94832bddbf5840d53df445efb516e1c450b009890ee7506"
     },
     {
       "path": "en/industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "0939df7f087a7c911c09481ce219af5d1525d8d310d65e928922aa3ba47254f7"
+      "sha256": "493cac20b45b6cabb5a1054323c80c7c9b1e6211d54b0aff21cf6566e79320b8"
     },
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "f0d183f6b39589c2e594260c3f944be17f56124fc71da60905b23f10f017d882"
+      "sha256": "8f3f5dc7c16af3f796e89281a09d119d31499d178e9504ec3853349b752ab27e"
     },
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "5a55dd3e195f61d7c4ac814fabe717d48d1d579c0b6175ae7a1a4ac7820dd2a9"
+      "sha256": "ed918f7d7fc7a8fba4b2714d53ee5f522750940005b58b313cbc1ab916f241db"
     },
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "ef8cb291c010dec71f8e9660fc02fabb4a80b4e4a3cc002b2d37f14ed721ea21"
+      "sha256": "1159a6ed61e4974d3c3d590ce3ddc64cc92a34d1286432a3f9d082a104276ea4"
     },
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "9067fbc6c66ee8fd85fc0f76127299231d9d52b0a200b94a963571d8f27593e8"
+      "sha256": "ddf0c69e86eac966966862596e481f2a7055500856b40d0f23ddf2631daf1fd9"
     },
     {
       "path": "en/industries/pharma/index.html",
       "kind": "html",
-      "sha256": "b556a25f32b73212f65aeaf204fc4ebcfc44151fc720df4b5e66aee4011e8e03"
+      "sha256": "3570774028540ddf2b97282afa62fd89d14cb82db5e45a17eb273d5eeac3de6f"
     },
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "b22cd46c42b32e26d1f584e3dd7b237b7666623b29a7d68818ab99fef7fa0be4"
+      "sha256": "c3b687a04b4aa82272b0a3b7cd7cc257828beb997e1c6226431247e342cefcee"
     },
     {
       "path": "en/personal-data-consent/index.html",
       "kind": "html",
-      "sha256": "761c61c1a0b9071a0bfdc5c0fa3149e6a402de544e0481b6f2656d9ad9a9cb36"
+      "sha256": "6e76b630e934b56b78a56651be7c2a89d2c42e783dbd391d3deeeb948f938672"
+    },
+    {
+      "path": "en/pricing/index.html",
+      "kind": "html",
+      "sha256": "e5f0312f72cfa97b908534e4f31df4a5ba88c0f51b658cd34d17491e5ef8e328"
     },
     {
       "path": "en/privacy-policy/index.html",
       "kind": "html",
-      "sha256": "7bce51e4b92d59580231853186384d0747b985432cfed90ab16b8b3aa7e7be10"
+      "sha256": "3452cc497935eaf0b17f79a26cff3f9598c037387b5a7d0aa0be78ab7b09063f"
     },
     {
       "path": "en/professional-biography/index.html",
       "kind": "html",
-      "sha256": "bab13c23b57978f0bbc1767125e518318303ab6e7b65fd7e98961b816aaa29b2"
+      "sha256": "08f5744077d7409662ff3b492275a6bb223bd098a79794ec870ac5908beafe9f"
     },
     {
       "path": "en/publications/index.html",
       "kind": "html",
-      "sha256": "b27095934e4447ee93698bb9fe2591fdf0a9b964086bb05cdf83c6c300099b71"
+      "sha256": "bd4c75fedb3622f1ed094bf17bf12eb470afb5d4e0129387fcfbfc6dbd2b31da"
     },
     {
       "path": "en/reviews/index.html",
       "kind": "html",
-      "sha256": "338ed47c9c355eb0deb06ffa5ba418434d3ad69711256ed196c2a870ffff943e"
+      "sha256": "d100f2b4fce4495287b5a68d502e348d32d4cf18b83a4337f788907ed430b4f2"
+    },
+    {
+      "path": "en/services/additional-platforms/index.html",
+      "kind": "html",
+      "sha256": "c34145e2068e57c6be9ef4d35f621a9fe107afbda8abe8522b3f95fd33b6af5d"
+    },
+    {
+      "path": "en/services/additional-prompts/index.html",
+      "kind": "html",
+      "sha256": "202c300b86fbb48bfccb2c5c56e061a0db191311411be725d148ff1245a9e5fa"
+    },
+    {
+      "path": "en/services/free-audit/index.html",
+      "kind": "html",
+      "sha256": "d364dd13535508beea43f317b238ba1464b43a9cc9cd4d9f91478adbdd303224"
+    },
+    {
+      "path": "en/services/geo-audit/index.html",
+      "kind": "html",
+      "sha256": "25e4ec21d16b44feffdf16bdd7a4f8c409f31ca5b989ece103913b548244053f"
+    },
+    {
+      "path": "en/services/geo-content/index.html",
+      "kind": "html",
+      "sha256": "e38a86701ee28a3a0c0106f49ffd5be1c043f6ae12ba2548c3900fc5d838b774"
+    },
+    {
+      "path": "en/services/geo-guarantee/index.html",
+      "kind": "html",
+      "sha256": "7bf0721ec46c87b649d03771991a7e67c96f1f258a8b11a860b6b1a6f324cbcc"
+    },
+    {
+      "path": "en/services/geo-promotion/index.html",
+      "kind": "html",
+      "sha256": "c4e92de974d1ba9dc4df4daed9e9bf8ff19170171830d12f57722abd8f09cc63"
     },
     {
       "path": "en/services/index.html",
       "kind": "html",
-      "sha256": "6a30e00eb3e005b9d6fbc8c558204647a1f04eb74d40dccf40374b150857362c"
+      "sha256": "0b23293912fedff59a65468661dba9eaf69f39433556408b515ade069101b5e8"
     },
     {
       "path": "en/services/website-development/index.html",
       "kind": "html",
-      "sha256": "78661e19f71df9b7c37b1f11a1de677e050046a68d4b4b768db58d00cefd0318"
+      "sha256": "4429a05dc948815f8c849dafdbc0e7e7033ed7e17cc789972d741cb4127004d3"
     },
     {
       "path": "en/strategies/ecommerce-catalog/index.html",
       "kind": "html",
-      "sha256": "6d2f734b3849794df8d7fd59266b4048195eb3bd047081bfb6a8f5b00ff19662"
+      "sha256": "aa5ed3315adad83a2e4a4dfeac8368c85782364fba8278959f7ab6a3ce3e3fc9"
     },
     {
       "path": "en/strategies/ecommerce-measurement/index.html",
       "kind": "html",
-      "sha256": "d00cd7eb2f4e6ba949e92ee056bea1b5b17a26bdd56898dfbc1a02d4b233c406"
+      "sha256": "c7f8c2906198274c5ad3557195736868c57a09ef746d137d9beb2487aeb18dc8"
     },
     {
       "path": "en/strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
-      "sha256": "f12fb9598fb4490449f1809f3af66a44e1fd05e9d221c0c1c87169986e9f38f3"
+      "sha256": "0bf0226797d131c202e1e0ad2098487795ddaec1dee3af576f73cd0c8bee3515"
     },
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "9d76363d2853c721efa22b5997d69ff101c2521fdaa2be61f3aa8007a98bf70f"
+      "sha256": "a7114ee4c7fcaa8e2fe1ae672a647abfd9a1e287e93472278dcaf77f59fcb4ae"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
       "kind": "html",
-      "sha256": "3ea13bdbb2620fb97b2a279031bd293dbd28857d833e60916fbc6cadecf79ca3"
+      "sha256": "9a1a22d67072d1cec916d984d462825502b9e8264e4fb4ce2af5bf15a7986621"
     },
     {
       "path": "en/strategies/legal-recommendations/index.html",
       "kind": "html",
-      "sha256": "25537489ec9b3b0680661781f2a4677b762d2dbf6795531e60c20f3295c72137"
+      "sha256": "927bbebac8e13afa7d4e38f12ee98319f09c6c80d1219f2a314e712c0626dc02"
     },
     {
       "path": "en/strategies/measurement/index.html",
       "kind": "html",
-      "sha256": "e4d48794ca75dbaf2003a3581af6673276efc339eacd501861a4ab6476463c81"
+      "sha256": "1e29ef13673e4e0fd262c86e09f2e8d5921a7f56db67a5ec01776db794440b8a"
     },
     {
       "path": "en/strategies/pharma-geo-evidence/index.html",
       "kind": "html",
-      "sha256": "406d2daed2f25b653ff485ca3529c16ea475e2e64a9f0d2c42a3b35e45da8456"
+      "sha256": "3b8e33b5127635b88a6f971dfd03f495c67cc7cf2154e47e1f15d0076f5aabbd"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
       "kind": "html",
-      "sha256": "6cce98357948726f1a3997fdca1d8a6f488641f38811b1aaeb0703e5cd081731"
+      "sha256": "f10714d6f7f2f50e642ca5045199298e9794d73f20d00b1ed8d81a70cebed38f"
     },
     {
       "path": "en/strategies/tourism-dmc-recommendations/index.html",
       "kind": "html",
-      "sha256": "a0e5b45ccdcad4c59849717ab202993699267e1514d6aa69275de58b24f8133f"
+      "sha256": "1a3ac5c7b1508ead7814864b835e59b105a462220970b08e609eac51c6729ebb"
     },
     {
       "path": "favicon.ico",
@@ -1628,82 +3023,82 @@
     {
       "path": "gaeo-services.yml.xml",
       "kind": "asset",
-      "sha256": "1f1d7daae5c75110c651a1b8ccb0d86e51cc757832cf2773e6116ede4d09de7f"
+      "sha256": "3d3129f452fa44b0cdceedf056a0b88a9c90ae9a3674c59ceb87ca1c2ba4dc9b"
     },
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "999e734c9554a8dbfa23a402d8c6399ca8789401d3de44412e634aff1cf1bb8e"
+      "sha256": "461c1d6777637e07cfddf9ae75a536092b59ff32c4d90374da32390c8f98da0e"
     },
     {
       "path": "index.html",
       "kind": "html",
-      "sha256": "30c5e9355de7c1091984871c6bd9a5713ea15f28949598bc10b48aca5ee5fc10"
+      "sha256": "0118e21f60fa2b714ee73bdff0e868ec288a39353a15dc8eab25564d1bb7d809"
     },
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "f12c243e4e589b4982232ec78386c47b5d97951f47e9c6dcbe1e5b1b66b8d9a6"
+      "sha256": "4780dc760b262b844b8963f986a790aa2a9d8cd2d1b39cdf059bd049a7e9775a"
     },
     {
       "path": "industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "5f7a121456745ae3726bf4a819a0173ab57013f178906b0c9b16c80d7fd00c33"
+      "sha256": "c60ea1bae1f064338746de68fe79a616ba8913cde69228fa747cf094e928de11"
     },
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "ef05d100fce7689fcf3d58512c67f42bcc8756530ffefbb9f97a340466930001"
+      "sha256": "82f92f671768460103e631bcce9f021a5e22f7543d4b89b5300d0c9c3751ce1b"
     },
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "9b7bc0c45b11be5ba57c4bef8a6eca0edf445d5c93a31ccca4ee37060cdd69b0"
+      "sha256": "9ea6fb2235e4ee52b4496b77bd5a6c9a737416c871878dd8caedf88b9988213f"
     },
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "68777d506858a6da98b80b95a2c37996f5100a997bda520b8f0413939fa21603"
+      "sha256": "7300cc97fc42d189f4cbb9d67b352e81c1e8b771384f6ad80ebbde2142408e9f"
     },
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "41c925f0efabdf511bb418b4cb8fe22cabffaaf1eca0a10c7e551b234cfdb85f"
+      "sha256": "22d6dc43ce118c7590e0328ac234bfd292386a847baf1dec785f7ea9b4785654"
     },
     {
       "path": "industries/pharma/index.html",
       "kind": "html",
-      "sha256": "f6583c9fe99fb7eb9a15482d7bfb69db37cbd69bf2ca98e61ff721326216213b"
+      "sha256": "3ac9961f9575386e0cc076eed371d4a00a59ccedacc906c1e8725bb387f8d894"
     },
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "d615e472e9ac8c07a82db1a9abe1094a1b556b5992b645a2dcf2b845f91c1faf"
+      "sha256": "b9e57145c1d16ef969db1a07132dbb92214fc5205133add09595ec5f576cc862"
     },
     {
       "path": "personal-data-consent/index.html",
       "kind": "html",
-      "sha256": "d728d2e07bdc79da73538c5406365174bbe27f542a1c5f8788aa70fb773c7078"
+      "sha256": "309fa4e164b44cc1219ec29f34d6a58de23d074c9362849bc0561af3577489dd"
     },
     {
       "path": "privacy-policy/index.html",
       "kind": "html",
-      "sha256": "fd1acb94d06f1bc5070d4f10317ff5f4ef9457e4fbbf7b988291ae698624be70"
+      "sha256": "033f834a48f8ddbdda68aec62e0b33af046ca92c51ec801ff8629b5b6a1d0ba6"
     },
     {
       "path": "professional-biography/index.html",
       "kind": "html",
-      "sha256": "e6be706c8486305f8b0f07b34621c43aacc7e5eb77083f92a50ed4ddd96e3caa"
+      "sha256": "56dfce9fa44762998e9bde261aca0788c643c213db0a04dcdcaafac75d153ab1"
     },
     {
       "path": "publications/index.html",
       "kind": "html",
-      "sha256": "6e38de8d00c9efb112f7ce8523e66b8bb515dff9d5a9c62264c6046afc0c3cad"
+      "sha256": "bc2ea1dc3cc70927fd996defdd247fcb83685ec0d944ba2e60790fad8a2b8ee7"
     },
     {
       "path": "reviews/index.html",
       "kind": "html",
-      "sha256": "915814ada89cb9d61283a4c9314005b78c6d9d99ba2b39a94253ecb93e5a527f"
+      "sha256": "84ffbef865fa378c0cde2208788ab08f12225914e9a4f7ab89193d250635dd4f"
     },
     {
       "path": "robots.production.txt",
@@ -1716,69 +3111,109 @@
       "sha256": "a1aad93f672889ac060c8940a2620edc00d8734d5f7832b81c0299b1cbd5f5bb"
     },
     {
+      "path": "services/additional-platforms/index.html",
+      "kind": "html",
+      "sha256": "f876fe72b1f4bd65411d486492c6ff5f71e80631e7aad15a2fa78a1d6e494c5d"
+    },
+    {
+      "path": "services/additional-prompts/index.html",
+      "kind": "html",
+      "sha256": "eebc65811c44fdbb988039923384c13727be0cf50c084c1ff53349c8aa8c2461"
+    },
+    {
+      "path": "services/free-audit/index.html",
+      "kind": "html",
+      "sha256": "362b29150aec58698be7bbb2effec133e9e7fd96af0eada7cd4206ad39f7f44f"
+    },
+    {
+      "path": "services/geo-audit/index.html",
+      "kind": "html",
+      "sha256": "9aed42d123349b4f3bc06c6110d3c960761da61fae83ec082bff0ff9ccba63c5"
+    },
+    {
+      "path": "services/geo-content/index.html",
+      "kind": "html",
+      "sha256": "036660e51350434b25bad93883216003408d2ce04c41b7d0d9c4294127b957c5"
+    },
+    {
+      "path": "services/geo-guarantee/index.html",
+      "kind": "html",
+      "sha256": "8d646e40a1e311fb2003ce0b16710426b2fe88ae425a03de9e8f36b5a49a1dff"
+    },
+    {
+      "path": "services/geo-promotion/index.html",
+      "kind": "html",
+      "sha256": "13b8afd369a607142417f598290ab941f9e1b7010edc32471c7f82170ef83cd0"
+    },
+    {
       "path": "services/index.html",
       "kind": "html",
-      "sha256": "f66e3ee73cac412f77fa9bd4a4d704356e8303d11279d146252c100413edadb9"
+      "sha256": "6a4076f0a32c35dd6c47c2e3b928c23163b63f1187f5875be45cafc4f84945d3"
     },
     {
       "path": "services/website-development/index.html",
       "kind": "html",
-      "sha256": "a4578745a15528e30dc80689aed683e1f561cae82a3971f9544be477e8f8bb52"
+      "sha256": "2f5ffe46ae104eea3d547ca4254b4eb18d76e3ae3af5f3fabca055bd25efc3b0"
     },
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "09423edd669bde25ebb41ddaed44c0ee75f643cf79abee1708f64fcb98719f17"
+      "sha256": "449c9cd231fede1076a1b40887c5d6546b1a94c139dcd026b9cc2876658a2fbe"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
       "kind": "html",
-      "sha256": "79d370e1a46bb698e960ff75e2c483d54e99deb86d5d1abaaf31e3b36c7eb3ee"
+      "sha256": "bd75d03391a0539ba93da98c4d4beaef1798d5ce373d23ccfbd13582d5f22414"
     },
     {
       "path": "strategies/ecommerce-measurement/index.html",
       "kind": "html",
-      "sha256": "bf7f44ed15a669f3fedc5a2a9ed9834898b2028af2b50a797274e583187c6d46"
+      "sha256": "c094bc211b14b634f738d9017c098a72c39471a15b38c409dc033ff891a1ee3e"
     },
     {
       "path": "strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
-      "sha256": "4821a01c95210463496f83891619970c4b82b599d0f8ea1c1d143b08e57d2a20"
+      "sha256": "8476e53922257e96c5fa7f17c959c6eb358482e4b8fa3d7c88ca7242e82c206f"
     },
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "4a0e6e5859b85ceccb65668e61cd0caf6ee9e1bbccbac63d8a99192abae51359"
+      "sha256": "85855fde8059bc7251e975c758af3c1c0b369725123fab16703980cb3047e8ba"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
       "kind": "html",
-      "sha256": "133adf23616cdff278ec2c6ac49657a22eeb6eb7944f619c58092c6471f6f01d"
+      "sha256": "42dbf21144644916c46823d1e21f60c33220b27fc3206f7b16cba87d8e7a6f95"
     },
     {
       "path": "strategies/legal-recommendations/index.html",
       "kind": "html",
-      "sha256": "2c42bf48326dd6e29456353dd5c8c75dc3dbdab27a0e5fa6b7a002d5c5adc9cc"
+      "sha256": "c7a4370f06a3fa3e5c51908c0e9549583266bb1a6ea6bcb279f2604ddf242c4b"
     },
     {
       "path": "strategies/measurement/index.html",
       "kind": "html",
-      "sha256": "f40f9036fa1fbbb75aba96804b06921c0ad3f8356cf24a7740db8a16f93aba32"
+      "sha256": "bc5ec1eb2ad23b4a4eed48ec32d2be8adead083ad6c52acea9b1b73c8308091d"
     },
     {
       "path": "strategies/pharma-geo-evidence/index.html",
       "kind": "html",
-      "sha256": "6db924514bbfaa3359e2673d8aec614aa713754107b4b7939a491f648ad539ca"
+      "sha256": "4d9fc9333f69d8e63a2a8132fe5df632ec4197b32f37d265bee4ec5c6ffee4cf"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
       "kind": "html",
-      "sha256": "d2888956aa71200b18e7454a72bfa61a69e1b2b0b37b5d5e853c32c8b936494b"
+      "sha256": "250ad75648b8751eafbff84a069b28c003671325efe51e2fdb4ad021b368e2a8"
     },
     {
       "path": "strategies/tourism-dmc-recommendations/index.html",
       "kind": "html",
-      "sha256": "01ba6c734501bcd9869150b013cfb0cca9fa6674960227e446fb601b399caa36"
+      "sha256": "0e79b5a62069460d17cb3debb316bc293bb3b92e7f11afc3e5efa288062a2459"
+    },
+    {
+      "path": "tarify/index.html",
+      "kind": "html",
+      "sha256": "f58319cbc7f9f14b56eade62de0f69ec6a8dd9bf3c88517ee481e4a8ede39651"
     }
   ]
 }
