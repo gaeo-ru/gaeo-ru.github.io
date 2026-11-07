@@ -13,6 +13,18 @@ on:
       - 'src/legacy/pages/en/cases/**'
       - 'src/legacy/pages/services/**'
       - 'src/legacy/pages/en/services/**'
+      - 'src/legacy/pages/publications/**'
+      - 'src/legacy/pages/en/publications/**'
+      - 'src/legacy/pages/reviews/**'
+      - 'src/legacy/pages/en/reviews/**'
+      - 'src/data/publications.json'
+      - 'src/data/reviews.json'
+      - 'src/lib/evidence.mjs'
+      - 'scripts/generate-evidence-pages.mjs'
+      - 'scripts/qa_evidence_pages.mjs'
+      - 'public/assets/evidence.css'
+      - 'public/assets/review-carousel.css'
+      - 'public/assets/review-carousel.js'
       - 'src/legacy/pages/index.html'
       - 'src/legacy/pages/en/index.html'
       - 'scripts/qa_site_development_service.mjs'
@@ -82,6 +94,7 @@ jobs:
       - run: node scripts/qa_legal_link_graph.mjs
       - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install chromium
+      - run: npm run check:evidence
       - run: npm run check:tariffs
       - run: npm run check:specializations
       - run: node scripts/qa_development_cases.mjs
@@ -93,6 +106,7 @@ jobs:
         with:
           name: geo-research-visual-checks
           path: |
+            visual-evidence/
             visual-research/
             visual-tariffs/
           if-no-files-found: ignore

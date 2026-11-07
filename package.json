@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "node scripts/generate-tariff-pages.mjs && node scripts/sync-service-feed.mjs && astro build",
+    "build": "node scripts/generate-evidence-pages.mjs && node scripts/generate-tariff-pages.mjs && node scripts/sync-service-feed.mjs && astro build",
     "check:parity": "node scripts/astro-parity.mjs",
     "check:visual": "node scripts/astro-visual-parity.mjs",
     "check:industry": "node scripts/astro-industry-browser-qa.mjs",
@@ -16,7 +16,8 @@
     "check:anchors": "node scripts/qa_internal_anchor_links.mjs",
     "check:design": "node scripts/qa_approved_design_system.mjs",
     "check:tariffs": "node scripts/qa_tariffs.mjs",
-    "check:specializations": "node scripts/qa_industry_specializations.mjs"
+    "check:specializations": "node scripts/qa_industry_specializations.mjs",
+    "check:evidence": "node scripts/qa_evidence_pages.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",
