@@ -1,0 +1,49 @@
+---
+import {getIndustrySpecialization} from '../data/industry-specializations.mjs';
+import {getPlan,pricingHref} from '../data/pricing.mjs';
+import IndustryPricing from './tariffs/IndustryPricing.astro';
+import FAQAccordion from './design/FAQAccordion.astro';
+const {sourcePath}=Astro.props;
+const page=getIndustrySpecialization(sourcePath);
+if(!page)throw new Error('Unknown industry specialization '+sourcePath);
+const lang=sourcePath.startsWith('en/')?'en':'ru',en=lang==='en',c=page.content[lang];
+const path=page.routes[lang],url='https://gaeo.ru'+path;
+const image='/assets/tariffs/industries/industry-'+String(page.id).padStart(3,'0')+'-960.webp';
+const offerIds=['geo','content','guarantee'];
+const schema={'@context':'https://schema.org','@graph':[
+ {'@type':'Service','@id':url+'#service',name:c.h1,description:c.description,url,serviceType:en?'GEO promotion for '+page.slug:'GEO-продвижение отраслевой специализации',provider:{'@id':'https://gaeo.ru/#business'},areaServed:en?'Worldwide':'Россия и международные рынки',offers:offerIds.map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))},
+ {'@type':'FAQPage','@id':url+'#faq',mainEntity:c.faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}
+]};
+const lead=en?'/en/#lead':'/#lead',methodLinks=page.methods[lang];
+const sectionLink=(link)=>link.startsWith('https://');
+---
+<section class="inner-hero industry-hero industry-specialization__hero" id="industry-overview">
+ <div class="container industry-hero__grid">
+  <div class="industry-hero__copy">
+   <div class="inner-eyebrow">{c.eyebrow}</div>
+   <h1>{c.h1}</h1>
+   <p class="industry-hero__lead">{c.lead}</p>
+   <ul class="industry-hero__proof">{c.heroPoints.map(x=><li>{x}</li>)}</ul>
+   <div class="industry-actions"><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss your project':'Обсудить задачу'}</a><a class="button outline" href={page.parent[lang]}>{en?'See the industry method':'Методика отрасли'}</a></div>
+   <p class="industry-hero__byline">{en?'Personally led by':'Лично ведет'} <a href={en?'/en/professional-biography/':'/professional-biography/'}>{en?'Alexey Yakovlev':'Алексей Яковлев'}</a>, {en?'GEO/AEO consultant':'независимый GEO/AEO-эксперт'}</p>
+  </div>
+  <figure class="industry-hero__media industry-specialization__media"><img src={image} width="960" height="960" alt={en?'Illustration of GEO promotion for '+c.eyebrow:'Иллюстрация GEO-продвижения: '+c.eyebrow} loading="eager" decoding="async" fetchpriority="high" /><figcaption>{en?'Approved industry illustration, catalogue entry #':'Готовое отраслевое изображение, направление №'}{page.id}</figcaption></figure>
+ </div>
+</section>
+<section class="industry-section industry-problem-section" id="industry-problem"><div class="container"><div class="industry-eyebrow">{en?'Selection barriers':'Проблемы выбора'}</div><h2>{c.problemTitle}</h2><p class="industry-section__lead">{c.problemIntro}</p><div class="industry-problem-grid">{c.problems.map((p,i)=><article class="industry-problem"><div class="industry-problem__number">{String(i+1).padStart(2,'0')}</div><h3>{p.title}</h3><p>{p.body}</p></article>)}</div></div></section>
+<section class="industry-section industry-scenarios-section" id="industry-scenarios"><div class="container"><div class="industry-eyebrow">{en?'Buyer intents':'Сценарии спроса'}</div><h2>{c.scenarioTitle}</h2><p class="industry-section__lead">{c.scenarioIntro}</p><div class="industry-table-scroll"><table class="industry-scenario-table"><thead><tr>{c.columns.map(x=><th scope="col">{x}</th>)}</tr></thead><tbody>{c.scenarios.map(row=><tr>{row.map((v,i)=><td data-label={c.columns[i]}>{i===0?<strong>{v}</strong>:v}</td>)}</tr>)}</tbody></table></div></div></section>
+<section class="industry-section industry-evidence-section" id="evidence"><div class="container"><div class="industry-eyebrow">{en?'Verifiable facts':'Проверяемые факты'}</div><h2>{c.proofTitle}</h2><p class="industry-section__lead">{c.proofIntro}</p><ul class="industry-check-list">{c.checks.map(x=><li>{x}</li>)}</ul><p class="industry-note">{c.proofNote}</p><h3>{en?'Methods and sources':'Методики и источники'}</h3><div class="industry-links">{methodLinks.map((href,i)=><a href={href}>{en?'GAEO related methodology '+(i+1):'Связанная методика GAEO '+(i+1)}<span aria-hidden="true"> ↗</span></a>)}{page.sources.map(s=><a href={s.href} target="_blank" rel="noopener">{s[lang]}<span aria-hidden="true"> ↗</span></a>)}</div></div></section>
+<section class="industry-section industry-process-section" id="industry-process"><div class="container"><div class="industry-eyebrow">{en?'Scope of work':'Как работаю'}</div><h2>{c.workTitle}</h2><p class="industry-section__lead">{c.workIntro}</p><ol class="industry-step-grid">{c.steps.map((s,i)=><li class="industry-step"><span class="industry-step__num" aria-hidden="true">{String(i+1).padStart(2,'0')}</span><h3>{s.title}</h3><p>{s.body}</p></li>)}</ol></div></section>
+<section class="industry-section industry-pricing-section" id="industry-pricing"><div class="container"><div class="industry-eyebrow">{en?'Current pricing':'Тарифы GAEO'}</div><h2>{en?'Audit and monthly GEO plans for this specialization':'Аудит и сопровождение для этой специализации'}</h2><IndustryPricing lang={lang} intro={en?'Three published monthly plans use the same GAEO prices across sectors. Final scope follows the baseline and project requirements.':'Для отраслей действуют общие 3 тарифа GAEO. Итоговый объем определяется стартовым замером и задачами проекта.'}/><p><a class="industry-text-link" href={pricingHref(lang)+'#industry-'+String(page.id).padStart(3,'0')}>{en?'This category in the 107-industry catalogue':'Это направление в каталоге 107 услуг'}</a></p></div></section>
+<section class="industry-section industry-faq-section" id="faq"><div class="container"><div class="industry-eyebrow">FAQ</div><h2>{en?'Questions about the service':'Частые вопросы'}</h2><FAQAccordion items={c.faq} paragraphAnswers={true}/></div></section>
+<section class="industry-section industry-about-section"><div class="container industry-about"><img src="/assets/alexey-yakovlev-biography.jpg" alt={en?'Alexey Yakovlev':'Алексей Яковлев'} width="300" height="300" loading="lazy" decoding="async"/><div><div class="industry-eyebrow">{en?'Responsible specialist':'Кто ведет проект'}</div><h2>{en?'Alexey Yakovlev':'Алексей Яковлев'}</h2><p>{en?'Independent GEO/AEO specialist with business experience since 2008. I personally carry out the diagnostic and build an industry-specific plan, separating verified sources from assumptions.':'Независимый GEO/AEO-эксперт с предпринимательским опытом с 2008 года. Лично провожу диагностику и составляю отраслевой план, отделяя подтвержденные сведения от предположений.'}</p><a class="industry-text-link" href={en?'/en/professional-biography/':'/professional-biography/'}>{en?'Professional biography':'Профессиональная биография'} ↗</a></div></div></section>
+<section class="industry-section industry-final-section"><div class="container"><h2>{c.ctaTitle}</h2><p class="industry-section__lead">{c.ctaText}</p><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss an initial audit':'Обсудить мини-аудит'}</a><p class="industry-note"><a href={page.parent[lang]}>{en?'Industry overview':'Общая страница отрасли'}</a> · <a href={pricingHref(lang)}>{en?'All GAEO pricing':'Все тарифы GAEO'}</a></p></div></section>
+<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')}/>
+<style>
+.industry-specialization__media img{display:block;width:100%;height:auto;max-width:470px;max-height:470px;object-fit:contain;margin-inline:auto;border-radius:16px}
+.industry-specialization__media figcaption{text-align:center;font-size:.83rem;padding:.5rem 0;color:var(--muted,#64748b)}
+.industry-faq-section .faq{max-width:960px}
+.industry-final-section .container{max-width:920px}
+.industry-final-section .button{margin-top:1rem}
+@media(max-width:640px){.industry-specialization__media img{max-width:300px}.industry-specialization__media{margin-top:1rem}}
+</style>
