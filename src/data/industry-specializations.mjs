@@ -1,5 +1,5 @@
 /**
- * Batches 2A, 2B and 2C: bilingual substantive GEO specializations.
+ * Batches 2A through 2D: bilingual evidence-led GEO industry specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -3137,6 +3137,273 @@ export const industrySpecializations = [
       "ctaTitle": "See which warehouse operators AI recommends",
       "ctaText": "Share the warehouse site, confirmed facilities, regions and product categories. I will propose a useful initial audit.",
       "request": "Warehouse and 3PL GEO: contract storage, pallet capacity, WMS, temperature zones and AI recommendations."
+    }
+  }
+},
+{
+  "id": 20,
+  "slug": "bankruptcy-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/bankruptcy-lawyers/",
+    "en": "/en/industries/bankruptcy-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика измерения рекомендаций юристов",
+      "12 проверок сайта юридической практики"
+    ],
+    "en": [
+      "Measuring AI recommendations of legal providers",
+      "Twelve checks for a legal-practice website"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_39331/",
+      "ru": "Федеральный закон №127-ФЗ о несостоятельности (банкротстве)",
+      "en": "Russian Federal Law 127-FZ on insolvency"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_39331/54f5f3b5dbc98c984ef89aee1e4b78db69a6c093/",
+      "ru": "Статья 213.2: процедуры банкротства граждан",
+      "en": "Article 213.2: personal insolvency procedures"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение юристов по банкротству в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение юристов по банкротству физических лиц и бизнеса",
+      "description": "GEO для юристов по банкротству: долги граждан, реструктуризация, несостоятельность компаний, кредиторы, процедуры и проверяемые рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Несостоятельность",
+      "lead": "Должник, кредитор и руководитель компании обращаются за разной юридической помощью. Проверяю, каких юристов по банкротству нейросети рекомендуют для этих задач и подкреплены ли рекомендации реальными услугами и профессиональными сведениями.",
+      "heroPoints": [
+        "Разные запросы граждан, компаний и кредиторов",
+        "Точные рамки услуг и процедур без обещания списать любой долг",
+        "Проверяемые профессиональные данные и ссылки на законодательство"
+      ],
+      "problemTitle": "Почему обещание «спишем все долги» мешает доверию",
+      "problemIntro": "Банкротство регулируется законом №127-ФЗ. Процедура, последствия и возможности юридического представителя зависят от статуса заявителя, требований кредиторов и документов. Рекламная гарантия исхода этого не учитывает.",
+      "problems": [
+        {
+          "title": "Смешаны граждане, компании и кредиторы",
+          "body": "Процедуры несостоятельности юридического лица отличаются от реструктуризации и реализации имущества гражданина. Для кредитора важен иной объем действий и документов."
+        },
+        {
+          "title": "Заявлены стопроцентные результаты",
+          "body": "Обещания гарантированного освобождения от всех обязательств и сохранения любого имущества не заменяют индивидуальную правовую оценку и могут вводить в заблуждение."
+        },
+        {
+          "title": "Юрист представлен арбитражным управляющим",
+          "body": "Юридическое сопровождение и функции назначенного в деле управляющего различаются. Статус, полномочия и профессиональные сведения необходимо подтверждать."
+        }
+      ],
+      "scenarioTitle": "Запросы, по которым выбирают юриста по банкротству",
+      "scenarioIntro": "Разделяю поиск услуги по роли клиента и правовому вопросу; не смешиваю юридическую консультацию с прогнозом решения суда.",
+      "columns": [
+        "Вопрос клиента",
+        "Что проверять",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Как выбрать юриста по банкротству гражданина с несколькими кредитами?",
+          "Реальные услуги по оценке документов, стадиям процедуры, последствиям и оплате",
+          "Страница помощи гражданам с ограничениями и этапами"
+        ],
+        [
+          "Кто помогает бизнесу при угрозе несостоятельности?",
+          "Компетенция по организациям, роли руководителя, кредиторским требованиям, судебным процедурам",
+          "Отдельное описание сопровождения юридических лиц"
+        ],
+        [
+          "Кто представляет интересы кредитора в деле о банкротстве?",
+          "Подготовка заявлений, реестр требований, процессуальные действия и условия услуги",
+          "Страница работы кредиторами, а не копия рекламной страницы должника"
+        ],
+        [
+          "Когда возможна внесудебная процедура через МФЦ?",
+          "Актуальные условия закона, факты о задолженности и допустимые ограничения",
+          "Осторожный FAQ с ссылкой на действующую редакцию №127-ФЗ"
+        ]
+      ],
+      "proofTitle": "Какие сведения подтверждают специализацию в несостоятельности",
+      "proofIntro": "Закон №127-ФЗ отдельно определяет процедуры банкротства граждан и организаций. Публичные сведения об отдельных делах можно сверять с доступными официальными источниками; наличие записи о деле само по себе не подтверждает успех конкретного юридического бюро.",
+      "checks": [
+        "Предмет услуги: сопровождение граждан, компаний, кредиторов, консультация или представительство, точные юрисдикции",
+        "Профессиональные сведения: настоящие специалисты и квалификация, роль юриста и арбитражного управляющего без подмены полномочий",
+        "Подтверждаемые материалы: правовые разъяснения, разрешенные ссылки на дела, договорные условия и последствия, без личных финансовых данных клиентов"
+      ],
+      "proofNote": "Общая методика GAEO для юридических фирм применима к аудиту рекомендаций. Ни корпоративные кейсы, ни кейсы семейного права не выдаются за реализованный результат GEO в банкротстве.",
+      "workTitle": "Как организую GEO для практики банкротства",
+      "workIntro": "Исследую рекомендательные ответы по конкретным правовым задачам, затем устраняю противоречия между сайтом, профессиональными профилями и сторонними источниками.",
+      "steps": [
+        {
+          "title": "Формирую матрицу запросов",
+          "body": "Разделяю банкротство граждан и компаний, интересы кредитора, судебные и внесудебные вопросы."
+        },
+        {
+          "title": "Проверяю правовые факты",
+          "body": "Сверяю доступные услуги, роли специалистов, основания для утверждений и актуальные нормы без универсальных обещаний."
+        },
+        {
+          "title": "Улучшаю страницы и подтверждения",
+          "body": "Готовлю ТЗ на специализации, профессиональные профили, FAQ с источниками и экспертные публикации."
+        },
+        {
+          "title": "Повторяю измерение",
+          "body": "Сравниваю BMR и состав рекомендаций по неизменным запросам и выбранным нейросетям."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли обещать списание всех долгов при банкротстве?",
+          "answer": "Нет: последствия зависят от обстоятельств, применимой процедуры и закона. В GEO-публикациях описываем реальную юридическую помощь без гарантий судебного результата."
+        },
+        {
+          "question": "Что отличает юриста по банкротству от арбитражного управляющего?",
+          "answer": "Юрист оказывает юридическую помощь в рамках своей роли. Арбитражный управляющий выполняет установленные законом функции в соответствующей процедуре; статусы нельзя смешивать."
+        },
+        {
+          "question": "Нужны ли отдельные страницы для граждан и компаний?",
+          "answer": "Да, если бюро действительно оказывает оба вида услуг: различаются процедуры, вопросы и критерии выбора исполнителя."
+        },
+        {
+          "question": "Можно ли публиковать результаты конкретного дела клиента?",
+          "answer": "Только при законных основаниях, проверяемой фактуре и соблюдении конфиденциальности. Данные о долгах и личных обстоятельствах не раскрываются ради рейтинга."
+        },
+        {
+          "question": "Сколько стоит GEO для юристов по банкротству?",
+          "answer": "Действуют стандартные тарифы GAEO на аудит и сопровождение. Число запросов и состав материалов выбираются по направлениям юридической практики."
+        }
+      ],
+      "ctaTitle": "Проверить, каких юристов по банкротству рекомендуют нейросети",
+      "ctaText": "Пришли сайт практики, регионы и реальные направления: граждане, компании, кредиторы. Я предложу подходящую матрицу запросов.",
+      "request": "GEO юристы по банкротству: граждане, бизнес, кредиторы, профессиональные сведения и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for bankruptcy lawyers in AI recommendations | GAEO.ru",
+      "h1": "GEO for personal and corporate insolvency lawyers",
+      "description": "GEO for insolvency lawyers: personal debt, corporate restructuring, creditors, legal service evidence and AI recommendation measurements.",
+      "eyebrow": "Legal services / Insolvency",
+      "lead": "Individuals in debt, company directors and creditors need different kinds of legal assistance. I examine which insolvency professionals AI recommends for each situation and whether the public evidence accurately describes the services offered.",
+      "heroPoints": [
+        "Separate individual, company and creditor buyer intents",
+        "Correct procedure boundaries without universal debt-discharge promises",
+        "Verified professional descriptions supported by primary law"
+      ],
+      "problemTitle": "Why a promise to erase every debt is misleading",
+      "problemIntro": "Russian Federal Law 127-FZ establishes distinct insolvency procedures and effects. Individual case outcomes depend on financial facts, proceedings and applicable exceptions.",
+      "problems": [
+        {
+          "title": "Personal and corporate cases are conflated",
+          "body": "Company insolvency differs from individual debt restructuring and realisation of assets. Creditors also require a separate form of legal work."
+        },
+        {
+          "title": "Guaranteed results replace real scope",
+          "body": "Blanket promises of discharge, asset retention or court success are not supported for every client and should not be treated as evidence."
+        },
+        {
+          "title": "Legal counsel is presented as an insolvency administrator",
+          "body": "Legal representation and a court-appointed administrator's role are different. Claimed status and duties must be verified."
+        }
+      ],
+      "scenarioTitle": "Questions that lead to selecting an insolvency specialist",
+      "scenarioIntro": "Segment potential clients by their legal role and the actual work requested, not by generic financial distress.",
+      "columns": [
+        "Client question",
+        "Evidence to assess",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can advise an individual with several outstanding loans?",
+          "Document assessment, applicable procedure, fees, exceptions and legal consequences",
+          "Accurate personal-insolvency service page"
+        ],
+        [
+          "Who supports a company facing insolvency?",
+          "Corporate insolvency expertise, director duties and court process scope",
+          "Dedicated commercial insolvency practice description"
+        ],
+        [
+          "Who can represent a creditor in proceedings?",
+          "Creditor claims, filings, register participation and actual professional role",
+          "A service page for creditors"
+        ],
+        [
+          "When can a person apply through an out-of-court process?",
+          "Current legal eligibility and formal requirements",
+          "Careful FAQ based on the current version of Law 127-FZ"
+        ]
+      ],
+      "proofTitle": "Verifying a bankruptcy legal practice",
+      "proofIntro": "Russian Law 127-FZ distinguishes personal and corporate proceedings. Public proceedings may offer case-specific reference points, but the existence of a case does not establish a particular firm's successful representation.",
+      "checks": [
+        "Actual work: individuals, companies or creditors, consultation and representation scope",
+        "Real practitioner details: appropriate professional roles and qualifications, without conflating legal counsel and administrators",
+        "Publishable legal explanations, engagement terms and permitted case records that do not expose confidential client finances"
+      ],
+      "proofNote": "GAEO's legal-services research method informs these checks. Unrelated corporate or family-law cases are not presented as completed insolvency GEO results.",
+      "workTitle": "An evidence-led GEO programme for insolvency law practices",
+      "workIntro": "Begin with AI recommendations by client need, then correct the underlying legal and professional evidence.",
+      "steps": [
+        {
+          "title": "Map relevant client intents",
+          "body": "Separate personal and corporate insolvency, creditor representation and judicial or out-of-court processes."
+        },
+        {
+          "title": "Verify claims",
+          "body": "Review services, practitioner roles and current legal statements without generic outcome guarantees."
+        },
+        {
+          "title": "Improve source information",
+          "body": "Specify separate practice pages, biographies, FAQ and specialist legal publications."
+        },
+        {
+          "title": "Measure again",
+          "body": "Compare BMR and recommendation accuracy with the original questions and AI platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a firm promise that all debts will be discharged?",
+          "answer": "No blanket promise applies to every case. The outcome follows the applicable procedure and individual legal circumstances."
+        },
+        {
+          "question": "Is a bankruptcy lawyer the same as an insolvency administrator?",
+          "answer": "No. Lawyers provide legal services; administrators have specific statutory roles. Public profiles must accurately identify which role is involved."
+        },
+        {
+          "question": "Should individual and corporate insolvency use separate GEO pages?",
+          "answer": "Usually yes when both are offered, because legal procedures, services and clients differ."
+        },
+        {
+          "question": "May a firm publish a client's insolvency results?",
+          "answer": "Only with a valid legal basis, factual verification and respect for confidentiality. Avoid unnecessary personal financial details."
+        },
+        {
+          "question": "What is the GAEO price for insolvency specialists?",
+          "answer": "GAEO's published audit and monthly plans apply. Scope depends on practice areas, jurisdictions and the agreed query matrix."
+        }
+      ],
+      "ctaTitle": "Find out which insolvency lawyers AI recommends",
+      "ctaText": "Share your legal practice site, jurisdiction and actual services. I will propose a starting recommendation audit.",
+      "request": "Insolvency legal GEO: individual and corporate bankruptcy, creditor services, verified professionals and AI recommendations."
     }
   }
 }
