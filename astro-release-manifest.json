@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "abb29156a55d4872dd9737147ec82a1b43eb7d19",
-  "releasedAt": "2026-11-07T21:41:09.615Z",
+  "sourceCommit": "6654e883da01bcae254d9e50e21aca938218a35f",
+  "releasedAt": "2026-11-07T21:51:05.982Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2913,7 +2913,7 @@
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "e2063959f97af4e0f7f242cc9fd048bb4306d195b095591e92b92686e7c34f9b"
+      "sha256": "43337ef6d163428a5600f9112a95deddc7a2b5bdf5e4521bd2ba4c5001d1c089"
     },
     {
       "path": "en/industries/electronic-document-flow/index.html",
@@ -2956,9 +2956,19 @@
       "sha256": "5b616cea798cd616352db59d89755d35a68da8e2941d2f893ec90b0619b6f7e4"
     },
     {
+      "path": "en/industries/home-improvement-online-stores/index.html",
+      "kind": "html",
+      "sha256": "e9db014029daf2bbe97e72e7b6464d8e92475ad903c9e50f5843bfa7d7b9e495"
+    },
+    {
       "path": "en/industries/hotels-country-resorts/index.html",
       "kind": "html",
       "sha256": "2f8e23355b3661dfd9bf3f379819469e608422bd96d3e49192dd7ff3e0fd6c5b"
+    },
+    {
+      "path": "en/industries/household-chemistry-brands/index.html",
+      "kind": "html",
+      "sha256": "e1a602c071d0ed1f0ef944f14285be11e82dd5f3c09894a034265897c17f6da2"
     },
     {
       "path": "en/industries/index.html",
@@ -2994,6 +3004,11 @@
       "path": "en/industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "2f3c95acf9a97c3a548b05975124b52a63c942ceae53d5d0b9ef0f79fd06dd63"
+    },
+    {
+      "path": "en/industries/pet-supplies-online-stores/index.html",
+      "kind": "html",
+      "sha256": "372abcc373586b2ebcbe55a00b81272b69ddd98baf5d4c7e89fbc3df8c9abb08"
     },
     {
       "path": "en/industries/pharma/index.html",
@@ -3048,7 +3063,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "dd4c9d318daca78fdfa60291395802873fcaa07a5249f353e7e3a749b7b1235f"
+      "sha256": "e6d885a59d9d8108f723dc1dd2bf89a92c86529410cf96ceefef809c9f01c231"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3248,7 +3263,7 @@
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "163e9751bc8cfafebd13afd3ecaf6fcdd41b0b83f35bb0f49599ff3369f067b6"
+      "sha256": "8f5ee3136643db504fb58fc72f2a88e6156cde6ff42e0efa7e9a8d53e6f2e6e0"
     },
     {
       "path": "industries/electronic-document-flow/index.html",
@@ -3291,9 +3306,19 @@
       "sha256": "c1e1fb5ebb3507e4574ec5c250788391cd72f0c0caa84a69149280acb2e7f901"
     },
     {
+      "path": "industries/home-improvement-online-stores/index.html",
+      "kind": "html",
+      "sha256": "cbd94a0467b965bd9bf5bae0d5dd224a558cecd5b3fc0cd03dea9e5b9ecaea42"
+    },
+    {
       "path": "industries/hotels-country-resorts/index.html",
       "kind": "html",
       "sha256": "7e941e8ebd3e6a4dbbfbeab02d098ca30b1665d449d7c0f2c7e8bfe817b52bdc"
+    },
+    {
+      "path": "industries/household-chemistry-brands/index.html",
+      "kind": "html",
+      "sha256": "29d41a8ce82698e9f51f05b40bba430ec955d4f3a2b78b1fafc3ba5c4bc16ab7"
     },
     {
       "path": "industries/index.html",
@@ -3329,6 +3354,11 @@
       "path": "industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "71b7de8fac7ce7ab5b61fc83c19f9c456ce861e305309a8158f0bf260d7640d8"
+    },
+    {
+      "path": "industries/pet-supplies-online-stores/index.html",
+      "kind": "html",
+      "sha256": "eb1efe55ef31c95139433982b6219ab1e74e770b30707d0e0f2d09751fa49658"
     },
     {
       "path": "industries/pharma/index.html",
@@ -3458,7 +3488,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "9260c56bc7853842a032c0e7312c17476b8cda4b40809b6fb419f9f2bedda9cc"
+      "sha256": "2b4a836b59752429ca6e69e3b3158d18e795154d3932f7fa19e5bb1c9f39f200"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3513,7 +3543,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "969673ed1f8047b4bacada91658a0c31b1fa5aa05c4214b5c0a3744c8fc8e911"
+      "sha256": "2af14ac7fbdc30a21f259d4b25abfdc812adb970b48a6e72acf936758a72b900"
     }
   ]
 }
