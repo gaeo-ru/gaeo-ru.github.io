@@ -1,5 +1,5 @@
 /**
- * Batches 2A and 2B: eight substantive RU/EN GEO specializations.
+ * Batches 2A, 2B and 2C: bilingual substantive GEO specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -2078,6 +2078,1065 @@ export const industrySpecializations = [
       "ctaTitle": "See which IT providers AI recommends to your buyers",
       "ctaText": "Share the provider site, verified capabilities, locations and approved project examples. I will propose a suitable baseline.",
       "request": "IT integrator and outsourcing GEO: 1C, migrations, SLAs, infrastructure, managed support and AI recommendations."
+    }
+  }
+},
+{
+  "id": 4,
+  "slug": "luxury-real-estate-agencies",
+  "group": "real-estate",
+  "routes": {
+    "ru": "/industries/luxury-real-estate-agencies/",
+    "en": "/en/industries/luxury-real-estate-agencies/"
+  },
+  "parent": {
+    "ru": "/geo-prodvizhenie-nedvizhimosti/",
+    "en": "/en/geo-for-real-estate/"
+  },
+  "methods": {
+    "ru": [
+      "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+    ],
+    "en": [
+      "/en/articles/geo-for-real-estate/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика анализа запросов покупателей недвижимости"
+    ],
+    "en": [
+      "Research methodology for property recommendation queries"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+      "ru": "Закон №218-ФЗ о государственной регистрации недвижимости",
+      "en": "Federal Law 218-FZ on property registration"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение агентств элитной недвижимости | GAEO.ru",
+      "h1": "GEO-продвижение агентств элитной недвижимости в нейросетях",
+      "description": "Продвижение агентств элитной недвижимости в ChatGPT и Алисе: клубные дома, премиальные квартиры, загородные резиденции, приватные продажи и выбор брокера.",
+      "eyebrow": "Недвижимость / Премиальные агентства",
+      "lead": "Покупатель премиальной квартиры выбирает не только адрес и площадь. Его интересуют приватность, доступ к релевантным предложениям, юридическая чистота и опыт конкретного брокера. Я проверяю, какие агентства нейросети рекомендуют по таким задачам и достаточно ли публичных оснований для этого выбора.",
+      "heroPoints": [
+        "Небрендовые запросы по формату жилья, локации и типу сопровождения",
+        "Проверка реальной специализации брокеров и условий работы с объектами",
+        "Сохранение конфиденциальности сделок и закрытых предложений"
+      ],
+      "problemTitle": "Почему каталог дорогих объектов не равен доверию к агентству",
+      "problemIntro": "Одинаковый бюджет может означать разные запросы: квартиру в клубном доме, загородную резиденцию или сопровождение сложной сделки. У агентства должны быть подтвержденные компетенции именно для нужной ситуации.",
+      "problems": [
+        {
+          "title": "Закрытые предложения описаны как общедоступные",
+          "body": "Нельзя обещать наличие конкретных off-market объектов, когда право на показ, актуальность и условия доступа не подтверждены."
+        },
+        {
+          "title": "Премиальность подменяет конкретные критерии",
+          "body": "Общие слова об эксклюзивности не показывают специализацию по районам, типам недвижимости, приватности и реальному составу услуги."
+        },
+        {
+          "title": "Утверждения о сделках недоказуемы",
+          "body": "Нельзя использовать вымышленные продажи, имена клиентов или неподтвержденный объем портфеля ради доказательства опыта брокера."
+        }
+      ],
+      "scenarioTitle": "По каким запросам выбирают премиальное агентство",
+      "scenarioIntro": "Задачи распределяются по объекту, покупателю и формату сопровождения. В исходном замере отделяю выбор агентства от рекомендации конкретного дома.",
+      "columns": [
+        "Вопрос покупателя",
+        "Какие сведения нужны",
+        "Что делать для GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое агентство специализируется на клубных домах в центре Москвы?",
+          "Фактические районы, типы объектов, опыт специалистов, доступные предложения",
+          "Проверяемые профили брокеров и страницы специализации"
+        ],
+        [
+          "К кому обратиться за покупкой загородной резиденции с сопровождением?",
+          "География, содержание проверки объекта, этапы сделки, партнерские специалисты",
+          "Отдельное предложение для загородной недвижимости и условий покупки"
+        ],
+        [
+          "Кто помогает искать объекты без публичного размещения?",
+          "Реальные условия закрытого подбора, конфиденциальность и порядок подтверждения доступа",
+          "Описать услугу без раскрытия закрытого каталога"
+        ],
+        [
+          "Как сравнить агентства при продаже премиальной квартиры?",
+          "Модель вознаграждения, маркетинг объекта, отчетность, ограничения по данным клиента",
+          "Сопоставимые условия брокерской услуги и FAQ"
+        ]
+      ],
+      "proofTitle": "Какие данные помогают обоснованно рекомендовать брокера",
+      "proofIntro": "При выборе дорогостоящего объекта важны документы на недвижимость и права сторон. Сведения ЕГРН относятся к установленному законом порядку доступа, поэтому публичное описание сделки не заменяет проверку документов и не может раскрывать закрытые данные.",
+      "checks": [
+        "Подтвержденная специализация брокеров, районы и типы объектов, актуальные публичные профили",
+        "Договорные условия: комиссия, приватность, порядок показа, сопровождение, участие профильных юристов",
+        "Только разрешенные примеры сделок и законно доступные данные; отдельный контроль актуальности off-market предложений"
+      ],
+      "proofNote": "Предаудит жилого комплекса и методика GAEO по недвижимости помогают исследовать спрос, но не подтверждают достигнутый GEO-результат для агентства элитной недвижимости.",
+      "workTitle": "Как я выстраиваю GEO-продвижение премиального агентства",
+      "workIntro": "Работа строится вокруг доверия к конкретным специалистам, сценариев выбора и проверяемых услуг, а не вокруг искусственного увеличения числа объектов на сайте.",
+      "steps": [
+        {
+          "title": "Разделяю запросы",
+          "body": "Фиксирую потребности покупателей и продавцов по сегментам квартир, загородным объектам, районам и конфиденциальному сопровождению."
+        },
+        {
+          "title": "Проверяю доказательства",
+          "body": "Сверяю фактический опыт брокеров, публичные профили, договорные условия, ограничения по конфиденциальности и допустимость упоминаний."
+        },
+        {
+          "title": "Готовлю сайт и внешние источники",
+          "body": "Разрабатываю ТЗ на специализированные услуги, профили брокеров, экспертные публикации и ответы на частые вопросы."
+        },
+        {
+          "title": "Повторно измеряю рекомендации",
+          "body": "Сравниваю ответы выбранных нейросетей по неизменным запросам, отслеживаю BMR и фактические ошибки."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать агентство без публикации закрытых сделок?",
+          "answer": "Да. Можно показывать проверенную специализацию, условия услуг, профессиональные публикации и разрешенные клиентские материалы, не раскрывая закрытые объекты."
+        },
+        {
+          "question": "Чем GEO агентства отличается от GEO элитного ЖК?",
+          "answer": "Агентство выбирают как исполнителя, а ЖК как объект. Для брокера важны люди, услуги и условия, а для комплекса - характеристики и доступность недвижимости."
+        },
+        {
+          "question": "Допустимо ли писать, что агентство работает с off-market объектами?",
+          "answer": "Только если такая услуга действительно оказывается. Объем закрытых предложений, эксклюзивные права и наличие конкретных объектов нельзя придумывать."
+        },
+        {
+          "question": "Как доказать юридическую чистоту сделки?",
+          "answer": "Требуется проверка документов и обстоятельств конкретного объекта квалифицированными специалистами. Общая фраза о юридической чистоте не заменяет такую проверку."
+        },
+        {
+          "question": "Как рассчитывается стоимость GEO для премиального агентства?",
+          "answer": "По общим тарифам GAEO на аудит и сопровождение. Объем определяется географией, специализацией, согласованными запросами и доступной доказательной базой."
+        }
+      ],
+      "ctaTitle": "Проверить рекомендации нейросетей о твоем агентстве",
+      "ctaText": "Пришли сайт агентства, реальные направления работы и публичные профили брокеров. Я выделю запросы, по которым покупатели выбирают посредника.",
+      "request": "GEO агентства элитной недвижимости: клубные дома, премиальные квартиры, приватность, брокеры и рекомендации."
+    },
+    "en": {
+      "title": "GEO for luxury real estate agencies | GAEO.ru",
+      "h1": "GEO for luxury real estate agencies in AI recommendations",
+      "description": "GEO for luxury estate agencies: private property searches, premium homes, discreet brokerage, verifiable agent expertise and AI visibility.",
+      "eyebrow": "Real estate / Luxury brokerage",
+      "lead": "A buyer of a premium home evaluates more than square metres and location. Discretion, relevant inventory, professional expertise and transaction support matter. I examine which estate agencies AI recommends for these needs and whether the available sources support the recommendation.",
+      "heroPoints": [
+        "Non-brand questions by property type, area and service need",
+        "Evidence of actual broker specialisation and agency responsibilities",
+        "Privacy-safe treatment of off-market listings and transactions"
+      ],
+      "problemTitle": "An expensive listing catalogue is not proof of brokerage expertise",
+      "problemIntro": "The same budget may cover a central-city apartment, a country residence or a sensitive off-market acquisition. Each buyer requires different evidence.",
+      "problems": [
+        {
+          "title": "Private listings are presented as publicly available",
+          "body": "A provider cannot claim access to an off-market property when authorisation, availability and disclosure terms have not been verified."
+        },
+        {
+          "title": "Premium positioning lacks usable criteria",
+          "body": "Exclusive language alone does not establish neighbourhood expertise, property specialism or a discreet service process."
+        },
+        {
+          "title": "Transaction results are unsubstantiated",
+          "body": "Invented deal volumes, named clients and unsupported completion claims must never be used as marketing evidence."
+        }
+      ],
+      "scenarioTitle": "Questions that lead to a luxury agency shortlist",
+      "scenarioIntro": "Separate the agency-selection task from the selection of individual buildings. The baseline distinguishes buyers, sellers and transaction models.",
+      "columns": [
+        "Buyer question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Which agency handles boutique apartment buildings in central Moscow?",
+          "Real service areas, broker expertise and current available offers",
+          "Specialist broker profiles and neighbourhood pages"
+        ],
+        [
+          "Who assists with purchasing a countryside residence?",
+          "Territory, due diligence scope, contract process and actual partners",
+          "A separate country-property service explanation"
+        ],
+        [
+          "Who offers a discreet search for homes not publicly listed?",
+          "Real private-search terms, confidentiality and permission to describe offerings",
+          "Explain the service without exposing inventory"
+        ],
+        [
+          "How should I compare agencies selling a premium apartment?",
+          "Fee terms, marketing scope, seller reporting and privacy",
+          "Transparent brokerage process and fee FAQ"
+        ]
+      ],
+      "proofTitle": "Evidence behind a luxury-broker recommendation",
+      "proofIntro": "Registered property rights and transaction verification are separate from a brokerage pitch. Russian law regulates access to EGRN information; public content cannot replace a property-specific review or disclose confidential details.",
+      "checks": [
+        "Real broker identities and expertise, areas covered and public professional profiles",
+        "Commission, confidentiality, marketing scope, viewing process and legal-service boundaries",
+        "Permission-based cases and accurate statements about private listings"
+      ],
+      "proofNote": "GAEO's residential-development research provides a measurement method, not a completed GEO success case for a luxury estate agency.",
+      "workTitle": "A GEO programme for a specialist luxury agency",
+      "workIntro": "The approach centres on responsible recommendations of qualified people and services, not mass reproduction of listings.",
+      "steps": [
+        {
+          "title": "Define buyer needs",
+          "body": "Separate central-city homes, country residences, private transactions and seller services by intent and geography."
+        },
+        {
+          "title": "Verify what can be disclosed",
+          "body": "Review broker capabilities, contract conditions, confidentiality and permission to cite transactions."
+        },
+        {
+          "title": "Build content evidence",
+          "body": "Specify agency service pages, biographies, sector materials and helpful transactional FAQ."
+        },
+        {
+          "title": "Measure comparable recommendations",
+          "body": "Repeat stable prompts and examine BMR and factual errors across selected AI interfaces."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a luxury agency use GEO without disclosing private transactions?",
+          "answer": "Yes. Verified services, practitioner biographies and approved public evidence can support recommendations without confidential details."
+        },
+        {
+          "question": "How is agency GEO different from developer GEO?",
+          "answer": "A developer is assessed for a property; an agency is selected for people, service and transaction terms."
+        },
+        {
+          "question": "Can off-market expertise be advertised?",
+          "answer": "Only if the provider genuinely offers it. No unsupported inventory totals, exclusive rights or availability claims should be made."
+        },
+        {
+          "question": "What proves a property transaction is legally sound?",
+          "answer": "Document and circumstance review for the specific property, performed by appropriately qualified professionals. Generic marketing statements are insufficient."
+        },
+        {
+          "question": "What is the GAEO price for a luxury agency?",
+          "answer": "The current audit and monthly GEO plans apply. Final scope depends on target geography, services and usable evidence."
+        }
+      ],
+      "ctaTitle": "See which luxury agents AI recommends to buyers",
+      "ctaText": "Share your brokerage website, actual services and professional profiles. I will identify a relevant baseline query set.",
+      "request": "Luxury real estate agency GEO: brokers, premium homes, off-market searches, confidentiality and AI recommendations."
+    }
+  }
+},
+{
+  "id": 22,
+  "slug": "intellectual-property-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/intellectual-property-lawyers/",
+    "en": "/en/industries/intellectual-property-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как оценивать рекомендации юридических подрядчиков",
+      "12 проверок сайта юридической компании"
+    ],
+    "en": [
+      "Evidence-led evaluation of legal recommendations",
+      "Twelve website checks for legal GEO"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://rospatent.gov.ru/ru/faq/gde-samostoyatelno-provesti-poisk-tovarnyh-znakov-v-internete",
+      "ru": "Роспатент: официальные поисковые сервисы и реестры товарных знаков",
+      "en": "Rospatent: public trademark search and registers"
+    },
+    {
+      "href": "https://rospatent.gov.ru/ru/sourses",
+      "ru": "Роспатент: реестры и правовой статус регистраций",
+      "en": "Rospatent: official registers and registration status"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для юристов по интеллектуальной собственности | GAEO.ru",
+      "h1": "GEO-продвижение юристов по интеллектуальной собственности",
+      "description": "Продвижение патентных поверенных и IP-юристов: регистрация товарных знаков, патенты, авторские права, лицензирование, споры и рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Интеллектуальная собственность",
+      "lead": "Компании ищут юриста по товарным знакам, патентного поверенного или специалиста по спору об авторских правах. Это разные задачи, где важны предмет права, территория защиты и реальные полномочия исполнителя. Проверяю, кого рекомендуют нейросети и какие сведения позволяют обоснованно выбрать специалиста.",
+      "heroPoints": [
+        "Раздельные группы запросов: товарные знаки, патенты, авторское право и споры",
+        "Проверка действительных профессиональных статусов и права на публикацию кейсов",
+        "Связь услуг с официальными реестрами Роспатента и отраслевой экспертизой"
+      ],
+      "problemTitle": "Почему «все услуги по защите интеллектуальной собственности» не убеждают",
+      "problemIntro": "Заказчик хочет решить конкретную задачу: проверить знак перед подачей, оформить патент или заключить лицензионный договор. Ошибка в обозначении услуги или полномочий делает рекомендацию ненадежной.",
+      "problems": [
+        {
+          "title": "Товарный знак, патент и авторское право смешиваются",
+          "body": "Права на знак, техническое решение, дизайн и произведение имеют разные объекты охраны и процедуры. Нельзя заменять их одной универсальной инструкцией."
+        },
+        {
+          "title": "Название «патентный поверенный» используется без проверки",
+          "body": "Профессиональный статус и направления аттестации специалиста нужно сверять по официальным данным; общее наличие юридического образования не подтверждает такую аттестацию."
+        },
+        {
+          "title": "Обещана регистрация или победа без оснований",
+          "body": "Исход экспертизы и спора зависит от документов и обстоятельств; нельзя обещать 100% регистрацию, выигрыш или сроки без условий."
+        }
+      ],
+      "scenarioTitle": "Коммерческие запросы для практики интеллектуальной собственности",
+      "scenarioIntro": "Запросы разделяются по объекту права и цели обращения, включая международные задачи. География и юрисдикция фиксируются отдельно.",
+      "columns": [
+        "Вопрос клиента",
+        "Какие факты нужны",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто поможет проверить название и зарегистрировать товарный знак в России?",
+          "Реальная услуга поиска, описание процедуры, источники и статус исполнителя",
+          "Страница услуг по товарным знакам с открытыми реестрами и ограничениями"
+        ],
+        [
+          "Как найти специалиста по патентованию технического решения?",
+          "Предмет заявки, компетенция по патентам, порядок подготовки и экспертизы",
+          "Отдельная специализация на патентовании, а не копия страницы товарных знаков"
+        ],
+        [
+          "Кто подготовит лицензионный договор для ПО или бренда?",
+          "Вид права, предмет лицензии, территория, применимые условия, реальные полномочия",
+          "Точное описание договорной работы и характерных вопросов"
+        ],
+        [
+          "Кто ведет спор о незаконном использовании изображения или бренда?",
+          "Характер правообладателя, доказательства использования, варианты защиты, процесс",
+          "Раздел о спорах без гарантий исхода и вымышленных решений"
+        ]
+      ],
+      "proofTitle": "Какие доказательства подходят для IP-практики",
+      "proofIntro": "Роспатент и ФИПС дают доступ к открытым реестрам товарных знаков, патентов и заявок. Реестр позволяет проверять конкретные регистрационные сведения, но само наличие ссылки на реестр не доказывает опыт юриста или исход будущей заявки.",
+      "checks": [
+        "Специализация: реальные направления работы, профессиональный статус, необходимые реестры и фактическая юрисдикция",
+        "Состав работ: предварительный поиск, заявка, переписка с ведомством, договорная работа, споры и оговорки о результате",
+        "Публикации и практика: только подтвержденные дела и документы с разрешением правообладателя, без раскрытия чужих технологий и коммерческих секретов"
+      ],
+      "proofNote": "Действующий юридический информационный хаб GAEO дает общую методику проверки рекомендации, но кейсы корпоративных юристов не подтверждают завершенного GEO-продвижения практики интеллектуальной собственности.",
+      "workTitle": "Как провожу GEO-продвижение IP-юриста или бюро",
+      "workIntro": "Фокус на правильных правовых категориях и проверяемом опыте, который помогает нейросети рекомендовать релевантного исполнителя.",
+      "steps": [
+        {
+          "title": "Фиксирую спрос",
+          "body": "Разделяю бренды и знаки, патенты, программные продукты, лицензии, споры и международные запросы."
+        },
+        {
+          "title": "Проверяю правовые сведения",
+          "body": "Сверяю статусы исполнителей, доступные кейсы и корректность объяснения процедур с первичными источниками."
+        },
+        {
+          "title": "Подготавливаю страницы услуг",
+          "body": "Создаю ТЗ на самостоятельные специализации, FAQ, профессиональные профили и публикации с примерами допустимых доказательств."
+        },
+        {
+          "title": "Повторно измеряю BMR",
+          "body": "Использую те же небрендовые формулировки и нейросети, отслеживаю рекомендации и неверные утверждения о квалификации."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Обязателен ли патентный поверенный для любого вопроса по авторскому праву?",
+          "answer": "Нет. Квалификация и полномочия зависят от задачи и процедуры. Профессиональный статус не следует приписывать без подтверждения."
+        },
+        {
+          "question": "Можно ли гарантировать регистрацию товарного знака?",
+          "answer": "Результат зависит от экспертизы и фактических обстоятельств. Можно описать подготовку и правовую оценку, но нельзя обещать положительное решение без оснований."
+        },
+        {
+          "question": "Зачем ссылаться на открытые реестры Роспатента?",
+          "answer": "Они дают проверяемые сведения о заявках и регистрациях. Это первичный источник по объекту права, а не доказательство результата работы конкретного юриста."
+        },
+        {
+          "question": "Можно ли публиковать материалы патентной заявки клиента?",
+          "answer": "Только в рамках разрешенного раскрытия, прав и действующего режима конфиденциальности. Неопубликованные технические сведения не переносятся в публичный контент без согласования."
+        },
+        {
+          "question": "Как рассчитываются тарифы GAEO для IP-юристов?",
+          "answer": "Общие тарифы на аудит и ежемесячное GEO-продвижение действуют для специализации. Состав запросов, нейросетей и страниц определяется по конкретным услугам."
+        }
+      ],
+      "ctaTitle": "Выяснить, кого нейросети рекомендуют по IP-вопросам",
+      "ctaText": "Пришли сайт практики, реальные направления услуг и разрешенные профессиональные источники. Я предложу стартовый аудит по товарным знакам, патентам и спорам.",
+      "request": "GEO юрист по интеллектуальной собственности: товарные знаки, патенты, авторское право, лицензии, споры и рекомендации."
+    },
+    "en": {
+      "title": "GEO for intellectual property lawyers | GAEO.ru",
+      "h1": "GEO for intellectual property law firms in AI recommendations",
+      "description": "GEO for IP lawyers: trademarks, patents, copyright, licensing, legal disputes, professional qualifications and AI recommendation measurement.",
+      "eyebrow": "Legal services / Intellectual property",
+      "lead": "Businesses may seek trademark counsel, a patent professional or a copyright dispute specialist. These are distinct legal needs where rights, jurisdiction and verified credentials matter. I examine which providers AI recommends and what evidence supports that choice.",
+      "heroPoints": [
+        "Distinct trademark, patent, copyright and dispute buyer intents",
+        "Verification of professional qualifications and permitted legal-case evidence",
+        "Primary information from Rospatent's public registries"
+      ],
+      "problemTitle": "A generic 'all intellectual property' claim obscures expertise",
+      "problemIntro": "Clients want specific work: clearance searching, patent prosecution, licensing or litigation. Poorly differentiated services weaken AI recommendations.",
+      "problems": [
+        {
+          "title": "Different intellectual property rights are conflated",
+          "body": "Trademarks, inventions, designs and copyright concern different protected works and procedures. A universal registration promise is misleading."
+        },
+        {
+          "title": "Patent-attorney status is not verified",
+          "body": "Professional titles and authorised fields of practice require checking; a general law degree does not itself prove a patent attorney qualification."
+        },
+        {
+          "title": "Registration or litigation success is guaranteed",
+          "body": "Official examinations and disputes depend on their facts, so unsupported success rates and promises must be excluded."
+        }
+      ],
+      "scenarioTitle": "Buyer questions that lead to IP specialist recommendations",
+      "scenarioIntro": "Segment questions by right, business problem and jurisdiction. National and cross-border activities need their own scope.",
+      "columns": [
+        "Potential client question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can clear and register a trademark in Russia?",
+          "Search scope, filing services, registry information and practitioner role",
+          "A dedicated trademark service and careful FAQ"
+        ],
+        [
+          "Which adviser handles patenting an engineering invention?",
+          "Patent field, professional competence and examination process",
+          "Actual patent practice rather than generic trademark copy"
+        ],
+        [
+          "Who can draft a software or brand licensing agreement?",
+          "Subject matter, rights, territory, responsibilities and actual service",
+          "A precise contract-law use case"
+        ],
+        [
+          "Which IP law firm handles an image or brand infringement dispute?",
+          "Rights ownership, permitted evidence and dispute scope",
+          "Rights-enforcement content without invented case wins"
+        ]
+      ],
+      "proofTitle": "Evidence appropriate for intellectual property practitioners",
+      "proofIntro": "Rospatent and FIPS maintain official registers and application information. Those records support verification of individual rights; they do not prove that a named law firm achieved an unrelated outcome.",
+      "checks": [
+        "Practitioner identity, professional status, supported practice areas and jurisdictions",
+        "Documented legal services: search, filing, official correspondence, licensing and dispute scope",
+        "Actual professional publications and case materials cleared for disclosure, without exposing confidential inventions or client secrets"
+      ],
+      "proofNote": "GAEO's general legal GEO methodology informs the work, but corporate-law examples are not presented as measured results for IP law specialists.",
+      "workTitle": "An evidence-led GEO programme for an IP practice",
+      "workIntro": "The plan connects buyer needs, actual professional services and verifiable primary sources.",
+      "steps": [
+        {
+          "title": "Map commercial intents",
+          "body": "Separate trademarks, patents, software licensing, copyrights, disputes and territorial needs."
+        },
+        {
+          "title": "Check legal evidence",
+          "body": "Verify qualifications, accessible records, case permissions and the accuracy of procedural descriptions."
+        },
+        {
+          "title": "Improve service content",
+          "body": "Specify differentiated service pages, adviser biographies, FAQ and authoritative reference materials."
+        },
+        {
+          "title": "Measure recommendations",
+          "body": "Repeat equivalent non-brand prompts and BMR rules across selected AI platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does every copyright issue require a registered patent attorney?",
+          "answer": "No. The appropriate practitioner and qualifications depend on the procedure and legal matter."
+        },
+        {
+          "question": "Can a law firm guarantee trademark registration?",
+          "answer": "Decisions depend on the official examination and case facts. Do not present a guaranteed approval as a universal outcome."
+        },
+        {
+          "question": "Why cite public Rospatent registers?",
+          "answer": "They help verify particular applications and registrations, but do not independently establish a firm's success in another matter."
+        },
+        {
+          "question": "Can client patent applications be used in articles?",
+          "answer": "Only where disclosure rights and confidentiality permit it. Unpublished technical information must not be exposed without authorisation."
+        },
+        {
+          "question": "How does GAEO price intellectual property GEO?",
+          "answer": "Published audit and monthly plans apply. The scope follows practice areas, target jurisdictions and the agreed query matrix."
+        }
+      ],
+      "ctaTitle": "See which IP law firms AI recommends to businesses",
+      "ctaText": "Share your practice site, verified services and approved professional evidence. I will outline a relevant baseline audit.",
+      "request": "IP law GEO: trademarks, patents, copyright, licensing, disputes and professional qualifications."
+    }
+  }
+},
+{
+  "id": 38,
+  "slug": "cloud-providers-data-centres",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/cloud-providers-data-centres/",
+    "en": "/en/industries/cloud-providers-data-centres/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Подтверждение компетенций технического B2B-подрядчика",
+      "Методика сравнимых GEO-замеров"
+    ],
+    "en": [
+      "Verifying technical B2B vendor evidence",
+      "Comparable AI visibility measurements"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/800/145/final",
+      "ru": "NIST SP 800-145: модели облачных услуг",
+      "en": "NIST SP 800-145: definition of cloud service models"
+    },
+    {
+      "href": "https://uptimeinstitute.com/uptime-institute-awards/list",
+      "ru": "Uptime Institute: реестр наград конкретных дата-центров",
+      "en": "Uptime Institute: verified data centre awards"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение облачных провайдеров и дата-центров | GAEO.ru",
+      "h1": "GEO-продвижение облачных провайдеров и дата-центров",
+      "description": "Продвижение облачных провайдеров и ЦОД в нейросетях: IaaS, размещение серверов, SLA, резервирование, сертификаты, безопасность и измерение рекомендаций.",
+      "eyebrow": "IT / Облачная инфраструктура и ЦОД",
+      "lead": "Компании выбирают провайдера облачной инфраструктуры по доступности, размещению данных, ресурсам и модели ответственности, а дата-центр для colocation - по условиям площадки, сетям и отказоустойчивости. Я разделяю эти запросы, проверяю источники и измеряю, каких поставщиков рекомендуют нейросети.",
+      "heroPoints": [
+        "Раздельные сценарии IaaS, colocation, резервного копирования и миграции",
+        "Подтверждение SLA, площадок, сертификации и реальной инфраструктуры",
+        "Проверяемые требования к безопасности, доступности и размещению данных"
+      ],
+      "problemTitle": "Почему фраза «надежное облако Tier III» требует уточнений",
+      "problemIntro": "Облачная услуга и физическая площадка - разные объекты проверки. Нельзя переносить статус одного дата-центра на весь парк провайдера или объявлять проектную сертификацию подтверждением готового объекта.",
+      "problems": [
+        {
+          "title": "Облако смешано с арендой стойки",
+          "body": "IaaS предполагает предоставление вычислений и хранения с управляемым выделением ресурсов, colocation - размещение оборудования клиента. Услуги различаются ответственностью и параметрами."
+        },
+        {
+          "title": "Tier и отказоустойчивость заявлены некорректно",
+          "body": "Сертификация проектной документации не равна сертификации построенного объекта. Для точного утверждения нужны площадка, тип награды, орган и дата."
+        },
+        {
+          "title": "SLA скрывает фактические исключения",
+          "body": "Доступность зависит от измерения, договорной зоны ответственности, резервирования и исключений; нельзя обещать нулевые простои или универсальное восстановление."
+        }
+      ],
+      "scenarioTitle": "В каких ситуациях бизнес выбирает облако или ЦОД",
+      "scenarioIntro": "Группирую запросы по нагрузкам, размещению данных и модели сервиса. Промпты о выборе провайдера и требования к конкретной услуге измеряются отдельно.",
+      "columns": [
+        "Запрос заказчика",
+        "Какие данные нужны",
+        "Как усиливать GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое облако подойдет для интернет-магазина с сезонными пиками?",
+          "Модель IaaS, масштабирование ресурсов, сеть, резервирование, SLA и ограничения",
+          "Страница вычислительных ресурсов с доказуемыми сценариями нагрузки"
+        ],
+        [
+          "Где арендовать стойку в дата-центре в Москве?",
+          "Адрес и площадка, мощность, условия подключения, доступ, безопасность, договор",
+          "Сопоставимые технические параметры конкретного ЦОД"
+        ],
+        [
+          "Кого выбрать для резервной площадки и восстановления сервисов?",
+          "Расположение, отдельные зоны, RPO/RTO по договору, тесты восстановления",
+          "Разделить резервное хранение, катастрофоустойчивость и реально гарантируемое"
+        ],
+        [
+          "Какой провайдер поддерживает нужное местоположение данных?",
+          "Конкретная услуга, юрисдикция, размещение, условия субподрядчиков, документы",
+          "Фактическая карта географии услуг без абстрактных обещаний соответствия"
+        ]
+      ],
+      "proofTitle": "Какие подтверждения нужны для инфраструктурного B2B",
+      "proofIntro": "NIST SP 800-145 определяет облачные модели IaaS, PaaS и SaaS. Uptime Institute публикует список конкретных наград для проектов ЦОД, разделяя проектную и построенную инфраструктуру. Эти определения помогают сформировать критерии, но не доказывают характеристики неизвестного поставщика.",
+      "checks": [
+        "Конкретные услуги: IaaS, управление облаком, аренда оборудования и colocation с точной моделью ответственности и доступными ресурсами",
+        "Инфраструктура: адреса площадок, характеристики, сети, зоны отказа, подтвержденные Tier-награды и актуальность сертификации",
+        "Контракт и безопасность: реальная формула SLA, периоды обслуживания, правила доступа, территориальные ограничения и проверяемые процедуры восстановления"
+      ],
+      "proofNote": "Методика технического B2B GAEO применима к выбору инфраструктуры, но кейс ускорения сайтов MethodLab не является доказанным результатом GEO-продвижения облачного провайдера или ЦОД.",
+      "workTitle": "Как организую GEO-продвижение провайдера",
+      "workIntro": "Работа начинается с того, какие предложения нейросети дают в ответах под конкретную инфраструктурную задачу. Затем устраняются технические и содержательные пробелы.",
+      "steps": [
+        {
+          "title": "Сегментация задач",
+          "body": "Разделяю облако, серверы, colocation, резервирование, миграцию, отраслевые нагрузки и географию."
+        },
+        {
+          "title": "Проверка фактуры",
+          "body": "Сверяю SLA, сертификаты, параметры площадок, роли провайдера и заказчика, актуальные тарифы и документацию."
+        },
+        {
+          "title": "Технические страницы и публикации",
+          "body": "Готовлю ТЗ на сравнимые спецификации услуг, FAQ, требования к миграции и доказательные экспертные материалы."
+        },
+        {
+          "title": "Повторный BMR",
+          "body": "Измеряю ту же матрицу запросов, состав рекомендаций, упоминаемые характеристики и цитируемые источники."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли указывать Tier III для всех дата-центров компании?",
+          "answer": "Только когда статус подтвержден для каждого указанного объекта и типа сертификации. Награда по проектной документации не равна сертификации построенной площадки."
+        },
+        {
+          "question": "Чем облако отличается от colocation для GEO?",
+          "answer": "У облачного предложения основные критерии включают выделение ресурсов, модель сервиса и управление. Для colocation оценивают физическую площадку, размещение оборудования, питание и сети."
+        },
+        {
+          "question": "Можно ли обещать 100% доступность облака?",
+          "answer": "Публичные обещания должны точно соответствовать действующему договору и правилам измерения SLA. Универсальная гарантия отсутствия простоев не подтверждается одним рекламным утверждением."
+        },
+        {
+          "question": "Обязателен ли отдельный тариф для каждого дата-центра?",
+          "answer": "Нужны точные условия по реально различающимся площадкам или услугам. Не следует автоматически плодить почти одинаковые страницы без самостоятельного содержания."
+        },
+        {
+          "question": "Сколько стоит GEO для облачного провайдера?",
+          "answer": "Применяются общие тарифы GAEO на аудит и ежемесячное сопровождение. Объем зависит от продуктовой линейки, регионов, нейросетей и запросов."
+        }
+      ],
+      "ctaTitle": "Узнать, какие облака и ЦОД рекомендуют нейросети заказчикам",
+      "ctaText": "Пришли сайт провайдера, перечень фактических услуг и документы по доступности или сертификации. Я подготовлю направления для исходного замера.",
+      "request": "GEO облачного провайдера и ЦОД: IaaS, colocation, SLA, Tier, резервирование, безопасность и рекомендации."
+    },
+    "en": {
+      "title": "GEO for cloud providers and data centres | GAEO.ru",
+      "h1": "GEO for cloud providers and data centres in AI recommendations",
+      "description": "GEO for cloud hosting and data centre providers: IaaS, colocation, SLAs, Tier certifications, disaster recovery, security and AI recommendations.",
+      "eyebrow": "IT / Cloud and data centre services",
+      "lead": "Businesses choosing cloud infrastructure assess available resources, availability, data placement and contractual responsibility. Those choosing colocation assess a facility, power and connectivity. I measure which providers AI recommends for these separate scenarios and verify the evidence behind those recommendations.",
+      "heroPoints": [
+        "Separate IaaS, colocation, backup and migration intents",
+        "Evidence for actual facilities, SLAs, awards and infrastructure",
+        "Clear boundaries for availability, security and data locations"
+      ],
+      "problemTitle": "Why 'reliable Tier III cloud' is an incomplete claim",
+      "problemIntro": "A cloud service and a physical facility are different subjects of verification. A design award must not be described as certification of an operational building.",
+      "problems": [
+        {
+          "title": "Cloud and colocation are conflated",
+          "body": "IaaS supplies configurable compute and storage resources while colocation houses customer equipment. The responsibilities differ."
+        },
+        {
+          "title": "Tier claims lack exact scope",
+          "body": "A Tier Certification of Design Documents is not equivalent to a Certification of Constructed Facility. Check facility and award type before making claims."
+        },
+        {
+          "title": "Service levels omit exceptions",
+          "body": "Availability depends on the measurement definition, scope, maintenance rules and responsibility model. A promise of zero downtime is not supported by marketing alone."
+        }
+      ],
+      "scenarioTitle": "Infrastructure buyer questions that matter for AI recommendations",
+      "scenarioIntro": "Segment by workload, contractual model, geography and provider role. The baseline uses stable prompts for comparable future measurements.",
+      "columns": [
+        "Business question",
+        "Evidence needed",
+        "GEO improvement"
+      ],
+      "scenarios": [
+        [
+          "Which cloud fits a retailer with seasonal load spikes?",
+          "Service model, resource scaling, network, redundancy, SLA limits",
+          "Document actual resource and load capabilities"
+        ],
+        [
+          "Where can we colocate equipment near Moscow?",
+          "Facility details, power, access, network, physical security and terms",
+          "Facility-specific, comparable technical specifications"
+        ],
+        [
+          "Who can offer a disaster recovery site?",
+          "Distinct fault domains, tested recovery methods and contractually defined RPO/RTO",
+          "Separate backups from tested recovery services"
+        ],
+        [
+          "Which provider can place our data in a required jurisdiction?",
+          "Exact locations, subcontractors, contract and documented operational limits",
+          "Accurate geographic and contractual facts rather than broad compliance claims"
+        ]
+      ],
+      "proofTitle": "Evidence for cloud and data centre supplier selection",
+      "proofIntro": "NIST SP 800-145 defines cloud service models including IaaS, PaaS and SaaS. Uptime Institute publishes awards for specific facilities and distinguishes design from constructed-facility certifications. Neither source establishes the characteristics of an unnamed vendor.",
+      "checks": [
+        "Actual service models and capabilities: IaaS, managed cloud, equipment rental and colocation, with responsibilities",
+        "Facilities, addresses, networks, zones, relevant Tier awards and their verified scope",
+        "Contractual availability, maintenance, access controls, geographic limitations and recovery responsibilities"
+      ],
+      "proofNote": "GAEO's technical B2B methodology supports the evaluation approach. The MethodLab website performance case does not prove a GEO outcome for a cloud or colocation business.",
+      "workTitle": "A practical GEO programme for infrastructure providers",
+      "workIntro": "Start from actual shortlists in AI answers and improve the source evidence relevant to technical procurement.",
+      "steps": [
+        {
+          "title": "Map workloads and service needs",
+          "body": "Separate cloud resources, servers, colocation, backups, DR, migration and location-related questions."
+        },
+        {
+          "title": "Audit factual claims",
+          "body": "Review SLAs, exact facility awards, service boundaries, supported resources and public documentation."
+        },
+        {
+          "title": "Create useful technical evidence",
+          "body": "Specify pages for services, facilities, migration, FAQ and sector publications with verified details."
+        },
+        {
+          "title": "Recheck recommendations",
+          "body": "Compare equivalent prompts and BMR and inspect incorrect claims and cited sources."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a company claim Tier III for every facility?",
+          "answer": "Only if the relevant award and its scope are verified for every named facility. Design and constructed facility awards differ."
+        },
+        {
+          "question": "How is IaaS different from colocation in GEO?",
+          "answer": "Cloud questions target on-demand service capabilities and management, while colocation questions target physical site characteristics and contracts."
+        },
+        {
+          "question": "Can a provider guarantee 100% uptime?",
+          "answer": "The public terms must match the actual contracted service level, measurement and exceptions. Generic zero-downtime promises are not substantiated."
+        },
+        {
+          "question": "Does every data centre require a separate landing page?",
+          "answer": "Only where its verified facilities, service terms or geography justify distinct information. Avoid duplicating generic pages."
+        },
+        {
+          "question": "How much does cloud provider GEO cost?",
+          "answer": "GAEO's standard audit and monthly plans apply, with project scope depending on products, locations and prompts."
+        }
+      ],
+      "ctaTitle": "See which cloud and colocation providers AI recommends",
+      "ctaText": "Share the provider site, actual services, supported locations and verified SLA or facility awards. I will identify the baseline query groups.",
+      "request": "Cloud and data centre GEO: IaaS, colocation, Tier, SLA, backups, facilities and AI recommendations."
+    }
+  }
+},
+{
+  "id": 58,
+  "slug": "warehouse-storage-3pl",
+  "group": "logistics",
+  "routes": {
+    "ru": "/industries/warehouse-storage-3pl/",
+    "en": "/en/industries/warehouse-storage-3pl/"
+  },
+  "parent": {
+    "ru": "/industries/fulfillment/",
+    "en": "/en/industries/fulfillment/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/fulfillment-provider-selection/",
+      "/industries/ecommerce/"
+    ],
+    "en": [
+      "/en/strategies/fulfillment-provider-selection/",
+      "/en/industries/ecommerce/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Критерии выбора фулфилмент-подрядчика и границы применимости",
+      "Специфика клиентских товарных данных"
+    ],
+    "en": [
+      "Provider selection and distinct warehouse/fulfilment roles",
+      "E-commerce catalogue and product data context"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_9027/7899d21bdcc6781e777105374c09050f7ded3c14/",
+      "ru": "ГК РФ, статья 907: договор складского хранения",
+      "en": "Russian Civil Code, Article 907: warehouse storage contract"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_9027/4863d790ba34912d721c4ba788fd87ccd24dfbc3/",
+      "ru": "ГК РФ, статья 912: складские документы",
+      "en": "Russian Civil Code, Article 912: warehouse documents"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение складских операторов и ответственного хранения | GAEO.ru",
+      "h1": "GEO-продвижение складской логистики и ответственного хранения",
+      "description": "Продвижение складских операторов в ChatGPT и Алисе: ответственное хранение, паллетоместа, WMS, приемка, отгрузка, SLA и проверка рекомендаций.",
+      "eyebrow": "Логистика / Складское хранение",
+      "lead": "Производитель или дистрибьютор ищет склад по расположению, режиму хранения, доступным площадям, учету остатков и договорной ответственности. Это отличается от выбора фулфилмента для маркетплейса. Проверяю, каких операторов нейросети рекомендуют по таким задачам и подтверждены ли их возможности.",
+      "heroPoints": [
+        "Отдельная матрица запросов для хранения, обработки и 3PL",
+        "Реальные режимы склада, география, учет и договорные условия",
+        "Сопоставление подтвержденных мощностей, WMS и уровня обслуживания"
+      ],
+      "problemTitle": "Почему карточка «складские услуги под ключ» не помогает выбору",
+      "problemIntro": "Заказчик должен понять, что именно хранитель принимает, как учитывает товары и за какие операции отвечает. Разные склады могут быть пригодны для разных категорий продукции.",
+      "problems": [
+        {
+          "title": "Ответственное хранение смешано с фулфилментом",
+          "body": "Хранение товарных партий и комплектация заказов маркетплейса - самостоятельные услуги. Наличие одной не доказывает выполнение другой."
+        },
+        {
+          "title": "Заявленные мощности не имеют единицы измерения",
+          "body": "Суммарные квадратные метры, число паллетомест, температурные зоны и ежедневный объем обработки нельзя использовать как взаимозаменяемые показатели."
+        },
+        {
+          "title": "Условия хранения и учета не раскрыты",
+          "body": "Хрупкие, жидкие, температурно-чувствительные и маркируемые товары требуют проверки реальной инфраструктуры, правил приемки и ограничений склада."
+        }
+      ],
+      "scenarioTitle": "Какие запросы приводят к выбору склада",
+      "scenarioIntro": "Фиксирую запросы по типу товара, месту, операции и ответственному хранению. Сравнение выполняется по подтвержденным параметрам выбранных операторов.",
+      "columns": [
+        "Вопрос бизнеса",
+        "Какие данные нужны",
+        "Работа GEO"
+      ],
+      "scenarios": [
+        [
+          "Где найти склад ответственного хранения в Подмосковье с паллетоместами?",
+          "Адрес, доступные зоны и емкость, договор, график и тарифная единица",
+          "Страница услуги с фактической географией и измеряемыми условиями"
+        ],
+        [
+          "Кому передать хранение товаров с партиями и сроками годности?",
+          "WMS, маркировка партий, учет сроков, температурный режим, ответственность",
+          "Проверяемые процессы и исключения по товарным категориям"
+        ],
+        [
+          "Как выбрать 3PL-оператора для приемки и отгрузки оптом?",
+          "Реальные операции, документы, SLA, система обмена и скорость обработки",
+          "Разделить хранение, обработку и транспортную часть логистики"
+        ],
+        [
+          "Чем отличаются хранение товара и фулфилмент для Wildberries?",
+          "Условия размещения, маркировка, комплектация, подготовка поставки на МП",
+          "Раздельные страницы направлений без вымышленных мощностей"
+        ]
+      ],
+      "proofTitle": "Какие факты доказывают пригодность складского оператора",
+      "proofIntro": "Гражданский кодекс РФ в статьях 907 и 912 регулирует договор складского хранения и складские документы. Это правовая основа для проверки договорных условий, но не доказательство, что любая компания оказывает услуги на одинаковых условиях.",
+      "checks": [
+        "Товар и условия: поддерживаемые категории, температурные зоны, паллетоместа, расположение, график приема и ограничения",
+        "Договор: хранитель и поклажедатель, ответственность, складские документы, приемка, возврат и порядок учета расхождений",
+        "Операции: фактические функции WMS, инвентаризация, обработка партий, отгрузка, интеграции, тарифная единица и актуальный SLA"
+      ],
+      "proofNote": "Опубликованный кейс Преп-Центра относится к конкретным работам фулфилмента. Он не подтверждает результат GEO-продвижения независимого оператора ответственного хранения.",
+      "workTitle": "Как продвигаю складскую логистику в нейросетях",
+      "workIntro": "Сначала проверяю, каких поставщиков рекомендуют для конкретного товара и географии, затем формирую необходимые доказательства по каждому сценарию.",
+      "steps": [
+        {
+          "title": "Исходная матрица",
+          "body": "Разделяю ответственное хранение, 3PL, температурные режимы, типы товара, географию и договорные условия."
+        },
+        {
+          "title": "Аудит реальных возможностей",
+          "body": "Сверяю складские площади, процессы, учет, действующие тарифы, договорные документы и ограничения."
+        },
+        {
+          "title": "Доработки сайта и публикации",
+          "body": "Готовлю страницы складских услуг, FAQ, описание операций и WMS, технические материалы и отраслевые сравнения."
+        },
+        {
+          "title": "Повторный контроль",
+          "body": "Сравниваю ответы нейросетей и BMR по той же матрице, устраняю ложные параметры мощностей и условий."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ответственное хранение и фулфилмент - одна услуга?",
+          "answer": "Нет. Хранение описывает обязательства по сохранности и возврату товара; фулфилмент дополнительно может включать комплектацию заказов и подготовку отправлений. Перечень работ определяется договором."
+        },
+        {
+          "question": "Можно ли заявлять хранение температурных товаров?",
+          "answer": "Только при наличии подтвержденных температурных зон, режима контроля и допустимых категорий продукции. Общего изображения склада недостаточно."
+        },
+        {
+          "question": "Какая информация важна покупателю 3PL-услуги?",
+          "answer": "Локация, реальная доступность мощностей, операции приемки и отгрузки, учет, договор, тарифы и ограничения по товару."
+        },
+        {
+          "question": "Нужны ли складские документы на публичной странице?",
+          "answer": "Сайт может объяснять порядок оформления и виды документов без раскрытия договоров клиентов. Законодательная процедура и фактический документооборот оператора проверяются отдельно."
+        },
+        {
+          "question": "Сколько стоит GEO-продвижение склада?",
+          "answer": "Применяются стандартные тарифы GAEO на аудит и ежемесячное сопровождение. Состав зависит от географии, товаров, операций и числа контролируемых запросов."
+        }
+      ],
+      "ctaTitle": "Проверить, какие склады нейросети советуют вашим заказчикам",
+      "ctaText": "Пришли сайт склада, регионы, реальные условия и категории товаров. Я подготовлю исходные запросы для проверки рекомендаций.",
+      "request": "GEO оператор складской логистики: ответственное хранение, 3PL, паллетоместа, WMS, температурные зоны и рекомендации."
+    },
+    "en": {
+      "title": "GEO for warehouse storage and 3PL operators | GAEO.ru",
+      "h1": "GEO for warehouse storage and 3PL logistics providers",
+      "description": "GEO for warehouse operators: contractual storage, pallet capacity, inventory systems, receiving, dispatch, service levels and AI recommendations.",
+      "eyebrow": "Logistics / Contract warehousing",
+      "lead": "Manufacturers and distributors choose warehouses by location, storage conditions, inventory accuracy and contractual responsibility. This is different from choosing an e-commerce fulfilment provider. I review which operators AI recommends and what substantiates their services.",
+      "heroPoints": [
+        "Separate storage, handling and outsourced logistics intents",
+        "Verify facility conditions, location, inventory processes and contracts",
+        "Comparable pallet capacity, WMS operations and service-level evidence"
+      ],
+      "problemTitle": "A generic 'warehouse services' offer is hard to evaluate",
+      "problemIntro": "Clients need to know what the operator accepts, how goods are tracked and who bears which responsibilities. Different goods require different facilities.",
+      "problems": [
+        {
+          "title": "Storage and fulfilment are conflated",
+          "body": "Storing bulk inventory differs from picking and packing marketplace orders. One service does not prove the other is offered."
+        },
+        {
+          "title": "Capacity lacks comparable units",
+          "body": "Square metres, pallet positions, temperature zones and daily throughput represent different metrics and must not be substituted for each other."
+        },
+        {
+          "title": "Storage constraints are unclear",
+          "body": "Liquid, fragile, temperature-sensitive and traceable goods may require evidence of actual equipment, conditions and accepted product categories."
+        }
+      ],
+      "scenarioTitle": "Buyer questions that lead to a storage provider shortlist",
+      "scenarioIntro": "Segment by product, contract model, service operation and geography. Use verified supplier capabilities in each comparison.",
+      "columns": [
+        "Business question",
+        "Evidence needed",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Which third-party warehouse has pallet storage near Moscow?",
+          "Location, current capacity, tariff units, contract terms and access hours",
+          "A location-specific storage offer with confirmed conditions"
+        ],
+        [
+          "Who stores goods by batches and expiry dates?",
+          "WMS support, batch handling, inventory tracking, temperature limits and liability",
+          "Document true stock-control processes and exclusions"
+        ],
+        [
+          "Which 3PL operator can handle inbound and wholesale dispatch?",
+          "Receiving steps, paperwork, actual service levels and data exchange",
+          "Distinguish storage, handling and transport responsibilities"
+        ],
+        [
+          "How does warehouse storage differ from marketplace fulfilment?",
+          "Bulk storage, item labelling, picking, packing and shipping scope",
+          "Distinct services rather than unsupported cross-category claims"
+        ]
+      ],
+      "proofTitle": "Evidence behind a third-party warehouse recommendation",
+      "proofIntro": "Articles 907 and 912 of the Russian Civil Code cover warehouse storage contracts and documents. They help frame buyer due diligence but do not establish what any individual provider can deliver.",
+      "checks": [
+        "Goods and facilities: categories accepted, pallet capacity, locations, temperature control and operating hours",
+        "Contracts and liability: custodian, owner, warehouse documents, intake, return procedures and discrepancy resolution",
+        "Operations: supported WMS functions, stock takes, batch control, dispatch, integrations, actual service-level and fee conditions"
+      ],
+      "proofNote": "GAEO has published fulfilment-related work for a specific customer, but it is not presented as a proven GEO result for an independent contract-storage operator.",
+      "workTitle": "An evidence-led GEO programme for warehousing",
+      "workIntro": "Begin with what AI recommends for actual goods and locations, then build reliable answers for the supplier's specific operational capabilities.",
+      "steps": [
+        {
+          "title": "Group buyer needs",
+          "body": "Separate contract storage, 3PL, temperature requirements, product categories and geographic queries."
+        },
+        {
+          "title": "Verify warehouse capabilities",
+          "body": "Review capacity, inventory procedures, storage rules, contract language and current commercial terms."
+        },
+        {
+          "title": "Build service evidence",
+          "body": "Specify service pages, WMS descriptions, FAQ, operational documentation and specialist publications."
+        },
+        {
+          "title": "Repeat measurements",
+          "body": "Compare stable AI prompts and BMR and identify misleading claims about capacity or service terms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is contract storage the same as fulfilment?",
+          "answer": "No. Storage concerns safekeeping and return of goods; fulfilment may additionally cover order picking and dispatch. The actual services depend on the agreement."
+        },
+        {
+          "question": "Can any warehouse claim temperature-controlled storage?",
+          "answer": "Only when relevant facilities, monitoring procedures and accepted product categories are verified."
+        },
+        {
+          "question": "What matters when choosing a 3PL partner?",
+          "answer": "Location, available capacity, receiving and dispatch, inventory systems, contracts, fees and relevant product restrictions."
+        },
+        {
+          "question": "Must client warehouse documents be published?",
+          "answer": "No. The website can explain the procedure and document types without disclosing private customer records."
+        },
+        {
+          "question": "What does GAEO charge for warehousing GEO?",
+          "answer": "GAEO's standard audit and monthly plans apply. Scope depends on locations, product categories, operations and query coverage."
+        }
+      ],
+      "ctaTitle": "See which warehouse operators AI recommends",
+      "ctaText": "Share the warehouse site, confirmed facilities, regions and product categories. I will propose a useful initial audit.",
+      "request": "Warehouse and 3PL GEO: contract storage, pallet capacity, WMS, temperature zones and AI recommendations."
     }
   }
 }
