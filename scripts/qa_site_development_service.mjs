@@ -147,6 +147,28 @@ try{
    await toggle.click();
    await page.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3500});
    assert.ok(await page.locator('.mobile-menu').locator('a[href="'+(route.includes('/en/')?'/en/services/':'/services/')+'"]').count(),'Mobile Services navigation '+route);
+   const cases=page.locator('#mobileMenu details.mobile-cases');
+   assert.equal(await cases.count(),1,'Exactly one Cases submenu '+route);
+   assert.equal(await cases.evaluate(el=>el.open),false,'Cases collapsed by default '+route);
+   assert.equal(await cases.locator('.mobile-cases__submenu').isVisible(),false,'Cases visually hidden '+route);
+   const casesRoot=route.startsWith('/en/')?'/en/cases/':'/cases/';
+   assert.deepEqual(await cases.locator('.mobile-cases__submenu a').evaluateAll(links=>links.map(a=>a.getAttribute('href'))),[
+    casesRoot,casesRoot+'#geo-promotion',casesRoot+'#website-development'
+   ],'All Cases and category links preserved '+route);
+   await cases.locator('summary').click();
+   assert.equal(await cases.evaluate(el=>el.open),true,'Cases disclosure opens '+route);
+   assert.equal(await cases.locator('.mobile-cases__submenu').isVisible(),true,'Cases sublinks visible '+route);
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=width+2,'No horizontal overflow after expanding submenu '+route);
+   await page.keyboard.press('Escape');
+   assert.equal(await cases.evaluate(el=>el.open),false,'Escape collapses Cases '+route);
+   assert.equal(await page.locator('.mobile-menu.open').count(),1,'Burger stays open after submenu Escape '+route);
+   await cases.locator('summary').click();
+   await toggle.click();
+   await page.locator('.mobile-menu').waitFor({state:'hidden',timeout:3500});
+   assert.equal(await cases.evaluate(el=>el.open),false,'Closing burger collapses Cases '+route);
+   await toggle.click();
+   await page.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3500});
+   assert.equal(await cases.locator('.mobile-cases__submenu').isVisible(),false,'Reopened burger shows only main items '+route);
    await toggle.click();
    await page.locator('.mobile-menu').waitFor({state:'hidden',timeout:3500});
    if(route.includes('website-development')){
