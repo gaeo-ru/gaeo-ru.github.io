@@ -3139,7 +3139,274 @@ export const industrySpecializations = [
       "request": "Warehouse and 3PL GEO: contract storage, pallet capacity, WMS, temperature zones and AI recommendations."
     }
   }
-}
+},
+  {
+    "id": 26,
+    "slug": "employment-migration-lawyers",
+    "group": "legal",
+    "routes": {
+      "ru": "/industries/employment-migration-lawyers/",
+      "en": "/en/industries/employment-migration-lawyers/"
+    },
+    "parent": {
+      "ru": "/industries/legal/",
+      "en": "/en/industries/legal/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/legal-recommendations/",
+        "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+      ],
+      "en": [
+        "/en/strategies/legal-recommendations/",
+        "/en/articles/legal-website-geo-12-checks/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Методика проверки рекомендаций юридических услуг",
+        "12 проверок юридического сайта для GEO"
+      ],
+      "en": [
+        "How legal-service recommendations are measured",
+        "Twelve GEO checks for law firm websites"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_34683/",
+        "ru": "Трудовой кодекс РФ: трудовые отношения, споры и гарантии",
+        "en": "Russian Labour Code: employment relations and disputes"
+      },
+      {
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_37868/",
+        "ru": "Федеральный закон №115-ФЗ: правовое положение иностранных граждан",
+        "en": "Federal Law 115-FZ: foreign nationals' legal status"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение юристов по трудовому и миграционному праву | GAEO.ru",
+        "h1": "Продвижение трудовых и миграционных юристов в ответах нейросетей",
+        "description": "Как юристам по трудовым спорам и миграционным вопросам попадать в обоснованные рекомендации ChatGPT и Алисы: типы дел, подтверждение практики, исходный BMR и тарифы GAEO.",
+        "eyebrow": "Юридические услуги / Трудовое и миграционное право",
+        "lead": "Работодатель с трудовым конфликтом, сотрудник после увольнения и компания, оформляющая иностранного специалиста, ищут разные юридические компетенции. Я проверяю, кого нейросети рекомендуют по каждому сценарию, какие факты подтверждают квалификацию исполнителя и где описание услуг вводит в заблуждение.",
+        "heroPoints": [
+          "Отдельные измерения по трудовым спорам и миграционному сопровождению",
+          "Проверка специализации и юридического статуса по публичным источникам",
+          "Сопоставимые повторные замеры BMR по согласованной матрице"
+        ],
+        "problemTitle": "Почему общая фраза «юридические услуги» не отвечает на вопрос клиента",
+        "problemIntro": "В этих направлениях различаются клиент, документы, применимое право и этап обращения. Нейросеть может рекомендовать юриста по гражданским делам на запрос бизнеса о найме иностранного работника, если специализация на сайте описана слишком широко.",
+        "problems": [
+          {
+            "title": "Смешаны работник и работодатель",
+            "body": "Оспаривание увольнения, разработка локальных актов и сопровождение проверок имеют разные стороны спора и набор доказательств. Нужно показывать фактические роли и виды услуг."
+          },
+          {
+            "title": "Устаревшие миграционные условия",
+            "body": "Разрешения, патенты, уведомления и основания пребывания зависят от статуса иностранного гражданина и действующей редакции правил. Публикации без даты проверки быстро создают ошибочные ожидания."
+          },
+          {
+            "title": "Неподтвержденная юридическая практика",
+            "body": "Общие обещания «решим любой спор» не раскрывают компетенцию. Публичные сведения о статусе специалиста, специализации и допустимых примерах работы полезнее непроверяемых гарантий."
+          }
+        ],
+        "scenarioTitle": "Какие запросы разделять в GEO-замере",
+        "scenarioIntro": "Формулировки ниже служат стартовыми образцами коммерческих запросов. География, роль доверителя и конкретные категории дел согласуются после диагностики; универсальных обещаний исхода дела нет.",
+        "columns": [
+          "Запрос потенциального доверителя",
+          "Что нужно подтвердить",
+          "Содержательная задача"
+        ],
+        "scenarios": [
+          [
+            "Кого выбрать для спора о незаконном увольнении в Москве?",
+            "Опыт трудовых споров, процессуальная роль, порядок консультации и документы для оценки дела",
+            "Создать отдельное описание услуг для работников и критериев обращения"
+          ],
+          [
+            "Какой юрист помогает работодателю при трудовой проверке?",
+            "Сфера кадрового сопровождения, виды проверок, актуальные нормы и границы ответственности",
+            "Отделить превентивный аудит от судебного представительства"
+          ],
+          [
+            "Кто сопровождает прием иностранных сотрудников в российскую компанию?",
+            "Статусы работников, виды разрешительных документов, уведомления и перечень действий по договору",
+            "Разложить миграционную услугу по статусам и сценариям найма"
+          ],
+          [
+            "Куда обратиться при споре о патенте или разрешении на работу?",
+            "Наличие соответствующей практики, актуальная правовая процедура, география и сроки, подтвержденные документами",
+            "Не подменять юридическую оценку автоматическим советом нейросети"
+          ]
+        ],
+        "proofTitle": "Какие сведения проверяю до публикации",
+        "proofIntro": "Трудовой кодекс РФ регулирует трудовые отношения и способы защиты прав, а 115-ФЗ устанавливает режим пребывания и работы иностранных граждан. Ссылки на эти законы подтверждают правовую основу вопроса, но сами по себе не доказывают опыт определенного юридического бюро.",
+        "checks": [
+          "Статус и полномочия исполнителей, реальная специализация, разрешенные к раскрытию кейсы и границы конфиденциальности",
+          "Точные категории трудовых споров и миграционных процедур, применимая юрисдикция и дата правовой проверки",
+          "Структура услуги: первичная оценка, документы, судебное/административное представительство, цена и условия договора"
+        ],
+        "proofNote": "Опыт GAEO по анализу юридических компаний относится к общей методике GEO. Завершенный кейс продвижения юристов именно по трудовому и миграционному праву здесь не заявлен.",
+        "workTitle": "Как выстраивается работа над нейровидимостью юридической практики",
+        "workIntro": "Начинаю с запросов реальных клиентов и разграничения направлений права; каждый следующий шаг опирается на проверенные сведения юридической команды.",
+        "steps": [
+          {
+            "title": "Разделить аудитории",
+            "body": "Выбираю отдельные группы небрендовых вопросов для работников, работодателей и иностранных специалистов. Фиксирую нейросети, регион и исходный BMR."
+          },
+          {
+            "title": "Проверить содержание",
+            "body": "Сверяю перечень услуг с документами, квалификацией и актуальной редакцией применимого права; отмечаю то, что требует проверки юристом."
+          },
+          {
+            "title": "Подготовить страницы и публикации",
+            "body": "Формирую ТЗ на отдельные страницы практик, FAQ по процедурам, профили специалистов и проверяемые экспертные объяснения."
+          },
+          {
+            "title": "Проверить изменения",
+            "body": "Повторяю согласованные запросы, сверяю рекомендации, источники и неточности. Цели роста BMR применяются только по условиям выбранного договора."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Можно ли на одной странице продвигать трудовые и миграционные услуги?",
+            "answer": "Можно обозначить оба направления, если у компании действительно есть соответствующие компетенции. Для отдельных коммерческих сценариев полезны самостоятельные страницы с подтверждаемыми процедурами и специалистами."
+          },
+          {
+            "question": "Нужно ли публиковать сведения о конкретных судебных делах?",
+            "answer": "Нет. Использовать можно только разрешенные к раскрытию и проверяемые сведения; персональные данные доверителей и закрытые документы не раскрываются ради GEO."
+          },
+          {
+            "question": "Может ли нейросеть дать окончательную миграционную консультацию?",
+            "answer": "Ответ нейросети не заменяет проверку действующего закона и ситуации квалифицированным юристом. В материалах нужно указывать условия применимости, дату и ограничения."
+          },
+          {
+            "question": "Как считается видимость юридической практики?",
+            "answer": "Отдельно фиксируются небрендовые запросы работников, работодателей и миграционных клиентов. Динамика BMR измеряется сопоставимым набором запросов и нейросетей."
+          },
+          {
+            "question": "Какие тарифы GAEO применяются к этой специализации?",
+            "answer": "Действуют опубликованные общие тарифы GAEO на аудит и ежемесячное сопровождение. Итоговый состав работ согласуется после начального замера и проверки специфики практики."
+          }
+        ],
+        "ctaTitle": "Проверить, каких юристов нейросети рекомендуют по вашим делам",
+        "ctaText": "Пришли адрес сайта, направления права, регионы работы и публичные подтверждения квалификации. Подготовлю основу стартового аудита без предположений об исходах дел.",
+        "request": "GEO для трудовых и миграционных юристов: проверка практик, небрендовых запросов, юридических источников и BMR."
+      },
+      "en": {
+        "title": "GEO for employment and immigration lawyers | GAEO.ru",
+        "h1": "GEO visibility for employment and immigration law practices",
+        "description": "GEO for employment and immigration lawyers: practice-specific buyer questions, verifiable credentials, reliable legal sources, AI recommendations and GAEO pricing.",
+        "eyebrow": "Legal services / Employment and immigration",
+        "lead": "An employee challenging dismissal, an HR team preparing for a labour inspection and an employer hiring a foreign national need different lawyers. I examine which providers AI recommends in each scenario, what evidence supports their qualifications and where service descriptions are too broad.",
+        "heroPoints": [
+          "Separate measurement for labour disputes and immigration procedures",
+          "Verification of legal specialisation and publicly supportable professional claims",
+          "Comparable non-branded prompt measurements and follow-up BMR"
+        ],
+        "problemTitle": "Why a generic legal-services page misses the buyer's intent",
+        "problemIntro": "Different parties, procedures and sources of law shape the decision. A generic recommendation can point a business hiring foreign staff to a provider whose verified practice is limited to unrelated civil litigation.",
+        "problems": [
+          {
+            "title": "Employee and employer needs are mixed",
+            "body": "Unfair dismissal, HR compliance reviews and representation during inspections involve different roles and evidence. A law firm should state its actual scope rather than imply it handles every dispute."
+          },
+          {
+            "title": "Immigration details become outdated",
+            "body": "Permits, notifications, immigration status and applicable procedures depend on current law and individual circumstances. An undated page can mislead both companies and workers."
+          },
+          {
+            "title": "Practice claims lack evidence",
+            "body": "A promise to win every case cannot establish qualifications. Accurate practitioner information, recognised specialisations and authorised examples of work make service comparisons more useful."
+          }
+        ],
+        "scenarioTitle": "Separate buyer questions for a reliable measurement",
+        "scenarioIntro": "These are candidate commercial prompts, not asserted search volumes or measured rankings. Scope, language, region and specific legal tasks are agreed at baseline.",
+        "columns": [
+          "Potential client's question",
+          "Evidence to check",
+          "GEO content action"
+        ],
+        "scenarios": [
+          [
+            "Who can help challenge an unfair dismissal in Moscow?",
+            "Employment litigation scope, relevant practitioner experience, intake steps and document requirements",
+            "Create an employee-side service page and clear intake guidance"
+          ],
+          [
+            "Which lawyer can support an employer during a labour inspection?",
+            "HR compliance experience, inspection type, service scope and currently applicable rules",
+            "Separate compliance support from courtroom representation"
+          ],
+          [
+            "Who advises a Russian business employing foreign nationals?",
+            "Work and residence statuses, notification obligations, permits and contractual responsibilities",
+            "Describe real immigration processes by worker status"
+          ],
+          [
+            "Where can I get advice on a disputed work permit?",
+            "Verified practitioner expertise, up-to-date legal process, jurisdiction and necessary evidence",
+            "Explain when individual legal advice is essential"
+          ]
+        ],
+        "proofTitle": "What must be checked before a legal claim is made",
+        "proofIntro": "The Russian Labour Code covers employment relationships and rights protection; Federal Law 115-FZ addresses foreign nationals' legal status. These are references for legal content, not evidence that any named firm has successfully handled a case.",
+        "checks": [
+          "Professional status, actual service specialisation, publication permissions and client confidentiality",
+          "Distinct employment disputes and immigration procedures, relevant jurisdiction and date of legal review",
+          "Transparent service stages, documents, representation scope, contracts and verified pricing conditions"
+        ],
+        "proofNote": "GAEO has general legal-sector methodology; no completed GEO performance result for an employment or immigration law practice is claimed on this page.",
+        "workTitle": "How I would develop this practice's GEO visibility",
+        "workIntro": "The work starts by separating the groups of clients and validating facts with the legal team, not by inventing practice outcomes.",
+        "steps": [
+          {
+            "title": "Segment requests",
+            "body": "Build distinct non-branded prompt sets for employees, employers and immigration clients; record platforms, geography and baseline BMR."
+          },
+          {
+            "title": "Verify the practice",
+            "body": "Review real services, professional evidence and current legal conditions with the lawyers responsible."
+          },
+          {
+            "title": "Specify public content",
+            "body": "Create briefs for practice pages, clearly scoped FAQs, professional profiles and legally reviewed explanatory materials."
+          },
+          {
+            "title": "Repeat the measurement",
+            "body": "Compare identical prompts, sources and recommendation accuracy. Contractual BMR targets apply only if the corresponding plan is chosen."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Can one page cover both employment and immigration services?",
+            "answer": "Yes, where both are genuine practice areas. Separate service pages may better answer different client intents, provided that their information is original and verifiable."
+          },
+          {
+            "question": "Must a law firm publish client case files?",
+            "answer": "No. Confidential files and personal information should remain private; use only verified examples authorised for publication."
+          },
+          {
+            "question": "Can an AI answer replace immigration legal advice?",
+            "answer": "No. An AI-generated answer should be checked against current legal rules and the client's circumstances by an appropriately qualified adviser."
+          },
+          {
+            "question": "How is AI visibility measured for this practice?",
+            "answer": "Non-branded employment, employer-side and immigration questions are measured separately under a fixed assistant and prompt matrix, with comparable BMR follow-ups."
+          },
+          {
+            "question": "What are GAEO's fees for this specialisation?",
+            "answer": "GAEO's existing audit and monthly GEO plans apply. The final scope follows the baseline, locations, services and available evidence."
+          }
+        ],
+        "ctaTitle": "Find out which employment and immigration lawyers AI recommends",
+        "ctaText": "Share the firm's website, real practice areas, jurisdictions and publicly verifiable credentials. I will outline the most useful initial audit.",
+        "request": "GEO for employment and immigration lawyers: practice segmentation, legal sources, non-brand prompts and BMR baseline."
+      }
+    }
+  }
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
