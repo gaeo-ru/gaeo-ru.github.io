@@ -118,7 +118,7 @@ try{
     assert.ok(gap.overviewToCalculator>=0&&gap.overviewToCalculator<=120,'Compact pricing-to-calculator spacing '+width+' '+route+' '+JSON.stringify(gap));
     if(route==='/tarify/'){
      assert.equal((await page.locator('#calculator > .container > .eyebrow').textContent())?.trim(),'Объем и стоимость работ');
-     assert.equal((await page.locator('#calculator > .container > h2').textContent())?.trim(),'Калькулятор стоимость продвижения');
+     assert.equal((await page.locator('#calculator > .container > h2').textContent())?.trim(),'Калькулятор стоимости продвижения');
     }
     const calculator=page.locator('[data-tariff-calculator]');
     await calculator.locator('[name="platform"][value="gemini"]').check();
