@@ -541,5 +541,277 @@ export const industrySpecializationsBatch2H = [
       "request": "Warehouse and industrial park GEO: units, loading, power, transport access, tenants and AI recommendations."
     }
   }
+},
+{
+  "id": 82,
+  "slug": "hotels-country-resorts",
+  "group": "tourism",
+  "routes": {
+    "ru": "/industries/hotels-country-resorts/",
+    "en": "/en/industries/hotels-country-resorts/"
+  },
+  "parent": {
+    "ru": "/industries/tourism/",
+    "en": "/en/industries/tourism/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/tourism-dmc-recommendations/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/tourism-dmc-recommendations/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Отраслевая методика GEO в туризме",
+      "Как измеряется BMR"
+    ],
+    "en": [
+      "Tourism GEO methodology",
+      "Measuring AI recommendation visibility"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.04.rospotrebnadzor.ru/index.php/information-for-businesses/reestr/19888-20022025.html",
+      "ru": "Роспотребнадзор: правила классификации гостиниц с 2025 года",
+      "en": "Rospotrebnadzor: Russian hotel classification rules since 2025"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_495352/",
+      "ru": "Постановление №1952: классификация и реестр средств размещения",
+      "en": "Government Decree 1952: accommodation classification and registry"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_495340/900910777f3217c00bda3f2f831ed6d26e7c67e6/",
+      "ru": "Постановление №1951: требования к типам и категориям средств размещения",
+      "en": "Government Decree 1951: accommodation types and category requirements"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение отелей и загородных курортов | GAEO.ru",
+      "h1": "Продвижение отелей и загородных курортов в нейросетях",
+      "description": "GEO для отелей, гостиниц и загородных курортов: семейный отдых, SPA, питание, бассейн, питомцы, доступность, классификация и отзывы. Запросы гостей, BMR и тарифы GAEO.",
+      "eyebrow": "Туризм и HoReCa / Средства размещения",
+      "lead": "Гость ищет отель под конкретный отдых: выходные с детьми, бассейн зимой, тишину, доступность транспорта или размещение с питомцем. Проверяю, каких владельцев объектов нейросети рекомендуют по таким вопросам и можно ли подтвердить обещанные условия.",
+      "heroPoints": [
+        "Сценарии отдыха и сезонность отдельно от запросов по названию отеля",
+        "Проверка классификации, категорий номеров, правил и фактических услуг",
+        "Точные сведения, отзывы и повторные замеры BMR"
+      ],
+      "problemTitle": "Почему красивых фотографий недостаточно для рекомендаций",
+      "problemIntro": "У одного отеля могут различаться условия по корпусам, номерам и датам. Если условия устарели, нейросети могут повторить старую категорию или приписать услугу, которой нет в выбранном тарифе.",
+      "problems": [
+        {
+          "title": "Звезды и тип размещения не сверены",
+          "body": "Публичное указание категории должно соответствовать действующему статусу объекта. В России классификация и реестр средств размещения регулируются отдельными правилами, поэтому нельзя брать число звезд из старого рекламного материала."
+        },
+        {
+          "title": "Пакеты услуг перепутаны",
+          "body": "«Все включено», SPA, сауна, детская анимация, бассейн и питание могут относиться только к отдельным категориям номера или дням недели. Это требует актуальной карты услуг и ограничений."
+        },
+        {
+          "title": "География и сезонные условия размыты",
+          "body": "Дорога от вокзала, трансфер, доступ к пляжу, работа трасс и прогулочные маршруты зависят от сезона. Декоративная карта не заменяет реальные способы добраться."
+        }
+      ],
+      "scenarioTitle": "Как гости формулируют запросы к нейросетям",
+      "scenarioIntro": "Проверяем небрендовые коммерческие запросы по типу отдыха, составу семьи, сезону и локации. Ниже примеры для составления начальной матрицы.",
+      "columns": [
+        "Вопрос гостя",
+        "Что подтверждать",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Какой загородный отель под Москвой выбрать с ребенком и теплым бассейном?",
+          "Фактический режим бассейна, возрастные правила, номера, питание и расстояние",
+          "Сделать сценарий семейного отдыха с актуальными условиями"
+        ],
+        [
+          "Где провести выходные с собакой и парковкой рядом с лесом?",
+          "Правила по животным, возможная доплата, парковка, карта и ограничения",
+          "Опубликовать пригодный для ответа FAQ об условиях проживания"
+        ],
+        [
+          "Какой курорт со SPA работает круглый год и включает завтрак?",
+          "Состав тарифа, расписание SPA, доступность процедур, сезон и цены",
+          "Разделить включенные услуги и дополнительные оплаты"
+        ],
+        [
+          "Как проверить, какой класс и категория у гостиницы?",
+          "Название объекта, регистрационные сведения и действующая классификация",
+          "Согласовать тексты сайта и профилей с реестровыми данными"
+        ]
+      ],
+      "proofTitle": "Какие источники позволяют проверить условия отдыха",
+      "proofIntro": "Сверяю паспорт и действующий статус средства размещения, условия бронирования по тарифам и актуальные сведения об услугах. Правила классификации, утвержденные в 2024 году и применяемые с 2025-го, помогают отличать формальную категорию от рекламных описаний.",
+      "checks": [
+        "Идентичность и категория объекта: тип средства размещения, регистрационная запись и актуальный статус при применимости",
+        "Проживание: категории номеров, вместимость, питание, правила детей и животных, доступность и условия отмены",
+        "Инфраструктура: реально работающие SPA и бассейны, трансфер, парковка, доступность для маломобильных гостей, сезонные ограничения"
+      ],
+      "proofNote": "Методика GAEO для туроператоров дает основу работы с туристическими интентами. Кейс туроператора не представлен как результат GEO-продвижения конкретного отеля.",
+      "workTitle": "Как выстраиваю GEO для гостиничного объекта",
+      "workIntro": "Сначала разбираю спрос по группам гостей и фиксирую, какие отели нейросети рекомендуют сегодня. Далее согласую факты и дополняю страницы и внешние источники.",
+      "steps": [
+        {
+          "title": "Исходная видимость",
+          "body": "Разделяю запросы по семейному отдыху, SPA, событиям, работе и сезонным сценариям. Фиксирую исходный BMR на неизменной матрице."
+        },
+        {
+          "title": "Проверка условий",
+          "body": "Сверяю классификацию, категории номеров, услуги, цены и бронирование; отдельно фиксирую, что зависит от даты заезда."
+        },
+        {
+          "title": "Сайт и профили отеля",
+          "body": "Готовлю ТЗ на страницы номеров, пакетов, географию и полезные FAQ; исправляю противоречащие сведения на доступных внешних ресурсах."
+        },
+        {
+          "title": "Повторное измерение",
+          "body": "Проверяю те же нейросети и вопросы, фиксирую изменения упоминаний, источники и неверные обещания об услугах."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Может ли отель появиться в нейросетях без крупных агрегаторов бронирования?",
+          "answer": "Да, при наличии достоверных собственных страниц и публичных подтверждений. Доля рекомендаций зависит от запросов и источников; наличие страницы не гарантирует показ."
+        },
+        {
+          "question": "Как корректно указывать звезды и классификацию гостиницы?",
+          "answer": "Указываем актуальную категорию и сведения реестра для конкретного объекта, если они применимы. Старую категорию или желаемые звезды нельзя выдавать за действующий статус."
+        },
+        {
+          "question": "Можно ли публиковать отзывы гостей?",
+          "answer": "Использовать нужно реальные отзывы с указанием источника и проверкой актуальности. Нельзя придумывать оценки или смешивать информацию о разных корпусах."
+        },
+        {
+          "question": "Что делать с сезонными услугами?",
+          "answer": "Описать фактический сезон, расписание и ограничения. По бассейну, трансферу, питанию и SPA отделить услуги из тарифа от отдельно оплачиваемых."
+        },
+        {
+          "question": "Сколько стоит GEO-продвижение загородного отеля?",
+          "answer": "Действуют общие тарифы GAEO. Итоговый объем зависит от объектов, направлений отдыха, языков, сезонности и числа запросов."
+        }
+      ],
+      "ctaTitle": "Узнать, какие отели нейросети предлагают вместо вашего",
+      "ctaText": "Пришли сайт объекта, актуальные условия номеров, услуги и сведения о классификации. Я предложу стартовую выборку запросов.",
+      "request": "GEO отеля и загородного курорта: семейный отдых, SPA, классификация, услуги, доступность, бронирование и BMR."
+    },
+    "en": {
+      "title": "GEO for hotels, country resorts and retreats | GAEO.ru",
+      "h1": "GEO promotion for hotels and country resorts",
+      "description": "Hotel and country resort GEO: family trips, pools, spa, pets, seasonal facilities, official accommodation classification, booking terms and AI recommendations.",
+      "eyebrow": "Travel and hospitality / Accommodation",
+      "lead": "Travellers look for a particular experience: a family weekend, a winter pool, a quiet retreat or pet-friendly accommodation. I measure which properties AI recommends for those needs and whether promised facilities are supported.",
+      "heroPoints": [
+        "Guest intents by trip type, season and location without brand terms",
+        "Verification of accommodation classification, facilities and booking conditions",
+        "Accurate hotel information and comparable BMR checks"
+      ],
+      "problemTitle": "Why attractive hotel photography is not sufficient",
+      "problemIntro": "Services and booking terms can vary by building, room type and arrival date. AI may repeat outdated star categories or imply a facility is included when it is not.",
+      "problems": [
+        {
+          "title": "Classification details are out of date",
+          "body": "A hotel's claimed category must match the applicable current status. Russian accommodation classification rules and registry information should be checked for the individual property."
+        },
+        {
+          "title": "Packages and amenities are confused",
+          "body": "Full board, swimming pool use, spa access and children's programmes may depend on the selected room, package or season. Clear availability and charges matter."
+        },
+        {
+          "title": "Location is presented too generally",
+          "body": "Station access, transfers, beaches, winter routes and outdoor activities change with season and transport conditions. A map pin does not establish practical access."
+        }
+      ],
+      "scenarioTitle": "The questions guests ask AI before booking",
+      "scenarioIntro": "Examples for non-brand recommendation measurement by family composition, season, location and facilities.",
+      "columns": [
+        "Guest question",
+        "Evidence needed",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Which country hotel near Moscow has a heated pool for families?",
+          "Pool schedule, age restrictions, room configuration, meals and transfer",
+          "Create an up-to-date family weekend guide"
+        ],
+        [
+          "Where can we stay with a dog and convenient parking?",
+          "Pet policy, possible charges, parking, nearby walking routes and limits",
+          "Publish a focused, accurate pet-friendly stay FAQ"
+        ],
+        [
+          "Which year-round resort offers spa access and breakfast?",
+          "Package inclusions, spa hours, booking conditions and additional fees",
+          "Distinguish included services from chargeable extras"
+        ],
+        [
+          "How do I verify the category assigned to a Russian hotel?",
+          "Property identity, classification status and the applicable registry record",
+          "Align site descriptions and public profiles with official information"
+        ]
+      ],
+      "proofTitle": "Evidence that supports an accommodation recommendation",
+      "proofIntro": "I verify the property identity, current booking terms and actual amenities. Russian classification rules governing accommodation types and categories help separate official status from marketing language.",
+      "checks": [
+        "Property and classification: accommodation type, registry details and current category where applicable",
+        "Booking: room capacities, family and pet policies, meals, cancellations and date-dependent rates",
+        "Amenities: real spa and pool opening, parking, accessibility, transport and seasonal restrictions"
+      ],
+      "proofNote": "GAEO's experience with tour operator GEO informs travel-intent research, but is not presented as a completed hotel GEO campaign.",
+      "workTitle": "How I structure GEO for a hotel",
+      "workIntro": "Establish which property types AI suggests to each guest group, verify what the hotel offers and develop consistently sourced content.",
+      "steps": [
+        {
+          "title": "Baseline by guest need",
+          "body": "Measure stable non-brand queries for families, couples, spa trips, business stays and seasonal activities."
+        },
+        {
+          "title": "Check current services",
+          "body": "Review classification, room types, package descriptions and date-dependent booking conditions."
+        },
+        {
+          "title": "Improve hotel pages and profiles",
+          "body": "Specify room and package pages, location advice, booking FAQs and consistent external sources."
+        },
+        {
+          "title": "Repeat comparable checks",
+          "body": "Compare the same AI prompts and inspect citations, inaccurate amenity claims and BMR."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a hotel feature in AI recommendations without large booking platforms?",
+          "answer": "Potentially yes, through accurate first-party content and verifiable public sources. Inclusion still depends on the question, the source coverage and the AI service."
+        },
+        {
+          "question": "How should hotel stars and classification be described?",
+          "answer": "Refer to the current applicable property classification and verified registry information. Do not present an outdated or desired rating as official."
+        },
+        {
+          "question": "Can guest reviews be used?",
+          "answer": "Use real attributable reviews with relevant dates, and do not invent scores or mix experiences from unrelated properties."
+        },
+        {
+          "question": "How should seasonal facilities be handled?",
+          "answer": "Publish actual operating periods, opening times, inclusions and fees. The availability of pools, transfers, dining and spa treatments may differ by package."
+        },
+        {
+          "question": "What does resort GEO promotion cost?",
+          "answer": "GAEO's published audit and monthly plans apply. Scope depends on properties, languages, seasons and guest-intent segments."
+        }
+      ],
+      "ctaTitle": "Find out which hotels AI recommends for your guests",
+      "ctaText": "Share the property website, current facilities, booking terms and relevant classification information to plan a baseline audit.",
+      "request": "Hotel and resort GEO: family stays, pools, spa, classification, booking terms, amenities and AI recommendations."
+    }
+  }
 }
 ];
