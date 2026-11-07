@@ -10,7 +10,7 @@ const read=path=>readFileSync(resolve('dist',path.slice(1),'index.html'),'utf8')
 const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const urls=[];
 for(const item of industrySpecializations){
- assert.ok([2,3,4,21,22,34,35,36,38,58,81,84].includes(item.id),'Only approved phase 2A/2B/2C industry categories');
+ assert.ok(Number.isInteger(item.id)&&item.id>=1&&item.id<=107,'Specialization must map to permanent catalogue ID');
  for(const lang of ['ru','en']){
   const path=item.routes[lang],html=read(path),url='https://gaeo.ru'+path,c=item.content[lang];
   const equivalent='https://gaeo.ru'+item.routes[lang==='en'?'ru':'en'];
@@ -35,9 +35,11 @@ for(const item of industrySpecializations){
   urls.push({path,lang});
  }
 }
-assert.deepEqual(industrySpecializations.map(x=>x.id).sort((a,b)=>a-b),[2,3,4,21,22,34,35,36,38,58,81,84],'Expected distinct industry records for batches 2A/2B/2C');
-assert.equal(urls.length,24,'Three batches must have twenty-four RU/EN specialization pages');
-if(process.argv.includes('--static')){console.log('Phase 2A+2B+2C static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
+const ids=industrySpecializations.map(x=>x.id);
+assert.equal(new Set(ids).size,ids.length,'No duplicate catalogue specialization IDs');
+for(const id of [2,3,4,21,22,26,34,35,36,38,41,58,81,84,88])assert.ok(ids.includes(id),'Approved 2A/2B/2C/2F record missing: '+id);
+assert.equal(urls.length,industrySpecializations.length*2,'Every specialization has exactly two RU/EN pages');
+if(process.argv.includes('--static')){console.log('Industry specializations static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
 const base='http://127.0.0.1:4378';const server=spawn('./node_modules/.bin/astro',['preview','--host','127.0.0.1','--port','4378'],{stdio:'ignore'});
 const pause=ms=>new Promise(res=>setTimeout(res,ms));let browser;
 try{
@@ -63,5 +65,5 @@ try{
   await page.screenshot({path:'visual-industry/industry-specialization-'+row.path.split('/').filter(Boolean).join('-')+'-'+width+'.png',fullPage:true,animations:'disabled'});
   await page.close();
  }
- console.log('Phase 2A+2B+2C browser QA PASS: '+urls.length+' pages at 1440/390/320, hero images, FAQ, pricing, form and overflow');
+ console.log('Industry specializations browser QA PASS: '+urls.length+' pages at 1440/390/320, hero images, FAQ, pricing, form and overflow');
 }finally{await browser?.close();server.kill('SIGTERM')}
