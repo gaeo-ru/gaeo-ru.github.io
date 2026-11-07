@@ -3940,6 +3940,273 @@ export const industrySpecializations = [
       "request": "Cybersecurity GEO: audit, penetration testing, SOC/MDR, incident response, licensing and AI recommendations."
     }
   }
+},
+{
+  "id": 66,
+  "slug": "medical-device-manufacturers",
+  "group": "pharma",
+  "routes": {
+    "ru": "/industries/medical-device-manufacturers/",
+    "en": "/en/industries/medical-device-manufacturers/"
+  },
+  "parent": {
+    "ru": "/industries/pharma/",
+    "en": "/en/industries/pharma/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/pharma-geo-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/pharma-geo-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика проверки медицинских и фармацевтических утверждений",
+      "Измерение BMR и достоверности ответов"
+    ],
+    "en": [
+      "Evidence verification for healthcare and pharma content",
+      "BMR and AI answer accuracy measurements"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://roszdravnadzor.gov.ru/medproducts/registration",
+      "ru": "Росздравнадзор: регистрация медицинских изделий и официальные сервисы",
+      "en": "Roszdravnadzor: medical device registration services"
+    },
+    {
+      "href": "https://elk.roszdravnadzor.gov.ru/widget/",
+      "ru": "Государственный реестр медицинских изделий и производителей",
+      "en": "Official state register of medical devices and manufacturers"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение производителей медицинских изделий | GAEO.ru",
+      "h1": "GEO-продвижение производителей медицинских изделий в нейросетях",
+      "description": "Продвижение производителей медицинских изделий в ответах нейросетей: регистрация Росздравнадзора, характеристики, назначение, совместимость, закупки и доказательства.",
+      "eyebrow": "Медицина и фармацевтика / Медицинские изделия",
+      "lead": "Клиника, лаборатория и дистрибьютор выбирают медицинское изделие по назначению, документам, совместимости и сервисному сопровождению. GEO для такого производителя требует проверки регистрационных сведений и строгой точности характеристик. Я измеряю рекомендации нейросетей по закупочным сценариям, а не подменяю их медицинскими советами пациентам.",
+      "heroPoints": [
+        "Запросы профессиональных закупщиков, клиник и лабораторий",
+        "Сверка наименования, модели, регистрационных сведений и назначения",
+        "Только подтвержденные технические и клинические утверждения"
+      ],
+      "problemTitle": "Почему каталог оборудования без доказательств не помогает закупке",
+      "problemIntro": "Названия изделий и рекламные формулировки сами по себе не устанавливают, где изделие зарегистрировано, для чего предназначено и совместимо ли с инфраструктурой покупателя. Важно строго различать медицинские изделия и лекарственные препараты.",
+      "problems": [
+        {
+          "title": "Регистрационные сведения не связаны с моделями",
+          "body": "Покупатель должен понимать, к какой записи реестра относятся конкретное название, модификация, изготовитель и заявленное назначение."
+        },
+        {
+          "title": "Эффективность заявлена без подтверждения",
+          "body": "Нельзя создавать утверждения о лечении, диагностической точности или превосходстве изделия, если они не следуют из разрешенных документов и исследований."
+        },
+        {
+          "title": "Не указаны ограничения применения и обслуживания",
+          "body": "Срок службы, расходные материалы, программная совместимость, сервис, обучение и условия эксплуатации влияют на профессиональный выбор."
+        }
+      ],
+      "scenarioTitle": "Какие закупочные вопросы приводят к рекомендациям изделий",
+      "scenarioIntro": "Разделяю изделия по назначению, классу и среде использования. Не создаю подбор пациентам по симптомам и не приписываю производителю отсутствующие медицинские показания.",
+      "columns": [
+        "Вопрос профессионального покупателя",
+        "Что подтверждать",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Как выбрать диагностическую систему для лаборатории?",
+          "Назначение, регистрационный статус, совместимые расходные материалы, ограничения, техподдержка",
+          "Страница конкретной категории и моделей с документами"
+        ],
+        [
+          "Какие мониторы пациента подходят для оснащения отделения?",
+          "Модели, измеряемые параметры, комплектация, условия эксплуатации и обучение",
+          "Сопоставимое описание зарегистрированных изделий по назначению"
+        ],
+        [
+          "Кто производит стерильные одноразовые медицинские изделия?",
+          "Номенклатура, регистрационные данные, требования к упаковке и заявленные характеристики",
+          "Раздел подтвержденной линейки без необоснованных сравнений"
+        ],
+        [
+          "Какие изделия можно интегрировать с больничной ИТ-системой?",
+          "Реальные интерфейсы, версии, информационная безопасность, сопровождение и пределы совместимости",
+          "Технические материалы и FAQ по подтвержденным интеграциям"
+        ]
+      ],
+      "proofTitle": "Какие официальные сведения подтверждают медицинское изделие",
+      "proofIntro": "Росздравнадзор ведет государственный реестр медицинских изделий и производителей. В нем предусмотрены сведения о регистрационном номере, изготовителе, наименовании, назначении и классе потенциального риска. Публикуемая карточка должна соответствовать действительным реестровым сведениям и разрешенной документации для заявленного рынка.",
+      "checks": [
+        "Идентичность изделия: регистрационная запись и статус, модель и производитель, назначение, модификации, класс потенциального риска",
+        "Технические данные: инструкция и эксплуатационные требования, разрешенные показатели, совместимость, ограничения и сервисные условия",
+        "Доказательства: официальные документы, допустимые результаты испытаний и профессиональные материалы без выдуманных рекомендаций врачей или клинических эффектов"
+      ],
+      "proofNote": "Отраслевая методика GAEO для фармацевтического рынка полезна как подход к проверке доказательств, но лекарства и медицинские изделия регулируются по-разному. Нельзя выдавать кейсы продвижения препаратов или клиник за результат по производителю медизделий.",
+      "workTitle": "Как выстраиваю GEO для производителя медицинских изделий",
+      "workIntro": "Основой становятся проверяемые карточки изделий, документация и реальные вопросы профессиональных покупателей; медицинские рекомендации пациентам остаются за квалифицированными специалистами.",
+      "steps": [
+        {
+          "title": "Формирую безопасную матрицу спроса",
+          "body": "Исследую запросы клиник, лабораторий, закупщиков и дистрибьюторов по назначению, категориям и условиям поставки."
+        },
+        {
+          "title": "Сверяю изделия с реестром",
+          "body": "Проверяю актуальные регистрационные записи, применимые модели, инструкции и документированные технические ограничения."
+        },
+        {
+          "title": "Разрабатываю план контента",
+          "body": "Готовлю ТЗ на линейки, карточки моделей, сравнения по подтвержденным параметрам, сервис и ответы на вопросы закупщиков."
+        },
+        {
+          "title": "Повторяю замеры и фактчекинг",
+          "body": "Отслеживаю BMR и корректность рекомендаций по тем же нейросетям, особенно недостоверные назначения и характеристики."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли рекламировать медизделие без проверки регистрационного статуса?",
+          "answer": "Не следует публиковать утверждения о зарегистрированном изделии без проверки официальных сведений для конкретной модели и рынка. Материалы должны соответствовать применимым требованиям."
+        },
+        {
+          "question": "Достаточно ли маркетингового каталога для GEO?",
+          "answer": "Нет. Технические параметры, назначение, изготовитель и регистрационные данные необходимо соотнести с первичными документами."
+        },
+        {
+          "question": "Может ли нейросеть рекомендовать медицинское изделие пациенту по симптомам?",
+          "answer": "Эта страница посвящена профессиональным закупкам и подтвержденным параметрам, а не индивидуальному подбору лечения или диагностике пациента."
+        },
+        {
+          "question": "Можно ли писать о клинической эффективности и превосходстве изделия?",
+          "answer": "Только в пределах подтвержденной документации, применимых правил и разрешенных доказательств. Нельзя создавать неподтвержденные медицинские обещания."
+        },
+        {
+          "question": "Сколько стоит GEO для производителей медицинских изделий?",
+          "answer": "Применяются общие тарифы GAEO на аудит и ежемесячное сопровождение. Объем зависит от линеек, моделей, рынков и числа проверяемых закупочных запросов."
+        }
+      ],
+      "ctaTitle": "Проверить рекомендации нейросетей о медицинских изделиях",
+      "ctaText": "Пришли сайт производителя, категории изделий, регистрацию и целевые группы профессиональных покупателей. Я предложу контрольные GEO-запросы.",
+      "request": "GEO производитель медицинских изделий: реестр, регистрация, технические характеристики, модели, закупки и AI-рекомендации."
+    },
+    "en": {
+      "title": "GEO for medical device manufacturers | GAEO.ru",
+      "h1": "GEO for medical device manufacturers in AI recommendations",
+      "description": "GEO for medical device producers: verified registration, intended use, product variants, technical specifications, hospital purchasing and AI recommendations.",
+      "eyebrow": "Healthcare technology / Medical devices",
+      "lead": "Hospitals, laboratories and distributors evaluate devices based on intended purpose, official records, interoperability and support. Medical device GEO requires careful verification of product claims. I measure professional procurement questions without turning marketing pages into patient-specific medical advice.",
+      "heroPoints": [
+        "Professional buyer, clinical laboratory and procurement intents",
+        "Device names, registration status, intended use and manufacturer verification",
+        "Only authorised and substantiated product and performance claims"
+      ],
+      "problemTitle": "Why equipment catalogues need verifiable medical-device evidence",
+      "problemIntro": "A product name and attractive marketing description do not prove its registration, intended use or compatibility. Medical devices should not be conflated with pharmaceuticals.",
+      "problems": [
+        {
+          "title": "Registration records are disconnected from individual models",
+          "body": "Buyers need to know which record covers a product name, configuration, maker and intended purpose."
+        },
+        {
+          "title": "Medical performance is overstated",
+          "body": "Diagnostic accuracy, therapeutic outcomes and superiority cannot be invented or inferred from promotional language without suitable authorised evidence."
+        },
+        {
+          "title": "Operating limits and service details are missing",
+          "body": "Consumables, lifetime, software interfaces, maintenance, training and operating conditions influence professional procurement."
+        }
+      ],
+      "scenarioTitle": "Device procurement questions AI may answer",
+      "scenarioIntro": "Segment by intended use, clinical setting and device type. These prompts concern institutional procurement, not treatment selection for individual patients.",
+      "columns": [
+        "Professional buyer question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Which diagnostic equipment fits a particular laboratory workflow?",
+          "Documented intended use, registration, compatible consumables and support",
+          "Device-family pages with traceable documentation"
+        ],
+        [
+          "Which patient monitors meet a ward's equipment requirements?",
+          "Registered models, supported parameters, configurations, use conditions and training",
+          "Comparable verified technical specifications"
+        ],
+        [
+          "Which company supplies sterile single-use medical products?",
+          "Device scope, manufacturer and registration records, packaging and permitted claims",
+          "A product-family overview without unsupported comparisons"
+        ],
+        [
+          "Which devices integrate with our hospital information system?",
+          "Documented interfaces, versions, cybersecurity and verified compatibility",
+          "Technical integration pages and careful buyer FAQ"
+        ]
+      ],
+      "proofTitle": "Official evidence that supports device identification",
+      "proofIntro": "Russia's Roszdravnadzor maintains the state register of medical devices and manufacturers. The records include registration identifiers, manufacturer information, intended purpose and potential risk class. Public pages should match the applicable registered information and approved device documentation.",
+      "checks": [
+        "Device identity: registration entry and status, manufacturer, model or variant, intended use and applicable risk class",
+        "Technical specifications: instructions, operating conditions, authorised parameters, limitations, compatibility and after-sales support",
+        "Evidence quality: official documentation, permitted study results and professional materials without invented physician endorsements or health claims"
+      ],
+      "proofNote": "GAEO's pharmaceutical evidence methodology informs the verification process, but medicinal products and medical devices have different requirements. A pharma case is not a completed GEO outcome for a device manufacturer.",
+      "workTitle": "An evidence-led GEO plan for medical technology manufacturers",
+      "workIntro": "Start from verifiable device records and the questions purchasing teams actually ask. Individual diagnosis and treatment decisions are outside this service content.",
+      "steps": [
+        {
+          "title": "Map professional purchase needs",
+          "body": "Separate hospitals, laboratories, distributors and procurement roles by intended use and equipment category."
+        },
+        {
+          "title": "Verify the product record",
+          "body": "Check current registration status, relevant variants, instructions and documented technical limitations."
+        },
+        {
+          "title": "Build accurate procurement content",
+          "body": "Specify family and product pages, authorised comparisons, support information and professional FAQ."
+        },
+        {
+          "title": "Repeat measurements and fact checks",
+          "body": "Track BMR and factual correctness, especially false indications or unsupported clinical specifications."
+        }
+      ],
+      "faq": [
+        {
+          "question": "May a manufacturer claim device registration without checking it?",
+          "answer": "Registration statements should match the official records for the specific product and market. Unsupported claims should not appear in public GEO material."
+        },
+        {
+          "question": "Is a marketing catalogue enough to support device recommendations?",
+          "answer": "No. Device identification, intended use, specifications and manufacturer details require traceable primary documents."
+        },
+        {
+          "question": "Should AI select a medical device for a patient based on symptoms?",
+          "answer": "This service concerns verified professional procurement questions, not diagnosis or personalised treatment recommendations."
+        },
+        {
+          "question": "Can a company claim improved clinical outcomes without evidence?",
+          "answer": "Only supported and permitted claims may be used, with the scope of documentation and applicable rules respected."
+        },
+        {
+          "question": "How does GAEO price medical device GEO?",
+          "answer": "GAEO's published audit and monthly plans apply. Scope depends on device families, models, markets and professional query coverage."
+        }
+      ],
+      "ctaTitle": "Check how AI recommends medical devices to professional buyers",
+      "ctaText": "Share your manufacturer's website, registered device families and institutional customer segments. I will propose an evidence-led baseline.",
+      "request": "Medical device manufacturer GEO: registration, intended purpose, models, product specifications and B2B procurement recommendations."
+    }
+  }
 }
 ];
 
