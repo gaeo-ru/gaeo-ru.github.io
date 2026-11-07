@@ -5017,7 +5017,274 @@ export const industrySpecializations = [
         "request": "Auto-parts retailer GEO: vehicle fitment, OEM references, interchange, inventory, delivery and AI recommendation BMR."
       }
     }
+  },
+{
+  "id": 25,
+  "slug": "motor-insurance-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/motor-insurance-lawyers/",
+    "en": "/en/industries/motor-insurance-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как измерять рекомендации юридических фирм",
+      "12 проверок юридического сайта для GEO"
+    ],
+    "en": [
+      "Measuring recommendations of legal practitioners",
+      "Twelve checks for a legal GEO website"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.cbr.ru/faq/insh/osago/",
+      "ru": "Банк России: разногласия по выплатам ОСАГО",
+      "en": "Bank of Russia: OSAGO settlement disputes"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_36528/0d93e8ea8486b165e2cb13b540beb4284b4b7115/",
+      "ru": "Закон №40-ФЗ, статья 16.1: порядок рассмотрения споров",
+      "en": "Federal Law 40-FZ, Article 16.1: dispute procedure"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение автоюристов и юристов по страховым спорам | GAEO.ru",
+      "h1": "GEO-продвижение автоюристов и юристов по страховым спорам",
+      "description": "Продвижение автоюристов в ответах нейросетей: споры по ОСАГО и КАСКО, ДТП, выплаты страховщика, финансовый уполномоченный, проверяемая практика и GEO-аудит.",
+      "eyebrow": "Юридические услуги / Автоюристы",
+      "lead": "После ДТП водитель ищет специалиста по спору со страховщиком, а собственник автомобиля может оспаривать отказ по КАСКО. Это разные процедуры и доказательства. Проверяю, каких автоюристов нейросети рекомендуют для таких ситуаций, и помогаю представить действительную специализацию без обещаний выиграть любой спор.",
+      "heroPoints": [
+        "Раздельные запросы по ОСАГО, КАСКО, ДТП и административным делам",
+        "Проверка этапов страховой претензии и применимости финансового уполномоченного",
+        "Подтвержденные услуги, условия работы и опыт специалистов"
+      ],
+      "problemTitle": "Почему страница «вернем любую страховую выплату» не вызывает доверия",
+      "problemIntro": "Для спора по ОСАГО имеют значение документы, характер разногласий и установленная процедура обращения. В КАСКО условия зависят от договора страхования. Универсальная инструкция для всех ситуаций вводит клиента в заблуждение.",
+      "problems": [
+        {
+          "title": "Страховые продукты смешаны",
+          "body": "ОСАГО регулируется специальным законом, а объем покрытия по КАСКО зависит от договора. Нельзя объявлять одинаковые основания возмещения для разных продуктов."
+        },
+        {
+          "title": "Пропущены обязательные этапы спора",
+          "body": "Для отдельных имущественных требований действует порядок обращения к страховщику и финансовому уполномоченному. Заявления о нем должны соответствовать виду спора и актуальной норме."
+        },
+        {
+          "title": "Неподтвержденные обещания выигрыша",
+          "body": "Формула «взыщем 100% компенсации» не показывает услуги, ограничения и зависимость результата от доказательств. Отзывы и судебные решения нельзя выдумывать."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам нейросети выбирают автоюриста",
+      "scenarioIntro": "В стартовой матрице разделяю страховые споры, правовую помощь после ДТП и административные дела. Не выдаю консультационную информацию за прогноз исхода конкретного спора.",
+      "columns": [
+        "Запрос водителя или владельца",
+        "Что нужно подтвердить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто поможет оспорить заниженную выплату по ОСАГО?",
+          "Порядок обращения к страховщику, применимость финансового уполномоченного, экспертиза и состав услуги",
+          "Страница споров по ОСАГО с источниками и этапами"
+        ],
+        [
+          "К какому юристу обратиться при отказе в выплате КАСКО?",
+          "Тип страхового случая, условия полиса, документы, процедура рассмотрения претензии",
+          "Отдельная услуга по КАСКО без смешения с обязательным страхованием"
+        ],
+        [
+          "Кто сопровождает спор о виновности и ущербе после ДТП?",
+          "Процессуальная роль специалиста, документы, оценка повреждений и рамки представительства",
+          "Правовые сценарии ДТП и профильный FAQ"
+        ],
+        [
+          "Кто поможет обжаловать постановление по делу водителя?",
+          "Вид производства, полномочия специалиста и применимые сроки обращения",
+          "Отдельное описание административных дел без обещания отмены решения"
+        ]
+      ],
+      "proofTitle": "Какие данные подтверждают компетенцию автоюриста",
+      "proofIntro": "Закон №40-ФЗ определяет требования к ОСАГО, в том числе особенности рассмотрения споров. Банк России разъясняет порядок действий при несогласии с выплатой. Эти сведения используются для точности описания услуги, но не подтверждают результат работы конкретного юриста.",
+      "checks": [
+        "Реальные специализации: ОСАГО, КАСКО, ДТП, административные споры, география работы и профессиональные данные",
+        "Договорные условия: этапы консультации, экспертиза, претензия, обращение к финансовому уполномоченному и судебное представительство там, где применимо",
+        "Документы и практика: подтвержденные публикации и допустимые к раскрытию решения без персональных сведений водителей и страховых данных"
+      ],
+      "proofNote": "Общая методика GAEO по юридическим рекомендациям применима к автоюристам, но результаты корпоративных, семейных или иных юридических практик не считаются доказанным GEO-кейсом по ОСАГО.",
+      "workTitle": "Как строю GEO-продвижение автоюриста",
+      "workIntro": "Сначала измеряю видимость по разным видам споров, затем проверяю фактические услуги, нормативные ссылки и профили специалистов.",
+      "steps": [
+        {
+          "title": "Разделяю коммерческие запросы",
+          "body": "Фиксирую ОСАГО, КАСКО, ущерб после ДТП, административные дела и географию работы."
+        },
+        {
+          "title": "Проверяю первичные сведения",
+          "body": "Сверяю описание услуг с действующими нормами, реальной процедурой и материалами юристов."
+        },
+        {
+          "title": "Улучшаю сайт и внешние источники",
+          "body": "Готовлю ТЗ на страницы услуг, профили сотрудников, FAQ и профессиональные публикации."
+        },
+        {
+          "title": "Повторяю сопоставимые замеры",
+          "body": "Проверяю BMR, точность рекомендаций и источники по той же матрице запросов."
+        }
+      ],
+      "faq": [
+        {
+          "question": "ОСАГО и КАСКО можно продвигать на одной странице?",
+          "answer": "Общий раздел возможен, но у страховых продуктов разные основания требований и документы. Для конкретных запросов нужны самостоятельные описания услуг."
+        },
+        {
+          "question": "Всегда ли перед судом требуется финансовый уполномоченный?",
+          "answer": "Порядок зависит от статуса заявителя и вида спора. Его применимость определяют по действующим нормам, без универсального обещания одной процедуры для всех."
+        },
+        {
+          "question": "Можно ли обещать клиенту увеличение выплаты по ОСАГО?",
+          "answer": "Итог зависит от документов, экспертных данных и решения уполномоченного органа или суда. Результат нельзя гарантировать рекламной формулировкой."
+        },
+        {
+          "question": "Допустимо ли использовать реальные дела в GEO-публикациях?",
+          "answer": "Да, при проверяемости фактов и соблюдении прав на публикацию. Персональные данные водителей, сведения полисов и материалы закрытых дел не раскрываются без основания."
+        },
+        {
+          "question": "Как рассчитываются тарифы GEO для автоюриста?",
+          "answer": "Применяются действующие тарифы GAEO на аудит и сопровождение. Объем выбирается по практикам, регионам и матрице рекомендательных запросов."
+        }
+      ],
+      "ctaTitle": "Проверить, каких автоюристов рекомендуют нейросети",
+      "ctaText": "Пришли сайт юридической практики, регион, фактически оказываемые услуги и публичные профессиональные материалы. Я предложу исходные запросы для GEO-аудита.",
+      "request": "GEO автоюристы и страховые споры: ОСАГО, КАСКО, ДТП, финансовый уполномоченный, профессиональные рекомендации."
+    },
+    "en": {
+      "title": "GEO for motor vehicle and insurance dispute lawyers | GAEO.ru",
+      "h1": "GEO for motor vehicle and insurance dispute lawyers",
+      "description": "GEO for Russian motor insurance lawyers: OSAGO, CASCO, road accident disputes, insurer complaints, legal expertise and AI recommendations.",
+      "eyebrow": "Legal services / Motor insurance disputes",
+      "lead": "Following an accident, a driver may need a lawyer for a compulsory-insurance payment dispute. Another client may contest a CASCO decision. These require different evidence and procedural steps. I examine which lawyers AI recommends and whether their professional service claims are substantiated.",
+      "heroPoints": [
+        "Separate OSAGO, CASCO, accident and administrative-law questions",
+        "Correct insurer complaint and financial ombudsman procedures where applicable",
+        "Verified practitioner experience, terms and practice scope"
+      ],
+      "problemTitle": "Why a universal insurance payout promise is unreliable",
+      "problemIntro": "An OSAGO claim depends on the applicable law, documents and procedure. CASCO terms depend on an individual insurance agreement. A single script cannot accurately cover every dispute.",
+      "problems": [
+        {
+          "title": "Different insurance products are conflated",
+          "body": "OSAGO is governed by a specific statutory regime while CASCO coverage depends on the insurance contract. They must not be marketed as identical."
+        },
+        {
+          "title": "Procedural steps are skipped",
+          "body": "Certain financial disputes require interaction with the insurer and financial ombudsman. Applicability must be described for the actual claim and claimant."
+        },
+        {
+          "title": "Guaranteed outcomes replace evidence",
+          "body": "Claims of a 100% payout or inevitable court win do not describe the real work. Invented case successes and reviews are unacceptable."
+        }
+      ],
+      "scenarioTitle": "The queries that lead to a motor vehicle lawyer",
+      "scenarioIntro": "The baseline separates insurance, accident and administrative proceedings. Informational answers are not predictions of a specific dispute.",
+      "columns": [
+        "Potential client question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can contest an undervalued OSAGO settlement?",
+          "Insurer complaint, ombudsman applicability, expert assessments and legal-service scope",
+          "An OSAGO dispute page with accurate steps"
+        ],
+        [
+          "Who can help when a CASCO insurer denies payment?",
+          "Policy conditions, evidence, refusal grounds and the applicable complaint process",
+          "A dedicated CASCO explanation"
+        ],
+        [
+          "Which lawyer handles accident liability or damage disputes?",
+          "Representation scope, documents and professional specialisation",
+          "An accident-related legal service and FAQ"
+        ],
+        [
+          "Who can challenge an administrative ruling affecting a driver?",
+          "Procedural rules, legal authority and applicable review deadlines",
+          "A clearly scoped administrative-law service"
+        ]
+      ],
+      "proofTitle": "What makes a motor insurance legal recommendation credible",
+      "proofIntro": "Russian Law 40-FZ addresses compulsory motor insurance disputes, while the Bank of Russia explains what consumers can do when contesting an OSAGO payment. These primary sources support legal accuracy but do not prove an individual lawyer's record.",
+      "checks": [
+        "Actual practice areas: OSAGO, CASCO, accidents, administrative cases and geographic coverage",
+        "Engagement and procedure: consultation, assessment, insurer correspondence, the ombudsman where relevant and representation",
+        "Public evidence: verified legal publications and authorised case descriptions without confidential driver or policy data"
+      ],
+      "proofNote": "GAEO's wider legal methodology can be reused here. Results for unrelated legal disciplines are not presented as measured GEO success for motor insurance lawyers.",
+      "workTitle": "An evidence-led GEO programme for motor vehicle lawyers",
+      "workIntro": "First compare actual AI recommendations across dispute types, then improve the accuracy and visibility of supporting professional information.",
+      "steps": [
+        {
+          "title": "Segment legal needs",
+          "body": "Separate OSAGO and CASCO, accident damage, administrative proceedings and relevant regions."
+        },
+        {
+          "title": "Verify claims and procedures",
+          "body": "Review actual services, primary law and approved practitioner evidence."
+        },
+        {
+          "title": "Improve source pages",
+          "body": "Specify service descriptions, specialist biographies, practical FAQ and legal publications."
+        },
+        {
+          "title": "Measure recommendations again",
+          "body": "Track BMR and factual accuracy with a stable non-brand query set."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can OSAGO and CASCO be described on one page?",
+          "answer": "A general overview can mention both, but concrete services and legal requirements differ and should be explained separately."
+        },
+        {
+          "question": "Is a financial ombudsman step compulsory in every dispute?",
+          "answer": "No universal claim is appropriate. The applicable procedure depends on the type of claim and claimant under current rules."
+        },
+        {
+          "question": "Can a lawyer promise to increase an OSAGO payment?",
+          "answer": "An outcome depends on evidence and the relevant legal decision. Marketing cannot establish a guaranteed award."
+        },
+        {
+          "question": "May case examples be used in GEO publications?",
+          "answer": "Only where the facts are verified and disclosure is permitted. Avoid private driver, insurance and case records."
+        },
+        {
+          "question": "How does GAEO price motor legal GEO?",
+          "answer": "Published GAEO audit and monthly plans apply, with scope based on practice areas and target queries."
+        }
+      ],
+      "ctaTitle": "See which motor insurance lawyers AI recommends",
+      "ctaText": "Share your practice site, jurisdiction, actual services and approved professional references. I will propose an initial recommendation audit.",
+      "request": "Motor insurance legal GEO: OSAGO, CASCO, accidents, ombudsman rules and AI recommendations."
+    }
   }
+}
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
