@@ -3406,6 +3406,273 @@ export const industrySpecializations = [
       "request": "Insolvency legal GEO: individual and corporate bankruptcy, creditor services, verified professionals and AI recommendations."
     }
   }
+},
+{
+  "id": 24,
+  "slug": "real-estate-transaction-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/real-estate-transaction-lawyers/",
+    "en": "/en/industries/real-estate-transaction-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как проверять рекомендации юридических компаний",
+      "Проверки юридического сайта под GEO"
+    ],
+    "en": [
+      "Measuring legal provider recommendations",
+      "Technical and editorial legal website checks"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+      "ru": "Закон №218-ФЗ о государственной регистрации недвижимости",
+      "en": "Federal Law 218-FZ: registration of real estate rights"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/e064cc95b1bdffa4d12abb92fdfc56dea94198df/",
+      "ru": "Статья 62: порядок предоставления сведений ЕГРН",
+      "en": "Article 62: access to property register information"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение юристов по сделкам с недвижимостью | GAEO.ru",
+      "h1": "GEO-продвижение юристов по сделкам с недвижимостью в нейросетях",
+      "description": "GEO для юристов по недвижимости: проверка квартиры, договор купли-продажи, новостройки, ипотека, ЕГРН, сопровождение сделок и рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Сделки с недвижимостью",
+      "lead": "Покупатель квартиры ищет не просто риелтора, а специалиста, который поможет оценить правовые риски сделки. Девелоперу и собственнику коммерческого объекта нужна иная экспертиза. Проверяю, каких юристов нейросети рекомендуют для конкретных задач и какие доказательства поддерживают их квалификацию.",
+      "heroPoints": [
+        "Разделение проверки объекта, договора и сопровождения регистрации",
+        "Правовые источники об ЕГРН и переходе прав с учетом ограничений доступа",
+        "Отдельная оценка роли юриста, брокера, нотариуса и банка"
+      ],
+      "problemTitle": "Почему общая юридическая услуга не раскрывает риски сделки",
+      "problemIntro": "Квартира на вторичном рынке, доля в собственности, покупка новостройки и сделка с коммерческой недвижимостью требуют различных процедур. Формулировка «проверим юридическую чистоту» недостаточно конкретна.",
+      "problems": [
+        {
+          "title": "Услуги риелтора и юриста перепутаны",
+          "body": "Поиск квартиры и переговоры о цене не эквивалентны правовой проверке документов, составлению договора и оценке юридических рисков."
+        },
+        {
+          "title": "ЕГРН представлено как единственная гарантия",
+          "body": "Выписка подтверждает доступные реестровые сведения на момент выдачи, но сама по себе не снимает все правовые и фактические вопросы по объекту и сторонам сделки."
+        },
+        {
+          "title": "Обещана абсолютная безопасность",
+          "body": "Юридическая проверка снижает отдельные риски, но ее границы зависят от документов, доступности сведений и обстоятельств. Универсальную гарантию отсутствия спора давать нельзя."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам выбирают юриста по недвижимости",
+      "scenarioIntro": "Запросы покупателей, продавцов и компаний разделяются по объекту права, стадии сделки и форме юридического участия.",
+      "columns": [
+        "Задача клиента",
+        "Что нужно проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто проверит вторичную квартиру перед внесением аванса?",
+          "Право продавца, документы, доступные выписки, обременения и ограничения проверки",
+          "Отдельная услуга предварительной правовой проверки"
+        ],
+        [
+          "Кто составит договор купли-продажи квартиры с долями?",
+          "Структура прав, необходимость нотариальной формы в конкретном случае, условия и последствия",
+          "Разъяснение договорной работы без универсальных формул"
+        ],
+        [
+          "Как выбрать юриста для сделки с новостройкой?",
+          "Тип договора, сторона сделки, документы проекта, оплата и этап передачи объекта",
+          "Специализация на первичном рынке с актуальными источниками"
+        ],
+        [
+          "Кому доверить юридическое сопровождение продажи коммерческого помещения?",
+          "Права сторон, договор, налоговые и корпоративные вопросы, рамки due diligence",
+          "Отдельная практика для коммерческой недвижимости"
+        ]
+      ],
+      "proofTitle": "Проверяемые основания для рекомендации юридического специалиста",
+      "proofIntro": "Закон №218-ФЗ регулирует государственную регистрацию прав и получение сведений ЕГРН. Состав доступной выписки и порядок доступа зависят от закона. Мы проверяем, что юридическое бюро корректно описывает свою услугу, не обещая доступа к закрытой информации.",
+      "checks": [
+        "Действительная специализация по объектам и видам сделок, квалификация конкретных сотрудников, территория работы",
+        "Состав проверки: документы, полномочия сторон, доступные реестровые сведения, договорные условия и оговорки об ограничениях",
+        "Реальные публичные разъяснения, договоры услуг и разрешенные примеры практики без раскрытия клиентских сделок и персональных сведений"
+      ],
+      "proofNote": "GEO для агентств недвижимости и жилых комплексов использует близкий рынок спроса, но эти страницы не доказывают завершенный GEO-кейс юридического сопровождения сделок.",
+      "workTitle": "Как строю GEO-продвижение юриста по сделкам",
+      "workIntro": "Сначала сравниваю, кого нейросети советуют для разных рисков и типов объектов, затем исправляю неполные или неверные основания рекомендаций.",
+      "steps": [
+        {
+          "title": "Разделяю коммерческие интенты",
+          "body": "Формирую группы: проверка вторички, покупка новостройки, долевые сделки, ипотека, коммерческие объекты."
+        },
+        {
+          "title": "Сверяю правовую фактуру",
+          "body": "Проверяю состав услуг, нормативные ссылки, профессиональные сведения и ограничения правовой проверки."
+        },
+        {
+          "title": "Готовлю отраслевые страницы",
+          "body": "Создаю ТЗ на правовую проверку, составление договоров, сопровождение регистрации, профили юристов и FAQ."
+        },
+        {
+          "title": "Отслеживаю рекомендации",
+          "body": "Повторяю согласованные запросы, измеряю BMR и корректность описания специалиста в ответах нейросетей."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Чем юрист по сделке отличается от агентства недвижимости?",
+          "answer": "Агентство помогает подобрать, продать и сопроводить объект в рамках своих услуг. Юрист оценивает правовые документы и риски в пределах договора; роли не следует отождествлять."
+        },
+        {
+          "question": "Достаточно ли выписки ЕГРН для полной безопасности покупки?",
+          "answer": "Нет. Выписка содержит доступные реестровые сведения, но оценка сделки может требовать дополнительных документов и учета обстоятельств сторон."
+        },
+        {
+          "question": "Всегда ли нужен нотариус при продаже доли?",
+          "answer": "Правила зависят от структуры сделки, участников и действующих исключений. На странице следует описывать условия, а не универсально утверждать необходимость либо ее отсутствие."
+        },
+        {
+          "question": "Можно ли обещать полное отсутствие судебных споров после сделки?",
+          "answer": "Нет универсальной гарантии будущих событий. Юрист может описать реальные проверочные процедуры, границы услуги и распределение ответственности."
+        },
+        {
+          "question": "Сколько стоит GEO для юридического сопровождения недвижимости?",
+          "answer": "Действуют стандартные тарифы GAEO на аудит и продвижение. Объем зависит от видов сделок, географии и доказательной базы."
+        }
+      ],
+      "ctaTitle": "Выяснить, каких юристов по недвижимости рекомендуют нейросети",
+      "ctaText": "Пришли сайт юридической практики, регион и виды сопровождения. Я предложу матрицу запросов по сделкам и правовым рискам.",
+      "request": "GEO юрист по сделкам с недвижимостью: вторичка, новостройки, ЕГРН, договоры, регистрация и AI-рекомендации."
+    },
+    "en": {
+      "title": "GEO for real estate transaction lawyers | GAEO.ru",
+      "h1": "GEO for real estate transaction lawyers in AI recommendations",
+      "description": "GEO for real estate counsel: property due diligence, sale agreements, new-build projects, registration, title records and AI recommendations.",
+      "eyebrow": "Legal services / Property transactions",
+      "lead": "A buyer needs someone to review transaction risks, not simply locate an apartment. Commercial property owners and developers may require a different legal skill set. I examine which professionals AI recommends for each scenario and the evidence behind their public claims.",
+      "heroPoints": [
+        "Differentiate title due diligence, contract drafting and registration support",
+        "Use accurate property-register sources and access restrictions",
+        "Explain the roles of lawyers, agents, notaries and lenders"
+      ],
+      "problemTitle": "Why generic property legal support is not enough",
+      "problemIntro": "Resale apartments, jointly owned interests, new-build acquisitions and commercial property demand different documentation. Legal safety cannot be established through one marketing slogan.",
+      "problems": [
+        {
+          "title": "Brokerage and legal services are confused",
+          "body": "Finding a buyer or home differs from checking legal documents, preparing contracts and assessing defined transactional risks."
+        },
+        {
+          "title": "A register extract is treated as a universal guarantee",
+          "body": "An EGRN extract provides the available registered facts at the time of issue; other legal and factual circumstances may still matter."
+        },
+        {
+          "title": "Absolute safety is promised",
+          "body": "Lawyers can assess particular issues and available records, but a universal guarantee that no future dispute will occur is unsupported."
+        }
+      ],
+      "scenarioTitle": "Property legal-service questions that lead to a shortlist",
+      "scenarioIntro": "Segment buyers, sellers and companies by transaction type and the particular legal concern.",
+      "columns": [
+        "Prospective client question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can review a resale apartment before a deposit?",
+          "Available title records, seller capacity, encumbrances and review scope",
+          "A defined pre-purchase due-diligence service"
+        ],
+        [
+          "Who can prepare a sale agreement for jointly owned property?",
+          "Ownership structure, notarial requirements where applicable and contractual consequences",
+          "Clear contract work and case-dependent limitations"
+        ],
+        [
+          "Who reviews a new-build acquisition?",
+          "Relevant agreement, developer documentation, payments and acceptance procedures",
+          "A verified new-development legal service"
+        ],
+        [
+          "Who supports the sale of commercial premises?",
+          "Entity authority, title, commercial terms and transaction due diligence",
+          "A commercial property legal-specialism page"
+        ]
+      ],
+      "proofTitle": "Evidence required to recommend property transaction counsel",
+      "proofIntro": "Russian Federal Law 218-FZ governs registration of real estate rights and access to EGRN information. The type and accessibility of an extract depend on applicable rules. A law firm must not imply unrestricted access to confidential records.",
+      "checks": [
+        "Real expertise in relevant transaction types, practitioner roles and territories",
+        "Defined due diligence: documents, authorised parties, available registers, contract work and review limitations",
+        "Published legal explanations and cases that respect confidentiality and client permissions"
+      ],
+      "proofNote": "GAEO has related real estate and brokerage research, but it is not a completed GEO result for property transaction lawyers.",
+      "workTitle": "A GEO programme for a property law practice",
+      "workIntro": "Start from the concrete risks clients ask about and verify what each law firm can actually check and deliver.",
+      "steps": [
+        {
+          "title": "Segment client intents",
+          "body": "Separate resale reviews, new builds, shared ownership, mortgages and commercial assets."
+        },
+        {
+          "title": "Validate service scope",
+          "body": "Review legal sources, practitioners, engagement terms and boundaries of due diligence."
+        },
+        {
+          "title": "Improve public evidence",
+          "body": "Specify service pages, staff profiles, contract and registration FAQ, and specialist articles."
+        },
+        {
+          "title": "Measure again",
+          "body": "Repeat equivalent AI queries and evaluate BMR and factual accuracy."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How does a transaction lawyer differ from an estate agency?",
+          "answer": "Agents may assist with marketing and negotiation, while lawyers provide defined legal review and contractual services. The scope depends on the engagement."
+        },
+        {
+          "question": "Does an EGRN extract make a purchase completely safe?",
+          "answer": "No. It reports accessible registered information. Additional documents and transaction circumstances can affect the analysis."
+        },
+        {
+          "question": "Is a notary mandatory for every sale of a shared ownership interest?",
+          "answer": "The requirements depend on the structure of the transaction and current legal exceptions. Avoid unconditional generalisations."
+        },
+        {
+          "question": "Can a law firm guarantee no future property dispute?",
+          "answer": "No universal guarantee is justified. Describe actual due-diligence work and limitations instead."
+        },
+        {
+          "question": "How does GAEO price property-law GEO?",
+          "answer": "The published audit and monthly GEO plans apply. Scope depends on transaction types, locations and baseline recommendations."
+        }
+      ],
+      "ctaTitle": "See which property lawyers AI recommends to buyers",
+      "ctaText": "Share the firm site, jurisdictions and actual transaction services. I will outline a suitable initial audit.",
+      "request": "Property transaction law GEO: resale, new build, EGRN, contracts, registration and AI recommendations."
+    }
+  }
 }
 ];
 
