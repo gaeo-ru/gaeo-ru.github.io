@@ -6,8 +6,8 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
 ---
 <section class="section-sm tariff-calculator-section" id="calculator">
  <div class="container">
-  <div class="eyebrow">{en?'Your scope':'Ваш объем работ'}</div>
-  <h2>{en?'Calculate your monthly GEO plan':'Рассчитайте стоимость продвижения'}</h2>
+  <div class="eyebrow">{en?'Your scope':'Объем и стоимость работ'}</div>
+  <h2>{en?'Calculate your monthly GEO plan':'Калькулятор стоимости продвижения'}</h2>
   <p class="tariff-lead">{en?'Choose a plan, AI platforms and additional prompts. Any 5 selected platforms are included; the surcharge starts with the 6th. The initial selection is an example you can change.':'Выберите тариф, нейросети и дополнительные запросы. Любые 5 выбранных нейросетей входят в базовый объем; доплата начинается с 6-й. Стартовый набор в калькуляторе можно изменить.'}</p>
   <div class="tariff-calculator" data-tariff-calculator>
    <script type="application/json" data-tariff-config set:html={JSON.stringify(config)}/>

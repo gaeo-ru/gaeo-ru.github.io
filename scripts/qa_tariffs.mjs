@@ -106,6 +106,21 @@ try{
    await page.locator('h1').waitFor();
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);assert.equal(overflow,false,'No horizontal overflow '+width+' '+route);
    if(route==='/tarify/'||route==='/en/pricing/'){
+    const gap=await page.evaluate(()=>{
+     const rect=selector=>document.querySelector(selector)?.getBoundingClientRect();
+     const links=rect('.tariff-page__intro .tariff-related');
+     const overviewTitle=rect('.tariff-page > #pricing .eyebrow');
+     const overviewLink=rect('.tariff-page > #pricing > .container > a.tariff-text-link');
+     const calculatorTitle=rect('.tariff-page > #calculator .eyebrow');
+     if(!links||!overviewTitle||!overviewLink||!calculatorTitle)return null;
+     return {introToOverview:Math.round(overviewTitle.top-links.bottom),overviewToCalculator:Math.round(calculatorTitle.top-overviewLink.bottom)};
+    });
+    assert.ok(gap&&gap.introToOverview>=0&&gap.introToOverview<=120,'Compact intro-to-pricing spacing '+width+' '+route+' '+JSON.stringify(gap));
+    assert.ok(gap.overviewToCalculator>=0&&gap.overviewToCalculator<=120,'Compact pricing-to-calculator spacing '+width+' '+route+' '+JSON.stringify(gap));
+    if(route==='/tarify/'){
+     assert.equal((await page.locator('#calculator > .container > .eyebrow').textContent())?.trim(),'Объем и стоимость работ');
+     assert.equal((await page.locator('#calculator > .container > h2').textContent())?.trim(),'Калькулятор стоимости продвижения');
+    }
     const calculator=page.locator('[data-tariff-calculator]');
     await calculator.locator('[name="platform"][value="gemini"]').check();
     await calculator.locator('[name="blocks"]').fill('2');
