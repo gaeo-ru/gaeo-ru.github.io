@@ -69,7 +69,7 @@ for(const lang of ['ru','en']){
 <!-- GAEO_TARIFF:CALCULATOR -->
 <!-- GAEO_TARIFF:COMPARISON -->
 <!-- GAEO_TARIFF:CATALOG -->
-<section class="section-sm"><div class="container"><!-- GAEO_DESIGN:CONTACT --></div></section></main>`;
+<section class="section-sm tariff-page__contact"><div class="container"><!-- GAEO_DESIGN:CONTACT --></div></section></main>`;
  save(resolve(root,route.slice(1),'index.html'),shell({lang,route,equivalent,title,description,h1,body,collection:true}));
 }
 // Industry specializations are generated from a single bilingual source, not hand-maintained HTML.
