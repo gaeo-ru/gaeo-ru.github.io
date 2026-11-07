@@ -130,6 +130,7 @@ try{
     }
   }
   await page.goto(origin+'/publications/#mention-pixel',{waitUntil:'networkidle'});
+  await page.waitForURL('**/publications/ratings/#mention-pixel');
   assert.ok(page.url().includes('/publications/ratings/#mention-pixel'),'Existing fragment link reaches its new category');
   assert.deepEqual(errors,[],'No browser runtime errors');
   const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
