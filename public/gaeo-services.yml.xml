@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<services_feed version="1.4" date="2026-11-06T09:09:22+03:00">
+<services_feed version="1.4" date="2026-11-07T14:08:26+03:00">
   <source>
     <name>GAEO.ru</name>
     <url>https://gaeo.ru/</url>
@@ -52,23 +52,23 @@
       </geo_info>
       <services>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/free-audit/</url>
           <persistent_id>quick-geo-audit</persistent_id>
-          <name>Быстрый GEO аудит бизнеса в нейросетях</name>
+          <name>Бесплатный мини-аудит</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
             <is_free>1</is_free>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20GEO-%D0%B0%D1%83%D0%B4%D0%B8%D1%82.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/04.jpg</photo_url>
           </photos>
-          <description>До 3 промптов До 3 нейросетей Отчет до 3 страниц</description>
+          <description>Первый взгляд на видимость бренда и точки роста. До 5 промптов и до 5 нейросетей. До 3 страниц с выводами. 1 рабочий день после получения данных.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/geo-audit/</url>
           <persistent_id>full-geo-audit</persistent_id>
-          <name>Полный GEO-аудит бизнеса в нейросетях</name>
+          <name>Полный GEO-аудит</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -78,14 +78,14 @@
             </exact>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9%20GEO-%D0%B0%D1%83%D0%B4%D0%B8%D1%82.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/03.jpg</photo_url>
           </photos>
-          <description>До 50 промптов До 7 нейросетей Отчет 20-25 страниц Погружение в бизнес План работ по GEO/AEO продвижению бизнеса в ответах нейросетей. ____________ Стоимость аудита вычитается из суммы договора на GEO-продвижение.</description>
+          <description>Диагностика, разбор конкурентов и план работ. До 100 промптов и до 11 нейросетей. Отчет на 25–35 страницах. Погружение в бизнес и план GEO-работ. 3–5 рабочих дней после получения данных.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/geo-promotion/</url>
           <persistent_id>geo-aeo-promotion</persistent_id>
-          <name>GEO / AEO продвижение в ответах нейросетей</name>
+          <name>GEO-продвижение</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -96,14 +96,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%2049900.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/18.jpg</photo_url>
           </photos>
-          <description>Карта интентов. От 50 промптов. От 5 нейросетей. ТЗ на доработки сайта. ТЗ на создание контента. Дистрибуция контента. Ссылочное продвижение. Работа с репутацией. Отчетность 1 раз в месяц</description>
+          <description>Веду стратегию; ваша команда внедряет ТЗ на сайт и контент. От 50 промптов и от 5 нейросетей. Карта интентов и ТЗ на доработки сайта. ТЗ на экспертный контент. Дистрибуция, ссылки и репутация. Отчетность 1 раз в месяц.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/geo-content/</url>
           <persistent_id>geo-aeo-promotion-content</persistent_id>
-          <name>GEO / AEO продвижение в ответах нейросетей + контент</name>
+          <name>GEO + контент</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -114,14 +114,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%BE%D0%BC%2079900.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/19.jpg</photo_url>
           </photos>
-          <description>Карта интентов. От 50 промптов. От 5 нейросетей. ТЗ на доработки сайта. Создание контента. Дистрибуция контента. Ссылочное продвижение. Работа с репутацией. Отчетность 1 раз в месяц.</description>
+          <description>Изучаю ваш продукт, создаю контент и организую публикации. Все работы базового GEO-продвижения. От 50 промптов и от 5 нейросетей. Создание экспертного контента. Организация публикаций и дистрибуция. ТЗ на доработки сайта.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#alice</url>
           <persistent_id>alice-ai-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Яндекс Алиса AI</name>
+          <name>GEO-продвижение в Алиса</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -132,14 +132,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%90%D0%BB%D0%B8%D1%81%D0%B0%20AI.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/06.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Алиса AI для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Алиса. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#chatgpt</url>
           <persistent_id>chatgpt-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети ChatGPT</name>
+          <name>GEO-продвижение в ChatGPT</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -150,14 +150,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20ChatGPT.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/07.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть ChatGPT для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в ChatGPT. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#gemini</url>
           <persistent_id>gemini-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Gemini</name>
+          <name>GEO-продвижение в Gemini</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -168,14 +168,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Gemini.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/08.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Google Gemini для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Gemini. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#google-ai-overviews</url>
           <persistent_id>google-ai-overviews-addon</persistent_id>
-          <name>AEO продвижение в ответах Google AI Overviews</name>
+          <name>GEO-продвижение в Google AI Overviews</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -186,14 +186,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/AEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Google%20AI%20Overviews.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/10.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Google AI Overviews для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Google AI Overviews. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#perplexity</url>
           <persistent_id>perplexity-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Perplexity</name>
+          <name>GEO-продвижение в Perplexity</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -204,14 +204,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Perplexity.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/12.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Perplexity для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Perplexity. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#deepseek</url>
           <persistent_id>deepseek-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети DeepSeek</name>
+          <name>GEO-продвижение в DeepSeek</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -222,14 +222,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20DeepSeek.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/11.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть DeepSeek для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в DeepSeek. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#gigachat</url>
           <persistent_id>gigachat-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети GigaChat</name>
+          <name>GEO-продвижение в GigaChat</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -240,14 +240,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20GigaChat.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/13.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть GigaChat для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в GigaChat. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#copilot</url>
           <persistent_id>copilot-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Copilot</name>
+          <name>GEO-продвижение в Microsoft Copilot</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -258,14 +258,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Copilot.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/14.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Microsoft Copilot для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Microsoft Copilot. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#qwen</url>
           <persistent_id>qwen-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Qwen</name>
+          <name>GEO-продвижение в Qwen</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -276,14 +276,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Qwen.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/15.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Qwen для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Qwen. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#claude</url>
           <persistent_id>claude-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Claude</name>
+          <name>GEO-продвижение в Claude</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -294,14 +294,14 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Claude.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/16.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть Claude для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Claude. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/#plans</url>
+          <url>https://gaeo.ru/services/additional-platforms/#grok</url>
           <persistent_id>grok-addon</persistent_id>
-          <name>GEO продвижение в ответах нейросети Grok</name>
+          <name>GEO-продвижение в Grok</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
@@ -312,9 +312,9 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://storage.yandexcloud.net/gaeo-photos/GEO-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20Grok.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/05.jpg</photo_url>
           </photos>
-          <description>+1 нейросеть xAI Grok для целенаправленного продвижения в ней, сверх 5 базовых</description>
+          <description>Целенаправленное GEO-продвижение и мониторинг в Grok. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
         </service>
       </services>
     </executor>

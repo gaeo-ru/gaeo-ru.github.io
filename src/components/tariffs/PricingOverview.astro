@@ -1,0 +1,15 @@
+---
+import PlanCards from './PlanCards.astro';
+import {pricingHref} from '../../data/pricing.mjs';
+const {lang='ru',open=false}=Astro.props;const en=lang==='en';
+---
+<section class="section tariff-overview" id="pricing">
+ <div class="container">
+  <div class="eyebrow">{en?'Pricing':'Тарифы'}</div>
+  <h2>{en?'Choose how to start and who implements the work':'От первого аудита до продвижения и разработки сайта'}</h2>
+  <p class="tariff-lead">{en?'6 service options, a clear scope and additional capacity when you need it. Alexey Yakovlev personally leads your project.':'6 форматов работы, открытый состав услуг и дополнительные опции под вашу задачу. Проект лично ведет Алексей Яковлев.'}</p>
+  <PlanCards lang={lang} open={open}/>
+  <p class="tariff-note">{en?'Monthly promotion starts with 50 prompts and 5 AI platforms. The final scope, implementation responsibilities and contractual targets are agreed before work starts.':'Базовый объем продвижения: 50 промптов и 5 нейросетей. До начала работ фиксируем состав задач, ответственность за внедрение и договорные показатели.'}</p>
+  <a class="tariff-text-link" href={pricingHref(lang)+(open?'#industry-catalog':'')}>{en?'Compare plans and browse 107 business categories':'Сравнить тарифы и найти свое направление среди 107 категорий'} →</a>
+ </div>
+</section>

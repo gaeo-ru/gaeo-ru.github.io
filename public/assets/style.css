@@ -191,6 +191,7 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
 .nowrap{white-space:nowrap}
 
 @media(max-width:720px){
+  h1,h2{overflow-wrap:break-word}
   /* Hero CTAs: keep both readable; centered text inside button. */
   .actions{
     display:grid;
@@ -215,6 +216,10 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
     text-align:center;
     white-space:nowrap;
   }
+  /* Development labels are longer than the hero CTAs in both languages. */
+  #site-development .actions{grid-template-columns:minmax(0,1fr);gap:14px}
+  #site-development .actions .button,
+  #site-development .actions .text-link{white-space:normal}
 
   /* GEO scheme: natural height, no absolute caption over the last node. */
   .geo-diagram{

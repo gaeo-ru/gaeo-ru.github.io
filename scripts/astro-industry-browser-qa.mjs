@@ -102,11 +102,14 @@ try {
     assert.equal(await page.locator('.industry-metric').count(),entry.route.includes('/industries/pharma/')?6:3,'Evidence statistics missing');
     assert.equal(await page.locator('.industry-step').count(),6,'Commercial steps missing');
     assert.equal(await page.locator('.faq-item').count(),6,'FAQ questions missing');
-    assert.equal(await page.locator('.industry-price').count(),3,'Rates missing');
-    for (const offer of (await page.locator('.industry-price').all()).slice(1)) {
+    const monthlyOffers = page.locator('#industry-pricing .tariff-plan');
+    assert.equal(await monthlyOffers.count(),3,'Expected exactly 3 monthly tariffs');
+    assert.deepEqual(await monthlyOffers.evaluateAll(items=>items.map(item=>item.dataset.plan)),
+      ['geo','content','guarantee'],'Monthly tariff lineup differs from the agreed plans');
+    for (const offer of await monthlyOffers.all()) {
       const terms = (await offer.locator('li').allTextContents()).map(s => s.trim());
-      assert.equal(terms[0], entry.lang === 'ru' ? 'От 50 промптов' : 'From 50 prompts', 'Monthly tariff prompt scope missing');
-      assert.equal(terms[1], entry.lang === 'ru' ? 'От 5 нейросетей' : 'From 5 AI platforms', 'Monthly tariff AI coverage missing');
+      assert.ok(terms.some(term=>term.includes(entry.lang === 'ru' ? 'От 50 промптов' : 'From 50 prompts')), 'Monthly tariff prompt scope missing');
+      assert.ok(terms.some(term=>term.includes(entry.lang === 'ru' ? 'от 5 нейросетей' : '5 AI platforms')), 'Monthly tariff AI coverage missing');
     }
     if(entry.ecommerce){
       assert.equal(await page.locator('.industry-framework-card').count(),5,'Five ecommerce framework indicators missing');

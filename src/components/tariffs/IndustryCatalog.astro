@@ -1,0 +1,130 @@
+---
+import { getIndustryCatalog, getIndustryGroups } from '../../data/industry-catalog.mjs';
+import { PRICES, money, pricingHref } from '../../data/pricing.mjs';
+
+const { lang = 'ru', id = 'industry-catalog' } = Astro.props;
+const en = lang === 'en';
+const items = getIndustryCatalog(lang);
+const groups = getIndustryGroups(lang);
+const leadHref = en ? '/en/#lead' : '/#lead';
+const price = value => money(value, lang);
+const prices = [
+  { label: 'GEO', value: PRICES.geo },
+  { label: en ? 'GEO + content' : 'GEO + контент', value: PRICES.content },
+  { label: en ? 'Contract guarantees' : 'Финансовые гарантии', value: PRICES.guarantee },
+];
+const copy = en ? {
+  eyebrow: 'GEO by industry',
+  title: 'Find the service for your business',
+  intro: '107 business categories, each with its own customer questions and areas of work. Choose an industry or search by your business, product or specialisation.',
+  hint: 'For example: law firms, WMS, cottage communities or pet supplies.',
+  search: 'Business or specialisation',
+  placeholder: 'Search 107 business categories',
+  group: 'Industry',
+  all: 'All industries',
+  reset: 'Reset',
+  count: '107 of 107 categories',
+  countTemplate: '{count} of {total} categories',
+  from: 'from',
+  period: '/month',
+  examples: 'Specialisations and examples',
+  contact: 'Discuss this industry',
+  image: 'View the service illustration',
+  noResults: 'No matching categories',
+  noResultsText: 'Try a broader term, choose another industry or tell me about your business.',
+  noResultsContact: 'Discuss another business category',
+  terms: 'Prices are monthly starting rates in RUB. The scope of work and financial guarantees for visibility growth are agreed in the contract.',
+} : {
+  eyebrow: 'GEO по отраслям',
+  title: 'Найдите направление для своего бизнеса',
+  intro: '107 направлений со своими запросами покупателей и задачами продвижения. Выберите отрасль или найдите свою компанию по услуге, товару и специализации.',
+  hint: 'Например: юристы, WMS, коттеджные поселки или зоотовары.',
+  search: 'Бизнес или специализация',
+  placeholder: 'Поиск по 107 направлениям',
+  group: 'Отрасль',
+  all: 'Все отрасли',
+  reset: 'Сбросить',
+  count: '107 из 107 направлений',
+  countTemplate: '{count} из {total} направлений',
+  from: 'от',
+  period: '/мес.',
+  examples: 'Специализации и примеры',
+  contact: 'Обсудить эту отрасль',
+  image: 'Рассмотреть изображение тарифа',
+  noResults: 'Подходящих направлений не найдено',
+  noResultsText: 'Попробуйте более общий запрос, выберите другую отрасль или расскажите о своем бизнесе.',
+  noResultsContact: 'Обсудить другое направление',
+  terms: 'Все цены указаны за месяц и начинаются с указанной суммы. Состав работ и финансовые гарантии роста видимости фиксируем в договоре.',
+};
+---
+
+<link rel="stylesheet" href="/assets/industry-catalog.css" />
+
+<section class="industry-catalog" id={id} aria-labelledby={`${id}-title`} data-industry-catalog data-count-template={copy.countTemplate}>
+  <div class="container">
+    <div class="industry-catalog__intro">
+      <div class="eyebrow">{copy.eyebrow}</div>
+      <h2 id={`${id}-title`}>{copy.title}</h2>
+      <p>{copy.intro}</p>
+    </div>
+
+    <form class="industry-catalog__filters" id={`${id}-filters`} role="search" aria-label={copy.title} data-catalog-controls hidden>
+      <div class="industry-catalog__field industry-catalog__search">
+        <label for={`${id}-search`}>{copy.search}</label>
+        <input type="search" id={`${id}-search`} name="industry-search" placeholder={copy.placeholder} autocomplete="off" aria-describedby={`${id}-hint`} aria-controls={`${id}-results`} data-catalog-search />
+      </div>
+      <div class="industry-catalog__field">
+        <label for={`${id}-group`}>{copy.group}</label>
+        <select id={`${id}-group`} name="industry-group" aria-controls={`${id}-results`} data-catalog-group>
+          <option value="">{copy.all}</option>
+          {groups.map(group => <option value={group.id}>{group.name} ({group.count})</option>)}
+        </select>
+      </div>
+      <button type="reset" class="button outline industry-catalog__reset">{copy.reset}</button>
+      <p class="industry-catalog__hint" id={`${id}-hint`}>{copy.hint}</p>
+    </form>
+
+    <p class="industry-catalog__count" data-catalog-count role="status" aria-live="polite" aria-atomic="true">{copy.count}</p>
+
+    <div class="industry-catalog__grid" id={`${id}-results`} data-catalog-results>
+      {items.map(item => <article class="industry-catalog__card" id={item.id} data-catalog-item data-group={item.groupId} data-search={[item.category, item.categoryEn, item.title, item.titleEn, item.group, item.groupEn, item.intro, item.introEn, ...item.specialties, ...item.specialtiesEn, item.searchAliases].join(' ')} aria-labelledby={`${item.id}-title`}>
+        <div class="industry-catalog__card-top">
+          <a class="industry-catalog__image" href={item.image.large} target="_blank" rel="noopener" aria-label={`${copy.image}: ${item.name}`}>
+            <img src={item.image.small} srcset={`${item.image.small} 480w, ${item.image.large} 960w`} sizes="(max-width: 420px) 88px, 120px" width={item.image.width} height={item.image.height} loading="lazy" decoding="async" alt={en ? `GAEO service illustration: ${item.name}` : `GEO-продвижение: ${item.name}`} />
+          </a>
+          <div class="industry-catalog__card-heading">
+            <p class="industry-catalog__group">{item.groupName}</p>
+            <h3 id={`${item.id}-title`}><a href={`${pricingHref(lang)}#${item.id}`} aria-label={item.serviceName}>{item.name}</a></h3>
+          </div>
+        </div>
+        <p class="industry-catalog__description">{item.description}</p>
+        <dl class="industry-catalog__prices">
+          {prices.map(offer => <div>
+            <dt>{offer.label}</dt>
+            <dd><span>{copy.from} </span><strong>{price(offer.value)}</strong><span> {copy.period}</span></dd>
+          </div>)}
+        </dl>
+        <details class="industry-catalog__examples">
+          <summary>{copy.examples}</summary>
+          <ul>{item.examples.map(example => <li>{example}</li>)}</ul>
+        </details>
+        <div class="industry-catalog__card-actions">
+          {item.hubLink && <a class="industry-catalog__hub" href={item.hubLink.href}>{item.hubLink.label} <span aria-hidden="true">↗</span></a>}
+          <a class="button outline industry-catalog__contact" href={leadHref} data-gaeo-request={`${item.serviceName}. ${en ? 'Industry' : 'Отрасль'}: ${item.groupName}. ${prices.map(offer => `${offer.label}: ${copy.from} ${price(offer.value)} ${copy.period}`).join('; ')}.`}>{copy.contact}</a>
+        </div>
+      </article>)}
+    </div>
+
+    <div class="industry-catalog__empty" data-catalog-empty hidden>
+      <h3>{copy.noResults}</h3>
+      <p>{copy.noResultsText}</p>
+      <div class="industry-catalog__empty-actions">
+        <button type="reset" form={`${id}-filters`} class="button outline">{copy.reset}</button>
+        <a href={leadHref}>{copy.noResultsContact}</a>
+      </div>
+    </div>
+    <p class="industry-catalog__terms">{copy.terms}</p>
+  </div>
+</section>
+
+<script is:inline src="/assets/industry-catalog.js" defer></script>

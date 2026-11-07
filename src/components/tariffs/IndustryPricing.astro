@@ -1,0 +1,11 @@
+---
+import PlanCards from './PlanCards.astro';
+import {pricingHref,serviceHref,serviceNodes} from '../../data/pricing.mjs';
+const {lang='ru',intro='',scopeNote=''}=Astro.props;const en=lang==='en';
+---
+{intro&&<p class="industry-section__lead">{intro}</p>}
+<PlanCards lang={lang} ids={['geo','content','guarantee']} open={true}/>
+<p class="industry-note">{en?'Start with a free mini-audit or a full GEO audit. A monthly plan includes 50 prompts and 5 AI platforms; broader scope is calculated separately.':'Начать можно с бесплатного мини-аудита или полного GEO-аудита. В базовом объеме сопровождения 50 промптов и 5 нейросетей; расширение рассчитывается отдельно.'} <a href={serviceHref('free-audit',lang)}>{en?'Free mini-audit':'Бесплатный мини-аудит'}</a> · <a href={serviceHref('geo-audit',lang)}>{en?'Full audit':'Полный аудит'}</a> · <a href={pricingHref(lang)+'#calculator'}>{en?'Calculate the scope':'Рассчитать объем'}</a></p>
+{scopeNote&&<p class="industry-note">{scopeNote}</p>}
+<p><a class="tariff-text-link" href={pricingHref(lang)+'#industry-catalog'}>{en?'All 107 business categories and prices':'Все 107 направлений и тарифы'} →</a></p>
+<script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@graph':['geo','content','guarantee'].flatMap(id=>serviceNodes(id,lang))}).replace(/</g,'\u003c')}/>

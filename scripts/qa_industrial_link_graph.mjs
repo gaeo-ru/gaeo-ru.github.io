@@ -36,7 +36,8 @@ for(const [route,destinations] of Object.entries(edges)){
  }
  if(!pages.includes(route))continue;
  if((html.match(/<h1\b/gi)||[]).length!==1)errors.push('Incorrect H1 count '+route);
- if((main.match(/<details\b/g)||[]).length!==6)errors.push('Expected six FAQ details '+route);
+ const faqNodes=[...main.matchAll(/<details\b[^>]*>/gi)].filter(([tag])=>tag.match(/\bclass=["']([^"']*)["']/i)?.[1].split(/\s+/).includes('faq-item')).length;
+ if(faqNodes!==6)errors.push('Expected six FAQ details '+route);
  if(!html.includes('<link rel="canonical" href="'+origin+route+'"'))errors.push('Canonical mismatch '+route);
  if(!/<meta name="robots" content="index,follow/i.test(html))errors.push('Not indexable '+route);
  if(/SteelMetriXX|стилметрикс|Афонин|Afonin|pharma-geo|ASTRO_INDUSTRY_COMMERCIAL_SLOT/.test(html))
