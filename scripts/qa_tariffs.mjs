@@ -24,6 +24,7 @@ assert.equal(quote('geo',first5.concat(first5,'unknown'),-1).total,79900,'No dup
 for(const id of ['free','audit','development','platform','prompts','additional-platforms','additional-prompts'])assert.throws(()=>quote(id,[],0),'One-time services and extras cannot be used as a base plan');
 
 const allRoutes=[];
+const nojsBlock='<!-- NOJS_FALLBACK_START -->\n'+readFileSync('templates/partials/nojs-fallback.html','utf8').trim()+'\n<!-- NOJS_FALLBACK_END -->';
 for(const lang of ['ru','en']){
  const catalogue=pricingHref(lang),html=read(catalogue),nodes=graph(html),list=nodes.find(n=>n['@type']==='ItemList'&&n.numberOfItems===107);
  assert.equal((html.match(/\bdata-catalog-item\b/g)||[]).length,107,'Full industry catalogue must be server-rendered');
@@ -64,6 +65,9 @@ for(const lang of ['ru','en']){
 }
 for(const route of allRoutes){
  const html=read(route),other=route==='/tarify/'?'/en/pricing/':route==='/en/pricing/'?'/tarify/':route.startsWith('/en/')?route.slice(3):'/en'+route;
+ for(const marker of ['FONT_LOADING_START','FONT_LOADING_END','NOJS_FALLBACK_START','NOJS_FALLBACK_END'])assert.equal(html.split('<!-- '+marker+' -->').length-1,1,'Required production template marker '+marker+' '+route);
+ assert.ok(html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1].includes(nojsBlock),'Canonical no-JS fallback in head '+route);
+ for(const img of html.matchAll(/<img\b[^>]*class="tariff-detail__image"[^>]*>/g))assert.match(img[0],/\bloading="eager"/,'Above-the-fold service image has explicit eager loading '+route);
  assert.equal((html.match(/<h1\b/g)||[]).length,1,'One H1 '+route);
  assert.equal((html.match(/rel="canonical"/g)||[]).length,1,'One canonical '+route);
  assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+route+'"'),'Self canonical '+route);

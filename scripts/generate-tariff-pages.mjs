@@ -3,6 +3,7 @@ import {dirname,resolve} from 'node:path';
 import {serviceDetails} from '../src/data/service-detail-content.mjs';
 import {getPlan,priceLabel,pricingHref,serviceNodes,UPDATED} from '../src/data/pricing.mjs';
 const root=resolve('src/legacy/pages');
+const nojsFallback=readFileSync(resolve('templates/partials/nojs-fallback.html'),'utf8').trim();
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const json=d=>JSON.stringify(d).replace(/</g,'\\u003c');
 function save(path,body){mkdirSync(dirname(path),{recursive:true});let prior;try{prior=readFileSync(path,'utf8')}catch{}if(prior!==body)writeFileSync(path,body);}
@@ -30,13 +31,18 @@ function shell({lang,route,equivalent,title,description,h1,body,collection=false
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(title)}"><meta name="twitter:description" content="${esc(description)}"><meta name="twitter:image" content="https://gaeo.ru/assets/gaeo-social-preview.jpg"><meta name="twitter:image:alt" content="GAEO.ru: ${esc(h1)}">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png"><link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
 <!-- SOCIAL_AND_ICONS_END -->
+<!-- FONT_LOADING_START -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic"></noscript>
+<!-- FONT_LOADING_END -->
 <link rel="stylesheet" href="/assets/style.css?v=0"><link rel="stylesheet" href="/assets/internal.css?v=0"><link rel="stylesheet" href="/assets/site-development.css?v=0"><link rel="stylesheet" href="/assets/tariffs.css?v=0">
 <script src="/assets/analytics.js?v=0" defer></script>
 <script type="application/ld+json">${json(ld)}</script>
 <!-- GAEO_TARIFF:SCHEMA -->
+<!-- NOJS_FALLBACK_START -->
+${nojsFallback}
+<!-- NOJS_FALLBACK_END -->
 </head><body>
 <!-- SITE_HEADER_START --><header data-astro-shared-header="true"></header><!-- SITE_HEADER_END -->
 ${body}
