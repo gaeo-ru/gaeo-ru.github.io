@@ -30,10 +30,13 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/\bdata-catalog-item\b/g)||[]).length,107,'Full industry catalogue must be server-rendered');
  assert.equal((html.match(/<div class="industry-catalog__image">/g)||[]).length,107,'All industry illustrations render without direct image links');
  assert.equal((html.match(/<a class="industry-catalog__image"/g)||[]).length,0,'No industry image links to raw files');
+ assert.equal((html.match(/class="button industry-catalog__contact"/g)||[]).length,107,'All industry CTAs use primary styling');
+ assert.ok(!html.includes('GEO: от 79 900 ₽/мес.; GEO + контент:'),'Industry inquiry context does not copy all tariff prices');
+ assert.ok(!html.includes('GEO: from RUB 79,900/month; GEO + content:'),'English inquiry context does not copy all tariff prices');
  for(const phrase of (lang==='ru'?[
-  'Внедряю все сам, либо пишу ТЗ','Сам все внедряю и дорабатываю','1 раз в месяц, с целью BMR по договору','Предоплата за текущий месяц'
+  'Сам дорабатываю сайт или готовлю ТЗ','Сам все внедряю и дорабатываю','1 раз в месяц, с целью BMR по договору','Предоплата за текущий месяц'
  ]:[
-  'I implement the website changes myself or provide a specification',
+  'I improve the website myself or prepare specifications',
   'I implement and improve the website myself','Prepayment for the current month'
  ])) assert.ok(html.includes(phrase),'Tariff comparison must match the approved responsibilities: '+phrase);
  assert.equal(list?.itemListElement?.length,107,'All 107 visible categories in ItemList');
@@ -52,6 +55,11 @@ for(const lang of ['ru','en']){
   const config=JSON.parse(source.match(/<script type="application\/json" data-tariff-config>([\s\S]*?)<\/script>/)[1]);
   assert.deepEqual(config.plans.map(p=>p.amount),[79900,99900,114900],'Browser uses canonical plan prices');
  }
+ const guaranteeHtml=read((lang==='en'?'/en':'')+'/services/geo-guarantee/');
+ const mainPart=guaranteeHtml.match(/<main class="tariff-detail">([\s\S]*?)<\/main>/)?.[1]||'';
+ assert.ok(mainPart,'Guarantee detail must render');
+ assert.doesNotMatch(text(mainPart),lang==='ru'?/\bТЗ\b/:/\b(?:specifications|briefs)\b/i,'Guarantees always include direct implementation');
+ assert.ok(read((lang==='en'?'/en':'')+'/services/additional-platforms/').includes(lang==='ru'?'Я успешно вывожу бизнесы в ответы 13 нейросетей и AI-интерфейсов':'I successfully bring businesses into the answers of 13 AI platforms and interfaces'),'Personal 13-platform claim is visible');
  for(const p of allPlans(lang)){
   const source=read(p.href),nodes=graph(source),offer=nodes.find(n=>types(n).includes('Offer')&&n['@id']==='https://gaeo.ru'+p.href+'#offer');
   assert.ok(offer,'Canonical offer '+p.href);
@@ -142,6 +150,26 @@ try{
     assert.equal(await minus.isDisabled(),true,'Minus re-disabled at zero');
    }
    if(route==='/tarify/'||route==='/en/pricing/'){
+    await page.waitForFunction(()=>document.querySelector('.tariff-page .tariff-plans')?.dataset.ctaAligned==='true');
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const visual=await page.evaluate(()=>{
+      const terms=document.querySelector('.industry-catalog__terms')?.getBoundingClientRect();
+      const lead=document.querySelector('.tariff-page > .tariff-page__contact #contact h2')?.getBoundingClientRect();
+      const cards=[...document.querySelectorAll('#pricing .tariff-plans > details.tariff-plan[open]')];
+      const groups=[];
+      for(const card of cards){
+        const y=card.getBoundingClientRect().top;
+        let g=groups.find(group=>Math.abs(group.rowTop-y)<2);
+        if(!g){g={rowTop:y,buttonTops:[]};groups.push(g);}
+        g.buttonTops.push(card.querySelector('.tariff-actions .button').getBoundingClientRect().top);
+      }
+      return {contactGap:terms&&lead?Math.round(lead.top-terms.bottom):null,ctaRows:groups.map(g=>g.buttonTops)};
+    });
+    assert.ok(visual.contactGap!==null && visual.contactGap>=0 && visual.contactGap<=140,'Compact industry-to-contact gap '+width+' '+route+' '+JSON.stringify(visual));
+    if(width>720)for(const y of visual.ctaRows){
+      if(y.length<2)continue;
+      assert.ok(Math.max(...y)-Math.min(...y)<=3,'CTAs align with longest tariff card within their row '+width+' '+route+' '+JSON.stringify(visual.ctaRows));
+    }
     const gap=await page.evaluate(()=>{
      const rect=selector=>document.querySelector(selector)?.getBoundingClientRect();
      const links=rect('.tariff-page__intro .tariff-related');
@@ -183,6 +211,12 @@ try{
     const currentUrl=page.url();
     await illustrations.first().click();
     assert.equal(page.url(),currentUrl,'Clicking illustration must not open the image file');
+    await catalog.locator('[data-catalog-item]:visible .industry-catalog__contact').first().click();
+    await page.locator('.gaeo-modal textarea[name="comment"]').waitFor();
+    const industryMessage=await page.locator('.gaeo-modal textarea[name="comment"]').inputValue();
+    assert.ok(industryMessage.includes(route.startsWith('/en/')?'Industry:':'Отрасль:'),'Prefilled industry label survives');
+    assert.doesNotMatch(industryMessage,/(?:GEO:\s*(?:от|from)|GEO \+ контент:\s*от|Финансовые гарантии:\s*от|Contract guarantees:\s*from)/,'Prices are not copied into industry inquiry');
+    await page.locator('.gaeo-modal-close').click();
     const examples=catalog.locator('[data-catalog-item]:visible .industry-catalog__examples');
     const rowSize=width>=1200?3:width>700?2:1;
     await examples.first().locator('summary').click();

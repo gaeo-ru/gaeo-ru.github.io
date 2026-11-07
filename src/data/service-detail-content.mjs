@@ -178,13 +178,13 @@ export const serviceDetails = {
     'geo-content': {
       eyebrow: 'Сопровождение и материалы',
       title: 'GEO-продвижение с созданием экспертного контента',
-      description: 'GEO + контент от GAEO: изучаю продукт, создаю материалы, внедряю изменения сайта или готовлю ТЗ. От 50 промптов, 5 нейросетей и ежемесячный мониторинг.',
+      description: 'GEO + контент от GAEO: изучаю продукт, создаю контент, сам дорабатываю сайт либо готовлю ТЗ на доработки. От 50 промптов, 5 нейросетей и ежемесячный мониторинг.',
       sections: [
         {
           heading: 'Когда подготовку материалов лучше включить в работу',
           paragraphs: [
             'Тариф подходит бизнесу, которому нужно продвижение, но внутри команды нет времени на регулярную подготовку материалов. Я изучаю продукт, создаю контент и организую публикацию. От вас нужны факты о предложении, доступные подтверждения и участие в проверке содержания там, где важны профессиональные детали.',
-            'В тариф входят карта интентов, от 50 промптов, от 5 нейросетей, дистрибуция, ссылочное продвижение и работа с репутацией. Контент создаю самостоятельно. На сайте внедряю согласованные изменения сам или составляю ТЗ для команды клиента.'
+            'В тариф входят карта интентов, от 50 промптов, от 5 нейросетей, дистрибуция, ссылочное продвижение и работа с репутацией. Контент создаю самостоятельно. Дорабатываю сайт самостоятельно или готовлю ТЗ для команды клиента.'
           ],
           items: [],
           links: [{ href: '/services/geo-promotion/', label: 'Сравнить с тарифом, где контент создает ваша команда' }]
@@ -250,7 +250,7 @@ export const serviceDetails = {
           heading: 'Какие работы предусмотрены',
           paragraphs: [
             'В состав входят карта интентов, от 50 промптов и от 5 нейросетей, доработки сайта, создание контента, дистрибуция, ссылочное продвижение и работа с репутацией. Отчетность проводится 1 раз в месяц. Объем задач согласуется с исходным состоянием бизнеса и целью проекта.',
-            'В тарифе с гарантиями я сам внедряю и дорабатываю согласованные элементы сайта, тогда как в GEO + контент могу подготовить ТЗ команде клиента. Половина ежемесячной оплаты зависит от достижения целевого BMR. Работы включают изменения страниц, сведений об услугах, перелинковки и технических элементов. Создание нового сайта остается отдельной услугой.'
+            'В тарифе с гарантиями я лично внедряю все согласованные изменения сайта, создаю и размещаю контент. Половина ежемесячной оплаты зависит от достижения целевого BMR. Работы включают изменения страниц, сведений об услугах, перелинковки и технических элементов. Создание нового сайта остается отдельной услугой.'
           ],
           items: [],
           links: [
@@ -305,7 +305,7 @@ export const serviceDetails = {
         {
           heading: 'Какие нейросети можно включить',
           paragraphs: [
-            'В каталоге GAEO представлены 13 направлений: ChatGPT, Алиса, Яндекс с Алисой, Google AI Overviews, Google AI Mode, Gemini, Perplexity, DeepSeek, GigaChat, Microsoft Copilot, Grok, Qwen и Claude. Состав для проекта выбираем после обсуждения языка, географии и задач.',
+            'Я успешно вывожу бизнесы в ответы 13 нейросетей и AI-интерфейсов: ChatGPT, Алиса, Яндекс с Алисой, Google AI Overviews, Google AI Mode, Gemini, Perplexity, DeepSeek, GigaChat, Microsoft Copilot, Grok, Qwen и Claude. Состав для проекта выбираем после обсуждения языка, географии и задач.',
             'Google AI Overviews и Google AI Mode представлены в каталоге отдельно; так же отдельно указаны Алиса и Яндекс с Алисой. При согласовании матрицы используем точные названия, чтобы было ясно, какой вариант ответа проверяется и за какой дополнительный объем рассчитана стоимость.'
           ],
           items: [],
@@ -647,7 +647,7 @@ export const serviceDetails = {
           heading: 'The work covered by this format',
           paragraphs: [
             'The scope includes intent mapping, at least 50 prompts and 5 AI platforms, website changes, content creation, distribution, link promotion and reputation work. Reporting takes place once a month. Tasks are agreed in relation to the business’s starting position and the project objective.',
-            'Compared with GEO + content, where I may prepare specifications for your team, I directly implement the agreed website improvements under the guarantee plan. Half of the monthly fee is linked to the BMR target. Website work covers service information, page structure, links between materials and technical requirements. A new website remains a separate development project.'
+            'Under the guarantee plan, I personally implement all agreed website improvements, create content and arrange publication. Half of the monthly fee is linked to the BMR target. Website work covers service information, page structure, links between materials and technical requirements. A new website remains a separate development project.'
           ],
           items: [],
           links: [
@@ -702,7 +702,7 @@ export const serviceDetails = {
         {
           heading: 'Platforms in the GAEO catalog',
           paragraphs: [
-            'The catalog covers 13 options: ChatGPT, Alice, Yandex with Alice, Google AI Overviews, Google AI Mode, Gemini, Perplexity, DeepSeek, GigaChat, Microsoft Copilot, Grok, Qwen and Claude. The project mix follows a discussion of language, market and objectives.',
+            'I successfully bring businesses into the answers of 13 AI platforms and interfaces: ChatGPT, Alice, Yandex with Alice, Google AI Overviews, Google AI Mode, Gemini, Perplexity, DeepSeek, GigaChat, Microsoft Copilot, Grok, Qwen and Claude. The project mix follows a discussion of language, market and objectives.',
             'Google AI Overviews and Google AI Mode are listed separately, as are Alice and Yandex with Alice. We use precise names when agreeing the matrix so that it is clear which answer experience is being assessed and which additional scope the price covers.'
           ],
           items: [],

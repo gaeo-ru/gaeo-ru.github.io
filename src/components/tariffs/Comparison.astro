@@ -5,7 +5,7 @@ const {lang='ru'}=Astro.props;const en=lang==='en';
 const plans=['geo','content','guarantee'].map(id=>getPlan(id,lang));
 const rows=en?[
  ['Prompt and platform coverage','From 50 prompts, 5 platforms','From 50 prompts, 5 platforms','From 50 prompts, 5 platforms'],
- ['Website','Specifications for your implementation team','I implement the website changes myself or provide a specification','I implement and improve the website myself'],
+ ['Website','Specifications for your implementation team','I improve the website myself or prepare specifications','I implement and improve the website myself'],
  ['Content','Briefs for your experts and writers','I study the product and create content','I create content'],
  ['External sources','Distribution, links and reputation','Distribution, links and reputation','Distribution, links and reputation'],
  ['Reporting','Monthly','Monthly','Monthly, with the BMR target specified in the contract'],
@@ -13,7 +13,7 @@ const rows=en?[
  ['Payment','Prepayment for the current month','Prepayment for the current month','50% fixed + 50% upon reaching the monthly BMR target']
 ]:[
  ['Запросы и нейросети','От 50 промптов, от 5 нейросетей','От 50 промптов, от 5 нейросетей','От 50 промптов, от 5 нейросетей'],
- ['Сайт','ТЗ для вашей команды внедрения','Внедряю все сам, либо пишу ТЗ','Сам все внедряю и дорабатываю'],
+ ['Сайт','ТЗ для вашей команды внедрения','Сам дорабатываю сайт или готовлю ТЗ','Сам все внедряю и дорабатываю'],
  ['Контент','ТЗ для ваших экспертов и авторов','Сам изучаю продукт и создаю контент','Сам создаю контент'],
  ['Внешние источники','Дистрибуция, ссылки, репутация','Дистрибуция, ссылки, репутация','Дистрибуция, ссылки, репутация'],
  ['Отчетность','1 раз в месяц','1 раз в месяц','1 раз в месяц, с целью BMR по договору'],
