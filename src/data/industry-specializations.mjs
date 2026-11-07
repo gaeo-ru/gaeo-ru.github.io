@@ -5836,6 +5836,282 @@ export const industrySpecializations = [
       "request": "Beauty e-commerce GEO: INCI, shades, fragrance concentration, authentic products and AI recommendations."
     }
   }
+},
+{
+  "id": 90,
+  "slug": "childrens-products-toys-online-stores",
+  "group": "ecommerce",
+  "routes": {
+    "ru": "/industries/childrens-products-toys-online-stores/",
+    "en": "/en/industries/childrens-products-toys-online-stores/"
+  },
+  "parent": {
+    "ru": "/industries/ecommerce/",
+    "en": "/en/industries/ecommerce/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/ecommerce-catalog/",
+      "/strategies/ecommerce-measurement/",
+      "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/"
+    ],
+    "en": [
+      "/en/strategies/ecommerce-catalog/",
+      "/en/strategies/ecommerce-measurement/",
+      "/en/articles/agentic-commerce-readiness/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Подготовка товарной информации к GEO",
+      "Повторные замеры рекомендаций магазина",
+      "Агентная торговля и данные каталога"
+    ],
+    "en": [
+      "GEO catalogue data requirements",
+      "Repeatable retail recommendation checks",
+      "Agentic commerce product readiness"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://protect.gost.ru/tr/details/227543dd-6838-4c55-b44e-25dabab34665",
+      "ru": "Росстандарт: ТР ТС 008/2011 о безопасности игрушек",
+      "en": "Rosstandart: TR TS 008/2011 toy safety"
+    },
+    {
+      "href": "https://protect.gost.ru/tr/details/20172201-a028-437f-9355-43beb60f3b0d",
+      "ru": "Росстандарт: ТР ТС 007/2011 о безопасности детской продукции",
+      "en": "Rosstandart: TR TS 007/2011 children's products"
+    },
+    {
+      "href": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+      "ru": "Google: данные предложений Product и Offer",
+      "en": "Google: Product and Offer information"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение интернет-магазинов детских товаров и игрушек | GAEO.ru",
+      "h1": "GEO-продвижение интернет-магазинов детских товаров и игрушек",
+      "description": "Продвижение магазинов детских товаров в нейросетях: игрушки по возрасту, безопасность, маркировка, размеры, наличие, доставка и проверка рекомендаций.",
+      "eyebrow": "Электронная коммерция / Детские товары",
+      "lead": "Родители ищут игрушки по возрасту, одежду нужного размера и товары для ежедневного ухода. Рекомендация магазина требует точных ограничений по использованию товара, документов, доступных вариантов и реальной доставки. Я проверяю, какие интернет-магазины нейросети советуют семьям и на чем основаны эти ответы.",
+      "heroPoints": [
+        "Отдельные запросы на игрушки, одежду и детские принадлежности",
+        "Проверка возраста, предупреждений, размеров и применимых требований безопасности",
+        "Актуальные остатки, варианты, состав комплекта и доставка"
+      ],
+      "problemTitle": "Почему общая категория «для детей» недостаточна для выбора",
+      "problemIntro": "Возраст ребенка, назначение вещи и ограничения производителя влияют на покупку. Неверный возраст на игрушке или неподтвержденное заявление о безопасности способно привести к опасной рекомендации.",
+      "problems": [
+        {
+          "title": "Возраст и ограничения не совпадают с упаковкой",
+          "body": "Игрушка для детей старшего возраста может содержать мелкие детали. В каталоге нужны настоящая возрастная маркировка, предупреждения и описание комплектации."
+        },
+        {
+          "title": "Разные группы детских товаров смешаны",
+          "body": "Игрушки, одежда и некоторые принадлежности регулируются разными требованиями. Сертификат одного товара нельзя распространять на весь ассортимент."
+        },
+        {
+          "title": "Размеры и комплектация товара неточны",
+          "body": "Одежда различается по таблицам размеров, игрушки по набору элементов, а аксессуары по совместимости. Покупатель должен получить сведения о конкретном SKU."
+        }
+      ],
+      "scenarioTitle": "Какие вопросы приводят родителей в интернет-магазин",
+      "scenarioIntro": "Разделяю возраст, тип товара и критерии выбора. Каталог не должен автоматически выдавать медицинские или развивающие обещания, которых нет в подтвержденной документации.",
+      "columns": [
+        "Вопрос покупателя",
+        "Что проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Какие игрушки подходят ребенку определенного возраста?",
+          "Возрастная маркировка, ограничения, предупреждения о мелких деталях, материалы",
+          "Страницы игрушек с точными данными производителя"
+        ],
+        [
+          "Где купить детскую куртку подходящего размера с доставкой?",
+          "Ростовка, размеры модели, материалы, наличие по SKU, дата доставки",
+          "Верные варианты, таблицы размеров и товарные предложения"
+        ],
+        [
+          "Какой набор для творчества разрешен для детей младшего возраста?",
+          "Возраст, состав набора, инструкции, предупреждения и применимый документ",
+          "FAQ по комплектации и назначению без вымышленных эффектов"
+        ],
+        [
+          "У какого магазина есть товары для новорожденных с понятным возвратом?",
+          "Фактическая категория, сведения о безопасности, комплектация, законные условия продажи",
+          "Страницы категорий и единая политика заказа с исключениями"
+        ]
+      ],
+      "proofTitle": "Какие документы и данные поддерживают рекомендацию детского товара",
+      "proofIntro": "Росстандарт публикует действующие карточки ТР ТС 008/2011 «О безопасности игрушек» и ТР ТС 007/2011 «О безопасности продукции, предназначенной для детей и подростков». Применимость требований зависит от конкретного типа изделия. Новые изменения нормативов проверяются на дату публикации; одно обозначение EAC не доказывает свойства всей линейки.",
+      "checks": [
+        "Товар и возраст: фактический тип, допустимый возраст, предупреждения, материалы, размеры, состав комплекта и идентификатор варианта",
+        "Подтверждение безопасности: применимый технический регламент, актуальные документы о соответствии по конкретному товару, инструкция и верная маркировка",
+        "Продавец и предложение: цена, наличие, регион и сроки доставки, возврат, точные фотографии и согласованные Product/Offer"
+      ],
+      "proofNote": "Общая методика GAEO для интернет-магазинов и разметка товаров помогают проверять машинно-читаемые данные, но не являются доказанным GEO-кейсом магазина детских товаров и не гарантируют попадание в рекомендации.",
+      "workTitle": "Как строю GEO-продвижение магазина детских товаров",
+      "workIntro": "Сначала анализирую реальные рекомендации по возрастам и товарным категориям, затем сверяю предложения с маркировкой, документами и данными склада.",
+      "steps": [
+        {
+          "title": "Делю покупательские запросы",
+          "body": "Формирую отдельные группы для игрушек, одежды, аксессуаров, сезонности и возрастных запросов."
+        },
+        {
+          "title": "Проверяю товарные сведения",
+          "body": "Сверяю возраст, предупреждения, размерные таблицы, документы, реальные варианты, наличие и условия возврата."
+        },
+        {
+          "title": "Усиливаю каталог и полезные материалы",
+          "body": "Составляю ТЗ на страницы моделей и вариантов, инструкции, безопасные FAQ и актуальную структурированную информацию."
+        },
+        {
+          "title": "Повторяю измерения",
+          "body": "Контролирую BMR, качество рекомендаций и ошибки в возрастных ограничениях по прежнему набору запросов."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Достаточно ли написать «безопасно для детей» в описании?",
+          "answer": "Нет. Нужно указывать реальную возрастную маркировку, предупреждения и документы о соответствии для конкретного изделия, если они требуются."
+        },
+        {
+          "question": "Одинаковы ли правила для детской одежды и игрушек?",
+          "answer": "Нет. Технические регламенты ТР ТС 007/2011 и 008/2011 охватывают разные категории продукции. Применимость нужно проверять по фактическому товару."
+        },
+        {
+          "question": "Может ли нейросеть подобрать игрушку по возрасту без проверки данных?",
+          "answer": "Такое предложение не следует считать надежным без сверки с официальной маркировкой изготовителя и ограничениями конкретной модели."
+        },
+        {
+          "question": "Как оформлять товарные варианты по размерам и цветам?",
+          "answer": "Нужны реальные SKU, фотографии, размерные данные, остатки и связи с основной моделью товара. Разметка не должна описывать несуществующие варианты."
+        },
+        {
+          "question": "Сколько стоит GEO для магазина детских товаров?",
+          "answer": "Действуют стандартные тарифы GAEO на аудит и сопровождение. Объем зависит от ассортимента, возрастных категорий и географии покупателей."
+        }
+      ],
+      "ctaTitle": "Узнать, какие магазины детских товаров рекомендуют нейросети",
+      "ctaText": "Пришли сайт магазина, основные товарные категории, маркировку и сведения о наличии. Я предложу первые запросы для оценки рекомендаций.",
+      "request": "GEO детские товары и игрушки: возраст, маркировка, безопасность, комплектация, Product/Offer, доставка и рекомендации."
+    },
+    "en": {
+      "title": "GEO for children's toys and products online stores | GAEO.ru",
+      "h1": "GEO for children's products and toys online shops",
+      "description": "GEO for children's e-commerce: toys by age, safety warnings, clothing sizes, applicable compliance, variants, stock and AI recommendations.",
+      "eyebrow": "E-commerce / Children and toys",
+      "lead": "Parents look for age-suitable toys, accurately sized clothing and everyday products. Reliable shopping recommendations depend on the maker's age restrictions, product evidence, true variants and real delivery terms. I analyse which retailers AI names for family needs and what information supports the choices.",
+      "heroPoints": [
+        "Distinct intents for toys, clothes and accessories",
+        "Verified age guidance, warnings, dimensions and product-safety scope",
+        "Accurate variants, bundle contents, availability and shipping"
+      ],
+      "problemTitle": "Why a generic 'for kids' label cannot guide product choice",
+      "problemIntro": "Age suitability and the maker's instructions affect safe selection. Incorrect warnings or unsupported safety statements can produce misleading recommendations.",
+      "problems": [
+        {
+          "title": "Age restrictions do not match packaging",
+          "body": "Toys for older children may have small parts or other restrictions. Listings need the actual manufacturer's guidance and warnings."
+        },
+        {
+          "title": "Different children's products are treated alike",
+          "body": "Toys, clothing and other goods may be subject to different safety requirements. Evidence for 1 product must not be applied to an entire assortment."
+        },
+        {
+          "title": "Sizes and included components are unclear",
+          "body": "Clothes depend on size charts, creative sets on actual components and accessories on compatibility. Variant-level accuracy matters."
+        }
+      ],
+      "scenarioTitle": "The shopping questions that bring parents to a retailer",
+      "scenarioIntro": "Segment by age, product category and buyer need. Avoid unsupported health, developmental or performance promises.",
+      "columns": [
+        "Parent's question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Which toys suit a child of a specified age?",
+          "Manufacturer age marking, safety warnings, materials and small-parts restrictions",
+          "Product pages with specific authorised information"
+        ],
+        [
+          "Where can I find a child's jacket in the right size with delivery?",
+          "Exact size chart, variant stock, materials and delivery estimate",
+          "Size-specific offers and reliable availability"
+        ],
+        [
+          "Which craft kit is marked suitable for younger children?",
+          "Age, contents, instructions, restrictions and applicable product documents",
+          "A verifiable kit specification and appropriate FAQ"
+        ],
+        [
+          "Which retailer explains buying and returning newborn products?",
+          "Real product category, documentation, package contents and relevant sales terms",
+          "Accurate category information and order policies"
+        ]
+      ],
+      "proofTitle": "Evidence supporting children's product recommendations",
+      "proofIntro": "The Russian standards authority publishes Technical Regulations TR TS 008/2011 for toy safety and TR TS 007/2011 for products intended for children and teenagers. Their scope depends on the particular product. Regulatory changes require checking for their effective date.",
+      "checks": [
+        "Identity and usage: product type, age marking, manufacturer warnings, materials, sizing, set contents and SKU",
+        "Applicable safety evidence: correct regulation, current conformity records where required, labels and manufacturer instructions",
+        "Merchant information: actual price, availability, delivery region, returns, accurate product images and Product/Offer data"
+      ],
+      "proofNote": "GAEO's e-commerce methods help validate product descriptions and source data, but no completed GEO result is claimed for a children's retailer. Structured data cannot guarantee an AI recommendation.",
+      "workTitle": "An evidence-led GEO programme for children's retailers",
+      "workIntro": "Start with recommendations by age and product need, then compare them with actual labels, official documentation and catalogue inventory.",
+      "steps": [
+        {
+          "title": "Group purchase intents",
+          "body": "Separate toys, clothing, accessories, seasons and age-sensitive selection questions."
+        },
+        {
+          "title": "Review product evidence",
+          "body": "Check age labels, warnings, sizes, compliance documents, actual variants, stock and return policies."
+        },
+        {
+          "title": "Improve the catalogue",
+          "body": "Specify product and variant pages, instructions, useful FAQ and structured product data."
+        },
+        {
+          "title": "Repeat comparable checks",
+          "body": "Measure BMR and inaccurate age or product claims with the same non-brand prompt set."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is saying 'safe for children' enough?",
+          "answer": "No. The actual age marking, applicable warnings and relevant conformity evidence must match the specific item."
+        },
+        {
+          "question": "Do toys and children's clothes follow identical rules?",
+          "answer": "No. TR TS 008/2011 addresses toys, while TR TS 007/2011 covers other defined products for children and teenagers. Check the correct scope."
+        },
+        {
+          "question": "Can an AI age recommendation be trusted without product data?",
+          "answer": "The manufacturer's actual age guidance and restrictions should be checked before relying on an item recommendation."
+        },
+        {
+          "question": "How should size and colour variants be represented?",
+          "answer": "Use genuine SKUs, size charts, photos and available stock, connected to the base product rather than inventing variants."
+        },
+        {
+          "question": "How does GAEO price GEO for a children's shop?",
+          "answer": "The published audit and monthly plans apply. Scope depends on product lines, age groups and geographic targets."
+        }
+      ],
+      "ctaTitle": "See which children's retailers AI recommends",
+      "ctaText": "Share your catalogue, product categories and available age or safety data. I will propose a relevant initial measurement.",
+      "request": "Children's toy retail GEO: age safety, product warnings, sizes, variants, delivery and AI recommendations."
+    }
+  }
 }
 ];
 
