@@ -5284,6 +5284,282 @@ export const industrySpecializations = [
       "request": "Motor insurance legal GEO: OSAGO, CASCO, accidents, ombudsman rules and AI recommendations."
     }
   }
+},
+{
+  "id": 86,
+  "slug": "electronics-appliances-online-stores",
+  "group": "ecommerce",
+  "routes": {
+    "ru": "/industries/electronics-appliances-online-stores/",
+    "en": "/en/industries/electronics-appliances-online-stores/"
+  },
+  "parent": {
+    "ru": "/industries/ecommerce/",
+    "en": "/en/industries/ecommerce/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/ecommerce-catalog/",
+      "/strategies/ecommerce-measurement/",
+      "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/"
+    ],
+    "en": [
+      "/en/strategies/ecommerce-catalog/",
+      "/en/strategies/ecommerce-measurement/",
+      "/en/articles/agentic-commerce-readiness/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Подготовка товарного каталога для GEO",
+      "Измерение рекомендаций интернет-магазина",
+      "Готовность магазина к агентной торговле"
+    ],
+    "en": [
+      "Product catalogue evidence for AI answers",
+      "Measuring e-commerce recommendations",
+      "Agentic commerce readiness"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+      "ru": "Google Search Central: структурированные данные Product и Offer",
+      "en": "Google Search Central: Product and Offer data"
+    },
+    {
+      "href": "https://developers.google.com/search/docs/appearance/structured-data/product-variants/",
+      "ru": "Google: ProductGroup и варианты товаров",
+      "en": "Google: ProductGroup and product variants"
+    },
+    {
+      "href": "https://zpp.rospotrebnadzor.ru/news/federal/572363",
+      "ru": "Роспотребнадзор: возврат товаров при дистанционной покупке",
+      "en": "Rospotrebnadzor: consumer distance-selling returns"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение магазинов электроники и бытовой техники | GAEO.ru",
+      "h1": "GEO-продвижение интернет-магазинов электроники и бытовой техники",
+      "description": "Продвижение магазинов электроники и бытовой техники в нейросетях: модели, характеристики, совместимость, остатки, цена, доставка, гарантия и проверка рекомендаций.",
+      "eyebrow": "Электронная коммерция / Электроника и техника",
+      "lead": "Покупатель ищет ноутбук под задачи или стиральную машину определенного размера, сравнивает модели, цену с доставкой и условия гарантии. Помогаю магазину измерять рекомендации нейросетей по таким запросам и сделать данные каталога пригодными для проверяемого сравнения.",
+      "heroPoints": [
+        "Запросы по назначению, техническим параметрам и конкретным моделям",
+        "Разделение вариантов товара, актуальных цен, остатков и регионов доставки",
+        "Согласованные условия гарантии, установки и возврата"
+      ],
+      "problemTitle": "Почему список моделей с ценами не объясняет покупателю выбор",
+      "problemIntro": "Нейросети сопоставляют характеристики разных продавцов. Когда магазин смешивает модификации, скрывает реальные сроки доставки или использует одинаковые описания для всех моделей, рекомендации становятся менее точными.",
+      "problems": [
+        {
+          "title": "Модификации товара объединены без идентификаторов",
+          "body": "Ноутбуки с разной памятью, смартфоны с разным объемом хранилища и техника с иной комплектацией требуют проверяемых SKU, артикула и точных характеристик."
+        },
+        {
+          "title": "Наличие и итоговая цена расходятся с каталогом",
+          "body": "Цена без региона, доставки или сведений о наличии может отличаться от условий покупки. Источники и товарная разметка должны отражать фактическое предложение."
+        },
+        {
+          "title": "Правила гарантии и возврата подменены обещаниями",
+          "body": "Продажа дистанционным способом регулируется особыми нормами. Не следует копировать правила возврата офлайн-магазина или обещать произвольный срок для любой категории."
+        }
+      ],
+      "scenarioTitle": "Покупательские запросы, которые стоит измерять",
+      "scenarioIntro": "Подбор запроса привязывается к техническим параметрам и типу покупки. Брендовые и небрендовые рекомендации исследую отдельно.",
+      "columns": [
+        "Вопрос покупателя",
+        "Какие данные необходимы",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Где купить ноутбук для монтажа видео с нужным объемом памяти?",
+          "Процессор, видеокарта, RAM, точная модификация, доступность и цена",
+          "Страницы моделей и сравнение подтвержденных конфигураций"
+        ],
+        [
+          "Какой холодильник подойдет под нишу заданной ширины?",
+          "Габариты, технологические зазоры из инструкции, доставка, подъем и установка",
+          "Точные размеры и условия монтажа в описаниях товара"
+        ],
+        [
+          "У какого магазина есть смартфон нужного цвета с быстрой доставкой?",
+          "Идентификатор варианта, цвет, память, региональные остатки, реальные сроки",
+          "Согласование SKU, оффера и сведений о доставке"
+        ],
+        [
+          "Где выбрать технику с официальной гарантией и понятным возвратом?",
+          "Продавец, гарантийные документы, применимые правила возврата, сервис",
+          "Политика обслуживания и ссылки из страниц товаров"
+        ]
+      ],
+      "proofTitle": "Какие данные позволяют нейросетям сравнивать предложения",
+      "proofIntro": "Google Search Central описывает структурированные данные Product и Offer для цены, наличия, доставки и возвратов, а также ProductGroup для вариантов моделей. Это технические требования поискового представления, они не гарантируют, что нейросеть рекомендует определенный магазин.",
+      "checks": [
+        "Ассортимент: точный производитель, модель, артикул, вариация, характеристики, фото и подтвержденные инструкции",
+        "Коммерческие условия: актуальная цена, остатки по регионам, доставка, услуги установки, гарантия и настоящий продавец",
+        "Источники и разметка: согласованные Product/Offer и ProductGroup, доступность страниц, политика возврата и корректные публичные сведения"
+      ],
+      "proofNote": "Опыт GAEO по электронной коммерции дает методику подготовки каталога и замера BMR, но не считается кейсом достигнутого результата для конкретного магазина электроники.",
+      "workTitle": "Как строю GEO-продвижение магазина электроники",
+      "workIntro": "Сначала определяю, какие предложения попадают в ответы нейросетей, затем сверяю характеристики, товарные ссылки и коммерческие условия.",
+      "steps": [
+        {
+          "title": "Сегментирую ассортимент",
+          "body": "Разделяю смартфоны, вычислительную технику, бытовые приборы и спрос по характеристикам."
+        },
+        {
+          "title": "Проверяю реальные товары",
+          "body": "Сверяю идентификаторы и модификации, доступность, цены, доставку и документы производителя."
+        },
+        {
+          "title": "Дорабатываю каталог и источники",
+          "body": "Готовлю задания на страницы товаров и вариантов, сравнительные материалы, FAQ и структурированные данные."
+        },
+        {
+          "title": "Повторяю контроль",
+          "body": "Измеряю BMR, точность рекомендаций и ссылки на продавца по согласованной матрице запросов."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать каждую модификацию техники отдельной страницей?",
+          "answer": "Если варианты имеют самостоятельные параметры и поисковый спрос, их можно описывать корректно, сохраняя структуру каталога и связь с базовой моделью. Не нужно создавать дубли без различий."
+        },
+        {
+          "question": "Достаточно ли разметки Product для попадания магазина в ChatGPT?",
+          "answer": "Нет. Структурированные данные улучшают машинную интерпретацию предложений в поддерживаемых интерфейсах, но не дают гарантии рекомендации конкретной нейросетью."
+        },
+        {
+          "question": "Нужно ли обновлять цену и наличие при каждой поставке?",
+          "answer": "Публичные условия и разметка должны соответствовать актуальному предложению. При изменениях обновляются страницы товара и связанные данные."
+        },
+        {
+          "question": "Одинаковы ли правила возврата техники в магазине и при онлайн-покупке?",
+          "answer": "Правила могут различаться. Для дистанционной продажи действует статья 26.1 Закона о защите прав потребителей; конкретные условия нужно сверять по товару и обстоятельствам."
+        },
+        {
+          "question": "Сколько стоит GEO для магазина электроники?",
+          "answer": "Действуют общие тарифы GAEO на аудит и сопровождение. Объем зависит от категорий, ассортимента, регионов и набора товарных запросов."
+        }
+      ],
+      "ctaTitle": "Узнать, какие магазины техники нейросети рекомендуют покупателям",
+      "ctaText": "Пришли ссылку на каталог, ключевые категории, основные рынки и доступные товарные данные. Я обозначу стартовые группы запросов.",
+      "request": "GEO магазина электроники: модели, характеристики, варианты, Product/Offer, наличие, доставка и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for electronics and home appliance online stores | GAEO.ru",
+      "h1": "GEO for electronics and appliance online stores",
+      "description": "GEO for electronics retailers: verified models, technical specifications, variants, price, delivery, warranty and AI shopping recommendations.",
+      "eyebrow": "E-commerce / Electronics and appliances",
+      "lead": "A shopper may ask for a laptop for video editing or a washing machine that fits a narrow space. They then compare models, delivery costs and warranties. I measure which retailers AI recommends and whether their actual product data supports the choice.",
+      "heroPoints": [
+        "Use-case and technical-specification purchase intents",
+        "Accurate model variants, real availability and local delivery conditions",
+        "Verifiable warranty, installation and return terms"
+      ],
+      "problemTitle": "Why an electronics catalogue needs more than product names",
+      "problemIntro": "AI compares models across retailers. Ambiguous variants, misleading stock data and duplicated descriptions reduce the accuracy of the product recommendation.",
+      "problems": [
+        {
+          "title": "Model variants lack distinct identifiers",
+          "body": "Laptops with different memory configurations and phones with different capacities must not share ambiguous specifications or SKUs."
+        },
+        {
+          "title": "Published offers do not reflect checkout conditions",
+          "body": "Price, availability and delivery can vary by region or selected configuration. Product pages should communicate actual purchase terms."
+        },
+        {
+          "title": "Warranty and returns are oversimplified",
+          "body": "Distance selling and physical retail may be subject to different return rules. The page should describe the applicable legal and commercial terms."
+        }
+      ],
+      "scenarioTitle": "Electronics questions that drive retailer shortlists",
+      "scenarioIntro": "The query set includes functional needs, product dimensions and specific variants. Brand and non-brand recommendations are measured separately.",
+      "columns": [
+        "Shopper question",
+        "Verifiable data",
+        "GEO content"
+      ],
+      "scenarios": [
+        [
+          "Where can I buy a laptop for editing with the required RAM?",
+          "Exact CPU/GPU, RAM, model variant, price and stock",
+          "Model-level evidence and correct comparisons"
+        ],
+        [
+          "Which refrigerator fits a particular built-in space?",
+          "Dimensions, manufacturer clearance requirements, delivery and installation",
+          "Technical specification and service details"
+        ],
+        [
+          "Who can deliver a phone in the right colour and storage version?",
+          "Variant SKU, stock location, delivery dates and price",
+          "Consistent Product/Offer data per variant"
+        ],
+        [
+          "Which shop offers traceable warranties and return policies?",
+          "Seller identity, documents, service scope and actual returns procedure",
+          "Store policy and product-to-policy links"
+        ]
+      ],
+      "proofTitle": "What supports an AI shopping recommendation",
+      "proofIntro": "Google Search Central documents Product and Offer data for prices, availability, shipping and return policy, plus ProductGroup for variants. These are search-platform data formats, not a guarantee of appearance in any specific AI answer.",
+      "checks": [
+        "Product identity: brand, full model, SKU, actual configuration, manufacturer instructions and authentic images",
+        "Offer details: current price, availability by service area, shipping, installation, warranty and seller",
+        "Source consistency: Product/Offer and variant data, crawlable pages and correct return terms"
+      ],
+      "proofNote": "GAEO's e-commerce methodology informs this work; it does not establish a completed GEO success case for a specific electronics shop.",
+      "workTitle": "A practical GEO programme for electronics retail",
+      "workIntro": "Start with real buyer questions and AI recommendations, then check the integrity of product and offer evidence.",
+      "steps": [
+        {
+          "title": "Group product intents",
+          "body": "Separate computing devices, phones, home appliances and technical-comparison queries."
+        },
+        {
+          "title": "Validate inventory data",
+          "body": "Check model variants, specifications, inventory, pricing and shipping information."
+        },
+        {
+          "title": "Improve catalogue and sources",
+          "body": "Specify product and variant pages, comparison content, FAQ and accurate structured data."
+        },
+        {
+          "title": "Repeat measurements",
+          "body": "Track BMR, recommendation accuracy and retailer links across identical prompts."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does every electronics model variant require its own page?",
+          "answer": "Variants with meaningful differences can have accurate separate information, provided the catalogue clearly connects them to the core product and avoids duplicate claims."
+        },
+        {
+          "question": "Does Product structured data guarantee a ChatGPT recommendation?",
+          "answer": "No. Structured data helps supported services interpret an offer, but does not guarantee selection by a particular AI provider."
+        },
+        {
+          "question": "How should changing prices and stock be handled?",
+          "answer": "Public pages and machine-readable offers should reflect current terms and be updated when they change."
+        },
+        {
+          "question": "Do distance-selling returns differ from shop returns?",
+          "answer": "They may. Applicable consumer law and the product circumstances determine the procedure; in Russia, Article 26.1 covers distance selling."
+        },
+        {
+          "question": "What is the GAEO price for an electronics store?",
+          "answer": "The standard audit and monthly plans apply. Scope depends on product categories, regions and query coverage."
+        }
+      ],
+      "ctaTitle": "See which electronics shops AI recommends",
+      "ctaText": "Share your catalogue, target product lines and regions. I will propose a useful baseline shopping-query audit.",
+      "request": "Electronics retail GEO: product models, specifications, variant data, inventory, delivery and AI recommendations."
+    }
+  }
 }
 ];
 
