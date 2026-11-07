@@ -125,3 +125,20 @@
   .tariff-page > .tariff-page__contact{padding-top:12px}
   .tariff-page > .tariff-page__contact .site-service__section#contact>h2{margin-top:18px}
 }
+
+/* Mobile-first: shorter scope column reveals more of the three plan columns. */
+@media(max-width:700px){
+ .tariff-comparison table{table-layout:fixed}
+ .tariff-comparison thead th:first-child,
+ .tariff-comparison tbody th:first-child{width:140px;padding-left:10px;padding-right:10px;overflow-wrap:break-word}
+ .tariff-comparison thead th:not(:first-child){width:auto}
+}
+
+/* Industry desktop tariff actions occupy the same bottom-anchored slot in equal-height cards.
+   Reserve space after the plan list so actions never cover the published scope. */
+@media(min-width:721px){
+ .industry-pricing-section .tariff-plans details.tariff-plan[open]{position:relative}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .price-details{padding-bottom:135px!important}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions{position:absolute;left:26px;right:26px;bottom:26px;margin:0;transform:none!important}
+ .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions .button{display:flex;align-items:center;justify-content:center;height:56px;min-height:56px;padding:8px 10px;line-height:1.25}
+}
