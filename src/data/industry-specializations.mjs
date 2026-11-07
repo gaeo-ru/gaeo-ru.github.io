@@ -3673,6 +3673,282 @@ export const industrySpecializations = [
         "request": "BI platform GEO: integrations, semantic models, KPIs, data security, selection prompts and baseline BMR."
       }
     }
+  },
+  {
+    "id": 88,
+    "slug": "auto-parts-online-stores",
+    "group": "ecommerce",
+    "routes": {
+      "ru": "/industries/auto-parts-online-stores/",
+      "en": "/en/industries/auto-parts-online-stores/"
+    },
+    "parent": {
+      "ru": "/industries/ecommerce/",
+      "en": "/en/industries/ecommerce/"
+    },
+    "methods": {
+      "ru": [
+        "/strategies/ecommerce-catalog/",
+        "/strategies/ecommerce-measurement/",
+        "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/"
+      ],
+      "en": [
+        "/en/strategies/ecommerce-catalog/",
+        "/en/strategies/ecommerce-measurement/",
+        "/en/articles/agentic-commerce-readiness/"
+      ]
+    },
+    "methodLabels": {
+      "ru": [
+        "Каталог товаров для рекомендаций нейросетей",
+        "Как измерять видимость интернет-магазина",
+        "Готовность каталога к агентной торговле"
+      ],
+      "en": [
+        "Product catalogue readiness for AI answers",
+        "E-commerce recommendation measurement",
+        "Preparing a store for agentic commerce"
+      ]
+    },
+    "sources": [
+      {
+        "href": "https://www.autocare.org/aces",
+        "ru": "Auto Care Association: ACES, стандартизация применимости запчастей",
+        "en": "Auto Care Association: ACES vehicle fitment data"
+      },
+      {
+        "href": "https://www.autocare.org/pies",
+        "ru": "Auto Care Association: PIES, стандартизация данных о запчастях",
+        "en": "Auto Care Association: PIES parts product data"
+      },
+      {
+        "href": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+        "ru": "Google Search Central: разметка Product и Offer для интернет-магазинов",
+        "en": "Google Search Central: Product and Offer merchant data"
+      }
+    ],
+    "content": {
+      "ru": {
+        "title": "GEO-продвижение интернет-магазинов автозапчастей | GAEO.ru",
+        "h1": "Продвижение интернет-магазинов автозапчастей в ответах нейросетей",
+        "description": "GEO для магазинов автозапчастей: подбор по автомобилю и артикулу, OEM-номера, совместимость, остатки, доставка и точность товарного каталога. Тарифы GAEO.",
+        "eyebrow": "Электронная коммерция / Автозапчасти",
+        "lead": "Покупатель ищет тормозные колодки для конкретной модификации автомобиля, комплект для ТО или замену детали по артикулу. Если каталог не различает совместимость, оригинал и аналог, нейросеть может предложить неподходящий товар. Я проверяю рекомендации магазинов по таким запросам и составляю план улучшения проверяемых товарных данных.",
+        "heroPoints": [
+          "Разделение запросов по VIN, артикулу, модели и назначению детали",
+          "Проверка применимости запчастей, наличия и условий покупки",
+          "Повторные замеры BMR и точности рекомендаций магазинов"
+        ],
+        "problemTitle": "Почему ассортимент сам по себе не обеспечивает рекомендацию магазина",
+        "problemIntro": "Для автозапчастей недостаточно совпадения названия товара. Выбор зависит от модификации, года выпуска, двигателя, комплектации и подтвержденной применимости. Ошибка может привести к лишней покупке и проблемам с безопасностью.",
+        "problems": [
+          {
+            "title": "Похожий номер не равен совместимости",
+            "body": "Код аналога, номер производителя, OEM-номер и номер комплекта имеют разные назначения. Одного совпадения символов недостаточно для уверенного подбора."
+          },
+          {
+            "title": "Каталог не объясняет модификацию",
+            "body": "Запрос «фильтр для модели X» часто слишком широк: различаются двигатель, год и комплектация. Нужна проверяемая матрица применимости с указанием ограничений."
+          },
+          {
+            "title": "Остатки и условия покупки расходятся",
+            "body": "Нейросеть может процитировать устаревшую цену или наличие. Важно различать складской остаток, заказ у поставщика, срок доставки и правила возврата конкретной категории товара."
+          }
+        ],
+        "scenarioTitle": "Типовые покупательские интенты интернет-магазина автозапчастей",
+        "scenarioIntro": "Примеры показывают разные траектории выбора. Приоритетные марки, регионы и ассортимент определяются по данным магазина; ни один запрос не обещает автоматическую точность подбора.",
+        "columns": [
+          "Вопрос покупателя",
+          "Какие факты нужны",
+          "Задача каталога и GEO"
+        ],
+        "scenarios": [
+          [
+            "Где купить колодки для конкретного автомобиля и двигателя?",
+            "Модификация, год, двигатель, ось, артикул и проверенная применимость",
+            "Связать фильтрацию автомобиля с товарной страницей и ограничениями"
+          ],
+          [
+            "Как найти аналог по OEM-номеру с доставкой сегодня?",
+            "Перекрестные номера, подтвержденная заменяемость, реальный остаток и регион доставки",
+            "Развести кросс-артикулы, совместимость и доступность"
+          ],
+          [
+            "Какой магазин продает набор для планового ТО моей модели?",
+            "Состав набора, требования производителя, комплектация и применимость каждой позиции",
+            "Показывать набор как составной продукт, а не набор неподтвержденных замен"
+          ],
+          [
+            "Где заказать запчасть для редкой комплектации без ошибки?",
+            "Параметры авто, возможность ручной проверки, порядок возврата и срок поставки",
+            "Объяснить ограничения автоматического подбора и способ проверки менеджером"
+          ]
+        ],
+        "proofTitle": "Что должно подтверждать рекомендацию магазина",
+        "proofIntro": "Отраслевой стандарт ACES описывает обмен данными о применимости деталей к автомобилям, а PIES относится к характеристикам товарных позиций. Google Search Central описывает свойства Product и Offer для товарных страниц. Эти стандарты помогают проверить структуру данных, но их упоминание не подтверждает, что конкретный российский магазин уже соответствует им.",
+        "checks": [
+          "Стабильные идентификаторы товара и производителя, кросс-номера, модель автомобиля, модификация, применимость и ограничения",
+          "Актуальность наличия, цены, склада, региона доставки и условий заказа; корректные данные Product/Offer на странице товара",
+          "Подтвержденные сведения о продавце, гарантиях, способах проверки совместимости, возврате и поддержке покупателя"
+        ],
+        "proofNote": "Методики GAEO для e-commerce применимы к исследованию товарного каталога. Завершенный кейс GEO-продвижения именно интернет-магазина автозапчастей здесь не заявлен. Стандарты ACES/PIES приведены как технический ориентир, а не как обязательная сертификация магазина.",
+        "workTitle": "Как выстрою продвижение магазина автозапчастей",
+        "workIntro": "Сначала определяю группы деталей и способы подбора, по которым нейросети действительно сравнивают продавцов. Затем связываю поисковые интенты с подтверждаемыми данными каталога.",
+        "steps": [
+          {
+            "title": "Составить матрицу выбора",
+            "body": "Отдельно измеряю запросы по артикулу, модели, назначению детали, оригиналам и аналогам, с учетом географии и канала покупки."
+          },
+          {
+            "title": "Проверить данные каталога",
+            "body": "Сверяю карточки товара, применимость, номера замен, остатки, цену и правила покупки с источниками магазина и поставщиков."
+          },
+          {
+            "title": "Подготовить SEO/GEO-требования",
+            "body": "Формирую ТЗ на фильтры совместимости, страницы категорий, Product/Offer, инструкции подбора и подтвержденные экспертные материалы."
+          },
+          {
+            "title": "Оценить повторные ответы",
+            "body": "Сопоставляю ответы той же выборки нейросетей, BMR, точность идентификации товара и источники рекомендаций."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Достаточно ли указать OEM-номер на товарной странице?",
+            "answer": "Нет. Для подбора важны тип детали, применимость к конкретной модификации автомобиля и проверенные кросс-номера. Совместимость следует подтверждать исходными каталогами."
+          },
+          {
+            "question": "Поможет ли разметка Product автоматически попасть в рекомендации ChatGPT?",
+            "answer": "Нет. Она делает товарные сведения структурированнее и может помогать отдельным поисковым сервисам, но не гарантирует упоминание в ответах какой-либо нейросети."
+          },
+          {
+            "question": "Что делать с деталями под заказ?",
+            "answer": "Отдельно показывать фактическое наличие и заказ с ожидаемым сроком. Нельзя выдавать доступность у поставщика за подтвержденный остаток магазина."
+          },
+          {
+            "question": "Можно ли продвигать магазин только по артикульным запросам?",
+            "answer": "Это лишь один сегмент. Отдельно стоит проверять подбор по автомобилю, категориям работ, региону, срокам доставки и вариантам замены."
+          },
+          {
+            "question": "Какие тарифы действуют для магазина автозапчастей?",
+            "answer": "Применяются опубликованные тарифы GAEO. Объем определяется размерами каталога, группами товаров, географией и количеством запросов в исходном замере."
+          }
+        ],
+        "ctaTitle": "Выяснить, каких продавцов запчастей нейросети рекомендуют покупателям",
+        "ctaText": "Пришли сайт, основные марки и группы запчастей, способ подбора и регионы доставки. Я определю стартовые запросы и проблемы, которые необходимо проверить в каталоге.",
+        "request": "GEO интернет-магазина автозапчастей: применимость, OEM и аналоги, товарные данные, регионы доставки и BMR."
+      },
+      "en": {
+        "title": "GEO for online auto parts stores | GAEO.ru",
+        "h1": "GEO visibility for online auto parts and accessories retailers",
+        "description": "Auto parts e-commerce GEO: vehicle fitment, part numbers, interchange, inventory, delivery, Product/Offer data and evidence-based AI retailer recommendations.",
+        "eyebrow": "E-commerce / Auto parts",
+        "lead": "A buyer searches for brake pads matching a particular engine, a service kit or an alternative part number. If a catalogue confuses interchange with verified fitment, an AI recommendation may lead to the wrong product. I examine these retailer recommendations and identify what trusted product data is missing.",
+        "heroPoints": [
+          "Buyer prompts by vehicle, part number, part function and fitment",
+          "Validation of compatibility, availability and buying conditions",
+          "Repeatable retailer BMR measurement with accuracy checks"
+        ],
+        "problemTitle": "Why a large parts catalogue does not guarantee suitable recommendations",
+        "problemIntro": "Part-name matching is not enough. Model year, engine, trim and supplier fitment rules can all affect the correct choice. An inaccurate recommendation can create cost and safety risks.",
+        "problems": [
+          {
+            "title": "Similar part numbers imply too much",
+            "body": "Original-equipment numbers, supplier SKUs, interchange references and kit identifiers play different roles. A similar string does not prove a part is interchangeable."
+          },
+          {
+            "title": "Vehicle variants are under-described",
+            "body": "A search for a filter by model name may omit the relevant engine, model year or trim. Fitment rules and exceptions must be traceable to authorised product data."
+          },
+          {
+            "title": "Stock and purchase terms go stale",
+            "body": "A recommendation may cite last week's price or a supplier's stock instead of the retailer's. Clear distinction among in-stock, special order, delivery period and return conditions matters."
+          }
+        ],
+        "scenarioTitle": "Four purchasing intents for automotive e-commerce",
+        "scenarioIntro": "These illustrate different paths to purchase rather than verified ranking or demand figures. Actual vehicles, regions and inventory groups are scoped for each retailer.",
+        "columns": [
+          "Customer question",
+          "Evidence to verify",
+          "Catalogue and GEO response"
+        ],
+        "scenarios": [
+          [
+            "Where can I buy brake pads for my engine and model year?",
+            "Vehicle variant, front/rear fitment, manufacturer number and compatibility rules",
+            "Connect vehicle lookup to precise product fitment information"
+          ],
+          [
+            "Who stocks an alternative to this OEM part today?",
+            "Cross references, validated interchange, real availability and destination",
+            "Distinguish interchange relationships from inventory claims"
+          ],
+          [
+            "Which store offers a service kit for my vehicle?",
+            "Contents of the kit, manufacturer requirements and fitment of each component",
+            "Publish accurate bundles and component data"
+          ],
+          [
+            "Where can I order a rare variant without a fitment mistake?",
+            "Vehicle parameters, manual verification process, lead time and returns",
+            "Explain limits of automated fitment and human confirmation"
+          ]
+        ],
+        "proofTitle": "Evidence behind a credible auto-parts store recommendation",
+        "proofIntro": "The ACES standard concerns automotive fitment data exchange, while PIES describes automotive product information. Google's merchant-listing guidance specifies structured Product and Offer data. These are useful evaluation frameworks, not proof that any individual retailer has implemented them.",
+        "checks": [
+          "Stable manufacturer and product IDs, interchange numbers, vehicle variants, fitment qualifiers and exceptions",
+          "Current stock, prices, warehouses, delivery locations and Product/Offer details displayed on the actual product page",
+          "Retailer identity, warranty terms, confirmation of fitment, returns and available customer support"
+        ],
+        "proofNote": "GAEO has general e-commerce GEO methodology but no completed auto-parts retailer GEO result is claimed. ACES and PIES are technical references, not certification requirements for every store.",
+        "workTitle": "How I would build an auto-parts GEO programme",
+        "workIntro": "The first question is how customers identify the part, then whether the catalogue can support an accurate supplier and product recommendation.",
+        "steps": [
+          {
+            "title": "Measure buyer routes",
+            "body": "Separate prompts by part number, vehicle, component purpose, OEM alternatives and region; record baseline AI responses."
+          },
+          {
+            "title": "Audit product evidence",
+            "body": "Check fitment, interchange, SKU, availability and ordering information against the retailer's authoritative systems."
+          },
+          {
+            "title": "Prepare catalogue improvements",
+            "body": "Write briefs for vehicle filters, category pages, merchant data, fitment guidance and specialist explanatory content."
+          },
+          {
+            "title": "Recheck recommendations",
+            "body": "Compare the same prompts, source citations and BMR, including whether suggested parts fit the stated vehicle."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Is an OEM reference number sufficient for accurate fitment?",
+            "answer": "No. Product type, vehicle variant and validated interchange information are still necessary. Manufacturer and catalogue evidence must support the selection."
+          },
+          {
+            "question": "Does Product structured data guarantee inclusion in ChatGPT?",
+            "answer": "No. Structured data can improve how product facts are represented to services that use it; it does not guarantee an AI recommendation."
+          },
+          {
+            "question": "How should special-order items be shown?",
+            "answer": "Distinguish actual retailer stock from supplier availability and make the expected order and delivery terms explicit."
+          },
+          {
+            "question": "Should GEO focus only on part numbers?",
+            "answer": "No. Vehicle-based searches, maintenance tasks, delivery time, local availability and validated alternatives are separate commercial intents."
+          },
+          {
+            "question": "What does GAEO charge auto-parts retailers?",
+            "answer": "The published GAEO plans apply. Scope depends on catalogue size, vehicle and part categories, regions and the baseline prompt matrix."
+          }
+        ],
+        "ctaTitle": "Find out which parts retailers AI recommends to your customers",
+        "ctaText": "Share your store URL, leading vehicle brands, part categories, fitment process and delivery regions. I will identify a useful baseline audit.",
+        "request": "Auto-parts retailer GEO: vehicle fitment, OEM references, interchange, inventory, delivery and AI recommendation BMR."
+      }
+    }
   }
 ];
 
