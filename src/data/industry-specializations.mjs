@@ -1546,6 +1546,273 @@ export const industrySpecializations = [
       "request": "Family and inheritance law GEO: divorce, assets, children, probate, credentials and AI recommendations."
     }
   }
+},
+{
+  "id": 34,
+  "slug": "crm-erp-platforms",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/crm-erp-platforms/",
+    "en": "/en/industries/crm-erp-platforms/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Проверяемые доказательства IT-поставщика",
+      "Методика измерения рекомендаций"
+    ],
+    "en": [
+      "Evidence of technical B2B expertise",
+      "AI recommendation measurement method"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/data-management-configuration-data-migration",
+      "ru": "Microsoft Learn: планирование миграции данных",
+      "en": "Microsoft Learn: configuration and data migration"
+    },
+    {
+      "href": "https://learn.microsoft.com/en-gb/dynamics365/guidance/implementation-guide/prepare-go-live-checklist",
+      "ru": "Microsoft Learn: проверка готовности к запуску",
+      "en": "Microsoft Learn: implementation go-live checklist"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение CRM и ERP-платформ в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение CRM и ERP-систем в ответах нейросетей",
+      "description": "GEO для CRM и ERP: воронка продаж, учет, интеграции с 1С, лицензии, миграция, внедрение и рекомендации ChatGPT, Алисы и других нейросетей.",
+      "eyebrow": "IT и корпоративное ПО / CRM и ERP",
+      "lead": "Руководитель отдела продаж выбирает CRM по воронкам и работе с клиентами. Финансовый или операционный директор может искать ERP по закупкам, учету и складу. Измеряю рекомендации нейросетей по таким конкретным задачам и проверяю, что заявленные возможности продукта подтверждены.",
+      "heroPoints": [
+        "Разделение спроса на CRM, ERP, интеграции и внедрение",
+        "Проверка возможностей по редакциям, документации и данным",
+        "Расчет полной стоимости проекта, а не только цены лицензии"
+      ],
+      "problemTitle": "Почему описание «автоматизируем бизнес» слабо для выбора ПО",
+      "problemIntro": "Нейросеть может упоминать продукт, не различая его функции и условия внедрения. Покупателю нужны сопоставимые характеристики именно продаваемой редакции.",
+      "problems": [
+        {
+          "title": "CRM и ERP смешиваются",
+          "body": "Клиентские коммуникации, воронка, сервис и продажи отличаются от учета ресурсов, закупок, финансов и производства. Требуются самостоятельные группы запросов."
+        },
+        {
+          "title": "Интеграции заявлены без ограничений",
+          "body": "Фраза «интеграция с 1С» не подтверждает поддержку конкретной конфигурации, метода обмена и редакции продукта."
+        },
+        {
+          "title": "Цена лицензии принята за стоимость внедрения",
+          "body": "Миграция справочников, обучение, доработки, поддержка и интеграционные тесты могут существенно влиять на итоговые условия."
+        }
+      ],
+      "scenarioTitle": "Какие задачи покупателей CRM и ERP стоит измерять",
+      "scenarioIntro": "Разделяю выбор платформы, выбор внедренца и требования конкретной отрасли. Для сравнения фиксируются одинаковые группы интентов.",
+      "columns": [
+        "Вопрос покупателя",
+        "Что должно быть доказано",
+        "Работа GEO"
+      ],
+      "scenarios": [
+        [
+          "Какая CRM подходит отделу продаж на 20 человек?",
+          "Воронки, роли, отчетность, телефония, редакции и стоимость лицензий",
+          "Разъяснить реальную функциональность и границы тарифа"
+        ],
+        [
+          "Какая ERP подойдет для закупок и учета нескольких складов?",
+          "Модули, справочники, остатки, роли, интеграции и процессы филиалов",
+          "Сценарии применимости и подтвержденные ограничения"
+        ],
+        [
+          "Какая CRM работает с конкретной конфигурацией 1С?",
+          "Точный коннектор, версия, направление обмена, частота и условия",
+          "Документация интеграций и практические примеры"
+        ],
+        [
+          "Сколько стоит перенос данных из старой ERP в новую?",
+          "Объем и качество данных, очистка, тесты, простой и приемка",
+          "Описать этапы миграции и состав будущей сметы"
+        ]
+      ],
+      "proofTitle": "Какие доказательства помогают выбрать корпоративную платформу",
+      "proofIntro": "Microsoft Learn рекомендует отдельно планировать конфигурационные и мигрируемые данные, проверять интеграции и готовность к запуску. Это пример применимой методики оценки, но не утверждение о возможностях любой конкретной CRM или ERP.",
+      "checks": [
+        "Функции и версии: поддерживаемые модули, редакции, ограничения, безопасность и актуальная документация",
+        "Данные и внедрение: интеграции с 1С и ERP, методика миграции, тесты и критерии приемки",
+        "Стоимость владения: лицензирование, внедрение, интеграции, обучение, доработки и сопровождение по фактическим условиям"
+      ],
+      "proofNote": "Техническая B2B-методика GAEO применима к проверке доказательств ПО. Кейс ускорения сайтов MethodLab не является кейсом продвижения CRM или ERP.",
+      "workTitle": "Как строю продвижение разработчика CRM или ERP",
+      "workIntro": "Начинаю с задач будущих покупателей и рекомендательных ответов, а не с общей частоты упоминаний названия продукта.",
+      "steps": [
+        {
+          "title": "Стартовый замер",
+          "body": "Разделяю CRM, ERP, отрасли клиентов, внедрение и интеграции; фиксирую BMR в выбранных нейросетях."
+        },
+        {
+          "title": "Проверка продукта",
+          "body": "Уточняю версии, модули, условия лицензий, документацию, ограничения и права на публикацию кейсов."
+        },
+        {
+          "title": "Улучшение источников",
+          "body": "Готовлю ТЗ на страницы функций, интеграций, миграции, сравнения и общую базу ответов о продукте."
+        },
+        {
+          "title": "Повторный контроль",
+          "body": "Проверяю те же запросы, фактические ошибки нейросетей, цитируемые источники и динамику BMR."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Нужны ли отдельные страницы CRM и ERP?",
+          "answer": "Да, если это самостоятельные продукты или группы решений. У покупателей различаются бизнес-процессы, роли и критерии выбора."
+        },
+        {
+          "question": "Как доказать поддержку интеграции с 1С?",
+          "answer": "Показать актуальные поддерживаемые конфигурации, версии, обмен данными, ограничения и условия внедрения. Общее рекламное обещание не доказывает совместимость."
+        },
+        {
+          "question": "Можно ли указать стоимость внедрения ERP одним числом?",
+          "answer": "Только для определенного набора пользователей, модулей и работ. Для сложного проекта нужна спецификация состава и ограничений."
+        },
+        {
+          "question": "Какие результаты внедрения стоит публиковать?",
+          "answer": "Только подтвержденные факты проекта и измеренные результаты с разрешением клиента; придумывать число внедрений или показатели экономии нельзя."
+        },
+        {
+          "question": "Сколько стоит GEO для CRM и ERP?",
+          "answer": "Общие тарифы GAEO на аудит и сопровождение действуют для отрасли. Дополнительные нейросети, запросы и контент рассчитываются по актуальным условиям."
+        }
+      ],
+      "ctaTitle": "Проверить, какие CRM и ERP нейросети рекомендуют вашим клиентам",
+      "ctaText": "Пришли сайт продукта, реальные функции, список интеграций и целевые отрасли. Я предложу матрицу вопросов для первичного аудита.",
+      "request": "GEO CRM/ERP: воронка продаж, учет, интеграция с 1С, миграция, лицензии, стоимость владения и рекомендации."
+    },
+    "en": {
+      "title": "GEO for CRM and ERP platforms in AI answers | GAEO.ru",
+      "h1": "GEO for CRM and ERP software vendors in AI recommendations",
+      "description": "GEO for CRM and ERP vendors: sales workflows, accounting, 1C integrations, licences, data migration, implementation and AI recommendations.",
+      "eyebrow": "Enterprise software / CRM and ERP",
+      "lead": "Sales teams select CRM for pipelines and customer interaction, while operations and finance may need ERP for inventory, procurement and resource management. I measure whether AI recommends a product for its actual use cases and check the evidence behind those recommendations.",
+      "heroPoints": [
+        "Separate demand for CRM, ERP, integrations and deployment",
+        "Verify product editions, technical documentation and capabilities",
+        "Explain project cost as well as the subscription price"
+      ],
+      "problemTitle": "Why a broad automation promise is insufficient",
+      "problemIntro": "A product name may appear in AI answers even when its functions and implementation conditions are misrepresented. Buyers need edition-specific evidence.",
+      "problems": [
+        {
+          "title": "CRM and ERP are conflated",
+          "body": "Sales and customer-service workflows differ from procurement, finance, stock and production. They require distinct buyer-intent groups."
+        },
+        {
+          "title": "Integration claims are vague",
+          "body": "Saying a product integrates with 1C does not establish supported editions, interfaces, sync direction or deployment conditions."
+        },
+        {
+          "title": "Licence cost is mistaken for full project cost",
+          "body": "Data migration, training, custom work, integration testing and support can materially change the budget."
+        }
+      ],
+      "scenarioTitle": "CRM and ERP buying questions worth tracking",
+      "scenarioIntro": "Separate platform selection, implementer selection and specific industry requirements while retaining stable query groups for repeat measurements.",
+      "columns": [
+        "Buyer question",
+        "What to verify",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Which CRM suits a 20-person sales team?",
+          "Pipelines, roles, reporting, telephony, editions and subscription limits",
+          "Explain real features and plan constraints"
+        ],
+        [
+          "Which ERP supports purchasing and inventory across several warehouses?",
+          "Modules, master data, stock, permissions and branch processes",
+          "Document actual supported workflows"
+        ],
+        [
+          "Which CRM works with our specific 1C configuration?",
+          "Connectors, versions, sync directions, update cadence and assumptions",
+          "Integration pages and concrete examples"
+        ],
+        [
+          "What does migrating from an old ERP cost?",
+          "Data volume, cleaning, test cycles, downtime and acceptance",
+          "Describe migration scope and estimation factors"
+        ]
+      ],
+      "proofTitle": "Evidence behind a credible enterprise-software recommendation",
+      "proofIntro": "Microsoft's implementation guidance distinguishes configuration from migrated data and includes integration and go-live testing. It offers useful procurement criteria without proving that a named third-party platform implements them.",
+      "checks": [
+        "Product and editions: supported functions, limits, security model and current documentation",
+        "Data and delivery: APIs, 1C connectors, migration strategy, tests and acceptance criteria",
+        "Commercial terms: licences, implementation, customisation, onboarding and support under actual agreements"
+      ],
+      "proofNote": "GAEO's technical B2B research method supports these checks. The MethodLab website-performance case is not presented as a CRM/ERP GEO result.",
+      "workTitle": "A GEO plan for a CRM or ERP provider",
+      "workIntro": "I start with the concrete jobs buyers need performed, then map missing or inaccurate evidence in sources AI can consult.",
+      "steps": [
+        {
+          "title": "Baseline",
+          "body": "Separate CRM, ERP, integration, deployment and industry queries; record BMR and the recommended products."
+        },
+        {
+          "title": "Product verification",
+          "body": "Review real editions, modules, documentation, licensing and publishable customer references."
+        },
+        {
+          "title": "Content specifications",
+          "body": "Define pages for workflows, integrations, migration, implementation costs and comparisons."
+        },
+        {
+          "title": "Repeat measurement",
+          "body": "Check BMR, cited sources and factual errors with equivalent prompts and platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Should CRM and ERP have separate landing pages?",
+          "answer": "Yes when they represent different products or workflows. The relevant buyer roles and selection criteria differ."
+        },
+        {
+          "question": "What demonstrates 1C compatibility?",
+          "answer": "Verified versions, a documented connector, data flow and implementation scope. A generic integration badge is not sufficient."
+        },
+        {
+          "question": "Can one figure represent ERP implementation cost?",
+          "answer": "Only for an explicitly specified scope. Complex deployments require a project estimate that covers licences and services."
+        },
+        {
+          "question": "Which deployment results belong in a case study?",
+          "answer": "Only documented project outcomes and details authorised for publication. Do not invent installation counts or time savings."
+        },
+        {
+          "question": "How much does GAEO charge for CRM or ERP GEO?",
+          "answer": "GAEO's standard audit and monthly pricing applies. Broader prompt, platform and content scope is calculated separately."
+        }
+      ],
+      "ctaTitle": "Discover which CRM and ERP providers AI recommends",
+      "ctaText": "Share product editions, integrations, buyer industries and your official site. I will propose a suitable baseline.",
+      "request": "CRM/ERP GEO: sales, finance, migration, 1C integrations, licences and AI recommendations."
+    }
+  }
 }
 ];
 
