@@ -88,7 +88,12 @@ try{
     await page.setViewportSize({width,height:1000});
     for(const path of routes){
       await page.goto(origin+path,{waitUntil:'networkidle'});
-      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No page overflow '+width+' '+path);
+      const overflow=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,items:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.width>0&&(r.right>innerWidth+1||r.left< -1)&&s.visibility!=='hidden'&&s.display!=='none'&&!e.closest('.review-carousel__track');}).slice(0,15).map(e=>({tag:e.tagName,classes:e.className,text:e.textContent.slice(0,90),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width}))}));
+      if(overflow.scroll>width+1){
+        console.error('OVERFLOW_DIAGNOSTIC',JSON.stringify({path,...overflow}));
+        await page.screenshot({path:`visual-evidence/overflow-${width}-${path.replace(/\W/g,'_')}.png`,fullPage:true});
+      }
+      assert.ok(overflow.scroll<=width+1,'No page overflow '+width+' '+path);
       assert.equal(await page.locator('#desktopMenu > .nav-publications').count(),1,'One desktop publication menu');
       assert.equal(await page.locator('#mobileMenu > .mobile-publications').count(),1,'One mobile publication menu');
       assert.equal(await page.locator('#desktopMenu > a').filter({hasText:/^(Публикации|Publications)$/}).count(),0,'No duplicate parent link after JS');
