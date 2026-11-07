@@ -813,5 +813,277 @@ export const industrySpecializationsBatch2H = [
       "request": "Hotel and resort GEO: family stays, pools, spa, classification, booking terms, amenities and AI recommendations."
     }
   }
+},
+{
+  "id": 85,
+  "slug": "contract-cosmetics-manufacturers",
+  "group": "ecommerce",
+  "routes": {
+    "ru": "/industries/contract-cosmetics-manufacturers/",
+    "en": "/en/industries/contract-cosmetics-manufacturers/"
+  },
+  "parent": {
+    "ru": "/industries/ecommerce/",
+    "en": "/en/industries/ecommerce/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/ecommerce-catalog/",
+      "/strategies/ecommerce-measurement/"
+    ],
+    "en": [
+      "/en/strategies/ecommerce-catalog/",
+      "/en/strategies/ecommerce-measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "GEO для товарных категорий и каталогов",
+      "Измерение нейровидимости брендов"
+    ],
+    "en": [
+      "Product catalogues in GEO",
+      "Measuring product and brand AI visibility"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://protect.gost.ru/tr/details/c99ec20c-e44d-43bc-8dd6-1e9af5fb3002",
+      "ru": "Росстандарт: действующий ТР ТС 009/2011 о безопасности парфюмерно-косметической продукции",
+      "en": "Rosstandart: current EAEU technical regulation TR CU 009/2011 for cosmetics"
+    },
+    {
+      "href": "https://www.iso.org/standard/36437.html",
+      "ru": "ISO 22716:2007: рекомендации GMP для производства, контроля и хранения косметики",
+      "en": "ISO 22716:2007: cosmetics GMP guidelines for production, control and storage"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_120222/",
+      "ru": "ТР ТС 009/2011 в актуальной редакции: подтверждение соответствия и маркировка",
+      "en": "TR CU 009/2011 consolidated rules for cosmetic safety, conformity and labelling"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для контрактных производителей косметики | GAEO.ru",
+      "h1": "Продвижение контрактных производителей косметики в нейросетях",
+      "description": "GEO для контрактного производства косметики и СТМ: рецептуры, минимальная партия, упаковка, испытания, ТР ТС 009/2011, GMP и сроки. Интенты брендов, BMR, тарифы GAEO.",
+      "eyebrow": "Электронная коммерция и бренды / Контрактное производство",
+      "lead": "Основатель косметического бренда выбирает производство по типу продукта, доступным технологиям, минимальной партии, разработке рецептуры и документам. Проверяю, каких контрактных производителей нейросети рекомендуют под эти условия и чем подтверждаются их возможности.",
+      "heroPoints": [
+        "Небрендовые запросы СТМ по категориям косметики и масштабу партии",
+        "Проверка производства, контроля качества, документации и упаковки",
+        "Сайт производителя, отраслевые материалы и сопоставимые замеры BMR"
+      ],
+      "problemTitle": "Почему обещание «произведем любую косметику» не помогает выбору",
+      "problemIntro": "Разработка рецептуры, изготовление по готовой формуле, фасовка и выпуск продукта в обращение требуют разных компетенций и документов. Без этих различий ответ нейросети может быть ошибочным.",
+      "problems": [
+        {
+          "title": "Минимальные партии без условий",
+          "body": "MOQ может зависеть от вида упаковки, фасовочной линии, сырья и готовности рецептуры. Универсальная цифра без категории и состава поставки вводит бренд в заблуждение."
+        },
+        {
+          "title": "Смешаны производство и разработка формулы",
+          "body": "Выпуск шампуня по формуле заказчика отличается от НИОКР, испытаний, оценки стабильности и подбора ингредиентов. Страница должна точно описывать, кто отвечает за каждый этап."
+        },
+        {
+          "title": "Непроверенные заявления о соответствии",
+          "body": "Действующий ТР ТС 009/2011 регулирует косметическую продукцию; документы зависят от вида продукта. Ссылка на ISO 22716 сама по себе не доказывает сертификацию завода или соответствие конкретной партии."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам бренды ищут контрактное производство",
+      "scenarioIntro": "Матрица запросов отражает реальные условия заказа и выбирается после проверки оборудования, продуктов и рынка поставок.",
+      "columns": [
+        "Вопрос заказчика",
+        "Что подтверждает возможность",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто сделает СТМ шампунь небольшой партией с собственной этикеткой?",
+          "Категории формул, фактические MOQ, фасовка, сроки и требования к макетам",
+          "Отдельная страница шампуней и упаковки с ограничениями"
+        ],
+        [
+          "Как выбрать производителя кремов с разработкой рецептуры и испытаниями?",
+          "Возможности R&D, лаборатории, план проверки стабильности, права на формулу",
+          "Разделить разработку и серийное изготовление, описать процесс"
+        ],
+        [
+          "Какой завод выпускает косметику в тубах и дозаторах?",
+          "Поддерживаемые типы тары, объемы, совместимость с линиями и требования к поставке",
+          "Сделать проверяемый перечень форматов фасовки"
+        ],
+        [
+          "Кто поможет подготовить документы для продажи косметики в ЕАЭС?",
+          "Вид продукта, применимые требования ТР ТС 009/2011, роли изготовителя и заявителя",
+          "Объяснить границы договорной ответственности и проверки соответствия"
+        ]
+      ],
+      "proofTitle": "Что проверяю перед публикацией продуктовых возможностей",
+      "proofIntro": "Собираю подтвержденный перечень категорий и производственных операций, условия испытаний и документы. Технический регламент по косметике проверяется по действующей редакции; ISO 22716 описывает GMP для производства, контроля, хранения и отгрузки, а не автоматически подтверждает сертификат конкретного предприятия.",
+      "checks": [
+        "Производство: фактические товарные категории, линии, MOQ, сроки по этапам, упаковка, сырье и технологические ограничения",
+        "Качество: лабораторные процедуры, контроль партии, применимые нормативные требования и подтвержденные документы на соответствующие продукты",
+        "Договор и продукт: владение рецептурой, стоимость образцов, права на дизайн, ответственность заявителя, маркировка и порядок приемки"
+      ],
+      "proofNote": "GEO-опыт GAEO в электронной коммерции и фулфилменте помогает различать производителей и продавцов. Он не представлен как доказанный результат продвижения контрактного косметического завода.",
+      "workTitle": "Как выстраиваю GEO для производственной площадки",
+      "workIntro": "Подбираю запросы владельцев брендов и закупщиков по конкретным продуктам, затем проверяю фактические возможности и готовлю информационную архитектуру сайта.",
+      "steps": [
+        {
+          "title": "Замер спроса СТМ",
+          "body": "Формирую группы запросов по типу косметики, партии, упаковке, региону, формуле и документации. Фиксирую небрендовый BMR."
+        },
+        {
+          "title": "Проверка доказательств",
+          "body": "Сверяю номенклатуру, технологии, документы контроля, договорные роли и разрешенные сведения о заказчиках."
+        },
+        {
+          "title": "Сайт и экспертные публикации",
+          "body": "Разрабатываю ТЗ на страницы категорий, этапов запуска, производственных мощностей, FAQ и отраслевые статьи с первоисточниками."
+        },
+        {
+          "title": "Повторная оценка ответов",
+          "body": "Сравниваю ответы на исходные запросы, отмечая качество упоминаний, источники и ошибочные заявления о сертификации или MOQ."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать производителя без раскрытия рецептур клиентов?",
+          "answer": "Да. Для нейросетей полезны перечень реально производимых категорий, процессы, условия заказа и проверяемые сведения о контроле. Состав конфиденциальных формул раскрывать не нужно."
+        },
+        {
+          "question": "Подтверждает ли ISO 22716 сертификацию производителя?",
+          "answer": "Сам стандарт описывает руководящие практики GMP. Наличие сертификата или подтверждение соответствия конкретного предприятия следует проверять отдельно по действительному документу."
+        },
+        {
+          "question": "Требуется ли государственная регистрация для любой косметики?",
+          "answer": "Нет, применимый способ подтверждения соответствия зависит от вида продукции и актуальных требований ТР ТС 009/2011. Для конкретной категории необходима отдельная проверка."
+        },
+        {
+          "question": "Как корректно публиковать минимальную партию?",
+          "answer": "MOQ нужно сопровождать товарной категорией, упаковкой и условиями рецептуры. Цифру нельзя переносить с одной технологической линии на весь ассортимент."
+        },
+        {
+          "question": "Какие тарифы GAEO подходят контрактному производству косметики?",
+          "answer": "Действуют общие аудит и планы сопровождения GAEO. Объем зависит от категорий продукции, числа регионов, запросов и производственных направлений."
+        }
+      ],
+      "ctaTitle": "Проверить, какие косметические производства советуют нейросети",
+      "ctaText": "Пришли сайт завода, реальные товарные направления, ограничения по партиям и доступные подтверждения качества. Я сформирую первичные вопросы для мини-аудита.",
+      "request": "GEO контрактного производителя косметики: СТМ, шампуни, кремы, MOQ, рецептуры, упаковка, ТР ТС 009/2011 и BMR."
+    },
+    "en": {
+      "title": "GEO for contract cosmetics manufacturers | GAEO.ru",
+      "h1": "GEO promotion for contract cosmetics manufacturers",
+      "description": "Private-label cosmetics manufacturing GEO: formula development, MOQ, filling lines, packaging, tests, EAEU cosmetic rules and GMP. AI recommendations and BMR.",
+      "eyebrow": "E-commerce and brands / Contract manufacturing",
+      "lead": "A cosmetics brand chooses a factory based on product categories, workable batch sizes, formulation support, packaging and regulatory responsibilities. I assess which manufacturers AI recommends for those requirements and what evidence supports the shortlist.",
+      "heroPoints": [
+        "Non-brand OEM/private-label buyer intents by product and batch scope",
+        "Verification of manufacturing capabilities, quality systems and packaging",
+        "Evidence-led factory pages and repeat BMR measurement"
+      ],
+      "problemTitle": "Why a claim to produce any cosmetic product is too vague",
+      "problemIntro": "Formulation design, manufacturing to a supplied formula, filling and placing products on the market are different services with different conditions.",
+      "problems": [
+        {
+          "title": "Minimum order quantities lack context",
+          "body": "MOQ varies by product, packaging line, raw materials and formulation readiness. A number without those constraints is misleading."
+        },
+        {
+          "title": "Formulation and manufacturing are conflated",
+          "body": "Producing a shampoo to an existing specification differs from R&D, stability assessment and ingredient selection. Service pages should identify who is responsible for each stage."
+        },
+        {
+          "title": "Conformity claims have no evidence",
+          "body": "The applicable EAEU cosmetic technical regulation depends on the product category. Merely mentioning ISO 22716 does not establish a certificate or conformity for a facility or product."
+        }
+      ],
+      "scenarioTitle": "How brand owners shortlist cosmetics manufacturers",
+      "scenarioIntro": "Example non-brand search intents. The final query matrix is tailored to verified production lines, regulatory scope and markets.",
+      "columns": [
+        "Brand owner's question",
+        "Evidence required",
+        "GEO action"
+      ],
+      "scenarios": [
+        [
+          "Who can make private-label shampoo in a small batch with custom packaging?",
+          "Actual product types, MOQ, filling capabilities, timings and artwork requirements",
+          "Develop a category-specific shampoo production page"
+        ],
+        [
+          "Which factory offers cream formulation and testing?",
+          "Demonstrated R&D scope, laboratory processes, stability testing and formula ownership",
+          "Separate formula development from series production"
+        ],
+        [
+          "Who fills cosmetics into tubes and pump dispensers?",
+          "Supported pack formats, volumes, line compatibility and procurement conditions",
+          "Publish a practical packaging capabilities matrix"
+        ],
+        [
+          "Which manufacturer helps with EAEU cosmetic conformity documentation?",
+          "Product class, applicable requirements, supplier and applicant responsibilities",
+          "Explain actual documentation scope and contractual boundaries"
+        ]
+      ],
+      "proofTitle": "Evidence that supports a credible factory recommendation",
+      "proofIntro": "I review product categories, real operations, quality procedures and applicable documents. TR CU 009/2011 governs cosmetics safety in the EAEU; ISO 22716 covers good manufacturing practices for production, control, storage and shipment rather than independently certifying the supplier.",
+      "checks": [
+        "Operations: actual product types, lines, MOQ conditions, packaging formats, lead-time stages and manufacturing constraints",
+        "Quality: documented control practices, batch verification and the appropriate legal conformity documents",
+        "Engagement: formula ownership, sampling charges, artwork rights, applicant responsibility and acceptance terms"
+      ],
+      "proofNote": "GAEO's e-commerce and fulfilment work informs the method, but is not presented as a completed GEO case for a contract cosmetics manufacturer.",
+      "workTitle": "A GEO programme for private-label cosmetics production",
+      "workIntro": "Start with brand-owner buyer questions, verify manufacturing and compliance statements, then create targeted information AI can evaluate.",
+      "steps": [
+        {
+          "title": "Measure OEM buyer intents",
+          "body": "Group prompts by product type, batch, package, formula support, geography and documentation before establishing a baseline BMR."
+        },
+        {
+          "title": "Validate production claims",
+          "body": "Check lines, product scope, testing, quality documents, engagement terms and permitted customer examples."
+        },
+        {
+          "title": "Create useful technical pages",
+          "body": "Prepare briefs for product families, development stages, capacity, FAQs and sourced sector publications."
+        },
+        {
+          "title": "Repeat AI comparisons",
+          "body": "Re-run agreed non-brand prompts and review mentions, source use and mistakes about certifications or minimum orders."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a manufacturer use GEO without revealing clients' formulations?",
+          "answer": "Yes. Publish actual product categories, operations, order requirements and verifiable quality procedures without exposing confidential customer formulas."
+        },
+        {
+          "question": "Does citing ISO 22716 prove that a supplier is certified?",
+          "answer": "No. ISO 22716 describes GMP guidelines. A claim about a particular facility's certification needs separate valid documentary evidence."
+        },
+        {
+          "question": "Does every cosmetics product require state registration in the EAEU?",
+          "answer": "No. The applicable conformity route depends on the product type and current TR CU 009/2011 requirements. It must be checked for the specific product."
+        },
+        {
+          "question": "How should minimum order quantity be stated?",
+          "answer": "State MOQ for a defined product category, formulation and packaging route. A number from one line should not be presented as universal."
+        },
+        {
+          "question": "How much does cosmetics manufacturing GEO cost?",
+          "answer": "GAEO's existing audit and monthly plans apply. Scope depends on product families, languages, target markets and question coverage."
+        }
+      ],
+      "ctaTitle": "Find out which cosmetics factories AI recommends to brands",
+      "ctaText": "Share your manufacturing website, supported products, real batch limits and quality evidence to plan an initial GEO audit.",
+      "request": "Contract cosmetics manufacturing GEO: private label, formula, MOQ, packaging, GMP, TR CU 009/2011 and AI recommendations."
+    }
+  }
 }
 ];
