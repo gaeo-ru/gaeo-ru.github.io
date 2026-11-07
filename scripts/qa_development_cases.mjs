@@ -226,7 +226,8 @@ try{
    const mobile=await browser.newPage({viewport:{width,height:760}});
    await mobile.goto(base+route,{waitUntil:'domcontentloaded'});
    const hamburger=mobile.locator('.menu-toggle');
-   assert.equal(await mobile.locator('.mobile-menu > a[href="'+route+'"], .mobile-menu > .mobile-cases > a[href="'+route+'"]').count(),1,'Exactly one mobile Cases parent, excluding language links '+lang);
+   assert.equal(await mobile.locator('.mobile-menu > details.mobile-cases > summary').count(),1,'Exactly one mobile Cases disclosure '+lang);
+   assert.equal(await mobile.locator('.mobile-menu > details.mobile-cases .mobile-cases__overview[href="'+route+'"]').count(),1,'All cases overview link preserved '+lang);
    await hamburger.click();
    await mobile.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3000});
    assert.equal(await hamburger.getAttribute('aria-expanded'),'true','Hamburger should report open '+lang);
@@ -235,6 +236,12 @@ try{
    await mobile.waitForTimeout(160);
    assert.ok(await mobile.locator('.mobile-menu').evaluate(el=>el.classList.contains('open')),'Mobile menu closed after late header sizing '+lang);
    assert.equal(await hamburger.getAttribute('aria-expanded'),'true','Hamburger reset by late sizing '+lang);
+   const casesDisclosure=mobile.locator('details.mobile-cases');
+   assert.equal(await casesDisclosure.evaluate(el=>el.open),false,'Cases collapsed by default '+lang);
+   assert.equal(await casesDisclosure.locator('.mobile-cases__submenu').isVisible(),false,'Hidden Cases links '+lang);
+   await casesDisclosure.locator('summary').click();
+   assert.equal(await casesDisclosure.evaluate(el=>el.open),true,'Cases expands on tap '+lang);
+   assert.equal(await casesDisclosure.locator('.mobile-cases__submenu').isVisible(),true,'Cases links become visible '+lang);
    await mobile.locator('.mobile-cases__submenu a[href$="#geo-promotion"]').click();
    await mobile.waitForURL(url=>url.hash==='#geo-promotion');
    assert.ok(!await mobile.locator('.mobile-menu').evaluate(el=>el.classList.contains('open')),'Mobile menu remained open '+lang);
