@@ -507,7 +507,7 @@
     "phase_2p": {
       "phase": 2,
       "batch": "2P",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "source_merged_pr_ci_pass_production_pending",
       "work_branch": "feat/industry-specializations-batch-2p-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2p.mjs",
       "records": [
@@ -517,13 +517,24 @@
       ],
       "new_industry_landing_pairs": 3,
       "new_html_pages": 6,
-      "pr_ci_status": "pending",
-      "production_status": "not_started",
-      "pages_status": "not_started",
+      "pr_ci_status": "pass",
+      "production_status": "in_progress",
+      "pages_status": "pending",
       "public_https_browser_verified": false,
-      "last_completed_step": "original_bilingual_source_and_qa_registration_prepared",
-      "next_required_step": "Open PR, obtain full CI PASS, merge on current astro-source, verify production/main/Pages, then direct HTTPS desktop/mobile before final landing statuses",
-      "parallel_preservation": "Do not modify 2K #92-94, 2L #7/9/11, 2M #8/83 or the concurrent 2N batch."
+      "last_completed_step": "PR94 merged and full PR CI PASS 90 RU/EN specializations at 1440/390/320",
+      "next_required_step": "verify production run 42422353522, main manifest and 6 HTML, Pages, then independent external HTTPS desktop/mobile",
+      "parallel_preservation": "Do not modify 2K #92-94, 2L #7/9/11, 2M #8/83 or the concurrent 2N batch.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94",
+      "source_commit": "7115377e497bda995e139b5637999ff456268d63",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376",
+      "source_merged": true,
+      "qa_ru_en_urls_verified": 90,
+      "qa_browser_widths": [
+        1440,
+        390,
+        320
+      ],
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422353522"
     }
   },
   "status_definitions": {
@@ -567,7 +578,9 @@
     "phase_2n_prepared_urls": 6,
     "phase_2n_status_note": "Three source-prepared pairs / six RU/EN pages, not yet deployed, not live-verified. Preserve previous production counts.",
     "phase_2p_prepared_pairs_not_yet_deployed": 3,
-    "phase_2p_prepared_ru_en_urls_not_yet_deployed": 6
+    "phase_2p_prepared_ru_en_urls_not_yet_deployed": 6,
+    "total_specialization_pairs_prepared_including_2p": 45,
+    "total_specialization_urls_prepared_including_2p": 90
   },
   "candidate_batches": [
     {
@@ -785,9 +798,12 @@
       ],
       "label": "Производители промышленного оборудования, пищевые линии, насосы и компрессоры",
       "condition": "Три отдельные оригинальные RU/EN специализации на существующем промышленном хабе. Технические характеристики и регламентная применимость подтверждаются по модели и области действия; не переносить опыт металлоконструкций как успех в этих нишах. Использовать канонические цены, 107 ID и локальные WebP.",
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "source_merged_pr_ci_pass_production_pending",
       "work_branch": "feat/industry-specializations-batch-2p-2026-11-08",
-      "source_file": "src/data/industry-specializations-batch-2p.mjs"
+      "source_file": "src/data/industry-specializations-batch-2p.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94",
+      "source_commit": "7115377e497bda995e139b5637999ff456268d63",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376"
     }
   ],
   "records": [
@@ -2337,17 +2353,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_astro_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_pr_ci_merge_production_pages_then_public_https",
-      "last_completed_step": "phase_2p_original_ru_en_content_sources_and_qa_registration",
+      "work_status": "source_merged_pr_ci_pass_production_pending",
+      "next_required_step": "verify_production_main_pages_then_public_https",
+      "last_completed_step": "phase_2p_pr94_merged_full_ci_pass_90_ru_en_pages",
       "planned_landing_url_ru": "/industries/industrial-equipment-manufacturers/",
       "planned_landing_url_en": "/en/industries/industrial-equipment-manufacturers/",
       "work_branch": "feat/industry-specializations-batch-2p-2026-11-08",
       "evidence_sources": [
         "https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766",
         "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94",
+      "source_commit": "7115377e497bda995e139b5637999ff456268d63",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376"
       ]
     },
     {
@@ -2370,11 +2391,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_astro_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_pr_ci_merge_production_pages_then_public_https",
-      "last_completed_step": "phase_2p_original_ru_en_content_sources_and_qa_registration",
+      "work_status": "source_merged_pr_ci_pass_production_pending",
+      "next_required_step": "verify_production_main_pages_then_public_https",
+      "last_completed_step": "phase_2p_pr94_merged_full_ci_pass_90_ru_en_pages",
       "planned_landing_url_ru": "/industries/food-processing-equipment-suppliers/",
       "planned_landing_url_en": "/en/industries/food-processing-equipment-suppliers/",
       "work_branch": "feat/industry-specializations-batch-2p-2026-11-08",
@@ -2382,6 +2403,11 @@
         "https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766",
         "https://protect.gost.ru/tr/details/8df9092f-9ca8-4776-ba2a-7b6c678ff5ca",
         "https://protect.gost.ru/tr/details/0ab50d83-4a64-455d-9c59-04b5ef9336b9"
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94",
+      "source_commit": "7115377e497bda995e139b5637999ff456268d63",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376"
       ]
     },
     {
@@ -2404,17 +2430,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_astro_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_pr_ci_merge_production_pages_then_public_https",
-      "last_completed_step": "phase_2p_original_ru_en_content_sources_and_qa_registration",
+      "work_status": "source_merged_pr_ci_pass_production_pending",
+      "next_required_step": "verify_production_main_pages_then_public_https",
+      "last_completed_step": "phase_2p_pr94_merged_full_ci_pass_90_ru_en_pages",
       "planned_landing_url_ru": "/industries/pump-compressor-suppliers/",
       "planned_landing_url_en": "/en/industries/pump-compressor-suppliers/",
       "work_branch": "feat/industry-specializations-batch-2p-2026-11-08",
       "evidence_sources": [
         "https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766",
         "https://protect.gost.ru/tr/details/7c0ea352-d399-4611-a13c-b80bbaeb5e32"
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94",
+      "source_commit": "7115377e497bda995e139b5637999ff456268d63",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376"
       ]
     },
     {
