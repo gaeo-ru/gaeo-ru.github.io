@@ -1016,7 +1016,265 @@ export const industrySpecializations = [
         "request": "Furniture GEO: product catalogue, variants, delivery, assembly and AI recommendations."
       }
     }
+  },
+{
+  "id": 3,
+  "slug": "residential-property-agencies",
+  "group": "real-estate",
+  "routes": {
+    "ru": "/industries/residential-property-agencies/",
+    "en": "/en/industries/residential-property-agencies/"
+  },
+  "parent": {
+    "ru": "/geo-prodvizhenie-nedvizhimosti/",
+    "en": "/en/geo-for-real-estate/"
+  },
+  "methods": {
+    "ru": [
+      "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+    ],
+    "en": [
+      "/en/articles/geo-for-real-estate/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика измерения рекомендаций жилой недвижимости"
+    ],
+    "en": [
+      "Method for measuring real-estate recommendations"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/e064cc95b1bdffa4d12abb92fdfc56dea94198df/",
+      "ru": "ФЗ №218-ФЗ, статья 62: получение сведений ЕГРН",
+      "en": "Law 218-FZ, Article 62: access to EGRN data"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение агентств недвижимости в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение агентств жилой недвижимости в нейросетях",
+      "description": "GEO-продвижение риелторского агентства: новостройки, вторичный рынок, продажа квартиры, комиссии и рекомендации ChatGPT и Алисы. Тарифы GAEO.",
+      "eyebrow": "Недвижимость / Агентства и риелторы",
+      "lead": "Покупатель может искать агентство для выбора квартиры, а продавец - специалиста, который поможет провести сделку. Проверяю, какие агентства нейросети рекомендуют по этим разным задачам и насколько убедительно описаны реальные компетенции.",
+      "heroPoints": [
+        "Отдельные запросы покупателей, продавцов и арендодателей",
+        "Проверяемые районы работы, услуги, договор и условия комиссии",
+        "Профили риелторов и разрешенные примеры работы вместо рекламных обещаний"
+      ],
+      "problemTitle": "Каталог квартир сам по себе не доказывает компетенцию агентства",
+      "problemIntro": "Покупателю и продавцу важно понять, кому можно поручить сопровождение, какова роль специалиста и за что агентство отвечает по договору.",
+      "problems": [
+        {
+          "title": "Смешаны разные услуги",
+          "body": "Новостройки, вторичный рынок, продажа квартиры и управление арендой требуют разных условий, опыта и источников подтверждения."
+        },
+        {
+          "title": "Нет конкретики о людях",
+          "body": "Профили сотрудников должны показывать реальную специализацию и географию. Нельзя выдавать опыт девелопера или знакомство с объектом за результат работы агентства."
+        },
+        {
+          "title": "Непрозрачны условия сделки",
+          "body": "Стороны хотят понимать, как рассчитывается комиссия, что включено в поиск или продажу, кто занимается проверкой документов и какие услуги оплачиваются отдельно."
+        }
+      ],
+      "scenarioTitle": "Ситуации, в которых нейросеть выбирает риелтора",
+      "scenarioIntro": "Для стартового замера формирую отдельные группы запросов, соответствующие разным коммерческим услугам.",
+      "columns": [
+        "Вопрос пользователя",
+        "Что требуется подтвердить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое агентство поможет продать квартиру в конкретном районе?",
+          "Район работы, условия договора, состав услуг, подтвержденные отзывы",
+          "Страница продажи квартиры с географией и порядком сотрудничества"
+        ],
+        [
+          "Кому поручить покупку вторичного жилья с проверкой документов?",
+          "Объем сопровождения, участие профильного юриста, ограничения проверки",
+          "Четко разделить агентскую работу и юридическую проверку"
+        ],
+        [
+          "Какие риелторы занимаются новостройками бизнес-класса?",
+          "Реальные специалисты, проекты, партнерские отношения, опыт по сегменту",
+          "Профили команды, достоверные страницы специализаций"
+        ],
+        [
+          "Кто поможет сдать квартиру и сопровождать аренду?",
+          "Отбор арендатора, отчетность, договор, состав дальнейшего управления",
+          "Отдельно описать аренду и регулярное управление"
+        ]
+      ],
+      "proofTitle": "Какие сведения нужны для проверяемой рекомендации",
+      "proofIntro": "Агентское сопровождение, юридические действия и государственные реестры выполняют разные функции. Закон №218-ФЗ регулирует получение сведений ЕГРН; публичные материалы должны учитывать ограничения доступа и конфиденциальность.",
+      "checks": [
+        "Сотрудники, специализации, регионы и профессиональные профили, которые можно проверить",
+        "Договор, комиссия, перечень работ и ограничения по юридическому сопровождению",
+        "Актуальные предложения, реальные отзывы и допустимые к публикации примеры работы без персональных данных клиентов"
+      ],
+      "proofNote": "Методика анализа рекомендаций жилых комплексов применима к рынку жилья, но она не является доказанным GEO-кейсом конкретного агентства недвижимости.",
+      "workTitle": "Как организую GEO-продвижение агентства",
+      "workIntro": "Начинаю с сравнения ответов нейросетей по реальным коммерческим задачам агентства, затем корректирую доступные источники информации.",
+      "steps": [
+        {
+          "title": "Исходная матрица",
+          "body": "Отдельно фиксирую покупку, продажу, аренду, районы и типы жилья; измеряю брендовые и небрендовые рекомендации."
+        },
+        {
+          "title": "Аудит фактов",
+          "body": "Проверяю состав услуг, комиссию, профили риелторов, актуальность объектов и разрешения на использование отзывов."
+        },
+        {
+          "title": "Доработки и публикации",
+          "body": "Готовлю ТЗ на страницы специализаций, FAQ, профили команды и экспертные материалы, подтверждающие работу агентства."
+        },
+        {
+          "title": "Контроль динамики",
+          "body": "Повторяю согласованные запросы и измеряю BMR, ссылки на источники и корректность сведений об агентстве."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Чем продвижение агентства отличается от продвижения ЖК?",
+          "answer": "ЖК продвигается как конкретный объект. При выборе агентства человек оценивает услуги, людей, районы, комиссию и ответственность; поэтому матрицы запросов различаются."
+        },
+        {
+          "question": "Можно ли продвигать отдельного риелтора?",
+          "answer": "Да, если можно достоверно описать его специализацию, географию, услуги и профессиональные профили. Вымышленные сделки и отзывы не нужны."
+        },
+        {
+          "question": "Как указывать комиссию агентства?",
+          "answer": "Публикуем действительный способ расчета и условия договора. Если оплата зависит от объекта или сделки, нельзя выдавать одну сумму за универсальный тариф."
+        },
+        {
+          "question": "Можно ли публиковать историю сделки с клиентом?",
+          "answer": "Только при соблюдении конфиденциальности, законных оснований и прав на материалы. Адреса, документы и персональные сведения без оснований не публикуются."
+        },
+        {
+          "question": "Какова стоимость GEO для риелторского агентства?",
+          "answer": "Используются общие тарифы GAEO на аудит и сопровождение. Объем работ выбирается после проверки услуг, географии и стартовой видимости."
+        }
+      ],
+      "ctaTitle": "Узнать, какие агентства недвижимости рекомендуют нейросети",
+      "ctaText": "Пришли сайт агентства, основные районы, услуги и ссылки на профили команды. Я предложу подходящие запросы для стартового аудита.",
+      "request": "GEO агентство недвижимости: выбор риелтора, районы, вторичный рынок, новостройки, комиссия и рекомендации."
+    },
+    "en": {
+      "title": "GEO for residential real estate agencies | GAEO.ru",
+      "h1": "GEO for residential real estate agencies in AI recommendations",
+      "description": "GEO for estate agencies: buying and selling homes, agent selection, fees, local expertise and evidence-based AI visibility measurement.",
+      "eyebrow": "Real estate / Residential agencies",
+      "lead": "Buyers want a suitable agent for a property search, while sellers need a team that can manage a transaction. I examine which agencies AI recommends for these separate needs and which facts support each recommendation.",
+      "heroPoints": [
+        "Different buyer, seller and landlord query groups",
+        "Verifiable local coverage, scope and service fees",
+        "Agent profiles and approved examples rather than unsupported claims"
+      ],
+      "problemTitle": "A listings database does not prove an agency's expertise",
+      "problemIntro": "People choosing a brokerage need to know who is responsible, which services are included and what expertise is relevant.",
+      "problems": [
+        {
+          "title": "Different services are conflated",
+          "body": "New-build sales, resale transactions, lettings and property management have distinct processes and commercial terms."
+        },
+        {
+          "title": "Agent profiles lack substance",
+          "body": "A useful biography states real specialisms and locations; working with a developer is not evidence of a completed brokerage result."
+        },
+        {
+          "title": "Fees and responsibilities are unclear",
+          "body": "The client should understand agency fees, transaction support, legal review boundaries and any separately charged services."
+        }
+      ],
+      "scenarioTitle": "Questions that drive residential agency selection",
+      "scenarioIntro": "The baseline groups buying, selling, rentals and specialist-property needs rather than treating all property searches as identical.",
+      "columns": [
+        "Prospective client question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can sell my apartment in this neighbourhood?",
+          "Local service area, contractual scope, fee terms and genuine reviews",
+          "A local property-sales service page with transparent terms"
+        ],
+        [
+          "Which agency supports buying a resale apartment and checking documents?",
+          "Service boundaries and any specialist legal involvement",
+          "Distinguish brokerage from independent legal review"
+        ],
+        [
+          "Which agents know business-class new-build properties?",
+          "Actual specialists, project coverage and partner roles",
+          "Relevant team profiles and project specialisms"
+        ],
+        [
+          "Who can arrange a letting and ongoing property management?",
+          "Tenant selection, contracts, reporting and management scope",
+          "Separate lettings from ongoing management"
+        ]
+      ],
+      "proofTitle": "Evidence behind an estate-agency recommendation",
+      "proofIntro": "Brokerage service and legal due diligence play distinct roles. Russian Law 218-FZ regulates access to property register information, so publicly described checks must respect the applicable access and privacy rules.",
+      "checks": [
+        "Real team members, specialisations, locations and verifiable public profiles",
+        "Engagement terms, commission model and boundaries of legal support",
+        "Up-to-date listings, authentic feedback and publishable cases without private client details"
+      ],
+      "proofNote": "GAEO's real-estate developer research informs the measurement method; it is not a completed GEO result for a residential brokerage.",
+      "workTitle": "A practical GEO programme for an agency",
+      "workIntro": "Work starts with the queries that cause buyers and sellers to choose an intermediary, then improves the source evidence.",
+      "steps": [
+        {
+          "title": "Baseline",
+          "body": "Record questions by transaction type, location and property segment, separating brand and non-brand recommendations."
+        },
+        {
+          "title": "Fact review",
+          "body": "Check agency scope, fees, team biographies, listing freshness and permitted references."
+        },
+        {
+          "title": "Content and specifications",
+          "body": "Prepare service pages, staff profiles, fee FAQ and specialist publications."
+        },
+        {
+          "title": "Repeat measurement",
+          "body": "Compare equivalent prompts, BMR and factual accuracy with the baseline."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How does agency GEO differ from developer GEO?",
+          "answer": "A development is recommended for the property itself; an agency is chosen for people, services, responsibilities and fees. The query set reflects that difference."
+        },
+        {
+          "question": "Can GEO promote an individual estate agent?",
+          "answer": "Yes, using genuine professional details and local specialisms without invented reviews or deals."
+        },
+        {
+          "question": "Should fees appear on the agency website?",
+          "answer": "The real calculation basis and relevant contract terms should be explained. Complex transactions may require a scoped estimate."
+        },
+        {
+          "question": "Can an agency publish individual transaction stories?",
+          "answer": "Only where privacy, confidentiality and usage permissions allow disclosure. Do not expose sensitive client documents."
+        },
+        {
+          "question": "How much does GEO cost for an agency?",
+          "answer": "GAEO's standard audit and monthly plans apply. Scope depends on local markets, service lines and the baseline."
+        }
+      ],
+      "ctaTitle": "See which residential agencies AI recommends instead of yours",
+      "ctaText": "Share the agency website, service areas and team profiles. I will suggest a relevant starting measurement.",
+      "request": "Residential agency GEO: agent selection, service areas, fees, buying and selling, AI recommendations."
+    }
   }
+}
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
