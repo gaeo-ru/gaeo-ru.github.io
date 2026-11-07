@@ -4,6 +4,14 @@
 
 Этот документ и `docs/tariff-industry-roadmap.json` ведутся дальше на месте. Не создавать новый конкурирующий план, Work-задачу или автоматизацию. Новые указания Алексея имеют приоритет над решениями этого файла.
 
+## Партия 2N: исходники и main опубликованы, Pages и внешний HTTPS проверяются (8 ноября 2026)
+
+**№10, №12, №13: 3 самостоятельные специализации / 6 RU/EN URL. PR #92 и production PASS; main проверен, Pages еще in_progress на дату записи.** Ветка `feat/industry-specializations-batch-2n-2026-11-08` создана от `astro-source` `04dd7039ecf8120adffa154c9faf2a9c9fb3d234`; содержимое синхронизировано с текущим HEAD `e3aeb1bf268e6d1ad6682cb26207ec4448e6af0d`. Общая тарифная модель, BMR, 107 каталоговых номеров и утвержденные изображения неизменны. Точная точка продолжения в разделе 25.
+
+## Партия 2P: итоговый выпуск и точка продолжения (8 ноября 2026)
+
+**Выполнено: №42, 43, 44, 3 новые специализации / 6 RU/EN URL.** [PR #94](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94) объединен в `astro-source` (`7115377e497bda995e139b5637999ff456268d63`). Полный [PR CI 42421815376](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376) **PASS** (90 RU/EN специализаций, 1440/390/320). [Production 42422353522](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422353522) **PASS**, выпущен `main` `65a5fff46b9b58b29af8c87f98781b9e9981a916`: 193 HTML, 188 URL sitemap и 732 файла manifest. Все 6 HTML/URL 2P проверены в `main`, [GitHub Pages 42422852356](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422852356) **PASS**. **Прямой внешний HTTPS/browser еще не подтвержден**: `gaeo.ru/tarify/` не открывается из среды проверки. Точка продолжения в разделе 26. Тарифы, финансовые гарантии BMR, каталог 107 номеров и параллельные 2K/2L/2M/2N/2O сохранены.
+
 ## Партия 2M: новая контрольная точка (8 ноября 2026)
 
 **Готовая часть 2M: №8 и №83 (4 RU/EN страницы)** в [PR #90](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90). №7 исключен: его делает 2L [PR #91](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91). Исходники объединены в `astro-source` коммитом `04dd7039ecf8120adffa154c9faf2a9c9fb3d234`; полный [PR CI 42419689288](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42419689288) **PASS** (78 RU/EN специализаций, 1440/390/320). Production, main, GitHub Pages и внешний HTTPS еще требуют отдельной проверки. Подробности в разделе 24. Параллельные изменения 2I/2K/2L сохранять. Фаза 1 опубликована, цены и гарантия BMR неизменны.
@@ -643,5 +651,60 @@
 3. Подтвердить `npm run build`, `check:specializations` (Chromium 1440/390/320), `check:tariffs`, `check:parity`, `check:design`, `check:anchors`, корректность 4 страниц, тарифов, H1, canonical/hreflang, WebP, 5 FAQ, 4 сценариев, форм и ссылок.
 4. PR #90 уже объединен после CI PASS. Теперь отдельно проверить успешный production workflow, `main/astro-release-manifest.json`, наличие **4 новых HTML и 4 URL в sitemap**, затем итог GitHub Pages. Зафиксировать фактические SHA/Actions в этих же документах.
 5. По внешнему `https://gaeo.ru/` проверить все 4 новых URL на десктопе и 390/320 px. При недоступности публичного HTTPS не заявлять live-PASS и не заполнять `landing_url_ru/en`, `verified_at`. Отдельно проверять ошибки изображений, FAQ, форму и реальное отображение.
-6. Следующая партия **2N** выбирается только по новому состоянию roadmap с учетом 2K/2L; исследовательская очередь 3A (№75, 76, 27, 30) сохраняется. **Продолжать обновлять именно эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json`, не плодить новые планы, PR или дубли. 
+6. Следующая партия **2N** выбирается только по новому состоянию roadmap с учетом 2K/2L; исследовательская очередь 3A (№75, 76, 27, 30) сохраняется. **Продолжать обновлять именно эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json`, не плодить новые планы, PR или дубли.
 
+## 25. Партия 2N: генподряд, дизайн интерьеров и ремонт жилья (8 ноября 2026)
+
+**Источник:** `src/data/industry-specializations-batch-2n.mjs`; штатный загрузчик `src/data/industry-specializations.mjs` и `scripts/qa_industry_specializations.mjs`. Проверенные по GitHub свободные номера: **10, 12 и 13**. Существующая 2L [PR #91](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91) занимает №7/9/11, 2M [PR #90](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90) №8/83, 2K [PR #89](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/89) №92–94. Эти работы не копировать и не перезаписывать.
+
+| № | Самостоятельная специализация | RU | EN | Основания для проверки |
+|---:|---|---|---|---|
+| 10 | Генподрядчики коммерческих и промышленных объектов: склад, производство, реконструкция, договорные роли и работы | `/industries/commercial-industrial-general-contractors/` | `/en/industries/commercial-industrial-general-contractors/` | [ГрК РФ, ст. 52](https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/), [ст. 55.8](https://www.consultant.ru/document/cons_doc_LAW_51040/a856e9636e5a3eca479377557ee86fb41304dafb/) |
+| 12 | Студии дизайна интерьеров: портфолио, реально построенные объекты, состав дизайн-проекта, перепланировка | `/industries/interior-design-studios/` | `/en/industries/interior-design-studios/` | [ЖК РФ, ст. 26](https://www.consultant.ru/document/cons_doc_LAW_51057/7e4a9388b3a2611890a95ada5f607b38ad46d0fd/), [ГК РФ, ст. 1288](https://www.consultant.ru/document/cons_doc_LAW_64629/8729a73d82e444f858aa833f74191fd5de2f508d/) |
+| 13 | Компании по ремонту квартир и домов: сметы, виды ремонта, приемка, отзывы и локальный спрос | `/industries/residential-renovation-contractors/` | `/en/industries/residential-renovation-contractors/` | [ГК РФ, ст. 730](https://www.consultant.ru/document/cons_doc_LAW_9027/28e9350147c65bfef403106a5b858c86f94fa747/), [ст. 737](https://www.consultant.ru/document/cons_doc_LAW_9027/d37197cf9693df199659033fcbf0f65f267044c5/), [Роспотребнадзор](https://26.rospotrebnadzor.ru/press-center/pr/12771/) |
+
+**Подготовленный контент:** каждая RU и EN версия содержит индивидуальный первый экран и метаданные, 3 специфические проблемы, 4 коммерческих сценария с проверяемыми критериями, 3 блока фактов, 4 этапа, 5 FAQ, собственный CTA и текст заявки. Не заявляются клиентские результаты для этих отраслей, универсальные допуски СРО, согласованная перепланировка, автоматически успешное разрешение спора, гарантированный срок ремонта или право на чужие изображения.
+
+**Шаблон и перелинковка:** `IndustrySpecialization.astro` и `IndustryPricing.astro`; родительские RU/EN страницы недвижимости `/geo-prodvizhenie-nedvizhimosti/` / `/en/geo-for-real-estate/`, отраслевые методики, каталог 107 направлений (постоянные `industry-010/012/013`), изображения `industry-010/012/013-960.webp` и общие цены из `pricing.mjs`. Исходный каталог и его якоря не изменены.
+
+**Границы приемки:** подготовленные данные и регистрация в QA не доказывают собранную страницу, CI, production, GitHub Pages, прямой HTTPS или индексацию. До фактического PR CI PASS не отмечать его прошедшим. После PASS безопасно объединить PR, проверив текущее состояние 2K/2L и параллельных документов; затем подтвердить `astro-release-manifest.json`, 6 новых HTML, 6 URL sitemap, штатный Pages и отдельно публичный `https://gaeo.ru/` на десктопе и 390/320 px. `landing_url_ru/en`, `verified_at`, `status=existing_landing` не заполнять до прямого внешнего HTTPS/браузерного контроля.
+
+**Последовательность для следующего чата:** (1) проверить PR 2N и самый новый CI, устранить ошибки в этой же ветке; (2) PR merge при PASS с сохранением чужих исходников; (3) production/main/manifest/sitemap/Pages; (4) внешний HTTPS и мобильная проверка; (5) обновить **эти же** 2 файла точными ссылками и проверенными счетчиками. Следующие свободные кандидаты для исследования: №14, 15, 16, без назначения и без публикации заранее; исследовательскую фазу 3A №75/76/27/30 сохранять.
+
+### Подтвержденный выпуск исходников и main для 2N (8 ноября 2026)
+
+- [PR #92](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/92) **объединен** в `astro-source`, merge `79e58e4bf37cf3ad643f77836ef3b8897ec40544`.
+- [PR CI 42421180383](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421180383) **PASS** (Astro, parity, ссылки, дизайн, цены, браузерные специализации RU/EN на 1440/390/320, изображения, формы и общие регрессии). [Production 42421663323](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421663323) **PASS**.
+- Опубликованный `main` `7f0133efdf76867ed6800ec0f9c6ef97366d8f35`: manifest `sourceCommit=79e58e4bf37cf3ad643f77836ef3b8897ec40544`, `releasedAt=2026-11-07T22:45:41.502Z` (8 ноября, 01:45:41 МСК), **726 файлов / 187 HTML**, `sitemap.xml` содержит **182 URL**.
+- В `main` проверены все 6 новых RU/EN HTML: один H1, 5 видимых FAQ и FAQPage, 4 покупательских сценария, Service, self-canonical, взаимные hreflang, единые тарифы, правильный номер изображения и контекст заявки. Все 6 URL присутствуют в manifest и sitemap.
+- [GitHub Pages 42422117754](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422117754) на момент записи еще **in_progress**. Повторная проверка его итога обязательна.
+- Внешний `https://gaeo.ru/` для всех 6 URL не открылся в текущем инструменте веб-доступа, локальная проверка получила ошибку DNS. **Это ограничение проверки, а не доказанная ошибка сайта**. Прямой браузерный PASS, изображения, форма и индексация не подтверждены, `landing_url_ru/en` и `verified_at` остаются пустыми.
+
+**Следующий шаг:** подтвердить Pages PASS именно для данного `main`, затем повторить внешнюю HTTPS-проверку на 1440/390/320. Если доступ не восстановлен, сохранять статус `deployed_pages_pass_live_unverified` и не выдавать результат сборки за live-визуальную приемку. При последующих изменениях не дублировать №10/12/13 и беречь параллельные 2K №92–94, 2L №7/9/11, 2O №55–57, 2P №42–44 и чужие изменения в документах.
+
+## 26. Партия 2P: промышленные машины, пищевое оборудование, насосы и компрессоры (8 ноября 2026)
+
+**Подтвержденная стадия: `deployed_ci_production_pages_pass_live_https_unverified`.** Фаза 1 уже опубликована, а эта партия подготовлена независимо от идущих 2K, 2L, 2M и 2N. Создан `src/data/industry-specializations-batch-2p.mjs` с 3 оригинальными RU/EN направлениями. В одном каноническом шаблоне для каждой языковой версии: 3 проблемы выбора, 4 проверяемых сценария, перечень данных, 4 этапа работы, 5 FAQ и отраслевой запрос на аудит. Нет вымышленных клиентских результатов, сертификации производителей или обещания попадания в ответы нейросетей.
+
+| № | Направление | RU URL | EN URL |
+|---:|---|---|---|
+| 42 | Производители промышленного оборудования | `/industries/industrial-equipment-manufacturers/` | `/en/industries/industrial-equipment-manufacturers/` |
+| 43 | Поставщики оборудования для пищевых производств | `/industries/food-processing-equipment-suppliers/` | `/en/industries/food-processing-equipment-suppliers/` |
+| 44 | Насосы и компрессоры | `/industries/pump-compressor-suppliers/` | `/en/industries/pump-compressor-suppliers/` |
+
+**Отраслевая специфика:** №42 различает паспортный режим, реальные технологические операции, комплектацию и сервис; №43 проверяет сырье, санитарную обработку, упаковку, ответственность поставщика и интегратора; №44 не смешивает напор и расход насосов с давлением и подачей компрессоров. Регламенты Росстандарта ТР ТС 010/2011, 021/2011, 005/2011 и 032/2013 используются с проверкой области действия, а не как подтверждение соответствия конкретной машины. Торговая разметка Product/Offer упомянута только при применимости Google Search Central к покупаемому товару.
+
+**Техническая модель:** общий источник `src/data/industry-specializations.mjs` подключает 2P, `scripts/qa_industry_specializations.mjs` дополняет обязательную проверку №42–44. Существующие `IndustrySpecialization.astro`, `IndustryPricing.astro`, `pricing.mjs`, изображения `industry-042/043/044-960.webp` и каталог 107 направлений переиспользуются. Родитель: существующий промышленный B2B-кластер `/industries/metal-structures/` и EN-версия; тематические методики `/strategies/industrial-supplier-evidence/` и `/strategies/measurement/` со своими EN-аналогами. Опыт диагностики металлоконструкций не представлен как результат продвижения смежных категорий.
+
+### Подтвержденные результаты 2P
+
+- Содержательный исходник: `src/data/industry-specializations-batch-2p.mjs`. Все 3 каталожных ID сохранили свои ранее утвержденные изображения, цены и отраслевые связи.
+- [PR #94](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/94) объединен в `astro-source`: merge `7115377e497bda995e139b5637999ff456268d63`. Перед merge обновлена база с включением 2N, ее данные и документация не потеряны.
+- Полный [PR CI 42421815376](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421815376) **PASS**: 90 двуязычных отраслевых страниц, Chromium 1440/390/320, изображения WebP, FAQ, CTA/форма, тарифы, отсутствие горизонтального переполнения; сборка Astro, паритет, ссылки, дизайн, кейсы и исследования также прошли.
+- [Production 42422353522](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422353522) **PASS**. Выпущен `main` `65a5fff46b9b58b29af8c87f98781b9e9981a916` с `manifest.sourceCommit=7115377e497bda995e139b5637999ff456268d63`, `releasedAt=2026-11-07T22:55:20.882Z`: 732 файла, 193 HTML и 188 sitemap URL. Все 6 RU/EN HTML 2P доступны в опубликованной ветке, проверены 1 H1, title, canonical, 5 FAQ, Service/FAQPage, 3 тарифных предложения, WebP и присутствие в sitemap. [GitHub Pages 42422852356](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422852356) **PASS**. Внешний HTTPS/browser по-прежнему отдельно не подтвержден.
+
+### Точная точка продолжения 2P
+
+1. Открыть все 6 публичных адресов `https://gaeo.ru/industries/industrial-equipment-manufacturers/`, `.../food-processing-equipment-suppliers/`, `.../pump-compressor-suppliers/` и соответствующие `/en/industries/` в реальном браузере на десктопе и мобильных ширинах. Проверить изображения, форму, ссылки, canonical/hreflang, FAQ и единые тарифы. Прямой HTTPS-инструмент этой сессии не открыл даже контрольный `/tarify/`, поэтому `public_https_browser_verified=false`.
+2. **Только после независимой HTTPS-проверки** обновить `landing_url_ru/en`, `verified_at`, `status` и `work_status` каждой записи №42–44; сейчас URL закреплены как `planned_landing_url_ru/en`. Не утверждать индексацию, BMR или рост заявок по одному успешному Pages.
+3. При следующем расширении заново проверить `astro-source`, PR и пересечения с 2K (№92–94), 2L (№7, 9, 11), 2N (№10, 12, 13), 2O (№55–57) и другими партиями. Свободные кандидаты по промышленности: №45, 46, 48, но их не резервировали и не исследовали в рамках 2P. Фаза 3A №75, 76, 27, 30 остается исследовательской. **Обновлять эти же 2 документа, без дубликатов.**
