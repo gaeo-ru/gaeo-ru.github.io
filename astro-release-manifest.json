@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "1667d8798ad7fb6de39c0c1ddc3ff42d4b0f80b3",
-  "releasedAt": "2026-11-07T20:46:13.382Z",
+  "sourceCommit": "49682c918eb3077c00a8450aff94b8bd2ada42b5",
+  "releasedAt": "2026-11-07T20:54:17.780Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2896,9 +2896,19 @@
       "sha256": "3ac7dd541d920d18994c16a146f8732da35c8decc2bb873557acaaafb0e82a38"
     },
     {
+      "path": "en/industries/electronic-document-flow/index.html",
+      "kind": "html",
+      "sha256": "bf7a786c8ac8c6f1504bca0a71d4694b5f0f692ee152c7e752fb8b721daa29d6"
+    },
+    {
       "path": "en/industries/employment-migration-lawyers/index.html",
       "kind": "html",
       "sha256": "539ce1663991bedbc788bc4294afa3117dd8cef4711687070c2213bf3ef27ff3"
+    },
+    {
+      "path": "en/industries/enterprise-software/index.html",
+      "kind": "html",
+      "sha256": "37458ab8ddfdaff20691a69fdb1f9c7e2c732747f83c97f464d74a7a1256035e"
     },
     {
       "path": "en/industries/family-inheritance-lawyers/index.html",
@@ -2918,7 +2928,7 @@
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "e89f5fc22cbc4ebca653cb85913b3c8560d1f265165caac683732b7ba06959b0"
+      "sha256": "87e0f776a9b1627e27467e9cc7236d922afc7380c6d71118f99336d70d76a4af"
     },
     {
       "path": "en/industries/index.html",
@@ -2933,7 +2943,7 @@
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "c34f6184c54b621d1d5077f009c9075ecdcccf190857e765c7129efd17e179ee"
+      "sha256": "a56b9ffa9b874a9d8948e026bd001966c967f7edc7316c6b971519037b43a85c"
     },
     {
       "path": "en/industries/luxury-real-estate-agencies/index.html",
@@ -2971,6 +2981,11 @@
       "sha256": "761c134b3863b76fa2edeafe35c97c6d5aef30291f71d6d80beaf4b9757eded2"
     },
     {
+      "path": "en/industries/tax-lawyers/index.html",
+      "kind": "html",
+      "sha256": "4a67fa78f95164a7f193a5772492a119030fb95f50f07394fbb5d866f582a34f"
+    },
+    {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
       "sha256": "b07320b380bfd9dc6c84ac1ada82e2afe84d76bb4b4c01a214c2aee541d61a0d"
@@ -2993,7 +3008,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "76ed848923cfa097ddf18869088b94eebe3c3482bf4e18ec21840bbf1fe511de"
+      "sha256": "16030fb489b57f27b7a059ad84e17d6f078ca6581a5643f65bb6c370184ab1ac"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3176,9 +3191,19 @@
       "sha256": "76448f44910e51925d39f76b4f0c7068c2363891d384c3e657786c58db6c2c4f"
     },
     {
+      "path": "industries/electronic-document-flow/index.html",
+      "kind": "html",
+      "sha256": "996a5a7f2530461fd38fd437e8d2b5a444e2491d16f60cfba6494526cbeddf2f"
+    },
+    {
       "path": "industries/employment-migration-lawyers/index.html",
       "kind": "html",
       "sha256": "b8d4a94cde27a80a391075418bf47cea05f16f0d529e9f79046e2f172f967a93"
+    },
+    {
+      "path": "industries/enterprise-software/index.html",
+      "kind": "html",
+      "sha256": "b4327f5f233c547c2e1808635c11d74ffd20d408f11ac6080ed9fa32f715dfee"
     },
     {
       "path": "industries/family-inheritance-lawyers/index.html",
@@ -3198,7 +3223,7 @@
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "e8bf8d3341d75dd2f5cb0f05ac331b26649da0842820d7a3c43c8a4026f19be3"
+      "sha256": "c3d1a13337b97e72c25ef63664dbfde5edb9f56038899b30ec9f20b6162e9ae1"
     },
     {
       "path": "industries/index.html",
@@ -3213,7 +3238,7 @@
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "b668cf7ec3bfab25b52a9f9700abfbb25a258ff1757b5ad54cad6bbc82c978f5"
+      "sha256": "8ff98e381822c63dc14f178bcc1c83faf7043166cd743cca97f4ba7a14aeb38f"
     },
     {
       "path": "industries/luxury-real-estate-agencies/index.html",
@@ -3249,6 +3274,11 @@
       "path": "industries/systems-integrators-it-outsourcers/index.html",
       "kind": "html",
       "sha256": "f25c995d932c9213f01eb8b6f392bb946478a47356492b9ae273671f23ce8e77"
+    },
+    {
+      "path": "industries/tax-lawyers/index.html",
+      "kind": "html",
+      "sha256": "01b75b23ca42d3073a465cd43924a555f4267f4b7f3e08948b985f1810bf782a"
     },
     {
       "path": "industries/tourism/index.html",
@@ -3348,7 +3378,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "16910ba727a28fb863de691ff612a7295404f587ede1b40061c53045ad9ed9a0"
+      "sha256": "854a4ccc180983ae494adcc632c0d6d061b79814e59816c2b54eb96cdd0b87bd"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3403,7 +3433,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "ece45992a16324916c14318a9e91bbde72fcc0a127b8590a811dea2e2cee7ae2"
+      "sha256": "fe441a69b35501b26ef1691deaa249024e6a55e90f1bac24c542794edc2ed295"
     }
   ]
 }
