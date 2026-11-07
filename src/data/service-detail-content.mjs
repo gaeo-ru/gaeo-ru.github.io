@@ -581,7 +581,7 @@ export const serviceDetails = {
           heading: 'When to include content production',
           paragraphs: [
             'This plan suits businesses that need promotion but have limited time for regular content creation. I research the product, write the material and organize publication. You provide accurate offer details, supporting evidence and professional input where the subject requires it.',
-            'The plan includes intent mapping, at least 50 prompts and 5 AI platforms, distribution, link promotion and reputation work. I create the content myself and either implement agreed website changes or prepare specifications for the client's team.'
+            'The plan includes intent mapping, at least 50 prompts and 5 AI platforms, distribution, link promotion and reputation work. I create the content myself and either implement agreed website changes or prepare specifications for your team.'
           ],
           items: [],
           links: [{ href: '/en/services/geo-promotion/', label: 'Compare the plan where your team creates content' }]
