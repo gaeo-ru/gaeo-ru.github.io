@@ -109,7 +109,7 @@ try{
      const rect=selector=>document.querySelector(selector)?.getBoundingClientRect();
      const links=rect('.tariff-page__intro .tariff-related');
      const overviewTitle=rect('.tariff-page > #pricing .eyebrow');
-     const overviewLink=rect('.tariff-page > #pricing .tariff-text-link');
+     const overviewLink=rect('.tariff-page > #pricing > .container > a.tariff-text-link');
      const calculatorTitle=rect('.tariff-page > #calculator .eyebrow');
      if(!links||!overviewTitle||!overviewLink||!calculatorTitle)return null;
      return {introToOverview:Math.round(overviewTitle.top-links.bottom),overviewToCalculator:Math.round(calculatorTitle.top-overviewLink.bottom)};
