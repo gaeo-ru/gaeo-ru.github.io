@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2N_PR_CI_then_merge_prod_main_pages_external_HTTPS",
+    "next_batch": "2N_Pages_and_external_HTTPS_then_parallel_2K_2L_2O_2P_check",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -485,7 +485,7 @@
     "phase_2n": {
       "phase": 2,
       "batch": "2N",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "main_verified_pages_in_progress_external_https_unverified",
       "source_base_sha": "e3aeb1bf268e6d1ad6682cb26207ec4448e6af0d",
       "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
       "records": [
@@ -497,12 +497,25 @@
       "qa_file": "scripts/qa_industry_specializations.mjs",
       "new_industry_landing_pairs_prepared": 3,
       "new_ru_en_urls_prepared": 6,
-      "ci_status": "not_yet_run",
-      "production_status": "not_published",
-      "pages_status": "not_published",
+      "ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "in_progress_at_documentation_check",
       "public_https_browser_verified": false,
       "parallel_owned": "2L=7/9/11; 2M=8/83; 2K=92/93/94",
-      "next_required_step": "Open PR, complete full CI including 1440/390/320 browser QA, merge safely, verify production/main/sitemap/Pages and direct HTTPS. Preserve only planned routes before live check."
+      "next_required_step": "Confirm Pages for main 7f0133, retry 6 live https URLs and mobile view, then only if actual pass set landing_url and verified_at.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/92",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421180383",
+      "source_merge_sha": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421663323",
+      "published_commit": "7f0133efdf76867ed6800ec0f9c6ef97366d8f35",
+      "released_at": "2026-11-07T22:45:41.502Z",
+      "manifest_files": 726,
+      "built_html_pages": 187,
+      "sitemap_urls": 182,
+      "main_new_html_verified": 6,
+      "main_new_sitemap_urls_verified": 6,
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422117754",
+      "public_https_limitation": "web open failed and local DNS not available; do not claim visual PASS"
     },
     "phase_2p": {
       "phase": 2,
@@ -556,19 +569,19 @@
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 37,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 177,
+    "total_generated_html_pages_current_release": 187,
     "total_new_specialization_pairs_in_phase_2": 37,
     "total_new_specialization_urls_in_phase_2": 74,
     "new_industry_landings_in_phase_2_prepared_not_deployed": 2,
     "new_industry_urls_in_phase_2_prepared_not_deployed": 4,
-    "total_specialization_pairs_in_main_current_release": 37,
-    "total_specialization_urls_in_main_current_release": 74,
+    "total_specialization_pairs_in_main_current_release": 42,
+    "total_specialization_urls_in_main_current_release": 84,
     "total_specialization_pairs_prepared_including_2h": 30,
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
     "total_specialization_urls_prepared_including_2j": 66,
-    "current_sitemap_urls": 172,
-    "main_manifest_file_count": 716,
+    "current_sitemap_urls": 182,
+    "main_manifest_file_count": 726,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
     "phase_2_counts_note": "Latest confirmed main 1cb06302 (source 985994ae) has 37 pairs/74 specialization URLs, 177 HTML/172 sitemap, 716 files. 2I: 4 pairs/8 URLs, PR CI/production/Pages PASS, raw main HTML verified, direct live HTTPS/browser mobile check pending. Parallel 2K/2L/2M not part of these counts.",
@@ -576,7 +589,7 @@
     "total_specialization_urls_prepared_including_2m": 78,
     "phase_2n_prepared_pairs": 3,
     "phase_2n_prepared_urls": 6,
-    "phase_2n_status_note": "Three source-prepared pairs / six RU/EN pages, not yet deployed, not live-verified. Preserve previous production counts.",
+    "phase_2n_status_note": "Source/PR CI/production and main manifest 42 pairs / 84 URLs passed; Pages 42422117754 in progress; external HTTPS unavailable.",
     "phase_2p_prepared_pairs_not_yet_deployed": 3,
     "phase_2p_prepared_ru_en_urls_not_yet_deployed": 6,
     "total_specialization_pairs_prepared_including_2p": 45,
@@ -783,9 +796,10 @@
       ],
       "label": "Строительные генподрядчики, дизайн интерьеров, ремонт жилья",
       "condition": "3 оригинальные RU/EN страницы; подтверждать объектную роль, договорные условия, права на изображения и применимость правовых требований. Общие тарифы сохраняются.",
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "main_verified_pages_in_progress_external_https_unverified",
       "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
-      "source_file": "src/data/industry-specializations-batch-2n.mjs"
+      "source_file": "src/data/industry-specializations-batch-2n.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/92"
     },
     {
       "batch": "2P",
@@ -1161,10 +1175,10 @@
       "match_scope": "none",
       "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_status": "main_verified_pages_in_progress_external_https_unverified",
+      "next_required_step": "confirm_pages_then_direct_https_and_responsive_visual",
       "work_batch": "2N",
-      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "last_completed_step": "2N_pr_CI_production_main_manifest_sitemap_pass",
       "planned_landing_url_ru": "/industries/commercial-industrial-general-contractors/",
       "planned_landing_url_en": "/en/industries/commercial-industrial-general-contractors/",
       "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
@@ -1173,7 +1187,9 @@
         "https://www.consultant.ru/document/cons_doc_LAW_51040/a856e9636e5a3eca479377557ee86fb41304dafb/"
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
-      "related_methodology_en": "/en/geo-for-real-estate/"
+      "related_methodology_en": "/en/geo-for-real-estate/",
+      "source_merge_sha": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421663323"
     },
     {
       "id": 11,
@@ -1222,10 +1238,10 @@
       "match_scope": "none",
       "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_status": "main_verified_pages_in_progress_external_https_unverified",
+      "next_required_step": "confirm_pages_then_direct_https_and_responsive_visual",
       "work_batch": "2N",
-      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "last_completed_step": "2N_pr_CI_production_main_manifest_sitemap_pass",
       "planned_landing_url_ru": "/industries/interior-design-studios/",
       "planned_landing_url_en": "/en/industries/interior-design-studios/",
       "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
@@ -1234,7 +1250,9 @@
         "https://www.consultant.ru/document/cons_doc_LAW_64629/8729a73d82e444f858aa833f74191fd5de2f508d/"
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
-      "related_methodology_en": "/en/geo-for-real-estate/"
+      "related_methodology_en": "/en/geo-for-real-estate/",
+      "source_merge_sha": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421663323"
     },
     {
       "id": 13,
@@ -1258,10 +1276,10 @@
       "match_scope": "none",
       "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_status": "main_verified_pages_in_progress_external_https_unverified",
+      "next_required_step": "confirm_pages_then_direct_https_and_responsive_visual",
       "work_batch": "2N",
-      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "last_completed_step": "2N_pr_CI_production_main_manifest_sitemap_pass",
       "planned_landing_url_ru": "/industries/residential-renovation-contractors/",
       "planned_landing_url_en": "/en/industries/residential-renovation-contractors/",
       "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
@@ -1271,7 +1289,9 @@
         "https://26.rospotrebnadzor.ru/press-center/pr/12771/"
       ],
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
-      "related_methodology_en": "/en/geo-for-real-estate/"
+      "related_methodology_en": "/en/geo-for-real-estate/",
+      "source_merge_sha": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42421663323"
     },
     {
       "id": 14,
