@@ -867,3 +867,28 @@
  .geo-study-article .geo-study-sources{padding:16px 16px 1px}
  .geo-study-article .geo-study-sources p{font-size:14px}
 }
+
+/* Narrow the leading columns in genuinely horizontally scrollable tables on mobile. */
+@media(max-width:700px){
+ /* e-commerce measurement and catalog: long explanations need the width, not the row label. */
+ .ecommerce-method .ecommerce-method-table thead th:first-child,
+ .ecommerce-method .ecommerce-method-table tbody th:first-child{width:132px;padding-left:9px;padding-right:9px}
+ .ecommerce-method .ecommerce-method-table--metrics thead th:first-child,
+ .ecommerce-method .ecommerce-method-table--metrics tbody th:first-child{width:96px;padding-left:8px;padding-right:8px}
+ /* Agentic commerce and the BMR/FRS research keep their scrollable, tabular layout. */
+ .agent-commerce-article .agent-commerce-table{table-layout:fixed}
+ .agent-commerce-article .agent-commerce-table thead th:first-child,
+ .agent-commerce-article .agent-commerce-table tbody td:first-child{width:142px;padding-left:11px;padding-right:11px;overflow-wrap:break-word}
+ .geo-study-article .geo-study-table--comparison thead th:first-child,
+ .geo-study-article .geo-study-table--comparison tbody td:first-child{width:148px}
+ .geo-study-article .geo-study-table--providers thead th:first-child,
+ .geo-study-article .geo-study-table--providers tbody td:first-child{width:128px}
+ .geo-study-article .geo-study-table--providers thead th:nth-child(2),
+ .geo-study-article .geo-study-table--providers tbody td:nth-child(2){width:140px}
+ /* Legal reference tables: free up room for source and explanation cells. */
+ .legal-proof-table{table-layout:fixed}
+ .legal-proof-table thead th:first-child,
+ .legal-proof-table tbody td:first-child{width:170px;padding-left:10px;padding-right:10px;overflow-wrap:break-word}
+ /* The legal strategy table already becomes stacked cards; remove a stale 620px minimum. */
+ .legal-guide .industry-scenario-table{min-width:0}
+}
