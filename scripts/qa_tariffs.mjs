@@ -159,6 +159,23 @@ try{
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
    if(width!==1100)assert.equal(overflow,false,'No horizontal overflow '+width+' '+route); // Existing non-tariff styles overflow at intermediate desktop widths.
    if(['/', '/en/', '/tarify/', '/en/pricing/'].includes(route)){
+    // Shared select styling must survive the calculator/catalogue CSS loaded after style.css.
+    const selectStyles=await page.locator('[data-tariff-calculator] select, [data-industry-catalog] select').evaluateAll(elements=>elements.map(element=>{
+     const css=getComputedStyle(element);
+     return {appearance:css.appearance,paddingRight:parseFloat(css.paddingRight),backgroundImage:css.backgroundImage,backgroundPosition:css.backgroundPosition};
+    }));
+    assert.ok(selectStyles.length>0,'At least one native dropdown exists '+route);
+    for(const style of selectStyles){
+     assert.equal(style.appearance,'none','Custom dropdown arrow '+width+' '+route);
+     assert.ok(style.paddingRight>=54,'Dropdown text stays clear of inset arrow '+width+' '+route);
+     assert.ok(style.backgroundImage.includes('linear-gradient')&&style.backgroundPosition.includes('31px')&&style.backgroundPosition.includes('21px'),
+      'Dark arrow is visibly inset '+width+' '+route+' '+JSON.stringify(style));
+    }
+    if((width===390||width===1440)&&(route==='/tarify/'||route==='/en/pricing/')){
+     const lang=route.startsWith('/en/')?'en':'ru';
+     await page.locator('[data-tariff-calculator] select[name="plan"]').screenshot({path:'visual-tariffs/select-plan-'+lang+'-'+width+'.png'});
+     await page.locator('[data-industry-catalog] select[data-catalog-group]').screenshot({path:'visual-tariffs/select-industry-'+lang+'-'+width+'.png'});
+    }
     const control=page.locator('[data-tariff-calculator]');
     const blocks=control.locator('[name="blocks"]');
     const minus=control.locator('[data-prompt-adjust="-1"]');
