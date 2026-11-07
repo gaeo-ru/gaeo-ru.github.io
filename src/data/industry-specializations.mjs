@@ -1,5 +1,5 @@
 /**
- * Batches 2A, 2B and 2C: bilingual substantive GEO specializations.
+ * Batches 2A through 2D: bilingual evidence-led GEO industry specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -3137,6 +3137,1074 @@ export const industrySpecializations = [
       "ctaTitle": "See which warehouse operators AI recommends",
       "ctaText": "Share the warehouse site, confirmed facilities, regions and product categories. I will propose a useful initial audit.",
       "request": "Warehouse and 3PL GEO: contract storage, pallet capacity, WMS, temperature zones and AI recommendations."
+    }
+  }
+},
+{
+  "id": 20,
+  "slug": "bankruptcy-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/bankruptcy-lawyers/",
+    "en": "/en/industries/bankruptcy-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика измерения рекомендаций юристов",
+      "12 проверок сайта юридической практики"
+    ],
+    "en": [
+      "Measuring AI recommendations of legal providers",
+      "Twelve checks for a legal-practice website"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_39331/",
+      "ru": "Федеральный закон №127-ФЗ о несостоятельности (банкротстве)",
+      "en": "Russian Federal Law 127-FZ on insolvency"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_39331/54f5f3b5dbc98c984ef89aee1e4b78db69a6c093/",
+      "ru": "Статья 213.2: процедуры банкротства граждан",
+      "en": "Article 213.2: personal insolvency procedures"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение юристов по банкротству в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение юристов по банкротству физических лиц и бизнеса",
+      "description": "GEO для юристов по банкротству: долги граждан, реструктуризация, несостоятельность компаний, кредиторы, процедуры и проверяемые рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Несостоятельность",
+      "lead": "Должник, кредитор и руководитель компании обращаются за разной юридической помощью. Проверяю, каких юристов по банкротству нейросети рекомендуют для этих задач и подкреплены ли рекомендации реальными услугами и профессиональными сведениями.",
+      "heroPoints": [
+        "Разные запросы граждан, компаний и кредиторов",
+        "Точные рамки услуг и процедур без обещания списать любой долг",
+        "Проверяемые профессиональные данные и ссылки на законодательство"
+      ],
+      "problemTitle": "Почему обещание «спишем все долги» мешает доверию",
+      "problemIntro": "Банкротство регулируется законом №127-ФЗ. Процедура, последствия и возможности юридического представителя зависят от статуса заявителя, требований кредиторов и документов. Рекламная гарантия исхода этого не учитывает.",
+      "problems": [
+        {
+          "title": "Смешаны граждане, компании и кредиторы",
+          "body": "Процедуры несостоятельности юридического лица отличаются от реструктуризации и реализации имущества гражданина. Для кредитора важен иной объем действий и документов."
+        },
+        {
+          "title": "Заявлены стопроцентные результаты",
+          "body": "Обещания гарантированного освобождения от всех обязательств и сохранения любого имущества не заменяют индивидуальную правовую оценку и могут вводить в заблуждение."
+        },
+        {
+          "title": "Юрист представлен арбитражным управляющим",
+          "body": "Юридическое сопровождение и функции назначенного в деле управляющего различаются. Статус, полномочия и профессиональные сведения необходимо подтверждать."
+        }
+      ],
+      "scenarioTitle": "Запросы, по которым выбирают юриста по банкротству",
+      "scenarioIntro": "Разделяю поиск услуги по роли клиента и правовому вопросу; не смешиваю юридическую консультацию с прогнозом решения суда.",
+      "columns": [
+        "Вопрос клиента",
+        "Что проверять",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Как выбрать юриста по банкротству гражданина с несколькими кредитами?",
+          "Реальные услуги по оценке документов, стадиям процедуры, последствиям и оплате",
+          "Страница помощи гражданам с ограничениями и этапами"
+        ],
+        [
+          "Кто помогает бизнесу при угрозе несостоятельности?",
+          "Компетенция по организациям, роли руководителя, кредиторским требованиям, судебным процедурам",
+          "Отдельное описание сопровождения юридических лиц"
+        ],
+        [
+          "Кто представляет интересы кредитора в деле о банкротстве?",
+          "Подготовка заявлений, реестр требований, процессуальные действия и условия услуги",
+          "Страница работы кредиторами, а не копия рекламной страницы должника"
+        ],
+        [
+          "Когда возможна внесудебная процедура через МФЦ?",
+          "Актуальные условия закона, факты о задолженности и допустимые ограничения",
+          "Осторожный FAQ с ссылкой на действующую редакцию №127-ФЗ"
+        ]
+      ],
+      "proofTitle": "Какие сведения подтверждают специализацию в несостоятельности",
+      "proofIntro": "Закон №127-ФЗ отдельно определяет процедуры банкротства граждан и организаций. Публичные сведения об отдельных делах можно сверять с доступными официальными источниками; наличие записи о деле само по себе не подтверждает успех конкретного юридического бюро.",
+      "checks": [
+        "Предмет услуги: сопровождение граждан, компаний, кредиторов, консультация или представительство, точные юрисдикции",
+        "Профессиональные сведения: настоящие специалисты и квалификация, роль юриста и арбитражного управляющего без подмены полномочий",
+        "Подтверждаемые материалы: правовые разъяснения, разрешенные ссылки на дела, договорные условия и последствия, без личных финансовых данных клиентов"
+      ],
+      "proofNote": "Общая методика GAEO для юридических фирм применима к аудиту рекомендаций. Ни корпоративные кейсы, ни кейсы семейного права не выдаются за реализованный результат GEO в банкротстве.",
+      "workTitle": "Как организую GEO для практики банкротства",
+      "workIntro": "Исследую рекомендательные ответы по конкретным правовым задачам, затем устраняю противоречия между сайтом, профессиональными профилями и сторонними источниками.",
+      "steps": [
+        {
+          "title": "Формирую матрицу запросов",
+          "body": "Разделяю банкротство граждан и компаний, интересы кредитора, судебные и внесудебные вопросы."
+        },
+        {
+          "title": "Проверяю правовые факты",
+          "body": "Сверяю доступные услуги, роли специалистов, основания для утверждений и актуальные нормы без универсальных обещаний."
+        },
+        {
+          "title": "Улучшаю страницы и подтверждения",
+          "body": "Готовлю ТЗ на специализации, профессиональные профили, FAQ с источниками и экспертные публикации."
+        },
+        {
+          "title": "Повторяю измерение",
+          "body": "Сравниваю BMR и состав рекомендаций по неизменным запросам и выбранным нейросетям."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли обещать списание всех долгов при банкротстве?",
+          "answer": "Нет: последствия зависят от обстоятельств, применимой процедуры и закона. В GEO-публикациях описываем реальную юридическую помощь без гарантий судебного результата."
+        },
+        {
+          "question": "Что отличает юриста по банкротству от арбитражного управляющего?",
+          "answer": "Юрист оказывает юридическую помощь в рамках своей роли. Арбитражный управляющий выполняет установленные законом функции в соответствующей процедуре; статусы нельзя смешивать."
+        },
+        {
+          "question": "Нужны ли отдельные страницы для граждан и компаний?",
+          "answer": "Да, если бюро действительно оказывает оба вида услуг: различаются процедуры, вопросы и критерии выбора исполнителя."
+        },
+        {
+          "question": "Можно ли публиковать результаты конкретного дела клиента?",
+          "answer": "Только при законных основаниях, проверяемой фактуре и соблюдении конфиденциальности. Данные о долгах и личных обстоятельствах не раскрываются ради рейтинга."
+        },
+        {
+          "question": "Сколько стоит GEO для юристов по банкротству?",
+          "answer": "Действуют стандартные тарифы GAEO на аудит и сопровождение. Число запросов и состав материалов выбираются по направлениям юридической практики."
+        }
+      ],
+      "ctaTitle": "Проверить, каких юристов по банкротству рекомендуют нейросети",
+      "ctaText": "Пришли сайт практики, регионы и реальные направления: граждане, компании, кредиторы. Я предложу подходящую матрицу запросов.",
+      "request": "GEO юристы по банкротству: граждане, бизнес, кредиторы, профессиональные сведения и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for bankruptcy lawyers in AI recommendations | GAEO.ru",
+      "h1": "GEO for personal and corporate insolvency lawyers",
+      "description": "GEO for insolvency lawyers: personal debt, corporate restructuring, creditors, legal service evidence and AI recommendation measurements.",
+      "eyebrow": "Legal services / Insolvency",
+      "lead": "Individuals in debt, company directors and creditors need different kinds of legal assistance. I examine which insolvency professionals AI recommends for each situation and whether the public evidence accurately describes the services offered.",
+      "heroPoints": [
+        "Separate individual, company and creditor buyer intents",
+        "Correct procedure boundaries without universal debt-discharge promises",
+        "Verified professional descriptions supported by primary law"
+      ],
+      "problemTitle": "Why a promise to erase every debt is misleading",
+      "problemIntro": "Russian Federal Law 127-FZ establishes distinct insolvency procedures and effects. Individual case outcomes depend on financial facts, proceedings and applicable exceptions.",
+      "problems": [
+        {
+          "title": "Personal and corporate cases are conflated",
+          "body": "Company insolvency differs from individual debt restructuring and realisation of assets. Creditors also require a separate form of legal work."
+        },
+        {
+          "title": "Guaranteed results replace real scope",
+          "body": "Blanket promises of discharge, asset retention or court success are not supported for every client and should not be treated as evidence."
+        },
+        {
+          "title": "Legal counsel is presented as an insolvency administrator",
+          "body": "Legal representation and a court-appointed administrator's role are different. Claimed status and duties must be verified."
+        }
+      ],
+      "scenarioTitle": "Questions that lead to selecting an insolvency specialist",
+      "scenarioIntro": "Segment potential clients by their legal role and the actual work requested, not by generic financial distress.",
+      "columns": [
+        "Client question",
+        "Evidence to assess",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can advise an individual with several outstanding loans?",
+          "Document assessment, applicable procedure, fees, exceptions and legal consequences",
+          "Accurate personal-insolvency service page"
+        ],
+        [
+          "Who supports a company facing insolvency?",
+          "Corporate insolvency expertise, director duties and court process scope",
+          "Dedicated commercial insolvency practice description"
+        ],
+        [
+          "Who can represent a creditor in proceedings?",
+          "Creditor claims, filings, register participation and actual professional role",
+          "A service page for creditors"
+        ],
+        [
+          "When can a person apply through an out-of-court process?",
+          "Current legal eligibility and formal requirements",
+          "Careful FAQ based on the current version of Law 127-FZ"
+        ]
+      ],
+      "proofTitle": "Verifying a bankruptcy legal practice",
+      "proofIntro": "Russian Law 127-FZ distinguishes personal and corporate proceedings. Public proceedings may offer case-specific reference points, but the existence of a case does not establish a particular firm's successful representation.",
+      "checks": [
+        "Actual work: individuals, companies or creditors, consultation and representation scope",
+        "Real practitioner details: appropriate professional roles and qualifications, without conflating legal counsel and administrators",
+        "Publishable legal explanations, engagement terms and permitted case records that do not expose confidential client finances"
+      ],
+      "proofNote": "GAEO's legal-services research method informs these checks. Unrelated corporate or family-law cases are not presented as completed insolvency GEO results.",
+      "workTitle": "An evidence-led GEO programme for insolvency law practices",
+      "workIntro": "Begin with AI recommendations by client need, then correct the underlying legal and professional evidence.",
+      "steps": [
+        {
+          "title": "Map relevant client intents",
+          "body": "Separate personal and corporate insolvency, creditor representation and judicial or out-of-court processes."
+        },
+        {
+          "title": "Verify claims",
+          "body": "Review services, practitioner roles and current legal statements without generic outcome guarantees."
+        },
+        {
+          "title": "Improve source information",
+          "body": "Specify separate practice pages, biographies, FAQ and specialist legal publications."
+        },
+        {
+          "title": "Measure again",
+          "body": "Compare BMR and recommendation accuracy with the original questions and AI platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a firm promise that all debts will be discharged?",
+          "answer": "No blanket promise applies to every case. The outcome follows the applicable procedure and individual legal circumstances."
+        },
+        {
+          "question": "Is a bankruptcy lawyer the same as an insolvency administrator?",
+          "answer": "No. Lawyers provide legal services; administrators have specific statutory roles. Public profiles must accurately identify which role is involved."
+        },
+        {
+          "question": "Should individual and corporate insolvency use separate GEO pages?",
+          "answer": "Usually yes when both are offered, because legal procedures, services and clients differ."
+        },
+        {
+          "question": "May a firm publish a client's insolvency results?",
+          "answer": "Only with a valid legal basis, factual verification and respect for confidentiality. Avoid unnecessary personal financial details."
+        },
+        {
+          "question": "What is the GAEO price for insolvency specialists?",
+          "answer": "GAEO's published audit and monthly plans apply. Scope depends on practice areas, jurisdictions and the agreed query matrix."
+        }
+      ],
+      "ctaTitle": "Find out which insolvency lawyers AI recommends",
+      "ctaText": "Share your legal practice site, jurisdiction and actual services. I will propose a starting recommendation audit.",
+      "request": "Insolvency legal GEO: individual and corporate bankruptcy, creditor services, verified professionals and AI recommendations."
+    }
+  }
+},
+{
+  "id": 24,
+  "slug": "real-estate-transaction-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/real-estate-transaction-lawyers/",
+    "en": "/en/industries/real-estate-transaction-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как проверять рекомендации юридических компаний",
+      "Проверки юридического сайта под GEO"
+    ],
+    "en": [
+      "Measuring legal provider recommendations",
+      "Technical and editorial legal website checks"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+      "ru": "Закон №218-ФЗ о государственной регистрации недвижимости",
+      "en": "Federal Law 218-FZ: registration of real estate rights"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/e064cc95b1bdffa4d12abb92fdfc56dea94198df/",
+      "ru": "Статья 62: порядок предоставления сведений ЕГРН",
+      "en": "Article 62: access to property register information"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение юристов по сделкам с недвижимостью | GAEO.ru",
+      "h1": "GEO-продвижение юристов по сделкам с недвижимостью в нейросетях",
+      "description": "GEO для юристов по недвижимости: проверка квартиры, договор купли-продажи, новостройки, ипотека, ЕГРН, сопровождение сделок и рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Сделки с недвижимостью",
+      "lead": "Покупатель квартиры ищет не просто риелтора, а специалиста, который поможет оценить правовые риски сделки. Девелоперу и собственнику коммерческого объекта нужна иная экспертиза. Проверяю, каких юристов нейросети рекомендуют для конкретных задач и какие доказательства поддерживают их квалификацию.",
+      "heroPoints": [
+        "Разделение проверки объекта, договора и сопровождения регистрации",
+        "Правовые источники об ЕГРН и переходе прав с учетом ограничений доступа",
+        "Отдельная оценка роли юриста, брокера, нотариуса и банка"
+      ],
+      "problemTitle": "Почему общая юридическая услуга не раскрывает риски сделки",
+      "problemIntro": "Квартира на вторичном рынке, доля в собственности, покупка новостройки и сделка с коммерческой недвижимостью требуют различных процедур. Формулировка «проверим юридическую чистоту» недостаточно конкретна.",
+      "problems": [
+        {
+          "title": "Услуги риелтора и юриста перепутаны",
+          "body": "Поиск квартиры и переговоры о цене не эквивалентны правовой проверке документов, составлению договора и оценке юридических рисков."
+        },
+        {
+          "title": "ЕГРН представлено как единственная гарантия",
+          "body": "Выписка подтверждает доступные реестровые сведения на момент выдачи, но сама по себе не снимает все правовые и фактические вопросы по объекту и сторонам сделки."
+        },
+        {
+          "title": "Обещана абсолютная безопасность",
+          "body": "Юридическая проверка снижает отдельные риски, но ее границы зависят от документов, доступности сведений и обстоятельств. Универсальную гарантию отсутствия спора давать нельзя."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам выбирают юриста по недвижимости",
+      "scenarioIntro": "Запросы покупателей, продавцов и компаний разделяются по объекту права, стадии сделки и форме юридического участия.",
+      "columns": [
+        "Задача клиента",
+        "Что нужно проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто проверит вторичную квартиру перед внесением аванса?",
+          "Право продавца, документы, доступные выписки, обременения и ограничения проверки",
+          "Отдельная услуга предварительной правовой проверки"
+        ],
+        [
+          "Кто составит договор купли-продажи квартиры с долями?",
+          "Структура прав, необходимость нотариальной формы в конкретном случае, условия и последствия",
+          "Разъяснение договорной работы без универсальных формул"
+        ],
+        [
+          "Как выбрать юриста для сделки с новостройкой?",
+          "Тип договора, сторона сделки, документы проекта, оплата и этап передачи объекта",
+          "Специализация на первичном рынке с актуальными источниками"
+        ],
+        [
+          "Кому доверить юридическое сопровождение продажи коммерческого помещения?",
+          "Права сторон, договор, налоговые и корпоративные вопросы, рамки due diligence",
+          "Отдельная практика для коммерческой недвижимости"
+        ]
+      ],
+      "proofTitle": "Проверяемые основания для рекомендации юридического специалиста",
+      "proofIntro": "Закон №218-ФЗ регулирует государственную регистрацию прав и получение сведений ЕГРН. Состав доступной выписки и порядок доступа зависят от закона. Мы проверяем, что юридическое бюро корректно описывает свою услугу, не обещая доступа к закрытой информации.",
+      "checks": [
+        "Действительная специализация по объектам и видам сделок, квалификация конкретных сотрудников, территория работы",
+        "Состав проверки: документы, полномочия сторон, доступные реестровые сведения, договорные условия и оговорки об ограничениях",
+        "Реальные публичные разъяснения, договоры услуг и разрешенные примеры практики без раскрытия клиентских сделок и персональных сведений"
+      ],
+      "proofNote": "GEO для агентств недвижимости и жилых комплексов использует близкий рынок спроса, но эти страницы не доказывают завершенный GEO-кейс юридического сопровождения сделок.",
+      "workTitle": "Как строю GEO-продвижение юриста по сделкам",
+      "workIntro": "Сначала сравниваю, кого нейросети советуют для разных рисков и типов объектов, затем исправляю неполные или неверные основания рекомендаций.",
+      "steps": [
+        {
+          "title": "Разделяю коммерческие интенты",
+          "body": "Формирую группы: проверка вторички, покупка новостройки, долевые сделки, ипотека, коммерческие объекты."
+        },
+        {
+          "title": "Сверяю правовую фактуру",
+          "body": "Проверяю состав услуг, нормативные ссылки, профессиональные сведения и ограничения правовой проверки."
+        },
+        {
+          "title": "Готовлю отраслевые страницы",
+          "body": "Создаю ТЗ на правовую проверку, составление договоров, сопровождение регистрации, профили юристов и FAQ."
+        },
+        {
+          "title": "Отслеживаю рекомендации",
+          "body": "Повторяю согласованные запросы, измеряю BMR и корректность описания специалиста в ответах нейросетей."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Чем юрист по сделке отличается от агентства недвижимости?",
+          "answer": "Агентство помогает подобрать, продать и сопроводить объект в рамках своих услуг. Юрист оценивает правовые документы и риски в пределах договора; роли не следует отождествлять."
+        },
+        {
+          "question": "Достаточно ли выписки ЕГРН для полной безопасности покупки?",
+          "answer": "Нет. Выписка содержит доступные реестровые сведения, но оценка сделки может требовать дополнительных документов и учета обстоятельств сторон."
+        },
+        {
+          "question": "Всегда ли нужен нотариус при продаже доли?",
+          "answer": "Правила зависят от структуры сделки, участников и действующих исключений. На странице следует описывать условия, а не универсально утверждать необходимость либо ее отсутствие."
+        },
+        {
+          "question": "Можно ли обещать полное отсутствие судебных споров после сделки?",
+          "answer": "Нет универсальной гарантии будущих событий. Юрист может описать реальные проверочные процедуры, границы услуги и распределение ответственности."
+        },
+        {
+          "question": "Сколько стоит GEO для юридического сопровождения недвижимости?",
+          "answer": "Действуют стандартные тарифы GAEO на аудит и продвижение. Объем зависит от видов сделок, географии и доказательной базы."
+        }
+      ],
+      "ctaTitle": "Выяснить, каких юристов по недвижимости рекомендуют нейросети",
+      "ctaText": "Пришли сайт юридической практики, регион и виды сопровождения. Я предложу матрицу запросов по сделкам и правовым рискам.",
+      "request": "GEO юрист по сделкам с недвижимостью: вторичка, новостройки, ЕГРН, договоры, регистрация и AI-рекомендации."
+    },
+    "en": {
+      "title": "GEO for real estate transaction lawyers | GAEO.ru",
+      "h1": "GEO for real estate transaction lawyers in AI recommendations",
+      "description": "GEO for real estate counsel: property due diligence, sale agreements, new-build projects, registration, title records and AI recommendations.",
+      "eyebrow": "Legal services / Property transactions",
+      "lead": "A buyer needs someone to review transaction risks, not simply locate an apartment. Commercial property owners and developers may require a different legal skill set. I examine which professionals AI recommends for each scenario and the evidence behind their public claims.",
+      "heroPoints": [
+        "Differentiate title due diligence, contract drafting and registration support",
+        "Use accurate property-register sources and access restrictions",
+        "Explain the roles of lawyers, agents, notaries and lenders"
+      ],
+      "problemTitle": "Why generic property legal support is not enough",
+      "problemIntro": "Resale apartments, jointly owned interests, new-build acquisitions and commercial property demand different documentation. Legal safety cannot be established through one marketing slogan.",
+      "problems": [
+        {
+          "title": "Brokerage and legal services are confused",
+          "body": "Finding a buyer or home differs from checking legal documents, preparing contracts and assessing defined transactional risks."
+        },
+        {
+          "title": "A register extract is treated as a universal guarantee",
+          "body": "An EGRN extract provides the available registered facts at the time of issue; other legal and factual circumstances may still matter."
+        },
+        {
+          "title": "Absolute safety is promised",
+          "body": "Lawyers can assess particular issues and available records, but a universal guarantee that no future dispute will occur is unsupported."
+        }
+      ],
+      "scenarioTitle": "Property legal-service questions that lead to a shortlist",
+      "scenarioIntro": "Segment buyers, sellers and companies by transaction type and the particular legal concern.",
+      "columns": [
+        "Prospective client question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can review a resale apartment before a deposit?",
+          "Available title records, seller capacity, encumbrances and review scope",
+          "A defined pre-purchase due-diligence service"
+        ],
+        [
+          "Who can prepare a sale agreement for jointly owned property?",
+          "Ownership structure, notarial requirements where applicable and contractual consequences",
+          "Clear contract work and case-dependent limitations"
+        ],
+        [
+          "Who reviews a new-build acquisition?",
+          "Relevant agreement, developer documentation, payments and acceptance procedures",
+          "A verified new-development legal service"
+        ],
+        [
+          "Who supports the sale of commercial premises?",
+          "Entity authority, title, commercial terms and transaction due diligence",
+          "A commercial property legal-specialism page"
+        ]
+      ],
+      "proofTitle": "Evidence required to recommend property transaction counsel",
+      "proofIntro": "Russian Federal Law 218-FZ governs registration of real estate rights and access to EGRN information. The type and accessibility of an extract depend on applicable rules. A law firm must not imply unrestricted access to confidential records.",
+      "checks": [
+        "Real expertise in relevant transaction types, practitioner roles and territories",
+        "Defined due diligence: documents, authorised parties, available registers, contract work and review limitations",
+        "Published legal explanations and cases that respect confidentiality and client permissions"
+      ],
+      "proofNote": "GAEO has related real estate and brokerage research, but it is not a completed GEO result for property transaction lawyers.",
+      "workTitle": "A GEO programme for a property law practice",
+      "workIntro": "Start from the concrete risks clients ask about and verify what each law firm can actually check and deliver.",
+      "steps": [
+        {
+          "title": "Segment client intents",
+          "body": "Separate resale reviews, new builds, shared ownership, mortgages and commercial assets."
+        },
+        {
+          "title": "Validate service scope",
+          "body": "Review legal sources, practitioners, engagement terms and boundaries of due diligence."
+        },
+        {
+          "title": "Improve public evidence",
+          "body": "Specify service pages, staff profiles, contract and registration FAQ, and specialist articles."
+        },
+        {
+          "title": "Measure again",
+          "body": "Repeat equivalent AI queries and evaluate BMR and factual accuracy."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How does a transaction lawyer differ from an estate agency?",
+          "answer": "Agents may assist with marketing and negotiation, while lawyers provide defined legal review and contractual services. The scope depends on the engagement."
+        },
+        {
+          "question": "Does an EGRN extract make a purchase completely safe?",
+          "answer": "No. It reports accessible registered information. Additional documents and transaction circumstances can affect the analysis."
+        },
+        {
+          "question": "Is a notary mandatory for every sale of a shared ownership interest?",
+          "answer": "The requirements depend on the structure of the transaction and current legal exceptions. Avoid unconditional generalisations."
+        },
+        {
+          "question": "Can a law firm guarantee no future property dispute?",
+          "answer": "No universal guarantee is justified. Describe actual due-diligence work and limitations instead."
+        },
+        {
+          "question": "How does GAEO price property-law GEO?",
+          "answer": "The published audit and monthly GEO plans apply. Scope depends on transaction types, locations and baseline recommendations."
+        }
+      ],
+      "ctaTitle": "See which property lawyers AI recommends to buyers",
+      "ctaText": "Share the firm site, jurisdictions and actual transaction services. I will outline a suitable initial audit.",
+      "request": "Property transaction law GEO: resale, new build, EGRN, contracts, registration and AI recommendations."
+    }
+  }
+},
+{
+  "id": 37,
+  "slug": "cybersecurity-providers",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/cybersecurity-providers/",
+    "en": "/en/industries/cybersecurity-providers/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как подтверждать компетенции технического B2B-поставщика",
+      "Методика измерения ответов нейросетей"
+    ],
+    "en": [
+      "Evidence for technical B2B supplier qualifications",
+      "Measuring AI recommendations"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1299/final",
+      "ru": "NIST CSF 2.0: структура управления киберрисками",
+      "en": "NIST Cybersecurity Framework 2.0"
+    },
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1326/final",
+      "ru": "NIST SP 1326 (2026): проверка поставщиков ИКТ",
+      "en": "NIST SP 1326 (2026): supplier due diligence"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение компаний по кибербезопасности | GAEO.ru",
+      "h1": "GEO-продвижение компаний по кибербезопасности в нейросетях",
+      "description": "Продвижение ИБ-подрядчиков в нейросетях: аудит защиты, тесты на проникновение, SOC, реагирование, лицензии, реальные компетенции и проверяемые рекомендации.",
+      "eyebrow": "IT и корпоративное ПО / Кибербезопасность",
+      "lead": "Заказчик может искать аудит информационной безопасности, разовую проверку защищенности или круглосуточный мониторинг инцидентов. Эти услуги требуют разных процессов и компетенций. Проверяю, каких ИБ-подрядчиков нейросети рекомендуют по конкретным задачам и обоснованы ли их публичные заявления.",
+      "heroPoints": [
+        "Самостоятельные запросы для аудита, тестирования, SOC/MDR и реагирования",
+        "Проверка реально оказываемых услуг, компетенций и применимых разрешений",
+        "Корректное описание SLA, конфиденциальности и границ проверки"
+      ],
+      "problemTitle": "Почему лозунг «защитим от всех атак» не раскрывает квалификацию",
+      "problemIntro": "Кибербезопасность - управление рисками, а не абсолютная гарантия. Покупатель должен понимать, какие системы, виды работ и результаты входят в договор, как обрабатываются уязвимости и кто отвечает за изменения.",
+      "problems": [
+        {
+          "title": "Пентест, аудит и SOC названы одной услугой",
+          "body": "Оценка защищенности, моделирование атак в согласованных границах и постоянный мониторинг требуют разных процессов, допусков и форматов отчета."
+        },
+        {
+          "title": "Лицензии и стандарты приписаны без проверки",
+          "body": "Применимость требований ФСТЭК или ФСБ зависит от вида деятельности. Ссылка на NIST не является сертификатом подрядчика, а чужие партнерские статусы нельзя использовать без оснований."
+        },
+        {
+          "title": "Обещана стопроцентная защита",
+          "body": "Количество атак, реакция на инцидент и итоговые риски зависят от среды клиента и распределения ответственности. Универсальные обещания невозможности взлома необоснованны."
+        }
+      ],
+      "scenarioTitle": "По каким вопросам компании выбирают ИБ-подрядчика",
+      "scenarioIntro": "Запросы разделяются по виду работ, размеру организации, отраслевому регулированию и доступным доказательствам.",
+      "columns": [
+        "Вопрос заказчика",
+        "Что подтверждать",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто проверит защищенность веб-приложения перед запуском?",
+          "Согласованный объем работ, правила тестирования, методика, отчет и повторная проверка",
+          "Страница проверки приложений без публичных опасных деталей"
+        ],
+        [
+          "Кому передать мониторинг событий безопасности 24/7?",
+          "Фактический режим SOC/MDR, источники событий, SLA, эскалация и роль клиента",
+          "Сервис мониторинга с измеримыми условиями"
+        ],
+        [
+          "Кто проведет аудит ИБ компании и подготовит план улучшений?",
+          "Компетенции, охват систем, методика, требования к документам и рекомендации",
+          "Отдельный аудит, не подмененный рекламой пентеста"
+        ],
+        [
+          "Кто поможет после выявления инцидента?",
+          "Порядок обращения, дежурства, сохранность данных, полномочия и ограничения",
+          "Описание реагирования и ответственности без обещаний полного восстановления"
+        ]
+      ],
+      "proofTitle": "Какие сведения позволяют обоснованно рекомендовать ИБ-провайдера",
+      "proofIntro": "NIST CSF 2.0 задает направления управления киберрисками, а руководство NIST SP 1326 (2026) описывает проверку поставщиков информационных технологий. Эти документы полезны для требований к исполнителю, но сами по себе не удостоверяют компетенцию или соответствие конкретной компании.",
+      "checks": [
+        "Подтвержденные услуги: аудит, тестирование, мониторинг, реагирование, охват платформ, форматы отчетов и границы доступа",
+        "Профессиональные факты: реальные роли специалистов, действительные партнерские статусы и применимые к деятельности лицензии только после документальной сверки",
+        "Сервисные обязательства: фактические часы поддержки, процедуры эскалации, конфиденциальность, обработка результатов и условия SLA"
+      ],
+      "proofNote": "Опыт MethodLab касается производительности сайтов. Он не доказывает результаты GEO в информационной безопасности. Нельзя приписывать ИБ-компаниям несуществующие сертификаты, устраненные уязвимости или предотвращенные инциденты.",
+      "workTitle": "Как организую GEO для подрядчика по кибербезопасности",
+      "workIntro": "Сначала фиксирую, кого рекомендуют нейросети по разным задачам защиты. Затем выстраиваю проверяемые сведения без публикации чувствительных подробностей инфраструктуры заказчиков.",
+      "steps": [
+        {
+          "title": "Исследую задачи покупки",
+          "body": "Разделяю аудит, тестирование, SOC/MDR, реагирование, обучение и требования отдельных отраслей."
+        },
+        {
+          "title": "Проверяю доказательства",
+          "body": "Сверяю описание услуг, квалификаций, применимости разрешений, методик, SLA и режима конфиденциальности."
+        },
+        {
+          "title": "Готовлю материалы и связи",
+          "body": "Составляю ТЗ на страницы услуг и процессов, профессиональные профили, безопасные FAQ и экспертные публикации."
+        },
+        {
+          "title": "Повторяю измерения",
+          "body": "Сравниваю BMR, точность характеристик и источники рекомендаций по неизменной матрице запросов."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли гарантировать полную защиту от кибератак?",
+          "answer": "Нет универсальной гарантии. Договор может определять конкретные услуги, сроки реакции, измеримые показатели и ответственность, но не отсутствие любых инцидентов."
+        },
+        {
+          "question": "Пентест и постоянный мониторинг SOC - одно и то же?",
+          "answer": "Нет. Пентест - согласованная проверка определенных систем и периода, SOC/MDR - сервис регулярного наблюдения, выявления и обработки событий в заданном объеме."
+        },
+        {
+          "question": "Любой ИБ-подрядчик обязан иметь одинаковый набор лицензий?",
+          "answer": "Нет. Нормативные требования зависят от вида услуг и деятельности. Публичные заявления о лицензиях ФСТЭК или ФСБ нужно сверять с конкретным исполнителем и актуальным документом."
+        },
+        {
+          "question": "Можно ли публиковать подробности найденных у заказчика уязвимостей?",
+          "answer": "Только в рамках полномочий и разрешений, без раскрытия сведений, создающих риски для клиента. Для GEO достаточно корректного описания методики и согласованных итогов."
+        },
+        {
+          "question": "Сколько стоит GEO для ИБ-компании?",
+          "answer": "Действуют общие тарифы GAEO на аудит и сопровождение. Состав направлений и запросов определяется реальными услугами, рынком и исходной видимостью."
+        }
+      ],
+      "ctaTitle": "Проверить, каких ИБ-подрядчиков рекомендуют нейросети",
+      "ctaText": "Пришли сайт компании, услуги, целевые сегменты и сведения, разрешенные к публикации. Я подготовлю контрольные запросы для GEO-аудита.",
+      "request": "GEO кибербезопасность: аудит, пентест, SOC/MDR, лицензии, SLA, реагирование и рекомендации нейросетей."
+    },
+    "en": {
+      "title": "GEO for cybersecurity service providers | GAEO.ru",
+      "h1": "GEO for cybersecurity companies in AI recommendations",
+      "description": "GEO for cybersecurity vendors: security assessments, penetration testing, SOC/MDR, incident response, verifiable service capabilities and AI visibility.",
+      "eyebrow": "IT services / Cybersecurity",
+      "lead": "A business may need a one-off security assessment, a scoped penetration test or continuous incident monitoring. Those services require different competencies and delivery models. I examine which providers AI recommends for each need and which verifiable facts support the recommendations.",
+      "heroPoints": [
+        "Distinct intents for audit, penetration testing, SOC/MDR and response",
+        "Verified scope, expertise and legally applicable credentials",
+        "Careful treatment of service levels, confidentiality and testing permission"
+      ],
+      "problemTitle": "Why a promise to prevent every cyberattack is not evidence",
+      "problemIntro": "Cybersecurity involves managing risks rather than guaranteeing their elimination. Buyers need to know what systems, tests, monitoring and incident tasks the vendor actually contracts to perform.",
+      "problems": [
+        {
+          "title": "Different security services are conflated",
+          "body": "An assessment, an authorised attack simulation and continuous monitoring have different goals, reporting and responsibilities."
+        },
+        {
+          "title": "Certification and licence claims are unsupported",
+          "body": "Applicable national requirements depend on the type of work. Referencing NIST does not certify a service provider; claimed authorisations must be confirmed."
+        },
+        {
+          "title": "Total security is guaranteed",
+          "body": "Risk, incident outcomes and recovery depend on the environment and shared responsibilities. No blanket assertion of impossibility of intrusion is substantiated."
+        }
+      ],
+      "scenarioTitle": "Cybersecurity buying questions worth monitoring",
+      "scenarioIntro": "Separate service needs, business size and regulated-sector requirements using a stable non-brand prompt matrix.",
+      "columns": [
+        "Potential buyer question",
+        "Evidence required",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Who can assess our web application before launch?",
+          "Authorised scope, test methodology, reporting, remediation review and limits",
+          "A precise application security assessment page"
+        ],
+        [
+          "Who can monitor security events around the clock?",
+          "Actual SOC/MDR hours, data feeds, escalation, roles and service terms",
+          "A documented monitoring service description"
+        ],
+        [
+          "Which firm can audit our security posture and recommend improvements?",
+          "Coverage, assessment methods, practitioner roles and deliverables",
+          "Distinguish security auditing from penetration tests"
+        ],
+        [
+          "Who can respond to an incident affecting company systems?",
+          "Availability, triage process, evidence handling and contractual authority",
+          "Describe incident response without unsupported recovery promises"
+        ]
+      ],
+      "proofTitle": "Evidence for selecting a cybersecurity supplier",
+      "proofIntro": "NIST Cybersecurity Framework 2.0 describes risk-management functions, while the final NIST SP 1326 (2026) explains due diligence of ICT suppliers. These are procurement frameworks, not certifications of an individual company.",
+      "checks": [
+        "Actual security services and scope: testing, assessment, monitoring, incident handling, platforms and deliverables",
+        "Verified practitioner credentials, partner statuses and any sector-specific licences when the work requires them",
+        "Real service hours, response rules, confidentiality, responsibility split and contractually defined performance measures"
+      ],
+      "proofNote": "GAEO's MethodLab website-performance case does not establish a completed GEO result for a cybersecurity firm. Avoid fabricated certifications, thwarted intrusions or remediation statistics.",
+      "workTitle": "An evidence-led GEO programme for cybersecurity firms",
+      "workIntro": "Start with actual recommendations for defined security services, then improve trustworthy public evidence without exposing clients' sensitive infrastructure.",
+      "steps": [
+        {
+          "title": "Segment buyer needs",
+          "body": "Separate security assessments, penetration tests, SOC/MDR, response and industry-specific duties."
+        },
+        {
+          "title": "Check actual vendor claims",
+          "body": "Review available expertise, licence scope where relevant, methods, SLAs and confidentiality restrictions."
+        },
+        {
+          "title": "Improve public sources",
+          "body": "Specify service pages, biographies, safe FAQ and specialist industry publications."
+        },
+        {
+          "title": "Measure again",
+          "body": "Repeat the same prompts and track BMR, cited sources and accuracy of descriptions."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a cybersecurity vendor promise zero incidents?",
+          "answer": "No unconditional promise is reasonable. A contract can define services, response targets and liabilities, not the absence of all security events."
+        },
+        {
+          "question": "Is a penetration test the same as SOC monitoring?",
+          "answer": "No. A test examines an authorised scope over a defined period, while SOC/MDR provides ongoing event monitoring and handling under agreed terms."
+        },
+        {
+          "question": "Does every cybersecurity firm require the same licences?",
+          "answer": "No. Requirements depend on the activities and jurisdiction. Claims about specific FSTEC or FSB authorisations must be checked against the actual work."
+        },
+        {
+          "question": "Can client vulnerability details be published in GEO materials?",
+          "answer": "Only where permissions and security restrictions allow it, and never in a way that exposes the customer's systems or creates additional risk."
+        },
+        {
+          "question": "What does GAEO charge for cybersecurity GEO?",
+          "answer": "The current GAEO audit and monthly plans apply. Work scope follows actual services, sectors and baseline query coverage."
+        }
+      ],
+      "ctaTitle": "See which cybersecurity providers AI recommends to clients",
+      "ctaText": "Share your company site, real service lines and publicly verifiable evidence. I will propose an initial audit.",
+      "request": "Cybersecurity GEO: audit, penetration testing, SOC/MDR, incident response, licensing and AI recommendations."
+    }
+  }
+},
+{
+  "id": 66,
+  "slug": "medical-device-manufacturers",
+  "group": "pharma",
+  "routes": {
+    "ru": "/industries/medical-device-manufacturers/",
+    "en": "/en/industries/medical-device-manufacturers/"
+  },
+  "parent": {
+    "ru": "/industries/pharma/",
+    "en": "/en/industries/pharma/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/pharma-geo-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/pharma-geo-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика проверки медицинских и фармацевтических утверждений",
+      "Измерение BMR и достоверности ответов"
+    ],
+    "en": [
+      "Evidence verification for healthcare and pharma content",
+      "BMR and AI answer accuracy measurements"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://roszdravnadzor.gov.ru/medproducts/registration",
+      "ru": "Росздравнадзор: регистрация медицинских изделий и официальные сервисы",
+      "en": "Roszdravnadzor: medical device registration services"
+    },
+    {
+      "href": "https://elk.roszdravnadzor.gov.ru/widget/",
+      "ru": "Государственный реестр медицинских изделий и производителей",
+      "en": "Official state register of medical devices and manufacturers"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение производителей медицинских изделий | GAEO.ru",
+      "h1": "GEO-продвижение производителей медицинских изделий в нейросетях",
+      "description": "Продвижение производителей медицинских изделий в ответах нейросетей: регистрация Росздравнадзора, характеристики, назначение, совместимость, закупки и доказательства.",
+      "eyebrow": "Медицина и фармацевтика / Медицинские изделия",
+      "lead": "Клиника, лаборатория и дистрибьютор выбирают медицинское изделие по назначению, документам, совместимости и сервисному сопровождению. GEO для такого производителя требует проверки регистрационных сведений и строгой точности характеристик. Я измеряю рекомендации нейросетей по закупочным сценариям, а не подменяю их медицинскими советами пациентам.",
+      "heroPoints": [
+        "Запросы профессиональных закупщиков, клиник и лабораторий",
+        "Сверка наименования, модели, регистрационных сведений и назначения",
+        "Только подтвержденные технические и клинические утверждения"
+      ],
+      "problemTitle": "Почему каталог оборудования без доказательств не помогает закупке",
+      "problemIntro": "Названия изделий и рекламные формулировки сами по себе не устанавливают, где изделие зарегистрировано, для чего предназначено и совместимо ли с инфраструктурой покупателя. Важно строго различать медицинские изделия и лекарственные препараты.",
+      "problems": [
+        {
+          "title": "Регистрационные сведения не связаны с моделями",
+          "body": "Покупатель должен понимать, к какой записи реестра относятся конкретное название, модификация, изготовитель и заявленное назначение."
+        },
+        {
+          "title": "Эффективность заявлена без подтверждения",
+          "body": "Нельзя создавать утверждения о лечении, диагностической точности или превосходстве изделия, если они не следуют из разрешенных документов и исследований."
+        },
+        {
+          "title": "Не указаны ограничения применения и обслуживания",
+          "body": "Срок службы, расходные материалы, программная совместимость, сервис, обучение и условия эксплуатации влияют на профессиональный выбор."
+        }
+      ],
+      "scenarioTitle": "Какие закупочные вопросы приводят к рекомендациям изделий",
+      "scenarioIntro": "Разделяю изделия по назначению, классу и среде использования. Не создаю подбор пациентам по симптомам и не приписываю производителю отсутствующие медицинские показания.",
+      "columns": [
+        "Вопрос профессионального покупателя",
+        "Что подтверждать",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Как выбрать диагностическую систему для лаборатории?",
+          "Назначение, регистрационный статус, совместимые расходные материалы, ограничения, техподдержка",
+          "Страница конкретной категории и моделей с документами"
+        ],
+        [
+          "Какие мониторы пациента подходят для оснащения отделения?",
+          "Модели, измеряемые параметры, комплектация, условия эксплуатации и обучение",
+          "Сопоставимое описание зарегистрированных изделий по назначению"
+        ],
+        [
+          "Кто производит стерильные одноразовые медицинские изделия?",
+          "Номенклатура, регистрационные данные, требования к упаковке и заявленные характеристики",
+          "Раздел подтвержденной линейки без необоснованных сравнений"
+        ],
+        [
+          "Какие изделия можно интегрировать с больничной ИТ-системой?",
+          "Реальные интерфейсы, версии, информационная безопасность, сопровождение и пределы совместимости",
+          "Технические материалы и FAQ по подтвержденным интеграциям"
+        ]
+      ],
+      "proofTitle": "Какие официальные сведения подтверждают медицинское изделие",
+      "proofIntro": "Росздравнадзор ведет государственный реестр медицинских изделий и производителей. В нем предусмотрены сведения о регистрационном номере, изготовителе, наименовании, назначении и классе потенциального риска. Публикуемая карточка должна соответствовать действительным реестровым сведениям и разрешенной документации для заявленного рынка.",
+      "checks": [
+        "Идентичность изделия: регистрационная запись и статус, модель и производитель, назначение, модификации, класс потенциального риска",
+        "Технические данные: инструкция и эксплуатационные требования, разрешенные показатели, совместимость, ограничения и сервисные условия",
+        "Доказательства: официальные документы, допустимые результаты испытаний и профессиональные материалы без выдуманных рекомендаций врачей или клинических эффектов"
+      ],
+      "proofNote": "Отраслевая методика GAEO для фармацевтического рынка полезна как подход к проверке доказательств, но лекарства и медицинские изделия регулируются по-разному. Нельзя выдавать кейсы продвижения препаратов или клиник за результат по производителю медизделий.",
+      "workTitle": "Как выстраиваю GEO для производителя медицинских изделий",
+      "workIntro": "Основой становятся проверяемые карточки изделий, документация и реальные вопросы профессиональных покупателей; медицинские рекомендации пациентам остаются за квалифицированными специалистами.",
+      "steps": [
+        {
+          "title": "Формирую безопасную матрицу спроса",
+          "body": "Исследую запросы клиник, лабораторий, закупщиков и дистрибьюторов по назначению, категориям и условиям поставки."
+        },
+        {
+          "title": "Сверяю изделия с реестром",
+          "body": "Проверяю актуальные регистрационные записи, применимые модели, инструкции и документированные технические ограничения."
+        },
+        {
+          "title": "Разрабатываю план контента",
+          "body": "Готовлю ТЗ на линейки, карточки моделей, сравнения по подтвержденным параметрам, сервис и ответы на вопросы закупщиков."
+        },
+        {
+          "title": "Повторяю замеры и фактчекинг",
+          "body": "Отслеживаю BMR и корректность рекомендаций по тем же нейросетям, особенно недостоверные назначения и характеристики."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли рекламировать медизделие без проверки регистрационного статуса?",
+          "answer": "Не следует публиковать утверждения о зарегистрированном изделии без проверки официальных сведений для конкретной модели и рынка. Материалы должны соответствовать применимым требованиям."
+        },
+        {
+          "question": "Достаточно ли маркетингового каталога для GEO?",
+          "answer": "Нет. Технические параметры, назначение, изготовитель и регистрационные данные необходимо соотнести с первичными документами."
+        },
+        {
+          "question": "Может ли нейросеть рекомендовать медицинское изделие пациенту по симптомам?",
+          "answer": "Эта страница посвящена профессиональным закупкам и подтвержденным параметрам, а не индивидуальному подбору лечения или диагностике пациента."
+        },
+        {
+          "question": "Можно ли писать о клинической эффективности и превосходстве изделия?",
+          "answer": "Только в пределах подтвержденной документации, применимых правил и разрешенных доказательств. Нельзя создавать неподтвержденные медицинские обещания."
+        },
+        {
+          "question": "Сколько стоит GEO для производителей медицинских изделий?",
+          "answer": "Применяются общие тарифы GAEO на аудит и ежемесячное сопровождение. Объем зависит от линеек, моделей, рынков и числа проверяемых закупочных запросов."
+        }
+      ],
+      "ctaTitle": "Проверить рекомендации нейросетей о медицинских изделиях",
+      "ctaText": "Пришли сайт производителя, категории изделий, регистрацию и целевые группы профессиональных покупателей. Я предложу контрольные GEO-запросы.",
+      "request": "GEO производитель медицинских изделий: реестр, регистрация, технические характеристики, модели, закупки и AI-рекомендации."
+    },
+    "en": {
+      "title": "GEO for medical device manufacturers | GAEO.ru",
+      "h1": "GEO for medical device manufacturers in AI recommendations",
+      "description": "GEO for medical device producers: verified registration, intended use, product variants, technical specifications, hospital purchasing and AI recommendations.",
+      "eyebrow": "Healthcare technology / Medical devices",
+      "lead": "Hospitals, laboratories and distributors evaluate devices based on intended purpose, official records, interoperability and support. Medical device GEO requires careful verification of product claims. I measure professional procurement questions without turning marketing pages into patient-specific medical advice.",
+      "heroPoints": [
+        "Professional buyer, clinical laboratory and procurement intents",
+        "Device names, registration status, intended use and manufacturer verification",
+        "Only authorised and substantiated product and performance claims"
+      ],
+      "problemTitle": "Why equipment catalogues need verifiable medical-device evidence",
+      "problemIntro": "A product name and attractive marketing description do not prove its registration, intended use or compatibility. Medical devices should not be conflated with pharmaceuticals.",
+      "problems": [
+        {
+          "title": "Registration records are disconnected from individual models",
+          "body": "Buyers need to know which record covers a product name, configuration, maker and intended purpose."
+        },
+        {
+          "title": "Medical performance is overstated",
+          "body": "Diagnostic accuracy, therapeutic outcomes and superiority cannot be invented or inferred from promotional language without suitable authorised evidence."
+        },
+        {
+          "title": "Operating limits and service details are missing",
+          "body": "Consumables, lifetime, software interfaces, maintenance, training and operating conditions influence professional procurement."
+        }
+      ],
+      "scenarioTitle": "Device procurement questions AI may answer",
+      "scenarioIntro": "Segment by intended use, clinical setting and device type. These prompts concern institutional procurement, not treatment selection for individual patients.",
+      "columns": [
+        "Professional buyer question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Which diagnostic equipment fits a particular laboratory workflow?",
+          "Documented intended use, registration, compatible consumables and support",
+          "Device-family pages with traceable documentation"
+        ],
+        [
+          "Which patient monitors meet a ward's equipment requirements?",
+          "Registered models, supported parameters, configurations, use conditions and training",
+          "Comparable verified technical specifications"
+        ],
+        [
+          "Which company supplies sterile single-use medical products?",
+          "Device scope, manufacturer and registration records, packaging and permitted claims",
+          "A product-family overview without unsupported comparisons"
+        ],
+        [
+          "Which devices integrate with our hospital information system?",
+          "Documented interfaces, versions, cybersecurity and verified compatibility",
+          "Technical integration pages and careful buyer FAQ"
+        ]
+      ],
+      "proofTitle": "Official evidence that supports device identification",
+      "proofIntro": "Russia's Roszdravnadzor maintains the state register of medical devices and manufacturers. The records include registration identifiers, manufacturer information, intended purpose and potential risk class. Public pages should match the applicable registered information and approved device documentation.",
+      "checks": [
+        "Device identity: registration entry and status, manufacturer, model or variant, intended use and applicable risk class",
+        "Technical specifications: instructions, operating conditions, authorised parameters, limitations, compatibility and after-sales support",
+        "Evidence quality: official documentation, permitted study results and professional materials without invented physician endorsements or health claims"
+      ],
+      "proofNote": "GAEO's pharmaceutical evidence methodology informs the verification process, but medicinal products and medical devices have different requirements. A pharma case is not a completed GEO outcome for a device manufacturer.",
+      "workTitle": "An evidence-led GEO plan for medical technology manufacturers",
+      "workIntro": "Start from verifiable device records and the questions purchasing teams actually ask. Individual diagnosis and treatment decisions are outside this service content.",
+      "steps": [
+        {
+          "title": "Map professional purchase needs",
+          "body": "Separate hospitals, laboratories, distributors and procurement roles by intended use and equipment category."
+        },
+        {
+          "title": "Verify the product record",
+          "body": "Check current registration status, relevant variants, instructions and documented technical limitations."
+        },
+        {
+          "title": "Build accurate procurement content",
+          "body": "Specify family and product pages, authorised comparisons, support information and professional FAQ."
+        },
+        {
+          "title": "Repeat measurements and fact checks",
+          "body": "Track BMR and factual correctness, especially false indications or unsupported clinical specifications."
+        }
+      ],
+      "faq": [
+        {
+          "question": "May a manufacturer claim device registration without checking it?",
+          "answer": "Registration statements should match the official records for the specific product and market. Unsupported claims should not appear in public GEO material."
+        },
+        {
+          "question": "Is a marketing catalogue enough to support device recommendations?",
+          "answer": "No. Device identification, intended use, specifications and manufacturer details require traceable primary documents."
+        },
+        {
+          "question": "Should AI select a medical device for a patient based on symptoms?",
+          "answer": "This service concerns verified professional procurement questions, not diagnosis or personalised treatment recommendations."
+        },
+        {
+          "question": "Can a company claim improved clinical outcomes without evidence?",
+          "answer": "Only supported and permitted claims may be used, with the scope of documentation and applicable rules respected."
+        },
+        {
+          "question": "How does GAEO price medical device GEO?",
+          "answer": "GAEO's published audit and monthly plans apply. Scope depends on device families, models, markets and professional query coverage."
+        }
+      ],
+      "ctaTitle": "Check how AI recommends medical devices to professional buyers",
+      "ctaText": "Share your manufacturer's website, registered device families and institutional customer segments. I will propose an evidence-led baseline.",
+      "request": "Medical device manufacturer GEO: registration, intended purpose, models, product specifications and B2B procurement recommendations."
     }
   }
 }
