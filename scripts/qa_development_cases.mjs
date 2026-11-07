@@ -251,5 +251,55 @@ try{
    await mobile.close();
   }
  }
+
+ // Test the actual rendered design on both homepages and internal RU/EN pages.
+ // Russian homepage has inline legacy CSS; its Cases styling must not regress.
+ for(const route of ['/','/en/','/services/','/en/services/']){
+  for(const width of [1100,390,320]){
+   const page=await browser.newPage({viewport:{width,height:800}});
+   const errors=[];page.on('pageerror',error=>errors.push(String(error)));
+   const response=await page.goto(base+route,{waitUntil:'domcontentloaded'});
+   assert.equal(response?.status(),200,'Styled menu route '+route);
+   await page.locator('#gaeo-burger-menu-styles').waitFor({state:'attached'});
+   const hamburger=page.locator('.menu-toggle');
+   await hamburger.click();
+   await page.locator('.mobile-menu.open').waitFor({state:'visible',timeout:3500});
+   const cases=page.locator('#mobileMenu details.mobile-cases');
+   assert.equal(await cases.count(),1,'One Cases group '+route);
+   assert.equal(await cases.evaluate(el=>el.open),false,'Cases closed initially '+route);
+   const appearance=await cases.locator('summary').evaluate(el=>{
+    const style=getComputedStyle(el);
+    const anchor=el.closest('.mobile-menu').querySelector(':scope > a[href]');
+    const baseline=getComputedStyle(anchor);
+    const arrow=el.querySelector('.mobile-cases__chevron');
+    const astyle=getComputedStyle(arrow);
+    const rect=el.getBoundingClientRect(),arrowRect=arrow.getBoundingClientRect();
+    return {
+     display:style.display,marker:style.listStyleType,
+     font:style.fontFamily,size:style.fontSize,weight:style.fontWeight,
+     linkFont:baseline.fontFamily,linkSize:baseline.fontSize,linkWeight:baseline.fontWeight,
+     rightAligned:arrowRect.left-rect.left>rect.width*.75,
+     arrowBorder:astyle.borderRightWidth,
+     rowBorder:getComputedStyle(el.parentElement).borderBottomWidth
+    };
+   });
+   assert.equal(appearance.display,'flex','No unstyled default summary '+route+' '+width);
+   assert.equal(appearance.marker,'none','No default black disclosure triangle '+route+' '+width);
+   assert.equal(appearance.font,appearance.linkFont,'Navigation font matches '+route+' '+width);
+   assert.equal(appearance.size,appearance.linkSize,'Navigation font size matches '+route+' '+width);
+   assert.equal(appearance.weight,appearance.linkWeight,'Navigation font weight matches '+route+' '+width);
+   assert.ok(appearance.rightAligned,'Custom chevron at right '+route+' '+width);
+   assert.equal(appearance.arrowBorder,'2px','Custom chevron border '+route+' '+width);
+   assert.equal(appearance.rowBorder,'1px','Matching row divider '+route+' '+width);
+   await cases.locator('summary').click();
+   assert.equal(await cases.locator('.mobile-cases__submenu').isVisible(),true,'Styled submenu expands '+route+' '+width);
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth)<=width+2,'No overflow after expanding '+route+' '+width);
+   await page.keyboard.press('Escape');
+   assert.equal(await cases.evaluate(el=>el.open),false,'Escape closes Cases '+route+' '+width);
+   await hamburger.click();
+   assert.deepEqual(errors,[],'No JS errors '+route+' '+width);
+   await page.close();
+  }
+ }
 }finally{if(browser)await browser.close();server.kill('SIGTERM');}
 console.log('DEVELOPMENT_CASE_BROWSER_QA=PASS; cases='+tests);

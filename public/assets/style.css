@@ -1299,40 +1299,4 @@ details.price:last-child{
 .desktop-menu .nav-cases__submenu a{display:block;padding:11px 12px;border-radius:7px;color:#1c3650;text-decoration:none;font-size:13px;line-height:1.35;font-weight:600}
 .desktop-menu .nav-cases__submenu a:hover,.desktop-menu .nav-cases__submenu a:focus-visible{background:#eaf5f7;color:#062d4b;outline-offset:2px}
 .desktop-menu .nav-cases__parent:hover,.desktop-menu .nav-cases__parent:focus-visible{text-decoration:underline;text-underline-offset:4px}
-/* Accordion-style two-level navigation, inspired by the AdaTours burger flow.
-   Keep the Cases sublinks out of the main list until the visitor opens them. */
-.mobile-menu .mobile-cases{border-bottom:1px solid rgba(2,22,65,.08)}
-.mobile-menu .mobile-cases__toggle{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  min-height:48px;padding:12px 0;list-style:none;cursor:pointer;
-  font-size:inherit;font-weight:600;line-height:1.4;color:var(--navy)
-}
-.mobile-menu .mobile-cases__toggle::-webkit-details-marker{display:none}
-.mobile-menu .mobile-cases__toggle::marker{content:""}
-.mobile-menu .mobile-cases__chevron{
-  display:block;flex:0 0 auto;width:9px;height:9px;margin-right:6px;
-  border-right:2px solid #47627b;border-bottom:2px solid #47627b;
-  transform:rotate(-45deg);transition:transform .18s ease,border-color .18s ease
-}
-.mobile-menu .mobile-cases[open] .mobile-cases__chevron{
-  transform:rotate(45deg);border-color:#06748b
-}
-.mobile-menu .mobile-cases__toggle:hover,
-.mobile-menu .mobile-cases[open]>.mobile-cases__toggle{color:#066779}
-.mobile-menu .mobile-cases__toggle:focus-visible{outline:2px solid #06748b;outline-offset:3px;border-radius:3px}
-.mobile-menu .mobile-cases__submenu{
-  display:none;gap:0;margin:0 0 12px;padding:4px 12px;
-  background:rgba(2,22,65,.035);border:1px solid rgba(2,22,65,.075);border-radius:10px
-}
-.mobile-menu .mobile-cases[open]>.mobile-cases__submenu{display:grid}
-.mobile-menu .mobile-cases__submenu a{
-  margin:0;padding:11px 6px;border:0;color:#344c67;
-  font-size:14px;font-weight:600;line-height:1.4
-}
-.mobile-menu .mobile-cases__submenu a+a{border-top:1px solid rgba(2,22,65,.09)}
-.mobile-menu .mobile-cases__submenu .mobile-cases__overview{font-weight:700;color:var(--navy)}
-.mobile-menu .mobile-cases__submenu a:hover,
-.mobile-menu .mobile-cases__submenu a:focus-visible{
-  color:#06596d;background:rgba(210,236,241,.6);outline-offset:2px
-}
-@media(prefers-reduced-motion:reduce){.mobile-menu .mobile-cases__chevron{transition:none}}
+/* Shared burger disclosure styles are injected by site.js for RU homepage and all inner pages. */
