@@ -1,0 +1,30 @@
+---
+import {getPlan,priceLabel,pricingHref,serviceHref} from '../../data/pricing.mjs';
+import GuaranteeTargets from './GuaranteeTargets.astro';
+const {lang='ru'}=Astro.props;const en=lang==='en';
+const plans=['geo','content','guarantee'].map(id=>getPlan(id,lang));
+const rows=en?[
+ ['Prompt and platform coverage','From 50 prompts, 5 platforms','From 50 prompts, 5 platforms','From 50 prompts, 5 platforms'],
+ ['Website','Specifications for your implementation team','Specifications for your implementation team','Agreed website improvements'],
+ ['Content','Briefs for your experts and writers','I study the product and create content','I create content'],
+ ['External sources','Distribution, links and reputation','Distribution, links and reputation','Distribution, links and reputation'],
+ ['Reporting','Monthly','Monthly','Monthly, with the contractual BMR target'],
+ ['Contractual growth targets','Scope agreed after the audit','Scope agreed after the audit','Baseline BMR +5 / +10 / +15 pp in months 1 / 2 / 3'],
+ ['Payment','Agreed in the contract','Agreed in the contract','50% fixed + 50% upon reaching the monthly BMR target']
+]:[
+ ['Запросы и нейросети','От 50 промптов, от 5 нейросетей','От 50 промптов, от 5 нейросетей','От 50 промптов, от 5 нейросетей'],
+ ['Сайт','ТЗ для вашей команды внедрения','ТЗ для вашей команды внедрения','Согласованные доработки сайта'],
+ ['Контент','ТЗ для ваших экспертов и авторов','Сам изучаю продукт и создаю контент','Сам создаю контент'],
+ ['Внешние источники','Дистрибуция, ссылки, репутация','Дистрибуция, ссылки, репутация','Дистрибуция, ссылки, репутация'],
+ ['Отчетность','1 раз в месяц','1 раз в месяц','1 раз в месяц, с договорной целью BMR'],
+ ['Цели роста по договору','Состав работ после аудита','Состав работ после аудита','Стартовый BMR +5 / +10 / +15 п.п. в 1 / 2 / 3-й месяцы'],
+ ['Оплата','Условия в договоре','Условия в договоре','50% фикс + 50% при достижении месячной цели BMR']
+];
+---
+<section class="section-sm" id="compare"><div class="container">
+ <div class="eyebrow">{en?'Compare':'Сравнение'}</div><h2>{en?'What changes between the 3 monthly plans':'Чем отличаются 3 тарифа продвижения'}</h2>
+ <div class="tariff-comparison" tabindex="0" role="region" aria-label={en?'Monthly plan comparison; scroll horizontally on small screens':'Сравнение тарифов; на узком экране таблицу можно прокрутить'}><table><thead><tr><th scope="col">{en?'Scope':'Состав работ'}</th>{plans.map(p=><th scope="col"><a href={p.href}>{p.name}</a><br/>{priceLabel(p,lang)}</th>)}</tr></thead><tbody>{rows.map(row=><tr><th scope="row">{row[0]}</th>{row.slice(1).map(cell=><td>{cell}</td>)}</tr>)}</tbody></table></div>
+ <GuaranteeTargets lang={lang}/>
+ <p class="tariff-note">{en?'The audit credit is agreed for promotion contracts lasting at least 6 months and applied during the first 3 months. The contract specifies the exact installments. The plan and any third-party expenses are agreed before launch.':'Зачет стоимости полного аудита согласуем при договоре на продвижение от 6 месяцев и распределяем на первые 3 месяца. Точные суммы зачета фиксируем в договоре. Состав работ и расходы на сторонние площадки согласуем до начала.'}</p>
+ <p><a href={serviceHref('geo-guarantee',lang)}>{en?'How the financial guarantee works':'Как работают финансовые гарантии'}</a> · <a href={serviceHref('website-development',lang)}>{en?'Website development':'Разработка сайта'}</a></p>
+</div></section>

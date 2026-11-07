@@ -1,7 +1,7 @@
 import {readdirSync,readFileSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 const ROOT=process.cwd(),PAGES=resolve(ROOT,'src/legacy/pages'),PARTIALS=resolve(ROOT,'templates/partials');
-const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->|<!-- GAEO_DESIGN:(?:FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES) -->/g;
+const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->|<!-- GAEO_DESIGN:(?:FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES) -->|<!-- GAEO_TARIFF:(?:OVERVIEW|CALCULATOR|COMPARISON|CATALOG|DETAIL|SCHEMA|INDUSTRY|DEVELOPMENT) -->/g;
 function walk(dir){
  const out=[];
  for(const entry of readdirSync(dir,{withFileTypes:true})){
@@ -54,6 +54,7 @@ export function tokenizeLegacyPage(rel){
   if(m.index>cursor)out.push({kind:'raw',content:src.slice(cursor,m.index)});
   const part=m[0];
   if(part.startsWith('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT'))out.push({kind:'industry-commercial'});
+  else if(part.startsWith('<!-- GAEO_TARIFF:'))out.push({kind:'tariff',block:part.match(/GAEO_TARIFF:([A-Z]+)/)[1]});
   else if(part.startsWith('<!-- SITE_HEADER_START'))out.push({kind:'header',content:chrome(src,'header',lang)});
   else if(part.startsWith('<!-- SITE_FOOTER_START'))out.push({kind:'footer',content:chrome(src,'footer',lang)});
   else if(part.startsWith('<!-- GAEO_DESIGN:'))out.push({kind:'design',block:part.match(/GAEO_DESIGN:([A-Z]+)/)[1]});
@@ -66,6 +67,8 @@ export function tokenizeLegacyPage(rel){
  if(cursor<src.length)out.push({kind:'raw',content:src.slice(cursor)});
  for(const kind of ['header','footer'])if(out.filter(x=>x.kind===kind).length!==1)throw Error('Unexpected '+kind+' in '+rel);
  const designBlocks=out.filter(x=>x.kind==='design');
+ const tariffBlocks=out.filter(x=>x.kind==='tariff');
+ if(new Set(tariffBlocks.map(x=>x.block)).size!==tariffBlocks.length)throw Error('Duplicate tariff blocks in '+rel);
  if(new Set(designBlocks.map(x=>x.block)).size!==designBlocks.length)throw Error('Duplicate approved design blocks in '+rel);
  if(sharedCta&&out.filter(x=>x.kind==='cta').length!==1)throw Error('Expected one CTA in '+rel);
  if(src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')&&out.filter(x=>x.kind==='industry-commercial').length!==1)throw Error('Expected exactly one commercial slot in '+rel);

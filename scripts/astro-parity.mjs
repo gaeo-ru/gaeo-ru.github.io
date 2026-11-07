@@ -15,7 +15,9 @@ const withoutSharedChrome=s=>s
  .replace(/<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->/g,'<!-- SHARED_FOOTER -->')
  // Only approved Astro slots can differ from the hybrid HTML source.
  // Every slot is separately verified by qa_approved_design_system.mjs.
- .replace(/<!-- GAEO_DESIGN:(FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES)_START -->[\s\S]*?<!-- GAEO_DESIGN:\1_END -->/g,(_,kind)=>'<!-- GAEO_DESIGN:'+kind+' -->');
+ .replace(/<!-- GAEO_DESIGN:(FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES)_START -->[\s\S]*?<!-- GAEO_DESIGN:\1_END -->/g,(_,kind)=>'<!-- GAEO_DESIGN:'+kind+' -->')
+ // Tariff components have their own numeric, schema, accessibility and link QA.
+ .replace(/<!-- GAEO_TARIFF:(OVERVIEW|CALCULATOR|COMPARISON|CATALOG|DETAIL|SCHEMA|INDUSTRY|DEVELOPMENT)_START -->[\s\S]*?<!-- GAEO_TARIFF:\1_END -->/g,(_,kind)=>'<!-- GAEO_TARIFF:'+kind+' -->');
 const originals=walk(ORIGINAL).filter(p=>p.endsWith('.html'));
 const assets=walk(PUBLIC);
 const problems=[];
@@ -50,7 +52,7 @@ for(const original of originals){
     if(!after.includes(marker))problems.push('Missing SEO metadata '+marker+' in '+path);
   }
   if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Commercial page requires exactly one H1 in '+path);
-  if((after.match(/<details\b/g)||[]).length<6)problems.push('Commercial FAQ requires at least six questions in '+path);
+  if((after.match(/<details\b[^>]*class="[^"]*\bfaq-item\b[^"]*"/g)||[]).length<6)problems.push('Commercial FAQ requires at least six questions in '+path);
   if(!after.includes('href="/#lead"')&&!after.includes('href="/en/#lead"'))problems.push('Commercial CTA missing in '+path);
   continue;
  }

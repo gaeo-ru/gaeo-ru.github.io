@@ -1,0 +1,35 @@
+---
+import PricingOverview from './PricingOverview.astro';
+import PricingCalculator from './PricingCalculator.astro';
+import Comparison from './Comparison.astro';
+import IndustryPricing from './IndustryPricing.astro';
+import IndustryCatalog from './IndustryCatalog.astro';
+import ServiceDetail from './ServiceDetail.astro';
+import DevelopmentOffer from './DevelopmentOffer.astro';
+import {pricingGraph,serviceNodes,getPlan} from '../../data/pricing.mjs';
+import {serviceDetails} from '../../data/service-detail-content.mjs';
+import {getIndustryCatalog} from '../../data/industry-catalog.mjs';
+import {pricingHref} from '../../data/pricing.mjs';
+const {sourcePath,block}=Astro.props;
+const lang=sourcePath.startsWith('en/')?'en':'ru';
+const slug=sourcePath.replace(/^en\//,'').match(/^services\/([^/]+)\//)?.[1];
+const service=slug&&getPlan(slug,lang);
+const schema=service?{'@context':'https://schema.org','@graph':[
+ ...serviceNodes(service.id,lang),
+ ...serviceDetails[lang][slug]?[{'@type':'FAQPage','@id':'https://gaeo.ru'+service.href+'#faq',mainEntity:serviceDetails[lang][slug].faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}]:[]
+]}:pricingGraph(lang);
+if(!service&&(sourcePath==='tarify/index.html'||sourcePath==='en/pricing/index.html')){
+ const url='https://gaeo.ru'+pricingHref(lang);
+ schema['@graph'].push({'@type':'ItemList','@id':url+'#industry-list',name:lang==='en'?'107 GEO business categories':'107 направлений GEO-продвижения',numberOfItems:107,itemListElement:getIndustryCatalog(lang).map((item,i)=>({'@type':'ListItem',position:i+1,url:url+'#'+item.id,item:{'@type':'Service','@id':url+'#'+item.id,url:url+'#'+item.id,name:item.serviceName,description:item.description,image:'https://gaeo.ru'+item.image.large,provider:{'@id':'https://gaeo.ru/#business'},offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}}))});
+}
+---
+<Fragment set:html={'<!-- GAEO_TARIFF:'+block+'_START -->'}/>
+{block==='OVERVIEW'&&<PricingOverview lang={lang} open={sourcePath!=='index.html'&&sourcePath!=='en/index.html'}/>}
+{block==='CALCULATOR'&&<PricingCalculator lang={lang}/>}
+{block==='COMPARISON'&&<Comparison lang={lang}/>}
+{block==='CATALOG'&&<IndustryCatalog lang={lang}/>}
+{block==='INDUSTRY'&&<IndustryPricing lang={lang}/>}
+{block==='DETAIL'&&<ServiceDetail lang={lang} slug={slug}/>}
+{block==='DEVELOPMENT'&&<DevelopmentOffer lang={lang}/>}
+{block==='SCHEMA'&&<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>}
+<Fragment set:html={'<!-- GAEO_TARIFF:'+block+'_END -->'}/>

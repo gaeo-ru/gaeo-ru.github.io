@@ -1,0 +1,23 @@
+---
+import {serviceDetails} from '../../data/service-detail-content.mjs';
+import {getPlan,priceLabel,platforms,imagePath,pricingHref,money,PRICES} from '../../data/pricing.mjs';
+import FAQAccordion from '../design/FAQAccordion.astro';
+import LightLead from '../design/LightLead.astro';
+import {approvedLeadFor} from '../../lib/approved-design-system.mjs';
+import GuaranteeTargets from './GuaranteeTargets.astro';
+const {lang='ru',slug}=Astro.props;const en=lang==='en';
+const plan=getPlan(slug,lang),page=serviceDetails[lang][slug];
+const lead=approvedLeadFor((en?'en/':'')+'services/'+slug+'/index.html');
+---
+<main class="tariff-detail"><div class="container">
+ <nav class="tariff-breadcrumbs" aria-label={en?'Breadcrumbs':'Хлебные крошки'}><a href={en?'/en/':'/'}>{en?'Home':'Главная'}</a> / <a href={pricingHref(lang)}>{en?'Pricing':'Тарифы'}</a> / <span>{plan.name}</span></nav>
+ <div class="tariff-detail__hero"><div><div class="eyebrow">{page.eyebrow}</div><h1>{page.title}</h1><p class="tariff-lead">{page.description}</p><div class="tariff-detail__price">{priceLabel(plan,lang)}</div><p class="tariff-note">{plan.kind==='monthly'?(en?'Monthly service':'Ежемесячное сопровождение'):(en?'One-time service':'Разовая услуга')}</p><ul>{plan.items.map(item=><li>{item}</li>)}</ul><a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-request={plan.name+' · '+priceLabel(plan,lang)}>{plan.cta}</a></div>
+ {plan.image&&<figure><a href={imagePath(plan.image,960)} target="_blank" rel="noopener" aria-label={en?'View the service illustration':'Открыть изображение услуги'}><img class="tariff-detail__image" src={imagePath(plan.image,480)} srcset={imagePath(plan.image,480)+' 480w, '+imagePath(plan.image,960)+' 960w'} sizes="(max-width:720px) 90vw, 380px" alt={plan.name+' · GAEO'} width="960" height="960" decoding="async" fetchpriority="high"/></a><figcaption class="tariff-note">{en?'Service illustration in Russian. Current scope and conditions are detailed on this page.':'Иллюстрация услуги. Актуальный состав работ и условия подробно описаны на этой странице.'}</figcaption></figure>}
+ </div>
+ {plan.id==='guarantee'&&<GuaranteeTargets lang={lang}/>}
+ {page.sections.map((section,index)=><section class="tariff-detail__chapter" id={'details-'+(index+1)}><h2>{section.heading}</h2>{(section.paragraphs||[]).map(p=><p>{p}</p>)}{section.items?.length>0&&<ul>{section.items.map(item=><li>{item}</li>)}</ul>}{section.links?.length>0&&<div class="tariff-related">{section.links.map(link=><a href={link.href} target={link.href.startsWith('http')?'_blank':undefined} rel={link.href.startsWith('http')?'noopener':undefined}>{link.label} →</a>)}</div>}</section>)}
+ {plan.id==='platform'&&<section class="tariff-detail__chapter"><h2>{en?'13 available AI platforms and interfaces':'13 нейросетей и интерфейсов для выбора'}</h2><p>{en?'Any 5 agreed platforms are included in the plan. These options cost extra only when they extend that base set.':'Любые 5 согласованных нейросетей входят в тариф. Эти опции оплачиваются дополнительно только при расширении базового набора.'}</p><div class="tariff-option-gallery">{platforms.map(p=><article id={p.id}><img src={imagePath(p.image,480)} width="480" height="480" loading="lazy" decoding="async" alt={(en?'GEO promotion in ':'GEO-продвижение в ')+(en?p.nameEn:p.name)}/><h3>{en?p.nameEn:p.name}</h3><p>+{money(PRICES.platform,lang)}{en?'/month beyond the 5 included platforms.':'/мес. сверх 5 включенных нейросетей.'}</p><a href={pricingHref(lang)+'#calculator'}>{en?'Select in calculator':'Выбрать в калькуляторе'}</a></article>)}</div></section>}
+ <section class="tariff-detail__chapter" id="faq"><div class="eyebrow">FAQ</div><h2>{en?'Questions about this service':'Вопросы об услуге'}</h2><FAQAccordion items={page.faq}/></section>
+ <section class="tariff-detail__chapter"><h2>{en?'Your project is led by Alexey Yakovlev':'Ваш проект ведет Алексей Яковлев'}</h2><p>{en?'I personally review the business, define the work and assess the result. The public cases show the scope and evidence behind completed projects.':'Лично разбираю бизнес, определяю состав работ и оцениваю результат. В опубликованных кейсах можно проверить задачи, выполненные действия и фактуру проектов.'}</p><div class="tariff-related"><a href={en?'/en/professional-biography/':'/professional-biography/'}>{en?'Professional biography':'Профессиональная биография'}</a><a href={en?'/en/cases/':'/cases/'}>{en?'Cases':'Кейсы'}</a><a href={pricingHref(lang)}>{en?'All plans and business categories':'Все тарифы и направления бизнеса'}</a></div></section>
+ <LightLead {...lead}/>
+</div></main>

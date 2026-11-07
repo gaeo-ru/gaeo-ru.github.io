@@ -26,6 +26,20 @@ on:
       - 'src/data/approved-design-content.mjs'
       - 'src/data/preexisting-legacy-routes.mjs'
       - 'src/data/industry-commercial-pages.mjs'
+      - 'src/data/pricing.mjs'
+      - 'src/data/service-detail-content.mjs'
+      - 'src/data/industry-catalog.mjs'
+      - 'src/legacy/pages/tarify/**'
+      - 'src/legacy/pages/en/pricing/**'
+      - 'public/assets/tariffs/**'
+      - 'public/assets/tariffs.css'
+      - 'public/assets/tariffs.js'
+      - 'public/assets/industry-catalog.css'
+      - 'public/assets/industry-catalog.js'
+      - 'scripts/generate-tariff-pages.mjs'
+      - 'scripts/sync-service-feed.mjs'
+      - 'scripts/qa_tariffs.mjs'
+      - 'public/gaeo-services.yml.xml'
       - 'src/components/**'
       - 'scripts/qa_legal_link_graph.mjs'
       - 'scripts/qa_industrial_link_graph.mjs'
@@ -65,6 +79,7 @@ jobs:
       - run: node scripts/qa_legal_link_graph.mjs
       - run: node scripts/qa_industrial_link_graph.mjs
       - run: npx playwright install chromium
+      - run: npm run check:tariffs
       - run: node scripts/qa_development_cases.mjs
       - run: node scripts/qa_site_development_service.mjs
       - run: npm run check:industry
@@ -73,6 +88,8 @@ jobs:
         if: always()
         with:
           name: geo-research-visual-checks
-          path: visual-research/
+          path: |
+            visual-research/
+            visual-tariffs/
           if-no-files-found: ignore
           retention-days: 7

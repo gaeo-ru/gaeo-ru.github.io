@@ -1,0 +1,111 @@
+.industry-catalog {
+  padding: 72px 0;
+  color: var(--ink, #111827);
+  background: var(--paper, #fff);
+  border-top: 1px solid var(--line, rgba(2, 22, 65, .14));
+  scroll-margin-top: 100px;
+}
+.industry-catalog [hidden] { display: none !important; }
+.industry-catalog__intro { max-width: 850px; margin-bottom: 30px; }
+.industry-catalog__intro .eyebrow { margin-bottom: 12px; }
+.industry-catalog__intro p { color: #3d4858; font-size: 17px; margin: 18px 0 0; }
+.industry-catalog__filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(210px, 1fr) auto;
+  align-items: end;
+  gap: 12px 16px;
+  padding: 24px;
+  background: var(--warm, #f6f7f8);
+  border: 1px solid var(--line, rgba(2, 22, 65, .14));
+  border-radius: 14px;
+}
+.industry-catalog__field { min-width: 0; }
+.industry-catalog__field label { display: block; margin-bottom: 8px; color: var(--navy, #021641); font-size: 14px; font-weight: 700; }
+.industry-catalog__field input,
+.industry-catalog__field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--navy, #021641);
+  background: var(--paper, #fff);
+  border: 1px solid rgba(2, 22, 65, .25);
+  border-radius: 8px;
+}
+.industry-catalog__field input::placeholder { color: #687281; opacity: 1; }
+.industry-catalog__hint { grid-column: 1 / -1; margin: 0; color: #687281; font-size: 13px; line-height: 1.5; }
+.industry-catalog__reset { white-space: nowrap; font: inherit; font-weight: 700; }
+.industry-catalog__count { margin: 22px 0 18px; font-size: 14px; color: #536072; }
+.industry-catalog__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+.industry-catalog__card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid #dbe3eb;
+  border-radius: 14px;
+  background: var(--warm, #f6f7f8);
+  scroll-margin-top: 100px;
+}
+.industry-catalog__card:target { border-color: var(--blue, #0e5ed7); box-shadow: 0 0 0 2px rgba(14, 94, 215, .14); }
+.industry-catalog__card-top { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: start; }
+.industry-catalog__image { display: block; overflow: hidden; border: 1px solid #dbe3eb; border-radius: 8px; background: var(--paper, #fff); }
+.industry-catalog__image img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.industry-catalog__card-heading { min-width: 0; }
+.industry-catalog__group { margin: 0 0 8px; font-size: 11px; line-height: 1.45; color: #536072; }
+.industry-catalog__card h3 { margin: 0; font-size: 17px; line-height: 1.4; letter-spacing: -.015em; overflow-wrap: anywhere; }
+.industry-catalog__card h3 a { text-decoration: none; }
+.industry-catalog__card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.industry-catalog__description { margin: 18px 0; font-size: 14px; line-height: 1.65; color: #34475b; }
+.industry-catalog__prices { margin: auto 0 16px; padding: 14px 0; border-top: 1px solid #dbe3eb; border-bottom: 1px solid #dbe3eb; }
+.industry-catalog__prices > div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 8px; margin: 0 0 7px; }
+.industry-catalog__prices > div:last-child { margin-bottom: 0; }
+.industry-catalog__prices dt { color: #34475b; font-size: 12px; line-height: 1.5; }
+.industry-catalog__prices dd { margin: 0; font-size: 12px; line-height: 1.5; white-space: nowrap; color: #536072; }
+.industry-catalog__prices dd strong { color: var(--navy, #021641); font-size: 14px; }
+.industry-catalog__examples { margin: 0 0 18px; font-size: 13px; color: #34475b; }
+.industry-catalog__examples summary { width: fit-content; min-height: 26px; padding: 3px 0; color: var(--navy, #021641); font-weight: 600; cursor: pointer; }
+.industry-catalog__examples ul { margin: 10px 0 0; padding-left: 19px; line-height: 1.6; }
+.industry-catalog__examples li + li { margin-top: 5px; }
+.industry-catalog__card-actions { display: flex; flex-direction: column; align-items: stretch; gap: 14px; }
+.industry-catalog__hub { display: inline-block; width: fit-content; color: var(--blue, #0e5ed7); font-size: 13px; font-weight: 600; line-height: 1.5; text-underline-offset: 3px; }
+.industry-catalog__contact { min-height: 46px; padding: 11px 14px; font-size: 13px; line-height: 1.4; text-align: center; }
+.industry-catalog__empty { padding: 32px; border: 1px solid #dbe3eb; border-radius: 14px; background: var(--warm, #f6f7f8); }
+.industry-catalog__empty h3 { font-size: 22px; }
+.industry-catalog__empty p { max-width: 680px; color: #34475b; }
+.industry-catalog__empty-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+.industry-catalog__empty-actions > a { color: var(--blue, #0e5ed7); text-underline-offset: 3px; }
+.industry-catalog__terms { margin: 24px 0 0; max-width: 850px; color: #536072; font-size: 13px; line-height: 1.65; }
+.industry-catalog a:focus-visible,
+.industry-catalog button:focus-visible,
+.industry-catalog input:focus-visible,
+.industry-catalog select:focus-visible,
+.industry-catalog summary:focus-visible { outline: 3px solid var(--blue, #0e5ed7); outline-offset: 3px; }
+@media (max-width: 1199px) {
+  .industry-catalog__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .industry-catalog__filters { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .industry-catalog__reset { justify-self: start; }
+  .industry-catalog__hint { grid-column: auto; align-self: center; }
+}
+@media (max-width: 700px) {
+  .industry-catalog { padding: 48px 0; }
+  .industry-catalog__intro h2 { font-size: 28px; line-height: 1.2; }
+  .industry-catalog__intro p { font-size: 16px; }
+  .industry-catalog__grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .industry-catalog__filters { grid-template-columns: minmax(0, 1fr); padding: 18px; }
+  .industry-catalog__hint { grid-column: 1; }
+  .industry-catalog__field input, .industry-catalog__field select { font-size: 16px; }
+  .industry-catalog__card { padding: 20px; }
+  .industry-catalog__empty { padding: 22px; }
+}
+@media (max-width: 420px) {
+  .industry-catalog__card-top { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
+  .industry-catalog__card h3 { font-size: 16px; }
+  .industry-catalog__card { padding: 16px; }
+  .industry-catalog__prices > div { gap: 3px 8px; }
+}

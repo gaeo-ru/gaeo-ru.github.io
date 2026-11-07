@@ -157,7 +157,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ['Reviews','/en/reviews/'],
     ['Articles','/en/articles/'],
     ['Publications','/en/publications/'],
-    ['Pricing','/en/#pricing']
+    ['Pricing','/en/pricing/']
   ] : [
     ['Обо мне','/professional-biography/'],
     ['Как работаю','/#process'],
@@ -168,7 +168,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ['Отзывы','/reviews/'],
     ['Статьи','/articles/'],
     ['Публикации','/publications/'],
-    ['Тарифы','/#pricing']
+    ['Тарифы','/tarify/']
   ];
 
   const desktop = document.getElementById('desktopMenu');
@@ -222,7 +222,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Industries','/en/industries/'],
       ['Strategies','/en/strategies/'],
       ['Reviews','/en/reviews/'],
-      ['Pricing','/en/#pricing']
+      ['Pricing','/en/pricing/']
     ] : [
       ['Обо мне','/professional-biography/'],
       ['Как работаю','/#process'],
@@ -231,7 +231,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Отрасли','/industries/'],
       ['Стратегии','/strategies/'],
       ['Отзывы','/reviews/'],
-      ['Тарифы','/#pricing']
+      ['Тарифы','/tarify/']
     ];
 
     const rightItems = isEn ? [
@@ -1162,6 +1162,11 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     const dialog = overlay.querySelector('.gaeo-modal');
     const formShell = buildForm('modal');
     dialog.appendChild(formShell);
+    const tariffRequest = opener && opener.dataset ? opener.dataset.gaeoRequest : '';
+    if(tariffRequest){
+      const comment = formShell.querySelector('textarea[name="comment"]');
+      if(comment) comment.value = tariffRequest.slice(0,3000);
+    }
     document.body.appendChild(overlay);
     document.body.classList.add('gaeo-modal-open');
 

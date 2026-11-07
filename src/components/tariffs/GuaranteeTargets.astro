@@ -1,0 +1,10 @@
+---
+import {GUARANTEE_TARGETS} from '../../data/pricing.mjs';
+const {lang='ru'}=Astro.props;const en=lang==='en';
+---
+<div class="tariff-guarantee">
+ <h3>{en?'BMR targets for the first 3 months':'Цели роста BMR на первые 3 месяца'}</h3>
+ <p>{en?'First, we record the initial BMR: the share of measured AI answers mentioning your brand. Each target below is measured relative to that initial result.':'Сначала фиксируем стартовый BMR: долю проверенных ответов нейросетей с упоминанием бренда. Все последующие цели считаются относительно этого стартового замера.'}</p>
+ <ol class="tariff-targets">{GUARANTEE_TARGETS.map(target=><li><span>{en?'Month '+target.month:target.month+'-й месяц'}</span><strong>{en?'Baseline':'Старт'} + {target.points} {en?'pp':'п.п.'}</strong></li>)}</ol>
+ <p>{en?'Example: a 20% baseline means targets of 25%, 30% and 35%. We retain an agreed prompt set, platform set and counting method so the measurements remain comparable. The payment model is 50% fixed and a 50% bonus upon reaching the target for the relevant month.':'Например, при старте 20% цели составят 25%, 30% и 35%. Сохраняем согласованные запросы, набор нейросетей и правила подсчета, чтобы сравнивать сопоставимые замеры. Оплата: 50% фиксированная часть и 50% премия при достижении цели соответствующего месяца.'}</p>
+</div>

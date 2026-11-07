@@ -1,0 +1,32 @@
+---
+import {platforms,getPlan,priceLabel,money,PRICES,pricingHref,serviceHref} from '../../data/pricing.mjs';
+const {lang='ru'}=Astro.props;const en=lang==='en';
+const monthly=['geo','content','guarantee'].map(id=>getPlan(id,lang));
+const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:PRICES.platform,promptPrice:PRICES.prompts,plans:monthly.map(p=>({id:p.id,name:p.name,amount:p.amount}))};
+---
+<section class="section-sm tariff-calculator-section" id="calculator">
+ <div class="container">
+  <div class="eyebrow">{en?'Your scope':'Ваш объем работ'}</div>
+  <h2>{en?'Calculate your monthly GEO plan':'Рассчитайте стоимость продвижения'}</h2>
+  <p class="tariff-lead">{en?'Choose a plan, AI platforms and additional prompts. Any 5 selected platforms are included; the surcharge starts with the 6th. The initial selection is an example you can change.':'Выберите тариф, нейросети и дополнительные запросы. Любые 5 выбранных нейросетей входят в базовый объем; доплата начинается с 6-й. Стартовый набор в калькуляторе можно изменить.'}</p>
+  <div class="tariff-calculator" data-tariff-calculator>
+   <script type="application/json" data-tariff-config set:html={JSON.stringify(config)}/>
+   <div class="tariff-calculator__controls">
+    <label class="tariff-field"><span>{en?'Monthly plan':'Тариф продвижения'}</span><select name="plan">{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select></label>
+    <fieldset class="tariff-platforms"><legend>{en?'AI platforms and search interfaces':'Нейросети и поисковые интерфейсы'}</legend><div class="tariff-platform-options">{platforms.map((p,i)=><label><input type="checkbox" name="platform" value={p.id} checked={i<5}/><span>{en?p.nameEn:p.name}</span></label>)}</div></fieldset>
+    <p class="tariff-note" data-platform-count>{en?'5 selected. No platform surcharge.':'Выбрано 5. Доплаты за нейросети нет.'}</p>
+    <label class="tariff-field tariff-prompts"><span>{en?'Additional blocks of 10 prompts':'Дополнительные пакеты по 10 запросов'}</span><input type="number" name="blocks" value="0" min="0" max="100" step="1" inputmode="numeric"/><small>{en?'50 prompts included. Each additional block: '+money(PRICES.prompts,lang)+'/month.':'50 запросов входят в тариф. Каждый дополнительный пакет: +'+money(PRICES.prompts,lang)+'/мес.'}</small></label>
+    <p class="tariff-note"><a href={serviceHref('additional-platforms',lang)}>{en?'Platform option details':'Условия дополнительных нейросетей'}</a> · <a href={serviceHref('additional-prompts',lang)}>{en?'Prompt block details':'Условия дополнительных запросов'}</a></p>
+   </div>
+   <div class="tariff-calculator__result" aria-live="polite" aria-atomic="true">
+    <h3>{en?'Monthly estimate':'Предварительный расчет в месяц'}</h3>
+    <dl><div><dt>{en?'Plan, from':'Тариф, от'}</dt><dd data-base>{money(PRICES.geo,lang)}</dd></div><div><dt>{en?'Additional platforms':'Дополнительные нейросети'}</dt><dd data-platform-price>{money(0,lang)}</dd></div><div><dt>{en?'Additional prompts':'Дополнительные запросы'}</dt><dd data-prompt-price>{money(0,lang)}</dd></div></dl>
+    <div class="tariff-total"><span>{en?'Total, from':'Итого от'}</span><output data-total>{money(PRICES.geo,lang)}</output><span>{en?'per month':'в месяц'}</span></div>
+    <p class="tariff-note" data-scope>{en?'50 prompts · 5 platforms':'50 запросов · 5 нейросетей'}</p>
+    <a class="button" href={en?'/en/#lead':'/#lead'} data-quote-inquiry>{en?'Discuss this scope':'Обсудить этот расчет'}</a>
+    <p class="tariff-note">{en?'This is a scope estimate. The agreed plan, prompt set, platforms and financial guarantee conditions are recorded in the contract. Website development and the full audit are one-time services.':'Это расчет выбранного объема. Состав работ, запросы, нейросети и условия финансовых гарантий закрепляем в договоре. Разработка сайта и полный аудит оплачиваются разово.'}</p>
+   </div>
+  </div>
+  <noscript><p>{en?'Calculation: plan + '+money(PRICES.platform,lang)+' for each platform beyond 5 + '+money(PRICES.prompts,lang)+' for each 10 prompts beyond 50, per month. Tell us your preferred scope in the inquiry.':'Расчет: тариф + '+money(PRICES.platform,lang)+' за каждую нейросеть сверх 5 + '+money(PRICES.prompts,lang)+' за каждые 10 запросов сверх 50 в месяц. Укажите нужный объем в заявке.'}</p></noscript>
+ </div>
+</section>

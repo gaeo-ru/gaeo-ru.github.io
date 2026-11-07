@@ -46,7 +46,7 @@ for(const [route,destinations] of Object.entries(cases)){
  if(canonical!==origin+route)errors.push('Canonical mismatch '+route+' '+String(canonical));
  if(!/<meta\s+name="robots"\s+content="index,follow/i.test(html))errors.push('No indexable robots '+route);
  if(/ASTRO_INDUSTRY_COMMERCIAL_SLOT|Afonin|Афонин|1\s*\/\s*52|Фармацевтик|Pharmaceutical|__FAQ__/.test(html))errors.push('Sensitive/legacy marker '+route);
- const faqNodes=(main.match(/<details\b/g)||[]).length;
+ const faqNodes=[...main.matchAll(/<details\b[^>]*>/gi)].filter(([tag])=>tag.match(/\bclass=["']([^"']*)["']/i)?.[1].split(/\s+/).includes('faq-item')).length;
  if(faqNodes!==6)errors.push('Expected 6 visible FAQ details '+route+' got '+faqNodes);
  const scripts=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
  let list=[];

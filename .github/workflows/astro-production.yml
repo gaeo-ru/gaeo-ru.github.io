@@ -36,6 +36,8 @@ jobs:
         run: node scripts/qa_industrial_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
         run: npx playwright install chromium
+      - name: Verify pricing, catalogue, calculator and inquiry handoff
+        run: npm run check:tariffs
       - name: Check industry landings at desktop and mobile widths
         run: npm run check:industry
       - name: Check bilingual website development cases
@@ -113,5 +115,6 @@ jobs:
             visual-parity/
             visual-industry/
             visual-research/
+            visual-tariffs/
           if-no-files-found: ignore
           retention-days: 14
