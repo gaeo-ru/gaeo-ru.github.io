@@ -150,6 +150,8 @@ try{
     assert.equal(await minus.isDisabled(),true,'Minus re-disabled at zero');
    }
    if(route==='/tarify/'||route==='/en/pricing/'){
+    await page.waitForFunction(()=>document.querySelector('.tariff-page .tariff-plans')?.dataset.ctaAligned==='true');
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     const visual=await page.evaluate(()=>{
       const terms=document.querySelector('.industry-catalog__terms')?.getBoundingClientRect();
       const lead=document.querySelector('.tariff-page > .tariff-page__contact #contact h2')?.getBoundingClientRect();
