@@ -1,8 +1,10 @@
 /**
- * Batches 2A through 2D: bilingual evidence-led GEO industry specializations.
+ * Batches 2A through 2E: bilingual evidence-led GEO industry specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
+import {industrySpecializationsBatch2E} from './industry-specializations-batch-2e.mjs';
+
 export const industrySpecializations = [
   {
     "id": 2,
@@ -4208,6 +4210,7 @@ export const industrySpecializations = [
     }
   }
 }
+  ,...industrySpecializationsBatch2E
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
