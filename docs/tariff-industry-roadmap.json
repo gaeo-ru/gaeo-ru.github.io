@@ -154,13 +154,13 @@
     "phase_2d": {
       "phase": 2,
       "batch": "2D",
-      "status": "pr_ci_in_progress",
+      "status": "source_merged_prod_in_progress",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
-      "ci_status": "in_progress",
-      "production_status": "not_started",
+      "ci_status": "pass",
+      "production_status": "in_progress",
       "pages_status": "not_started",
       "public_https_browser_verified": false,
       "records": [
@@ -170,7 +170,9 @@
         66
       ],
       "expected_new_industry_landing_pairs": 4,
-      "expected_new_html_pages": 8
+      "expected_new_html_pages": 8,
+      "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341"
     }
   },
   "status_definitions": {
@@ -251,7 +253,7 @@
       ],
       "label": "Банкротство, сделки с недвижимостью, кибербезопасность, медицинские изделия",
       "condition": "Подтвердить собственные интенты, регуляторные и технические факты; не переносить результаты смежных клиентов. После проверки публикации предыдущих специализаций выпускать только готовые RU/EN материалы.",
-      "work_status": "source_pr_ci_in_progress"
+      "work_status": "source_merged_prod_in_progress"
     },
     {
       "batch": "3A",
@@ -855,13 +857,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "pr_ci_pending",
+      "content_status": "source_merged_production_pending",
       "evidence_level": null,
-      "work_status": "source_pr_ci_in_progress",
-      "next_required_step": "complete_pr_ci_then_release",
+      "work_status": "source_merged_prod_in_progress",
+      "next_required_step": "verify_production_pages_and_main",
       "planned_landing_url_ru": "/industries/bankruptcy-lawyers/",
       "planned_landing_url_en": "/en/industries/bankruptcy-lawyers/",
-      "last_completed_step": "phase_2d_bilingual_source_committed",
+      "last_completed_step": "phase_2d_pr_ci_pass_source_merged",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "source_head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
@@ -870,8 +872,10 @@
         "https://www.consultant.ru/document/cons_doc_LAW_39331/54f5f3b5dbc98c984ef89aee1e4b78db69a6c093/"
       ],
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341"
+      ],
+      "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897"
     },
     {
       "id": 21,
@@ -1033,13 +1037,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "pr_ci_pending",
+      "content_status": "source_merged_production_pending",
       "evidence_level": null,
-      "work_status": "source_pr_ci_in_progress",
-      "next_required_step": "complete_pr_ci_then_release",
+      "work_status": "source_merged_prod_in_progress",
+      "next_required_step": "verify_production_pages_and_main",
       "planned_landing_url_ru": "/industries/real-estate-transaction-lawyers/",
       "planned_landing_url_en": "/en/industries/real-estate-transaction-lawyers/",
-      "last_completed_step": "phase_2d_bilingual_source_committed",
+      "last_completed_step": "phase_2d_pr_ci_pass_source_merged",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "source_head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
@@ -1048,8 +1052,10 @@
         "https://www.consultant.ru/document/cons_doc_LAW_182661/e064cc95b1bdffa4d12abb92fdfc56dea94198df/"
       ],
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341"
+      ],
+      "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897"
     },
     {
       "id": 25,
@@ -1475,13 +1481,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "pr_ci_pending",
+      "content_status": "source_merged_production_pending",
       "evidence_level": null,
-      "work_status": "source_pr_ci_in_progress",
-      "next_required_step": "complete_pr_ci_then_release",
+      "work_status": "source_merged_prod_in_progress",
+      "next_required_step": "verify_production_pages_and_main",
       "planned_landing_url_ru": "/industries/cybersecurity-providers/",
       "planned_landing_url_en": "/en/industries/cybersecurity-providers/",
-      "last_completed_step": "phase_2d_bilingual_source_committed",
+      "last_completed_step": "phase_2d_pr_ci_pass_source_merged",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "source_head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
@@ -1490,8 +1496,10 @@
         "https://csrc.nist.gov/pubs/sp/1326/final"
       ],
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341"
+      ],
+      "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897"
     },
     {
       "id": 38,
@@ -2308,13 +2316,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "pr_ci_pending",
+      "content_status": "source_merged_production_pending",
       "evidence_level": null,
-      "work_status": "source_pr_ci_in_progress",
-      "next_required_step": "complete_pr_ci_then_release",
+      "work_status": "source_merged_prod_in_progress",
+      "next_required_step": "verify_production_pages_and_main",
       "planned_landing_url_ru": "/industries/medical-device-manufacturers/",
       "planned_landing_url_en": "/en/industries/medical-device-manufacturers/",
-      "last_completed_step": "phase_2d_bilingual_source_committed",
+      "last_completed_step": "phase_2d_pr_ci_pass_source_merged",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "source_head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
@@ -2323,8 +2331,10 @@
         "https://elk.roszdravnadzor.gov.ru/widget/"
       ],
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341"
+      ],
+      "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897"
     },
     {
       "id": 67,
