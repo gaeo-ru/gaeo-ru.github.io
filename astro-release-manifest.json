@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "4b1fc8d4b62ef8b623c56cc7e068fea47180322d",
-  "releasedAt": "2026-11-07T19:37:55.960Z",
+  "sourceCommit": "68674feb1ac5d0089770693d297a988afc3dff65",
+  "releasedAt": "2026-11-07T19:53:06.572Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2843,12 +2843,17 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "2870bafa0c4275d203d92a5a668af85528779578b275f4ed0d43d760eaf2575d"
+      "sha256": "4db8796149a59d3ff44417a8e60ab854300810a0eab6cf6f08565ec5bf167199"
     },
     {
       "path": "en/index.html",
       "kind": "html",
       "sha256": "6efa0d71dce618cdbc145343aff96be15cafdcc1b0113363ad406f8ab284c845"
+    },
+    {
+      "path": "en/industries/cloud-providers-data-centres/index.html",
+      "kind": "html",
+      "sha256": "57b21c3d23966f8ba8be7d09eb72e5f12b6a72eb6f5badff3a6da6f0a7660358"
     },
     {
       "path": "en/industries/corporate-travel-mice/index.html",
@@ -2878,7 +2883,7 @@
     {
       "path": "en/industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "3d9d34639cca610d8e02c2fe774840f1fdcc037e6b46091b06c18db6c63138dc"
+      "sha256": "4d15f33744dccd45ab670387431448dfc2df93b8524dba1a7ca467c9f86c8ee1"
     },
     {
       "path": "en/industries/furniture/index.html",
@@ -2888,7 +2893,7 @@
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "4c78282a64fc56d14f0c4040f03972dee71e6bba7e8ef8a1592bbf8e132e56ad"
+      "sha256": "a6be396436ffff93131ea44127befaa54c726ee024f3ba696b53fbba98b237fe"
     },
     {
       "path": "en/industries/index.html",
@@ -2896,9 +2901,19 @@
       "sha256": "ed918f7d7fc7a8fba4b2714d53ee5f522750940005b58b313cbc1ab916f241db"
     },
     {
+      "path": "en/industries/intellectual-property-lawyers/index.html",
+      "kind": "html",
+      "sha256": "8044b0cd89a6abaf76138bb6b1856c94648e838ed9ae3fcea99201102b406c76"
+    },
+    {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "af04e615c9e38ad76a1149f84de35a97ad5efd4547aa3e666f38eb788a84f082"
+      "sha256": "3bcabe5778b19ac3f297d76d4edbb3a9cee7e93c97d85ce472dcde5fde897118"
+    },
+    {
+      "path": "en/industries/luxury-real-estate-agencies/index.html",
+      "kind": "html",
+      "sha256": "fb8a1470f2f434f3a2c6579a41f3a825fd590c265026ccdf4316dbf9c024fa0b"
     },
     {
       "path": "en/industries/metal-structures/index.html",
@@ -2926,6 +2941,11 @@
       "sha256": "2014856d438fb18ac0185789b3464bb17115983a50e76fdc108180588bc9b1c0"
     },
     {
+      "path": "en/industries/warehouse-storage-3pl/index.html",
+      "kind": "html",
+      "sha256": "70fbceaaca6c0f54f9b2f56572e7415456fe6d0d2ffcaeb24a6fc2b9f138d3ec"
+    },
+    {
       "path": "en/industries/wms-tms/index.html",
       "kind": "html",
       "sha256": "07478a8fb1b42991dd83c1344d1a3f229e705159f12e1b3348e35720bb973015"
@@ -2938,7 +2958,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "dca12efd1079398624f4cd53dda83f6409315ce267868c05f24ed33592f796c5"
+      "sha256": "13bc06134ecdf9910d86be198cbd330c062e37e17b74ab8ab0ee6b3ea1d604fa"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3068,12 +3088,17 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "9ce38d59d7fb4d0ca2d864aab2dc42c3de49b0a8ddf615867ddb2af44105144b"
+      "sha256": "3308b143a900e1f214f1971dc9141e431b94d840021bc5a9e090f37d6dd4590c"
     },
     {
       "path": "index.html",
       "kind": "html",
       "sha256": "90943b6a7294738bb2ffc0dff231dad081d08a05c9c26bb96a55ba2708d263a3"
+    },
+    {
+      "path": "industries/cloud-providers-data-centres/index.html",
+      "kind": "html",
+      "sha256": "ef1811423e34285a9d36f3fe94875866fa6f28ee3badaf71c46181394e9d0891"
     },
     {
       "path": "industries/corporate-travel-mice/index.html",
@@ -3103,7 +3128,7 @@
     {
       "path": "industries/fulfillment/index.html",
       "kind": "html",
-      "sha256": "8193be23e89ad233b8c18b596287302e7bd528e0bb965f6badfdf8aa741c3fa0"
+      "sha256": "7a7e9a97e99fb896e8f6acbaccceade8334aa73d195f346ffec30d692d0c0216"
     },
     {
       "path": "industries/furniture/index.html",
@@ -3113,7 +3138,7 @@
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "cec0882314afd3bd03e45f8a21617c3bcfb13e43711ad8a3006aa4ce786ccea7"
+      "sha256": "f79117d53bd1dbd25ccc9eee795313f486be8825dfb64756cee477dc00511988"
     },
     {
       "path": "industries/index.html",
@@ -3121,9 +3146,19 @@
       "sha256": "9ea6fb2235e4ee52b4496b77bd5a6c9a737416c871878dd8caedf88b9988213f"
     },
     {
+      "path": "industries/intellectual-property-lawyers/index.html",
+      "kind": "html",
+      "sha256": "b62e96dc3b9b2181e77af6c42a6255be30d53754966089689d4e574485148f53"
+    },
+    {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "e739a526cb788257280da61b9ff718c30c7ba5ed19f09b06c1f8735700040b6f"
+      "sha256": "6f180a9eac979237718caead4bbe3cffd523f952683187fabad2d57a5165f5c9"
+    },
+    {
+      "path": "industries/luxury-real-estate-agencies/index.html",
+      "kind": "html",
+      "sha256": "cad5a883f90b4a4ad96fbefaf0d2c966500854b023456796dec35f199c720df1"
     },
     {
       "path": "industries/metal-structures/index.html",
@@ -3149,6 +3184,11 @@
       "path": "industries/tourism/index.html",
       "kind": "html",
       "sha256": "e9ab934b30e7208c526180710f0082a3af74b78f2d016e328915d1a7ef4047cb"
+    },
+    {
+      "path": "industries/warehouse-storage-3pl/index.html",
+      "kind": "html",
+      "sha256": "3bf63cdc6b44e8bc99022128f53201dad1e83f9969413fc1291936a5dccaed5c"
     },
     {
       "path": "industries/wms-tms/index.html",
@@ -3238,7 +3278,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "f1ef0bbf31c470f0a16d79793d79869d814ff52d1a7a75c0c2793c88e4ca297b"
+      "sha256": "cba3b5d07f57cfcc17800cc12522e8b1386a9de2235153e74f9e0a2f8b2e9686"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3293,7 +3333,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "f000de3b1ff148d972690e9af712fcf658c83af2554a843e80d6cabda6b6096f"
+      "sha256": "78d4ce6e7ab9cd7e5567a110dcb51c1fa845a54373ae086462890ecd1de3c79e"
     }
   ]
 }
