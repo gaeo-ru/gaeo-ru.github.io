@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2J_PR_CI_then_safe_merge_production_Pages_and_external_HTTPS",
+    "next_batch": "2L_PR_CI_then_safe_merge_production_main_pages_live_https",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -318,7 +318,7 @@
     "phase_2j": {
       "phase": 2,
       "batch": "2J",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "merged_into_astro_source_release_verification_pending",
       "records": [
         87,
         91,
@@ -336,9 +336,31 @@
       "pages_status": "not_published",
       "public_https_browser_verified": false,
       "parallel_batches": "2H branch owns separate real-estate/industrial-park content; 2I branch includes IDs 95,96,97,98. Those records must not be duplicated in 2J.",
-      "next_required_step": "Open a single PR from 2J to astro-source, run full CI, reconcile other batches without overwriting, merge if PASS; confirm main manifest, sitemap, Pages and direct HTTPS when possible",
+      "next_required_step": "Confirm production, main/Pages and external HTTPS separately.",
       "count_note": "Main verified at source ad3772f: 26 specializations and 155 HTML; source now includes 2H 4 further pairs; 2J 3 pairs prepared in separate branch. Independent browser HTTPS not verified.",
-      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/86"
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/86",
+      "source_merge_sha": "6654e883da01bcae254d9e50e21aca938218a35f"
+    },
+    "phase_2l": {
+      "phase": 2,
+      "batch": "2L",
+      "status": "bilingual_sources_prepared_pr_ci_pending",
+      "records": [
+        7,
+        9,
+        11
+      ],
+      "base_source_sha": "6654e883da01bcae254d9e50e21aca938218a35f",
+      "work_branch": "feat/industry-specializations-batch-2l-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2l.mjs",
+      "qa_file": "scripts/qa_industry_specializations.mjs",
+      "new_industry_landing_pairs_prepared": 3,
+      "new_ru_en_urls_prepared": 6,
+      "ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "next_required_step": "Open one PR, run build and static/browser QA, reconcile other branches, merge on PASS, verify production/main/Pages and direct HTTPS."
     }
   },
   "status_definitions": {
@@ -370,7 +392,9 @@
     "total_specialization_pairs_prepared_including_2h": 30,
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
-    "total_specialization_urls_prepared_including_2j": 66
+    "total_specialization_urls_prepared_including_2j": 66,
+    "total_specialization_pairs_prepared_including_2l": 36,
+    "total_specialization_urls_prepared_including_2l": 72
   },
   "candidate_batches": [
     {
@@ -528,6 +552,34 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2j-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2j.mjs"
+    },
+    {
+      "batch": "2L",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        7,
+        9,
+        11
+      ],
+      "label": "Управляющие компании недвижимости, строители загородных домов, архитектурные бюро",
+      "condition": "3 оригинальные RU/EN специализации; проверять лицензии, проекты, эскроу и СРО только по применимости, без выдуманных клиентских результатов.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2l-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2l.mjs"
+    },
+    {
+      "batch": "2M",
+      "phase": 2,
+      "kind": "research_candidates",
+      "ids": [
+        8,
+        10,
+        12
+      ],
+      "label": "Индивидуальное хранение, генподряд, дизайн интерьеров",
+      "condition": "Условная следующая очередь. Сначала фактура, buyer intents и проверенный отраслевой хаб.",
+      "work_status": "research_pending_unassigned"
     }
   ],
   "records": [
@@ -780,10 +832,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_original_bilingual_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_main_Pages_then_direct_HTTPS_verification",
+      "work_batch": "2L",
+      "last_completed_step": "phase_2l_bilingual_source_and_qa_registration",
+      "planned_landing_url_ru": "/industries/property-management-companies/",
+      "planned_landing_url_en": "/en/industries/property-management-companies/",
+      "work_branch": "feat/industry-specializations-batch-2l-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51057/71c7149b7b2a7693ca3f88b93580da0a5376e041/",
+        "https://cdn.dom.gosuslugi.ru/webhelp/new/topics/public_part/licenses_och/t_search-och.html",
+        "https://cdn.dom.gosuslugi.ru/webhelp/new/topics/public_part/management_company_and_solution_list_och/t_navigate-och.html"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 8,
@@ -830,10 +894,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_original_bilingual_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_main_Pages_then_direct_HTTPS_verification",
+      "work_batch": "2L",
+      "last_completed_step": "phase_2l_bilingual_source_and_qa_registration",
+      "planned_landing_url_ru": "/industries/country-house-builders/",
+      "planned_landing_url_en": "/en/industries/country-house-builders/",
+      "work_branch": "feat/industry-specializations-batch-2l-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/fe0cad704c69e3b97bf615f0437ecf1996a57677/",
+        "https://www.consultant.ru/document/cons_doc_LAW_481246/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 10,
@@ -880,10 +955,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_original_bilingual_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_main_Pages_then_direct_HTTPS_verification",
+      "work_batch": "2L",
+      "last_completed_step": "phase_2l_bilingual_source_and_qa_registration",
+      "planned_landing_url_ru": "/industries/architectural-design-bureaus/",
+      "planned_landing_url_en": "/en/industries/architectural-design-bureaus/",
+      "work_branch": "feat/industry-specializations-batch-2l-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/b884020ea7453099ba8bc9ca021b84982cadea7d/",
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/a856e9636e5a3eca479377557ee86fb41304dafb/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 12,
