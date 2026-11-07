@@ -180,7 +180,7 @@ function connectEditorialIndexes(lang){
   const en=lang==='en';
   for(const [section,category,label] of [['cases','cases',en?'More public case studies and external publications':'Публичные кейсы и публикации на внешних площадках'],['articles','articles',en?'Authored articles and research on other platforms':'Авторские публикации и исследования на других площадках']]){
     const path=resolve(ROOT,en?'en':'',section,'index.html');let html=readFileSync(path,'utf8');
-    const block=`<!-- EVIDENCE_RELATED_LINK_START --><section class="section-sm"><div class="container"><h2>${label}</h2><p><a class="text-link" href="${publicationRoute(lang,category)}">${en?'View the publication collection':'Перейти в раздел публикаций'} →</a></p></div></section><!-- EVIDENCE_RELATED_LINK_END -->`;
+    const block=`<!-- EVIDENCE_RELATED_LINK_START --><aside class="section-sm" aria-label="${esc(label)}"><div class="container"><p><strong>${label}</strong></p><p><a class="text-link" href="${publicationRoute(lang,category)}">${en?'View the publication collection':'Перейти в раздел публикаций'} →</a></p></div></aside><!-- EVIDENCE_RELATED_LINK_END -->`;
     if(html.includes('<!-- EVIDENCE_RELATED_LINK_START -->'))html=html.replace(/<!-- EVIDENCE_RELATED_LINK_START -->[\s\S]*?<!-- EVIDENCE_RELATED_LINK_END -->/,block);
     else html=html.replace('</main>',block+'\n</main>');
     save(path,html);
