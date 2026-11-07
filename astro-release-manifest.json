@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "79e58e4bf37cf3ad643f77836ef3b8897ec40544",
-  "releasedAt": "2026-11-07T22:45:41.502Z",
+  "sourceCommit": "7115377e497bda995e139b5637999ff456268d63",
+  "releasedAt": "2026-11-07T22:55:20.882Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2956,6 +2956,11 @@
       "sha256": "aca47c0826ce41c6d22e0a65429fc14152f1012953f748620838e4e7ac783660"
     },
     {
+      "path": "en/industries/food-processing-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "c364702e4cbef72f42b414ae8ba62adf4c175bc6c88e83174cc0c908658a3018"
+    },
+    {
       "path": "en/industries/food-producers-retailers/index.html",
       "kind": "html",
       "sha256": "24c79c41c7c1f645f58da019093e74a4baa33581c6cf402d67d957c1f1659d00"
@@ -2996,6 +3001,11 @@
       "sha256": "577cd99e06437218ab3a7bd819beb6c667336ee868260e2cd415a5b33294d705"
     },
     {
+      "path": "en/industries/industrial-equipment-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "6f501d559d0dc6687efb125f9dcb2c8990f8571e0b42143ef88643247dd7b788"
+    },
+    {
       "path": "en/industries/intellectual-property-lawyers/index.html",
       "kind": "html",
       "sha256": "007043b092f1f6913c559d86b7e385b47131891fda74d7bb6802872db00c8b1a"
@@ -3028,7 +3038,7 @@
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "e416111206304895a6d59ebb996a016c6e524c113a953f2a69da50450083cfa6"
+      "sha256": "55e5d968a39db4c5ef1a37eb5f1a6c15c9d29499d73908767d46620a8d42b28e"
     },
     {
       "path": "en/industries/motor-insurance-lawyers/index.html",
@@ -3044,6 +3054,11 @@
       "path": "en/industries/pharma/index.html",
       "kind": "html",
       "sha256": "0ea7ac3e4d9d0dcb420b6ed847f44af43577a7843142920a42d9fbb8eb483bf1"
+    },
+    {
+      "path": "en/industries/pump-compressor-suppliers/index.html",
+      "kind": "html",
+      "sha256": "3b09d853772bd6316b4e3dbbd1652ea4da7f3607130c301c6985e545d495c709"
     },
     {
       "path": "en/industries/real-estate-transaction-lawyers/index.html",
@@ -3108,7 +3123,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "486bf39dab3d6296443c12bdb41d72faf6e0567c60f7c7887be574a8d602a8d6"
+      "sha256": "4064dbb11c2cea59d056d24267806b13fdf965b0ce5a224b18a66feb7562eb13"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3351,6 +3366,11 @@
       "sha256": "22f5dad608c07853ce79e52461fba718cd916d11cd79989de9ac1a4cb214eebf"
     },
     {
+      "path": "industries/food-processing-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "fb69ddca22574dfb18c12f2363f11700677353945202d5216edf9533690cf0dc"
+    },
+    {
       "path": "industries/food-producers-retailers/index.html",
       "kind": "html",
       "sha256": "f6e9e2c66829d63f62bfe148681732a1febd1d4846319496fba4903c74f3fafd"
@@ -3391,6 +3411,11 @@
       "sha256": "b18da414dbc7bbafcf3a1999342b5beb1e328d9683cb042d7f683f46cf389114"
     },
     {
+      "path": "industries/industrial-equipment-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "71157eb7351a2cabcac2046859d3b3052ee4fb1b412ea30557875b8b79b17eb9"
+    },
+    {
       "path": "industries/intellectual-property-lawyers/index.html",
       "kind": "html",
       "sha256": "9dfecef2558242fd3385d4503aa65bcca11e18478dfd53533e6a80438f739b55"
@@ -3423,7 +3448,7 @@
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "abc68cff7438c454094753e0edb749b62d9d439095db8708856e56b11befc7c7"
+      "sha256": "c4ef7fb24d73dc793f16d7728f750aa796f2e5f219432cb9338fd33b50d94bb9"
     },
     {
       "path": "industries/motor-insurance-lawyers/index.html",
@@ -3439,6 +3464,11 @@
       "path": "industries/pharma/index.html",
       "kind": "html",
       "sha256": "4abd143fbbac0988df3e27a9c9bbf5cae21b682f870f18aa426ac21d068f149a"
+    },
+    {
+      "path": "industries/pump-compressor-suppliers/index.html",
+      "kind": "html",
+      "sha256": "380093547f0519f0a067d2af3fe0b3de9ceacea6fe17c682ca4684591f98426d"
     },
     {
       "path": "industries/real-estate-transaction-lawyers/index.html",
@@ -3578,7 +3608,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "477cb6d39dade151ec79ccdd6193a6b53e3b002867882a31114f5fe639146386"
+      "sha256": "2a8c2259a3ded6c1ba313ea06df2c09984567f9f8f5fd3338940dd7078fe671f"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3633,7 +3663,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "412f1f47a7a8d163b6f5ca5051dab456527e58f05b0e543d0db8f85ff0c9a880"
+      "sha256": "be5dbb0fdf8c0c1d4b4b82a7c297fd637a71945806bfd66ad1288565329e7b58"
     }
   ]
 }
