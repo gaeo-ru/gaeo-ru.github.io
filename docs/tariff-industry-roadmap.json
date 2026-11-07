@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2P_external_https_check_and_select_nonoverlapping_future_batch_after_2K_2L_2O",
+    "next_batch": "2Q_open_PR_full_CI_merge_production_Pages_external_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -557,6 +557,28 @@
       "main_html_pages_verified": 6,
       "main_sitemap_urls_verified": 6,
       "blocker": "Direct external HTTPS/browser access to gaeo.ru is unavailable from the checking environment; do not assert mobile live review or search indexing."
+    },
+    "phase_2q": {
+      "phase": 2,
+      "batch": "2Q",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        45,
+        46,
+        48
+      ],
+      "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
+      "base_source_sha": "13ed1c5bdd25d437d874f8de93a0272a57c33242",
+      "source_file": "src/data/industry-specializations-batch-2q.mjs",
+      "qa_script": "scripts/qa_industry_specializations.mjs",
+      "pairs_prepared": 3,
+      "ru_en_urls_prepared": 6,
+      "pr_ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "parallel_batches": "2K 92/93/94; 2L 7/9/11; 2O 55/56/57; 2P 42/43/44 already merged",
+      "next_required_step": "Open PR and complete full build/browser CI, merge on PASS, then verify main release/Pages and direct HTTPS. Preserve live fields until direct check."
     }
   },
   "status_definitions": {
@@ -602,7 +624,12 @@
     "total_specialization_pairs_prepared_including_2p": 45,
     "total_specialization_urls_prepared_including_2p": 90,
     "phase_2p_deployed_pairs": 3,
-    "phase_2p_deployed_ru_en_urls": 6
+    "phase_2p_deployed_ru_en_urls": 6,
+    "total_specialization_pairs_prepared_including_2q": 48,
+    "total_specialization_urls_prepared_including_2q": 96,
+    "phase_2q_prepared_pairs_not_deployed": 3,
+    "phase_2q_prepared_urls_not_deployed": 6,
+    "phase_2q_count_note": "45 specializations in last verified main; +3 original 2Q pairs in isolated PR, excluding independently pending 2K/2L/2O. CI/main/Pages/HTTPS not yet claimed."
   },
   "candidate_batches": [
     {
@@ -831,6 +858,21 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42422852356",
       "published_commit": "65a5fff46b9b58b29af8c87f98781b9e9981a916",
       "public_https_browser_verified": false
+    },
+    {
+      "batch": "2Q",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        45,
+        46,
+        48
+      ],
+      "label": "Лабораторные приборы, электротехника/кабели, упаковка/тара/этикетки",
+      "condition": "3 оригинальные RU/EN B2B-специализации: обязательность поверки и калибровка, разная область действия технических регламентов, классификация упаковки и этикеток. Не приписывать сертификацию, клиентские результаты, поверку без доказательства.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2q.mjs"
     }
   ],
   "records": [
@@ -2513,10 +2555,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_production_pages_then_independent_live_HTTPS",
+      "work_batch": "2Q",
+      "last_completed_step": "phase_2q_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/laboratory-measurement-equipment-suppliers/",
+      "planned_landing_url_en": "/en/industries/laboratory-measurement-equipment-suppliers/",
+      "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_77904/3bfb763ea01f7fc945dd7b589037fea5b6c90643/",
+        "https://www.consultant.ru/document/cons_doc_LAW_77904/6f99b733a93295b8b52ec1dcaabf260ac41e5f2a/",
+        "https://fgis.gost.ru/fundmetrology/registry"
+      ],
+      "related_methodology_ru": "/strategies/industrial-supplier-evidence/",
+      "related_methodology_en": "/en/strategies/industrial-supplier-evidence/"
     },
     {
       "id": 46,
@@ -2538,10 +2592,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_production_pages_then_independent_live_HTTPS",
+      "work_batch": "2Q",
+      "last_completed_step": "phase_2q_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/electrical-cable-product-suppliers/",
+      "planned_landing_url_en": "/en/industries/electrical-cable-product-suppliers/",
+      "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/4c5fbddd-d1c6-40c1-ab38-30808cc48049",
+        "https://protect.gost.ru/tr/details/7681d60c-888c-427c-9cc9-07406a770d22",
+        "https://www.consultant.ru/document/cons_doc_LAW_124673/e5b378df1963606d9a7d703e9e183857089e43db/"
+      ],
+      "related_methodology_ru": "/strategies/industrial-supplier-evidence/",
+      "related_methodology_en": "/en/strategies/industrial-supplier-evidence/"
     },
     {
       "id": 47,
@@ -2595,10 +2661,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_merge_production_pages_then_independent_live_HTTPS",
+      "work_batch": "2Q",
+      "last_completed_step": "phase_2q_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/packaging-container-label-manufacturers/",
+      "planned_landing_url_en": "/en/industries/packaging-container-label-manufacturers/",
+      "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/0ab50d83-4a64-455d-9c59-04b5ef9336b9",
+        "https://www.consultant.ru/document/cons_doc_LAW_119326/31a955b397b9e457d0b719f0ffceea03d5c05835/",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ],
+      "related_methodology_ru": "/strategies/industrial-supplier-evidence/",
+      "related_methodology_en": "/en/strategies/industrial-supplier-evidence/"
     },
     {
       "id": 49,
