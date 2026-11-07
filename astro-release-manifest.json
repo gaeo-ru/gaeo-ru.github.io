@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "3ad206807c23a635ccb6d5bb2a0b6adea1c07bde",
-  "releasedAt": "2026-11-07T22:18:46.378Z",
+  "sourceCommit": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234",
+  "releasedAt": "2026-11-07T22:29:16.706Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2843,7 +2843,7 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "ab24f74a16b95ec76ccb5e0b062bca3919ec64e6b7d2039ffd7875de5d7576a2"
+      "sha256": "e3ef9a0794d697b966ba13b749bfebb9bfa983091a316ccbd7e722f6668c6157"
     },
     {
       "path": "en/index.html",
@@ -3046,6 +3046,16 @@
       "sha256": "3cbdd4f1d781a73361e323fa7efebaeed00f134dccd60c43049b87bc556cbc06"
     },
     {
+      "path": "en/industries/restaurants-coffee-chains/index.html",
+      "kind": "html",
+      "sha256": "51cea8de14f9956e9a52089d8ff963e5ef72475869576a1bd6b6266631f6b82d"
+    },
+    {
+      "path": "en/industries/self-storage-services/index.html",
+      "kind": "html",
+      "sha256": "898951192f3fd50166dd5e626d74529918fb3b45a1323f220e8389004b416615"
+    },
+    {
       "path": "en/industries/systems-integrators-it-outsourcers/index.html",
       "kind": "html",
       "sha256": "04cdf2b607ce1b2137f39bb074b5c79a80efe534f6a43bd0b197368e9f6620de"
@@ -3058,7 +3068,7 @@
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "6ddf2fbe9d0bfdd44ce09d3ebe24eec8b5607a7ec8d710f3d15ff3dc65245689"
+      "sha256": "10943584ee283fe1233fffef12332cb4e1c3be66016c47a9d88e9ee59198ca0a"
     },
     {
       "path": "en/industries/warehouse-industrial-parks/index.html",
@@ -3083,7 +3093,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "e2d5bca2f9f80c24cd9fcc47c6c15194a2bc2eefcdbee1fa0a939cc4c13deb18"
+      "sha256": "c905d2994da7e4bf640df9995c443b5fb3c41e0bc0ccb469792b353c72c784cf"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3213,7 +3223,7 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "bdac9161881e9f2a361497f7a82418480dfe8ecaa52d9c22afec6306a904fd1d"
+      "sha256": "32b55a46c774a05a212ec48f3069ab38c16abd47435a9256765fe27da4c29c35"
     },
     {
       "path": "index.html",
@@ -3416,6 +3426,16 @@
       "sha256": "a791a6aa2b57f0933f08ac1c71e46d4cfeb239e7bc8ce825eb449f7463a752c8"
     },
     {
+      "path": "industries/restaurants-coffee-chains/index.html",
+      "kind": "html",
+      "sha256": "c85fe5d37381d11b8b85d38aedc5fbd9e26ab4a4a0376c4b42bcd4839c7f9725"
+    },
+    {
+      "path": "industries/self-storage-services/index.html",
+      "kind": "html",
+      "sha256": "9caaa84c620f6ce2380f754a385b2091d95abdd877ba46be461d38281fe8ec5a"
+    },
+    {
       "path": "industries/systems-integrators-it-outsourcers/index.html",
       "kind": "html",
       "sha256": "2561f5737898b7098d51ce6ca3bfbd7e533b168652391ef22658280c7fc449a1"
@@ -3428,7 +3448,7 @@
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "c52235e2bf8c2ba012ce4135fba94b1ad30d395c11a8aa2a88f82f098625ced7"
+      "sha256": "63b33c452355bf930c8afb73374cd651d6a396d0db48997185d59dfb5c5dbe7f"
     },
     {
       "path": "industries/warehouse-industrial-parks/index.html",
@@ -3528,7 +3548,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "848b1fc6baa4d8db723fe36b82f872e1beaf1084cbd2ad9f5795933b5c3fe1ff"
+      "sha256": "91ecc61261281d6a5391adb4feb2e9689ee8bd6d711bda8727234e11eb0de348"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3583,7 +3603,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "5c458b117e389d8b845ac71aa8e2185624dea3fc4bc21ae2f5680559d3255779"
+      "sha256": "c36eaacd7f0b30c022f4a2eb404eeb7c914a927f5a423ddb67e14a3fb763c349"
     }
   ]
 }
