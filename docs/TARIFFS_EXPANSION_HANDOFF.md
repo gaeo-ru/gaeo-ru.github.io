@@ -4,6 +4,10 @@
 
 Этот документ и `docs/tariff-industry-roadmap.json` ведутся дальше на месте. Не создавать новый конкурирующий план, Work-задачу или автоматизацию. Новые указания Алексея имеют приоритет над решениями этого файла.
 
+## Партия 2N: текущая работа, проверка и точка продолжения (8 ноября 2026)
+
+**Назначены №10, №12, №13, 3 независимые специализации и 6 RU/EN URL**. Ветка `feat/industry-specializations-batch-2n-2026-11-08` создана от `astro-source` `04dd7039ecf8120adffa154c9faf2a9c9fb3d234`; содержимое синхронизировано с текущим HEAD `e3aeb1bf268e6d1ad6682cb26207ec4448e6af0d`. Общая тарифная модель, BMR, 107 каталоговых номеров и утвержденные изображения неизменны. Точная точка продолжения в разделе 25.
+
 ## Партия 2M: новая контрольная точка (8 ноября 2026)
 
 **Готовая часть 2M: №8 и №83 (4 RU/EN страницы)** в [PR #90](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90). №7 исключен: его делает 2L [PR #91](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91). Исходники объединены в `astro-source` коммитом `04dd7039ecf8120adffa154c9faf2a9c9fb3d234`; полный [PR CI 42419689288](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42419689288) **PASS** (78 RU/EN специализаций, 1440/390/320). Production, main, GitHub Pages и внешний HTTPS еще требуют отдельной проверки. Подробности в разделе 24. Параллельные изменения 2I/2K/2L сохранять. Фаза 1 опубликована, цены и гарантия BMR неизменны.
@@ -643,5 +647,22 @@
 3. Подтвердить `npm run build`, `check:specializations` (Chromium 1440/390/320), `check:tariffs`, `check:parity`, `check:design`, `check:anchors`, корректность 4 страниц, тарифов, H1, canonical/hreflang, WebP, 5 FAQ, 4 сценариев, форм и ссылок.
 4. PR #90 уже объединен после CI PASS. Теперь отдельно проверить успешный production workflow, `main/astro-release-manifest.json`, наличие **4 новых HTML и 4 URL в sitemap**, затем итог GitHub Pages. Зафиксировать фактические SHA/Actions в этих же документах.
 5. По внешнему `https://gaeo.ru/` проверить все 4 новых URL на десктопе и 390/320 px. При недоступности публичного HTTPS не заявлять live-PASS и не заполнять `landing_url_ru/en`, `verified_at`. Отдельно проверять ошибки изображений, FAQ, форму и реальное отображение.
-6. Следующая партия **2N** выбирается только по новому состоянию roadmap с учетом 2K/2L; исследовательская очередь 3A (№75, 76, 27, 30) сохраняется. **Продолжать обновлять именно эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json`, не плодить новые планы, PR или дубли. 
+6. Следующая партия **2N** выбирается только по новому состоянию roadmap с учетом 2K/2L; исследовательская очередь 3A (№75, 76, 27, 30) сохраняется. **Продолжать обновлять именно эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json`, не плодить новые планы, PR или дубли.
 
+## 25. Партия 2N: генподряд, дизайн интерьеров и ремонт жилья (8 ноября 2026)
+
+**Источник:** `src/data/industry-specializations-batch-2n.mjs`; штатный загрузчик `src/data/industry-specializations.mjs` и `scripts/qa_industry_specializations.mjs`. Проверенные по GitHub свободные номера: **10, 12 и 13**. Существующая 2L [PR #91](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91) занимает №7/9/11, 2M [PR #90](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90) №8/83, 2K [PR #89](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/89) №92–94. Эти работы не копировать и не перезаписывать.
+
+| № | Самостоятельная специализация | RU | EN | Основания для проверки |
+|---:|---|---|---|---|
+| 10 | Генподрядчики коммерческих и промышленных объектов: склад, производство, реконструкция, договорные роли и работы | `/industries/commercial-industrial-general-contractors/` | `/en/industries/commercial-industrial-general-contractors/` | [ГрК РФ, ст. 52](https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/), [ст. 55.8](https://www.consultant.ru/document/cons_doc_LAW_51040/a856e9636e5a3eca479377557ee86fb41304dafb/) |
+| 12 | Студии дизайна интерьеров: портфолио, реально построенные объекты, состав дизайн-проекта, перепланировка | `/industries/interior-design-studios/` | `/en/industries/interior-design-studios/` | [ЖК РФ, ст. 26](https://www.consultant.ru/document/cons_doc_LAW_51057/7e4a9388b3a2611890a95ada5f607b38ad46d0fd/), [ГК РФ, ст. 1288](https://www.consultant.ru/document/cons_doc_LAW_64629/8729a73d82e444f858aa833f74191fd5de2f508d/) |
+| 13 | Компании по ремонту квартир и домов: сметы, виды ремонта, приемка, отзывы и локальный спрос | `/industries/residential-renovation-contractors/` | `/en/industries/residential-renovation-contractors/` | [ГК РФ, ст. 730](https://www.consultant.ru/document/cons_doc_LAW_9027/28e9350147c65bfef403106a5b858c86f94fa747/), [ст. 737](https://www.consultant.ru/document/cons_doc_LAW_9027/d37197cf9693df199659033fcbf0f65f267044c5/), [Роспотребнадзор](https://26.rospotrebnadzor.ru/press-center/pr/12771/) |
+
+**Подготовленный контент:** каждая RU и EN версия содержит индивидуальный первый экран и метаданные, 3 специфические проблемы, 4 коммерческих сценария с проверяемыми критериями, 3 блока фактов, 4 этапа, 5 FAQ, собственный CTA и текст заявки. Не заявляются клиентские результаты для этих отраслей, универсальные допуски СРО, согласованная перепланировка, автоматически успешное разрешение спора, гарантированный срок ремонта или право на чужие изображения.
+
+**Шаблон и перелинковка:** `IndustrySpecialization.astro` и `IndustryPricing.astro`; родительские RU/EN страницы недвижимости `/geo-prodvizhenie-nedvizhimosti/` / `/en/geo-for-real-estate/`, отраслевые методики, каталог 107 направлений (постоянные `industry-010/012/013`), изображения `industry-010/012/013-960.webp` и общие цены из `pricing.mjs`. Исходный каталог и его якоря не изменены.
+
+**Границы приемки:** подготовленные данные и регистрация в QA не доказывают собранную страницу, CI, production, GitHub Pages, прямой HTTPS или индексацию. До фактического PR CI PASS не отмечать его прошедшим. После PASS безопасно объединить PR, проверив текущее состояние 2K/2L и параллельных документов; затем подтвердить `astro-release-manifest.json`, 6 новых HTML, 6 URL sitemap, штатный Pages и отдельно публичный `https://gaeo.ru/` на десктопе и 390/320 px. `landing_url_ru/en`, `verified_at`, `status=existing_landing` не заполнять до прямого внешнего HTTPS/браузерного контроля.
+
+**Последовательность для следующего чата:** (1) проверить PR 2N и самый новый CI, устранить ошибки в этой же ветке; (2) PR merge при PASS с сохранением чужих исходников; (3) production/main/manifest/sitemap/Pages; (4) внешний HTTPS и мобильная проверка; (5) обновить **эти же** 2 файла точными ссылками и проверенными счетчиками. Следующие свободные кандидаты для исследования: №14, 15, 16, без назначения и без публикации заранее; исследовательскую фазу 3A №75/76/27/30 сохранять.

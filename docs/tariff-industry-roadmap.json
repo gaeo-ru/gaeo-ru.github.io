@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2M_production_main_Pages_then_direct_live_HTTPS_and_2N_selection",
+    "next_batch": "2N_PR_CI_then_merge_prod_main_pages_external_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -481,7 +481,29 @@
       "qa_dev_cases_fix_commit": "1bbeddc737eb9e3bfd29423a99faf5a113905415",
       "last_verified_source_sha": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234"
     },
-    "current_expansion_phase": 2
+    "current_expansion_phase": 2,
+    "phase_2n": {
+      "phase": 2,
+      "batch": "2N",
+      "status": "source_prepared_pr_ci_pending",
+      "source_base_sha": "e3aeb1bf268e6d1ad6682cb26207ec4448e6af0d",
+      "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
+      "records": [
+        10,
+        12,
+        13
+      ],
+      "source_file": "src/data/industry-specializations-batch-2n.mjs",
+      "qa_file": "scripts/qa_industry_specializations.mjs",
+      "new_industry_landing_pairs_prepared": 3,
+      "new_ru_en_urls_prepared": 6,
+      "ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "parallel_owned": "2L=7/9/11; 2M=8/83; 2K=92/93/94",
+      "next_required_step": "Open PR, complete full CI including 1440/390/320 browser QA, merge safely, verify production/main/sitemap/Pages and direct HTTPS. Preserve only planned routes before live check."
+    }
   },
   "status_definitions": {
     "existing_landing": "Для 4 прямых и 3 более широких соответствий уже есть публичная коммерческая страница. Это не 7 новых страниц и не 7 точных специализированных соответствий.",
@@ -519,7 +541,10 @@
     "total_specialization_urls_prepared_including_2i": 74,
     "phase_2_counts_note": "Latest confirmed main 1cb06302 (source 985994ae) has 37 pairs/74 specialization URLs, 177 HTML/172 sitemap, 716 files. 2I: 4 pairs/8 URLs, PR CI/production/Pages PASS, raw main HTML verified, direct live HTTPS/browser mobile check pending. Parallel 2K/2L/2M not part of these counts.",
     "total_specialization_pairs_prepared_including_2m": 39,
-    "total_specialization_urls_prepared_including_2m": 78
+    "total_specialization_urls_prepared_including_2m": 78,
+    "phase_2n_prepared_pairs": 3,
+    "phase_2n_prepared_urls": 6,
+    "phase_2n_status_note": "Three source-prepared pairs / six RU/EN pages, not yet deployed, not live-verified. Preserve previous production counts."
   },
   "candidate_batches": [
     {
@@ -710,6 +735,21 @@
       "source_file": "src/data/industry-specializations-batch-2m.mjs",
       "source_commit": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42419689288"
+    },
+    {
+      "batch": "2N",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        10,
+        12,
+        13
+      ],
+      "label": "Строительные генподрядчики, дизайн интерьеров, ремонт жилья",
+      "condition": "3 оригинальные RU/EN страницы; подтверждать объектную роль, договорные условия, права на изображения и применимость правовых требований. Общие тарифы сохраняются.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2n.mjs"
     }
   ],
   "records": [
@@ -1065,10 +1105,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_batch": "2N",
+      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/commercial-industrial-general-contractors/",
+      "planned_landing_url_en": "/en/industries/commercial-industrial-general-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/",
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/a856e9636e5a3eca479377557ee86fb41304dafb/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 11,
@@ -1115,10 +1166,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_batch": "2N",
+      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/interior-design-studios/",
+      "planned_landing_url_en": "/en/industries/interior-design-studios/",
+      "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51057/7e4a9388b3a2611890a95ada5f607b38ad46d0fd/",
+        "https://www.consultant.ru/document/cons_doc_LAW_64629/8729a73d82e444f858aa833f74191fd5de2f508d/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 13,
@@ -1140,10 +1202,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_prod_Pages_external_HTTPS",
+      "work_batch": "2N",
+      "last_completed_step": "phase_2n_original_bilingual_content_and_qa_registration",
+      "planned_landing_url_ru": "/industries/residential-renovation-contractors/",
+      "planned_landing_url_en": "/en/industries/residential-renovation-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2n-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/28e9350147c65bfef403106a5b858c86f94fa747/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/d37197cf9693df199659033fcbf0f65f267044c5/",
+        "https://26.rospotrebnadzor.ru/press-center/pr/12771/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 14,
