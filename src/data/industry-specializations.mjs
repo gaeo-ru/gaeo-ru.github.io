@@ -1,5 +1,5 @@
 /**
- * Batch 2A: four substantive RU/EN GEO specializations.
+ * Batches 2A and 2B: eight substantive RU/EN GEO specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -1016,7 +1016,1071 @@ export const industrySpecializations = [
         "request": "Furniture GEO: product catalogue, variants, delivery, assembly and AI recommendations."
       }
     }
+  },
+{
+  "id": 3,
+  "slug": "residential-property-agencies",
+  "group": "real-estate",
+  "routes": {
+    "ru": "/industries/residential-property-agencies/",
+    "en": "/en/industries/residential-property-agencies/"
+  },
+  "parent": {
+    "ru": "/geo-prodvizhenie-nedvizhimosti/",
+    "en": "/en/geo-for-real-estate/"
+  },
+  "methods": {
+    "ru": [
+      "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+    ],
+    "en": [
+      "/en/articles/geo-for-real-estate/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика измерения рекомендаций жилой недвижимости"
+    ],
+    "en": [
+      "Method for measuring real-estate recommendations"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/e064cc95b1bdffa4d12abb92fdfc56dea94198df/",
+      "ru": "ФЗ №218-ФЗ, статья 62: получение сведений ЕГРН",
+      "en": "Law 218-FZ, Article 62: access to EGRN data"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение агентств недвижимости в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение агентств жилой недвижимости в нейросетях",
+      "description": "GEO-продвижение риелторского агентства: новостройки, вторичный рынок, продажа квартиры, комиссии и рекомендации ChatGPT и Алисы. Тарифы GAEO.",
+      "eyebrow": "Недвижимость / Агентства и риелторы",
+      "lead": "Покупатель может искать агентство для выбора квартиры, а продавец - специалиста, который поможет провести сделку. Проверяю, какие агентства нейросети рекомендуют по этим разным задачам и насколько убедительно описаны реальные компетенции.",
+      "heroPoints": [
+        "Отдельные запросы покупателей, продавцов и арендодателей",
+        "Проверяемые районы работы, услуги, договор и условия комиссии",
+        "Профили риелторов и разрешенные примеры работы вместо рекламных обещаний"
+      ],
+      "problemTitle": "Каталог квартир сам по себе не доказывает компетенцию агентства",
+      "problemIntro": "Покупателю и продавцу важно понять, кому можно поручить сопровождение, какова роль специалиста и за что агентство отвечает по договору.",
+      "problems": [
+        {
+          "title": "Смешаны разные услуги",
+          "body": "Новостройки, вторичный рынок, продажа квартиры и управление арендой требуют разных условий, опыта и источников подтверждения."
+        },
+        {
+          "title": "Нет конкретики о людях",
+          "body": "Профили сотрудников должны показывать реальную специализацию и географию. Нельзя выдавать опыт девелопера или знакомство с объектом за результат работы агентства."
+        },
+        {
+          "title": "Непрозрачны условия сделки",
+          "body": "Стороны хотят понимать, как рассчитывается комиссия, что включено в поиск или продажу, кто занимается проверкой документов и какие услуги оплачиваются отдельно."
+        }
+      ],
+      "scenarioTitle": "Ситуации, в которых нейросеть выбирает риелтора",
+      "scenarioIntro": "Для стартового замера формирую отдельные группы запросов, соответствующие разным коммерческим услугам.",
+      "columns": [
+        "Вопрос пользователя",
+        "Что требуется подтвердить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое агентство поможет продать квартиру в конкретном районе?",
+          "Район работы, условия договора, состав услуг, подтвержденные отзывы",
+          "Страница продажи квартиры с географией и порядком сотрудничества"
+        ],
+        [
+          "Кому поручить покупку вторичного жилья с проверкой документов?",
+          "Объем сопровождения, участие профильного юриста, ограничения проверки",
+          "Четко разделить агентскую работу и юридическую проверку"
+        ],
+        [
+          "Какие риелторы занимаются новостройками бизнес-класса?",
+          "Реальные специалисты, проекты, партнерские отношения, опыт по сегменту",
+          "Профили команды, достоверные страницы специализаций"
+        ],
+        [
+          "Кто поможет сдать квартиру и сопровождать аренду?",
+          "Отбор арендатора, отчетность, договор, состав дальнейшего управления",
+          "Отдельно описать аренду и регулярное управление"
+        ]
+      ],
+      "proofTitle": "Какие сведения нужны для проверяемой рекомендации",
+      "proofIntro": "Агентское сопровождение, юридические действия и государственные реестры выполняют разные функции. Закон №218-ФЗ регулирует получение сведений ЕГРН; публичные материалы должны учитывать ограничения доступа и конфиденциальность.",
+      "checks": [
+        "Сотрудники, специализации, регионы и профессиональные профили, которые можно проверить",
+        "Договор, комиссия, перечень работ и ограничения по юридическому сопровождению",
+        "Актуальные предложения, реальные отзывы и допустимые к публикации примеры работы без персональных данных клиентов"
+      ],
+      "proofNote": "Методика анализа рекомендаций жилых комплексов применима к рынку жилья, но она не является доказанным GEO-кейсом конкретного агентства недвижимости.",
+      "workTitle": "Как организую GEO-продвижение агентства",
+      "workIntro": "Начинаю с сравнения ответов нейросетей по реальным коммерческим задачам агентства, затем корректирую доступные источники информации.",
+      "steps": [
+        {
+          "title": "Исходная матрица",
+          "body": "Отдельно фиксирую покупку, продажу, аренду, районы и типы жилья; измеряю брендовые и небрендовые рекомендации."
+        },
+        {
+          "title": "Аудит фактов",
+          "body": "Проверяю состав услуг, комиссию, профили риелторов, актуальность объектов и разрешения на использование отзывов."
+        },
+        {
+          "title": "Доработки и публикации",
+          "body": "Готовлю ТЗ на страницы специализаций, FAQ, профили команды и экспертные материалы, подтверждающие работу агентства."
+        },
+        {
+          "title": "Контроль динамики",
+          "body": "Повторяю согласованные запросы и измеряю BMR, ссылки на источники и корректность сведений об агентстве."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Чем продвижение агентства отличается от продвижения ЖК?",
+          "answer": "ЖК продвигается как конкретный объект. При выборе агентства человек оценивает услуги, людей, районы, комиссию и ответственность; поэтому матрицы запросов различаются."
+        },
+        {
+          "question": "Можно ли продвигать отдельного риелтора?",
+          "answer": "Да, если можно достоверно описать его специализацию, географию, услуги и профессиональные профили. Вымышленные сделки и отзывы не нужны."
+        },
+        {
+          "question": "Как указывать комиссию агентства?",
+          "answer": "Публикуем действительный способ расчета и условия договора. Если оплата зависит от объекта или сделки, нельзя выдавать одну сумму за универсальный тариф."
+        },
+        {
+          "question": "Можно ли публиковать историю сделки с клиентом?",
+          "answer": "Только при соблюдении конфиденциальности, законных оснований и прав на материалы. Адреса, документы и персональные сведения без оснований не публикуются."
+        },
+        {
+          "question": "Какова стоимость GEO для риелторского агентства?",
+          "answer": "Используются общие тарифы GAEO на аудит и сопровождение. Объем работ выбирается после проверки услуг, географии и стартовой видимости."
+        }
+      ],
+      "ctaTitle": "Узнать, какие агентства недвижимости рекомендуют нейросети",
+      "ctaText": "Пришли сайт агентства, основные районы, услуги и ссылки на профили команды. Я предложу подходящие запросы для стартового аудита.",
+      "request": "GEO агентство недвижимости: выбор риелтора, районы, вторичный рынок, новостройки, комиссия и рекомендации."
+    },
+    "en": {
+      "title": "GEO for residential real estate agencies | GAEO.ru",
+      "h1": "GEO for residential real estate agencies in AI recommendations",
+      "description": "GEO for estate agencies: buying and selling homes, agent selection, fees, local expertise and evidence-based AI visibility measurement.",
+      "eyebrow": "Real estate / Residential agencies",
+      "lead": "Buyers want a suitable agent for a property search, while sellers need a team that can manage a transaction. I examine which agencies AI recommends for these separate needs and which facts support each recommendation.",
+      "heroPoints": [
+        "Different buyer, seller and landlord query groups",
+        "Verifiable local coverage, scope and service fees",
+        "Agent profiles and approved examples rather than unsupported claims"
+      ],
+      "problemTitle": "A listings database does not prove an agency's expertise",
+      "problemIntro": "People choosing a brokerage need to know who is responsible, which services are included and what expertise is relevant.",
+      "problems": [
+        {
+          "title": "Different services are conflated",
+          "body": "New-build sales, resale transactions, lettings and property management have distinct processes and commercial terms."
+        },
+        {
+          "title": "Agent profiles lack substance",
+          "body": "A useful biography states real specialisms and locations; working with a developer is not evidence of a completed brokerage result."
+        },
+        {
+          "title": "Fees and responsibilities are unclear",
+          "body": "The client should understand agency fees, transaction support, legal review boundaries and any separately charged services."
+        }
+      ],
+      "scenarioTitle": "Questions that drive residential agency selection",
+      "scenarioIntro": "The baseline groups buying, selling, rentals and specialist-property needs rather than treating all property searches as identical.",
+      "columns": [
+        "Prospective client question",
+        "Evidence required",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can sell my apartment in this neighbourhood?",
+          "Local service area, contractual scope, fee terms and genuine reviews",
+          "A local property-sales service page with transparent terms"
+        ],
+        [
+          "Which agency supports buying a resale apartment and checking documents?",
+          "Service boundaries and any specialist legal involvement",
+          "Distinguish brokerage from independent legal review"
+        ],
+        [
+          "Which agents know business-class new-build properties?",
+          "Actual specialists, project coverage and partner roles",
+          "Relevant team profiles and project specialisms"
+        ],
+        [
+          "Who can arrange a letting and ongoing property management?",
+          "Tenant selection, contracts, reporting and management scope",
+          "Separate lettings from ongoing management"
+        ]
+      ],
+      "proofTitle": "Evidence behind an estate-agency recommendation",
+      "proofIntro": "Brokerage service and legal due diligence play distinct roles. Russian Law 218-FZ regulates access to property register information, so publicly described checks must respect the applicable access and privacy rules.",
+      "checks": [
+        "Real team members, specialisations, locations and verifiable public profiles",
+        "Engagement terms, commission model and boundaries of legal support",
+        "Up-to-date listings, authentic feedback and publishable cases without private client details"
+      ],
+      "proofNote": "GAEO's real-estate developer research informs the measurement method; it is not a completed GEO result for a residential brokerage.",
+      "workTitle": "A practical GEO programme for an agency",
+      "workIntro": "Work starts with the queries that cause buyers and sellers to choose an intermediary, then improves the source evidence.",
+      "steps": [
+        {
+          "title": "Baseline",
+          "body": "Record questions by transaction type, location and property segment, separating brand and non-brand recommendations."
+        },
+        {
+          "title": "Fact review",
+          "body": "Check agency scope, fees, team biographies, listing freshness and permitted references."
+        },
+        {
+          "title": "Content and specifications",
+          "body": "Prepare service pages, staff profiles, fee FAQ and specialist publications."
+        },
+        {
+          "title": "Repeat measurement",
+          "body": "Compare equivalent prompts, BMR and factual accuracy with the baseline."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How does agency GEO differ from developer GEO?",
+          "answer": "A development is recommended for the property itself; an agency is chosen for people, services, responsibilities and fees. The query set reflects that difference."
+        },
+        {
+          "question": "Can GEO promote an individual estate agent?",
+          "answer": "Yes, using genuine professional details and local specialisms without invented reviews or deals."
+        },
+        {
+          "question": "Should fees appear on the agency website?",
+          "answer": "The real calculation basis and relevant contract terms should be explained. Complex transactions may require a scoped estimate."
+        },
+        {
+          "question": "Can an agency publish individual transaction stories?",
+          "answer": "Only where privacy, confidentiality and usage permissions allow disclosure. Do not expose sensitive client documents."
+        },
+        {
+          "question": "How much does GEO cost for an agency?",
+          "answer": "GAEO's standard audit and monthly plans apply. Scope depends on local markets, service lines and the baseline."
+        }
+      ],
+      "ctaTitle": "See which residential agencies AI recommends instead of yours",
+      "ctaText": "Share the agency website, service areas and team profiles. I will suggest a relevant starting measurement.",
+      "request": "Residential agency GEO: agent selection, service areas, fees, buying and selling, AI recommendations."
+    }
   }
+},
+{
+  "id": 21,
+  "slug": "family-inheritance-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/family-inheritance-lawyers/",
+    "en": "/en/industries/family-inheritance-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как измерять рекомендации юридических специалистов",
+      "12 проверок сайта юридической компании"
+    ],
+    "en": [
+      "Method for legal-provider AI recommendations",
+      "Twelve website checks for legal GEO"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://minjust.gov.ru/ru/appeals/faq/623/",
+      "ru": "Минюст: порядок оформления наследства",
+      "en": "Ministry of Justice: probate process"
+    },
+    {
+      "href": "https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/",
+      "ru": "Минюст: Единый государственный реестр адвокатов",
+      "en": "Ministry of Justice: advocates register"
+    },
+    {
+      "href": "https://minjust.gov.ru/ru/documents/7900/",
+      "ru": "Минюст: законодательство о нотариате",
+      "en": "Ministry of Justice: notaries legislation"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение семейных и наследственных юристов | GAEO.ru",
+      "h1": "GEO-продвижение семейных и наследственных юристов в нейросетях",
+      "description": "GEO для юристов по разводу, разделу имущества, алиментам, спорам о детях и наследству: подтвержденная квалификация, рекомендации и тарифы GAEO.",
+      "eyebrow": "Юридические услуги / Семья и наследство",
+      "lead": "Человек ищет семейного или наследственного юриста в деликатной ситуации. Нейросети сравнивают специализации, профили, содержание услуг и репутационные источники. Проверяю, каких специалистов они рекомендуют и насколько верны основания такого выбора.",
+      "heroPoints": [
+        "Отдельные запросы по семейным делам, наследству и нотариальным действиям",
+        "Проверка реальной специализации и заявленного статуса адвоката",
+        "Конфиденциальность клиентов и отказ от вымышленных судебных побед"
+      ],
+      "problemTitle": "Почему общая юридическая страница не закрывает деликатные запросы",
+      "problemIntro": "Семейные и наследственные вопросы различаются по процедуре, документам и роли специалиста. Публичные сведения должны быть проверяемыми и не раскрывать обстоятельств частной жизни.",
+      "problems": [
+        {
+          "title": "Смешаны услуги с разными процедурами",
+          "body": "Раздел имущества, алименты, споры о детях, принятие наследства и оспаривание завещания имеют разный предмет. Нужны самостоятельные описания помощи."
+        },
+        {
+          "title": "Юрист ошибочно представлен адвокатом",
+          "body": "Статус адвоката проверяется в официальном реестре Минюста. Если такого статуса нет, нельзя его приписывать специалисту."
+        },
+        {
+          "title": "Описание подменено обещаниями исхода",
+          "body": "Судебное решение и наследственные права зависят от конкретных обстоятельств. Без подтверждения нельзя заявлять гарантированные победы, процент успешных дел или личный опыт по чужим делам."
+        }
+      ],
+      "scenarioTitle": "В каких вопросах люди выбирают юридического специалиста",
+      "scenarioIntro": "Матрица запросов формируется по виду дела и региону. Общие сведения о праве не заменяют консультацию по документам клиента.",
+      "columns": [
+        "Вопрос клиента",
+        "Что необходимо проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кого выбрать для раздела имущества при разводе?",
+          "Специализацию, формат консультации, условия представительства и предмет спора",
+          "Раздел услуги с реальными этапами и ограничениями"
+        ],
+        [
+          "Где найти юриста по алиментам и спору о детях?",
+          "Подтвержденную практику по семейным делам и соблюдение конфиденциальности",
+          "Деликатные FAQ и профессиональные профили"
+        ],
+        [
+          "Кто помогает оформить наследство и обратиться к нотариусу?",
+          "Роль юриста и нотариуса, порядок заявлений, реальные услуги",
+          "Разъяснить процесс с официальными источниками Минюста"
+        ],
+        [
+          "Кто ведет спор о завещании или доле в наследстве?",
+          "Профиль практики, роль исполнителя, предмет и условия ведения спора",
+          "Показать специализацию без раскрытия сведений наследников"
+        ]
+      ],
+      "proofTitle": "Какие факты подтверждают юридическую компетенцию",
+      "proofIntro": "Минюст публикует сведения о порядке оформления наследства, нотариальных действиях и реестр адвокатов. Статус, виды помощи и юрисдикция должны соответствовать фактической работе специалиста.",
+      "checks": [
+        "Личность, реальная специализация и профессиональный статус; реестр адвокатов использовать только при заявленном статусе",
+        "Состав услуг: консультации, документы, представительство, взаимодействие с нотариусом и пределы полномочий",
+        "Разрешенные к раскрытию публикации, профессиональные материалы и данные, без сведений о детях и частных делах клиентов"
+      ],
+      "proofNote": "Опубликованная юридическая методика GAEO применима к этой нише. Опыт работы с корпоративными юристами не равен завершенному GEO-кейсу семейной или наследственной практики.",
+      "workTitle": "Как организую GEO-продвижение семейного и наследственного юриста",
+      "workIntro": "Работа начинается с реальных рекомендательных запросов, затем приводит в порядок подтверждения профессиональных возможностей.",
+      "steps": [
+        {
+          "title": "Выбираю группы запросов",
+          "body": "Разделяю развод, раздел имущества, вопросы детей, алименты, наследство и нотариальную процедуру."
+        },
+        {
+          "title": "Проверяю факты",
+          "body": "Сверяю специализацию, публичные профили, статусы, ограничения рекламы и доступность подтверждений."
+        },
+        {
+          "title": "Готовлю сайт и публикации",
+          "body": "Проектирую страницы услуг, профили специалистов и FAQ с первичными правовыми источниками, без персональных данных."
+        },
+        {
+          "title": "Измеряю изменения",
+          "body": "Повторяю контрольные запросы в выбранных нейросетях и сравниваю BMR, описания специалистов и ссылки на источники."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать семейного юриста без публичных судебных решений?",
+          "answer": "Да. Можно подтвердить квалификацию, состав услуг и профессиональные публикации без раскрытия дел клиентов и обещаний исхода."
+        },
+        {
+          "question": "Юрист и адвокат - одно и то же?",
+          "answer": "Нет. При обозначении специалиста как адвоката нужно проверить его статус по государственному реестру. Описание должно соответствовать действительным полномочиям."
+        },
+        {
+          "question": "Можно ли обещать получение наследства или выигрыш суда?",
+          "answer": "Результат зависит от документов, закона и обстоятельств дела. Универсальные гарантии исхода и неподтвержденные проценты побед не использовать."
+        },
+        {
+          "question": "Как сохранить конфиденциальность в кейсах?",
+          "answer": "Не раскрывать сведения о детях, семейном положении, адресах, финансах и наследстве без законного основания. Полезная методика возможна без таких подробностей."
+        },
+        {
+          "question": "Какова стоимость GEO для семейного юриста?",
+          "answer": "Общие тарифы GAEO включают мини-аудит, полный аудит и ежемесячное сопровождение. Состав запросов, источников и контента определяется исходным замером."
+        }
+      ],
+      "ctaTitle": "Проверить, каких семейных и наследственных юристов рекомендуют нейросети",
+      "ctaText": "Пришли сайт, город, реальные направления практики и публичные профили. Я предложу первичную матрицу запросов и аудит.",
+      "request": "GEO семейные и наследственные юристы: развод, имущество, дети, алименты, наследство, квалификация и рекомендации."
+    },
+    "en": {
+      "title": "GEO for family and inheritance lawyers | GAEO.ru",
+      "h1": "GEO for family and inheritance lawyers in AI recommendations",
+      "description": "GEO for family and inheritance law professionals: divorce, property disputes, maintenance, probate, verified credentials and AI visibility measurement.",
+      "eyebrow": "Legal services / Family and inheritance law",
+      "lead": "Someone seeking help with divorce or inheritance needs a professional whose actual scope and credentials fit a sensitive matter. I review which practitioners AI recommends, the evidence cited and the gaps in their public profiles.",
+      "heroPoints": [
+        "Separate family disputes, probate and notarial procedures",
+        "Check professional specialisation and registered advocate status when claimed",
+        "Protect client confidentiality and avoid unsupported case outcomes"
+      ],
+      "problemTitle": "Generic legal claims fail to resolve sensitive professional choices",
+      "problemIntro": "The procedures, documents and roles differ across family and inheritance matters. Public descriptions must be verifiable without exposing private client information.",
+      "problems": [
+        {
+          "title": "Distinct matters are lumped together",
+          "body": "Matrimonial property, child arrangements, maintenance, succession and contested wills require different expertise and process explanations."
+        },
+        {
+          "title": "Professional titles are overstated",
+          "body": "An advocate designation in Russia must reflect actual registration. A general legal practitioner should not be described as a registered advocate without evidence."
+        },
+        {
+          "title": "A promised outcome replaces service details",
+          "body": "Court and probate outcomes depend on the case. Unsupported win rates and universal guarantees are not reliable proof of expertise."
+        }
+      ],
+      "scenarioTitle": "Legal needs that drive recommendations",
+      "scenarioIntro": "The baseline distinguishes matters and jurisdictions; informational pages cannot replace advice based on client documents.",
+      "columns": [
+        "Client question",
+        "Evidence to check",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Who can help with matrimonial property division?",
+          "Relevant scope, consultation, representation and terms",
+          "Explain the service and its limits"
+        ],
+        [
+          "Who handles child or maintenance disputes?",
+          "Verified family-practice expertise and privacy safeguards",
+          "Topic-specific service pages and responsible FAQ"
+        ],
+        [
+          "Who can assist with probate and notarial steps?",
+          "Different responsibilities of the lawyer and notary",
+          "Link procedural explanations to authoritative sources"
+        ],
+        [
+          "Who represents a contested inheritance matter?",
+          "Actual specialisation, duties and engagement terms",
+          "Present credible professional evidence without private case details"
+        ]
+      ],
+      "proofTitle": "Verifiable evidence for family and inheritance law",
+      "proofIntro": "Russia's Ministry of Justice publishes guidance on succession, notarial acts and the advocate register. Content must distinguish general legal information from individually scoped services.",
+      "checks": [
+        "Verified names, jurisdictions and professional status; check the register when advocate status is claimed",
+        "Actual consultation, document, representation and notarial-support services with clear boundaries",
+        "Publishable professional materials and lawful disclosures, protecting children and client privacy"
+      ],
+      "proofNote": "GAEO's legal-provider methodology is relevant, but corporate-law work does not establish a completed GEO result for family-law or inheritance specialists.",
+      "workTitle": "A practical GEO programme for legal practitioners",
+      "workIntro": "Start from actual AI recommendations and then build evidence that correctly describes the practice.",
+      "steps": [
+        {
+          "title": "Segment client intents",
+          "body": "Separate divorce, assets, child matters, maintenance, succession and notarial processes."
+        },
+        {
+          "title": "Verify claims",
+          "body": "Review practice areas, professional status, permissions and confidentiality constraints."
+        },
+        {
+          "title": "Improve sources",
+          "body": "Specify practice pages, biographies and FAQ supported by authoritative legal material."
+        },
+        {
+          "title": "Repeat measurements",
+          "body": "Track BMR, practitioner descriptions and references with stable non-brand questions."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can GEO work without public court decisions?",
+          "answer": "Yes. Accurate credentials, service scope and professional explanations can be useful without disclosing confidential cases."
+        },
+        {
+          "question": "Can any lawyer be presented as an advocate?",
+          "answer": "No. Advocate status in Russia is a specific registered designation. The public profile must use the correct professional title."
+        },
+        {
+          "question": "Can a practitioner promise to win a case?",
+          "answer": "A universal outcome promise cannot reflect the facts of each case. Describe actual service terms without unsupported results."
+        },
+        {
+          "question": "How should family-case privacy be handled?",
+          "answer": "Do not disclose personal family circumstances, children's data or estate documents without a lawful basis and appropriate rights."
+        },
+        {
+          "question": "How does GAEO pricing apply?",
+          "answer": "Published audit and monthly GEO plans apply. The final query and content scope depends on practice areas and the baseline."
+        }
+      ],
+      "ctaTitle": "Find out which family and inheritance lawyers AI recommends",
+      "ctaText": "Share the practice website, region, actual specialist services and professional profiles. I will suggest an initial audit.",
+      "request": "Family and inheritance law GEO: divorce, assets, children, probate, credentials and AI recommendations."
+    }
+  }
+},
+{
+  "id": 34,
+  "slug": "crm-erp-platforms",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/crm-erp-platforms/",
+    "en": "/en/industries/crm-erp-platforms/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Проверяемые доказательства IT-поставщика",
+      "Методика измерения рекомендаций"
+    ],
+    "en": [
+      "Evidence of technical B2B expertise",
+      "AI recommendation measurement method"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/data-management-configuration-data-migration",
+      "ru": "Microsoft Learn: планирование миграции данных",
+      "en": "Microsoft Learn: configuration and data migration"
+    },
+    {
+      "href": "https://learn.microsoft.com/en-gb/dynamics365/guidance/implementation-guide/prepare-go-live-checklist",
+      "ru": "Microsoft Learn: проверка готовности к запуску",
+      "en": "Microsoft Learn: implementation go-live checklist"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение CRM и ERP-платформ в нейросетях | GAEO.ru",
+      "h1": "GEO-продвижение CRM и ERP-систем в ответах нейросетей",
+      "description": "GEO для CRM и ERP: воронка продаж, учет, интеграции с 1С, лицензии, миграция, внедрение и рекомендации ChatGPT, Алисы и других нейросетей.",
+      "eyebrow": "IT и корпоративное ПО / CRM и ERP",
+      "lead": "Руководитель отдела продаж выбирает CRM по воронкам и работе с клиентами. Финансовый или операционный директор может искать ERP по закупкам, учету и складу. Измеряю рекомендации нейросетей по таким конкретным задачам и проверяю, что заявленные возможности продукта подтверждены.",
+      "heroPoints": [
+        "Разделение спроса на CRM, ERP, интеграции и внедрение",
+        "Проверка возможностей по редакциям, документации и данным",
+        "Расчет полной стоимости проекта, а не только цены лицензии"
+      ],
+      "problemTitle": "Почему описание «автоматизируем бизнес» слабо для выбора ПО",
+      "problemIntro": "Нейросеть может упоминать продукт, не различая его функции и условия внедрения. Покупателю нужны сопоставимые характеристики именно продаваемой редакции.",
+      "problems": [
+        {
+          "title": "CRM и ERP смешиваются",
+          "body": "Клиентские коммуникации, воронка, сервис и продажи отличаются от учета ресурсов, закупок, финансов и производства. Требуются самостоятельные группы запросов."
+        },
+        {
+          "title": "Интеграции заявлены без ограничений",
+          "body": "Фраза «интеграция с 1С» не подтверждает поддержку конкретной конфигурации, метода обмена и редакции продукта."
+        },
+        {
+          "title": "Цена лицензии принята за стоимость внедрения",
+          "body": "Миграция справочников, обучение, доработки, поддержка и интеграционные тесты могут существенно влиять на итоговые условия."
+        }
+      ],
+      "scenarioTitle": "Какие задачи покупателей CRM и ERP стоит измерять",
+      "scenarioIntro": "Разделяю выбор платформы, выбор внедренца и требования конкретной отрасли. Для сравнения фиксируются одинаковые группы интентов.",
+      "columns": [
+        "Вопрос покупателя",
+        "Что должно быть доказано",
+        "Работа GEO"
+      ],
+      "scenarios": [
+        [
+          "Какая CRM подходит отделу продаж на 20 человек?",
+          "Воронки, роли, отчетность, телефония, редакции и стоимость лицензий",
+          "Разъяснить реальную функциональность и границы тарифа"
+        ],
+        [
+          "Какая ERP подойдет для закупок и учета нескольких складов?",
+          "Модули, справочники, остатки, роли, интеграции и процессы филиалов",
+          "Сценарии применимости и подтвержденные ограничения"
+        ],
+        [
+          "Какая CRM работает с конкретной конфигурацией 1С?",
+          "Точный коннектор, версия, направление обмена, частота и условия",
+          "Документация интеграций и практические примеры"
+        ],
+        [
+          "Сколько стоит перенос данных из старой ERP в новую?",
+          "Объем и качество данных, очистка, тесты, простой и приемка",
+          "Описать этапы миграции и состав будущей сметы"
+        ]
+      ],
+      "proofTitle": "Какие доказательства помогают выбрать корпоративную платформу",
+      "proofIntro": "Microsoft Learn рекомендует отдельно планировать конфигурационные и мигрируемые данные, проверять интеграции и готовность к запуску. Это пример применимой методики оценки, но не утверждение о возможностях любой конкретной CRM или ERP.",
+      "checks": [
+        "Функции и версии: поддерживаемые модули, редакции, ограничения, безопасность и актуальная документация",
+        "Данные и внедрение: интеграции с 1С и ERP, методика миграции, тесты и критерии приемки",
+        "Стоимость владения: лицензирование, внедрение, интеграции, обучение, доработки и сопровождение по фактическим условиям"
+      ],
+      "proofNote": "Техническая B2B-методика GAEO применима к проверке доказательств ПО. Кейс ускорения сайтов MethodLab не является кейсом продвижения CRM или ERP.",
+      "workTitle": "Как строю продвижение разработчика CRM или ERP",
+      "workIntro": "Начинаю с задач будущих покупателей и рекомендательных ответов, а не с общей частоты упоминаний названия продукта.",
+      "steps": [
+        {
+          "title": "Стартовый замер",
+          "body": "Разделяю CRM, ERP, отрасли клиентов, внедрение и интеграции; фиксирую BMR в выбранных нейросетях."
+        },
+        {
+          "title": "Проверка продукта",
+          "body": "Уточняю версии, модули, условия лицензий, документацию, ограничения и права на публикацию кейсов."
+        },
+        {
+          "title": "Улучшение источников",
+          "body": "Готовлю ТЗ на страницы функций, интеграций, миграции, сравнения и общую базу ответов о продукте."
+        },
+        {
+          "title": "Повторный контроль",
+          "body": "Проверяю те же запросы, фактические ошибки нейросетей, цитируемые источники и динамику BMR."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Нужны ли отдельные страницы CRM и ERP?",
+          "answer": "Да, если это самостоятельные продукты или группы решений. У покупателей различаются бизнес-процессы, роли и критерии выбора."
+        },
+        {
+          "question": "Как доказать поддержку интеграции с 1С?",
+          "answer": "Показать актуальные поддерживаемые конфигурации, версии, обмен данными, ограничения и условия внедрения. Общее рекламное обещание не доказывает совместимость."
+        },
+        {
+          "question": "Можно ли указать стоимость внедрения ERP одним числом?",
+          "answer": "Только для определенного набора пользователей, модулей и работ. Для сложного проекта нужна спецификация состава и ограничений."
+        },
+        {
+          "question": "Какие результаты внедрения стоит публиковать?",
+          "answer": "Только подтвержденные факты проекта и измеренные результаты с разрешением клиента; придумывать число внедрений или показатели экономии нельзя."
+        },
+        {
+          "question": "Сколько стоит GEO для CRM и ERP?",
+          "answer": "Общие тарифы GAEO на аудит и сопровождение действуют для отрасли. Дополнительные нейросети, запросы и контент рассчитываются по актуальным условиям."
+        }
+      ],
+      "ctaTitle": "Проверить, какие CRM и ERP нейросети рекомендуют вашим клиентам",
+      "ctaText": "Пришли сайт продукта, реальные функции, список интеграций и целевые отрасли. Я предложу матрицу вопросов для первичного аудита.",
+      "request": "GEO CRM/ERP: воронка продаж, учет, интеграция с 1С, миграция, лицензии, стоимость владения и рекомендации."
+    },
+    "en": {
+      "title": "GEO for CRM and ERP platforms in AI answers | GAEO.ru",
+      "h1": "GEO for CRM and ERP software vendors in AI recommendations",
+      "description": "GEO for CRM and ERP vendors: sales workflows, accounting, 1C integrations, licences, data migration, implementation and AI recommendations.",
+      "eyebrow": "Enterprise software / CRM and ERP",
+      "lead": "Sales teams select CRM for pipelines and customer interaction, while operations and finance may need ERP for inventory, procurement and resource management. I measure whether AI recommends a product for its actual use cases and check the evidence behind those recommendations.",
+      "heroPoints": [
+        "Separate demand for CRM, ERP, integrations and deployment",
+        "Verify product editions, technical documentation and capabilities",
+        "Explain project cost as well as the subscription price"
+      ],
+      "problemTitle": "Why a broad automation promise is insufficient",
+      "problemIntro": "A product name may appear in AI answers even when its functions and implementation conditions are misrepresented. Buyers need edition-specific evidence.",
+      "problems": [
+        {
+          "title": "CRM and ERP are conflated",
+          "body": "Sales and customer-service workflows differ from procurement, finance, stock and production. They require distinct buyer-intent groups."
+        },
+        {
+          "title": "Integration claims are vague",
+          "body": "Saying a product integrates with 1C does not establish supported editions, interfaces, sync direction or deployment conditions."
+        },
+        {
+          "title": "Licence cost is mistaken for full project cost",
+          "body": "Data migration, training, custom work, integration testing and support can materially change the budget."
+        }
+      ],
+      "scenarioTitle": "CRM and ERP buying questions worth tracking",
+      "scenarioIntro": "Separate platform selection, implementer selection and specific industry requirements while retaining stable query groups for repeat measurements.",
+      "columns": [
+        "Buyer question",
+        "What to verify",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Which CRM suits a 20-person sales team?",
+          "Pipelines, roles, reporting, telephony, editions and subscription limits",
+          "Explain real features and plan constraints"
+        ],
+        [
+          "Which ERP supports purchasing and inventory across several warehouses?",
+          "Modules, master data, stock, permissions and branch processes",
+          "Document actual supported workflows"
+        ],
+        [
+          "Which CRM works with our specific 1C configuration?",
+          "Connectors, versions, sync directions, update cadence and assumptions",
+          "Integration pages and concrete examples"
+        ],
+        [
+          "What does migrating from an old ERP cost?",
+          "Data volume, cleaning, test cycles, downtime and acceptance",
+          "Describe migration scope and estimation factors"
+        ]
+      ],
+      "proofTitle": "Evidence behind a credible enterprise-software recommendation",
+      "proofIntro": "Microsoft's implementation guidance distinguishes configuration from migrated data and includes integration and go-live testing. It offers useful procurement criteria without proving that a named third-party platform implements them.",
+      "checks": [
+        "Product and editions: supported functions, limits, security model and current documentation",
+        "Data and delivery: APIs, 1C connectors, migration strategy, tests and acceptance criteria",
+        "Commercial terms: licences, implementation, customisation, onboarding and support under actual agreements"
+      ],
+      "proofNote": "GAEO's technical B2B research method supports these checks. The MethodLab website-performance case is not presented as a CRM/ERP GEO result.",
+      "workTitle": "A GEO plan for a CRM or ERP provider",
+      "workIntro": "I start with the concrete jobs buyers need performed, then map missing or inaccurate evidence in sources AI can consult.",
+      "steps": [
+        {
+          "title": "Baseline",
+          "body": "Separate CRM, ERP, integration, deployment and industry queries; record BMR and the recommended products."
+        },
+        {
+          "title": "Product verification",
+          "body": "Review real editions, modules, documentation, licensing and publishable customer references."
+        },
+        {
+          "title": "Content specifications",
+          "body": "Define pages for workflows, integrations, migration, implementation costs and comparisons."
+        },
+        {
+          "title": "Repeat measurement",
+          "body": "Check BMR, cited sources and factual errors with equivalent prompts and platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Should CRM and ERP have separate landing pages?",
+          "answer": "Yes when they represent different products or workflows. The relevant buyer roles and selection criteria differ."
+        },
+        {
+          "question": "What demonstrates 1C compatibility?",
+          "answer": "Verified versions, a documented connector, data flow and implementation scope. A generic integration badge is not sufficient."
+        },
+        {
+          "question": "Can one figure represent ERP implementation cost?",
+          "answer": "Only for an explicitly specified scope. Complex deployments require a project estimate that covers licences and services."
+        },
+        {
+          "question": "Which deployment results belong in a case study?",
+          "answer": "Only documented project outcomes and details authorised for publication. Do not invent installation counts or time savings."
+        },
+        {
+          "question": "How much does GAEO charge for CRM or ERP GEO?",
+          "answer": "GAEO's standard audit and monthly pricing applies. Broader prompt, platform and content scope is calculated separately."
+        }
+      ],
+      "ctaTitle": "Discover which CRM and ERP providers AI recommends",
+      "ctaText": "Share product editions, integrations, buyer industries and your official site. I will propose a suitable baseline.",
+      "request": "CRM/ERP GEO: sales, finance, migration, 1C integrations, licences and AI recommendations."
+    }
+  }
+},
+{
+  "id": 36,
+  "slug": "systems-integrators-it-outsourcers",
+  "group": "it",
+  "routes": {
+    "ru": "/industries/systems-integrators-it-outsourcers/",
+    "en": "/en/industries/systems-integrators-it-outsourcers/"
+  },
+  "parent": {
+    "ru": "/industries/highload-it/",
+    "en": "/en/industries/highload-it/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/technical-b2b-vendor-evidence/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/strategies/technical-b2b-vendor-evidence/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика подтверждения IT-компетенций",
+      "Контроль рекомендаций нейросетей"
+    ],
+    "en": [
+      "Technical B2B expertise evidence",
+      "AI recommendations measurement"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://csrc.nist.gov/pubs/sp/1305/final",
+      "ru": "NIST SP 1305: риски технологических поставщиков",
+      "en": "NIST SP 1305: supplier cybersecurity risk"
+    },
+    {
+      "href": "https://www.nist.gov/cyberframework/faqs",
+      "ru": "NIST CSF: роли и ответственность подрядчиков",
+      "en": "NIST CSF: provider and customer responsibilities"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для системных интеграторов и IT-аутсорсинга | GAEO.ru",
+      "h1": "GEO-продвижение системных интеграторов и IT-аутсорсеров",
+      "description": "GEO для IT-подрядчиков: интеграция 1С, инфраструктура, миграция, поддержка, SLA, безопасность, подтвержденные компетенции и ответы нейросетей.",
+      "eyebrow": "IT и корпоративное ПО / Интеграция и сопровождение",
+      "lead": "Для внедрения 1С или миграции серверов компания ищет проектную команду, а для регулярной поддержки - подрядчика с договорными условиями обслуживания. Проверяю, каких исполнителей нейросети рекомендуют в каждом сценарии и подтверждены ли реальные компетенции.",
+      "heroPoints": [
+        "Отдельные матрицы спроса для внедрения и регулярной поддержки",
+        "Подтверждение технологий, зоны ответственности и разрешенных кейсов",
+        "Различие SLA, безопасности, миграции и обслуживания"
+      ],
+      "problemTitle": "Почему перечисление всех IT-услуг не отвечает на запрос заказчика",
+      "problemIntro": "Технический руководитель сравнивает подрядчиков по стеку, масштабу задачи, ответственности и подтвержденному процессу. Общие обещания заменяют слишком мало фактов.",
+      "problems": [
+        {
+          "title": "Внедрение и поддержка смешиваются",
+          "body": "Проектная интеграция, 1С, перенос серверов и обслуживание рабочих мест требуют разных компетенций, сроков и приемки."
+        },
+        {
+          "title": "SLA без измеримых условий",
+          "body": "Часы поддержки, реакция, приоритеты обращений, исключения и сроки восстановления определяются контрактом. Нельзя обещать единый результат всем клиентам."
+        },
+        {
+          "title": "Компетенции заявлены без проверки",
+          "body": "Статусы партнеров, сертификаты, технологии и количество реализованных проектов должны подтверждаться действительными документами и разрешениями."
+        }
+      ],
+      "scenarioTitle": "По каким задачам выбирают IT-интегратора",
+      "scenarioIntro": "Разделяю запросы IT-директора, руководителя бизнеса и закупок. Контрольные формулировки привязываются к фактическому стеку подрядчика.",
+      "columns": [
+        "Вопрос заказчика",
+        "Что подтвердить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто внедрит 1С с обменом со складом и интернет-магазином?",
+          "Конфигурации, схема обмена, границы проекта, приемка и поддержка",
+          "Страница интеграционного сценария с проверяемыми условиями"
+        ],
+        [
+          "Кто поможет перенести серверы в облако без потери данных?",
+          "Обследование, резервные копии, тестовый перенос, план отката и допуски",
+          "Описание конкретной методики миграции и ее ограничений"
+        ],
+        [
+          "Кому передать IT-поддержку сети офисов?",
+          "География, каналы заявок, время работы, SLA, выездная поддержка",
+          "Сервисные страницы и договорные параметры"
+        ],
+        [
+          "Кого привлечь для проверки резервного копирования?",
+          "Методика аудита, права доступа, ответственность, согласованные RTO/RPO",
+          "Разграничить аудит, внедрение и гарантию восстановления"
+        ]
+      ],
+      "proofTitle": "Какие сведения дают основания рекомендовать технического подрядчика",
+      "proofIntro": "NIST CSF 2.0 и руководство по рискам технологических поставщиков описывают важность требований к подрядчикам и распределения ответственности. Это полезные критерии для сравнения, но не сертификат конкретного интегратора.",
+      "checks": [
+        "Реальная область работы: версии и платформы, фактические компетенции, доступные регионы и модель сотрудничества",
+        "Проектная реализация: обследование, план внедрения, критерии тестов, условия приемки и публичные примеры только с разрешением",
+        "Сопровождение и безопасность: график поддержки, соглашение об уровне обслуживания, обработка инцидентов, управление доступом и резервированием"
+      ],
+      "proofNote": "Опыт GAEO в техническом B2B дает методику проверки источников. Кейс MethodLab про ускорение сайта нельзя выдавать за завершенное продвижение IT-аутсорсера.",
+      "workTitle": "Как строю GEO для интегратора и IT-аутсорсера",
+      "workIntro": "Проверяю реальные рекомендации по типам услуг, затем согласовываю, какие доказательства можно раскрыть и где они нужны.",
+      "steps": [
+        {
+          "title": "Матрица коммерческих запросов",
+          "body": "Разделяю системную интеграцию, 1С, серверы, миграцию, поддержку и информационную безопасность."
+        },
+        {
+          "title": "Проверка доказательств",
+          "body": "Уточняю стек, партнерские статусы, реальные договорные SLA и разрешенные к публикации результаты проектов."
+        },
+        {
+          "title": "ТЗ на сайт и публикации",
+          "body": "Проектирую страницы услуг, квалификаций и технологий, FAQ о сотрудничестве и экспертные материалы."
+        },
+        {
+          "title": "Повторное измерение",
+          "body": "Сравниваю BMR и корректность рекомендаций по одному набору вопросов и выбранным нейросетям."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Нужно ли разделить системную интеграцию и IT-аутсорсинг на сайте?",
+          "answer": "Да, когда это самостоятельные предложения. Проектное внедрение и постоянная поддержка отличаются критериями выбора и договорной ответственностью."
+        },
+        {
+          "question": "Можно ли размещать логотип производителя как доказательство партнерства?",
+          "answer": "Само изображение не доказывает партнерский статус. Проверяем действительность статуса и права использования обозначений."
+        },
+        {
+          "question": "Что писать про SLA?",
+          "answer": "Только реальные условия: часы поддержки, приоритеты, сроки реакции, измеряемые показатели и исключения. Фактическое восстановление зависит от проекта и договора."
+        },
+        {
+          "question": "Ссылка на NIST подтверждает сертификацию интегратора?",
+          "answer": "Нет. Руководства NIST описывают подходы и рекомендации, а не подтверждают компетенции конкретной компании."
+        },
+        {
+          "question": "Сколько стоит GEO для IT-аутсорсера?",
+          "answer": "Применяются действующие тарифы GAEO на аудит и продвижение. Объем зависит от услуг, географии, технических отраслей и контрольных запросов."
+        }
+      ],
+      "ctaTitle": "Проверить, каких интеграторов рекомендуют нейросети по вашим услугам",
+      "ctaText": "Пришли сайт компании, список подтвержденных компетенций, регионы и разрешенные примеры работ. Я предложу стартовую матрицу GEO.",
+      "request": "GEO системный интегратор и IT-аутсорсинг: 1С, инфраструктура, миграция, SLA, IT-поддержка и рекомендации."
+    },
+    "en": {
+      "title": "GEO for IT integrators and outsourcing providers | GAEO.ru",
+      "h1": "GEO for systems integrators and IT outsourcing firms",
+      "description": "GEO for IT service providers: 1C integration, infrastructure, migrations, SLAs, support, verifiable expertise and AI vendor recommendations.",
+      "eyebrow": "IT services / Systems integration and managed support",
+      "lead": "A cloud migration calls for a project team, while ongoing office support calls for a service provider with documented response terms. I assess which suppliers AI recommends in each case and whether the sources match their actual capabilities.",
+      "heroPoints": [
+        "Separate implementation projects from managed support",
+        "Verify technology expertise, responsibilities and publishable projects",
+        "Distinguish SLAs, migration conditions and security requirements"
+      ],
+      "problemTitle": "Generic IT-service claims are too broad for supplier selection",
+      "problemIntro": "IT leaders compare providers by supported platforms, project scope, accountability and delivery evidence. Promises of universal service often lack useful specifics.",
+      "problems": [
+        {
+          "title": "Implementation and support are conflated",
+          "body": "ERP integration, cloud migrations, workplace support and monitoring require different skills, agreements and acceptance tests."
+        },
+        {
+          "title": "SLAs lack measurable terms",
+          "body": "Support hours, escalation, response and recovery depend on the agreed service scope. One universal promise cannot cover every project."
+        },
+        {
+          "title": "Credentials and work history are unsupported",
+          "body": "Partner badges, certifications, staff counts and outcomes must be checked against real current evidence."
+        }
+      ],
+      "scenarioTitle": "IT provider selection queries worth measuring",
+      "scenarioIntro": "Distinct query groups cover project buyers, IT directors and procurement; examples are adapted to a supplier's actual stack.",
+      "columns": [
+        "Buyer question",
+        "Evidence needed",
+        "GEO content"
+      ],
+      "scenarios": [
+        [
+          "Who can deploy 1C and connect it to our warehouse and shop?",
+          "Supported editions, integration boundaries, testing and handover",
+          "A precise implementation workflow"
+        ],
+        [
+          "Who can migrate servers to cloud without data loss?",
+          "Discovery, backups, pilot migration, rollback and access requirements",
+          "Documented migration method with realistic limitations"
+        ],
+        [
+          "Which company supports several offices?",
+          "Geographic reach, ticket handling, hours, escalation and SLA",
+          "Comparable managed-support offering"
+        ],
+        [
+          "Who can assess our backup recovery readiness?",
+          "Audit methodology, access rights and contractually agreed recovery objectives",
+          "Differentiate assessment from implementation and operations"
+        ]
+      ],
+      "proofTitle": "Evidence that supports a technical supplier recommendation",
+      "proofIntro": "NIST guidance on technology-supplier risks describes clear supplier requirements and responsibilities. It supports buyer evaluation but does not certify a named provider.",
+      "checks": [
+        "Scope: genuine platform experience, technology stack, location coverage and engagement model",
+        "Delivery: discovery, implementation, acceptance criteria, handover and approved examples",
+        "Operations: service hours, incident management, SLA terms, access controls and backup responsibilities"
+      ],
+      "proofNote": "GAEO's technical B2B methodology applies here. The website-performance work for MethodLab does not prove an IT-outsourcing GEO result.",
+      "workTitle": "An evidence-led GEO programme for IT providers",
+      "workIntro": "First measure vendor recommendations by service need, then improve the evidence that buyers and AI can check.",
+      "steps": [
+        {
+          "title": "Segment demand",
+          "body": "Separate integration, 1C, migration, cloud operations, support and security questions."
+        },
+        {
+          "title": "Review capabilities",
+          "body": "Verify platform expertise, active partner credentials, SLAs and permission to publish cases."
+        },
+        {
+          "title": "Build the information base",
+          "body": "Prepare service and technology pages, FAQ, carefully scoped case studies and specialist articles."
+        },
+        {
+          "title": "Recheck recommendations",
+          "body": "Repeat the same prompts across selected AI platforms and track BMR and factual accuracy."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Should integration and managed IT services have different pages?",
+          "answer": "Yes when they are separate commercial services. Project buyers and support customers evaluate different responsibilities and evidence."
+        },
+        {
+          "question": "Is a technology badge proof of a partnership?",
+          "answer": "No. Partner status must be genuine and current, and the right to display a manufacturer's marks should be verified."
+        },
+        {
+          "question": "What belongs in an SLA description?",
+          "answer": "Actual support hours, response priorities, escalation, measurement rules and exclusions. Recovery guarantees require a defined contractual scope."
+        },
+        {
+          "question": "Does NIST guidance certify a vendor?",
+          "answer": "No. It provides evaluation and risk-management methods, not proof of a named supplier's competence."
+        },
+        {
+          "question": "How does GAEO price IT-provider GEO?",
+          "answer": "Standard GAEO audit and monthly prices apply. Scope is determined by service lines, locations, technical depth and queries."
+        }
+      ],
+      "ctaTitle": "See which IT providers AI recommends to your buyers",
+      "ctaText": "Share the provider site, verified capabilities, locations and approved project examples. I will propose a suitable baseline.",
+      "request": "IT integrator and outsourcing GEO: 1C, migrations, SLAs, infrastructure, managed support and AI recommendations."
+    }
+  }
+}
 ];
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
