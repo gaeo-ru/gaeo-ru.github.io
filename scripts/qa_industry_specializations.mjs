@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,84,85,86,87,88,89,90,91,99])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,84,85,86,87,88,89,90,91,99,7,9,11])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 assert.equal(urls.length,industrySpecializations.length*2,'Each specialization must have two RU/EN pages');
 if(process.argv.includes('--static')){console.log('Industry specializations static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
 const base='http://127.0.0.1:4378';const server=spawn('./node_modules/.bin/astro',['preview','--host','127.0.0.1','--port','4378'],{stdio:'ignore'});
