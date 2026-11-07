@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_date": "2026-11-07",
+  "updated_date": "2026-11-08",
   "purpose": "Единый машиночитаемый реестр расширения 107 тарифных направлений; использовать вместе с docs/TARIFFS_EXPANSION_HANDOFF.md.",
   "sources": {
     "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1FE6v_bRBNqzSD2eBRW7j7V34srZNTgWFVlAte-xwtUE/edit",
@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2E_ci_recheck_after_2F_merge_then_production_live_and_3A_research",
+    "next_batch": "2I_pr84_ci_merge_prod_pages_https; retain_parallel_2H_and_3A_research",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -257,6 +257,87 @@
       ],
       "public_https_browser_verified": false,
       "next_required_step": "await_rebased_ci_then_merge_production_pages_and_external_https"
+    },
+    "phase_2g": {
+      "phase": 2,
+      "batch": "2G",
+      "status": "main_published_pages_in_progress",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
+      "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
+      "ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "in_progress",
+      "public_https_browser_verified": false,
+      "records": [
+        25,
+        86,
+        89,
+        90
+      ],
+      "new_industry_landing_pairs_prepared": 4,
+      "new_ru_en_urls_prepared": 8,
+      "source_module": "src/data/industry-specializations-batch-2g.mjs",
+      "qa_specialization_pairs_verified": 26,
+      "qa_browser_widths": [
+        1440,
+        390,
+        320
+      ],
+      "published_commit": "46203214c978419a9c14f54272424e364208587a",
+      "released_at": "2026-11-07T21:08:06.421Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447",
+      "main_html_pages_verified": 8,
+      "main_sitemap_urls": 150,
+      "main_sitemap_new_urls_present": 8,
+      "main_total_html_pages": 155,
+      "main_total_files": 694,
+      "public_https_limitation": "Direct gaeo.ru/tarify/ inaccessible from chat web tool. Main/CI pass not a substitute for public HTTPS or visual pass."
+    },
+    "phase_2i": {
+      "phase": 2,
+      "batch": "2I",
+      "status": "pr_open_ci_in_progress",
+      "records": [
+        95,
+        96,
+        97,
+        98
+      ],
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84",
+      "source_module": "src/data/industry-specializations-batch-2i.mjs",
+      "import_module": "src/data/industry-specializations.mjs",
+      "qa_script": "scripts/qa_industry_specializations.mjs",
+      "content_commit": "5a58f50c3ea8e8af5ab77ac87d4eefd7f010636d",
+      "qa_commit": "c71c96a811fc116000a556f373778efb2067faf3",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42415924050",
+      "ci_status": "in_progress",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "new_industry_landing_pairs_prepared": 4,
+      "new_ru_en_urls_prepared": 8,
+      "expected_total_ru_en_specialization_urls_on_base_2g": 60,
+      "qa_browser_widths": [
+        1440,
+        390,
+        320
+      ],
+      "structural_validation": "pass: JSON, all field counts, eight unique routes",
+      "parallel_batch_2h": {
+        "records": [
+          5,
+          6,
+          82,
+          85
+        ],
+        "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/85",
+        "status": "separate_pr_no_overlap"
+      },
+      "next_required_step": "await_pr84_full_ci_then_reconcile_2h_and_docs_prs_merge_production_pages_https"
     }
   },
   "status_definitions": {
@@ -276,13 +357,14 @@
     "catalog_published": 107,
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
-    "new_industry_landings_in_phase_2_deployed": 16,
+    "new_industry_landings_in_phase_2_deployed": 22,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 135,
-    "total_new_specialization_pairs_in_phase_2": 16,
-    "total_new_specialization_urls_in_phase_2": 32,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 3,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 6
+    "total_generated_html_pages_current_release": 155,
+    "total_new_specialization_pairs_in_phase_2": 26,
+    "total_new_specialization_urls_in_phase_2": 52,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 8,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 16,
+    "phase_2_counts_note": "22 пары имеют предыдущие Pages PASS (2A-2F); 2G 4 пары уже в main, Pages еще выполняется; 2I 4 пары в PR #84 и параллельная 2H 4 пары в PR #85 пока не включены в main. Проверка прямого HTTPS остается открытой."
   },
   "candidate_batches": [
     {
@@ -395,6 +477,38 @@
       "work_status": "source_merged_production_pending_verification",
       "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78"
+    },
+    {
+      "batch": "2G",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        25,
+        86,
+        89,
+        90
+      ],
+      "label": "Автоюристы, магазины электроники, косметики и детских товаров",
+      "condition": "4 отдельные RU/EN специализации под действующими кластерами legal/ecommerce; фактический CI, production, Pages, main и внешний HTTPS проверять раздельно, не переносить чужие кейсы.",
+      "work_status": "main_published_pages_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82"
+    },
+    {
+      "batch": "2I",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        95,
+        96,
+        97,
+        98
+      ],
+      "label": "Ювелирные бренды, fashion, пищевые бренды, производители детских товаров",
+      "condition": "4 оригинальные двуязычные специализации на существующем e-commerce хабе; источники Федеральной пробирной палаты, Честного знака, Роспотребнадзора, Росстандарта и Google Search Central. Не смешивать производителя и магазин, юридическую применимость проверять по модели изделия, клиентские результаты не выдумывать. После CI, merge, production и Pages нужен прямой HTTPS.",
+      "work_status": "pr84_ci_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84"
     }
   ],
   "records": [
@@ -1216,10 +1330,26 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "main_published_pages_in_progress",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "main_published_pages_in_progress",
+      "next_required_step": "verify_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/motor-insurance-lawyers/",
+      "planned_landing_url_en": "/en/industries/motor-insurance-lawyers/",
+      "last_completed_step": "phase_2g_main_and_production_pass",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
+      "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+      "evidence_sources": [
+        "https://www.cbr.ru/faq/insh/osago/",
+        "https://www.consultant.ru/document/cons_doc_LAW_36528/0d93e8ea8486b165e2cb13b540beb4284b4b7115/"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447"
+      ],
+      "published_commit": "46203214c978419a9c14f54272424e364208587a"
     },
     {
       "id": 26,
@@ -3083,10 +3213,27 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "main_published_pages_in_progress",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "main_published_pages_in_progress",
+      "next_required_step": "verify_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/electronics-appliances-online-stores/",
+      "planned_landing_url_en": "/en/industries/electronics-appliances-online-stores/",
+      "last_completed_step": "phase_2g_main_and_production_pass",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
+      "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+      "evidence_sources": [
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+        "https://developers.google.com/search/docs/appearance/structured-data/product-variants/",
+        "https://zpp.rospotrebnadzor.ru/news/federal/572363"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447"
+      ],
+      "published_commit": "46203214c978419a9c14f54272424e364208587a"
     },
     {
       "id": 87,
@@ -3194,10 +3341,27 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "main_published_pages_in_progress",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "main_published_pages_in_progress",
+      "next_required_step": "verify_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/cosmetics-perfume-online-stores/",
+      "planned_landing_url_en": "/en/industries/cosmetics-perfume-online-stores/",
+      "last_completed_step": "phase_2g_main_and_production_pass",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
+      "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/c99ec20c-e44d-43bc-8dd6-1e9af5fb3002",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+        "https://developers.google.com/search/docs/appearance/structured-data/product-variants/"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447"
+      ],
+      "published_commit": "46203214c978419a9c14f54272424e364208587a"
     },
     {
       "id": 90,
@@ -3227,10 +3391,27 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "main_published_pages_in_progress",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "main_published_pages_in_progress",
+      "next_required_step": "verify_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/childrens-products-toys-online-stores/",
+      "planned_landing_url_en": "/en/industries/childrens-products-toys-online-stores/",
+      "last_completed_step": "phase_2g_main_and_production_pass",
+      "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
+      "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/227543dd-6838-4c55-b44e-25dabab34665",
+        "https://protect.gost.ru/tr/details/20172201-a028-437f-9355-43beb60f3b0d",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447"
+      ],
+      "published_commit": "46203214c978419a9c14f54272424e364208587a"
     },
     {
       "id": 91,
@@ -3392,10 +3573,23 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "pr_open_ci_in_progress",
+      "next_required_step": "pr84_ci_merge_production_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/jewelry-brands-workshops/",
+      "planned_landing_url_en": "/en/industries/jewelry-brands-workshops/",
+      "last_completed_step": "phase_2i_ru_en_source_structural_validation_pass",
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84",
+      "content_commit": "5a58f50c3ea8e8af5ab77ac87d4eefd7f010636d",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42415924050"
+      ],
+      "evidence_sources": [
+        "https://probpalata.gov.ru/check-uin",
+        "https://probpalata.gov.ru/dmdk/razyasneniya-dlya-uchastnikov-oborota-dmdk-po-chasto-vstrechayushhimsya-voprosam-raboty-v-giis-dmdk/"
+      ]
     },
     {
       "id": 96,
@@ -3425,10 +3619,23 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "pr_open_ci_in_progress",
+      "next_required_step": "pr84_ci_merge_production_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/fashion-apparel-brands/",
+      "planned_landing_url_en": "/en/industries/fashion-apparel-brands/",
+      "last_completed_step": "phase_2i_ru_en_source_structural_validation_pass",
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84",
+      "content_commit": "5a58f50c3ea8e8af5ab77ac87d4eefd7f010636d",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42415924050"
+      ],
+      "evidence_sources": [
+        "https://developers.google.com/search/docs/appearance/structured-data/product-variants",
+        "https://markirovka.ru/knowledge/tovarnye-gruppy/legkaya-promishlennost/etapy-i-sroki-markirovki-tovarov-legkoy-promyshlennosti"
+      ]
     },
     {
       "id": 97,
@@ -3458,10 +3665,23 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "pr_open_ci_in_progress",
+      "next_required_step": "pr84_ci_merge_production_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/food-producers-retailers/",
+      "planned_landing_url_en": "/en/industries/food-producers-retailers/",
+      "last_completed_step": "phase_2i_ru_en_source_structural_validation_pass",
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84",
+      "content_commit": "5a58f50c3ea8e8af5ab77ac87d4eefd7f010636d",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42415924050"
+      ],
+      "evidence_sources": [
+        "https://zpp.rospotrebnadzor.ru/news/federal/572903",
+        "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing"
+      ]
     },
     {
       "id": 98,
@@ -3491,10 +3711,24 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "pr_open_ci_in_progress",
+      "next_required_step": "pr84_ci_merge_production_pages_then_external_https",
+      "planned_landing_url_ru": "/industries/children-product-manufacturers/",
+      "planned_landing_url_en": "/en/industries/children-product-manufacturers/",
+      "last_completed_step": "phase_2i_ru_en_source_structural_validation_pass",
+      "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84",
+      "content_commit": "5a58f50c3ea8e8af5ab77ac87d4eefd7f010636d",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42415924050"
+      ],
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/20172201-a028-437f-9355-43beb60f3b0d",
+        "https://protect.gost.ru/tr/details/227543dd-6838-4c55-b44e-25dabab34665",
+        "https://26.rospotrebnadzor.ru/ond/zpp/1580/"
+      ]
     },
     {
       "id": 99,
