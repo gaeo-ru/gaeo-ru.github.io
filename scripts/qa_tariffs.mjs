@@ -31,7 +31,7 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/<div class="industry-catalog__image">/g)||[]).length,107,'All industry illustrations render without direct image links');
  assert.equal((html.match(/<a class="industry-catalog__image"/g)||[]).length,0,'No industry image links to raw files');
  for(const phrase of (lang==='ru'?[
-  'Внедряю все сам, либо пишу ТЗ','Сам все внедряю и дорабатываю','Предоплата за текущий месяц'
+  'Внедряю все сам, либо пишу ТЗ','Сам все внедряю и дорабатываю','1 раз в месяц, с целью BMR по договору','Предоплата за текущий месяц'
  ]:[
   'I implement the website changes myself or provide a specification',
   'I implement and improve the website myself','Prepayment for the current month'
