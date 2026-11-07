@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2I_external_https_live_visual_check_then_3A_75_76_27_30; preserve_parallel_2K_2L_2M",
+    "next_batch": "2M_PR90_CI_then_safe_merge_production_Pages_and_external_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -441,7 +441,36 @@
       "main_html_pages_verified": 8,
       "main_sitemap_new_urls_present": 8,
       "public_https_limitation": "Direct web tool cannot access gaeo.ru/tarify/ or 2I URLs; GitHub Pages PASS and generated HTML validation do not establish visible live browser PASS."
-    }
+    },
+    "phase_2m": {
+      "phase": 2,
+      "batch": "2M",
+      "status": "source_prepared_pr_ci_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2m-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90",
+      "content_commit": "d8901e5d24c1fd72d9ddc6003050c2a24f5187e9",
+      "source_file": "src/data/industry-specializations-batch-2m.mjs",
+      "records": [
+        8,
+        83
+      ],
+      "new_industry_landing_pairs": 2,
+      "new_html_pages": 4,
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42418204177",
+      "pr_ci_status": "in_progress_at_record_time",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "blockers": [
+        "PR CI, merge, production and GitHub Pages not yet verified",
+        "Public HTTPS desktop/mobile and form/image checks require post-release verification"
+      ],
+      "excluded_duplicate_catalogue_ids": [
+        7
+      ],
+      "exclusion_reason": "№7 belongs to concurrent batch 2L PR #91; do not register as 2M."
+    },
+    "current_expansion_phase": 2
   },
   "status_definitions": {
     "existing_landing": "Для 4 прямых и 3 более широких соответствий уже есть публичная коммерческая страница. Это не 7 новых страниц и не 7 точных специализированных соответствий.",
@@ -465,8 +494,8 @@
     "total_generated_html_pages_current_release": 177,
     "total_new_specialization_pairs_in_phase_2": 37,
     "total_new_specialization_urls_in_phase_2": 74,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 0,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 2,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 4,
     "total_specialization_pairs_in_main_current_release": 37,
     "total_specialization_urls_in_main_current_release": 74,
     "total_specialization_pairs_prepared_including_2h": 30,
@@ -477,7 +506,9 @@
     "main_manifest_file_count": 716,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
-    "phase_2_counts_note": "Latest confirmed main 1cb06302 (source 985994ae) has 37 pairs/74 specialization URLs, 177 HTML/172 sitemap, 716 files. 2I: 4 pairs/8 URLs, PR CI/production/Pages PASS, raw main HTML verified, direct live HTTPS/browser mobile check pending. Parallel 2K/2L/2M not part of these counts."
+    "phase_2_counts_note": "Latest confirmed main 1cb06302 (source 985994ae) has 37 pairs/74 specialization URLs, 177 HTML/172 sitemap, 716 files. 2I: 4 pairs/8 URLs, PR CI/production/Pages PASS, raw main HTML verified, direct live HTTPS/browser mobile check pending. Parallel 2K/2L/2M not part of these counts.",
+    "total_specialization_pairs_prepared_including_2m": 39,
+    "total_specialization_urls_prepared_including_2m": 78
   },
   "candidate_batches": [
     {
@@ -651,6 +682,21 @@
       "work_status": "deployed_pages_pass_live_unverified",
       "work_branch": "feat/industry-specializations-batch-2i-2026-11-08",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/84"
+    },
+    {
+      "batch": "2M",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        8,
+        83
+      ],
+      "label": "Индивидуальное хранение и рестораны/сети кофеен",
+      "condition": "Готовая часть: 2 оригинальные RU/EN специализации (4 страницы). №7 исключен после обнаружения другого исполнителя в партии 2L PR #91. Аренду бокса и договор хранения разграничить; для ресторанов разделить филиалы, меню, часы, бронирование, доставку. Цены и изображения общие; CI, production, Pages и HTTPS проверять отдельно.",
+      "work_status": "source_prepared_pr_ci_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2m-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90",
+      "source_file": "src/data/industry-specializations-batch-2m.mjs"
     }
   ],
   "records": [
@@ -946,10 +992,19 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_in_progress",
+      "next_required_step": "pr_ci_merge_production_then_direct_https_verification",
+      "planned_landing_url_ru": "/industries/self-storage-services/",
+      "planned_landing_url_en": "/en/industries/self-storage-services/",
+      "last_completed_step": "phase_2m_original_ru_en_sources_and_qa_registration",
+      "work_branch": "feat/industry-specializations-batch-2m-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/afbf7746a8ab4a8753f6eeeca8749b7412f21e2a/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/83454ca2a4ad87b54134f7f9885d3dd8181a4d1b/"
+      ]
     },
     {
       "id": 9,
@@ -3302,10 +3357,20 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_in_progress",
+      "next_required_step": "pr_ci_merge_production_then_direct_https_verification",
+      "planned_landing_url_ru": "/industries/restaurants-coffee-chains/",
+      "planned_landing_url_en": "/en/industries/restaurants-coffee-chains/",
+      "last_completed_step": "phase_2m_original_ru_en_sources_and_qa_registration",
+      "work_branch": "feat/industry-specializations-batch-2m-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_363241/",
+        "https://zpp.rospotrebnadzor.ru/news/regional/569257",
+        "https://support.google.com/business/answer/9455840?hl=en"
+      ]
     },
     {
       "id": 84,
