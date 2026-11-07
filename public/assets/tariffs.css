@@ -69,3 +69,14 @@
 @media(max-width:720px){.tariff-overview{padding:64px 0}.tariff-plans,.tariff-calculator,.tariff-detail__hero,.tariff-development{grid-template-columns:1fr}.tariff-plans .price.tariff-plan{padding:22px!important}.tariff-detail__hero{gap:25px}.tariff-detail__hero h1{font-size:32px}.tariff-detail__hero figure{max-width:440px}.tariff-detail{padding:38px 0 60px}.tariff-calculator__result{padding:22px}.tariff-lead{font-size:16px}.tariff-targets{grid-template-columns:1fr}.tariff-targets li{flex-direction:row;align-items:center;justify-content:space-between}.tariff-guarantee{padding:20px}.tariff-option-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.tariff-option-gallery article{padding:12px}.tariff-detail__chapter h2{font-size:26px}}
 @media(max-width:720px){.tariff-plans{gap:16px}}
 @media(max-width:380px){.tariff-platform-options,.tariff-option-gallery{grid-template-columns:1fr}.tariff-plans .price .amount{font-size:23px!important}.tariff-total output{font-size:32px}.tariff-targets strong{font-size:18px}}
+
+/* The pricing directory is a continuous flow; do not change the home-page pricing block. */
+.tariff-page > .tariff-page__intro{padding-bottom:8px}
+.tariff-page__intro .tariff-related{margin-bottom:0}
+.tariff-page > #pricing.tariff-overview{padding-top:24px;padding-bottom:12px}
+.tariff-page > #calculator.tariff-calculator-section{padding-top:24px}
+@media(max-width:720px){
+  .tariff-page > .tariff-page__intro{padding-bottom:8px}
+  .tariff-page > #pricing.tariff-overview{padding-top:20px;padding-bottom:10px}
+  .tariff-page > #calculator.tariff-calculator-section{padding-top:20px}
+}
