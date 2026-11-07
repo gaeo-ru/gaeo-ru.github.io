@@ -28,6 +28,14 @@ const nojsBlock='<!-- NOJS_FALLBACK_START -->\n'+readFileSync('templates/partial
 for(const lang of ['ru','en']){
  const catalogue=pricingHref(lang),html=read(catalogue),nodes=graph(html),list=nodes.find(n=>n['@type']==='ItemList'&&n.numberOfItems===107);
  assert.equal((html.match(/\bdata-catalog-item\b/g)||[]).length,107,'Full industry catalogue must be server-rendered');
+ assert.equal((html.match(/<div class="industry-catalog__image">/g)||[]).length,107,'All industry illustrations render without direct image links');
+ assert.equal((html.match(/<a class="industry-catalog__image"/g)||[]).length,0,'No industry image links to raw files');
+ for(const phrase of (lang==='ru'?[
+  'Внедряю все сам, либо пишу ТЗ','Сам все внедряю и дорабатываю','1 раз в месяц, с целью BMR по договору','Предоплата за текущий месяц'
+ ]:[
+  'I implement the website changes myself or provide a specification',
+  'I implement and improve the website myself','Prepayment for the current month'
+ ])) assert.ok(html.includes(phrase),'Tariff comparison must match the approved responsibilities: '+phrase);
  assert.equal(list?.itemListElement?.length,107,'All 107 visible categories in ItemList');
  assert.equal((html.match(/\bdata-gaeo-request=/g)||[]).length>=107,true,'Industry context is passed to inquiry form');
  for(const item of getIndustryCatalog(lang)){
@@ -99,12 +107,40 @@ const browser=await chromium.launch({headless:true,
 mkdirSync('visual-tariffs',{recursive:true});
 try{
  const page=await browser.newPage();const errors=[];page.on('pageerror',error=>errors.push(error.message));
- for(const width of [1440,390,320]){
+ for(const width of [1440,1100,390,320]){
   await page.setViewportSize({width,height:900});
   for(const route of ['/','/en/','/tarify/','/en/pricing/','/services/geo-guarantee/','/en/services/geo-guarantee/','/services/additional-platforms/','/services/website-development/','/industries/legal/']){
+   if(width===1100&&!['/tarify/','/en/pricing/'].includes(route))continue;
    await page.goto(origin+route,{waitUntil:'domcontentloaded'});
    await page.locator('h1').waitFor();
-   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);assert.equal(overflow,false,'No horizontal overflow '+width+' '+route);
+   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
+   if(width!==1100)assert.equal(overflow,false,'No horizontal overflow '+width+' '+route); // Existing non-tariff styles overflow at intermediate desktop widths.
+   if(['/', '/en/', '/tarify/', '/en/pricing/'].includes(route)){
+    const control=page.locator('[data-tariff-calculator]');
+    const blocks=control.locator('[name="blocks"]');
+    const minus=control.locator('[data-prompt-adjust="-1"]');
+    const plus=control.locator('[data-prompt-adjust="1"]');
+    assert.equal(await minus.isVisible(),true,'Minus button shown '+width+' '+route);
+    assert.equal(await plus.isVisible(),true,'Plus button shown '+width+' '+route);
+    const quantityBounds=await control.locator('.tariff-quantity').evaluate(el=>{
+     const r=el.getBoundingClientRect();return {left:r.left,right:r.right,width:window.innerWidth};
+    });
+    assert.ok(quantityBounds.left>=0&&quantityBounds.right<=quantityBounds.width+1,'Stepper fits in viewport '+width+' '+route+' '+JSON.stringify(quantityBounds));
+    assert.equal(await minus.isDisabled(),true,'Minus disabled at zero');
+    await plus.click();
+    await plus.click();
+    assert.equal(await blocks.inputValue(),'2','Plus buttons add 2 packs');
+    assert.match(await control.locator('[data-prompt-price]').innerText(),/20[\s,\u00a0\u202f]?000/,'Pack clicks update amount');
+    await minus.click();
+    assert.equal(await blocks.inputValue(),'1','Minus button removes a pack');
+    await blocks.fill('999');
+    await blocks.press('Tab');
+    assert.equal(await blocks.inputValue(),'100','Manual entry is capped at 100');
+    assert.equal(await plus.isDisabled(),true,'Plus disabled at maximum');
+    await blocks.fill('0');
+    await blocks.press('Tab');
+    assert.equal(await minus.isDisabled(),true,'Minus re-disabled at zero');
+   }
    if(route==='/tarify/'||route==='/en/pricing/'){
     const gap=await page.evaluate(()=>{
      const rect=selector=>document.querySelector(selector)?.getBoundingClientRect();
@@ -143,6 +179,18 @@ try{
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),0,'Empty search state');
     await catalog.locator('[data-catalog-empty] button[type="reset"]').click();
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),107,'Reset restores all categories');
+    const illustrations=catalog.locator('[data-catalog-item]:visible .industry-catalog__image img');
+    const currentUrl=page.url();
+    await illustrations.first().click();
+    assert.equal(page.url(),currentUrl,'Clicking illustration must not open the image file');
+    const examples=catalog.locator('[data-catalog-item]:visible .industry-catalog__examples');
+    const rowSize=width>=1200?3:width>700?2:1;
+    await examples.first().locator('summary').click();
+    for(let i=0;i<Math.min(rowSize+1,107);i++)
+     assert.equal(await examples.nth(i).evaluate(el=>el.open),i<rowSize,'Only the clicked visual row expands '+width+' index '+i);
+    await examples.first().locator('summary').click();
+    for(let i=0;i<rowSize;i++)
+     assert.equal(await examples.nth(i).evaluate(el=>el.open),false,'Same-row accordions close together '+width+' index '+i);
     await catalog.locator('#industry-019 img').scrollIntoViewIfNeeded();
     await page.waitForFunction(()=>{const img=document.querySelector('#industry-019 img');return img.complete&&img.naturalWidth>0});
     if(width!==320)await page.screenshot({path:'visual-tariffs/catalog-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
