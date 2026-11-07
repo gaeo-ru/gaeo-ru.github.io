@@ -2338,6 +2338,273 @@ export const industrySpecializations = [
       "request": "Luxury real estate agency GEO: brokers, premium homes, off-market searches, confidentiality and AI recommendations."
     }
   }
+},
+{
+  "id": 22,
+  "slug": "intellectual-property-lawyers",
+  "group": "legal",
+  "routes": {
+    "ru": "/industries/intellectual-property-lawyers/",
+    "en": "/en/industries/intellectual-property-lawyers/"
+  },
+  "parent": {
+    "ru": "/industries/legal/",
+    "en": "/en/industries/legal/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/legal-recommendations/",
+      "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/"
+    ],
+    "en": [
+      "/en/strategies/legal-recommendations/",
+      "/en/articles/legal-website-geo-12-checks/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Как оценивать рекомендации юридических подрядчиков",
+      "12 проверок сайта юридической компании"
+    ],
+    "en": [
+      "Evidence-led evaluation of legal recommendations",
+      "Twelve website checks for legal GEO"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://rospatent.gov.ru/ru/faq/gde-samostoyatelno-provesti-poisk-tovarnyh-znakov-v-internete",
+      "ru": "Роспатент: официальные поисковые сервисы и реестры товарных знаков",
+      "en": "Rospatent: public trademark search and registers"
+    },
+    {
+      "href": "https://rospatent.gov.ru/ru/sourses",
+      "ru": "Роспатент: реестры и правовой статус регистраций",
+      "en": "Rospatent: official registers and registration status"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для юристов по интеллектуальной собственности | GAEO.ru",
+      "h1": "GEO-продвижение юристов по интеллектуальной собственности",
+      "description": "Продвижение патентных поверенных и IP-юристов: регистрация товарных знаков, патенты, авторские права, лицензирование, споры и рекомендации нейросетей.",
+      "eyebrow": "Юридические услуги / Интеллектуальная собственность",
+      "lead": "Компании ищут юриста по товарным знакам, патентного поверенного или специалиста по спору об авторских правах. Это разные задачи, где важны предмет права, территория защиты и реальные полномочия исполнителя. Проверяю, кого рекомендуют нейросети и какие сведения позволяют обоснованно выбрать специалиста.",
+      "heroPoints": [
+        "Раздельные группы запросов: товарные знаки, патенты, авторское право и споры",
+        "Проверка действительных профессиональных статусов и права на публикацию кейсов",
+        "Связь услуг с официальными реестрами Роспатента и отраслевой экспертизой"
+      ],
+      "problemTitle": "Почему «все услуги по защите интеллектуальной собственности» не убеждают",
+      "problemIntro": "Заказчик хочет решить конкретную задачу: проверить знак перед подачей, оформить патент или заключить лицензионный договор. Ошибка в обозначении услуги или полномочий делает рекомендацию ненадежной.",
+      "problems": [
+        {
+          "title": "Товарный знак, патент и авторское право смешиваются",
+          "body": "Права на знак, техническое решение, дизайн и произведение имеют разные объекты охраны и процедуры. Нельзя заменять их одной универсальной инструкцией."
+        },
+        {
+          "title": "Название «патентный поверенный» используется без проверки",
+          "body": "Профессиональный статус и направления аттестации специалиста нужно сверять по официальным данным; общее наличие юридического образования не подтверждает такую аттестацию."
+        },
+        {
+          "title": "Обещана регистрация или победа без оснований",
+          "body": "Исход экспертизы и спора зависит от документов и обстоятельств; нельзя обещать 100% регистрацию, выигрыш или сроки без условий."
+        }
+      ],
+      "scenarioTitle": "Коммерческие запросы для практики интеллектуальной собственности",
+      "scenarioIntro": "Запросы разделяются по объекту права и цели обращения, включая международные задачи. География и юрисдикция фиксируются отдельно.",
+      "columns": [
+        "Вопрос клиента",
+        "Какие факты нужны",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Кто поможет проверить название и зарегистрировать товарный знак в России?",
+          "Реальная услуга поиска, описание процедуры, источники и статус исполнителя",
+          "Страница услуг по товарным знакам с открытыми реестрами и ограничениями"
+        ],
+        [
+          "Как найти специалиста по патентованию технического решения?",
+          "Предмет заявки, компетенция по патентам, порядок подготовки и экспертизы",
+          "Отдельная специализация на патентовании, а не копия страницы товарных знаков"
+        ],
+        [
+          "Кто подготовит лицензионный договор для ПО или бренда?",
+          "Вид права, предмет лицензии, территория, применимые условия, реальные полномочия",
+          "Точное описание договорной работы и характерных вопросов"
+        ],
+        [
+          "Кто ведет спор о незаконном использовании изображения или бренда?",
+          "Характер правообладателя, доказательства использования, варианты защиты, процесс",
+          "Раздел о спорах без гарантий исхода и вымышленных решений"
+        ]
+      ],
+      "proofTitle": "Какие доказательства подходят для IP-практики",
+      "proofIntro": "Роспатент и ФИПС дают доступ к открытым реестрам товарных знаков, патентов и заявок. Реестр позволяет проверять конкретные регистрационные сведения, но само наличие ссылки на реестр не доказывает опыт юриста или исход будущей заявки.",
+      "checks": [
+        "Специализация: реальные направления работы, профессиональный статус, необходимые реестры и фактическая юрисдикция",
+        "Состав работ: предварительный поиск, заявка, переписка с ведомством, договорная работа, споры и оговорки о результате",
+        "Публикации и практика: только подтвержденные дела и документы с разрешением правообладателя, без раскрытия чужих технологий и коммерческих секретов"
+      ],
+      "proofNote": "Действующий юридический информационный хаб GAEO дает общую методику проверки рекомендации, но кейсы корпоративных юристов не подтверждают завершенного GEO-продвижения практики интеллектуальной собственности.",
+      "workTitle": "Как провожу GEO-продвижение IP-юриста или бюро",
+      "workIntro": "Фокус на правильных правовых категориях и проверяемом опыте, который помогает нейросети рекомендовать релевантного исполнителя.",
+      "steps": [
+        {
+          "title": "Фиксирую спрос",
+          "body": "Разделяю бренды и знаки, патенты, программные продукты, лицензии, споры и международные запросы."
+        },
+        {
+          "title": "Проверяю правовые сведения",
+          "body": "Сверяю статусы исполнителей, доступные кейсы и корректность объяснения процедур с первичными источниками."
+        },
+        {
+          "title": "Подготавливаю страницы услуг",
+          "body": "Создаю ТЗ на самостоятельные специализации, FAQ, профессиональные профили и публикации с примерами допустимых доказательств."
+        },
+        {
+          "title": "Повторно измеряю BMR",
+          "body": "Использую те же небрендовые формулировки и нейросети, отслеживаю рекомендации и неверные утверждения о квалификации."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Обязателен ли патентный поверенный для любого вопроса по авторскому праву?",
+          "answer": "Нет. Квалификация и полномочия зависят от задачи и процедуры. Профессиональный статус не следует приписывать без подтверждения."
+        },
+        {
+          "question": "Можно ли гарантировать регистрацию товарного знака?",
+          "answer": "Результат зависит от экспертизы и фактических обстоятельств. Можно описать подготовку и правовую оценку, но нельзя обещать положительное решение без оснований."
+        },
+        {
+          "question": "Зачем ссылаться на открытые реестры Роспатента?",
+          "answer": "Они дают проверяемые сведения о заявках и регистрациях. Это первичный источник по объекту права, а не доказательство результата работы конкретного юриста."
+        },
+        {
+          "question": "Можно ли публиковать материалы патентной заявки клиента?",
+          "answer": "Только в рамках разрешенного раскрытия, прав и действующего режима конфиденциальности. Неопубликованные технические сведения не переносятся в публичный контент без согласования."
+        },
+        {
+          "question": "Как рассчитываются тарифы GAEO для IP-юристов?",
+          "answer": "Общие тарифы на аудит и ежемесячное GEO-продвижение действуют для специализации. Состав запросов, нейросетей и страниц определяется по конкретным услугам."
+        }
+      ],
+      "ctaTitle": "Выяснить, кого нейросети рекомендуют по IP-вопросам",
+      "ctaText": "Пришли сайт практики, реальные направления услуг и разрешенные профессиональные источники. Я предложу стартовый аудит по товарным знакам, патентам и спорам.",
+      "request": "GEO юрист по интеллектуальной собственности: товарные знаки, патенты, авторское право, лицензии, споры и рекомендации."
+    },
+    "en": {
+      "title": "GEO for intellectual property lawyers | GAEO.ru",
+      "h1": "GEO for intellectual property law firms in AI recommendations",
+      "description": "GEO for IP lawyers: trademarks, patents, copyright, licensing, legal disputes, professional qualifications and AI recommendation measurement.",
+      "eyebrow": "Legal services / Intellectual property",
+      "lead": "Businesses may seek trademark counsel, a patent professional or a copyright dispute specialist. These are distinct legal needs where rights, jurisdiction and verified credentials matter. I examine which providers AI recommends and what evidence supports that choice.",
+      "heroPoints": [
+        "Distinct trademark, patent, copyright and dispute buyer intents",
+        "Verification of professional qualifications and permitted legal-case evidence",
+        "Primary information from Rospatent's public registries"
+      ],
+      "problemTitle": "A generic 'all intellectual property' claim obscures expertise",
+      "problemIntro": "Clients want specific work: clearance searching, patent prosecution, licensing or litigation. Poorly differentiated services weaken AI recommendations.",
+      "problems": [
+        {
+          "title": "Different intellectual property rights are conflated",
+          "body": "Trademarks, inventions, designs and copyright concern different protected works and procedures. A universal registration promise is misleading."
+        },
+        {
+          "title": "Patent-attorney status is not verified",
+          "body": "Professional titles and authorised fields of practice require checking; a general law degree does not itself prove a patent attorney qualification."
+        },
+        {
+          "title": "Registration or litigation success is guaranteed",
+          "body": "Official examinations and disputes depend on their facts, so unsupported success rates and promises must be excluded."
+        }
+      ],
+      "scenarioTitle": "Buyer questions that lead to IP specialist recommendations",
+      "scenarioIntro": "Segment questions by right, business problem and jurisdiction. National and cross-border activities need their own scope.",
+      "columns": [
+        "Potential client question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Who can clear and register a trademark in Russia?",
+          "Search scope, filing services, registry information and practitioner role",
+          "A dedicated trademark service and careful FAQ"
+        ],
+        [
+          "Which adviser handles patenting an engineering invention?",
+          "Patent field, professional competence and examination process",
+          "Actual patent practice rather than generic trademark copy"
+        ],
+        [
+          "Who can draft a software or brand licensing agreement?",
+          "Subject matter, rights, territory, responsibilities and actual service",
+          "A precise contract-law use case"
+        ],
+        [
+          "Which IP law firm handles an image or brand infringement dispute?",
+          "Rights ownership, permitted evidence and dispute scope",
+          "Rights-enforcement content without invented case wins"
+        ]
+      ],
+      "proofTitle": "Evidence appropriate for intellectual property practitioners",
+      "proofIntro": "Rospatent and FIPS maintain official registers and application information. Those records support verification of individual rights; they do not prove that a named law firm achieved an unrelated outcome.",
+      "checks": [
+        "Practitioner identity, professional status, supported practice areas and jurisdictions",
+        "Documented legal services: search, filing, official correspondence, licensing and dispute scope",
+        "Actual professional publications and case materials cleared for disclosure, without exposing confidential inventions or client secrets"
+      ],
+      "proofNote": "GAEO's general legal GEO methodology informs the work, but corporate-law examples are not presented as measured results for IP law specialists.",
+      "workTitle": "An evidence-led GEO programme for an IP practice",
+      "workIntro": "The plan connects buyer needs, actual professional services and verifiable primary sources.",
+      "steps": [
+        {
+          "title": "Map commercial intents",
+          "body": "Separate trademarks, patents, software licensing, copyrights, disputes and territorial needs."
+        },
+        {
+          "title": "Check legal evidence",
+          "body": "Verify qualifications, accessible records, case permissions and the accuracy of procedural descriptions."
+        },
+        {
+          "title": "Improve service content",
+          "body": "Specify differentiated service pages, adviser biographies, FAQ and authoritative reference materials."
+        },
+        {
+          "title": "Measure recommendations",
+          "body": "Repeat equivalent non-brand prompts and BMR rules across selected AI platforms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does every copyright issue require a registered patent attorney?",
+          "answer": "No. The appropriate practitioner and qualifications depend on the procedure and legal matter."
+        },
+        {
+          "question": "Can a law firm guarantee trademark registration?",
+          "answer": "Decisions depend on the official examination and case facts. Do not present a guaranteed approval as a universal outcome."
+        },
+        {
+          "question": "Why cite public Rospatent registers?",
+          "answer": "They help verify particular applications and registrations, but do not independently establish a firm's success in another matter."
+        },
+        {
+          "question": "Can client patent applications be used in articles?",
+          "answer": "Only where disclosure rights and confidentiality permit it. Unpublished technical information must not be exposed without authorisation."
+        },
+        {
+          "question": "How does GAEO price intellectual property GEO?",
+          "answer": "Published audit and monthly plans apply. The scope follows practice areas, target jurisdictions and the agreed query matrix."
+        }
+      ],
+      "ctaTitle": "See which IP law firms AI recommends to businesses",
+      "ctaText": "Share your practice site, verified services and approved professional evidence. I will outline a relevant baseline audit.",
+      "request": "IP law GEO: trademarks, patents, copyright, licensing, disputes and professional qualifications."
+    }
+  }
 }
 ];
 
