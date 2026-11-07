@@ -1,6 +1,7 @@
 import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 import {createHash} from 'node:crypto';
+import {industrySpecializations} from '../src/data/industry-specializations.mjs';
 const ROOT=process.cwd(),ORIGINAL=resolve(ROOT,'src/legacy/pages'),PUBLIC=resolve(ROOT,'public'),OUTPUT=resolve(ROOT,'dist');
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(x=>{
  const abs=resolve(dir,x.name);
@@ -23,6 +24,7 @@ const assets=walk(PUBLIC);
 const problems=[];
 // Evidence-led RU/EN industry pages intentionally render a shared structured Astro component.
 // Preserve and verify their SEO shell while retaining exact parity for untouched routes.
+const specializationRoutes=new Set(industrySpecializations.flatMap(p=>Object.values(p.routes).map(route=>route.slice(1)+'index.html')));
 const commercialRoutes=new Set([
  'geo-prodvizhenie-nedvizhimosti/index.html',
  'en/geo-for-real-estate/index.html',
@@ -42,6 +44,16 @@ for(const original of originals){
  if(!existsSync(generated)){problems.push('Missing route: '+path);continue;}
  const before=normalize(readFileSync(original,'utf8'));
  const after=normalize(readFileSync(generated,'utf8'));
+ if(specializationRoutes.has(path)){
+  if(!before.includes('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->'))problems.push('Missing specialization slot in '+path);
+  if(after.includes('ASTRO_INDUSTRY_SPECIALIZATION_SLOT'))problems.push('Unrendered specialization in '+path);
+  for(const section of ['industry-specialization__hero','industry-problem-section','industry-scenarios-section','industry-evidence-section','industry-process-section','industry-pricing-section','industry-faq-section','industry-final-section']){
+   if(!after.includes(section))problems.push('Missing specialization section '+section+' in '+path);
+  }
+  if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Specialization must have one H1 in '+path);
+  for(const marker of ['rel="canonical"','hreflang="ru"','hreflang="en"','type="application/ld+json"'])if(!after.includes(marker))problems.push('Specialization missing SEO '+marker+' in '+path);
+  continue;
+ }
  if(commercialRoutes.has(path)){
   if(!before.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->'))problems.push('Missing managed Astro slot in '+path);
   if(after.includes('ASTRO_INDUSTRY_COMMERCIAL_SLOT'))problems.push('Unrendered managed Astro slot in '+path);

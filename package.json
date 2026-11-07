@@ -15,7 +15,8 @@
     "check:research": "node scripts/qa_research_article_layout.mjs",
     "check:anchors": "node scripts/qa_internal_anchor_links.mjs",
     "check:design": "node scripts/qa_approved_design_system.mjs",
-    "check:tariffs": "node scripts/qa_tariffs.mjs"
+    "check:tariffs": "node scripts/qa_tariffs.mjs",
+    "check:specializations": "node scripts/qa_industry_specializations.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",
