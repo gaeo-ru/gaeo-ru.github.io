@@ -2872,6 +2872,273 @@ export const industrySpecializations = [
       "request": "Cloud and data centre GEO: IaaS, colocation, Tier, SLA, backups, facilities and AI recommendations."
     }
   }
+},
+{
+  "id": 58,
+  "slug": "warehouse-storage-3pl",
+  "group": "logistics",
+  "routes": {
+    "ru": "/industries/warehouse-storage-3pl/",
+    "en": "/en/industries/warehouse-storage-3pl/"
+  },
+  "parent": {
+    "ru": "/industries/fulfillment/",
+    "en": "/en/industries/fulfillment/"
+  },
+  "methods": {
+    "ru": [
+      "/strategies/fulfillment-provider-selection/",
+      "/industries/ecommerce/"
+    ],
+    "en": [
+      "/en/strategies/fulfillment-provider-selection/",
+      "/en/industries/ecommerce/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Критерии выбора фулфилмент-подрядчика и границы применимости",
+      "Специфика клиентских товарных данных"
+    ],
+    "en": [
+      "Provider selection and distinct warehouse/fulfilment roles",
+      "E-commerce catalogue and product data context"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_9027/7899d21bdcc6781e777105374c09050f7ded3c14/",
+      "ru": "ГК РФ, статья 907: договор складского хранения",
+      "en": "Russian Civil Code, Article 907: warehouse storage contract"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_9027/4863d790ba34912d721c4ba788fd87ccd24dfbc3/",
+      "ru": "ГК РФ, статья 912: складские документы",
+      "en": "Russian Civil Code, Article 912: warehouse documents"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение складских операторов и ответственного хранения | GAEO.ru",
+      "h1": "GEO-продвижение складской логистики и ответственного хранения",
+      "description": "Продвижение складских операторов в ChatGPT и Алисе: ответственное хранение, паллетоместа, WMS, приемка, отгрузка, SLA и проверка рекомендаций.",
+      "eyebrow": "Логистика / Складское хранение",
+      "lead": "Производитель или дистрибьютор ищет склад по расположению, режиму хранения, доступным площадям, учету остатков и договорной ответственности. Это отличается от выбора фулфилмента для маркетплейса. Проверяю, каких операторов нейросети рекомендуют по таким задачам и подтверждены ли их возможности.",
+      "heroPoints": [
+        "Отдельная матрица запросов для хранения, обработки и 3PL",
+        "Реальные режимы склада, география, учет и договорные условия",
+        "Сопоставление подтвержденных мощностей, WMS и уровня обслуживания"
+      ],
+      "problemTitle": "Почему карточка «складские услуги под ключ» не помогает выбору",
+      "problemIntro": "Заказчик должен понять, что именно хранитель принимает, как учитывает товары и за какие операции отвечает. Разные склады могут быть пригодны для разных категорий продукции.",
+      "problems": [
+        {
+          "title": "Ответственное хранение смешано с фулфилментом",
+          "body": "Хранение товарных партий и комплектация заказов маркетплейса - самостоятельные услуги. Наличие одной не доказывает выполнение другой."
+        },
+        {
+          "title": "Заявленные мощности не имеют единицы измерения",
+          "body": "Суммарные квадратные метры, число паллетомест, температурные зоны и ежедневный объем обработки нельзя использовать как взаимозаменяемые показатели."
+        },
+        {
+          "title": "Условия хранения и учета не раскрыты",
+          "body": "Хрупкие, жидкие, температурно-чувствительные и маркируемые товары требуют проверки реальной инфраструктуры, правил приемки и ограничений склада."
+        }
+      ],
+      "scenarioTitle": "Какие запросы приводят к выбору склада",
+      "scenarioIntro": "Фиксирую запросы по типу товара, месту, операции и ответственному хранению. Сравнение выполняется по подтвержденным параметрам выбранных операторов.",
+      "columns": [
+        "Вопрос бизнеса",
+        "Какие данные нужны",
+        "Работа GEO"
+      ],
+      "scenarios": [
+        [
+          "Где найти склад ответственного хранения в Подмосковье с паллетоместами?",
+          "Адрес, доступные зоны и емкость, договор, график и тарифная единица",
+          "Страница услуги с фактической географией и измеряемыми условиями"
+        ],
+        [
+          "Кому передать хранение товаров с партиями и сроками годности?",
+          "WMS, маркировка партий, учет сроков, температурный режим, ответственность",
+          "Проверяемые процессы и исключения по товарным категориям"
+        ],
+        [
+          "Как выбрать 3PL-оператора для приемки и отгрузки оптом?",
+          "Реальные операции, документы, SLA, система обмена и скорость обработки",
+          "Разделить хранение, обработку и транспортную часть логистики"
+        ],
+        [
+          "Чем отличаются хранение товара и фулфилмент для Wildberries?",
+          "Условия размещения, маркировка, комплектация, подготовка поставки на МП",
+          "Раздельные страницы направлений без вымышленных мощностей"
+        ]
+      ],
+      "proofTitle": "Какие факты доказывают пригодность складского оператора",
+      "proofIntro": "Гражданский кодекс РФ в статьях 907 и 912 регулирует договор складского хранения и складские документы. Это правовая основа для проверки договорных условий, но не доказательство, что любая компания оказывает услуги на одинаковых условиях.",
+      "checks": [
+        "Товар и условия: поддерживаемые категории, температурные зоны, паллетоместа, расположение, график приема и ограничения",
+        "Договор: хранитель и поклажедатель, ответственность, складские документы, приемка, возврат и порядок учета расхождений",
+        "Операции: фактические функции WMS, инвентаризация, обработка партий, отгрузка, интеграции, тарифная единица и актуальный SLA"
+      ],
+      "proofNote": "Опубликованный кейс Преп-Центра относится к конкретным работам фулфилмента. Он не подтверждает результат GEO-продвижения независимого оператора ответственного хранения.",
+      "workTitle": "Как продвигаю складскую логистику в нейросетях",
+      "workIntro": "Сначала проверяю, каких поставщиков рекомендуют для конкретного товара и географии, затем формирую необходимые доказательства по каждому сценарию.",
+      "steps": [
+        {
+          "title": "Исходная матрица",
+          "body": "Разделяю ответственное хранение, 3PL, температурные режимы, типы товара, географию и договорные условия."
+        },
+        {
+          "title": "Аудит реальных возможностей",
+          "body": "Сверяю складские площади, процессы, учет, действующие тарифы, договорные документы и ограничения."
+        },
+        {
+          "title": "Доработки сайта и публикации",
+          "body": "Готовлю страницы складских услуг, FAQ, описание операций и WMS, технические материалы и отраслевые сравнения."
+        },
+        {
+          "title": "Повторный контроль",
+          "body": "Сравниваю ответы нейросетей и BMR по той же матрице, устраняю ложные параметры мощностей и условий."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ответственное хранение и фулфилмент - одна услуга?",
+          "answer": "Нет. Хранение описывает обязательства по сохранности и возврату товара; фулфилмент дополнительно может включать комплектацию заказов и подготовку отправлений. Перечень работ определяется договором."
+        },
+        {
+          "question": "Можно ли заявлять хранение температурных товаров?",
+          "answer": "Только при наличии подтвержденных температурных зон, режима контроля и допустимых категорий продукции. Общего изображения склада недостаточно."
+        },
+        {
+          "question": "Какая информация важна покупателю 3PL-услуги?",
+          "answer": "Локация, реальная доступность мощностей, операции приемки и отгрузки, учет, договор, тарифы и ограничения по товару."
+        },
+        {
+          "question": "Нужны ли складские документы на публичной странице?",
+          "answer": "Сайт может объяснять порядок оформления и виды документов без раскрытия договоров клиентов. Законодательная процедура и фактический документооборот оператора проверяются отдельно."
+        },
+        {
+          "question": "Сколько стоит GEO-продвижение склада?",
+          "answer": "Применяются стандартные тарифы GAEO на аудит и ежемесячное сопровождение. Состав зависит от географии, товаров, операций и числа контролируемых запросов."
+        }
+      ],
+      "ctaTitle": "Проверить, какие склады нейросети советуют вашим заказчикам",
+      "ctaText": "Пришли сайт склада, регионы, реальные условия и категории товаров. Я подготовлю исходные запросы для проверки рекомендаций.",
+      "request": "GEO оператор складской логистики: ответственное хранение, 3PL, паллетоместа, WMS, температурные зоны и рекомендации."
+    },
+    "en": {
+      "title": "GEO for warehouse storage and 3PL operators | GAEO.ru",
+      "h1": "GEO for warehouse storage and 3PL logistics providers",
+      "description": "GEO for warehouse operators: contractual storage, pallet capacity, inventory systems, receiving, dispatch, service levels and AI recommendations.",
+      "eyebrow": "Logistics / Contract warehousing",
+      "lead": "Manufacturers and distributors choose warehouses by location, storage conditions, inventory accuracy and contractual responsibility. This is different from choosing an e-commerce fulfilment provider. I review which operators AI recommends and what substantiates their services.",
+      "heroPoints": [
+        "Separate storage, handling and outsourced logistics intents",
+        "Verify facility conditions, location, inventory processes and contracts",
+        "Comparable pallet capacity, WMS operations and service-level evidence"
+      ],
+      "problemTitle": "A generic 'warehouse services' offer is hard to evaluate",
+      "problemIntro": "Clients need to know what the operator accepts, how goods are tracked and who bears which responsibilities. Different goods require different facilities.",
+      "problems": [
+        {
+          "title": "Storage and fulfilment are conflated",
+          "body": "Storing bulk inventory differs from picking and packing marketplace orders. One service does not prove the other is offered."
+        },
+        {
+          "title": "Capacity lacks comparable units",
+          "body": "Square metres, pallet positions, temperature zones and daily throughput represent different metrics and must not be substituted for each other."
+        },
+        {
+          "title": "Storage constraints are unclear",
+          "body": "Liquid, fragile, temperature-sensitive and traceable goods may require evidence of actual equipment, conditions and accepted product categories."
+        }
+      ],
+      "scenarioTitle": "Buyer questions that lead to a storage provider shortlist",
+      "scenarioIntro": "Segment by product, contract model, service operation and geography. Use verified supplier capabilities in each comparison.",
+      "columns": [
+        "Business question",
+        "Evidence needed",
+        "GEO task"
+      ],
+      "scenarios": [
+        [
+          "Which third-party warehouse has pallet storage near Moscow?",
+          "Location, current capacity, tariff units, contract terms and access hours",
+          "A location-specific storage offer with confirmed conditions"
+        ],
+        [
+          "Who stores goods by batches and expiry dates?",
+          "WMS support, batch handling, inventory tracking, temperature limits and liability",
+          "Document true stock-control processes and exclusions"
+        ],
+        [
+          "Which 3PL operator can handle inbound and wholesale dispatch?",
+          "Receiving steps, paperwork, actual service levels and data exchange",
+          "Distinguish storage, handling and transport responsibilities"
+        ],
+        [
+          "How does warehouse storage differ from marketplace fulfilment?",
+          "Bulk storage, item labelling, picking, packing and shipping scope",
+          "Distinct services rather than unsupported cross-category claims"
+        ]
+      ],
+      "proofTitle": "Evidence behind a third-party warehouse recommendation",
+      "proofIntro": "Articles 907 and 912 of the Russian Civil Code cover warehouse storage contracts and documents. They help frame buyer due diligence but do not establish what any individual provider can deliver.",
+      "checks": [
+        "Goods and facilities: categories accepted, pallet capacity, locations, temperature control and operating hours",
+        "Contracts and liability: custodian, owner, warehouse documents, intake, return procedures and discrepancy resolution",
+        "Operations: supported WMS functions, stock takes, batch control, dispatch, integrations, actual service-level and fee conditions"
+      ],
+      "proofNote": "GAEO has published fulfilment-related work for a specific customer, but it is not presented as a proven GEO result for an independent contract-storage operator.",
+      "workTitle": "An evidence-led GEO programme for warehousing",
+      "workIntro": "Begin with what AI recommends for actual goods and locations, then build reliable answers for the supplier's specific operational capabilities.",
+      "steps": [
+        {
+          "title": "Group buyer needs",
+          "body": "Separate contract storage, 3PL, temperature requirements, product categories and geographic queries."
+        },
+        {
+          "title": "Verify warehouse capabilities",
+          "body": "Review capacity, inventory procedures, storage rules, contract language and current commercial terms."
+        },
+        {
+          "title": "Build service evidence",
+          "body": "Specify service pages, WMS descriptions, FAQ, operational documentation and specialist publications."
+        },
+        {
+          "title": "Repeat measurements",
+          "body": "Compare stable AI prompts and BMR and identify misleading claims about capacity or service terms."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is contract storage the same as fulfilment?",
+          "answer": "No. Storage concerns safekeeping and return of goods; fulfilment may additionally cover order picking and dispatch. The actual services depend on the agreement."
+        },
+        {
+          "question": "Can any warehouse claim temperature-controlled storage?",
+          "answer": "Only when relevant facilities, monitoring procedures and accepted product categories are verified."
+        },
+        {
+          "question": "What matters when choosing a 3PL partner?",
+          "answer": "Location, available capacity, receiving and dispatch, inventory systems, contracts, fees and relevant product restrictions."
+        },
+        {
+          "question": "Must client warehouse documents be published?",
+          "answer": "No. The website can explain the procedure and document types without disclosing private customer records."
+        },
+        {
+          "question": "What does GAEO charge for warehousing GEO?",
+          "answer": "GAEO's standard audit and monthly plans apply. Scope depends on locations, product categories, operations and query coverage."
+        }
+      ],
+      "ctaTitle": "See which warehouse operators AI recommends",
+      "ctaText": "Share the warehouse site, confirmed facilities, regions and product categories. I will propose a useful initial audit.",
+      "request": "Warehouse and 3PL GEO: contract storage, pallet capacity, WMS, temperature zones and AI recommendations."
+    }
+  }
 }
 ];
 
