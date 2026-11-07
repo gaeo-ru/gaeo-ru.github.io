@@ -1,5 +1,5 @@
 /**
- * Batches 2A and 2B: eight substantive RU/EN GEO specializations.
+ * Batches 2A, 2B and 2C: bilingual substantive GEO specializations.
  * Catalogue images and prices remain in their existing canonical sources.
  * No client-specific performance outcome is claimed by these pages.
  */
@@ -2078,6 +2078,264 @@ export const industrySpecializations = [
       "ctaTitle": "See which IT providers AI recommends to your buyers",
       "ctaText": "Share the provider site, verified capabilities, locations and approved project examples. I will propose a suitable baseline.",
       "request": "IT integrator and outsourcing GEO: 1C, migrations, SLAs, infrastructure, managed support and AI recommendations."
+    }
+  }
+},
+{
+  "id": 4,
+  "slug": "luxury-real-estate-agencies",
+  "group": "real-estate",
+  "routes": {
+    "ru": "/industries/luxury-real-estate-agencies/",
+    "en": "/en/industries/luxury-real-estate-agencies/"
+  },
+  "parent": {
+    "ru": "/geo-prodvizhenie-nedvizhimosti/",
+    "en": "/en/geo-for-real-estate/"
+  },
+  "methods": {
+    "ru": [
+      "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/"
+    ],
+    "en": [
+      "/en/articles/geo-for-real-estate/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "Методика анализа запросов покупателей недвижимости"
+    ],
+    "en": [
+      "Research methodology for property recommendation queries"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+      "ru": "Закон №218-ФЗ о государственной регистрации недвижимости",
+      "en": "Federal Law 218-FZ on property registration"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO-продвижение агентств элитной недвижимости | GAEO.ru",
+      "h1": "GEO-продвижение агентств элитной недвижимости в нейросетях",
+      "description": "Продвижение агентств элитной недвижимости в ChatGPT и Алисе: клубные дома, премиальные квартиры, загородные резиденции, приватные продажи и выбор брокера.",
+      "eyebrow": "Недвижимость / Премиальные агентства",
+      "lead": "Покупатель премиальной квартиры выбирает не только адрес и площадь. Его интересуют приватность, доступ к релевантным предложениям, юридическая чистота и опыт конкретного брокера. Я проверяю, какие агентства нейросети рекомендуют по таким задачам и достаточно ли публичных оснований для этого выбора.",
+      "heroPoints": [
+        "Небрендовые запросы по формату жилья, локации и типу сопровождения",
+        "Проверка реальной специализации брокеров и условий работы с объектами",
+        "Сохранение конфиденциальности сделок и закрытых предложений"
+      ],
+      "problemTitle": "Почему каталог дорогих объектов не равен доверию к агентству",
+      "problemIntro": "Одинаковый бюджет может означать разные запросы: квартиру в клубном доме, загородную резиденцию или сопровождение сложной сделки. У агентства должны быть подтвержденные компетенции именно для нужной ситуации.",
+      "problems": [
+        {
+          "title": "Закрытые предложения описаны как общедоступные",
+          "body": "Нельзя обещать наличие конкретных off-market объектов, когда право на показ, актуальность и условия доступа не подтверждены."
+        },
+        {
+          "title": "Премиальность подменяет конкретные критерии",
+          "body": "Общие слова об эксклюзивности не показывают специализацию по районам, типам недвижимости, приватности и реальному составу услуги."
+        },
+        {
+          "title": "Утверждения о сделках недоказуемы",
+          "body": "Нельзя использовать вымышленные продажи, имена клиентов или неподтвержденный объем портфеля ради доказательства опыта брокера."
+        }
+      ],
+      "scenarioTitle": "По каким запросам выбирают премиальное агентство",
+      "scenarioIntro": "Задачи распределяются по объекту, покупателю и формату сопровождения. В исходном замере отделяю выбор агентства от рекомендации конкретного дома.",
+      "columns": [
+        "Вопрос покупателя",
+        "Какие сведения нужны",
+        "Что делать для GEO"
+      ],
+      "scenarios": [
+        [
+          "Какое агентство специализируется на клубных домах в центре Москвы?",
+          "Фактические районы, типы объектов, опыт специалистов, доступные предложения",
+          "Проверяемые профили брокеров и страницы специализации"
+        ],
+        [
+          "К кому обратиться за покупкой загородной резиденции с сопровождением?",
+          "География, содержание проверки объекта, этапы сделки, партнерские специалисты",
+          "Отдельное предложение для загородной недвижимости и условий покупки"
+        ],
+        [
+          "Кто помогает искать объекты без публичного размещения?",
+          "Реальные условия закрытого подбора, конфиденциальность и порядок подтверждения доступа",
+          "Описать услугу без раскрытия закрытого каталога"
+        ],
+        [
+          "Как сравнить агентства при продаже премиальной квартиры?",
+          "Модель вознаграждения, маркетинг объекта, отчетность, ограничения по данным клиента",
+          "Сопоставимые условия брокерской услуги и FAQ"
+        ]
+      ],
+      "proofTitle": "Какие данные помогают обоснованно рекомендовать брокера",
+      "proofIntro": "При выборе дорогостоящего объекта важны документы на недвижимость и права сторон. Сведения ЕГРН относятся к установленному законом порядку доступа, поэтому публичное описание сделки не заменяет проверку документов и не может раскрывать закрытые данные.",
+      "checks": [
+        "Подтвержденная специализация брокеров, районы и типы объектов, актуальные публичные профили",
+        "Договорные условия: комиссия, приватность, порядок показа, сопровождение, участие профильных юристов",
+        "Только разрешенные примеры сделок и законно доступные данные; отдельный контроль актуальности off-market предложений"
+      ],
+      "proofNote": "Предаудит жилого комплекса и методика GAEO по недвижимости помогают исследовать спрос, но не подтверждают достигнутый GEO-результат для агентства элитной недвижимости.",
+      "workTitle": "Как я выстраиваю GEO-продвижение премиального агентства",
+      "workIntro": "Работа строится вокруг доверия к конкретным специалистам, сценариев выбора и проверяемых услуг, а не вокруг искусственного увеличения числа объектов на сайте.",
+      "steps": [
+        {
+          "title": "Разделяю запросы",
+          "body": "Фиксирую потребности покупателей и продавцов по сегментам квартир, загородным объектам, районам и конфиденциальному сопровождению."
+        },
+        {
+          "title": "Проверяю доказательства",
+          "body": "Сверяю фактический опыт брокеров, публичные профили, договорные условия, ограничения по конфиденциальности и допустимость упоминаний."
+        },
+        {
+          "title": "Готовлю сайт и внешние источники",
+          "body": "Разрабатываю ТЗ на специализированные услуги, профили брокеров, экспертные публикации и ответы на частые вопросы."
+        },
+        {
+          "title": "Повторно измеряю рекомендации",
+          "body": "Сравниваю ответы выбранных нейросетей по неизменным запросам, отслеживаю BMR и фактические ошибки."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Можно ли продвигать агентство без публикации закрытых сделок?",
+          "answer": "Да. Можно показывать проверенную специализацию, условия услуг, профессиональные публикации и разрешенные клиентские материалы, не раскрывая закрытые объекты."
+        },
+        {
+          "question": "Чем GEO агентства отличается от GEO элитного ЖК?",
+          "answer": "Агентство выбирают как исполнителя, а ЖК как объект. Для брокера важны люди, услуги и условия, а для комплекса - характеристики и доступность недвижимости."
+        },
+        {
+          "question": "Допустимо ли писать, что агентство работает с off-market объектами?",
+          "answer": "Только если такая услуга действительно оказывается. Объем закрытых предложений, эксклюзивные права и наличие конкретных объектов нельзя придумывать."
+        },
+        {
+          "question": "Как доказать юридическую чистоту сделки?",
+          "answer": "Требуется проверка документов и обстоятельств конкретного объекта квалифицированными специалистами. Общая фраза о юридической чистоте не заменяет такую проверку."
+        },
+        {
+          "question": "Как рассчитывается стоимость GEO для премиального агентства?",
+          "answer": "По общим тарифам GAEO на аудит и сопровождение. Объем определяется географией, специализацией, согласованными запросами и доступной доказательной базой."
+        }
+      ],
+      "ctaTitle": "Проверить рекомендации нейросетей о твоем агентстве",
+      "ctaText": "Пришли сайт агентства, реальные направления работы и публичные профили брокеров. Я выделю запросы, по которым покупатели выбирают посредника.",
+      "request": "GEO агентства элитной недвижимости: клубные дома, премиальные квартиры, приватность, брокеры и рекомендации."
+    },
+    "en": {
+      "title": "GEO for luxury real estate agencies | GAEO.ru",
+      "h1": "GEO for luxury real estate agencies in AI recommendations",
+      "description": "GEO for luxury estate agencies: private property searches, premium homes, discreet brokerage, verifiable agent expertise and AI visibility.",
+      "eyebrow": "Real estate / Luxury brokerage",
+      "lead": "A buyer of a premium home evaluates more than square metres and location. Discretion, relevant inventory, professional expertise and transaction support matter. I examine which estate agencies AI recommends for these needs and whether the available sources support the recommendation.",
+      "heroPoints": [
+        "Non-brand questions by property type, area and service need",
+        "Evidence of actual broker specialisation and agency responsibilities",
+        "Privacy-safe treatment of off-market listings and transactions"
+      ],
+      "problemTitle": "An expensive listing catalogue is not proof of brokerage expertise",
+      "problemIntro": "The same budget may cover a central-city apartment, a country residence or a sensitive off-market acquisition. Each buyer requires different evidence.",
+      "problems": [
+        {
+          "title": "Private listings are presented as publicly available",
+          "body": "A provider cannot claim access to an off-market property when authorisation, availability and disclosure terms have not been verified."
+        },
+        {
+          "title": "Premium positioning lacks usable criteria",
+          "body": "Exclusive language alone does not establish neighbourhood expertise, property specialism or a discreet service process."
+        },
+        {
+          "title": "Transaction results are unsubstantiated",
+          "body": "Invented deal volumes, named clients and unsupported completion claims must never be used as marketing evidence."
+        }
+      ],
+      "scenarioTitle": "Questions that lead to a luxury agency shortlist",
+      "scenarioIntro": "Separate the agency-selection task from the selection of individual buildings. The baseline distinguishes buyers, sellers and transaction models.",
+      "columns": [
+        "Buyer question",
+        "Evidence needed",
+        "GEO content task"
+      ],
+      "scenarios": [
+        [
+          "Which agency handles boutique apartment buildings in central Moscow?",
+          "Real service areas, broker expertise and current available offers",
+          "Specialist broker profiles and neighbourhood pages"
+        ],
+        [
+          "Who assists with purchasing a countryside residence?",
+          "Territory, due diligence scope, contract process and actual partners",
+          "A separate country-property service explanation"
+        ],
+        [
+          "Who offers a discreet search for homes not publicly listed?",
+          "Real private-search terms, confidentiality and permission to describe offerings",
+          "Explain the service without exposing inventory"
+        ],
+        [
+          "How should I compare agencies selling a premium apartment?",
+          "Fee terms, marketing scope, seller reporting and privacy",
+          "Transparent brokerage process and fee FAQ"
+        ]
+      ],
+      "proofTitle": "Evidence behind a luxury-broker recommendation",
+      "proofIntro": "Registered property rights and transaction verification are separate from a brokerage pitch. Russian law regulates access to EGRN information; public content cannot replace a property-specific review or disclose confidential details.",
+      "checks": [
+        "Real broker identities and expertise, areas covered and public professional profiles",
+        "Commission, confidentiality, marketing scope, viewing process and legal-service boundaries",
+        "Permission-based cases and accurate statements about private listings"
+      ],
+      "proofNote": "GAEO's residential-development research provides a measurement method, not a completed GEO success case for a luxury estate agency.",
+      "workTitle": "A GEO programme for a specialist luxury agency",
+      "workIntro": "The approach centres on responsible recommendations of qualified people and services, not mass reproduction of listings.",
+      "steps": [
+        {
+          "title": "Define buyer needs",
+          "body": "Separate central-city homes, country residences, private transactions and seller services by intent and geography."
+        },
+        {
+          "title": "Verify what can be disclosed",
+          "body": "Review broker capabilities, contract conditions, confidentiality and permission to cite transactions."
+        },
+        {
+          "title": "Build content evidence",
+          "body": "Specify agency service pages, biographies, sector materials and helpful transactional FAQ."
+        },
+        {
+          "title": "Measure comparable recommendations",
+          "body": "Repeat stable prompts and examine BMR and factual errors across selected AI interfaces."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can a luxury agency use GEO without disclosing private transactions?",
+          "answer": "Yes. Verified services, practitioner biographies and approved public evidence can support recommendations without confidential details."
+        },
+        {
+          "question": "How is agency GEO different from developer GEO?",
+          "answer": "A developer is assessed for a property; an agency is selected for people, service and transaction terms."
+        },
+        {
+          "question": "Can off-market expertise be advertised?",
+          "answer": "Only if the provider genuinely offers it. No unsupported inventory totals, exclusive rights or availability claims should be made."
+        },
+        {
+          "question": "What proves a property transaction is legally sound?",
+          "answer": "Document and circumstance review for the specific property, performed by appropriately qualified professionals. Generic marketing statements are insufficient."
+        },
+        {
+          "question": "What is the GAEO price for a luxury agency?",
+          "answer": "The current audit and monthly GEO plans apply. Final scope depends on target geography, services and usable evidence."
+        }
+      ],
+      "ctaTitle": "See which luxury agents AI recommends to buyers",
+      "ctaText": "Share your brokerage website, actual services and professional profiles. I will identify a relevant baseline query set.",
+      "request": "Luxury real estate agency GEO: brokers, premium homes, off-market searches, confidentiality and AI recommendations."
     }
   }
 }
