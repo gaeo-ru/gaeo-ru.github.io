@@ -100,18 +100,11 @@
 /* A single divider after the last FAQ answer is sufficient. */
 .tariff-detail__chapter#faq + .tariff-detail__chapter{border-top:0;padding-top:0}
 
-/* Share summary/content row heights across the three open plans in each desktop row. */
-@supports (grid-template-rows:subgrid){
-  @media(min-width:721px){
-    .tariff-page #pricing .tariff-plans{grid-template-rows:repeat(2,auto auto)}
-    .tariff-page #pricing .tariff-plans > details.tariff-plan[open]{display:grid!important;grid-row:span 2;grid-template-rows:subgrid;row-gap:0;height:auto!important}
-    .tariff-page #pricing .tariff-plans > details.tariff-plan[open] > .price-details{display:flex!important;flex-direction:column!important;flex:1 1 auto!important;min-height:0!important}
-    .tariff-page #pricing .tariff-plans > details.tariff-plan[open] > .price-details > ul{flex:1 1 auto!important}
-    .tariff-page #pricing .tariff-plans .tariff-actions{margin-top:auto}
-  }
-  @media(min-width:721px) and (max-width:1050px){
-    .tariff-page #pricing .tariff-plans{grid-template-rows:repeat(3,auto auto)}
-  }
+/* Open tariff cards fill their row; alignment is measured per visible grid row. */
+@media(min-width:721px){
+  #pricing .tariff-plans > details.tariff-plan[open]{height:100%;display:flex!important;flex-direction:column!important}
+  #pricing .tariff-plans > details.tariff-plan[open] > .price-details{flex:1 1 auto!important;display:flex!important;flex-direction:column!important}
+  #pricing .tariff-plans > details.tariff-plan[open] > .price-details > ul{flex:1 1 auto!important}
 }
 @media(max-width:720px){
   .tariff-page > .industry-catalog{padding-bottom:16px}
