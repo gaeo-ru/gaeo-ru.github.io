@@ -100,8 +100,8 @@
 /* A single divider after the last FAQ answer is sufficient. */
 .tariff-detail__chapter#faq + .tariff-detail__chapter{border-top:0;padding-top:0}
 
-/* All PlanCards instances share the same desktop CTA baseline: pricing directory,
-   industry hubs, and individual specializations (RU/EN). No JS is required. */
+/* Stretch tariff card contents on desktop; the shared tariff script aligns actual CTA
+   coordinates per grid row, including native <details> on industry pages (RU/EN). */
 @media(min-width:721px){
   .tariff-plans{align-items:stretch!important}
   .tariff-plans > details.tariff-plan[open]{
