@@ -269,5 +269,277 @@ export const industrySpecializationsBatch2H = [
       "request": "Commercial property agency GEO: office leasing, industrial property, retail, current listings and AI recommendations."
     }
   }
+},
+{
+  "id": 6,
+  "slug": "warehouse-industrial-parks",
+  "group": "real-estate",
+  "routes": {
+    "ru": "/industries/warehouse-industrial-parks/",
+    "en": "/en/industries/warehouse-industrial-parks/"
+  },
+  "parent": {
+    "ru": "/geo-prodvizhenie-nedvizhimosti/",
+    "en": "/en/geo-for-real-estate/"
+  },
+  "methods": {
+    "ru": [
+      "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "/strategies/measurement/"
+    ],
+    "en": [
+      "/en/articles/geo-for-real-estate/",
+      "/en/strategies/measurement/"
+    ]
+  },
+  "methodLabels": {
+    "ru": [
+      "GEO-методика для недвижимости",
+      "Замер BMR для небрендовых запросов"
+    ],
+    "en": [
+      "Real estate GEO methodology",
+      "Non-brand BMR measurement"
+    ]
+  },
+  "sources": [
+    {
+      "href": "https://gisp.gov.ru/nmp/measure/8123826",
+      "ru": "ГИСП: подтверждение соответствия индустриальных парков требованиям Минпромторга",
+      "en": "State industry information system: recognised industrial park requirements"
+    },
+    {
+      "href": "https://gisp.gov.ru/nmp/measure/8123826/document",
+      "ru": "ГИСП: документы об инфраструктуре, резидентах и управляющей компании",
+      "en": "State industry information system: infrastructure and management evidence"
+    },
+    {
+      "href": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+      "ru": "Закон №218-ФЗ: права и сведения об объектах недвижимости",
+      "en": "Federal Law 218-FZ: registered real estate rights and property records"
+    }
+  ],
+  "content": {
+    "ru": {
+      "title": "GEO для складских комплексов и индустриальных парков | GAEO.ru",
+      "h1": "Продвижение складских и индустриальных парков в нейросетях",
+      "description": "GEO для собственников складских комплексов и индустриальных парков: доступные площади, высота, доки, мощности, дороги, режимы, резиденты и договоры. Методика BMR GAEO.",
+      "eyebrow": "Недвижимость / Складские и индустриальные объекты",
+      "lead": "Производитель и логистическая компания выбирают площадку по транспортному доступу, мощности сетей, размеру блока и срокам готовности. Проверяю, какие парки нейросети предлагают арендаторам и какие характеристики нуждаются в подтверждении.",
+      "heroPoints": [
+        "Небрендовые запросы производителей, логистов и промышленных резидентов",
+        "Проверка реальных площадей, сетей, погрузки и статуса инфраструктуры",
+        "Страницы объектов и независимые факты для сопоставимого BMR"
+      ],
+      "problemTitle": "Что мешает нейросети рекомендовать подходящий парк",
+      "problemIntro": "«Складской комплекс класса А» и «индустриальный парк» обозначают разные свойства. Для рекомендации конкретного объекта нужны точные параметры, готовность помещений и статус заявлений.",
+      "problems": [
+        {
+          "title": "Складской формат смешан с индустриальным статусом",
+          "body": "Обычный складской комплекс нельзя автоматически называть парком из федерального реестра. Если управляющая компания заявляет подтвержденный статус, проверяем запись, действующий срок и требования ГИСП."
+        },
+        {
+          "title": "Площадь и инженерия указаны без единиц",
+          "body": "Общая площадь территории, сдаваемый модуль, высота хранения, полы, ворота, электрическая мощность и газ имеют разные единицы и готовность. Нельзя объединять проект и введенные мощности."
+        },
+        {
+          "title": "Логистика описана рекламно",
+          "body": "Отгрузка зависит от подъездных дорог, ограничений для грузовиков, географии и графика работы. Расстояние по прямой не заменяет время и условия реального маршрута."
+        }
+      ],
+      "scenarioTitle": "Какие требования резиденты задают при выборе площадки",
+      "scenarioIntro": "Сценарии для построения измеряемой матрицы: запросы уточняются по региону, типу арендатора и реальным техническим условиям парка.",
+      "columns": [
+        "Запрос потенциального резидента",
+        "Что проверить",
+        "Задача GEO"
+      ],
+      "scenarios": [
+        [
+          "Где арендовать склад с 12-метровой высотой и доковыми воротами?",
+          "Реальная свободная площадь, рабочая высота, число доков и нагрузки на пол",
+          "Опубликовать таблицу фактических параметров по каждому корпусу"
+        ],
+        [
+          "Какой индустриальный парк подойдет для пищевого производства?",
+          "Назначение помещений, санитарные и инженерные требования, вода, электричество и ограничения",
+          "Описать допустимые виды производств и статус инженерных сетей"
+        ],
+        [
+          "Где разместить логистический центр с круглосуточной отгрузкой?",
+          "Подъезды, правила доступа, график, площадки маневрирования и транспортные ограничения",
+          "Проверить дороги и операции по реальным документам и условиям"
+        ],
+        [
+          "Какие парки имеют подтвержденный статус в реестре Минпромторга?",
+          "Реестровое подтверждение, категория объекта, заявитель и текущий статус",
+          "Отделить официальное признание от маркетингового названия"
+        ]
+      ],
+      "proofTitle": "Какие характеристики имеют силу доказательства",
+      "proofIntro": "Сверяю документацию собственника и управляющей компании, сведения о правах, технические условия и актуальные доступные блоки. Реестр ГИСП применим к соответствующим индустриальным паркам; не распространяю его критерии автоматически на обычные логистические склады.",
+      "checks": [
+        "Объект: тип и назначение, доступные блоки, год и стадия ввода, права, план корпуса, инженерные мощности и их фактическая готовность",
+        "Операции: подъезд для транспорта, режим доступа, погрузочные места, ограничения хранения и работы производств",
+        "Договор: сторона аренды или продажи, сроки доступа, услуги управляющей компании, ставки и порядок подтверждения текущих условий"
+      ],
+      "proofNote": "Методика GAEO по недвижимости и фулфилменту помогает формулировать требования покупателей. Она не подтверждает завершенный проект GEO для конкретного складского или индустриального парка.",
+      "workTitle": "Как продвигаю площадку в рекомендациях нейросетей",
+      "workIntro": "Разделяю объекты и реальные сценарии резидентов, фиксирую исходный BMR и готовлю проверяемые страницы с техническими параметрами.",
+      "steps": [
+        {
+          "title": "Замер спроса",
+          "body": "Составляю запросы по типу резидента, логистике, площади, коммуникациям и географии. Отдельно измеряю брендовые вопросы."
+        },
+        {
+          "title": "Проверка площадки",
+          "body": "Получаю актуальные схемы и подтверждения мощности, проверяю правоотношения, дату доступности и заявленный индустриальный статус."
+        },
+        {
+          "title": "Сайт и внешние доказательства",
+          "body": "Готовлю ТЗ на страницы корпусов, FAQ об инженерии, логистике, договоре, а также на экспертные публикации с источниками."
+        },
+        {
+          "title": "Повторный контроль BMR",
+          "body": "Сравниваю те же запросы и нейросети, отдельно фиксирую неверные сведения об инфраструктуре и резидентских условиях."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Каждый логопарк считается индустриальным парком по реестру Минпромторга?",
+          "answer": "Нет. Статус индустриального парка, соответствующего требованиям государственной поддержки, проверяется отдельно по действующим данным ГИСП. Название складского объекта само по себе ничего не подтверждает."
+        },
+        {
+          "question": "Можно ли продвигать парк с еще не готовой инженерией?",
+          "answer": "Да, если четко обозначить стадию проекта, запланированные сроки, фактически доступные мощности и документально подтвержденные технические условия."
+        },
+        {
+          "question": "Как показать свободные складские площади?",
+          "answer": "Нужны датированные сведения по конкретному корпусу или модулю, назначению, площади, высоте, инженерии и условиям доступа. Изменения доступности регулярно обновляются."
+        },
+        {
+          "question": "Является ли продвижение складского парка тем же, что GEO фулфилмент-оператора?",
+          "answer": "Нет. Собственник предлагает недвижимость и инфраструктуру, а фулфилмент-оператор выполняет складские операции для клиентов. Покупательские интенты, доказательства и договорная модель различаются."
+        },
+        {
+          "question": "Сколько стоит GEO для логистического или индустриального парка?",
+          "answer": "Применяются общие тарифы GAEO. Масштаб зависит от числа объектов, корпусов, регионов и выбранных сценариев резидентов."
+        }
+      ],
+      "ctaTitle": "Проверить, какие площадки нейросети советуют потенциальным резидентам",
+      "ctaText": "Пришли сайт парка, фактическую готовность корпусов, схемы и разрешенные технические характеристики. Определю начальную матрицу запросов.",
+      "request": "GEO складского и индустриального парка: доступные блоки, доки, инженерия, логистика, резиденты и BMR."
+    },
+    "en": {
+      "title": "GEO for warehouse and industrial park owners | GAEO.ru",
+      "h1": "GEO promotion for warehouse and industrial park owners",
+      "description": "Warehouse and industrial property GEO: real unit availability, loading bays, floor load, utilities, access roads, park status and tenant questions. GAEO BMR.",
+      "eyebrow": "Real estate / Warehouse and industrial parks",
+      "lead": "Manufacturers and logistics operators select sites by truck access, available capacity, utility connections and occupancy dates. I test which parks AI recommends and whether their documented specifications match tenant needs.",
+      "heroPoints": [
+        "Non-brand questions from logistics and manufacturing tenants",
+        "Verified unit availability, power, loading and infrastructure status",
+        "Evidence-based property content and comparable BMR tracking"
+      ],
+      "problemTitle": "Why an industrial property is not automatically recommended",
+      "problemIntro": "A warehouse complex and a formally recognised industrial park may be different propositions. AI shortlists need accurate specifications and a clear distinction between existing and planned facilities.",
+      "problems": [
+        {
+          "title": "Park status is overstated",
+          "body": "A logistics building cannot be assumed to hold official industrial park status. Where management claims recognition, the relevant state registry and supporting evidence must be checked."
+        },
+        {
+          "title": "Engineering capacity is ambiguous",
+          "body": "Site area, rentable unit area, clear height, loading doors, floor load and electrical capacity need consistent units and actual readiness dates."
+        },
+        {
+          "title": "Transport access lacks evidence",
+          "body": "Truck routes and operational access depend on roads, operating windows and vehicle restrictions. Straight-line distance is not a substitute for feasible logistics."
+        }
+      ],
+      "scenarioTitle": "The searches that drive tenant decisions",
+      "scenarioIntro": "Illustrative commercial prompts; final query coverage follows the specific assets, tenant types and geography.",
+      "columns": [
+        "Tenant question",
+        "Evidence required",
+        "GEO action"
+      ],
+      "scenarios": [
+        [
+          "Where can I rent a warehouse with high clear height and dock doors?",
+          "Vacant units, clear height, dock availability, floor load and location",
+          "Provide building-specific, dated technical inventories"
+        ],
+        [
+          "Which industrial park can accommodate food production?",
+          "Permitted operations, utilities, fit-out, water and hygiene-related constraints",
+          "Describe allowed uses and verified utility readiness"
+        ],
+        [
+          "Where can we run a logistics hub with 24-hour dispatch?",
+          "Truck access, gate rules, loading schedule and yard constraints",
+          "Document actual operating conditions and road connections"
+        ],
+        [
+          "Which industrial parks have recognised status in the Russian registry?",
+          "Actual registry entry, managing company and current status",
+          "Distinguish verified state status from a marketing description"
+        ]
+      ],
+      "proofTitle": "Evidence behind a credible property recommendation",
+      "proofIntro": "I review owner and manager documentation, registered property information, technical conditions and live unit availability. The state industrial park registry applies only when the specified recognition criteria are relevant.",
+      "checks": [
+        "Property: type, permitted use, available units, readiness stage, floorplans and verified utility capacities",
+        "Operations: truck access, loading, security, permitted activities and actual site restrictions",
+        "Commercial offer: leasing party, access dates, manager services, current terms and contract scope"
+      ],
+      "proofNote": "GAEO's real estate and fulfilment experience provides methodological context. No completed GEO outcome for an industrial or warehouse park is claimed.",
+      "workTitle": "A practical GEO programme for industrial sites",
+      "workIntro": "Segment tenant questions, document the property and compare AI recommendations before and after improving the available facts.",
+      "steps": [
+        {
+          "title": "Demand and BMR baseline",
+          "body": "Record non-brand queries by tenant profile, region, usable area, utilities and logistics requirements."
+        },
+        {
+          "title": "Verify asset capabilities",
+          "body": "Review available units, actual capacity, property role, commissioning stages and any claimed registry status."
+        },
+        {
+          "title": "Build evidence-led pages",
+          "body": "Specify building pages, technical FAQs, logistics notes, leasing terms and sourced sector publications."
+        },
+        {
+          "title": "Repeat measured queries",
+          "body": "Compare the same AI responses, noting BMR and errors about utilities, availability or park designation."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does every logistics park qualify as a registered industrial park?",
+          "answer": "No. Government-recognised industrial park status must be checked against the applicable registry and official requirements. A project's name alone is not evidence."
+        },
+        {
+          "question": "Can an unfinished site use GEO?",
+          "answer": "Yes, if plans, currently available space and confirmed technical conditions are separated clearly, with appropriate dates and limitations."
+        },
+        {
+          "question": "How should vacant units be described?",
+          "answer": "Publish dated inventory for individual units with area, clear height, available infrastructure, permitted use and conditions for taking possession."
+        },
+        {
+          "question": "Is warehouse real estate GEO the same as fulfilment operator GEO?",
+          "answer": "No. A property owner provides facilities and access, whereas a fulfilment operator provides operational services. Their buyer decisions and evidence differ."
+        },
+        {
+          "question": "What does industrial park GEO cost?",
+          "answer": "GAEO's standard audit and promotion plans apply. Scope depends on assets, regions and the number of distinct tenant requirements."
+        }
+      ],
+      "ctaTitle": "See which industrial and logistics sites AI recommends",
+      "ctaText": "Share your park website, available buildings and approved technical details to prepare a focused baseline audit.",
+      "request": "Warehouse and industrial park GEO: units, loading, power, transport access, tenants and AI recommendations."
+    }
+  }
 }
 ];
