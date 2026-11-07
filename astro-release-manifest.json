@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
-  "releasedAt": "2026-11-07T21:08:06.421Z",
+  "sourceCommit": "abb29156a55d4872dd9737147ec82a1b43eb7d19",
+  "releasedAt": "2026-11-07T21:41:09.615Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2843,7 +2843,7 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "07ab2dfa7889b729449a14b8599f79d19adc072df43adf447569ddbe26a42a56"
+      "sha256": "0d8a10356bc8e7502a8019e61be542e649356bb3a68f774d2706cd0bb1ad4fa8"
     },
     {
       "path": "en/index.html",
@@ -2876,6 +2876,16 @@
       "sha256": "344aedeb0ac30882eae793d2d09d5a54d4d5c3d9ef3f17ad666c375b94e64de8"
     },
     {
+      "path": "en/industries/commercial-property-agencies/index.html",
+      "kind": "html",
+      "sha256": "d6fb81db151e8ab5d3b190924f64c20ace41e9a25b25166243a5d9a84e051529"
+    },
+    {
+      "path": "en/industries/contract-cosmetics-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "dde104ca0691aa81ee4e98664f9f1b625468ab5606dd6eacffdc2423d852ec3c"
+    },
+    {
       "path": "en/industries/corporate-travel-mice/index.html",
       "kind": "html",
       "sha256": "28d54238bd00bb7218f7519c231f25f1bf0d98fb00e7899ab8a84f94453e350d"
@@ -2903,7 +2913,7 @@
     {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "263e1b2529a541c3413191fb8f8db616d90b92a29ccb6f1b732cc62d58471107"
+      "sha256": "e2063959f97af4e0f7f242cc9fd048bb4306d195b095591e92b92686e7c34f9b"
     },
     {
       "path": "en/industries/electronic-document-flow/index.html",
@@ -2944,6 +2954,11 @@
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
       "sha256": "5b616cea798cd616352db59d89755d35a68da8e2941d2f893ec90b0619b6f7e4"
+    },
+    {
+      "path": "en/industries/hotels-country-resorts/index.html",
+      "kind": "html",
+      "sha256": "2f8e23355b3661dfd9bf3f379819469e608422bd96d3e49192dd7ff3e0fd6c5b"
     },
     {
       "path": "en/industries/index.html",
@@ -3008,7 +3023,12 @@
     {
       "path": "en/industries/tourism/index.html",
       "kind": "html",
-      "sha256": "7f598cbac73606ac68dd36c45c9a2faf119cb3b1f9c2fe4a4cc8fe018c421165"
+      "sha256": "4e60ccc5069769090d5bea7e7635b6d07aafdca51eee6d9c07cb6bc271385e95"
+    },
+    {
+      "path": "en/industries/warehouse-industrial-parks/index.html",
+      "kind": "html",
+      "sha256": "f72d99e25d37f9a2e1ecec4a1fa0ecc8ef5dda1d947fb9398c2a91380180a9df"
     },
     {
       "path": "en/industries/warehouse-storage-3pl/index.html",
@@ -3028,7 +3048,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "a898f88e2340bdd53eccb947504ad7c3ac3e648b911f187b3d5b3f18c080ec68"
+      "sha256": "dd4c9d318daca78fdfa60291395802873fcaa07a5249f353e7e3a749b7b1235f"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3158,7 +3178,7 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "5234bb5636f666726e11ce702f748d187e2f00a01e9737d6882f06966769d3cd"
+      "sha256": "6649e6f2e1391ccd90e918de682cfffcf395e4dfd0ca9fdbbe81f88b6e775214"
     },
     {
       "path": "index.html",
@@ -3191,6 +3211,16 @@
       "sha256": "039e7e428c465affb8c0f26dd496ade112d94bd21c132554ce33688c60c25ac3"
     },
     {
+      "path": "industries/commercial-property-agencies/index.html",
+      "kind": "html",
+      "sha256": "f32c86ca2f647fcf429d278b0fd8cfce0c8c6a7fc0eb3c07df90c0c8b08f7126"
+    },
+    {
+      "path": "industries/contract-cosmetics-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "a9fead1608a11ce0a4c1f789de38d19472fb466fc3a0c1712bfd6dc5c476b085"
+    },
+    {
       "path": "industries/corporate-travel-mice/index.html",
       "kind": "html",
       "sha256": "a30f5204cdf7d49b229f70ee6152af7f88bd8022fcd704472e2e2853ab556616"
@@ -3218,7 +3248,7 @@
     {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
-      "sha256": "377d71d11eff2a62d7f121d637941ba6e12c0e810b4d14be0e1844d4dfed82db"
+      "sha256": "163e9751bc8cfafebd13afd3ecaf6fcdd41b0b83f35bb0f49599ff3369f067b6"
     },
     {
       "path": "industries/electronic-document-flow/index.html",
@@ -3259,6 +3289,11 @@
       "path": "industries/highload-it/index.html",
       "kind": "html",
       "sha256": "c1e1fb5ebb3507e4574ec5c250788391cd72f0c0caa84a69149280acb2e7f901"
+    },
+    {
+      "path": "industries/hotels-country-resorts/index.html",
+      "kind": "html",
+      "sha256": "7e941e8ebd3e6a4dbbfbeab02d098ca30b1665d449d7c0f2c7e8bfe817b52bdc"
     },
     {
       "path": "industries/index.html",
@@ -3323,7 +3358,12 @@
     {
       "path": "industries/tourism/index.html",
       "kind": "html",
-      "sha256": "dff28a307f1bdea5fd191569629a457bdcf6974ad12240941e54ecad5c6e8be1"
+      "sha256": "f59d46f37c854bd106f54ec9bbbf416bd41d7fed74ffd22360d0a5c8809bad22"
+    },
+    {
+      "path": "industries/warehouse-industrial-parks/index.html",
+      "kind": "html",
+      "sha256": "ebe6424950a2be74cc0edc265c372e6c3d271b8197f99afc6b20a7a31aeb54b9"
     },
     {
       "path": "industries/warehouse-storage-3pl/index.html",
@@ -3418,7 +3458,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "469b8362046654efb9bfd758a5490e8d89d6aa045d8c01e5c17c7fc707e177c3"
+      "sha256": "9260c56bc7853842a032c0e7312c17476b8cda4b40809b6fb419f9f2bedda9cc"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3473,7 +3513,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "67c405aa6ec73544400709487f4e946bb5cb35949b18c515653d75f6735a6d69"
+      "sha256": "969673ed1f8047b4bacada91658a0c31b1fa5aa05c4214b5c0a3744c8fc8e911"
     }
   ]
 }
