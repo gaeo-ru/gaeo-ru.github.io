@@ -13,15 +13,59 @@
   },
   "release": {
     "phase": 1,
-    "implementation_status": "implemented_locally_verified",
-    "publication_status": "PENDING",
+    "implementation_status": "published_verified",
+    "publication_status": "published",
     "source_branch": "astro-source",
     "work_branch": "feat/pricing-industry-catalog-2026-11-07",
-    "pull_request": "PENDING",
-    "source_commit": "PENDING",
-    "ci_runs": [],
-    "published_commit": "PENDING",
-    "live_verification": "PENDING"
+    "followup_fix_branch": "fix/pricing-production-template-2026-11-07",
+    "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/63",
+    "pull_requests": [
+      "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/63",
+      "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/64"
+    ],
+    "source_commit": "8039de634be7e71a5b5fa9edb09b6ea26a30a822",
+    "ci_runs": [
+      "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42368447700",
+      "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42369779548"
+    ],
+    "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42370099633",
+    "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42370375532",
+    "published_commit": "693f80ce1fe123ef47cf299f1acd84d4df6d040e",
+    "released_at": "2026-11-07T11:57:47.925Z",
+    "manifest_files": 642,
+    "built_html_pages": 103,
+    "sitemap_urls": 98,
+    "live_verification": {
+      "verified_date": "2026-11-07",
+      "public_browser": "PASS: guarantee terms, website development, pricing, calculator, project inquiry and WMS search",
+      "browser_proof": "docs/qa/tariffs-catalog-live-2026-11-07.jpg",
+      "example_quote": {
+        "plan": "guarantee",
+        "platforms": 6,
+        "prompts": 70,
+        "monthly_rub": 144900
+      },
+      "search_check": {
+        "query": "WMS",
+        "results": 3,
+        "total": 107
+      },
+      "lead_form_submitted": false,
+      "layout_checks": "PASS on final build and CI: 1440, 390 and 320 px; no horizontal overflow",
+      "scope_note": "Public desktop UI was checked via the cloud browser. Mobile viewport checks ran against the production build in local and CI Chromium; no direct public mobile-browser PASS is claimed.",
+      "https_report": "docs/qa/tariffs-live-https-report-2026-11-07.json",
+      "https_pages_passed": 34,
+      "https_homepages_passed": 2,
+      "image_urls_passed": 248,
+      "industry_webp_variants_passed": 214,
+      "service_image_variants_passed": 25,
+      "existing_image_urls_passed": 9,
+      "css_js_byte_matches": 10,
+      "sitemap_new_urls_present": 16
+    },
+    "next_phase": 2,
+    "next_batch": "2A",
+    "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation."
   },
   "status_definitions": {
     "existing_landing": "Для 4 прямых и 3 более широких соответствий уже есть публичная коммерческая страница. Это не 7 новых страниц и не 7 точных специализированных соответствий.",
@@ -36,7 +80,10 @@
     "existing_direct": 4,
     "existing_broader": 3,
     "catalog_ready_related": 36,
-    "needs_content": 64
+    "needs_content": 64,
+    "catalog_published": 107,
+    "new_industry_landings_in_phase_1": 0,
+    "existing_industry_pages_with_shared_pricing": 8
   },
   "candidate_batches": [
     {
@@ -106,9 +153,9 @@
       "match_scope": "broader",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "assess_specialization_boundary"
     },
     {
       "id": 2,
@@ -577,9 +624,9 @@
       "match_scope": "broader",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "assess_specialization_boundary"
     },
     {
       "id": 20,
@@ -1190,9 +1237,9 @@
       "match_scope": "broader",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "assess_specialization_boundary"
     },
     {
       "id": 40,
@@ -1413,9 +1460,9 @@
       "match_scope": "direct",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "maintain_existing_landing"
     },
     {
       "id": 48,
@@ -1597,9 +1644,9 @@
       "match_scope": "direct",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "maintain_existing_landing"
     },
     {
       "id": 55,
@@ -1943,9 +1990,9 @@
       "match_scope": "direct",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "maintain_existing_landing"
     },
     {
       "id": 68,
@@ -2278,9 +2325,9 @@
       "match_scope": "direct",
       "content_status": "existing_landing",
       "evidence_level": null,
-      "work_status": "existing_public_url",
-      "last_completed_step": "existing_public_page_before_phase_1",
-      "next_required_step": "accept_current_release"
+      "work_status": "existing_landing_tariffs_verified",
+      "last_completed_step": "phase_1_shared_pricing_published_verified",
+      "next_required_step": "maintain_existing_landing"
     },
     {
       "id": 81,
@@ -3087,12 +3134,14 @@
     }
   ],
   "price_source": "src/data/pricing.mjs",
-  "default_catalog_status": "ready_locally_publication_pending",
+  "default_catalog_status": "published_verified",
   "evidence_policy": "Уровень доказательности конкретной категории не назначается автоматически. Сверить первичные материалы перед заявлением об опыте или результате; кейс смежной категории не является кейсом этой специализации.",
   "next_step_definitions": {
     "accept_current_release": "Закончить приемку тарифов текущего выпуска на существующем URL, записать реальные коммиты и проверки.",
     "prepare_specialized_content": "Собрать собственные сценарии и фактуру; подготовить самостоятельную посадочную RU/EN с учетом связанного кластера.",
-    "research_new_subject": "Исследовать отрасль, источники и сценарии; определить родительский кластер и доказательную методику; затем подготовить RU/EN содержание."
+    "research_new_subject": "Исследовать отрасль, источники и сценарии; определить родительский кластер и доказательную методику; затем подготовить RU/EN содержание.",
+    "maintain_existing_landing": "Тарифы действующей страницы проверены. При следующих содержательных изменениях сохранять URL, общие цены и релевантные связи.",
+    "assess_specialization_boundary": "Более широкая действующая страница и ее тарифы проверены. Отдельную специализацию создавать только после определения самостоятельного интента и содержания."
   },
   "optional_progress_fields": [
     "catalog_status",
