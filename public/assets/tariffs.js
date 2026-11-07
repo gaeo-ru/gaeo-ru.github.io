@@ -4,10 +4,13 @@
   const config=JSON.parse(root.querySelector('[data-tariff-config]').textContent);
   const en=config.lang==='en',format=n=>en?'RUB '+n.toLocaleString('en-US'):n.toLocaleString('ru-RU')+' ₽';
   const planSelect=root.querySelector('[name="plan"]'),blocksInput=root.querySelector('[name="blocks"]');
+  const clampBlocks=()=>Math.max(0,Math.min(100,Math.trunc(Number(blocksInput.value)||0)));
   function update(){
    const plan=config.plans.find(p=>p.id===planSelect.value)||config.plans[0];
    const checked=[...root.querySelectorAll('[name="platform"]:checked')];
-   const blocks=Math.max(0,Math.min(100,Math.trunc(Number(blocksInput.value)||0)));
+   const blocks=clampBlocks();
+   root.querySelector('[data-prompt-adjust="-1"]').disabled=blocks===0;
+   root.querySelector('[data-prompt-adjust="1"]').disabled=blocks===100;
    const count=checked.length,extra=Math.max(0,count-config.basePlatforms),prompts=config.basePrompts+blocks*config.promptBlock;
    const platformsCost=extra*config.platformPrice,promptsCost=blocks*config.promptPrice,total=plan.amount+platformsCost+promptsCost;
    root.querySelector('[data-base]').textContent=format(plan.amount);
@@ -19,8 +22,14 @@
    const names=checked.map(input=>input.parentElement.querySelector('span').textContent).join(', ');
    root.querySelector('[data-quote-inquiry]').dataset.gaeoRequest=en?`GEO estimate: ${plan.name}. ${prompts} prompts. Platforms: ${names||'to be agreed'}. Additional platforms: ${extra}; additional prompt blocks: ${blocks}. From ${format(total)}/month.`:`Расчет GEO: ${plan.name}. ${prompts} запросов. Нейросети: ${names||'согласуем'}. Дополнительных нейросетей: ${extra}; пакетов запросов: ${blocks}. От ${format(total)}/мес.`;
   }
+  root.addEventListener('click',event=>{
+   const button=event.target.closest('[data-prompt-adjust]');
+   if(!button||!root.contains(button))return;
+   blocksInput.value=String(Math.max(0,Math.min(100,clampBlocks()+Number(button.dataset.promptAdjust))));
+   update();
+  });
   root.addEventListener('input',update);
-  root.addEventListener('change',()=>{blocksInput.value=String(Math.max(0,Math.min(100,Math.trunc(Number(blocksInput.value)||0))));update();});
+  root.addEventListener('change',()=>{blocksInput.value=String(clampBlocks());update();});
   update();
  });
 })();
