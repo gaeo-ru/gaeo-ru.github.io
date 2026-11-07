@@ -255,7 +255,8 @@ try{
  // Test the actual rendered design on both homepages and internal RU/EN pages.
  // Russian homepage has inline legacy CSS; its Cases styling must not regress.
  for(const route of ['/','/en/','/services/','/en/services/']){
-  for(const width of [1100,390,320]){
+  // Burger button is mobile-only; desktop navigation has its own checks above.
+  for(const width of [390,320]){
    const page=await browser.newPage({viewport:{width,height:800}});
    const errors=[];page.on('pageerror',error=>errors.push(String(error)));
    const response=await page.goto(base+route,{waitUntil:'domcontentloaded'});
