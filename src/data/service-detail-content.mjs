@@ -178,13 +178,13 @@ export const serviceDetails = {
     'geo-content': {
       eyebrow: 'Сопровождение и материалы',
       title: 'GEO-продвижение с созданием экспертного контента',
-      description: 'GEO + контент от GAEO: изучаю продукт, готовлю материалы и организую публикацию. От 50 промптов, от 5 нейросетей, ТЗ на сайт и ежемесячный мониторинг.',
+      description: 'GEO + контент от GAEO: изучаю продукт, создаю материалы, внедряю изменения сайта или готовлю ТЗ. От 50 промптов, 5 нейросетей и ежемесячный мониторинг.',
       sections: [
         {
           heading: 'Когда подготовку материалов лучше включить в работу',
           paragraphs: [
             'Тариф подходит бизнесу, которому нужно продвижение, но внутри команды нет времени на регулярную подготовку материалов. Я изучаю продукт, создаю контент и организую публикацию. От вас нужны факты о предложении, доступные подтверждения и участие в проверке содержания там, где важны профессиональные детали.',
-            'В тариф входят работы базового GEO-сопровождения: карта интентов, от 50 промптов, от 5 нейросетей, ТЗ на доработки сайта, дистрибуция, ссылочное продвижение и работа с репутацией. Главное отличие в том, что создание материалов беру на себя.'
+            'В тариф входят карта интентов, от 50 промптов, от 5 нейросетей, дистрибуция, ссылочное продвижение и работа с репутацией. Контент создаю самостоятельно. На сайте внедряю согласованные изменения сам или составляю ТЗ для команды клиента.'
           ],
           items: [],
           links: [{ href: '/services/geo-promotion/', label: 'Сравнить с тарифом, где контент создает ваша команда' }]
@@ -215,7 +215,7 @@ export const serviceDetails = {
           heading: 'Как контент связывается с измеримым результатом',
           paragraphs: [
             'Ежемесячно проверяю видимость по согласованной матрице и смотрю, как нейросети описывают компанию и ее услуги. Важны смысл рекомендации, точность сведений и источники ответа. Эти наблюдения помогают выбирать темы следующего этапа и исправлять слабые места.',
-            'Для новых продуктов можно добавить пакеты запросов, а для расширения аудитории дополнительные нейросети. Если нужен формат, в котором часть оплаты зависит от целевого BMR, его условия описаны отдельно. Там предусмотрены доработки сайта и договорная модель финансовых гарантий.'
+            'Для новых продуктов можно добавить пакеты запросов, а для расширения аудитории дополнительные нейросети. Если нужна финансовая гарантия BMR, отдельный тариф предусматривает, что доработки сайта я внедряю лично, а 50% ежемесячной оплаты зависит от достижения договорной цели.'
           ],
           items: [],
           links: [
@@ -226,10 +226,10 @@ export const serviceDetails = {
         }
       ],
       faq: [
-        { question: 'Что добавляется к обычному GEO-продвижению?', answer: 'Я сам изучаю продукт, создаю контент и организую его публикацию. Базовые работы по карте интентов, ТЗ на сайт, внешним источникам, репутации и мониторингу сохраняются.' },
+        { question: 'Что добавляется к обычному GEO-продвижению?', answer: 'Я изучаю продукт, создаю контент и организую публикацию. Согласованные изменения сайта внедряю сам либо готовлю ТЗ вашей команде. Работы по интентам, внешним источникам, репутации и мониторингу сохраняются.' },
         { question: 'Нужно ли нам участвовать в подготовке контента?', answer: 'Да, нужны достоверные вводные о продукте и проверка фактов. Особенно это касается профессиональных утверждений, актуальных условий и клиентских историй.' },
         { question: 'Сколько текстов будет подготовлено?', answer: 'Форматы и объем определяются планом конкретного проекта. Они зависят от приоритетных услуг, существующих материалов и требований площадок; единое число статей для всех бизнесов не установлено.' },
-        { question: 'Включено ли создание нового сайта?', answer: 'В GEO + контент входят ТЗ на доработки существующего сайта. Создание нового сайта обсуждается как отдельная услуга разработки.' }
+        { question: 'Включено ли создание нового сайта?', answer: 'В GEO + контент я внедряю согласованные изменения существующего сайта либо готовлю ТЗ для команды клиента. Создание нового сайта остается отдельной услугой.' }
       ]
     },
     'geo-guarantee': {
@@ -250,7 +250,7 @@ export const serviceDetails = {
           heading: 'Какие работы предусмотрены',
           paragraphs: [
             'В состав входят карта интентов, от 50 промптов и от 5 нейросетей, доработки сайта, создание контента, дистрибуция, ссылочное продвижение и работа с репутацией. Отчетность проводится 1 раз в месяц. Объем задач согласуется с исходным состоянием бизнеса и целью проекта.',
-            'В сравнении с тарифом GEO + контент здесь предусмотрены доработки сайта и финансовая модель по результату. Под доработками понимаются согласованные изменения для продвижения: состав страниц, сведения об услугах, связи материалов и технические требования. Разработка нового сайта имеет отдельный состав работ и тариф.'
+            'В тарифе с гарантиями я сам внедряю и дорабатываю согласованные элементы сайта, тогда как в GEO + контент могу подготовить ТЗ команде клиента. Половина ежемесячной оплаты зависит от достижения целевого BMR. Работы включают изменения страниц, сведений об услугах, перелинковки и технических элементов. Создание нового сайта остается отдельной услугой.'
           ],
           items: [],
           links: [
@@ -284,7 +284,7 @@ export const serviceDetails = {
         { question: 'Как устроена оплата с финансовой гарантией?', answer: 'За соответствующий месяц предусмотрены 50% фиксированной оплаты и 50% премии при достижении его цели BMR. Цели на 1, 2 и 3 месяц: стартовый BMR +5, +10 и +15 процентных пунктов соответственно. Методика измерения и порядок оплаты закрепляются в договоре.' },
         { question: 'Какой рост BMR предусмотрен за 3 месяца?', answer: 'После стартового замера цель на конец 1 месяца равна BMR старта +5 п.п., на конец 2 месяца +10 п.п., на конец 3 месяца +15 п.п. Например, при старте 20% цели составят 25%, 30% и 35%. Это процентные пункты, а не относительные проценты роста.' },
         { question: 'Это гарантия продаж или места в каждом ответе?', answer: 'Договорная цель относится к BMR по согласованной матрице. Продажи и качество обращений измеряются отдельно; ответы нейросетей проверяются в рамках принятой методики.' },
-        { question: 'Входят ли сайт и контент в этот формат?', answer: 'Предусмотрены согласованные доработки сайта и создание контента. Разработка нового сайта обсуждается отдельно, поскольку ее объем отличается от задач ежемесячного продвижения.' },
+        { question: 'Входят ли сайт и контент в этот формат?', answer: 'Я лично внедряю и дорабатываю согласованные элементы сайта, создаю контент и организую публикации. Создание нового сайта обсуждается отдельно.' },
         { question: 'Как применяется шкала при высоком стартовом BMR?', answer: 'Применимость целей проверяется до заключения договора. Если прибавка +15 п.п. выходит за 100%, условия требуют отдельного согласования; цель не заменяется автоматически на 100%.' }
       ]
     },
@@ -373,7 +373,7 @@ export const serviceDetails = {
           heading: 'Как новые запросы связаны с работами',
           paragraphs: [
             'Для новой группы фиксируем исходные ответы и определяем, каких фактов, страниц или внешних подтверждений не хватает. Дальнейшие задачи включаются в согласованный план сопровождения. Так расширение матрицы помогает выбрать содержание работ, а не просто увеличить число строк в отчете.',
-            'Распределение работ зависит от основного тарифа. В GEO-продвижении я готовлю ТЗ на сайт и контент, в GEO + контент также создаю материалы. Для варианта с финансовыми гарантиями изменение договорной матрицы и условий измерения закрепляется при согласовании расширения.'
+            'Распределение работ зависит от основного тарифа. В GEO-продвижении я готовлю ТЗ на сайт и контент, в GEO + контент создаю материалы и внедряю изменения сайта сам либо готовлю ТЗ. Для варианта с финансовыми гарантиями изменение договорной матрицы и условий измерения закрепляется при согласовании расширения.'
           ],
           items: [],
           links: [
@@ -575,13 +575,13 @@ export const serviceDetails = {
     'geo-content': {
       eyebrow: 'Promotion and publishing',
       title: 'GEO promotion with expert content creation',
-      description: 'GAEO researches your product, creates content and organizes publication. Includes at least 50 prompts, 5 AI platforms, website briefs and monthly visibility monitoring.',
+      description: 'GAEO researches your product, creates content and implements website changes or prepares specifications. Includes at least 50 prompts, 5 AI platforms and monthly monitoring.',
       sections: [
         {
           heading: 'When to include content production',
           paragraphs: [
             'This plan suits businesses that need promotion but have limited time for regular content creation. I research the product, write the material and organize publication. You provide accurate offer details, supporting evidence and professional input where the subject requires it.',
-            'The plan includes the work covered by the base GEO engagement: intent mapping, at least 50 prompts and 5 AI platforms, website briefs, distribution, link promotion and reputation work. The main difference is that I also take responsibility for creating the content.'
+            'The plan includes intent mapping, at least 50 prompts and 5 AI platforms, distribution, link promotion and reputation work. I create the content myself and either implement agreed website changes or prepare specifications for the client's team.'
           ],
           items: [],
           links: [{ href: '/en/services/geo-promotion/', label: 'Compare the plan where your team creates content' }]
@@ -612,7 +612,7 @@ export const serviceDetails = {
           heading: 'Connecting content with measured progress',
           paragraphs: [
             'Each month, I check visibility across the agreed matrix and examine how AI answers describe the business and its services. The meaning of the recommendation, accuracy of facts and cited sources matter. Those findings help choose the next topics and address gaps.',
-            'New products can be covered with additional prompt packs, while further AI platforms can broaden audience coverage. A separate plan ties part of the payment to a BMR target. That format includes agreed website changes and contractual financial guarantees.'
+            'New products can be covered with additional prompt packs, while further AI platforms can broaden audience coverage. A separate plan ties part of the payment to a BMR target. Under that plan, I personally implement the website improvements and payment is tied to contractual BMR targets.'
           ],
           items: [],
           links: [
@@ -623,10 +623,10 @@ export const serviceDetails = {
         }
       ],
       faq: [
-        { question: 'What is added to standard GEO promotion?', answer: 'I research the product, create the content and organize publication. Intent mapping, website briefs, external sources, reputation work and monitoring remain included.' },
+        { question: 'What is added to standard GEO promotion?', answer: 'I research the product, create and publish the content, and either implement website improvements or prepare specifications for your team. Intent mapping, external sources, reputation work and monitoring remain included.' },
         { question: 'Do we still need to help with content?', answer: 'Yes. Accurate product information and factual review are needed, particularly for professional claims, current terms and client stories.' },
         { question: 'How many articles will you create?', answer: 'Formats and volume are defined in the project plan. They depend on priority services, existing content and publication requirements; there is no universal article count for every business.' },
-        { question: 'Does this include a new website?', answer: 'GEO + content includes briefs for improving your existing site. Building a new website is a separate development service.' }
+        { question: 'Does this include a new website?', answer: 'GEO + content includes implementing agreed changes to your existing site or preparing specifications for your team. Building a new website is a separate development service.' }
       ]
     },
     'geo-guarantee': {
@@ -647,7 +647,7 @@ export const serviceDetails = {
           heading: 'The work covered by this format',
           paragraphs: [
             'The scope includes intent mapping, at least 50 prompts and 5 AI platforms, website changes, content creation, distribution, link promotion and reputation work. Reporting takes place once a month. Tasks are agreed in relation to the business’s starting position and the project objective.',
-            'Compared with GEO + content, this format includes agreed website changes and the result-linked payment model. Website work covers changes needed for promotion, such as service information, page structure, links between materials and technical requirements. A new website is a separate development project with its own scope and price.'
+            'Compared with GEO + content, where I may prepare specifications for your team, I directly implement the agreed website improvements under the guarantee plan. Half of the monthly fee is linked to the BMR target. Website work covers service information, page structure, links between materials and technical requirements. A new website remains a separate development project.'
           ],
           items: [],
           links: [
@@ -681,7 +681,7 @@ export const serviceDetails = {
         { question: 'How is payment structured?', answer: 'Each month has a 50% fixed payment and a 50% performance fee on reaching its BMR target. Targets for months 1, 2 and 3 are baseline BMR +5, +10 and +15 percentage points respectively. Measurement and payment terms are recorded in the contract.' },
         { question: 'What BMR growth is specified over 3 months?', answer: 'The target at the end of month 1 is baseline BMR +5 percentage points, then +10 at month 2 and +15 at month 3. A 20% baseline gives targets of 25%, 30% and 35%. These are percentage-point increases, not relative percentage growth.' },
         { question: 'Does this guarantee sales or a place in every answer?', answer: 'The contractual target concerns BMR across the agreed matrix. Sales and enquiry quality are measured separately; AI responses are assessed using the agreed methodology.' },
-        { question: 'Are website work and content included?', answer: 'The plan includes agreed website improvements and content creation. Building a new website is discussed separately because its scope differs from monthly promotion.' },
+        { question: 'Are website work and content included?', answer: 'I implement and refine the agreed website improvements myself, create content and organize publication. Building a new website is a separate service.' },
         { question: 'What happens if the baseline BMR is already high?', answer: 'The applicability of the targets is checked before signing. If adding 15 percentage points would exceed 100%, the terms require separate agreement; the target is not automatically capped at 100%.' }
       ]
     },
@@ -770,7 +770,7 @@ export const serviceDetails = {
           heading: 'Connecting prompts with the work plan',
           paragraphs: [
             'For each new group, we record initial responses and identify missing facts, pages or supporting sources. The resulting tasks become part of the agreed promotion plan. Expanding the matrix therefore informs what needs to be done as well as what needs to be measured.',
-            'Responsibilities follow the main plan. Standard GEO promotion includes website and content briefs; GEO + content also includes content creation. For the financial-guarantee format, changes to the contractual matrix and measurement terms are recorded when the extension is agreed.'
+            'Responsibilities follow the main plan. Standard GEO promotion includes website and content briefs; GEO + content adds content creation and hands-on website changes or implementation specifications. For the financial-guarantee format, changes to the contractual matrix and measurement terms are recorded when the extension is agreed.'
           ],
           items: [],
           links: [
