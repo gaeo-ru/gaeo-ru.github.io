@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "59f8461db7fa92a650f6cd00c1ca954c32306ae7",
-  "releasedAt": "2026-11-07T18:25:29.072Z",
+  "sourceCommit": "b45a660d29411bf1a2a977e50fe81ff9f62b1c7a",
+  "releasedAt": "2026-11-07T19:19:13.543Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2843,7 +2843,7 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "6b6fff01c3a20a70c8c8813cfc7ae541594a607b44678788717eaa6730f818cf"
+      "sha256": "f676989e83f9e1d5fbac15511aed3b4b7a2b9de0fb7554bda8d9e25674b1ef10"
     },
     {
       "path": "en/index.html",
@@ -2861,9 +2861,19 @@
       "sha256": "440010d4c6dadc3f0355bae6d8af9e17aa24b61e71f1d39d44ee9e2e61b3942e"
     },
     {
+      "path": "en/industries/crm-erp-platforms/index.html",
+      "kind": "html",
+      "sha256": "4aa5ef2d228f312502b638c320d8307230c1f6a6976dbd373deaea5e98e6bec3"
+    },
+    {
       "path": "en/industries/ecommerce/index.html",
       "kind": "html",
       "sha256": "9e31d6cbb7bda4bdeee4dbd730ebf77d04ae59a3be97a9a74aa16386b988fca3"
+    },
+    {
+      "path": "en/industries/family-inheritance-lawyers/index.html",
+      "kind": "html",
+      "sha256": "afacc5b4a5b21833d20f7793a4ce87688f7fa62602b6f2403a7d01669a820cb5"
     },
     {
       "path": "en/industries/fulfillment/index.html",
@@ -2878,7 +2888,7 @@
     {
       "path": "en/industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "0836b1a9b2697dc44c202d19c707c00e4c2548dd60a3790776807df194a582b7"
+      "sha256": "fe250e1b07128bfb4d854adef0202e1aa573682747def98e093cf652a8e331d7"
     },
     {
       "path": "en/industries/index.html",
@@ -2888,7 +2898,7 @@
     {
       "path": "en/industries/legal/index.html",
       "kind": "html",
-      "sha256": "50ab5e2d71edcd195b4028fd5d749ceab442bfa5250197ba2a1f83e469dca8b2"
+      "sha256": "936631cae932581a3fdc2f760c636ab8565f9b8ffac7f2e1fdd833795877495b"
     },
     {
       "path": "en/industries/metal-structures/index.html",
@@ -2899,6 +2909,16 @@
       "path": "en/industries/pharma/index.html",
       "kind": "html",
       "sha256": "b36b8c24d90cf38ce230f1c9d851197acf4f0d9465cdf144a4e6908683a2b946"
+    },
+    {
+      "path": "en/industries/residential-property-agencies/index.html",
+      "kind": "html",
+      "sha256": "a9009103c7c2a66592b6f63f0c8cf0044c9500c9be0cbfdc98a9698d5e544d94"
+    },
+    {
+      "path": "en/industries/systems-integrators-it-outsourcers/index.html",
+      "kind": "html",
+      "sha256": "6c7d1f275cc17b71dd90ba90ec160094b617bb1536590dc9a39ffd0a1e35076d"
     },
     {
       "path": "en/industries/tourism/index.html",
@@ -2918,7 +2938,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "aeb1534edf929d859146841a6c365089452a976507212cff1c2148b70538a86b"
+      "sha256": "13ff2b6bda456807a9f748f495ba865cc79a5c5ef4e1d01b7d3327c948fbd09b"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3048,7 +3068,7 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "53724fed67e2db036f41a2ea2f2ea94be26664a88161f489db812f59842aac1a"
+      "sha256": "513c98dbac970c8201c4a941e2497d6a381933705cad40ae568d2093c84c2122"
     },
     {
       "path": "index.html",
@@ -3066,9 +3086,19 @@
       "sha256": "610cef1ae6aa5ad07da0ba954b6845b690020b9d7318168d613ef9cd5a2305d1"
     },
     {
+      "path": "industries/crm-erp-platforms/index.html",
+      "kind": "html",
+      "sha256": "04b45b1f8a2c1b4a48a54ce31dbad4f250120ece9aab0a8c37ce00ce65187a5a"
+    },
+    {
       "path": "industries/ecommerce/index.html",
       "kind": "html",
       "sha256": "1438ac9d8c50b449f3f883b618ea152cecc0583ee57034aea8f1bf86ea2142cb"
+    },
+    {
+      "path": "industries/family-inheritance-lawyers/index.html",
+      "kind": "html",
+      "sha256": "d4e3d0a00a62f832b8b923a3a3675ad0c766c6884cc91dca151552ed12a7423e"
     },
     {
       "path": "industries/fulfillment/index.html",
@@ -3083,7 +3113,7 @@
     {
       "path": "industries/highload-it/index.html",
       "kind": "html",
-      "sha256": "83d4cd676b336f955a8024034f8aa2549dd9a491da1c2493f825208350ada76e"
+      "sha256": "d23d6a53154369c610a9413f0a06c9e37efba45aaa86b526abb697201fa3209c"
     },
     {
       "path": "industries/index.html",
@@ -3093,7 +3123,7 @@
     {
       "path": "industries/legal/index.html",
       "kind": "html",
-      "sha256": "1bd0a4a9ee5469611f3c379be7ba96f8d7944e0d4d6be94a08883119dcc3cd86"
+      "sha256": "7bba35801b3ea89d60985709c349382b409284f87875159f2c57ce87f1e040bc"
     },
     {
       "path": "industries/metal-structures/index.html",
@@ -3104,6 +3134,16 @@
       "path": "industries/pharma/index.html",
       "kind": "html",
       "sha256": "e5924d21d276e3c7ae9a89cf1f18f584610d64e76dee5d1c5650e8b1763a834f"
+    },
+    {
+      "path": "industries/residential-property-agencies/index.html",
+      "kind": "html",
+      "sha256": "0c4f52fdd4a039684777026cc0f5acafbc22c6e5cdd85c4c618feeb3c58089d2"
+    },
+    {
+      "path": "industries/systems-integrators-it-outsourcers/index.html",
+      "kind": "html",
+      "sha256": "fbfefd2bd6b88ae75883c48094c44b96dbe48b9fc7db8ed614e9353d84067c06"
     },
     {
       "path": "industries/tourism/index.html",
@@ -3198,7 +3238,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "d3c3d8ac3c78c646811a4278f8d88d30517fbcc04352a628ddf62ff83c857122"
+      "sha256": "f1ef0bbf31c470f0a16d79793d79869d814ff52d1a7a75c0c2793c88e4ca297b"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3253,7 +3293,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "21f617fb41520fdbe20cce88932f3356435e6050b71b8fbbc8887533968c06e6"
+      "sha256": "565a211771a8597979b4e6178cc99dfc80c62fe72f2fe36fd242189d4535fd93"
     }
   ]
 }
