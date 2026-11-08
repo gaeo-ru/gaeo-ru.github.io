@@ -14,47 +14,41 @@ concurrency:
 jobs:
   accept:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 10
     steps:
-      - name: Load this isolated one-time inspection script
-        uses: actions/checkout@v4
-      - name: Check out the exact merged release source
-        uses: actions/checkout@v4
-        with:
-          ref: e8df34a2f7fb06325b78fbb5e75db78e3c736234
-          path: site
-          fetch-depth: 0
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Prepare the existing browser test dependencies
-        working-directory: site
+      - run: npm install --no-audit --no-fund && npx playwright install chromium
+      - name: Diagnose public directory geometry without changing the site
         run: |
-          npm install --no-audit --no-fund
-          npx playwright install chromium
-      - name: Select a successful Pages execution, allowing superseded cancelled duplicates
-        working-directory: site
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('../scripts/_finalize-sector-3b.mjs')
-          text = p.read_text()
-          old = "pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name));"
-          new = "pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name)&&x.status==='completed'&&x.conclusion==='success');"
-          assert text.count(old) == 1, 'Expected exact Pages selector'
-          p.write_text(text.replace(old,new))
-          PY
-      - name: Confirm production and Pages, inspect the public site, update the same handoff
-        working-directory: site
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: node ../scripts/_finalize-sector-3b.mjs
+          node --input-type=module <<'JS'
+          import {chromium} from 'playwright';
+          import fs from 'node:fs';
+          fs.mkdirSync('visual-sector-3b',{recursive:true});
+          const browser=await chromium.launch({headless:true});
+          const report=[];
+          const inspect=page=>page.evaluate(()=>({width:innerWidth,document:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.right>innerWidth+1||r.left< -1);}).map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {tag:e.tagName,class:e.className,text:e.textContent.slice(0,180),left:r.left,right:r.right,width:r.width,scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,display:s.display,minWidth:s.minWidth,maxWidth:s.maxWidth,whiteSpace:s.whiteSpace,overflowWrap:s.overflowWrap,wordBreak:s.wordBreak,fontSize:s.fontSize,padding:s.padding,grid:s.gridTemplateColumns};}).slice(0,35)}));
+          for(const route of ['/strategies/','/en/strategies/']){
+            const page=await browser.newPage({viewport:{width:320,height:1000},reducedMotion:'reduce'});
+            await page.goto('https://gaeo.ru'+route,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
+            const before=await inspect(page);
+            await page.screenshot({path:'visual-sector-3b/'+(route.startsWith('/en/')?'en':'ru')+'-before-320.jpg',type:'jpeg',quality:70,fullPage:true});
+            const css='@media(max-width:760px){main .listing-grid{grid-template-columns:minmax(0,1fr)}main .list-card{min-width:0;overflow-wrap:anywhere}main .list-card .button,main .page-cta .button{max-width:100%;white-space:normal;box-sizing:border-box}main .listing-hero h1{overflow-wrap:anywhere}main .page-cta h2{overflow-wrap:anywhere}}';
+            await page.addStyleTag({content:css});
+            const after=await inspect(page);
+            await page.screenshot({path:'visual-sector-3b/'+(route.startsWith('/en/')?'en':'ru')+'-candidate-320.jpg',type:'jpeg',quality:70,fullPage:true});
+            report.push({route,before,after,css});
+            console.log('DIRECTORY_DIAGNOSIS',JSON.stringify(report.at(-1)));
+            await page.close();
+          }
+          await browser.close();fs.writeFileSync('visual-sector-3b/diagnosis.json',JSON.stringify(report,null,2)+'\n');
+          JS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: sector-3b-public-release-acceptance
-          path: |
-            site/visual-sector-3b/
-            site/visual-industry/3b-*.png
+          name: sector-3b-directory-diagnosis
+          path: visual-sector-3b/
           if-no-files-found: error
           retention-days: 14
