@@ -22,6 +22,8 @@ export function validateArticle(a){
   need(categoryFor(a.category),`${a.id}: unknown category`);
   need(a.familyId,`${a.id}: familyId required`);
   need(!a.excluded,`${a.id}: excluded article`);
+  const selection=a.contentType==='selection';
+  if(selection)need(a.category==='products'&&a.firstPlace===null&&a.entityType==='Product',`${a.id}: product selection cannot declare a winner`);
   for(const key of ['sourceDate','publishedDate','modifiedDate'])need(/^\d{4}-\d{2}-\d{2}$/.test(a[key])&&!Number.isNaN(Date.parse(a[key])),`${a.id}: invalid ${key}`);
   need(a.modifiedDate>=a.publishedDate,`${a.id}: modified date before publication`);
   need(a.source&&a.source.status==='found',`${a.id}: a Drive or Yandex source is required`);
@@ -51,7 +53,8 @@ export function validateArticle(a){
     need(!/\[\[(?:AGENT|ВСТАВИТЬ)|\[ИЗОБРАЖЕНИЕ|TODO|TBD/i.test(JSON.stringify(t)),`${a.id}/${lang}: unfinished text`);
     need(!/[<>]/.test(JSON.stringify(t)),`${a.id}/${lang}: HTML is not allowed in article data`);
   }
-  need(a.ru.ranking[0].name===a.firstPlace,`${a.id}: winner changed`);
+  if(selection)need([...a.ru.ranking,...a.en.ranking].every(e=>e.score===undefined||e.score===null||e.score===''),`${a.id}: selection scores are unsupported`);
+  else need(a.ru.ranking[0].name===a.firstPlace,`${a.id}: winner changed`);
   need(a.ru.ranking.length===a.en.ranking.length,`${a.id}: RU/EN count mismatch`);
   a.ru.ranking.forEach((r,i)=>need(r.position===a.en.ranking[i].position&&(r.url||'')===(a.en.ranking[i].url||'')&&String(r.score||'')===String(a.en.ranking[i].score||''),`${a.id}: ranking order/URL/score mismatch ${i+1}`));
 }
@@ -69,7 +72,7 @@ export function articleSchema(a,lang){
     {'@type':'ProfessionalService','@id':SITE+'/#business',name:'GAEO.ru',url:SITE+'/',founder:{'@id':SITE+'/#person'}},
     {'@type':'WebPage','@id':url+'#webpage',url,name:t.title,description:t.description,inLanguage:lang==='en'?'en':'ru-RU',isPartOf:{'@id':SITE+'/#website'},mainEntity:{'@id':url+'#article'},breadcrumb:{'@id':url+'#breadcrumb'}},
     {'@type':'Article','@id':url+'#article',url,headline:t.title,description:t.description,inLanguage:lang==='en'?'en':'ru-RU',datePublished:a.publishedDate,dateModified:a.modifiedDate,author:{'@id':SITE+'/#person'},publisher:{'@id':SITE+'/#business'},mainEntityOfPage:{'@id':url+'#webpage'},articleSection:categoryFor(a.category)[lang],isAccessibleForFree:true,isBasedOn:versions,citation:versions,mainEntity:{'@id':url+'#ranking'},...(a.images?.length?{image:a.images.map(x=>SITE+x.src)}:{}),...(lang==='en'?{translationOfWork:{'@id':other+'#article'}}:{workTranslation:{'@id':other+'#article'}})},
-    {'@type':'ItemList','@id':url+'#ranking',name:t.title,itemListOrder:'https://schema.org/ItemListOrderAscending',numberOfItems:t.ranking.length,itemListElement:t.ranking.map(e=>({'@type':'ListItem',position:e.position,name:e.name,url:url+'#place-'+e.position,item:{'@type':a.entityType||'Organization',name:e.name,...(e.url?{url:e.url}:{})}}))},
+    {'@type':'ItemList','@id':url+'#ranking',name:t.title,itemListOrder:a.contentType==='selection'?'https://schema.org/ItemListUnordered':'https://schema.org/ItemListOrderAscending',numberOfItems:t.ranking.length,itemListElement:t.ranking.map(e=>({'@type':'ListItem',position:e.position,name:e.name,url:url+'#place-'+e.position,item:{'@type':a.entityType||'Organization',name:e.name,...(e.url?{url:e.url}:{})}}))},
     {'@type':'FAQPage','@id':url+'#faq',isPartOf:{'@id':url+'#webpage'},mainEntity:t.faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}
   ];
   return graph;
