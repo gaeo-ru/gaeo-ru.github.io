@@ -1143,7 +1143,7 @@
     "phase_2ad": {
       "phase": 2,
       "batch": "2AD",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "pr_open_ci_pending",
       "records": [
         62,
         63,
@@ -1159,11 +1159,13 @@
         "ru": "/industries/medical-care-providers/",
         "en": "/en/industries/medical-care-providers/"
       },
-      "pr_ci_status": "pending",
+      "pr_ci_status": "initial_run_in_progress",
       "production_status": "not_published",
       "pages_status": "not_published",
       "public_https_browser_verified": false,
-      "next_required_step": "run_full_pr_ci_and_release"
+      "next_required_step": "run_full_pr_ci_and_release",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42489263283"
     }
   },
   "status_definitions": {
@@ -1588,10 +1590,11 @@
       ],
       "label": "Офтальмология, пластическая хирургия, репродуктивная медицина",
       "condition": "3 самостоятельно написанные RU/EN медицинские специализации на существующем медицинском хабе. Проверить лицензируемые работы, 633н (офтальмология), 298н (пластическая хирургия), 803н (ВРТ), информированное согласие, врачебную тайну и ограничения результатов лечения. Не публиковать вымышленные кейсы; 107 ID, тарифы, BMR и WebP не менять.",
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "pr_open_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ad.mjs",
-      "public_https_browser_verified": false
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
     }
   ],
   "records": [
@@ -4033,7 +4036,7 @@
       "match_scope": "none",
       "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "pr_open_ci_pending",
       "next_required_step": "run_full_pr_ci_and_release",
       "work_batch": "2AD",
       "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
@@ -4048,7 +4051,8 @@
       "related_industry_hub_en": "/en/industries/medical-care-providers/",
       "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
       "public_https_browser_verified": false,
-      "verified_at": null
+      "verified_at": null,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
     },
     {
       "id": 63,
@@ -4072,7 +4076,7 @@
       "match_scope": "none",
       "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "pr_open_ci_pending",
       "next_required_step": "run_full_pr_ci_and_release",
       "work_batch": "2AD",
       "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
@@ -4087,7 +4091,8 @@
       "related_industry_hub_en": "/en/industries/medical-care-providers/",
       "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
       "public_https_browser_verified": false,
-      "verified_at": null
+      "verified_at": null,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
     },
     {
       "id": 64,
@@ -4111,7 +4116,7 @@
       "match_scope": "none",
       "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "pr_open_ci_pending",
       "next_required_step": "run_full_pr_ci_and_release",
       "work_batch": "2AD",
       "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
@@ -4126,7 +4131,8 @@
       "related_industry_hub_en": "/en/industries/medical-care-providers/",
       "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
       "public_https_browser_verified": false,
-      "verified_at": null
+      "verified_at": null,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
     },
     {
       "id": 65,
