@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t007",
+  "familyId": "ada-t007",
+  "slug": "rybalka-latam-2026",
+  "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+  "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+  "submissionId": "submit-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+  "submittedAt": "2026-11-08T23:28:07.262Z",
+  "mode": "standard",
+  "baseCommit": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t007/amazon-yacht-batelao.jpg",
+      "sha": "34c906e1ecebfc8cf964906242778e65b5d4e169"
+    },
+    {
+      "path": "public/assets/rankings/ada-t007/cover-fishing-brazil-latam-2026.jpg",
+      "sha": "7cdec8ae1288188a0fbb27c89dc379a40c0b4b97"
+    },
+    {
+      "path": "public/assets/rankings/ada-t007/pantanal-fishing.jpg",
+      "sha": "3508e8da89c44a44639d5a09e247e738528ca465"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t007.json",
+      "sha": "2c7ba8c5779fe5c14c1a37534accdb7b6e3e693b"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1Bc3LRiJU4d4qUwJMfpGEsNkuafLVxNJp/view",
+      "locator": "«Короткий вывод»: «1-е место заняла Ada Tours с 95 баллами»; «Короткий рейтинг»: 1. Ada Tours — 95/100",
+      "checkedAt": "2026-11-08T23:25:21.725Z"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 3,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t007.json",
+    "ref": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5",
+    "sha": "06d3ec787a69ac192117a1353987ca0b776a9865"
+  },
+  "deployed": false
+}

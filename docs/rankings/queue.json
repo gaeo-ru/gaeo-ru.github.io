@@ -904,21 +904,47 @@
       "slug": "rybalka-latam-2026",
       "title": "Рыболовные туры в Бразилию и Латинскую Америку как специализированная или комбинированная поездка",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t007.json",
       "earliestPublicationDate": "2026-09-11",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
         "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
         "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
         "token": "rk-mw8gcfp9-0tpeufkfucc-oj1vafrgts",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:15.728Z",
-        "expiresAt": "2026-11-09T05:17:15.728Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t007.json",
+        "committedAt": "2026-11-08T23:28:07.262Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t007/amazon-yacht-batelao.jpg",
+            "sha": "34c906e1ecebfc8cf964906242778e65b5d4e169"
+          },
+          {
+            "path": "public/assets/rankings/ada-t007/cover-fishing-brazil-latam-2026.jpg",
+            "sha": "7cdec8ae1288188a0fbb27c89dc379a40c0b4b97"
+          },
+          {
+            "path": "public/assets/rankings/ada-t007/pantanal-fishing.jpg",
+            "sha": "3508e8da89c44a44639d5a09e247e738528ca465"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t007.json",
+            "sha": "2c7ba8c5779fe5c14c1a37534accdb7b6e3e693b"
+          }
+        ],
+        "baseCommit": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1Bc3LRiJU4d4qUwJMfpGEsNkuafLVxNJp/view",
+        "locator": "«Короткий вывод»: «1-е место заняла Ada Tours с 95 баллами»; «Короткий рейтинг»: 1. Ada Tours — 95/100",
+        "checkedAt": "2026-11-08T23:25:21.725Z"
+      },
+      "block": null
     },
     {
       "id": "orient-t001",
@@ -2019,8 +2045,9 @@
       "expiresAt": "2026-11-09T05:17:15.728Z",
       "previousStatus": "ready",
       "taskId": "ada-t007",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-mw8gcfp9-94rfjgw4x7"
     },
     {
       "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
@@ -2215,5 +2242,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:27:52.617Z"
+  "updatedAt": "2026-11-08T23:28:07.262Z"
 }
