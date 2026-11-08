@@ -1,0 +1,47 @@
+name: One-time 3C public HTTPS and browser acceptance
+on:
+  push:
+    branches: ['feat/sector-guides-3c-2026-11-09']
+    paths:
+      - '.github/workflows/verify-sector-3c-public.yml'
+permissions:
+  contents: read
+concurrency:
+  group: gaeo-one-time-sector-3c-public
+  cancel-in-progress: false
+jobs:
+  accept:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Load isolated 3C acceptance instructions
+        uses: actions/checkout@v4
+      - name: Load exactly the published GitHub Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build matching Astro source and install browser
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          npx playwright install chromium
+      - name: Confirm published main and public HTTPS bytes on 26 pages
+        run: node scripts/_verify-sector-3c-public.mjs
+      - name: Repeat 3C browser checks against public gaeo.ru at 1440, 390, 320
+        env:
+          GAEO_QA_BASE_URL: https://gaeo.ru
+        run: npm run check:sector3c
+      - name: Preserve finite acceptance evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sector-3c-public-acceptance
+          path: |
+            visual-sector-3c/report.json
+            visual-industry/3c-*.png
+          if-no-files-found: ignore
+          retention-days: 14
