@@ -1204,6 +1204,30 @@
       "next_required_step": "run_full_pr_ci_and_release",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42489263283"
+    },
+    "phase_2ai": {
+      "phase": 2,
+      "batch": "2AI",
+      "records": [
+        28
+      ],
+      "status": "pr_two_full_ci_pass_pending_latest_source_rebase_merge",
+      "work_branch": "feat/industry-specializations-batch-2ai-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ai.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/123",
+      "tested_head_sha": "71bdc36fa9608933919cd402a1b19827a7bab813",
+      "pr_ci_status": "pass",
+      "pr_ci_runs": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42490894876",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172"
+      ],
+      "prepared_specialization_pairs": 1,
+      "prepared_ru_en_urls": 2,
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "blocker": "While PR CI ran, astro-source advanced with parallel 2AH. Reconcile source and PR before merge; do not overwrite 2AB, 2AD, 2AH.",
+      "next_required_step": "Rebase existing PR #123 on latest astro-source preserving docs and other batches; full PR CI PASS, merge, production/main/Pages, then direct public HTTPS desktop/390/320 and live fields."
     }
   },
   "status_definitions": {
@@ -1671,6 +1695,20 @@
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
       "public_https_browser_verified": false,
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+    },
+    {
+      "batch": "2AI",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        28
+      ],
+      "label": "Аудиторские и консалтинговые компании: независимый аудит, реестры и отраслевые задания",
+      "condition": "Отличать аудиторские задания №28 от общего консалтинга №72. Проверять 307-ФЗ, общий и специальный реестры, не выдумывать клиентов или квалификацию GAEO.",
+      "work_status": "pr_two_full_ci_pass_pending_rebase_merge",
+      "work_branch": "feat/industry-specializations-batch-2ai-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ai.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/123"
     }
   ],
   "records": [
@@ -2797,10 +2835,27 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_full_ci_pass_latest_rebase_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/audit-assurance-consulting-firms/",
+      "planned_landing_url_en": "/en/industries/audit-assurance-consulting-firms/",
+      "work_branch": "feat/industry-specializations-batch-2ai-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ai.mjs",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_83311/5662200f71fec9b8ab1a6e0615896613d3852b5a/",
+        "https://www.consultant.ru/document/cons_doc_LAW_83311/936cae07de7eea62c31127923f43ce2f0e2e1599/",
+        "https://roskazna.gov.ru/kontrol-i-audit/nadzor-za-auditorskoj-deyatelnostyu/reestr-auditorskih-organizaciy-okazyvayuschih-auditorskie-uslugi-obschestvenno-znachimym-organizaciyam/reestr-auditorskih-organizaciy-okazyvayuschih-auditorskie-uslugi-obschestvenno-znachimym-organizaciyam"
+      ],
+      "last_completed_step": "phase_2ai_original_ru_en_pr_123_two_full_ci_pass",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/123",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42490894876",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 29,
