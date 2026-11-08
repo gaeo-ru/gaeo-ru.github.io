@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "No new writing in this pass. 3 unwritten ID: 30,75,76. Existing broader coverage #1,#19,#39. Independently verify direct public HTTPS of all 104 bilingual pairs when available.",
+    "next_batch": "Publish prepared 2AK #30/#75/#76 from de81cdb, check main/Pages/live; then confirm 107×2 final coverage. Do not write duplicate pages.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1448,6 +1448,31 @@
       "public_direct_https_browser_checked": false,
       "public_direct_https_limitation": "web.open gaeo.ru inaccessible and container DNS cannot resolve gaeo.ru; source/main/Pages do not prove independent live HTTP/mobile appearance",
       "user_instruction": "Publish existing written content; do not write the three missing content families now"
+    },
+    "phase_2ak": {
+      "phase": 2,
+      "batch": "2AK",
+      "records": [
+        30,
+        75,
+        76
+      ],
+      "source_content_commit": "b66923a1d2e25bd54a370eacbe0cb2ecf9e30e63",
+      "source_activation_commit": "de81cdb8d3593a725c6c173f92914ddbaaa0b9ff",
+      "status": "source_prepared_production_ci_in_progress_not_yet_deployed",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42498571360",
+      "pages_status": "not_confirmed",
+      "direct_https_verified": false,
+      "urls_ru": [
+        "/industries/insurance-brokers/",
+        "/industries/car-dealerships/",
+        "/industries/vehicle-sourcing-import/"
+      ],
+      "urls_en": [
+        "/en/industries/insurance-brokers/",
+        "/en/industries/car-dealerships/",
+        "/en/industries/vehicle-sourcing-import/"
+      ]
     }
   },
   "status_definitions": {
@@ -3237,13 +3262,14 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_and_imported",
       "evidence_level": null,
-      "work_status": "not_started_by_user_instruction",
-      "next_required_step": "Только по следующей команде: подготовить полноценные оригинальные RU/EN страницы, проверить факты, опубликовать. Сейчас не писать.",
-      "coverage_kind": "unwritten_no_dedicated_bilingual_landing",
-      "coverage_release_status": "not_written_not_published_industry_catalog_only",
-      "coverage_checked_date": "2026-11-08"
+      "work_status": "source_imported_production_ci_pending",
+      "next_required_step": "Check full CI production workflow 42498571360, main manifest six HTML+sitemap, GitHub Pages; external public HTTPS separately.",
+      "coverage_kind": "dedicated_original_bilingual_specialization_prepared",
+      "coverage_release_status": "source_prepared_ci_pending",
+      "coverage_checked_date": "2026-11-08",
+      "last_completed_step": "2AK original bilingual content (b66923a), source import and index/QA (de81cdb)"
     },
     {
       "id": 31,
@@ -5161,13 +5187,14 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_and_imported",
       "evidence_level": null,
-      "work_status": "not_started_by_user_instruction",
-      "next_required_step": "Только по следующей команде: подготовить полноценные оригинальные RU/EN страницы, проверить факты, опубликовать. Сейчас не писать.",
-      "coverage_kind": "unwritten_no_dedicated_bilingual_landing",
-      "coverage_release_status": "not_written_not_published_industry_catalog_only",
-      "coverage_checked_date": "2026-11-08"
+      "work_status": "source_imported_production_ci_pending",
+      "next_required_step": "Check full CI production workflow 42498571360, main manifest six HTML+sitemap, GitHub Pages; external public HTTPS separately.",
+      "coverage_kind": "dedicated_original_bilingual_specialization_prepared",
+      "coverage_release_status": "source_prepared_ci_pending",
+      "coverage_checked_date": "2026-11-08",
+      "last_completed_step": "2AK original bilingual content (b66923a), source import and index/QA (de81cdb)"
     },
     {
       "id": 76,
@@ -5189,13 +5216,14 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_and_imported",
       "evidence_level": null,
-      "work_status": "not_started_by_user_instruction",
-      "next_required_step": "Только по следующей команде: подготовить полноценные оригинальные RU/EN страницы, проверить факты, опубликовать. Сейчас не писать.",
-      "coverage_kind": "unwritten_no_dedicated_bilingual_landing",
-      "coverage_release_status": "not_written_not_published_industry_catalog_only",
-      "coverage_checked_date": "2026-11-08"
+      "work_status": "source_imported_production_ci_pending",
+      "next_required_step": "Check full CI production workflow 42498571360, main manifest six HTML+sitemap, GitHub Pages; external public HTTPS separately.",
+      "coverage_kind": "dedicated_original_bilingual_specialization_prepared",
+      "coverage_release_status": "source_prepared_ci_pending",
+      "coverage_checked_date": "2026-11-08",
+      "last_completed_step": "2AK original bilingual content (b66923a), source import and index/QA (de81cdb)"
     },
     {
       "id": 77,
@@ -6754,6 +6782,13 @@
     "catalog_items_en": 107,
     "public_direct_https_browser_checked": false,
     "public_direct_https_limitation": "web.open gaeo.ru inaccessible and container DNS cannot resolve gaeo.ru; source/main/Pages do not prove independent live HTTP/mobile appearance",
-    "user_instruction": "Publish existing written content; do not write the three missing content families now"
+    "user_instruction": "2026-11-08: Write and publish #30 #75 #76 now; all three original RU/EN pairs authored in source, CI/Pages pending.",
+    "phase_2ak_source_prepared_pairs": 3,
+    "phase_2ak_source_prepared_ids": [
+      30,
+      75,
+      76
+    ],
+    "pending_release_source_commit": "de81cdb8d3593a725c6c173f92914ddbaaa0b9ff"
   }
 }
