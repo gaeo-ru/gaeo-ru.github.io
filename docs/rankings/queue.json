@@ -1241,9 +1241,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t018.json",
       "earliestPublicationDate": "2026-09-28",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-gaeo-20261109-0215-p4j7bm9",
+        "requestId": "claim-gaeo-20261109-0215-p4j7bm9",
+        "token": "rk-mw8getnz-bbhq71e275-jxmlyfbo94f",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:19:13.973Z",
+        "expiresAt": "2026-11-09T05:19:13.973Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t019",
@@ -2077,7 +2086,19 @@
       "taskId": "mlab-t006",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-gaeo-20261109-0215-p4j7bm9",
+      "requestId": "claim-gaeo-20261109-0215-p4j7bm9",
+      "token": "rk-mw8getnz-bbhq71e275-jxmlyfbo94f",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:19:13.973Z",
+      "expiresAt": "2026-11-09T05:19:13.973Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t018",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:19:06.425Z"
+  "updatedAt": "2026-11-08T23:19:13.973Z"
 }
