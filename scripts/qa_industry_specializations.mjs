@@ -67,9 +67,62 @@ for(const lang of ['ru','en']){
  assert.ok(structured?.itemListElement.some(n=>n.url==='https://gaeo.ru'+route),'2AI structured index link '+lang);
  assert.equal(structured.numberOfItems,structured.itemListElement.length,'Industry index schema count '+lang);
 }
+// Phase 2AE: distinct automotive buyers, documented evidence, immutable catalogue IDs.
+for(const id of [77,78,79]){
+ const item=industrySpecializations.find(x=>x.id===id);
+ assert.ok(item&&item.group==='automotive','2AE automotive category '+id);
+ assert.ok(item.sources.length>=3,'2AE primary-source depth '+id);
+ assert.ok(item.parent.ru==='/tarify/'&&item.parent.en==='/en/pricing/','2AE catalogue parent '+id);
+ for(const lang of ['ru','en']){
+  const c=item.content[lang];
+  assert.equal(c.problems.length,3,'2AE problems '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AE scenarios '+id+' '+lang);
+  assert.equal(c.checks.length,3,'2AE evidence checklist '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AE workflow '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AE FAQs '+id+' '+lang);
+  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AE substantial copy '+id+' '+lang);
+  assert.ok(c.proofNote.toLowerCase().includes(lang==='ru'?'не заяв':'not')||c.proofNote.toLowerCase().includes('no measured'),'2AE evidence boundary '+id+' '+lang);
+ }
+}
+
+// Phase 2AF: distinct, sensitive rehabilitation (#65) and counselling (#104) services.
+for(const [id,group] of [[65,'healthcare'],[104,'local-services']]){
+ const item=industrySpecializations.find(x=>x.id===id);
+ assert.ok(item&&item.group===group,'2AF correct regulated/specialist group '+id);
+ assert.ok(item.sources.length>=3,'2AF multiple primary sources '+id);
+ assert.equal(item.parent.ru,'/tarify/','2AF canonical RU catalog '+id);
+ assert.equal(item.parent.en,'/en/pricing/','2AF canonical EN catalog '+id);
+ for(const lang of ['ru','en']){
+  const c=item.content[lang];
+  assert.equal(c.problems.length,3,'2AF barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AF demand intents '+id+' '+lang);
+  assert.ok(c.scenarios.every(x=>x.length===3),'2AF table structure '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AF service process '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AF visible FAQ '+id+' '+lang);
+  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AF original evidence copy '+id+' '+lang);
+ }
+}
+
+// Phase 2AG: leasing and payment-service sector evidence.
+for(const id of [31,32]){
+ const sector=industrySpecializations.find(x=>x.id===id);
+ assert.ok(sector&&sector.group==='financial-services','2AG financial-services group '+id);
+ assert.equal(sector.parent.ru,'/tarify/','2AG canonical catalogue parent RU '+id);
+ assert.equal(sector.parent.en,'/en/pricing/','2AG canonical catalogue parent EN '+id);
+ assert.ok(sector.sources.length>=3,'2AG regulatory sources '+id);
+ for(const lang of ['ru','en']){
+  const c=sector.content[lang];
+  assert.equal(c.problems.length,3,'2AG buyer barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AG buyer-intent scenarios '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AG process stages '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AG FAQ '+id+' '+lang);
+  assert.ok(c.lead.length>130&&c.proofIntro.length>110,'2AG evidence-led copy '+id+' '+lang);
+ }
+}
+
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64,28])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64,28,77,78,79,65,104,31,32])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
