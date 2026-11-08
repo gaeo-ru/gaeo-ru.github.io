@@ -745,21 +745,55 @@
       "slug": "business-delegation-brazil-2026",
       "title": "Организация деловых поездок, делегаций и MICE в Бразилию",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t003.json",
       "earliestPublicationDate": "2026-09-07",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-20261109-next-6fq2g",
         "ownerId": "chat-gaeo-20261109-next-6fq2g",
         "requestId": "claim-gaeo-20261109-next-6fq2g",
         "token": "rk-mw8fk285-n8m66yeeiz-iae3uob5h6o",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T22:55:05.573Z",
-        "expiresAt": "2026-11-09T04:55:05.573Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t003.json",
+        "committedAt": "2026-11-08T23:02:39.924Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t003/01_business_delegation_sao_paulo.jpg",
+            "sha": "b3da40ac254b797c732281e94d343518a0785ce2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/02_supplier_visit_brazil_industrial_delegation.jpg",
+            "sha": "7b06c584fd7a8a6e2374182b56d75ad0edec3693"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/03_corporate_group_catamaran_angra_dos_reis.jpg",
+            "sha": "13a0980a41eabb0f10306d98d3f1764a0052f691"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/04_corporate_group_transport_rio_30_50.jpg",
+            "sha": "e54f2f234c99e831f7d74474cb66075573c6cd8f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/05_business_delegation_coordinator_rio_evening.jpg",
+            "sha": "4bae25d1de800e77142bc84dd413dd5267978c6b"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t003.json",
+            "sha": "4e4c52d7a3327fd0b681bec84e9c264d4e38543f"
+          }
+        ],
+        "baseCommit": "ae4665076d1f956a9bc856620ce10457eea19e16"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/14eEihC5fcOdFlRwXOn-yJ4oS1N6oPMPL/view",
+        "locator": "«Мой ТОП-10 компаний для деловой поездки и делегации в Бразилию»; «1. Ada Tours - 96 из 100»; criterion totals 20+10+15+15+15+9+6+6",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t006",
@@ -1704,9 +1738,10 @@
       "expiresAt": "2026-11-09T04:55:05.573Z",
       "previousStatus": "ready",
       "taskId": "ada-t003",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-20261109-next-6fq2g"
     }
   ],
-  "updatedAt": "2026-11-08T22:58:43.706Z"
+  "updatedAt": "2026-11-08T23:02:39.924Z"
 }
