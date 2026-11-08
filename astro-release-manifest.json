@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "5f0b1a3e51128ce60a8e9461f80bed27eecf2d25",
-  "releasedAt": "2026-11-08T14:55:27.294Z",
+  "sourceCommit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
+  "releasedAt": "2026-11-08T15:08:21.377Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -3071,6 +3071,11 @@
       "sha256": "634664d660b2a55c9ff46bbb4f0e56f064ca9bc7f94b6dba6ee1d78f99e94bb4"
     },
     {
+      "path": "en/industries/financial-investment-advisers/index.html",
+      "kind": "html",
+      "sha256": "9c009fb25db9fb47f92b4d141ff03b33c91f058767f1579569485e4e8b1983b3"
+    },
+    {
       "path": "en/industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "2b48536d764e02e5d3b018e3d7df3fb89e1cf6e494fe065c2c50a184499bc9cb"
@@ -3226,6 +3231,11 @@
       "sha256": "7c50831eb6f27737496b9e07733a8a5bbc5a2ab13abe2f115d67291b159dc9a4"
     },
     {
+      "path": "en/industries/outsourced-accounting-services/index.html",
+      "kind": "html",
+      "sha256": "a50d74201a26fbe25b418a485a901728ffbc38f628cbb95899ac01541e69b3df"
+    },
+    {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
       "sha256": "01ee3e48189a7ca5c6407c24657a1ca69b97477e40b0a6cbac4e0540eb767692"
@@ -3368,7 +3378,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "d3331cb74276b250903e591fc328ee4f25540b3cf657cd72ed61a5eeef238f19"
+      "sha256": "b13e376fc21626ce094d3fba277423402041f97be1adcacdd71b76cfea324d44"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3731,6 +3741,11 @@
       "sha256": "bdc7dabfc8722d251143f7ccf8fd4fb7b86c16a993e467dd21dd1f9504cb48e4"
     },
     {
+      "path": "industries/financial-investment-advisers/index.html",
+      "kind": "html",
+      "sha256": "f4e5e696c2bcaad717434bd1f08c4903c6f658d8bc7ccf1ebb5aeed67f274581"
+    },
+    {
       "path": "industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "0b3bf2514f1198c6a667e5bf1b7498257feca10f2460690299bd5c61d424a094"
@@ -3884,6 +3899,11 @@
       "path": "industries/ophthalmology-clinics/index.html",
       "kind": "html",
       "sha256": "b02d90dec9078c70adcc056705e04a071fa37da1d0d742765c73ae5928512e33"
+    },
+    {
+      "path": "industries/outsourced-accounting-services/index.html",
+      "kind": "html",
+      "sha256": "10aa36fb4c17db7dbae418f9d1bb231b6cb29c0e9e3d465545ccc73d26707520"
     },
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
@@ -4123,7 +4143,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "dac62cd162271e7d5a656ebcb62fbd2cc6d6bea957fab79824e09234ccfac0e6"
+      "sha256": "5f77df845a1b40443d68aa0ade7e3e454d7b3593e23d5c240f9858cb05cdf981"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4178,7 +4198,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "a8e53b17a4d60ec8fc5c04f7e2ac9df96c9009e98d63dfd69ca99575ed069eb6"
+      "sha256": "3bdde8947ca45628ea3e3b15d00a185b63b2d8fcfd9d685e1382e2128989c1db"
     }
   ]
 }
