@@ -24,7 +24,7 @@ const sectionLink=(link)=>link.startsWith('https://');
    <h1>{c.h1}</h1>
    <p class="industry-hero__lead">{c.lead}</p>
    <ul class="industry-hero__proof">{c.heroPoints.map(x=><li>{x}</li>)}</ul>
-   <div class="industry-actions"><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss your project':'Обсудить задачу'}</a><a class="button outline" href={page.parent[lang]}>{en?'See the industry method':'Методика отрасли'}</a></div>
+   <div class="industry-actions"><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss your project':'Обсудить задачу'}</a><a class="button outline" href={page.parent[lang]}>{page.parentLabels?.[lang] || (en?'See the industry method':'Методика отрасли')}</a></div>
    <p class="industry-hero__byline">{en?'Personally led by':'Лично ведет'} <a href={en?'/en/professional-biography/':'/professional-biography/'}>{en?'Alexey Yakovlev':'Алексей Яковлев'}</a>, {en?'GEO/AEO consultant':'независимый GEO/AEO-эксперт'}</p>
   </div>
   <figure class="industry-hero__media industry-specialization__media"><img src={image} width="960" height="960" alt={en?'Illustration of GEO promotion for '+c.eyebrow:'Иллюстрация GEO-продвижения: '+c.eyebrow} loading="eager" decoding="async" fetchpriority="high" /><figcaption>{en?'Approved industry illustration, catalogue entry #':'Готовое отраслевое изображение, направление №'}{page.id}</figcaption></figure>
