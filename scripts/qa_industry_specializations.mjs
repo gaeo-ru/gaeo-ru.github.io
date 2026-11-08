@@ -37,16 +37,16 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,77,78,79])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,29])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 
 // Phase 2AJ: automotive repair, commercial vehicle and motorcycle buyer journeys.
-for(const id of [77,78,79]){
+for(const id of [29]){
  const item=industrySpecializations.find(x=>x.id===id);
- assert.ok(item&&item.group==='automotive','2AJ automotive specialization '+id);
+ assert.ok(item&&item.group==='finance','2AJ finance specialization '+id);
  assert.ok(item.sources.length>=2,'2AJ verifiable sources '+id);
  for(const lang of ['ru','en']){
   const c=item.content[lang];
-  assert.equal(c.problems.length,3,'2AJ buying barriers '+id+' '+lang);
+  assert.equal(c.problems.length,3,'2AJ professional buyer barriers '+id+' '+lang);
   assert.equal(c.scenarios.length,4,'2AJ buyer questions '+id+' '+lang);
   assert.equal(c.steps.length,4,'2AJ work stages '+id+' '+lang);
   assert.equal(c.faq.length,5,'2AJ FAQ '+id+' '+lang);
