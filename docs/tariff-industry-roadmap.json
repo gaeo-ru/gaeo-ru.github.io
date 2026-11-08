@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2T_production_main_Pages_then_external_HTTPS_and_next_free_17_18",
+    "next_batch": "2V_education_PR107_full_CI_then_astro_source_merge_production_main_Pages_8_direct_HTTPS;_next_education_71_72_73_if_free",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -814,6 +814,51 @@
         320
       ],
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    "phase_2v": {
+      "phase": 2,
+      "batch": "2V",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        68,
+        69,
+        70
+      ],
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+      "hub_routes": {
+        "ru": "/industries/education-providers/",
+        "en": "/en/industries/education-providers/"
+      },
+      "new_industry_landing_pairs": 3,
+      "new_specialization_html_pages": 6,
+      "new_hub_html_pages": 2,
+      "new_html_pages": 8,
+      "pr_ci_status": "pending",
+      "source_merged": false,
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "previous_2v_collision_removed": "Construction IDs 14-16 already in 2T PR106 and 2U branch; 2V reassigned to free education IDs",
+      "last_completed_step": "original_education_source_data_hubs_directory_links_and_qa_prepared",
+      "next_required_step": "Retarget existing PR107 to clean tree; full CI; merge after conflict check; verify main/pages and 8 direct HTTPS URLs",
+      "sources_by_id": {
+        "68": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/dda3cee5868d1739eb34ccd9e8a98085fa2c76e2/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/a2c973958cc01dcacbd2106b8f88d6dfdf86e320/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/16484fcceccbff241e7f0387146f346240cb050e/"
+        ],
+        "69": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/9ab9b85e5291f25d6986b5301ab79c23f0055ca4/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/dda3cee5868d1739eb34ccd9e8a98085fa2c76e2/"
+        ],
+        "70": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/a2c973958cc01dcacbd2106b8f88d6dfdf86e320/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/16484fcceccbff241e7f0387146f346240cb050e/"
+        ]
+      }
     }
   },
   "status_definitions": {
@@ -850,7 +895,7 @@
     "main_manifest_file_count": 779,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
-    "phase_2_counts_note": "Current confirmed main 41040cfd (source 4116e953, released 2026-11-08T11:32:22.853Z) has 62 specialization pairs/124 RU EN URL, 237 HTML, 232 sitemap entries and 779 files. Includes 2S #52-53 (2 pairs / 4 URL). PR105 CI/production/Pages PASS, 4 main HTML+sitemap verified; direct external HTTPS remains unverified. Earlier batch counts are historical.",
+    "phase_2_counts_note": "Current confirmed main 41040cfd (source 4116e953, released 2026-11-08T11:32:22.853Z) has 62 specialization pairs/124 RU EN URL, 237 HTML, 232 sitemap entries and 779 files. Includes 2S #52-53 (2 pairs / 4 URL). PR105 CI/production/Pages PASS, 4 main HTML+sitemap verified; direct external HTTPS remains unverified. Earlier batch counts are historical. 2V education #68-70 and 2 hub pages prepared in PR107, not added to verified main counts; prior construction collision eliminated, 2T/2U content untouched.",
     "total_specialization_pairs_prepared_including_2m": 39,
     "total_specialization_urls_prepared_including_2m": 78,
     "phase_2n_prepared_pairs": 3,
@@ -872,7 +917,11 @@
     "phase_2s_deployed_pairs": 2,
     "phase_2s_deployed_ru_en_urls": 4,
     "phase_2t_prepared_pairs_not_deployed": 3,
-    "phase_2t_prepared_ru_en_urls_not_deployed": 6
+    "phase_2t_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2v_source_prepared_pairs": 3,
+    "phase_2v_source_prepared_specialization_urls": 6,
+    "phase_2v_source_prepared_hub_urls": 2,
+    "phase_2v_source_prepared_total_urls": 8
   },
   "candidate_batches": [
     {
@@ -1183,6 +1232,24 @@
       "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    {
+      "batch": "2V",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        68,
+        69,
+        70
+      ],
+      "label": "Частные школы, EdTech, вузы и бизнес-школы",
+      "condition": "Новый образовательно-коммерческий хаб RU/EN, 3 отдельные RU/EN специализации. Лицензия, аккредитация и статус программ проверяются раздельно по 273-ФЗ. Не дублировать 2T/2U №14-17; не менять 107 ID, прайс и BMR; не выдумывать клиентские кейсы.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+      "hub_ru": "/industries/education-providers/",
+      "hub_en": "/en/industries/education-providers/"
     }
   ],
   "records": [
@@ -3702,13 +3769,17 @@
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Частные школы",
       "service_name": "Продвижение в ответах нейросетей для частных школ",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-068",
       "sheet_row": 69,
       "priority": 1,
@@ -3716,24 +3787,36 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/private-schools/",
+      "planned_landing_url_en": "/en/industries/private-schools/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared"
     },
     {
       "id": 69,
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Онлайн-школы и EdTech",
       "service_name": "Продвижение в ответах нейросетей для онлайн-школ и EdTech-компаний",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-069",
       "sheet_row": 70,
       "priority": 1,
@@ -3741,24 +3824,36 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/online-schools-edtech/",
+      "planned_landing_url_en": "/en/industries/online-schools-edtech/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared"
     },
     {
       "id": 70,
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Вузы и бизнес-школы",
       "service_name": "Продвижение в ответах нейросетей для вузов и бизнес-школ",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-070",
       "sheet_row": 71,
       "priority": 1,
@@ -3766,11 +3861,19 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/universities-business-schools/",
+      "planned_landing_url_en": "/en/industries/universities-business-schools/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared"
     },
     {
       "id": 71,

@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,68,69,70])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
@@ -52,6 +52,22 @@ for(const lang of ['ru','en']){
  const collection=graph(html).find(n=>n['@type']==='ItemList');
  assert.equal(collection?.numberOfItems,3,'Three sector choices in structured data '+hub);
 }
+for(const lang of ['ru','en']){
+ const hub=lang==='ru'?'/industries/education-providers/':'/en/industries/education-providers/';
+ const equivalent=lang==='ru'?'/en/industries/education-providers/':'/industries/education-providers/';
+ const html=read(hub);
+ assert.equal((html.match(/<h1/g)||[]).length,1,'2V education hub H1 '+hub);
+ assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+hub+'"'),'2V education hub canonical '+hub);
+ assert.ok(html.includes('hreflang="'+(lang==='ru'?'en':'ru')+'" href="https://gaeo.ru'+equivalent+'"'),'2V education hub hreflang '+hub);
+ for(const slug of ['private-schools','online-schools-edtech','universities-business-schools']){
+  const href=(lang==='ru'?'/industries/':'/en/industries/')+slug+'/';
+  assert.ok(html.includes('href="'+href+'"'),'2V education hub link '+href);
+ }
+ assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'2V education index link '+hub);
+ const list=graph(html).find(x=>x['@type']==='ItemList');
+ assert.equal(list?.numberOfItems,3,'2V education hub ItemList '+hub);
+}
+
 assert.equal(urls.length,industrySpecializations.length*2,'Each specialization must have two RU/EN pages');
 if(process.argv.includes('--static')){console.log('Industry specializations static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
 const base='http://127.0.0.1:4378';const server=spawn('./node_modules/.bin/astro',['preview','--host','127.0.0.1','--port','4378'],{stdio:'ignore'});
@@ -91,6 +107,23 @@ try{
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
    assert.ok(overflow<=2,'Logistics hub horizontal overflow '+path+' at '+width+': '+overflow);
    assert.equal(errors.length,0,'Logistics hub JS errors '+path+': '+errors.join('; '));
+   if(width===390){await page.locator('main .industry-actions .button[data-gaeo-intent="service"]').click();await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});await page.locator('.gaeo-modal-close').click();}
+   await page.close();
+  }
+ }
+
+ for(const lang of ['ru','en']){
+  const path=lang==='ru'?'/industries/education-providers/':'/en/industries/education-providers/';
+  for(const width of [1440,390,320]){
+   const page=await browser.newPage({viewport:{width,height:900}});
+   const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+   const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:25000});
+   assert.equal(response?.status(),200,'2V education hub HTTP '+path);
+   assert.equal(await page.locator('main h1').count(),1,'2V education hub H1 '+path);
+   assert.equal(await page.locator('main .industry-problem-grid article').count(),3,'2V education hub sectors '+path);
+   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+   assert.ok(overflow<=2,'2V education hub overflow '+path+' width '+width+': '+overflow);
+   assert.equal(errors.length,0,'2V education hub JS error '+path+': '+errors.join('; '));
    if(width===390){await page.locator('main .industry-actions .button[data-gaeo-intent="service"]').click();await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});await page.locator('.gaeo-modal-close').click();}
    await page.close();
   }
