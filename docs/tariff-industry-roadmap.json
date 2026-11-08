@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Y_production_main_pages_and_independent_https_verification_before_next_free_ids",
+    "next_batch": "2Z reassigned to #103/#105 in existing PR #109 after 2Y #106/#107 source merge; PR CI, production, main, Pages, external HTTPS pending",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -850,6 +850,28 @@
       "main_pre_2y_html": 243,
       "main_pre_2y_sitemap": 238,
       "main_pre_2y_files": 785
+    },
+    "phase_2z": {
+      "phase": 2,
+      "batch": "2Z",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        103,
+        105
+      ],
+      "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
+      "pr_number": 109,
+      "source_file": "src/data/industry-specializations-batch-2z.mjs",
+      "source_base_commit": "0a2b0da176b54a43b182ced8c8db57497c03e1db",
+      "reassigned_from": "conflict with batch 2Y #106/#107 merged",
+      "new_specialization_pairs_prepared": 2,
+      "new_specialization_ru_en_urls_prepared": 4,
+      "new_hub_pages_prepared": 0,
+      "pr_ci_status": "pending",
+      "source_merge_status": "not_started",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false
     }
   },
   "status_definitions": {
@@ -911,7 +933,11 @@
     "phase_2t_prepared_ru_en_urls_not_deployed": 6,
     "phase_2y_prepared_pairs_not_deployed": 2,
     "phase_2y_prepared_ru_en_urls_not_deployed": 4,
-    "phase_2y_counts_note": "Batch 2Y: PR110 full CI PASS (134 RU EN pages at 1440/390/320) and astro-source merged 778c7ea7; 2 source specialization pairs/4 URL awaiting publication confirmation. The latest inspected main 90335eaa contains preceding 2T: 65 pairs/130 RU EN, 243 HTML/238 sitemap/785 files. Source/main/Pages for 2Y not yet claimed, direct HTTPS unverified; preserve 2U/2V."
+    "phase_2y_counts_note": "Batch 2Y: PR110 full CI PASS (134 RU EN pages at 1440/390/320) and astro-source merged 778c7ea7; 2 source specialization pairs/4 URL awaiting publication confirmation. The latest inspected main 90335eaa contains preceding 2T: 65 pairs/130 RU EN, 243 HTML/238 sitemap/785 files. Source/main/Pages for 2Y not yet claimed, direct HTTPS unverified; preserve 2U/2V.",
+    "phase_2z_prepared_pairs_not_deployed": 2,
+    "phase_2z_prepared_ru_en_urls_not_deployed": 4,
+    "phase_2z_prepared_hub_pages_not_deployed": 0,
+    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated."
   },
   "candidate_batches": [
     {
@@ -1239,6 +1265,20 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724",
       "source_merge_sha": "778c7ea7b05a780c3de480854e76de5738f80ce2"
+    },
+    {
+      "batch": "2Z",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        103,
+        105
+      ],
+      "label": "Частная охрана/видеонаблюдение и аренда спецтехники",
+      "condition": "2 bilingual evidence-led distinct services; 427-FZ from Sep 2026 for licensed private guarding, 625 self-propelled registration from Sep 2026 and Civil Code crew/no-crew distinctions; root /industries as current parent, no duplicate local-services hub while 2X open. No customer BMR claims; 107 IDs/prices/guarantees unchanged.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2z.mjs"
     }
   ],
   "records": [
@@ -5046,10 +5086,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "planned_landing_url_ru": "/industries/security-cctv-companies/",
+      "planned_landing_url_en": "/en/industries/security-cctv-companies/",
+      "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2z.mjs",
+      "last_completed_step": "2Z_bilingual_source_and_root_backlinks_prepared",
+      "public_https_browser_verified": false,
+      "evidence_sources": [
+        "https://rosguard.gov.ru/News/Article/federalnyj-zakon-reguliruyushhij-chastnuyu-oxrannuyu-deyatelnost-vstupil-v-silu-1-sentyabrya-2026-g",
+        "https://www.rosguard.gov.ru/page/index/voprosy-chastnoj-oxrannoj-deyatelnosti",
+        "https://mintrud.gov.ru/docs/laws/130"
+      ]
     },
     {
       "id": 104,
@@ -5096,10 +5147,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "planned_landing_url_ru": "/industries/construction-equipment-rental/",
+      "planned_landing_url_en": "/en/industries/construction-equipment-rental/",
+      "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2z.mjs",
+      "last_completed_step": "2Z_bilingual_source_and_root_backlinks_prepared",
+      "public_https_browser_verified": false,
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_535444/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/1ffe0cb622bfbe86c61d7d6df4c8c6011dfb45fe/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/0980286733e45f8e2639d616606189838d3f3bcc/"
+      ]
     },
     {
       "id": 106,
