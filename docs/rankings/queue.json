@@ -283,9 +283,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t009.json",
       "earliestPublicationDate": "2026-08-24",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
+        "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
+        "token": "rk-mw8dh2ca-tjsjro5jg4e-n8uaan2bys",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T21:56:47.078Z",
+        "expiresAt": "2026-11-09T03:56:47.078Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t008",
@@ -1274,7 +1283,19 @@
       "taskId": "prep-t006",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
+      "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
+      "token": "rk-mw8dh2ca-tjsjro5jg4e-n8uaan2bys",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T21:56:47.078Z",
+      "expiresAt": "2026-11-09T03:56:47.078Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t009",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T21:51:36.823Z"
+  "updatedAt": "2026-11-08T21:56:47.078Z"
 }
