@@ -57,7 +57,7 @@ for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/medical-care-providers/':'/en/industries/medical-care-providers/';
  const alternate=lang==='ru'?'/en/industries/medical-care-providers/':'/industries/medical-care-providers/';
  const html=read(hub);
- assert.equal((html.match(/<h1\\b/g)||[]).length,1,'Medical hub one H1 '+hub);
+ assert.equal((html.match(/<h1\b/g)||[]).length,1,'Medical hub one H1 '+hub);
  assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+hub+'"'),'Medical hub canonical '+hub);
  assert.ok(html.includes('hreflang="'+(lang==='ru'?'en':'ru')+'" href="https://gaeo.ru'+alternate+'"'),'Medical hub reciprocal hreflang '+hub);
  for(const slug of ['private-medical-clinics','dental-clinics','diagnostic-centres-medical-laboratories']){
