@@ -1,0 +1,48 @@
+name: One-time 3B public release acceptance
+on:
+  push:
+    branches: ['feat/sector-methods-3b-2026-11-08']
+    paths:
+      - '.github/workflows/finalize-sector-3b.yml'
+permissions:
+  contents: write
+  actions: read
+  pull-requests: read
+concurrency:
+  group: gaeo-sector-3b-final-acceptance
+  cancel-in-progress: false
+jobs:
+  accept:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Load this isolated one-time inspection script
+        uses: actions/checkout@v4
+      - name: Check out the exact merged release source
+        uses: actions/checkout@v4
+        with:
+          ref: e8df34a2f7fb06325b78fbb5e75db78e3c736234
+          path: site
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare the existing browser test dependencies
+        working-directory: site
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install chromium
+      - name: Confirm production and Pages, inspect the public site, update the same handoff
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node ../scripts/_finalize-sector-3b.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sector-3b-public-release-acceptance
+          path: |
+            site/visual-sector-3b/
+            site/visual-industry/3b-*.png
+          if-no-files-found: error
+          retention-days: 14
