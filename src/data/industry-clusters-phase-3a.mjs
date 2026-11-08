@@ -38,17 +38,17 @@ export const phase3AClusters = [
     ],
     "ru": {
       "hub": {
-        "title": "GEO-продвижение автомобильного рынка: дилеры, импорт, СТО и запчасти | GAEO",
+        "title": "GEO-продвижение автомобильного рынка: дилеры, импорт, СТО и мототехника | GAEO",
         "h1": "GEO-продвижение автомобильного бизнеса в нейросетях",
-        "description": "GEO для автодилеров, импорта авто, СТО, коммерческого транспорта и запчастей: 5 специализаций, источники, сценарии выбора и тарифы GAEO.",
+        "description": "GEO для автодилеров, импорта авто, СТО, коммерческого транспорта и мототехники: 5 специализаций, источники, сценарии выбора и тарифы GAEO.",
         "eyebrow": "Отраслевой хаб / Авторынок №75–79",
-        "lead": "Покупатели спрашивают нейросети о конкретной модели, истории автомобиля, сроках ввоза, ремонте или совместимости детали. Для рекомендаций нужны доказуемые сведения именно об этих условиях. Я лично определяю коммерческие запросы, сравниваю ответы и выстраиваю план GEO-продвижения для конкретного типа автобизнеса.",
+        "lead": "Покупатели спрашивают нейросети о конкретной модели, истории автомобиля, сроках ввоза, ремонте или условиях покупки мотоцикла. Для рекомендаций нужны доказуемые сведения именно об этих условиях. Я лично определяю коммерческие запросы, сравниваю ответы и выстраиваю план GEO-продвижения для конкретного типа автобизнеса.",
         "summary": "В автомобильном GEO измеряю рекомендации продавца или сервиса отдельно от упоминания модели, марки и товара. Заявления об условиях покупки проверяю по документам и актуальным предложениям.",
         "sections": [
           {
             "title": "5 разных рынков внутри одного автобизнеса",
             "p": [
-              "У нового автомобиля, импортируемой под заказ машины, ремонта по заказ-наряду, корпоративного автопарка и подбора запчасти разные критерии доверия. Универсальная страница «продвижение авто» оставляет эти различия без ответа.",
+              "У нового автомобиля, импортируемой под заказ машины, ремонта по заказ-наряду, корпоративного автопарка и выбора мотоцикла разные критерии доверия. Универсальная страница «продвижение авто» оставляет эти различия без ответа.",
               "Специализации ниже разделяют задачи и соединяют каждую с собственными коммерческими запросами, ответственными источниками и исходными данными для GEO-аудита."
             ]
           },
@@ -62,7 +62,7 @@ export const phase3AClusters = [
               "Импорт: роль посредника, платежи, маршрут, подтверждение происхождения и статус электронного паспорта.",
               "СТО: специализация по агрегатам, заказ-наряд, гарантии только в применимых документально подтвержденных пределах.",
               "Коммерческий транспорт: полезная нагрузка, комплектация, сервисная сеть и эксплуатационный сценарий заказчика.",
-              "Запчасти: артикул, OEM-аналоги, применимость по VIN и наличие в конкретном регионе."
+              "Мотодилеры: назначение и класс мотоцикла, доступная комплектация, гарантия и подтвержденные возможности сервиса."
             ]
           },
           {
@@ -75,7 +75,7 @@ export const phase3AClusters = [
               "Кто привезет автомобиль из-за границы с понятными документами и составом платежей?",
               "Какой автосервис обслуживает конкретную трансмиссию и оформляет заказ-наряд?",
               "Кому поручить подбор коммерческой техники под массу груза и маршрут?",
-              "У кого проверить совместимость и заказать определенную запчасть по VIN?"
+              "Какой мотодилер предлагает туристический мотоцикл с проверенными условиями покупки и сервисом?"
             ]
           },
           {
@@ -120,11 +120,11 @@ export const phase3AClusters = [
         ]
       },
       "method": {
-        "title": "Методика GEO для авторынка: выбор автомобиля, СТО, импорта и запчастей | GAEO",
+        "title": "Методика GEO для авторынка: дилеры, импорт, СТО и мототехника | GAEO",
         "h1": "Как измерять рекомендации нейросетей на автомобильном рынке",
-        "description": "Методика авторынка: матрицы запросов для дилеров, импорта, ремонта, коммерческой техники и запчастей; точность цены, документов и BMR.",
+        "description": "Методика авторынка: матрицы запросов для дилеров, импорта, ремонта, коммерческой техники и мототехники; точность цены, документов и BMR.",
         "eyebrow": "Методика / Автомобильный рынок",
-        "lead": "Разделяю рекомендации марки и модели, продавца автомобиля, импортера, сервиса и поставщика запчастей. Только после этого можно определить, что именно означает рост видимости конкретного бизнеса.",
+        "lead": "Разделяю рекомендации марки и модели, продавца автомобиля, импортера, сервиса и дилера мототехники. Только после этого можно определить, что именно означает рост видимости конкретного бизнеса.",
         "summary": "Контрольная матрица авторынка связывает намерение покупателя, подтверждаемое свойство предложения и реальную рекомендацию исполнителя. BMR учитывает название компании, а не только марку автомобиля.",
         "sections": [
           {
@@ -138,7 +138,7 @@ export const phase3AClusters = [
             "title": "Матрица «сценарий × проверяемое свойство»",
             "p": [
               "Для дилера разделяю новый автомобиль, машину с пробегом, trade-in и кредит. Импортеру нужна другая матрица: договорная роль, регион закупки, маршруты, таможня, утильсбор, ЭПТС. Для СТО задаю агрегат, модель, тип дефекта, доступность диагностики, заказ-наряд.",
-              "Коммерческий транспорт сравниваю по грузоподъемности и назначению, а запчасти по артикулу, VIN, совместимости и наличию. Нельзя свести их к одному запросу «какой автомобильный бизнес лучше»."
+              "Коммерческий транспорт сравниваю по грузоподъемности и назначению, а мототехнику по назначению, типу двигателя, комплектации и условиям сервиса. Нельзя свести их к одному запросу «какой автомобильный бизнес лучше»."
             ]
           },
           {
@@ -151,13 +151,13 @@ export const phase3AClusters = [
               "Назван дилер с недостоверной «ценой от»: факт помечается как требующий исправления, даже если BMR положительный.",
               "Рекомендована СТО без подтверждения специализации: отмечается риск для качества рекомендации.",
               "Импортеру приписаны фиксированные сборы или сроки: проверяется применимость к дате, автомобилю и договору.",
-              "Магазину запчастей ошибочно приписана совместимость: требуется проверка каталога применимости."
+              "Мотодилеру приписана неподтвержденная гарантия на мотоцикл: требуются действующие условия продавца и производителя."
             ]
           },
           {
             "title": "Контент, который может подтвердить ответ",
             "p": [
-              "Нужны читаемые страницы моделей, комплектаций и условий сделки, договорные сведения, прозрачные шаги импорта, профиль работ СТО, актуальный каталог запчастей. У каждого утверждения должны быть источник, применимость и дата обновления.",
+              "Нужны читаемые страницы моделей, комплектаций и условий сделки, договорные сведения, прозрачные шаги импорта, профиль работ СТО, актуальные сведения о доступных мотоциклах и комплектациях. У каждого утверждения должны быть источник, применимость и дата обновления.",
               "Для автодилеров в 2026 году особенно значима проверка дополнительных услуг и полной стоимости покупки. Для ремонта применяются обновленные Правила №780; старые пересказы требований №290 без проверки не использовать как актуальные."
             ]
           },
@@ -194,17 +194,17 @@ export const phase3AClusters = [
     },
     "en": {
       "hub": {
-        "title": "Automotive GEO: dealers, car imports, workshops and parts | GAEO",
+        "title": "Automotive GEO: dealers, imports, workshops and motorcycles | GAEO",
         "h1": "GEO promotion for automotive businesses in AI answers",
-        "description": "Automotive GEO across five sectors: dealers, car sourcing and imports, workshops, commercial vehicles and parts. Evidence, methodology and GAEO pricing.",
+        "description": "Automotive GEO across five sectors: dealers, car sourcing and imports, workshops, commercial vehicles and motorcycle dealers. Evidence, methodology and GAEO pricing.",
         "eyebrow": "Industry hub / Automotive #75–79",
         "lead": "A buyer may ask AI for a specific trim, car import terms, a repair workshop or a part that fits a particular vehicle. Each query requires different evidence. I personally map commercial prompts, review AI answers and develop a GEO plan around the actual business model.",
-        "summary": "Automotive GEO separates a recommendation of a vehicle model from a recommendation of the dealer, importer, workshop or parts supplier. Price and service claims need current, verifiable conditions.",
+        "summary": "Automotive GEO separates a recommendation of a vehicle model from a recommendation of the dealer, importer, workshop or motorcycle dealership. Price and service claims need current, verifiable conditions.",
         "sections": [
           {
             "title": "Five distinct automotive buying decisions",
             "p": [
-              "Selling a new car, sourcing one abroad, repairing a transmission, purchasing a commercial vehicle and checking part fitment are not variations of the same decision. A generic automotive landing page cannot adequately answer all five.",
+              "Selling a new car, sourcing one abroad, repairing a transmission, purchasing a commercial vehicle and choosing a motorcycle are not variations of the same decision. A generic automotive landing page cannot adequately answer all five.",
               "The linked specializations cover different buyer prompts, source requirements and measurable recommendation criteria."
             ]
           },
@@ -218,7 +218,7 @@ export const phase3AClusters = [
               "Import specialists: contract model, acquisition country, route, fees and documents.",
               "Workshops: supported vehicle types, repair scope, work order and confirmed warranty terms.",
               "Commercial transport dealers: payload, body configuration, application and service support.",
-              "Parts retailers: OEM or aftermarket number, VIN fitment, stock and delivery location."
+              "Motorcycle dealerships: model class, engine size, equipment, warranty conditions and service availability."
             ]
           },
           {
@@ -231,7 +231,7 @@ export const phase3AClusters = [
               "Which provider can source a vehicle from abroad with a documented fee breakdown?",
               "Which workshop repairs this transmission type and issues a proper work order?",
               "Who supplies commercial vehicles for a specific payload and operating route?",
-              "Which supplier can confirm fitment of a part using a VIN?"
+              "Which motorcycle dealer provides the required model, documented warranty and local servicing?"
             ]
           },
           {
@@ -277,9 +277,9 @@ export const phase3AClusters = [
       "method": {
         "title": "How to measure automotive GEO: AI car dealer, workshop and import recommendations | GAEO",
         "h1": "Automotive GEO methodology: measuring AI recommendations",
-        "description": "Reproducible automotive GEO framework: buyer prompt matrix, vehicle offer evidence, workshops, sourcing, part fitment and BMR measurement.",
+        "description": "Reproducible automotive GEO framework: buyer prompt matrix, vehicle offers, workshops, sourcing, motorcycle specifications and BMR measurement.",
         "eyebrow": "Methodology / Automotive market",
-        "lead": "Separate recommendations of a car make or model from recommendations of the specific dealer, importer, workshop and parts supplier. That is the prerequisite for measuring business visibility.",
+        "lead": "Separate recommendations of a car make or model from recommendations of the specific dealer, importer, workshop and motorcycle dealership. That is the prerequisite for measuring business visibility.",
         "summary": "The automotive baseline links a buyer intent to a verifiable offer and the actual recommended provider. A model mention does not count as a dealer mention.",
         "sections": [
           {
@@ -293,7 +293,7 @@ export const phase3AClusters = [
             "title": "Build the intent × evidence matrix",
             "p": [
               "Segment dealer prompts by new versus used cars, trims, trade-in and financing. Segment imports by contracting role, origin, customs, recycling fees and vehicle passport. Segment repair by fault, vehicle type and work order.",
-              "Commercial vehicles require payload and application data; parts require fitment and inventory. A generic 'best automotive company' prompt is not an adequate diagnostic."
+              "Commercial vehicles require payload and application data; motorcycles require accurate specifications, stock and service terms. A generic 'best automotive company' prompt is not an adequate diagnostic."
             ]
           },
           {
@@ -306,13 +306,13 @@ export const phase3AClusters = [
               "A dealer is named with an incomplete price: verify finance and add-on conditions.",
               "A workshop is recommended for unverified specialist repairs: flag the claim.",
               "An importer is assigned a fixed fee without sufficient conditions: verify the current applicable rules.",
-              "A part's VIN fitment is asserted without catalog evidence: validate the compatibility."
+              "A motorcycle warranty is asserted without the applicable sales terms: verify the dealer and manufacturer documents."
             ]
           },
           {
             "title": "Publish verifiable decision evidence",
             "p": [
-              "Create readable offer and service pages with exact model, trim, terms, repair scope and fitment information. The date and source of changing claims matter as much as the claim itself.",
+              "Create readable offer and service pages with exact model, trim, terms, repair scope and motorcycle model information. The date and source of changing claims matter as much as the claim itself.",
               "Russian consumer guidance from 2026 covers car-sale add-ons and the current repair paperwork framework. Recheck applicability instead of relying on outdated summaries."
             ]
           },
