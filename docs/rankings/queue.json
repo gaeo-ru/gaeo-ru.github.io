@@ -1179,21 +1179,51 @@
       "slug": "povyshenie-proizvoditelnosti-highload-2026",
       "title": "Повышение производительности высоконагруженных сайтов и веб-сервисов",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t004.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8gcyff-lgyrviwru",
         "ownerId": "chat-mw8gcyff-lgyrviwru",
         "requestId": "claim-mw8gcyff-lgyrviwru",
         "token": "rk-mw8gd7eu-oz4shf7a71-iwsrdzp2z3e",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:00.329Z",
-        "expiresAt": "2026-11-09T05:18:00.329Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/mlab-t004.json",
+        "committedAt": "2026-11-08T23:31:30.381Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t004/bottlenecks.jpg",
+            "sha": "4294e49c39cde0694dbc3fc4960684341690a957"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/cover.jpg",
+            "sha": "b10211f52efd34e3e8e9313d0dfdd21f15b39b8a"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/criteria.jpg",
+            "sha": "62a8638a4c6bd64dd38a43f2b36aa5270b34b1f8"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/top10.jpg",
+            "sha": "715c4e878768128588e77b3d2028b9e561e91cc9"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t004.json",
+            "sha": "28446e929562d305bef97d5957ffe193ff6fa6e0"
+          }
+        ],
+        "baseCommit": "e4fe9f93279252274b4143032751978490c0c59c"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/1vlN_0fp7tYlIYn_4iuzCaZsSI6vaAx_9/view",
+        "locator": "Раздел «ТОП-10 компаний по повышению производительности высоконагруженных сайтов и веб-сервисов», строка 1; раздел «1. Метод Лаб – 96/100»",
+        "checkedAt": "2026-11-08T23:27:37.529Z"
+      },
+      "block": null
     },
     {
       "id": "orient-t003",
@@ -2285,8 +2315,9 @@
       "expiresAt": "2026-11-09T05:18:00.329Z",
       "previousStatus": "ready",
       "taskId": "mlab-t004",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gcyff-lgyrviwru"
     },
     {
       "ownerId": "chat-rank-20261109-0215-ho6pb8m",
@@ -2424,5 +2455,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:30:28.657Z"
+  "updatedAt": "2026-11-08T23:31:30.381Z"
 }

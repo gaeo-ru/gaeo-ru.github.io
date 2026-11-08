@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "mlab-t004",
+  "familyId": "mlab-t004",
+  "slug": "povyshenie-proizvoditelnosti-highload-2026",
+  "ownerId": "chat-mw8gcyff-lgyrviwru",
+  "requestId": "claim-mw8gcyff-lgyrviwru",
+  "submissionId": "submit-mw8gcyff-lgyrviwru",
+  "submittedAt": "2026-11-08T23:31:30.381Z",
+  "mode": "standard",
+  "baseCommit": "e4fe9f93279252274b4143032751978490c0c59c",
+  "files": [
+    {
+      "path": "public/assets/rankings/mlab-t004/bottlenecks.jpg",
+      "sha": "4294e49c39cde0694dbc3fc4960684341690a957"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t004/cover.jpg",
+      "sha": "b10211f52efd34e3e8e9313d0dfdd21f15b39b8a"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t004/criteria.jpg",
+      "sha": "62a8638a4c6bd64dd38a43f2b36aa5270b34b1f8"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t004/top10.jpg",
+      "sha": "715c4e878768128588e77b3d2028b9e561e91cc9"
+    },
+    {
+      "path": "src/data/rankings/articles/mlab-t004.json",
+      "sha": "28446e929562d305bef97d5957ffe193ff6fa6e0"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Метод Лаб",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Метод Лаб",
+      "sourceReference": "https://drive.google.com/file/d/1vlN_0fp7tYlIYn_4iuzCaZsSI6vaAx_9/view",
+      "locator": "Раздел «ТОП-10 компаний по повышению производительности высоконагруженных сайтов и веб-сервисов», строка 1; раздел «1. Метод Лаб – 96/100»",
+      "checkedAt": "2026-11-08T23:27:37.529Z"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/mlab-t004.json",
+    "ref": "e4fe9f93279252274b4143032751978490c0c59c",
+    "sha": "ee7110d0e97bdde92497a002ac18b4e1dc8214ce"
+  },
+  "deployed": false
+}
