@@ -1244,21 +1244,51 @@
       "slug": "audit-proizvoditelnosti-saytov-2026",
       "title": "Аудит производительности и скорости сайтов для команды заказчика",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-20261109-0215-t4n8",
         "ownerId": "chat-rankings-20261109-0215-t4n8",
         "requestId": "claim-rankings-20261109-0215-t4n8",
         "token": "rk-mw8gd21m-futtfn0ur16-28cl80df3o7",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:51.113Z",
-        "expiresAt": "2026-11-09T05:17:51.113Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/mlab-t003.json",
+        "committedAt": "2026-11-08T23:36:05.331Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t003/bottlenecks.jpg",
+            "sha": "09332e5822681220d570c3ac7b4bb431f0ea1e70"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/cover.jpg",
+            "sha": "f86ed64401830438ff2d14ece280eb82492d5f57"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/criteria.jpg",
+            "sha": "0cd9872ad82ed8cd4cf5fae9bc990d351eb8cb20"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/top10.jpg",
+            "sha": "745d8c88fc9a59763389936edbb0180b242b31db"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t003.json",
+            "sha": "ef4abc07445ce6f462cbb6c979f14f1aeb27df3c"
+          }
+        ],
+        "baseCommit": "b6232ee613f77c6e0e6f33242e9048daf04983d5"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/19ggvhYSwAaSN64G2d5xBsvHupRIO7avX/view",
+        "locator": "Оригинальный Sostav MD: сводный ТОП-10, строки 49-67; подробный участник 1, строки 73-87",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t004",
@@ -2552,8 +2582,9 @@
       "expiresAt": "2026-11-09T05:17:51.113Z",
       "previousStatus": "ready",
       "taskId": "mlab-t003",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-0215-t4n8"
     },
     {
       "ownerId": "chat-mw8gcyff-lgyrviwru",
@@ -2710,5 +2741,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:35:54.694Z"
+  "updatedAt": "2026-11-08T23:36:05.331Z"
 }
