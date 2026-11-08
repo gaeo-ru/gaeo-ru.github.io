@@ -1139,6 +1139,21 @@
       "sitemap_new_urls_present": 34,
       "main_new_html_pages_present": 34,
       "next_required_step": "Independently open all 34 new URLs on gaeo.ru (desktop/390/320), verify images, links, forms, canonical/hreflang and then populate live fields. GAEO.ru including baseline /tarify/ inaccessible via chat web/container DNS."
+    },
+    "phase_2ac": {
+      "phase": 2,
+      "batch": "2AC",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        62,
+        63
+      ],
+      "work_branch": "feat/industry-specializations-batch-2ac-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ac.mjs",
+      "base_source_sha": "6f0e06d4cbbfdb9a4019fc674a3e4ac24d4c36f0",
+      "new_ru_en_urls": 4,
+      "public_https_browser_verified": false,
+      "next_required_step": "full_pr_ci_merge_production_main_pages_direct_https"
     }
   },
   "status_definitions": {
@@ -1204,7 +1219,10 @@
     "phase_2z_prepared_pairs_not_deployed": 0,
     "phase_2z_prepared_ru_en_urls_not_deployed": 0,
     "phase_2z_prepared_hub_pages_not_deployed": 0,
-    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated."
+    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
+    "phase_2ac_prepared_pairs_not_deployed": 2,
+    "phase_2ac_prepared_ru_en_urls_not_deployed": 4,
+    "phase_2ac_status_note": "Batch 2AC adds #62/#63, four RU/EN pages in an isolated branch; global historic release counts are not automatically promoted. CI, production/main/Pages and public HTTPS must be checked separately."
   },
   "candidate_batches": [
     {
@@ -1546,6 +1564,20 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs"
+    },
+    {
+      "batch": "2AC",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        62,
+        63
+      ],
+      "label": "Офтальмологические клиники и пластическая хирургия",
+      "condition": "2 оригинальные RU/EN специализации; проверить полный CI, безопасное слияние astro-source, production/main/Pages и отдельный внешний HTTPS. Не выдумывать медицинские результаты.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ac-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ac.mjs"
     }
   ],
   "records": [
@@ -3985,10 +4017,25 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "last_completed_step": "phase_2ac_original_ru_en_medical_research_hub_backlinks_and_qa_prepared",
+      "planned_landing_url_ru": "/industries/ophthalmology-clinics/",
+      "planned_landing_url_en": "/en/industries/ophthalmology-clinics/",
+      "work_branch": "feat/industry-specializations-batch-2ac-2026-11-08",
+      "work_batch": "2AC",
+      "source_file": "src/data/industry-specializations-batch-2ac.mjs",
+      "parent_link_ru": "/industries/medical-care-providers/",
+      "parent_link_en": "/en/industries/medical-care-providers/",
+      "evidence_sources": [
+        "https://base.garant.ru/413139055/",
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/",
+        "https://www.consultant.ru/document/cons_doc_LAW_58968/8fbc3d05dbc778e17bfc1b45fb7339df525c1985/"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 63,
@@ -4010,10 +4057,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "last_completed_step": "phase_2ac_original_ru_en_medical_research_hub_backlinks_and_qa_prepared",
+      "planned_landing_url_ru": "/industries/plastic-surgery-clinics/",
+      "planned_landing_url_en": "/en/industries/plastic-surgery-clinics/",
+      "work_branch": "feat/industry-specializations-batch-2ac-2026-11-08",
+      "work_batch": "2AC",
+      "source_file": "src/data/industry-specializations-batch-2ac.mjs",
+      "parent_link_ru": "/industries/medical-care-providers/",
+      "parent_link_en": "/en/industries/medical-care-providers/",
+      "evidence_sources": [
+        "https://base.garant.ru/71972580/",
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/",
+        "https://www.consultant.ru/document/cons_doc_LAW_58968/8fbc3d05dbc778e17bfc1b45fb7339df525c1985/"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 64,
