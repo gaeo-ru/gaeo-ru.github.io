@@ -57,7 +57,7 @@
 .industry-catalog__card-heading { min-width: 0; }
 .industry-catalog__group { margin: 0 0 8px; font-size: 11px; line-height: 1.45; color: #536072; }
 .industry-catalog__card h3 { margin: 0; font-size: 17px; line-height: 1.4; letter-spacing: -.015em; overflow-wrap: anywhere; }
-.industry-catalog__card h3 a { text-decoration: none; }
+.industry-catalog__card h3 a { color: var(--navy, #021641); text-decoration: underline; text-decoration-color: #0a7c94; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .industry-catalog__card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .industry-catalog__description { margin: 18px 0; font-size: 14px; line-height: 1.65; color: #34475b; }
 .industry-catalog__prices { margin: auto 0 16px; padding: 14px 0; border-top: 1px solid #dbe3eb; border-bottom: 1px solid #dbe3eb; }
