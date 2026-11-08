@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { industrySpecializations } from '../src/data/industry-specializations.mjs';
 import { spawn } from 'node:child_process';
 import { mkdirSync } from 'node:fs';
 import assert from 'node:assert/strict';
@@ -241,6 +242,50 @@ try {
     assert.ok(await list.evaluate(el=>el.getBoundingClientRect().height>=el.scrollHeight-3),'No-JS must show every related link '+route);
     await plain.close();
   }
+
+  // Verify the same compact cross-link widget on every existing parent hub,
+  // not just the real-estate template. The linked destinations stay in the HTML.
+  const specializationHubs=[...new Set(industrySpecializations.flatMap(item=>
+    [item.parent.ru,item.parent.en]))].filter(route=>
+      route!=='/tarify/'&&route!=='/en/pricing/');
+  let auditedRelatedHubs=0;
+  for(const route of specializationHubs){
+    const page=await browser.newPage({viewport:{width:390,height:844}});
+    const response=await page.goto(BASE+route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'Specialization parent hub unavailable '+route);
+    const block=page.locator('.industry-related-specializations');
+    if(await block.count()===0){await page.close();continue;}
+    auditedRelatedHubs++;
+    assert.equal(await block.count(),1,'One related specialization widget '+route);
+    const viewport=block.locator('[data-related-viewport]'),toggle=block.locator('[data-related-toggle]');
+    const links=block.locator('li a'),hrefs=await links.evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));
+    assert.ok(hrefs.length>0&&hrefs.every(Boolean),'All parent hub backlinks remain in HTML '+route);
+    const state=await viewport.evaluate(el=>({
+      height:el.clientHeight,scrollHeight:el.scrollHeight,
+      lineHeight:parseFloat(getComputedStyle(el.querySelector('li')).lineHeight),
+      listStyle:getComputedStyle(el.querySelector('ul')).listStyleType,
+      fade:getComputedStyle(el,'::after').backgroundImage
+    }));
+    assert.equal(state.listStyle,'none','Shared styled list missing on '+route);
+    if(state.scrollHeight>state.height+3){
+      assert.ok(state.height<=state.lineHeight*4.3,'Long industry links must fit in four lines '+route+' '+JSON.stringify(state));
+      assert.ok(state.fade.includes('linear-gradient'),'Fade missing on '+route);
+      assert.ok(await toggle.isVisible(),'Expand control missing '+route);
+      assert.equal(await toggle.getAttribute('aria-expanded'),'false','Initially collapsed '+route);
+      await toggle.click();
+      assert.equal(await toggle.getAttribute('aria-expanded'),'true','Expand failed '+route);
+      assert.ok(await viewport.evaluate(el=>el.clientHeight>=el.scrollHeight-3),'Expanded list is clipped '+route);
+      assert.deepEqual(await links.evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href'))),hrefs,'Link destinations changed '+route);
+      await toggle.click();
+      assert.equal(await toggle.getAttribute('aria-expanded'),'false','Collapse failed '+route);
+      assert.ok(await viewport.evaluate(el=>el.clientHeight<el.scrollHeight-3),'List did not collapse '+route);
+    }else{
+      assert.ok(await toggle.isHidden(),'Short industry list must not have a toggle '+route);
+    }
+    await page.close();
+  }
+  assert.ok(auditedRelatedHubs>=14,'Expected the 7 original industry hub templates in RU and EN');
+  checks.push('All '+auditedRelatedHubs+' RU/EN parent hubs have compact related links and working controls PASS');
 
   // E-commerce catalog methodology: technical guide parity, images, mobile tables and lead form.
   for (const entry of [
