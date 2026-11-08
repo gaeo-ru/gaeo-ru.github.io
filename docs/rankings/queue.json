@@ -154,22 +154,62 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t003.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "chat-gaeo-rankings-mw8cdftd-g2jbimjyvv",
-        "requestId": "claim-mw8cdftd-g2jbimjyvv",
-        "token": "rk-mw8cdfte-urqsn6lpjk-6eahgwnjewb",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T21:25:57.728Z",
-        "expiresAt": "2026-11-09T03:25:57.728Z",
-        "previousStatus": "ready"
-      },
+      "status": "needs_work_source",
+      "lease": null,
       "result": null,
       "leaseVersion": 2,
       "lastRelease": {
         "at": "2026-11-08T20:08:14.586Z",
         "ownerId": "gaeo-rankings-live-smoke-a-20261108-mw89kz54",
         "reason": "Completed live connector concurrency test; no article started. Returned to the regular queue."
+      },
+      "block": {
+        "reason": "Полный текст опубликованного рейтинга PREP-T003 от 31.07.2026 для одновременной FBS-работы с Wildberries и Ozon не найден после завершенных поисков на Google Drive и Яндекс.Диске. На Google Drive обнаружены иной рейтинг жидких товаров PREP-T001 и посадочная страница FBS; на Яндекс.Диске обнаружена обложка ТОП-10 FBS фулфилментов.jpg, но не рукопись. Яндекс-поиски FBS, Wildberries, ТОП-10 полностью охватили по 20 919 имен файлов; публикационные каталоги проверены. Требуется восстановление текста из опубликованной версии в Work.",
+        "sourceChecks": [
+          {
+            "provider": "google-drive",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-08T21:39:41.100Z",
+            "queries": [
+              "ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS",
+              "фулфилментов FBS WB Ozon 2026",
+              "fulfillment_fbs_wb_ozon_2026",
+              "name contains 'FBS'",
+              "name contains 'Wildberries'",
+              "name contains 'Ozon'",
+              "name contains 'ТОП-10'"
+            ],
+            "locations": [
+              "https://drive.google.com/drive/folders/1VudTv6pINe_2uIzpZecmODBw_vf0zVQ-",
+              "https://drive.google.com/drive/folders/1-4gL7aiVQiDzGnIkUz5J7a9DnIB2Rr3P",
+              "Google Drive: доступные файлы, результаты целевых запросов, проверенные тематические папки"
+            ]
+          },
+          {
+            "provider": "yandex-disk",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-08T21:39:41.100Z",
+            "requestId": "rankings-prep-t003-mw8cfdep-top102",
+            "queries": [
+              "FBS",
+              "Wildberries",
+              "ТОП-10"
+            ],
+            "locations": [
+              "disk:/!GAEO/!Договора/Prep-Center",
+              "disk:/!GAEO/!Договора/Prep-Center/Статьи",
+              "disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка",
+              "disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-fbs2.json",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-wb2.json",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-top102.json"
+            ]
+          }
+        ],
+        "at": "2026-11-08T21:39:42.407Z",
+        "ownerId": "chat-gaeo-rankings-mw8cdftd-g2jbimjyvv"
       }
     },
     {
@@ -1158,8 +1198,20 @@
       "expiresAt": "2026-11-09T03:25:57.728Z",
       "previousStatus": "ready",
       "taskId": "prep-t003",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-mw8cdftd-g2jbimjyvv-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный текст опубликованного рейтинга PREP-T003 от 31.07.2026 для одновременной FBS-работы с Wildberries и Ozon не найден после завершенных поисков на Google Drive и Яндекс.Диске. На Google Drive обнаружены иной рейтинг жидких товаров PREP-T001 и посадочная страница FBS; на Яндекс.Диске обнаружена обложка ТОП-10 FBS фулфилментов.jpg, но не рукопись. Яндекс-поиски FBS, Wildberries, ТОП-10 полностью охватили по 20 919 имен файлов; публикационные каталоги проверены. Требуется восстановление текста из опубликованной версии в Work.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-08T21:39:41.100Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1VudTv6pINe_2uIzpZecmODBw_vf0zVQ-\",\"https://drive.google.com/drive/folders/1-4gL7aiVQiDzGnIkUz5J7a9DnIB2Rr3P\",\"Google Drive: доступные файлы, результаты целевых запросов, проверенные тематические папки\"],\"provider\":\"google-drive\",\"queries\":[\"ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS\",\"фулфилментов FBS WB Ozon 2026\",\"fulfillment_fbs_wb_ozon_2026\",\"name contains 'FBS'\",\"name contains 'Wildberries'\",\"name contains 'Ozon'\",\"name contains 'ТОП-10'\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-08T21:39:41.100Z\",\"complete\":true,\"locations\":[\"disk:/!GAEO/!Договора/Prep-Center\",\"disk:/!GAEO/!Договора/Prep-Center/Статьи\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-fbs2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-wb2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-top102.json\"],\"provider\":\"yandex-disk\",\"queries\":[\"FBS\",\"Wildberries\",\"ТОП-10\"],\"requestId\":\"rankings-prep-t003-mw8cfdep-top102\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-08T21:39:42.407Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "prep-t003",
+            "reason": "Полный текст опубликованного рейтинга PREP-T003 от 31.07.2026 для одновременной FBS-работы с Wildberries и Ozon не найден после завершенных поисков на Google Drive и Яндекс.Диске. На Google Drive обнаружены иной рейтинг жидких товаров PREP-T001 и посадочная страница FBS; на Яндекс.Диске обнаружена обложка ТОП-10 FBS фулфилментов.jpg, но не рукопись. Яндекс-поиски FBS, Wildberries, ТОП-10 полностью охватили по 20 919 имен файлов; публикационные каталоги проверены. Требуется восстановление текста из опубликованной версии в Work."
+          }
+        }
+      ]
     },
     {
       "ownerId": "chat-mw8crve4-cuabv8ph2y",
@@ -1174,5 +1226,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T21:37:11.118Z"
+  "updatedAt": "2026-11-08T21:39:42.407Z"
 }
