@@ -306,21 +306,51 @@
       "slug": "fulfillment-bytovaya-himiya-2026",
       "title": "Фулфилмент для бытовой химии: выбор склада в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t009.json",
       "earliestPublicationDate": "2026-08-24",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8dh2ca-3cy7my",
         "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
         "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
         "token": "rk-mw8dh2ca-tjsjro5jg4e-n8uaan2bys",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T21:56:47.078Z",
-        "expiresAt": "2026-11-09T03:56:47.078Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t009.json",
+        "committedAt": "2026-11-08T22:05:47.048Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t009/case.jpg",
+            "sha": "8709390435078fda0a46b0d6bedeb3c7501fa3fb"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/cover.jpg",
+            "sha": "b6cc64bff43f02fbc1cc7619a171f2dbe3355780"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/packing-line.jpg",
+            "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/warehouse.jpg",
+            "sha": "efd92c1909e7ea5d16ca393132f32b9c7af21398"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t009.json",
+            "sha": "c9c6e364956e7e9c80e08caa49a98d1e7fc13ae4"
+          }
+        ],
+        "baseCommit": "c0b24990df8e31e246dcb6a78c462b5c552f31d9"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "12Im7BZwk_LTI0FUhKYf1uPrWL2HoMn0k",
+        "locator": "Вступление «Первое место ... занял Преп-Центр», нумерованный ТОП-10, строка 72; раздел «1. Преп-Центр», строка 86",
+        "checkedAt": "2026-11-08T22:04:48.405Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t008",
@@ -1329,8 +1359,9 @@
       "expiresAt": "2026-11-09T03:56:47.078Z",
       "previousStatus": "ready",
       "taskId": "prep-t009",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8dh2ca-3cy7my"
     },
     {
       "ownerId": "chat-mw8dnbbk-e1crhhfuo3k",
@@ -1345,5 +1376,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T22:01:37.910Z"
+  "updatedAt": "2026-11-08T22:05:47.048Z"
 }
