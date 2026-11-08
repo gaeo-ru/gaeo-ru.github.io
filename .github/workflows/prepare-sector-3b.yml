@@ -21,13 +21,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Apply exact narrow patches, preserving other source content
-        run: node scripts/_prepare-sector-3b.mjs
-      - name: Commit only the integrated source and canonical handoff
+      - name: Apply exact narrow source patches
+        run: |
+          node scripts/_prepare-sector-3b.mjs
+          git restore .github/workflows/legal-geo-pr-qa.yml .github/workflows/astro-production.yml
+          node --input-type=module -e "import fs from 'node:fs'; const p=JSON.parse(fs.readFileSync('package.json','utf8')); p.scripts['check:sector3a']='node scripts/qa_sector_clusters_3a.mjs && node scripts/qa_sector_methods_3b.mjs'; fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n');"
+      - name: Commit integrated source and canonical handoff
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/generate-tariff-pages.mjs src/data/industry-specializations.mjs scripts/qa_approved_design_system.mjs scripts/qa_sector_clusters_3a.mjs src/legacy/pages/strategies/index.html src/legacy/pages/en/strategies/index.html package.json .github/workflows/legal-geo-pr-qa.yml .github/workflows/astro-production.yml docs/TARIFFS_EXPANSION_HANDOFF.md docs/tariff-industry-roadmap.json
+          git add scripts/generate-tariff-pages.mjs src/data/industry-specializations.mjs scripts/qa_approved_design_system.mjs scripts/qa_sector_clusters_3a.mjs src/legacy/pages/strategies/index.html src/legacy/pages/en/strategies/index.html package.json docs/TARIFFS_EXPANSION_HANDOFF.md docs/tariff-industry-roadmap.json
           git commit -m 'feat(3B): integrate methods, reciprocal links, canonical directories and quality gates'
           git push origin HEAD:feat/sector-methods-3b-2026-11-08
       - run: npm install --no-audit --no-fund
