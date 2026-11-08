@@ -64,8 +64,8 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2AD_62_63_64_full_PR_CI_then_source_merge_production_main_pages_separate_public_https; later_research_65_73_104_3A",
-    "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
+    "next_batch": "2AD_62_63_64_source_merged_production_main_pages_live_https_followup; 2AB_73_independent_public_https_check; later_research_65_104_3A_75_76_27_30",
+    "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
       "batch": "2A",
