@@ -25,6 +25,8 @@ for(const item of industrySpecializations){
   assert.ok(html.includes('industry-specialization__catalog-button'),'Accessible category catalogue button '+path);
    assert.ok(html.includes('industry-pricing__quick-links'),'Separate audit links in shared price component '+path);
    assert.ok(html.includes('industry-specialization__related-links'),'Styled related navigation '+path);
+   assert.ok(html.includes('/_astro/')&&html.includes('rel="stylesheet"'),
+     'Astro component styles must have a visible page stylesheet reference '+path);
   assert.equal((html.match(/class="industry-specialization__catalog-label-line"/g)||[]).length,2,'Two intentional catalogue button lines '+path);
   assert.ok(html.includes(lang==='en'?'View this category':'Смотреть это направление'),'Correct first line of catalogue button '+path);
   assert.ok(html.includes(lang==='en'?'in the 107-service catalogue':'в каталоге 107 услуг'),'Correct second line of catalogue button '+path);
@@ -267,12 +269,27 @@ try{
   assert.equal(await page.locator('main .industry-pricing-section [data-plan]').count(),3,'Canonical pricing '+row.path);
   assert.equal(await page.locator('main .industry-pricing__quick-links a').count(),3,'Three pricing choice links '+row.path);
   assert.equal(await page.locator('main .industry-specialization__related-links a').count(),2,'Two final related links '+row.path);
+  const linkStyles=await page.evaluate(()=>{
+    const nav=document.querySelector('.industry-pricing__quick-links');
+    const anchor=nav?.querySelector('a');
+    const related=document.querySelector('.industry-specialization__related-links');
+    const relatedAnchor=related?.querySelector('a');
+    const style=el=>{const cs=getComputedStyle(el);return {display:cs.display,border:cs.borderTopStyle,radius:parseFloat(cs.borderTopLeftRadius),gap:parseFloat(cs.columnGap||'0'),color:cs.color}};
+    return {nav:style(nav),anchor:style(anchor),related:style(related),relatedAnchor:style(relatedAnchor)};
+  });
+  assert.equal(linkStyles.nav.display,'flex','Price navigation is styled as a flexible group '+row.path);
+  assert.equal(linkStyles.related.display,'flex','Related navigation is styled as a flexible group '+row.path);
+  for(const key of ['anchor','relatedAnchor']){
+    assert.ok(['inline-flex','flex'].includes(linkStyles[key].display),'Styled flexible pill link '+key+' '+row.path);
+    assert.equal(linkStyles[key].border,'solid','Pill border '+key+' '+row.path);
+    assert.ok(linkStyles[key].radius>=18,'Rounded pill corners '+key+' '+row.path);
+  }
   const pricingGap=await page.evaluate(()=>{
     const a=document.querySelector('.industry-specialization__catalog-button').getBoundingClientRect();
     const b=document.querySelector('.industry-specialization__faq .industry-eyebrow').getBoundingClientRect();
     return Math.round(b.top-a.bottom);
   });
-  assert.ok(pricingGap>=20&&pricingGap<=130,'Reduced blank space between catalogue and FAQ '+row.path+' '+width+': '+pricingGap);
+  assert.ok(pricingGap>=12&&pricingGap<=60,'Compact catalogue-to-FAQ spacing '+row.path+' '+width+': '+pricingGap);
   const catalogButton=page.locator('main .industry-specialization__catalog-button');
   assert.equal(await catalogButton.count(),1,'Exactly one industry catalogue button '+row.path);
   const catalogGeometry=await catalogButton.evaluate(el=>{
@@ -304,14 +321,16 @@ try{
    const table=document.querySelector('.industry-scenario-table');
    const portrait=document.querySelector('.industry-about>img');
    const box=element=>{const r=element.getBoundingClientRect();return {left:r.left,width:r.width};};
-   return {image:box(image),imageRight:image.getBoundingClientRect().right,imageFit:getComputedStyle(image).objectFit,
+   const media=image.closest('.industry-specialization__media');
+   return {image:box(image),media:box(media),imageRight:image.getBoundingClientRect().right,imageFit:getComputedStyle(image).objectFit,
       naturalAspect:image.naturalWidth/image.naturalHeight,renderedAspect:image.clientWidth/image.clientHeight,
       question:box(question),questionRow:box(questionRow),tableDisplay:getComputedStyle(table).display,portrait:box(portrait),portraitFloat:getComputedStyle(portrait).float};
   });
   assert.equal(layout.imageFit,'contain','Full specialist image is never cropped by CSS '+row.path);
   assert.ok(Math.abs(layout.naturalAspect-layout.renderedAspect)<0.04,'Hero image keeps its natural aspect ratio '+row.path);
+  assert.ok(layout.image.left-layout.media.left>=10,'Hero contains visible left-side inset '+row.path+' '+width);
   if(width<=390){
-   assert.ok(layout.image.width>=width-24&&layout.image.left>=0&&layout.imageRight<=width+1,'Image fits within mobile viewport with safe margins '+row.path+' '+width+' '+JSON.stringify(layout));
+   assert.ok(layout.image.width>=width-28&&layout.image.left>=0&&layout.imageRight<=width+1,'Mobile image retains inset white safety margins '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.ok(Math.abs(layout.question.width-layout.questionRow.width)<=4,'Buyer question must occupy the entire mobile card '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.ok(Math.abs(layout.portrait.width-width/2)<=2&&layout.portraitFloat==='left','Expert photo takes half mobile viewport and floats left '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.equal(layout.tableDisplay,'block','Mobile scenarios use stacked rows '+row.path+' '+width);

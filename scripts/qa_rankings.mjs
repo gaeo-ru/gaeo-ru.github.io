@@ -144,6 +144,32 @@ try{
     assert.ok(rightLinks.indexOf(articleHref)>=0 && rightLinks.indexOf(rankingHref)===rightLinks.indexOf(articleHref)+1 && rightLinks.indexOf(profileHref)===rightLinks.indexOf(rankingHref)+1,'Rankings follow authored publications and precede profiles');
     assert.equal(await cols.locator(':scope > .footer-brand > .footer-lang').count(),1,'Footer language switch is under brand/contact column');
     assert.equal(await cols.locator(':scope > div:nth-child(3) > .footer-lang').count(),0,'No language switch below publications');
+    const mobileLang=page.locator('footer .footer-lang--mobile');
+    const desktopLang=page.locator('footer .footer-brand > .footer-lang--desktop');
+    assert.equal(await mobileLang.count(),1,'One mobile-only language switch');
+    assert.equal(await desktopLang.count(),1,'One desktop language switch');
+    if(width<=720){
+      assert.ok(await mobileLang.isVisible(),'Mobile footer language switch must be visible below navigation');
+      assert.ok(!await desktopLang.isVisible(),'Desktop language switch hidden on narrow viewports');
+      const placement=await mobileLang.evaluate(el=>{
+        const grid=el.previousElementSibling,legal=el.nextElementSibling;
+        return {
+          isAfterMenus:grid?.classList.contains('footer-grid'),
+          isBeforeLegal:legal?.classList.contains('footer-bottom'),
+          menubottom:grid?.getBoundingClientRect().bottom||0,
+          langTop:el.getBoundingClientRect().top,
+          langBottom:el.getBoundingClientRect().bottom,
+          legalTop:legal?.getBoundingClientRect().top||0
+        };
+      });
+      assert.ok(placement.isAfterMenus&&placement.isBeforeLegal
+        &&placement.langTop>=placement.menubottom-1
+        &&placement.legalTop>=placement.langBottom-1,
+        'RU/EN must be below all mobile footer links and above the legal details: '+JSON.stringify(placement));
+    }else{
+      assert.ok(!await mobileLang.isVisible(),'Extra mobile switch hidden on desktop');
+      assert.ok(await desktopLang.isVisible(),'Brand-column switch visible on desktop');
+    }
     const contact=await cols.locator(':scope > .footer-brand .footer-contact').innerText();
     assert.ok(contact.includes('Email: ya@gaeo.ru') && contact.includes((lang==='en'?'Phone:':'Телефон:')+' +7 (926) 42-42-333'),'Email and phone have labeled separate lines');
     const contactLines=contact.split(/\n+/).map(s=>s.trim());

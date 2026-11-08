@@ -15,11 +15,29 @@ function hash(path,kind){
  return createHash('sha256').update(body).digest('hex');
 }
 const sourcePages=resolve(base,'src/legacy/pages'),sourceAssets=resolve(base,'public');
+// Astro component-scoped CSS/JS is emitted under dist/_astro. Publishing only
+// public/ and source HTML silently left 404 stylesheets on hundreds of pages.
+const astroDir=resolve(dist,'_astro');
+const generatedAssets=existsSync(astroDir)?walk(astroDir).map(p=>({
+ path:'_astro/'+relative(astroDir,p).split(sep).join('/'),kind:'asset'
+})):[];
+if(!generatedAssets.some(f=>f.path.endsWith('.css')))
+ throw Error('Astro component CSS is missing from dist/_astro; refuse an unstyled release');
 const files=[
  ...walk(sourcePages).filter(p=>p.endsWith('.html')).map(p=>({path:relative(sourcePages,p).split(sep).join('/'),kind:'html'})),
- ...walk(sourceAssets).map(p=>({path:relative(sourceAssets,p).split(sep).join('/'),kind:'asset'}))
+ ...walk(sourceAssets).map(p=>({path:relative(sourceAssets,p).split(sep).join('/'),kind:'asset'})),
+ ...generatedAssets
 ].sort((a,b)=>a.path.localeCompare(b.path));
 if(new Set(files.map(f=>f.path)).size!==files.length)throw Error('Duplicate page/asset path');
+/* Check all HTML references, not only the presence of any CSS file. */
+const stagedPaths=new Set(files.map(f=>f.path));
+for(const page of files.filter(f=>f.kind==='html')){
+ const html=readFileSync(resolve(dist,page.path),'utf8');
+ for(const match of html.matchAll(/(?:href|src)=["']\/(_astro\/[^"'?#]+)(?:[?#][^"']*)?["']/g)){
+  if(!stagedPaths.has(match[1]))throw Error('Missing Astro asset '+match[1]+' referenced by '+page.path);
+ }
+}
+
 for(const name of ['index.html','404.html','robots.txt','sitemap.xml','CNAME','assets/site.js'])
  if(!files.some(f=>f.path===name))throw Error('Required output missing: '+name);
 let prior=null;
@@ -36,7 +54,7 @@ for(const f of expected){
 }
 for(const f of files)if(!existsSync(resolve(dist,f.path)))errors.push('Astro did not build '+f.path);
 if(errors.length){console.error(errors.slice(0,30).join('\n'));throw Error('SAFE PUBLISH ABORTED: '+errors.length+' differences');}
-console.log('RELEASE_PREFLIGHT=PASS; initial='+(!prior)+'; html='+files.filter(f=>f.kind==='html').length+'; assets='+files.filter(f=>f.kind==='asset').length);
+console.log('RELEASE_PREFLIGHT=PASS; initial='+(!prior)+'; html='+files.filter(f=>f.kind==='html').length+'; assets='+files.filter(f=>f.kind==='asset').length+'; astroBundles='+generatedAssets.length);
 if(mode==='preflight'){
  if(process.env.GITHUB_OUTPUT)appendFileSync(process.env.GITHUB_OUTPUT,'initial='+(!prior)+'\n');
  process.exit(0);

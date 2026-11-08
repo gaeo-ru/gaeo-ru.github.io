@@ -17,10 +17,10 @@ const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-'
 <!-- Run the existing row-measurement logic on every industry tariff grid, not only /tarify/. -->
 <script is:inline src="/assets/tariffs.js" defer></script>
 <p class="industry-note industry-pricing__explanation">{en?'Start with a free mini-audit or a full GEO audit. A monthly plan includes 50 prompts and 5 AI platforms; broader scope is calculated separately.':'Начать можно с бесплатного мини-аудита или полного GEO-аудита. В базовом объеме сопровождения 50 промптов и 5 нейросетей; расширение рассчитывается отдельно.'}</p>
-<nav class="industry-pricing__quick-links" aria-label={en?'Choose an audit or calculate the scope':'Выбрать аудит или рассчитать объем'}>
-  <a href={serviceHref('free-audit',lang)}>{en?'Free mini-audit':'Бесплатный мини-аудит'} <span aria-hidden="true">→</span></a>
-  <a href={serviceHref('geo-audit',lang)}>{en?'Full GEO audit':'Полный аудит'} <span aria-hidden="true">→</span></a>
-  <a href={pricingHref(lang)+'#calculator'}>{en?'Calculate the scope':'Рассчитать объем'} <span aria-hidden="true">→</span></a>
+<nav class="industry-pricing__quick-links" aria-label={en?'Start with an audit or estimate the scope':'Аудит или расчет объема'}>
+  <a href={serviceHref('free-audit',lang)}>{en?'Free mini-audit':'Бесплатный мини-аудит'}</a>
+  <a href={serviceHref('geo-audit',lang)}>{en?'Full GEO audit':'Полный GEO-аудит'}</a>
+  <a href={pricingHref(lang)+'#calculator'}>{en?'Calculate the scope':'Рассчитать объём'}</a>
 </nav>
 {scopeNote&&<p class="industry-note">{scopeNote}</p>}
 {showCatalogLink&&<p><a class="tariff-text-link" href={pricingHref(lang)+'#industry-catalog'}>{en?'All 107 business categories and prices':'Все 107 направлений и тарифы'} →</a></p>}
@@ -34,14 +34,7 @@ const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-'
 <script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@graph':['geo','content','guarantee'].flatMap(id=>serviceNodes(id,lang))}).replace(/</g,'\u003c')}/>
 
 <style>
-/* Shared service links: visually distinct from the pricing explanation. */
-.industry-pricing__explanation{margin-bottom:0}
-.industry-pricing__quick-links{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:stretch;margin:12px 0 0}
-.industry-pricing__quick-links a{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;padding:10px 14px;border:1px solid #cad9e5;border-radius:9px;background:#f7fafc;color:#075e80;font-size:14px;font-weight:650;line-height:1.4;text-decoration:none;transition:border-color .15s ease,background-color .15s ease}
-.industry-pricing__quick-links a span{font-size:16px;font-weight:500}
-.industry-pricing__quick-links a:hover,.industry-pricing__quick-links a:focus-visible{background:#eaf5fa;border-color:#7aa9bc;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:720px){.industry-pricing__quick-links{gap:8px}.industry-pricing__quick-links a{padding:10px 12px;min-height:42px;font-size:13px}}
-@media(max-width:420px){.industry-pricing__quick-links a{width:100%}}
+/* Contextual navigation style lives in /assets/internal.css; keep responsive link styling global. */
 /* A compact cross-link preview. Every link remains in the HTML and the
    complete list stays visible if JavaScript is unavailable. */
 .industry-related-specializations{

@@ -37,31 +37,30 @@ const sectionLink=(link)=>link.startsWith('https://');
 <section class="industry-section industry-pricing-section industry-specialization__pricing" id="industry-pricing"><div class="container"><div class="industry-eyebrow">{en?'Current pricing':'Тарифы GAEO'}</div><h2>{en?'Audit and monthly GEO plans for this specialization':'Аудит и сопровождение для этой специализации'}</h2><IndustryPricing lang={lang} intro={en?'Three published monthly plans use the same GAEO prices across sectors. Final scope follows the baseline and project requirements.':'Для отраслей действуют общие 3 тарифа GAEO. Итоговый объем определяется стартовым замером и задачами проекта.'} showCatalogLink={false}/><p class="industry-specialization__catalog-action"><a class="button outline industry-specialization__catalog-button" href={pricingHref(lang)+'#industry-'+String(page.id).padStart(3,'0')} aria-label={en?'View this category in the 107-service catalogue':'Смотреть это направление в каталоге 107 услуг'}><span class="industry-specialization__catalog-label"><span class="industry-specialization__catalog-label-line">{en?'View this category':'Смотреть это направление'}</span><span class="industry-specialization__catalog-label-line">{en?'in the 107-service catalogue':'в каталоге 107 услуг'}</span></span><span class="industry-specialization__catalog-arrow" aria-hidden="true">→</span></a></p></div></section>
 <section class="industry-section industry-faq-section industry-specialization__faq" id="faq"><div class="container"><div class="industry-eyebrow">FAQ</div><h2>{en?'Questions about the service':'Частые вопросы'}</h2><FAQAccordion items={c.faq} paragraphAnswers={true}/></div></section>
 <section class="industry-section industry-about-section"><div class="container industry-about"><img src="/assets/alexey-yakovlev-biography.jpg" alt={en?'Alexey Yakovlev':'Алексей Яковлев'} width="300" height="300" loading="lazy" decoding="async"/><div><div class="industry-eyebrow">{en?'Responsible specialist':'Кто ведет проект'}</div><h2>{en?'Alexey Yakovlev':'Алексей Яковлев'}</h2><p>{en?'Independent GEO/AEO specialist with business experience since 2008. I personally carry out the diagnostic and build an industry-specific plan, separating verified sources from assumptions.':'Независимый GEO/AEO-эксперт с предпринимательским опытом с 2008 года. Лично провожу диагностику и составляю отраслевой план, отделяя подтвержденные сведения от предположений.'}</p><a class="industry-text-link" href={en?'/en/professional-biography/':'/professional-biography/'}>{en?'Professional biography':'Профессиональная биография'} ↗</a></div></div></section>
-<section class="industry-section industry-final-section"><div class="container"><h2>{c.ctaTitle}</h2><p class="industry-section__lead">{c.ctaText}</p><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss an initial audit':'Обсудить мини-аудит'}</a><nav class="industry-specialization__related-links" aria-label={en?'Related pages':'Связанные разделы'}>
- <a href={page.parent[lang]}>{page.parentLabels?.[lang] || (en?'Industry overview':'Общая страница отрасли')}<span aria-hidden="true">→</span></a>
- <a href={pricingHref(lang)}>{en?'All GAEO pricing':'Все тарифы GAEO'}<span aria-hidden="true">→</span></a>
+<section class="industry-section industry-final-section"><div class="container"><h2>{c.ctaTitle}</h2><p class="industry-section__lead">{c.ctaText}</p><a class="button" href={lead} data-gaeo-intent="service" data-gaeo-request={c.request}>{en?'Discuss an initial audit':'Обсудить мини-аудит'}</a><nav class="industry-specialization__related-links" aria-label={en?'Explore related pages':'Другие разделы'}>
+ <a href={page.parent[lang]}>{page.parentLabels?.[lang] || (en?'Industry overview':'Общая страница отрасли')}</a>
+ <a href={pricingHref(lang)}>{en?'All GAEO pricing':'Все тарифы GAEO'}</a>
 </nav></div></section>
 <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')}/>
 <style>
 /* Shared specialization layout for the 100 dedicated RU/EN industry pages.
    The seven earlier commercial landings use the shared internal.css template. */
+/* The same rules are mirrored in public/assets/internal.css, which the
+   production pipeline publishes independently of generated Astro CSS. */
 .industry-specialization__media{
- display:block;width:100%;max-width:540px;min-width:0;
- justify-self:center;align-self:center;margin:0;
- padding:0 12px;box-sizing:border-box;overflow:visible
+ display:block;width:100%;max-width:590px;min-width:0;
+ justify-self:center;align-self:center;margin:0 auto;
+ padding:20px;box-sizing:border-box;overflow:visible;
+ background:#fff;border:1px solid #e4ebf1;border-radius:18px
 }
 .industry-hero .industry-specialization__media img{
  display:block;width:100%;max-width:100%;max-height:none;height:auto;
  aspect-ratio:auto;object-fit:contain;object-position:center;
- margin:0 auto;border-radius:12px
+ margin:0 auto;border-radius:9px;box-shadow:none
 }
-.industry-specialization__pricing{padding-bottom:32px}
-.industry-specialization__faq{padding-top:32px}
-.industry-specialization__catalog-action{margin:18px 0 0}
-.industry-specialization__related-links{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:stretch;margin:22px 0 0}
-.industry-specialization__related-links a{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;padding:10px 14px;border:1px solid #cad9e5;border-radius:9px;background:#fff;color:#075e80;font-size:14px;line-height:1.45;font-weight:650;text-decoration:none}
-.industry-specialization__related-links a:hover,.industry-specialization__related-links a:focus-visible{background:#edf7fb;border-color:#7aa9bc;text-decoration:underline;text-underline-offset:3px}
-.industry-specialization__related-links span{font-size:16px;font-weight:500}
+.industry-specialization__pricing{padding-bottom:12px}
+.industry-specialization__faq{padding-top:12px}
+.industry-specialization__catalog-action{margin:12px 0 0}
 .industry-specialization__catalog-button{
  display:inline-grid;grid-template-columns:minmax(0,1fr) 18px;
  align-items:center;column-gap:10px;
@@ -84,9 +83,8 @@ const sectionLink=(link)=>link.startsWith('https://');
 .industry-final-section .container{max-width:920px}
 .industry-final-section .button{margin-top:1rem}
 @media(max-width:720px){
- .industry-specialization__pricing{padding-bottom:24px}
- .industry-specialization__faq{padding-top:24px}
- .industry-specialization__related-links a{width:100%}
+ .industry-specialization__pricing{padding-bottom:10px}
+ .industry-specialization__faq{padding-top:10px}
  .industry-specialization__catalog-button{
   width:100%;padding-inline:10px;column-gap:6px;
   font-size:clamp(12px,3.6vw,14px)
@@ -94,7 +92,8 @@ const sectionLink=(link)=>link.startsWith('https://');
  /* The original square catalogue artwork must be fully visible, screen edge to edge. */
  .industry-specialization__media{
   display:block;width:100vw;max-width:none;
-  padding-inline:10px;margin-inline:calc(50% - 50vw)
+  padding:12px;margin-inline:calc(50% - 50vw);
+  border-radius:0;border-inline:0
  }
  .industry-hero .industry-specialization__media img{
   width:100%;height:auto;aspect-ratio:auto;max-width:100%;max-height:none;
