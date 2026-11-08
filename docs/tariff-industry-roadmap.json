@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "independent_public_https_verification_2U_to_2AA_then_free_ids; source_and_pages_released",
+    "next_batch": "2AD_62_63_64_full_PR_CI_then_source_merge_production_main_pages_separate_public_https; later_research_65_73_104_3A",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -1139,6 +1139,31 @@
       "sitemap_new_urls_present": 34,
       "main_new_html_pages_present": 34,
       "next_required_step": "Independently open all 34 new URLs on gaeo.ru (desktop/390/320), verify images, links, forms, canonical/hreflang and then populate live fields. GAEO.ru including baseline /tarify/ inaccessible via chat web/container DNS."
+    },
+    "phase_2ad": {
+      "phase": 2,
+      "batch": "2AD",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        62,
+        63,
+        64
+      ],
+      "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
+      "base_source_commit": "6f0e06d4cbbfdb9a4019fc674a3e4ac24d4c36f0",
+      "content_commit": "2120580d6776107b2733ff160aad409a6e0c7477",
+      "source_file": "src/data/industry-specializations-batch-2ad.mjs",
+      "new_specialization_pairs_prepared": 3,
+      "new_ru_en_urls_prepared": 6,
+      "medical_hub_routes": {
+        "ru": "/industries/medical-care-providers/",
+        "en": "/en/industries/medical-care-providers/"
+      },
+      "pr_ci_status": "pending",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "next_required_step": "run_full_pr_ci_and_release"
     }
   },
   "status_definitions": {
@@ -1163,8 +1188,8 @@
     "total_generated_html_pages_current_release": 285,
     "total_new_specialization_pairs_in_phase_2": 83,
     "total_new_specialization_urls_in_phase_2": 166,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 0,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 3,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 6,
     "total_specialization_pairs_in_main_current_release": 83,
     "total_specialization_urls_in_main_current_release": 166,
     "total_specialization_pairs_prepared_including_2h": 30,
@@ -1204,7 +1229,12 @@
     "phase_2z_prepared_pairs_not_deployed": 0,
     "phase_2z_prepared_ru_en_urls_not_deployed": 0,
     "phase_2z_prepared_hub_pages_not_deployed": 0,
-    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated."
+    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
+    "phase_2ad_prepared_pairs_not_deployed": 3,
+    "phase_2ad_prepared_urls_not_deployed": 6,
+    "total_specialization_pairs_prepared_including_2ad": 86,
+    "total_specialization_urls_prepared_including_2ad": 172,
+    "phase_2ad_count_note": "Source prepared for #62/63/64 (3 pairs, 6 RU/EN URLs), not published. Previous consolidated 2U–2AA baseline: 83 deployed pairs, 166 URLs, 285 HTML, 280 sitemap, 827 manifest files with CI/production/Pages PASS. Public HTTPS for 2AD remains unverified."
   },
   "candidate_batches": [
     {
@@ -1546,6 +1576,22 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs"
+    },
+    {
+      "batch": "2AD",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        62,
+        63,
+        64
+      ],
+      "label": "Офтальмология, пластическая хирургия, репродуктивная медицина",
+      "condition": "3 самостоятельно написанные RU/EN медицинские специализации на существующем медицинском хабе. Проверить лицензируемые работы, 633н (офтальмология), 298н (пластическая хирургия), 803н (ВРТ), информированное согласие, врачебную тайну и ограничения результатов лечения. Не публиковать вымышленные кейсы; 107 ID, тарифы, BMR и WebP не менять.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ad.mjs",
+      "public_https_browser_verified": false
     }
   ],
   "records": [
@@ -3985,10 +4031,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AD",
+      "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
+      "planned_landing_url_ru": "/industries/ophthalmology-clinics/",
+      "planned_landing_url_en": "/en/industries/ophthalmology-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://base.garant.ru/413139055/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
+      "public_https_browser_verified": false,
+      "verified_at": null
     },
     {
       "id": 63,
@@ -4010,10 +4070,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AD",
+      "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
+      "planned_landing_url_ru": "/industries/plastic-surgery-clinics/",
+      "planned_landing_url_en": "/en/industries/plastic-surgery-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://72reg.roszdravnadzor.ru/medactivities/statecontrol/standards/documents/53072",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
+      "public_https_browser_verified": false,
+      "verified_at": null
     },
     {
       "id": 64,
@@ -4035,10 +4109,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_source_prepared_awaits_pr_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AD",
+      "work_branch": "feat/industry-specializations-batch-2ad-2026-11-08",
+      "planned_landing_url_ru": "/industries/reproductive-medicine-clinics/",
+      "planned_landing_url_en": "/en/industries/reproductive-medicine-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.roszdravnadzor.ru/spec/medactivities/licensing/documents/74900",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "2AD_six_original_bilingual_medical_pages_hub_six_items_and_static_QA_source_committed",
+      "public_https_browser_verified": false,
+      "verified_at": null
     },
     {
       "id": 65,
