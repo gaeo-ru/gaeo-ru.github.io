@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Q_direct_public_HTTPS_backlog_then_research_2R_49_50_51_if_free",
+    "next_batch": "2R_research_49_50_51_then_RU_EN_CI_production_Pages_live; preserve_3A_75_76_27_30",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -597,7 +597,7 @@
     "phase_2k": {
       "phase": 2,
       "batch": "2K",
-      "status": "rebased_source_prepared_ci_pending",
+      "status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
       "records": [
         92,
         93,
@@ -606,16 +606,26 @@
       "source_file": "src/data/industry-specializations-batch-2k.mjs",
       "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/89",
       "work_branch": "release/recover-2k-2l-2o-2026-11-08",
-      "pr_ci_status": "pending",
-      "production_status": "not_run",
-      "pages_status": "not_run",
+      "pr_ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
-      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts"
+      "next_required_step": "independent_direct_https_and_mobile_live_check_only",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42469697715",
+      "source_merge_sha": "bb2391fbb9aace04af0b67973b18c6dc90a817eb",
+      "source_fix_sha": "8290799667324842cabf89b841139fc979b5993f",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42470999027",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "released_at": "2026-11-08T10:27:30.404Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42471509919",
+      "main_new_html_verified": 6,
+      "public_https_limitation": "The checking environment could not open gaeo.ru; main/Pages PASS is confirmed, public browser rendering is not."
     },
     "phase_2l": {
       "phase": 2,
       "batch": "2L",
-      "status": "rebased_source_prepared_ci_pending",
+      "status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
       "records": [
         7,
         9,
@@ -624,16 +634,26 @@
       "source_file": "src/data/industry-specializations-batch-2l.mjs",
       "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91",
       "work_branch": "release/recover-2k-2l-2o-2026-11-08",
-      "pr_ci_status": "pending",
-      "production_status": "not_run",
-      "pages_status": "not_run",
+      "pr_ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
-      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts"
+      "next_required_step": "independent_direct_https_and_mobile_live_check_only",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42469697715",
+      "source_merge_sha": "bb2391fbb9aace04af0b67973b18c6dc90a817eb",
+      "source_fix_sha": "8290799667324842cabf89b841139fc979b5993f",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42470999027",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "released_at": "2026-11-08T10:27:30.404Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42471509919",
+      "main_new_html_verified": 6,
+      "public_https_limitation": "The checking environment could not open gaeo.ru; main/Pages PASS is confirmed, public browser rendering is not."
     },
     "phase_2o": {
       "phase": 2,
       "batch": "2O",
-      "status": "rebased_source_prepared_ci_pending",
+      "status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
       "records": [
         55,
         56,
@@ -642,15 +662,25 @@
       "source_file": "src/data/industry-specializations-batch-2o.mjs",
       "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/95",
       "work_branch": "release/recover-2k-2l-2o-2026-11-08",
-      "pr_ci_status": "pending",
-      "production_status": "not_run",
-      "pages_status": "not_run",
+      "pr_ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
-      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts",
+      "next_required_step": "independent_direct_https_and_mobile_live_check_only",
       "hub_routes": {
         "ru": "/industries/international-logistics/",
         "en": "/en/industries/international-logistics/"
-      }
+      },
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42469697715",
+      "source_merge_sha": "bb2391fbb9aace04af0b67973b18c6dc90a817eb",
+      "source_fix_sha": "8290799667324842cabf89b841139fc979b5993f",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42470999027",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "released_at": "2026-11-08T10:27:30.404Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42471509919",
+      "main_new_html_verified": 8,
+      "public_https_limitation": "The checking environment could not open gaeo.ru; main/Pages PASS is confirmed, public browser rendering is not."
     }
   },
   "status_definitions": {
@@ -948,6 +978,19 @@
       "work_branch": "feat/industry-specializations-batch-2q-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2q.mjs",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/98"
+    },
+    {
+      "batch": "2R",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        49,
+        50,
+        51
+      ],
+      "label": "Складское оборудование, промышленная химия, промышленная автоматизация и сервис",
+      "condition": "Сначала исследовать отдельные покупательские запросы и официальные источники. Выпустить 3 оригинальные RU/EN специализации (6 страниц), без ложных клиентских результатов. Сохранить общий тариф и 107 ID. Перед началом проверить параллельные задачи; пройти PR CI, production, Pages и публичный HTTPS независимо.",
+      "work_status": "research_pending_no_owner"
     }
   ],
   "records": [
@@ -1218,10 +1261,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 8,
@@ -1278,10 +1324,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 10,
@@ -1341,10 +1390,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 12,
@@ -2941,10 +2993,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 56,
@@ -2966,10 +3021,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 57,
@@ -2991,10 +3049,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 58,
@@ -4162,10 +4223,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 93,
@@ -4195,10 +4259,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 94,
@@ -4228,10 +4295,13 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
+      "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "restored_in_isolated_branch_ci_pending",
-      "next_required_step": "full_ci_then_production_pages_and_independent_https"
+      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
+      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "source_commit": "8290799667324842cabf89b841139fc979b5993f",
+      "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103"
     },
     {
       "id": 95,
