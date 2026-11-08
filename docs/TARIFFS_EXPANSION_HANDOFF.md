@@ -4,7 +4,9 @@
 
 Этот документ и `docs/tariff-industry-roadmap.json` ведутся дальше на месте. Не создавать новый конкурирующий план, Work-задачу или автоматизацию. Новые указания Алексея имеют приоритет над решениями этого файла.
 
-## Партия 2T: подготовлены 3 строительные специализации (8 ноября 2026)
+## Партия 2T: исходники и PR CI PASS, production выполняется (8 ноября 2026)
+
+№14/15/16: 3 оригинальные RU/EN специализации, 6 HTML. [PR #106](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106) объединен в `astro-source` коммитом `36c3b33346ada429c18b633a1a60e1f48515548c`. [Полный CI 42479150229](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229) **PASS** (130 RU/EN страниц при 1440/390/320, тарифы, изображения, FAQ, формы и прочие регрессии). [Production 42479863079](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079) выполняется. `main`, Pages и публичный HTTPS проверяются отдельно; статусы live-полей не повышены. Общие тарифы и гарантия BMR не изменены. Продолжение в разделе 30.
 
 Проверены `astro-source`, актуальный реестр 107 направлений, последний выпуск 2S и открытые PR. Свободные №14/15/16 объединены в одну независимую партию **2T: 3 специализации / 6 RU/EN HTML**. №17/18 и исследовательская 3A не затронуты. Код в `feat/industry-specializations-batch-2t-2026-11-08`; до полного CI, source merge, production и Pages статус **только prepared**, отдельный публичный HTTPS не подтвержден. Подробная точка продолжения в разделе 30.
 
@@ -852,6 +854,12 @@
 - **№16:** [ГОСТ 33079-2014](https://protect.gost.ru/gost/details/3ab32780-20d3-4e74-8d4b-2585ddbe36dc) классифицирует навесные светопрозрачные фасады, [ГОСТ 33793-2021](https://protect.gost.ru/gost/details/6a4e7f70-4174-461f-9e2a-fa25da1ab28e) описывает испытания по ветровой нагрузке, [ГОСТ 33792-2021](https://protect.gost.ru/gost/details/2c91b736-b1f5-47ea-b24a-faedcb523776) по воздухо- и водопроницаемости, [СП 20.13330.2016](https://protect.gost.ru/sp/details/bac9e1fe-45f1-401b-8e32-949f4ee27821) регулирует нагрузки. Свойства стеклопакета не выдаются за доказательство огнестойкости всей системы.
 
 **Архитектура:** `industry-specializations-batch-2t.mjs` импортирован в общий `src/data/industry-specializations.mjs`; №14/15/16 внесены в обязательную проверку `scripts/qa_industry_specializations.mjs`. Существующие `IndustrySpecialization.astro`, `IndustryPricing.astro`, `src/data/pricing.mjs`, стабильные №14–16 и локальные WebP `industry-014/015/016-960.webp` используются без копирования. Для входящих ссылок пока задействован действующий родительский раздел `/geo-prodvizhenie-nedvizhimosti/` (и EN), методики промышленного подтверждения, недвижимости и измерения. Это навигационная и методическая связь, а не доказательство опыта GAEO в 3 новых нишах.
+
+### Подтвержденные исходники и CI 2T
+
+- [PR #106](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106) объединен в `astro-source`, merge `36c3b33346ada429c18b633a1a60e1f48515548c`; сохранены другие специализации и оба канонических документа.
+- [Полный CI 42479150229](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229) **PASS**: Astro, 130 RU/EN отраслевых HTML, Chromium 1440/390/320, WebP, FAQ, 3 канонических тарифа, формы, ссылки, паритет, кейсы и исследования.
+- [Production 42479863079](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079) запущен и пока не завершился. Выводы о `main`, GitHub Pages и публичном HTTPS нельзя делать до подтверждения.
 
 ### Точная точка продолжения
 

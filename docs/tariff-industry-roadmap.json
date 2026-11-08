@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2T_PR_full_CI_merge_prod_main_pages_then_independent_public_https",
+    "next_batch": "2T_production_main_Pages_then_external_HTTPS_and_next_free_17_18",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -776,7 +776,7 @@
     "phase_2t": {
       "phase": 2,
       "batch": "2T",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "source_merged_pr_ci_pass_production_in_progress",
       "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2t.mjs",
       "records": [
@@ -786,14 +786,14 @@
       ],
       "new_industry_landing_pairs": 3,
       "new_html_pages": 6,
-      "pr_ci_status": "pending",
-      "production_status": "not_started",
-      "pages_status": "not_started",
+      "pr_ci_status": "pass",
+      "production_status": "in_progress",
+      "pages_status": "pending",
       "public_https_browser_verified": false,
       "previous_main_source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
       "source_base_commit": "dfdbd937f71135619be3daaf0c1ba852faa093d8",
-      "last_completed_step": "original bilingual industry pages, relevant current official source checks, 6 routes, root and mandatory QA",
-      "next_required_step": "Open one PR and require full CI PASS; merge after checking fresh source, production/main/Pages PASS, direct external HTTPS later",
+      "last_completed_step": "PR106 full CI PASS 130 RU EN at 1440/390/320, source merge 36c3b333",
+      "next_required_step": "Confirm production 42479863079 and main manifest+6 HTML+sitemap, GitHub Pages then direct HTTPS",
       "constraints": "Preserve all 107 catalogue IDs, common prices, contractual BMR guarantees, other batches and their two canonical docs.",
       "excluded": [
         17,
@@ -802,7 +802,18 @@
         76,
         27,
         30
-      ]
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "source_merged": true,
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
+      "qa_ru_en_urls_verified": 130,
+      "qa_browser_widths": [
+        1440,
+        390,
+        320
+      ],
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
     }
   },
   "status_definitions": {
@@ -1161,13 +1172,17 @@
       ],
       "label": "Коммерческий ремонт, оконные производители и монтаж, фасадное и специальное остекление",
       "condition": "3 самостоятельные двуязычные специализации / 6 RU+EN страниц. Проверять актуальный СП 71.13330.2017 с Изменением №3 (с 1.02.2026), оконные ГОСТ 23166-2024/30971-2012/24866-2014 и классификацию фасадов ГОСТ 33079-2014 плюс испытания ГОСТ 33792/33793-2021. Не выдавать стандарты за сертификаты отдельных фирм, испытания конкретных систем или готовые кейсы GEO. 107 исходных ID, цены и BMR гарантии неизменны.",
-      "work_status": "source_prepared_pr_ci_pending",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
       "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2t.mjs",
-      "pr_ci_status": "not_started",
+      "pr_ci_status": "pass",
       "production_status": "not_started",
       "pages_status": "not_started",
-      "public_https_browser_verified": false
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
     }
   ],
   "records": [
@@ -1672,11 +1687,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "pr_ci_merge_source_production_main_pages_then_public_https",
-      "last_completed_step": "phase_2t_original_ru_en_content_evidence_and_qa_registered",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
       "planned_landing_url_ru": "/industries/commercial-fit-out-contractors/",
       "planned_landing_url_en": "/en/industries/commercial-fit-out-contractors/",
       "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
@@ -1686,7 +1701,12 @@
         "https://www.consultant.ru/document/cons_doc_LAW_498649/",
         "https://rosguard.gov.ru/document/article/federalnyj-zakon-ot-30-dekabrya-2009-g--384fz"
       ],
-      "public_https_browser_verified": false
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 15,
@@ -1708,11 +1728,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "pr_ci_merge_source_production_main_pages_then_public_https",
-      "last_completed_step": "phase_2t_original_ru_en_content_evidence_and_qa_registered",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
       "planned_landing_url_ru": "/industries/window-manufacturers-installers/",
       "planned_landing_url_en": "/en/industries/window-manufacturers-installers/",
       "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
@@ -1722,7 +1742,12 @@
         "https://protect.gost.ru/gost/details/09b731bf-531e-428b-8ef9-556ed2d1c110",
         "https://protect.gost.ru/gost/details/5ffa7300-668a-432f-89d7-f695db24c0c8"
       ],
-      "public_https_browser_verified": false
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 16,
@@ -1744,11 +1769,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "pr_ci_merge_source_production_main_pages_then_public_https",
-      "last_completed_step": "phase_2t_original_ru_en_content_evidence_and_qa_registered",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
       "planned_landing_url_ru": "/industries/facade-specialist-glazing-companies/",
       "planned_landing_url_en": "/en/industries/facade-specialist-glazing-companies/",
       "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
@@ -1759,7 +1784,12 @@
         "https://protect.gost.ru/gost/details/2c91b736-b1f5-47ea-b24a-faedcb523776",
         "https://protect.gost.ru/sp/details/bac9e1fe-45f1-401b-8e32-949f4ee27821"
       ],
-      "public_https_browser_verified": false
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 17,
