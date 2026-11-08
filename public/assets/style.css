@@ -1338,3 +1338,9 @@ details.price:last-child{
 }
 .home-publication-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin:24px 0 28px}
 .home-publication-links a{font:600 13px/1.6 Manrope,Arial,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+
+/* Footer navigation: balanced case/publication submenus, contact labels and language control in brand column. */
+.footer-grid>div:nth-child(2)>a.footer-case-link{margin:9px 0;padding-left:12px;border-left:1px solid rgba(255,255,255,.25);white-space:normal;line-height:1.5;overflow-wrap:break-word}
+.footer-brand>.footer-lang{width:min(100%,320px);margin-top:20px;padding-top:14px}
+.footer-contact__label{color:#eff7ff;font-weight:600}
+@media(max-width:720px){.footer-brand>.footer-lang{margin-top:8px}}
