@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2R_direct_HTTPS_validation_then_unassigned_industrial_52_53_research_or_3A",
+    "next_batch": "2S_pr_ci_merge_production_pages_then_external_HTTPS_and_next_free_content_batch",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -731,6 +731,27 @@
       "main_html_pages_verified": 6,
       "main_sitemap_urls_verified": 6,
       "blocker": "Direct gaeo.ru HTTPS/browser unavailable via environment including /tarify/; cannot assert actual browser rendering or indexing."
+    },
+    "phase_2s": {
+      "phase": 2,
+      "batch": "2S",
+      "status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2s.mjs",
+      "records": [
+        52,
+        53
+      ],
+      "new_industry_landing_pairs": 2,
+      "new_html_pages": 4,
+      "pr_ci_status": "pending",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "last_completed_step": "prepared original bilingual content, checked current regulations and registered QA",
+      "next_required_step": "Open PR and obtain full CI, source merge, production, Pages and public HTTPS separately",
+      "constraints": "Do not change pricing.mjs, guarantee BMR, 107 catalogue IDs, shared templates, or parallel industry PRs",
+      "evidence_levels": "No client-specific E4 claims; standards cited for applicability only"
     }
   },
   "status_definitions": {
@@ -785,7 +806,9 @@
     "phase_2q_deployed_pairs": 3,
     "phase_2q_deployed_ru_en_urls": 6,
     "phase_2r_deployed_pairs": 3,
-    "phase_2r_deployed_ru_en_urls": 6
+    "phase_2r_deployed_ru_en_urls": 6,
+    "phase_2s_prepared_pairs_not_deployed": 2,
+    "phase_2s_prepared_ru_en_urls_not_deployed": 4
   },
   "candidate_batches": [
     {
@@ -1052,6 +1075,20 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42473139968",
       "published_commit": "46414ffbcccdd45fce4bcfa5393076cacce214a4",
       "public_https_browser_verified": false
+    },
+    {
+      "batch": "2S",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        52,
+        53
+      ],
+      "label": "Производители строительных материалов и поставщики спецодежды/СИЗ",
+      "condition": "Две самостоятельные RU/EN специализации, 4 страницы. Для стройматериалов различать ГОСТ 31108-2020 на цемент, ГОСТ 7473-2026 (с 1.11.2026) на готовые бетонные смеси и 384-ФЗ на проектное соответствие; для СИЗ проверять область ТР ТС 019/2011, приказ 766н и дату действия изменений 2026. Не заявлять универсальную сертификацию, кейсы и технические гарантии. Цены, каталог 107 и готовые изображения неизменны.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2s.mjs"
     }
   ],
   "records": [
@@ -3027,10 +3064,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_pr_ci_then_merge_production_main_pages_and_independent_public_https",
+      "last_completed_step": "phase_2s_original_ru_en_intents_sources_and_qa_registered",
+      "planned_landing_url_ru": "/industries/building-material-manufacturers/",
+      "planned_landing_url_en": "/en/industries/building-material-manufacturers/",
+      "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2s.mjs",
+      "evidence_sources": [
+        "https://mchs.gov.ru/deyatelnost/grazhdanskaya-oborona/opoveshchenie-naseleniya/normativno-pravovaya-baza/federalnyy-zakon-ot-30-dekabrya-2009-goda-384-fz-tehnicheskiy-reglament-o-bezopasnosti-zdaniy-i-sooruzheniy",
+        "https://protect.gost.ru/gost/details/540e6d41-0aa3-4280-a123-b983634fa349",
+        "https://protect.gost.ru/gost/details/9eb7e295-f214-4040-a214-22f44be24024"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 53,
@@ -3052,10 +3100,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_pr_ci_then_merge_production_main_pages_and_independent_public_https",
+      "last_completed_step": "phase_2s_original_ru_en_intents_sources_and_qa_registered",
+      "planned_landing_url_ru": "/industries/workwear-ppe-suppliers/",
+      "planned_landing_url_en": "/en/industries/workwear-ppe-suppliers/",
+      "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2s.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/add929e6-1ff3-4964-916e-bec08ffe7d49",
+        "https://www.consultant.ru/document/cons_doc_LAW_405210/",
+        "https://docs.eaeunion.org/documents/461/"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 54,
