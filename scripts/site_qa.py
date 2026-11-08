@@ -595,6 +595,24 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
         if asset_path_from_url(src):
             asset_refs.append(("script", src))
 
+    # Bundled Astro CSS/JS is not under /assets/. Its filename is hashed
+    # already, but it MUST be on the published branch or all scoped styles 404.
+    for element in tags(text, "link"):
+        rels = {x.lower() for x in element.get("rel", "").split()}
+        href = element.get("href", "")
+        parsed = urlparse(href)
+        if "stylesheet" in rels and parsed.path.startswith("/_astro/"):
+            target = ROOT / parsed.path.lstrip("/")
+            if not target.is_file():
+                errors.append(f"{page}: missing compiled Astro CSS: {href}")
+    for element in tags(text, "script"):
+        src = element.get("src", "")
+        parsed = urlparse(src)
+        if parsed.path.startswith("/_astro/"):
+            target = ROOT / parsed.path.lstrip("/")
+            if not target.is_file():
+                errors.append(f"{page}: missing compiled Astro JavaScript: {src}")
+
     for kind, value in asset_refs:
         parsed = urlparse(value)
         params = dict(x.split("=", 1) if "=" in x else (x, "") for x in parsed.query.split("&") if x)
