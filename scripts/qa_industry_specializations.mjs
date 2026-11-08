@@ -49,9 +49,27 @@ for(const id of [27,29]){
   assert.ok(c.lead.length>110 && c.proofIntro.length>160,'2AH individual sector analysis '+id+' '+lang);
  }
 }
+// 2AI: registered audit organisation content and index backlink must be distinct from general consulting.
+const audit28=industrySpecializations.find(item=>item.id===28);
+assert.ok(audit28&&audit28.group==='professional-services','2AI permanent audit ID');
+assert.ok(audit28.sources.length>=3,'2AI professional and registry sources');
+for(const lang of ['ru','en']){
+ const c=audit28.content[lang];
+ assert.equal(c.problems.length,3,'2AI problems '+lang);
+ assert.equal(c.scenarios.length,4,'2AI buyer questions '+lang);
+ assert.equal(c.steps.length,4,'2AI workflow '+lang);
+ assert.equal(c.faq.length,5,'2AI FAQ '+lang);
+ assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AI original copy '+lang);
+ const index=read(lang==='ru'?'/industries/':'/en/industries/');
+ const route=audit28.routes[lang];
+ assert.ok(index.includes('href="'+route+'"'),'2AI visible industry link '+lang);
+ const structured=graph(index).find(n=>n['@type']==='ItemList');
+ assert.ok(structured?.itemListElement.some(n=>n.url==='https://gaeo.ru'+route),'2AI structured index link '+lang);
+ assert.equal(structured.numberOfItems,structured.itemListElement.length,'Industry index schema count '+lang);
+}
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64,28])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
