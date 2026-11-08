@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "d75e0db48b02d70990fffd5b7627b42db1645e41",
-  "releasedAt": "2026-11-08T21:16:58.067Z",
+  "sourceCommit": "e8df34a2f7fb06325b78fbb5e75db78e3c736234",
+  "releasedAt": "2026-11-08T21:30:16.496Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2933,7 +2933,7 @@
     {
       "path": "en/industries/automotive/index.html",
       "kind": "html",
-      "sha256": "84bce4ddd5cb610baac758bb36e203a3dd269c3a1ec18144efe47a7d53d05fe2"
+      "sha256": "c59bcd96be7d1e93c83b2089fac33df5cd9a2b1978fbc5da9201b17a7a738bca"
     },
     {
       "path": "en/industries/bankruptcy-lawyers/index.html",
@@ -3133,7 +3133,7 @@
     {
       "path": "en/industries/finance-insurance-accounting/index.html",
       "kind": "html",
-      "sha256": "45818905e39378c9de451e195ceb213d92a2019592f98b833c348dc9b097b4db"
+      "sha256": "83c08bae7db226064875759307b5907d1d0736811b0a67e65ffc4263d7b40a28"
     },
     {
       "path": "en/industries/financial-investment-advisers/index.html",
@@ -3213,7 +3213,7 @@
     {
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "718d30a0e3f08c1c018a0b11f786d1d961bc2db4c47779cebe5a1b5b5e8cf8d3"
+      "sha256": "9c9f132b851471125b8fd8933d3cd3f02749aa9c3c7f8296936a0bef09afae77"
     },
     {
       "path": "en/industries/insurance-brokers/index.html",
@@ -3233,7 +3233,7 @@
     {
       "path": "en/industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "ccc568ceaa7bfc971b378283c039b28c64c5a245e24d037531331cfe244a196e"
+      "sha256": "1144a5f1fc41fc95a4664c4a807c866193abd2e5406cf81f9da3af39949d22fb"
     },
     {
       "path": "en/industries/international-logistics/index.html",
@@ -3323,7 +3323,7 @@
     {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "a7772816aaedda847e3e5f769e53eaee1cf22f9fcb857ca00e0b8ef58b0b5d61"
+      "sha256": "f54e39b20715867f1f8563656a4edf55911a79cfbb08348e142c6d48e46d0d5a"
     },
     {
       "path": "en/industries/pet-supplies-online-stores/index.html",
@@ -3343,7 +3343,7 @@
     {
       "path": "en/industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "59b668d42efb4c65c416e28479809707b8559a22ef93f885cbc20e28440079ff"
+      "sha256": "240947d8df3e0d2361d9f926b67b5c040fcc668eda58b797223824c7bf105027"
     },
     {
       "path": "en/industries/private-psychologists-psychotherapists/index.html",
@@ -3603,7 +3603,7 @@
     {
       "path": "en/strategies/automotive-buyer-evidence/index.html",
       "kind": "html",
-      "sha256": "52afb46cd88071666f5588774da93387c93330ee4bdcc2dd1ad8c6879f892c6a"
+      "sha256": "42a13fa976264412ca9678fb74e72bfa8c8c754072bc6c717c7059e9ba3d5adb"
     },
     {
       "path": "en/strategies/ecommerce-catalog/index.html",
@@ -3618,7 +3618,7 @@
     {
       "path": "en/strategies/financial-services-evidence/index.html",
       "kind": "html",
-      "sha256": "6e1da2b585e4b895e03fe9fbb405cb1bc8406592e556a3a81709ee9005bcbecd"
+      "sha256": "b33bce465972e2e89424b502780729b2b876ec9417a6c55168236ef599fc264f"
     },
     {
       "path": "en/strategies/fulfillment-provider-selection/index.html",
@@ -3628,12 +3628,22 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "00ce63545a7f84eaf1b29a3aa0aaf6f211f24026c06a0f9fc0397e3fd81680d2"
+      "sha256": "211bfc8138d732cd3ccaa291f1432e3a75c52ceb2267d7c5088eb4adb67b2f6f"
+    },
+    {
+      "path": "en/strategies/industrial-equipment-evidence/index.html",
+      "kind": "html",
+      "sha256": "742012aa6f2319848239bf4fb0dd505fe4721dc638e3372319aa8ca717f66312"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
       "kind": "html",
       "sha256": "def99c0ab33cd26f26efeb6cc4691ffd665601aebe5e191cb3f4ec2ffcf95b91"
+    },
+    {
+      "path": "en/strategies/international-logistics-route-evidence/index.html",
+      "kind": "html",
+      "sha256": "172e7763d6d73b84013c759099c242e463222194947a22dbeee6fcd606d1e763"
     },
     {
       "path": "en/strategies/legal-recommendations/index.html",
@@ -3646,9 +3656,19 @@
       "sha256": "6b8daa8add717dac7f5d6e1f8fb207c2b34553e812e4b7e1ce9e118e5c890085"
     },
     {
+      "path": "en/strategies/packaging-material-evidence/index.html",
+      "kind": "html",
+      "sha256": "d403ce4f8fd202167e3487ef62d8ad43ee33736f87dea1d560129299674c475a"
+    },
+    {
       "path": "en/strategies/pharma-geo-evidence/index.html",
       "kind": "html",
       "sha256": "39350dffb8dadc47fac5cea6956db806d0906ea60e320c7425eb40eaba541bdf"
+    },
+    {
+      "path": "en/strategies/private-clinics-service-evidence/index.html",
+      "kind": "html",
+      "sha256": "f487ddefa248987c17af54b277ab0753ecdd7a1b324ea7f9615ffda3b110a282"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
@@ -3993,7 +4013,7 @@
     {
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "366733fa846c736e2bb5b1e6147fbb7d157c440757223688ac8f16c1ca8b340d"
+      "sha256": "a5baf35d79964f93847b4192ab0c3fd47a5e38a6d35ce5daab9aaf5d643f2ef3"
     },
     {
       "path": "industries/insurance-brokers/index.html",
@@ -4013,7 +4033,7 @@
     {
       "path": "industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "a272a3d8456b71959615fc830618b77296a6854eedbd9f831bd366bfb0cf9da7"
+      "sha256": "ef9bbe5224da829cb19083b5e40e8eeb6400b344f8a23b1bc3cc1d15af1c70bd"
     },
     {
       "path": "industries/international-logistics/index.html",
@@ -4103,7 +4123,7 @@
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "743535c2fbd325c863905a44fb62f0dd5eeb4bd034f48b2c9f3ef6bdd8df51b1"
+      "sha256": "dd532aed9946a35cc457394e3784f496aa8c6a48800e0e4d3124619568432a08"
     },
     {
       "path": "industries/pet-supplies-online-stores/index.html",
@@ -4123,7 +4143,7 @@
     {
       "path": "industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "9e94a22347797163d6eff12b82af0671a64e7ec461737cc25b1b036b55f0bf00"
+      "sha256": "43fc2c82eb5d1da9002d28224b9461701551c56191999b838cfd9f4da5d7c91f"
     },
     {
       "path": "industries/private-psychologists-psychotherapists/index.html",
@@ -4388,7 +4408,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "c9603846d11523a0bae4b6ca4796fda08bec67ef3d65fc84eabcf4a06ee069ec"
+      "sha256": "c94effc4c85a4ee13fd7cafad523bcba1ef731357be3ed7024699358b7f1448d"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
@@ -4418,12 +4438,22 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "591024448b7d4678b0dba0a78c4a3b7d436b3722ce898ddf0e55405b8ae1a83e"
+      "sha256": "fa263d63abc13ae72e8916cb85913cc75808a4024c8cbacba6a61c401b4ba7aa"
+    },
+    {
+      "path": "strategies/industrial-equipment-evidence/index.html",
+      "kind": "html",
+      "sha256": "4851c30626a14245f3a2a10743977b966ec12bba8dec93f91864e636db01da43"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
       "kind": "html",
       "sha256": "f33f08af47340e64b9a985cf0b9724f9dbb7036ea4e521fe621342ae5444696c"
+    },
+    {
+      "path": "strategies/international-logistics-route-evidence/index.html",
+      "kind": "html",
+      "sha256": "f5352d8254397977e4f588aa223ae255985ab442db16f44acbe371bf1e38566e"
     },
     {
       "path": "strategies/legal-recommendations/index.html",
@@ -4436,9 +4466,19 @@
       "sha256": "7d96dbfdc052381cd6fc66af92e36f92d388de0f9a6a8ae314c5298fbaffdfc8"
     },
     {
+      "path": "strategies/packaging-material-evidence/index.html",
+      "kind": "html",
+      "sha256": "0d562e8b912dcb3601cd9cbe61aa165da110c81b2d930716eed5cb7cfe0ccb02"
+    },
+    {
       "path": "strategies/pharma-geo-evidence/index.html",
       "kind": "html",
       "sha256": "cd83ce8e4f838dbfacf8e58f53539aca9e72b3c687ed8460c5050c1d740e900d"
+    },
+    {
+      "path": "strategies/private-clinics-service-evidence/index.html",
+      "kind": "html",
+      "sha256": "b667ad3c4b02d98aeb70116ab556b2d6f7b78ba25ee86a2bb5ab38f31d2c2eaa"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
