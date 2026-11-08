@@ -932,9 +932,18 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t001.json",
       "earliestPublicationDate": "2026-09-12",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
+        "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
+        "token": "rk-mw8gchjj-gbkbz2hvqy8-8vyg7w99lki",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:17:25.861Z",
+        "expiresAt": "2026-11-09T05:17:25.861Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "orient-t002",
@@ -1846,7 +1855,19 @@
       "taskId": "ada-t007",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
+      "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
+      "token": "rk-mw8gchjj-gbkbz2hvqy8-8vyg7w99lki",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:25.861Z",
+      "expiresAt": "2026-11-09T05:17:25.861Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t001",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:17:15.728Z"
+  "updatedAt": "2026-11-08T23:17:25.861Z"
 }
