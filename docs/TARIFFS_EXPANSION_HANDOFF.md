@@ -4,6 +4,40 @@
 
 Этот документ и `docs/tariff-industry-roadmap.json` ведутся дальше на месте. Не создавать новый конкурирующий план, Work-задачу или автоматизацию. Новые указания Алексея имеют приоритет над решениями этого файла.
 
+## Партия 2AE: 3 автомобильные специализации RU/EN, исходники подготовлены (8 ноября 2026)
+
+**Текущий статус на дату записи: source prepared в [PR #118](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118). Полный PR CI, слияние в `astro-source`, production/main, GitHub Pages и прямой внешний HTTPS пока не подтверждены.** Рабочая ветка `feat/industry-specializations-batch-2ae-2026-11-08` создана строго от `astro-source` `6f0e06d4cbbfdb9a4019fc674a3e4ac24d4c36f0`, без правок чужих PR.
+
+| № | Отрасль | RU URL (план) | EN URL (план) |
+|---:|---|---|---|
+| 77 | Автосервисы и СТО | `/industries/auto-repair-shops/` | `/en/industries/auto-repair-shops/` |
+| 78 | Дилеры коммерческого транспорта и спецтехники | `/industries/commercial-vehicle-machinery-dealers/` | `/en/industries/commercial-vehicle-machinery-dealers/` |
+| 79 | Дилеры мотоциклов и мототехники | `/industries/motorcycle-powersports-dealers/` | `/en/industries/motorcycle-powersports-dealers/` |
+
+**Готовая часть:** канонический новый файл `src/data/industry-specializations-batch-2ae.mjs` содержит 3 самостоятельных двуязычных набора: уникальные H1, title, description, лид и CTA, по 3 отраслевые проблемы, 4 коммерческих запроса, 3 группы проверяемых фактов, 4 этапа работ и 5 FAQ для каждого языка. У всех 3 есть ссылки на действующую методику BMR и каталог `/tarify/`/`/en/pricing/`. В `src/data/industry-specializations.mjs` выполнен импорт и включение массива, в `scripts/qa_industry_specializations.mjs` добавлены обязательные проверки ID 77/78/79, количества структурных блоков, наличия источников и границ доказательности. Общий Astro-шаблон `IndustrySpecialization.astro`, тарифы `src/data/pricing.mjs`, 107 ID, договорная гарантия BMR (+5/+10/+15 п.п. к стартовому замеру за месяцы 1/2/3), общие изображения и форма **не менялись**. Проверено наличие 3 ранее утвержденных WebP в `public/assets/tariffs/industries/`.
+
+**Проверяемые отраслевые основания:**
+- №77: [Роспотребнадзор, постановление №780 от 29.05.2025](https://zpp.rospotrebnadzor.ru/news/federal/557684), вступившее в силу 01.09.2025, и [договор с приемо-сдаточным актом](https://zpp.rospotrebnadzor.ru/news/federal/575844), разъяснение от 24.07.2026. Выделены марка/модель, конкретный ремонт, филиал, смета, запись и гарантийные условия. Клиентский результат не заявлен.
+- №78: [Росстандарт: ТР ТС 018/2011](https://protect.gost.ru/tr/details/89583411-7805-4836-abd5-3b3d9057eed7), [СЭП: форматы выписок](https://elpts.ru/novye-formaty-vypisok/) с октября 2026, [постановление №625 о регистрации самоходных машин](https://www.consultant.ru/document/cons_doc_LAW_535444/). Разграничены дорожные категории M/N и применимые виды самоходной техники; модель, модификация, склад и поставка сверяются отдельно.
+- №79: [ТР ТС 018/2011, категории L](https://protect.gost.ru/tr/details/89583411-7805-4836-abd5-3b3d9057eed7), [электронные паспорта](https://elpts.ru/novye-formaty-vypisok/), [правила розничной продажи с 01.09.2026](https://zpp.rospotrebnadzor.ru/news/federal/593809). Разведены дорожные мотоциклы и отдельные внедорожные машины, посадка/назначение, наличие, тест-драйв и реальный сервис. Не давать непроверенные советы по безопасности водителя.
+
+**Параллельные работы и границы:** на момент старта открыты [2AB, PR #115](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/115) (№73), [2AC, PR #117](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/117) (№62/63) и [2AD, PR #116](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116) (№62/63/64). 2AC и 2AD пересекаются, но 2AE не вмешивается в их ветки и не создает дублей. Отдельную исследовательскую 3A (№75/76 и №27/30) не начинать; создание общего автомобильного хаба отложить до проверки его содержания. №65, №104 и исследовательские темы остаются вне 2AE.
+
+**Сверка параллельной работы:** PR #115 (2AB, №73) уже объединен в `astro-source` коммитом `4181159a77022e53cbd11caa84ba316f3e73688f`. Содержимое 2AB сохранено при переносе 2AE на новую базу; ее production/main/Pages проверяются отдельно.
+
+**Дополнение по синхронизации:** текущая база `astro-source` e6a7e4fc87a35a59ca2d5bed8cd053b56b19ae47, сохранившая партии 2AB и 2AD. [Полный CI 42490860631](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42490860631) успешно проверил исходники 2AE на предыдущем объединенном состоянии с 2AB; после переноса на более новую базу требуется отдельный полный CI для нового HEAD, затем source merge. Общая публикация не подтверждена.
+
+### Точная точка продолжения 2AE
+
+1. Сначала сверить актуальные HEAD `astro-source`, `main`, другие открытые PR и состояние [PR #118](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118). При изменении базы безопасно актуализировать только ветку 2AE, не переписывать работы 2AB/2AC/2AD.
+2. Пройти **полный PR CI**: Astro build, parity, design, SEO/GEO, тарифы и гарантии BMR, 6 новых RU/EN URL, взаимный hreflang, canonical, H1, Service/FAQPage, 3 тарифных плана, каталог/обратные ссылки, WebP, формы, браузер 1440/390/320 и регрессия всех ранее существовавших специализаций. Без PASS не объединять.
+3. После CI PASS объединить PR в `astro-source`; подтвердить production workflow, `main/astro-release-manifest.json` с корректным `sourceCommit`, 6 точных HTML в `main`, 6 URL в sitemap и GitHub Pages PASS. При параллельных слияниях пересчитать фактические количества, не прибавлять 3 к старым счетчикам автоматически.
+4. Отдельно открыть 6 публичных HTTPS-страниц на gaeo.ru и проверить 1440/390/320: реальные изображения, формы, FAQ, ссылки и отсутствие горизонтального переполнения. **До фактического live PASS** сохранять `landing_url_ru/en=null`, `verified_at=null`, `status=needs_content` и `public_https_browser_verified=false`. Не выдавать исходники или успешный PR CI за подтвержденную индексацию.
+5. Итог с реальными PR/CI/production/Pages/SHA и дальнейшей свободной очередью записать в **эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json`. По подтвержденному `main` на старте 2AE: 83 пары / 166 RU/EN URL, 285 HTML и 280 sitemap URL, source commit `3c5744d5b03d96f71d9ad4cc00ebe10b6258d639`, `main=62b0fd2b2b7b080ffef182704177b8baeb83b7af`, [production 42487465048](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42487465048) и [Pages 42488244643](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42488244643) PASS; внешний HTTPS еще не подтвержден.
+
+
+
+
 ## Партия 2Y: полный CI PASS, исходники объединены, production проверяется (8 ноября 2026)
 
 **№106/107: 2 оригинальные RU/EN специализации, 4 HTML подготовлены и объединены в `astro-source`.** [PR #110](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110) завершен слиянием `778c7ea7b05a780c3de480854e76de5738f80ce2`. Полный [PR CI 42482700724](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724) **PASS**, включая браузерную приемку всех 134 RU/EN специализаций на ширинах 1440/390/320, тарифы, доказательства, формы и общую регрессию. **Production/main/Pages именно для 2Y и прямой публичный HTTPS еще не подтверждены**; не объявлять новые URL опубликованными. Каталог 107, цены и гарантия BMR не менялись, параллельные PR #107 (2V, №68–70) и #108 (2U, №17–18) сохранены. Точная точка продолжения в разделе 31.

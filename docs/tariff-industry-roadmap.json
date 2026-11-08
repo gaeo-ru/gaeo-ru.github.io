@@ -1277,7 +1277,10 @@
     "total_specialization_pairs_prepared_including_2ad": 86,
     "total_specialization_urls_prepared_including_2ad": 172,
     "phase_2ad_count_note": "Source prepared for #62/63/64 (3 pairs, 6 RU/EN URLs), not published. Previous consolidated 2U–2AA baseline: 83 deployed pairs, 166 URLs, 285 HTML, 280 sitemap, 827 manifest files with CI/production/Pages PASS. Public HTTPS for 2AD remains unverified.",
-    "phase_2ab_count_note": "2AB PASS PR CI 42489335076, source 4181159a, production 42490282854, main 256d77dd (168 RU/EN specializations; 287 HTML, 282 sitemap, 829 files), Pages 42491047417; external direct HTTPS unverified. Parallel 2AD source merged separately; current main counts are 2AB publication snapshot."
+    "phase_2ab_count_note": "2AB PASS PR CI 42489335076, source 4181159a, production 42490282854, main 256d77dd (168 RU/EN specializations; 287 HTML, 282 sitemap, 829 files), Pages 42491047417; external direct HTTPS unverified. Parallel 2AD source merged separately; current main counts are 2AB publication snapshot.",
+    "phase_2ae_prepared_pairs_not_deployed": 3,
+    "phase_2ae_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2ae_status_note": "PR #118 created with 3 original RU/EN automotive specialization pairs (6 prepared URLs); CI/source merge/production/main/Pages/public HTTPS not confirmed. Main release remains at 83 pairs and 285 generated HTML until independently verified; IDs 77/78/79 not treated as live."
   },
   "candidate_batches": [
     {
@@ -1655,6 +1658,23 @@
       "source_file": "src/data/industry-specializations-batch-2ad.mjs",
       "public_https_browser_verified": false,
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
+    },
+    {
+      "batch": "2AE",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        77,
+        78,
+        79
+      ],
+      "label": "Автосервисы, дилеры коммерческого транспорта и дилеры мототехники",
+      "condition": "3 оригинальные RU/EN специализации для №77/78/79 на официальной отраслевой фактуре: правила ремонта №780, ТР ТС 018/2011, ЭПТС и действующие правила продажи. Различать дорожный транспорт и самоходные машины; не переносить результаты клиентов и не запускать исследовательскую 3A №75/76/27/30. После полного PR CI PASS объединить с изоляцией параллельных 2AB/2AC/2AD, затем проверить production/main/Pages и отдельно публичный HTTPS.",
+      "work_status": "source_prepared_pr118_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ae-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118",
+      "source_file": "src/data/industry-specializations-batch-2ae.mjs",
+      "public_https_browser_verified": false
     }
   ],
   "records": [
@@ -4649,10 +4669,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AE",
+      "last_completed_step": "phase_2ae_pr118_source_complete_ci_and_release_unverified",
+      "planned_landing_url_ru": "/industries/auto-repair-shops/",
+      "planned_landing_url_en": "/en/industries/auto-repair-shops/",
+      "work_branch": "feat/industry-specializations-batch-2ae-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ae.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://zpp.rospotrebnadzor.ru/news/federal/557684",
+        "https://zpp.rospotrebnadzor.ru/news/federal/575844",
+        "https://zpp.rospotrebnadzor.ru/news/federal/569887"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118",
+      "release_note": "2AE has distinct evidence-led RU/EN content for this stable catalogue ID, 3 problems/4 buyer scenarios/3 fact groups/4 work stages/5 FAQs per language, with shared canonical prices and artwork. Source prepared in PR #118; full PR CI, source merge, production/main/Pages and direct HTTPS remain unconfirmed. No sector client result asserted."
     },
     {
       "id": 78,
@@ -4674,10 +4710,27 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AE",
+      "last_completed_step": "phase_2ae_pr118_source_complete_ci_and_release_unverified",
+      "planned_landing_url_ru": "/industries/commercial-vehicle-machinery-dealers/",
+      "planned_landing_url_en": "/en/industries/commercial-vehicle-machinery-dealers/",
+      "work_branch": "feat/industry-specializations-batch-2ae-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ae.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/89583411-7805-4836-abd5-3b3d9057eed7",
+        "https://elpts.ru/novye-formaty-vypisok/",
+        "https://www.consultant.ru/document/cons_doc_LAW_535444/",
+        "https://zpp.rospotrebnadzor.ru/news/federal/593809"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118",
+      "release_note": "2AE has distinct evidence-led RU/EN content for this stable catalogue ID, 3 problems/4 buyer scenarios/3 fact groups/4 work stages/5 FAQs per language, with shared canonical prices and artwork. Source prepared in PR #118; full PR CI, source merge, production/main/Pages and direct HTTPS remain unconfirmed. No sector client result asserted."
     },
     {
       "id": 79,
@@ -4699,10 +4752,27 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "work_batch": "2AE",
+      "last_completed_step": "phase_2ae_pr118_source_complete_ci_and_release_unverified",
+      "planned_landing_url_ru": "/industries/motorcycle-powersports-dealers/",
+      "planned_landing_url_en": "/en/industries/motorcycle-powersports-dealers/",
+      "work_branch": "feat/industry-specializations-batch-2ae-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ae.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://protect.gost.ru/tr/details/89583411-7805-4836-abd5-3b3d9057eed7",
+        "https://elpts.ru/novye-formaty-vypisok/",
+        "https://zpp.rospotrebnadzor.ru/news/federal/593809",
+        "https://zpp.rospotrebnadzor.ru/news/federal/570249"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118",
+      "release_note": "2AE has distinct evidence-led RU/EN content for this stable catalogue ID, 3 problems/4 buyer scenarios/3 fact groups/4 work stages/5 FAQs per language, with shared canonical prices and artwork. Source prepared in PR #118; full PR CI, source merge, production/main/Pages and direct HTTPS remain unconfirmed. No sector client result asserted."
     },
     {
       "id": 80,
