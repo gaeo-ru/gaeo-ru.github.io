@@ -1655,6 +1655,22 @@
       "source_file": "src/data/industry-specializations-batch-2ad.mjs",
       "public_https_browser_verified": false,
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/116"
+    },
+    {
+      "batch": "2AH",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        27,
+        29
+      ],
+      "label": "Бухгалтерский аутсорсинг и финансовые/инвестиционные консультанты",
+      "condition": "4 индивидуальные RU/EN страницы №27/29 на проверяемых источниках 402-ФЗ/ФНС/МЧД и реестрах Банка России для инвестиционных советников. Никаких неподтвержденных клиентских результатов, статусов или обещаний доходности. Полный CI и безопасное source merge -> production/main/Pages -> прямой HTTPS.",
+      "work_status": "pr_open_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ah.mjs",
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
     }
   ],
   "records": [
@@ -2738,10 +2754,28 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_deployed",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_open_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/outsourced-accounting-services/",
+      "planned_landing_url_en": "/en/industries/outsourced-accounting-services/",
+      "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ah.mjs",
+      "last_completed_step": "phase_2ah_pr121_revision_independent_ru_en_prepared",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_122855/56dc96d26dd9e8b6922341ab162acc7e10d57ddf/",
+        "https://www.nalog.gov.ru/rn77/taxation/submission_statements/",
+        "https://www.nalog.gov.ru/rn77/related_activities/el_doc/use_electronic_sign/"
+      ],
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "public_https_browser_verified": false,
+      "verified_at": null,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+      ]
     },
     {
       "id": 28,
@@ -2788,10 +2822,28 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_deployed",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_open_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/financial-investment-advisers/",
+      "planned_landing_url_en": "/en/industries/financial-investment-advisers/",
+      "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ah.mjs",
+      "last_completed_step": "phase_2ah_pr121_revision_independent_ru_en_prepared",
+      "evidence_sources": [
+        "https://www.cbr.ru/explan/invest/",
+        "https://www.cbr.ru/securities_market/registries/",
+        "https://www.consultant.ru/document/cons_doc_LAW_58968/0021818db8b93ae5fbd38076074a7182e157186c/"
+      ],
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "public_https_browser_verified": false,
+      "verified_at": null,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+      ]
     },
     {
       "id": 30,
