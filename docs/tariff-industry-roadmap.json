@@ -1139,6 +1139,39 @@
       "sitemap_new_urls_present": 34,
       "main_new_html_pages_present": 34,
       "next_required_step": "Independently open all 34 new URLs on gaeo.ru (desktop/390/320), verify images, links, forms, canonical/hreflang and then populate live fields. GAEO.ru including baseline /tarify/ inaccessible via chat web/container DNS."
+    },
+    "phase_2af": {
+      "phase": 2,
+      "batch": "2AF",
+      "records": [
+        77,
+        78,
+        79
+      ],
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "status": "source_prepared_pr_ci_pending",
+      "source_content_commit": "a71daa812ffdf18fce5efe2662bfe5d8b1f29e15",
+      "qa_source_commit": "b82b3ffb9ffb401144e3a4425626e2a6b25bc5bc",
+      "prepared_pairs": 3,
+      "prepared_ru_en_urls": 6,
+      "ci_status": "not_yet_run",
+      "source_merged": false,
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "next_required_step": "Open one PR, validate full Astro/Chromium 1440/390/320, merge only after PASS, then main/Pages and independent HTTPS verification",
+      "excluded_3a_records": [
+        75,
+        76,
+        27,
+        30
+      ],
+      "parallel_open_prs_at_initial_check": [
+        115,
+        116,
+        117
+      ]
     }
   },
   "status_definitions": {
@@ -1204,7 +1237,10 @@
     "phase_2z_prepared_pairs_not_deployed": 0,
     "phase_2z_prepared_ru_en_urls_not_deployed": 0,
     "phase_2z_prepared_hub_pages_not_deployed": 0,
-    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated."
+    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
+    "phase_2af_prepared_pairs_not_deployed": 3,
+    "phase_2af_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2af_release_snapshot_note": "83 specialization pairs/166 URLs in confirmed latest main 62b0fd2; 2AF adds 3 pairs/6 URLs only in isolated source branch until PR, CI, source merge, production and Pages. External HTTPS for 2AF is not verified."
   },
   "candidate_batches": [
     {
@@ -1546,6 +1582,23 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs"
+    },
+    {
+      "batch": "2AF",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        77,
+        78,
+        79
+      ],
+      "label": "Автосервисы и СТО, дилеры коммерческого транспорта и спецтехники, дилеры мотоциклов и мототехники",
+      "condition": "Три независимые RU/EN GEO-специализации с проверяемыми потребительскими/закупочными запросами. Постановление №780 отделяет ремонт от техосмотра, 283-ФЗ и 297-ФЗ требуют различать дорожные ТС и самоходные машины. 3A №75/76 и финансовые №27/30 не затронуты; тарифы, BMR, 107 изображений и ID неизменны.",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "work_status": "source_prepared_pr_ci_pending",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "public_https_browser_verified": false,
+      "next_required_step": "run_full_pr_ci_and_release"
     }
   ],
   "records": [
@@ -4492,10 +4545,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/auto-repair-service-stations/",
+      "planned_landing_url_en": "/en/industries/auto-repair-service-stations/",
+      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://zpp.rospotrebnadzor.ru/news/federal/575844",
+        "https://www.consultant.ru/document/cons_doc_LAW_506689/",
+        "https://www.consultant.ru/document/cons_doc_LAW_115853/"
+      ],
+      "public_https_browser_verified": false,
+      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
     },
     {
       "id": 78,
@@ -4517,10 +4584,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/commercial-vehicle-special-equipment-dealers/",
+      "planned_landing_url_en": "/en/industries/commercial-vehicle-special-equipment-dealers/",
+      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_304041/",
+        "https://www.consultant.ru/document/cons_doc_LAW_388991/",
+        "https://www.consultant.ru/document/cons_doc_LAW_535444/2d49e42ea1ebc4f0c3afdf5a9490b3116b04f99a/"
+      ],
+      "public_https_browser_verified": false,
+      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
     },
     {
       "id": 79,
@@ -4542,10 +4623,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/motorcycle-powersports-dealers/",
+      "planned_landing_url_en": "/en/industries/motorcycle-powersports-dealers/",
+      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_304041/",
+        "https://www.consultant.ru/document/cons_doc_LAW_506689/0efd2963a57a04b9a7049dd39976579c9ab67b76/",
+        "https://www.consultant.ru/document/cons_doc_LAW_388991/"
+      ],
+      "public_https_browser_verified": false,
+      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
     },
     {
       "id": 80,
