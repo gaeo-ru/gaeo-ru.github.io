@@ -23,6 +23,8 @@ for(const item of industrySpecializations){
   assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-'+String(item.id).padStart(3,'0')+'"','g'))||[]).length,1,'Exactly one category-specific catalogue link '+path);
   assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-catalog"','g'))||[]).length,0,'No redundant full-catalogue link '+path);
   assert.ok(html.includes('industry-specialization__catalog-button'),'Accessible category catalogue button '+path);
+   assert.ok(html.includes('industry-pricing__quick-links'),'Separate audit links in shared price component '+path);
+   assert.ok(html.includes('industry-specialization__related-links'),'Styled related navigation '+path);
   assert.equal((html.match(/class="industry-specialization__catalog-label-line"/g)||[]).length,2,'Two intentional catalogue button lines '+path);
   assert.ok(html.includes(lang==='en'?'View this category':'Смотреть это направление'),'Correct first line of catalogue button '+path);
   assert.ok(html.includes(lang==='en'?'in the 107-service catalogue':'в каталоге 107 услуг'),'Correct second line of catalogue button '+path);
@@ -263,6 +265,14 @@ try{
   assert.equal(await page.locator('main details.faq-item').count(),5,'Visible FAQs '+row.path);
   assert.equal(await page.locator('main .industry-scenario-table tbody tr').count(),4,'Scenario rows '+row.path);
   assert.equal(await page.locator('main .industry-pricing-section [data-plan]').count(),3,'Canonical pricing '+row.path);
+  assert.equal(await page.locator('main .industry-pricing__quick-links a').count(),3,'Three pricing choice links '+row.path);
+  assert.equal(await page.locator('main .industry-specialization__related-links a').count(),2,'Two final related links '+row.path);
+  const pricingGap=await page.evaluate(()=>{
+    const a=document.querySelector('.industry-specialization__catalog-button').getBoundingClientRect();
+    const b=document.querySelector('.industry-specialization__faq .industry-eyebrow').getBoundingClientRect();
+    return Math.round(b.top-a.bottom);
+  });
+  assert.ok(pricingGap>=20&&pricingGap<=130,'Reduced blank space between catalogue and FAQ '+row.path+' '+width+': '+pricingGap);
   const catalogButton=page.locator('main .industry-specialization__catalog-button');
   assert.equal(await catalogButton.count(),1,'Exactly one industry catalogue button '+row.path);
   const catalogGeometry=await catalogButton.evaluate(el=>{
@@ -294,10 +304,14 @@ try{
    const table=document.querySelector('.industry-scenario-table');
    const portrait=document.querySelector('.industry-about>img');
    const box=element=>{const r=element.getBoundingClientRect();return {left:r.left,width:r.width};};
-   return {image:box(image),question:box(question),questionRow:box(questionRow),tableDisplay:getComputedStyle(table).display,portrait:box(portrait),portraitFloat:getComputedStyle(portrait).float};
+   return {image:box(image),imageRight:image.getBoundingClientRect().right,imageFit:getComputedStyle(image).objectFit,
+      naturalAspect:image.naturalWidth/image.naturalHeight,renderedAspect:image.clientWidth/image.clientHeight,
+      question:box(question),questionRow:box(questionRow),tableDisplay:getComputedStyle(table).display,portrait:box(portrait),portraitFloat:getComputedStyle(portrait).float};
   });
+  assert.equal(layout.imageFit,'contain','Full specialist image is never cropped by CSS '+row.path);
+  assert.ok(Math.abs(layout.naturalAspect-layout.renderedAspect)<0.04,'Hero image keeps its natural aspect ratio '+row.path);
   if(width<=390){
-   assert.ok(layout.image.width>=width-2&&Math.abs(layout.image.left)<=2,'Mobile illustration must occupy the full viewport '+row.path+' '+width+' '+JSON.stringify(layout));
+   assert.ok(layout.image.width>=width-24&&layout.image.left>=0&&layout.imageRight<=width+1,'Image fits within mobile viewport with safe margins '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.ok(Math.abs(layout.question.width-layout.questionRow.width)<=4,'Buyer question must occupy the entire mobile card '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.ok(Math.abs(layout.portrait.width-width/2)<=2&&layout.portraitFloat==='left','Expert photo takes half mobile viewport and floats left '+row.path+' '+width+' '+JSON.stringify(layout));
    assert.equal(layout.tableDisplay,'block','Mobile scenarios use stacked rows '+row.path+' '+width);

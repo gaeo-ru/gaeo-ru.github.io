@@ -303,15 +303,33 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ];
 
     const fillColumn = (column, items) => {
-      column.querySelectorAll(':scope > a').forEach(a => a.remove());
+      column.querySelectorAll(':scope > a, :scope > .footer-submenu').forEach(node => node.remove());
+      let group = null, groupType = null;
       items.forEach(([label, href]) => {
         const a = document.createElement('a');
         if(href) a.href = href;
         a.textContent = label;
-        if(/^\/(?:en\/)?cases\/#(?:geo-promotion|website-development)$/.test(href)) a.className = 'footer-case-link';
-        if(/^\/(?:en\/)?publications\/[^/]+\/$/.test(href)) a.className = 'footer-publication-link';
-        if(/^\/(?:en\/)?rankings\/$/.test(href)) a.className = 'footer-rankings-link';
-        column.appendChild(a);
+        const type = /^\/(?:en\/)?cases\/#(?:geo-promotion|website-development)$/.test(href) ? 'cases'
+          : /^\/(?:en\/)?publications\/[^/]+\/$/.test(href) ? 'publications' : null;
+        if(type){
+          a.className = type === 'cases' ? 'footer-case-link' : 'footer-publication-link';
+          if(!group || groupType !== type){
+            group = document.createElement('div');
+            group.className = 'footer-submenu footer-submenu--' + type;
+            group.setAttribute('role','group');
+            group.setAttribute('aria-label',type === 'cases'
+              ? (isEn ? 'Case study sections' : 'Разделы кейсов')
+              : (isEn ? 'Publication sections' : 'Разделы публикаций'));
+            column.appendChild(group);
+            groupType = type;
+          }
+          group.appendChild(a);
+        }else{
+          group = null;
+          groupType = null;
+          if(/^\/(?:en\/)?rankings\/$/.test(href)) a.className = 'footer-rankings-link';
+          column.appendChild(a);
+        }
       });
     };
 
