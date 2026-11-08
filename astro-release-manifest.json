@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "0a2b0da176b54a43b182ced8c8db57497c03e1db",
-  "releasedAt": "2026-11-08T13:25:53.647Z",
+  "sourceCommit": "79c2b4fe6a3d60de177ed5eb743d384e60448a11",
+  "releasedAt": "2026-11-08T13:34:25.861Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2931,6 +2931,11 @@
       "sha256": "7c2397ff6a45764ad83a0c163c758c3bcc81800232e6ff90e8a975e713f2b0c6"
     },
     {
+      "path": "en/industries/construction-equipment-rental/index.html",
+      "kind": "html",
+      "sha256": "b0b2a09a68075711313e527c44d259f66734191662eea4730d5673081d9f90b2"
+    },
+    {
       "path": "en/industries/contract-cosmetics-manufacturers/index.html",
       "kind": "html",
       "sha256": "58ddf41edd9016dd4ce5b72e5247a57854890498f0e1c43a01b82f2468461c04"
@@ -3068,7 +3073,7 @@
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "07a585623d9b4bfbcad6325286e96e2334b9291e6fbf15bb3391444b83a5bc47"
+      "sha256": "abbda47d54bac3b7c1d21c1bca239891e3048e73eea8cd73dbf7efa10af2ac53"
     },
     {
       "path": "en/industries/industrial-automation-service-companies/index.html",
@@ -3191,6 +3196,11 @@
       "sha256": "613c3a0e68f1ae518cb33a38d4284093bcc1ab372326982a01ddf3e7a436a7e4"
     },
     {
+      "path": "en/industries/security-cctv-companies/index.html",
+      "kind": "html",
+      "sha256": "dbb99616fc31e19348a775377ac3b613ccada05ba584f8f2ba0f30d51f257352"
+    },
+    {
       "path": "en/industries/self-storage-services/index.html",
       "kind": "html",
       "sha256": "d993d47a248cdb94b30db72c0911e95537058e174d71edbb05623325ffd6ee52"
@@ -3253,7 +3263,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "10e89f90db1e37a763e50cab2e855caf43e4073d5215089e8a7aef7f2bad4249"
+      "sha256": "0939ecf60691d0ce2d4cfbe78d5e59766fbdbb50b914a2955413c0c4996601c8"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3476,6 +3486,11 @@
       "sha256": "8551a956b3081eff9b17015afa198c85be63a9a634ff36fee4e55e094abbc9e9"
     },
     {
+      "path": "industries/construction-equipment-rental/index.html",
+      "kind": "html",
+      "sha256": "1053e2913880af99628c25161ec13b03bd5504bdc8b92ebb080b24a33353a6f3"
+    },
+    {
       "path": "industries/contract-cosmetics-manufacturers/index.html",
       "kind": "html",
       "sha256": "07fc1970d983e92bc8d61b6e94f089662e7f0428ee71489812d8d1cd05539187"
@@ -3613,7 +3628,7 @@
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "c933caeabacf77a6f73e6448c5e525e72014f46e07861da95e8b9e35b1be1292"
+      "sha256": "8d1389bf390628ab70623ba6cbbf513d65dc1bfa00ccba40abde6bf84820de16"
     },
     {
       "path": "industries/industrial-automation-service-companies/index.html",
@@ -3734,6 +3749,11 @@
       "path": "industries/restaurants-coffee-chains/index.html",
       "kind": "html",
       "sha256": "1787bd56b6015c4e655aaae5c85bd600c1e7e1fb746a90794a3695ff1240886e"
+    },
+    {
+      "path": "industries/security-cctv-companies/index.html",
+      "kind": "html",
+      "sha256": "fe866699c7eb866285ac64ba18c661ca11053eda92b2cf1d97a9c30ba89b9dbf"
     },
     {
       "path": "industries/self-storage-services/index.html",
@@ -3893,7 +3913,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "b075b5f947b74eb534e64ae9a5724c8e26ea533afe178400aba843fbcca9f3db"
+      "sha256": "f8c6560626ee48e40ea0a4e10ad9334ca616742938f5f769cdec85bc1dbb31f0"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3948,7 +3968,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "007089ccc3b555b682de8c63db344ea69a49c89da7534c34cf811e356611c4d1"
+      "sha256": "5e39466e0937288a6f28d3326beb2025c0aee895bf44ec05d6da69f9933df660"
     }
   ]
 }
