@@ -90,6 +90,8 @@ try{
       const overflow=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
       if(overflow.document>width+1)console.error('OVERFLOW_ELEMENTS',path,width,await page.evaluate(()=>Array.from(document.querySelectorAll('body *')).filter(e=>!e.closest('.ranking-table-scroll')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,class:e.className,text:e.textContent.slice(0,75),right:e.getBoundingClientRect().right})).slice(0,15)));
       assert.ok(overflow.document<=width+1,`No horizontal page overflow ${width} ${path}: ${JSON.stringify(overflow)}`);
+      const desktop=page.locator('header .desktop-menu');
+      if(await desktop.isVisible()){const language=await desktop.locator('.lang-en').boundingBox(),cta=await page.locator('header .header-cta').boundingBox();assert.ok(language.x+language.width<=cta.x,'Desktop language switch is not covered by CTA');}
       const a=articles.find(a=>path===articleRoute(a,path.startsWith('/en/')?'en':'ru'));
       if(a){
         for(const img of await page.locator('.ranking-figure img').all()){
@@ -108,7 +110,14 @@ try{
         const renderedFaq=await page.locator('.faq-a').allTextContents();assert.deepEqual(renderedFaq.map(x=>x.trim()),schemaFaq,'Browser text agrees with FAQ schema');
         if(width===390||width===1440){await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await page.screenshot({path:`visual-rankings/${a.id}-${path.startsWith('/en/')?'en':'ru'}-${width}-hero.png`});}
         if(width===390&&!path.startsWith('/en/')){await page.locator('#comparison').screenshot({path:`visual-rankings/${a.id}-${width}-comparison.png`});}
-      }else if(path===route(path.startsWith('/en/')?'en':'ru')&&(width===1440||width===390))await page.screenshot({path:`visual-rankings/index-${path.startsWith('/en/')?'en':'ru'}-${width}.png`,fullPage:true});
+      }else{
+        for(const img of await page.locator('.ranking-card__link>img').all()){
+          await img.evaluate(el=>{el.loading='eager';el.scrollIntoView({block:'center',behavior:'instant'});});
+          await page.waitForFunction(el=>el.complete&&el.naturalWidth>0,await img.elementHandle(),{timeout:15000});
+          await img.evaluate(el=>el.decode());
+        }
+        if(path===route(path.startsWith('/en/')?'en':'ru')&&(width===1440||width===390)){await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await page.screenshot({path:`visual-rankings/index-${path.startsWith('/en/')?'en':'ru'}-${width}.png`,fullPage:true});}
+      }
       report.push({path,width,status:200,overflow:false,images:a?a.images.length:null,faq:a?'native-details-pass':null});
     }
   }
