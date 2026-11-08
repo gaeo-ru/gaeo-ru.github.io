@@ -1350,11 +1350,11 @@ details.price:last-child{
 
 /* One language switch under the contact block on desktop; below the entire
    navigation and immediately above the legal details on narrow screens. */
-.footer-lang--mobile{display:none}
+footer .footer-lang--mobile{display:none!important}
 @media(max-width:720px){
  footer .footer-brand>.footer-lang--desktop{display:none}
  footer .footer-lang--mobile{
-  display:flex;align-items:center;gap:6px;
+  display:flex!important;align-items:center;gap:6px;
   width:100%;margin:20px 0 0;padding:15px 0 0;
   border-top:1px solid rgba(255,255,255,.2)
  }
