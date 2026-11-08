@@ -1698,21 +1698,39 @@
       "slug": "fbs-ozon-2026",
       "title": "Фулфилмент для Ozon по FBS в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t020.json",
       "earliestPublicationDate": "2026-09-29",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
         "ownerId": "chat-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
         "requestId": "claim-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
         "token": "rk-mw8gg6zo-uyxwr3hcfm8-6krcm4npvd3",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:20:04.697Z",
-        "expiresAt": "2026-11-09T05:20:04.697Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t020.json",
+        "committedAt": "2026-11-08T23:34:33.111Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t020/01_cover_top10_fbs_ozon_2026.jpg",
+            "sha": "412c72e5ffea07ef16896c36458747a91eca3a2f"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t020.json",
+            "sha": "06688710697eb970922f83d7e584ee155a4ee28e"
+          }
+        ],
+        "baseCommit": "91f6c0a44c8e721e00d70c519daf689d208be527"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1GNvSUFtQnHxY6PYPo-1g1aCWMXdeHAPD/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-10 и раздел «1. Преп-Центр – 98 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t021",
@@ -2612,8 +2630,9 @@
       "expiresAt": "2026-11-09T05:20:04.697Z",
       "previousStatus": "ready",
       "taskId": "prep-t020",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gg6zo-vjqakw5d6c-z6al4821lt8"
     },
     {
       "ownerId": "chat-gaeo-rkmw8gdff4-b0xvbo4dv09",
@@ -2629,5 +2648,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:33:51.535Z"
+  "updatedAt": "2026-11-08T23:34:33.111Z"
 }
