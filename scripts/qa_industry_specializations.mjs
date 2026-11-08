@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,77,78,79])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,65,104])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
@@ -67,20 +67,21 @@ for(const id of [71,72,74]){
  }
 }
 
-// Phase 2AF automotive: three independent road-service, fleet and powersports intents.
-for(const id of [77,78,79]){
+// Phase 2AF: distinct, sensitive rehabilitation (#65) and counselling (#104) services.
+for(const [id,group] of [[65,'healthcare'],[104,'local-services']]){
  const item=industrySpecializations.find(x=>x.id===id);
- assert.ok(item&&item.group==='automotive','2AF automotive ID '+id);
- assert.ok(item.sources.length>=2,'2AF has supporting primary sources '+id);
- assert.ok(item.parent.ru==='/tarify/'&&item.parent.en==='/en/pricing/','2AF has canonical parent '+id);
+ assert.ok(item&&item.group===group,'2AF correct regulated/specialist group '+id);
+ assert.ok(item.sources.length>=3,'2AF multiple primary sources '+id);
+ assert.equal(item.parent.ru,'/tarify/','2AF canonical RU catalog '+id);
+ assert.equal(item.parent.en,'/en/pricing/','2AF canonical EN catalog '+id);
  for(const lang of ['ru','en']){
   const c=item.content[lang];
-  assert.equal(c.problems.length,3,'2AF evidence barriers '+id+' '+lang);
-  assert.equal(c.scenarios.length,4,'2AF buying scenarios '+id+' '+lang);
-  assert.ok(c.scenarios.every(x=>x.length===3),'2AF three-column intents '+id+' '+lang);
-  assert.equal(c.steps.length,4,'2AF methodology '+id+' '+lang);
+  assert.equal(c.problems.length,3,'2AF barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AF demand intents '+id+' '+lang);
+  assert.ok(c.scenarios.every(x=>x.length===3),'2AF table structure '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AF service process '+id+' '+lang);
   assert.equal(c.faq.length,5,'2AF visible FAQ '+id+' '+lang);
-  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AF original copy '+id+' '+lang);
+  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AF original evidence copy '+id+' '+lang);
  }
 }
 

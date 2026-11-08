@@ -1163,23 +1163,22 @@
       "phase": 2,
       "batch": "2AF",
       "records": [
-        77,
-        78,
-        79
+        65,
+        104
       ],
       "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2af.mjs",
       "status": "source_prepared_pr_ci_pending",
-      "source_content_commit": "a71daa812ffdf18fce5efe2662bfe5d8b1f29e15",
-      "qa_source_commit": "b82b3ffb9ffb401144e3a4425626e2a6b25bc5bc",
-      "prepared_pairs": 3,
-      "prepared_ru_en_urls": 6,
-      "ci_status": "not_yet_run",
+      "source_content_commit": "363326b843ffc25ae0cb95f9b409897c9f476f52",
+      "qa_source_commit": null,
+      "prepared_pairs": 2,
+      "prepared_ru_en_urls": 4,
+      "ci_status": "pending_after_scope_change",
       "source_merged": false,
       "production_status": "not_published",
       "pages_status": "not_published",
       "public_https_browser_verified": false,
-      "next_required_step": "Open one PR, validate full Astro/Chromium 1440/390/320, merge only after PASS, then main/Pages and independent HTTPS verification",
+      "next_required_step": "Full PR CI including Astro and all Chromium 1440/390/320, merge only after PASS, then main manifest/Pages and separate public HTTPS checks; keep #65/104 live fields null",
       "excluded_3a_records": [
         75,
         76,
@@ -1189,8 +1188,23 @@
       "parallel_open_prs_at_initial_check": [
         115,
         116,
-        117
-      ]
+        117,
+        118,
+        119,
+        120,
+        121,
+        123
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/122",
+      "collision_avoided_with": {
+        "batch": "2AE",
+        "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/118",
+        "ids": [
+          77,
+          78,
+          79
+        ]
+      }
     }
   },
   "status_definitions": {
@@ -1259,9 +1273,9 @@
     "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
     "phase_2ab_prepared_pairs_not_deployed": 1,
     "phase_2ab_prepared_urls_not_deployed": 2,
-    "phase_2af_prepared_pairs_not_deployed": 3,
-    "phase_2af_prepared_ru_en_urls_not_deployed": 6,
-    "phase_2af_release_snapshot_note": "83 specialization pairs/166 URLs in confirmed latest main 62b0fd2; 2AF adds 3 pairs/6 URLs only in isolated source branch until PR, CI, source merge, production and Pages. External HTTPS for 2AF is not verified."
+    "phase_2af_prepared_pairs_not_deployed": 2,
+    "phase_2af_prepared_ru_en_urls_not_deployed": 4,
+    "phase_2af_release_snapshot_note": "2AF now only #65/#104, 2 pairs/4 RU-EN URL prepared in branch PR #122. Automotive #77-79 already owned by concurrent 2AE PR #118. No changes to 83/166 confirmed main snapshot, direct HTTPS unverified."
   },
   "candidate_batches": [
     {
@@ -1622,17 +1636,18 @@
       "phase": 2,
       "kind": "content_candidates",
       "ids": [
-        77,
-        78,
-        79
+        65,
+        104
       ],
-      "label": "Автосервисы и СТО, дилеры коммерческого транспорта и спецтехники, дилеры мотоциклов и мототехники",
-      "condition": "Три независимые RU/EN GEO-специализации с проверяемыми потребительскими/закупочными запросами. Постановление №780 отделяет ремонт от техосмотра, 283-ФЗ и 297-ФЗ требуют различать дорожные ТС и самоходные машины. 3A №75/76 и финансовые №27/30 не затронуты; тарифы, BMR, 107 изображений и ID неизменны.",
+      "label": "Медицинские реабилитационные центры и частные психологи/врачи-психотерапевты",
+      "condition": "Две оригинальные RU/EN специализации с усиленной медицинской и профессиональной проверкой. Приказы 788н/878н, закон 323-ФЗ, профстандарт 537н, медквалификация 206н, реестр лицензий, 152-ФЗ. 2AE PR #118 уже владеет #77/78/79 и их не дублируем. Не раскрывать пациентские сведения, не придумывать эффективность лечения или медицинские полномочия. Исходные 107 направлений, изображения, тарифы и BMR неизменны.",
       "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
       "work_status": "source_prepared_pr_ci_pending",
       "source_file": "src/data/industry-specializations-batch-2af.mjs",
       "public_https_browser_verified": false,
-      "next_required_step": "run_full_pr_ci_and_release"
+      "next_required_step": "review_pr_ci_then_merge_and_validate_production",
+      "collision_avoided": "phase_2ae_pr_118_owns_ids_77_78_79",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/122"
     }
   ],
   "records": [
@@ -4147,10 +4162,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_pr_ci_then_source_merge_production_pages_public_https",
+      "planned_landing_url_ru": "/industries/rehabilitation-centres/",
+      "planned_landing_url_en": "/en/industries/rehabilitation-centres/",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://kurort.minzdrav.gov.ru/articles/10/11",
+        "https://www.consultant.ru/document/cons_doc_LAW_433852/251914c20e9de78b3ee8b2d5e0bf9dc53015020e/",
+        "https://www.consultant.ru/document/cons_doc_LAW_341304/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing"
+      ],
+      "public_https_browser_verified": false,
+      "release_note": "2AF original source in PR #122, not yet merged or deployed. No live HTTPS confirmation; do not fill landing_url or verified_at."
     },
     {
       "id": 66,
@@ -4582,24 +4611,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "not_started",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
-      "planned_landing_url_ru": "/industries/auto-repair-service-stations/",
-      "planned_landing_url_en": "/en/industries/auto-repair-service-stations/",
-      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
-      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
-      "source_file": "src/data/industry-specializations-batch-2af.mjs",
-      "parent_link_ru": "/tarify/",
-      "parent_link_en": "/en/pricing/",
-      "evidence_sources": [
-        "https://zpp.rospotrebnadzor.ru/news/federal/575844",
-        "https://www.consultant.ru/document/cons_doc_LAW_506689/",
-        "https://www.consultant.ru/document/cons_doc_LAW_115853/"
-      ],
-      "public_https_browser_verified": false,
-      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
+      "work_status": "not_started",
+      "next_required_step": "research_new_subject"
     },
     {
       "id": 78,
@@ -4621,24 +4636,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "not_started",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
-      "planned_landing_url_ru": "/industries/commercial-vehicle-special-equipment-dealers/",
-      "planned_landing_url_en": "/en/industries/commercial-vehicle-special-equipment-dealers/",
-      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
-      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
-      "source_file": "src/data/industry-specializations-batch-2af.mjs",
-      "parent_link_ru": "/tarify/",
-      "parent_link_en": "/en/pricing/",
-      "evidence_sources": [
-        "https://www.consultant.ru/document/cons_doc_LAW_304041/",
-        "https://www.consultant.ru/document/cons_doc_LAW_388991/",
-        "https://www.consultant.ru/document/cons_doc_LAW_535444/2d49e42ea1ebc4f0c3afdf5a9490b3116b04f99a/"
-      ],
-      "public_https_browser_verified": false,
-      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
+      "work_status": "not_started",
+      "next_required_step": "research_new_subject"
     },
     {
       "id": 79,
@@ -4660,24 +4661,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_prepared_in_branch",
+      "content_status": "not_started",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
-      "planned_landing_url_ru": "/industries/motorcycle-powersports-dealers/",
-      "planned_landing_url_en": "/en/industries/motorcycle-powersports-dealers/",
-      "last_completed_step": "phase_2af_original_ru_en_content_registered_and_static_contract_added",
-      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
-      "source_file": "src/data/industry-specializations-batch-2af.mjs",
-      "parent_link_ru": "/tarify/",
-      "parent_link_en": "/en/pricing/",
-      "evidence_sources": [
-        "https://www.consultant.ru/document/cons_doc_LAW_304041/",
-        "https://www.consultant.ru/document/cons_doc_LAW_506689/0efd2963a57a04b9a7049dd39976579c9ab67b76/",
-        "https://www.consultant.ru/document/cons_doc_LAW_388991/"
-      ],
-      "public_https_browser_verified": false,
-      "release_note": "Source prepared in independent 2AF branch for PR CI. Not merged, deployed or live-verified. Keep landing_url_ru/en and verified_at empty."
+      "work_status": "not_started",
+      "next_required_step": "research_new_subject"
     },
     {
       "id": 80,
@@ -5759,10 +5746,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_pr_ci_then_source_merge_production_pages_public_https",
+      "planned_landing_url_ru": "/industries/private-psychologists-psychotherapists/",
+      "planned_landing_url_en": "/en/industries/private-psychologists-psychotherapists/",
+      "work_branch": "feat/industry-specializations-batch-2af-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2af.mjs",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "evidence_sources": [
+        "https://mintrud.gov.ru/docs/mintrud/orders/2458",
+        "https://base.garant.ru/406969654/53f89421bbdaf741eb2d1ecc4ddb4c33/",
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://mintrud.gov.ru/docs/laws/130"
+      ],
+      "public_https_browser_verified": false,
+      "release_note": "2AF original source in PR #122, not yet merged or deployed. No live HTTPS confirmation; do not fill landing_url or verified_at."
     },
     {
       "id": 105,
