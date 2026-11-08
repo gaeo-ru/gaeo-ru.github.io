@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "taskId": "orient-t001",
+  "familyId": "orient-t001",
+  "slug": "semeyny-sport-2026",
+  "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
+  "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
+  "submissionId": "submit-rankings-mw8gcaa7-y795e426n5",
+  "submittedAt": "2026-11-08T23:32:13.570Z",
+  "mode": "standard",
+  "baseCommit": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4",
+  "files": [
+    {
+      "path": "public/assets/rankings/orient-t001/family-orienteering-scheme.jpg",
+      "sha": "8ea6eddf7c42925494551b6595786176d84929ce"
+    },
+    {
+      "path": "public/assets/rankings/orient-t001/score-top10-family-sports.jpg",
+      "sha": "6a6632ddf667bacc6fcc8274d204b44865ac7b41"
+    },
+    {
+      "path": "src/data/rankings/articles/orient-t001.json",
+      "sha": "372c09ce2a0b22467786a13ed7ac59f532bd9b9c"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Спортивное ориентирование",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+      "locator": "«Итоговый ТОП-10» и «1. Спортивное ориентирование — 94/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 2,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/orient-t001.json",
+    "ref": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4",
+    "sha": "37698f06bc3f902e72e2ebb53d27b02c74a58a73"
+  },
+  "deployed": false
+}

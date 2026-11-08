@@ -1082,18 +1082,40 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t001.json",
       "earliestPublicationDate": "2026-09-12",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-mw8gcaa7-y795e426n5",
         "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
         "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
         "token": "rk-mw8gchjj-gbkbz2hvqy8-8vyg7w99lki",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:25.861Z",
-        "expiresAt": "2026-11-09T05:17:25.861Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/orient-t001.json",
+        "committedAt": "2026-11-08T23:32:13.570Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t001/family-orienteering-scheme.jpg",
+            "sha": "8ea6eddf7c42925494551b6595786176d84929ce"
+          },
+          {
+            "path": "public/assets/rankings/orient-t001/score-top10-family-sports.jpg",
+            "sha": "6a6632ddf667bacc6fcc8274d204b44865ac7b41"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t001.json",
+            "sha": "372c09ce2a0b22467786a13ed7ac59f532bd9b9c"
+          }
+        ],
+        "baseCommit": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+        "locator": "«Итоговый ТОП-10» и «1. Спортивное ориентирование — 94/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "orient-t002",
@@ -2544,8 +2566,9 @@
       "expiresAt": "2026-11-09T05:17:25.861Z",
       "previousStatus": "ready",
       "taskId": "orient-t001",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-mw8gcaa7-y795e426n5"
     },
     {
       "ownerId": "chat-mw8gcnf4-1ac3be820q",
@@ -2741,5 +2764,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:36:05.331Z"
+  "updatedAt": "2026-11-08T23:32:13.570Z"
 }

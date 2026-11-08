@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t001",
+  "familyId": "orient-t001",
+  "category": "orienteering",
+  "slug": "semeyny-sport-2026",
+  "firstPlace": "Спортивное ориентирование",
+  "sourceDate": "2026-09-12",
+  "dataAsOf": "2026-09-12",
+  "publishedDate": "2026-11-09",
+  "modifiedDate": "2026-11-09",
+  "source": {
+    "status": "found",
+    "provider": "google-drive",
+    "url": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+    "fileId": "1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J",
+    "originalAuthor": {
+      "ru": "Алена Михайлова",
+      "en": "Alena Mikhailova"
+    },
+    "originalPublicationUrl": "https://www.sostav.ru/blogs/292167/108174",
+    "selectedVersion": "Full Sostav source manuscript dated September 12, 2026",
+    "readComplete": true,
+    "checkedDate": "2026-11-09",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+      "locator": "«Итоговый ТОП-10» и «1. Спортивное ориентирование — 94/100»",
+      "checkedDate": "2026-11-09"
+    }
+  },
+  "disclosure": {
+    "ru": "Редакция GAEO пересказала опубликованный 12 сентября 2026 года рейтинг Алены Михайловой, сохранив его методику, участников и оценки. Результат относится к удобству спорта для совместного участия семьи.",
+    "en": "GAEO has rewritten Alena Mikhailova's ranking originally published on September 12, 2026, preserving its method, participants and scores. The assessment concerns sports for shared family participation."
+  },
+  "versions": [
+    {
+      "platform": "Sostav",
+      "label": {
+        "ru": "Sostav: оригинальный рейтинг",
+        "en": "Sostav: original Russian ranking"
+      },
+      "ru": "https://www.sostav.ru/blogs/292167/108174"
+    },
+    {
+      "platform": "TenChat",
+      "label": {
+        "ru": "TenChat: опубликованная версия",
+        "en": "TenChat: published Russian edition"
+      },
+      "ru": "https://tenchat.ru/media/6133757-top10-vidov-sporta-dlya-vsey-semi-gde-roditeli-tozhe-uchastvuyut--2026"
+    },
+    {
+      "platform": "vc.ru",
+      "label": {
+        "ru": "vc.ru: альтернативная редакция",
+        "en": "vc.ru: alternative Russian edition"
+      },
+      "ru": "https://vc.ru/life/3135449-luchshie-vidy-sporta-dlya-vsej-semi"
+    },
+    {
+      "platform": "GitHub",
+      "label": {
+        "ru": "GitHub IndexResearch: RU/EN",
+        "en": "GitHub IndexResearch: RU/EN"
+      },
+      "ru": "https://github.com/IndexResearch-ru/family-sports-russia-2026",
+      "en": "https://github.com/IndexResearch-ru/family-sports-russia-2026-en"
+    },
+    {
+      "platform": "IndexResearch.ru",
+      "label": {
+        "ru": "IndexResearch.ru: RU/EN",
+        "en": "IndexResearch.ru: RU/EN"
+      },
+      "ru": "https://indexresearch.ru/family-sports-russia-2026.html",
+      "en": "https://indexresearch.ru/en/family-sports-russia-2026.html"
+    },
+    {
+      "platform": "GitHub · 中文",
+      "label": {
+        "ru": "GitHub: версия на китайском",
+        "en": "GitHub: Chinese edition"
+      },
+      "ru": "https://github.com/IndexResearch-ru/family-sports-russia-2026-cn",
+      "en": "https://github.com/IndexResearch-ru/family-sports-russia-2026-cn"
+    },
+    {
+      "platform": "IndexResearch.ru · 中文",
+      "label": {
+        "ru": "IndexResearch.ru: китайская версия",
+        "en": "IndexResearch.ru: Chinese edition"
+      },
+      "ru": "https://indexresearch.ru/cn/family-sports-russia-2026.html",
+      "en": "https://indexresearch.ru/cn/family-sports-russia-2026.html"
+    }
+  ],
+  "clientLinks": [],
+  "images": [
+    {
+      "src": "/assets/rankings/orient-t001/score-top10-family-sports.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Диаграмма ТОП-10 семейных видов спорта с ориентированием на 1-м месте, 94 из 100",
+        "en": "Original Russian chart of ten family sports, orienteering first at 94 out of 100"
+      },
+      "caption": {
+        "ru": "Оригинальная диаграмма сентябрьского рейтинга; все баллы приведены также текстом.",
+        "en": "Original Russian-language September ranking chart; scores are also reproduced in text."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1LGhKfcFX9xt_GyuPbpeW9Qh8sMWznP1s/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t001/family-orienteering-scheme.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Схема одного стартового центра с дистанциями для ребенка, подростка и взрослого",
+        "en": "Original Russian diagram showing separate child, teenage and adult orienteering courses at one starting venue"
+      },
+      "caption": {
+        "ru": "Разные дистанции и собственный результат у каждого участника семьи.",
+        "en": "Original Russian-language diagram of separate courses and individual results at one family event."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1jhcfGQPTCoEXdyuhd5u04CfDSlWIgzlI/view"
+    }
+  ],
+  "ru": {
+    "title": "ТОП-10 видов спорта для всей семьи в России: совместное участие, расходы и возраст, 2026",
+    "seoTitle": "Лучшие виды спорта для всей семьи: рейтинг ТОП-10 России, 2026",
+    "description": "Семейные виды спорта: спортивное ориентирование 94/100, бег 90/100, настольный теннис 83/100. Методика, 10 участников и выбор на сентябрь 2026.",
+    "shortAnswer": "На 12 сентября 2026 года в редакционном рейтинге видов спорта для всей семьи 1-е место заняло спортивное ориентирование (94/100). Следом бег (90/100) и настольный теннис (83/100).",
+    "intro": [
+      "Семейным можно назвать почти любой спорт, доступный детям и взрослым. Но совместное занятие устроить сложнее: важно, чтобы все действительно участвовали, а не ждали у площадки завершения чужой тренировки.",
+      "Рейтинг Алены Михайловой от 12 сентября 2026 года оценивал именно общую спортивную жизнь семьи. Эта статья заново излагает его методику и результаты, сохраняя всех участников и исторический срез."
+    ],
+    "contextTitle": "Почему общий спортивный день важнее одной дистанции",
+    "context": [
+      "Родители и дети могут участвовать в одном событии, но проходить разные дистанции и получать собственное время. Так нагрузка соответствует подготовке, а дорога, место старта и впечатления остаются общими.",
+      "Это объясняет преимущество ориентирования и беговых стартов и сдержанную оценку плавания, где расписания детских и взрослых групп часто не совпадают."
+    ],
+    "methodology": [
+      "В исходном сравнении каждый из 10 видов оценивали по семи критериям от 0 до 10. Затем применяли веса с суммой 100% и округляли итог до целого балла. На возможность участия всей семьи в одном событии приходилось 30%, на адаптацию к возрасту 15%, на разнообразие еще 15%.",
+      "При равенстве итоговых баллов выше ставили участника с лучшим результатом по семейному формату, затем по адаптации к возрасту. Поэтому велоспорт и скалолазание получили по 77/100, но велосипед оказался выше.",
+      "Оценки отражают авторскую сравнительную модель на 12 сентября 2026 года, а не классификацию Минспорта. Для подтверждения возрастных категорий и форматов оригинальная публикация использовала материалы профильных спортивных федераций. Доступность и цены зависят от региона и времени."
+    ],
+    "criteria": [
+      {
+        "name": "Совместный спортивный день",
+        "weight": "30%",
+        "description": "Участие родителей и детей в одном месте примерно одновременно."
+      },
+      {
+        "name": "Разный возраст и подготовка",
+        "weight": "15%",
+        "description": "Возможность подобрать посильную нагрузку детям и взрослым."
+      },
+      {
+        "name": "Простота первого занятия",
+        "weight": "10%",
+        "description": "Сколько подготовки требуется для первой тренировки."
+      },
+      {
+        "name": "Расходы и логистика",
+        "weight": "10%",
+        "description": "Инвентарь, аренда, хранение и перевозка."
+      },
+      {
+        "name": "Круглогодичная доступность",
+        "weight": "10%",
+        "description": "Зависимость от сезона, погоды и площадок."
+      },
+      {
+        "name": "Разнообразие",
+        "weight": "15%",
+        "description": "Новые условия и задачи, поддерживающие интерес."
+      },
+      {
+        "name": "Личный результат",
+        "weight": "10%",
+        "description": "Возможность получить собственное время или место."
+      }
+    ],
+    "ranking": [
+      {
+        "position": 1,
+        "name": "Спортивное ориентирование",
+        "score": "94/100",
+        "summary": "Общий старт с разными по сложности маршрутами и личным временем каждого.",
+        "paragraphs": [
+          "Семья приезжает на один старт, но ребенку и взрослому не приходится проходить одинаковую дистанцию. Короткий маршрут новичка и более сложный маршрут опытного участника дают каждому собственную задачу; результаты можно обсудить после финиша.",
+          "Меняются карты, постановка контрольных пунктов и местность, поэтому семейные занятия не ограничиваются одной тренировочной схемой. В исходной статье приведены данные ФСОР за 2025 год: 33 591 участие в соревнованиях календаря по нескольким дисциплинам. Речь идет об участиях, а не об уникальных спортсменах. Самостоятельный старт требует знакомства с картой, условными знаками и правилами отметки."
+        ],
+        "caution": "Нужны начальные навыки чтения карты; возрастные группы и условия допуска зависят от конкретного соревнования."
+      },
+      {
+        "position": 2,
+        "name": "Бег",
+        "score": "90/100",
+        "summary": "Самый простой и недорогой способ начать заниматься вместе.",
+        "paragraphs": [
+          "Для семейной пробежки не нужны аренда корта или сложная техника. Массовые забеги предлагают разные дистанции; в календаре ВФЛА на 2026 год представлены детские и взрослые форматы.",
+          "Бег отстал от ориентирования на 4 балла по специфике общего спортивного события. При разной подготовке сильный участник обычно подстраивает скорость под ребенка, а забеги разных возрастов не обязательно совпадают по времени."
+        ],
+        "caution": "Различие в темпе может мешать общей тренировке."
+      },
+      {
+        "position": 3,
+        "name": "Настольный теннис",
+        "score": "83/100",
+        "summary": "Игра в зале с быстрым входом и небольшими требованиями к инвентарю.",
+        "paragraphs": [
+          "Для начала хватит стола, ракеток и мячей; родитель и ребенок могут играть с форой или снижать темп. Возрастные турниры существуют и для молодежи, и для ветеранов.",
+          "Однако календарь соревнований разных возрастов чаще раздельный. Для досуга всей семьи настольный теннис удобен, но единый семейный старт с личными результатами каждого организовать сложнее."
+        ],
+        "caution": "Нужен доступ к столу; совместный семейный турнир доступен не всегда."
+      },
+      {
+        "position": 4,
+        "name": "Бадминтон",
+        "score": "81/100",
+        "summary": "Активная семейная игра с удобным заловым форматом.",
+        "paragraphs": [
+          "С бадминтоном можно познакомиться быстрее, чем с большим теннисом. В России проводятся юношеские и ветеранские соревнования, поэтому дисциплина открыта для разных поколений.",
+          "Главное ограничение проявляется в игре людей с разной техникой. Взрослому приходится смягчать подачу или менять правила, иначе полноценный матч становится односторонним."
+        ],
+        "caution": "Большой разрыв в технике мешает играть на равных."
+      },
+      {
+        "position": 5,
+        "name": "Лыжные гонки",
+        "score": "80/100",
+        "summary": "Семейный зимний день с выбором скорости и длины дистанции.",
+        "paragraphs": [
+          "На лыжной трассе можно приехать вместе, но выбрать каждому свой темп. Возрастные группы охватывают детей и взрослых, а официальные правила ФЛГР для старших спортсменов включают группы до 85–89 лет.",
+          "За эту семейность лыжи получили высокую оценку, но общий результат снизили снегозависимость и необходимость комплектов ботинок, лыж и палок для каждого. Летняя подготовка на лыжероллерах требует иных навыков."
+        ],
+        "caution": "Погода, сезон и комплекты снаряжения ограничивают регулярность."
+      },
+      {
+        "position": 6,
+        "name": "Велоспорт",
+        "score": "77/100",
+        "summary": "Совместные маршруты можно менять по длине, скорости и рельефу.",
+        "paragraphs": [
+          "Велопрогулка сочетает физическую нагрузку с поездкой и легко меняется от короткой парковой дистанции до длинного маршрута. Существуют и любительские старты.",
+          "Главные затруднения возникают с хранением, перевозкой и обслуживанием нескольких велосипедов, а также с безопасностью дорог. При равных 77 баллах велосипед выше скалолазания по дополнительному критерию общей семейной активности."
+        ],
+        "caution": "Нужны безопасные маршруты и место для нескольких велосипедов."
+      },
+      {
+        "position": 7,
+        "name": "Скалолазание",
+        "score": "77/100",
+        "summary": "Один скалодром дает трассы для разного уровня подготовки.",
+        "paragraphs": [
+          "Ребенок может идти по простой трассе, а взрослый по технически сложной; вся семья остается на одной площадке. Появление новых маршрутов поддерживает интерес, зал доступен независимо от сезона.",
+          "В исходной оценке скалолазание уступило велосипеду при равных 77 баллах из-за меньшего балла за совместность. Нужны скалодром, подходящие возрастные условия и соблюдение техники безопасности."
+        ],
+        "caution": "Необходимы подходящая площадка и обучение безопасной работе."
+      },
+      {
+        "position": 8,
+        "name": "Плавание",
+        "score": "74/100",
+        "summary": "Круглогодичная активность для разных возрастов при наличии бассейна.",
+        "paragraphs": [
+          "У детей есть секции, у взрослых любительские и ветеранские соревнования; при доступном бассейне сезон почти не ограничивает занятия.",
+          "Но родители и дети часто плавают по разным расписаниям и дорожкам. Семья может посещать один комплекс, не получая общего соревновательного события, поэтому по ключевому критерию итог ниже."
+        ],
+        "caution": "Расписание дорожек и групп может разделять семью."
+      },
+      {
+        "position": 9,
+        "name": "Большой теннис",
+        "score": "72/100",
+        "summary": "Семейная игра возможна, но аренда корта и техника повышают расходы.",
+        "paragraphs": [
+          "Родитель может тренироваться с ребенком и играть парами. В теннисном календаре России на 2026 год были детские, юниорские и взрослые категории.",
+          "Техника требует времени, а разница в уровне быстро ухудшает качество совместного розыгрыша. Аренда корта, тренировки и экипировка делают регулярный семейный спорт дорогим."
+        ],
+        "caution": "Проверь расходы на корт и готовность учиться всем составом."
+      },
+      {
+        "position": 10,
+        "name": "Горные лыжи",
+        "score": "70/100",
+        "summary": "Общая поездка с трассами разных уровней при высокой стоимости.",
+        "paragraphs": [
+          "На горнолыжном курорте можно вместе приехать и распределиться по трассам, а после катания встретиться. Есть детские и взрослые соревнования, включая старшие возрастные направления.",
+          "Итог сильнее всего снижают сезонность и расходы: ски-пассы, дорога, жилье и несколько комплектов оборудования. Для регулярного недорогого семейного спорта этот формат неудобен."
+        ],
+        "caution": "Высокие расходы и привязка к курортам."
+      }
+    ],
+    "selection": [
+      "Для дешевого первого шага достаточно семейной пробежки или нескольких занятий настольным теннисом. Попробуй формат до покупки большого количества оборудования.",
+      "Если уровень детей и родителей сильно различается, ищи варианты с разными дистанциями в одном событии: ориентирование, массовые беговые старты, лыжные гонки. Тогда каждый получает собственную задачу.",
+      "Сравни время на дорогу, нужное снаряжение, сезон и то, готовы ли взрослые участвовать сами. Для зимних поездок подходят лыжи; для зала круглый год есть настольный теннис, бадминтон, плавание и скалолазание.",
+      "Прежде чем записывать ребенка в секцию, сходите на пробное занятие всей семьей. Хороший выбор тот, к которому хочется возвращаться не только детям, но и родителям."
+    ],
+    "faq": [
+      {
+        "question": "Какой семейный спорт занял 1-е место?",
+        "answer": "Спортивное ориентирование получило 94/100 по модели на 12 сентября 2026 года: семья участвует в одном событии, а маршруты и результаты у всех собственные."
+      },
+      {
+        "question": "Можно ли родителям и детям участвовать в одном старте по ориентированию?",
+        "answer": "Часто да: участники приезжают к одному стартовому центру, но идут по разным возрастным или открытым дистанциям. Проверь положение конкретного старта."
+      },
+      {
+        "question": "Какой вид спорта дешевле начать?",
+        "answer": "Обычно бег: для первой семейной пробежки не нужны аренда площадки и дорогой специальный инвентарь."
+      },
+      {
+        "question": "Что выбрать при разной физической подготовке?",
+        "answer": "Ориентирование, лыжные гонки, беговые старты и велопрогулки позволяют подобрать разные дистанции или нагрузки."
+      },
+      {
+        "question": "Почему плавание только 8-е?",
+        "answer": "Это рейтинг общего семейного спортивного дня, а не пользы для здоровья. Детские и взрослые занятия в бассейне часто разделены по времени."
+      },
+      {
+        "question": "Что лучше для семьи: бег или ориентирование?",
+        "answer": "Бег выигрывает по простоте и цене, ориентирование по совместному старту с разными заданиями. Попробуйте оба формата."
+      }
+    ],
+    "conclusion": [
+      "Спортивное ориентирование заняло 1-е место с 94/100 потому, что сочетает один спортивный день, отдельные маршруты по возрасту и личный результат. Бег получил 90/100 и остается наиболее простым входом в регулярную семейную активность.",
+      "Это новая редакция одного исходного рейтинга Алены Михайловой. Ссылки на его разные публикации не означают несколько независимых исследований. Места сохраняют смысл только внутри выбранной семейной методики."
+    ]
+  },
+  "en": {
+    "title": "Top 10 sports for the whole family in Russia: participation, cost and age, 2026",
+    "seoTitle": "Best sports for families in Russia: Top 10 comparison and scores, 2026",
+    "description": "A seven-criterion family sports comparison from September 2026. Orienteering leads at 94/100, running at 90 and table tennis at 83.",
+    "shortAnswer": "In the editorial family sports ranking dated September 12, 2026, orienteering ranked first at 94/100. Running followed with 90/100 and table tennis with 83/100.",
+    "intro": [
+      "Many sports can be practiced by both adults and children. That does not automatically mean a family can take part together rather than wait for separate sessions to finish.",
+      "Alena Mikhailova's September 12, 2026 ranking assessed how well ten sports support a shared family sporting life. This English adaptation rewrites the explanation while retaining the original participants, dates and scores."
+    ],
+    "contextTitle": "A shared event does not require an identical course",
+    "context": [
+      "Parents and children can attend the same competition while following different routes and recording their own results. The venue, travel and sporting atmosphere are shared; the workload can still match each person's age and ability.",
+      "This distinction favours orienteering and some running events, while swimming scores less strongly because children's classes and adult sessions often use different timetables."
+    ],
+    "methodology": [
+      "The source rated each of ten sports on seven criteria from 0 to 10. Weighted values added to 100%, and totals were rounded to whole points. Sharing one sporting event carried 30%, age and ability flexibility 15%, and long-term variety another 15%.",
+      "Tied overall scores were separated by the family-participation criterion and then suitability for different ages. Cycling and climbing both scored 77/100, but cycling received the higher togetherness score.",
+      "These are editorial judgments for a particular family participation scenario as of September 12, 2026, not a ranking issued by a ministry or sports federation. The original article cited national federation calendars for age categories and competitions. Local costs and access must be checked afresh."
+    ],
+    "criteria": [
+      {
+        "name": "Shared sporting day",
+        "weight": "30%",
+        "description": "Can parents and children participate at the same venue at roughly the same time?"
+      },
+      {
+        "name": "Different ages and abilities",
+        "weight": "15%",
+        "description": "Can everyone find a challenge suited to age and fitness?"
+      },
+      {
+        "name": "Ease of entry",
+        "weight": "10%",
+        "description": "How much preparation is needed before a first real session?"
+      },
+      {
+        "name": "Cost and logistics",
+        "weight": "10%",
+        "description": "Equipment, venue hire, storage and transport."
+      },
+      {
+        "name": "Year-round access",
+        "weight": "10%",
+        "description": "Dependence on seasons, weather and specialist facilities."
+      },
+      {
+        "name": "Long-term variety",
+        "weight": "15%",
+        "description": "Fresh challenges and locations that sustain interest."
+      },
+      {
+        "name": "Individual results",
+        "weight": "10%",
+        "description": "Can each participant obtain a personal measurable result?"
+      }
+    ],
+    "ranking": [
+      {
+        "position": 1,
+        "name": "Orienteering",
+        "originalName": "Спортивное ориентирование",
+        "score": "94/100",
+        "summary": "A shared event with age-appropriate courses and an individual result for everyone.",
+        "paragraphs": [
+          "A family can arrive at one start centre while children and adults navigate different routes. A short beginner course and a harder adult course let everyone solve an individual challenge and compare experiences afterwards.",
+          "Courses change with the terrain, map and control-point placement, keeping the activity varied. The source cited 33,591 participations in Russian Orienteering Federation calendar events across several disciplines in 2025. These were participations, not unique athletes. Beginners must first learn map symbols, checkpoint procedures and event rules."
+        ],
+        "caution": "Basic map-reading skills are necessary; age categories and entry rules depend on the event."
+      },
+      {
+        "position": 2,
+        "name": "Running",
+        "originalName": "Бег",
+        "score": "90/100",
+        "summary": "The lowest-barrier, low-cost way to get started.",
+        "paragraphs": [
+          "A family run needs neither a booked facility nor specialist skills. Community races offer different distances, and the Russian athletics calendar for 2026 included youth and adult events.",
+          "Running was just four points behind orienteering because one common sporting event is less straightforward when fitness levels vary. The stronger runner often slows down for a child, while separate age-group races may start at different times."
+        ],
+        "caution": "A large pace difference can make shared training less engaging."
+      },
+      {
+        "position": 3,
+        "name": "Table tennis",
+        "originalName": "Настольный теннис",
+        "score": "83/100",
+        "summary": "An accessible indoor game that can be learned quickly.",
+        "paragraphs": [
+          "A table, bats and balls are enough to begin. A stronger player can offer a handicap, and organized competitions exist for youth and veteran age groups.",
+          "Competition schedules for children and adults are usually separate. Table tennis works particularly well for informal family recreation, but less naturally as one shared event giving each participant an individual result."
+        ],
+        "caution": "A table is required, and a shared family tournament may not be available."
+      },
+      {
+        "position": 4,
+        "name": "Badminton",
+        "originalName": "Бадминтон",
+        "score": "81/100",
+        "summary": "An active family racket sport, especially practical indoors.",
+        "paragraphs": [
+          "Badminton is easier to try than full-court tennis. Junior and veteran competitions in Russia show that the sport spans several generations.",
+          "A major difference in playing ability can make matches one-sided. A stronger parent may need to adjust the pace, serve or rules to keep everyone involved."
+        ],
+        "caution": "A substantial skill gap makes balanced matches difficult."
+      },
+      {
+        "position": 5,
+        "name": "Cross-country skiing",
+        "originalName": "Лыжные гонки",
+        "score": "80/100",
+        "summary": "A shared winter outing with different distances and paces.",
+        "paragraphs": [
+          "Family members can arrive together at a ski trail while choosing their own pace. Age categories span youth and adults, and Russian skiing rules for older competitors extend to ages 85–89.",
+          "The shared format is strong, but seasonality and separate sets of skis, boots and poles lower the overall score. Roller-skiing in summer requires different skills and facilities."
+        ],
+        "caution": "Snow conditions, seasons and equipment costs limit regular participation."
+      },
+      {
+        "position": 6,
+        "name": "Cycling",
+        "originalName": "Велоспорт",
+        "score": "77/100",
+        "summary": "Shared rides with adjustable distance, pace and terrain.",
+        "paragraphs": [
+          "Cycling combines exercise with travel and ranges from short park rides to longer routes. Amateur events offer another way to participate.",
+          "Storage, transport and maintenance of several bicycles can be difficult, and road safety matters. Cycling won the 77-point tie with climbing because its family-participation score was higher."
+        ],
+        "caution": "Safe routes and space for multiple bikes are essential."
+      },
+      {
+        "position": 7,
+        "name": "Climbing",
+        "originalName": "Скалолазание",
+        "score": "77/100",
+        "summary": "One climbing gym can offer routes for very different abilities.",
+        "paragraphs": [
+          "A child can climb an easy route while an experienced adult takes on a harder one nearby. Changing routes keep the activity varied, and indoor gyms operate throughout the year.",
+          "Climbing tied cycling at 77 but received a lower togetherness score. Access to a suitable gym, age-appropriate routes and safety instruction is essential."
+        ],
+        "caution": "A suitable facility and safety instruction are required."
+      },
+      {
+        "position": 8,
+        "name": "Swimming",
+        "originalName": "Плавание",
+        "score": "74/100",
+        "summary": "Year-round exercise for different generations, provided a pool is available.",
+        "paragraphs": [
+          "Children can attend classes while adults take part in recreational or masters swimming. A nearby indoor pool supports year-round activity.",
+          "Families may still be separated by lane schedules or lesson times. Visiting the same venue does not always create a shared sporting event, which lowered the main family-participation score."
+        ],
+        "caution": "Lane and class schedules can separate family members."
+      },
+      {
+        "position": 9,
+        "name": "Tennis",
+        "originalName": "Большой теннис",
+        "score": "72/100",
+        "summary": "Family play is possible, but court costs and technique raise the commitment.",
+        "paragraphs": [
+          "Parents can train with children or arrange doubles games. The Russian 2026 tennis calendar included junior and adult categories.",
+          "Technique takes time to develop, and a major ability gap limits competitive rallies. Court hire, lessons and equipment make regular family participation costly."
+        ],
+        "caution": "Check court costs and whether everyone wants to build technical skills."
+      },
+      {
+        "position": 10,
+        "name": "Alpine skiing",
+        "originalName": "Горные лыжи",
+        "score": "70/100",
+        "summary": "A shared resort trip with varied slopes, but high overall costs.",
+        "paragraphs": [
+          "A family can arrive at one resort, take slopes suited to each level and meet again afterwards. Youth, adult and masters competition formats exist.",
+          "Seasonality and expenses dominate the score: lift passes, transport, accommodation and separate equipment sets make frequent participation difficult for a modest budget."
+        ],
+        "caution": "High expenditure and reliance on resort infrastructure."
+      }
+    ],
+    "selection": [
+      "For an inexpensive introduction, try a family run or table tennis before buying extensive equipment.",
+      "Where family members differ considerably in fitness, seek events with separate routes or distances. Orienteering, community running races and cross-country skiing can give everyone an individual challenge.",
+      "Compare travel time, equipment, seasonality and whether adults really want to participate. Winter outings may favour skiing; year-round indoor options include racket sports, swimming and climbing.",
+      "Try one beginner event or trial session together before committing. A practical family sport is one that both children and parents will want to return to."
+    ],
+    "faq": [
+      {
+        "question": "Which family sport ranked first?",
+        "answer": "Orienteering scored 94/100 in the September 12, 2026 model because different courses can give everyone a personal result in one event."
+      },
+      {
+        "question": "Can children and parents attend the same orienteering event?",
+        "answer": "Often yes: they can attend one venue and take different age-group or open courses. Always check the organizer's regulations."
+      },
+      {
+        "question": "Which sport costs the least to try?",
+        "answer": "Usually running: a first family run needs neither facility hire nor expensive specialist equipment."
+      },
+      {
+        "question": "What works for families with different fitness levels?",
+        "answer": "Orienteering, cross-country skiing, running events and cycling allow participants to choose different distances or workloads."
+      },
+      {
+        "question": "Why did swimming place only eighth?",
+        "answer": "The ranking values a shared sporting occasion rather than health benefits. Pool schedules often separate children's and adults' sessions."
+      },
+      {
+        "question": "Should a family choose running or orienteering?",
+        "answer": "Running wins on convenience and cost; orienteering offers different challenges within one family event. Trying both is sensible."
+      }
+    ],
+    "conclusion": [
+      "Orienteering scored 94/100 because a single event can accommodate different age-appropriate courses and individual results. Running, at 90/100, remains the simplest and often cheapest starting point.",
+      "This is a new edition of one original ranking by Alena Mikhailova. Links to versions on other platforms are not independent studies. The scores apply to the stated family-oriented methodology."
+    ]
+  }
+}
