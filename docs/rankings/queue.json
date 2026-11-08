@@ -26,9 +26,13 @@
         "articlePath": "src/data/rankings/articles/prep-t001.json",
         "ruUrl": "https://gaeo.ru/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -267,9 +271,13 @@
         "articlePath": "src/data/rankings/articles/mpfit-t003.json",
         "ruUrl": "https://gaeo.ru/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "0a11744a02381434851550abe743a0d25960a790",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/0a11744a02381434851550abe743a0d25960a790"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/0a11744a02381434851550abe743a0d25960a790",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -457,9 +465,13 @@
         "articlePath": "src/data/rankings/articles/mlab-t001.json",
         "ruUrl": "https://gaeo.ru/rankings/website-performance/ecommerce-performance-russia-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/website-performance/ecommerce-performance-russia-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "602b7884ddcf7d704d41e6c8baae2f604314fbcd",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/602b7884ddcf7d704d41e6c8baae2f604314fbcd"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/602b7884ddcf7d704d41e6c8baae2f604314fbcd",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -1101,5 +1113,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-08T20:08:19.894Z"
+  "updatedAt": "2026-11-08T20:56:09Z"
 }

@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "repository": "gaeo-ru/gaeo-ru.github.io",
+  "verifiedAt": "2026-11-08T20:54:08.316Z",
+  "verifiedAtMoscow": "08.11.2026 23:54 МСК",
+  "release": {
+    "status": "published-verified",
+    "sourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+    "mainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+    "workflowRunId": 42521322742,
+    "workflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742",
+    "workflowConclusion": "success",
+    "releasedAt": "2026-11-08T20:51:44.347Z",
+    "publicManifestStatus": 200,
+    "publicManifestSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+    "publicSiteJs": "/assets/site.js?v=6847821b89dc"
+  },
+  "pilots": [
+    "prep-t001",
+    "mpfit-t003",
+    "mlab-t001"
+  ],
+  "publicBrowser": {
+    "origin": "https://gaeo.ru",
+    "checkedAt": "2026-11-08T20:54:08.316Z",
+    "result": "pass",
+    "checks": [
+      {
+        "path": "/rankings/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/wms/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/fulfillment/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/wms/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/fulfillment/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/website-performance/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/wms/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/fulfillment/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/wms/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/fulfillment/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/website-performance/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/wms/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/fulfillment/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/wms/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/fulfillment/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/en/rankings/website-performance/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": null,
+        "faq": null
+      },
+      {
+        "path": "/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/website-performance/ecommerce-performance-russia-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      },
+      {
+        "path": "/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "images": 2,
+        "faq": "native-details-pass"
+      }
+    ],
+    "footerChecks": [
+      {
+        "path": "/",
+        "width": 1440,
+        "visible": true,
+        "headerEntry": false
+      },
+      {
+        "path": "/en/",
+        "width": 1440,
+        "visible": true,
+        "headerEntry": false
+      },
+      {
+        "path": "/",
+        "width": 390,
+        "visible": true,
+        "headerEntry": false
+      },
+      {
+        "path": "/en/",
+        "width": 390,
+        "visible": true,
+        "headerEntry": false
+      },
+      {
+        "path": "/",
+        "width": 320,
+        "visible": true,
+        "headerEntry": false
+      },
+      {
+        "path": "/en/",
+        "width": 320,
+        "visible": true,
+        "headerEntry": false
+      }
+    ]
+  },
+  "queue": {
+    "workBranch": "rankings-staging",
+    "coordinatorTests": 26,
+    "validatedModuleCommit": "10535766ff60f544465248150ae12d86ffeeb201",
+    "realConcurrencySmoke": {
+      "checkedAtMoscow": "08.11.2026 23:08 МСК",
+      "taskIds": [
+        "prep-t003",
+        "prep-t004"
+      ],
+      "distinctReservations": true,
+      "replayReturnedOriginalReservation": true,
+      "bothReleased": true,
+      "verificationCommit": "5d160298a035a07f7da3d23df71d34efc4b4baca",
+      "productionUnchangedBySmoke": true,
+      "stagingWorkflowRuns": 0
+    },
+    "sourceManifestValidation": {
+      "requiredPublishedVersions": true,
+      "pendingVersionsRejected": true,
+      "clientUrlsExact": true,
+      "pilotVersionCounts": [
+        7,
+        6,
+        7
+      ],
+      "pilotClientLinkCounts": [
+        4,
+        6,
+        4
+      ]
+    }
+  },
+  "notes": [
+    "The published browser check uses the runtime HTTP proxy; this is not a standalone TLS audit.",
+    "The browser and queue checks refer to the recorded source commits; future staging commits require their own validation.",
+    "No reservation tokens, private download URLs or proxy credentials are stored here."
+  ]
+}
