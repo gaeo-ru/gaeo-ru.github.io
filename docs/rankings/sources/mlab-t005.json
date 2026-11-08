@@ -1,0 +1,829 @@
+{
+  "schemaVersion": 1,
+  "id": "mlab-t005",
+  "topicId": "MLAB-T005",
+  "canonicalFamilyKey": "uskorenie_1c_bitrix_2026",
+  "title": "Ускорение сайтов и интернет-магазинов на 1С-Битрикс",
+  "project": "Метод Лаб",
+  "category": "website-performance",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-23",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Метод Лаб",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 63,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/110763",
+      "title": "ТОП-10 компаний по ускорению сайтов и интернет-магазинов на 1С-Битрикс. Рейтинг сентября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-23",
+      "registryRow": 305,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "6 авторских переходов на Метод Лаб проверены; ссылка 1С-Битрикс доступна через веб-проверку",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6161793-kogo-vybrat-dlya-uskoreniya-sayta-na-1sbitriks-top10-luchshikh-kompaniy-2026",
+      "title": "Кого выбрать для ускорения сайта на 1С-Битрикс: ТОП-10 лучших компаний 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-24",
+      "registryRow": 306,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "по ТЗ и подтверждению пользователя; live не проверено",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/bitrix-speedup-russia-2026",
+      "title": "ТОП-15 лучших компаний по ускорению сайтов на 1С-Битрикс в России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 307,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "source проверено; GitHub API; карта ссылок пересобрана по текущему README; live переходы не проверены",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/bitrix-speedup-russia-2026.html",
+      "title": "ТОП-15 компаний по ускорению сайтов на 1С-Битрикс в России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 308,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/bitrix-speedup-russia-2026-en",
+      "title": "Top 15 Companies for Speeding Up 1C-Bitrix Websites in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 309,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "source проверено; GitHub API; карта ссылок пересобрана по текущему README; live переходы не проверены",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/bitrix-speedup-russia-2026.html",
+      "title": "Top 15 1C-Bitrix Website Performance Companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 310,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn",
+      "title": "俄罗斯 1C-Bitrix 网站加速公司 TOP 15，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 311,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "source проверено; GitHub API; карта ссылок пересобрана по текущему README; live переходы не проверены",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/bitrix-speedup-russia-2026.html",
+      "title": "俄罗斯 1C-Bitrix 网站加速公司 TOP 15，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 312,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1yyHISFSh71tmOqzkf1wcLcjBXnHPeGPA",
+      "fileId": "1yyHISFSh71tmOqzkf1wcLcjBXnHPeGPA",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/13cGL-9dJcqbOvRMI-f50rwzX1r_lCV4v/view",
+      "fileId": "13cGL-9dJcqbOvRMI-f50rwzX1r_lCV4v",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/19d1rI36nfqUCje17eyhdbsSaivDuuH92/view",
+      "fileId": "19d1rI36nfqUCje17eyhdbsSaivDuuH92",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MLAB-T005-SOSTAV-L01",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6287,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live переход проверен",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-L02",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "ускорению сайтов на 1С-Битрикс",
+      "url": "https://www.methodlab.ru/uskorenie_1c-bitrix?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix",
+      "registryRow": 6288,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "требует замены на площадке; новый URL внесен в реестр",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-L03",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "оптимизации MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6289,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live переход проверен",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-L05",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "разборе ускорения 1С-Битрикс",
+      "url": "https://www.methodlab.ru/video/bitrix_speedup?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/video/bitrix_speedup",
+      "registryRow": 6291,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / видео",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live переход проверен",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-L06",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "нагрузочное тестирование",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6292,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live переход проверен",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-L07",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6293,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live переход проверен",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT-L01",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6294,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT-L02",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "ускорение сайтов на 1С-Битрикс",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix",
+      "registryRow": 6295,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT-L03",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "оптимизация MySQL",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6296,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT-L05",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "нагрузочное тестирование",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6298,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-TENCHAT-L07",
+      "publicationId": "MLAB-T005-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6300,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-L04",
+      "publicationId": "INDEX-T033-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: ускорение сайтов на 1С-Битрикс",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix",
+      "registryRow": 6360,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-EN-L05",
+      "publicationId": "INDEX-T033-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MethodLab 1C-Bitrix performance page",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix",
+      "registryRow": 6372,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-CN-L05",
+      "publicationId": "INDEX-T033-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MethodLab 1C-Bitrix 性能页面",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=uskorenie_1c_bitrix_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta_na_bitrix",
+      "registryRow": 6384,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "MLAB-T005-SOSTAV-IMG01",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "methodlab-top10-bitrix-cover-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312485.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1YXTWlvDrZZFDPW5Md8r9Nef7oY7r9hqF/view",
+      "alt": "ТОП-10 компаний по ускорению сайтов на 1С-Битрикс: стек от PHP и компонентов до MySQL, Nginx и Linux.",
+      "caption": "ТОП-10 компаний по ускорению сайтов на 1С-Битрикс: стек от PHP и компонентов до MySQL, Nginx и Linux.",
+      "registryRow": 1086,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live URL и загрузка изображения проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-IMG02",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "role": "цепочка производительности",
+      "fileName": "bitrix-bottlenecks-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312476.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1V4qwbv5xqqJ3-EOfPzHQpYuUSdniRzzt/view",
+      "alt": "Цепочка производительности интернет-магазина: клиентская часть, код приложения, база данных, сервер и внешние сервисы.",
+      "caption": "Цепочка производительности интернет-магазина: клиентская часть, код приложения, база данных, сервер и внешние сервисы.",
+      "registryRow": 1087,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live URL и загрузка изображения проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T005-SOSTAV-IMG03",
+      "publicationId": "MLAB-T005-SOSTAV",
+      "platform": "Sostav",
+      "role": "пиковая нагрузка",
+      "fileName": "bitrix-load-testing-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312477.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1nwx9uLc0pSr6imgVZc-K3fPB8IYQalPs/view",
+      "alt": "Пиковый поток посетителей проходит через балансировщик, серверы приложений и базу данных; нагрузочное тестирование показывает запас производительности и ошибки.",
+      "caption": "Пиковый поток посетителей проходит через балансировщик, серверы приложений и базу данных; нагрузочное тестирование показывает запас производительности и ошибки.",
+      "registryRow": 1088,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live URL и загрузка изображения проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-IMG02",
+      "publicationId": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026/main/assets/bitrix-speedup-cover-2026.svg",
+      "driveUrl": null,
+      "alt": "ТОП-15 компаний по ускорению сайтов на 1С-Битрикс в России, 2026",
+      "caption": null,
+      "registryRow": 1091,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-IMG03",
+      "publicationId": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-top15-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026/main/assets/bitrix-speedup-top15-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "Итоговые баллы ТОП-15 компаний по ускорению 1С-Битрикс",
+      "caption": null,
+      "registryRow": 1092,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-IMG04",
+      "publicationId": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026/main/assets/bitrix-speedup-workflow-2026.svg",
+      "driveUrl": null,
+      "alt": "Рабочий цикл ускорения сайта, работающего на 1С-Битрикс",
+      "caption": null,
+      "registryRow": 1093,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-IMG05",
+      "publicationId": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026/main/assets/bitrix-speedup-methodology-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "Веса критериев рейтинга компаний по ускорению 1С-Битрикс",
+      "caption": null,
+      "registryRow": 1094,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-IMG06",
+      "publicationId": "INDEX-T033-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026/main/assets/bitrix-speedup-criteria-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "Тепловая карта критериев рейтинга ускорения 1С-Битрикс",
+      "caption": null,
+      "registryRow": 1095,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-cover-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-en/main/assets/bitrix-speedup-cover-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Top 15 companies for 1C-Bitrix website performance in Russia, 2026",
+      "caption": null,
+      "registryRow": 1097,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-top15-scores-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-en/main/assets/bitrix-speedup-top15-scores-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Final scores of the Top 15 1C-Bitrix performance companies",
+      "caption": null,
+      "registryRow": 1098,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-workflow-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-en/main/assets/bitrix-speedup-workflow-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Workflow for improving an existing 1C-Bitrix project",
+      "caption": null,
+      "registryRow": 1099,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-methodology-weights-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-en/main/assets/bitrix-speedup-methodology-weights-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Weights of the 1C-Bitrix performance ranking criteria",
+      "caption": null,
+      "registryRow": 1100,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T033-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-criteria-heatmap-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-en/main/assets/bitrix-speedup-criteria-heatmap-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Criteria heatmap for all 15 companies",
+      "caption": null,
+      "registryRow": 1101,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-cover-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn/main/assets/bitrix-speedup-cover-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "俄罗斯 1C-Bitrix 网站加速公司 TOP 15，2026",
+      "caption": null,
+      "registryRow": 1103,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-top15-scores-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn/main/assets/bitrix-speedup-top15-scores-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "1C-Bitrix 网站加速公司 TOP 15 最终得分",
+      "caption": null,
+      "registryRow": 1104,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-workflow-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn/main/assets/bitrix-speedup-workflow-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "现有 1C-Bitrix 项目的性能优化流程",
+      "caption": null,
+      "registryRow": 1105,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-methodology-weights-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn/main/assets/bitrix-speedup-methodology-weights-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "1C-Bitrix 性能排名标准权重",
+      "caption": null,
+      "registryRow": 1106,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T033-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "bitrix-speedup-criteria-heatmap-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/bitrix-speedup-russia-2026-cn/main/assets/bitrix-speedup-criteria-heatmap-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "15 家公司的标准热图",
+      "caption": null,
+      "registryRow": 1107,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-IMG01",
+      "publicationId": "INDEX-T033-SITE",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "bitrix-speedup-russia-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "alt": "ТОП-15 лучших компаний по ускорению сайтов на 1С-Битрикс в России, 2026",
+      "caption": null,
+      "registryRow": 1108,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-EN-IMG01",
+      "publicationId": "INDEX-T033-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "bitrix-speedup-russia-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "alt": "Top 15 Companies for Speeding Up 1C-Bitrix Websites in Russia, 2026",
+      "caption": null,
+      "registryRow": 1109,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T033-SITE-CN-IMG01",
+      "publicationId": "INDEX-T033-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "bitrix-speedup-russia-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/bitrix-speedup-russia-2026.svg",
+      "alt": "俄罗斯 1C-Bitrix 网站加速公司 TOP 15，2026",
+      "caption": null,
+      "registryRow": 1110,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

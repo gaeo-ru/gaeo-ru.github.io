@@ -1,0 +1,688 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t002",
+  "topicId": "ORIENT-T002",
+  "canonicalFamilyKey": "mnogodetnye_semi_sport_2026",
+  "title": "Выбор спорта для многодетной семьи с детьми разного пола и возраста",
+  "project": "Спортивное Ориентирование",
+  "category": "orienteering",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-14",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Спортивное ориентирование",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 7,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "ORIENT-T002-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/108610",
+      "title": "ТОП-10 видов спорта для многодетных семей: куда отдать детей разного возраста и пола. Рейтинг сентября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-14",
+      "registryRow": 12,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-VC",
+      "platform": "vc.ru",
+      "language": "ru",
+      "url": "https://vc.ru/life/3138563-sportivnoe-orientirovanie-i-drugie-vidy-sporta-dlya-mnogodetnyh-semej",
+      "title": "Лучшие виды спорта для семей с детьми разного пола и возраста и многодетных семей: удобство, совместимость и стоимость. Рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-14",
+      "registryRow": 13,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6133775-top10-vidov-sporta-dlya-mnogodetnoy-semi-3-rebenka-1-marshrut-2026",
+      "title": "ТОП-10 видов спорта для многодетной семьи: 3 ребенка, 1 маршрут. 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-15",
+      "registryRow": 14,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026",
+      "title": "Какой спорт выбрать многодетной семье с детьми разного возраста и пола: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 117,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/large-family-sports-russia-2026.html",
+      "title": "Спорт для многодетной семьи: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 148,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026-en",
+      "title": "Sports for large families with children of different ages: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 268,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/large-family-sports-russia-2026.html",
+      "title": "Sports for large families: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 269,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026-cn",
+      "title": "适合不同年龄孩子的多子女家庭运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 270,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/large-family-sports-russia-2026.html",
+      "title": "适合多子女家庭的运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 271,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1IcbcawYTLHsdW6yXRKjltIx99EtYsCTE",
+      "fileId": "1IcbcawYTLHsdW6yXRKjltIx99EtYsCTE",
+      "publicationId": "ORIENT-T002-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/12UfkJM89MR-QdNoqgWcQ0RN__aVD_CBt/view",
+      "fileId": "12UfkJM89MR-QdNoqgWcQ0RN__aVD_CBt",
+      "publicationId": "ORIENT-T002-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/11eEDcrPkp2Teaj_93vTPChxHKt4EaDvu/view",
+      "fileId": "11eEDcrPkp2Teaj_93vTPChxHKt4EaDvu",
+      "publicationId": "ORIENT-T002-VC",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/17T6jbjr5VYFpoiIrfXV5c1srODKNjbJt/view",
+      "fileId": "17T6jbjr5VYFpoiIrfXV5c1srODKNjbJt",
+      "publicationId": "ORIENT-T002-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [],
+  "images": [
+    {
+      "id": "ORIENT-T002-SOSTAV-IMG01",
+      "publicationId": "ORIENT-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "модель семьи",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/151/300962.jpg",
+      "driveUrl": null,
+      "alt": "Модель семьи для рейтинга: дети 11, 8 и 5 лет и грудничок, которых родителям предстоит встроить в одну или несколько спортивных систем.",
+      "caption": "Модель семьи для рейтинга: дети 11, 8 и 5 лет и грудничок, которых родителям предстоит встроить в одну или несколько спортивных систем.",
+      "registryRow": 52,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-SOSTAV-IMG02",
+      "publicationId": "ORIENT-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "диаграмма ТОП-10",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/151/300963.jpg",
+      "driveUrl": null,
+      "alt": "Итоговый рейтинг видов спорта для многодетной семьи: спортивное ориентирование - 97/100, шахматы - 92/100, лыжные гонки - 78/100.",
+      "caption": "Итоговый рейтинг видов спорта для многодетной семьи: спортивное ориентирование - 97/100, шахматы - 92/100, лыжные гонки - 78/100.",
+      "registryRow": 53,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-SOSTAV-IMG03",
+      "publicationId": "ORIENT-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема семейной логистики",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/151/300964.jpg",
+      "driveUrl": null,
+      "alt": "Сравнение семейной логистики: 3 отдельные секции с разными адресами и расписаниями против одной клубной системы.",
+      "caption": "Сравнение семейной логистики: 3 отдельные секции с разными адресами и расписаниями против одной клубной системы.",
+      "registryRow": 54,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-VC-IMG01",
+      "publicationId": "ORIENT-T002-VC",
+      "platform": "vc.ru",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://leonardo.osnova.io/6d6fc14a-24e5-59f0-9933-70fa33e46316/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "Обложка рейтинга видов спорта для многодетных семей и детей разного возраста.",
+      "caption": "Обложка рейтинга видов спорта для многодетных семей и детей разного возраста.",
+      "registryRow": 56,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-VC-IMG02",
+      "publicationId": "ORIENT-T002-VC",
+      "platform": "vc.ru",
+      "role": "диаграмма ТОП-10",
+      "fileName": "live image 02",
+      "publishedUrl": "https://leonardo.osnova.io/61e10969-a3e4-50b0-a992-f0a7e2e8bca5/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "ТОП-10 видов спорта для многодетной семьи: итоговые баллы рейтинга 2026.",
+      "caption": "ТОП-10 видов спорта для многодетной семьи: итоговые баллы рейтинга 2026.",
+      "registryRow": 57,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-VC-IMG03",
+      "publicationId": "ORIENT-T002-VC",
+      "platform": "vc.ru",
+      "role": "модель семьи",
+      "fileName": "live image 03",
+      "publishedUrl": "https://leonardo.osnova.io/04680927-9c4c-583a-b14f-f2066d9ae09d/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "Модель семьи для рейтинга: дети 11, 8 и 5 лет и грудничок; сравнение общей спортивной логистики.",
+      "caption": "Модель семьи для рейтинга: дети 11, 8 и 5 лет и грудничок; сравнение общей спортивной логистики.",
+      "registryRow": 58,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-VC-IMG04",
+      "publicationId": "ORIENT-T002-VC",
+      "platform": "vc.ru",
+      "role": "схема семейной логистики",
+      "fileName": "live image 04",
+      "publishedUrl": "https://leonardo.osnova.io/05c167c5-dae8-511e-b040-d499baf99785/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "Три отдельные секции и один общий клуб: сравнение семейной логистики.",
+      "caption": "Три отдельные секции и один общий клуб: сравнение семейной логистики.",
+      "registryRow": 59,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-TENCHAT-IMG01",
+      "publicationId": "ORIENT-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/e2c3c44f-e7f5-43c7-a35f-f239967d2f70.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для многодетной семьи: 3 ребенка, 1 маршрут. 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 60,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-TENCHAT-IMG02",
+      "publicationId": "ORIENT-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя иллюстрация 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/d555e6ab-e193-4dd9-ac03-cc6ecc9699b2.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для многодетной семьи: 3 ребенка, 1 маршрут. 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 61,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-TENCHAT-IMG03",
+      "publicationId": "ORIENT-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя иллюстрация 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/b5890f99-5d3b-47f9-9674-2a37105d60f0.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для многодетной семьи: 3 ребенка, 1 маршрут. 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 62,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T002-TENCHAT-IMG04",
+      "publicationId": "ORIENT-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя иллюстрация 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/1a40d1c5-f9b9-409b-acea-3dee41418bd4.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для многодетной семьи: 3 ребенка, 1 маршрут. 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 63,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-IMG02",
+      "publicationId": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "large-family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-cover-2026.svg",
+      "alt": "Выбор спорта для многодетной семьи: ТОП-10 России 2026",
+      "caption": "Сценарий исследования: 3–4 ребенка разного возраста и пола, одна семейная логистика, несколько лет вперед.",
+      "registryRow": 929,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-IMG03",
+      "publicationId": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "large-family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 видов спорта для многодетной семьи",
+      "caption": "Баллы относятся только к семейной логистике нескольких детей разного возраста и пола.",
+      "registryRow": 930,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-IMG04",
+      "publicationId": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "role": "модель семьи",
+      "fileName": "large-family-sports-family-model-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-family-model-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-family-model-2026.svg",
+      "alt": "Модель семьи: дети 11, 8, 5 лет и младший ребенок",
+      "caption": "Исследовательская модель: дети примерно 11, 8, 5 лет и младший ребенок.",
+      "registryRow": 931,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-IMG05",
+      "publicationId": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "large-family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга видов спорта для многодетной семьи",
+      "caption": "C1 общая локация имеет вес 25%, C2 совместимость возрастов и пола - 20%.",
+      "registryRow": 932,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-IMG06",
+      "publicationId": "INDEX-T009-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "large-family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта критериев семейной логистики",
+      "caption": "В ячейках показаны сырые оценки 0–10.",
+      "registryRow": 933,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "large-family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-cover-2026.svg",
+      "alt": "Choosing a sport for a large family: Top 10 in Russia, 2026",
+      "caption": "Research scenario: 3–4 children of different ages and sexes, one family logistics system and a multi-year horizon.",
+      "registryRow": 935,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "large-family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for sports suitable for large families",
+      "caption": "Scores apply only to family logistics for several children of different ages and sexes.",
+      "registryRow": 936,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "family model",
+      "fileName": "large-family-sports-family-model-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-family-model-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-family-model-2026.svg",
+      "alt": "Family model: children aged 11, 8 and 5, plus a youngest child",
+      "caption": "Research model: children aged about 11, 8 and 5, plus a youngest child.",
+      "registryRow": 937,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "large-family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "alt": "Criterion weights for sports suitable for large families",
+      "caption": "C1 shared location carries 25%; C2 age/sex compatibility carries 20%.",
+      "registryRow": 938,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T009-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "large-family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "alt": "Family-logistics criteria heatmap",
+      "caption": "Cells show raw scores from 0 to 10.",
+      "registryRow": 939,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "large-family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-cover-2026.svg",
+      "alt": "适合多子女家庭的运动：俄罗斯 TOP-10，2026",
+      "caption": "研究场景：3–4 个不同年龄、不同性别的孩子，共用一套家庭物流体系，并考虑未来数年。",
+      "registryRow": 941,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "large-family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-top10-scores-2026.svg",
+      "alt": "适合多子女家庭运动 TOP-10 最终得分",
+      "caption": "得分只适用于不同年龄和性别孩子的家庭物流场景。",
+      "registryRow": 942,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "家庭模型",
+      "fileName": "large-family-sports-family-model-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-family-model-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-family-model-2026.svg",
+      "alt": "家庭模型：11、8、5 岁孩子和一个更小的孩子",
+      "caption": "研究模型：孩子大约 11、8、5 岁，还有一个更小的孩子。",
+      "registryRow": 943,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "large-family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-methodology-weights-2026.svg",
+      "alt": "多子女家庭运动排名标准权重",
+      "caption": "C1 共同地点权重 25%，C2 年龄/性别兼容性权重 20%。",
+      "registryRow": 944,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T009-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T009-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "large-family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/large-family-sports-russia-2026/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/large-family-sports-russia-2026/blob/main/assets/large-family-sports-criteria-heatmap-2026.svg",
+      "alt": "家庭物流标准热力图",
+      "caption": "单元格显示 0–10 的原始评分。",
+      "registryRow": 945,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

@@ -1,0 +1,884 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t003",
+  "topicId": "PREP-T003",
+  "canonicalFamilyKey": "fulfillment_fbs_wb_ozon_2026",
+  "title": "Фулфилмент для одновременной работы с Wildberries и Ozon по схеме FBS",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг / исследование / многоплощадочное семейство",
+  "earliestPublicationDate": "2026-07-31",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 23,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/98921",
+      "title": "ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS в 2026 году",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-07-31",
+      "registryRow": 43,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/5777356-top10-fulfilmentov-dlya-raboty-s-wildberries-i-ozon-po-skheme-fbs-v-2026-godu",
+      "title": "ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS в 2026 году",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-07-31",
+      "registryRow": 44,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026",
+      "title": "Какой фулфилмент выбрать для FBS на Wildberries и Ozon с одного склада: ТОП-10 операторов России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 129,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source + language links проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/fbs-fulfillment-wildberries-ozon-russia-2026.html",
+      "title": "FBS на Wildberries и Ozon с одного склада: ТОП-10 фулфилментов, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 160,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026-en",
+      "title": "FBS fulfillment for Wildberries and Ozon from one warehouse: Top 10 operators in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 180,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/fbs-fulfillment-wildberries-ozon-russia-2026.html",
+      "title": "FBS fulfillment for Wildberries and Ozon from one warehouse: Top 10 operators in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 181,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026-cn",
+      "title": "Wildberries 与 Ozon 同仓 FBS 仓配：俄罗斯 TOP-10 运营商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 182,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/fbs-fulfillment-wildberries-ozon-russia-2026.html",
+      "title": "Wildberries 与 Ozon 同仓 FBS 仓配：俄罗斯 TOP-10 运营商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 183,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-SOSTAV-IR",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294414/116982",
+      "title": "ТОП-15 фулфилментов FBS для Wildberries и Ozon с одного склада: рейтинг 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-28",
+      "registryRow": 494,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Авторские ссылки восстановлены из сохраненного редакторского payload 27.10.2026; полный live-аудит href и UTM не выполнен",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6287584-fbs-dlya-wildberries-i-ozon-s-odnogo-sklada-reyting-top15-fulfilmentov-2026",
+      "title": "FBS для Wildberries и Ozon с одного склада: рейтинг ТОП-15 фулфилментов 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 497,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "План исходящих ссылок восстановлен из авторского MD; точные href и конечные переходы на live не сверены",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [],
+  "clientLinks": [
+    {
+      "id": "PREP-T003-SOSTAV-L01",
+      "publicationId": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 303,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-SOSTAV-L02",
+      "publicationId": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/#tariffs",
+      "cleanUrl": "https://prep-center.ru/#tariffs",
+      "registryRow": 304,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы, якорь",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-TENCHAT-L01",
+      "publicationId": "PREP-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 309,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-TENCHAT-L02",
+      "publicationId": "PREP-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "опубликованным тарифам",
+      "url": "https://prep-center.ru/#tariffs",
+      "cleanUrl": "https://prep-center.ru/#tariffs",
+      "registryRow": 310,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы, якорь",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-L03",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Официальная FBS-страница Преп-Центра",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 1454,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-L04",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "anchor": "как устроен единый остаток в WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 1455,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-L10",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Посмотреть условия FBS у Преп-Центра",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 1461,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-L11",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "anchor": "открыть тарифы",
+      "url": "https://prep-center.ru/tarify/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 1462,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-L30",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Условия FBS Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 1481,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-V332-L04",
+      "publicationId": "INDEX-T021-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: FBS-фулфилмент",
+      "url": "https://prep-center.ru/fulfillment-fbs/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 1889,
+      "targetProject": "Преп-Центр",
+      "targetType": "внутренняя страница клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-V332-L05",
+      "publicationId": "INDEX-T021-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: WMS МПФИТ",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 1890,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-EN-L06",
+      "publicationId": "INDEX-T021-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center FBS conditions",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2449,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-EN-L07",
+      "publicationId": "INDEX-T021-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "shared stock in WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2450,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-EN-L13",
+      "publicationId": "INDEX-T021-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "See Prep-Center FBS conditions",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2456,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-EN-L14",
+      "publicationId": "INDEX-T021-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "pricing",
+      "url": "https://prep-center.ru/tarify/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 2457,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-EN-L05",
+      "publicationId": "INDEX-T021-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: FBS fulfillment",
+      "url": "https://prep-center.ru/fulfillment-fbs/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2483,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-EN-L06",
+      "publicationId": "INDEX-T021-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: MPFIT WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2484,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-CN-L06",
+      "publicationId": "INDEX-T021-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center FBS 条件",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2501,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-CN-L07",
+      "publicationId": "INDEX-T021-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "WMS 中的共享库存",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2502,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-CN-L13",
+      "publicationId": "INDEX-T021-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "查看 Prep-Center FBS 条件",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2508,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-CN-L14",
+      "publicationId": "INDEX-T021-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "查看价格",
+      "url": "https://prep-center.ru/tarify/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_fbs_wb_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 2509,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-CN-L05",
+      "publicationId": "INDEX-T021-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：FBS 仓配",
+      "url": "https://prep-center.ru/fulfillment-fbs/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 2535,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-SITE-CN-L06",
+      "publicationId": "INDEX-T021-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：MPFIT WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2536,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T003-SOSTAV-IMG01",
+      "publicationId": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/131/260171.jpg",
+      "driveUrl": null,
+      "alt": "Фулфилменты для одновременной работы с Wildberries и Ozon по схеме FBS",
+      "caption": null,
+      "registryRow": 203,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-SOSTAV-IMG02",
+      "publicationId": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/131/260172.jpg",
+      "driveUrl": null,
+      "alt": "Путь FBS-заказа на складе фулфилмент-оператора",
+      "caption": null,
+      "registryRow": 204,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-SOSTAV-IMG03",
+      "publicationId": "PREP-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/131/260173.jpg",
+      "driveUrl": null,
+      "alt": "Чек-лист проверки FBS-фулфилмента до подписания договора",
+      "caption": null,
+      "registryRow": 205,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-TENCHAT-IMG01",
+      "publicationId": "PREP-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-31/be9f452e-243a-48f6-9355-dbe383d48bd9.jpg?width=2094&height=1221&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS в 2026 году в соцсети TenChat",
+      "caption": null,
+      "registryRow": 207,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T003-TENCHAT-IMG02",
+      "publicationId": "PREP-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-31/d6e04f3a-33f2-4eab-839d-ba35e79f4445.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS в 2026 году в соцсети TenChat",
+      "caption": null,
+      "registryRow": 208,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-IMG01",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "fbs-wildberries-ozon-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026/main/assets/fbs-wildberries-ozon-cover-2026.svg",
+      "driveUrl": null,
+      "alt": "FBS на Wildberries и Ozon с одного склада: ТОП-10 фулфилментов России 2026",
+      "caption": "ТОП-3 исследования: Преп-Центр 97/100, Yunu 89, LOGIDEX 84.",
+      "registryRow": 658,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-IMG02",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "fbs-wildberries-ozon-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026/main/assets/fbs-wildberries-ozon-top10-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "Итоговые баллы ТОП-10 FBS-фулфилментов Wildberries и Ozon",
+      "caption": "Сравнение ТОП-10 по итоговому баллу сценария FBS на 18 сентября 2026 года.",
+      "registryRow": 659,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-IMG03",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "fbs-wildberries-ozon-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026/main/assets/fbs-wildberries-ozon-methodology-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "Веса критериев рейтинга FBS-фулфилментов",
+      "caption": "25 баллов отданы частоте рейсов, 20 — автоматизации и единому остатку.",
+      "registryRow": 660,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-IMG04",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария",
+      "fileName": "fbs-wildberries-ozon-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026/main/assets/fbs-wildberries-ozon-workflow-2026.svg",
+      "driveUrl": null,
+      "alt": "Схема FBS с одного физического остатка",
+      "caption": "Заказ WB/Ozon проходит через API/WMS, единый остаток, сборку, маркировку и рейс на площадку.",
+      "registryRow": 661,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T021-GITHUB-IMG05",
+      "publicationId": "INDEX-T021-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "fbs-wildberries-ozon-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fbs-fulfillment-wildberries-ozon-russia-2026/main/assets/fbs-wildberries-ozon-criteria-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "Тепловая карта ТОП-10 FBS-фулфилментов",
+      "caption": "Оценки 0–5 показывают профиль сильных и слабых сторон участников по 6 критериям.",
+      "registryRow": 662,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-SOSTAV-IR-IMG01",
+      "publicationId": "PREP-T025-SOSTAV-IR",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "01_cover_sostav_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332536.jpg",
+      "driveUrl": "https://chatgpt.com/library?file_id=libfile_ec7a7152c5f081918cc19757577a2e2a&account_id=personal",
+      "alt": "Иллюстрация: сборка FBS-заказов на общем складе и передача в два канала продаж",
+      "caption": "Иллюстрация: сборка FBS-заказов на общем складе и передача в два канала продаж",
+      "registryRow": 5232,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "загружено в редактор 27.10; публичная отрисовка не проверена",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-SOSTAV-IR-IMG02",
+      "publicationId": "PREP-T025-SOSTAV-IR",
+      "platform": "Sostav",
+      "role": "внутренняя иллюстрация",
+      "fileName": "02_stock_picking_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332537.jpg",
+      "driveUrl": "https://chatgpt.com/library?file_id=libfile_ec7a7152c5f081918cc19757577a2e2a&account_id=personal",
+      "alt": "Оператор сканирует SKU товара на стеллаже единого склада",
+      "caption": "Адресное хранение и поштучный контроль помогают собрать заказы из 2 каналов без пересорта",
+      "registryRow": 5233,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "загружено в редактор 27.10; публичная отрисовка не проверена",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-SOSTAV-IR-IMG03",
+      "publicationId": "PREP-T025-SOSTAV-IR",
+      "platform": "Sostav",
+      "role": "внутренняя иллюстрация",
+      "fileName": "03_barcode_control_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332539.jpg",
+      "driveUrl": "https://chatgpt.com/library?file_id=libfile_ec7a7152c5f081918cc19757577a2e2a&account_id=personal",
+      "alt": "Проверка этикетки FBS-заказа сканером на упаковочном столе",
+      "caption": "Контроль соответствия SKU, отправления и кода маркировки влияет на риск отказа в приемке",
+      "registryRow": 5234,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "загружено в редактор 27.10; публичная отрисовка не проверена",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T025-SOSTAV-IR-IMG04",
+      "publicationId": "PREP-T025-SOSTAV-IR",
+      "platform": "Sostav",
+      "role": "внутренняя иллюстрация",
+      "fileName": "04_loading_dock_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332545.jpg",
+      "driveUrl": "https://chatgpt.com/library?file_id=libfile_ec7a7152c5f081918cc19757577a2e2a&account_id=personal",
+      "alt": "Работники готовят коробки для загрузки в автомобили FBS-доставки",
+      "caption": "Срок сборки и срок передачи перевозчику — разные показатели; фиксируйте оба",
+      "registryRow": 5235,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "загружено в редактор 27.10; публичная отрисовка не проверена",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

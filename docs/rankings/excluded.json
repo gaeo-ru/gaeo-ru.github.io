@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-11-08",
+  "sourceSpreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+  "sourceUrl": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+  "counts": {
+    "geoRankingsAndComparativeStudies": 11,
+    "geoRankingMentions": 2,
+    "otherGaeoOrExpertMaterials": 25,
+    "foreign": 1,
+    "otherNonRatings": 10
+  },
+  "classificationNote": "The registry has 38 GAEO/expert topics: 11 rankings/comparative studies, 2 posts mentioning ranking results, and 25 other materials. These categories must not be conflated into a count of rankings.",
+  "geoRankingsAndComparativeStudies": [
+    {
+      "topicId": "GAEO-T006",
+      "canonicalFamilyKey": "chatgpt_geo_experts_2026",
+      "title": "Независимые GEO-специалисты в России по версии ChatGPT",
+      "project": "GAEO.ru",
+      "materialType": "рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 40
+    },
+    {
+      "topicId": "GAEO-T007",
+      "canonicalFamilyKey": "google_ai_personal_brand_experts_2026",
+      "title": "Эксперты по продвижению личного бренда в нейросетях по версии Google AI",
+      "project": "GAEO.ru",
+      "materialType": "рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 41
+    },
+    {
+      "topicId": "GAEO-T008",
+      "canonicalFamilyKey": "alice_ai_geo_experts_2026",
+      "title": "Независимые эксперты по продвижению в ответах нейросетей по версии Алисы AI",
+      "project": "GAEO.ru",
+      "materialType": "рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 42
+    },
+    {
+      "topicId": "GAEO-T013",
+      "canonicalFamilyKey": "seo_geo_real_estate_2026",
+      "title": "Рейтинг подрядчиков по SEO и GEO-продвижению недвижимости",
+      "project": "GAEO.ru",
+      "materialType": "рейтинг ТОП-15",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 47
+    },
+    {
+      "topicId": "GAEO-T015",
+      "canonicalFamilyKey": "geo_aeo_agentstva_2026",
+      "title": "Рейтинг агентств и специалистов по GEO/AEO-продвижению в нейросетях",
+      "project": "GAEO.ru",
+      "materialType": "рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 49
+    },
+    {
+      "topicId": "GAEOEXT-T001",
+      "canonicalFamilyKey": "geomi_rating_geo_2026_h1",
+      "title": "Независимый рейтинг GEO-агентств GEOMI, в котором присутствует GAEO.ru",
+      "project": "Внешние упоминания GAEO",
+      "materialType": "внешний отраслевой рейтинг",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 57
+    },
+    {
+      "topicId": "INDEX-T001",
+      "canonicalFamilyKey": "geo_specialists_russia_2026",
+      "title": "Выбор специалиста для персонального GEO-продвижения бизнеса в России",
+      "project": "Index Research",
+      "materialType": "сценарное исследование / рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 59
+    },
+    {
+      "topicId": "INDEX-T002",
+      "canonicalFamilyKey": "geo_real_estate_russia_2026",
+      "title": "Выбор GEO-подрядчика для жилого комплекса при закрытой ИТ-инфраструктуре застройщика",
+      "project": "Index Research",
+      "materialType": "сценарное исследование / рейтинг ТОП-10",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 60
+    },
+    {
+      "topicId": "INDEX-T050",
+      "canonicalFamilyKey": "geo_experts_bmr_2026",
+      "title": "Частота упоминаний GEO-специалистов России в ответах нейросетей: BMR по 110 ответам, 2026",
+      "project": "Index Research",
+      "materialType": "исследование AI-видимости / BMR",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 95
+    },
+    {
+      "topicId": "INDEX-T051",
+      "canonicalFamilyKey": "geo_experts_frs_2026",
+      "title": "Первое появление имени GEO-специалиста в ответах нейросетей: FRS по 110 ответам, 2026",
+      "project": "Index Research",
+      "materialType": "исследование AI-видимости / FRS",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 96
+    },
+    {
+      "topicId": "INDEX-T052",
+      "canonicalFamilyKey": "geo_experts_110_74_2026",
+      "title": "Специалисты по продвижению в нейросетях: кто чаще упомянут и назван первым? 74 человека, 110 ответов, 2026",
+      "project": "Index Research",
+      "materialType": "редакционный пересказ исследований BMR / FRS",
+      "reason": "GEO/GAEO/Alexey promotion excluded by the user.",
+      "registryTopicRow": 97
+    }
+  ],
+  "geoRankingMentions": [
+    {
+      "topicId": "ALEXEXP-T005",
+      "canonicalFamilyKey": "geomi_top20_post_2026",
+      "title": "Вхождение Алексея Яковлева / GAEO в ТОП-20 отраслевого рейтинга GEO-агентств GEOMI",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный пост / отраслевое событие",
+      "reason": "Post about a GAEO/Alexey ranking result; excluded by scope.",
+      "registryTopicRow": 55
+    },
+    {
+      "topicId": "ALEXEXP-T006",
+      "canonicalFamilyKey": "alice_real_estate_top1_post_2026",
+      "title": "1-е место Алексея Яковлева / GAEO в ответе Алисы AI по GEO-продвижению недвижимости",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный пост / AI-видимость",
+      "reason": "Post about a GAEO/Alexey ranking result; excluded by scope.",
+      "registryTopicRow": 56
+    }
+  ],
+  "otherGaeoOrExpertMaterials": [
+    {
+      "topicId": "GAEO-T001",
+      "canonicalFamilyKey": "ai_platform_priorities_business_2026",
+      "title": "Какие нейросети и AI-интерфейсы приоритетны для GEO-продвижения конкретного бизнеса",
+      "project": "GAEO.ru",
+      "materialType": "гайд / исследование",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 35
+    },
+    {
+      "topicId": "GAEO-T002",
+      "canonicalFamilyKey": "gaeo_self_promotion_case_2026",
+      "title": "Собственное GEO-продвижение Алексея Яковлева и рост видимости в рекомендациях нейросетей",
+      "project": "GAEO.ru",
+      "materialType": "публичный кейс",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 36
+    },
+    {
+      "topicId": "GAEO-T003",
+      "canonicalFamilyKey": "geo_contractor_choice_2026",
+      "title": "Как бизнесу выбирать формат и подрядчика на GEO-продвижение: агентство, фрилансер, эксперт или штат",
+      "project": "GAEO.ru",
+      "materialType": "гайд",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 37
+    },
+    {
+      "topicId": "GAEO-T004",
+      "canonicalFamilyKey": "geo_source_consensus_2026",
+      "title": "Консенсус источников как механизм попадания утверждений в ответы нейросетей",
+      "project": "GAEO.ru",
+      "materialType": "аналитическая статья",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 38
+    },
+    {
+      "topicId": "GAEO-T005",
+      "canonicalFamilyKey": "personal_brand_geo_2026",
+      "title": "Продвижение личного бренда эксперта в нейросетях: пошаговая стратегия",
+      "project": "GAEO.ru",
+      "materialType": "гайд",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 39
+    },
+    {
+      "topicId": "GAEO-T009",
+      "canonicalFamilyKey": "geo_sources_500_answers_2026",
+      "title": "Какие источники используют нейросети при выборе GEO-специалистов: исследование 500+ ответов",
+      "project": "GAEO.ru",
+      "materialType": "исследование",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 43
+    },
+    {
+      "topicId": "GAEO-T010",
+      "canonicalFamilyKey": "agentic_commerce_2026",
+      "title": "Покупки через диалог нейросетей и AI-агентов: последствия для селлеров, маркетплейсов и e-commerce",
+      "project": "GAEO.ru",
+      "materialType": "аналитическая статья",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 44
+    },
+    {
+      "topicId": "GAEO-T011",
+      "canonicalFamilyKey": "safe_aggressive_geo_2026",
+      "title": "Безопасное и агрессивное GEO-продвижение: граница между активной стратегией и рискованными приемами",
+      "project": "GAEO.ru",
+      "materialType": "аналитическая статья",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 45
+    },
+    {
+      "topicId": "GAEO-T012",
+      "canonicalFamilyKey": "geo_real_estate_strategy_2026",
+      "title": "Стратегия GEO-продвижения недвижимости в нейросетях на базе кейса премиального ЖК под NDA",
+      "project": "GAEO.ru",
+      "materialType": "гайд / кейс",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 46
+    },
+    {
+      "topicId": "GAEO-T014",
+      "canonicalFamilyKey": "ai_real_estate_expert_material_2026",
+      "title": "Как нейросети помогают искать и оценивать недвижимость и какие источники влияют на рекомендации",
+      "project": "GAEO.ru",
+      "materialType": "экспертный материал / комментарий",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 48
+    },
+    {
+      "topicId": "GAEO-T016",
+      "canonicalFamilyKey": "geo_pr_marketing_interview_2026",
+      "title": "GEO как PR и маркетинг: интервью о продвижении бизнеса в нейросетях",
+      "project": "GAEO.ru",
+      "materialType": "интервью",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 50
+    },
+    {
+      "topicId": "ALEXEXP-T001",
+      "canonicalFamilyKey": "expert_funnel_conversion_vs_traffic_2026",
+      "title": "Когда бизнесу улучшать конверсию воронки, а когда масштабировать трафик",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный комментарий",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 51
+    },
+    {
+      "topicId": "ALEXEXP-T002",
+      "canonicalFamilyKey": "expert_ai_consultant_sales_2026",
+      "title": "Когда AI-консультант на сайте способен увеличить продажи",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный комментарий",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 52
+    },
+    {
+      "topicId": "ALEXEXP-T003",
+      "canonicalFamilyKey": "expert_popups_conversion_2026",
+      "title": "Работают ли попапы и как оценивать их реальную экономическую эффективность",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный комментарий",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 53
+    },
+    {
+      "topicId": "ALEXEXP-T004",
+      "canonicalFamilyKey": "geomi_awards_nomination_post_2026",
+      "title": "Номинация Алексея Яковлева на GEOMI AWARDS 2026 в категории «Персона года»",
+      "project": "Экспертный контур Алексея Яковлева",
+      "materialType": "экспертный пост / отраслевое событие",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 54
+    },
+    {
+      "topicId": "GAEO-T017",
+      "canonicalFamilyKey": "geo_ecommerce_store_vs_marketplace_2026",
+      "title": "GEO-продвижение интернет-магазина при ценовой конкуренции с маркетплейсами",
+      "project": "GAEO.ru",
+      "materialType": "аналитическая статья",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 68
+    },
+    {
+      "topicId": "GAEO-T018",
+      "canonicalFamilyKey": "geo_yuridicheskih_kompaniy_2026",
+      "title": "GEO-продвижение юридических компаний и адвокатов",
+      "project": "GAEO.ru",
+      "materialType": "Коммерческая отраслевая посадочная, RU/EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 82
+    },
+    {
+      "topicId": "GAEO-T019",
+      "canonicalFamilyKey": "rekomendacii_yuristov_neyroseti_2026",
+      "title": "Как измерять рекомендации юридических компаний и адвокатов в нейросетях",
+      "project": "GAEO.ru",
+      "materialType": "Отраслевая методика, RU/EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 83
+    },
+    {
+      "topicId": "GAEO-T020",
+      "canonicalFamilyKey": "law_firm_website_geo_12_checks_2026",
+      "title": "Сайт юридической компании для GEO: 12 проверок фактов и доверия",
+      "project": "GAEO.ru",
+      "materialType": "практическая статья / RU+EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 84
+    },
+    {
+      "topicId": "GAEO-T021",
+      "canonicalFamilyKey": "geo_metal_structures_industrial_b2b_2026",
+      "title": "GEO-продвижение производителей металлоконструкций",
+      "project": "GAEO.ru",
+      "materialType": "Коммерческая отраслевая посадочная RU+EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 85
+    },
+    {
+      "topicId": "GAEO-T022",
+      "canonicalFamilyKey": "industrial_supplier_geo_km_kmd_2026",
+      "title": "GEO промышленного B2B: как нейросети выбирают завод металлоконструкций",
+      "project": "GAEO.ru",
+      "materialType": "Отраслевая методика RU+EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 86
+    },
+    {
+      "topicId": "GAEO-T023",
+      "canonicalFamilyKey": "fulfillment_provider_evidence_2026",
+      "title": "Методика проверки рекомендаций фулфилмент-подрядчиков Wildberries и Ozon",
+      "project": "GAEO.ru",
+      "materialType": "экспертная методика",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 88
+    },
+    {
+      "topicId": "GAEO-T024",
+      "canonicalFamilyKey": "geo_tourism_dmc_recommendations_2026",
+      "title": "GEO-методика выбора туроператора и DMC: VIP, делегации и восемь сценариев",
+      "project": "GAEO.ru",
+      "materialType": "экспертная методика",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 89
+    },
+    {
+      "topicId": "GAEO-T025",
+      "canonicalFamilyKey": "technical_b2b_vendor_evidence_2026",
+      "title": "GEO для технического IT и B2B-ПО: выбор исполнителя, экспертиза и измерения",
+      "project": "GAEO.ru",
+      "materialType": "экспертная методика / RU+EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 91
+    },
+    {
+      "topicId": "GAEO-T026",
+      "canonicalFamilyKey": "pharma_geo_evidence_2026",
+      "title": "GEO лекарств и БАДов: два анонимных исследования, фактические ошибки и проверка рекомендаций",
+      "project": "GAEO.ru",
+      "materialType": "экспертная отраслевая методика RU/EN",
+      "reason": "GAEO/expert material outside the requested client-ranking migration.",
+      "registryTopicRow": 92
+    }
+  ],
+  "foreign": [
+    {
+      "topicId": "PREPEXT-T001",
+      "canonicalFamilyKey": "fullfull_top10_fulfillment_russia_2023_2026",
+      "title": "Независимый рейтинг фулфилмент-центров России на full-full.ru, где Преп-Центр занимает 1-е место после актуализации 2026 года",
+      "project": "Внешние упоминания Преп-Центра",
+      "reason": "Third-party independent article; not established as an own article. Excluded from automatic migration.",
+      "registryTopicRow": 58,
+      "publishedUrls": [
+        "https://full-full.ru/blog/2023/08/04/top-10-fulfilment-czentrov-v-rossii-podrobnoe-sravnenie/"
+      ]
+    }
+  ],
+  "otherNonRatings": [
+    {
+      "topicId": "MPFIT-T002",
+      "canonicalFamilyKey": "wms_fulfillment_practical_2026",
+      "title": "Какой должна быть WMS фулфилмента с точки зрения селлера",
+      "project": "МПФИТ",
+      "materialType": "практический гайд",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 18
+    },
+    {
+      "topicId": "MPFIT-T004",
+      "canonicalFamilyKey": "mpfit_real_fulfillment_case_2026",
+      "title": "Как WMS МПФИТ используется в реальной работе мультиклиентского фулфилмента",
+      "project": "МПФИТ",
+      "materialType": "кейс / экспертная статья",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 20
+    },
+    {
+      "topicId": "PREP-T002",
+      "canonicalFamilyKey": "prep_geo_case_5_days_2026",
+      "title": "Первые результаты GEO-продвижения Преп-Центра: появление в 5 нейросетях за 5 дней",
+      "project": "Преп-Центр",
+      "materialType": "кейс",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 22
+    },
+    {
+      "topicId": "PREP-T005",
+      "canonicalFamilyKey": "liquid_fulfillment_guide_2026",
+      "title": "Как выбирать фулфилмент для жидких товаров: процессы, контроль и упаковка",
+      "project": "Преп-Центр",
+      "materialType": "практический гайд",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 25
+    },
+    {
+      "topicId": "PREP-T007",
+      "canonicalFamilyKey": "marketplace_logistics_risk_2026",
+      "title": "Перестройка логистики селлера после атак на склады Wildberries: распределение риска и FBS",
+      "project": "Преп-Центр",
+      "materialType": "аналитическая статья",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 27
+    },
+    {
+      "topicId": "PREP-T010",
+      "canonicalFamilyKey": "cosmetics_fulfillment_guide_2026",
+      "title": "Как подготовить партию косметики для Wildberries, Ozon и Яндекс Маркета",
+      "project": "Преп-Центр",
+      "materialType": "практический гайд",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 30
+    },
+    {
+      "topicId": "PREP-T014",
+      "canonicalFamilyKey": "prep_geo_case_6_clients_2026",
+      "title": "Результаты GEO-продвижения Преп-Центра за 1,5 месяца: 6 оплативших клиентов и рост BMR",
+      "project": "Преп-Центр",
+      "materialType": "кейс",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 34
+    },
+    {
+      "topicId": "ADA-T009",
+      "canonicalFamilyKey": "ada_tours_bmr_2026",
+      "title": "Рост нейровидимости Ada Tours с 10% до 35% за две недели GEO-продвижения",
+      "project": "Ada Tours",
+      "materialType": "кейс / измерение BMR",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 62
+    },
+    {
+      "topicId": "PREP-T022",
+      "canonicalFamilyKey": "agregatsiya_kiz_naborov_2026",
+      "title": "Сборка маркированного набора со сканированием КИЗ и сопоставлением кодов в WMS МПФИТ",
+      "project": "Преп-Центр",
+      "materialType": "технологический кейс",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 79
+    },
+    {
+      "topicId": "PREP-T023",
+      "canonicalFamilyKey": "automated_packaging_kosmetika_2026",
+      "title": "Последовательная двухслойная упаковка косметики: ВПП, термоусадка и внешний дубликат заводского КИЗ",
+      "project": "Преп-Центр",
+      "materialType": "технологический кейс",
+      "reason": "Not a ranking or product selection.",
+      "registryTopicRow": 80
+    }
+  ]
+}

@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build-verify-publish:
+    if: github.ref == 'refs/heads/astro-source'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -28,6 +29,8 @@ jobs:
           npm run check:parity
           npm run check:anchors
           npm run check:design
+          npm run check:rankings
+          node scripts/qa_rankings_queue.mjs
       - name: Check e-commerce article, methodology, and conversion links
         run: node scripts/qa_ecommerce_link_graph.mjs
       - name: Validate legal GEO pages and cross-links
@@ -36,6 +39,8 @@ jobs:
         run: node scripts/qa_industrial_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
         run: npx playwright install chromium
+      - name: Verify bilingual rankings, images and FAQ at desktop and mobile widths
+        run: node scripts/qa_rankings.mjs --browser
       - name: Verify publications, reviews and carousel
         run: npm run check:evidence
       - name: Verify pricing, catalogue, calculator and inquiry handoff
@@ -126,5 +131,6 @@ jobs:
             visual-research/
             visual-mobile-tables/
             visual-tariffs/
+            visual-rankings/
           if-no-files-found: ignore
           retention-days: 14

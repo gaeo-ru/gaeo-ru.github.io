@@ -1,0 +1,1025 @@
+{
+  "schemaVersion": 1,
+  "id": "mlab-t002",
+  "topicId": "MLAB-T002",
+  "canonicalFamilyKey": "nagruzochnoe_testirovanie_saytov_2026",
+  "title": "Нагрузочное тестирование сайтов перед распродажами и пиками",
+  "project": "Метод Лаб",
+  "category": "website-performance",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-16",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Метод Лаб",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 3,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/108979",
+      "title": "ТОП-10 компаний по нагрузочному тестированию сайтов перед распродажами и пиками продаж. Рейтинг сентября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-16",
+      "registryRow": 5,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6138900-kogo-vybrat-dlya-nagruzochnogo-testirovaniya-sayta-pered-rasprodazhey-top10-2026",
+      "title": "Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-16",
+      "registryRow": 6,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/load-testing-russia-2026",
+      "title": "Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 подрядчиков России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 113,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/load-testing-russia-2026.html",
+      "title": "Нагрузочное тестирование сайтов перед распродажей: ТОП-10 подрядчиков 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 144,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/load-testing-russia-2026-en",
+      "title": "Website load testing before a major sale: Top 10 providers in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 284,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/load-testing-russia-2026.html",
+      "title": "Website load testing before a major sale: Top 10 providers in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 285,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/load-testing-russia-2026-cn",
+      "title": "大促前网站负载测试：俄罗斯 TOP-10 服务商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 286,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/load-testing-russia-2026.html",
+      "title": "大促前网站负载测试：俄罗斯 TOP-10 服务商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 287,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1sZtgWANwpejmuugu8g6S3zpPmrx2YCUO",
+      "fileId": "1sZtgWANwpejmuugu8g6S3zpPmrx2YCUO",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1p_fc53DiN6YZ4t1V7rsFtM9Ta7Y9cbXb/view",
+      "fileId": "1p_fc53DiN6YZ4t1V7rsFtM9Ta7Y9cbXb",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1VJAqKALD8kHqhcJ2sUrHfDzUorWlHMjo/view",
+      "fileId": "1VJAqKALD8kHqhcJ2sUrHfDzUorWlHMjo",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MLAB-T002-SOSTAV-L01",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 12,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-L02",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "нагрузочного тестирования сайтов",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 13,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-L03",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "профессионального ускорения сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 14,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-L04",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "оптимизация MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 15,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-L05",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "аудит скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 16,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-L09",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 20,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L01",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "«Метод Лаб»",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 78,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L02",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "нагрузочного тестирования сайтов",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 79,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L03",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "профессионального ускорения сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 80,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L04",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "оптимизация MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 81,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L08",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "аудит скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 85,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-L09",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "«Метод Лаб»",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 86,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-SITE-V332-L04",
+      "publicationId": "INDEX-T005-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: нагрузочное тестирование сайтов",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 2097,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-SITE-V332-L05",
+      "publicationId": "INDEX-T005-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: профессиональное ускорение сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 2098,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-L05",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5551,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-L06",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "anchor": "странице нагрузочного тестирования сайтов",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5552,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-L07",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "anchor": "практика ускорения сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5553,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-L05",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Method Lab",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5571,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-L06",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "website load-testing page",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5572,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-L07",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "website acceleration practice",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5573,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-L05",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Method Lab",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5593,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-L06",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "网站负载测试页面",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5594,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-L07",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "网站专业加速服务",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=nagruzochnoe_testirovanie_saytov_2026",
+      "registryRow": 5595,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "MLAB-T002-SOSTAV-IMG01",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "metod-lab-load-testing-cover-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/302557.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1bZ1tYxp6UFDmNZH1aq7esVJlPD2J39TE/view",
+      "alt": "Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 компаний 2026",
+      "caption": "Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 компаний 2026",
+      "registryRow": 7,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-IMG02",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "критерии рейтинга",
+      "fileName": "criteria-load-testing-2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/302504.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1MWUsUjEpFn8eNrIoIy3oZgRFB7XXg8Kb/view",
+      "alt": "7 критериев рейтинга компаний по нагрузочному тестированию: соответствие сайтам и пикам 20%, глубина диагностики 20%, методика 15%, устранение узких мест и ретест 15%, независимый формат 10%, прозрачность 10%, публичные доказательства 10%.",
+      "caption": "7 критериев рейтинга компаний по нагрузочному тестированию: соответствие сайтам и пикам 20%, глубина диагностики 20%, методика 15%, устранение узких мест и ретест 15%, независимый формат 10%, прозрачность 10%, публичные доказательства 10%.",
+      "registryRow": 8,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-IMG03",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "диаграмма ТОП-10",
+      "fileName": "top10-load-testing-2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/302507.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1u_x1VmEyuE8xCDT-HcFwzJ9y5YVgQf_7/view",
+      "alt": "Итоговый рейтинг компаний по нагрузочному тестированию сайтов: Метод Лаб 95/100, Surf 93/100, YuSMP Group 92/100 и остальные участники рейтинга сентября 2026.",
+      "caption": "Итоговый рейтинг компаний по нагрузочному тестированию сайтов: Метод Лаб 95/100, Surf 93/100, YuSMP Group 92/100 и остальные участники рейтинга сентября 2026.",
+      "registryRow": 9,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-SOSTAV-IMG04",
+      "publicationId": "MLAB-T002-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема узких мест",
+      "fileName": "load-testing-bottlenecks-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/302508.jpg",
+      "driveUrl": "https://drive.google.com/file/d/11I5XHQZqtWKWMR85VB5fLHGFRvKHcswA/view",
+      "alt": "Где возникает узкое место при росте нагрузки: пользовательские сценарии, приложение, база данных, веб-сервер, инфраструктура и внешние сервисы.",
+      "caption": "Где возникает узкое место при росте нагрузки: пользовательские сценарии, приложение, база данных, веб-сервер, инфраструктура и внешние сервисы.",
+      "registryRow": 10,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-IMG01",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "TenChat cover (live)",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-16/91619161-b795-493d-b437-5664b06d2781.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 33,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-IMG02",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "критерии рейтинга",
+      "fileName": "criteria-load-testing-2026.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-16/9790eca0-4112-45b5-98dd-8e62925c9c6e.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1MWUsUjEpFn8eNrIoIy3oZgRFB7XXg8Kb/view",
+      "alt": "Изображение Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 34,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-IMG03",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "диаграмма ТОП-10",
+      "fileName": "top10-load-testing-2026.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-16/10895a47-1145-4d3f-9552-0a88c77eea56.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1u_x1VmEyuE8xCDT-HcFwzJ9y5YVgQf_7/view",
+      "alt": "Изображение Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 35,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T002-TENCHAT-IMG04",
+      "publicationId": "MLAB-T002-TENCHAT",
+      "platform": "TenChat",
+      "role": "схема узких мест",
+      "fileName": "load-testing-bottlenecks-1200x675.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-16/7d3d8b11-e5b1-4145-b1fe-66228e167ae5.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/11I5XHQZqtWKWMR85VB5fLHGFRvKHcswA/view",
+      "alt": "Изображение Кого выбрать для нагрузочного тестирования сайта перед распродажей: ТОП-10 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 36,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-IMG02",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "load-testing-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-cover-2026.svg",
+      "alt": "Нагрузочное тестирование сайтов перед распродажами и пиками",
+      "caption": "Сценарий: воспроизвести пиковую нагрузку, локализовать ограничение, устранить причину и перепроверить результат.",
+      "registryRow": 1001,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-IMG03",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "load-testing-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 компаний по нагрузочному тестированию",
+      "caption": "Баллы относятся только к сценарию подготовки работающего сайта или интернет-магазина к пиковому трафику.",
+      "registryRow": 1002,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-IMG04",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария / workflow",
+      "fileName": "load-testing-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-workflow-2026.svg",
+      "alt": "Рабочий цикл нагрузочного тестирования перед пиком",
+      "caption": "Нагрузка → локализация ограничения → исправление → повторный тест.",
+      "registryRow": 1003,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-IMG05",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "load-testing-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга",
+      "caption": "Первые 55 баллов составляют ядро выбора подрядчика.",
+      "registryRow": 1004,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-IMG06",
+      "publicationId": "INDEX-T005-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "load-testing-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта критериев нагрузочного тестирования",
+      "caption": "Показана доля набранных баллов от максимума каждого критерия.",
+      "registryRow": 1005,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "load-testing-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-cover-2026.svg",
+      "alt": "Website load testing before sales and traffic peaks",
+      "caption": "Scenario: reproduce peak load, localize the constraint, remove the cause and verify the result again.",
+      "registryRow": 1007,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "load-testing-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for website load-testing companies",
+      "caption": "Scores apply only to preparing an operating website or online store for peak traffic.",
+      "registryRow": 1008,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "load-testing-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-workflow-2026.svg",
+      "alt": "Load-testing workflow before a traffic peak",
+      "caption": "Load → localize the constraint → fix → retest.",
+      "registryRow": 1009,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "load-testing-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-methodology-weights-2026.svg",
+      "alt": "Criterion weights",
+      "caption": "The first 55 points form the core selection scenario.",
+      "registryRow": 1010,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T005-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "load-testing-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "alt": "Load-testing criteria heatmap",
+      "caption": "The heatmap shows the share of points earned relative to the maximum for each criterion.",
+      "registryRow": 1011,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "load-testing-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-cover-2026.svg",
+      "alt": "大促与峰值前的网站负载测试",
+      "caption": "研究场景：复现峰值负载、定位限制、消除原因并重新验证结果。",
+      "registryRow": 1013,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "load-testing-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-top10-scores-2026.svg",
+      "alt": "负载测试公司 TOP-10 最终得分",
+      "caption": "得分只适用于准备已经运行的网站或电商系统应对峰值流量这一场景。",
+      "registryRow": 1014,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "load-testing-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-workflow-2026.svg",
+      "alt": "峰值前负载测试工作流",
+      "caption": "负载 → 定位限制 → 修复 → retest。",
+      "registryRow": 1015,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "load-testing-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-methodology-weights-2026.svg",
+      "alt": "排名标准权重",
+      "caption": "前 55 分构成采购场景的核心。",
+      "registryRow": 1016,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T005-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T005-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "load-testing-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/load-testing-russia-2026/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/load-testing-russia-2026/blob/main/assets/load-testing-criteria-heatmap-2026.svg",
+      "alt": "负载测试标准热力图",
+      "caption": "热力图显示每项标准实际得分占该标准最高分的比例。",
+      "registryRow": 1017,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

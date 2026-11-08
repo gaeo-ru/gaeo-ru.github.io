@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t016",
+  "topicId": "PREP-T016",
+  "canonicalFamilyKey": "fbo_ozon_2026",
+  "title": "Фулфилмент для отгрузки на Ozon по FBO в Москве и МО",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-24",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 65,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294064/110873",
+      "title": "ТОП-10 лучших фулфилментов для отгрузки на Ozon (Озон) по FBO в Москве и МО: рейтинг сентября 2026",
+      "author": "Амалия Саакян",
+      "publicationDate": "2026-09-24",
+      "registryRow": 321,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live страница проверена; публичный URL подтвержден; содержимое соответствует PREP-T016",
+        "recordedCheckedDate": "2026-09-28",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026",
+      "title": "Фулфилмент для Ozon FBO: ТОП-10 операторов Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 329,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; public repo подтвержден; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/ozon-fbo-fulfillment-moscow-2026.html",
+      "title": "Ozon FBO: ТОП-10 фулфилментов Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 330,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; live HTTP инструмент недоступен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026-en",
+      "title": "Ozon FBO Fulfillment Providers in Moscow and Moscow Region: Top 10, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 331,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language/canonical links проверены; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/ozon-fbo-fulfillment-moscow-2026.html",
+      "title": "Ozon FBO: Top 10 Fulfillment Providers in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 332,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; live HTTP инструмент недоступен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026-cn",
+      "title": "莫斯科及莫斯科州 Ozon FBO 履约服务商：2026 TOP-10 场景排名",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 333,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language/canonical links проверены; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/ozon-fbo-fulfillment-moscow-2026.html",
+      "title": "Ozon FBO：莫斯科及莫斯科州履约服务商 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 334,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; live HTTP инструмент недоступен",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6163335-top10-luchshikh-fulfilmentov-dlya-ozon-po-fbo-moskva-i-mo-sentyabr-2026",
+      "title": "ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 548,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Авторские href подтверждены; 1 конечных перехода/переходов не подтверждены",
+        "recordedCheckedDate": "2026-11-07",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1Zd1S5krGWhCcNy3E4l_zIwaXCjvjcr4_",
+      "fileId": "1Zd1S5krGWhCcNy3E4l_zIwaXCjvjcr4_",
+      "publicationId": "PREP-T016-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/15ooz_YLnStNDHEh2usjTzgQ-wGcoGA8d/view",
+      "fileId": "15ooz_YLnStNDHEh2usjTzgQ-wGcoGA8d",
+      "publicationId": "PREP-T016-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "INDEX-T035-GITHUB-L04",
+      "publicationId": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/fbo-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbo_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-ozon/",
+      "registryRow": 6656,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API; live переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE-L04",
+      "publicationId": "INDEX-T035-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: FBO на Ozon",
+      "url": "https://prep-center.ru/fbo-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbo_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-ozon/",
+      "registryRow": 6679,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA PASS; live переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE-EN-L04",
+      "publicationId": "INDEX-T035-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Ozon FBO",
+      "url": "https://prep-center.ru/fbo-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbo_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-ozon/",
+      "registryRow": 6712,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA PASS; live переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-SITE-CN-L04",
+      "publicationId": "INDEX-T035-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Ozon FBO",
+      "url": "https://prep-center.ru/fbo-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbo_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-ozon/",
+      "registryRow": 6749,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA PASS; live переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-L01",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/fbo-ozon/",
+      "cleanUrl": "https://prep-center.ru/fbo-ozon/",
+      "registryRow": 11654,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T016-SOSTAV-IMG01",
+      "publicationId": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "01_cover_top10_fbo_ozon_2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312784.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1m_YlX3glePBwwKG0wz-U8G60u0WhhD5R/view",
+      "alt": "Подготовленные короба и паллеты перед FBO-отгрузкой на склад Ozon",
+      "caption": "FBO заканчивается для фулфилмента только после того, как готовая партия собрана в корректные грузоместа и передана в логистику",
+      "registryRow": 1132,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "preview проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-SOSTAV-IMG02",
+      "publicationId": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "02_fbo_ozon_process_5_steps.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312775.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1JnvNK2tuLDcUyHDWwT70Z7Au-hSoJVs0/view",
+      "alt": "Пять этапов подготовки FBO-поставки от приемки партии до погрузки",
+      "caption": "В рейтинге оценивалась вся цепочка до передачи Ozon, а не только цена одной операции",
+      "registryRow": 1133,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "preview проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-SOSTAV-IMG03",
+      "publicationId": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "03_boxes_vs_pallets_fbo_ozon.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312779.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1gGPLPjKJjLlLnQKI5e3_EgDRMrC9bFup/view",
+      "alt": "Коробочная и паллетная FBO-поставка перед отгрузкой",
+      "caption": "Формат грузоместа влияет и на складскую подготовку, и на стоимость доставки до Ozon",
+      "registryRow": 1134,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "preview проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-SOSTAV-IMG04",
+      "publicationId": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "04_complex_prep_liquids_fbo_ozon.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312780.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1qbrLYkRYuEwEoAdnkqkMTEnYMB-RXZQb/view",
+      "alt": "Упаковка жидких товаров и контроль штрихкодов перед FBO-поставкой",
+      "caption": "Для косметики, шампуней и химии результат зависит от подготовки каждой единицы до формирования грузоместа",
+      "registryRow": 1135,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "preview проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-SOSTAV-IMG05",
+      "publicationId": "PREP-T016-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "05_logistics_to_ozon_cluster.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/157/312782.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1xd2TmvDff-Mrm70yJKsGgyNzSnuwn_Ut/view",
+      "alt": "Грузовик с паллетной FBO-поставкой у распределительного центра",
+      "caption": "Для FBO логистика до нужного склада и временного интервала является частью услуги, а не последним необязательным этапом",
+      "registryRow": 1136,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "preview проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-IMG02",
+      "publicationId": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "role": "итоговые баллы",
+      "fileName": "ozon-fbo-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/main/assets/ozon-fbo-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/blob/main/assets/ozon-fbo-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 Ozon FBO 2026",
+      "caption": null,
+      "registryRow": 1173,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-IMG03",
+      "publicationId": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методики",
+      "fileName": "ozon-fbo-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/main/assets/ozon-fbo-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/blob/main/assets/ozon-fbo-method-weights-2026.svg",
+      "alt": "Веса методики Ozon FBO 2026",
+      "caption": null,
+      "registryRow": 1174,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-IMG04",
+      "publicationId": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "role": "матрица критериев",
+      "fileName": "ozon-fbo-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/main/assets/ozon-fbo-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/blob/main/assets/ozon-fbo-criteria-heatmap-2026.svg",
+      "alt": "Матрица оценок 17 допущенных операторов по C1–C8",
+      "caption": null,
+      "registryRow": 1175,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T035-GITHUB-IMG05",
+      "publicationId": "INDEX-T035-GITHUB",
+      "platform": "GitHub",
+      "role": "сценарий полного цикла",
+      "fileName": "ozon-fbo-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/main/assets/ozon-fbo-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/ozon-fbo-fulfillment-moscow-2026/blob/main/assets/ozon-fbo-workflow-2026.svg",
+      "alt": "Сценарий полного цикла Ozon FBO",
+      "caption": null,
+      "registryRow": 1176,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-IMG01",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "7d7579e9-8c70-4957-9f3b-69e9b0f7e2ae.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-24/7d7579e9-8c70-4957-9f3b-69e9b0f7e2ae.jpg?fmt=webp&height=1098&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026»",
+      "caption": null,
+      "registryRow": 5394,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-IMG02",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "7d70c9c0-b344-4eb1-a1d2-60fe52aa97e6.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-24/7d70c9c0-b344-4eb1-a1d2-60fe52aa97e6.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026»",
+      "caption": null,
+      "registryRow": 5395,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-IMG03",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "1aa87ff8-f471-4b52-bd9a-075c608fd093.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-24/1aa87ff8-f471-4b52-bd9a-075c608fd093.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026»",
+      "caption": null,
+      "registryRow": 5396,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-IMG04",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "e79788f1-b82a-4451-b795-91bf0a01035f.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-24/e79788f1-b82a-4451-b795-91bf0a01035f.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026»",
+      "caption": null,
+      "registryRow": 5397,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T016-TENCHAT-IMG05",
+      "publicationId": "PREP-T016-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "c476e145-f2b1-4551-b916-97146f8dd1de.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-24/c476e145-f2b1-4551-b916-97146f8dd1de.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов для Ozon по FBO: Москва и МО, сентябрь 2026»",
+      "caption": null,
+      "registryRow": 5398,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

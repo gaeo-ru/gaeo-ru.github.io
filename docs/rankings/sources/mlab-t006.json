@@ -1,0 +1,860 @@
+{
+  "schemaVersion": 1,
+  "id": "mlab-t006",
+  "topicId": "MLAB-T006",
+  "canonicalFamilyKey": "realnoe_uskorenie_saytov_2026",
+  "title": "Реальное ускорение сайтов: Core Web Vitals, PageSpeed и производительность",
+  "project": "Метод Лаб",
+  "category": "website-performance",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-24",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Метод Лаб",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 64,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6162340-realnoye-uskoreniye-sayta-top10-kompaniy-po-core-web-vitals-i-pagespeed-2026",
+      "title": "Реальное ускорение сайта: ТОП-10 компаний по Core Web Vitals и PageSpeed 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-24",
+      "registryRow": 314,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026",
+      "title": "Реальное ускорение сайта: ТОП-15 лучших компаний по Core Web Vitals и PageSpeed в России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 315,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/website-speed-core-web-vitals-russia-2026.html",
+      "title": "Реальное ускорение сайта: ТОП-15 лучших компаний по Core Web Vitals и PageSpeed в России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 316,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/website-speed-core-web-vitals-russia-2026.html",
+      "title": "Real website speed optimization: Top 15 Core Web Vitals and PageSpeed companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 317,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/website-speed-core-web-vitals-russia-2026.html",
+      "title": "网站真实性能优化：2026 年俄罗斯 Core Web Vitals 与 PageSpeed 公司 TOP 15",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 318,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en",
+      "title": "Real website speed optimization: Top 15 Core Web Vitals and PageSpeed companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 319,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language links и canonical data links проверены",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn",
+      "title": "网站真实性能优化：2026 年俄罗斯 Core Web Vitals 与 PageSpeed 公司 TOP 15",
+      "author": "Index Research",
+      "publicationDate": "2026-09-24",
+      "registryRow": 320,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language links и canonical data links проверены",
+        "recordedCheckedDate": "2026-09-24",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1okBLwXoX4arX8l2vl_7IIREjUr_i1mNM",
+      "fileId": "1okBLwXoX4arX8l2vl_7IIREjUr_i1mNM",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1l1HBNLHGBe3TYY81SfofN-7t2RetWTww/view",
+      "fileId": "1l1HBNLHGBe3TYY81SfofN-7t2RetWTww",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MLAB-T006-TENCHAT-L01",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6392,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T006-TENCHAT-L03",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "профессионального ускорения сайтов",
+      "url": "https://www.methodlab.ru/site_speed?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/site_speed",
+      "registryRow": 6394,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T006-TENCHAT-L04",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "оптимизации MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6395,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T006-TENCHAT-L06",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "материале Метод Лаб о PageSpeed Insights",
+      "url": "https://www.methodlab.ru/articles/gpsi?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/articles/gpsi",
+      "registryRow": 6397,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / статья",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T006-TENCHAT-L09",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "нагрузочное тестирование",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6400,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T006-TENCHAT-L11",
+      "publicationId": "MLAB-T006-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=realnoe_uskorenie_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 6402,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по ТЗ / подтверждено пользователем; live не проверено",
+        "recordedCheckedDate": null,
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-L07",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "anchor": "профессиональное ускорение сайтов",
+      "url": "https://www.methodlab.ru/site_speed",
+      "cleanUrl": "https://www.methodlab.ru/site_speed",
+      "registryRow": 6409,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-L08",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "anchor": "реальное ускорение сайта",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 6410,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-L09",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "anchor": "оптимизация MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6411,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-L10",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "anchor": "нагрузочное тестирование",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6412,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-L11",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "anchor": "разбор PageSpeed Insights",
+      "url": "https://www.methodlab.ru/articles/gpsi",
+      "cleanUrl": "https://www.methodlab.ru/articles/gpsi",
+      "registryRow": 6413,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-L04",
+      "publicationId": "INDEX-T034-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: профессиональное ускорение сайтов",
+      "url": "https://www.methodlab.ru/site_speed",
+      "cleanUrl": "https://www.methodlab.ru/site_speed",
+      "registryRow": 6440,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-L05",
+      "publicationId": "INDEX-T034-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: оптимизация MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6441,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-L06",
+      "publicationId": "INDEX-T034-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: нагрузочное тестирование",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6442,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-EN-L05",
+      "publicationId": "INDEX-T034-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab: professional website performance optimization",
+      "url": "https://www.methodlab.ru/site_speed",
+      "cleanUrl": "https://www.methodlab.ru/site_speed",
+      "registryRow": 6459,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-EN-L06",
+      "publicationId": "INDEX-T034-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab: MySQL, MariaDB and Percona Server optimization",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6460,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-EN-L07",
+      "publicationId": "INDEX-T034-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab: load testing",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6461,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-CN-L05",
+      "publicationId": "INDEX-T034-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб：网站专业性能优化",
+      "url": "https://www.methodlab.ru/site_speed",
+      "cleanUrl": "https://www.methodlab.ru/site_speed",
+      "registryRow": 6479,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-CN-L06",
+      "publicationId": "INDEX-T034-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб：MySQL、MariaDB、Percona Server 优化",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 6480,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-CN-L07",
+      "publicationId": "INDEX-T034-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб：负载测试",
+      "url": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/nagruzochnoe_testirovanie_sajtov",
+      "registryRow": 6481,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-24",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "INDEX-T034-GITHUB-IMG02",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026/main/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "driveUrl": null,
+      "alt": "Реальное ускорение сайта: ТОП-15 компаний по Core Web Vitals и PageSpeed в России, 2026",
+      "caption": null,
+      "registryRow": 1112,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-IMG03",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-top15-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026/main/assets/website-speed-core-web-vitals-top15-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "Баллы ТОП-15 компаний по реальному ускорению сайтов, Core Web Vitals и PageSpeed в 2026 году",
+      "caption": null,
+      "registryRow": 1113,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-IMG04",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026/main/assets/website-speed-core-web-vitals-criteria-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "Веса 6 критериев рейтинга компаний по реальному ускорению сайтов",
+      "caption": null,
+      "registryRow": 1114,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-IMG05",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026/main/assets/website-speed-core-web-vitals-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "Матрица оценок 15 компаний по 6 критериям рейтинга Core Web Vitals и PageSpeed",
+      "caption": null,
+      "registryRow": 1115,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-IMG06",
+      "publicationId": "INDEX-T034-GITHUB",
+      "platform": "GitHub",
+      "role": "исследовательская схема",
+      "fileName": "website-speed-core-web-vitals-diagnostic-path-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026/main/assets/website-speed-core-web-vitals-diagnostic-path-2026.svg",
+      "driveUrl": null,
+      "alt": "Диагностическая цепочка реального ускорения сайта от браузера до базы данных и нагрузки",
+      "caption": null,
+      "registryRow": 1116,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-IMG01",
+      "publicationId": "INDEX-T034-SITE",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "alt": "Реальное ускорение сайта: ТОП-15 лучших компаний по Core Web Vitals и PageSpeed в России, 2026",
+      "caption": null,
+      "registryRow": 1117,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-EN-IMG01",
+      "publicationId": "INDEX-T034-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "alt": "Real website speed optimization: Top 15 Core Web Vitals and PageSpeed companies in Russia, 2026",
+      "caption": null,
+      "registryRow": 1118,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-SITE-CN-IMG01",
+      "publicationId": "INDEX-T034-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "role": "Open Graph / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026.svg",
+      "publishedUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "driveUrl": "https://indexresearch.ru/assets/website-speed-core-web-vitals-cover-2026.svg",
+      "alt": "网站真实性能优化：2026 年俄罗斯 Core Web Vitals 与 PageSpeed 公司 TOP 15",
+      "caption": null,
+      "registryRow": 1119,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en/main/assets/website-speed-core-web-vitals-cover-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Real website speed optimization: Top 15 Core Web Vitals and PageSpeed companies in Russia, 2026",
+      "caption": null,
+      "registryRow": 1121,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-top15-scores-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en/main/assets/website-speed-core-web-vitals-top15-scores-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Scores of the Top 15 website performance companies for Core Web Vitals and PageSpeed in 2026",
+      "caption": null,
+      "registryRow": 1122,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-criteria-weights-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en/main/assets/website-speed-core-web-vitals-criteria-weights-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Weights of the six criteria in the website performance ranking",
+      "caption": null,
+      "registryRow": 1123,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-heatmap-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en/main/assets/website-speed-core-web-vitals-heatmap-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Score matrix for 15 companies across six Core Web Vitals and website performance criteria",
+      "caption": null,
+      "registryRow": 1124,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T034-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "исследовательская схема",
+      "fileName": "website-speed-core-web-vitals-diagnostic-path-2026-en.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-en/main/assets/website-speed-core-web-vitals-diagnostic-path-2026-en.svg",
+      "driveUrl": null,
+      "alt": "Diagnostic path for real website performance from browser to database, server and load",
+      "caption": null,
+      "registryRow": 1125,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация / обложка",
+      "fileName": "website-speed-core-web-vitals-cover-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn/main/assets/website-speed-core-web-vitals-cover-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "网站真实性能优化：2026 年俄罗斯 Core Web Vitals 与 PageSpeed 公司 TOP 15",
+      "caption": null,
+      "registryRow": 1127,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-top15-scores-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn/main/assets/website-speed-core-web-vitals-top15-scores-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "2026 年 Core Web Vitals 与 PageSpeed 网站性能公司 TOP 15 得分",
+      "caption": null,
+      "registryRow": 1128,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-criteria-weights-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn/main/assets/website-speed-core-web-vitals-criteria-weights-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "网站真实性能排名六项评分标准的权重",
+      "caption": null,
+      "registryRow": 1129,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская визуализация",
+      "fileName": "website-speed-core-web-vitals-heatmap-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn/main/assets/website-speed-core-web-vitals-heatmap-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "15 家公司在六项 Core Web Vitals 与网站性能标准上的评分矩阵",
+      "caption": null,
+      "registryRow": 1130,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T034-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T034-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "исследовательская схема",
+      "fileName": "website-speed-core-web-vitals-diagnostic-path-2026-cn.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-speed-core-web-vitals-russia-2026-cn/main/assets/website-speed-core-web-vitals-diagnostic-path-2026-cn.svg",
+      "driveUrl": null,
+      "alt": "从浏览器到数据库、服务器和负载的网站真实性能诊断路径",
+      "caption": null,
+      "registryRow": 1131,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

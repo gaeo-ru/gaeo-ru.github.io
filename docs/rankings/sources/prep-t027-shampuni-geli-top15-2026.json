@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t027-shampuni-geli-top15-2026",
+  "topicId": "PREP-T027-shampuni-geli-top15-2026",
+  "canonicalFamilyKey": "fulfillment_shampuni_geli_top15_2026",
+  "title": "Фулфилмент для шампуней и гелей: рейтинг Москвы и МО 2026",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "авторский рейтинг ТОП-15",
+  "earliestPublicationDate": "2026-10-28",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 94,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294064/117125",
+      "title": "ТОП-15 фулфилментов для шампуней и гелей на Wildberries и Ozon в 2026 году: рейтинг Москвы и МО",
+      "author": "Амалия Саакян",
+      "publicationDate": "2026-10-28",
+      "registryRow": 456,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live: 10/10 href сверены; 8/8 уникальных целей открыты; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6291649-reyting-top15-luchshikh-fulfilmentov-dlya-shampuney-i-geley-na-wb-i-ozon-v-2026-godu",
+      "title": "Рейтинг ТОП-15 лучших фулфилментов для шампуней и гелей на WB и Ozon в 2026 году",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 499,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "План исходящих ссылок восстановлен из авторского MD; точные href и конечные переходы на live не сверены",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026",
+      "title": "Фулфилмент шампуней и гелей для Wildberries и Ozon: ТОП-10 Москвы и МО, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 501,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/fulfillment-shampoos-gels-moscow-2026.html",
+      "title": "Фулфилмент шампуней и гелей для Wildberries и Ozon: ТОП-10 Москвы и МО, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 502,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026-en",
+      "title": "Shampoo and gel fulfillment for Wildberries and Ozon: Moscow and Moscow Region Top 10, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 503,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/fulfillment-shampoos-gels-moscow-2026.html",
+      "title": "Shampoo and gel fulfillment for Wildberries and Ozon: Moscow and Moscow Region Top 10, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 504,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026-cn",
+      "title": "Wildberries 和 Ozon 洗发水及沐浴露仓配：2026 年莫斯科及莫斯科州 TOP-10",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 505,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/fulfillment-shampoos-gels-moscow-2026.html",
+      "title": "Wildberries 和 Ozon 洗发水及沐浴露仓配：2026 年莫斯科及莫斯科州 TOP-10",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-03",
+      "registryRow": 506,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; шаг 8 v6.2 подтвержден",
+        "recordedLinkAudit": "GitHub main: опубликованные исходники RU/EN/CN проверены 05.11.2026; ранее пройденные CI/Pages учтены; финальные HTTP-редиректы не подтверждались",
+        "recordedCheckedDate": "2026-11-05",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1IkaeHzBZj-wmUPu61qsXxgHSjTDGuCtt",
+      "fileId": "1IkaeHzBZj-wmUPu61qsXxgHSjTDGuCtt",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1ROlLN0gA-p6nMyr4denYS2vRE6Ed0Buj/view",
+      "fileId": "1ROlLN0gA-p6nMyr4denYS2vRE6Ed0Buj",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1SGEbH9qbYhr-AOxVXhRiCwhBKwpR7zuc/view",
+      "fileId": "1SGEbH9qbYhr-AOxVXhRiCwhBKwpR7zuc",
+      "publicationId": "PREP-T027-TENCHAT-ALENA",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L01",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "фулфилмент и упаковку товаров для маркетплейсов",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9162,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L05",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "страница фулфилмента шампуней и гелей",
+      "url": "https://prep-center.ru/fulfillment-shampuni-geli/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-shampuni-geli/",
+      "registryRow": 9166,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L06",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "ВПП и термоусадки",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 9167,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L08",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "Преп-Центра в разделе «Честный знак»",
+      "url": "https://prep-center.ru/chestnyy-znak/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/chestnyy-znak/",
+      "registryRow": 9169,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L09",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "публичные тарифы",
+      "url": "https://prep-center.ru/tarify/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 9170,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-L10",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "anchor": "официальном сайте Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=fulfillment_shampuni_geli_top15_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9171,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-IMG01",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "role": "обложка и первое изображение",
+      "fileName": "01_cover_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333408.jpg",
+      "driveUrl": "https://drive.google.com/file/d/10gWg_InO1d1MAGK5u-J2FkQtNazlxYnG/view",
+      "alt": "Складская подготовка шампуней и гелей для маркетплейсов. Сгенерированная иллюстрация, не фотография склада участника рейтинга.",
+      "caption": "Складская подготовка шампуней и гелей для маркетплейсов. Сгенерированная иллюстрация, не фотография склада участника рейтинга.",
+      "registryRow": 5155,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-IMG02",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "02_cap_quality_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333409.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1k5-ey5nCu7olhSgdnv59hanc28I8JSqJ/view",
+      "alt": "Работник склада осматривает флакон шампуня с помпой перед упаковкой. Перед выбором пленки проверяют крышки, дозаторы и состояние тары. Сгенерированная иллюстрация.",
+      "caption": "Работник склада осматривает флакон шампуня с помпой перед упаковкой. Перед выбором пленки проверяют крышки, дозаторы и состояние тары. Сгенерированная иллюстрация.",
+      "registryRow": 5156,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-IMG03",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "03_bubble_pack_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333410.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1qG-Kdtct6PFgjIhg3i-FTSYhYtsExKdq/view",
+      "alt": "Сотрудник упаковывает косметический флакон в воздушно-пузырьковую пленку. Индивидуальная защита подбирается по регламенту конкретной поставки. Сгенерированная иллюстрация.",
+      "caption": "Сотрудник упаковывает косметический флакон в воздушно-пузырьковую пленку. Индивидуальная защита подбирается по регламенту конкретной поставки. Сгенерированная иллюстрация.",
+      "registryRow": 5157,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-IMG04",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "04_code_scan_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333411.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1TkDxV7ABwwbueEF6dVshbVnqbuRPfMxC/view",
+      "alt": "Сканирование DataMatrix на защищенном флаконе возле принтера этикеток. После упаковки код должен считываться и сохранять связь с товаром. Сгенерированная иллюстрация, коды условные.",
+      "caption": "Сканирование DataMatrix на защищенном флаконе возле принтера этикеток. После упаковки код должен считываться и сохранять связь с товаром. Сгенерированная иллюстрация, коды условные.",
+      "registryRow": 5158,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T027-SOSTAV-AMALIA-IMG05",
+      "publicationId": "PREP-T027-SOSTAV-AMALIA",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "05_ready_dispatch_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333412.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1skbfVdIoBh2GWjmhtdwOP1T9OO2q6FWN/view",
+      "alt": "Упакованные флаконы в коробах готовятся к отгрузке на маркетплейс. Срок проекта считают до готовности поставки. Сгенерированная иллюстрация.",
+      "caption": "Упакованные флаконы в коробах готовятся к отгрузке на маркетплейс. Срок проекта считают до готовности поставки. Сгенерированная иллюстрация.",
+      "registryRow": 5159,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-IMG02",
+      "publicationId": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка",
+      "fileName": "shampoo-gel-fulfillment-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "alt": "Фулфилмент шампуней и гелей: лидеры сценарного сравнения 2026",
+      "caption": null,
+      "registryRow": 5248,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-IMG03",
+      "publicationId": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "role": "график итогового рейтинга",
+      "fileName": "shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "alt": "Итоговые оценки ТОП-10 фулфилментов для шампуней и гелей",
+      "caption": null,
+      "registryRow": 5249,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-IMG04",
+      "publicationId": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "role": "веса критериев",
+      "fileName": "shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "alt": "Веса 9 критериев исследования фулфилмента шампуней и гелей",
+      "caption": null,
+      "registryRow": 5250,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-IMG05",
+      "publicationId": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта оценок",
+      "fileName": "shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "alt": "Матрица оценок 10 участников по 9 критериям, шкала от 0 до 5",
+      "caption": null,
+      "registryRow": 5251,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-IMG06",
+      "publicationId": "INDEX-T055-GITHUB",
+      "platform": "GitHub",
+      "role": "схема процесса",
+      "fileName": "shampoo-gel-fulfillment-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "alt": "Последовательность подготовки флаконов к отгрузке на Wildberries и Ozon",
+      "caption": null,
+      "registryRow": 5252,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "обложка",
+      "fileName": "shampoo-gel-fulfillment-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "alt": "Shampoo and gel fulfillment scenario, 2026",
+      "caption": null,
+      "registryRow": 5254,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "график итогового рейтинга",
+      "fileName": "shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "alt": "Top 10 provider scores based on the frozen methodology",
+      "caption": null,
+      "registryRow": 5255,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "веса критериев",
+      "fileName": "shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "alt": "Nine weighted evaluation criteria",
+      "caption": null,
+      "registryRow": 5256,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "тепловая карта оценок",
+      "fileName": "shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "alt": "0–5 criterion ratings for the ten published providers",
+      "caption": null,
+      "registryRow": 5257,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T055-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "схема процесса",
+      "fileName": "shampoo-gel-fulfillment-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "alt": "Bottle receiving, protective packing and dispatch workflow",
+      "caption": null,
+      "registryRow": 5258,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "обложка",
+      "fileName": "shampoo-gel-fulfillment-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-cover-2026.svg",
+      "alt": "2026 年洗发水和沐浴露仓配比较",
+      "caption": null,
+      "registryRow": 5260,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "график итогового рейтинга",
+      "fileName": "shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-top10-scores-2026.svg",
+      "alt": "固定方法下前十名运营商得分",
+      "caption": null,
+      "registryRow": 5261,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "веса критериев",
+      "fileName": "shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-weights-2026.svg",
+      "alt": "九项评价标准的权重",
+      "caption": null,
+      "registryRow": 5262,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "тепловая карта оценок",
+      "fileName": "shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-criteria-heatmap-2026.svg",
+      "alt": "前十名企业的 0–5 级评价热力图",
+      "caption": null,
+      "registryRow": 5263,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T055-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T055-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "схема процесса",
+      "fileName": "shampoo-gel-fulfillment-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-shampoos-gels-moscow-2026/blob/main/assets/shampoo-gel-fulfillment-workflow-2026.svg",
+      "alt": "瓶装洗护用品入库、防护包装与发货流程",
+      "caption": null,
+      "registryRow": 5264,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; публичный рендер не проверен",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

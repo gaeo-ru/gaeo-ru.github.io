@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t024",
+  "topicId": "PREP-T024",
+  "canonicalFamilyKey": "srochnaya_upakovka_krupnykh_partiy_2026",
+  "title": "Срочная автоматизированная упаковка крупных партий",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-15",
+  "earliestPublicationDate": "2026-11-02",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 90,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "INDEX-T053-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026",
+      "title": "Срочная упаковка крупных партий для Wildberries и Ozon: сравнение 21 предложения Москвы и МО, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 475,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live GitHub README HTTP 200, 1440/390 px; 21 таблица RU или 23 EN/CN, 4/4 изображения PASS; проверены исходящие href и наличие внутренних файлов. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/urgent-automated-packaging-fulfillment-moscow-2026.html",
+      "title": "Срочная упаковка крупных партий для Wildberries и Ozon: сравнение 21 предложения Москвы и МО, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 476,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live сайт HTTP 200, 1440/360/390/412 px; 21 профиль, 8 FAQ, canonical/hreflang/chrome/analytics PASS, нет переполнения. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026-en",
+      "title": "Urgent Bulk Packaging for Wildberries and Ozon: Evidence from 21 Moscow Service Offers, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 477,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live GitHub README HTTP 200, 1440/390 px; 21 таблица RU или 23 EN/CN, 4/4 изображения PASS; проверены исходящие href и наличие внутренних файлов. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/urgent-automated-packaging-fulfillment-moscow-2026.html",
+      "title": "Urgent Bulk Packaging for Wildberries and Ozon: Evidence from 21 Moscow Service Offers, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 478,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live сайт HTTP 200, 1440/360/390/412 px; 21 профиль, 8 FAQ, canonical/hreflang/chrome/analytics PASS, нет переполнения. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026-cn",
+      "title": "Wildberries与Ozon大批量商品加急包装：2026年莫斯科21项服务方案的证据对比",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 479,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live GitHub README HTTP 200, 1440/390 px; 21 таблица RU или 23 EN/CN, 4/4 изображения PASS; проверены исходящие href и наличие внутренних файлов. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/urgent-automated-packaging-fulfillment-moscow-2026.html",
+      "title": "Wildberries与Ozon大批量商品加急包装：2026年莫斯科21项服务方案的证据对比",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 480,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; live HTTP, Chromium/mobile и ссылки PASS",
+        "recordedLinkAudit": "Chromium live сайт HTTP 200, 1440/360/390/412 px; 21 профиль, 8 FAQ, canonical/hreflang/chrome/analytics PASS, нет переполнения. Все 27 уникальных целевых URL проверены: HTTP 200, без редиректа; 115 авторских ссылок покрыты.",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6286904-reyting-top15-fulfilmentov-dlya-srochnoy-upakovki-krupnykh-partiy-v-2026-godu",
+      "title": "Рейтинг ТОП-15 фулфилментов для срочной упаковки крупных партий в 2026 году",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 496,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "План исходящих ссылок восстановлен из авторского MD; точные href и конечные переходы на live не сверены",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [
+    {
+      "id": "PREP-T024-WORKSPACE",
+      "platform": "Workspace",
+      "language": "ru",
+      "url": "https://workspace.ru/blog/top-15-fulfilmentov-dlya-srochnoy-avtomatizirovannoy-upakovki-krupnyh-partiy-moskva-2026/",
+      "title": "ТОП-15 фулфилментов для срочной автоматизированной упаковки крупных партий: Москва, 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-10-27",
+      "registryRow": 443,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "на модерации; статья добавлена",
+        "recordedLinkAudit": "страница открыта в браузере; 0 внешних ссылок; 4 изображения загружены",
+        "recordedCheckedDate": "2026-10-27",
+        "classification": "public-publication-unconfirmed",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294064/116875",
+      "title": "ТОП-15 фулфилментов для срочной автоматизированной упаковки крупных партий для Wildberries и Ozon в 2026 году",
+      "author": "Амалия Саакян",
+      "publicationDate": "2026-10-27",
+      "registryRow": 446,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "сохранено с общим доступом; live-доступ не подтвержден (502)",
+        "recordedLinkAudit": "7 авторских href совпали с ТЗ; ровно 2 на главную; конкурентов 0. Чистые цели сверены; UTM-переходы не подтверждены, live-проверка 502.",
+        "recordedCheckedDate": "2026-10-27",
+        "classification": "public-publication-unconfirmed",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "fileId": "10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/151o0_O6goRP5s0QzhqAxsaoMDnzAjprm/view",
+      "fileId": "151o0_O6goRP5s0QzhqAxsaoMDnzAjprm",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1HKAX9cdx85s2uGHu7DnBn7tHssnRdLGs/view",
+      "fileId": "1HKAX9cdx85s2uGHu7DnBn7tHssnRdLGs",
+      "publicationId": "PREP-T024-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T024-SOSTAV-L01",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=srochnaya_upakovka_krupnykh_partiy_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9002,
+      "targetProject": "Преп-Центр",
+      "targetType": "главная клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href совпал с ТЗ; чистая цель открывалась; переход с UTM не подтвержден",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-L02",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "страница срочной обработки",
+      "url": "https://prep-center.ru/srochnaya-obrabotka-partiy/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=srochnaya_upakovka_krupnykh_partiy_2026",
+      "cleanUrl": "https://prep-center.ru/srochnaya-obrabotka-partiy/",
+      "registryRow": 9003,
+      "targetProject": "Преп-Центр",
+      "targetType": "услуга клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href совпал с ТЗ; чистая цель открывалась; переход с UTM не подтвержден",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-L03",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "8 400 единиц косметики за 2 дня",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=srochnaya_upakovka_krupnykh_partiy_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 9004,
+      "targetProject": "Преп-Центр",
+      "targetType": "кейс клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href совпал с ТЗ; чистая цель открывалась; переход с UTM не подтвержден",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-L04",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "кейс 6 000 канцелярских наборов за 5 дней",
+      "url": "https://prep-center.ru/cases/kantselyarskie-nabory-6000-za-5-dney/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=srochnaya_upakovka_krupnykh_partiy_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kantselyarskie-nabory-6000-za-5-dney/",
+      "registryRow": 9005,
+      "targetProject": "Преп-Центр",
+      "targetType": "кейс клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href совпал с ТЗ; чистая цель открывалась; переход с UTM не подтвержден",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-L07",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "главной странице Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=srochnaya_upakovka_krupnykh_partiy_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9008,
+      "targetProject": "Преп-Центр",
+      "targetType": "главная клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href совпал с ТЗ; чистая цель открывалась; переход с UTM не подтвержден",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T024-WORKSPACE-IMG01",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "platform": "Workspace",
+      "role": "обложка и иллюстрация в лиде",
+      "fileName": "cover_workspace_1200x800.jpg",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/b3d/1200_800_1619711fa078991f0a23d032687646b21/jec0ft8jlvuimr3hdqe9e1p5gnvbj8jg.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1IT0S92zNoWHoyLmGIu93BNQ7ndcEFPxA/view",
+      "alt": null,
+      "caption": "Срочная подготовка партии зависит от упаковки, контроля SKU и готовности поставки; визуализация условная, не фотография конкретного склада",
+      "registryRow": 5116,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "страница проверена; на модерации",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-WORKSPACE-IMG02",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "platform": "Workspace",
+      "role": "иллюстрация",
+      "fileName": "process_1200x675.jpg",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/d5d/1200_675_1619711fa078991f0a23d032687646b21/mmt0frepv8aixvvga1kjye2w5c0w3700.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1fSrhjXrajwGpbvNO9NATuoBs5EAlV5P4/view",
+      "alt": null,
+      "caption": "Критический путь срочной партии: самый медленный обязательный этап определяет крайний срок",
+      "registryRow": 5117,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "страница проверена; на модерации",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-WORKSPACE-IMG03",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "platform": "Workspace",
+      "role": "иллюстрация",
+      "fileName": "methodology_1200x675.jpg",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/2af/1200_675_1619711fa078991f0a23d032687646b21/2mo26mbfirp3x3dj0xpmrpwxdu9y6ptc.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1jeIIFOQRG0hUolFuNswfsMfykqO715BV/view",
+      "alt": null,
+      "caption": "На автоматическое оборудование, производительность, срочность и кейсы приходится 65 баллов из 100",
+      "registryRow": 5118,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "страница проверена; на модерации",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-WORKSPACE-IMG04",
+      "publicationId": "PREP-T024-WORKSPACE",
+      "platform": "Workspace",
+      "role": "иллюстрация",
+      "fileName": "ranking_15_1200x675.jpg",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/fb4/1200_675_1619711fa078991f0a23d032687646b21/mvtgjop8862zeold3fmtzxbhcpmobus6.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1mPIGcesZGvzuC03-tINEyTxfda0gviDc/view",
+      "alt": null,
+      "caption": "Сравнение 15 компаний по весовой авторской модели. Все цифры продублированы текстом",
+      "registryRow": 5119,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "страница проверена; на модерации",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-IMG01",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "cover_sostav_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332458.jpg",
+      "driveUrl": "https://drive.google.com/file/d/10g2ANn6lOF9jtrjgS2chdZYzSnzJgQwQ/view",
+      "alt": "Иллюстративное изображение: скорость поточной линии — только часть срока срочной поставки",
+      "caption": "Иллюстративное изображение: скорость поточной линии — только часть срока срочной поставки",
+      "registryRow": 5122,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "сохранено; проверено в предпросмотре",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-IMG02",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "role": "методика",
+      "fileName": "methodology_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332461.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1-E_1Jnx8YSGqdMk7Apn89KH9JsjEDkpg/view",
+      "alt": "На упаковочное оборудование, производительность, сроки и реальные кейсы отведено 65 из 100 возможных баллов",
+      "caption": "На упаковочное оборудование, производительность, сроки и реальные кейсы отведено 65 из 100 возможных баллов",
+      "registryRow": 5123,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "сохранено; проверено в предпросмотре",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-IMG03",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "role": "рейтинг ТОП-15",
+      "fileName": "ranking_15_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332463.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1_3t4aQoVOCsRy5tnECqZkShCPzcOTO5_/view",
+      "alt": "Баллы по публичной доказательности сценария срочной упаковки на 27 октября 2026 года; весь рейтинг продублирован текстом",
+      "caption": "Баллы по публичной доказательности сценария срочной упаковки на 27 октября 2026 года; весь рейтинг продублирован текстом",
+      "registryRow": 5124,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "сохранено; проверено в предпросмотре",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-SOSTAV-IMG04",
+      "publicationId": "PREP-T024-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема процесса",
+      "fileName": "process_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/332462.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1FEGSV9Bl3zh-MIkfKxSgUnpkSGYAesSj/view",
+      "alt": "Скорость всей поставки задает самый медленный обязательный этап, а не максимальная скорость одной машины",
+      "caption": "Скорость всей поставки задает самый медленный обязательный этап, а не максимальная скорость одной машины",
+      "registryRow": 5125,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "сохранено; проверено в предпросмотре",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-IMG02",
+      "publicationId": "INDEX-T053-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценариев",
+      "fileName": "urgent-packaging-scenarios-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "alt": "Сценарии отбора подрядчиков",
+      "caption": "4 пересекающихся сценария, отражающих документированность предложений, а не производительность.",
+      "registryRow": 5186,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-IMG03",
+      "publicationId": "INDEX-T053-GITHUB",
+      "platform": "GitHub",
+      "role": "график обеспеченности свидетельств",
+      "fileName": "urgent-packaging-claim-coverage-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "alt": "Распределение статусов доказательности",
+      "caption": "D/E/G/U показывают степень определенности открытых заявлений, а не качество компании.",
+      "registryRow": 5187,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-IMG04",
+      "publicationId": "INDEX-T053-GITHUB",
+      "platform": "GitHub",
+      "role": "схема проверки заказа",
+      "fileName": "urgent-packaging-buyer-checklist-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "alt": "Этапы проверки срочного заказа",
+      "caption": "Модельный дедлайн 72 часа зависит от количества SKU и фактических ограничений технологии. Нельзя подменять срок всей партии скоростью одной операции.",
+      "registryRow": 5188,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T053-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "график обеспеченности свидетельств",
+      "fileName": "urgent-packaging-claim-coverage-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "alt": "Distribution of 147 documented evidence categories",
+      "caption": "The original diagram is labelled in Russian. Evidence counts: D=14 detailed statements, E=24 explicit statements, G=47 general mentions, U=62 insufficiently documented cases. These are not scores or independently verified performance results.",
+      "registryRow": 5190,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T053-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "схема сценариев",
+      "fileName": "urgent-packaging-scenarios-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "alt": "Four overlapping unranked selection scenarios",
+      "caption": "The original diagram uses Russian labels: S-A physical machines (4 offers), S-B completed multi-step FBO case (1), S-C QC and FBO procedures (5), S-D industrial copacking (3). Group counts do not indicate ranking positions.",
+      "registryRow": 5191,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T053-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "схема проверки заказа",
+      "fileName": "urgent-packaging-buyer-checklist-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "alt": "Checklist before contracting a 10000 unit packaging batch",
+      "caption": "The original diagram uses Russian labels. Ask about the product and materials, 1–3 SKUs and incoming QC, machine/manual steps and facility address, finished sellable units and KIZ codes, FBO cartons and handoff, and the documented complete-order timeline. The 72-hour window is a buyer request, not an SLA.",
+      "registryRow": 5192,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T053-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "график обеспеченности свидетельств",
+      "fileName": "urgent-packaging-claim-coverage-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-claim-coverage-2026.svg",
+      "alt": "147项公开证据状态分布示意图",
+      "caption": "原图为俄语。D=14项详细公开说明，E=24项明确说明，G=47项一般提及，U=62项公开证据不足。这里统计的是证据详尽程度，不是经独立验证的服务质量分数。",
+      "registryRow": 5194,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T053-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "схема сценариев",
+      "fileName": "urgent-packaging-scenarios-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-scenarios-2026.svg",
+      "alt": "4种可重叠的无排名采购场景",
+      "caption": "原图采用俄语标注。S-A：实体包装设备（4项）；S-B：已完成多阶段FBO批次案例（1项）；S-C：质检与FBO流程（5项）；S-D：工业代包装（3项）。数字为符合条件的方案数量，不代表名次。",
+      "registryRow": 5195,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T053-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T053-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "схема проверки заказа",
+      "fileName": "urgent-packaging-buyer-checklist-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/urgent-automated-packaging-fulfillment-moscow-2026/main/assets/urgent-packaging-buyer-checklist-2026.svg",
+      "alt": "10,000件批次询价前的6项检查内容",
+      "caption": "原图为俄语。应核实商品与包装材料、1–3个SKU及入库质检、机器或人工步骤和生产地址、成品数量与KIZ码、FBO装箱交接、整单完成书面进度。72小时仅是采购方模拟要求，不是供应商的SLA。",
+      "registryRow": 5196,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "GitHub README: live Chromium HTTP 200, 1440/390 px; файл загрузился (naturalWidth > 0), 4/4 изображения каждого языка. ",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-TENCHAT-ALENA-IMG01",
+      "publicationId": "PREP-T024-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "role": "обложка по MD",
+      "fileName": "cover_tenchat_1200x630.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5240,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-TENCHAT-ALENA-IMG02",
+      "publicationId": "PREP-T024-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "ranking_15_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5241,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-TENCHAT-ALENA-IMG03",
+      "publicationId": "PREP-T024-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "process_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5242,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T024-TENCHAT-ALENA-IMG04",
+      "publicationId": "PREP-T024-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "methodology_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/10IQwh3z1sHJ8qzC5bSpYu7vse7oYVCay",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5243,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "Some platform versions are unconfirmed/moderating; do not publish invented URLs or label pending versions as already public.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t026",
+  "topicId": "PREP-T026",
+  "canonicalFamilyKey": "markirovka_kiz_aggregatsiya_2026",
+  "title": "Маркировка Честный знак: КИЗ, дублирование и агрегация для маркетплейсов",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "авторский рейтинг ТОП-15",
+  "earliestPublicationDate": "2026-10-28",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 93,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/117035",
+      "title": "ТОП-15 компаний по маркировке «Честный знак»: КИЗ, дублирование и агрегация кодов для маркетплейсов, 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-10-28",
+      "registryRow": 455,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live: 10/10 href сверены; 9/9 уникальных целей открыты; конечные URL и UTM подтверждены",
+        "recordedCheckedDate": "2026-10-28",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026",
+      "title": "Маркировка «Честный знак» для Wildberries и Ozon: 20 предложений Москвы и МО, 5 сценариев, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 487,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/chestny-znak-kiz-fulfillment-moscow-2026.html",
+      "title": "Маркировка «Честный знак» для Wildberries и Ozon: 20 предложений Москвы и МО, 5 сценариев, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 488,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026-en",
+      "title": "Chestny Znak labeling for Wildberries and Ozon: 20 fulfillment offers in Moscow, five scenarios (2026)",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 489,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/chestny-znak-kiz-fulfillment-moscow-2026.html",
+      "title": "Chestny Znak KIZ Marking for Wildberries and Ozon: 20 Moscow Providers, 2026",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 490,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026-cn",
+      "title": "Wildberries与Ozon“诚实标签”标识处理：2026年莫斯科20项仓配服务方案与5种场景对比",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 491,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/chestny-znak-kiz-fulfillment-moscow-2026.html",
+      "title": "2026年莫斯科“诚实标签”KIZ仓配服务：20项方案、5种场景",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-02",
+      "registryRow": 492,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано; Chromium 18/18 PASS; HTTP 200; внешние цели частично неопределенны",
+        "recordedLinkAudit": "Chromium 18/18 PASS (12 site 1440/360/390/412 + 6 GitHub 1440/390), HTTP 200; 77 уникальных URL проверены: 56 confirmed, 0 definitive 404/410, 21 uncertain (в основном внешние).",
+        "recordedCheckedDate": "2026-11-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-TENCHAT-ALENA",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6290322-chestniy-znak-i-kiz-top15-luchshikh-kompaniy-po-markirovke-i-agregatsii-2026",
+      "title": "Честный знак и КИЗ: ТОП-15 лучших компаний по маркировке и агрегации, 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 498,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "План исходящих ссылок восстановлен из авторского MD; точные href и конечные переходы на live не сверены",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1fp0SCdU7oMWmul9Pbag6eZOQlFfD-GGQ",
+      "fileId": "1fp0SCdU7oMWmul9Pbag6eZOQlFfD-GGQ",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/19h0kn7LIuRXQvWdNrrvL8QXrQVSbo_H8/view",
+      "fileId": "19h0kn7LIuRXQvWdNrrvL8QXrQVSbo_H8",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L01",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9152,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L05",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "печать и нанесение КИЗ, дублирование уже нанесенного кода и учет в WMS МПФИТ",
+      "url": "https://prep-center.ru/chestnyy-znak/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/chestnyy-znak/",
+      "registryRow": 9156,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L06",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "3 186 ополаскивателей за 2 рабочих дня",
+      "url": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/",
+      "registryRow": 9157,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L07",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "сборка маркированных наборов с сопоставлением КИЗ в WMS",
+      "url": "https://prep-center.ru/agregatsiya-kiz-naborov/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/agregatsiya-kiz-naborov/",
+      "registryRow": 9158,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L08",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "описании WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 9159,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L09",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "Прайс Преп-Центра",
+      "url": "https://prep-center.ru/tarify/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 9160,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-L10",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "anchor": "Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_15&utm_content=markirovka_kiz_aggregatsiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 9161,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: браузерный переход подтвержден; UTM сохранены",
+        "recordedCheckedDate": "2026-10-28",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-IMG01",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "cover_sostav_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333082.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1GRI2ww9wQ4nDEWXV1lAKbstmHYSrrom1/view",
+      "alt": "Работа с кодами маркировки на конвейере современного фулфилмент-склада. Сгенерированная иллюстрация, коды ненастоящие.",
+      "caption": "Работа с кодами маркировки на конвейере современного фулфилмент-склада. Сгенерированная иллюстрация, коды ненастоящие.",
+      "registryRow": 5150,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-IMG02",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "role": "редакционная иллюстрация",
+      "fileName": "02_duplicate_on_bubble_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333084.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1Swx5MbQFb_CUpJAH8hIA49m1dhq3Em4k/view",
+      "alt": "Иллюстрация дублирования DataMatrix для той же единицы товара после защитной упаковки. Изображение сгенерировано, коды ненастоящие.",
+      "caption": "Иллюстрация дублирования DataMatrix для той же единицы товара после защитной упаковки. Изображение сгенерировано, коды ненастоящие.",
+      "registryRow": 5151,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-IMG03",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "role": "редакционная иллюстрация",
+      "fileName": "03_wms_scan_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333086.jpg",
+      "driveUrl": "https://drive.google.com/file/d/18Auhsu7oIDpf4sjek6JO4qbko1O3rzT7/view",
+      "alt": "Складская обработка маркировки с учетной системой. Сгенерированная иллюстрация; интерфейс условный, коды ненастоящие.",
+      "caption": "Складская обработка маркировки с учетной системой. Сгенерированная иллюстрация; интерфейс условный, коды ненастоящие.",
+      "registryRow": 5152,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T026-SOSTAV-ALENA-IMG04",
+      "publicationId": "PREP-T026-SOSTAV-ALENA",
+      "platform": "Sostav",
+      "role": "редакционная иллюстрация",
+      "fileName": "04_code_control_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/167/333089.jpg",
+      "driveUrl": "https://drive.google.com/file/d/18ySannGW9GGjB0Rl1xS18RcOKW6gXapb/view",
+      "alt": "Контроль считывания и печати DataMatrix на упаковке. Сгенерированная иллюстрация, интерфейс условный, коды ненастоящие.",
+      "caption": "Контроль считывания и печати DataMatrix на упаковке. Сгенерированная иллюстрация, интерфейс условный, коды ненастоящие.",
+      "registryRow": 5153,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-IMG02",
+      "publicationId": "INDEX-T054-GITHUB",
+      "platform": "GitHub",
+      "role": "схема операций с КИЗ",
+      "fileName": "kiz-process-flow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "alt": "Схема 5 сценариев",
+      "caption": null,
+      "registryRow": 5220,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-IMG03",
+      "publicationId": "INDEX-T054-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма категорий доказательств",
+      "fileName": "kiz-evidence-coverage-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-evidence-coverage-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-evidence-coverage-2026.svg",
+      "alt": "Распределение статусов",
+      "caption": null,
+      "registryRow": 5221,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-IMG04",
+      "publicationId": "INDEX-T054-GITHUB",
+      "platform": "GitHub",
+      "role": "матрица участия в сценариях",
+      "fileName": "kiz-scenario-matrix-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "alt": "Матрица сценарного соответствия",
+      "caption": null,
+      "registryRow": 5222,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T054-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "схема операций с КИЗ",
+      "fileName": "kiz-process-flow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "alt": "Five separate marking scenarios",
+      "caption": null,
+      "registryRow": 5224,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T054-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "матрица участия в сценариях",
+      "fileName": "kiz-scenario-matrix-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "alt": "Scenario membership: no ranks or scores",
+      "caption": null,
+      "registryRow": 5225,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T054-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "схема операций с КИЗ",
+      "fileName": "kiz-process-flow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-process-flow-2026.svg",
+      "alt": "五种代码处理场景",
+      "caption": null,
+      "registryRow": 5227,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T054-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T054-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "матрица участия в сценариях",
+      "fileName": "kiz-scenario-matrix-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "driveUrl": "https://raw.githubusercontent.com/IndexResearch-ru/chestny-znak-kiz-fulfillment-moscow-2026/main/assets/kiz-scenario-matrix-2026.svg",
+      "alt": "服务商参与场景示意",
+      "caption": null,
+      "registryRow": 5228,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium GitHub README HTTP 200; SVG loaded (naturalWidth > 0), 1440/390 px",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

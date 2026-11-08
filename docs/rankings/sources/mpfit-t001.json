@@ -1,0 +1,921 @@
+{
+  "schemaVersion": 1,
+  "id": "mpfit-t001",
+  "topicId": "MPFIT-T001",
+  "canonicalFamilyKey": "wms_fulfillment_rating_july_2026",
+  "title": "Выбор WMS для фулфилмент-операторов и складов селлеров на маркетплейсах",
+  "project": "МПФИТ",
+  "category": "wms",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-07-22",
+  "status": "needs_work_source",
+  "publicationEligibility": "published",
+  "firstPlace": "МПФИТ",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 17,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/97419",
+      "title": "ТОП-10 WMS для фулфилмент-операторов и складов селлеров на маркетплейсах",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-07-22",
+      "registryRow": 33,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026",
+      "title": "Какую WMS выбрать фулфилмент-оператору или селлеру со своим складом: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 125,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/wms-marketplace-sellers-russia-2026.html",
+      "title": "WMS для фулфилмента и складов селлеров: ТОП-10 России 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 156,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026-en",
+      "title": "Which WMS to choose for a fulfillment operator or seller-operated warehouse: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 236,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/wms-marketplace-sellers-russia-2026.html",
+      "title": "Which WMS to choose for a fulfillment operator or seller-operated warehouse: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 237,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026-cn",
+      "title": "仓配运营商或拥有自营仓库的卖家该选哪套 WMS：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 238,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/wms-marketplace-sellers-russia-2026.html",
+      "title": "仓配运营商或拥有自营仓库的卖家该选哪套 WMS：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 239,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "preparation-brief-not-manuscript",
+      "url": "https://drive.google.com/file/d/1mO2-WGn5BOjcM_CYO1rNL1oTaW96ftsc/view",
+      "fileId": "1mO2-WGn5BOjcM_CYO1rNL1oTaW96ftsc",
+      "verification": "full-text-read; preparation brief only"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MPFIT-T001-SOSTAV-L01",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "фулфилменту",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 238,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский/партнерский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-L02",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "фулфилмент-оператору",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 239,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский/партнерский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-L03",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "МПФИТ",
+      "url": "https://mpfit.ru/",
+      "cleanUrl": "https://mpfit.ru/",
+      "registryRow": 240,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-L05",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "anchor": "МПФИТ",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 1320,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-L09",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "anchor": "страницу WMS для фулфилмента МПФИТ",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 1324,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-L33",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "anchor": "МПФИТ",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 1348,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-V332-L04",
+      "publicationId": "INDEX-T017-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "МПФИТ: WMS для фулфилмента маркетплейсов",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "registryRow": 1932,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / продукт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-V332-L05",
+      "publicationId": "INDEX-T017-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "МПФИТ: FBS",
+      "url": "https://mpfit.ru/product/fbs/",
+      "cleanUrl": "https://mpfit.ru/product/fbs/",
+      "registryRow": 1933,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / продукт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-L05",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MPFIT",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4115,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-L09",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MPFIT WMS for fulfillment page",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4119,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-L35",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MPFIT",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4145,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-L05",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MPFIT",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4151,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-L09",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MPFIT 仓配 WMS 页面",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4155,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-L35",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MPFIT",
+      "url": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "cleanUrl": "https://mpfit.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=wms_fulfillment_rating_july_2026",
+      "registryRow": 4181,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-EN-L05",
+      "publicationId": "INDEX-T017-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MPFIT: WMS for marketplace fulfillment",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "registryRow": 4187,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-EN-L06",
+      "publicationId": "INDEX-T017-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MPFIT: FBS",
+      "url": "https://mpfit.ru/product/fbs/",
+      "cleanUrl": "https://mpfit.ru/product/fbs/",
+      "registryRow": 4188,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-CN-L05",
+      "publicationId": "INDEX-T017-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MPFIT：面向电商平台仓配的 WMS",
+      "url": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "cleanUrl": "https://mpfit.ru/product/programma-dlya-fulfilmenta-marketpleysov/",
+      "registryRow": 4204,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-SITE-CN-L06",
+      "publicationId": "INDEX-T017-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "MPFIT：FBS",
+      "url": "https://mpfit.ru/product/fbs/",
+      "cleanUrl": "https://mpfit.ru/product/fbs/",
+      "registryRow": 4205,
+      "targetProject": "МПФИТ",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG01",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255698.jpg",
+      "driveUrl": null,
+      "alt": "WMS связывает товар, сотрудника, складскую операцию, маркетплейс и расчет с клиентом в одном процессе.",
+      "caption": null,
+      "registryRow": 136,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG02",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255703.jpg",
+      "driveUrl": null,
+      "alt": "Cпециализированная WMS управляет не только товаром, но и правилами обработки, работой сотрудников и расчетами фулфилмента.",
+      "caption": null,
+      "registryRow": 137,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG03",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255704.jpg",
+      "driveUrl": null,
+      "alt": "Места отражают пригодность для фулфилмента и селлерского склада, а не универсальную мощность продукта.",
+      "caption": null,
+      "registryRow": 138,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG04",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255706.jpg",
+      "driveUrl": null,
+      "alt": "Единый сток распределяет доступный физический остаток между каналами и снижает риск oversell без ручного перекидывания запасов.",
+      "caption": null,
+      "registryRow": 139,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG05",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 4",
+      "fileName": "live image 05",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255712.jpg",
+      "driveUrl": null,
+      "alt": "Правильный класс WMS зависит от сложности склада, интеграций и требований к внедрению, а не только от числа заказов.",
+      "caption": null,
+      "registryRow": 140,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MPFIT-T001-SOSTAV-IMG06",
+      "publicationId": "MPFIT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 5",
+      "fileName": "live image 06",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/128/255713.jpg",
+      "driveUrl": null,
+      "alt": "Сначала выбирается класс системы, затем конкретный продукт внутри этого класса.",
+      "caption": null,
+      "registryRow": 141,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-IMG02",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "role": "первый экран",
+      "fileName": "wms-marketplace-sellers-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "alt": "WMS для фулфилмента и складов селлеров: сценарий IndexResearch",
+      "caption": null,
+      "registryRow": 647,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-IMG03",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "role": "Итоговый ТОП-10",
+      "fileName": "wms-marketplace-sellers-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 WMS",
+      "caption": null,
+      "registryRow": 648,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-IMG04",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "role": "Что именно сравнивали",
+      "fileName": "wms-marketplace-sellers-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "alt": "Архитектура WMS для фулфилмента",
+      "caption": null,
+      "registryRow": 649,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-IMG05",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "role": "Методика: 10 критериев, 100 баллов",
+      "fileName": "wms-marketplace-sellers-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга WMS",
+      "caption": null,
+      "registryRow": 650,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-IMG06",
+      "publicationId": "INDEX-T017-GITHUB",
+      "platform": "GitHub",
+      "role": "Сравнение по критериям",
+      "fileName": "wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта критериев ТОП-10 WMS",
+      "caption": null,
+      "registryRow": 651,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "first screen",
+      "fileName": "wms-marketplace-sellers-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "alt": "WMS for fulfillment and seller-operated warehouses: IndexResearch scenario",
+      "caption": null,
+      "registryRow": 797,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "Final Top 10",
+      "fileName": "wms-marketplace-sellers-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "alt": "Final Top 10 WMS scores",
+      "caption": null,
+      "registryRow": 798,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "What exactly we compared",
+      "fileName": "wms-marketplace-sellers-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "alt": "WMS architecture for fulfillment",
+      "caption": null,
+      "registryRow": 799,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "Methodology: 10 criteria, 100 points",
+      "fileName": "wms-marketplace-sellers-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "alt": "Criterion weights for the WMS ranking",
+      "caption": null,
+      "registryRow": 800,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T017-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "Criteria comparison",
+      "fileName": "wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "alt": "Top 10 WMS criteria heatmap",
+      "caption": null,
+      "registryRow": 801,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "首屏",
+      "fileName": "wms-marketplace-sellers-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-cover-2026.svg",
+      "alt": "面向仓配与卖家自营仓库的 WMS：IndexResearch 场景",
+      "caption": null,
+      "registryRow": 803,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终 TOP-10",
+      "fileName": "wms-marketplace-sellers-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-top10-scores-2026.svg",
+      "alt": "WMS TOP-10 最终得分",
+      "caption": null,
+      "registryRow": 804,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "我们到底比较了什么",
+      "fileName": "wms-marketplace-sellers-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-workflow-2026.svg",
+      "alt": "仓配 WMS 架构",
+      "caption": null,
+      "registryRow": 805,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论：10 项标准，100 分",
+      "fileName": "wms-marketplace-sellers-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-methodology-weights-2026.svg",
+      "alt": "WMS 排名标准权重",
+      "caption": null,
+      "registryRow": 806,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T017-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T017-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "各标准对比",
+      "fileName": "wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wms-marketplace-sellers-russia-2026/blob/main/assets/wms-marketplace-sellers-criteria-heatmap-2026.svg",
+      "alt": "WMS TOP-10 标准热力图",
+      "caption": null,
+      "registryRow": 807,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "Both storage providers were checked. A preparation brief exists, but it is not a finished article. A later Work chat must recover the published text; do not substitute MPFIT-T003.",
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  },
+  "sourceChecks": [
+    {
+      "provider": "google-drive",
+      "status": "not_found",
+      "complete": true,
+      "checkedDate": "2026-11-08",
+      "scope": "Finished manuscript of MPFIT-T001; preparation brief excluded.",
+      "queries": [
+        "trashed = false and (name contains 'WMS' or name contains 'wms' or name contains 'МПФИТ' or name contains 'mpfit')"
+      ],
+      "locations": [
+        "https://drive.google.com/drive/folders/1rplwEroNnRp8Wv62vPJpELkzsZSXPU4_",
+        "https://drive.google.com/drive/folders/1hjy9RQ3PvScsBvFzJDpLbxfGuxe4KBhS",
+        "https://drive.google.com/drive/folders/1Z-3VaOm_wy9UjIqWSmTghYtA33ayZpL2"
+      ],
+      "searchResultCount": 40,
+      "requestedPageSize": 100,
+      "nextPageTokenReturned": false,
+      "folderEntryCounts": [
+        5,
+        4,
+        29
+      ],
+      "conclusion": "No finished July 2026 manuscript found in the completed filename search and relevant project folders. The September MPFIT-T003 manuscript is a different article."
+    },
+    {
+      "provider": "yandex-disk",
+      "status": "not_found",
+      "complete": true,
+      "checkedDate": "2026-11-08",
+      "scope": "Finished manuscript of MPFIT-T001; preparation brief excluded.",
+      "queries": [
+        "WMS"
+      ],
+      "locations": [
+        "disk:/!GAEO/Статьи",
+        "disk:/!GAEO/!Договора/МПФИТ",
+        "disk:/!GAEO/!Договора/МПФИТ/Сайт",
+        "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям"
+      ],
+      "searchScannedFiles": 20919,
+      "searchPageOffsets": [
+        0,
+        20000
+      ],
+      "folderEntryCounts": [
+        16,
+        29,
+        6,
+        21
+      ],
+      "conclusion": "Completed filename search over 20,919 files and complete relevant folder listings found a preparation brief, but no finished manuscript."
+    }
+  ]
+}

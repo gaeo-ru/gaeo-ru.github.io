@@ -1,0 +1,797 @@
+{
+  "schemaVersion": 1,
+  "id": "mlab-t004",
+  "topicId": "MLAB-T004",
+  "canonicalFamilyKey": "povyshenie_proizvoditelnosti_highload_2026",
+  "title": "Повышение производительности высоконагруженных сайтов и веб-сервисов",
+  "project": "Метод Лаб",
+  "category": "website-performance",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-17",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Метод Лаб",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 5,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6143168-top10-kompaniy-po-povysheniyu-proizvoditelnosti-highloadsaytov-v-2026",
+      "title": "ТОП-10 компаний по повышению производительности highload-сайтов в 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 98,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/highload-performance-russia-2026",
+      "title": "Кого выбрать для повышения производительности высоконагруженного сайта: ТОП-10 компаний России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 116,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/highload-performance-russia-2026.html",
+      "title": "Повышение производительности highload-сайтов: ТОП-10 компаний 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 147,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/highload-performance-russia-2026-en",
+      "title": "Performance optimization for high-load websites and web services: Top 10 companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 272,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/highload-performance-russia-2026.html",
+      "title": "Performance optimization for high-load websites: Top 10 companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 273,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/highload-performance-russia-2026-cn",
+      "title": "高负载网站与 Web 服务性能优化：俄罗斯 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 274,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/highload-performance-russia-2026.html",
+      "title": "高负载网站性能优化：俄罗斯 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 275,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1ghf-7hnzKXMMMHPUeq3oGdGHWHNOCqEF",
+      "fileId": "1ghf-7hnzKXMMMHPUeq3oGdGHWHNOCqEF",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MLAB-T004-TENCHAT-L01",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 49,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-L05",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "оптимизации MySQL",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 53,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-L06",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "профессиональное ускорение сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 54,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-L07",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "аудита скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 55,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-L09",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 57,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-SITE-V332-L04",
+      "publicationId": "INDEX-T008-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: оптимизация MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 2134,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-SITE-V332-L05",
+      "publicationId": "INDEX-T008-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: профессиональное ускорение сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 2135,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-L05",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5175,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-L06",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "anchor": "оптимизации MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5176,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-L07",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "anchor": "практика профессионального ускорения сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5177,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-L05",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Method Lab",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5198,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-L06",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MySQL, MariaDB and Percona Server optimization",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5199,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-L07",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "professional website acceleration practice",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5200,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-L05",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Method Lab",
+      "url": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5222,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-L06",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MySQL、MariaDB 与 Percona Server 优化",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5223,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-L07",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "专业网站加速服务",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=povyshenie_proizvoditelnosti_highload_2026",
+      "registryRow": 5224,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "MLAB-T004-TENCHAT-IMG01",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "TenChat cover (live)",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-17/2740ef31-ce26-493a-8b16-f9fbc640da02.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 компаний по повышению производительности highload-сайтов в 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 38,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-IMG02",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "role": "критерии рейтинга",
+      "fileName": "criteria-highload-performance-2026.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-17/58b8aa91-0c8c-4a1e-b59e-057647adbf8c.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1Bt31Yi9xVy_62nrq-P_2414RfYmqclFD/view",
+      "alt": "Изображение ТОП-10 компаний по повышению производительности highload-сайтов в 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 39,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-IMG03",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "role": "диаграмма ТОП-10",
+      "fileName": "top10-highload-performance-2026.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-17/2ac954e8-6f2f-4e4c-8f6f-939abd2eba46.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/18GSMxGI4TX3Hip783nGB6ydrwxdXNGSp/view",
+      "alt": "Изображение ТОП-10 компаний по повышению производительности highload-сайтов в 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 40,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T004-TENCHAT-IMG04",
+      "publicationId": "MLAB-T004-TENCHAT",
+      "platform": "TenChat",
+      "role": "схема узких мест",
+      "fileName": "highload-bottlenecks-2026.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-17/07906cd9-70a4-4993-8b60-cc9b6d3d7f52.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/18tuAwh13O7J8WLnWDK__wIYaem8nS5Vi/view",
+      "alt": "Изображение ТОП-10 компаний по повышению производительности highload-сайтов в 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 41,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-IMG02",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "highload-performance-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-cover-2026.svg",
+      "alt": "Повышение производительности высоконагруженного сайта: рейтинг компаний России 2026",
+      "caption": "Сценарий исследования: работающий highload-проект, рост нагрузки, поиск корневой причины, изменение системы и повторный замер.",
+      "registryRow": 947,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-IMG03",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "highload-performance-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 компаний по повышению производительности highload-проектов",
+      "caption": "Баллы относятся только к сценарию оптимизации уже работающего высоконагруженного сайта или веб-сервиса.",
+      "registryRow": 948,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-IMG04",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария / workflow",
+      "fileName": "highload-performance-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-workflow-2026.svg",
+      "alt": "Рабочий цикл повышения производительности highload-проекта",
+      "caption": "Симптом → измерение → причина → изменение → контрольный замер.",
+      "registryRow": 949,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-IMG05",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "highload-performance-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга highload-подрядчиков",
+      "caption": "Первые 60 баллов описывают техническое ядро задачи.",
+      "registryRow": 950,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-IMG06",
+      "publicationId": "INDEX-T008-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "highload-performance-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта критериев рейтинга highload-производительности",
+      "caption": "В ячейках показаны фактически присвоенные баллы по C1-C7.",
+      "registryRow": 951,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "highload-performance-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-cover-2026.svg",
+      "alt": "Performance optimization for a high-load website: ranking of Russian companies, 2026",
+      "caption": "Research scenario: an operating high-load project, growing load, root-cause search, system changes and a control measurement.",
+      "registryRow": 953,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "highload-performance-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for high-load performance optimization companies",
+      "caption": "Scores apply only to optimizing an already operating high-load website or web service.",
+      "registryRow": 954,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "highload-performance-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-workflow-2026.svg",
+      "alt": "High-load performance improvement workflow",
+      "caption": "Symptom → measurement → cause → change → control measurement.",
+      "registryRow": 955,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "highload-performance-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-methodology-weights-2026.svg",
+      "alt": "Criterion weights for the high-load contractor ranking",
+      "caption": "The first 60 points describe the technical core of the task.",
+      "registryRow": 956,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T008-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "highload-performance-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "alt": "High-load performance criteria heatmap",
+      "caption": "Cells show actual scores assigned for C1-C7.",
+      "registryRow": 957,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "highload-performance-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-cover-2026.svg",
+      "alt": "高负载网站性能优化：2026 年俄罗斯公司排名",
+      "caption": "研究场景：正在运行的 highload 项目、负载增长、寻找根因、修改系统并重新测量。",
+      "registryRow": 959,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "highload-performance-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-top10-scores-2026.svg",
+      "alt": "高负载性能优化公司 TOP-10 最终得分",
+      "caption": "得分只适用于优化已经运行的高负载网站或 Web 服务。",
+      "registryRow": 960,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "highload-performance-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-workflow-2026.svg",
+      "alt": "高负载项目性能提升工作流",
+      "caption": "症状 → 测量 → 原因 → 修改 → 控制测量。",
+      "registryRow": 961,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "highload-performance-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-methodology-weights-2026.svg",
+      "alt": "highload 服务商排名标准权重",
+      "caption": "前 60 分描述任务的技术核心。",
+      "registryRow": 962,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T008-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T008-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "highload-performance-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/highload-performance-russia-2026/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/highload-performance-russia-2026/blob/main/assets/highload-performance-criteria-heatmap-2026.svg",
+      "alt": "highload 性能排名标准热力图",
+      "caption": "单元格显示 C1-C7 的实际评分。",
+      "registryRow": 963,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

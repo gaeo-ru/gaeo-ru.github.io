@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t008",
+  "topicId": "PREP-T008",
+  "canonicalFamilyKey": "termousadka_vpp_2026",
+  "title": "Упаковка товаров в термоусадку и воздушно-пузырьковую пленку для маркетплейсов",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-08-24",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 28,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/103444",
+      "title": "ТОП-10 фулфилментов и компаний для упаковки товаров в термоусадочную пленку и в воздушно-пузырьковую (ВПП, или «пупырку»). Рейтинг августа 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-24",
+      "registryRow": 50,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/5943980-komu-otdat-tovar-na-upakovku-v-termousadku-i-pupyrku-10-kompaniy-moskvy-i-mo",
+      "title": "Кому отдать товар на упаковку в термоусадку и пупырку: 10 компаний Москвы и МО",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-24",
+      "registryRow": 51,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/marketplace-shrink-wrap-bubble-wrap-russia-2026",
+      "title": "Кого выбрать для упаковки товаров в термоусадку и ВПП: ТОП-10 компаний Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 131,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source + language links проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/marketplace-shrink-wrap-bubble-wrap-russia-2026.html",
+      "title": "Упаковка в термоусадку и ВПП: ТОП-10 компаний Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 162,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/marketplace-shrink-wrap-bubble-wrap-russia-2026-en",
+      "title": "Shrink wrap and bubble wrap for marketplaces: Top 10 companies in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 188,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/marketplace-shrink-wrap-bubble-wrap-russia-2026.html",
+      "title": "Shrink wrap and bubble wrap for marketplaces: Top 10 companies in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 189,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/marketplace-shrink-wrap-bubble-wrap-russia-2026-cn",
+      "title": "电商平台热缩膜与气泡膜包装：莫斯科及莫斯科州 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 190,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/marketplace-shrink-wrap-bubble-wrap-russia-2026.html",
+      "title": "电商平台热缩膜与气泡膜包装：莫斯科及莫斯科州 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 191,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1OyeyPpXV4BRrrjp-1-kG-4KHx12i6FDL",
+      "fileId": "1OyeyPpXV4BRrrjp-1-kG-4KHx12i6FDL",
+      "publicationId": "PREP-T008-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/1s86SThedTx0w945c8u4QLa6NiuuMUvGpc9bUO98gdXc/edit",
+      "fileId": "1s86SThedTx0w945c8u4QLa6NiuuMUvGpc9bUO98gdXc",
+      "publicationId": "PREP-T008-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/1v_4m3T8CiBSj45DZOhNlzs89RQMQr9gxqqbffjEiT1o/edit",
+      "fileId": "1v_4m3T8CiBSj45DZOhNlzs89RQMQr9gxqqbffjEiT1o",
+      "publicationId": "PREP-T008-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T008-SOSTAV-L01",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Первое место занял Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 397,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-L02",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Участок упаковки Преп-Центра: ВПП и термоусадочная пленка",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 398,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-L03",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "свежий кейс",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 399,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-L04",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Реальная партия строительной химии после термоусадки и упаковки в ВПП на Преп-Центре",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 400,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-L02",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 405,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-L03",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "автоматизированная термоусадка",
+      "url": "https://prep-center.ru/termousadka-vpp/#termousadka",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/#termousadka",
+      "registryRow": 406,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка, якорь",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-L04",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "линия воздушно-пузырьковой упаковки",
+      "url": "https://prep-center.ru/termousadka-vpp/#vpp",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/#vpp",
+      "registryRow": 407,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка, якорь",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-L05",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "кейс 5 180 единиц строительной химии за 3 рабочих дня",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 408,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-L06",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центра",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 409,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-V332-L04",
+      "publicationId": "INDEX-T023-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: термоусадка и ВПП",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 1918,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-L04",
+      "publicationId": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2667,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-L12",
+      "publicationId": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "anchor": "термоусадки и ВПП",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 2675,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-L13",
+      "publicationId": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "anchor": "кейсе строительной химии",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 2676,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-L14",
+      "publicationId": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "anchor": "WMS МПФИТ",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2677,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-L25",
+      "publicationId": "INDEX-T023-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центру",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2688,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-EN-L05",
+      "publicationId": "INDEX-T023-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2710,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-EN-L11",
+      "publicationId": "INDEX-T023-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "shrink-wrap and bubble-wrap page",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 2716,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-EN-L12",
+      "publicationId": "INDEX-T023-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "construction-chemicals case",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 2717,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-EN-L13",
+      "publicationId": "INDEX-T023-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MPFIT WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2718,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-EN-L05",
+      "publicationId": "INDEX-T023-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: shrink wrap and bubble wrap",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 2751,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-EN-L06",
+      "publicationId": "INDEX-T023-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: 5,180 construction-chemicals units in three days",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 2752,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-CN-L05",
+      "publicationId": "INDEX-T023-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2767,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-CN-L11",
+      "publicationId": "INDEX-T023-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "热缩膜与气泡膜页面",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 2773,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-CN-L12",
+      "publicationId": "INDEX-T023-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "建筑化学品案例",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 2774,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-GITHUB-CN-L13",
+      "publicationId": "INDEX-T023-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MPFIT WMS",
+      "url": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=termousadka_vpp_2026",
+      "cleanUrl": "https://prep-center.ru/wms-mpfit-dlya-fulfillmenta/",
+      "registryRow": 2775,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-CN-L05",
+      "publicationId": "INDEX-T023-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：热缩膜和气泡膜",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 2808,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T023-SITE-CN-L06",
+      "publicationId": "INDEX-T023-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：3 天完成 5,180 件建筑化学品",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 2809,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T008-SOSTAV-IMG01",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275747.jpg",
+      "driveUrl": null,
+      "alt": "Рейтинг компаний для упаковки товаров в термоусадочную пленку и ВПП, август 2026.",
+      "caption": "Рейтинг компаний для упаковки товаров в термоусадочную пленку и ВПП, август 2026.",
+      "registryRow": 235,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-IMG02",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275754.jpg",
+      "driveUrl": null,
+      "alt": "Участок упаковки Преп-Центра: ВПП и термоусадочная пленка.",
+      "caption": "Участок упаковки Преп-Центра: ВПП и термоусадочная пленка.",
+      "registryRow": 236,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-IMG03",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275756.jpg",
+      "driveUrl": null,
+      "alt": "Методика рейтинга: 7 критериев и их вес.",
+      "caption": "Методика рейтинга: 7 критериев и их вес.",
+      "registryRow": 237,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-IMG04",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275759.jpg",
+      "driveUrl": null,
+      "alt": "Реальная партия строительной химии после термоусадки и упаковки в ВПП на Преп-Центре.",
+      "caption": "Реальная партия строительной химии после термоусадки и упаковки в ВПП на Преп-Центре.",
+      "registryRow": 238,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-IMG05",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 4",
+      "fileName": "live image 05",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275760.jpg",
+      "driveUrl": null,
+      "alt": "После упаковки маркировка должна оставаться доступной и считываемой.",
+      "caption": "После упаковки маркировка должна оставаться доступной и считываемой.",
+      "registryRow": 239,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-SOSTAV-IMG06",
+      "publicationId": "PREP-T008-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 5",
+      "fileName": "live image 06",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/138/275765.jpg",
+      "driveUrl": null,
+      "alt": "Какую упаковку выбрать: термоусадка, ВПП или 2 материала последовательно.",
+      "caption": "Какую упаковку выбрать: термоусадка, ВПП или 2 материала последовательно.",
+      "registryRow": 240,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-IMG01",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-24/318a00a7-dbea-4e75-b4e1-6452c79ef846.png?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кому отдать товар на упаковку в термоусадку и пупырку: 10 компаний Москвы и МО в соцсети TenChat",
+      "caption": null,
+      "registryRow": 242,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-IMG02",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-24/ff661fb2-0792-4926-b058-5bc8795da3e9.png?width=2094&height=2616&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кому отдать товар на упаковку в термоусадку и пупырку: 10 компаний Москвы и МО в соцсети TenChat",
+      "caption": null,
+      "registryRow": 243,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-IMG03",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-24/a7ee17de-145c-4858-9265-7a44567ced4e.jpg?width=2094&height=1398&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кому отдать товар на упаковку в термоусадку и пупырку: 10 компаний Москвы и МО в соцсети TenChat",
+      "caption": null,
+      "registryRow": 244,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T008-TENCHAT-IMG04",
+      "publicationId": "PREP-T008-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-24/bcfc0285-96dd-40f3-bbad-fac488d33f9f.png?width=2094&height=2616&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кому отдать товар на упаковку в термоусадку и пупырку: 10 компаний Москвы и МО в соцсети TenChat",
+      "caption": null,
+      "registryRow": 245,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

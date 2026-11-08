@@ -1,0 +1,569 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t013",
+  "topicId": "PREP-T013",
+  "canonicalFamilyKey": "fulfillment_cosmetics_aug2026",
+  "title": "Фулфилмент для косметики на Wildberries и Ozon: новый рейтинг с кейсом 8 400 единиц",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-08-30",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 33,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/104806",
+      "title": "ТОП-10 фулфилментов для косметики на Wildberries и Ozon в Москве и МО: рейтинг августа 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-30",
+      "registryRow": 59,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6019918-top10-fulfilmentov-dlya-kosmetiki-na-wb-i-ozon-moskva-i-mo-avgust-2026",
+      "title": "ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-30",
+      "registryRow": 60,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/12m5AisI4dIv-gD3Zr3etk1nkm9N1K4zE",
+      "fileId": "12m5AisI4dIv-gD3Zr3etk1nkm9N1K4zE",
+      "publicationId": "PREP-T013-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40/view",
+      "fileId": "1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40",
+      "publicationId": "PREP-T013-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1KKZ5HNDu75U6nDW3mn8zxCxp8wqOwAZ1/view",
+      "fileId": "1KKZ5HNDu75U6nDW3mn8zxCxp8wqOwAZ1",
+      "publicationId": "PREP-T013-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T013-SOSTAV-L01",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "фулфилмент для косметики",
+      "url": "https://prep-center.ru/fulfillment-kosmetika/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-kosmetika/",
+      "registryRow": 456,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / косметика",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L02",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "кейсе партии 8 400 единиц косметики за 2 дня",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 457,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L03",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "о Преп-Центре",
+      "url": "https://prep-center.ru/about/",
+      "cleanUrl": "https://prep-center.ru/about/",
+      "registryRow": 458,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / о компании",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L04",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "комплектации наборов",
+      "url": "https://prep-center.ru/komplektatsiya-naborov/",
+      "cleanUrl": "https://prep-center.ru/komplektatsiya-naborov/",
+      "registryRow": 459,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L05",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "открытом прайсе Преп-Центра",
+      "url": "https://prep-center.ru/tarify/",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 460,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L06",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "кейсе Преп-Центра по косметике",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 461,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L07",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "открытый прайс из 129 тарифов",
+      "url": "https://prep-center.ru/tarify/",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 462,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L08",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "косметическом кейсе Преп-Центра",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 463,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-L09",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центре",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 464,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-L01",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "фулфилмента для косметики",
+      "url": "https://prep-center.ru/fulfillment-kosmetika/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-kosmetika/",
+      "registryRow": 465,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / косметика",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-L02",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "8 400 единиц косметики за 2 дня",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 466,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-L03",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "прайс Преп-Центра",
+      "url": "https://prep-center.ru/tarify/",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 467,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-L04",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "косметическом кейсе Преп-Центра",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 468,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-L05",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "фулфилмент для косметики",
+      "url": "https://prep-center.ru/fulfillment-kosmetika/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-kosmetika/",
+      "registryRow": 469,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / косметика",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T013-SOSTAV-IMG01",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280734.jpg",
+      "driveUrl": null,
+      "alt": null,
+      "caption": null,
+      "registryRow": 281,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-IMG02",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280717.jpg",
+      "driveUrl": null,
+      "alt": "Как собирался рейтинг фулфилментов для косметики",
+      "caption": null,
+      "registryRow": 282,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-IMG03",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280718.jpg",
+      "driveUrl": null,
+      "alt": "8 критериев рейтинга: от опыта с косметикой до публичных кейсов",
+      "caption": null,
+      "registryRow": 283,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-IMG04",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280720.jpg",
+      "driveUrl": null,
+      "alt": "8 400 единиц, 14 SKU и 5 FBO-поставок за 2 рабочих дня: ключевой кейс лидера рейтинга",
+      "caption": null,
+      "registryRow": 284,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-IMG05",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 4",
+      "fileName": "live image 05",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280719.jpg",
+      "driveUrl": null,
+      "alt": "ТОП-10 фулфилментов для косметики по итогам оценки на 30 августа 2026 года",
+      "caption": null,
+      "registryRow": 285,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-SOSTAV-IMG06",
+      "publicationId": "PREP-T013-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 5",
+      "fileName": "live image 06",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/141/280721.jpg",
+      "driveUrl": null,
+      "alt": "Лидеры получают высокие баллы по разным причинам: измеримые кейсы, категорийная специализация, наборы или контроль маркировки",
+      "caption": null,
+      "registryRow": 286,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG01",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/48ac6531-3c50-4f49-bfd9-8e7fe7378784.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 288,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG02",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/39d9da00-b4ed-48c3-83ae-ecf9b5612875.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 289,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG03",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/3f196c04-750c-4b04-bafc-52c4ee39b6bf.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 290,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG04",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/5f5098f7-e279-44fa-8b88-874c3b0cd101.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 291,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG05",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 4",
+      "fileName": "live image 05",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/384d0354-e71a-4386-bdfd-fa7030d790cb.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 292,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T013-TENCHAT-IMG06",
+      "publicationId": "PREP-T013-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 5",
+      "fileName": "live image 06",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-31/48b02a02-a74f-4b98-8c79-3e8276b3f1c2.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для косметики на WB и Ozon: Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 293,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

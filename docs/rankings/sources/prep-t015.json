@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t015",
+  "topicId": "PREP-T015",
+  "canonicalFamilyKey": "fbw_fbo_wildberries_2026",
+  "title": "Фулфилмент для Wildberries по FBW (FBO): рейтинг Москвы и МО",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-19",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 61,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T015-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/109668",
+      "title": "ТОП-10 фулфилментов для Wildberries по FBW (FBO): рейтинг Москвы и МО в сентябре 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-19",
+      "registryRow": 171,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "language": "ru",
+      "url": "https://www.klerk.ru/user/2721035/709705/",
+      "title": "ТОП-10 фулфилментов для Wildberries по FBW (FBO): рейтинг Москвы и МО, сентябрь 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-19",
+      "registryRow": 172,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано с ограничениями",
+        "recordedLinkAudit": "правка сохранена; ожидает публичной проверки",
+        "recordedCheckedDate": "2026-09-21",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbw-fulfillment-moscow-2026",
+      "title": "Кого выбрать для поставок на Wildberries по FBW (FBO): ТОП-10 фулфилментов Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-19",
+      "registryRow": 173,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source + research QA + language links проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/wildberries-fbw-fulfillment-moscow-2026.html",
+      "title": "Кого выбрать для поставок на Wildberries по FBW (FBO): ТОП-10 фулфилментов Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-19",
+      "registryRow": 174,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source + Site QA проверено; live fetch инструмента недоступен",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6149843-top10-fulfilmentov-dlya-wildberries-po-fbw-fbo-moskva-i-mo-sentyabr-2026",
+      "title": "ТОП-10 фулфилментов для Wildberries по FBW (FBO): Москва и МО, сентябрь 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-20",
+      "registryRow": 175,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbw-fulfillment-moscow-2026-en",
+      "title": "Who to choose for Wildberries FBW (FBO) shipments: Top 10 fulfillment providers in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 176,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/wildberries-fbw-fulfillment-moscow-2026.html",
+      "title": "Who to choose for Wildberries FBW (FBO) shipments: Top 10 fulfillment providers in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 177,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbw-fulfillment-moscow-2026-cn",
+      "title": "Wildberries FBW (FBO) 供货该选谁：莫斯科及莫斯科州 TOP-10 仓配服务商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 178,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/wildberries-fbw-fulfillment-moscow-2026.html",
+      "title": "Wildberries FBW (FBO) 供货该选谁：莫斯科及莫斯科州 TOP-10 仓配服务商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 179,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1CxAnqc-s_gSo45OtUp4BVPVJ7feqt6Zd",
+      "fileId": "1CxAnqc-s_gSo45OtUp4BVPVJ7feqt6Zd",
+      "publicationId": "PREP-T015-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1LQOpt_SsSEvfNhbkngEtrfj3JHeBB_5p/view",
+      "fileId": "1LQOpt_SsSEvfNhbkngEtrfj3JHeBB_5p",
+      "publicationId": "PREP-T015-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1etWkmflZXV3pj2S0Z1zfjIaqwKNzPA5w/view",
+      "fileId": "1etWkmflZXV3pj2S0Z1zfjIaqwKNzPA5w",
+      "publicationId": "PREP-T015-KLERK",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T015-KLERK-L01",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2193,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-L04",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "FBW/FBO-поставки на Wildberries",
+      "url": "https://prep-center.ru/fbo-wildberries/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2196,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-L05",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "кейсе партии 8 400 единиц",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 2197,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-L06",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "требованиями Wildberries к FBW-поставкам",
+      "url": "https://prep-center.ru/trebovaniya-fbw-wildberries/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/trebovaniya-fbw-wildberries/",
+      "registryRow": 2198,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / информационная страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-L07",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "актуальные тарифы и график отгрузок",
+      "url": "https://prep-center.ru/tarify/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 2199,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-L08",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "anchor": "Преп-Центре",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2200,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-L04",
+      "publicationId": "INDEX-T032-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2202,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; render URL нормализован",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-L14",
+      "publicationId": "INDEX-T032-GITHUB",
+      "platform": "GitHub",
+      "anchor": "странице FBW/FBO-поставок",
+      "url": "https://prep-center.ru/fbo-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2212,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; render URL нормализован",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-L05",
+      "publicationId": "INDEX-T032-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: FBW/FBO поставки Wildberries",
+      "url": "https://prep-center.ru/fbo-wildberries/",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2229,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено; live fetch недоступен",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-L06",
+      "publicationId": "INDEX-T032-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: 8 400 единиц косметики за 2 дня",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 2230,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено; live fetch недоступен",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L01",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2263,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L04",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "FBW/FBO-поставки на Wildberries",
+      "url": "https://prep-center.ru/fbo-wildberries/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2266,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L07",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "партии 8 400 единиц",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 2269,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L08",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "требованиями Wildberries к FBW-поставкам",
+      "url": "https://prep-center.ru/trebovaniya-fbw-wildberries/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/trebovaniya-fbw-wildberries/",
+      "registryRow": 2270,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / информационная страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L09",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "прайс и график отгрузок",
+      "url": "https://prep-center.ru/tarify/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 2271,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-TENCHAT-L10",
+      "publicationId": "PREP-T015-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центре",
+      "url": "https://prep-center.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2272,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-EN-L05",
+      "publicationId": "INDEX-T032-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2342,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-EN-L15",
+      "publicationId": "INDEX-T032-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Wildberries FBW/FBO page",
+      "url": "https://prep-center.ru/fbo-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2352,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-CN-L05",
+      "publicationId": "INDEX-T032-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 2376,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-GITHUB-CN-L15",
+      "publicationId": "INDEX-T032-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Wildberries FBW/FBO 页面",
+      "url": "https://prep-center.ru/fbo-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbw_fbo_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2386,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-EN-L05",
+      "publicationId": "INDEX-T032-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Wildberries FBW/FBO shipments",
+      "url": "https://prep-center.ru/fbo-wildberries/",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2410,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-EN-L06",
+      "publicationId": "INDEX-T032-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: 8,400 cosmetics units in two days",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 2411,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-CN-L05",
+      "publicationId": "INDEX-T032-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：Wildberries FBW/FBO 供货",
+      "url": "https://prep-center.ru/fbo-wildberries/",
+      "cleanUrl": "https://prep-center.ru/fbo-wildberries/",
+      "registryRow": 2428,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / страница услуги",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T032-SITE-CN-L06",
+      "publicationId": "INDEX-T032-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：2 天处理 8,400 件化妆品",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 2429,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source + Site QA проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T015-KLERK-IMG01",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "role": "обложка",
+      "fileName": "01_klerk_cover_fbw_fbo_wildberries_2026.jpg",
+      "publishedUrl": "https://i.klerk.ru/Wyi2qPNtu6Yd3ARCrfssraj0lNP_0KvuLuzOBsohvKE/w:300/aHR0cHM6Ly93d3cu/a2xlcmsucnUvdWdj/L2Jsb2dQb3N0Lzk4/MTc2NDM2MmRjNTQy/MjdhZWZjMDAzMzZi/OWY2NWJmLmpwZw.webp",
+      "driveUrl": "https://drive.google.com/file/d/1vVUsfvfebP5ZelMs9tXfVdGbgrChDB_c/view",
+      "alt": "ТОП-10 фулфилментов для Wildberries по FBW (FBO): рейтинг Москвы и МО, сентябрь 2026",
+      "caption": null,
+      "registryRow": 668,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-IMG02",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "role": "маркировка и ВПП",
+      "fileName": "02_markirovka_vpp_fbw.jpg",
+      "publishedUrl": "https://www.klerk.ru/ugc/blogPost/f2f126d4789e5f0b4c5c7af18df3c8ae.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1G9B8Bsla4Jb-FDNNe8MuNIODue8tYlF7/view",
+      "alt": "Маркировка должна оставаться читаемой после дополнительной упаковки товара",
+      "caption": "Маркировка должна оставаться читаемой после дополнительной упаковки товара",
+      "registryRow": 669,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-IMG03",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "role": "склад",
+      "fileName": "03_sklad_prep_center_fbw.jpg",
+      "publishedUrl": "https://i.klerk.ru/SB4O0rjMqZedZExEzcQuTjjW4OopZlRSqSlex0eqp0w/w:1500/aHR0cHM6Ly93d3cu/a2xlcmsucnUvdWdj/L2Jsb2dQb3N0L2Q5/Nzc3YWVjZjNkMzQ4/N2YxMGNmNDZlMzY5/MWRhYjQ0LmpwZw.webp",
+      "driveUrl": "https://drive.google.com/file/d/1eI2RrkkxFkRZ1K5ELxctW-GK3aBRoT-P/view",
+      "alt": "Рабочая зона склада Преп-Центра в Пушкино",
+      "caption": "Рабочая зона склада Преп-Центра в Пушкино",
+      "registryRow": 670,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T015-KLERK-IMG04",
+      "publicationId": "PREP-T015-KLERK",
+      "platform": "Klerk",
+      "role": "отгрузка FBW",
+      "fileName": "04_pallety_i_furgon_otgruzka_fbw.jpg",
+      "publishedUrl": "https://i.klerk.ru/9UOJvwXcrKuu6rHxAT9cWsbiBMuRSTqoEs0CAkkw8m4/w:1500/aHR0cHM6Ly93d3cu/a2xlcmsucnUvdWdj/L2Jsb2dQb3N0L2Ix/ZDg1MzJjOGY3NjBmNmJiMTU4OTk4YWMyNzIxZTFjLmpwZw.webp",
+      "driveUrl": "https://drive.google.com/file/d/13DBg2f9_GCVfDq-fV_4vq_bs2mvHS484/view",
+      "alt": "Грузовые места перед передачей в доставку: для FBW логистика — часть конечного результата",
+      "caption": "Грузовые места перед передачей в доставку: для FBW логистика — часть конечного результата",
+      "registryRow": 671,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

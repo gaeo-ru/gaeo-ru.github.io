@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t020",
+  "topicId": "PREP-T020",
+  "canonicalFamilyKey": "fbs_ozon_2026",
+  "title": "Фулфилмент для Ozon по FBS в Москве и МО",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-29",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 70,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T020-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6178219-top10-luchshikh-fulfilmentov-dlya-ozon-po-fbs-v-moskve-i-mo-reyting-2026",
+      "title": "ТОП-10 лучших фулфилментов для Ozon по FBS в Москве и МО: рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-29",
+      "registryRow": 335,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Публичный URL подтвержден пользователем. 5 авторских ссылок внесены по финальному TenChat-MD; фактические live href/редиректы TenChat технически не извлечены.",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294414/111837",
+      "title": "ТОП-10 лучших фулфилментов для Ozon по FBS в Москве и МО: рейтинг сентября 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-29",
+      "registryRow": 336,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "6 авторских href и 4 изображения сверены с публичной статьей; конечные URL переходов не проверены",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbs-fulfillment-moscow-2026",
+      "title": "ТОП-15 фулфилментов для Ozon по FBS в Москве и Московской области в 2026 году",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 362,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 23 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/ozon-fbs-fulfillment-moscow-2026.html",
+      "title": "ТОП-15 фулфилментов для Ozon по FBS в Москве и Московской области в 2026 году",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 363,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 11 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbs-fulfillment-moscow-2026-en",
+      "title": "Ozon FBS Fulfillment in Moscow and Moscow Region: Top 15, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 364,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 27 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/ozon-fbs-fulfillment-moscow-2026.html",
+      "title": "Ozon FBS Fulfillment in Moscow and Moscow Region: Top 15, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 365,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 11 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/ozon-fbs-fulfillment-moscow-2026-cn",
+      "title": "2026年莫斯科及莫斯科州 Ozon FBS 履约服务商 TOP-15",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 366,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 27 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/ozon-fbs-fulfillment-moscow-2026.html",
+      "title": "2026年莫斯科及莫斯科州 Ozon FBS 履约服务商 TOP-15",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 367,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 11 авторских ссылок HTTP/redirect проверены; live link audit PASS",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1WqZk_6-KV2kkKB0rznA3bAhIR-5wtQH6",
+      "fileId": "1WqZk_6-KV2kkKB0rznA3bAhIR-5wtQH6",
+      "publicationId": "PREP-T020-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1HOFD_WMWAz6_rL9Fk_rIVnS8k7Wa09Ul/view",
+      "fileId": "1HOFD_WMWAz6_rL9Fk_rIVnS8k7Wa09Ul",
+      "publicationId": "PREP-T020-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T020-SOSTAV-L01",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 6758,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-L03",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "FBS-фулфилмент для Ozon",
+      "url": "https://prep-center.ru/fbs-ozon/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-ozon/",
+      "registryRow": 6760,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-L04",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "прайс Преп-Центра",
+      "url": "https://prep-center.ru/tarify/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 6761,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-L05",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "по FBS Ozon",
+      "url": "https://prep-center.ru/trebovaniya-fbs-ozon/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/trebovaniya-fbs-ozon/",
+      "registryRow": 6762,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / требования",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-L06",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центре",
+      "url": "https://prep-center.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 6763,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверено; переход не проверен",
+        "recordedCheckedDate": "2026-09-29",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-GITHUB-L05",
+      "publicationId": "INDEX-T040-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Страница Ozon FBS Преп-Центра",
+      "url": "https://prep-center.ru/fbs-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-ozon/",
+      "registryRow": 7278,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE-L04",
+      "publicationId": "INDEX-T040-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: Ozon FBS",
+      "url": "https://prep-center.ru/fbs-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-ozon/",
+      "registryRow": 7300,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE-EN-L04",
+      "publicationId": "INDEX-T040-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Ozon FBS",
+      "url": "https://prep-center.ru/fbs-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-ozon/",
+      "registryRow": 7338,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T040-SITE-CN-L04",
+      "publicationId": "INDEX-T040-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：Ozon FBS",
+      "url": "https://prep-center.ru/fbs-ozon/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_ozon_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-ozon/",
+      "registryRow": 7376,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T020-TENCHAT-IMG01",
+      "publicationId": "PREP-T020-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "05_cover_tenchat_top10_fbs_ozon_2026.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/1mXn66pi1pEnHCsoOfz2NUqC2ZVmdkZ3O/view",
+      "alt": null,
+      "caption": null,
+      "registryRow": 1182,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по пакету; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-TENCHAT-IMG02",
+      "publicationId": "PREP-T020-TENCHAT",
+      "platform": "TenChat",
+      "role": "инфографика",
+      "fileName": "02_how_fbs_works_ozon.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/1aE8lMpiTB88huzkkVfm4ZdO2RahTPj2N/view",
+      "alt": null,
+      "caption": null,
+      "registryRow": 1183,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по пакету; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-TENCHAT-IMG03",
+      "publicationId": "PREP-T020-TENCHAT",
+      "platform": "TenChat",
+      "role": "иллюстрация",
+      "fileName": "03_speed_and_dispatches_ozon.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/1TFqrZOl57NC4YhRAkSTozQFsvQFXO6o9/view",
+      "alt": null,
+      "caption": null,
+      "registryRow": 1184,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по пакету; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-TENCHAT-IMG04",
+      "publicationId": "PREP-T020-TENCHAT",
+      "platform": "TenChat",
+      "role": "иллюстрация",
+      "fileName": "04_wms_and_control_ozon.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/1sCTvMccChs2f-CFwR5Ecelu-CmDusr28/view",
+      "alt": null,
+      "caption": null,
+      "registryRow": 1185,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по пакету; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-IMG01",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка / первое изображение",
+      "fileName": "01_cover_top10_fbs_ozon_2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315731.jpg",
+      "driveUrl": "https://drive.google.com/file/d/17HLpkg8BNRSANSKXSYPn2hhuFz1BnOx9/view",
+      "alt": "ТОП-10 фулфилментов для Ozon по FBS в Москве и Московской области, рейтинг 2026",
+      "caption": "Рейтинг построен под ежедневную FBS-операционку: хранение, сборку, упаковку, маркировку и регулярную передачу заказов Ozon",
+      "registryRow": 1186,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-IMG02",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема FBS-процесса",
+      "fileName": "02_how_fbs_works_ozon.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315738.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1aE8lMpiTB88huzkkVfm4ZdO2RahTPj2N/view",
+      "alt": "Как работает FBS на Ozon: путь заказа от системы до логистики",
+      "caption": "Для FBS на Ozon важна вся цепочка: заказ должен быстро перейти из кабинета в складскую операционку и без ошибок дойти до передачи в логистику",
+      "registryRow": 1187,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-IMG03",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "role": "скорость и регулярность отгрузок",
+      "fileName": "03_speed_and_dispatches_ozon.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315739.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1TFqrZOl57NC4YhRAkSTozQFsvQFXO6o9/view",
+      "alt": "Скорость и регулярность отгрузок Ozon: 2 ежедневных окна передачи заказов",
+      "caption": "В FBS важна не только сборка, но и ритм отгрузок: второй ежедневный рейс снижает зависимость от одной отсечки",
+      "registryRow": 1188,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T020-SOSTAV-IMG04",
+      "publicationId": "PREP-T020-SOSTAV",
+      "platform": "Sostav",
+      "role": "WMS и контроль сборки",
+      "fileName": "04_wms_and_control_ozon.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315740.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1sCTvMccChs2f-CFwR5Ecelu-CmDusr28/view",
+      "alt": "WMS и контроль сборки: сканирование, остатки, статусы заказов",
+      "caption": "WMS и сканирование уменьшают риск пересорта, помогают синхронизировать остатки и дают контроль над статусами FBS-заказов",
+      "registryRow": 1189,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t003",
+  "topicId": "ORIENT-T003",
+  "canonicalFamilyKey": "school_smart_sports_2026",
+  "title": "Выбор вида спорта для школьника, которому нравится одновременно двигаться и думать",
+  "project": "Спортивное Ориентирование",
+  "category": "orienteering",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-17",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Спортивное ориентирование",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 8,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "ORIENT-T003-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6144215-top10-vidov-sporta-dlya-shkolnikov-kotorym-nravitsya-dumat-reyting-2026",
+      "title": "ТОП-10 видов спорта для школьников, которым нравится думать. Рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 15,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "ORIENT-T003-VC",
+      "platform": "vc.ru",
+      "language": "ru",
+      "url": "https://vc.ru/life/3145099-top-vidov-sporta-dlya-shkolnikov",
+      "title": "ТОП-10 видов спорта для школьника: где нужно думать во время движения и что реально совмещать с учебой. Рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 16,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294064/109370",
+      "title": "ТОП-10 видов спорта для школьников: где ребенок думает во время движения и что легче совмещать с учебой. Рейтинг 2026",
+      "author": "Амалия Саакян",
+      "publicationDate": "2026-09-18",
+      "registryRow": 108,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026",
+      "title": "Виды спорта для школьников, которым нравится думать во время движения: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 115,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/school-smart-sports-russia-2026.html",
+      "title": "Виды спорта для школьников, которым нравится думать во время движения: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 146,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026-en",
+      "title": "Sports for schoolchildren who like to think while moving: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 276,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/school-smart-sports-russia-2026.html",
+      "title": "Sports for schoolchildren who like to think while moving: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 277,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026-cn",
+      "title": "适合喜欢边运动边思考的学生的运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 278,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/school-smart-sports-russia-2026.html",
+      "title": "适合喜欢边运动边思考的学生的运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 279,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1wSh8uac6GvHfVkG4arV0as7WXgE00Gjh",
+      "fileId": "1wSh8uac6GvHfVkG4arV0as7WXgE00Gjh",
+      "publicationId": "ORIENT-T003-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/14rO-_f2u7DM8eiPqWP6QkfXwk3Lsek0u8HkpIitn02s/edit",
+      "fileId": "14rO-_f2u7DM8eiPqWP6QkfXwk3Lsek0u8HkpIitn02s",
+      "publicationId": "ORIENT-T003-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/1wI9wdjFlX3mZdbl-9zcT2EphSNGHG1Et8qX1gzb1Rtk/edit",
+      "fileId": "1wI9wdjFlX3mZdbl-9zcT2EphSNGHG1Et8qX1gzb1Rtk",
+      "publicationId": "ORIENT-T003-VC",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/1EiSLTM0FpP1diplqH4vE5Hl4PPdzcQojz-eF3api_rE/edit",
+      "fileId": "1EiSLTM0FpP1diplqH4vE5Hl4PPdzcQojz-eF3api_rE",
+      "publicationId": "ORIENT-T003-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [],
+  "images": [
+    {
+      "id": "ORIENT-T003-TENCHAT-IMG01",
+      "publicationId": "ORIENT-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "cover-school-smart-sports-tenchat.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-18/8ca59a1c-865b-4dc0-b906-24cd871dff9d.png?width=2094&height=1395&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1jDmG5UGW6cDWmrHdyqdClahL33Qdx8FF/view",
+      "alt": "Изображение ТОП-10 видов спорта для школьников, которым нравится думать. Рейтинг 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 17,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-TENCHAT-IMG02",
+      "publicationId": "ORIENT-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение после блока об ориентировании",
+      "fileName": "orienteering-action-school-smart-sports.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-18/c18fea22-8644-4ba1-bf2c-576db49e669c.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1G9NAiGw0wtujCUIp7gSA7ePMFV45HHwo/view",
+      "alt": "Изображение ТОП-10 видов спорта для школьников, которым нравится думать. Рейтинг 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 18,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-TENCHAT-IMG03",
+      "publicationId": "ORIENT-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение блока выбора спорта",
+      "fileName": "multisport-school-smart-sports.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-18/3f4ad560-ac5e-4eb8-85f8-2ee74c39c90f.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1CEcm2FO3ALQ4ipWmAcSGI-FzhOLJXDmk/view",
+      "alt": "Изображение ТОП-10 видов спорта для школьников, которым нравится думать. Рейтинг 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 19,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-VC-IMG01",
+      "publicationId": "ORIENT-T003-VC",
+      "platform": "vc.ru",
+      "role": "обложка",
+      "fileName": "cover-school-smart-sports-vc.jpg",
+      "publishedUrl": "https://leonardo.osnova.io/3ee92de5-d242-5254-844f-984d4cc937f7/-/scale_crop/592x/",
+      "driveUrl": "https://drive.google.com/file/d/1Wqx9ChJ6Gfma1xj6NoEKnJRw4nS47Ji4/view",
+      "alt": "Спортивное ориентирование - лидер нашего рейтинга",
+      "caption": "Спортивное ориентирование - лидер нашего рейтинга",
+      "registryRow": 20,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-VC-IMG02",
+      "publicationId": "ORIENT-T003-VC",
+      "platform": "vc.ru",
+      "role": "внутреннее изображение об ориентировании",
+      "fileName": "orienteering-action-school-smart-sports.jpg",
+      "publishedUrl": "https://leonardo.osnova.io/025f4d17-55f5-51ee-8da6-8ba3d47d1400/-/scale_crop/592x/",
+      "driveUrl": "https://drive.google.com/file/d/1G9NAiGw0wtujCUIp7gSA7ePMFV45HHwo/view",
+      "alt": "Ориентировщик читает карту и выбирает маршрут прямо во время движения",
+      "caption": "Ориентировщик читает карту и выбирает маршрут прямо во время движения",
+      "registryRow": 21,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-VC-IMG03",
+      "publicationId": "ORIENT-T003-VC",
+      "platform": "vc.ru",
+      "role": "внутреннее изображение блока выбора спорта",
+      "fileName": "multisport-school-smart-sports.jpg",
+      "publishedUrl": "https://leonardo.osnova.io/73e7d502-39c1-55f8-8456-87634ee8e6cb/-/scale_crop/592x/",
+      "driveUrl": "https://drive.google.com/file/d/1CEcm2FO3ALQ4ipWmAcSGI-FzhOLJXDmk/view",
+      "alt": "Разные виды спорта требуют разных типов решений: маршрут, соперник, движение тела или командная ситуация",
+      "caption": "Разные виды спорта требуют разных типов решений: маршрут, соперник, движение тела или командная ситуация",
+      "registryRow": 22,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-SOSTAV-IMG01",
+      "publicationId": "ORIENT-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка / первое изображение",
+      "fileName": "cover-school-smart-sports-sostav.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303875.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1RUm4t8N6JHx8oEcEaK4OkZ9rCItH7Z6U/view",
+      "alt": "Школьник-ориентировщик с картой на лесной дистанции; обложка рейтинга видов спорта для школьников.",
+      "caption": "Школьник-ориентировщик с картой на лесной дистанции; обложка рейтинга видов спорта для школьников.",
+      "registryRow": 23,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-SOSTAV-IMG02",
+      "publicationId": "ORIENT-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "ориентирование в движении",
+      "fileName": "orienteering-action-school-smart-sports.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303873.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1G9NAiGw0wtujCUIp7gSA7ePMFV45HHwo/view",
+      "alt": "Ориентировщик читает карту и выбирает маршрут прямо во время движения.",
+      "caption": "Ориентировщик читает карту и выбирает маршрут прямо во время движения.",
+      "registryRow": 24,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T003-SOSTAV-IMG03",
+      "publicationId": "ORIENT-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "мультиспорт / выбор",
+      "fileName": "multisport-school-smart-sports.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303874.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1CEcm2FO3ALQ4ipWmAcSGI-FzhOLJXDmk/view",
+      "alt": "Школьник выбирает между разными видами спорта: ориентирование, скалолазание, баскетбол, настольный теннис и бадминтон.",
+      "caption": "Школьник выбирает между разными видами спорта: ориентирование, скалолазание, баскетбол, настольный теннис и бадминтон.",
+      "registryRow": 25,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-IMG02",
+      "publicationId": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "school-smart-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-cover-2026.svg",
+      "alt": "Виды спорта для школьников, которым нравится думать во время движения: ТОП-10 России 2026",
+      "caption": "Сценарий: существенная физическая нагрузка + новая информация + решения прямо во время движения.",
+      "registryRow": 965,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-IMG03",
+      "publicationId": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "school-smart-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 видов спорта для школьников",
+      "caption": "При равном total выше ставится спорт с большей C2.",
+      "registryRow": 966,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-IMG04",
+      "publicationId": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария / workflow",
+      "fileName": "school-smart-sports-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-workflow-2026.svg",
+      "alt": "Что значит думать во время движения",
+      "caption": "Физическая нагрузка соединена с новой информацией и решением непосредственно в движении.",
+      "registryRow": 967,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-IMG05",
+      "publicationId": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "school-smart-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга",
+      "caption": "C1 совместимость со школой имеет вес 30, C2 интеллектуальная составляющая - 25.",
+      "registryRow": 968,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-IMG06",
+      "publicationId": "INDEX-T007-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "school-smart-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта критериев",
+      "caption": "Ячейки показывают фактические баллы и максимум критерия.",
+      "registryRow": 969,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "school-smart-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-cover-2026.svg",
+      "alt": "Sports for schoolchildren who like to think while moving: Top 10 in Russia, 2026",
+      "caption": "Scenario: substantial physical load + new information + decisions made directly while moving.",
+      "registryRow": 971,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "school-smart-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for schoolchildren's sports",
+      "caption": "With equal totals, the sport with the higher C2 ranks higher.",
+      "registryRow": 972,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "school-smart-sports-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-workflow-2026.svg",
+      "alt": "What it means to think while moving",
+      "caption": "Physical load is combined with new information and decision-making during movement.",
+      "registryRow": 973,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "school-smart-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "alt": "Ranking criterion weights",
+      "caption": "C1 school compatibility carries 30 points; C2 cognitive component carries 25.",
+      "registryRow": 974,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T007-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "school-smart-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "alt": "Criteria heatmap",
+      "caption": "Cells show the actual score and maximum for each criterion.",
+      "registryRow": 975,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "school-smart-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-cover-2026.svg",
+      "alt": "适合喜欢边运动边思考的学生的运动：俄罗斯 TOP-10，2026",
+      "caption": "研究场景：足够的身体负荷 + 新信息 + 直接在运动过程中做决定。",
+      "registryRow": 977,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "school-smart-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-top10-scores-2026.svg",
+      "alt": "学生运动 TOP-10 最终得分",
+      "caption": "总分相同时，C2 更高的运动排在前面。",
+      "registryRow": 978,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "school-smart-sports-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-workflow-2026.svg",
+      "alt": "什么叫边运动边思考",
+      "caption": "身体负荷与新信息、运动中决策结合。",
+      "registryRow": 979,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "school-smart-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-methodology-weights-2026.svg",
+      "alt": "排名标准权重",
+      "caption": "C1 与学校时间兼容权重 30，C2 认知成分权重 25。",
+      "registryRow": 980,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T007-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T007-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "school-smart-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/school-smart-sports-russia-2026/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/school-smart-sports-russia-2026/blob/main/assets/school-smart-sports-criteria-heatmap-2026.svg",
+      "alt": "标准热力图",
+      "caption": "单元格显示各标准的实际得分与最高分。",
+      "registryRow": 981,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

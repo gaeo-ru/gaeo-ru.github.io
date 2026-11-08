@@ -1,0 +1,822 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t019",
+  "topicId": "PREP-T019",
+  "canonicalFamilyKey": "fbs_wildberries_2026",
+  "title": "Фулфилмент для отгрузки на Wildberries по FBS в Москве и МО",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-28",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 67,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T019-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/294064/111607",
+      "title": "ТОП-10 лучших фулфилментов для отгрузки на Wildberries по FBS в Москве и МО: рейтинг сентября 2026",
+      "author": "Амалия Саакян",
+      "publicationDate": "2026-09-28",
+      "registryRow": 323,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live страница проверена; URL, 7 ссылок, 5 JPG, 10 FAQ и 2 цитаты",
+        "recordedCheckedDate": "2026-09-28",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026",
+      "title": "Фулфилмент для Wildberries FBS с «Честным знаком» и сложной упаковкой: ТОП-10 Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 356,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 27 авторских ссылок HTTP/redirect проверены; 5 изображений загружены",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/wildberries-fbs-complex-goods-moscow-2026.html",
+      "title": "Фулфилмент Wildberries FBS с Честным знаком и сложной упаковкой: ТОП-10 Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 357,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 16 авторских ссылок HTTP/redirect проверены; Site QA PASS; sitemap/Pages проверены",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026-en",
+      "title": "Wildberries FBS Fulfillment with Chestny ZNAK and Complex Protective Packaging: Top 10 in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 358,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 31 авторская ссылка HTTP/redirect проверена; 5 изображений загружены; parity проверен",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/wildberries-fbs-complex-goods-moscow-2026.html",
+      "title": "Wildberries FBS Fulfillment with Chestny ZNAK and Complex Packaging: Top 10 in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 359,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 15 авторских ссылок HTTP/redirect проверены; Site QA PASS; sitemap/Pages проверены",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026-cn",
+      "title": "Wildberries FBS 履约服务：“诚实标签”与复杂防护包装，莫斯科及莫斯科州 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 360,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 31 авторская ссылка HTTP/redirect проверена; 5 изображений загружены; CJK render и parity проверены",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/wildberries-fbs-complex-goods-moscow-2026.html",
+      "title": "Wildberries FBS 履约服务：“诚实标签”与复杂防护包装，莫斯科及莫斯科州 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-02",
+      "registryRow": 361,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live Chrome/Selenium проверено; 15 авторских ссылок HTTP/redirect проверены; Site QA PASS; CJK render/sitemap/Pages проверены",
+        "recordedCheckedDate": "2026-10-02",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6175413-top10-luchshikh-fulfilmentov-wildberries-po-fbs-moskva-i-mo-sentyabr-2026-goda",
+      "title": "ТОП-10 лучших фулфилментов Wildberries по FBS: Москва и МО, сентябрь 2026 года",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 550,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1Q1nF9FnhEu8mpdihIPy887We0zUDY2VJ",
+      "fileId": "1Q1nF9FnhEu8mpdihIPy887We0zUDY2VJ",
+      "publicationId": "PREP-T019-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1S1AvzUqZZoHDwqGe8D9PAsqrxLud-naD/view",
+      "fileId": "1S1AvzUqZZoHDwqGe8D9PAsqrxLud-naD",
+      "publicationId": "PREP-T019-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "INDEX-T039-GITHUB-L04",
+      "publicationId": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7142,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN-L04",
+      "publicationId": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7169,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN-L04",
+      "publicationId": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7200,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-L07",
+      "publicationId": "INDEX-T039-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: FBS для Wildberries",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7234,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-L08",
+      "publicationId": "INDEX-T039-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: маркировка «Честный знак»",
+      "url": "https://prep-center.ru/chestnyy-znak/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/chestnyy-znak/",
+      "registryRow": 7235,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-L09",
+      "publicationId": "INDEX-T039-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: тарифы",
+      "url": "https://prep-center.ru/tarify/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 7236,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / тарифы",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-EN-L07",
+      "publicationId": "INDEX-T039-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Wildberries FBS",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7250,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-EN-L08",
+      "publicationId": "INDEX-T039-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: Chestny ZNAK operations",
+      "url": "https://prep-center.ru/chestnyy-znak/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/chestnyy-znak/",
+      "registryRow": 7251,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-CN-L07",
+      "publicationId": "INDEX-T039-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：Wildberries FBS",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 7265,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-SITE-CN-L08",
+      "publicationId": "INDEX-T039-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：“诚实标签”操作",
+      "url": "https://prep-center.ru/chestnyy-znak/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fbs_wildberries_2026",
+      "cleanUrl": "https://prep-center.ru/chestnyy-znak/",
+      "registryRow": 7266,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено; HTTP 200; redirect chain завершен",
+        "recordedCheckedDate": "2026-10-02",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-L01",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_campaign=top_10&utm_content=fbs_wildberries_2026&utm_medium=article&utm_source=tenchat",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 11671,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-L04",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "FBS-фулфилмент для Wildberries",
+      "url": "https://prep-center.ru/fbs-wildberries/?utm_campaign=top_10&utm_content=fbs_wildberries_2026&utm_medium=article&utm_source=tenchat",
+      "cleanUrl": "https://prep-center.ru/fbs-wildberries/",
+      "registryRow": 11674,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-L05",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "прайс Преп-Центра",
+      "url": "https://prep-center.ru/tarify/?utm_campaign=top_10&utm_content=fbs_wildberries_2026&utm_medium=article&utm_source=tenchat",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 11675,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-L09",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "требованиям к FBS Wildberries",
+      "url": "https://prep-center.ru/trebovaniya-fbs-wildberries/?utm_campaign=top_10&utm_content=fbs_wildberries_2026&utm_medium=article&utm_source=tenchat",
+      "cleanUrl": "https://prep-center.ru/trebovaniya-fbs-wildberries/",
+      "registryRow": 11679,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-L10",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центре",
+      "url": "https://prep-center.ru/?utm_campaign=top_10&utm_content=fbs_wildberries_2026&utm_medium=article&utm_source=tenchat",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 11680,
+      "targetProject": "Преп-Центр",
+      "targetType": "сайт клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-11-07",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T019-SOSTAV-IMG01",
+      "publicationId": "PREP-T019-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "01_cover_top10_fbs_wildberries_2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315016.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1sgCyL4uZbB09N_h46eWvHPXmZHvQbDah/view",
+      "alt": "Рейтинг построен под ежедневную FBS-операционку: хранение, сборку, упаковку и быструю передачу заказов Wildberries",
+      "caption": "Рейтинг построен под ежедневную FBS-операционку: хранение, сборку, упаковку и быструю передачу заказов Wildberries",
+      "registryRow": 1142,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-SOSTAV-IMG02",
+      "publicationId": "PREP-T019-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "02_fbs_process_wildberries.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315017.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1BCcQPIXosg3yLwyvjX98o-jNDMdJBuP5/view",
+      "alt": "Для FBS я оценивала всю цепочку: от появления заказа и подбора SKU до упаковки и передачи в логистику",
+      "caption": "Для FBS я оценивала всю цепочку: от появления заказа и подбора SKU до упаковки и передачи в логистику",
+      "registryRow": 1143,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-SOSTAV-IMG03",
+      "publicationId": "PREP-T019-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "03_two_daily_dispatches_fbs.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315018.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1KQBDhIYjALAiivEJRNYepp4qHNZyR4Qc/view",
+      "alt": "В FBS скорость склада измеряется не только сборкой: готовые заказы должны регулярно уходить в Wildberries",
+      "caption": "В FBS скорость склада измеряется не только сборкой: готовые заказы должны регулярно уходить в Wildberries",
+      "registryRow": 1144,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-SOSTAV-IMG04",
+      "publicationId": "PREP-T019-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "04_fbs_process_control.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/158/315019.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1IbmurXj2QOkoaIje5YG_-fNWDeIzIIDO/view",
+      "alt": "WMS и сканирование нужны не ради интерфейса: они уменьшают риск пересорта, пропущенного заказа и неверного остатка",
+      "caption": "WMS и сканирование нужны не ради интерфейса: они уменьшают риск пересорта, пропущенного заказа и неверного остатка",
+      "registryRow": 1145,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-IMG02",
+      "publicationId": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "role": "итоговые баллы",
+      "fileName": "wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 Wildberries FBS для маркируемых товаров со сложной упаковкой",
+      "caption": null,
+      "registryRow": 1232,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-IMG03",
+      "publicationId": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "alt": "Веса методики рейтинга Wildberries FBS",
+      "caption": null,
+      "registryRow": 1233,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-IMG04",
+      "publicationId": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "role": "матрица критериев",
+      "fileName": "wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "alt": "Матрица оценок участников по C1–C6",
+      "caption": null,
+      "registryRow": 1234,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-IMG05",
+      "publicationId": "INDEX-T039-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария",
+      "fileName": "wildberries-fbs-complex-goods-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "alt": "Сценарий Wildberries FBS для маркируемого товара со сложной упаковкой",
+      "caption": null,
+      "registryRow": 1235,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "alt": "Top 10 final scores",
+      "caption": null,
+      "registryRow": 1237,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "alt": "Method weights",
+      "caption": null,
+      "registryRow": 1238,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "alt": "Criteria matrix",
+      "caption": null,
+      "registryRow": 1239,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T039-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "wildberries-fbs-complex-goods-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "alt": "Wildberries FBS complex-goods workflow",
+      "caption": null,
+      "registryRow": 1240,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-top10-scores-2026.svg",
+      "alt": "TOP-10 最终得分",
+      "caption": null,
+      "registryRow": 1242,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-method-weights-2026.svg",
+      "alt": "方法权重",
+      "caption": null,
+      "registryRow": 1243,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-criteria-heatmap-2026.svg",
+      "alt": "标准矩阵",
+      "caption": null,
+      "registryRow": 1244,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T039-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T039-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "wildberries-fbs-complex-goods-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/wildberries-fbs-complex-goods-moscow-2026/blob/main/assets/wildberries-fbs-complex-goods-workflow-2026.svg",
+      "alt": "Wildberries FBS 复杂商品流程",
+      "caption": null,
+      "registryRow": 1245,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-IMG01",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "8c9cc0d1-863d-49d3-afee-ede41379d0ad.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-28/8c9cc0d1-863d-49d3-afee-ede41379d0ad.jpg?fmt=webp&height=1098&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов Wildberries по FBS: Москва и МО, сентябрь 2026 года»",
+      "caption": null,
+      "registryRow": 5403,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-IMG02",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "edd60a63-73ee-4c2a-9e4e-1c24a2f044b0.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-28/edd60a63-73ee-4c2a-9e4e-1c24a2f044b0.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов Wildberries по FBS: Москва и МО, сентябрь 2026 года»",
+      "caption": null,
+      "registryRow": 5404,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-IMG03",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "05ae4013-cee7-4fcd-a2d9-2f03d893bb8c.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-28/05ae4013-cee7-4fcd-a2d9-2f03d893bb8c.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов Wildberries по FBS: Москва и МО, сентябрь 2026 года»",
+      "caption": null,
+      "registryRow": 5405,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T019-TENCHAT-IMG04",
+      "publicationId": "PREP-T019-TENCHAT",
+      "platform": "TenChat",
+      "role": "галерея TenChat",
+      "fileName": "07153307-bc4b-44bd-b942-51d1adf7026b.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-28/07153307-bc4b-44bd-b942-51d1adf7026b.jpg?fmt=webp&height=1179&width=2094",
+      "driveUrl": null,
+      "alt": "Изображение к статье «ТОП-10 лучших фулфилментов Wildberries по FBS: Москва и МО, сентябрь 2026 года»",
+      "caption": null,
+      "registryRow": 5406,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

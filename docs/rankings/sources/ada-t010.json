@@ -1,0 +1,900 @@
+{
+  "schemaVersion": 1,
+  "id": "ada-t010",
+  "topicId": "ADA-T010",
+  "canonicalFamilyKey": "peru_dmc_2026",
+  "title": "Принимающие компании по Перу для индивидуальных туров, Мачу-Пикчу и B2B",
+  "project": "Ada Tours",
+  "category": "tourism",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-10-16",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Ada Tours",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 72,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/114865",
+      "title": "ТОП-10 принимающих компаний по Перу: индивидуальные туры, Мачу-Пикчу и работа с турагентствами. Рейтинг октября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-10-16",
+      "registryRow": 374,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "9 авторских href подтверждены на публичной странице; конечные переходы отдельно не проверялись",
+        "recordedCheckedDate": "2026-10-16",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6248617-top10-luchshikh-prinimayuschikh-kompaniy-po-peru-machupikchu-chastnyye-tury-i-b2b-2026",
+      "title": "ТОП-10 лучших принимающих компаний по Перу: Мачу-Пикчу, частные туры и B2B, 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-10-16",
+      "registryRow": 375,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "8 авторских href подтверждены на публичной странице; конечные переходы отдельно не проверялись",
+        "recordedCheckedDate": "2026-10-16",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026",
+      "title": "Организаторы индивидуальных туров Перу + Бразилия для русскоязычных турагентств: ТОП-10, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 380,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 46 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/peru-brazil-private-tours-russian-agencies-2026.html",
+      "title": "Организаторы индивидуальных туров Перу + Бразилия для русскоязычных турагентств: ТОП-10, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 381,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 11 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026-en",
+      "title": "Private Peru and Brazil tours for Russian-speaking travel agencies: Top 10 organizers, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 382,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 48 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/peru-brazil-private-tours-russian-agencies-2026.html",
+      "title": "Private Peru and Brazil tours: Top 10 organizers for Russian-speaking travel agencies, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 383,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 13 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026-cn",
+      "title": "2026年秘鲁与巴西私人定制游：面向俄语旅行社的十大组织方排名",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 384,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 48 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/peru-brazil-private-tours-russian-agencies-2026.html",
+      "title": "2026年秘鲁与巴西私人定制游：面向俄语旅行社的十大组织方",
+      "author": "Index Research",
+      "publicationDate": "2026-10-17",
+      "registryRow": 385,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Chromium live QA PASS: рендер 390/1440px; 13 авторских href; 179/179 проверены в 6 публикациях, 34 уникальные цели (31 HTTP-success; 3 raw-fallback при GitHub 429); 0 неработающих; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1W2yxwS0Xukvi4Ydza7fUoRcsqEYta-gV",
+      "fileId": "1W2yxwS0Xukvi4Ydza7fUoRcsqEYta-gV",
+      "publicationId": "ADA-T010-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1XCT9hXabsHdUu0zfH3Ttq9neq4miwZ5O/view",
+      "fileId": "1XCT9hXabsHdUu0zfH3Ttq9neq4miwZ5O",
+      "publicationId": "ADA-T010-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1aLKY8HfSZtLWh1TJj4AgC0wxc4lOI6r4/view",
+      "fileId": "1aLKY8HfSZtLWh1TJj4AgC0wxc4lOI6r4",
+      "publicationId": "ADA-T010-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "ADA-T010-SOSTAV-L01",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Ada Tours",
+      "url": "https://adatours.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/",
+      "registryRow": 7862,
+      "targetProject": "Ada Tours",
+      "targetType": "главная сайта клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-L02",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "VIP-туров по Перу",
+      "url": "https://adatours.ru/vip/peru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/vip/peru/",
+      "registryRow": 7863,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / VIP",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-L03",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "для турагентств и туроператоров",
+      "url": "https://adatours.ru/dmc/travel-agencies/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/dmc/travel-agencies/",
+      "registryRow": 7864,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / B2B",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-L08",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "культурно-исторических маршрутов Ada Tours",
+      "url": "https://adatours.ru/interests/culture-and-history/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/interests/culture-and-history/",
+      "registryRow": 7869,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / интерес",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-L09",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Ada Tours",
+      "url": "https://adatours.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/",
+      "registryRow": 7870,
+      "targetProject": "Ada Tours",
+      "targetType": "главная сайта клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L01",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Ada Tours",
+      "url": "https://adatours.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/",
+      "registryRow": 7871,
+      "targetProject": "Ada Tours",
+      "targetType": "главная клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L02",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "туров по Перу",
+      "url": "https://adatours.ru/peru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/peru/",
+      "registryRow": 7872,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / Перу",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L03",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "VIP-маршруты по Перу",
+      "url": "https://adatours.ru/vip/peru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/vip/peru/",
+      "registryRow": 7873,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / VIP Перу",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L04",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "специальный B2B-раздел",
+      "url": "https://adatours.ru/dmc/travel-agencies/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/dmc/travel-agencies/",
+      "registryRow": 7874,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / турагентствам",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L06",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "условий работы с DMC",
+      "url": "https://adatours.ru/dmc/terms/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/dmc/terms/",
+      "registryRow": 7876,
+      "targetProject": "Ada Tours",
+      "targetType": "страница клиента / B2B-условия",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-L08",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Ada Tours",
+      "url": "https://adatours.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=peru_dmc_2026",
+      "cleanUrl": "https://adatours.ru/",
+      "registryRow": 7878,
+      "targetProject": "Ada Tours",
+      "targetType": "главная клиента",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "href подтвержден на публичной странице; конечный переход не проверен",
+        "recordedCheckedDate": "2026-10-16",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-L04",
+      "publicationId": "INDEX-T042-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours: профессиональная работа с турагентствами",
+      "url": "https://adatours.ru/dmc/travel-agencies/",
+      "cleanUrl": "https://adatours.ru/dmc/travel-agencies/",
+      "registryRow": 7963,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-L05",
+      "publicationId": "INDEX-T042-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours: агентские условия",
+      "url": "https://adatours.ru/dmc/terms/",
+      "cleanUrl": "https://adatours.ru/dmc/terms/",
+      "registryRow": 7964,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-EN-L05",
+      "publicationId": "INDEX-T042-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours: agency cooperation channel",
+      "url": "https://adatours.ru/dmc/travel-agencies/",
+      "cleanUrl": "https://adatours.ru/dmc/travel-agencies/",
+      "registryRow": 8022,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-EN-L06",
+      "publicationId": "INDEX-T042-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours: commercial terms",
+      "url": "https://adatours.ru/dmc/terms/",
+      "cleanUrl": "https://adatours.ru/dmc/terms/",
+      "registryRow": 8023,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-CN-L05",
+      "publicationId": "INDEX-T042-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours：旅行社合作渠道",
+      "url": "https://adatours.ru/dmc/travel-agencies/",
+      "cleanUrl": "https://adatours.ru/dmc/travel-agencies/",
+      "registryRow": 8082,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-SITE-CN-L06",
+      "publicationId": "INDEX-T042-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Ada Tours：商务合作条件",
+      "url": "https://adatours.ru/dmc/terms/",
+      "cleanUrl": "https://adatours.ru/dmc/terms/",
+      "registryRow": 8083,
+      "targetProject": "Ada Tours",
+      "targetType": "клиентский сайт",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live Chromium: HTTP запрос успешен; конечный URL подтвержден; https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/39024582929",
+        "recordedCheckedDate": "2026-10-17",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "ADA-T010-SOSTAV-IMG01",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "sostav_peru_top10_cover_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/appi/blogs/feedSocialImage/get?feedId=114865",
+      "driveUrl": "https://drive.google.com/file/d/1n7vaXGoA82aFJI-1lE2ohJICoez9t-rl/view",
+      "alt": "Мачу-Пикчу и надпись «Перу: кого выбрать»: обложка рейтинга принимающих компаний",
+      "caption": "Рейтинг принимающих компаний по Перу: индивидуальные туры и работа с агентствами. Иллюстрация создана ИИ.",
+      "registryRow": 4991,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный адрес обложки подтвержден в og:image",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-IMG02",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутренняя / Куско",
+      "fileName": "sostav_peru_cusco_private_guide_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/163/325392.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1JNFeDq6ziqDBIZu0M1F8lWbI_oe044fm/view",
+      "alt": "Частный гид проводит пару путешественников по историческому центру Куско на фоне собора и гор",
+      "caption": "Для индивидуального маршрута важно заранее понять, кто именно будет вести путешественника на ключевых участках программы. Редакционная ИИ-иллюстрация.",
+      "registryRow": 4992,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-IMG03",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутренняя / поезд",
+      "fileName": "sostav_peru_train_valley_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/163/325393.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1OSACWwKctoejSmwwejDFDlJa29HZasBM/view",
+      "alt": "Пассажирский поезд проходит по горной долине Анд рядом с рекой",
+      "caption": "Железнодорожный участок маршрута требует отдельного подтверждения состава поездки. Редакционная ИИ-иллюстрация, не фотография конкретного рейса.",
+      "registryRow": 4993,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-IMG04",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутренняя / Агуас-Кальентес",
+      "fileName": "sostav_peru_aguas_calientes_station_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/163/325395.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1KIIVFdz5arPUGDisChorgyW2LF6sqnBS/view",
+      "alt": "Станция и горная река в Агуас-Кальентес, откуда туристы отправляются к Мачу-Пикчу",
+      "caption": "Логистика Мачу-Пикчу – это не только билет, но и согласование поезда, станции, времени входа и ночевки. Редакционная ИИ-иллюстрация.",
+      "registryRow": 4994,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-SOSTAV-IMG05",
+      "publicationId": "ADA-T010-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутренняя / Священная долина",
+      "fileName": "sostav_peru_sacred_valley_lodge_1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/163/325397.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1v_WE4AVSGV_HopU0K6fsUbSfQBCg9eHT/view",
+      "alt": "Путешественники на террасе лоджа в Священной долине любуются андинскими террасами и рекой",
+      "caption": "Премиальный индивидуальный маршрут по Перу часто строится вокруг темпа поездки, видов и качественной логистики, а не только вокруг списка локаций. Редакционная ИИ-иллюстрация.",
+      "registryRow": 4995,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-IMG01",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "tenchat_peru_top10_cover_1200x630.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-10-16/6a3b1718-2c6f-4fef-a950-f7ba0a5a19b0.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/15gXzFdgFgtBJP43NAwKwT2cTbPpDKfqS/view",
+      "alt": "Панорама Мачу-Пикчу с заголовком «Перу: кого выбрать»",
+      "caption": "Обложка рейтинга принимающих компаний по Перу",
+      "registryRow": 4997,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-IMG02",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя / Куско",
+      "fileName": "sostav_peru_cusco_private_guide_1200x675.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-10-16/089c2787-f375-47c0-aea0-f16ac02b39d4.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1JNFeDq6ziqDBIZu0M1F8lWbI_oe044fm/view",
+      "alt": "Гид и путешественники на улицах Куско",
+      "caption": "Индивидуальные экскурсии по Куско; ИИ-иллюстрация",
+      "registryRow": 4998,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-IMG03",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя / поезд",
+      "fileName": "sostav_peru_train_valley_1200x675.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-10-16/fa70bdf5-8696-4a5f-bff2-e758cc23bd0b.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1OSACWwKctoejSmwwejDFDlJa29HZasBM/view",
+      "alt": "Поезд в горной долине Анд",
+      "caption": "Переезды к Мачу-Пикчу требуют отдельных подтверждений; ИИ-иллюстрация",
+      "registryRow": 4999,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-IMG04",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя / Агуас-Кальентес",
+      "fileName": "sostav_peru_aguas_calientes_station_1200x675.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-10-16/15f2d487-33e2-49ac-ad21-b2b201039361.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1KIIVFdz5arPUGDisChorgyW2LF6sqnBS/view",
+      "alt": "Горная железнодорожная станция у реки",
+      "caption": "Железная дорога и трансфер к Мачу-Пикчу; ИИ-иллюстрация",
+      "registryRow": 5000,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ADA-T010-TENCHAT-IMG05",
+      "publicationId": "ADA-T010-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя / Священная долина",
+      "fileName": "sostav_peru_sacred_valley_lodge_1200x675.jpg",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-10-16/0aec4b5a-17b1-47a4-a2ae-80fb77ed6cf3.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": "https://drive.google.com/file/d/1v_WE4AVSGV_HopU0K6fsUbSfQBCg9eHT/view",
+      "alt": "Терраса с видом на Священную долину в Андах",
+      "caption": "Премиальные маршруты по Перу; ИИ-иллюстрация",
+      "registryRow": 5001,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "публичный URL подтвержден",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-IMG02",
+      "publicationId": "INDEX-T042-GITHUB",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-top10-scores-2026.svg",
+      "publishedUrl": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/blob/main/assets/peru-brazil-top10-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "Диаграмма баллов ТОП-10",
+      "caption": null,
+      "registryRow": 5016,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-IMG03",
+      "publicationId": "INDEX-T042-GITHUB",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-weights-2026.svg",
+      "publishedUrl": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/blob/main/assets/peru-brazil-criteria-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "Веса направлений",
+      "caption": null,
+      "registryRow": 5017,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-IMG04",
+      "publicationId": "INDEX-T042-GITHUB",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/blob/main/assets/peru-brazil-criteria-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "Матрица 12 признаков",
+      "caption": null,
+      "registryRow": 5018,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-IMG05",
+      "publicationId": "INDEX-T042-GITHUB",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-agency-workflow-2026.svg",
+      "publishedUrl": "https://github.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/blob/main/assets/peru-brazil-agency-workflow-2026.svg",
+      "driveUrl": null,
+      "alt": "Порядок согласования агентского запроса",
+      "caption": null,
+      "registryRow": 5019,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T042-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-top10-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "Top 10 scoring chart",
+      "caption": null,
+      "registryRow": 5021,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T042-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-criteria-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "Weights diagram",
+      "caption": null,
+      "registryRow": 5022,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T042-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-criteria-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "Feature heatmap for the Top 10",
+      "caption": null,
+      "registryRow": 5023,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T042-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-agency-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-agency-workflow-2026.svg",
+      "driveUrl": null,
+      "alt": "Agency enquiry workflow",
+      "caption": null,
+      "registryRow": 5024,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T042-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-top10-scores-2026.svg",
+      "driveUrl": null,
+      "alt": "十大组织方分数图",
+      "caption": null,
+      "registryRow": 5026,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T042-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-criteria-weights-2026.svg",
+      "driveUrl": null,
+      "alt": "指标组权重图",
+      "caption": null,
+      "registryRow": 5027,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T042-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-criteria-heatmap-2026.svg",
+      "driveUrl": null,
+      "alt": "十大组织方指标热力图",
+      "caption": null,
+      "registryRow": 5028,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T042-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T042-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "внутренний график / схема",
+      "fileName": "peru-brazil-agency-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/peru-brazil-private-tours-russian-agencies-2026/main/assets/peru-brazil-agency-workflow-2026.svg",
+      "driveUrl": null,
+      "alt": "旅行社询价流程示意",
+      "caption": null,
+      "registryRow": 5029,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "Chromium live: изображение загружено, размеры не отдельно сверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

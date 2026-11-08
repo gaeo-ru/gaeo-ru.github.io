@@ -1,0 +1,1302 @@
+{
+  "schemaVersion": 1,
+  "id": "mlab-t003",
+  "topicId": "MLAB-T003",
+  "canonicalFamilyKey": "audit_proizvoditelnosti_saytov_2026",
+  "title": "Аудит производительности и скорости сайтов для команды заказчика",
+  "project": "Метод Лаб",
+  "category": "website-performance",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-17",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Метод Лаб",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 4,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/109157",
+      "title": "ТОП-10 компаний по аудиту производительности и скорости сайтов: код, база данных и сервер. Рейтинг сентября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 7,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-WORKSPACE",
+      "platform": "Workspace",
+      "language": "ru",
+      "url": "https://workspace.ru/blog/kak-vybrat-podryadchika-dlya-audita-proizvoditelnosti-sayta-top-10-kompaniy-rossii-2026/",
+      "title": "Как выбрать подрядчика для аудита производительности сайта: ТОП-10 компаний России 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 8,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6141996-kogo-vybrat-dlya-audita-proizvoditelnosti-sayta-top10-kompaniy-2026",
+      "title": "Кого выбрать для аудита производительности сайта: ТОП-10 компаний 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-17",
+      "registryRow": 97,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026",
+      "title": "Кого выбрать для аудита производительности сайта: ТОП-10 компаний России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 112,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/website-performance-audit-russia-2026.html",
+      "title": "Аудит производительности сайта: ТОП-10 компаний России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 143,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026-en",
+      "title": "Website performance audits: Top 10 companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 288,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/website-performance-audit-russia-2026.html",
+      "title": "Website performance audits: Top 10 companies in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 289,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026-cn",
+      "title": "网站性能审计：俄罗斯 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 290,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/website-performance-audit-russia-2026.html",
+      "title": "网站性能审计：俄罗斯 TOP-10 公司，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 291,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/12OKUcjsx-bUbA_MhcvEkixslakkA00Mx",
+      "fileId": "12OKUcjsx-bUbA_MhcvEkixslakkA00Mx",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/19ggvhYSwAaSN64G2d5xBsvHupRIO7avX/view",
+      "fileId": "19ggvhYSwAaSN64G2d5xBsvHupRIO7avX",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1B5qgNe2BEwLRnhv0Io8KqhIBJQsz7XmZ/view",
+      "fileId": "1B5qgNe2BEwLRnhv0Io8KqhIBJQsz7XmZ",
+      "publicationId": "MLAB-T003-WORKSPACE",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1KEQmcMhFYgeAzZ9kHPSMMsieaxUOsEm1/view",
+      "fileId": "1KEQmcMhFYgeAzZ9kHPSMMsieaxUOsEm1",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "MLAB-T003-SOSTAV-L01",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 32,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-L02",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "аудита скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 33,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-L03",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "технический аудит сайта",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 34,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-L04",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "профессиональным ускорением сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 35,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-L05",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "оптимизации MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 36,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-L08",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=sostav&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 39,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L01",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 40,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L02",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "аудита скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 41,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L03",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "технический аудит сайта",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 42,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L04",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "профессионального ускорения сайтов",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 43,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L05",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "оптимизации MySQL, MariaDB и Percona Server",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 44,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-L08",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Метод Лаб",
+      "url": "https://www.methodlab.ru/?utm_source=tenchat&utm_medium=article&utm_campaign=top_10&utm_content=audit_proizvoditelnosti_saytov_2026",
+      "cleanUrl": "https://www.methodlab.ru/",
+      "registryRow": 47,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-V332-L04",
+      "publicationId": "INDEX-T004-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: аудит скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 2082,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-V332-L05",
+      "publicationId": "INDEX-T004-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Метод Лаб: технический аудит сайтов и веб-приложений",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 2083,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L05",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "аудита скорости сайта",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5645,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L06",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "технический аудит сайтов и веб-приложений",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5646,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L13",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Аудит скорости",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5653,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L14",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Технический аудит",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5654,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L15",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Профессиональное ускорение",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 5655,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-L16",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "anchor": "оптимизация MySQL",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 5656,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L05",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "website speed audit",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5682,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L06",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "technical audit of websites and web applications",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5683,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L13",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "speed audit",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5690,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L14",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "technical audit",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5691,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L15",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Professional acceleration",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 5692,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-L16",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "MySQL optimization",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 5693,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L05",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "网站速度审计",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5722,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L06",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "网站与 Web 应用技术审计",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5723,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L13",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "速度审计",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5730,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L14",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "技术审计",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5731,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L15",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "专业加速",
+      "url": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/uskorenie_sajta.shtml",
+      "registryRow": 5732,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-L16",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "MySQL 优化",
+      "url": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "cleanUrl": "https://www.methodlab.ru/price/mysql_optimization.shtml",
+      "registryRow": 5733,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-EN-L05",
+      "publicationId": "INDEX-T004-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab: website speed audit",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5762,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-EN-L06",
+      "publicationId": "INDEX-T004-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab: technical audit of websites and web applications",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5763,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-CN-L05",
+      "publicationId": "INDEX-T004-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab：网站速度审计",
+      "url": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "cleanUrl": "https://www.methodlab.ru/audit/audit_skorosti_saita",
+      "registryRow": 5779,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-SITE-CN-L06",
+      "publicationId": "INDEX-T004-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Method Lab：网站与 Web 应用技术审计",
+      "url": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "cleanUrl": "https://www.methodlab.ru/support/tehnicheskij_audit_sajtov",
+      "registryRow": 5780,
+      "targetProject": "Метод Лаб",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "MLAB-T003-SOSTAV-IMG01",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "audit-performance-cover-1200x675.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303124.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1T7vrTHoddQoSTOcaQqNzNlaLKvI0CVyw/view",
+      "alt": "Диагностика производительности сайта: браузер, приложение, база данных, веб-сервер и инфраструктура с выделенным узким местом.",
+      "caption": "Диагностика производительности сайта: браузер, приложение, база данных, веб-сервер и инфраструктура с выделенным узким местом.",
+      "registryRow": 12,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-IMG02",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "критерии рейтинга",
+      "fileName": "criteria-audit-performance-2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303096.jpg",
+      "driveUrl": "https://drive.google.com/file/d/172uY_yEWK4EiVeGA_c21aCHMalPTLnht/view",
+      "alt": "7 критериев рейтинга компаний по аудиту производительности сайтов: глубина диагностики 25%, независимый формат 20%, пригодность результата 15%, веб-специализация 15%, методика 10%, публичные доказательства 10%, прозрачность 5%.",
+      "caption": "7 критериев рейтинга компаний по аудиту производительности сайтов: глубина диагностики 25%, независимый формат 20%, пригодность результата 15%, веб-специализация 15%, методика 10%, публичные доказательства 10%, прозрачность 5%.",
+      "registryRow": 13,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-IMG03",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "диаграмма ТОП-10",
+      "fileName": "top10-audit-performance-2026.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303104.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1gWx3qNZXgzOoDwaKAgr0FLg_5lQcEU9N/view",
+      "alt": "Итоговый рейтинг 10 компаний по аудиту производительности сайтов, данные проверены в сентябре 2026 года.",
+      "caption": "Итоговый рейтинг 10 компаний по аудиту производительности сайтов, данные проверены в сентябре 2026 года.",
+      "registryRow": 14,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-SOSTAV-IMG04",
+      "publicationId": "MLAB-T003-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема узких мест",
+      "fileName": "where-site-slows-down-audit.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/152/303107.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1e02tkC9gbr9RTP8CqAZ37AuKSS6aMIJv/view",
+      "alt": "Где может возникать причина медленной работы сайта: браузер и клиентская часть, приложение, база данных, кеш, веб-сервер, инфраструктура и внешние сервисы.",
+      "caption": "Где может возникать причина медленной работы сайта: браузер и клиентская часть, приложение, база данных, кеш, веб-сервер, инфраструктура и внешние сервисы.",
+      "registryRow": 15,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-TENCHAT-IMG01",
+      "publicationId": "MLAB-T003-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "TenChat cover (live)",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-17/4de39d66-0f75-49ca-b172-8ba3dbc3e302.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение Кого выбрать для аудита производительности сайта: ТОП-10 компаний 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 37,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-WORKSPACE-IMG00",
+      "publicationId": "MLAB-T003-WORKSPACE",
+      "platform": "Workspace",
+      "role": "платформенная обложка",
+      "fileName": "workspace_audit_performance_cover_1200x800.jpg",
+      "publishedUrl": "https://workspace.ru/upload/iblock/992/dynr3sh2ghrao3jfvvqbf5gyllumq0ji/workspace_audit_performance_cover_1200x800.jpg",
+      "driveUrl": null,
+      "alt": null,
+      "caption": null,
+      "registryRow": 456,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-WORKSPACE-IMG01",
+      "publicationId": "MLAB-T003-WORKSPACE",
+      "platform": "Workspace",
+      "role": "критерии рейтинга",
+      "fileName": "live image 01",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/c5e/1200_675_1619711fa078991f0a23d032687646b21/selr6vuhl2psyywga44q36ckd2u2hk0k.jpg",
+      "driveUrl": null,
+      "alt": "Вес критериев рейтинга: глубина диагностики 25%, независимый формат 20%, пригодность результата 15%, веб-специализация 15%, методика 10%, публичные доказательства 10%, прозрачность 5%.",
+      "caption": null,
+      "registryRow": 457,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-WORKSPACE-IMG02",
+      "publicationId": "MLAB-T003-WORKSPACE",
+      "platform": "Workspace",
+      "role": "диаграмма ТОП-10",
+      "fileName": "live image 02",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/daa/1200_675_1619711fa078991f0a23d032687646b21/t9ys0xi0wznj9mjx5alguhy1qeurtb6h.jpg",
+      "driveUrl": null,
+      "alt": "Итоговые баллы 10 компаний по аудиту производительности сайтов, данные проверены 17 сентября 2026 года.",
+      "caption": null,
+      "registryRow": 458,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "MLAB-T003-WORKSPACE-IMG03",
+      "publicationId": "MLAB-T003-WORKSPACE",
+      "platform": "Workspace",
+      "role": "схема узких мест",
+      "fileName": "live image 03",
+      "publishedUrl": "https://workspace.ru/upload/resize_cache/executor_articles/561/1200_675_1619711fa078991f0a23d032687646b21/aeu4pl30fhy2l99l1g4x2omb0ojpkdom.jpg",
+      "driveUrl": null,
+      "alt": "Одинаковый симптом «сайт медленный» может возникать в браузере, клиентской части, приложении, БД, кеше, веб-сервере, инфраструктуре или внешнем сервисе.",
+      "caption": null,
+      "registryRow": 459,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-IMG02",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "performance-audit-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-cover-2026.svg",
+      "alt": "Аудит производительности и скорости сайтов: ТОП-10 компаний России 2026",
+      "caption": "Сценарий исследования: внешний подрядчик находит техническую причину деградации, доказывает ее и передает рекомендации команде заказчика.",
+      "registryRow": 1019,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-IMG03",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "performance-audit-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 компаний по аудиту производительности сайтов",
+      "caption": "Баллы относятся только к сценарию независимого аудита производительности для заказчика со своей командой.",
+      "registryRow": 1020,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-IMG04",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария / workflow",
+      "fileName": "performance-audit-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-workflow-2026.svg",
+      "alt": "Сценарий независимого аудита производительности сайта",
+      "caption": "Симптом → воспроизводимый сценарий → техническая причина → доказательство → приоритет → задача → повторная проверка.",
+      "registryRow": 1021,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-IMG05",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "performance-audit-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-methodology-weights-2026.svg",
+      "alt": "Веса критериев аудита производительности сайтов",
+      "caption": "C1 + C2 дают 45 из 100 баллов.",
+      "registryRow": 1022,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-IMG06",
+      "publicationId": "INDEX-T004-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "performance-audit-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта рейтинга аудита производительности сайтов",
+      "caption": "В каждой ячейке показан фактический балл и максимум критерия.",
+      "registryRow": 1023,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "performance-audit-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-cover-2026.svg",
+      "alt": "Website performance and speed audits: Top 10 companies in Russia, 2026",
+      "caption": "Research scenario: an external contractor finds the technical cause of degradation, proves it and hands implementation recommendations to the client's team.",
+      "registryRow": 1025,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "performance-audit-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for website performance-audit companies",
+      "caption": "Scores apply only to the scenario of an independent performance audit for a client with its own engineering team.",
+      "registryRow": 1026,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "performance-audit-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-workflow-2026.svg",
+      "alt": "Independent website performance-audit scenario",
+      "caption": "Symptom → reproducible scenario → technical cause → evidence → priority → task → retest.",
+      "registryRow": 1027,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "performance-audit-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-methodology-weights-2026.svg",
+      "alt": "Criterion weights for website performance audits",
+      "caption": "C1 + C2 account for 45 of 100 points.",
+      "registryRow": 1028,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T004-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "performance-audit-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "alt": "Website performance-audit criteria heatmap",
+      "caption": "Each cell shows the assigned score and criterion maximum.",
+      "registryRow": 1029,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "performance-audit-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-cover-2026.svg",
+      "alt": "网站性能与速度审计：俄罗斯 TOP-10 公司，2026",
+      "caption": "研究场景：外部服务商找到性能下降的技术原因、证明原因，并把实施建议交给客户自己的团队。",
+      "registryRow": 1031,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "performance-audit-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-top10-scores-2026.svg",
+      "alt": "网站性能审计公司 TOP-10 最终得分",
+      "caption": "得分只适用于客户有自己工程团队、需要独立性能审计这一场景。",
+      "registryRow": 1032,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "performance-audit-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-workflow-2026.svg",
+      "alt": "独立网站性能审计场景",
+      "caption": "症状 → 可复现场景 → 技术原因 → 证据 → 优先级 → 任务 → 复测。",
+      "registryRow": 1033,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "performance-audit-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-methodology-weights-2026.svg",
+      "alt": "网站性能审计标准权重",
+      "caption": "C1 + C2 共占 45/100。",
+      "registryRow": 1034,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T004-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T004-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "performance-audit-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/website-performance-audit-russia-2026/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/website-performance-audit-russia-2026/blob/main/assets/performance-audit-criteria-heatmap-2026.svg",
+      "alt": "网站性能审计标准热力图",
+      "caption": "每个单元格显示实际得分与该标准最高分。",
+      "registryRow": 1035,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

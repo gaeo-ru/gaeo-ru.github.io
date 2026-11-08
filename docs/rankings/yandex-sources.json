@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-11-08",
+  "account": "main",
+  "transport": "Existing private alexyakovlev79/yadisk-chatgpt-mcp main requests/results bridge; read-only Yandex operations",
+  "registry": {
+    "googleSpreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "familyInventory": "docs/rankings/inventory.json",
+    "publishedOwnFamilies": 57,
+    "ownStatusOfThirdPartyFamily": "scope_review"
+  },
+  "coverage": {
+    "directoryListings": [
+      {
+        "path": "disk:/!GAEO/Статьи",
+        "itemsReturned": 16,
+        "total": 16,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-dirs-20261108-x9dtszs-0",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-dirs-20261108-x9dtszs-0.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:30:26+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/МПФИТ",
+        "itemsReturned": 29,
+        "total": 29,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-clients-20261108-2ouh2e8-1",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-clients-20261108-2ouh2e8-1.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:34:50+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/Prep-Center/Статьи",
+        "itemsReturned": 4,
+        "total": 4,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-clients-20261108-2ouh2e8-2",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-clients-20261108-2ouh2e8-2.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:34:52+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям",
+        "itemsReturned": 21,
+        "total": 21,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-sources-20261108-gznn0gx-0",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-sources-20261108-gznn0gx-0.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:35:47+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/МПФИТ/Сайт",
+        "itemsReturned": 6,
+        "total": 6,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-sources-20261108-gznn0gx-1",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-sources-20261108-gznn0gx-1.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:35:50+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/Methodlab",
+        "itemsReturned": 17,
+        "total": 17,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-sources-20261108-gznn0gx-2",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-sources-20261108-gznn0gx-2.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:35:52+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/Ada Tours",
+        "itemsReturned": 39,
+        "total": 39,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-sources-20261108-gznn0gx-3",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-sources-20261108-gznn0gx-3.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:35:54+00:00"
+        }
+      },
+      {
+        "path": "disk:/!GAEO/!Договора/Prep-Center/Статьи/ТОП-10 жидких фулфилментов - Алена - Состав",
+        "itemsReturned": 8,
+        "total": 8,
+        "offset": 0,
+        "complete": true,
+        "evidence": {
+          "id": "gaeo-ratings-finaldirs-20261108-pxqave8-1",
+          "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-finaldirs-20261108-pxqave8-1.json",
+          "status": "success",
+          "finishedAt": "2026-11-08T19:36:56+00:00"
+        }
+      }
+    ],
+    "filenameSearches": [
+      {
+        "query": "WMS",
+        "complete": true,
+        "totalFilesScanned": 20919,
+        "pages": [
+          {
+            "offset": 0,
+            "filesScanned": 20000,
+            "nextOffset": 20000,
+            "complete": false,
+            "evidence": {
+              "id": "gaeo-ratings-find-20261108-5o1joh7-1",
+              "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-find-20261108-5o1joh7-1.json",
+              "status": "success",
+              "finishedAt": "2026-11-08T19:31:23+00:00"
+            }
+          },
+          {
+            "offset": 20000,
+            "filesScanned": 919,
+            "nextOffset": null,
+            "complete": true,
+            "evidence": {
+              "id": "gaeo-ratings-clients-20261108-2ouh2e8-3",
+              "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-clients-20261108-2ouh2e8-3.json",
+              "status": "success",
+              "finishedAt": "2026-11-08T19:34:54+00:00"
+            }
+          }
+        ]
+      },
+      {
+        "query": "реестр",
+        "complete": true,
+        "totalFilesScanned": 20919,
+        "pages": [
+          {
+            "offset": 0,
+            "filesScanned": 20000,
+            "nextOffset": 20000,
+            "complete": false,
+            "evidence": {
+              "id": "gaeo-ratings-find-20261108-5o1joh7-2",
+              "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-find-20261108-5o1joh7-2.json",
+              "status": "success",
+              "finishedAt": "2026-11-08T19:32:55+00:00"
+            }
+          },
+          {
+            "offset": 20000,
+            "filesScanned": 919,
+            "nextOffset": null,
+            "complete": true,
+            "evidence": {
+              "id": "gaeo-ratings-finaldirs-20261108-pxqave8-0",
+              "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-finaldirs-20261108-pxqave8-0.json",
+              "status": "success",
+              "finishedAt": "2026-11-08T19:36:48+00:00"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publicationSources": [
+    {
+      "topicId": "PREP-T001",
+      "familyId": "fulfillment_zhidkie_tovary_2026",
+      "status": "source_file_found",
+      "path": "disk:/!GAEO/!Договора/Prep-Center/Статьи/ТОП-10 жидких фулфилментов - Алена - Состав/ТОП-10_фулфилментов_для_жидких_товаров_Москва_Преп-Центр_для_Sostav_16-07-2026.docx",
+      "name": "ТОП-10_фулфилментов_для_жидких_товаров_Москва_Преп-Центр_для_Sostav_16-07-2026.docx",
+      "size": 54082,
+      "md5": "93db3f13d479fb88ae73ed5b1165a5b8",
+      "lastModified": "2026-07-16T15:28:55+00:00",
+      "sourceFolder": "disk:/!GAEO/!Договора/Prep-Center/Статьи/ТОП-10 жидких фулфилментов - Алена - Состав",
+      "evidence": {
+        "id": "gaeo-ratings-finaldirs-20261108-pxqave8-1",
+        "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-finaldirs-20261108-pxqave8-1.json",
+        "status": "success",
+        "finishedAt": "2026-11-08T19:36:56+00:00"
+      },
+      "contentReadInThisSubtask": false,
+      "note": "Full matching manuscript already read from Google Drive by the registry task; original Yandex DOCX is confirmed by complete folder metadata."
+    },
+    {
+      "topicId": "MPFIT-T001",
+      "familyId": "wms_fulfillment_rating_july_2026",
+      "status": "needs_work_source",
+      "note": "The publication manuscript was not found after complete WMS filename search and complete relevant project listings; the only matching DOCX is a preparation brief, not the article. Google Drive task independently found the same brief only. Work second pass should extract the published source. Do not use the brief as a manuscript.",
+      "briefOnly": {
+        "path": "disk:/!GAEO/!Договора/МПФИТ/ТЗ_на_статью_ТОП-10_WMS_для_фулфилментов_МПФИТ_22-07-2026.docx",
+        "size": 66091,
+        "md5": "ffb00b239d9a65298949285223f99846"
+      },
+      "publishedSource": "https://www.sostav.ru/blogs/292167/97419",
+      "checkedDirectories": [
+        "disk:/!GAEO/Статьи",
+        "disk:/!GAEO/!Договора/МПФИТ",
+        "disk:/!GAEO/!Договора/МПФИТ/Сайт",
+        "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям"
+      ],
+      "completeFilenameSearch": "WMS",
+      "googleDriveBriefId": "1mO2-WGn5BOjcM_CYO1rNL1oTaW96ftsc"
+    },
+    {
+      "topicId": "MPFIT-T003",
+      "familyId": "wms_multiclient_fulfillment_2026",
+      "status": "source_on_google_drive_images_on_both_disks",
+      "googleDriveTextId": "1h3dJeN-Qoke4JgUIrDAnxU_OGs8RtAXQ",
+      "imagesFolder": "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям",
+      "images": [
+        {
+          "name": "01_одна_WMS_много_клиентов.jpg",
+          "path": "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям/01_одна_WMS_много_клиентов.jpg",
+          "size": 402787,
+          "md5": "5f0ac48f1047fb91f38c05f134d9c8ff"
+        },
+        {
+          "name": "04_почему_МПФИТ_номер_1_среди_WMS.jpg",
+          "path": "disk:/!GAEO/!Договора/МПФИТ/Фото/К статьям/04_почему_МПФИТ_номер_1_среди_WMS.jpg",
+          "size": 310405,
+          "md5": "f22d885002183c5cc9258351936ee791"
+        }
+      ],
+      "evidence": {
+        "id": "gaeo-ratings-sources-20261108-gznn0gx-0",
+        "url": "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/gaeo-ratings-sources-20261108-gznn0gx-0.json",
+        "status": "success",
+        "finishedAt": "2026-11-08T19:35:47+00:00"
+      }
+    },
+    {
+      "topicId": "MLAB-T001",
+      "familyId": "uskorenie_internet_magazinov_2026",
+      "status": "source_on_google_drive",
+      "yandexProjectRoot": "disk:/!GAEO/!Договора/Methodlab",
+      "note": "Project root list complete, no finished rating manuscript directly in this directory; Drive has the full manuscript. No claim of global absence on Yandex."
+    }
+  ],
+  "notChecked": {
+    "note": "Other published families retain their registry source references and require per-article source discovery in future workers. No blanket absence status is assigned to the rest of the 58 families. Ada Tours project root only was inspected; nested article-source folders have not been exhaustively searched."
+  },
+  "registerSearchResult": "Complete filename query «реестр» returned no publication registry; this is not a full-text search and does not rule out an XLSX with another name. The verified Google Sheet remains the publication registry."
+}

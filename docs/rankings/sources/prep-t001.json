@@ -1,0 +1,979 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t001",
+  "topicId": "PREP-T001",
+  "canonicalFamilyKey": "fulfillment_zhidkie_tovary_2026",
+  "title": "Фулфилмент для жидких товаров и химии на маркетплейсах",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-07-16",
+  "status": "source-verified",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "verified-in-manuscript",
+    "basis": "finished Google Drive manuscript read in full",
+    "sourceUrl": "https://docs.google.com/document/d/1Lf4wTZZBwM6n1JPix7SDmQXMbp6FqFyy/edit",
+    "checkedDate": "2026-11-08"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 21,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/96356",
+      "title": "Рейтинг ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами: шампуни и гели, косметика, бытовая, автомобильная и строительная химия",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-07-16",
+      "registryRow": 38,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/5724999-top10-fulfilmentov-dlya-marketpleysov-v-moskve-rabotayuschikh-s-zhidkimi-tovarami",
+      "title": "ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-07-19",
+      "registryRow": 39,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "language": "ru",
+      "url": "https://www.klerk.ru/user/2721035/708274/",
+      "title": "Фулфилменты для маркетплейсов: 10 лучших компаний для селлеров на WB и Ozon по обработке крупных партий товара, упаковке и отгрузке по схемам FBO и FBS. Рейтинг 2026.",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-09",
+      "registryRow": 40,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "правка сохранена; ожидает публичной проверки",
+        "recordedCheckedDate": "2026-09-21",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-liquids-russia-2026",
+      "title": "Кого выбрать для фулфилмента жидких товаров на маркетплейсах: ТОП-10 операторов России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 127,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source + language links проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/fulfillment-liquids-russia-2026.html",
+      "title": "Фулфилмент жидких товаров: ТОП-10 операторов России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 158,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-liquids-russia-2026-en",
+      "title": "Fulfillment for liquid products and chemicals: Top 10 operators in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 208,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/fulfillment-liquids-russia-2026.html",
+      "title": "Fulfillment for liquid products and chemicals: Top 10 operators in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 209,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-liquids-russia-2026-cn",
+      "title": "液体商品与化学品电商仓配：俄罗斯 TOP-10 运营商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 210,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/fulfillment-liquids-russia-2026.html",
+      "title": "液体商品与化学品仓配：俄罗斯 TOP-10 运营商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 211,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1czSZ98Vkx5_Og8p4CcmRVr2qiBehGuIN",
+      "fileId": "1czSZ98Vkx5_Og8p4CcmRVr2qiBehGuIN",
+      "publicationId": "PREP-T001-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://docs.google.com/document/d/1Lf4wTZZBwM6n1JPix7SDmQXMbp6FqFyy/edit",
+      "fileId": "1Lf4wTZZBwM6n1JPix7SDmQXMbp6FqFyy",
+      "publicationId": "PREP-T001-SOSTAV",
+      "verification": "full-text-read"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1oAC5oEhpwLXiX82-sghEvZJAnt1FY3PD/view",
+      "fileId": "1oAC5oEhpwLXiX82-sghEvZJAnt1FY3PD",
+      "publicationId": "PREP-T001-KLERK",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T001-SOSTAV-L01",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 283,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-L03",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 285,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-L05",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Коллаж по кейсам шампуней и бытовой химии",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 287,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-L06",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 288,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-L01",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр — фулфилмент",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 290,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-L02",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "кейсов",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 291,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-L05",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 294,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L01",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 295,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L02",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "срочная обработка крупных партий",
+      "url": "https://prep-center.ru/srochnaya-obrabotka-partiy/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/srochnaya-obrabotka-partiy/",
+      "registryRow": 296,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L03",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "подготовка поставок по FBO",
+      "url": "https://prep-center.ru/fulfillment-fbo/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbo/",
+      "registryRow": 297,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / FBO",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L04",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "фулфилмент по FBS",
+      "url": "https://prep-center.ru/fulfillment-fbs/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-fbs/",
+      "registryRow": 298,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / FBS",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L05",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "упаковка в ВПП и термоусадочную пленку",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 299,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-L06",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "anchor": "на сайте Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_10&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 300,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-L02",
+      "publicationId": "INDEX-T019-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 1383,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-L04",
+      "publicationId": "INDEX-T019-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Фулфилмент жидких товаров Преп-Центра",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 1385,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-L05",
+      "publicationId": "INDEX-T019-GITHUB",
+      "platform": "GitHub",
+      "anchor": "кейс 8 400 единиц косметики",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 1386,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / внутренняя страница",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-L19",
+      "publicationId": "INDEX-T019-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центру",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 1400,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-V332-L04",
+      "publicationId": "INDEX-T019-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: фулфилмент жидких товаров",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 1815,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-EN-L05",
+      "publicationId": "INDEX-T019-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3325,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-EN-L07",
+      "publicationId": "INDEX-T019-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "liquid-products fulfillment page",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 3327,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-EN-L08",
+      "publicationId": "INDEX-T019-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "8,400-unit cosmetics case",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 3328,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-EN-L05",
+      "publicationId": "INDEX-T019-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: fulfillment for liquid products",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 3364,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-EN-L06",
+      "publicationId": "INDEX-T019-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: 3,186 fabric-softener units in two days",
+      "url": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/",
+      "registryRow": 3365,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-CN-L05",
+      "publicationId": "INDEX-T019-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3382,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-CN-L07",
+      "publicationId": "INDEX-T019-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center 液体商品仓配",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 3384,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-GITHUB-CN-L08",
+      "publicationId": "INDEX-T019-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "8,400 件化妆品案例",
+      "url": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_zhidkie_tovary_2026",
+      "cleanUrl": "https://prep-center.ru/cases/kosmetika-8400-za-2-dnya/",
+      "registryRow": 3385,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-CN-L05",
+      "publicationId": "INDEX-T019-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：液体商品仓配",
+      "url": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-zhidkih-tovarov/",
+      "registryRow": 3421,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T019-SITE-CN-L06",
+      "publicationId": "INDEX-T019-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：2 天处理 3,186 件衣物柔顺剂",
+      "url": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/opolaskivateli-3186-za-2-dnya/",
+      "registryRow": 3422,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T001-SOSTAV-IMG01",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "04 Реальное фото — упаковочная линия ВПП и термоусадка.jpg",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/127/252850.jpg",
+      "driveUrl": "https://drive.google.com/file/d/1kuui4FMXQ8godvSzxHHLhDI548wUg01Y/view",
+      "alt": "Упаковочная линия с ВПП и термоусадкой",
+      "caption": "Упаковочная линия с ВПП и термоусадкой",
+      "registryRow": 173,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-IMG02",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/127/252854.jpg",
+      "driveUrl": null,
+      "alt": "Схема порядка работы с жидкими товарами и химией перед отгрузкой на маркетплейсы",
+      "caption": "Схема порядка работы с жидкими товарами и химией перед отгрузкой на маркетплейсы",
+      "registryRow": 174,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-IMG03",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/127/252855.jpg",
+      "driveUrl": null,
+      "alt": "Методика составления рейтинга ТОП-10 фулфилментов для маркетплейсов в Москве",
+      "caption": "Методика составления рейтинга ТОП-10 фулфилментов для маркетплейсов в Москве",
+      "registryRow": 175,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-IMG04",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/127/252859.jpg",
+      "driveUrl": null,
+      "alt": "Коллаж по кейсам шампуней и бытовой химии",
+      "caption": "Коллаж по кейсам шампуней и бытовой химии",
+      "registryRow": 176,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-SOSTAV-IMG05",
+      "publicationId": "PREP-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 4",
+      "fileName": "live image 05",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/127/252865.jpg",
+      "driveUrl": null,
+      "alt": "Таблица преимуществ фулфилмент-операторов",
+      "caption": "Таблица преимуществ фулфилмент-операторов",
+      "registryRow": 177,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-IMG01",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-19/261ae240-8a02-49e6-bf14-e3640f42b60b.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами в соцсети TenChat",
+      "caption": null,
+      "registryRow": 179,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-IMG02",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-19/be4bbe72-e4bc-492a-a883-1e4bb7a9ba52.png?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами в соцсети TenChat",
+      "caption": null,
+      "registryRow": 180,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-IMG03",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-19/998b5b39-bfc2-459f-9881-484631d0c017.jpg?width=2094&height=924&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами в соцсети TenChat",
+      "caption": null,
+      "registryRow": 181,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-TENCHAT-IMG04",
+      "publicationId": "PREP-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-07-19/57fda01a-671a-45d9-848d-be5393d27f44.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов для маркетплейсов в Москве, работающих с жидкими товарами в соцсети TenChat",
+      "caption": null,
+      "registryRow": 182,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-IMG01",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "role": "внутренняя иллюстрация 1",
+      "fileName": "live image 01",
+      "publishedUrl": "https://i.klerk.ru/ITfvTIJz57WrtMj0fcnzism_ic2juFS3qYe3jXsBDvE/w:1500/aHR0cHM6Ly9pLmts/ZXJrLnJ1L2xUR2ky/RkR2QzhBWGVoOExn/SFVaZk83OWkyTS1u/MlNVeWxmNmVVdTJ2/QmMvdzoxMDI0L2FI/UjBjSE02THk5M2Qz/Y3UvYTJ4bGNtc3Vj/blV2ZFdkai9MMkpz/YjJkUWIzTjBMelZt/L01XTTRaVE13WWpF/NU16ZzMvTm1VeVlq/SmxOVE00TnpjMS9Z/Mlk0T1daaExtcHda/dy53ZWJw.webp",
+      "driveUrl": null,
+      "alt": "Иллюстрация упаковочного процесса: воздушно-пузырьковая пленка защищает товар до маркировки и дальнейшей отгрузки. На крупной партии скорость этой операции влияет на общий срок обработки.",
+      "caption": "Иллюстрация упаковочного процесса: воздушно-пузырьковая пленка защищает товар до маркировки и дальнейшей отгрузки. На крупной партии скорость этой операции влияет на общий срок обработки.",
+      "registryRow": 183,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T001-KLERK-IMG02",
+      "publicationId": "PREP-T001-KLERK",
+      "platform": "Klerk",
+      "role": "внутренняя иллюстрация 2",
+      "fileName": "live image 02",
+      "publishedUrl": "https://i.klerk.ru/fTQGQeiFaz3Fy_1VseEzrCm7AGB1bkDn7eTwNZZoYFM/w:1500/aHR0cHM6Ly9pLmts/ZXJrLnJ1L2dyWllV/VzczR1hpMVRsTGkz/OHFfdnptbVp2a3VS/Q2FzUnlveW9rWDVR/NFUvdzoxMDI0L2FI/UjBjSE02THk5M2Qz/Y3UvYTJ4bGNtc3Vj/blV2ZFdkai9MMkpz/YjJkUWIzTjBMMkUz/L09EZzJPR1V5TVRa/a1pqWXkvWWpNeVlX/Sm1ZekJoTWpjeS9P/VE5sTVRJekxtcHda/dy53ZWJw.webp",
+      "driveUrl": null,
+      "alt": "Иллюстрация к опубликованным кейсам Преп-Центра: 23 500 шампуней обработаны за 4 дня, 10 000 единиц бытовой химии — за 3 дня. Цифры и сроки продублированы в тексте статьи.",
+      "caption": "Иллюстрация к опубликованным кейсам Преп-Центра: 23 500 шампуней обработаны за 4 дня, 10 000 единиц бытовой химии — за 3 дня. Цифры и сроки продублированы в тексте статьи.",
+      "registryRow": 184,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "drive-18Fx8ZypddMxsK7YrAC7c1QxvKHFcWJpH",
+      "publicationId": null,
+      "platform": "Google Drive source",
+      "role": "source cover",
+      "fileName": "Упаковочная линия с ВПП и термоусадкой.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/18Fx8ZypddMxsK7YrAC7c1QxvKHFcWJpH/view",
+      "width": 1536,
+      "height": 1024,
+      "verification": {
+        "basis": "google-drive-file",
+        "independentlyDownloadedInThisPass": true,
+        "visuallyInspected": true,
+        "checkedDate": "2026-11-08",
+        "sha256": "6390e9c18fe8f8bb2ef962b055eed94ec97ee15080aefe40e0ce1c0a5337bca6",
+        "bytes": 432049
+      }
+    },
+    {
+      "id": "drive-1jnxL_DK7tLI6Ieg3ZlvsHo1JGk5OpQmy",
+      "publicationId": null,
+      "platform": "Google Drive source",
+      "role": "source illustration",
+      "fileName": "Порядок работы с жидкими товарами и химией.png",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/file/d/1jnxL_DK7tLI6Ieg3ZlvsHo1JGk5OpQmy/view",
+      "width": 1536,
+      "height": 428,
+      "verification": {
+        "basis": "google-drive-file",
+        "independentlyDownloadedInThisPass": true,
+        "visuallyInspected": true,
+        "checkedDate": "2026-11-08",
+        "sha256": "6e49f76e2b3978c46b8d7aa5ca7bc4905981cc875d5a46bc5aa4c64f04c71be4",
+        "bytes": 738074
+      }
+    }
+  ],
+  "advisories": [
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly.",
+    "Inspected illustrations may contain Russian text or promotional statements from the original. Describe them as reused source illustrations, not new verification evidence."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": {
+      "provider": "google-drive",
+      "fileId": "1Lf4wTZZBwM6n1JPix7SDmQXMbp6FqFyy",
+      "url": "https://docs.google.com/document/d/1Lf4wTZZBwM6n1JPix7SDmQXMbp6FqFyy/edit",
+      "checkedDate": "2026-11-08",
+      "status": "full-text-read",
+      "extractedTextSha256": "2966854ee558d888484e8074bb891202c29f0e9379952ebcdf09d629935c8e45",
+      "extractedTextBytes": 47829,
+      "firstPlaceVerified": true
+    },
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

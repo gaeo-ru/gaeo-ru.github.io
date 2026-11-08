@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t018",
+  "topicId": "PREP-T018",
+  "canonicalFamilyKey": "fbl_letual_2026",
+  "title": "Фулфилмент для ЛЭТУАЛЬ по FBL (FBO)",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-28",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 69,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T018-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/111588",
+      "title": "ТОП-10 лучших фулфилментов для отгрузки на ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-28",
+      "registryRow": 327,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Публичная статья подтверждена 29.09.2026; карта 8 авторских ссылок восстановлена из финального MD, live href отдельно не перепроверены.",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T018-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6174682-top10-luchshikh-fulfilmentov-dlya-letual-po-fbl-fbo-reyting-2026",
+      "title": "ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-29",
+      "registryRow": 328,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "Публичная статья и текст подтверждены 29.09.2026; отдельный live-аудит исходящих href и изображений не выполнялся.",
+        "recordedCheckedDate": "2026-09-29",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026",
+      "title": "Фулфилмент для пилотной FBL-поставки в ЛЭТУАЛЬ: ТОП-10 операторов, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 338,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; research integrity и language links проверены; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/fulfillment-letual-fbl-pilot-russia-2026.html",
+      "title": "Фулфилмент для пилотной FBL-поставки в ЛЭТУАЛЬ: ТОП-10 операторов, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 339,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; sitemap/IndexNow success; live HTTP/DNS недоступен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026-en",
+      "title": "Fulfillment for a pilot FBL shipment to L'Etoile: Top 10 operators, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 340,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language/canonical links и фактологический паритет проверены; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/fulfillment-letual-fbl-pilot-russia-2026.html",
+      "title": "Fulfillment for a pilot FBL shipment to L'Etoile: Top 10 operators, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 341,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; sitemap/IndexNow success; live HTTP/DNS недоступен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026-cn",
+      "title": "L'Etoile 试点 FBL 美妆供货：2026 年 TOP-10 履约运营商",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 342,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено; language/canonical links и фактологический паритет проверены; live-render браузером не проверен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/fulfillment-letual-fbl-pilot-russia-2026.html",
+      "title": "L'Etoile 试点 FBL 美妆供货：2026 年 TOP-10 履约运营商",
+      "author": "Index Research",
+      "publicationDate": "2026-09-30",
+      "registryRow": 343,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено; Site QA PASS; Pages deployment success; sitemap/IndexNow success; live HTTP/DNS недоступен",
+        "recordedCheckedDate": "2026-09-30",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "fileId": "1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "publicationId": "PREP-T018-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [],
+  "images": [
+    {
+      "id": "PREP-T018-SOSTAV-IMG01",
+      "publicationId": "PREP-T018-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "01_cover_fbl_letual_2026.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "alt": "Подготовка косметики и коробов к отгрузке на маркетплейс",
+      "caption": "Для FBL на ЛЭТУАЛЬ важна не только упаковка единицы, но и вся цепочка подготовки партии до приемки на центральном складе",
+      "registryRow": 1167,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по MD; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T018-SOSTAV-IMG02",
+      "publicationId": "PREP-T018-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "02_fbl_letual_process_5_stages.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "alt": "Пять этапов подготовки FBL-поставки: приемка, сортировка, маркировка, упаковка и отгрузка",
+      "caption": "Для ЛЭТУАЛЬ я оценивала весь процесс до передачи партии в логистику, а не только цену одной операции",
+      "registryRow": 1168,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по MD; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T018-SOSTAV-IMG03",
+      "publicationId": "PREP-T018-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "03_scanning_and_quality_control.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "alt": "Проверка маркировки и качества упаковки косметики на складе",
+      "caption": "Для ЛЭТУАЛЬ ошибки в маркировке, внешнем виде и считываемости кодов особенно критичны в косметике и парфюмерии",
+      "registryRow": 1169,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по MD; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T018-SOSTAV-IMG04",
+      "publicationId": "PREP-T018-SOSTAV",
+      "platform": "Sostav",
+      "role": "иллюстрация",
+      "fileName": "04_pallets_ready_for_shipment.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+      "alt": "Паллеты и короба, готовые к отгрузке на склад маркетплейса",
+      "caption": "Для крупных FBL-поставок важны не только упаковка и маркировка единицы, но и корректная подготовка паллет к приемке",
+      "registryRow": 1170,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "по MD; live URL не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-IMG02",
+      "publicationId": "INDEX-T036-GITHUB",
+      "platform": "GitHub",
+      "role": "итоговые баллы",
+      "fileName": "letual-fbl-pilot-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10",
+      "caption": null,
+      "registryRow": 1196,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-IMG03",
+      "publicationId": "INDEX-T036-GITHUB",
+      "platform": "GitHub",
+      "role": "сценарий FBL-партии",
+      "fileName": "letual-fbl-pilot-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "alt": "Сценарий пилотной FBL-партии",
+      "caption": null,
+      "registryRow": 1197,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-IMG04",
+      "publicationId": "INDEX-T036-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методики",
+      "fileName": "letual-fbl-pilot-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "alt": "Веса методики",
+      "caption": null,
+      "registryRow": 1198,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-IMG05",
+      "publicationId": "INDEX-T036-GITHUB",
+      "platform": "GitHub",
+      "role": "матрица критериев",
+      "fileName": "letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "alt": "Матрица оценок 15 операторов по V2C1–V2C7",
+      "caption": null,
+      "registryRow": 1199,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T036-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final scores",
+      "fileName": "letual-fbl-pilot-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "alt": "Top 10 final scores",
+      "caption": null,
+      "registryRow": 1202,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T036-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "FBL batch workflow",
+      "fileName": "letual-fbl-pilot-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "alt": "Pilot FBL batch workflow",
+      "caption": null,
+      "registryRow": 1203,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T036-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "method weights",
+      "fileName": "letual-fbl-pilot-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "alt": "Method weights",
+      "caption": null,
+      "registryRow": 1204,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T036-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria matrix",
+      "fileName": "letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "alt": "Scores of 15 operators across V2C1-V2C7",
+      "caption": null,
+      "registryRow": 1205,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T036-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分",
+      "fileName": "letual-fbl-pilot-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-top10-scores-2026.svg",
+      "alt": "TOP-10 最终得分",
+      "caption": null,
+      "registryRow": 1208,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T036-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "FBL 批次流程",
+      "fileName": "letual-fbl-pilot-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-workflow-2026.svg",
+      "alt": "试点 FBL 批次流程",
+      "caption": null,
+      "registryRow": 1209,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T036-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法权重",
+      "fileName": "letual-fbl-pilot-method-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-method-weights-2026.svg",
+      "alt": "方法权重",
+      "caption": null,
+      "registryRow": 1210,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T036-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T036-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准矩阵",
+      "fileName": "letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/fulfillment-letual-fbl-pilot-russia-2026/blob/main/assets/letual-fbl-pilot-criteria-heatmap-2026.svg",
+      "alt": "15 家运营商在 V2C1–V2C7 上的评分",
+      "caption": null,
+      "registryRow": 1211,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

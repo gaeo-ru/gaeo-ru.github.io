@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-thermoshrink-top15-oct2026",
+  "topicId": "PREP-THERMOSHRINK-TOP15-OCT2026",
+  "canonicalFamilyKey": "termo_upakovka_top15_2026",
+  "title": "Серийная термоусадочная упаковка товаров для Wildberries и Ozon: ТОП-15 компаний Москвы и МО",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-15 / октябрьская редакционная версия",
+  "earliestPublicationDate": "2026-10-27",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 87,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "language": "ru",
+      "url": "https://www.klerk.ru/user/2721035/715691/",
+      "title": "ТОП-15 компаний по термоусадочной упаковке товаров для Wildberries и Ozon: рейтинг Москвы и МО, 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-10-27",
+      "registryRow": 438,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано с ограничениями; открыто для индексации",
+        "recordedLinkAudit": "live: авторский текст полностью совпадает с ТЗ; 9/9 авторских href, 2 таблицы, 30 H2/H3, оглавление и 4 изображения проверены; 3 внутренние страницы клиента доступны извне",
+        "recordedCheckedDate": "2026-10-27",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6286066-termousadka-dlya-marketpleysov-top15-kompaniy-moskvy-i-mo-reyting-2026",
+      "title": "Термоусадка для маркетплейсов: ТОП-15 компаний Москвы и МО. Рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": null,
+      "registryRow": 495,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "План исходящих ссылок восстановлен из авторского MD; точные href и конечные переходы на live не сверены",
+        "recordedCheckedDate": null,
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "fileId": "1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1hjMjeF37tLGpL8tPLw3QsTK99gjIaRIr/view",
+      "fileId": "1hjMjeF37tLGpL8tPLw3QsTK99gjIaRIr",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1p2ZX_pgkWd_yKgULvi7LVB0nLVzjdyYl/view",
+      "fileId": "1p2ZX_pgkWd_yKgULvi7LVB0nLVzjdyYl",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-L01",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "anchor": "Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_15&utm_content=termo_upakovka_top15_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 8899,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверен",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-L05",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "anchor": "странице термоусадочной упаковки",
+      "url": "https://prep-center.ru/termousadka-vpp/?utm_source=klerk&utm_medium=article&utm_campaign=top_15&utm_content=termo_upakovka_top15_2026",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 8903,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / внутренняя",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверен",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-L06",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "anchor": "кейсе строительной химии",
+      "url": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/?utm_source=klerk&utm_medium=article&utm_campaign=top_15&utm_content=termo_upakovka_top15_2026",
+      "cleanUrl": "https://prep-center.ru/cases/stroitelnaya-himiya-5180-za-3-dnya/",
+      "registryRow": 8904,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / внутренняя",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверен",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-L07",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "anchor": "открытые тарифы",
+      "url": "https://prep-center.ru/tarify/?utm_source=klerk&utm_medium=article&utm_campaign=top_15&utm_content=termo_upakovka_top15_2026",
+      "cleanUrl": "https://prep-center.ru/tarify/",
+      "registryRow": 8905,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / внутренняя",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверен",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-L09",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "anchor": "Преп-Центра",
+      "url": "https://prep-center.ru/?utm_source=klerk&utm_medium=article&utm_campaign=top_15&utm_content=termo_upakovka_top15_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 8907,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live href проверен",
+        "recordedCheckedDate": "2026-10-27",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-IMG01",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "role": "обложка",
+      "fileName": "cover_klerk_2048x1152.jpg",
+      "publishedUrl": "https://i.klerk.ru/qldZ7ASBP7Vh_Zjt4vDiroIittzWB9pwAENW6fAoP7A/w:300/aHR0cHM6Ly93d3cu/a2xlcmsucnUvdWdj/L2Jsb2dQb3N0LzM5/OWQ1YWM3YTkwZGY0/NTMyYTM4ODIyYWJm/YjlmZDQ2LmpwZw.webp",
+      "driveUrl": "https://drive.google.com/file/d/1eezXuPlyYjsrtCUcMCk2Z4XIoFSMQ-uY/view",
+      "alt": "ТОП-15 компаний по термоусадочной упаковке товаров для Wildberries и Ozon: рейтинг Москвы и МО, 2026",
+      "caption": "Термоусадочная упаковка товарных партий для маркетплейсов. Тематическая иллюстрация создана с помощью GPT Image.",
+      "registryRow": 5105,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: изображение, ALT и подпись проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-IMG02",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "role": "иллюстрация",
+      "fileName": "rating_15_1200x675.jpg",
+      "publishedUrl": "https://www.klerk.ru/ugc/blogPost/5f1a0434e446c89afdbce7d0c9668d13.jpg",
+      "driveUrl": "https://drive.google.com/file/d/180IJLGXNcuunxXlnChlSGr3Zg29Ga-Ky/view",
+      "alt": "Баллы 15 участников по восьмикритериальной модели, срез исследования 18.09.2026. Это сценарный рейтинг, а не оценка компаний для всех видов фулфилмента",
+      "caption": "Баллы 15 участников по восьмикритериальной модели, срез исследования 18.09.2026. Это сценарный рейтинг, а не оценка компаний для всех видов фулфилмента",
+      "registryRow": 5106,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: изображение, ALT и подпись проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-IMG03",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "role": "иллюстрация",
+      "fileName": "method_8_1200x675.jpg",
+      "publishedUrl": "https://www.klerk.ru/ugc/blogPost/4db9da5d2c6b2056249ca128a871472f.jpg",
+      "driveUrl": "https://drive.google.com/file/d/13U9aTbTEg6tCG8krXZxBlpQTfzJYwnaX/view",
+      "alt": "Распределение весов критериев: технология, скорость, доказательства, цена и контроль. Все участники оценивались по одинаковой формуле",
+      "caption": "Распределение весов критериев: технология, скорость, доказательства, цена и контроль. Все участники оценивались по одинаковой формуле",
+      "registryRow": 5107,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: изображение, ALT и подпись проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK-IMG04",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-KLERK",
+      "platform": "Klerk",
+      "role": "иллюстрация",
+      "fileName": "packing_process_1200x675.jpg",
+      "publishedUrl": "https://i.klerk.ru/hijaraoh03wFx4mVe75n21DgeNKdZZvbfcfVNmLf5vY/w:1500/aHR0cHM6Ly93d3cu/a2xlcmsucnUvdWdj/L2Jsb2dQb3N0LzAy/ZjMxNDUzMjk5OTA4/NTIyNzI4ZGFmZDk4/YmQ2YmNkLmpwZw.webp",
+      "driveUrl": "https://drive.google.com/file/d/1He9h2BlGt7SOvB14XPFwmq83tWL-5I2J/view",
+      "alt": "Путь от входного контроля товара до поставки на маркетплейс. Упаковочная линия — лишь один этап полного заказа",
+      "caption": "Путь от входного контроля товара до поставки на маркетплейс. Упаковочная линия — лишь один этап полного заказа",
+      "registryRow": 5108,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live: изображение, ALT и подпись проверены",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT-IMG01",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка по MD",
+      "fileName": "cover_tenchat_1200x630.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5236,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT-IMG02",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "rating_15_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5237,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT-IMG03",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "packing_process_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5238,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT-IMG04",
+      "publicationId": "PREP-THERMOSHRINK-TOP15-OCT2026-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение по MD",
+      "fileName": "method_8_1200x675.jpg",
+      "publishedUrl": null,
+      "driveUrl": "https://drive.google.com/drive/folders/1aE9C2B0TajzOLMq70uuc7fVlo_876hv1",
+      "alt": null,
+      "caption": null,
+      "registryRow": 5239,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "подготовлено; наличие в публикации не проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

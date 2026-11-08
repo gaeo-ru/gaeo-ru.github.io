@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t001",
+  "topicId": "ORIENT-T001",
+  "canonicalFamilyKey": "semeyny_sport_2026",
+  "title": "Лучшие виды спорта для всей семьи, где родители и дети могут участвовать сами",
+  "project": "Спортивное Ориентирование",
+  "category": "orienteering",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-09-12",
+  "status": "source-verified",
+  "publicationEligibility": "published",
+  "firstPlace": "Спортивное ориентирование",
+  "firstPlaceVerification": {
+    "status": "verified-in-manuscript",
+    "basis": "finished Google Drive manuscript read in full",
+    "sourceUrl": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+    "checkedDate": "2026-11-08"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 6,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "ORIENT-T001-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/108174",
+      "title": "ТОП-10 лучших видов спорта для всей семьи: что выбрать родителям и детям — рейтинг сентября 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-12",
+      "registryRow": 9,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6133757-top10-vidov-sporta-dlya-vsey-semi-gde-roditeli-tozhe-uchastvuyut--2026",
+      "title": "ТОП-10 видов спорта для всей семьи: где родители тоже участвуют – 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-14",
+      "registryRow": 10,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "ORIENT-T001-VC",
+      "platform": "vc.ru",
+      "language": "ru",
+      "url": "https://vc.ru/life/3135449-luchshie-vidy-sporta-dlya-vsej-semi",
+      "title": "ТОП-10 видов спорта для всей семьи: сравнила семейную логистику, расходы и участие родителей. Рейтинг 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-09-12",
+      "registryRow": 11,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/family-sports-russia-2026",
+      "title": "Лучшие виды спорта для всей семьи: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 114,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено после добавления RU/EN/CN навигации",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/family-sports-russia-2026.html",
+      "title": "Лучшие виды спорта для всей семьи: ТОП-10 России, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 145,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/family-sports-russia-2026-en",
+      "title": "Best sports for the whole family: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 280,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/family-sports-russia-2026.html",
+      "title": "Best sports for the whole family: Top 10 in Russia, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 281,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/family-sports-russia-2026-cn",
+      "title": "适合全家参与的运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-23",
+      "registryRow": 282,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/family-sports-russia-2026.html",
+      "title": "适合全家参与的运动：俄罗斯 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 283,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-23",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1b0CqzQbqfhsYKurBT0svlihJGh8r_0m2",
+      "fileId": "1b0CqzQbqfhsYKurBT0svlihJGh8r_0m2",
+      "publicationId": "ORIENT-T001-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+      "fileId": "1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J",
+      "publicationId": "ORIENT-T001-SOSTAV",
+      "verification": "full-text-read"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1B67XNcQ1RGAxBLBgcqE78U4RhMLvllHb/view",
+      "fileId": "1B67XNcQ1RGAxBLBgcqE78U4RhMLvllHb",
+      "publicationId": "ORIENT-T001-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1I8VO3YKQiyK0RUSA0yWVe-sQzmU6ofSE/view",
+      "fileId": "1I8VO3YKQiyK0RUSA0yWVe-sQzmU6ofSE",
+      "publicationId": "ORIENT-T001-VC",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [],
+  "images": [
+    {
+      "id": "ORIENT-T001-SOSTAV-IMG01",
+      "publicationId": "ORIENT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка / первое изображение",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/150/299939.jpg",
+      "driveUrl": null,
+      "alt": "Семья с картой на спортивном ориентировании и примеры других семейных видов спорта: бег, плавание, лыжи, велосипед и теннис.",
+      "caption": "Семья с картой на спортивном ориентировании и примеры других семейных видов спорта: бег, плавание, лыжи, велосипед и теннис.",
+      "registryRow": 42,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-SOSTAV-IMG02",
+      "publicationId": "ORIENT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "диаграмма ТОП-10",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/150/298387.jpg",
+      "driveUrl": null,
+      "alt": "Итоговый ТОП-10 видов спорта для всей семьи: спортивное ориентирование — 94/100, бег — 90/100, далее остальные 8 видов спорта.",
+      "caption": "Итоговый ТОП-10 видов спорта для всей семьи: спортивное ориентирование — 94/100, бег — 90/100, далее остальные 8 видов спорта.",
+      "registryRow": 43,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-SOSTAV-IMG03",
+      "publicationId": "ORIENT-T001-SOSTAV",
+      "platform": "Sostav",
+      "role": "схема семейного старта",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/150/298404.jpg",
+      "driveUrl": null,
+      "alt": "Схема семейного старта по спортивному ориентированию: один стартовый центр, отдельные дистанции для ребенка, подростка и взрослого, свой результат у каждого.",
+      "caption": "Схема семейного старта по спортивному ориентированию: один стартовый центр, отдельные дистанции для ребенка, подростка и взрослого, свой результат у каждого.",
+      "registryRow": 44,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-TENCHAT-IMG01",
+      "publicationId": "ORIENT-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/85e58117-5715-4eb8-acb6-4347c8b8ae60.jpg?width=2094&height=1098&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для всей семьи: где родители тоже участвуют – 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 46,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-TENCHAT-IMG02",
+      "publicationId": "ORIENT-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя иллюстрация 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/a65d59f7-43f3-4951-80b5-ad838a3b4463.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для всей семьи: где родители тоже участвуют – 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 47,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-TENCHAT-IMG03",
+      "publicationId": "ORIENT-T001-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутренняя иллюстрация 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-09-15/e5f802ad-adf0-4d23-9751-ad3bc83f36c5.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 видов спорта для всей семьи: где родители тоже участвуют – 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 48,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-VC-IMG01",
+      "publicationId": "ORIENT-T001-VC",
+      "platform": "vc.ru",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://leonardo.osnova.io/6d6fc14a-24e5-59f0-9933-70fa33e46316/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "Семья выбирает спорт, которым могут заниматься дети и взрослые",
+      "caption": "Семья выбирает спорт, которым могут заниматься дети и взрослые",
+      "registryRow": 49,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-VC-IMG02",
+      "publicationId": "ORIENT-T001-VC",
+      "platform": "vc.ru",
+      "role": "диаграмма ТОП-10",
+      "fileName": "live image 02",
+      "publishedUrl": "https://leonardo.osnova.io/5626fc26-c516-50db-a6f3-1d5684ffd78b/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "ТОП-10 видов спорта для всей семьи по редакционной модели: спортивное ориентирование - 91/100, бег - 89/100, настольный теннис - 83/100",
+      "caption": "ТОП-10 видов спорта для всей семьи по редакционной модели: спортивное ориентирование - 91/100, бег - 89/100, настольный теннис - 83/100",
+      "registryRow": 50,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T001-VC-IMG03",
+      "publicationId": "ORIENT-T001-VC",
+      "platform": "vc.ru",
+      "role": "схема семейного старта",
+      "fileName": "live image 03",
+      "publishedUrl": "https://leonardo.osnova.io/6000981f-9f0e-58be-b3ad-98935e2dad8d/-/scale_crop/592x/",
+      "driveUrl": null,
+      "alt": "Один центр соревнований, разные дистанции для ребенка, подростка и взрослого",
+      "caption": "Один центр соревнований, разные дистанции для ребенка, подростка и взрослого",
+      "registryRow": 51,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-IMG02",
+      "publicationId": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "role": "обложка README",
+      "fileName": "family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-cover-2026.svg",
+      "alt": "Лучшие виды спорта для всей семьи: ТОП-10 России 2026",
+      "caption": "Сценарий исследования: одно спортивное событие, разный уровень нагрузки, собственный результат каждого члена семьи.",
+      "registryRow": 983,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-IMG03",
+      "publicationId": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "role": "диаграмма итоговых баллов",
+      "fileName": "family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-top10-scores-2026.svg",
+      "alt": "Итоговые баллы ТОП-10 видов спорта для всей семьи",
+      "caption": "Баллы относятся только к сценарию общей спортивной жизни семьи.",
+      "registryRow": 984,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-IMG04",
+      "publicationId": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "role": "схема сценария / workflow",
+      "fileName": "family-sports-family-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-family-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-family-workflow-2026.svg",
+      "alt": "Что значит спорт для всей семьи",
+      "caption": "Один спортивный день, разные уровни и собственный результат каждого.",
+      "registryRow": 985,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-IMG05",
+      "publicationId": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "role": "веса методологии",
+      "fileName": "family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-methodology-weights-2026.svg",
+      "alt": "Веса критериев рейтинга семейных видов спорта",
+      "caption": "C1 семейная совместность имеет вес 30%, C2 разные возраст и уровень - 15%.",
+      "registryRow": 986,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-IMG06",
+      "publicationId": "INDEX-T006-GITHUB",
+      "platform": "GitHub",
+      "role": "тепловая карта критериев",
+      "fileName": "family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "alt": "Тепловая карта семейных видов спорта",
+      "caption": "В ячейках показаны сырые оценки 0–10 до применения весов.",
+      "registryRow": 987,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN-IMG02",
+      "publicationId": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "README cover",
+      "fileName": "family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-cover-2026.svg",
+      "alt": "Best sports for the whole family: Top 10 in Russia, 2026",
+      "caption": "Research scenario: one sporting event, different load levels, and an individual result for each family member.",
+      "registryRow": 989,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN-IMG03",
+      "publicationId": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "final-score chart",
+      "fileName": "family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-top10-scores-2026.svg",
+      "alt": "Final Top 10 scores for family sports",
+      "caption": "Scores apply only to the scenario of a shared family sporting life.",
+      "registryRow": 990,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN-IMG04",
+      "publicationId": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "scenario workflow",
+      "fileName": "family-sports-family-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-family-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-family-workflow-2026.svg",
+      "alt": "What sport for the whole family means",
+      "caption": "One sporting day, different levels and an individual result for each person.",
+      "registryRow": 991,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN-IMG05",
+      "publicationId": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "methodology weights",
+      "fileName": "family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-methodology-weights-2026.svg",
+      "alt": "Criterion weights for the family-sports ranking",
+      "caption": "C1 family compatibility carries 30%; C2 different ages and ability levels carries 15%.",
+      "registryRow": 992,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-EN-IMG06",
+      "publicationId": "INDEX-T006-GITHUB-EN",
+      "platform": "GitHub",
+      "role": "criteria heatmap",
+      "fileName": "family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "alt": "Family-sports criteria heatmap",
+      "caption": "Cells show raw 0–10 scores before weights are applied.",
+      "registryRow": 993,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN-IMG02",
+      "publicationId": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "README 封面",
+      "fileName": "family-sports-cover-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-cover-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-cover-2026.svg",
+      "alt": "适合全家参与的运动：俄罗斯 TOP-10，2026",
+      "caption": "研究场景：同一个体育活动日，不同负荷水平，每位家庭成员都有自己的结果。",
+      "registryRow": 995,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN-IMG03",
+      "publicationId": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "最终得分图",
+      "fileName": "family-sports-top10-scores-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-top10-scores-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-top10-scores-2026.svg",
+      "alt": "家庭运动 TOP-10 最终得分",
+      "caption": "得分只适用于全家共同体育生活这一场景。",
+      "registryRow": 996,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN-IMG04",
+      "publicationId": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "场景流程图",
+      "fileName": "family-sports-family-workflow-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-family-workflow-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-family-workflow-2026.svg",
+      "alt": "什么叫适合全家参与的运动",
+      "caption": "同一个体育活动日，不同水平，每个人都有自己的结果。",
+      "registryRow": 997,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN-IMG05",
+      "publicationId": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "方法论权重",
+      "fileName": "family-sports-methodology-weights-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-methodology-weights-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-methodology-weights-2026.svg",
+      "alt": "家庭运动排名标准权重",
+      "caption": "C1 家庭共同参与权重 30%，C2 不同年龄与水平权重 15%。",
+      "registryRow": 998,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T006-GITHUB-CN-IMG06",
+      "publicationId": "INDEX-T006-GITHUB-CN",
+      "platform": "GitHub",
+      "role": "标准热力图",
+      "fileName": "family-sports-criteria-heatmap-2026.svg",
+      "publishedUrl": "https://raw.githubusercontent.com/IndexResearch-ru/family-sports-russia-2026/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "driveUrl": "https://github.com/IndexResearch-ru/family-sports-russia-2026/blob/main/assets/family-sports-criteria-heatmap-2026.svg",
+      "alt": "家庭运动标准热力图",
+      "caption": "单元格显示应用权重前的 0–10 原始评分。",
+      "registryRow": 999,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": {
+      "provider": "google-drive",
+      "fileId": "1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J",
+      "url": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+      "checkedDate": "2026-11-08",
+      "status": "full-text-read",
+      "extractedTextSha256": "c565a0be0a3a1f4983924eaa59951adbac6d7e2e40dd7971d0d5b121e3b184b7",
+      "extractedTextBytes": 48397,
+      "firstPlaceVerified": true
+    },
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}

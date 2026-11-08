@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 1,
+  "id": "prep-t011",
+  "topicId": "PREP-T011",
+  "canonicalFamilyKey": "fulfillment_avtohimiya_2026",
+  "title": "Фулфилмент для автохимии и автокосметики на Wildberries и Ozon",
+  "project": "Преп-Центр",
+  "category": "fulfillment",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-08-27",
+  "status": "requires-source-verification",
+  "publicationEligibility": "published",
+  "firstPlace": "Преп-Центр",
+  "firstPlaceVerification": {
+    "status": "expected-unverified",
+    "basis": "project mapping only; requires source verification"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 31,
+    "snapshotDate": "2026-11-08"
+  },
+  "publishedVersions": [
+    {
+      "id": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/104285",
+      "title": "ТОП-10 фулфилментов для автохимии и автокосметики на Wildberries и Ozon. Рейтинг Москвы и МО, август 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-27",
+      "registryRow": 55,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/5989242-top10-fulfilmentov-avtokhimii-i-avtokosmetiki-wbozon-moskva-i-mo-avgust-2026",
+      "title": "ТОП-10 фулфилментов автохимии и автокосметики: WB/Ozon, Москва и МО, август 2026",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-08-28",
+      "registryRow": 56,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "Registry status column contains a date; verify the public page.",
+        "recordedLinkAudit": "live проверено",
+        "recordedCheckedDate": "2026-09-20",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false,
+        "advisory": "Registry row has shifted status/date cells. No publication status was invented."
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/automotive-chemicals-fulfillment-moscow-2026",
+      "title": "Кого выбрать для фулфилмента автохимии и автокосметики: ТОП-10 Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 133,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source + language links проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/automotive-chemicals-fulfillment-moscow-2026.html",
+      "title": "Фулфилмент автохимии и автокосметики: ТОП-10 Москвы и МО, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-18",
+      "registryRow": 164,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/automotive-chemicals-fulfillment-moscow-2026-en",
+      "title": "Automotive chemicals and car-care fulfillment: Top 10 operators in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 200,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/automotive-chemicals-fulfillment-moscow-2026.html",
+      "title": "Automotive chemicals and car-care fulfillment: Top 10 in Moscow and the Moscow Region, 2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 201,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/automotive-chemicals-fulfillment-moscow-2026-cn",
+      "title": "汽车化学品与汽车护理仓配：莫斯科及莫斯科州 TOP-10 运营商，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 202,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "GitHub source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/automotive-chemicals-fulfillment-moscow-2026.html",
+      "title": "汽车化学品与汽车护理仓配：莫斯科及莫斯科州 TOP-10，2026",
+      "author": "Index Research",
+      "publicationDate": "2026-09-22",
+      "registryRow": 203,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "recordedLinkAudit": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "classification": "recorded-as-published",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1g9qgi69F78YScW25R5X8O7FAl6cWrMV_",
+      "fileId": "1g9qgi69F78YScW25R5X8O7FAl6cWrMV_",
+      "publicationId": "PREP-T011-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1wPUkdxb8p2iMsLqaB6ZMMG07w9AM1R80/view",
+      "fileId": "1wPUkdxb8p2iMsLqaB6ZMMG07w9AM1R80",
+      "publicationId": "PREP-T011-SOSTAV",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1N8LQuy2l0-lWIuCEu5o8GHmyRT_xESGT",
+      "fileId": "1N8LQuy2l0-lWIuCEu5o8GHmyRT_xESGT",
+      "publicationId": "PREP-T011-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "text",
+      "url": "https://drive.google.com/file/d/1_Eevds5eDS40xA1Y7HTN6i1fkUmPBFjC/view",
+      "fileId": "1_Eevds5eDS40xA1Y7HTN6i1fkUmPBFjC",
+      "publicationId": "PREP-T011-TENCHAT",
+      "verification": "registry-reference-not-content-verified"
+    }
+  ],
+  "clientLinks": [
+    {
+      "id": "PREP-T011-SOSTAV-L01",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 434,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-L03",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "про фулфилмент автохимии и автокосметики",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 436,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / автохимия",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-L04",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "кейс 2 393 подарочных наборов автохимии за 2 рабочих дня",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 437,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-L05",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "условия упаковки в воздушно-пузырьковую и термоусадочную пленку",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 438,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-L02",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "кейсе Преп-Центра по автохимии",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 442,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-L03",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "anchor": "варианты упаковки в ВПП и термоусадочную пленку",
+      "url": "https://prep-center.ru/termousadka-vpp/",
+      "cleanUrl": "https://prep-center.ru/termousadka-vpp/",
+      "registryRow": 443,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / упаковка",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "recordedCheckedDate": "2026-09-18",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-V332-L04",
+      "publicationId": "INDEX-T025-SITE",
+      "platform": "IndexResearch.ru",
+      "anchor": "Преп-Центр: фулфилмент для автохимии и автокосметики",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 1860,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / автохимия",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-19",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-L04",
+      "publicationId": "INDEX-T025-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центр",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3052,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-L12",
+      "publicationId": "INDEX-T025-GITHUB",
+      "platform": "GitHub",
+      "anchor": "странице услуги",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 3060,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-L13",
+      "publicationId": "INDEX-T025-GITHUB",
+      "platform": "GitHub",
+      "anchor": "кейс 2 393 подарочных наборов",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 3061,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-L23",
+      "publicationId": "INDEX-T025-GITHUB",
+      "platform": "GitHub",
+      "anchor": "Преп-Центру",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3071,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-EN-L05",
+      "publicationId": "INDEX-T025-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3093,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-EN-L11",
+      "publicationId": "INDEX-T025-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "dedicated service page",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 3099,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-EN-L12",
+      "publicationId": "INDEX-T025-GITHUB-EN",
+      "platform": "GitHub",
+      "anchor": "2,393-gift-set case",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 3100,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-EN-L05",
+      "publicationId": "INDEX-T025-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: fulfillment for automotive chemicals and car-care products",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 3134,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-EN-L06",
+      "publicationId": "INDEX-T025-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center: 2,393 gift sets in two days",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 3135,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-CN-L05",
+      "publicationId": "INDEX-T025-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "Prep-Center",
+      "url": "https://prep-center.ru/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/",
+      "registryRow": 3152,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / главная",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-CN-L11",
+      "publicationId": "INDEX-T025-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "专项服务页面",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 3158,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-GITHUB-CN-L12",
+      "publicationId": "INDEX-T025-GITHUB-CN",
+      "platform": "GitHub",
+      "anchor": "2,393 套礼盒案例",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/?utm_source=indexresearch&utm_medium=article&utm_campaign=research&utm_content=fulfillment_avtohimiya_2026",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 3159,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "source проверено; GitHub API",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-CN-L05",
+      "publicationId": "INDEX-T025-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：汽车化学品与汽车护理产品仓配",
+      "url": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "cleanUrl": "https://prep-center.ru/fulfillment-avtohimiya/",
+      "registryRow": 3193,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / услуга",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T025-SITE-CN-L06",
+      "publicationId": "INDEX-T025-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "anchor": "Prep-Center：2 天处理 2,393 套礼盒",
+      "url": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "cleanUrl": "https://prep-center.ru/cases/avtohimiya-2393-nabora-za-2-dnya/",
+      "registryRow": 3194,
+      "targetProject": "Преп-Центр",
+      "targetType": "клиентский сайт / кейс",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "HTML source проверено",
+        "recordedCheckedDate": "2026-09-22",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "PREP-T011-SOSTAV-IMG01",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/140/279188.jpg",
+      "driveUrl": null,
+      "alt": "Рейтинг фулфилментов Москвы и МО для автохимии и автокосметики, август 2026",
+      "caption": null,
+      "registryRow": 259,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-IMG02",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/140/279192.jpg",
+      "driveUrl": null,
+      "alt": "Для автохимии важны не только маркировка и отгрузка: склад должен учитывать тару, риск протечек и свойства самого товара",
+      "caption": null,
+      "registryRow": 260,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-IMG03",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/140/279229.jpg",
+      "driveUrl": null,
+      "alt": "Методика рейтинга: наибольший вес получили подтвержденный опыт с автохимией и защитная упаковка жидких товаров",
+      "caption": null,
+      "registryRow": 261,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-SOSTAV-IMG04",
+      "publicationId": "PREP-T011-SOSTAV",
+      "platform": "Sostav",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://www.sostav.ru/blogs/images/feeds/140/279242.jpg",
+      "driveUrl": null,
+      "alt": "Упаковочный участок Преп-Центра. Для автохимии конкретную схему упаковки подбирают под товар и тару",
+      "caption": null,
+      "registryRow": 262,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-IMG01",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "role": "обложка",
+      "fileName": "live image 01",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-28/92cd41c3-aed0-47c0-af08-fb57fc54bec9.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов автохимии и автокосметики: WB/Ozon, Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 264,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-IMG02",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 1",
+      "fileName": "live image 02",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-28/48ff697a-2433-412a-8978-2cb951c42ea2.jpg?width=2094&height=1179&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов автохимии и автокосметики: WB/Ozon, Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 265,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-IMG03",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 2",
+      "fileName": "live image 03",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-28/301b3c95-9dd4-4980-8097-610b07bd1e49.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов автохимии и автокосметики: WB/Ozon, Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 266,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    },
+    {
+      "id": "PREP-T011-TENCHAT-IMG04",
+      "publicationId": "PREP-T011-TENCHAT",
+      "platform": "TenChat",
+      "role": "внутреннее изображение 3",
+      "fileName": "live image 04",
+      "publishedUrl": "https://cdn1.tenchat.ru/static/vbc-gostinder/2026-08-28/8776ff42-54a7-4f52-94bd-6a1824eb457d.jpg?width=2094&height=1395&fmt=webp",
+      "driveUrl": null,
+      "alt": "Изображение ТОП-10 фулфилментов автохимии и автокосметики: WB/Ozon, Москва и МО, август 2026 в соцсети TenChat",
+      "caption": null,
+      "registryRow": 267,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedStatus": "live проверено",
+        "independentlyDownloadedInThisPass": false
+      }
+    }
+  ],
+  "advisories": [
+    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
+    "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
+    "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
+    "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+  ],
+  "sourceEvidence": {
+    "registrySnapshotComplete": true,
+    "registryTabsRead": [
+      "Темы",
+      "Публикации",
+      "Ссылки",
+      "Изображения статей"
+    ],
+    "registrySnapshotDate": "2026-11-08",
+    "selectedManuscript": null,
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+  }
+}
