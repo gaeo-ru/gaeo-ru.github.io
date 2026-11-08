@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2U_CI_then_safe_merge_main_pages_and_live_HTTPS",
+    "next_batch": "2U_single_PR_CI_then_merge_production_Pages_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -773,18 +773,61 @@
       "main_sitemap_urls_verified": 4,
       "blocker": "Direct gaeo.ru HTTPS/browser (including /tarify/) not accessible from the tool; no live viewport or indexing claim."
     },
+    "phase_2t": {
+      "phase": 2,
+      "batch": "2T",
+      "status": "source_merged_pr_ci_pass_production_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2t.mjs",
+      "records": [
+        14,
+        15,
+        16
+      ],
+      "new_industry_landing_pairs": 3,
+      "new_html_pages": 6,
+      "pr_ci_status": "pass",
+      "production_status": "in_progress",
+      "pages_status": "pending",
+      "public_https_browser_verified": false,
+      "previous_main_source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
+      "source_base_commit": "dfdbd937f71135619be3daaf0c1ba852faa093d8",
+      "last_completed_step": "PR106 full CI PASS 130 RU EN at 1440/390/320, source merge 36c3b333",
+      "next_required_step": "Confirm production 42479863079 and main manifest+6 HTML+sitemap, GitHub Pages then direct HTTPS",
+      "constraints": "Preserve all 107 catalogue IDs, common prices, contractual BMR guarantees, other batches and their two canonical docs.",
+      "excluded": [
+        17,
+        18,
+        75,
+        76,
+        27,
+        30
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "source_merged": true,
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
+      "qa_ru_en_urls_verified": 130,
+      "qa_browser_widths": [
+        1440,
+        390,
+        320
+      ],
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
     "phase_2u": {
       "phase": 2,
       "batch": "2U",
       "status": "source_prepared_pr_ci_pending",
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
       "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2u.mjs",
       "records": [
         17,
         18
       ],
-      "new_landing_pairs": 2,
-      "new_ru_en_pages": 4,
+      "new_industry_landing_pairs": 2,
+      "new_html_pages": 4,
       "pr_ci_status": "not_yet_run",
       "production_status": "not_started",
       "pages_status": "not_started",
@@ -794,8 +837,8 @@
         15,
         16
       ],
-      "exclusion_reason": "2T PR106 and 2V PR107 concurrently own #14-16 with different URL slugs. Neither is duplicated in 2U.",
-      "next_required_step": "One PR for #17/#18; full CI then merge safely, main/Pages and external HTTPS verification."
+      "exclusion_reason": "2T PR #106 owns 14/15/16; 2V PR #107 has overlapping competitor pages; 2U only 17/18.",
+      "next_required_step": "PR full CI, safe merge, production/main 4 pages and sitemap, Pages and external HTTPS separately."
     }
   },
   "status_definitions": {
@@ -853,11 +896,13 @@
     "phase_2r_deployed_ru_en_urls": 6,
     "phase_2s_deployed_pairs": 2,
     "phase_2s_deployed_ru_en_urls": 4,
-    "phase_2u_prepared_pairs_not_yet_deployed": 2,
-    "phase_2u_prepared_ru_en_urls_not_yet_deployed": 4,
-    "total_specialization_pairs_prepared_including_2u": 64,
-    "total_specialization_urls_prepared_including_2u": 128,
-    "phase_2u_count_note": "Last confirmed main 62 pairs / 124 RU+EN URLs. Phase 2U owns only #17/#18, 2 prepared pairs / 4 URLs; exclude parallel contested #14-16 (2T/2V), no PR/CI/production/Pages yet."
+    "phase_2t_prepared_pairs_not_deployed": 3,
+    "phase_2t_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2u_prepared_pairs_not_deployed": 2,
+    "phase_2u_prepared_urls_not_deployed": 4,
+    "total_specialization_pairs_prepared_including_2u": 67,
+    "total_specialization_urls_prepared_including_2u": 134,
+    "phase_2u_count_note": "Last verified main: 62 pairs/124 URL. 2T #14/15/16 merged into source but production pending; +2 2U pairs source-prepared; duplicate #14/15/16 in parallel 2V not counted."
   },
   "candidate_batches": [
     {
@@ -1147,6 +1192,29 @@
       "public_https_browser_verified": false
     },
     {
+      "batch": "2T",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        14,
+        15,
+        16
+      ],
+      "label": "Коммерческий ремонт, оконные производители и монтаж, фасадное и специальное остекление",
+      "condition": "3 самостоятельные двуязычные специализации / 6 RU+EN страниц. Проверять актуальный СП 71.13330.2017 с Изменением №3 (с 1.02.2026), оконные ГОСТ 23166-2024/30971-2012/24866-2014 и классификацию фасадов ГОСТ 33079-2014 плюс испытания ГОСТ 33792/33793-2021. Не выдавать стандарты за сертификаты отдельных фирм, испытания конкретных систем или готовые кейсы GEO. 107 исходных ID, цены и BMR гарантии неизменны.",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2t.mjs",
+      "pr_ci_status": "pass",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    {
       "batch": "2U",
       "phase": 2,
       "kind": "content_candidates",
@@ -1154,8 +1222,8 @@
         17,
         18
       ],
-      "label": "Инженерные монтажные компании и ландшафтное благоустройство",
-      "condition": "Собственные RU/EN запросы; разделять монтаж и сервис, проектирование и посадки, общественные и частные территории. Сохранять нормы и область применения; не дублировать 2T/2V №14-16.",
+      "label": "Инженерные монтажные и ландшафтно-благоустроительные компании",
+      "condition": "Оригинальные RU/EN. Проверять инженерные роли, проект и фактическое озеленение, применимость СП и местные требования; не дублировать 2T/2V #14–16.",
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2u.mjs"
@@ -1663,10 +1731,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
+      "planned_landing_url_ru": "/industries/commercial-fit-out-contractors/",
+      "planned_landing_url_en": "/en/industries/commercial-fit-out-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2t.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/sp/details/ca915ed9-5bce-4de4-94af-debfd041a939",
+        "https://www.consultant.ru/document/cons_doc_LAW_498649/",
+        "https://rosguard.gov.ru/document/article/federalnyj-zakon-ot-30-dekabrya-2009-g--384fz"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 15,
@@ -1688,10 +1772,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
+      "planned_landing_url_ru": "/industries/window-manufacturers-installers/",
+      "planned_landing_url_en": "/en/industries/window-manufacturers-installers/",
+      "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2t.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/a64d7437-05ff-4621-8339-53cd7418810d",
+        "https://protect.gost.ru/gost/details/09b731bf-531e-428b-8ef9-556ed2d1c110",
+        "https://protect.gost.ru/gost/details/5ffa7300-668a-432f-89d7-f695db24c0c8"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 16,
@@ -1713,10 +1813,27 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_in_source_ci_pass",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_six_html_sitemap_pages_then_public_https",
+      "last_completed_step": "phase_2t_pr106_full_ci_pass_and_source_merged",
+      "planned_landing_url_ru": "/industries/facade-specialist-glazing-companies/",
+      "planned_landing_url_en": "/en/industries/facade-specialist-glazing-companies/",
+      "work_branch": "feat/industry-specializations-batch-2t-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2t.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/3ab32780-20d3-4e74-8d4b-2585ddbe36dc",
+        "https://protect.gost.ru/gost/details/6a4e7f70-4174-461f-9e2a-fa25da1ab28e",
+        "https://protect.gost.ru/gost/details/2c91b736-b1f5-47ea-b24a-faedcb523776",
+        "https://protect.gost.ru/sp/details/bac9e1fe-45f1-401b-8e32-949f4ee27821"
+      ],
+      "public_https_browser_verified": false,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/106",
+      "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229"
+      ]
     },
     {
       "id": 17,
@@ -1738,10 +1855,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "original_ru_en_industry_content_source_prepared",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
       "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "full_CI_then_safe_merge_production_pages_public_HTTPS",
+      "next_required_step": "full_PR_CI_safe_merge_production_Pages_then_external_HTTPS",
       "work_batch": "2U",
       "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
       "planned_landing_url_ru": "/industries/engineering-installation-contractors/",
@@ -1751,7 +1868,7 @@
         "https://www.consultant.ru/document/cons_doc_LAW_9027/b0da391a51396ddb67727145adb0141c346ab424/",
         "https://www.consultant.ru/document/cons_doc_LAW_9027/b48c040fb20b324efb339e89ad832027d4b5d97a/"
       ],
-      "last_completed_step": "bilingual_original_content_qa_loader",
+      "last_completed_step": "bilingual_original_qa_loader",
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/"
     },
@@ -1775,10 +1892,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "original_ru_en_industry_content_source_prepared",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
       "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "full_CI_then_safe_merge_production_pages_public_HTTPS",
+      "next_required_step": "full_PR_CI_safe_merge_production_Pages_then_external_HTTPS",
       "work_batch": "2U",
       "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
       "planned_landing_url_ru": "/industries/landscape-site-improvement-contractors/",
@@ -1788,7 +1905,7 @@
         "https://protect.gost.ru/gost/details/c4141c07-9d4b-441f-8396-4baa6243fade",
         "https://www.consultant.ru/document/cons_doc_LAW_546063/"
       ],
-      "last_completed_step": "bilingual_original_content_qa_loader",
+      "last_completed_step": "bilingual_original_qa_loader",
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/"
     },
