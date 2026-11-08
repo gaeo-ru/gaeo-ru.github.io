@@ -1279,21 +1279,51 @@
       "slug": "fbo-ozon-2026",
       "title": "Фулфилмент для отгрузки на Ozon по FBO в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t016.json",
       "earliestPublicationDate": "2026-09-24",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-20261109-mw8gdy7y-bc7cu52ghc",
         "ownerId": "chat-20261109-mw8gdy7y-bc7cu52ghc",
         "requestId": "claim-20261109-mw8gdy7y-bc7cu52ghc",
         "token": "rk-mw8ge3cq-2uw4u7fhr43-e2ieaehsgwf",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:40.760Z",
-        "expiresAt": "2026-11-09T05:18:40.760Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t016.json",
+        "committedAt": "2026-11-08T23:30:28.657Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t016/boxes-pallets.jpg",
+            "sha": "561cc52a2e0898a92cf00dcb1e153c1e4e93940b"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/cover.jpg",
+            "sha": "043ae3e5f61f742fd3b9179eeaa0f5b122256029"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/liquid-packaging.jpg",
+            "sha": "008680c48d9bf5bc8a32290464fb42f3a3e4c250"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/loading.jpg",
+            "sha": "5b02510a3552b212ba991a1ac4fb2245b9a9646e"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t016.json",
+            "sha": "e0ad95132e75232adf85080484c840156616b400"
+          }
+        ],
+        "baseCommit": "3513dc4d86b70a76fa2090e5c53d058ca148df9a"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/15ooz_YLnStNDHEh2usjTzgQ-wGcoGA8d/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ: «По моей методике 1-е место занял Преп-Центр с 96 баллами»; раздел «Итоговый ТОП-10»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t017",
@@ -2303,8 +2333,9 @@
       "expiresAt": "2026-11-09T05:18:40.760Z",
       "previousStatus": "ready",
       "taskId": "prep-t016",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-20261109-mw8gdy7y-bc7cu52ghc"
     },
     {
       "ownerId": "chat-g6-mw8gch4c-rhm7xdnc8",
@@ -2393,5 +2424,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:30:14.604Z"
+  "updatedAt": "2026-11-08T23:30:28.657Z"
 }

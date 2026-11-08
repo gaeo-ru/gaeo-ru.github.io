@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t016",
+  "familyId": "prep-t016",
+  "slug": "fbo-ozon-2026",
+  "ownerId": "chat-20261109-mw8gdy7y-bc7cu52ghc",
+  "requestId": "claim-20261109-mw8gdy7y-bc7cu52ghc",
+  "submissionId": "submit-20261109-mw8gdy7y-bc7cu52ghc",
+  "submittedAt": "2026-11-08T23:30:28.657Z",
+  "mode": "standard",
+  "baseCommit": "3513dc4d86b70a76fa2090e5c53d058ca148df9a",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t016/boxes-pallets.jpg",
+      "sha": "561cc52a2e0898a92cf00dcb1e153c1e4e93940b"
+    },
+    {
+      "path": "public/assets/rankings/prep-t016/cover.jpg",
+      "sha": "043ae3e5f61f742fd3b9179eeaa0f5b122256029"
+    },
+    {
+      "path": "public/assets/rankings/prep-t016/liquid-packaging.jpg",
+      "sha": "008680c48d9bf5bc8a32290464fb42f3a3e4c250"
+    },
+    {
+      "path": "public/assets/rankings/prep-t016/loading.jpg",
+      "sha": "5b02510a3552b212ba991a1ac4fb2245b9a9646e"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t016.json",
+      "sha": "e0ad95132e75232adf85080484c840156616b400"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/15ooz_YLnStNDHEh2usjTzgQ-wGcoGA8d/view",
+      "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ: «По моей методике 1-е место занял Преп-Центр с 96 баллами»; раздел «Итоговый ТОП-10»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 1,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t016.json",
+    "ref": "3513dc4d86b70a76fa2090e5c53d058ca148df9a",
+    "sha": "95b500a7c35e5c0d87e2fb185134a2590ab4005d"
+  },
+  "deployed": false
+}
