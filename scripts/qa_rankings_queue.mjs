@@ -406,7 +406,7 @@ await check('editorial product shortlist has no winner or invented scores and pr
   const item = {...task('products'), category: 'products', contentType: 'selection', firstPlace: null,
     firstPlaceStatus: 'not-applicable-selection', expectedCount: 2};
   const urls = ['https://market.yandex.ru/cc/P01?erid=source1', 'https://market.yandex.ru/cc/P02?erid=source2'];
-  const manifest = manifestFor(item); manifest.clientLinks = urls.map(url => ({url}));
+  const manifest = manifestFor(item); manifest.clientLinks = urls.map(url => ({url})); manifest.orderedProductUrls = urls;
   const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
   const claim = await worker.claim({ownerId: 'chat-products', requestId: 'claim-products'});
   const prepare = value => {
@@ -422,6 +422,13 @@ await check('editorial product shortlist has no winner or invented scores and pr
   assert.equal(claim.taskId, 'products');
   await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.ru.ranking[0].score = 95;}), 'UNSUPPORTED_SELECTION_SCORES');
   await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.clientLinks.pop();}), 'MISSING_PRODUCT_LINK');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {
+    prepare(value); for(const lang of ['ru','en']) {
+      const old=value[lang].ranking[0].url;
+      value[lang].ranking[0].url=value[lang].ranking[1].url;
+      value[lang].ranking[1].url=old;
+    }
+  }), 'PRODUCT_ORDER_CHANGED');
   const accepted = await submit(worker, claim, 'submit-products', prepare);
   assert.equal(accepted.status, 'committed');
   const result = git.queue().tasks[0];

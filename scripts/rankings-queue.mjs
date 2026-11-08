@@ -220,6 +220,9 @@ export function validateRankingsSources(article, task, manifest) {
       && [...registeredClients].every(url => chosen.has(url)) && productUrls.length === task.expectedCount
       && new Set(productUrls).size === registeredClients.size && productUrls.every(url => registeredClients.has(url)),
       'MISSING_PRODUCT_LINK', 'A product selection must keep every exact product referral URL from the source manifest and link each product once.');
+    need(Array.isArray(manifest.orderedProductUrls) && manifest.orderedProductUrls.length === task.expectedCount
+      && manifest.orderedProductUrls.every((url, index) => productUrls[index] === url && registeredClients.has(url)),
+      'PRODUCT_ORDER_CHANGED', 'The product links must match the original source shortlist order, not merely the set of 11 referral URLs.');
   }
   return {requiredPublishedVersions: {ru: required.ru.size, en: required.en.size}, selectedClientLinks: article.clientLinks.length,
     excludedPendingUrls: pending.size};
