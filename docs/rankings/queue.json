@@ -854,21 +854,51 @@
       "slug": "top10-rio-2026",
       "title": "Поездка в Рио-де-Жанейро на Карнавал, Новый год и другие пиковые даты",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t004.json",
       "earliestPublicationDate": "2026-09-10",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-20261109-0214-gaeo-rank-61a9",
         "ownerId": "chat-20261109-0214-gaeo-rank-61a9",
         "requestId": "claim-20261109-0214-gaeo-rank-61a9",
         "token": "rk-mw8gc9qh-c5pmyy678m-59dk5tm73h6",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:01.374Z",
-        "expiresAt": "2026-11-09T05:17:01.374Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t004.json",
+        "committedAt": "2026-11-08T23:29:13.334Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t004/00_sostav_rio_cover_1200x675.jpg",
+            "sha": "95f807e548914b0ee352f1b8d5a3d0ad9652981f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/01_sostav_rio_sambadrome_1200x675.jpg",
+            "sha": "31fdbb1cdded98fd8ac242fa1e81139c40a5b051"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/02_sostav_copacabana_new_year_1200x675.jpg",
+            "sha": "410f8508fb464e2d3821db2ea5e36ffb5deba1f8"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/03_sostav_rio_beach_1200x675.jpg",
+            "sha": "fac2b58e80f8ad8f41b4b214ea99ed1edeb7c5a3"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t004.json",
+            "sha": "a46d6456ce3690606d58984b0d89a9dbf5fb5556"
+          }
+        ],
+        "baseCommit": "a7d73281094e58e9df0f7a308cf30cd753a9d716"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/191cW0i03OsnoXAXhr732upapa7k4eH3R/view",
+        "locator": "«Мой ТОП-10 компаний для поездки в Рио-де-Жанейро» and «1. Ada Tours – 98 из 100»: 15+18+16+11+13+10+10+5 = 98",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t008",
@@ -2021,8 +2051,9 @@
       "expiresAt": "2026-11-09T05:17:01.374Z",
       "previousStatus": "ready",
       "taskId": "ada-t004",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-20261109-0214-gaeo-rank-61a9"
     },
     {
       "ownerId": "chat-rnk-mw8gbzll-ha5v4l8y5",
@@ -2242,5 +2273,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:28:07.262Z"
+  "updatedAt": "2026-11-08T23:29:13.334Z"
 }
