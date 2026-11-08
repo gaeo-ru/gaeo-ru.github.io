@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t017",
+  "familyId": "prep-t017",
+  "slug": "fby-yandex-market-2026",
+  "ownerId": "chat-g6-mw8gch4c-rhm7xdnc8",
+  "requestId": "claim-g6-mw8gch4c-rhm7xdnc8",
+  "submissionId": "submit-g6-mw8gch4c-rhm7xdnc8",
+  "submittedAt": "2026-11-08T23:30:04.251Z",
+  "mode": "standard",
+  "baseCommit": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t017/01_cover_fby_yandex_market_2026.jpg",
+      "sha": "d7e673f5d41f916e1328c485d33e0b070e6efbc3"
+    },
+    {
+      "path": "public/assets/rankings/prep-t017/02_fby_yandex_process_5_stages.jpg",
+      "sha": "831cc18331cf2fe0fa31060f8033b0816b00d5de"
+    },
+    {
+      "path": "public/assets/rankings/prep-t017/03_pallets_ready_for_shipment.jpg",
+      "sha": "34192d751da334c02a5627dde2f080fd02a0a7fc"
+    },
+    {
+      "path": "public/assets/rankings/prep-t017/04_scanning_and_packing_station.jpg",
+      "sha": "26686b8ecfd0a3f25b6665422eb7c783fa009bbb"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t017.json",
+      "sha": "10f2bdefe19e188f4bdb7db0b4f212b24b877ed6"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1hizT7VSwki_S0SYCK6kVeuf0ZxZsKmE8/view",
+      "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-10, строка 1; раздел «1. Преп-Центр – 95 из 100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 2,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t017.json",
+    "ref": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062",
+    "sha": "fb300aa17217401a681277485f85d4e36584ba78"
+  },
+  "deployed": false
+}

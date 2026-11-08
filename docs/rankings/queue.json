@@ -1304,21 +1304,51 @@
       "slug": "fby-yandex-market-2026",
       "title": "Фулфилмент для Яндекс Маркета по FBY (FBO) в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t017.json",
       "earliestPublicationDate": "2026-09-24",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-g6-mw8gch4c-rhm7xdnc8",
         "ownerId": "chat-g6-mw8gch4c-rhm7xdnc8",
         "requestId": "claim-g6-mw8gch4c-rhm7xdnc8",
         "token": "rk-mw8ger52-s0tcejoonxp-5dwhyeejiz3",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:57.178Z",
-        "expiresAt": "2026-11-09T05:18:57.178Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t017.json",
+        "committedAt": "2026-11-08T23:30:04.251Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t017/01_cover_fby_yandex_market_2026.jpg",
+            "sha": "d7e673f5d41f916e1328c485d33e0b070e6efbc3"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/02_fby_yandex_process_5_stages.jpg",
+            "sha": "831cc18331cf2fe0fa31060f8033b0816b00d5de"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/03_pallets_ready_for_shipment.jpg",
+            "sha": "34192d751da334c02a5627dde2f080fd02a0a7fc"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/04_scanning_and_packing_station.jpg",
+            "sha": "26686b8ecfd0a3f25b6665422eb7c783fa009bbb"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t017.json",
+            "sha": "10f2bdefe19e188f4bdb7db0b4f212b24b877ed6"
+          }
+        ],
+        "baseCommit": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1hizT7VSwki_S0SYCK6kVeuf0ZxZsKmE8/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-10, строка 1; раздел «1. Преп-Центр – 95 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t006",
@@ -2259,8 +2289,9 @@
       "expiresAt": "2026-11-09T05:18:57.178Z",
       "previousStatus": "ready",
       "taskId": "prep-t017",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-g6-mw8gch4c-rhm7xdnc8"
     },
     {
       "ownerId": "chat-mw8gcwir-f0o12e8jigv",
@@ -2335,5 +2366,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:29:37.522Z"
+  "updatedAt": "2026-11-08T23:30:04.251Z"
 }
