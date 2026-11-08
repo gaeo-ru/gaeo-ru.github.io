@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Y_full_pr_ci_then_source_merge_production_main_pages_and_direct_https; preserve open_2U_2V",
+    "next_batch": "2Y_production_main_pages_and_independent_https_verification_before_next_free_ids",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -818,7 +818,7 @@
     "phase_2y": {
       "phase": 2,
       "batch": "2Y",
-      "status": "source_prepared_pr_pending",
+      "status": "source_merged_ci_pass_production_pending",
       "records": [
         106,
         107
@@ -828,19 +828,28 @@
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "new_industry_landing_pairs_prepared": 2,
       "new_ru_en_urls_prepared": 4,
-      "ci_status": "not_run",
-      "source_merged": false,
-      "production_status": "not_published",
-      "pages_status": "not_published",
+      "ci_status": "pass",
+      "source_merged": true,
+      "production_status": "pending_verification",
+      "pages_status": "pending_verification",
       "public_https_browser_verified": false,
       "preserved_parallel_pull_requests": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/108"
       ],
-      "next_required_step": "Open one PR, run complete CI, reconcile concurrent 2U/2V changes, merge only after PASS; inspect main/manifest/sitemap/Pages, then direct public HTTPS desktop and mobile.",
+      "next_required_step": "Confirm production sourceCommit preserving batch 2Y, four HTML/sitemap entries and Pages, then separate HTTPS live visual acceptance.",
       "evidence_policy": "Differentiate crop and veterinary traceability; check registered agrochemicals and seed information per product. No unverified supplier credentials or client GEO outcomes.",
       "original_catalogue_count_preserved": 107,
-      "shared_prices_and_bmr_unchanged": true
+      "shared_prices_and_bmr_unchanged": true,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724",
+      "source_merge_sha": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "last_completed_step": "full_pr_ci_pass_134_ru_en_browser_pages_1440_390_320_and_source_merge",
+      "main_pre_2y_sha": "90335eaaeebbc92619f6b1d4e0ac95c2d90e004f",
+      "main_pre_2y_source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+      "main_pre_2y_html": 243,
+      "main_pre_2y_sitemap": 238,
+      "main_pre_2y_files": 785
     }
   },
   "status_definitions": {
@@ -862,19 +871,19 @@
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 62,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 237,
+    "total_generated_html_pages_current_release": 243,
     "total_new_specialization_pairs_in_phase_2": 62,
     "total_new_specialization_urls_in_phase_2": 124,
     "new_industry_landings_in_phase_2_prepared_not_deployed": 2,
     "new_industry_urls_in_phase_2_prepared_not_deployed": 4,
-    "total_specialization_pairs_in_main_current_release": 62,
-    "total_specialization_urls_in_main_current_release": 124,
+    "total_specialization_pairs_in_main_current_release": 65,
+    "total_specialization_urls_in_main_current_release": 130,
     "total_specialization_pairs_prepared_including_2h": 30,
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
     "total_specialization_urls_prepared_including_2j": 66,
-    "current_sitemap_urls": 232,
-    "main_manifest_file_count": 779,
+    "current_sitemap_urls": 238,
+    "main_manifest_file_count": 785,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
     "phase_2_counts_note": "Current confirmed main 41040cfd (source 4116e953, released 2026-11-08T11:32:22.853Z) has 62 specialization pairs/124 RU EN URL, 237 HTML, 232 sitemap entries and 779 files. Includes 2S #52-53 (2 pairs / 4 URL). PR105 CI/production/Pages PASS, 4 main HTML+sitemap verified; direct external HTTPS remains unverified. Earlier batch counts are historical.",
@@ -902,7 +911,7 @@
     "phase_2t_prepared_ru_en_urls_not_deployed": 6,
     "phase_2y_prepared_pairs_not_deployed": 2,
     "phase_2y_prepared_ru_en_urls_not_deployed": 4,
-    "phase_2y_counts_note": "Batch 2Y is prepared in an isolated branch, not included in current main release. Published 62 pairs/124 RU+EN specialization pages remain unchanged until source/production/Pages verification. Open 2U/2V PRs are independent and excluded from these 2Y-only prepared counts."
+    "phase_2y_counts_note": "Batch 2Y: PR110 full CI PASS (134 RU EN pages at 1440/390/320) and astro-source merged 778c7ea7; 2 source specialization pairs/4 URL awaiting publication confirmation. The latest inspected main 90335eaa contains preceding 2T: 65 pairs/130 RU EN, 243 HTML/238 sitemap/785 files. Source/main/Pages for 2Y not yet claimed, direct HTTPS unverified; preserve 2U/2V."
   },
   "candidate_batches": [
     {
@@ -1224,9 +1233,12 @@
       ],
       "label": "Агропроизводители и поставщики товаров для агробизнеса",
       "condition": "Two independent RU/EN evidence-led specializations; reuse current 107-industry catalogue as parent, and keep Phase 3A automotive/finance research separate. Require full PR CI and independent Pages/live acceptance.",
-      "work_status": "source_prepared_pr_pending",
+      "work_status": "source_merged_ci_pass_production_pending",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
-      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08"
+      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724",
+      "source_merge_sha": "778c7ea7b05a780c3de480854e76de5738f80ce2"
     }
   ],
   "records": [
@@ -5109,13 +5121,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "source_prepared_awaiting_ci",
+      "content_status": "source_merged_awaiting_production",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
+      "work_status": "source_merged_ci_pass_production_pending",
+      "next_required_step": "confirm_production_main_pages_then_live",
       "planned_landing_url_ru": "/industries/agricultural-producers/",
       "planned_landing_url_en": "/en/industries/agricultural-producers/",
-      "last_completed_step": "phase_2y_original_ru_en_content_added_to_isolated_branch",
+      "last_completed_step": "phase_2y_pr110_ci_42482700724_pass_and_source_merge_778c7ea7",
       "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "evidence_sources": [
@@ -5126,7 +5138,13 @@
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
       "public_https_browser_verified": false,
-      "release_note": "Prepared RU/EN source only; CI, source merge, production, Pages and direct live HTTPS are not yet confirmed. Original status/landing_url remain unchanged."
+      "release_note": "Source merged after full PR CI PASS including 134 RU/EN pages at 1440/390/320; production/main/Pages and direct external public HTTPS still unverified. Retain planned URL and no live status promotion.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+      "source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724"
+      ]
     },
     {
       "id": 107,
@@ -5148,13 +5166,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "source_prepared_awaiting_ci",
+      "content_status": "source_merged_awaiting_production",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
+      "work_status": "source_merged_ci_pass_production_pending",
+      "next_required_step": "confirm_production_main_pages_then_live",
       "planned_landing_url_ru": "/industries/agricultural-input-suppliers/",
       "planned_landing_url_en": "/en/industries/agricultural-input-suppliers/",
-      "last_completed_step": "phase_2y_original_ru_en_content_added_to_isolated_branch",
+      "last_completed_step": "phase_2y_pr110_ci_42482700724_pass_and_source_merge_778c7ea7",
       "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "evidence_sources": [
@@ -5165,7 +5183,13 @@
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
       "public_https_browser_verified": false,
-      "release_note": "Prepared RU/EN source only; CI, source merge, production, Pages and direct live HTTPS are not yet confirmed. Original status/landing_url remain unchanged."
+      "release_note": "Source merged after full PR CI PASS including 134 RU/EN pages at 1440/390/320; production/main/Pages and direct external public HTTPS still unverified. Retain planned URL and no live status promotion.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+      "source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724"
+      ]
     }
   ],
   "price_source": "src/data/pricing.mjs",
@@ -5178,7 +5202,8 @@
     "maintain_existing_landing": "Тарифы действующей страницы проверены. При следующих содержательных изменениях сохранять URL, общие цены и релевантные связи.",
     "assess_specialization_boundary": "Более широкая действующая страница и ее тарифы проверены. Отдельную специализацию создавать только после определения самостоятельного интента и содержания.",
     "verify_live_deployment": "Открыть RU/EN посадочные на публичном https://gaeo.ru после Pages; проверить HTML, ссылки, визуальный вид и обновить реальные статусы.",
-    "run_full_pr_ci_and_release": "Из исходной ветки открыть один PR в актуальную astro-source и запустить полный CI с браузерной проверкой 1440/390/320. После PASS объединить, подтвердить production/main/Pages, отдельно прямой HTTPS; до live PASS URL и статус публичной посадочной не повышать."
+    "run_full_pr_ci_and_release": "Из исходной ветки открыть один PR в актуальную astro-source и запустить полный CI с браузерной проверкой 1440/390/320. После PASS объединить, подтвердить production/main/Pages, отдельно прямой HTTPS; до live PASS URL и статус публичной посадочной не повышать.",
+    "confirm_production_main_pages_then_live": "После source merge и полного CI проверить GitHub Actions production, manifest sourceCommit, 4 HTML и 4 sitemap URL в main, Pages; только затем прямой HTTPS/desktop/390/320, WebP, CTA, FAQ и форму. До реального live PASS не повышать статус."
   },
   "optional_progress_fields": [
     "catalog_status",
