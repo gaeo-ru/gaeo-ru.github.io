@@ -133,6 +133,21 @@ try{
     assert.equal(await footerLink.count(),1,'One homepage footer link after JavaScript');
     assert.ok(await footerLink.isVisible(),'Homepage footer provides a real visible archive entry');
     assert.equal(await page.locator(`header a[href="${route(lang)}"]`).count(),0,'No archive entry added to the homepage header');
+    const cols=page.locator('footer .footer-grid');
+    const caseLinks=cols.locator(':scope > div:nth-child(2) > a.footer-case-link');
+    assert.deepEqual(await caseLinks.evaluateAll(els=>els.map(a=>a.getAttribute('href'))),
+      lang==='en'?['/en/cases/#geo-promotion','/en/cases/#website-development']:['/cases/#geo-promotion','/cases/#website-development'],'Footer case submenu follows the header');
+    const rightLinks=await cols.locator(':scope > div:nth-child(3) > a').evaluateAll(els=>els.map(a=>a.getAttribute('href')));
+    const articleHref=lang==='en'?'/en/publications/articles/':'/publications/articles/';
+    const rankingHref=route(lang);
+    const profileHref=lang==='en'?'/en/professional-biography/#official-profiles':'/professional-biography/#external-profiles';
+    assert.ok(rightLinks.indexOf(articleHref)>=0 && rightLinks.indexOf(rankingHref)===rightLinks.indexOf(articleHref)+1 && rightLinks.indexOf(profileHref)===rightLinks.indexOf(rankingHref)+1,'Rankings follow authored publications and precede profiles');
+    assert.equal(await cols.locator(':scope > .footer-brand > .footer-lang').count(),1,'Footer language switch is under brand/contact column');
+    assert.equal(await cols.locator(':scope > div:nth-child(3) > .footer-lang').count(),0,'No language switch below publications');
+    const contact=await cols.locator(':scope > .footer-brand .footer-contact').innerText();
+    assert.ok(contact.includes('Email: ya@gaeo.ru') && contact.includes((lang==='en'?'Phone:':'Телефон:')+' +7 (926) 42-42-333'),'Email and phone have labeled separate lines');
+    const contactLines=contact.split(/\\n+/).map(s=>s.trim());
+    assert.ok(contactLines.some(s=>s.startsWith('Email:')) && contactLines.some(s=>s.startsWith(lang==='en'?'Phone:':'Телефон:')),'Labeled contacts are separate');
     footerChecks.push({path,width,visible:true,headerEntry:false});
   }
   assert.deepEqual(errors,[],'No page JavaScript errors');
