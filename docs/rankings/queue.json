@@ -121,26 +121,60 @@
       "slug": "fulfillment-cosmetics-july-2026",
       "title": "Фулфилмент для косметики на маркетплейсах: июльский рейтинг операторов",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t004.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261108212511-5p9kef26",
         "ownerId": "chat-gaeo-rankings-20261108212511-5p9kef26",
         "requestId": "claim-gaeo-rankings-20261108212511-5p9kef26",
         "token": "rk-mw8cco3i-wfjl1ba7w5n-l0ggi0ylndk",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T21:25:21.806Z",
-        "expiresAt": "2026-11-09T03:25:21.806Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t004.json",
+        "committedAt": "2026-11-08T21:51:36.823Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t004/cover.jpg",
+            "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/criteria.jpg",
+            "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/leaders.jpg",
+            "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/method.jpg",
+            "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/top10.jpg",
+            "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t004.json",
+            "sha": "32e519d1d6b9b7fdba29da60dacb6bdc77db1b9d"
+          }
+        ],
+        "baseCommit": "e017c5e7247ddb779b4867067cbe395b9b944ea7"
       },
-      "result": null,
       "leaseVersion": 2,
       "lastRelease": {
         "at": "2026-11-08T20:08:19.894Z",
         "ownerId": "gaeo-rankings-live-smoke-b-20261108-mw89kz54",
         "reason": "Completed live connector concurrency test; no article started. Returned to the regular queue."
-      }
+      },
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40",
+        "locator": "Раздел «Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; раздел «1. Преп-Центр — 97 из 100», строки 126–211",
+        "checkedAt": "2026-11-08T21:47:52.800Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t003",
@@ -1201,8 +1235,9 @@
       "expiresAt": "2026-11-09T03:25:21.806Z",
       "previousStatus": "ready",
       "taskId": "prep-t004",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261108212511-5p9kef26"
     },
     {
       "ownerId": "chat-gaeo-rankings-mw8cdftd-g2jbimjyvv",
@@ -1240,5 +1275,6 @@
       "outcome": "reserved",
       "operations": []
     }
-  ]
+  ],
+  "updatedAt": "2026-11-08T21:51:36.823Z"
 }
