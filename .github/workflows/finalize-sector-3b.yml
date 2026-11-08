@@ -6,7 +6,7 @@ on:
       - '.github/workflows/finalize-sector-3b.yml'
 permissions:
   contents: write
-  actions: read
+  actions: write
   pull-requests: read
 concurrency:
   group: gaeo-sector-3b-final-acceptance
@@ -14,41 +14,126 @@ concurrency:
 jobs:
   accept:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - name: Load the same isolated acceptance helper
+        uses: actions/checkout@v4
+      - name: Load current source without overwriting concurrent work
+        uses: actions/checkout@v4
+        with:
+          ref: astro-source
+          path: site
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-audit --no-fund && npx playwright install chromium
-      - name: Diagnose public directory geometry without changing the site
+      - name: Apply only the proven directory correction and permanent regression check
+        working-directory: site
         run: |
-          node --input-type=module <<'JS'
-          import {chromium} from 'playwright';
-          import fs from 'node:fs';
-          fs.mkdirSync('visual-sector-3b',{recursive:true});
-          const browser=await chromium.launch({headless:true});
-          const report=[];
-          const inspect=page=>page.evaluate(()=>({width:innerWidth,document:document.documentElement.scrollWidth,elements:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.right>innerWidth+1||r.left< -1);}).map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {tag:e.tagName,class:e.className,text:e.textContent.slice(0,180),left:r.left,right:r.right,width:r.width,scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,display:s.display,minWidth:s.minWidth,maxWidth:s.maxWidth,whiteSpace:s.whiteSpace,overflowWrap:s.overflowWrap,wordBreak:s.wordBreak,fontSize:s.fontSize,padding:s.padding,grid:s.gridTemplateColumns};}).slice(0,35)}));
-          for(const route of ['/strategies/','/en/strategies/']){
-            const page=await browser.newPage({viewport:{width:320,height:1000},reducedMotion:'reduce'});
-            await page.goto('https://gaeo.ru'+route,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
-            const before=await inspect(page);
-            await page.screenshot({path:'visual-sector-3b/'+(route.startsWith('/en/')?'en':'ru')+'-before-320.jpg',type:'jpeg',quality:70,fullPage:true});
-            const css='@media(max-width:760px){main .listing-grid{grid-template-columns:minmax(0,1fr)}main .list-card{min-width:0;overflow-wrap:anywhere}main .list-card .button,main .page-cta .button{max-width:100%;white-space:normal;box-sizing:border-box}main .listing-hero h1{overflow-wrap:anywhere}main .page-cta h2{overflow-wrap:anywhere}}';
-            await page.addStyleTag({content:css});
-            const after=await inspect(page);
-            await page.screenshot({path:'visual-sector-3b/'+(route.startsWith('/en/')?'en':'ru')+'-candidate-320.jpg',type:'jpeg',quality:70,fullPage:true});
-            report.push({route,before,after,css});
-            console.log('DIRECTORY_DIAGNOSIS',JSON.stringify(report.at(-1)));
+          python - <<'PY'
+          from pathlib import Path
+          import json, re, subprocess
+          original = 'e8df34a2f7fb06325b78fbb5e75db78e3c736234'
+          assert subprocess.check_output(['git','merge-base',original,'HEAD'],text=True).strip() == original
+          css = Path('public/assets/strategies-directory.css')
+          assert not css.exists(), 'Correction already exists; do not duplicate it'
+          css.write_text('/* Scoped to the bilingual strategies directory. Keep full text and links visible. */\n@media(max-width:760px){\n .strategies-directory .listing-grid{grid-template-columns:minmax(0,1fr)}\n .strategies-directory .list-card{min-width:0;overflow-wrap:anywhere}\n .strategies-directory .list-card .button,.strategies-directory .page-cta .button{max-width:100%;white-space:normal;box-sizing:border-box}\n .strategies-directory .listing-hero h1,.strategies-directory .page-cta h2{overflow-wrap:anywhere}\n}\n')
+          for prefix in ['', 'en/']:
+              p=Path('src/legacy/pages')/prefix/'strategies/index.html'
+              text=p.read_text()
+              assert text.count('<main class="page-shell">')==1
+              assert text.count('</head>')==1
+              text=text.replace('<main class="page-shell">','<main class="page-shell strategies-directory">')
+              text=text.replace('</head>','<link rel="stylesheet" href="/assets/strategies-directory.css">\n</head>')
+              p.write_text(text)
+          p=Path('scripts/qa_sector_methods_3b.mjs');text=p.read_text()
+          marker=" console.log('3B browser PASS:"
+          assert text.count(marker)==1
+          regression=""" // The directory is part of 3B discovery and must fit narrow screens too.
+           for(const directory of ['/strategies/','/en/strategies/'])for(const width of [1440,390,320]){
+            const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
+            assert.equal((await page.goto(base+directory,{waitUntil:'networkidle'}))?.status(),200);
+            await page.evaluate(()=>document.fonts.ready);
+            assert.equal(await page.locator('main.strategies-directory').count(),1,'Scoped directory');
+            const geometry=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth,cards:[...document.querySelectorAll('main .list-card')].map(e=>({right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width,client:e.clientWidth,scroll:e.scrollWidth}))}));
+            assert.ok(geometry.document<=width+2,'Directory overflow '+directory+' '+width+' '+JSON.stringify(geometry));
+            assert.ok(geometry.cards.every(x=>x.right<=width+2&&x.scroll<=x.client+2),'Card content contained without clipping');
+            for(const entry of phase3BMethods){const lang=directory.startsWith('/en/')?'en':'ru';assert.ok(await page.locator('main a[href="'+entry.routes.method[lang]+'"]').count()>0,'All method links retained');}
+            await page.screenshot({path:'visual-industry/3b-directory-'+(directory.startsWith('/en/')?'en':'ru')+'-'+width+'.png',fullPage:true,animations:'disabled'});
             await page.close();
-          }
-          await browser.close();fs.writeFileSync('visual-sector-3b/diagnosis.json',JSON.stringify(report,null,2)+'\n');
-          JS
+           }
+           console.log('3B directory PASS: RU/EN at 1440/390/320; original cards, links and full text retained');
+          """
+          text=text.replace(marker,regression+marker);p.write_text(text)
+          p=Path('docs/tariff-industry-roadmap.json');data=json.loads(p.read_text());phase=data['release']['phase_3b']
+          phase.update(status='published_methods_verified_directory_320_correction_in_progress',pull_request='https://github.com/gaeo-ru/gaeo-ru.github.io/pull/128',source_merge_commit=original,initial_production_run='https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42523780898',initial_pages_run='https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42525536782',initial_public_acceptance_run='https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42525833476',directory_diagnosis_run='https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42526494624',initial_public_https_urls_passed=18,initial_public_browser_checks_passed=50,public_https_browser_verified=False,next_required_step='Publish narrowly scoped directory wrapping correction through full production, then repeat 18-URL public acceptance; do not recreate 3B or open another PR.')
+          p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          p=Path('docs/TARIFFS_EXPANSION_HANDOFF.md');text=p.read_text()
+          old=re.search(r'\*\*Статус:\*\* подготовлено в изолированной ветке[^\n]+',text)
+          assert old, 'Expected the existing 3B checkpoint'
+          note='**Статус:** PR #128 объединен, production 42523780898 и Pages 42525536782 PASS. Первая внешняя приемка 42525833476 подтвердила совпадение всех 18 HTML с main, 19 ресурсов, 8 методик и связанные услуги в Chromium; 50 из 54 проверок пройдены. Найден реальный дефект каталога /strategies/ на 320 px: сетка карточек растягивает документ до 340 px. Диагностика 42526494624 подтверждает исправление без обрезки текста; применяется узкая коррекция только 2 языковых каталогов с постоянным регрессионным тестом. Итоговая публикация коррекции и повторная внешняя приемка пока не подтверждены. Цены, 107 ID, 100 специализаций и BMR +5/+10/+15 п.п. сохранены.'
+          text=text[:old.start()]+note+text[old.end():];p.write_text(text)
+          PY
+          git add public/assets/strategies-directory.css src/legacy/pages/strategies/index.html src/legacy/pages/en/strategies/index.html scripts/qa_sector_methods_3b.mjs docs/TARIFFS_EXPANSION_HANDOFF.md docs/tariff-industry-roadmap.json
+          git diff --cached --stat
+      - name: Validate the correction before publishing source
+        working-directory: site
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          npm run check:anchors
+          npm run check:design
+          npx playwright install chromium
+          npm run check:sector3a
+      - name: Commit only the tested patch and start the existing production workflow once
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix(3B): contain strategy directory cards on narrow screens with regression QA'
+          git push origin HEAD:astro-source
+          SOURCE=$(git rev-parse HEAD)
+          echo "GAEO_FINAL_SOURCE=$SOURCE" >> "$GITHUB_ENV"
+          gh api --method POST repos/gaeo-ru/gaeo-ru.github.io/actions/workflows/astro-production.yml/dispatches -f ref=astro-source
+          for i in $(seq 1 24); do
+            RUN=$(gh api "repos/gaeo-ru/gaeo-ru.github.io/actions/runs?head_sha=$SOURCE&event=workflow_dispatch&per_page=10" --jq '.workflow_runs[] | select(.path==".github/workflows/astro-production.yml") | .id' | head -n1)
+            if [ -n "$RUN" ]; then echo "GAEO_FINAL_PRODUCTION_RUN=$RUN" >> "$GITHUB_ENV"; echo "3B corrected source $SOURCE production $RUN"; break; fi
+            sleep 5
+          done
+          test -n "$RUN"
+      - name: Bind acceptance to the corrected release, preserving the original PR merge evidence
+        working-directory: site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('../scripts/_finalize-sector-3b.mjs');s=p.read_text()
+          def once(old,new):
+              global s
+              assert s.count(old)==1, old[:100]
+              s=s.replace(old,new)
+          once("const repo='gaeo-ru/gaeo-ru.github.io', merge='e8df34a2f7fb06325b78fbb5e75db78e3c736234';", "const repo='gaeo-ru/gaeo-ru.github.io', prMerge='e8df34a2f7fb06325b78fbb5e75db78e3c736234', merge=process.env.GAEO_FINAL_SOURCE;assert.ok(merge);")
+          once('const production=42523780898, prCI=42521534840;', 'const production=Number(process.env.GAEO_FINAL_PRODUCTION_RUN), prCI=42521534840;assert.ok(production);')
+          once('source_merge:merge,pr:128', 'source_merge:prMerge,release_source:merge,directory_fix:true,pr:128')
+          once('assert.equal(pr.merge_commit_sha,merge);','assert.equal(pr.merge_commit_sha,prMerge);')
+          once("pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name));", "pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name)&&x.status==='completed'&&x.conclusion==='success');")
+          once('source_commit:merge,pr_ci_run:', 'source_commit:merge,source_merge_commit:prMerge,directory_fix_source_commit:merge,pr_ci_run:')
+          once('объединен в source \\`${merge}\\`;', 'объединен в source \\`${prMerge}\\`; последующая узкая коррекция мобильного каталога выпущена из \\`${merge}\\`;')
+          once('**Неизменные условия:**', '**Исправление приемки:** первоначальная проверка выявила растяжение русского каталога стратегий до 340 px на экране 320 px. Добавлены ограниченные этим каталогом правила сетки и переноса, без скрытия содержимого, а также постоянный тест RU/EN каталогов на 1440/390/320. Полная повторная производственная и публичная приемка выполнена уже с коррекцией.\\n\\n**Неизменные условия:**')
+          p.write_text(s)
+          PY
+      - name: Confirm the corrected production and Pages, inspect the public site, close the same handoff
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node ../scripts/_finalize-sector-3b.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: sector-3b-directory-diagnosis
-          path: visual-sector-3b/
-          if-no-files-found: error
+          name: sector-3b-public-release-acceptance
+          path: |
+            site/visual-sector-3b/
+            site/visual-industry/3b-*.png
+          if-no-files-found: warn
           retention-days: 14
