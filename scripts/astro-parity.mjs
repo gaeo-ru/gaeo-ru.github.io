@@ -61,7 +61,7 @@ for(const original of originals){
  if(phase3ARoutes.has(path)){
   if(!before.includes('<div class="page-cta"></div>'))problems.push('Missing shared CTA slot in phase 3A page '+path);
   if(after.includes('<div class="page-cta"></div>'))problems.push('Shared CTA slot left unrendered in '+path);
-  if((after.match(/<h1\\b/g)||[]).length!==1)problems.push('Phase 3A page must contain one H1 in '+path);
+  if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Phase 3A page must contain one H1 in '+path);
   for(const marker of ['rel="canonical"','hreflang="ru"','hreflang="en"','type="application/ld+json"','id="specializations"','id="sources"']){
    if(!after.includes(marker))problems.push('Phase 3A page missing '+marker+' in '+path);
   }
