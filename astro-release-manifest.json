@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "6d1df8537d28729eaa46fc66e16bf1ebf4a3789f",
-  "releasedAt": "2026-11-08T15:27:21.451Z",
+  "sourceCommit": "488945366e258d7024894c3dbc02118ffa9fdd23",
+  "releasedAt": "2026-11-08T15:39:05.983Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2891,6 +2891,11 @@
       "sha256": "c89b5c224bc5cad15417e44d37097fc6643bec67a09217479dc4f921f0faafb0"
     },
     {
+      "path": "en/industries/auto-repair-shops/index.html",
+      "kind": "html",
+      "sha256": "8fcc17127ce987c7bf5b78817a81afd226330a920ac0520530a12469d45c4bf7"
+    },
+    {
       "path": "en/industries/bankruptcy-lawyers/index.html",
       "kind": "html",
       "sha256": "5e54f7f6c7a3c1b205c2dbe6599b36e3421560ee0f5086ff5e336ce38e6a3b1b"
@@ -2954,6 +2959,11 @@
       "path": "en/industries/commercial-property-agencies/index.html",
       "kind": "html",
       "sha256": "7c2397ff6a45764ad83a0c163c758c3bcc81800232e6ff90e8a975e713f2b0c6"
+    },
+    {
+      "path": "en/industries/commercial-vehicle-machinery-dealers/index.html",
+      "kind": "html",
+      "sha256": "d83bb30c2f4bdad2b1d7617e78be3e456d1ddc730b3b3bb9c25489dae07b842c"
     },
     {
       "path": "en/industries/construction-equipment-rental/index.html",
@@ -3081,6 +3091,11 @@
       "sha256": "9c009fb25db9fb47f92b4d141ff03b33c91f058767f1579569485e4e8b1983b3"
     },
     {
+      "path": "en/industries/fintech-payment-services/index.html",
+      "kind": "html",
+      "sha256": "618a7bbfa790ce2fd81bca17e93243f7b3ae8abf1efe0478de23758dbb1d5c22"
+    },
+    {
       "path": "en/industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "2b48536d764e02e5d3b018e3d7df3fb89e1cf6e494fe065c2c50a184499bc9cb"
@@ -3186,6 +3201,11 @@
       "sha256": "1be065dc72343b999471d1011e3e672c61a0ffb34cca3c4618aa418054f70b51"
     },
     {
+      "path": "en/industries/leasing-companies/index.html",
+      "kind": "html",
+      "sha256": "a4160e73d959d4fedddf5120f84e3bf6134ac37be16e1364054bada679e9742c"
+    },
+    {
       "path": "en/industries/legal/index.html",
       "kind": "html",
       "sha256": "da7c8f5a52aa74707bfd0a39b1baaac339f35e9bd7cd9d1df8a1ab5b250cc472"
@@ -3224,6 +3244,11 @@
       "path": "en/industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "fec0db633af738017565f465ae7dc0ef9a33ba451beca221796652c0f87c432f"
+    },
+    {
+      "path": "en/industries/motorcycle-powersports-dealers/index.html",
+      "kind": "html",
+      "sha256": "828033c6215e7e47dcbb0138f2cca06cfac91efd33b999d3892cd8cbf1b22293"
     },
     {
       "path": "en/industries/online-schools-edtech/index.html",
@@ -3266,6 +3291,11 @@
       "sha256": "3044f592b2f0f393f57f2a03e550be001fab025a8e79e9c5106a1499230ae13f"
     },
     {
+      "path": "en/industries/private-psychologists-psychotherapists/index.html",
+      "kind": "html",
+      "sha256": "38bdd1ebb738d965632b1b94bbe26e375b448dac61a494d6993fbddfb9e05416"
+    },
+    {
       "path": "en/industries/private-schools/index.html",
       "kind": "html",
       "sha256": "59269d7a9e5844fe8c323788cc6d5c280cd3f824ac71a4008036a89d0311fb91"
@@ -3289,6 +3319,11 @@
       "path": "en/industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
       "sha256": "c8924608203cef20ce1a050c61019661343833c4feccc6934c3657b3618ae05e"
+    },
+    {
+      "path": "en/industries/rehabilitation-centres/index.html",
+      "kind": "html",
+      "sha256": "d5a5f1286a1cf8c22bd5e3b75edfeca88baeceab4c2a38e80a8422b7a5aa0c92"
     },
     {
       "path": "en/industries/reproductive-medicine-clinics/index.html",
@@ -3383,7 +3418,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "4b1aebfe54e386c7d9c13d59c3e79db5939cfd15d70e2b3878eaa03855e17da7"
+      "sha256": "13bae55beff3ce3d6fc02c9b28452c98d6736b3d5ddb6703fe5327693c98d1f9"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3566,6 +3601,11 @@
       "sha256": "e6657b4487aee4166443ca0d5b1950be51d89991e4e6bbce4b05c5d8bdbe0f08"
     },
     {
+      "path": "industries/auto-repair-shops/index.html",
+      "kind": "html",
+      "sha256": "6dd77cbb08cc04bf753e91f57d19ad7d3c4a123e534ab44bc4c30a6dccaeeec0"
+    },
+    {
       "path": "industries/bankruptcy-lawyers/index.html",
       "kind": "html",
       "sha256": "24b1c63fda37eafa4fcb0963f18d0b22b7d3181562e4a52c9ebcf15c1bfa01a0"
@@ -3629,6 +3669,11 @@
       "path": "industries/commercial-property-agencies/index.html",
       "kind": "html",
       "sha256": "8551a956b3081eff9b17015afa198c85be63a9a634ff36fee4e55e094abbc9e9"
+    },
+    {
+      "path": "industries/commercial-vehicle-machinery-dealers/index.html",
+      "kind": "html",
+      "sha256": "e826462f37f1da0c474e9c968974cb6599bbd9fb31613d2e43c74ebab0c9fdbc"
     },
     {
       "path": "industries/construction-equipment-rental/index.html",
@@ -3756,6 +3801,11 @@
       "sha256": "f4e5e696c2bcaad717434bd1f08c4903c6f658d8bc7ccf1ebb5aeed67f274581"
     },
     {
+      "path": "industries/fintech-payment-services/index.html",
+      "kind": "html",
+      "sha256": "a5f9469742061213029b95821b4078909d8308bc3e6368110f50d7a8fb23ded7"
+    },
+    {
       "path": "industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "0b3bf2514f1198c6a667e5bf1b7498257feca10f2460690299bd5c61d424a094"
@@ -3861,6 +3911,11 @@
       "sha256": "4fa0412e44bf1be8f38aa31540526e94f94c4a259b52b04ff32c0d05942b958e"
     },
     {
+      "path": "industries/leasing-companies/index.html",
+      "kind": "html",
+      "sha256": "545b2b4d22b08cac4ef5935761c7a8f7b03e1a572314e35763dc6343e0fc42fa"
+    },
+    {
       "path": "industries/legal/index.html",
       "kind": "html",
       "sha256": "42c2bde43af7684c4747da97216cde8e7905c754e3dc3be529fa52b294c231c5"
@@ -3899,6 +3954,11 @@
       "path": "industries/motor-insurance-lawyers/index.html",
       "kind": "html",
       "sha256": "05778cfbabc851fa5600ad54ae7f30422476c7d1a405fdf8dbc5a4bfc9a24e62"
+    },
+    {
+      "path": "industries/motorcycle-powersports-dealers/index.html",
+      "kind": "html",
+      "sha256": "e2a4ac4a30ace66754a8106f5bc9432dee9836458db972fb945e005ebeaf6637"
     },
     {
       "path": "industries/online-schools-edtech/index.html",
@@ -3941,6 +4001,11 @@
       "sha256": "625e934743cd8806488b087c79917376cfeac8c126ee99e29aebf3fe4a2b1643"
     },
     {
+      "path": "industries/private-psychologists-psychotherapists/index.html",
+      "kind": "html",
+      "sha256": "b8c93e40aedd866e7cfc60964303947ca3c8eb61b0adee9a3cb00174c7ac7e3a"
+    },
+    {
       "path": "industries/private-schools/index.html",
       "kind": "html",
       "sha256": "8ede17012a7106086ebd82555595c5206dffd8a02b83926e3bfaf7efb7588e05"
@@ -3964,6 +4029,11 @@
       "path": "industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
       "sha256": "6cda642de55883f10a2fe05ab945108f2ffa65a9b38d3ec86b26ee62f10396b1"
+    },
+    {
+      "path": "industries/rehabilitation-centres/index.html",
+      "kind": "html",
+      "sha256": "87b5b0f142149daab5c77ebefec0df455d9122483b629fd58c50a6abfb223098"
     },
     {
       "path": "industries/reproductive-medicine-clinics/index.html",
@@ -4153,7 +4223,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "cf0898dafaae4e1353126cb414ac0b4c9a5e66bacc3083a9287a01710ed8ce37"
+      "sha256": "e2e5950b93008e3d3b39f96507f46101f999c6cab55c16f1b0c10b3c671c6bb4"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4208,7 +4278,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "9766e791baa888050cac2fe5938c93fa6aeeb05472f007ca9276dfa0c1546006"
+      "sha256": "a149a77ec0280001ea218fe0a75a9120ec13195eb5f834689a37cb2d03d2497f"
     }
   ]
 }
