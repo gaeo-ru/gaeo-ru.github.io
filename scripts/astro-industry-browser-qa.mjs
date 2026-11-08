@@ -121,6 +121,9 @@ try {
       const links=block.locator('li a');
       assert.ok(await links.count()>=10,'All industry links remain in the server HTML '+entry.route);
       const hrefsBefore=await links.evaluateAll(els=>els.map(el=>el.getAttribute('href')));
+      const linkNames=await links.allTextContents();
+      assert.equal(linkNames[0].trim(),entry.lang==='ru'?'Девелоперы коттеджных поселков':'Cottage community developers','Use the official, concise sector name '+entry.route);
+      assert.ok(linkNames.every(label=>!/^GEO[ -]*(?:продвижение|promotion)/i.test(label.trim())),'Avoid repetitive GEO keywords in related anchors '+entry.route);
       assert.ok(hrefsBefore.every(href=>href?.startsWith(entry.lang==='ru'?'/industries/':'/en/industries/')),'Related links must use their native language '+entry.route);
       assert.ok(await toggle.isVisible(),'Show more toggle missing '+entry.route);
       assert.equal(await toggle.getAttribute('aria-expanded'),'false','Related list starts collapsed '+entry.route);
