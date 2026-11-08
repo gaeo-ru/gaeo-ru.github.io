@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
-  "releasedAt": "2026-11-08T11:32:22.853Z",
+  "sourceCommit": "36c3b33346ada429c18b633a1a60e1f48515548c",
+  "releasedAt": "2026-11-08T12:30:58.680Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2858,7 +2858,7 @@
     {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
-      "sha256": "2754d13b09fb89c3998a4376460328a87f5ce0279112eaa5ba563319a06596a6"
+      "sha256": "e86837cb39d80d810dae2b2a54c7df84ff8db63fcc83724bce78981693a7cb9f"
     },
     {
       "path": "en/index.html",
@@ -2904,6 +2904,11 @@
       "path": "en/industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "474adfc16062976c70fc4d9332d08c3a79b24188ebc19a508cf91f9bfaf91e2a"
+    },
+    {
+      "path": "en/industries/commercial-fit-out-contractors/index.html",
+      "kind": "html",
+      "sha256": "0caac7db3da29d2e9fcba3d3e10f15a8b3aaac6c7b1134b9d9b17cf9f14c8a35"
     },
     {
       "path": "en/industries/commercial-industrial-general-contractors/index.html",
@@ -2989,6 +2994,11 @@
       "path": "en/industries/enterprise-software/index.html",
       "kind": "html",
       "sha256": "2136660fcaa6eab23be41d970070c63f234b233bbaa7d6062d8c40080f53b55b"
+    },
+    {
+      "path": "en/industries/facade-specialist-glazing-companies/index.html",
+      "kind": "html",
+      "sha256": "803818f5b01ca80f4f5cafa2e39ab6b49a011fbb118869a6558609a6c4903e79"
     },
     {
       "path": "en/industries/family-inheritance-lawyers/index.html",
@@ -3211,6 +3221,11 @@
       "sha256": "51565bc9fed753794b985d76a1c7f6af5190ea6a867ef32ec76f6d279a8dd436"
     },
     {
+      "path": "en/industries/window-manufacturers-installers/index.html",
+      "kind": "html",
+      "sha256": "04cb81abddbde1996d716311d3d4bc9b2a1268a6efc737450dd5d0ae79da23a5"
+    },
+    {
       "path": "en/industries/wms-tms/index.html",
       "kind": "html",
       "sha256": "18dba0a4750068a82dbb4c3751cc540737b3d709cb4f2607b767fe51dfc6c8d2"
@@ -3228,7 +3243,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "6064f401d0c21d68ad50d7b33df44651b57471b0223832192e0c6dc38e89f8d4"
+      "sha256": "4be7fe7bb22eef147c30162020acbc6efc53132ea8deacee537ac5d1c5a81855"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3378,7 +3393,7 @@
     {
       "path": "geo-prodvizhenie-nedvizhimosti/index.html",
       "kind": "html",
-      "sha256": "dba17cd5292731da60770e497e0f69f95d6dd6998453e0c63a8f3e9222a152a5"
+      "sha256": "1e2457ee51cca84f4236379b938b968355d1babd05c68deb2677bbfd7434f296"
     },
     {
       "path": "index.html",
@@ -3424,6 +3439,11 @@
       "path": "industries/cloud-providers-data-centres/index.html",
       "kind": "html",
       "sha256": "5fa778454f3270f7148676426af918d67a006b43ba059672b29a0a63ca2876a7"
+    },
+    {
+      "path": "industries/commercial-fit-out-contractors/index.html",
+      "kind": "html",
+      "sha256": "a4129922a6b71c9c8087a8b101e569df2b89d176c3249ab65ecbc0cc46761862"
     },
     {
       "path": "industries/commercial-industrial-general-contractors/index.html",
@@ -3509,6 +3529,11 @@
       "path": "industries/enterprise-software/index.html",
       "kind": "html",
       "sha256": "6a37fc0795dde8f8f92b97832a07c1c8b97a39cbfb47e9f049025f760e54c7d2"
+    },
+    {
+      "path": "industries/facade-specialist-glazing-companies/index.html",
+      "kind": "html",
+      "sha256": "54f2836dc0c434daae68ad95427aa2ce56464694d65c465ab4df346a8d0b8169"
     },
     {
       "path": "industries/family-inheritance-lawyers/index.html",
@@ -3731,6 +3756,11 @@
       "sha256": "7239adbd3c2fac3f0b94d412d364ef0fefb0f354eed923970e0bd439446428a1"
     },
     {
+      "path": "industries/window-manufacturers-installers/index.html",
+      "kind": "html",
+      "sha256": "5cfdf006c61ebda0263a34cabe518b00e126a483213385d787011743558c96b4"
+    },
+    {
       "path": "industries/wms-tms/index.html",
       "kind": "html",
       "sha256": "35ffc2b741375a41c2d4c47cb30da06240cea055d82421920a94af89a85b318b"
@@ -3843,7 +3873,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "0871e595bb727d808cbe93c1ce0e2b0c3a5e91b393647ad6ab22480502296bdd"
+      "sha256": "e74778ff2ccdbb8c0db84dd5004b0e3edb01efe082955e0ab028bb980d45fc7f"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3898,7 +3928,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "871b682c1d8636f008161eda7958bd3236934051ac4b38a3f9a6926428b6048e"
+      "sha256": "12c3e568d43c2d3abec6ea0037866935134f0fe5cab34c697f8c726f9e27c7fe"
     }
   ]
 }
