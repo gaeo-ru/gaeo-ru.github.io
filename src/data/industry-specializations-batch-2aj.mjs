@@ -1,18 +1,17 @@
 /**
- * Phase 2AJ: evidence-led RU/EN automotive GEO pages for repair shops (#77),
- * commercial-vehicle dealers (#78), and motorcycle dealers (#79).
- * Verified sources describe regulations and official document processes;
- * no unverified customer outcomes, registrations, inventory or BMR are claimed.
- * Pricing, 107 catalogue IDs, BMR terms and approved artwork stay canonical.
+ * Phase 2AJ: bilingual financial and investment adviser GEO, catalogue #29.
+ * Distinguish ordinary financial planning from individually regulated securities advice.
+ * Evidence links support verification procedures, not GAEO client results or investor returns.
+ * Canonical prices, 107 IDs, approved WebP and BMR guarantee are unchanged.
  */
 export const industrySpecializationsBatch2AJ = [
   {
-    "id": 77,
-    "slug": "automotive-service-repair",
-    "group": "automotive",
+    "id": 29,
+    "slug": "financial-investment-advisers",
+    "group": "finance",
     "routes": {
-      "ru": "/industries/automotive-service-repair/",
-      "en": "/en/industries/automotive-service-repair/"
+      "ru": "/industries/financial-investment-advisers/",
+      "en": "/en/industries/financial-investment-advisers/"
     },
     "parent": {
       "ru": "/tarify/",
@@ -35,797 +34,255 @@ export const industrySpecializationsBatch2AJ = [
     "methodLabels": {
       "ru": [
         "Методика измерения BMR",
-        "Как проверять данные и заявления поставщика услуг"
+        "Проверка подтверждений компетенции подрядчика"
       ],
       "en": [
         "BMR measurement methodology",
-        "Checking professional service evidence"
+        "Checking provider claims and evidence"
       ]
     },
     "sources": [
       {
-        "href": "https://zpp.rospotrebnadzor.ru/news/federal/575844",
-        "ru": "Роспотребнадзор: документы при ремонте автомобиля, июль 2026",
-        "en": "Rospotrebnadzor: documents issued for vehicle repair, July 2026"
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_10148/c7375c64b45cadae15697cffbee9601fadc60975/",
+        "ru": "39-ФЗ, статья 6.1: инвестиционное консультирование и статус советника",
+        "en": "Federal Law 39-FZ, Article 6.1: regulated investment advice"
       },
       {
-        "href": "https://www.consultant.ru/document/cons_doc_LAW_506689/",
-        "ru": "Постановление РФ №780: правила ремонта автомототранспортных средств с 01.09.2025",
-        "en": "Russian Decree 780: vehicle-maintenance and repair rules effective September 2025"
+        "href": "https://www.consultant.ru/document/cons_doc_LAW_10148/b0f0f1e253c950b933830988e85dbbc0ae025edb/",
+        "ru": "39-ФЗ, статья 6.2: индивидуальные рекомендации и инвестиционный профиль",
+        "en": "Federal Law 39-FZ, Article 6.2: investment profiles and personalised recommendations"
+      },
+      {
+        "href": "https://www.cbr.ru/finorg/",
+        "ru": "Банк России: проверка участников финансового рынка",
+        "en": "Bank of Russia: verify a financial-market participant"
+      },
+      {
+        "href": "https://www.cbr.ru/explan/invest/",
+        "ru": "Банк России: включение в единый реестр инвестиционных советников",
+        "en": "Bank of Russia: investment-adviser register and requirements"
       }
     ],
     "content": {
       "ru": {
-        "title": "GEO-продвижение автосервисов и СТО в ChatGPT и Алисе | GAEO.ru",
-        "h1": "Продвижение автосервисов и СТО в ответах нейросетей",
-        "description": "GEO для автосервисов и СТО: диагностика, ремонт по марке автомобиля, география, запись, договор и документы по постановлению №780. Замеры BMR и тарифы GAEO.",
-        "eyebrow": "Авторынок / Автосервисы и СТО",
-        "lead": "Водитель ищет сервис для определенной марки, поломки и района, а не просто «лучший автосервис». Я проверяю, какие СТО нейросети рекомендуют по конкретным задачам, и помогает ли открытая информация подтвердить специализацию, условия ремонта и запись.",
+        "title": "GEO-продвижение финансовых и инвестиционных консультантов | GAEO.ru",
+        "h1": "GEO-продвижение финансовых и инвестиционных консультантов",
+        "description": "Продвижение финансовых консультантов в ответах нейросетей: различие финансового планирования и инвестиционных рекомендаций, реестр Банка России, BMR, тарифы.",
+        "eyebrow": "Финансы / Консультации и инвестиционные советники",
+        "lead": "Человек может искать помощь с семейным бюджетом, стратегией накоплений или индивидуальными инвестиционными рекомендациями. У этих задач разные предметы и правовые требования. Я измеряю, каких консультантов нейросети рекомендуют по каждому сценарию, и сверяю описание услуг с документами и публичными фактами.",
         "heroPoints": [
-          "Небрендовые запросы по неисправности, модели и району",
-          "Проверка услуг, диагностического оборудования и условий приема",
-          "Раздельные замеры по филиалам, типам ремонта и рекомендациям"
+          "Раздельные запросы о финансовом планировании и регулируемом инвестиционном консультировании",
+          "Проверка статуса в реестре Банка России, если требуется по конкретной услуге",
+          "Измерение BMR и точности описания компетенций без обещаний доходности"
         ],
-        "problemTitle": "Почему популярный автосервис может пропускать целевые рекомендации",
-        "problemIntro": "Общая высокая оценка не отвечает на вопрос о ремонте вариатора, электрики или кузова конкретной модели. Нужны подтвержденные услуги и актуальные условия обращения.",
+        "problemTitle": "Почему широкое слово «финансовый эксперт» мешает корректной рекомендации",
+        "problemIntro": "Покупателю недостаточно общего обещания улучшить финансовое положение. Нужны конкретный вид услуги, условия договора, статус исполнителя и понимание возможного риска.",
         "problems": [
           {
-            "title": "Нельзя проверить специализацию",
-            "body": "Заявление «ремонтируем все марки» не показывает опыт с конкретным агрегатом, наличие оборудования и доступность нужной работы в выбранном филиале."
+            "title": "Смешаны разные услуги",
+            "body": "Работа с бюджетом семьи, финансовое обучение и индивидуальная инвестиционная рекомендация различаются по содержанию. Термин «консультант» сам по себе не подтверждает право давать регулируемые рекомендации."
           },
           {
-            "title": "Неясны условия и стоимость",
-            "body": "Диагностическая цена, предварительная смета и итоговая стоимость ремонта имеют разный смысл. Гарантийные условия и перечень работ нужно показывать без ложных фиксированных цен."
+            "title": "Невозможно проверить статус",
+            "body": "Профиль специалиста может перечислять обучение и опыт, но для инвестиционного консультирования важны применимые требования закона и наличие записи в реестре Банка России."
           },
           {
-            "title": "Филиалы смешиваются",
-            "body": "Адрес, часы, прием без записи, эвакуация и профиль мастеров могут различаться у точек одной сети. Нейросеть не должна переносить возможности одного сервиса на другой."
+            "title": "Обещания результата размыты",
+            "body": "Прогноз накоплений, историческая доходность и гарантированный результат не равнозначны. Условия, риск и ограничения необходимо раскрывать точно без недоказанных обещаний."
           }
         ],
-        "scenarioTitle": "Какие вопросы водителей стоит измерять в нейросетях",
-        "scenarioIntro": "Примеры покупательских запросов формируют матрицу BMR после сверки настоящих услуг и географии конкретного сервиса.",
+        "scenarioTitle": "Какие вопросы клиентов надо разделять при замере BMR",
+        "scenarioIntro": "Это примеры небрендовых запросов для будущего измерения, а не утверждения о фактических рекомендациях определенных специалистов.",
         "columns": [
-          "Вопрос автовладельца",
-          "Что подтверждает ответ",
-          "Что подготовить для GEO"
-        ],
-        "scenarios": [
-          [
-            "Где рядом со мной диагностируют электрику этой модели?",
-            "Филиал, марка, конкретный вид диагностики, запись и оборудование",
-            "Посадочную по диагностике с доступными марками и адресами"
-          ],
-          [
-            "Как выбрать СТО для ремонта автоматической коробки передач?",
-            "Виды коробок, выполняемые работы, квалификация, договор и гарантия",
-            "Разделить ремонт АКПП, вариатора и обслуживание по реальным компетенциям"
-          ],
-          [
-            "Какие сервисы выполняют кузовной ремонт с оформлением заказа?",
-            "Виды работ, примеры с разрешением, порядок приемки и документы",
-            "Опубликовать этапы приемки, сметы и выдачи автомобиля"
-          ],
-          [
-            "Как записаться в автосервис в выходные в моем районе?",
-            "Фактические часы каждой точки, контакты и условия приема",
-            "Синхронизировать филиалы, контакты и расписание во внешних источниках"
-          ]
-        ],
-        "proofTitle": "Какие сведения помогают отличить реальный сервис от общего описания",
-        "proofIntro": "Правила по постановлению Правительства РФ №780 действуют с 1 сентября 2025 года и регулируют отношения по техническому обслуживанию и ремонту автомототранспорта. Роспотребнадзор разъясняет состав документов, выдаваемых потребителю. Наличие этих норм не доказывает качество какой-либо СТО.",
-        "checks": [
-          "Проверяемые виды ремонта, модели и оборудование по каждому фактическому адресу",
-          "Порядок записи, предварительной оценки стоимости, договорных документов и гарантийных условий",
-          "Согласованные фотографии процесса, подтвержденные квалификации и ограничения диагностики"
-        ],
-        "proofNote": "GAEO анализирует рекомендации нейросетей, а не оценивает безопасность выполненного ремонта. Клиентских результатов GEO-продвижения СТО здесь не заявлено.",
-        "workTitle": "Как организую GEO-продвижение автосервиса",
-        "workIntro": "Сначала разделяю запросы о проблеме автомобиля, выборе сервиса и удобстве записи; затем сопоставляю ответы с действительными услугами.",
-        "steps": [
-          {
-            "title": "Стартовый BMR по работам",
-            "body": "Фиксирую вопросы о диагностике, агрегатах, марках, филиалах и районах без названия сервиса."
-          },
-          {
-            "title": "Проверка условий обслуживания",
-            "body": "Уточняю перечни работ, доступность оборудования, документы и согласованные гарантии по конкретным точкам."
-          },
-          {
-            "title": "Доработка сайта и источников",
-            "body": "Формирую задания для страниц услуг, филиалов, профилей специалистов, контактов и экспертных объяснений типовых неисправностей."
-          },
-          {
-            "title": "Повторный замер",
-            "body": "Сравниваю исходную матрицу запросов и проверяю, точно ли нейросети указывают работы, адреса и ограничения."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Можно ли продвигать сеть СТО одной общей страницей?",
-            "answer": "Общая страница нужна для выбора сети, но адреса, часы и список услуг требуется подтверждать отдельно для каждого филиала. Это снижает риск неверных рекомендаций."
-          },
-          {
-            "question": "Какие документы важны при ремонте автомобиля?",
-            "answer": "Постановление №780 регулирует оформление отношений и порядок оказания услуг. Состав договора и выдаваемых документов следует сверять с актуальными правилами и конкретной ситуацией."
-          },
-          {
-            "question": "Можно ли обещать точную стоимость ремонта по запросу в нейросети?",
-            "answer": "Без диагностики и согласованного объема работ итоговая стоимость может быть неизвестна. Разумно публиковать реальные базовые цены, условия расчета и ограничения."
-          },
-          {
-            "question": "Как измеряется видимость автосервиса?",
-            "answer": "BMR считают по заранее зафиксированным небрендовым запросам, отдельно для ремонтных работ, марок и районов. Упоминание названия сети само по себе не равно рекомендации."
-          },
-          {
-            "question": "Сколько стоит GEO-продвижение СТО?",
-            "answer": "Для автосервисов действуют опубликованные тарифы GAEO. Объем зависит от числа услуг, филиалов, конкурентов и стартовых запросов."
-          }
-        ],
-        "ctaTitle": "Проверим, какие СТО нейросети рекомендуют именно твоим клиентам",
-        "ctaText": "Пришли адреса, марки и виды ремонта, подтвержденные услуги и условия записи. Составлю исходную матрицу запросов.",
-        "request": "GEO-продвижение автосервиса и СТО: диагностика, ремонт по марке, филиалы, запись и BMR."
-      },
-      "en": {
-        "title": "GEO for independent auto repair shops and service centres | GAEO",
-        "h1": "GEO visibility for auto repair shops and service centres",
-        "description": "AI recommendations for vehicle repair shops: make-specific services, diagnostic work, workshop locations, booking, repair documents and BMR.",
-        "eyebrow": "Automotive / Repair workshops",
-        "lead": "Drivers look for a workshop able to fix a particular fault on a particular model within a practical distance. I measure which providers AI recommends for these non-branded questions and check whether real services, locations and booking conditions support the recommendation.",
-        "heroPoints": [
-          "Repair-specific search prompts by model, fault and neighbourhood",
-          "Verifiable service list, diagnostic capabilities and customer documents",
-          "Separate comparisons for locations and types of work"
-        ],
-        "problemTitle": "Why a well-known garage may not be recommended for a repair",
-        "problemIntro": "A strong overall rating does not tell a driver whether the shop handles a particular transmission, electrical fault or body repair. AI needs specific, current evidence.",
-        "problems": [
-          {
-            "title": "Service claims are too broad",
-            "body": "“All makes and models” does not prove equipment, mechanics' experience or the availability of a specific repair at each location."
-          },
-          {
-            "title": "Prices and terms are unclear",
-            "body": "A diagnostic fee, provisional estimate and final repair price are distinct. Work scope and warranty terms require precise wording."
-          },
-          {
-            "title": "Workshop locations are conflated",
-            "body": "Hours, appointments, services and emergency assistance may vary across branches. A recommendation must refer to the right site."
-          }
-        ],
-        "scenarioTitle": "Real questions that can drive repair-shop recommendations",
-        "scenarioIntro": "These are proposed measurement prompts, not reported AI answers. They are refined against the workshop's verified service catalogue.",
-        "columns": [
-          "Driver question",
-          "Evidence to verify",
-          "GEO content task"
-        ],
-        "scenarios": [
-          [
-            "Which nearby workshop diagnoses electronics on my car model?",
-            "Supported models, electrical diagnostics, branch, booking and tools",
-            "Explain diagnostic scope and workshop locations"
-          ],
-          [
-            "Who repairs this type of automatic transmission?",
-            "Transmission types, actual work, staff competence and service terms",
-            "Differentiate automatic, CVT and maintenance services"
-          ],
-          [
-            "Where can I book documented body repairs?",
-            "Permitted work examples, estimates, customer paperwork and handover",
-            "Publish the repair and approval process"
-          ],
-          [
-            "What repair shop is open at weekends in my area?",
-            "Branch-specific hours, contact details and booking terms",
-            "Align public profiles with actual schedules"
-          ]
-        ],
-        "proofTitle": "Evidence a customer can check before choosing a workshop",
-        "proofIntro": "Russian Government Decree 780, in effect since September 2025, sets rules for motor vehicle maintenance and repair services. Rospotrebnadzor also explains the paperwork a customer should receive. Those rules do not certify a particular workshop.",
-        "checks": [
-          "Actual repair categories, compatible models and equipment at each branch",
-          "Booking terms, documented estimates, written terms and applicable guarantees",
-          "Approved repair examples, specialist qualifications and diagnostic limits"
-        ],
-        "proofNote": "GAEO measures the quality of AI recommendations, not vehicle repair safety. This page makes no claims of completed automotive GEO client projects.",
-        "workTitle": "How I develop GEO for a repair service",
-        "workIntro": "I separate fault-based search, workshop selection and booking convenience, then evaluate what AI actually says about the business.",
-        "steps": [
-          {
-            "title": "Measure baseline BMR",
-            "body": "Record non-branded prompts by repair type, model, neighbourhood and opening hours."
-          },
-          {
-            "title": "Validate service evidence",
-            "body": "Verify the offered jobs, real equipment, customer paperwork and branch-specific service scope."
-          },
-          {
-            "title": "Improve public information",
-            "body": "Prepare work for repair-category pages, locations, team expertise and independent technical explanations."
-          },
-          {
-            "title": "Re-measure accuracy",
-            "body": "Repeat the same question matrix and audit location, model and service misattribution."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Can one page cover every branch of a garage network?",
-            "answer": "Use a network overview for navigation, but keep each branch's hours, address and services separately verifiable."
-          },
-          {
-            "question": "What paperwork should a repair shop provide?",
-            "answer": "The applicable Russian vehicle repair rules govern service agreements and customer documentation. Verify the exact requirements for the transaction."
-          },
-          {
-            "question": "Can AI state one exact repair price?",
-            "answer": "An assessment may be required before the full scope and cost are known. Publish actual price ranges and estimation conditions rather than inventing a fixed total."
-          },
-          {
-            "question": "How is repair-shop visibility measured?",
-            "answer": "BMR is measured using a fixed set of non-branded repair, vehicle and location prompts. Brand-name mentions are reported separately."
-          },
-          {
-            "question": "How much does automotive GEO cost?",
-            "answer": "GAEO's published plans apply. Scope depends on the services, branches, competing workshops and baseline prompt matrix."
-          }
-        ],
-        "ctaTitle": "See which workshops AI recommends for your repair categories",
-        "ctaText": "Share branch addresses, the vehicles you service and booking conditions. I will outline the initial buyer-question matrix.",
-        "request": "GEO for automotive repair workshops: service types, diagnostics, makes, location pages, booking and BMR."
-      }
-    }
-  },
-  {
-    "id": 78,
-    "slug": "commercial-vehicle-equipment-dealers",
-    "group": "automotive",
-    "routes": {
-      "ru": "/industries/commercial-vehicle-equipment-dealers/",
-      "en": "/en/industries/commercial-vehicle-equipment-dealers/"
-    },
-    "parent": {
-      "ru": "/tarify/",
-      "en": "/en/pricing/"
-    },
-    "parentLabels": {
-      "ru": "Каталог 107 направлений",
-      "en": "107-industry service catalogue"
-    },
-    "methods": {
-      "ru": [
-        "/strategies/technical-b2b-vendor-evidence/",
-        "/strategies/measurement/"
-      ],
-      "en": [
-        "/en/strategies/technical-b2b-vendor-evidence/",
-        "/en/strategies/measurement/"
-      ]
-    },
-    "methodLabels": {
-      "ru": [
-        "Как проверять B2B-поставщика",
-        "Методика измерения BMR"
-      ],
-      "en": [
-        "B2B supplier evidence checks",
-        "BMR measurement methodology"
-      ]
-    },
-    "sources": [
-      {
-        "href": "https://www.consultant.ru/document/cons_doc_LAW_125114/",
-        "ru": "ТР ТС 018/2011: безопасность колесных транспортных средств, редакция 2026 года",
-        "en": "TR CU 018/2011: wheeled-vehicle safety regulation, 2026 edition"
-      },
-      {
-        "href": "https://docs.elpts.ru/ncher/otts",
-        "ru": "Администратор СЭП: реестр одобрений типа транспортного средства (ОТТС)",
-        "en": "Electronic Passport Administrator: vehicle type approval register"
-      },
-      {
-        "href": "https://elpts.ru/novye-formaty-vypisok/",
-        "ru": "Администратор СЭП: порядок получения выписок из ЭПТС, октябрь 2026",
-        "en": "Electronic Passport Administrator: extract procedure, October 2026"
-      }
-    ],
-    "content": {
-      "ru": {
-        "title": "GEO-продвижение дилеров коммерческого транспорта и спецтехники | GAEO",
-        "h1": "GEO-продвижение дилеров коммерческого транспорта и спецтехники",
-        "description": "GEO для дилеров грузовиков, автобусов и спецтехники: грузоподъемность, назначение, наличие, сервис, лизинг, ОТТС/ЭПТС и BMR. Тарифы GAEO.",
-        "eyebrow": "Авторынок / Коммерческий транспорт",
-        "lead": "Покупатель грузовика или спецтехники сравнивает машину под конкретную задачу, нагрузки и доступный сервис. Я проверяю, каких дилеров нейросети предлагают по таким запросам и насколько точно они передают характеристики, комплектации, наличие и условия поставки.",
-        "heroPoints": [
-          "Матрица запросов по тоннажу, кузову, назначению и региону",
-          "Разделение наличия, срока поставки, лизинга и сервиса",
-          "Сверка характеристик с документацией по конкретной модификации"
-        ],
-        "problemTitle": "Почему каталог моделей недостаточен для рекомендации дилера",
-        "problemIntro": "Покупка коммерческого транспорта обычно привязана к маршруту, грузу, нормативам и стоимости владения. Одна общая характеристика модельного ряда не заменяет точные параметры модификации.",
-        "problems": [
-          {
-            "title": "Характеристики модельного ряда усреднены",
-            "body": "Грузоподъемность, полная масса, колесная формула, надстройка и ограничения по дороге могут различаться у версий одной модели."
-          },
-          {
-            "title": "Наличие и способ приобретения смешаны",
-            "body": "Машина на площадке, в производственном заказе и с прогнозируемой поставкой имеют разные сроки. Лизинговое предложение зависит от условий сделки."
-          },
-          {
-            "title": "Обещания сервиса без территории",
-            "body": "Наличие запчастей и регламент обслуживания нужно подтверждать по региону и конкретному договору, особенно для корпоративных автопарков."
-          }
-        ],
-        "scenarioTitle": "Запросы автопарков и подрядчиков к нейросетям",
-        "scenarioIntro": "Ниже 4 гипотезы коммерческого спроса для стартового BMR; реальные модели и конкуренты определяются после сверки ассортимента.",
-        "columns": [
-          "Вопрос закупщика",
-          "Проверяемые параметры",
-          "Работа над GEO"
-        ],
-        "scenarios": [
-          [
-            "Какого дилера выбрать для закупки рефрижераторов 5 тонн?",
-            "Кузов, допустимая нагрузка, температурный режим, комплектация и наличие",
-            "Отдельно раскрыть тип надстройки и документы"
-          ],
-          [
-            "У кого есть самосвалы с конкретной колесной формулой?",
-            "Модель, формула, полная масса, условия эксплуатации и остаток на складе",
-            "Поддерживать актуальные комплектации и статус поставки"
-          ],
-          [
-            "Какие дилеры грузовиков обслуживают парк в 3 регионах?",
-            "География сервиса, партнерская сеть, регламенты и реальная доступность",
-            "Связать продажу и последующее обслуживание"
-          ],
-          [
-            "Где сравнить условия покупки тягача в лизинг?",
-            "Документированные условия финансирования, первоначальный взнос и ограничения",
-            "Публиковать расчетные условия с оговорками, без обещания одобрения"
-          ]
-        ],
-        "proofTitle": "Как проверять пригодность коммерческой техники по документам",
-        "proofIntro": "ТР ТС 018/2011 устанавливает требования к применимым категориям колесных транспортных средств и компонентам. Администратор системы электронных паспортов предоставляет реестр ОТТС и процедуры получения выписок из ЭПТС. Эти сведения помогают проверять документы, но не доказывают наличие конкретной машины у дилера.",
-        "checks": [
-          "Модификация, допустимые массы, назначение, кузов и применимая документация на транспортное средство",
-          "Реальное наличие, срок поставки, территория гарантийного и постгарантийного обслуживания",
-          "Прозрачные условия приобретения, лизинга и обслуживания без универсальной гарантии одобрения"
-        ],
-        "proofNote": "Не присваиваю дилеру сертификаты, складские остатки или выполненные проекты GAEO без первичного подтверждения. Страница описывает методику.",
-        "workTitle": "Как работаю с GEO дилера грузовиков и спецтехники",
-        "workIntro": "Задача связать запрос закупщика с проверяемой модификацией и реальными возможностями дилерского центра.",
-        "steps": [
-          {
-            "title": "Базовый BMR по сценариям закупки",
-            "body": "Фиксирую вопросы по классу техники, назначению, массе, сроку поставки и географии."
-          },
-          {
-            "title": "Проверка товарных данных",
-            "body": "Сопоставляю комплектации, официальные спецификации, документы, остатки и условия сервиса."
-          },
-          {
-            "title": "Содержание и отраслевые объяснения",
-            "body": "Готовлю задания для страниц моделей, сравнения надстроек, обслуживания, лизинга и технических пояснений."
-          },
-          {
-            "title": "Контроль рекомендаций",
-            "body": "Повторяю запросы и проверяю правильность модели, условий поставки и ограничений применения."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Можно ли продвигать все виды спецтехники одной страницей?",
-            "answer": "Только в качестве навигации. Экскаваторы, грузовики и автобусы имеют разные критерии выбора, документы и покупателей. Матрицы запросов лучше разделять."
-          },
-          {
-            "question": "Что доказывает наличие ОТТС?",
-            "answer": "ОТТС относится к документам одобрения типа транспортного средства в установленном порядке. Оно не подтверждает складской остаток, будущую цену или индивидуальные условия поставки."
-          },
-          {
-            "question": "Можно ли обещать одобрение лизинга?",
-            "answer": "Нет, если решение принимает лизинговая организация и зависит от ее проверки и конкретного договора. Публикуются подтвержденные условия предложения."
-          },
-          {
-            "question": "Какая характеристика важна для покупателя грузовика?",
-            "answer": "Зависит от задачи: груз, маршрут, ограничения по массе, кузов, сервис и стоимость владения. Нельзя заменять все параметры одним показателем грузоподъемности."
-          },
-          {
-            "question": "Сколько стоит GEO для дилера коммерческого транспорта?",
-            "answer": "Действуют общие тарифы GAEO. Объем определяется моделями, территориями продаж, сервисной сетью и числом сценариев выбора."
-          }
-        ],
-        "ctaTitle": "Проверим рекомендации дилеров по реальным задачам автопарков",
-        "ctaText": "Пришли модельный ряд, регионы, подтвержденные комплектации и условия сервиса. Подберу исходные запросы закупщиков.",
-        "request": "GEO дилера коммерческого транспорта и спецтехники: грузовики, надстройки, ОТТС, ЭПТС, лизинг и BMR."
-      },
-      "en": {
-        "title": "GEO for commercial vehicle and special-equipment dealers | GAEO",
-        "h1": "GEO for truck, fleet and commercial-equipment dealers",
-        "description": "AI recommendations for truck and special-equipment dealers: payload, configuration, availability, leasing terms, type approvals, service and BMR.",
-        "eyebrow": "Automotive / Commercial vehicle dealers",
-        "lead": "Fleet buyers compare vehicles for a specific load, route, body configuration and ongoing maintenance. I assess which dealers AI recommends in these scenarios and whether the stated specification, stock position and delivery conditions can actually be verified.",
-        "heroPoints": [
-          "Non-branded prompts for payload, configuration and region",
-          "Separate stock, lead-time, finance and after-sales claims",
-          "Model-specific specification and document checks"
-        ],
-        "problemTitle": "Why a model catalogue alone does not qualify a dealer",
-        "problemIntro": "Commercial vehicle procurement depends on the intended operation, legal limits and cost of ownership. Generic model-family information may misrepresent the exact build.",
-        "problems": [
-          {
-            "title": "Variants are presented as one specification",
-            "body": "Payload, gross weight, axle layout and body equipment can differ between variants of the same truck."
-          },
-          {
-            "title": "Stock and leasing are conflated",
-            "body": "An in-stock vehicle, a production order and a finance quotation have different conditions and deadlines."
-          },
-          {
-            "title": "Service promises lack geographic proof",
-            "body": "Parts availability and maintenance coverage depend on actual locations, arrangements and the vehicle in question."
-          }
-        ],
-        "scenarioTitle": "Questions fleet buyers might ask AI",
-        "scenarioIntro": "These example prompts are starting hypotheses for measurement, not evidence of actual recommendations.",
-        "columns": [
-          "Buyer prompt",
-          "Evidence required",
-          "GEO task"
-        ],
-        "scenarios": [
-          [
-            "Who supplies five-tonne refrigerated vehicles?",
-            "Body, payload, temperature requirements, specification and stock",
-            "Make the relevant configuration and limitations explicit"
-          ],
-          [
-            "Which dealers have trucks with this axle configuration?",
-            "Exact variant, gross weight, intended use and stock position",
-            "Maintain variant-level inventory and delivery status"
-          ],
-          [
-            "Who can service a truck fleet across three regions?",
-            "Workshop geography, after-sales partners and documented terms",
-            "Connect sales claims to operational service coverage"
-          ],
-          [
-            "Where can I compare truck leasing options?",
-            "Actual finance terms, deposit assumptions and eligibility limits",
-            "Publish conditional examples, never automatic approval promises"
-          ]
-        ],
-        "proofTitle": "Verifying commercial vehicle offers against source documents",
-        "proofIntro": "TR CU 018/2011 defines technical requirements for relevant wheeled vehicle categories. The Electronic Passport Administrator publishes type-approval records and details electronic-passport extracts. These sources support documentary checks but do not verify a dealer's current inventory.",
-        "checks": [
-          "Specific variant, mass, vehicle function, body type and applicable approval documents",
-          "Verifiable availability, lead time, warranty/service territories and parts arrangements",
-          "Realistic purchase and leasing conditions with customer and vehicle qualifications"
-        ],
-        "proofNote": "No dealer certifications, stock levels or GAEO client outcomes are claimed without direct evidence. This page explains a buyer-led GEO method.",
-        "workTitle": "How I work on GEO for fleet and truck dealers",
-        "workIntro": "The goal is to connect a buyer's operational requirement with the right variant and documented dealer capabilities.",
-        "steps": [
-          {
-            "title": "Baseline procurement prompts",
-            "body": "Capture questions by vehicle class, payload, intended use, region and delivery timing."
-          },
-          {
-            "title": "Check product evidence",
-            "body": "Review official specifications, available variants, supporting documents and service terms."
-          },
-          {
-            "title": "Improve vehicle pages",
-            "body": "Plan content for configurations, body types, ownership costs, maintenance and leasing criteria."
-          },
-          {
-            "title": "Audit repeated recommendations",
-            "body": "Measure the same prompts and check model accuracy, stock claims and application limits."
-          }
-        ],
-        "faq": [
-          {
-            "question": "Does one page work for every type of special equipment?",
-            "answer": "It can introduce the range, but excavators, buses and trucks use different buyer questions and documentary requirements. Separate comparisons are usually stronger."
-          },
-          {
-            "question": "Does type approval prove dealer stock?",
-            "answer": "No. Type-approval documents address a vehicle type under the relevant rules. They do not prove inventory, price or an individual delivery date."
-          },
-          {
-            "question": "Can a dealer guarantee leasing approval?",
-            "answer": "Only the financing provider can decide under its actual terms. GEO content should disclose conditional assumptions rather than promise approval."
-          },
-          {
-            "question": "Which technical metric matters most in truck selection?",
-            "answer": "It depends on the intended load, route, mass restrictions, body equipment and ongoing servicing. A single payload figure is not sufficient."
-          },
-          {
-            "question": "How are GAEO services priced for fleet dealers?",
-            "answer": "GAEO's published plans apply. Final scope follows vehicle classes, sales regions, after-sales geography and the prompt matrix."
-          }
-        ],
-        "ctaTitle": "Measure which dealers AI recommends for real fleet requirements",
-        "ctaText": "Share your range, regions, verified configurations and servicing arrangements. I will define a relevant initial procurement prompt set.",
-        "request": "Commercial vehicle dealer GEO: trucks, equipment, specifications, type approvals, electronic passports, leasing and BMR."
-      }
-    }
-  },
-  {
-    "id": 79,
-    "slug": "motorcycle-motorsport-dealers",
-    "group": "automotive",
-    "routes": {
-      "ru": "/industries/motorcycle-motorsport-dealers/",
-      "en": "/en/industries/motorcycle-motorsport-dealers/"
-    },
-    "parent": {
-      "ru": "/tarify/",
-      "en": "/en/pricing/"
-    },
-    "parentLabels": {
-      "ru": "Каталог 107 направлений",
-      "en": "107-industry service catalogue"
-    },
-    "methods": {
-      "ru": [
-        "/strategies/ecommerce-catalog/",
-        "/strategies/measurement/"
-      ],
-      "en": [
-        "/en/strategies/ecommerce-catalog/",
-        "/en/strategies/measurement/"
-      ]
-    },
-    "methodLabels": {
-      "ru": [
-        "Структура товарного каталога",
-        "Методика измерения BMR"
-      ],
-      "en": [
-        "Product catalogue structure",
-        "BMR measurement methodology"
-      ]
-    },
-    "sources": [
-      {
-        "href": "https://www.consultant.ru/document/cons_doc_LAW_125114/",
-        "ru": "ТР ТС 018/2011: применимые категории мототранспортных средств и оценка соответствия",
-        "en": "TR CU 018/2011: relevant powered-two-wheeler categories and conformity framework"
-      },
-      {
-        "href": "https://elpts.ru/novye-formaty-vypisok/",
-        "ru": "СЭП: сведения об электронных паспортах и выписках, октябрь 2026",
-        "en": "Electronic Passports: extract information and October 2026 procedure"
-      },
-      {
-        "href": "https://zpp.rospotrebnadzor.ru/news/federal/570451",
-        "ru": "Роспотребнадзор: правила ремонта автомототранспортных средств с сентября 2025",
-        "en": "Rospotrebnadzor: motor vehicle repair rules effective September 2025"
-      }
-    ],
-    "content": {
-      "ru": {
-        "title": "Продвижение дилеров мотоциклов и мототехники в нейросетях | GAEO",
-        "h1": "GEO-продвижение дилеров мотоциклов и мототехники",
-        "description": "Продвижение мотосалонов в ChatGPT, Алисе и других нейросетях: дорожная и внедорожная техника, категория, ЭПТС, наличие, экипировка, сервис и BMR.",
-        "eyebrow": "Авторынок / Мотоциклы и мототехника",
-        "lead": "Покупатель выбирает дорожный мотоцикл, эндуро или другую мототехнику по назначению, опыту, бюджету и условиям регистрации. Я проверяю, какие дилеры появляются в рекомендациях нейросетей и насколько точно ответы описывают конкретную модель и статус поставки.",
-        "heroPoints": [
-          "Интенты по назначению, классу техники и опыту водителя",
-          "Разделение дорожных моделей, спорта и внедорожного использования",
-          "Проверяемые характеристики, документы, наличие и обслуживание"
-        ],
-        "problemTitle": "Что мешает нейросети корректно советовать мотосалон",
-        "problemIntro": "В каталоге рядом могут оказаться модели с совершенно разной областью использования и документами. Сравнение только по кубатуре или стоимости приводит к ошибочным советам.",
-        "problems": [
-          {
-            "title": "Назначение техники не определено",
-            "body": "Дорожный мотоцикл, кроссовая модель и техника для закрытой трассы не взаимозаменяемы. Допустимость эксплуатации и документы проверяются для каждой модели."
-          },
-          {
-            "title": "Комплектации и остатки устаревают",
-            "body": "Цена, наличие конкретного цвета, год модели, доставка, ЭПТС и набор аксессуаров меняются; их нельзя автоматически считать постоянными."
-          },
-          {
-            "title": "Сервис и экипировка заявлены общими словами",
-            "body": "Для выбора важны наличие запчастей, регламент технического обслуживания, совместимость экипировки и реальные условия гарантии."
-          }
-        ],
-        "scenarioTitle": "Какой спрос на мототехнику анализировать",
-        "scenarioIntro": "Эти запросы служат гипотезами для исследования. Соответствие конкретной модели требованиям и ее доступность проверяются отдельно.",
-        "columns": [
-          "Вопрос покупателя",
-          "Какие факты нужны",
+          "Вопрос клиента",
+          "Проверяемые основания",
           "Задача GEO"
         ],
         "scenarios": [
           [
-            "Какой дорожный мотоцикл выбрать новичку в моем бюджете?",
-            "Назначение, посадка, масса, модель, документальные характеристики и наличие",
-            "Показать допустимые параметры моделей без обещаний безопасности"
+            "Кто поможет составить личный финансовый план с учетом кредитов?",
+            "Реальные услуги по бюджетированию, этапы работы, цена, договор и квалификация",
+            "Описать границы финансового планирования, процесс и ожидаемый документ"
           ],
           [
-            "Где купить эндуро для конкретного вида использования?",
-            "Различие дорожной и внедорожной эксплуатации, документы, комплектация",
-            "Объяснить ограничения модели и способы проверки"
+            "Как выбрать инвестиционного советника для индивидуальных рекомендаций?",
+            "Запись в реестре Банка России, правовой статус, договор и методика учета профиля инвестора",
+            "Связать услугу с подтвержденным статусом и требованиями 39-ФЗ"
           ],
           [
-            "Кто продает мотоциклы с оформлением электронного паспорта?",
-            "Применимость ЭПТС, документы конкретной техники и условия сделки",
-            "Отделить наличие документа от обещания легкой регистрации"
+            "Кто консультирует собственников малого бизнеса по личным финансам?",
+            "Целевая аудитория, компетенции, примеры с разрешением и прозрачность условий",
+            "Отделить личные финансы владельца от бухгалтерии и корпоративных консультаций"
           ],
           [
-            "В каком мотосалоне есть сервис и расходники для этой модели?",
-            "Реальные сервисные мощности, расходники, сроки и регион",
-            "Связать модель и послепродажное обслуживание"
+            "Какие вопросы задать консультанту о рисках и вознаграждении?",
+            "Порядок оплаты, конфликт интересов, документы и раскрытие существенных рисков",
+            "Создать проверяемый раздел об условиях и ограничениях работы"
           ]
         ],
-        "proofTitle": "Какие документы и данные нужны для корректного выбора",
-        "proofIntro": "ТР ТС 018/2011 регулирует соответствующие категории колесных транспортных средств, включая ряд мототранспортных средств; применимость зависит от классификации модели. Администратор СЭП описывает выписки из электронных паспортов. Требования к сервису следует отделять от требований к продаже и документам.",
+        "proofTitle": "Что действительно можно подтвердить по открытым источникам",
+        "proofIntro": "Статьи 6.1 и 6.2 закона №39-ФЗ регулируют индивидуальные инвестиционные рекомендации и работу инвестиционных советников. Банк России ведет реестры участников финансового рынка и описывает требования к статусу инвестиционного советника. Эти источники не означают, что любое бюджетное консультирование автоматически имеет тот же регулируемый статус.",
         "checks": [
-          "Класс и назначение модели, характеристики, комплектации и область разрешенной эксплуатации",
-          "Фактическое наличие, год модели, ЭПТС или другие применимые документы и условия сделки",
-          "Адреса дилера, сервис, расходники, согласованные гарантийные условия и параметры экипировки"
+          "Точный перечень услуг: финансовый план, обучение, анализ бюджета либо индивидуальные инвестиционные рекомендации",
+          "Для регулируемой деятельности: проверка реестра и договорных условий по конкретному исполнителю, без переноса статуса на иных специалистов",
+          "Квалификация, методика работы, допустимые публикации, риски и порядок вознаграждения без обещаний положительной доходности"
         ],
-        "proofNote": "Страница не устанавливает категорию прав, законность конкретной поездки или качество техники. GAEO не заявляет реализованные GEO-кейсы мотоциклетных дилеров.",
-        "workTitle": "Как организую GEO для дилера мототехники",
-        "workIntro": "Разделяю запросы о модели, назначении и покупке; затем проверяю достоверность открытых сведений и динамику рекомендаций.",
+        "proofNote": "GAEO предлагает методику GEO-продвижения консультантов, а не инвестиционные рекомендации потребителям. Клиентских результатов GAEO в этой специализации здесь не заявлено.",
+        "workTitle": "Как организую GEO-продвижение финансового консультанта",
+        "workIntro": "Сначала разграничиваю запросы об обучении, финансовом плане и персональных инвестиционных рекомендациях. Затем проверяю, что ответы нейросетей не смешивают эти услуги.",
         "steps": [
           {
-            "title": "Базовый BMR по назначению",
-            "body": "Фиксирую вопросы по городскому использованию, туризму, эндуро, характеристикам и региону."
+            "title": "Стартовый BMR по типам запросов",
+            "body": "Фиксирую небрендовые вопросы по жизненным ситуациям, виду консультации, требованиям к советнику и географии оказания услуг."
           },
           {
-            "title": "Документы и ассортимент",
-            "body": "Сверяю классификацию, реальные модели, комплектации, цены и поставки с разрешенной документацией."
+            "title": "Правовая и фактологическая проверка",
+            "body": "Сверяю заявленные услуги, применимость реестра, условия договора, публичную квалификацию и формулировки о рисках."
           },
           {
-            "title": "Модельные и экспертные страницы",
-            "body": "Готовлю рекомендации для каталога, сравнений классов техники, сервисных разделов и проверяемых обзоров."
+            "title": "Экспертное содержание и источники",
+            "body": "Готовлю задания для страниц разных услуг, методик консультаций, профильной биографии и разрешенных примеров работы."
           },
           {
-            "title": "Повторный BMR и точность",
-            "body": "Повторяю запросы и отдельно выявляю ошибочные обещания по регистрации, наличию и условиям сервиса."
+            "title": "Повторное измерение и контроль ошибок",
+            "body": "Сравниваю рекомендации по той же матрице и проверяю, не приписывают ли нейросети право на регулируемые услуги или гарантии доходности."
           }
         ],
         "faq": [
           {
-            "question": "Можно ли назвать любой эндуро дорожным мотоциклом?",
-            "answer": "Нет. Назначение и документы зависят от конкретной модели и применимых требований. Покупателю следует проверять характеристики и условия допуска к эксплуатации."
+            "question": "Обязательно ли финансовому консультанту быть инвестиционным советником?",
+            "answer": "Зависит от конкретных услуг. Предоставление индивидуальных инвестиционных рекомендаций по ценным бумагам и производным инструментам регулируется законом №39-ФЗ. Финансовое планирование и общие информационные материалы надо оценивать по их фактическому содержанию."
           },
           {
-            "question": "Наличие ЭПТС означает, что модель можно использовать где угодно?",
-            "answer": "Нет. Электронный паспорт содержит сведения о транспортном средстве, но не подменяет требования к условиям эксплуатации и правам управления."
+            "question": "Где проверить инвестиционного советника?",
+            "answer": "В реестре и сервисе проверки участников финансового рынка Банка России. Сверять следует конкретное юридическое лицо или ИП и актуальные сведения, а не только рекламный профиль."
           },
           {
-            "question": "Как сравнивать технику для новичка?",
-            "answer": "Нужны назначение, масса, посадка, характеристики и реальная возможность ознакомления с моделью. Давать универсальные обещания безопасности по объему двигателя нельзя."
+            "question": "Может ли GEO обещать прибыль клиенту консультанта?",
+            "answer": "Нет. GEO измеряет рекомендации самого консультанта в нейросетях. Инвестиционная доходность зависит от рыночных рисков и не является результатом GEO-продвижения."
           },
           {
-            "question": "Нужно ли отдельно продвигать сервис мотосалона?",
-            "answer": "Да, если дилер действительно оказывает услуги. Покупатели спрашивают о расходниках, ремонте и гарантии иначе, чем о покупке новой модели."
+            "question": "Как считать BMR финансового консультанта?",
+            "answer": "По зафиксированной выборке небрендовых вопросов отдельно для финансового планирования и регулируемого инвестиционного консультирования. В ответах проверяются не только упоминания, но и точность описания услуг."
           },
           {
-            "question": "Сколько стоит GEO-продвижение мотосалона?",
-            "answer": "Действуют опубликованные тарифы GAEO. Конкретный объем определяется модельным рядом, географией продаж и матрицей запросов."
+            "question": "Сколько стоит продвижение инвестиционного консультанта в нейросетях?",
+            "answer": "Действуют опубликованные тарифы GAEO. Объем определяется видами услуг, целевой аудиторией, географией и набором проверяемых коммерческих запросов."
           }
         ],
-        "ctaTitle": "Проверить рекомендации мотосалона по реальным сценариям выбора",
-        "ctaText": "Пришли сайт, модельный ряд, регионы, документы на технику и перечень сервисных услуг. Подберу матрицу проверки.",
-        "request": "GEO мотосалона и дилера мототехники: дорожные мотоциклы, эндуро, ЭПТС, комплектации, сервис и BMR."
+        "ctaTitle": "Проверим, за какие финансовые запросы нейросети рекомендуют консультантов",
+        "ctaText": "Пришли сайт, перечень услуг, условия договора и подтверждение статуса, когда он необходим. Предложу исходную матрицу BMR.",
+        "request": "GEO для финансовых и инвестиционных консультантов: финансовый план, инвестиционные рекомендации, реестр ЦБ, риски, BMR."
       },
       "en": {
-        "title": "GEO for motorcycle and powersports dealers | GAEO",
-        "h1": "GEO visibility for motorcycle and powersports dealers",
-        "description": "AI visibility for motorcycle dealers: road versus off-road use, model documentation, electronic passports, availability, maintenance and BMR.",
-        "eyebrow": "Automotive / Motorcycles and powersports",
-        "lead": "Buyers compare road motorcycles, enduro bikes and other powersports vehicles by intended use, experience, budget and registration requirements. I test which dealers AI recommends and verify whether the answers match real model specifications, available stock and servicing.",
+        "title": "GEO for financial planners and regulated investment advisers | GAEO",
+        "h1": "GEO visibility for financial consultants and investment advisers",
+        "description": "AI visibility for financial planning and investment advisers: regulated advice boundaries, Bank of Russia register, verifiable credentials and BMR.",
+        "eyebrow": "Finance / Financial planning and investment advice",
+        "lead": "People seeking a household budget plan and those looking for personalised securities advice need different services. I measure which advisers AI recommends for each non-branded situation and verify whether their claimed scope, professional status and engagement terms are supported by public records.",
         "heroPoints": [
-          "Questions by riding purpose, vehicle class and experience",
-          "Clear separation of road, competition and off-road use",
-          "Verifiable model data, documents, stock and after-sales service"
+          "Separate personal financial planning from regulated investment recommendations",
+          "Verify the Bank of Russia register where the actual service requires it",
+          "Measure recommendation accuracy and BMR without return-on-investment promises"
         ],
-        "problemTitle": "Why AI may suggest the wrong motorcycle dealer",
-        "problemIntro": "Retail listings may mix vehicles with very different intended uses and documentation. Engine displacement or a headline price alone is not a responsible comparison.",
+        "problemTitle": "Why the label “financial expert” is too vague for AI recommendations",
+        "problemIntro": "A client needs to know the actual deliverable, the adviser's status, the contract and potential risks. Generic statements about improving finances do not provide those facts.",
         "problems": [
           {
-            "title": "Use cases are confused",
-            "body": "A road bike, motocross machine and closed-course competition model are not necessarily interchangeable. Check actual model classification and documents."
+            "title": "Different services are mixed",
+            "body": "Budget coaching, general education and individualised securities advice have different purposes. The word “consultant” alone does not prove authorisation for regulated activity."
           },
           {
-            "title": "Stock and specification drift",
-            "body": "Model year, available colour, delivery date, electronic passport and included accessories may change quickly."
+            "title": "Professional status cannot be verified",
+            "body": "A biography may list credentials, yet the relevant regulatory status and current registration are crucial when the service is investment advising."
           },
           {
-            "title": "Service claims lack detail",
-            "body": "Parts, maintenance schedules, warranty conditions and protective-gear fit need model-specific evidence."
+            "title": "Outcome claims lack context",
+            "body": "An illustrative savings plan, historic investment performance and a guaranteed return are different concepts. Public content should state assumptions and risks."
           }
         ],
-        "scenarioTitle": "Buyer questions worth measuring for powersports",
-        "scenarioIntro": "These are proposed research prompts. A given model's road-use eligibility and current availability require separate verification.",
+        "scenarioTitle": "Buyer questions for a defensible BMR benchmark",
+        "scenarioIntro": "These prompts are research hypotheses, not reports of actual AI recommendations or endorsements.",
         "columns": [
-          "Buyer question",
-          "Evidence required",
-          "GEO task"
+          "Client question",
+          "Evidence to review",
+          "GEO content task"
         ],
         "scenarios": [
           [
-            "What road motorcycle suits a beginner in my price range?",
-            "Intended use, weight, ergonomics, factual model specifications and stock",
-            "Compare actual models without blanket safety claims"
+            "Who can help my family build a financial plan around debt repayments?",
+            "Budget-planning services, stages, fees, written terms and relevant background",
+            "Explain the planning deliverable and its limits"
           ],
           [
-            "Where can I buy an enduro bike for this type of riding?",
-            "Road/off-road category, documents and configuration",
-            "Explain intended use and any limitations"
+            "How do I select an investment adviser for personalised recommendations?",
+            "Bank of Russia registration, legal status, advice agreement and investor-profile procedure",
+            "Distinguish regulated advice from general financial commentary"
           ],
           [
-            "Which dealer handles electronic motorcycle passports?",
-            "Applicability and status of electronic-passport documents for the actual unit",
-            "Separate documentation from guaranteed registration"
+            "Who helps small-business owners with personal financial planning?",
+            "Audience focus, documented competence, permitted work examples and fees",
+            "Separate personal planning from business accounting and consultancy"
           ],
           [
-            "Who can service this motorcycle and supply parts nearby?",
-            "Workshop location, inventory, maintenance scope and timing",
-            "Connect vehicle pages with genuine after-sales offerings"
+            "What should I ask about conflicts of interest and investment risk?",
+            "Remuneration terms, risk disclosure, contractual obligations and adviser status",
+            "Publish verifiable engagement terms and limitations"
           ]
         ],
-        "proofTitle": "What to verify before recommending a motorcycle dealership",
-        "proofIntro": "TR CU 018/2011 governs applicable classes of wheeled vehicles, including relevant powered-two-wheeler categories. The Electronic Passport Administrator explains passport extracts. Rules for maintenance services are distinct from the paperwork needed for a vehicle purchase.",
+        "proofTitle": "What can be checked before an adviser is recommended",
+        "proofIntro": "Articles 6.1 and 6.2 of Russia's Federal Law 39-FZ govern personalised investment advice and the requirements for investment advisers. The Bank of Russia maintains financial-sector registers and explains the admission process. Those rules must not automatically be applied to every generic budgeting or education service.",
         "checks": [
-          "Model class, intended use, configuration and applicable legal/documentary status",
-          "Current availability, model year, electronic passport where relevant and purchase terms",
-          "Dealer geography, maintenance capability, parts, actual warranty conditions and equipment compatibility"
+          "Exact type of service: budgeting, financial education, planning or personalised investment recommendations",
+          "For regulated activity: the specific provider's current registration, governing status and engagement documents",
+          "Professional history, documented methodology, permitted case evidence, remuneration and risk disclosure without guaranteed profits"
         ],
-        "proofNote": "This page makes no universal claims about road legality or rider licensing and reports no completed GAEO GEO campaign for motorcycle dealers.",
-        "workTitle": "How I improve motorcycle-dealer GEO",
-        "workIntro": "I map motorcycle selection, intended use and purchase questions to verifiable model information, then measure recommendations again.",
+        "proofNote": "GAEO offers GEO measurement and content work, not financial product recommendations to consumers. No completed GAEO client results in this sector are asserted.",
+        "workTitle": "How I develop GEO for a financial advisory practice",
+        "workIntro": "I separate education, planning and personal investment recommendations before judging how AI depicts the provider.",
         "steps": [
           {
-            "title": "Measure use-specific baseline",
-            "body": "Collect non-branded prompts about commuter riding, touring, enduro, specifications and region."
+            "title": "Baseline buyer-question BMR",
+            "body": "Measure non-branded questions by client life situation, service category, geography and regulatory expectations."
           },
           {
-            "title": "Review models and documents",
-            "body": "Verify class, actual stock, model year, prices, equipment and relevant documentation."
+            "title": "Verify legal and professional evidence",
+            "body": "Review actual service boundaries, register applicability, contract terms, credentials and risk statements."
           },
           {
-            "title": "Plan model-level content",
-            "body": "Prepare the catalogue structure, vehicle comparisons, service pages and expert explainers."
+            "title": "Improve professional content",
+            "body": "Plan distinct service pages, adviser biographies, client-method explanations and authorised examples."
           },
           {
-            "title": "Recheck AI responses",
-            "body": "Repeat prompts and identify inaccurate claims about registration, availability and servicing."
+            "title": "Recheck AI accuracy",
+            "body": "Repeat the fixed prompt matrix and identify unsupported regulated-service claims or investment-return promises."
           }
         ],
         "faq": [
           {
-            "question": "Is every enduro bike legal for road use?",
-            "answer": "No. Intended use and the applicable documentation differ by model. Actual technical classification and permission to operate must be checked."
+            "question": "Does every financial planner need to be a registered investment adviser?",
+            "answer": "Not automatically. Personalised investment recommendations relating to securities and derivatives are regulated under Federal Law 39-FZ. Assess other financial-planning and educational services according to their actual content."
           },
           {
-            "question": "Does an electronic passport guarantee any kind of use?",
-            "answer": "No. An electronic vehicle passport records vehicle data but does not override driving-entitlement and operating rules."
+            "question": "Where can someone verify an investment adviser in Russia?",
+            "answer": "Use the Bank of Russia's financial-sector participant search and investment-adviser register. Match the specific legal entity or sole proprietor and current record."
           },
           {
-            "question": "How should a beginner compare motorcycles?",
-            "answer": "Consider the intended riding, ergonomics, weight, documented specifications and opportunities to inspect the specific model. Displacement alone is insufficient."
+            "question": "Can GEO guarantee an adviser's clients' investment returns?",
+            "answer": "No. GEO measures whether AI recommends the adviser accurately. Market returns and portfolio risk are separate from GEO performance."
           },
           {
-            "question": "Should a motorcycle dealer promote its workshop separately?",
-            "answer": "Yes, when it offers real services. Parts and maintenance questions differ significantly from new-bike purchasing queries."
+            "question": "How should an adviser's BMR be measured?",
+            "answer": "Use a fixed set of non-branded questions, splitting financial planning and regulated investment advice. Audit both brand recommendations and the accuracy of the services described."
           },
           {
-            "question": "How does GAEO price motorcycle-dealer GEO?",
-            "answer": "The published GAEO plans apply. Scope follows the model range, sales regions and baseline prompt matrix."
+            "question": "How much does GEO for investment advisers cost?",
+            "answer": "GAEO's published plans apply. Scope depends on real service lines, audience segments, operating regions and baseline buyer questions."
           }
         ],
-        "ctaTitle": "Find out which motorcycle dealers AI recommends for actual needs",
-        "ctaText": "Share your model range, regions, product documents and servicing scope. I will outline an initial question set.",
-        "request": "Motorcycle dealer GEO: road motorcycles, enduro, model documents, electronic passports, stock, maintenance and BMR."
+        "ctaTitle": "Find out which advisers AI recommends for the services you actually provide",
+        "ctaText": "Share the website, genuine service scope, contract terms and applicable registration evidence. I will build an initial BMR question set.",
+        "request": "Financial and investment adviser GEO: regulated recommendations, financial planning, Bank of Russia register, risk disclosures and BMR."
       }
     }
   }
