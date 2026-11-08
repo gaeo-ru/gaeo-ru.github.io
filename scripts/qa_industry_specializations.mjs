@@ -20,6 +20,9 @@ for(const item of industrySpecializations){
   assert.ok(html.includes('hreflang="'+(lang==='en'?'ru':'en')+'" href="'+equivalent+'"'),'Mutual hreflang '+path);
   assert.ok(html.includes('id="industry-pricing"'),'IndustryPricing '+path);
   assert.ok(html.includes('href="'+pricingHref(lang)+'#industry-'+String(item.id).padStart(3,'0')+'"'),'Catalogue backlink '+path);
+  assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-'+String(item.id).padStart(3,'0')+'"','g'))||[]).length,1,'Exactly one category-specific catalogue link '+path);
+  assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-catalog"','g'))||[]).length,0,'No redundant full-catalogue link '+path);
+  assert.ok(html.includes('industry-specialization__catalog-button'),'Accessible category catalogue button '+path);
   assert.equal((html.match(/<tr\b/g)||[]).length,5,'Scenario table header and four rows '+path);
   assert.equal((html.match(/<details class="faq-item">/g)||[]).length,5,'Five visible FAQ '+path);
   const faq=graph(html).find(n=>n['@type']==='FAQPage');
@@ -141,8 +144,8 @@ for(const [id,group] of [[30,'finance'],[75,'automotive'],[76,'automotive']]){
   const html=read(lang==='ru'?'/industries/':'/en/industries/');
   assert.ok(html.includes('href="'+item.routes[lang]+'"'),'2AK industry listing backlink '+id+' '+lang);
   const list=graph(html).find(n=>n['@type']==='ItemList');
-  assert.equal(list?.numberOfItems,18,'2AK industry directory structured items '+lang);
-  assert.equal(list.itemListElement.length,18,'2AK industry directory JSON-LD coherence '+lang);
+  assert.equal(list?.numberOfItems,20,'2AK + 3A industry directory structured items '+lang);
+  assert.equal(list.itemListElement.length,20,'2AK + 3A industry directory JSON-LD coherence '+lang);
   assert.ok(list.itemListElement.some(n=>n.url==='https://gaeo.ru'+item.routes[lang]),'2AK industry directory JSON-LD link '+id+' '+lang);
  }
 }
