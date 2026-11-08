@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2R_research_49_50_51_then_RU_EN_CI_production_Pages_live; preserve_3A_75_76_27_30",
+    "next_batch": "2R_full_PR_CI_then_merge_production_Pages_direct_live",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -681,6 +681,38 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42471509919",
       "main_new_html_verified": 8,
       "public_https_limitation": "The checking environment could not open gaeo.ru; main/Pages PASS is confirmed, public browser rendering is not."
+    },
+    "phase_2r": {
+      "phase": 2,
+      "batch": "2R",
+      "status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2r-2026-11-08",
+      "records": [
+        49,
+        50,
+        51
+      ],
+      "source_file": "src/data/industry-specializations-batch-2r.mjs",
+      "new_industry_landing_pairs": 3,
+      "new_ru_en_html": 6,
+      "pr_ci_status": "initial_run_superseded_by_safe_source_rebase",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "safety_source_note": "GOST R 55525-2017 only applies to defined indoor racking; GOST 30333-2007 current / 30333-2022 effective 2027; NIST Rev3 final vs Rev4 draft. Client certifications/performance never inferred.",
+      "parallel_batches_preserved": [
+        "2K",
+        "2L",
+        "2O",
+        "2Q"
+      ],
+      "upstream_recovery_merge": "bb2391fbb9aace04af0b67973b18c6dc90a817eb",
+      "upstream_logistics_hub_QA_fix": "8290799667324842cabf89b841139fc979b5993f",
+      "upstream_production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42470999027",
+      "last_completed_step": "content_and_QA_added; PR104 opened; reconciled new source documentation without losing 2A-2Q release",
+      "next_required_step": "PR full CI, merge to fresh source, production Pages main manifest six HTML sitemap, independent public HTTPS",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/104",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42471541855"
     }
   },
   "status_definitions": {
@@ -733,7 +765,9 @@
     "phase_2q_prepared_urls_not_deployed": 0,
     "phase_2q_count_note": "2Q PR/CI/production/main/Pages PASS; 48 pairs/96 RU EN URLs; 199 HTML, 194 sitemap, 738 files. External HTTPS unverified; parallel 2K/2L/2O excluded from deployed main snapshot.",
     "phase_2q_deployed_pairs": 3,
-    "phase_2q_deployed_ru_en_urls": 6
+    "phase_2q_deployed_ru_en_urls": 6,
+    "phase_2r_prepared_pairs_not_deployed": 3,
+    "phase_2r_prepared_ru_en_urls_not_deployed": 6
   },
   "candidate_batches": [
     {
@@ -988,9 +1022,12 @@
         50,
         51
       ],
-      "label": "Складское оборудование, промышленная химия, промышленная автоматизация и сервис",
-      "condition": "Сначала исследовать отдельные покупательские запросы и официальные источники. Выпустить 3 оригинальные RU/EN специализации (6 страниц), без ложных клиентских результатов. Сохранить общий тариф и 107 ID. Перед началом проверить параллельные задачи; пройти PR CI, production, Pages и публичный HTTPS независимо.",
-      "work_status": "research_pending_no_owner"
+      "label": "Складские стеллажи и мезонины, поставщики промышленной химии, промышленная автоматизация и сервис",
+      "condition": "Три самостоятельные двуязычные коммерческие специализации с различными техническими интентами. Проверять применимость ГОСТ 55525/57381; на ноябрь 2026 ГОСТ 30333-2007 действует, 30333-2022 вводится в 2027; NIST SP 800-82 Rev.3 final, Rev.4 draft. Не приписывать соответствие конкретных поставщиков, не обещать безопасность продукта или конечный BMR.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2r-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2r.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/104"
     }
   ],
   "records": [
@@ -2834,10 +2871,20 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_merge_after_pass_then_production_main_pages_and_external_https",
+      "last_completed_step": "phase_2r_original_bilingual_content_sources_qa_registered",
+      "planned_landing_url_ru": "/industries/warehouse-equipment-suppliers/",
+      "planned_landing_url_en": "/en/industries/warehouse-equipment-suppliers/",
+      "work_branch": "feat/industry-specializations-batch-2r-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2r.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/e2f9c209-d588-42d4-8e62-bed5aa8dc61a",
+        "https://protect.gost.ru/gost/details/26e771fd-733e-456a-a9c6-11b8ec04eefb"
+      ],
+      "blocker": "No direct live HTTPS validation; do not set landing_url or verified_at."
     },
     {
       "id": 50,
@@ -2859,10 +2906,20 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_merge_after_pass_then_production_main_pages_and_external_https",
+      "last_completed_step": "phase_2r_original_bilingual_content_sources_qa_registered",
+      "planned_landing_url_ru": "/industries/industrial-chemical-suppliers/",
+      "planned_landing_url_en": "/en/industries/industrial-chemical-suppliers/",
+      "work_branch": "feat/industry-specializations-batch-2r-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2r.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/c4ca13fd-c6ba-4707-bc0a-0aa53cb4a22c",
+        "https://protect.gost.ru/gost/details/5783d03d-bb3b-470c-be8c-63eef8f85a06"
+      ],
+      "blocker": "No direct live HTTPS validation; do not set landing_url or verified_at."
     },
     {
       "id": 51,
@@ -2884,10 +2941,20 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_merge_after_pass_then_production_main_pages_and_external_https",
+      "last_completed_step": "phase_2r_original_bilingual_content_sources_qa_registered",
+      "planned_landing_url_ru": "/industries/industrial-automation-service-companies/",
+      "planned_landing_url_en": "/en/industries/industrial-automation-service-companies/",
+      "work_branch": "feat/industry-specializations-batch-2r-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2r.mjs",
+      "evidence_sources": [
+        "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "https://csrc.nist.gov/pubs/sp/800/82/r4/ipd"
+      ],
+      "blocker": "No direct live HTTPS validation; do not set landing_url or verified_at."
     },
     {
       "id": 52,
