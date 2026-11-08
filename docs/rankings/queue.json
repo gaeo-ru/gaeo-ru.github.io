@@ -859,21 +859,51 @@
       "slug": "top10-argentina-patagonia-2026",
       "title": "Сложный индивидуальный маршрут по Аргентине и Патагонии",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t005.json",
       "earliestPublicationDate": "2026-09-10",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8gbd5o-x0eczlvbp79",
         "ownerId": "chat-mw8gbd5o-x0eczlvbp79",
         "requestId": "claim-mw8gbd5o-x0eczlvbp79",
         "token": "rk-mw8gbd5o-ftbvfotgyp-wq54hof46c",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:16:19.261Z",
-        "expiresAt": "2026-11-09T05:16:19.261Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t005.json",
+        "committedAt": "2026-11-08T23:33:51.535Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t005/buenos-aires.jpg",
+            "sha": "cd587e418e0303892b90e8b675253a901fbd1876"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/cover.jpg",
+            "sha": "9aa9d4bf39fd4b474492cbe184b5696e2fef340e"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/patagonia-glacier.jpg",
+            "sha": "993702c6c613757f49b6624088c5e39d3328233d"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/ushuaia.jpg",
+            "sha": "d4fa07fa41322744e42e41f620bb3445c6acc34d"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t005.json",
+            "sha": "e1f9c3d004f378ae91f2e39505ddbb123998f5bc"
+          }
+        ],
+        "baseCommit": "fc18dc917d7fcd0734603abf3634e9ba0f93849b"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1X5Sz0QZcGIa3dpabyoxcVKmMNbW1ZHlC/view",
+        "locator": "Разделы «ТОП-10 туроператоров и принимающих компаний по Аргентине» и «1. Ada Tours — 96 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t004",
@@ -2354,8 +2384,9 @@
       "expiresAt": "2026-11-09T05:16:19.261Z",
       "previousStatus": "ready",
       "taskId": "ada-t005",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gbd5o-x0eczlvbp79"
     },
     {
       "ownerId": "chat-20261109-0214-gaeo-rank-61a9",
@@ -2598,5 +2629,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:33:29.295Z"
+  "updatedAt": "2026-11-08T23:33:51.535Z"
 }
