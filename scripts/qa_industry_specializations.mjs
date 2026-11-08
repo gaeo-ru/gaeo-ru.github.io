@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
@@ -51,6 +51,20 @@ for(const lang of ['ru','en']){
  assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'Main industries index link to logistics hub '+lang);
  const collection=graph(html).find(n=>n['@type']==='ItemList');
  assert.equal(collection?.numberOfItems,3,'Three sector choices in structured data '+hub);
+}
+// Phase 2AD: distinct medical specializations, original bilingual copy and sources.
+for(const id of [62,63,64]){
+ const item=industrySpecializations.find(x=>x.id===id);
+ assert.ok(item&&item.group==='medical-care','2AD healthcare group '+id);
+ assert.ok(item.sources.length>=3,'2AD legal sources '+id);
+ for(const lang of ['ru','en']){
+  const c=item.content[lang];
+  assert.equal(c.problems.length,3,'2AD problems '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AD patient questions '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AD work steps '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AD FAQ '+id+' '+lang);
+  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'2AD substantive copy '+id+' '+lang);
+ }
 }
 // Phase 2AA: verifiable professional-services content, stable IDs 71/72/74.
 for(const id of [71,72,74]){
@@ -92,13 +106,13 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/<h1\b/g)||[]).length,1,'Medical hub one H1 '+hub);
  assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+hub+'"'),'Medical hub canonical '+hub);
  assert.ok(html.includes('hreflang="'+(lang==='ru'?'en':'ru')+'" href="https://gaeo.ru'+alternate+'"'),'Medical hub reciprocal hreflang '+hub);
- for(const slug of ['private-medical-clinics','dental-clinics','diagnostic-centres-medical-laboratories']){
+ for(const slug of ['private-medical-clinics','dental-clinics','diagnostic-centres-medical-laboratories','ophthalmology-clinics','plastic-surgery-clinics','reproductive-medicine-clinics']){
   const route=(lang==='ru'?'/industries/':'/en/industries/')+slug+'/';
   assert.ok(html.includes('href="'+route+'"'),'Medical hub specialization link '+route);
  }
  assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'Industry index must link medical hub '+lang);
  const listing=graph(html).find(n=>n['@type']==='ItemList');
- assert.equal(listing?.numberOfItems,3,'Medical hub three sectors '+lang);
+ assert.equal(listing?.numberOfItems,6,'Medical hub six sectors '+lang);
 }
 
 // Batch 2X local-services hub.
