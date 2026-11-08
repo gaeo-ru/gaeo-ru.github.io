@@ -7,12 +7,12 @@ export const industrySpecializationsBatch2Y = [
   {
     "group": "agribusiness",
     "parent": {
-      "ru": "/industries/",
-      "en": "/en/industries/"
+      "ru": "/tarify/",
+      "en": "/en/pricing/"
     },
     "parentLabels": {
-      "ru": "Все отрасли GAEO",
-      "en": "All GAEO industries"
+      "ru": "Каталог 107 направлений",
+      "en": "107-industry service catalogue"
     },
     "id": 106,
     "slug": "agricultural-producers",
@@ -279,12 +279,12 @@ export const industrySpecializationsBatch2Y = [
   {
     "group": "agribusiness",
     "parent": {
-      "ru": "/industries/",
-      "en": "/en/industries/"
+      "ru": "/tarify/",
+      "en": "/en/pricing/"
     },
     "parentLabels": {
-      "ru": "Все отрасли GAEO",
-      "en": "All GAEO industries"
+      "ru": "Каталог 107 направлений",
+      "en": "107-industry service catalogue"
     },
     "id": 107,
     "slug": "agricultural-input-suppliers",
