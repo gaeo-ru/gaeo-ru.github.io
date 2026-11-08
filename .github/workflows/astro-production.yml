@@ -51,6 +51,8 @@ jobs:
         run: npm run check:specializations
       - name: Check phase 3A automotive and finance GEO hubs and methods
         run: npm run check:sector3a
+      - name: Check phase 3C editorial checklists and industry link graph
+        run: npm run check:sector3c
       - name: Check bilingual website development cases
         run: node scripts/qa_development_cases.mjs
       - name: Check GEO website development service pages and navigation

@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3B completed: 4 bilingual methods, 8 new URLs, public HTTPS and desktop/mobile browser PASS. Next research batch requires separate scope selection; do not repeat 3B.",
+    "next_batch": "3C prepared in isolated branch; PR CI/merge/deployment pending. Do not repeat 3B or create duplicate service landings.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1585,6 +1585,60 @@
         320
       ],
       "lead_form_submitted": false
+    },
+    "phase_3c": {
+      "phase": 3,
+      "batch": "3C",
+      "status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/sector-guides-3c-2026-11-09",
+      "records": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "scope": "Four original bilingual practical checklists; preserve all existing phase-2 specializations and phase-3B methodologies",
+      "new_guide_pairs": 4,
+      "new_ru_en_urls": 8,
+      "guide_urls": [
+        {
+          "id": 42,
+          "ru": "/strategies/industrial-equipment-rfq-checklist/",
+          "en": "/en/strategies/industrial-equipment-rfq-checklist/"
+        },
+        {
+          "id": 48,
+          "ru": "/strategies/packaging-supplier-brief-checklist/",
+          "en": "/en/strategies/packaging-supplier-brief-checklist/"
+        },
+        {
+          "id": 55,
+          "ru": "/strategies/international-logistics-tender-checklist/",
+          "en": "/en/strategies/international-logistics-tender-checklist/"
+        },
+        {
+          "id": 59,
+          "ru": "/strategies/private-clinic-branch-facts-checklist/",
+          "en": "/en/strategies/private-clinic-branch-facts-checklist/"
+        }
+      ],
+      "source_file": "src/data/sector-guides-phase-3c.mjs",
+      "qa_script": "scripts/qa_sector_guides_3c.mjs",
+      "regulatory_sources": [
+        "https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766",
+        "https://protect.gost.ru/tr/details/0ab50d83-4a64-455d-9c59-04b5ef9336b9",
+        "https://docs.eaeunion.org/documents/429/8416/",
+        "https://eec.eaeunion.org/comission/department/dep_tamoj_zak/tk_eaes.php",
+        "https://roszdravnadzor.gov.ru/medactivities/licensing",
+        "https://roszdravnadzor.gov.ru/services/licenses"
+      ],
+      "ci_status": "pending",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "verified_at": null,
+      "lead_form_submitted": false,
+      "next_required_step": "Run full PR CI, resolve failures without duplicate PR; merge if PASS; confirm production/main/Pages; inspect public HTTPS and then update these same canonical files"
     }
   },
   "status_definitions": {
