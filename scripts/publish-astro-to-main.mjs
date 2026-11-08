@@ -29,6 +29,15 @@ const files=[
  ...generatedAssets
 ].sort((a,b)=>a.path.localeCompare(b.path));
 if(new Set(files.map(f=>f.path)).size!==files.length)throw Error('Duplicate page/asset path');
+/* Check all HTML references, not only the presence of any CSS file. */
+const stagedPaths=new Set(files.map(f=>f.path));
+for(const page of files.filter(f=>f.kind==='html')){
+ const html=readFileSync(resolve(dist,page.path),'utf8');
+ for(const match of html.matchAll(/(?:href|src)=["']\/(_astro\/[^"'?#]+)(?:[?#][^"']*)?["']/g)){
+  if(!stagedPaths.has(match[1]))throw Error('Missing Astro asset '+match[1]+' referenced by '+page.path);
+ }
+}
+
 for(const name of ['index.html','404.html','robots.txt','sitemap.xml','CNAME','assets/site.js'])
  if(!files.some(f=>f.path===name))throw Error('Required output missing: '+name);
 let prior=null;
