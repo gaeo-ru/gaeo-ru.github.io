@@ -1260,21 +1260,43 @@
       "slug": "school-smart-sports-2026",
       "title": "Выбор вида спорта для школьника, которому нравится одновременно двигаться и думать",
       "firstPlace": "Спортивное ориентирование",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rank-20261109-0215-ho6pb8m",
         "ownerId": "chat-rank-20261109-0215-ho6pb8m",
         "requestId": "claim-rank-20261109-0215-ho6pb8m",
         "token": "rk-mw8gdj3j-z4re6h39m3h-kwf37yryylo",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:08.127Z",
-        "expiresAt": "2026-11-09T05:18:08.127Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/orient-t003.json",
+        "committedAt": "2026-11-08T23:33:16.112Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t003/cover.jpg",
+            "sha": "af7634f95312885fd7e71266f46f9c30990e5d8b"
+          },
+          {
+            "path": "public/assets/rankings/orient-t003/orienteering.jpg",
+            "sha": "0035916550d47ef8de0767a9e601f790b1e1b19a"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t003.json",
+            "sha": "b5c4c7994d15836769f217488ee3500005248e0e"
+          }
+        ],
+        "baseCommit": "1b8a290391d8f2a648be5981160ba57788080bf1"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://docs.google.com/document/d/1EiSLTM0FpP1diplqH4vE5Hl4PPdzcQojz-eF3api_rE/edit",
+        "locator": "Вступление и «Итоговый ТОП-10»: «1. Спортивное ориентирование – 95/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t015",
@@ -2419,8 +2441,9 @@
       "expiresAt": "2026-11-09T05:18:08.127Z",
       "previousStatus": "ready",
       "taskId": "orient-t003",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rank-20261109-0215-ho6pb8m"
     },
     {
       "ownerId": "chat-gaeo0911-mw8gdzlz-sn75sfa",
@@ -2548,5 +2571,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:32:40.195Z"
+  "updatedAt": "2026-11-08T23:33:16.112Z"
 }

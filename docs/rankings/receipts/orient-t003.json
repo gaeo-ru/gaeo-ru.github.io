@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "taskId": "orient-t003",
+  "familyId": "orient-t003",
+  "slug": "school-smart-sports-2026",
+  "ownerId": "chat-rank-20261109-0215-ho6pb8m",
+  "requestId": "claim-rank-20261109-0215-ho6pb8m",
+  "submissionId": "submit-rank-20261109-0215-ho6pb8m",
+  "submittedAt": "2026-11-08T23:33:16.112Z",
+  "mode": "standard",
+  "baseCommit": "1b8a290391d8f2a648be5981160ba57788080bf1",
+  "files": [
+    {
+      "path": "public/assets/rankings/orient-t003/cover.jpg",
+      "sha": "af7634f95312885fd7e71266f46f9c30990e5d8b"
+    },
+    {
+      "path": "public/assets/rankings/orient-t003/orienteering.jpg",
+      "sha": "0035916550d47ef8de0767a9e601f790b1e1b19a"
+    },
+    {
+      "path": "src/data/rankings/articles/orient-t003.json",
+      "sha": "b5c4c7994d15836769f217488ee3500005248e0e"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Спортивное ориентирование",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://docs.google.com/document/d/1EiSLTM0FpP1diplqH4vE5Hl4PPdzcQojz-eF3api_rE/edit",
+      "locator": "Вступление и «Итоговый ТОП-10»: «1. Спортивное ориентирование – 95/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 2,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/orient-t003.json",
+    "ref": "1b8a290391d8f2a648be5981160ba57788080bf1",
+    "sha": "775946aa74958cd0d757d371389b5d049dc29b5d"
+  },
+  "deployed": false
+}
