@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2S_production_main_pages_then_independent_HTTPS_and_unassigned_construction_candidates",
+    "next_batch": "2S_direct_HTTPS_check_then_research_unassigned_construction_14_15_16_17_no_3A",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -735,7 +735,7 @@
     "phase_2s": {
       "phase": 2,
       "batch": "2S",
-      "status": "source_merged_pr_ci_pass_production_in_progress",
+      "status": "deployed_ci_production_pages_pass_live_https_unverified",
       "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2s.mjs",
       "records": [
@@ -745,11 +745,11 @@
       "new_industry_landing_pairs": 2,
       "new_html_pages": 4,
       "pr_ci_status": "pass",
-      "production_status": "in_progress",
-      "pages_status": "pending",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
-      "last_completed_step": "PR105 merged 4116e953 and full PR CI PASS (124 RU EN pages at 1440,390,320)",
-      "next_required_step": "Verify production run 42475518887, main release manifest, four HTML/sitemap, Pages, then direct live HTTPS",
+      "last_completed_step": "PR105 full CI, production 42475518887, main 41040cfd, Pages 42476203426 PASS; four HTML and sitemap URLs verified",
+      "next_required_step": "Independent public HTTPS desktop/mobile verification of four new 2S pages, then fill live fields",
       "constraints": "Do not change pricing.mjs, guarantee BMR, 107 catalogue IDs, shared templates, or parallel industry PRs",
       "evidence_levels": "No client-specific E4 claims; standards cited for applicability only",
       "source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
@@ -762,7 +762,16 @@
         390,
         320
       ],
-      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887"
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426",
+      "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17",
+      "released_at": "2026-11-08T11:32:22.853Z",
+      "main_manifest_file_count": 779,
+      "built_html_pages": 237,
+      "sitemap_urls": 232,
+      "main_html_pages_verified": 4,
+      "main_sitemap_urls_verified": 4,
+      "blocker": "Direct gaeo.ru HTTPS/browser (including /tarify/) not accessible from the tool; no live viewport or indexing claim."
     }
   },
   "status_definitions": {
@@ -782,24 +791,24 @@
     "catalog_published": 107,
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
-    "new_industry_landings_in_phase_2_deployed": 60,
+    "new_industry_landings_in_phase_2_deployed": 62,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 233,
-    "total_new_specialization_pairs_in_phase_2": 60,
-    "total_new_specialization_urls_in_phase_2": 120,
+    "total_generated_html_pages_current_release": 237,
+    "total_new_specialization_pairs_in_phase_2": 62,
+    "total_new_specialization_urls_in_phase_2": 124,
     "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
     "new_industry_urls_in_phase_2_prepared_not_deployed": 0,
-    "total_specialization_pairs_in_main_current_release": 60,
-    "total_specialization_urls_in_main_current_release": 120,
+    "total_specialization_pairs_in_main_current_release": 62,
+    "total_specialization_urls_in_main_current_release": 124,
     "total_specialization_pairs_prepared_including_2h": 30,
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
     "total_specialization_urls_prepared_including_2j": 66,
-    "current_sitemap_urls": 228,
-    "main_manifest_file_count": 775,
+    "current_sitemap_urls": 232,
+    "main_manifest_file_count": 779,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
-    "phase_2_counts_note": "Confirmed main 46414ffb (source ba944fe3, released 2026-11-08T10:50:41.844Z) has 60 specializations / 120 RU EN URLs, 233 HTML, 228 sitemap entries and 775 files. Includes recovered 2K/2L/2O (9 pairs / 18 RU EN URLs + 2 bilingual international-logistics hub pages) and 2R #49-51 (3 pairs / 6 URLs). PR104 CI/production/Pages PASS and 6 main HTML/sitemap verified. Public HTTPS desktop/mobile remains unverified. Older checkpoint fields are historical, not current release totals.",
+    "phase_2_counts_note": "Current confirmed main 41040cfd (source 4116e953, released 2026-11-08T11:32:22.853Z) has 62 specialization pairs/124 RU EN URL, 237 HTML, 232 sitemap entries and 779 files. Includes 2S #52-53 (2 pairs / 4 URL). PR105 CI/production/Pages PASS, 4 main HTML+sitemap verified; direct external HTTPS remains unverified. Earlier batch counts are historical.",
     "total_specialization_pairs_prepared_including_2m": 39,
     "total_specialization_urls_prepared_including_2m": 78,
     "phase_2n_prepared_pairs": 3,
@@ -818,8 +827,8 @@
     "phase_2q_deployed_ru_en_urls": 6,
     "phase_2r_deployed_pairs": 3,
     "phase_2r_deployed_ru_en_urls": 6,
-    "phase_2s_prepared_pairs_not_deployed": 2,
-    "phase_2s_prepared_ru_en_urls_not_deployed": 4
+    "phase_2s_deployed_pairs": 2,
+    "phase_2s_deployed_ru_en_urls": 4
   },
   "candidate_batches": [
     {
@@ -1097,12 +1106,16 @@
       ],
       "label": "Производители строительных материалов и поставщики спецодежды/СИЗ",
       "condition": "Две самостоятельные RU/EN специализации, 4 страницы. Для стройматериалов различать ГОСТ 31108-2020 на цемент, ГОСТ 7473-2026 (с 1.11.2026) на готовые бетонные смеси и 384-ФЗ на проектное соответствие; для СИЗ проверять область ТР ТС 019/2011, приказ 766н и дату действия изменений 2026. Не заявлять универсальную сертификацию, кейсы и технические гарантии. Цены, каталог 107 и готовые изображения неизменны.",
-      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
       "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2s.mjs",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105",
       "source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
-      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014"
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426",
+      "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17",
+      "public_https_browser_verified": false
     }
   ],
   "records": [
@@ -3078,11 +3091,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_in_source_ci_pass",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_pr_ci_pass_production_in_progress",
-      "next_required_step": "verify_production_main_pages_then_direct_public_https",
-      "last_completed_step": "phase_2s_pr105_merged_full_ci_pass_124_ru_en_pages",
+      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
+      "next_required_step": "verify_public_https_then_finalize_landing_status",
+      "last_completed_step": "phase_2s_pr105_ci_production_main_pages_pass_124_ru_en_pages",
       "planned_landing_url_ru": "/industries/building-material-manufacturers/",
       "planned_landing_url_en": "/en/industries/building-material-manufacturers/",
       "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
@@ -3096,8 +3109,11 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105",
       "source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426"
+      ],
+      "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17"
     },
     {
       "id": 53,
@@ -3119,11 +3135,11 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "full_bilingual_content_in_source_ci_pass",
+      "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "source_merged_pr_ci_pass_production_in_progress",
-      "next_required_step": "verify_production_main_pages_then_direct_public_https",
-      "last_completed_step": "phase_2s_pr105_merged_full_ci_pass_124_ru_en_pages",
+      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
+      "next_required_step": "verify_public_https_then_finalize_landing_status",
+      "last_completed_step": "phase_2s_pr105_ci_production_main_pages_pass_124_ru_en_pages",
       "planned_landing_url_ru": "/industries/workwear-ppe-suppliers/",
       "planned_landing_url_en": "/en/industries/workwear-ppe-suppliers/",
       "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
@@ -3137,8 +3153,11 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105",
       "source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014"
-      ]
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426"
+      ],
+      "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17"
     },
     {
       "id": 54,

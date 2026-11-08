@@ -4,11 +4,9 @@
 
 Этот документ и `docs/tariff-industry-roadmap.json` ведутся дальше на месте. Не создавать новый конкурирующий план, Work-задачу или автоматизацию. Новые указания Алексея имеют приоритет над решениями этого файла.
 
-## Партия 2S: PR #105 объединен, CI PASS (8 ноября 2026)
+## Партия 2S: production и GitHub Pages PASS, прямой HTTPS отдельно (8 ноября 2026)
 
-**№52 и №53, 2 новых специализации / 4 RU/EN страницы.** [PR #105](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105) объединен в `astro-source` `4116e953de0ec7fdf058d27289470e1aa7a21581`. [Полный CI 42474862014](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014) **PASS**: 124 двуязычных отраслевых URL с Chromium 1440/390/320, тарифы, изображения, FAQ, форма и проверки общих разделов. [Production 42475518887](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887) выполняется; `main`, GitHub Pages и внешний HTTPS проверяются отдельно. Цены, гарантии BMR и каталог 107 направлений сохранены. Подробная точка продолжения в разделе 29.
-
-**2 свободных номера №52 и 53, 4 страницы RU/EN.** Отдельные исходники в `feat/industry-specializations-batch-2s-2026-11-08`, PR CI и публикация еще не подтверждены. Проверены исходные статусы `not_started`, отсутствие отдельного URL и назначения в параллельных PR. Содержание привязано к текущей промышленной методике, общим ценам и утвержденным изображениям. Точная точка продолжения в разделе 29.
+**№52/53, 2 новые специализации / 4 RU/EN страницы** выпущены: [PR #105](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105) объединен, [полный CI 42474862014](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014) PASS (124 специализации RU/EN, Chromium 1440/390/320), [production 42475518887](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887) PASS, [Pages 42476203426](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426) PASS. Опубликован `main` `41040cfd9ce93fac16d44c5325568db4c5ccfc17`, 237 HTML, 232 URL sitemap, 779 файлов manifest. Все 4 новые HTML и sitemap URL проверены статически. **Прямой внешний HTTPS на gaeo.ru остается неподтвержденным**, поэтому live-поля пустые. Цены, гарантии BMR, 107 ID каталога и параллельные изменения сохранены. Подробности и следующая точка в разделе 29.
 
 ## Партия 2R: production и GitHub Pages PASS, внешний HTTPS отдельно (8 ноября 2026)
 
@@ -802,7 +800,7 @@
 
 ## 29. Партия 2S: стройматериалы и СИЗ (8 ноября 2026)
 
-**Контрольная точка: `source_prepared_pr_ci_pending`.** Ветка `feat/industry-specializations-batch-2s-2026-11-08` содержит `src/data/industry-specializations-batch-2s.mjs`, зарегистрированный импорт в `src/data/industry-specializations.mjs`, обязательные №52/53 в `scripts/qa_industry_specializations.mjs` и обновления **этих же** 2 документов. Созданы 2 оригинальные пары RU/EN с 3 отраслевыми проблемами, 4 коммерческими запросами, 3 группами фактов, 4 этапами, 5 FAQ, отдельными H1, метаданных и заявкой. Изображения и общие тарифы не копируются.
+**Подтвержденная стадия: `deployed_ci_production_pages_pass_live_https_unverified`.** Ветка `feat/industry-specializations-batch-2s-2026-11-08` содержит `src/data/industry-specializations-batch-2s.mjs`, зарегистрированный импорт в `src/data/industry-specializations.mjs`, обязательные №52/53 в `scripts/qa_industry_specializations.mjs` и обновления **этих же** 2 документов. Созданы 2 оригинальные пары RU/EN с 3 отраслевыми проблемами, 4 коммерческими запросами, 3 группами фактов, 4 этапами, 5 FAQ, отдельными H1, метаданных и заявкой. Изображения и общие тарифы не копируются.
 
 | № | Направление | Плановые RU/EN URL |
 |---:|---|---|
@@ -817,15 +815,17 @@
 
 **Реализация:** общий `IndustrySpecialization.astro` генерирует Service/FAQPage из проверяемого видимого содержания; `IndustryPricing.astro` использует только `src/data/pricing.mjs`. Применяются существующие `industry-052-960.webp` и `industry-053-960.webp`. Для родительских ссылок используются действующий промышленный вход `/industries/metal-structures/` и EN-эквивалент, методики `/strategies/industrial-supplier-evidence/` и `/strategies/measurement/`, включая EN версии. Это смежные методики, а не доказанные результаты в нишах №52/53.
 
-### Подтвержденные исходники и PR CI
+### Подтвержденный выпуск 2S
 
-- [PR #105](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105) успешно объединен в `astro-source`: `4116e953de0ec7fdf058d27289470e1aa7a21581`.
-- [Полный CI 42474862014](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014) **PASS**: Astro, тарифная модель, доказательная методика, ссылки, дизайн и браузерный контроль **124 RU/EN отраслевых страниц на ширинах 1440, 390 и 320 px**, проверка WebP, FAQ, форм и отсутствия переполнения.
-- [Production 42475518887](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887) начат после слияния. Окончательный `main`, GitHub Pages и прямой внешний HTTPS пока не подтверждены.
+- [PR #105](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105) объединен в `astro-source`, merge `4116e953de0ec7fdf058d27289470e1aa7a21581`. Исходный файл `src/data/industry-specializations-batch-2s.mjs`; стабильные ID №52/53, утвержденные изображения и общие тарифы сохранены.
+- Полный [PR CI 42474862014](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014) **PASS**: 124 отраслевых RU/EN HTML проверены Chromium на 1440/390/320, изображения, 5 FAQ, 3 канонических тарифа, форма и отсутствие горизонтального переполнения. Тарифы, связи, содержательная проверка источников, дизайн и общие тесты завершились успешно.
+- [Production 42475518887](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887) **PASS**. В `main` `41040cfd9ce93fac16d44c5325568db4c5ccfc17` release manifest содержит `sourceCommit=4116e953de0ec7fdf058d27289470e1aa7a21581`, `releasedAt=2026-11-08T11:32:22.853Z`, 779 файлов / 237 HTML; sitemap содержит 232 URL.
+- На всех 4 RU/EN HTML №52/53 в `main` проверены 1 H1, правильные Title/canonical и взаимные hreflang, 5 FAQ и Service/FAQPage JSON-LD, таблица сценариев, 3 тарифных предложения, отраслевой WebP и штатная форма. Все 4 URL есть в sitemap. [GitHub Pages 42476203426](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426) **PASS** для этого же `main`.
+- **Незакрытая часть:** прямой внешний браузерный HTTPS, реальная мобильная отрисовка и отправка заявки на production. Веб-инструмент не открыл `https://gaeo.ru/tarify/` и контрольную отраслевую страницу; это ограничение доступа среды, а не подтвержденный дефект. Индексация, рост BMR и приток заявок не измерялись.
 
 ### Точная точка продолжения
 
-1. На актуальной `astro-source` проверить PR, отсутствие пересечений и выполнить полный CI: Astro, тарифы, ссылки, 4 RU/EN HTML и sitemap URL, H1/canonical/hreflang, FAQ/Service Schema.org, изображения 052/053, CTA и браузерный контроль 1440/390/320. Без полного PASS не объединять.
-2. После CI PASS безопасно объединить PR, проверить production workflow, `main/astro-release-manifest.json`, 4 HTML и sitemap URL, а затем успешный GitHub Pages. Учитывать документацию и параллельные коммиты, не перезаписывать другие пакеты.
-3. Отдельно проверить все 4 публичных `https://gaeo.ru/` адреса на desktop/mobile. До внешнего HTTPS подтверждения `landing_url_ru/en`, `verified_at` и `status=existing_landing` **не** выставлять. Успешные CI/main/Pages не заменяют прямой live-контроль и не доказывают индексацию или прирост BMR.
-4. Обновить **эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json` реальными PR/SHA/CI/Pages, точными статусами и следующей точкой. После 2S кандидатами для отдельного исследования остаются строительные направления №14–17 (при условии, что они не заняты); **3A не начинать** без нового указания.
+1. Проверить все 4 публичных адреса №52/53 в настоящем браузере на десктопе, 390 и 320 px, включая изображения, CTA, форму, ссылки, FAQ, canonical/hreflang и отсутствие переполнения.
+2. **После подтвержденного внешнего HTTPS PASS** заполнить `landing_url_ru/en`, `verified_at` и повысить статусы №52/53; до этого остаются `planned_landing_url_ru/en` и `public_https_browser_verified=false`. GitHub Pages PASS не доказывает индексацию.
+3. Для нового расширения исследовать незанятые №14–17 из строительного кластера, выбрать 2–3 по подтвержденной фактуре и проверить пересечения с параллельными PR. **Исследовательскую 3A не начинать**. Не менять существующие цены, гарантию BMR и 107 ID каталога.
+4. Обновлять **эти же** `docs/TARIFFS_EXPANSION_HANDOFF.md` и `docs/tariff-industry-roadmap.json` с реальными коммитами и проверками. Не создавать дублированные документы, PR, задания или публикации.
