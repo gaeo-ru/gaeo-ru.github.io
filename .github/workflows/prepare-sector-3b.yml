@@ -1,0 +1,46 @@
+name: Prepare isolated 3B source patch
+on:
+  push:
+    branches: ['feat/sector-methods-3b-2026-11-08']
+    paths:
+      - '.github/workflows/prepare-sector-3b.yml'
+      - 'scripts/_prepare-sector-3b.mjs'
+permissions:
+  contents: write
+concurrency:
+  group: prepare-sector-3b-once
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/sector-methods-3b-2026-11-08
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply exact narrow patches, preserving other source content
+        run: node scripts/_prepare-sector-3b.mjs
+      - name: Commit only the integrated source and canonical handoff
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/generate-tariff-pages.mjs src/data/industry-specializations.mjs scripts/qa_approved_design_system.mjs scripts/qa_sector_clusters_3a.mjs src/legacy/pages/strategies/index.html src/legacy/pages/en/strategies/index.html package.json .github/workflows/legal-geo-pr-qa.yml .github/workflows/astro-production.yml docs/TARIFFS_EXPANSION_HANDOFF.md docs/tariff-industry-roadmap.json
+          git commit -m 'feat(3B): integrate methods, reciprocal links, canonical directories and quality gates'
+          git push origin HEAD:feat/sector-methods-3b-2026-11-08
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - run: node scripts/qa_sector_methods_3b.mjs --static
+      - run: npm run check:anchors
+      - run: npm run check:design
+      - run: npx playwright install chromium
+      - run: npm run check:sector3b
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: isolated-3b-review
+          path: visual-industry/
+          if-no-files-found: ignore
+          retention-days: 3
