@@ -23,6 +23,9 @@ for(const item of industrySpecializations){
   assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-'+String(item.id).padStart(3,'0')+'"','g'))||[]).length,1,'Exactly one category-specific catalogue link '+path);
   assert.equal((html.match(new RegExp('href="'+pricingHref(lang)+'#industry-catalog"','g'))||[]).length,0,'No redundant full-catalogue link '+path);
   assert.ok(html.includes('industry-specialization__catalog-button'),'Accessible category catalogue button '+path);
+  assert.equal((html.match(/class="industry-specialization__catalog-label-line"/g)||[]).length,2,'Two intentional catalogue button lines '+path);
+  assert.ok(html.includes(lang==='en'?'View this category':'Смотреть это направление'),'Correct first line of catalogue button '+path);
+  assert.ok(html.includes(lang==='en'?'in the 107-service catalogue':'в каталоге 107 услуг'),'Correct second line of catalogue button '+path);
   assert.equal((html.match(/<tr\b/g)||[]).length,5,'Scenario table header and four rows '+path);
   assert.equal((html.match(/<details class="faq-item">/g)||[]).length,5,'Five visible FAQ '+path);
   const faq=graph(html).find(n=>n['@type']==='FAQPage');
@@ -260,6 +263,23 @@ try{
   assert.equal(await page.locator('main details.faq-item').count(),5,'Visible FAQs '+row.path);
   assert.equal(await page.locator('main .industry-scenario-table tbody tr').count(),4,'Scenario rows '+row.path);
   assert.equal(await page.locator('main .industry-pricing-section [data-plan]').count(),3,'Canonical pricing '+row.path);
+  const catalogButton=page.locator('main .industry-specialization__catalog-button');
+  assert.equal(await catalogButton.count(),1,'Exactly one industry catalogue button '+row.path);
+  const catalogGeometry=await catalogButton.evaluate(el=>{
+   const b=el.getBoundingClientRect();
+   const a=el.querySelector('.industry-specialization__catalog-arrow').getBoundingClientRect();
+   const lines=[...el.querySelectorAll('.industry-specialization__catalog-label-line')].map(node=>{
+    const r=node.getBoundingClientRect();
+    return {left:r.left,right:r.right,top:r.top,height:r.height,scrollWidth:node.scrollWidth,clientWidth:node.clientWidth};
+   });
+   return {left:b.left,right:b.right,arrowLeft:a.left,lines};
+  });
+  assert.equal(catalogGeometry.lines.length,2,'Two visible lines '+row.path+' '+width);
+  assert.ok(catalogGeometry.lines[1].top>catalogGeometry.lines[0].top+4,'Explicit second line '+row.path+' '+width);
+  for(const line of catalogGeometry.lines){
+   assert.ok(line.left>=catalogGeometry.left-1&&line.right<catalogGeometry.arrowLeft+1,'Catalogue text must not collide with arrow '+row.path+' '+width+' '+JSON.stringify(catalogGeometry));
+   assert.ok(line.scrollWidth<=line.clientWidth+1,'Catalogue text must stay on its own line '+row.path+' '+width);
+  }
   const img=page.locator('main .industry-specialization__media img');
   assert.equal(await img.count(),1,'Hero image '+row.path);
   await img.evaluate(el=>el.decode());
