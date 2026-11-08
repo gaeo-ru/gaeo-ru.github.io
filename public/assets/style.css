@@ -1331,7 +1331,10 @@ details.price:last-child{
 .mobile-menu :is(.mobile-cases__submenu,.mobile-publications__submenu) a+a{border-top:1px solid rgba(2,22,65,.09)}
 .mobile-menu :is(.mobile-cases__overview,.mobile-publications__overview){font-weight:700!important;color:var(--navy)!important}
 .mobile-menu :is(.mobile-cases__submenu,.mobile-publications__submenu) a:is(:hover,:focus-visible){color:#06596d;background:rgba(210,236,241,.6);outline-offset:2px}
-.footer-grid>div:nth-child(3)>a.footer-publication-link{margin:9px 0;padding-left:12px;border-left:1px solid rgba(255,255,255,.25);white-space:normal;line-height:1.5;overflow-wrap:break-word}
+/* One continuous vertical rule spans each complete footer submenu. */
+.footer-grid .footer-submenu{display:flex;flex-direction:column;align-items:stretch;gap:13px;margin:11px 0 15px;padding:2px 0 2px 14px;border-left:1px solid rgba(255,255,255,.34)}
+.footer-grid .footer-submenu>a{display:block;margin:0;color:#dbe5f3;font-size:13px;line-height:1.55;white-space:normal;overflow-wrap:break-word}
+.footer-grid .footer-submenu>a:hover,.footer-grid .footer-submenu>a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:3px}
 @media(prefers-reduced-motion:reduce){
  .desktop-menu :is(.nav-cases__submenu,.nav-publications__submenu),
  .mobile-menu :is(.mobile-cases__chevron,.mobile-publications__chevron){transition:none}
@@ -1340,7 +1343,6 @@ details.price:last-child{
 .home-publication-links a{font:600 13px/1.6 Manrope,Arial,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:4px}
 
 /* Footer navigation: balanced case/publication submenus, contact labels and language control in brand column. */
-.footer-grid>div:nth-child(2)>a.footer-case-link{margin:9px 0;padding-left:12px;border-left:1px solid rgba(255,255,255,.25);white-space:normal;line-height:1.5;overflow-wrap:break-word}
 .footer-brand>.footer-lang{width:min(100%,320px);margin-top:20px;padding-top:14px}
 .footer-contact__label{color:#eff7ff;font-weight:600}
 @media(max-width:720px){.footer-brand>.footer-lang{margin-top:8px}}

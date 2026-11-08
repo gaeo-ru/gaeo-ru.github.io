@@ -134,10 +134,10 @@ try{
     assert.ok(await footerLink.isVisible(),'Homepage footer provides a real visible archive entry');
     assert.equal(await page.locator(`header a[href="${route(lang)}"]`).count(),0,'No archive entry added to the homepage header');
     const cols=page.locator('footer .footer-grid');
-    const caseLinks=cols.locator(':scope > div:nth-child(2) > a.footer-case-link');
+    const caseLinks=cols.locator(':scope > div:nth-child(2) > .footer-submenu--cases > a.footer-case-link');
     assert.deepEqual(await caseLinks.evaluateAll(els=>els.map(a=>a.getAttribute('href'))),
       lang==='en'?['/en/cases/#geo-promotion','/en/cases/#website-development']:['/cases/#geo-promotion','/cases/#website-development'],'Footer case submenu follows the header');
-    const rightLinks=await cols.locator(':scope > div:nth-child(3) > a').evaluateAll(els=>els.map(a=>a.getAttribute('href')));
+    const rightLinks=await cols.locator(':scope > div:nth-child(3) a').evaluateAll(els=>els.map(a=>a.getAttribute('href')));
     const articleHref=lang==='en'?'/en/publications/articles/':'/publications/articles/';
     const rankingHref=route(lang);
     const profileHref=lang==='en'?'/en/professional-biography/#official-profiles':'/professional-biography/#external-profiles';
@@ -148,6 +148,18 @@ try{
     assert.ok(contact.includes('Email: ya@gaeo.ru') && contact.includes((lang==='en'?'Phone:':'Телефон:')+' +7 (926) 42-42-333'),'Email and phone have labeled separate lines');
     const contactLines=contact.split(/\n+/).map(s=>s.trim());
     assert.ok(contactLines.some(s=>s.startsWith('Email:')) && contactLines.some(s=>s.startsWith(lang==='en'?'Phone:':'Телефон:')),'Labeled contacts are separate');
+    const telegramLabel=cols.locator(':scope > .footer-brand .footer-contact__label').filter({hasText:'Telegram:'});
+    assert.equal(await telegramLabel.count(),1,'Telegram label exists');
+    assert.ok(Number(await telegramLabel.evaluate(el=>getComputedStyle(el).fontWeight))>=600,'Telegram label is bold');
+    for(const type of ['cases','publications']){
+      const group=cols.locator('.footer-submenu--'+type);
+      assert.equal(await group.count(),1,'One submenu '+type);
+      const m=await group.evaluate(el=>{
+        const g=el.getBoundingClientRect(),children=[...el.querySelectorAll('a')];
+        return {style:getComputedStyle(el).borderLeftStyle,height:g.height,first:children[0].getBoundingClientRect().top-g.top,last:g.bottom-children[children.length-1].getBoundingClientRect().bottom};
+      });
+      assert.ok(m.style==='solid'&&m.height>25&&m.first>=-2&&m.last>=-2,'Continuous border covers the entire submenu '+type);
+    }
     footerChecks.push({path,width,visible:true,headerEntry:false});
   }
   assert.deepEqual(errors,[],'No page JavaScript errors');
