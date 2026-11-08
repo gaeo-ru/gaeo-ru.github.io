@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "38883495f5f8c88b42e7b1c486f9609dd26438e4",
-  "releasedAt": "2026-11-08T19:34:23.291Z",
+  "sourceCommit": "7b8831d4e55e523450afdc225785770e8da1b78c",
+  "releasedAt": "2026-11-08T19:55:24.170Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2883,7 +2883,7 @@
     {
       "path": "en/industries/audit-assurance-consulting-firms/index.html",
       "kind": "html",
-      "sha256": "b65d2e055b5b58a24422f3bfc7d8620dbdc853c5141be9c3e0972f497e9961e7"
+      "sha256": "23aec0824c58ea6bead11eb8202b3f5af31d1e9033b851b318a0e9cd805b1bcb"
     },
     {
       "path": "en/industries/auto-parts-online-stores/index.html",
@@ -2893,7 +2893,12 @@
     {
       "path": "en/industries/auto-repair-shops/index.html",
       "kind": "html",
-      "sha256": "08dae4bb6b1c9afa7bcd3c1131dbe05e04458540889f48aada834d304e41b9ac"
+      "sha256": "c1df24154fe15ae202d8c701bad40d859b6b39308908721ae5b79c41dad1bf10"
+    },
+    {
+      "path": "en/industries/automotive/index.html",
+      "kind": "html",
+      "sha256": "3cd51928510ccb37a98d7299d27dd6642391ee563a7951f224f6dce25fdbce00"
     },
     {
       "path": "en/industries/bankruptcy-lawyers/index.html",
@@ -2923,7 +2928,7 @@
     {
       "path": "en/industries/car-dealerships/index.html",
       "kind": "html",
-      "sha256": "c6dd31395b80c1c7573d56016e415c927ec81eff4772478a424d6cdc11b64305"
+      "sha256": "1d6f45b4d96c74701c0c88cdca45f504e7e2a82d041e45659135c17d43341da7"
     },
     {
       "path": "en/industries/children-product-manufacturers/index.html",
@@ -2968,7 +2973,7 @@
     {
       "path": "en/industries/commercial-vehicle-machinery-dealers/index.html",
       "kind": "html",
-      "sha256": "ac167cad366f9a2d42598f57a200aa9cb08e091a7a54034ba6b1530987ebafbe"
+      "sha256": "4ca0ccd1004c56d6bae829d545b0d13c8d1b55c349968b99b902ce54fb0be7b8"
     },
     {
       "path": "en/industries/construction-equipment-rental/index.html",
@@ -3091,14 +3096,19 @@
       "sha256": "5e531c36b3a682f7ab93e06e14ce3ad6b66dd99c75024fd0b2775235b42f672e"
     },
     {
+      "path": "en/industries/finance-insurance-accounting/index.html",
+      "kind": "html",
+      "sha256": "7366838de56bcb5cf3ba3024b0f7d221a9fbb24f330c6ab6b96c70f654acb429"
+    },
+    {
       "path": "en/industries/financial-investment-advisers/index.html",
       "kind": "html",
-      "sha256": "fe9a3b7e417b0113ceeeaa05265779cceb9350f8c1604eab410e0829083c716f"
+      "sha256": "193b691e3aea7df6fb0df0800f8832fc778a0f5ab2062bf954be258c21c89641"
     },
     {
       "path": "en/industries/fintech-payment-services/index.html",
       "kind": "html",
-      "sha256": "a09d7000fff44a2b0fbad8fc3b86d41e0b9e0800c966ec52c2a1bdbbb586c438"
+      "sha256": "8b66780e74ff9529987bc7efba1b0cba66106710de18a6f7a471ab2d5f9bd1ce"
     },
     {
       "path": "en/industries/food-processing-equipment-suppliers/index.html",
@@ -3153,7 +3163,7 @@
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "dfca2fd8946c4ade99e3b9b7879643c4c84db85f9f9f3690eb9eb2b5e4f14b93"
+      "sha256": "54e49d1a8b90bf259b6d377ffcd5fe940beaab6a6aa431ea180e2b57035fe085"
     },
     {
       "path": "en/industries/industrial-automation-service-companies/index.html",
@@ -3173,7 +3183,7 @@
     {
       "path": "en/industries/insurance-brokers/index.html",
       "kind": "html",
-      "sha256": "0446e05fa3544174f63b020ea5459d73ca5b36fc8d4a1faf5f7665f1bfbd9b42"
+      "sha256": "94dbc7183c478d264651ac18ea02de4abff50a6a0d3afcbc569887db935db940"
     },
     {
       "path": "en/industries/intellectual-property-lawyers/index.html",
@@ -3213,7 +3223,7 @@
     {
       "path": "en/industries/leasing-companies/index.html",
       "kind": "html",
-      "sha256": "8591c5ad631a06f62607ce356a1815f9dcb79aab125c089ec5299b634ebfe6fd"
+      "sha256": "603e2fe927393ef84bdfc1567eecea0d7e14127a015d3b34f80e1bcb70c6fbe7"
     },
     {
       "path": "en/industries/legal/index.html",
@@ -3258,7 +3268,7 @@
     {
       "path": "en/industries/motorcycle-powersports-dealers/index.html",
       "kind": "html",
-      "sha256": "b0d86ce2fd09b73b6a632961cb044e2f458083ec8cffd8176aca1a074dfade95"
+      "sha256": "beb57b353eb46bdb3cb309904b2e2113d4d5bfa08b5a35521119a72718d02524"
     },
     {
       "path": "en/industries/online-schools-edtech/index.html",
@@ -3273,7 +3283,7 @@
     {
       "path": "en/industries/outsourced-accounting-services/index.html",
       "kind": "html",
-      "sha256": "848f83b1e036831ff6b8796d9a1bf26a60bd55baef29e1551eca43294356d1ff"
+      "sha256": "cd6285d8afd46fbc51051cc725471dc76b6928daa38fff4f8ef914fb8ebf06c7"
     },
     {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
@@ -3393,7 +3403,7 @@
     {
       "path": "en/industries/vehicle-sourcing-import/index.html",
       "kind": "html",
-      "sha256": "9cd5ec51c12aa3c602f6cb059926224ab709733024e0061bfb552144b656d326"
+      "sha256": "c8abfc25d38eba9f5ab6a0624174973d47c0536c09660e3b5950baa84931fff3"
     },
     {
       "path": "en/industries/warehouse-equipment-suppliers/index.html",
@@ -3521,6 +3531,11 @@
       "sha256": "f5359a6c89a1ca5207eb0efd0566996781aee79ec54299f7c4344065c7cbcee7"
     },
     {
+      "path": "en/strategies/automotive-buyer-evidence/index.html",
+      "kind": "html",
+      "sha256": "6a1586f7abbbb8b313fa47b5cd3c1ca05ee270317dadc13bbaa6681829b67d91"
+    },
+    {
       "path": "en/strategies/ecommerce-catalog/index.html",
       "kind": "html",
       "sha256": "cb7003dcfbe88e39dd56516ce4891e0a913c0b3c8f28f1480ee4fbcc46d62842"
@@ -3531,6 +3546,11 @@
       "sha256": "4b424d803bdd22946b976d8ba73acb01df0ed36d10af023cc11ef02974da3a5b"
     },
     {
+      "path": "en/strategies/financial-services-evidence/index.html",
+      "kind": "html",
+      "sha256": "929db81af84637da9d58deff7c422197caabe2f7aa651333ec3dc45f19e6b13e"
+    },
+    {
       "path": "en/strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
       "sha256": "952ee163742a25068ea9a47b4bd1eaa3029aff06b8d029b5a9de0eaf8103642e"
@@ -3538,7 +3558,7 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "de32129d0ef60fec4916a820b81e8b651d1dbe18fabfd90a5df71bc30d6d3ab9"
+      "sha256": "964e9ee4a0cb6b8b62aa260005d4a9f8dc0797b83124fa20ea0b5199568c0bbd"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -3608,7 +3628,7 @@
     {
       "path": "industries/audit-assurance-consulting-firms/index.html",
       "kind": "html",
-      "sha256": "eeb0ab5f34345b69ca136a1347b2aeeba838c0401a0b3b25e89f653d921cb81c"
+      "sha256": "1e6e37618207f4722904080161ae687eddcfeb78a2e9c18317d85c06c46d3e89"
     },
     {
       "path": "industries/auto-parts-online-stores/index.html",
@@ -3618,7 +3638,12 @@
     {
       "path": "industries/auto-repair-shops/index.html",
       "kind": "html",
-      "sha256": "39c561ad5ada44d107d296746e4af570f139bf6b5fce50153d851bb9f449b196"
+      "sha256": "fef3826070bcafd388034f5d661aa763f8d9d0c866ebc786dfd6b5e84e694554"
+    },
+    {
+      "path": "industries/automotive/index.html",
+      "kind": "html",
+      "sha256": "330b5f3d7a69ceda152d02f57e161f03e3f4b8492547d82f68ddeb44562afcbd"
     },
     {
       "path": "industries/bankruptcy-lawyers/index.html",
@@ -3648,7 +3673,7 @@
     {
       "path": "industries/car-dealerships/index.html",
       "kind": "html",
-      "sha256": "8f235e608e1ffe2ad068bfaa41d119c4597631b63d61e11bb6483756868449ea"
+      "sha256": "3b183ed78c477a5a936101eaedfa9a66120d68af6f40495ff23183af6b588463"
     },
     {
       "path": "industries/children-product-manufacturers/index.html",
@@ -3693,7 +3718,7 @@
     {
       "path": "industries/commercial-vehicle-machinery-dealers/index.html",
       "kind": "html",
-      "sha256": "b00f71b9a169d03b85a13657979bc9378e540a45a53c0d7765aa4f1aef34a119"
+      "sha256": "62ba1e7db64649255f995ab0c9066b18dc29c64a4df694ccc53532babafacd66"
     },
     {
       "path": "industries/construction-equipment-rental/index.html",
@@ -3816,14 +3841,19 @@
       "sha256": "5619fee4de8ac7f52c9dd948400dc2ace56247cbba4514fc4b3505e04167bd3d"
     },
     {
+      "path": "industries/finance-insurance-accounting/index.html",
+      "kind": "html",
+      "sha256": "cb40ed719ade417d6df58aff8bfea842d1ee524fb8add66964a18f86b776aa5c"
+    },
+    {
       "path": "industries/financial-investment-advisers/index.html",
       "kind": "html",
-      "sha256": "95de7d3e8871214f9f5c699541059132f02ea38b54768e34e3e15fbfc10713ba"
+      "sha256": "fc86337a7124ff6ab5cab39439d68288052ff9ab7b6c3242fa16fbc83f4da247"
     },
     {
       "path": "industries/fintech-payment-services/index.html",
       "kind": "html",
-      "sha256": "8d4cac4c04622cd2088c38e9462b0956763a4fa71fb69ab7de98197cc7884fcd"
+      "sha256": "82359870292645a943a948cc3b1e92d599cf1568d6ed4ab6ae45db32361c5f95"
     },
     {
       "path": "industries/food-processing-equipment-suppliers/index.html",
@@ -3878,7 +3908,7 @@
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "bb8ed3a96c9fa35400972a42fada8e4b666264457039e1d6fbdc3e3a04b0ec10"
+      "sha256": "03993e061542b38cb749758177f5fa455503efa209f59a9f771dacf6d674377e"
     },
     {
       "path": "industries/industrial-automation-service-companies/index.html",
@@ -3898,7 +3928,7 @@
     {
       "path": "industries/insurance-brokers/index.html",
       "kind": "html",
-      "sha256": "a895e5156658118fcfbc8b8e41ef7d46f3b18d38963f001bbc770e1aa79f2764"
+      "sha256": "be99aa27ce2255e83ff96d08e57660f8fc18fb9e7f4ba587c9e5850c9b7c4a96"
     },
     {
       "path": "industries/intellectual-property-lawyers/index.html",
@@ -3938,7 +3968,7 @@
     {
       "path": "industries/leasing-companies/index.html",
       "kind": "html",
-      "sha256": "881b1723d440c52332ed9cc0d11c828a0832d0cc2af53cd9d69976e006ffca11"
+      "sha256": "8c71f8b183478f4125aadc76ccbbd26c98066276f20af86ef7df5e38b18d758a"
     },
     {
       "path": "industries/legal/index.html",
@@ -3983,7 +4013,7 @@
     {
       "path": "industries/motorcycle-powersports-dealers/index.html",
       "kind": "html",
-      "sha256": "3875295acfdc52c16556da6adde4b7a97b2b87102493401075d8690cef816c98"
+      "sha256": "cccf07bae3960b1bf6a075bd5e6d33734f2a6c0ab1cdd9dac2107c0bfb4a50f6"
     },
     {
       "path": "industries/online-schools-edtech/index.html",
@@ -3998,7 +4028,7 @@
     {
       "path": "industries/outsourced-accounting-services/index.html",
       "kind": "html",
-      "sha256": "8cbfe629c414dab290c21b8985d1fdb29036ad54763e1e0b71e5b7a1fbba8428"
+      "sha256": "ae9426066105de75027074fc22407f9813f48367f127321daac998ac3fb107bf"
     },
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
@@ -4118,7 +4148,7 @@
     {
       "path": "industries/vehicle-sourcing-import/index.html",
       "kind": "html",
-      "sha256": "4632edb5e1fd0bc5b62796bd921334dbaca18b74ff0650ade2997a8cd39090f7"
+      "sha256": "eb7624b4bcb65421dbbeebac26b1bd5885529a63374379260b25b6e66b5fc954"
     },
     {
       "path": "industries/warehouse-equipment-suppliers/index.html",
@@ -4253,7 +4283,12 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "c43905f22d289a88b3326e4ab24accefd4d50a48acaef805e1cda2cd96037eb5"
+      "sha256": "6ac10d76ed763907e417cf0363f41bcc4df4c12a4ee60f8e744a0ec3493e0321"
+    },
+    {
+      "path": "strategies/automotive-buyer-evidence/index.html",
+      "kind": "html",
+      "sha256": "cf5be67f1ec3c8c474335a5dfab0dfac8861d42c92d366ee064672630798ce66"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4266,6 +4301,11 @@
       "sha256": "e5eb67421b3f5473fcefb59ec42857ba77a30735e677031ffccbcefacbab5ad4"
     },
     {
+      "path": "strategies/financial-services-evidence/index.html",
+      "kind": "html",
+      "sha256": "61ea3ed5150a83624516d6460326fc5db62996a1058dacd7752196ea70e0c3fb"
+    },
+    {
       "path": "strategies/fulfillment-provider-selection/index.html",
       "kind": "html",
       "sha256": "a98694d71fba60bd91d65e2b0e3a5db962e317d63b80b09898330619a1259168"
@@ -4273,7 +4313,7 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "023ceb760f29631fad41bd7e581096384169fc6e0f273c7e0052a0b9659aedc8"
+      "sha256": "8740d8c5c5635e551ced493ab171787c063ca24f6e16ca9b4a28c74cd45b667b"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
