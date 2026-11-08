@@ -1,4 +1,5 @@
 import {phase3BMethods} from './industry-methods-phase-3b.mjs';
+import {phase3CGuides} from './sector-guides-phase-3c.mjs';
 /**
  * Evidence-led RU/EN GEO specializations, expanded in isolated industry batches.
  * The 107-ID catalogue, approved images and canonical tariff terms remain shared.
@@ -5137,6 +5138,22 @@ for(const entry of phase3BMethods){
   service.methods[lang] ||= [];
   service.methodLabels[lang] ||= [];
   while(service.methodLabels[lang].length<service.methods[lang].length)service.methodLabels[lang].push(lang==='ru'?'Тематическая методика GEO':'Related GEO methodology');
+  const href=entry.routes.method[lang];
+  if(!service.methods[lang].includes(href)){
+   service.methods[lang].push(href);
+   service.methodLabels[lang].push(entry[lang].method.h1);
+  }
+ }
+}
+
+// Phase 3C: link to practical evidence checklists from original commercial pages.
+for(const entry of phase3CGuides){
+ const service=industrySpecializations.find(s=>s.id===entry.ids[0]);
+ if(!service)throw new Error('Missing existing commercial route for 3C #'+entry.ids[0]);
+ service.methodLabels||={ru:[],en:[]};
+ for(const lang of ['ru','en']){
+  service.methods[lang]||=[];service.methodLabels[lang]||=[];
+  while(service.methodLabels[lang].length<service.methods[lang].length)service.methodLabels[lang].push(lang==='ru'?'Связанная методика GEO':'Related GEO method');
   const href=entry.routes.method[lang];
   if(!service.methods[lang].includes(href)){
    service.methods[lang].push(href);
