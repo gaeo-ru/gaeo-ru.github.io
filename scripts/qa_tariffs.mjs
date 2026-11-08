@@ -41,11 +41,22 @@ for(const lang of ['ru','en']){
  ])) assert.ok(html.includes(phrase),'Tariff comparison must match the approved responsibilities: '+phrase);
  assert.equal(list?.itemListElement?.length,107,'All 107 visible categories in ItemList');
  assert.equal((html.match(/\bdata-gaeo-request=/g)||[]).length>=107,true,'Industry context is passed to inquiry form');
- for(const item of getIndustryCatalog(lang)){
+const industryItems=getIndustryCatalog(lang);
+ assert.equal(industryItems.length,107,'The tariff catalogue must retain all 107 business categories');
+ for(const item of industryItems){
   assert.ok(html.includes('id="'+item.id+'"'),'Addressable category '+item.id);
-  if(item.detailLink)assert.ok(html.includes('href="'+item.detailLink+'"'),'Specialized category page '+item.id);
-  else assert.ok(html.includes('href="'+catalogue+'#'+item.id+'"'),'Canonical category fragment');
+  assert.ok(item.detailLink?.startsWith('/'),'Every catalogue title needs a real page, never an in-page anchor: '+item.id);
+  assert.doesNotMatch(item.detailLink,/#/,'Industry title points to a standalone page: '+item.id);
+  assert.ok(existsSync(resolve(dist,item.detailLink.slice(1),'index.html')),'Missing industry landing page '+item.id+' -> '+item.detailLink);
+  assert.ok(html.includes('id="'+item.id+'-title"><a href="'+item.detailLink+'"'),'Clickable industry title '+item.id);
+  const itemListEntry=list.itemListElement.find(x=>x.position===item.number);
+  assert.equal(itemListEntry?.url,'https://gaeo.ru'+item.detailLink,'The ItemList should link to the actual industry page: '+item.id);
   for(const image of [item.image.small,item.image.large])assert.ok(existsSync(resolve(dist,image.slice(1))),'Missing image '+image);
+ }
+ for(const number of [1,19,39,47,54,67,80]){
+  const original=industryItems.find(i=>i.number===number);
+  assert.ok(original?.hubLink?.relation==='existing_service','Legacy industry has its own commercial landing '+number);
+  assert.equal(original.detailLink,original.hubLink.href,'Previously published industry page is the true title destination '+number);
  }
  for(const route of [lang==='en'?'/en/':'/',catalogue]){
   const source=read(route);
@@ -280,6 +291,16 @@ try{
     await catalog.locator('#industry-019 img').scrollIntoViewIfNeeded();
     await page.waitForFunction(()=>{const img=document.querySelector('#industry-019 img');return img.complete&&img.naturalWidth>0});
     if(width!==320)await page.screenshot({path:'visual-tariffs/catalog-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
+    // Every visible title must navigate to a standalone industry page.
+    if(width===1440||width===390){
+     const currentLang=route.startsWith('/en/')?'en':'ru';
+     for(const number of [1,2,19,39,47,54,67,80,107]){
+      const item=getIndustryCatalog(currentLang).find(x=>x.number===number);
+      await page.locator('#'+item.id+'-title a').click();
+      assert.equal(new URL(page.url()).pathname,item.detailLink,'Clickable title navigation '+item.id+' '+width+' '+currentLang);
+      await page.goto(origin+route,{waitUntil:'domcontentloaded'});
+     }
+    }
    }
    if(route.includes('geo-guarantee')){
     assert.equal(await page.locator('.tariff-targets li').count(),3,'Visible contractual target ladder');
@@ -320,7 +341,17 @@ try{
     assert.ok(Math.max(...row.buttonTops)-Math.min(...row.buttonTops)<=3,
      'Aligned desktop CTAs '+width+' '+route+' '+JSON.stringify(row.buttonTops));
    }
-   if(width===390)assert.ok(rows.docWidth<=rows.viewport+2,'No overflow '+route+' '+width);
+   if(width===390){
+    assert.ok(rows.docWidth<=rows.viewport+2,'No overflow '+route+' '+width);
+    const layout=await page.evaluate(()=>{
+     const first=document.querySelector('.industry-scenario-table tbody tr td:first-child');
+     const card=first?.parentElement;
+     const photo=document.querySelector('.industry-about>img');
+     return {questionWidth:first?.getBoundingClientRect().width,cardWidth:card?.getBoundingClientRect().width,photoWidth:photo?.getBoundingClientRect().width,photoFloat:photo?getComputedStyle(photo).float:null};
+    });
+    if(layout.cardWidth)assert.ok(Math.abs(layout.questionWidth-layout.cardWidth)<=4,'Full-width mobile question on '+route+' '+JSON.stringify(layout));
+    if(layout.photoWidth)assert.ok(Math.abs(layout.photoWidth-width/2)<=2&&layout.photoFloat==='left','Half-screen float portrait on '+route+' '+JSON.stringify(layout));
+   }
   }
  }
  assert.deepEqual(errors,[],'No browser runtime errors');
