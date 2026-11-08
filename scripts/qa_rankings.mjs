@@ -146,7 +146,7 @@ try{
     assert.equal(await cols.locator(':scope > div:nth-child(3) > .footer-lang').count(),0,'No language switch below publications');
     const contact=await cols.locator(':scope > .footer-brand .footer-contact').innerText();
     assert.ok(contact.includes('Email: ya@gaeo.ru') && contact.includes((lang==='en'?'Phone:':'Телефон:')+' +7 (926) 42-42-333'),'Email and phone have labeled separate lines');
-    const contactLines=contact.split(/\\n+/).map(s=>s.trim());
+    const contactLines=contact.split(/\n+/).map(s=>s.trim());
     assert.ok(contactLines.some(s=>s.startsWith('Email:')) && contactLines.some(s=>s.startsWith(lang==='en'?'Phone:':'Телефон:')),'Labeled contacts are separate');
     footerChecks.push({path,width,visible:true,headerEntry:false});
   }
