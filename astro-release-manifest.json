@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
-  "releasedAt": "2026-11-08T15:08:21.377Z",
+  "sourceCommit": "6d1df8537d28729eaa46fc66e16bf1ebf4a3789f",
+  "releasedAt": "2026-11-08T15:27:21.451Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2881,6 +2881,11 @@
       "sha256": "9570e4c2b43f9c36d185c9146c427fd0561709e55255aedfc1325e8effaa70a3"
     },
     {
+      "path": "en/industries/audit-assurance-consulting-firms/index.html",
+      "kind": "html",
+      "sha256": "fbda5b2f19189a43bc580f8368b2fe826013b6f380d0291f26c43f099dd9d09a"
+    },
+    {
       "path": "en/industries/auto-parts-online-stores/index.html",
       "kind": "html",
       "sha256": "c89b5c224bc5cad15417e44d37097fc6643bec67a09217479dc4f921f0faafb0"
@@ -3128,7 +3133,7 @@
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "2d0ac64b8e005b5c2e663ad768cec28b78db75c8c206e313b82c4197dfe0ed92"
+      "sha256": "27a28bf4dad8256299f1b215209594674dedd15a1bbd02494d938310a188a948"
     },
     {
       "path": "en/industries/industrial-automation-service-companies/index.html",
@@ -3378,7 +3383,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "b13e376fc21626ce094d3fba277423402041f97be1adcacdd71b76cfea324d44"
+      "sha256": "4b1aebfe54e386c7d9c13d59c3e79db5939cfd15d70e2b3878eaa03855e17da7"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3549,6 +3554,11 @@
       "path": "industries/architectural-design-bureaus/index.html",
       "kind": "html",
       "sha256": "66c8405c6d6e03576f2f37263d4ad054427a8f9a080147f7e8cc5c6e4bd9cb76"
+    },
+    {
+      "path": "industries/audit-assurance-consulting-firms/index.html",
+      "kind": "html",
+      "sha256": "fd7ef56497ac2671cfa9dd8f67a0fa679d3fcef59bc0f7bc4f621cb70bd2c432"
     },
     {
       "path": "industries/auto-parts-online-stores/index.html",
@@ -3798,7 +3808,7 @@
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "01a4ee0c943caa428925f96210fd350a1706cc16bc187a067c11870a0e740404"
+      "sha256": "0ef2820ab0146ebb59b9de62a35d600e7e85efbf11bd2fda2a221625e7c6e7e5"
     },
     {
       "path": "industries/industrial-automation-service-companies/index.html",
@@ -4143,7 +4153,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "5f77df845a1b40443d68aa0ade7e3e454d7b3593e23d5c240f9858cb05cdf981"
+      "sha256": "cf0898dafaae4e1353126cb414ac0b4c9a5e66bacc3083a9287a01710ed8ce37"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4198,7 +4208,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "3bdde8947ca45628ea3e3b15d00a185b63b2d8fcfd9d685e1382e2128989c1db"
+      "sha256": "9766e791baa888050cac2fe5938c93fa6aeeb05472f007ca9276dfa0c1546006"
     }
   ]
 }
