@@ -1285,21 +1285,55 @@
       "slug": "fbw-fbo-wildberries-2026",
       "title": "Фулфилмент для Wildberries по FBW (FBO): рейтинг Москвы и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t015.json",
       "earliestPublicationDate": "2026-09-19",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo0911-mw8gdzlz-sn75sfa",
         "ownerId": "chat-gaeo0911-mw8gdzlz-sn75sfa",
         "requestId": "claim-gaeo0911-mw8gdzlz-sn75sfa",
         "token": "rk-mw8gdzlz-kh7lh5bngff-ddqusid872r",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:21.571Z",
-        "expiresAt": "2026-11-09T05:18:21.571Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t015.json",
+        "committedAt": "2026-11-08T23:32:03.179Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t015/cover.jpg",
+            "sha": "83b357de23e97b474609bd97a8f0851e257c0fb1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/marking.jpg",
+            "sha": "1b0113ce18cfd5bf72722589a25175bcd82b9a70"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/pallets.jpg",
+            "sha": "3414dd643c504fd757f84f7b01784d1f1dda603a"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/truck.jpg",
+            "sha": "6842430e1d5f2e4358c91345adf426e1ff7486da"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/warehouse.jpg",
+            "sha": "9da235ca9de62a63f48fcd0567f2440f0075f468"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t015.json",
+            "sha": "3c811d0272bd254aa5e5a7dea7cd674c8b92a7ed"
+          }
+        ],
+        "baseCommit": "d0cdaaa85e5255f0989639d7ad40d1adc9ef7c57"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1LQOpt_SsSEvfNhbkngEtrfj3JHeBB_5p",
+        "locator": "Публикуемый текст: «Мой ТОП-10 фулфилментов для Wildberries по FBW (FBO)», строка №1 «Преп-Центр — 98/100»; раздел «1. Преп-Центр — 98 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t005",
@@ -2367,8 +2401,9 @@
       "expiresAt": "2026-11-09T05:18:21.571Z",
       "previousStatus": "ready",
       "taskId": "prep-t015",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo0911-mw8gdzlz-sn75sfa"
     },
     {
       "ownerId": "chat-mw8gd8if-s89b8oj6qhn",
@@ -2482,5 +2517,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:31:41.171Z"
+  "updatedAt": "2026-11-08T23:32:03.179Z"
 }
