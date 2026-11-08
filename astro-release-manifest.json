@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "b66923a1d2e25bd54a370eacbe0cb2ecf9e30e63",
-  "releasedAt": "2026-11-08T16:18:24.906Z",
+  "sourceCommit": "de81cdb8d3593a725c6c173f92914ddbaaa0b9ff",
+  "releasedAt": "2026-11-08T16:30:55.778Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2921,6 +2921,11 @@
       "sha256": "c981fc90656f006643693775cf00d0f9b8c91d5b57ddecb3f46ebe042782faee"
     },
     {
+      "path": "en/industries/car-dealerships/index.html",
+      "kind": "html",
+      "sha256": "f4fac36ab2068f19c37c4ad7520f36ebc064ecac1fe0e8b0c507c460849dfb9d"
+    },
+    {
       "path": "en/industries/children-product-manufacturers/index.html",
       "kind": "html",
       "sha256": "d97bcb918f35f507fde2d265447addd75332fbf6fe501a41bd15835c443ec3b9"
@@ -3148,7 +3153,7 @@
     {
       "path": "en/industries/index.html",
       "kind": "html",
-      "sha256": "27a28bf4dad8256299f1b215209594674dedd15a1bbd02494d938310a188a948"
+      "sha256": "a61385340271b57648bbc5e8da96519e4b28412656679d68056800f024ee3fa8"
     },
     {
       "path": "en/industries/industrial-automation-service-companies/index.html",
@@ -3164,6 +3169,11 @@
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
       "sha256": "4996ab2374fbe0037d66e18ebf7579ce61e366141b0daa348c0db082a3a28f35"
+    },
+    {
+      "path": "en/industries/insurance-brokers/index.html",
+      "kind": "html",
+      "sha256": "5fca781e7dc3d47370005f1815655049351163ae7f7acac51861121e6e9534d0"
     },
     {
       "path": "en/industries/intellectual-property-lawyers/index.html",
@@ -3381,6 +3391,11 @@
       "sha256": "be5da716ff67a2d391c7316d27a1a4658a23e3191f5f07e324884a3254b0914c"
     },
     {
+      "path": "en/industries/vehicle-sourcing-import/index.html",
+      "kind": "html",
+      "sha256": "37afbcbacf8907d08ab9d7a30ab22b144798b88db97d3aa838f76296ca808cee"
+    },
+    {
       "path": "en/industries/warehouse-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "b7693be65ce35259b1d9a4dc72981ce4f4f5ed137caa61b7dc5b8eef22ae0aca"
@@ -3418,7 +3433,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "13bae55beff3ce3d6fc02c9b28452c98d6736b3d5ddb6703fe5327693c98d1f9"
+      "sha256": "76e8b7b052abaaf99ff69e85ffd76e403d08b3723a17d10aeaea2e9ec99ddcfb"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3629,6 +3644,11 @@
       "path": "industries/building-material-manufacturers/index.html",
       "kind": "html",
       "sha256": "82221c54aa3ba12cbc90dcb07e30acfb2863582367d6d2b89a2aec961fd66244"
+    },
+    {
+      "path": "industries/car-dealerships/index.html",
+      "kind": "html",
+      "sha256": "2e7f19b3e0251ec6e6cf7c3f08d712acf5256100d0de63794e369b81418d719e"
     },
     {
       "path": "industries/children-product-manufacturers/index.html",
@@ -3858,7 +3878,7 @@
     {
       "path": "industries/index.html",
       "kind": "html",
-      "sha256": "0ef2820ab0146ebb59b9de62a35d600e7e85efbf11bd2fda2a221625e7c6e7e5"
+      "sha256": "cbea23605ea7945a2009d6903c0bc744a2aa0f8d7cfb3950a78bab4f0d18435a"
     },
     {
       "path": "industries/industrial-automation-service-companies/index.html",
@@ -3874,6 +3894,11 @@
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
       "sha256": "47f6f11864f9b920f6f0d760c73e451d9ec4d241717b24347b6da19f6252a190"
+    },
+    {
+      "path": "industries/insurance-brokers/index.html",
+      "kind": "html",
+      "sha256": "4514b06dc9857b0fee9e48ba780aa77c63ea7cfa882e72cb266d3812cfa57a9d"
     },
     {
       "path": "industries/intellectual-property-lawyers/index.html",
@@ -4091,6 +4116,11 @@
       "sha256": "ca23b9a4e1d6a61a46b3eb6ae643be8b49e74a7945112064dd980a94ecaf3355"
     },
     {
+      "path": "industries/vehicle-sourcing-import/index.html",
+      "kind": "html",
+      "sha256": "ec01d49d35dbe6df435f79e6ec3f2cd7f697c5afce70b778c7e5c5b38a1307d0"
+    },
+    {
       "path": "industries/warehouse-equipment-suppliers/index.html",
       "kind": "html",
       "sha256": "49d1c3f7e4c963ab088495f575129814599c1f451377c32b47ea23ea9bf3a6e8"
@@ -4223,7 +4253,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "e2e5950b93008e3d3b39f96507f46101f999c6cab55c16f1b0c10b3c671c6bb4"
+      "sha256": "2a2dfcb1afe46931a98eebf7bb630c67f13c79a71df3e2b1275946356e0e284c"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4278,7 +4308,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "a149a77ec0280001ea218fe0a75a9120ec13195eb5f834689a37cb2d03d2497f"
+      "sha256": "434f87edee0b1602e5b74ce8197408cb18ed9fa47677563e1c8175e715f18e95"
     }
   ]
 }
