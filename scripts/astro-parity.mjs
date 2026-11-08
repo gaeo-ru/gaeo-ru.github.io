@@ -2,7 +2,6 @@ import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 import {createHash} from 'node:crypto';
 import {industrySpecializations} from '../src/data/industry-specializations.mjs';
-import {phase3AClusters} from '../src/data/industry-clusters-phase-3a.mjs';
 const ROOT=process.cwd(),ORIGINAL=resolve(ROOT,'src/legacy/pages'),PUBLIC=resolve(ROOT,'public'),OUTPUT=resolve(ROOT,'dist');
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(x=>{
  const abs=resolve(dir,x.name);
@@ -26,9 +25,6 @@ const problems=[];
 // Evidence-led RU/EN industry pages intentionally render a shared structured Astro component.
 // Preserve and verify their SEO shell while retaining exact parity for untouched routes.
 const specializationRoutes=new Set(industrySpecializations.flatMap(p=>Object.values(p.routes).map(route=>route.slice(1)+'index.html')));
-// Phase 3A sector hubs and methodology pages use the existing shared CTA component.
-// Their entire rendered content is verified separately in qa_sector_clusters_3a.mjs.
-const phase3ARoutes=new Set(phase3AClusters.flatMap(cluster=>['hub','method'].flatMap(kind=>Object.values(cluster.routes[kind]).map(route=>route.slice(1)+'index.html'))));
 const commercialRoutes=new Set([
  'geo-prodvizhenie-nedvizhimosti/index.html',
  'en/geo-for-real-estate/index.html',
@@ -56,15 +52,6 @@ for(const original of originals){
   }
   if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Specialization must have one H1 in '+path);
   for(const marker of ['rel="canonical"','hreflang="ru"','hreflang="en"','type="application/ld+json"'])if(!after.includes(marker))problems.push('Specialization missing SEO '+marker+' in '+path);
-  continue;
- }
- if(phase3ARoutes.has(path)){
-  if(!before.includes('<div class="page-cta"></div>'))problems.push('Missing shared CTA slot in phase 3A page '+path);
-  if(after.includes('<div class="page-cta"></div>'))problems.push('Shared CTA slot left unrendered in '+path);
-  if((after.match(/<h1\b/g)||[]).length!==1)problems.push('Phase 3A page must contain one H1 in '+path);
-  for(const marker of ['rel="canonical"','hreflang="ru"','hreflang="en"','type="application/ld+json"','id="specializations"','id="sources"']){
-   if(!after.includes(marker))problems.push('Phase 3A page missing '+marker+' in '+path);
-  }
   continue;
  }
  if(commercialRoutes.has(path)){
