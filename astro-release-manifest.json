@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "440db99828162a1a218d30dabe594a272b412510",
-  "releasedAt": "2026-11-08T11:06:58.239Z",
+  "sourceCommit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
+  "releasedAt": "2026-11-08T11:32:22.853Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2886,6 +2886,11 @@
       "sha256": "ac7cc076dfe28a9d471caa8e2834fd14cc09240aaa8fc6194c474d4f58edaa05"
     },
     {
+      "path": "en/industries/building-material-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "c981fc90656f006643693775cf00d0f9b8c91d5b57ddecb3f46ebe042782faee"
+    },
+    {
       "path": "en/industries/children-product-manufacturers/index.html",
       "kind": "html",
       "sha256": "d97bcb918f35f507fde2d265447addd75332fbf6fe501a41bd15835c443ec3b9"
@@ -3113,7 +3118,7 @@
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "c0b618c3f7a6057952c8ae6a4daea1c01d05830c2f0b5072de6cff5082180f6c"
+      "sha256": "89a2de11c677d6db28281ade7b5414e8199e23b9fede934a6638dfc2d1180c91"
     },
     {
       "path": "en/industries/motor-insurance-lawyers/index.html",
@@ -3211,6 +3216,11 @@
       "sha256": "18dba0a4750068a82dbb4c3751cc540737b3d709cb4f2607b767fe51dfc6c8d2"
     },
     {
+      "path": "en/industries/workwear-ppe-suppliers/index.html",
+      "kind": "html",
+      "sha256": "9b56feea8d22f2cfe0d3df8fe48f14f3b0ade7577d5d92a759a0b038e558f6b5"
+    },
+    {
       "path": "en/personal-data-consent/index.html",
       "kind": "html",
       "sha256": "73721fe339e67e3a099a6c332284045a3d3daf9abe6367148ace72c0c3b1a490"
@@ -3218,7 +3228,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "1e73773dc4957b92bf69827afbbb02f47557be350e71aae670ce2dca3083d9c0"
+      "sha256": "6064f401d0c21d68ad50d7b33df44651b57471b0223832192e0c6dc38e89f8d4"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3394,6 +3404,11 @@
       "path": "industries/bi-analytics-platforms/index.html",
       "kind": "html",
       "sha256": "33285071f89fd2ce621bde0d9d84aa869a32b2e85c9c7171794cd082f75f1fc3"
+    },
+    {
+      "path": "industries/building-material-manufacturers/index.html",
+      "kind": "html",
+      "sha256": "82221c54aa3ba12cbc90dcb07e30acfb2863582367d6d2b89a2aec961fd66244"
     },
     {
       "path": "industries/children-product-manufacturers/index.html",
@@ -3623,7 +3638,7 @@
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "f2e6e165c2fa834db06b4e82fc39924aed5bb4e7b9f4235b5b1ab4862ba13dac"
+      "sha256": "5195b08297061120b52d557a282238537971c0221b0535dccd96af6b103927cf"
     },
     {
       "path": "industries/motor-insurance-lawyers/index.html",
@@ -3719,6 +3734,11 @@
       "path": "industries/wms-tms/index.html",
       "kind": "html",
       "sha256": "35ffc2b741375a41c2d4c47cb30da06240cea055d82421920a94af89a85b318b"
+    },
+    {
+      "path": "industries/workwear-ppe-suppliers/index.html",
+      "kind": "html",
+      "sha256": "b0600cc8e1adb6f7fc732cdd9b4dd0f1f0f34394d508abac03fc0c4fa4fdaf55"
     },
     {
       "path": "personal-data-consent/index.html",
@@ -3823,7 +3843,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "18c81af85193dfe59d3fd91fc2221e9562e3060886dca3b4ac09eace9ae44b51"
+      "sha256": "0871e595bb727d808cbe93c1ce0e2b0c3a5e91b393647ad6ab22480502296bdd"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3878,7 +3898,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "61bcc47f147e118709b91c71752362e0cc0fdaa8f4bee56015daf138fca49008"
+      "sha256": "871b682c1d8636f008161eda7958bd3236934051ac4b38a3f9a6926428b6048e"
     }
   ]
 }
