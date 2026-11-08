@@ -1645,21 +1645,51 @@
       "slug": "fbs-yandex-market-2026",
       "title": "Фулфилмент для Яндекс Маркета по FBS в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t021.json",
       "earliestPublicationDate": "2026-09-29",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09",
         "ownerId": "chat-gaeo-rkmw8gdff4-b0xvbo4dv09",
         "requestId": "claim-gaeo-rkmw8gdff4-b0xvbo4dv09",
         "token": "rk-mw8gh0l0-yailgby5oz9-rpaykcxw4z",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:20:42.815Z",
-        "expiresAt": "2026-11-09T05:20:42.815Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t021.json",
+        "committedAt": "2026-11-08T23:32:40.195Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t021/01_cover_top10_fbs_yandex_market_2026.jpg",
+            "sha": "abe943f999f95196d96b67dd2eb189a897afca28"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/02_fbs_yandex_pick_pack.jpg",
+            "sha": "a855c8e4b49e7b35cd167cfeae7d97922731e24c"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/03_liquids_packaging_yandex_fbs.jpg",
+            "sha": "5111b491d27750afff8b52373efe9f296218a5cb"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/04_fbs_yandex_dispatch.jpg",
+            "sha": "bfc73ed5eb608393bb4f092def7be2c6bf102402"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t021.json",
+            "sha": "515a0b8ff97355511bcf611010d23a46e1d3d629"
+          }
+        ],
+        "baseCommit": "3df57bf29e0030a51e6feb590834ed9ed7e4b286"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1axvfUZEOSqs_kPg_bMK9lhWnyR4zwoD5",
+        "locator": "«Итоговый ТОП-10 фулфилментов для Яндекс Маркета по FBS», строка 1; «1. Преп-Центр – 98 из 100» и блок контрольных баллов",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t011",
@@ -2513,9 +2543,10 @@
       "expiresAt": "2026-11-09T05:20:42.815Z",
       "previousStatus": "ready",
       "taskId": "prep-t021",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:32:03.179Z"
+  "updatedAt": "2026-11-08T23:32:40.195Z"
 }
