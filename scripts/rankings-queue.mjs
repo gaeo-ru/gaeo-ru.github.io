@@ -173,6 +173,39 @@ export function validateRankingsSubmission(article, task, filePaths) {
     firstPlaceVerification: clone(proof), images: imageFiles.size};
 }
 
+/** The same language selection as versionsFor() and the generated-page QA. */
+export function validateRankingsSources(article, task, manifest) {
+  need(manifest && manifest.schemaVersion === 1 && manifest.id === task.id && manifest.category === task.category
+    && Array.isArray(manifest.publishedVersions) && Array.isArray(manifest.pendingVersions) && Array.isArray(manifest.clientLinks),
+    'INVALID_SOURCE_MANIFEST', 'The source manifest is missing, incomplete, or belongs to another task.');
+  need(manifest.publishedVersions.length > 0, 'PUBLICATION_UNCONFIRMED', 'The manifest has no confirmed published versions. Use needs_review.');
+  const pending = new Set(manifest.pendingVersions.map(version => version.url).filter(text));
+  const allArticleUrls = new Set([
+    ...article.versions.flatMap(version => [version.ru, version.en, version.url]),
+    ...article.clientLinks.map(link => link.url),
+    ...article.ru.ranking.map(entry => entry.url), ...article.en.ranking.map(entry => entry.url)
+  ].filter(text));
+  for (const url of pending) need(!allArticleUrls.has(url), 'PENDING_PUBLICATION', 'An unconfirmed/pending publication URL cannot appear in the article.', {taskId: task.id, url});
+  const required = {ru: new Set(), en: new Set()};
+  for (const lang of ['ru', 'en']) {
+    const linked = new Set(article.versions.map(version => version[lang] || version.url || version.ru).filter(text));
+    for (const version of manifest.publishedVersions) {
+      need(text(version.url) && text(version.platform), 'INVALID_SOURCE_MANIFEST', 'A published manifest entry has no URL or platform.');
+      need(!pending.has(version.url), 'CONFLICTING_PUBLICATION_STATUS', 'A URL is listed as both published and pending; resolve the manifest before submission.', {url: version.url});
+      if ((lang === 'ru' && version.language === 'en')
+        || (lang === 'en' && version.language === 'ru' && /indexresearch|github/i.test(version.platform))) continue;
+      required[lang].add(version.url);
+      need(linked.has(version.url), 'MISSING_PUBLISHED_VERSION', 'A registered published version is missing from the rendered language link list.',
+        {taskId: task.id, language: lang, url: version.url, platform: version.platform, sourceLanguage: version.language});
+    }
+  }
+  const registeredClients = new Set(manifest.clientLinks.map(link => link.url).filter(text));
+  for (const link of article.clientLinks) need(registeredClients.has(link.url), 'UNREGISTERED_CLIENT_URL',
+    'A selected client URL must exactly match a manifest clientLinks[].url, including its path and parameters.', {taskId: task.id, url: link.url});
+  return {requiredPublishedVersions: {ru: required.ru.size, en: required.en.size}, selectedClientLinks: article.clientLinks.length,
+    excludedPendingUrls: pending.size};
+}
+
 function unpack(result, tool) {
   const payload = result?.structuredContent ?? result;
   if (result?.isError || payload?.error) {
@@ -215,6 +248,15 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     const result = unpack(await invoke('fetch_file', {repository_full_name: repository, path, ref, encoding: 'utf-8'}), 'fetch_file');
     need(typeof result?.content === 'string', 'INVALID_GITHUB_RESPONSE', `No UTF-8 content returned for ${path}.`);
     return result;
+  }
+  async function sourceManifest(task, ref) {
+    const path = task.sourceManifest;
+    need(typeof path === 'string' && /^docs\/rankings\/sources\/[a-z0-9-]+\.json$/.test(path), 'INVALID_SOURCE_PATH', 'Missing or unsafe source manifest path.');
+    const result = await file(path, ref);
+    let manifest;
+    try { manifest = JSON.parse(result.content); } catch { fail('INVALID_SOURCE_MANIFEST', 'The source manifest is not valid JSON.'); }
+    need(manifest?.id === task.id, 'INVALID_SOURCE_MANIFEST', 'The source manifest belongs to another task.');
+    return {manifest, path, ref, sha: result.sha || null};
   }
   async function read() {
     const current = await get(`${api}/branches/${encodeURIComponent(branch)}`);
@@ -455,7 +497,14 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     const initial = await read(), initialTask = getTask(initial.queue, args.taskId);
     validateRankingsSubmission(article, initialTask, [...seen]);
     const initialClaim = getClaim(initial.queue, args);
-    if (!initialTask.result) requireLease(initial.queue, args, now());
+    if (!initialTask.result) {
+      requireLease(initial.queue, args, now());
+      // Reject missing versions/modified client targets before even creating blobs.
+      // A completed submission is recovered from its receipt instead of being
+      // invalidated by a later edit to the source inventory.
+      const source = await sourceManifest(initialTask, initial.headSha);
+      validateRankingsSources(article, initialTask, source.manifest);
+    }
     if (initialClaim.mode === 'standard' && !['google-drive', 'yandex-disk'].includes(article.source.provider)) fail('SOURCE_MODE_MISMATCH', 'Ordinary chats must use a verified Drive/Yandex text source; recovered published-page sources belong to the Work pass.');
     for (const item of args.files) prepared.push({path: item.path, sha: item.path === articlePath(args.taskId)
       ? returnedSha(await invoke('create_blob', {repository_full_name: repository, content: item.content, encoding: 'utf-8'}), 'create_blob') : item.sha});
@@ -473,12 +522,17 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     return atomic({inspect: sameSubmission, finish: (snapshot, task, candidate) => completeReceipt(snapshot, task, candidate), build: async snapshot => {
       const queue = clone(snapshot.queue), at = now(), {task, claim} = requireLease(queue, args, at);
       const validation = validateRankingsSubmission(article, task, prepared.map(item => item.path));
+      // Re-read at this exact head after every CAS race: a coordinator may have
+      // updated the manifest as well as another worker's queue state.
+      const source = await sourceManifest(task, snapshot.headSha);
+      const sourceValidation = validateRankingsSources(article, task, source.manifest);
       const receiptFile = receiptPath(task.id), entries = await pathEntries(snapshot.treeSha, [...prepared.map(item => item.path), receiptFile]);
       for (const [path, entry] of entries) need(!entry, 'EXISTING_CONTENT', `Existing content cannot be overwritten by a worker: ${path}.`);
       const deadline = Date.parse(task.lease.expiresAt);
       const receipt = {schemaVersion: 1, taskId: task.id, familyId: task.familyId, slug: task.slug, ownerId: args.ownerId,
         requestId: args.requestId, submissionId: args.submissionId, submittedAt: iso(at), mode: claim.mode,
-        baseCommit: snapshot.headSha, files: prepared, validation, deployed: false};
+        baseCommit: snapshot.headSha, files: prepared, validation: {...validation, ...sourceValidation},
+        sourceManifest: {path: source.path, ref: source.ref, sha: source.sha}, deployed: false};
       task.result = {submissionId: args.submissionId, ownerId: args.ownerId, requestId: args.requestId, token: args.token,
         receiptPath: receiptFile, committedAt: iso(at), files: prepared, baseCommit: snapshot.headSha};
       task.firstPlaceStatus = 'verified-in-manuscript'; task.firstPlaceVerification = clone(article.source.firstPlaceVerification);
@@ -511,10 +565,8 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     taskId(id);
     const snapshot = await read(), task = getTask(snapshot.queue, id);
     need(!ref || SHA.test(ref), 'INVALID_REF', 'A source read may be pinned only to a full commit SHA.');
-    need(typeof task.sourceManifest === 'string' && task.sourceManifest.startsWith('docs/rankings/sources/')
-      && !task.sourceManifest.includes('..') && /^docs\/rankings\/sources\/[a-z0-9-]+\.json$/.test(task.sourceManifest), 'INVALID_SOURCE_PATH', 'Missing or unsafe source manifest path.');
-    const result = await file(task.sourceManifest, ref || snapshot.headSha);
-    return {taskId: id, headSha: ref || snapshot.headSha, path: task.sourceManifest, manifest: JSON.parse(result.content)};
+    const result = await sourceManifest(task, ref || snapshot.headSha);
+    return {taskId: id, headSha: result.ref, path: result.path, manifest: result.manifest};
   }
   return Object.freeze({claim, renew, release, block, submit, recover, status, source});
 }
