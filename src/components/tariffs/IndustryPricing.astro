@@ -2,7 +2,7 @@
 import PlanCards from './PlanCards.astro';
 import {pricingHref,serviceHref,serviceNodes} from '../../data/pricing.mjs';
 import {industrySpecializations} from '../../data/industry-specializations.mjs';
-const {lang='ru',intro='',scopeNote='',sourcePath=''}=Astro.props;const en=lang==='en';
+const {lang='ru',intro='',scopeNote='',sourcePath='',showCatalogLink=true}=Astro.props;const en=lang==='en';
 const route=sourcePath?'/'+sourcePath.replace(/index\.html$/,''):null;
 const related=industrySpecializations.filter(p=>p.parent[lang]===route);
 ---
@@ -12,6 +12,6 @@ const related=industrySpecializations.filter(p=>p.parent[lang]===route);
 <script is:inline src="/assets/tariffs.js" defer></script>
 <p class="industry-note">{en?'Start with a free mini-audit or a full GEO audit. A monthly plan includes 50 prompts and 5 AI platforms; broader scope is calculated separately.':'Начать можно с бесплатного мини-аудита или полного GEO-аудита. В базовом объеме сопровождения 50 промптов и 5 нейросетей; расширение рассчитывается отдельно.'} <a href={serviceHref('free-audit',lang)}>{en?'Free mini-audit':'Бесплатный мини-аудит'}</a> · <a href={serviceHref('geo-audit',lang)}>{en?'Full audit':'Полный аудит'}</a> · <a href={pricingHref(lang)+'#calculator'}>{en?'Calculate the scope':'Рассчитать объем'}</a></p>
 {scopeNote&&<p class="industry-note">{scopeNote}</p>}
-<p><a class="tariff-text-link" href={pricingHref(lang)+'#industry-catalog'}>{en?'All 107 business categories and prices':'Все 107 направлений и тарифы'} →</a></p>
+{showCatalogLink&&<p><a class="tariff-text-link" href={pricingHref(lang)+'#industry-catalog'}>{en?'All 107 business categories and prices':'Все 107 направлений и тарифы'} →</a></p>}
 {related.length>0&&<aside class="industry-related-specializations" aria-label={en?'Related GEO specializations':'Смежные GEO-специализации'}><h3>{en?'Detailed specializations':'Специализации по отрасли'}</h3><ul>{related.map(p=><li><a href={p.routes[lang]}>{p.content[lang].h1}</a></li>)}</ul></aside>}
 <script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@graph':['geo','content','guarantee'].flatMap(id=>serviceNodes(id,lang))}).replace(/</g,'\u003c')}/>
