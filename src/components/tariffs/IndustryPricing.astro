@@ -2,9 +2,15 @@
 import PlanCards from './PlanCards.astro';
 import {pricingHref,serviceHref,serviceNodes} from '../../data/pricing.mjs';
 import {industrySpecializations} from '../../data/industry-specializations.mjs';
+import {getIndustryCatalog} from '../../data/industry-catalog.mjs';
 const {lang='ru',intro='',scopeNote='',sourcePath='',showCatalogLink=true}=Astro.props;const en=lang==='en';
 const route=sourcePath?'/'+sourcePath.replace(/index\.html$/,''):null;
-const related=industrySpecializations.filter(p=>p.parent[lang]===route);
+const catalogNames=new Map(getIndustryCatalog(lang).map(item=>[item.number,item.name]));
+const related=industrySpecializations.filter(p=>p.parent[lang]===route).map(p=>({
+  href:p.routes[lang],
+  label:catalogNames.get(p.id) || p.content[lang].h1,
+}));
+const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'');
 ---
 {intro&&<p class="industry-section__lead">{intro}</p>}
 <PlanCards lang={lang} ids={['geo','content','guarantee']} open={true}/>
@@ -13,5 +19,92 @@ const related=industrySpecializations.filter(p=>p.parent[lang]===route);
 <p class="industry-note">{en?'Start with a free mini-audit or a full GEO audit. A monthly plan includes 50 prompts and 5 AI platforms; broader scope is calculated separately.':'Начать можно с бесплатного мини-аудита или полного GEO-аудита. В базовом объеме сопровождения 50 промптов и 5 нейросетей; расширение рассчитывается отдельно.'} <a href={serviceHref('free-audit',lang)}>{en?'Free mini-audit':'Бесплатный мини-аудит'}</a> · <a href={serviceHref('geo-audit',lang)}>{en?'Full audit':'Полный аудит'}</a> · <a href={pricingHref(lang)+'#calculator'}>{en?'Calculate the scope':'Рассчитать объем'}</a></p>
 {scopeNote&&<p class="industry-note">{scopeNote}</p>}
 {showCatalogLink&&<p><a class="tariff-text-link" href={pricingHref(lang)+'#industry-catalog'}>{en?'All 107 business categories and prices':'Все 107 направлений и тарифы'} →</a></p>}
-{related.length>0&&<aside class="industry-related-specializations" aria-label={en?'Related GEO specializations':'Смежные GEO-специализации'}><h3>{en?'Detailed specializations':'Специализации по отрасли'}</h3><ul>{related.map(p=><li><a href={p.routes[lang]}>{p.content[lang].h1}</a></li>)}</ul></aside>}
+{related.length>0&&<aside class="industry-related-specializations" aria-label={en?'Related GEO specializations':'Смежные GEO-специализации'} data-related-specializations="true">
+  <h3>{en?'Detailed specializations':'Специализации по отрасли'}</h3>
+  <div class="industry-related-specializations__viewport" id={relatedId} data-related-viewport="true">
+    <ul>{related.map(p=><li><a href={p.href}>{p.label}</a></li>)}</ul>
+  </div>
+  <button type="button" class="industry-related-specializations__toggle" data-related-toggle="true" data-more-label={en?'Show more':'Смотреть дальше'} data-less-label={en?'Show less':'Свернуть'} aria-controls={relatedId} aria-expanded="false" hidden>{en?'Show more':'Смотреть дальше'}</button>
+</aside>}
 <script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@graph':['geo','content','guarantee'].flatMap(id=>serviceNodes(id,lang))}).replace(/</g,'\u003c')}/>
+
+<style>
+/* A compact cross-link preview. Every link remains in the HTML and the
+   complete list stays visible if JavaScript is unavailable. */
+.industry-related-specializations{
+  margin-top:24px;padding-top:19px;border-top:1px solid #e0e8ee;
+  max-width:920px
+}
+.industry-related-specializations h3{
+  margin:0 0 13px;color:#19364c;font-size:18px;line-height:1.35;font-weight:700
+}
+.industry-related-specializations__viewport{position:relative;font-size:15px}
+.industry-related-specializations__viewport ul{
+  display:grid;gap:7px;list-style:none;margin:0;padding:0
+}
+.industry-related-specializations__viewport li{
+  position:relative;margin:0;padding:0 0 0 17px;
+  color:#36576d;font-size:15px;line-height:1.55
+}
+.industry-related-specializations__viewport li::before{
+  content:'›';position:absolute;left:0;top:0;color:#7a91a4
+}
+.industry-related-specializations__viewport a{
+  color:#36576d;text-decoration:none;
+  border-bottom:1px solid rgba(54,87,109,.30);
+  overflow-wrap:anywhere
+}
+.industry-related-specializations__viewport a:hover,
+.industry-related-specializations__viewport a:focus-visible{
+  color:#075e80;text-decoration:underline;text-underline-offset:3px
+}
+.industry-related-specializations.is-collapsed .industry-related-specializations__viewport{
+  max-height:calc(1.55em * 3.9);overflow:hidden
+}
+.industry-related-specializations.is-collapsed .industry-related-specializations__viewport::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:2.6em;
+  background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);
+  pointer-events:none
+}
+.industry-related-specializations__toggle{
+  display:inline-flex;align-items:center;gap:8px;min-height:42px;
+  margin:7px 0 0;padding:5px 4px 5px 0;
+  border:0;background:transparent;color:#075e80;
+  font:700 14px/1.4 Manrope,Arial,sans-serif;
+  cursor:pointer;text-align:left
+}
+.industry-related-specializations__toggle::after{content:'⌄';font-size:21px;line-height:1}
+.industry-related-specializations.is-expanded .industry-related-specializations__toggle::after{content:'⌃'}
+.industry-related-specializations__toggle:hover{text-decoration:underline;text-underline-offset:4px}
+.industry-related-specializations__toggle:focus-visible{outline:2px solid #075e80;outline-offset:3px}
+.industry-related-specializations__toggle[hidden]{display:none}
+@media(max-width:720px){
+  .industry-related-specializations{margin-top:20px;padding-top:17px}
+  .industry-related-specializations h3{font-size:17px;margin-bottom:11px}
+}
+</style>
+<script is:inline>
+(() => {
+  document.querySelectorAll('[data-related-specializations]').forEach(section => {
+    if(section.dataset.relatedInitialized === 'true') return;
+    const viewport=section.querySelector('[data-related-viewport]');
+    const button=section.querySelector('[data-related-toggle]');
+    if(!viewport||!button) return;
+    section.dataset.relatedInitialized='true';
+    section.classList.add('is-collapsed');
+    // Keep short lists fully visible; use the toggle only for long lists.
+    if(viewport.scrollHeight <= viewport.clientHeight + 3){
+      section.classList.remove('is-collapsed');
+      return;
+    }
+    button.hidden=false;
+    button.addEventListener('click', () => {
+      const expanded=!section.classList.contains('is-expanded');
+      section.classList.toggle('is-expanded', expanded);
+      section.classList.toggle('is-collapsed', !expanded);
+      button.setAttribute('aria-expanded',String(expanded));
+      button.textContent=expanded?button.dataset.lessLabel:button.dataset.moreLabel;
+    });
+  });
+})();
+</script>
