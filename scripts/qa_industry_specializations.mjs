@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,74,100,101,102])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
@@ -74,13 +74,13 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/<h1/g)||[]).length,1,'2V education hub H1 '+hub);
  assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+hub+'"'),'2V education hub canonical '+hub);
  assert.ok(html.includes('hreflang="'+(lang==='ru'?'en':'ru')+'" href="https://gaeo.ru'+equivalent+'"'),'2V education hub hreflang '+hub);
- for(const slug of ['private-schools','online-schools-edtech','universities-business-schools']){
+ for(const slug of ['private-schools','online-schools-edtech','universities-business-schools','childrens-education-centres']){
   const href=(lang==='ru'?'/industries/':'/en/industries/')+slug+'/';
   assert.ok(html.includes('href="'+href+'"'),'2V education hub link '+href);
  }
  assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'2V education index link '+hub);
  const list=graph(html).find(x=>x['@type']==='ItemList');
- assert.equal(list?.numberOfItems,3,'2V education hub ItemList '+hub);
+ assert.equal(list?.numberOfItems,4,'2AB education hub ItemList '+hub);
 }
 
 
@@ -165,7 +165,7 @@ try{
    const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:25000});
    assert.equal(response?.status(),200,'2V education hub HTTP '+path);
    assert.equal(await page.locator('main h1').count(),1,'2V education hub H1 '+path);
-   assert.equal(await page.locator('main .industry-problem-grid article').count(),3,'2V education hub sectors '+path);
+   assert.equal(await page.locator('main .industry-problem-grid article').count(),4,'2AB education hub sectors '+path);
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
    assert.ok(overflow<=2,'2V education hub overflow '+path+' width '+width+': '+overflow);
    assert.equal(errors.length,0,'2V education hub JS error '+path+': '+errors.join('; '));
