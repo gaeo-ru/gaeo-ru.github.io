@@ -2,9 +2,14 @@
 import PlanCards from './PlanCards.astro';
 import {pricingHref,serviceHref,serviceNodes} from '../../data/pricing.mjs';
 import {industrySpecializations} from '../../data/industry-specializations.mjs';
+import {getIndustryCatalog} from '../../data/industry-catalog.mjs';
 const {lang='ru',intro='',scopeNote='',sourcePath='',showCatalogLink=true}=Astro.props;const en=lang==='en';
 const route=sourcePath?'/'+sourcePath.replace(/index\.html$/,''):null;
-const related=industrySpecializations.filter(p=>p.parent[lang]===route);
+const catalogNames=new Map(getIndustryCatalog(lang).map(item=>[item.number,item.name]));
+const related=industrySpecializations.filter(p=>p.parent[lang]===route).map(p=>({
+  href:p.routes[lang],
+  label:catalogNames.get(p.id) || p.content[lang].h1,
+}));
 const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'');
 ---
 {intro&&<p class="industry-section__lead">{intro}</p>}
@@ -17,7 +22,7 @@ const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-'
 {related.length>0&&<aside class="industry-related-specializations" aria-label={en?'Related GEO specializations':'Смежные GEO-специализации'} data-related-specializations="true">
   <h3>{en?'Detailed specializations':'Специализации по отрасли'}</h3>
   <div class="industry-related-specializations__viewport" id={relatedId} data-related-viewport="true">
-    <ul>{related.map(p=><li><a href={p.routes[lang]}>{p.content[lang].h1}</a></li>)}</ul>
+    <ul>{related.map(p=><li><a href={p.href}>{p.label}</a></li>)}</ul>
   </div>
   <button type="button" class="industry-related-specializations__toggle" data-related-toggle="true" data-more-label={en?'Show more':'Смотреть дальше'} data-less-label={en?'Show less':'Свернуть'} aria-controls={relatedId} aria-expanded="false" hidden>{en?'Show more':'Смотреть дальше'}</button>
 </aside>}
