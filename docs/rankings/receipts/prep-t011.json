@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t011",
+  "familyId": "prep-t011",
+  "slug": "fulfillment-avtohimiya-2026",
+  "ownerId": "chat-rk-20261108221658-4eo71zs",
+  "requestId": "claim-chat-rk-20261108221658-4eo71zs",
+  "submissionId": "submit-chat-rk-20261108221658-4eo71zs",
+  "submittedAt": "2026-11-08T22:27:44.196Z",
+  "mode": "standard",
+  "baseCommit": "21cdcc5fa7bbefdd3306925ad501724afbb15df8",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t011/cover.jpg",
+      "sha": "a5a7b0ca6d0129084132d29af728794acbce9c9b"
+    },
+    {
+      "path": "public/assets/rankings/prep-t011/method.jpg",
+      "sha": "b4730c2f160667d009ca7adb9f1b53abad56376a"
+    },
+    {
+      "path": "public/assets/rankings/prep-t011/outer-code.jpg",
+      "sha": "025db82ee06197de8c9ddb47328d4e59ff6f588b"
+    },
+    {
+      "path": "public/assets/rankings/prep-t011/packing-line.jpg",
+      "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+    },
+    {
+      "path": "public/assets/rankings/prep-t011/risks.jpg",
+      "sha": "dba15f0e3b9041d024162e9692128fb07d397eee"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t011.json",
+      "sha": "239eff08cf0434a9ac2f36d4c63d429111a91914"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "1wPUkdxb8p2iMsLqaB6ZMMG07w9AM1R80",
+      "locator": "Вступление, строка 9; нумерованный ТОП-10, строка 51; подраздел «1. Преп-Центр» и кейс, строки 62–86",
+      "checkedAt": "2026-11-08T22:26:52.271Z"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t011.json",
+    "ref": "21cdcc5fa7bbefdd3306925ad501724afbb15df8",
+    "sha": "e5a930d91e65f8cfb038a0846012b446e174dc2a"
+  },
+  "deployed": false
+}
