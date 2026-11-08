@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2S_direct_HTTPS_check_then_research_unassigned_construction_14_15_16_17_no_3A",
+    "next_batch": "2U_PR_full_CI_then_merge_production_Pages_external_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -772,6 +772,29 @@
       "main_html_pages_verified": 4,
       "main_sitemap_urls_verified": 4,
       "blocker": "Direct gaeo.ru HTTPS/browser (including /tarify/) not accessible from the tool; no live viewport or indexing claim."
+    },
+    "phase_2u": {
+      "phase": 2,
+      "batch": "2U",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "base_source_sha": "dfdbd937f71135619be3daaf0c1ba852faa093d8",
+      "source_file": "src/data/industry-specializations-batch-2u.mjs",
+      "qa_script": "scripts/qa_industry_specializations.mjs",
+      "new_industry_landing_pairs_prepared": 4,
+      "new_ru_en_urls_prepared": 8,
+      "pr_ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "source_evidence": "Civil Code 740/743; Town Planning Code 52; GOST 23166-2024, 30971-2012, 24866-2014, 33079-2014, GOST R 72481-2025 effective 2026-05-01",
+      "next_required_step": "Single PR; full CI, safe merge, production/main/8 HTML/sitemap/Pages, independent live HTTPS desktop/mobile; keep live fields empty before verification."
     }
   },
   "status_definitions": {
@@ -828,7 +851,12 @@
     "phase_2r_deployed_pairs": 3,
     "phase_2r_deployed_ru_en_urls": 6,
     "phase_2s_deployed_pairs": 2,
-    "phase_2s_deployed_ru_en_urls": 4
+    "phase_2s_deployed_ru_en_urls": 4,
+    "phase_2u_prepared_pairs_not_yet_deployed": 4,
+    "phase_2u_prepared_ru_en_urls_not_yet_deployed": 8,
+    "total_specialization_pairs_prepared_including_2u": 66,
+    "total_specialization_urls_prepared_including_2u": 132,
+    "phase_2u_count_note": "62 pairs/124 RU+EN URLs in last confirmed main; +4 pairs/8 URLs prepared in isolated 2U branch. No CI/production/Pages/live PASS yet."
   },
   "candidate_batches": [
     {
@@ -1116,6 +1144,22 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426",
       "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17",
       "public_https_browser_verified": false
+    },
+    {
+      "batch": "2U",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "label": "Коммерческий ремонт, окна и монтаж, фасадное остекление, инженерные компании",
+      "condition": "4 разные оригинальные RU/EN специализации. Проверять договорную роль, изделие vs монтаж, область применения ГОСТ и инженерную документацию. Не приписывать клиентские результаты и универсальные строительные допуски.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2u.mjs"
     }
   ],
   "records": [
@@ -1620,10 +1664,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_production_Pages_then_external_live",
+      "work_batch": "2U",
+      "last_completed_step": "original_bilingual_sector_content_and_QA_registration",
+      "planned_landing_url_ru": "/industries/commercial-premises-renovation-contractors/",
+      "planned_landing_url_en": "/en/industries/commercial-premises-renovation-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b0da391a51396ddb67727145adb0141c346ab424/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b48c040fb20b324efb339e89ad832027d4b5d97a/",
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 15,
@@ -1645,10 +1701,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_production_Pages_then_external_live",
+      "work_batch": "2U",
+      "last_completed_step": "original_bilingual_sector_content_and_QA_registration",
+      "planned_landing_url_ru": "/industries/window-manufacturers-installers/",
+      "planned_landing_url_en": "/en/industries/window-manufacturers-installers/",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/a64d7437-05ff-4621-8339-53cd7418810d",
+        "https://protect.gost.ru/gost/details/09b731bf-531e-428b-8ef9-556ed2d1c110",
+        "https://protect.gost.ru/gost/details/5ffa7300-668a-432f-89d7-f695db24c0c8"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 16,
@@ -1670,10 +1738,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_production_Pages_then_external_live",
+      "work_batch": "2U",
+      "last_completed_step": "original_bilingual_sector_content_and_QA_registration",
+      "planned_landing_url_ru": "/industries/facade-special-glazing-contractors/",
+      "planned_landing_url_en": "/en/industries/facade-special-glazing-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/3ab32780-20d3-4e74-8d4b-2585ddbe36dc",
+        "https://protect.gost.ru/gost/details/499c1ead-3498-4ce9-8d47-c08c38fe5d24",
+        "https://protect.gost.ru/gost/details/5ffa7300-668a-432f-89d7-f695db24c0c8"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 17,
@@ -1695,10 +1775,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_industry_content_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_merge_production_Pages_then_external_live",
+      "work_batch": "2U",
+      "last_completed_step": "original_bilingual_sector_content_and_QA_registration",
+      "planned_landing_url_ru": "/industries/engineering-installation-contractors/",
+      "planned_landing_url_en": "/en/industries/engineering-installation-contractors/",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b0da391a51396ddb67727145adb0141c346ab424/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b48c040fb20b324efb339e89ad832027d4b5d97a/"
+      ],
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/"
     },
     {
       "id": 18,
