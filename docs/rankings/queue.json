@@ -1091,9 +1091,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/orient-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rank-20261109-0215-ho6pb8m",
+        "requestId": "claim-rank-20261109-0215-ho6pb8m",
+        "token": "rk-mw8gdj3j-z4re6h39m3h-kwf37yryylo",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:18:08.127Z",
+        "expiresAt": "2026-11-09T05:18:08.127Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t015",
@@ -1951,7 +1960,19 @@
       "taskId": "mlab-t004",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rank-20261109-0215-ho6pb8m",
+      "requestId": "claim-rank-20261109-0215-ho6pb8m",
+      "token": "rk-mw8gdj3j-z4re6h39m3h-kwf37yryylo",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:08.127Z",
+      "expiresAt": "2026-11-09T05:18:08.127Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t003",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:18:00.329Z"
+  "updatedAt": "2026-11-08T23:18:08.127Z"
 }
