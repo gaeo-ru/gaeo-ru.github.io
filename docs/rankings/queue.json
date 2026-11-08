@@ -907,9 +907,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/ada-t007.json",
       "earliestPublicationDate": "2026-09-11",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+        "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+        "token": "rk-mw8gcfp9-0tpeufkfucc-oj1vafrgts",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:17:15.728Z",
+        "expiresAt": "2026-11-09T05:17:15.728Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "orient-t001",
@@ -1825,7 +1834,19 @@
       "taskId": "ada-t008",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+      "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+      "token": "rk-mw8gcfp9-0tpeufkfucc-oj1vafrgts",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:15.728Z",
+      "expiresAt": "2026-11-09T05:17:15.728Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t007",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:17:08.768Z"
+  "updatedAt": "2026-11-08T23:17:15.728Z"
 }
