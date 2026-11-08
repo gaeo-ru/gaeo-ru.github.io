@@ -969,21 +969,55 @@
       "slug": "moto-latam-2026",
       "title": "Мото-туры по Бразилии и Латинской Америке с полной организацией путешествия",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t008.json",
       "earliestPublicationDate": "2026-09-11",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rnk-mw8gbzll-ha5v4l8y5",
         "ownerId": "chat-rnk-mw8gbzll-ha5v4l8y5",
         "requestId": "claim-rnk-mw8gbzll-ha5v4l8y5",
         "token": "rk-mw8gc9xw-uhbsd2aajq-nascat7ig9p",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:08.768Z",
-        "expiresAt": "2026-11-09T05:17:08.768Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t008.json",
+        "committedAt": "2026-11-08T23:34:48.782Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t008/ada-moto-route.jpg",
+            "sha": "3eeea278d883c98d897817808de4d3e77dc2a0d2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/brazil-coastal-road.jpg",
+            "sha": "59131e5050441575f385b3a6b957a9633d41e3bd"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/brazil-winding-road.jpg",
+            "sha": "0cfd204ba80cf3eff9f690e65f3a6dbb08ea7920"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/capitolio-stop.jpg",
+            "sha": "b631a59dcde7bbb8adca50fe093b9c988dee013f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/cover.jpg",
+            "sha": "83968e48d18e1b8b0226345a8468b180a0a5b6dd"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t008.json",
+            "sha": "7889950831833a46dca4e823e64dab610eb9bcff"
+          }
+        ],
+        "baseCommit": "8d6a14733af55708c0b5a1dd9a285d45626980e2"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1uGoJI7gOTGrZtPIJc24bZ7NoXS2K15mj/view",
+        "locator": "Раздел «Короткий рейтинг»: 1. Ada Tours — 94/100, затем раздел «1. Ada Tours»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t007",
@@ -2428,8 +2462,9 @@
       "expiresAt": "2026-11-09T05:17:08.768Z",
       "previousStatus": "ready",
       "taskId": "ada-t008",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rnk-mw8gbzll-ha5v4l8y5"
     },
     {
       "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
@@ -2648,5 +2683,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:34:33.111Z"
+  "updatedAt": "2026-11-08T23:34:48.782Z"
 }
