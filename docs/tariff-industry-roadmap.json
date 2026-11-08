@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Y_full_pr_ci_then_source_merge_production_main_pages_and_direct_https; preserve open_2U_2V",
+    "next_batch": "2X_rebased_full_CI_then_production_pages_and_HTTPS_preserve_2Y_2U_2V_2W",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -841,6 +841,43 @@
       "evidence_policy": "Differentiate crop and veterinary traceability; check registered agrochemicals and seed information per product. No unverified supplier credentials or client GEO outcomes.",
       "original_catalogue_count_preserved": 107,
       "shared_prices_and_bmr_unchanged": true
+    },
+    "phase_2x": {
+      "phase": 2,
+      "batch": "2X",
+      "status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_module": "src/data/industry-specializations-batch-2x.mjs",
+      "records": [
+        100,
+        101,
+        102
+      ],
+      "new_specialization_pairs": 3,
+      "new_ru_en_specialization_urls": 6,
+      "additional_hub_routes": [
+        "/industries/local-services/",
+        "/en/industries/local-services/"
+      ],
+      "new_total_html_pages": 8,
+      "source_base_commit": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "pr_ci_status": "rerun_required_after_rebase_on_2y",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false,
+      "parallel_prs_preserved": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/108"
+      ],
+      "non_overlap_note": "2U #17/18; 2V #68/69/70; 2X #100/101/102; 2W assignment must be rechecked before merging.",
+      "completed_work": "Original bilingual content, new local-services RU/EN hub and corresponding general industry index links; registered module and QA.",
+      "next_required_step": "Full PR CI after rebase on source with 2Y, then merge after PASS, production/main 8 HTML+sitemap and GitHub Pages; independent HTTPS.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/111",
+      "initial_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482630867",
+      "initial_ci_failure": "editorial contrast 'а не' in local RU hub; corrected in 273ea171cebb",
+      "pre_rebase_pass_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482727976",
+      "base_source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "preserved_2y_source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2"
     }
   },
   "status_definitions": {
@@ -902,7 +939,10 @@
     "phase_2t_prepared_ru_en_urls_not_deployed": 6,
     "phase_2y_prepared_pairs_not_deployed": 2,
     "phase_2y_prepared_ru_en_urls_not_deployed": 4,
-    "phase_2y_counts_note": "Batch 2Y is prepared in an isolated branch, not included in current main release. Published 62 pairs/124 RU+EN specialization pages remain unchanged until source/production/Pages verification. Open 2U/2V PRs are independent and excluded from these 2Y-only prepared counts."
+    "phase_2y_counts_note": "Batch 2Y is prepared in an isolated branch, not included in current main release. Published 62 pairs/124 RU+EN specialization pages remain unchanged until source/production/Pages verification. Open 2U/2V PRs are independent and excluded from these 2Y-only prepared counts.",
+    "phase_2x_prepared_specialization_pairs_not_deployed": 3,
+    "phase_2x_prepared_specialization_urls_not_deployed": 6,
+    "phase_2x_prepared_hub_urls_not_deployed": 2
   },
   "candidate_batches": [
     {
@@ -1227,6 +1267,29 @@
       "work_status": "source_prepared_pr_pending",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "work_branch": "feat/industry-specializations-batch-2y-2026-11-08"
+    },
+    {
+      "batch": "2X",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        100,
+        101,
+        102
+      ],
+      "label": "Салоны красоты и косметологические кабинеты, клининг, ремонт бытовой техники",
+      "condition": "3 distinct RU/EN local service pages plus bilingual hub: clinical versus everyday cosmetology, current SP 2.1.4284-26 since Sep 2026, cleaning standards R 51870-2014 / R 57582-2017 / R 72719-2026, domestic services rule 1514 expires Jan 2027, workshop authorisation vs independent. No fabricated clients, provider licence or guaranteed outcomes. Do not modify 107 catalogue prices or contractual BMR. Parallel 2U #17-18 and 2V #68-70 remain independent.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "hub_routes": {
+        "ru": "/industries/local-services/",
+        "en": "/en/industries/local-services/"
+      },
+      "pr_ci_status": "not_started",
+      "production_status": "not_started",
+      "pages_status": "not_started",
+      "public_https_browser_verified": false
     }
   ],
   "records": [
@@ -4959,10 +5022,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/beauty-salons-cosmetology-practices/",
+      "planned_landing_url_en": "/en/industries/beauty-salons-cosmetology-practices/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://mru42.fmba.gov.ru/press-tsentr/detail/?ELEMENT_ID=87587",
+        "https://www.roszdravnadzor.gov.ru/medactivities/licensing/news/35556",
+        "https://www.consultant.ru/document/cons_doc_LAW_363382/"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 101,
@@ -4984,10 +5058,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/cleaning-companies/",
+      "planned_landing_url_en": "/en/industries/cleaning-companies/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/cdda6455-2619-48eb-b04f-5b42b8115ec8",
+        "https://protect.gost.ru/gost/details/487c0d2e-6c5f-4803-9a86-3b430f1434f1",
+        "https://protect.gost.ru/gost/details/c0ff12a0-655e-47db-9c30-6dbf2499eeba"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 102,
@@ -5009,10 +5094,21 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/home-appliance-repair-services/",
+      "planned_landing_url_en": "/en/industries/home-appliance-repair-services/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://62.rospotrebnadzor.ru/content/prava-potrebiteley-pri-okazanii-uslug-po-remontu-bytovoy-tehniki-0",
+        "https://www.consultant.ru/document/cons_doc_LAW_363382/",
+        "https://zpp.rospotrebnadzor.ru/news/federal/536006"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 103,

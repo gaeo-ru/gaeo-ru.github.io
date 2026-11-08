@@ -18,6 +18,7 @@ import {industrySpecializationsBatch2Q} from './industry-specializations-batch-2
 import {industrySpecializationsBatch2R} from './industry-specializations-batch-2r.mjs';
 import {industrySpecializationsBatch2S} from './industry-specializations-batch-2s.mjs';
 import {industrySpecializationsBatch2T} from './industry-specializations-batch-2t.mjs';
+import {industrySpecializationsBatch2X} from './industry-specializations-batch-2x.mjs';
 import {industrySpecializationsBatch2Y} from './industry-specializations-batch-2y.mjs';
 
 export const industrySpecializations = [
@@ -5050,6 +5051,7 @@ export const industrySpecializations = [
   ...industrySpecializationsBatch2R,
   ...industrySpecializationsBatch2S,
   ...industrySpecializationsBatch2T,
+  ...industrySpecializationsBatch2X,
   ...industrySpecializationsBatch2Y
 ];
 
