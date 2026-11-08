@@ -593,6 +593,64 @@
       "main_structural_checks": "PASS: 1 H1, 5 FAQ, four buyer scenarios, Service and FAQPage, self-canonical, reciprocal hreflang, canonical prices, image path, inquiry CTA",
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42424572614",
       "public_https_limitation": "web tool unable to open 3 new RU URLs or /tarify/, local Python HTTPS fails to resolve gaeo.ru; live images/forms/mobile not verified"
+    },
+    "phase_2k": {
+      "phase": 2,
+      "batch": "2K",
+      "status": "rebased_source_prepared_ci_pending",
+      "records": [
+        92,
+        93,
+        94
+      ],
+      "source_file": "src/data/industry-specializations-batch-2k.mjs",
+      "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/89",
+      "work_branch": "release/recover-2k-2l-2o-2026-11-08",
+      "pr_ci_status": "pending",
+      "production_status": "not_run",
+      "pages_status": "not_run",
+      "public_https_browser_verified": false,
+      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts"
+    },
+    "phase_2l": {
+      "phase": 2,
+      "batch": "2L",
+      "status": "rebased_source_prepared_ci_pending",
+      "records": [
+        7,
+        9,
+        11
+      ],
+      "source_file": "src/data/industry-specializations-batch-2l.mjs",
+      "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/91",
+      "work_branch": "release/recover-2k-2l-2o-2026-11-08",
+      "pr_ci_status": "pending",
+      "production_status": "not_run",
+      "pages_status": "not_run",
+      "public_https_browser_verified": false,
+      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts"
+    },
+    "phase_2o": {
+      "phase": 2,
+      "batch": "2O",
+      "status": "rebased_source_prepared_ci_pending",
+      "records": [
+        55,
+        56,
+        57
+      ],
+      "source_file": "src/data/industry-specializations-batch-2o.mjs",
+      "old_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/95",
+      "work_branch": "release/recover-2k-2l-2o-2026-11-08",
+      "pr_ci_status": "pending",
+      "production_status": "not_run",
+      "pages_status": "not_run",
+      "public_https_browser_verified": false,
+      "next_required_step": "Full CI on combined restored sources, then merge into astro-source, publish to main and Pages, independently check public HTTPS and mobile layouts",
+      "hub_routes": {
+        "ru": "/industries/international-logistics/",
+        "en": "/en/industries/international-logistics/"
+      }
     }
   },
   "status_definitions": {
@@ -1160,10 +1218,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 8,
@@ -1220,10 +1278,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 10,
@@ -1283,10 +1341,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 12,
@@ -2883,10 +2941,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 56,
@@ -2908,10 +2966,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 57,
@@ -2933,10 +2991,10 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 58,
@@ -4104,10 +4162,10 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 93,
@@ -4137,10 +4195,10 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 94,
@@ -4170,10 +4228,10 @@
       "landing_url_en": null,
       "status": "catalog_ready",
       "match_scope": "related_only",
-      "content_status": "not_started",
+      "content_status": "bilingual_landing_prepared_rebased_ci_pending",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "prepare_specialized_content"
+      "work_status": "restored_in_isolated_branch_ci_pending",
+      "next_required_step": "full_ci_then_production_pages_and_independent_https"
     },
     {
       "id": 95,
