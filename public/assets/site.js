@@ -276,6 +276,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ];
 
     const rightItems = isEn ? [
+      ['Rankings','/en/rankings/'],
       ['Articles','/en/articles/'],
       ['Publications','/en/publications/'],
       ['Rankings and External Mentions','/en/publications/ratings/'],
@@ -286,6 +287,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Privacy policy','/en/privacy-policy/'],
       ['Personal data processing','/en/personal-data-consent/']
     ] : [
+      ['Рейтинги','/rankings/'],
       ['Статьи','/articles/'],
       ['Публикации','/publications/'],
       ['Рейтинги и внешние упоминания','/publications/ratings/'],
@@ -304,6 +306,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         if(href) a.href = href;
         a.textContent = label;
         if(/^\/(?:en\/)?publications\/[^/]+\/$/.test(href)) a.className = 'footer-publication-link';
+        if(/^\/(?:en\/)?rankings\/$/.test(href)) a.className = 'footer-rankings-link';
         if(footerLang && column === right){
           column.insertBefore(a, footerLang);
         }else{

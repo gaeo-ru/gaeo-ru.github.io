@@ -76,6 +76,7 @@ if(!origin){
 const {chromium}=await import('playwright');
 let browser;
 const report=[];mkdirSync('visual-rankings',{recursive:true});
+const footerChecks=[];
 try{
   browser=await chromium.launch({headless:true,args:['--no-sandbox']});
   const context=await browser.newContext({reducedMotion:'reduce'});
@@ -87,6 +88,9 @@ try{
     for(const path of paths){
       const response=await page.goto(origin+path,{waitUntil:'networkidle'});assert.equal(response.status(),200,'Public response '+path);
       assert.equal(await page.locator('h1').count(),1,'One visible main heading');
+      const footerLink=page.locator(`footer a:not(.lang-link)[href="${route(path.startsWith('/en/')?'en':'ru')}"]`);
+      assert.equal(await footerLink.count(),1,'One rankings footer link after JavaScript');
+      assert.ok(await footerLink.isVisible(),'Rankings footer entry remains visible after shared navigation rebuild');
       const overflow=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
       if(overflow.document>width+1)console.error('OVERFLOW_ELEMENTS',path,width,await page.evaluate(()=>Array.from(document.querySelectorAll('body *')).filter(e=>!e.closest('.ranking-table-scroll')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,class:e.className,text:e.textContent.slice(0,75),right:e.getBoundingClientRect().right})).slice(0,15)));
       assert.ok(overflow.document<=width+1,`No horizontal page overflow ${width} ${path}: ${JSON.stringify(overflow)}`);
@@ -121,7 +125,17 @@ try{
       report.push({path,width,status:200,overflow:false,images:a?a.images.length:null,faq:a?'native-details-pass':null});
     }
   }
+  for(const width of [1440,390,320])for(const lang of ['ru','en']){
+    await page.setViewportSize({width,height:960});
+    const path=lang==='en'?'/en/':'/';
+    const response=await page.goto(origin+path,{waitUntil:'networkidle'});assert.equal(response.status(),200);
+    const footerLink=page.locator(`footer a:not(.lang-link)[href="${route(lang)}"]`);
+    assert.equal(await footerLink.count(),1,'One homepage footer link after JavaScript');
+    assert.ok(await footerLink.isVisible(),'Homepage footer provides a real visible archive entry');
+    assert.equal(await page.locator(`header a[href="${route(lang)}"]`).count(),0,'No archive entry added to the homepage header');
+    footerChecks.push({path,width,visible:true,headerEntry:false});
+  }
   assert.deepEqual(errors,[],'No page JavaScript errors');
-  writeFileSync('visual-rankings/report.json',JSON.stringify({origin,checkedAt:new Date().toISOString(),result:'pass',checks:report},null,2)+'\n');
-  console.log(`RANKINGS_BROWSER=PASS; ${report.length} route/viewport checks; widths=1440,390,320; origin=${origin}`);
+  writeFileSync('visual-rankings/report.json',JSON.stringify({origin,checkedAt:new Date().toISOString(),result:'pass',checks:report,footerChecks},null,2)+'\n');
+  console.log(`RANKINGS_BROWSER=PASS; ${report.length} route/viewport checks; footer_checks=${footerChecks.length}; widths=1440,390,320; origin=${origin}`);
 }finally{if(browser)await browser.close();if(server)await new Promise(r=>server.close(r));}
