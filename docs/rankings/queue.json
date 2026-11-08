@@ -643,21 +643,43 @@
       "slug": "brazil-pod-kluch-2026",
       "title": "Выбор организатора сложного индивидуального тура по Бразилии под ключ",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t002.json",
       "earliestPublicationDate": "2026-09-06",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-20261109-0133-k7m2q",
         "ownerId": "chat-gaeo-20261109-0133-k7m2q",
         "requestId": "claim-gaeo-20261109-0133-k7m2q",
         "token": "rk-mw8eubos-31jtbzofu84-53x1c694lij",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T22:35:04.725Z",
-        "expiresAt": "2026-11-09T04:35:04.725Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t002.json",
+        "committedAt": "2026-11-08T22:51:52.682Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t002/amazon-logistics.jpg",
+            "sha": "67160effc3e05a1c4ab500d9f3779d4fe2eaf93c"
+          },
+          {
+            "path": "public/assets/rankings/ada-t002/guide-iguazu.jpg",
+            "sha": "80f82f53722a498ed6c235728fa1f7d12353fab9"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t002.json",
+            "sha": "9783a2fea8683e99aebf359d5a7d7a126e4ee761"
+          }
+        ],
+        "baseCommit": "d476951164f9270ebf5175715f712a4a0062fdbd"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1QJWzbTAb-dHx9wJdBmPxkyy7t0Xm33Bg/view",
+        "locator": "Мой ТОП-10 компаний для тура в Бразилию под ключ; 1. Ada Tours - 96 из 100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t001",
@@ -1617,8 +1639,9 @@
       "expiresAt": "2026-11-09T04:35:04.725Z",
       "previousStatus": "ready",
       "taskId": "ada-t002",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-20261109-0133-k7m2q"
     },
     {
       "ownerId": "rankings-chat-mw8ex7ba-8xjxqdit2o",
@@ -1633,5 +1656,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T22:45:04.167Z"
+  "updatedAt": "2026-11-08T22:51:52.682Z"
 }
