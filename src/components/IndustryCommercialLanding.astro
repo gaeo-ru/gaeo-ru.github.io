@@ -24,7 +24,7 @@ const en = page.language === 'en';
       </div>
       <p class="industry-hero__byline">{en ? 'Personally led by' : 'Лично ведет'} <a href={page.about.link.href}>{page.about.name}</a>, {en ? 'GEO/AEO consultant' : 'независимый GEO/AEO-эксперт'}</p>
     </div>
-    <figure class="industry-hero__media">
+    <figure class={`industry-hero__media industry-commercial__media ${page.heroImage.native?'industry-commercial__media--native':'industry-commercial__media--image'}`}>
       {page.heroImage.native ? (
         <div class="industrial-hero-art" role="group" aria-label={page.heroImage.alt}>
           <div class="industrial-hero-art__intro">
@@ -243,3 +243,28 @@ const en = page.language === 'en';
     </div>
   </div>
 </section>
+
+<style>
+/* Seven pre-existing industry commercial landings: keep meaningful captions
+   under their image instead of beside it, on desktop as well as mobile. */
+.industry-commercial__media{display:block;align-self:center;width:100%;min-width:0}
+.industry-hero .industry-hero__media.industry-commercial__media>img{
+ display:block;width:100%;height:auto;max-height:560px;aspect-ratio:auto;
+ object-fit:contain;object-position:center;margin-inline:auto
+}
+.industry-commercial__media figcaption{
+ display:block;text-align:center;line-height:1.5;margin-top:12px
+}
+@media(max-width:720px){
+ .industry-hero .industry-hero__media.industry-commercial__media--image{
+  width:100vw;max-width:none;margin-inline:calc(50% - 50vw)
+ }
+ .industry-hero .industry-hero__media.industry-commercial__media>img{
+  width:100%;height:auto;max-height:none;aspect-ratio:auto;
+  object-fit:contain;object-position:center;border-radius:0;box-shadow:none
+ }
+ .industry-commercial__media--image figcaption{
+  padding-inline:20px;margin-block:12px 0
+ }
+}
+</style>
