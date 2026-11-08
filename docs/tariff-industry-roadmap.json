@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Z reassigned to #103/#105 in existing PR #109 after 2Y #106/#107 source merge; PR CI, production, main, Pages, external HTTPS pending",
+    "next_batch": "2U_2V_2W_2X_2AA_merge_after_full_CI_then_production_main_pages_and_public_https",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -872,6 +872,218 @@
       "production_status": "not_started",
       "pages_status": "not_started",
       "public_https_browser_verified": false
+    },
+    "phase_2u": {
+      "phase": 2,
+      "batch": "2U",
+      "status": "consolidated_release_pr_ci_pending",
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2u.mjs",
+      "records": [
+        17,
+        18
+      ],
+      "new_industry_landing_pairs": 2,
+      "new_html_pages": 4,
+      "pr_ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "excluded_duplicate_catalogue_ids": [
+        14,
+        15,
+        16
+      ],
+      "exclusion_reason": "2T PR #106 owns 14/15/16; 2V PR #107 has overlapping competitor pages; 2U only 17/18.",
+      "next_required_step": "PR full CI, safe merge, production/main 4 pages and sitemap, Pages and external HTTPS separately.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/108",
+      "original_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42480248815"
+    },
+    "phase_2v": {
+      "phase": 2,
+      "batch": "2V",
+      "status": "consolidated_release_pr_ci_pending",
+      "records": [
+        68,
+        69,
+        70
+      ],
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+      "hub_routes": {
+        "ru": "/industries/education-providers/",
+        "en": "/en/industries/education-providers/"
+      },
+      "new_industry_landing_pairs": 3,
+      "new_specialization_html_pages": 6,
+      "new_hub_html_pages": 2,
+      "new_html_pages": 8,
+      "pr_ci_status": "pending",
+      "source_merged": false,
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "previous_2v_collision_removed": "Construction IDs 14-16 already in 2T PR106 and 2U branch; 2V reassigned to free education IDs",
+      "last_completed_step": "original_education_source_data_hubs_directory_links_and_qa_prepared",
+      "next_required_step": "Retarget existing PR107 to clean tree; full CI; merge after conflict check; verify main/pages and 8 direct HTTPS URLs",
+      "sources_by_id": {
+        "68": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/dda3cee5868d1739eb34ccd9e8a98085fa2c76e2/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/a2c973958cc01dcacbd2106b8f88d6dfdf86e320/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/16484fcceccbff241e7f0387146f346240cb050e/"
+        ],
+        "69": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/9ab9b85e5291f25d6986b5301ab79c23f0055ca4/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/dda3cee5868d1739eb34ccd9e8a98085fa2c76e2/"
+        ],
+        "70": [
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/a2c973958cc01dcacbd2106b8f88d6dfdf86e320/",
+          "https://www.consultant.ru/document/cons_doc_LAW_140174/16484fcceccbff241e7f0387146f346240cb050e/"
+        ]
+      },
+      "original_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42480469338"
+    },
+    "phase_2w": {
+      "phase": 2,
+      "batch": "2W",
+      "status": "consolidated_release_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "records": [
+        59,
+        60,
+        61
+      ],
+      "source_file": "src/data/industry-specializations-batch-2w.mjs",
+      "hub_routes": {
+        "ru": "/industries/medical-care-providers/",
+        "en": "/en/industries/medical-care-providers/"
+      },
+      "new_industry_landing_pairs": 3,
+      "new_specialization_html_pages": 6,
+      "new_hub_html_pages": 2,
+      "new_html_pages": 8,
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "pr_ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "parallel_batch_reservations": [
+        "2U=17/18",
+        "2V=68/69/70",
+        "2T=14/15/16 already merged"
+      ],
+      "sources_by_id": {
+        "59": [
+          "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/256d3c9ccb172b31210f5f1728fd5a3f538a3cce/",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+        ],
+        "60": [
+          "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+          "https://www.consultant.ru/document/cons_doc_LAW_542698/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+          "https://base.garant.ru/74710260/"
+        ],
+        "61": [
+          "https://www.consultant.ru/document/cons_doc_LAW_385548/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/",
+          "https://mintrud.gov.ru/docs/laws/104"
+        ]
+      },
+      "last_completed_step": "bilingual_medical_specializations_hub_and_industry_indexes_source_prepared",
+      "next_required_step": "One PR full CI; safe merge preserving concurrent 2U/2V, production/main manifest eight HTML+URLs, Pages and separate external HTTPS.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/112",
+      "original_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42483737884"
+    },
+    "phase_2x": {
+      "phase": 2,
+      "batch": "2X",
+      "status": "consolidated_release_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_module": "src/data/industry-specializations-batch-2x.mjs",
+      "records": [
+        100,
+        101,
+        102
+      ],
+      "new_specialization_pairs": 3,
+      "new_ru_en_specialization_urls": 6,
+      "additional_hub_routes": [
+        "/industries/local-services/",
+        "/en/industries/local-services/"
+      ],
+      "new_total_html_pages": 8,
+      "source_base_commit": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "pr_ci_status": "rerun_required_after_rebase_on_2y",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "parallel_prs_preserved": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/108"
+      ],
+      "non_overlap_note": "2U #17/18; 2V #68/69/70; 2X #100/101/102; 2W assignment must be rechecked before merging.",
+      "completed_work": "Original bilingual content, new local-services RU/EN hub and corresponding general industry index links; registered module and QA.",
+      "next_required_step": "Full PR CI after rebase on source with 2Y, then merge after PASS, production/main 8 HTML+sitemap and GitHub Pages; independent HTTPS.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/111",
+      "initial_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482630867",
+      "initial_ci_failure": "editorial contrast 'а не' in local RU hub; corrected in 273ea171cebb",
+      "pre_rebase_pass_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482727976",
+      "base_source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "preserved_2y_source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
+      "original_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42483780914"
+    },
+    "phase_2aa": {
+      "phase": 2,
+      "batch": "2AA",
+      "records": [
+        71,
+        72,
+        74
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "original_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359",
+      "status": "consolidated_release_pr_ci_pending",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false
+    },
+    "phase_2_consolidated_through_2aa": {
+      "phase": 2,
+      "parts": [
+        "2U",
+        "2V",
+        "2W",
+        "2X",
+        "2AA"
+      ],
+      "records": [
+        17,
+        18,
+        59,
+        60,
+        61,
+        68,
+        69,
+        70,
+        71,
+        72,
+        74,
+        100,
+        101,
+        102
+      ],
+      "prepared_specialization_pairs": 14,
+      "prepared_ru_en_specialization_urls": 28,
+      "prepared_ru_en_hub_urls": 6,
+      "status": "consolidated_release_pr_ci_pending",
+      "source_branch": "astro-source",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "exclusions": "2Z already merged into astro-source via PR #109; preserve 2Y and 107 catalogue IDs. Live only after independent HTTPS."
     }
   },
   "status_definitions": {
@@ -1907,10 +2119,23 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_PR_CI_safe_merge_production_Pages_then_external_HTTPS",
+      "work_batch": "2U",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "planned_landing_url_ru": "/industries/engineering-installation-contractors/",
+      "planned_landing_url_en": "/en/industries/engineering-installation-contractors/",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_51040/df32b8231cf067c4d4e864c717eb6b398358b504/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b0da391a51396ddb67727145adb0141c346ab424/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/b48c040fb20b324efb339e89ad832027d4b5d97a/"
+      ],
+      "last_completed_step": "bilingual_original_qa_loader",
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/",
+      "public_https_browser_verified": false
     },
     {
       "id": 18,
@@ -1932,10 +2157,23 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_ru_en_content_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_PR_CI_safe_merge_production_Pages_then_external_HTTPS",
+      "work_batch": "2U",
+      "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
+      "planned_landing_url_ru": "/industries/landscape-site-improvement-contractors/",
+      "planned_landing_url_en": "/en/industries/landscape-site-improvement-contractors/",
+      "evidence_sources": [
+        "https://protect.gost.ru/sp/details/8d5a8ef5-f450-4356-ac88-72cd17c416cf",
+        "https://protect.gost.ru/gost/details/c4141c07-9d4b-441f-8396-4baa6243fade",
+        "https://www.consultant.ru/document/cons_doc_LAW_546063/"
+      ],
+      "last_completed_step": "bilingual_original_qa_loader",
+      "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
+      "related_methodology_en": "/en/geo-for-real-estate/",
+      "public_https_browser_verified": false
     },
     {
       "id": 19,
@@ -3558,10 +3796,23 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/private-medical-clinics/",
+      "planned_landing_url_en": "/en/industries/private-medical-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/256d3c9ccb172b31210f5f1728fd5a3f538a3cce/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA",
+      "public_https_browser_verified": false
     },
     {
       "id": 60,
@@ -3583,10 +3834,23 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/dental-clinics/",
+      "planned_landing_url_en": "/en/industries/dental-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_542698/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+        "https://base.garant.ru/74710260/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA",
+      "public_https_browser_verified": false
     },
     {
       "id": 61,
@@ -3608,10 +3872,23 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/diagnostic-centres-medical-laboratories/",
+      "planned_landing_url_en": "/en/industries/diagnostic-centres-medical-laboratories/",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_385548/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/",
+        "https://mintrud.gov.ru/docs/laws/104"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA",
+      "public_https_browser_verified": false
     },
     {
       "id": 62,
@@ -3798,13 +4075,17 @@
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Частные школы",
       "service_name": "Продвижение в ответах нейросетей для частных школ",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-068",
       "sheet_row": 69,
       "priority": 1,
@@ -3812,24 +4093,37 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/private-schools/",
+      "planned_landing_url_en": "/en/industries/private-schools/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared",
+      "work_batch": "2V"
     },
     {
       "id": 69,
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Онлайн-школы и EdTech",
       "service_name": "Продвижение в ответах нейросетей для онлайн-школ и EdTech-компаний",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-069",
       "sheet_row": 70,
       "priority": 1,
@@ -3837,24 +4131,37 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/online-schools-edtech/",
+      "planned_landing_url_en": "/en/industries/online-schools-edtech/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared",
+      "work_batch": "2V"
     },
     {
       "id": 70,
       "industry_group": "Образование, кадры и консалтинг",
       "business_category": "Вузы и бизнес-школы",
       "service_name": "Продвижение в ответах нейросетей для вузов и бизнес-школ",
-      "existing_cluster": null,
-      "existing_cluster_url": null,
-      "mapping_type": "new_subject_requires_content",
-      "supporting_pages": [],
-      "link_relation": null,
-      "existing_cluster_url_en": null,
-      "supporting_pages_en": [],
+      "existing_cluster": "education-providers",
+      "existing_cluster_url": "/industries/education-providers/",
+      "mapping_type": "specialization_under_new_education_hub_pending_release",
+      "supporting_pages": [
+        "/strategies/measurement/"
+      ],
+      "link_relation": "planned_education_hub_exact_bilingual_backlinks",
+      "existing_cluster_url_en": "/en/industries/education-providers/",
+      "supporting_pages_en": [
+        "/en/strategies/measurement/"
+      ],
       "stable_id": "industry-070",
       "sheet_row": 71,
       "priority": 1,
@@ -3862,11 +4169,20 @@
       "landing_url_ru": null,
       "landing_url_en": null,
       "status": "needs_content",
-      "match_scope": "none",
-      "content_status": "not_started",
+      "match_scope": "dedicated_original_bilingual_specialization",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR107_FULL_CI_SAFE_MERGE_PRODUCTION_MAIN_PAGES_EXTERNAL_HTTPS",
+      "work_branch": "feat/industry-specializations-batch-2v-2026-11-08",
+      "batch": "2V",
+      "source_file": "src/data/industry-specializations-batch-2v.mjs",
+      "planned_landing_url_ru": "/industries/universities-business-schools/",
+      "planned_landing_url_en": "/en/industries/universities-business-schools/",
+      "verified_at": null,
+      "public_https_browser_verified": false,
+      "last_completed_step": "original_bilingual_education_content_new_hub_backlinks_source_prepared",
+      "work_batch": "2V"
     },
     {
       "id": 71,
@@ -3888,10 +4204,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/recruitment-agencies-recruiters/",
+      "planned_landing_url_en": "/en/industries/recruitment-agencies-recruiters/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_464093/",
+        "https://mintrud.gov.ru/docs/laws/130",
+        "https://www.consultant.ru/document/cons_doc_LAW_139574/"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 72,
@@ -3913,10 +4245,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/consulting-firms-independent-experts/",
+      "planned_landing_url_en": "/en/industries/consulting-firms-independent-experts/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.iso.org/standard/63501.html",
+        "https://www.nalog.gov.ru/donline/",
+        "https://mintrud.gov.ru/docs/laws/130"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 73,
@@ -3963,10 +4311,26 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/branding-marketing-agencies/",
+      "planned_landing_url_en": "/en/industries/branding-marketing-agencies/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_58968/2c4537e4796f6ff8b2736ed1b0d4fef08e14458e/",
+        "https://www.nalog.gov.ru/donline/",
+        "https://www.iso.org/standard/63501.html"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ],
+      "public_https_browser_verified": false
     },
     {
       "id": 75,
@@ -5011,10 +5375,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/beauty-salons-cosmetology-practices/",
+      "planned_landing_url_en": "/en/industries/beauty-salons-cosmetology-practices/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://mru42.fmba.gov.ru/press-tsentr/detail/?ELEMENT_ID=87587",
+        "https://www.roszdravnadzor.gov.ru/medactivities/licensing/news/35556",
+        "https://www.consultant.ru/document/cons_doc_LAW_363382/"
+      ],
+      "public_https_browser_verified": false,
+      "work_batch": "2X"
     },
     {
       "id": 101,
@@ -5036,10 +5412,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/cleaning-companies/",
+      "planned_landing_url_en": "/en/industries/cleaning-companies/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://protect.gost.ru/gost/details/cdda6455-2619-48eb-b04f-5b42b8115ec8",
+        "https://protect.gost.ru/gost/details/487c0d2e-6c5f-4803-9a86-3b430f1434f1",
+        "https://protect.gost.ru/gost/details/c0ff12a0-655e-47db-9c30-6dbf2499eeba"
+      ],
+      "public_https_browser_verified": false,
+      "work_batch": "2X"
     },
     {
       "id": 102,
@@ -5061,10 +5449,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "consolidated_pr_ci_pending",
+      "next_required_step": "PR_full_ci_merge_after_pass_production_main_pages_external_https",
+      "last_completed_step": "phase_2x_original_ru_en_evidence_local_hub_incoming_links_and_qa_registered",
+      "planned_landing_url_ru": "/industries/home-appliance-repair-services/",
+      "planned_landing_url_en": "/en/industries/home-appliance-repair-services/",
+      "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2x.mjs",
+      "evidence_sources": [
+        "https://62.rospotrebnadzor.ru/content/prava-potrebiteley-pri-okazanii-uslug-po-remontu-bytovoy-tehniki-0",
+        "https://www.consultant.ru/document/cons_doc_LAW_363382/",
+        "https://zpp.rospotrebnadzor.ru/news/federal/536006"
+      ],
+      "public_https_browser_verified": false,
+      "work_batch": "2X"
     },
     {
       "id": 103,
