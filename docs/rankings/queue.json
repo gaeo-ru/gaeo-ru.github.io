@@ -1041,9 +1041,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/mlab-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rankings-20261109-0215-t4n8",
+        "requestId": "claim-rankings-20261109-0215-t4n8",
+        "token": "rk-mw8gd21m-futtfn0ur16-28cl80df3o7",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:17:51.113Z",
+        "expiresAt": "2026-11-09T05:17:51.113Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "mlab-t004",
@@ -1909,7 +1918,19 @@
       "taskId": "mlab-t002",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rankings-20261109-0215-t4n8",
+      "requestId": "claim-rankings-20261109-0215-t4n8",
+      "token": "rk-mw8gd21m-futtfn0ur16-28cl80df3o7",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:51.113Z",
+      "expiresAt": "2026-11-09T05:17:51.113Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t003",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:17:41.388Z"
+  "updatedAt": "2026-11-08T23:17:51.113Z"
 }
