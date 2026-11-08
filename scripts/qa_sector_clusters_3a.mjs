@@ -64,7 +64,8 @@ for(const cluster of phase3AClusters){
 for(const kind of ['hub','method'])for(const lang of ['ru','en']){
  const index=read((lang==='en'?'/en/':'/')+(kind==='hub'?'industries/':'strategies/'));
  const list=graph(index).find(x=>x['@type']==='ItemList');
- const expected=kind==='hub'?20:9;
+ const expected=(index.match(/<article class="list-card">/g)||[]).length;
+ assert.ok(expected>=(kind==='hub'?20:9),'No previous directory entries removed');
  assert.equal(list?.numberOfItems,expected,'Updated '+kind+' '+lang+' directory ItemList');
  assert.equal(list?.itemListElement?.length,expected,'Updated item count '+kind+' '+lang);
 }

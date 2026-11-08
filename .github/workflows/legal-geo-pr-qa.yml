@@ -44,6 +44,8 @@ on:
       - 'src/data/industry-specializations.mjs'
       - 'src/data/industry-clusters-phase-3a.mjs'
       - 'scripts/qa_sector_clusters_3a.mjs'
+      - 'src/data/industry-methods-phase-3b.mjs'
+      - 'scripts/qa_sector_methods_3b.mjs'
       - 'src/data/industry-specializations-batch-*.mjs'
       - 'scripts/qa_industry_specializations.mjs'
       - 'src/legacy/pages/tarify/**'
@@ -112,5 +114,6 @@ jobs:
             visual-evidence/
             visual-research/
             visual-tariffs/
+            visual-industry/
           if-no-files-found: ignore
           retention-days: 7

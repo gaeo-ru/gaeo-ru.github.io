@@ -1,3 +1,4 @@
+import {phase3BMethods} from './industry-methods-phase-3b.mjs';
 /**
  * Evidence-led RU/EN GEO specializations, expanded in isolated industry batches.
  * The 107-ID catalogue, approved images and canonical tariff terms remain shared.
@@ -5123,6 +5124,23 @@ for (const cluster of phase3AClusters) {
      page.methodLabels[lang].push(label);
     }
    }
+  }
+ }
+}
+
+// Phase 3B: retain every existing method and add exactly one sector-specific method.
+for(const entry of phase3BMethods){
+ const service=industrySpecializations.find(x=>x.id===entry.ids[0]);
+ if(!service)throw new Error('Missing 3B service '+entry.ids[0]);
+ service.methodLabels ||= {ru:[],en:[]};
+ for(const lang of ['ru','en']){
+  service.methods[lang] ||= [];
+  service.methodLabels[lang] ||= [];
+  while(service.methodLabels[lang].length<service.methods[lang].length)service.methodLabels[lang].push(lang==='ru'?'Тематическая методика GEO':'Related GEO methodology');
+  const href=entry.routes.method[lang];
+  if(!service.methods[lang].includes(href)){
+   service.methods[lang].push(href);
+   service.methodLabels[lang].push(entry[lang].method.h1);
   }
  }
 }
