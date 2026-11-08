@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "mlab-t002",
+  "familyId": "mlab-t002",
+  "slug": "nagruzochnoe-testirovanie-saytov-2026",
+  "ownerId": "chat-rankings-20261109-mw8gcum8-r6jrc2vb",
+  "requestId": "claim-rankings-20261109-mw8gcum8-r6jrc2vb",
+  "submissionId": "submit-rankings-20261109-mw8gcum8-r6jrc2vb",
+  "submittedAt": "2026-11-08T23:29:37.522Z",
+  "mode": "standard",
+  "baseCommit": "f28dec1adb53c7f3eeb11f2c2c6bdbcbbedd1eb6",
+  "files": [
+    {
+      "path": "public/assets/rankings/mlab-t002/bottlenecks.jpg",
+      "sha": "24e2bb80cab3ebd955e6eff25c50bf990ea0601e"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t002/cover.jpg",
+      "sha": "5d3c3851eb6a529b2399e504568c0a5fe6c30727"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t002/criteria.jpg",
+      "sha": "2167bd76226a3d618a8ed713b075fa5816f04ae0"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t002/top10.jpg",
+      "sha": "1c2bef047fb06ffd512a4c44480c5f6d34a09d86"
+    },
+    {
+      "path": "src/data/rankings/articles/mlab-t002.json",
+      "sha": "a4fbf80b9e5e28eb9f5a881e9f3636afd83eaa7a"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Метод Лаб",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Метод Лаб",
+      "sourceReference": "https://drive.google.com/file/d/1p_fc53DiN6YZ4t1V7rsFtM9Ta7Y9cbXb/view",
+      "locator": "Раздел «ТОП-10 компаний по нагрузочному тестированию сайтов и интернет-магазинов» и H3 «1. «Метод Лаб» – 95/100»",
+      "checkedAt": "2026-11-08T23:27:12.355Z"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/mlab-t002.json",
+    "ref": "f28dec1adb53c7f3eeb11f2c2c6bdbcbbedd1eb6",
+    "sha": "9fd772a6d972ba175dbb9c944dd4f44f7aa2fd6d"
+  },
+  "deployed": false
+}
