@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "independent_public_https_verification_2U_to_2AA_then_free_ids; source_and_pages_released",
+    "next_batch": "2AB_PR_CI_SOURCE_MERGE_PRODUCTION_PAGES_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -1140,6 +1140,25 @@
       "main_new_html_pages_present": 34,
       "next_required_step": "Independently open all 34 new URLs on gaeo.ru (desktop/390/320), verify images, links, forms, canonical/hreflang and then populate live fields. GAEO.ru including baseline /tarify/ inaccessible via chat web/container DNS."
     },
+    "phase_2ab": {
+      "phase": 2,
+      "batch": "2AB",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        73
+      ],
+      "work_branch": "feat/industry-specializations-batch-2ab-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ab.mjs",
+      "base_source_sha": "6f0e06d4cbbfdb9a4019fc674a3e4ac24d4c36f0",
+      "new_landing_pairs": 1,
+      "new_ru_en_html": 2,
+      "ci_status": "pending",
+      "source_merged": false,
+      "production_status": "pending",
+      "pages_status": "pending",
+      "public_https_browser_verified": false,
+      "next_required_step": "Complete PR CI, merge, verify main manifest & sitemap, Pages and public browser."
+    },
     "phase_2af": {
       "phase": 2,
       "batch": "2AF",
@@ -1238,6 +1257,8 @@
     "phase_2z_prepared_ru_en_urls_not_deployed": 0,
     "phase_2z_prepared_hub_pages_not_deployed": 0,
     "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
+    "phase_2ab_prepared_pairs_not_deployed": 1,
+    "phase_2ab_prepared_urls_not_deployed": 2,
     "phase_2af_prepared_pairs_not_deployed": 3,
     "phase_2af_prepared_ru_en_urls_not_deployed": 6,
     "phase_2af_release_snapshot_note": "83 specialization pairs/166 URLs in confirmed latest main 62b0fd2; 2AF adds 3 pairs/6 URLs only in isolated source branch until PR, CI, source merge, production and Pages. External HTTPS for 2AF is not verified."
@@ -1582,6 +1603,19 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs"
+    },
+    {
+      "batch": "2AB",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        73
+      ],
+      "label": "Детские образовательные центры",
+      "condition": "Оригинальные RU/EN страницы с детскими программами, новыми СП 2.4.2.4283-26 и проверкой применимости лицензии; PR CI -> merge -> production/main/Pages -> real HTTPS.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ab-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ab.mjs"
     },
     {
       "batch": "2AF",
@@ -4427,10 +4461,13 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "PR full CI, source merge, production manifest+main HTML+sitemap and Pages, then independent live HTTPS desktop/390/320.",
+      "planned_landing_url_ru": "/industries/childrens-education-centres/",
+      "planned_landing_url_en": "/en/industries/childrens-education-centres/",
+      "last_completed_step": "Original bilingual #73 source and updated education hub, QA and evidence written from current astro-source; CI/source release/live have not yet been checked."
     },
     {
       "id": 74,
