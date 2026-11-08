@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "orient-t002",
+  "familyId": "orient-t002",
+  "slug": "mnogodetnye-semi-sport-2026",
+  "ownerId": "chat-mw8gcnf4-1ac3be820q",
+  "requestId": "claim-mw8gcnf4-1ac3be820q",
+  "submissionId": "submit-mw8gcnf4-1ac3be820q",
+  "submittedAt": "2026-11-08T23:31:41.171Z",
+  "mode": "standard",
+  "baseCommit": "42325e35f9169d805caab786b6439a910a5ac3b2",
+  "files": [
+    {
+      "path": "public/assets/rankings/orient-t002/family-logistics.jpg",
+      "sha": "bf90137ecae6b70e8a3a20d12bd5a63cd6aec8ad"
+    },
+    {
+      "path": "public/assets/rankings/orient-t002/model-family.jpg",
+      "sha": "514a27667bd0706650d559f6beeebdb5bbe08a07"
+    },
+    {
+      "path": "public/assets/rankings/orient-t002/ranking-scores.jpg",
+      "sha": "91adb8fead5b29692eaf84ccab67ec01ce0f06c3"
+    },
+    {
+      "path": "src/data/rankings/articles/orient-t002.json",
+      "sha": "8418c0a579a532ec2b0a3b4820b9fa49cef0146e"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Спортивное ориентирование",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://drive.google.com/file/d/12UfkJM89MR-QdNoqgWcQ0RN__aVD_CBt/view",
+      "locator": "Раздел «Итоговый ТОП-10» и заголовок «1. Спортивное ориентирование - 97/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/orient-t002.json",
+    "ref": "42325e35f9169d805caab786b6439a910a5ac3b2",
+    "sha": "9c1b6eb32539ac664d355842738f644e2a77536f"
+  },
+  "deployed": false
+}

@@ -1040,21 +1040,47 @@
       "slug": "mnogodetnye-semi-sport-2026",
       "title": "Выбор спорта для многодетной семьи с детьми разного пола и возраста",
       "firstPlace": "Спортивное ориентирование",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t002.json",
       "earliestPublicationDate": "2026-09-14",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8gcnf4-1ac3be820q",
         "ownerId": "chat-mw8gcnf4-1ac3be820q",
         "requestId": "claim-mw8gcnf4-1ac3be820q",
         "token": "rk-mw8gcnf4-cvnzdxtyd7v-92vwhj82gf4",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:17:33.879Z",
-        "expiresAt": "2026-11-09T05:17:33.879Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/orient-t002.json",
+        "committedAt": "2026-11-08T23:31:41.171Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t002/family-logistics.jpg",
+            "sha": "bf90137ecae6b70e8a3a20d12bd5a63cd6aec8ad"
+          },
+          {
+            "path": "public/assets/rankings/orient-t002/model-family.jpg",
+            "sha": "514a27667bd0706650d559f6beeebdb5bbe08a07"
+          },
+          {
+            "path": "public/assets/rankings/orient-t002/ranking-scores.jpg",
+            "sha": "91adb8fead5b29692eaf84ccab67ec01ce0f06c3"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t002.json",
+            "sha": "8418c0a579a532ec2b0a3b4820b9fa49cef0146e"
+          }
+        ],
+        "baseCommit": "42325e35f9169d805caab786b6439a910a5ac3b2"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://drive.google.com/file/d/12UfkJM89MR-QdNoqgWcQ0RN__aVD_CBt/view",
+        "locator": "Раздел «Итоговый ТОП-10» и заголовок «1. Спортивное ориентирование - 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t001",
@@ -2278,8 +2304,9 @@
       "expiresAt": "2026-11-09T05:17:33.879Z",
       "previousStatus": "ready",
       "taskId": "orient-t002",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gcnf4-1ac3be820q"
     },
     {
       "ownerId": "chat-rankings-20261109-mw8gcum8-r6jrc2vb",
@@ -2455,5 +2482,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:31:30.381Z"
+  "updatedAt": "2026-11-08T23:31:41.171Z"
 }
