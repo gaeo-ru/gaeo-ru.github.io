@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "3c5744d5b03d96f71d9ad4cc00ebe10b6258d639",
-  "releasedAt": "2026-11-08T14:07:26.150Z",
+  "sourceCommit": "4181159a77022e53cbd11caa84ba316f3e73688f",
+  "releasedAt": "2026-11-08T14:41:27.255Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -2916,6 +2916,11 @@
       "sha256": "d97bcb918f35f507fde2d265447addd75332fbf6fe501a41bd15835c443ec3b9"
     },
     {
+      "path": "en/industries/childrens-education-centres/index.html",
+      "kind": "html",
+      "sha256": "58ddaae042d8302636697aaab4f3b43cda96a0a9774a1d87ca15d08de80588ba"
+    },
+    {
       "path": "en/industries/childrens-products-toys-online-stores/index.html",
       "kind": "html",
       "sha256": "4e77fce0060950ad93031e6dfa2c92e93d028b193904b0b92408301cb755dedf"
@@ -3018,7 +3023,7 @@
     {
       "path": "en/industries/education-providers/index.html",
       "kind": "html",
-      "sha256": "f9e83c459a1e22c95cf49ce8f42e722f05da1054476d97d7af88f200126c39e9"
+      "sha256": "893aa358d55b3ecb6694db4e2b4f5767b3741a7fa57c6ef26889f513056d326a"
     },
     {
       "path": "en/industries/electrical-cable-product-suppliers/index.html",
@@ -3348,7 +3353,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "a0ab6cfb3295e8718b76126847211fdbb1ca3c7f481f56c90d2f20aefd49bcaf"
+      "sha256": "e5d22eebcac2a6f840449a55d32de6f2cc616bc2b1757a1d05e0401b162b440a"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3556,6 +3561,11 @@
       "sha256": "0a059881bc270acff176c3951fdce5f99b52affee2bda83208df07406a7afd05"
     },
     {
+      "path": "industries/childrens-education-centres/index.html",
+      "kind": "html",
+      "sha256": "cfb3b68c9b9faff677f06fcbec25e8a2fd54a1889fd0ac48b920c43f052a40bf"
+    },
+    {
       "path": "industries/childrens-products-toys-online-stores/index.html",
       "kind": "html",
       "sha256": "44f835ad249cf5a3a841f31ea8134536f8d19ac660406e5dbfe4a1e7298aa4dc"
@@ -3658,7 +3668,7 @@
     {
       "path": "industries/education-providers/index.html",
       "kind": "html",
-      "sha256": "94ee8c365310c53884d83c8e88b8bfa908277719344263dc8cf4fcd333e1a8e9"
+      "sha256": "8bfa7f6ed4921f36e4ce89cbaf375b04be2bcb9beefc9d5993850e237d96ebf3"
     },
     {
       "path": "industries/electrical-cable-product-suppliers/index.html",
@@ -4083,7 +4093,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "5207505562d2407f3b8ae1a4beff0be48e57981b01d38f5d507896d755dc74cb"
+      "sha256": "728bdf23598e0e1c3f3e5e6386a5e0f789dd0793e997c56c6add72540f6783ef"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4138,7 +4148,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "42346cd15bb4451031bc8fe7ee0c9917b099a5e8f0452a521ebd8e0fb9b1af14"
+      "sha256": "5e4ba61bcf5a8ea84c103152d65c9dce65ef86ff1e7dc20d1f988c56d7c77718"
     }
   ]
 }
