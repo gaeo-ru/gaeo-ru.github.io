@@ -37,7 +37,24 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,31,32])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+
+for(const id of [31,32]){
+ const sector=industrySpecializations.find(x=>x.id===id);
+ assert.ok(sector&&sector.group==='financial-services','2AG financial-services group '+id);
+ assert.equal(sector.parent.ru,'/tarify/','2AG canonical catalogue parent RU '+id);
+ assert.equal(sector.parent.en,'/en/pricing/','2AG canonical catalogue parent EN '+id);
+ assert.ok(sector.sources.length>=3,'2AG regulatory sources '+id);
+ for(const lang of ['ru','en']){
+  const c=sector.content[lang];
+  assert.equal(c.problems.length,3,'2AG buyer barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AG buyer-intent scenarios '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AG process stages '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AG FAQ '+id+' '+lang);
+  assert.ok(c.lead.length>130&&c.proofIntro.length>110,'2AG evidence-led copy '+id+' '+lang);
+ }
+}
+
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';

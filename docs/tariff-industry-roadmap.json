@@ -1158,6 +1158,24 @@
       "pages_status": "pending",
       "public_https_browser_verified": false,
       "next_required_step": "Complete PR CI, merge, verify main manifest & sitemap, Pages and public browser."
+    },
+    "phase_2ag": {
+      "phase": 2,
+      "batch": "2AG",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        31,
+        32
+      ],
+      "new_industry_landing_pairs_prepared": 2,
+      "new_ru_en_urls_prepared": 4,
+      "work_branch": "feat/industry-specializations-batch-2ag-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ag.mjs",
+      "parent_source_commit": "4181159a77022e53cbd11caa84ba316f3e73688f",
+      "source_validation": "2AG code and docs rebased onto source with merged 2AB; PR full CI re-run required. External HTTPS unverified.",
+      "public_https_browser_verified": false,
+      "next_required_step": "open_pr_run_full_ci_then_release_and_verify",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/120"
     }
   },
   "status_definitions": {
@@ -1182,8 +1200,8 @@
     "total_generated_html_pages_current_release": 285,
     "total_new_specialization_pairs_in_phase_2": 83,
     "total_new_specialization_urls_in_phase_2": 166,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 0,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 3,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 6,
     "total_specialization_pairs_in_main_current_release": 83,
     "total_specialization_urls_in_main_current_release": 166,
     "total_specialization_pairs_prepared_including_2h": 30,
@@ -1225,7 +1243,12 @@
     "phase_2z_prepared_hub_pages_not_deployed": 0,
     "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
     "phase_2ab_prepared_pairs_not_deployed": 1,
-    "phase_2ab_prepared_urls_not_deployed": 2
+    "phase_2ab_prepared_urls_not_deployed": 2,
+    "phase_2ag_prepared_pairs": 2,
+    "phase_2ag_prepared_ru_en_urls": 4,
+    "total_specialization_pairs_prepared_including_2ag": 86,
+    "total_specialization_urls_prepared_including_2ag": 172,
+    "phase_2ag_count_note": "Source 2AB #73 has merged into astro-source but main release still last verified as 83 pairs; 2AG #31/32 isolated PR#120 ready for CI. New prepared source count 3 pairs/6 URLs beyond released 83, total 86 in source+2AG. No public live verification for 2AG."
   },
   "candidate_batches": [
     {
@@ -1580,6 +1603,20 @@
       "work_status": "source_prepared_pr_ci_pending",
       "work_branch": "feat/industry-specializations-batch-2ab-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ab.mjs"
+    },
+    {
+      "batch": "2AG",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        31,
+        32
+      ],
+      "label": "Лизинговые компании и финтех/платежные сервисы",
+      "condition": "2 самостоятельные RU/EN специализации с проверенными первичными нормативными источниками. Разделять условия лизинга и роль участников НПС; не объявлять банковскую/платежную лицензию там, где она не подтверждена. Отдельно PR CI, source merge, production/main/Pages и внешний HTTPS; сохранять 107 ID, цены и BMR.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2ag-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ag.mjs"
     }
   ],
   "records": [
@@ -2763,10 +2800,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_awaiting_pr_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/leasing-companies/",
+      "planned_landing_url_en": "/en/industries/leasing-companies/",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "work_branch": "feat/industry-specializations-batch-2ag-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ag.mjs",
+      "last_completed_step": "phase_2ag_ru_en_content_and_source_isolation_prepared",
+      "public_https_browser_verified": false,
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_20780/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/34ecc7b79293f29e40e4bf84047d4ea58c9cf3e6/",
+        "https://www.consultant.ru/document/cons_doc_LAW_9027/1e065bff91cdb61f1c42c7444211fa24cac05a84/"
+      ],
+      "release_note": "Four planned RU/EN pages in isolated source branch for 2AG; CI/merge/production/main/Pages/direct HTTPS not yet verified. No sector client BMR results or approval claims."
     },
     {
       "id": 32,
@@ -2788,10 +2839,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_awaiting_pr_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/fintech-payment-services/",
+      "planned_landing_url_en": "/en/industries/fintech-payment-services/",
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "work_branch": "feat/industry-specializations-batch-2ag-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2ag.mjs",
+      "last_completed_step": "phase_2ag_ru_en_content_and_source_isolation_prepared",
+      "public_https_browser_verified": false,
+      "evidence_sources": [
+        "https://www.cbr.ru/registries/nps/",
+        "https://cbr.ru/admissionfinmarket/navigator/ops/",
+        "https://www.consultant.ru/document/cons_doc_LAW_115625/4f41fe599ce341751e4e34dc50a4b676674c1416/"
+      ],
+      "release_note": "Four planned RU/EN pages in isolated source branch for 2AG; CI/merge/production/main/Pages/direct HTTPS not yet verified. No sector client BMR results or approval claims."
     },
     {
       "id": 33,
