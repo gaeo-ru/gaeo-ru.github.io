@@ -1690,11 +1690,14 @@
       ],
       "label": "Бухгалтерский аутсорсинг и финансовые/инвестиционные консультанты",
       "condition": "4 индивидуальные RU/EN страницы №27/29 на проверяемых источниках 402-ФЗ/ФНС/МЧД и реестрах Банка России для инвестиционных советников. Никаких неподтвержденных клиентских результатов, статусов или обещаний доходности. Полный CI и безопасное source merge -> production/main/Pages -> прямой HTTPS.",
-      "work_status": "pr_open_ci_pending",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
       "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
       "public_https_browser_verified": false,
-      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
+      "source_commit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491432285",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42492293955"
     },
     {
       "batch": "2AI",
@@ -2794,13 +2797,13 @@
       "match_scope": "none",
       "content_status": "source_prepared_not_deployed",
       "evidence_level": null,
-      "work_status": "pr_open_ci_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_pages_and_public_https",
       "planned_landing_url_ru": "/industries/outsourced-accounting-services/",
       "planned_landing_url_en": "/en/industries/outsourced-accounting-services/",
       "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
-      "last_completed_step": "phase_2ah_pr121_revision_independent_ru_en_prepared",
+      "last_completed_step": "phase_2ah_source_merge_pr_ci_pass",
       "evidence_sources": [
         "https://www.consultant.ru/document/cons_doc_LAW_122855/56dc96d26dd9e8b6922341ab162acc7e10d57ddf/",
         "https://www.nalog.gov.ru/rn77/taxation/submission_statements/",
@@ -2813,7 +2816,10 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
-      ]
+      ],
+      "source_commit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491432285",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42492293955"
     },
     {
       "id": 28,
@@ -2879,13 +2885,13 @@
       "match_scope": "none",
       "content_status": "source_prepared_not_deployed",
       "evidence_level": null,
-      "work_status": "pr_open_ci_pending",
-      "next_required_step": "run_full_pr_ci_and_release",
+      "work_status": "source_merged_pr_ci_pass_production_in_progress",
+      "next_required_step": "verify_production_main_pages_and_public_https",
       "planned_landing_url_ru": "/industries/financial-investment-advisers/",
       "planned_landing_url_en": "/en/industries/financial-investment-advisers/",
       "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
-      "last_completed_step": "phase_2ah_pr121_revision_independent_ru_en_prepared",
+      "last_completed_step": "phase_2ah_source_merge_pr_ci_pass",
       "evidence_sources": [
         "https://www.cbr.ru/explan/invest/",
         "https://www.cbr.ru/securities_market/registries/",
@@ -2898,7 +2904,10 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
-      ]
+      ],
+      "source_commit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491432285",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42492293955"
     },
     {
       "id": 30,
