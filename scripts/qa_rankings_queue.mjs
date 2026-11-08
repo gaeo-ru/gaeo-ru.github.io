@@ -402,4 +402,30 @@ await check('manifest edits during a CAS race are revalidated before any article
   assert.equal(recovered.commitSha, accepted.commitSha, 'A historical accepted submission remains idempotent after inventory changes');
   assert.equal(git.refWrites.length, 2);
 });
+await check('editorial product shortlist has no winner or invented scores and preserves every product referral', async () => {
+  const item = {...task('products'), category: 'products', contentType: 'selection', firstPlace: null,
+    firstPlaceStatus: 'not-applicable-selection', expectedCount: 2};
+  const urls = ['https://market.yandex.ru/cc/P01?erid=source1', 'https://market.yandex.ru/cc/P02?erid=source2'];
+  const manifest = manifestFor(item); manifest.clientLinks = urls.map(url => ({url}));
+  const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-products', requestId: 'claim-products'});
+  const prepare = value => {
+    value.contentType = 'selection'; value.entityType = 'Product';
+    value.source.firstPlaceVerification = {status: 'not-applicable-selection', firstPlace: null,
+      sourceReference: 'test-source-id', locator: 'TOP 11 editorial shortlist, no empirical winner', checkedDate: '2026-11-08'};
+    value.clientLinks = urls.map(url => ({url, label: {ru: 'Посмотреть товар', en: 'View item'}, relation: 'sponsored'}));
+    for(const lang of ['ru', 'en'])value[lang].ranking.forEach((entry, i) => {
+      entry.name = lang === 'ru' ? 'Товар ' + (i + 1) : 'Product ' + (i + 1);
+      entry.url = urls[i]; delete entry.score;
+    });
+  };
+  assert.equal(claim.taskId, 'products');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.ru.ranking[0].score = 95;}), 'UNSUPPORTED_SELECTION_SCORES');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.clientLinks.pop();}), 'MISSING_PRODUCT_LINK');
+  const accepted = await submit(worker, claim, 'submit-products', prepare);
+  assert.equal(accepted.status, 'committed');
+  const result = git.queue().tasks[0];
+  assert.equal(result.firstPlace, null); assert.equal(result.firstPlaceStatus, 'not-applicable-selection');
+  assert.equal(JSON.parse(git.file(result.result.receiptPath)).validation.contentType, 'selection');
+});
 console.log(`\nPASS ${checks} rankings queue checks. No production branches or remote tools were used.`);

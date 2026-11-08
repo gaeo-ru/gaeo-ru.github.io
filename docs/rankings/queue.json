@@ -1121,8 +1121,10 @@
       "status": "needs_review",
       "lease": null,
       "result": null,
-      "reason": "No research winner is recorded. This is a product selection; do not invent a first-place winner or a scoring methodology.",
-      "sourceChecks": []
+      "reason": "Режим редакционной подборки без первого места и баллов реализован; активация отложена до завершения резервов исполнителей, использующих предыдущую версию модуля.",
+      "sourceChecks": [],
+      "contentType": "selection",
+      "expectedCount": 11
     },
     {
       "id": "index-t064",

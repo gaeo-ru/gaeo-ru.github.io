@@ -2781,7 +2781,7 @@
     }
   ],
   "advisories": [
-    "No research winner is recorded. This is a product selection; do not invent a first-place winner or a scoring methodology.",
+    "Confirmed product selection: 11 listed gifts with no research winner and no numeric quality scores. Use contentType=selection, entityType=Product, firstPlace=null, preserve all 11 exact distinct referral URLs, and mark every referral as sponsored.",
     "Editorial product selection, not a research ranking. Preserve all 11 exact referral URLs and the selection order, age/adult-use constraints and disclosed advertising.",
     "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
     "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
@@ -2799,5 +2799,7 @@
     "registrySnapshotDate": "2026-11-08",
     "selectedManuscript": null,
     "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
-  }
+  },
+  "contentType": "selection",
+  "expectedCount": 11
 }
