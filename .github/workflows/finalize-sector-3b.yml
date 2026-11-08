@@ -32,6 +32,18 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npx playwright install chromium
+      - name: Select a successful Pages execution, allowing superseded cancelled duplicates
+        working-directory: site
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('../scripts/_finalize-sector-3b.mjs')
+          text = p.read_text()
+          old = "pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name));"
+          new = "pages=runs.workflow_runs.find(x=>/pages.*(build|deploy)/i.test(x.name)&&x.status==='completed'&&x.conclusion==='success');"
+          assert text.count(old) == 1, 'Expected exact Pages selector'
+          p.write_text(text.replace(old,new))
+          PY
       - name: Confirm production and Pages, inspect the public site, update the same handoff
         working-directory: site
         env:
