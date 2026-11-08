@@ -63,8 +63,8 @@
       "css_js_byte_matches": 10,
       "sitemap_new_urls_present": 16
     },
-    "next_phase": 2,
-    "next_batch": "2AK source/main/Pages published. Remaining: independent external HTTPS and real desktop/mobile inspection; optional future dedicated narrower content #1/#19/#39 only if separately requested. Do not re-author #30/#75/#76 or create duplicate branches.",
+    "next_phase": 3,
+    "next_batch": "3B prepared: complete CI and publication of four bilingual evidence methods for #42/#48/#55/#59. Do not recreate commercial pages. External live acceptance remains separate.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1484,6 +1484,74 @@
       "main_manifest_files": 861,
       "public_https_browser_verified": false,
       "verification_note": "All 6 new RU/EN pages exist in main and sitemap. Each has one H1, canonical/hreflang, five FAQ/schema, three canonical offers, WebP and CTA. Static+local Chromium 1440/390/320 PASS; direct public HTTPS unavailable."
+    },
+    "phase_3b": {
+      "phase": 3,
+      "batch": "3B",
+      "status": "prepared_in_isolated_branch_ci_pending",
+      "work_branch": "feat/sector-methods-3b-2026-11-08",
+      "records": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "scope": "Four original bilingual evidence methodologies; reuse existing commercial landings, do not duplicate hubs or services",
+      "new_method_pairs": 4,
+      "new_ru_en_urls": 8,
+      "method_urls": [
+        {
+          "id": 42,
+          "ru": "/strategies/industrial-equipment-evidence/",
+          "en": "/en/strategies/industrial-equipment-evidence/"
+        },
+        {
+          "id": 48,
+          "ru": "/strategies/packaging-material-evidence/",
+          "en": "/en/strategies/packaging-material-evidence/"
+        },
+        {
+          "id": 55,
+          "ru": "/strategies/international-logistics-route-evidence/",
+          "en": "/en/strategies/international-logistics-route-evidence/"
+        },
+        {
+          "id": 59,
+          "ru": "/strategies/private-clinics-service-evidence/",
+          "en": "/en/strategies/private-clinics-service-evidence/"
+        }
+      ],
+      "source_file": "src/data/industry-methods-phase-3b.mjs",
+      "public_https_browser_verified": false,
+      "next_required_step": "Full PR CI, source merge, production/main/Pages; independent public HTTPS and browser inspection remain separate",
+      "evidence_sources": [
+        {
+          "id": 42,
+          "urls": [
+            "https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766"
+          ]
+        },
+        {
+          "id": 48,
+          "urls": [
+            "https://protect.gost.ru/tr/details/0ab50d83-4a64-455d-9c59-04b5ef9336b9",
+            "https://docs.eaeunion.org/documents/429/8416/"
+          ]
+        },
+        {
+          "id": 55,
+          "urls": [
+            "https://eec.eaeunion.org/comission/department/dep_tamoj_zak/tk_eaes.php"
+          ]
+        },
+        {
+          "id": 59,
+          "urls": [
+            "https://roszdravnadzor.gov.ru/services/licenses",
+            "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing"
+          ]
+        }
+      ]
     }
   },
   "status_definitions": {

@@ -17,9 +17,10 @@
     "check:design": "node scripts/qa_approved_design_system.mjs",
     "check:tariffs": "node scripts/qa_tariffs.mjs",
     "check:specializations": "node scripts/qa_industry_specializations.mjs",
-    "check:sector3a": "node scripts/qa_sector_clusters_3a.mjs",
+    "check:sector3a": "node scripts/qa_sector_clusters_3a.mjs && node scripts/qa_sector_methods_3b.mjs",
     "check:evidence": "node scripts/qa_evidence_pages.mjs",
-    "check:rankings": "node scripts/qa_rankings.mjs"
+    "check:rankings": "node scripts/qa_rankings.mjs",
+    "check:sector3b": "node scripts/qa_sector_methods_3b.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",

@@ -1,3 +1,4 @@
+import {phase3BMethods} from '../src/data/industry-methods-phase-3b.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
@@ -27,6 +28,7 @@ const approved={
 for(const cluster of phase3AClusters)for(const kind of ['hub','method'])for(const route of Object.values(cluster.routes[kind])){
  approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
 }
+for(const entry of phase3BMethods)for(const route of Object.values(entry.routes.method))approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
 for(const slug of caseSlugs){
  approved['cases/'+slug+'/index.html']=['FAQ'];
  approved['en/cases/'+slug+'/index.html']=['FAQ'];
