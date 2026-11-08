@@ -7,7 +7,7 @@ export const industrySpecializationsBatch2AB = [
   {
     "id": 73,
     "slug": "childrens-education-centres",
-    "group": "education",
+    "group": "education-consulting",
     "routes": {
       "ru": "/industries/childrens-education-centres/",
       "en": "/en/industries/childrens-education-centres/"
