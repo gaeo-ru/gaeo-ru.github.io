@@ -4330,7 +4330,7 @@ export function getIndustryCatalog(lang = 'ru') {
     description: en ? industry.introEn : industry.intro,
     groupName: en ? industry.groupEn : industry.group,
     examples: en ? industry.specialtiesEn : industry.specialties,
-    detailLink: industrySpecializations.find(page=>page.id===industry.number)?.routes[lang] || null,
+    detailLink: industrySpecializations.find(page=>page.id===industry.number)?.routes[lang] || (industry.hub?.relation==='existing_service' ? (en ? industry.hub.hrefEn : industry.hub.href) : null),
     hubLink: industry.hub ? {
       href: en ? industry.hub.hrefEn : industry.hub.href,
       label: en ? industry.hub.labelEn : industry.hub.label,

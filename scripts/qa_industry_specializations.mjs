@@ -261,6 +261,28 @@ try{
   assert.equal(await img.count(),1,'Hero image '+row.path);
   await img.evaluate(el=>el.decode());
   assert.ok(await img.evaluate(el=>el.naturalWidth>0),'Hero failed to decode '+row.path);
+  assert.equal(await page.locator('.industry-specialization__media figcaption').count(),0,'No internal catalogue-number caption '+row.path);
+  // Assert responsive geometry as well as overall scroll width. A narrow first
+  // table cell passed overflow checks before this fix but was unreadable.
+  const layout=await page.evaluate(()=>{
+   const image=document.querySelector('.industry-specialization__media img');
+   const question=document.querySelector('.industry-scenario-table tbody tr:first-child td:first-child');
+   const questionRow=question.parentElement;
+   const table=document.querySelector('.industry-scenario-table');
+   const portrait=document.querySelector('.industry-about>img');
+   const box=element=>{const r=element.getBoundingClientRect();return {left:r.left,width:r.width};};
+   return {image:box(image),question:box(question),questionRow:box(questionRow),tableDisplay:getComputedStyle(table).display,portrait:box(portrait),portraitFloat:getComputedStyle(portrait).float};
+  });
+  if(width<=390){
+   assert.ok(layout.image.width>=width-2&&Math.abs(layout.image.left)<=2,'Mobile illustration must occupy the full viewport '+row.path+' '+width+' '+JSON.stringify(layout));
+   assert.ok(Math.abs(layout.question.width-layout.questionRow.width)<=4,'Buyer question must occupy the entire mobile card '+row.path+' '+width+' '+JSON.stringify(layout));
+   assert.ok(Math.abs(layout.portrait.width-width/2)<=2&&layout.portraitFloat==='left','Expert photo takes half mobile viewport and floats left '+row.path+' '+width+' '+JSON.stringify(layout));
+   assert.equal(layout.tableDisplay,'block','Mobile scenarios use stacked rows '+row.path+' '+width);
+  }else{
+   assert.equal(layout.tableDisplay,'table','Desktop preserves the real 3-column comparison '+row.path);
+   assert.equal(layout.portraitFloat,'none','Desktop expert portrait retains the side-by-side grid '+row.path);
+   assert.ok(layout.question.width>200,'Desktop first column remains readable '+row.path);
+  }
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
   assert.ok(overflow<=2,'Horizontal overflow '+row.path+' at '+width+': '+overflow);
   assert.equal(errors.length,0,'JS errors '+row.path+' '+errors.join('; '));
