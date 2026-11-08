@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2T_production_main_Pages_then_external_HTTPS_and_next_free_17_18",
+    "next_batch": "2W_single_PR_CI_merge_prod_main_Pages_live_HTTPS",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -814,6 +814,55 @@
         320
       ],
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    "phase_2w": {
+      "phase": 2,
+      "batch": "2W",
+      "status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "records": [
+        59,
+        60,
+        61
+      ],
+      "source_file": "src/data/industry-specializations-batch-2w.mjs",
+      "hub_routes": {
+        "ru": "/industries/medical-care-providers/",
+        "en": "/en/industries/medical-care-providers/"
+      },
+      "new_industry_landing_pairs": 3,
+      "new_specialization_html_pages": 6,
+      "new_hub_html_pages": 2,
+      "new_html_pages": 8,
+      "source_base_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "pr_ci_status": "not_yet_run",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "parallel_batch_reservations": [
+        "2U=17/18",
+        "2V=68/69/70",
+        "2T=14/15/16 already merged"
+      ],
+      "sources_by_id": {
+        "59": [
+          "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/256d3c9ccb172b31210f5f1728fd5a3f538a3cce/",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+        ],
+        "60": [
+          "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+          "https://www.consultant.ru/document/cons_doc_LAW_542698/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+          "https://base.garant.ru/74710260/"
+        ],
+        "61": [
+          "https://www.consultant.ru/document/cons_doc_LAW_385548/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+          "https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/",
+          "https://mintrud.gov.ru/docs/laws/104"
+        ]
+      },
+      "last_completed_step": "bilingual_medical_specializations_hub_and_industry_indexes_source_prepared",
+      "next_required_step": "One PR full CI; safe merge preserving concurrent 2U/2V, production/main manifest eight HTML+URLs, Pages and separate external HTTPS."
     }
   },
   "status_definitions": {
@@ -872,7 +921,11 @@
     "phase_2s_deployed_pairs": 2,
     "phase_2s_deployed_ru_en_urls": 4,
     "phase_2t_prepared_pairs_not_deployed": 3,
-    "phase_2t_prepared_ru_en_urls_not_deployed": 6
+    "phase_2t_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2w_prepared_pairs_not_deployed": 3,
+    "phase_2w_prepared_specialization_urls_not_deployed": 6,
+    "phase_2w_prepared_hub_urls_not_deployed": 2,
+    "phase_2w_note": "3 new medical GEO pairs + bilingual healthcare hub source-prepared only, not yet deployed or publicly verified. Parallel 2U/2V not double counted."
   },
   "candidate_batches": [
     {
@@ -1183,6 +1236,21 @@
       "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    {
+      "batch": "2W",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        59,
+        60,
+        61
+      ],
+      "label": "Частные клиники, стоматологии, диагностические центры и медицинские лаборатории",
+      "condition": "Медицина высокой ответственности: лицензируемые работы и адреса, врачебная тайна, приказ 786н с 696н от 01.10.2026, лабораторный приказ 464н. 3 оригинальные RU/EN специализации + двуязычный хаб, без медицинских обещаний или вымышленных кейсов.",
+      "work_status": "source_prepared_pr_ci_pending",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2w.mjs"
     }
   ],
   "records": [
@@ -3462,10 +3530,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/private-medical-clinics/",
+      "planned_landing_url_en": "/en/industries/private-medical-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/256d3c9ccb172b31210f5f1728fd5a3f538a3cce/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/0b1cadf39ebeb0f1fed2ef0b8ebab5973197d7f1/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA"
     },
     {
       "id": 60,
@@ -3487,10 +3567,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/dental-clinics/",
+      "planned_landing_url_en": "/en/industries/dental-clinics/",
+      "evidence_sources": [
+        "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing",
+        "https://www.consultant.ru/document/cons_doc_LAW_542698/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+        "https://base.garant.ru/74710260/"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA"
     },
     {
       "id": 61,
@@ -3512,10 +3604,22 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "original_medical_ru_en_source_prepared",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_ci_pending",
+      "next_required_step": "full_CI_safe_merge_production_Pages_and_external_HTTPS",
+      "work_batch": "2W",
+      "work_branch": "feat/industry-specializations-batch-2w-2026-11-08",
+      "planned_landing_url_ru": "/industries/diagnostic-centres-medical-laboratories/",
+      "planned_landing_url_en": "/en/industries/diagnostic-centres-medical-laboratories/",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_385548/2ff7a8c72de3994f30496a0ccbb1ddafdaddf518/",
+        "https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/",
+        "https://mintrud.gov.ru/docs/laws/104"
+      ],
+      "related_industry_hub_ru": "/industries/medical-care-providers/",
+      "related_industry_hub_en": "/en/industries/medical-care-providers/",
+      "last_completed_step": "original_medical_bilingual_source_hub_and_QA"
     },
     {
       "id": 62,

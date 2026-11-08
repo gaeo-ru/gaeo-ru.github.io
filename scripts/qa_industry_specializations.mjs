@@ -37,7 +37,7 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,59,60,61])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
@@ -51,6 +51,22 @@ for(const lang of ['ru','en']){
  assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'Main industries index link to logistics hub '+lang);
  const collection=graph(html).find(n=>n['@type']==='ItemList');
  assert.equal(collection?.numberOfItems,3,'Three sector choices in structured data '+hub);
+}
+// Batch 2W healthcare hub, internal routes and structured sector index.
+for(const lang of ['ru','en']){
+ const hub=lang==='ru'?'/industries/medical-care-providers/':'/en/industries/medical-care-providers/';
+ const alternate=lang==='ru'?'/en/industries/medical-care-providers/':'/industries/medical-care-providers/';
+ const html=read(hub);
+ assert.equal((html.match(/<h1\\b/g)||[]).length,1,'Medical hub one H1 '+hub);
+ assert.ok(html.includes('rel="canonical" href="https://gaeo.ru'+hub+'"'),'Medical hub canonical '+hub);
+ assert.ok(html.includes('hreflang="'+(lang==='ru'?'en':'ru')+'" href="https://gaeo.ru'+alternate+'"'),'Medical hub reciprocal hreflang '+hub);
+ for(const slug of ['private-medical-clinics','dental-clinics','diagnostic-centres-medical-laboratories']){
+  const route=(lang==='ru'?'/industries/':'/en/industries/')+slug+'/';
+  assert.ok(html.includes('href="'+route+'"'),'Medical hub specialization link '+route);
+ }
+ assert.ok(read(lang==='ru'?'/industries/':'/en/industries/').includes('href="'+hub+'"'),'Industry index must link medical hub '+lang);
+ const listing=graph(html).find(n=>n['@type']==='ItemList');
+ assert.equal(listing?.numberOfItems,3,'Medical hub three sectors '+lang);
 }
 assert.equal(urls.length,industrySpecializations.length*2,'Each specialization must have two RU/EN pages');
 if(process.argv.includes('--static')){console.log('Industry specializations static QA PASS: '+urls.length+' pages, schema, images, prices and backlinks');process.exit(0);}
