@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3C prepared in isolated branch; PR CI/merge/deployment pending. Do not repeat 3B or create duplicate service landings.",
+    "next_batch": "3C complete: 4 new RU/EN practical guide pairs, 8 pages, full CI/production/Pages PASS and public 26-HTTPS/30-browser acceptance PASS. Next 3D research scope: evidence inventory E0–E4 for industry/logistics/medicine; assess independent content needs for broader reused #1/#19/#39. Do not repeat 3B/3C.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1589,7 +1589,7 @@
     "phase_3c": {
       "phase": 3,
       "batch": "3C",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "completed_public_https_browser_verified",
       "work_branch": "feat/sector-guides-3c-2026-11-09",
       "records": [
         42,
@@ -1632,13 +1632,36 @@
         "https://roszdravnadzor.gov.ru/medactivities/licensing",
         "https://roszdravnadzor.gov.ru/services/licenses"
       ],
-      "ci_status": "pending",
-      "production_status": "not_started",
-      "pages_status": "not_started",
-      "public_https_browser_verified": false,
-      "verified_at": null,
+      "ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "pass",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-08T23:05:12Z",
       "lead_form_submitted": false,
-      "next_required_step": "Run full PR CI, resolve failures without duplicate PR; merge if PASS; confirm production/main/Pages; inspect public HTTPS and then update these same canonical files"
+      "next_required_step": "3C is complete. For phase 3D first audit E0–E4 source materials and permitted sector case evidence, and assess separate editorial value of broader reused landing IDs #1/#19/#39. Do not recreate the 3C guides or existing services.",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/130",
+      "source_merge_commit": "0a34e8292235428b5b96175244bd4123113c6aac",
+      "source_commit": "0a34e8292235428b5b96175244bd4123113c6aac",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42531209670",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42532332845",
+      "published_commit": "e14c45533ea38c3883330929113aaef5aa04a856",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42533288811",
+      "released_at": "2026-11-08T23:03:34.860Z",
+      "manifest_files": 907,
+      "built_html_pages": 357,
+      "sitemap_urls": 352,
+      "public_verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42533369775",
+      "public_verification_artifact": "sector-3c-public-acceptance",
+      "public_verification_artifact_id": 13637653741,
+      "verified_moscow": "2026-11-09 02:05:12",
+      "verified_https_urls": 26,
+      "verified_local_assets": 20,
+      "verified_browser_viewports": 30,
+      "verification_widths": [
+        1440,
+        390,
+        320
+      ]
     }
   },
   "status_definitions": {
@@ -2131,6 +2154,35 @@
       "work_branch": "feat/industry-specializations-batch-2ai-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ai.mjs",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/123"
+    },
+    {
+      "batch": "3C",
+      "phase": 3,
+      "kind": "completed_editorial_guides",
+      "ids": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "label": "Прикладные проверки исходных доказательств (RU/EN) для промышленности, логистики и медицины",
+      "work_status": "completed_public_https_browser_verified",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/130",
+      "verified_at": "2026-11-08T23:05:12Z",
+      "public_acceptance": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42533369775"
+    },
+    {
+      "batch": "3D",
+      "phase": 3,
+      "kind": "research_candidates",
+      "ids": [
+        1,
+        19,
+        39
+      ],
+      "label": "Оценка самостоятельных материалов для 3 широких RU/EN посадочных и разрешенных отраслевых фактов",
+      "condition": "Сначала проверить реальную самостоятельную поисковую задачу, доступные данные E0–E4, сохранность существующих URL и актуальные параллельные работы. Только затем выбрать узкий пакет без дублей; медицинские кейсы и клиентские результаты не выдумывать.",
+      "work_status": "research_not_started"
     }
   ],
   "records": [
