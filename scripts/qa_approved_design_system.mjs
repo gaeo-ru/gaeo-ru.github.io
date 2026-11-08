@@ -3,6 +3,7 @@ import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
 import {faqItemsFor,approvedLeadFor,approvedCardsFor,DESIGN_BLOCKS} from '../src/lib/approved-design-system.mjs';
 import {preexistingLegacyRoutes} from '../src/data/preexisting-legacy-routes.mjs';
+import {phase3AClusters} from '../src/data/industry-clusters-phase-3a.mjs';
 
 const ROOT=process.cwd();
 const src=resolve(ROOT,'src/legacy/pages'),dist=resolve(ROOT,'dist');
@@ -22,6 +23,10 @@ const approved={
  'services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES'],
  'en/services/website-development/index.html':['FAQ','CONTACT','WHEN','STEPS','CASES']
 };
+// Phase 3A pages use the same canonical FAQAccordion and LightLead components.
+for(const cluster of phase3AClusters)for(const kind of ['hub','method'])for(const route of Object.values(cluster.routes[kind])){
+ approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
+}
 for(const slug of caseSlugs){
  approved['cases/'+slug+'/index.html']=['FAQ'];
  approved['en/cases/'+slug+'/index.html']=['FAQ'];
