@@ -466,12 +466,12 @@
 .industry-evidence-figure figcaption{color:#c1d1e3;font-size:12px;line-height:1.55;margin-top:13px}
 .industry-scenarios-section{background:#fff}
 .industry-table-scroll{width:100%;overflow-x:auto;overscroll-behavior-x:contain}
-.industry-scenario-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #d7e0e7;border-radius:14px;overflow:hidden}
+.industry-scenario-table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;border:1px solid #d7e0e7;border-radius:14px;overflow:hidden}
 .industry-scenario-table th{background:#071b3e;color:#fff;text-align:left;font-size:13px;font-weight:700;padding:18px 20px;vertical-align:top;line-height:1.45}
 .industry-scenario-table td{font-size:14px;line-height:1.62;vertical-align:top;padding:21px 20px;border-bottom:1px solid #e5eaf0;color:#2b3950;min-width:0}
 .industry-scenario-table tr:last-child td{border-bottom:0}
 .industry-scenario-table tr:nth-child(even) td{background:#f7f9fb}
-.industry-scenario-table td:first-child{width:28%;color:#021641}
+.industry-scenario-table :is(th,td):first-child{width:34%}.industry-scenario-table td:first-child{color:#021641}
 .industry-text-link{display:inline-block;color:#075778;font-weight:800;text-decoration:underline;text-underline-offset:4px;margin-top:22px;font-size:14px;line-height:1.55}
 .industry-process-section{background:#f6f7f8}
 .industry-step-grid{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -558,24 +558,24 @@
   .industry-inline-cta{flex-direction:column;align-items:stretch;padding:22px 20px}
   .industry-inline-cta .button{width:100%}
   .industry-final-panel{padding:33px 23px}
-  .industry-scenario-table{border:0;border-radius:0}
+  .industry-scenario-table{display:block;width:100%;border:0;border-radius:0}
   .industry-scenario-table thead{display:none}
-  .industry-scenario-table tbody,.industry-scenario-table tr,.industry-scenario-table td{display:block;width:100%}
+  .industry-scenario-table tbody,.industry-scenario-table tr,.industry-scenario-table td{display:block;width:100%;box-sizing:border-box}
   .industry-scenario-table tr{margin-bottom:13px;border:1px solid #dce3eb;border-radius:12px;overflow:hidden}
   .industry-scenario-table tr:nth-child(even) td{background:transparent}
   .industry-scenario-table td{border-bottom:1px solid #e6edf2;padding:13px 18px;font-size:13px}
   .industry-scenario-table td:last-child{border:0}
   .industry-scenario-table td:before{content:attr(data-label);display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#167286;margin-bottom:5px}
-  .industry-scenario-table tr td:first-child{background:#eff5f7;color:#021641}
-  .industry-about{grid-template-columns:92px minmax(0,1fr);gap:17px;align-items:start}
-  .industry-about>img{width:92px;height:92px}
-  .industry-about h2{font-size:26px}
+  .industry-scenario-table tr td:first-child{width:100%;background:#eff5f7;color:#021641;font-size:15px;line-height:1.55}
+  /* Float allows the expert introduction to continue below the half-screen portrait. */
+  .industry-about{display:flow-root}
+  .industry-about>img{float:left;width:50vw;max-width:none;height:auto;aspect-ratio:1;margin:0 clamp(10px,3vw,18px) 12px 0;object-fit:cover}
+  .industry-about h2{font-size:clamp(22px,5.5vw,26px);line-height:1.22}
 }
 @media(max-width:390px){
   .industry-actions{flex-direction:column;align-items:stretch}
   .industry-actions .button{width:100%}
-  .industry-about{grid-template-columns:1fr}
-  .industry-about>img{width:110px;height:110px}
+
 }
 
 /* The pharma hero illustration is a purpose-made square image. */
