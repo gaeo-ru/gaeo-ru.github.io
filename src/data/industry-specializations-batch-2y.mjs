@@ -5,7 +5,7 @@
  */
 export const industrySpecializationsBatch2Y = [
   {
-    "group": "agribusiness",
+    "group": "agriculture",
     "parent": {
       "ru": "/tarify/",
       "en": "/en/pricing/"
@@ -277,7 +277,7 @@ export const industrySpecializationsBatch2Y = [
     }
   },
   {
-    "group": "agribusiness",
+    "group": "agriculture",
     "parent": {
       "ru": "/tarify/",
       "en": "/en/pricing/"
