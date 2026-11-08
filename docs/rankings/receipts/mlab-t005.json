@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "mlab-t005",
+  "familyId": "mlab-t005",
+  "slug": "uskorenie-1c-bitrix-2026",
+  "ownerId": "chat-mw8gd8if-s89b8oj6qhn",
+  "requestId": "claim-mw8gd8if-s89b8oj6qhn",
+  "submissionId": "submit-mw8gd8if-s89b8oj6qhn",
+  "submittedAt": "2026-11-08T23:35:54.694Z",
+  "mode": "standard",
+  "baseCommit": "1791031738998d0cf0da2d040ff9b33d09bc294c",
+  "files": [
+    {
+      "path": "public/assets/rankings/mlab-t005/bottlenecks.jpg",
+      "sha": "a9b2f33248230ea47a26af2693466e35159c2ca1"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t005/cover.jpg",
+      "sha": "bd00402227730349b0b9d0daaeb15f4820ae4582"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t005/load-testing.jpg",
+      "sha": "ea97f0511557c8b68f3e95291cbffcfa3a957a1f"
+    },
+    {
+      "path": "src/data/rankings/articles/mlab-t005.json",
+      "sha": "5b45e34ea5e414955d3b0e83b207b77962d9cde0"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Метод Лаб",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Метод Лаб",
+      "sourceReference": "https://drive.google.com/file/d/13cGL-9dJcqbOvRMI-f50rwzX1r_lCV4v/view",
+      "locator": "Исходный MD, раздел 10 «Полный публичный текст», ТОП-10 и подраздел «1. Метод Лаб – 96/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/mlab-t005.json",
+    "ref": "1791031738998d0cf0da2d040ff9b33d09bc294c",
+    "sha": "17a735543d1215d3fb9855774951ad667cefa840"
+  },
+  "deployed": false
+}

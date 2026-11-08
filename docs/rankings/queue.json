@@ -1430,21 +1430,47 @@
       "slug": "uskorenie-1c-bitrix-2026",
       "title": "Ускорение сайтов и интернет-магазинов на 1С-Битрикс",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t005.json",
       "earliestPublicationDate": "2026-09-23",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8gd8if-s89b8oj6qhn",
         "ownerId": "chat-mw8gd8if-s89b8oj6qhn",
         "requestId": "claim-mw8gd8if-s89b8oj6qhn",
         "token": "rk-mw8ge0tn-lbhr5784q2-q3zp08h834",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:18:29.936Z",
-        "expiresAt": "2026-11-09T05:18:29.936Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/mlab-t005.json",
+        "committedAt": "2026-11-08T23:35:54.694Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t005/bottlenecks.jpg",
+            "sha": "a9b2f33248230ea47a26af2693466e35159c2ca1"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t005/cover.jpg",
+            "sha": "bd00402227730349b0b9d0daaeb15f4820ae4582"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t005/load-testing.jpg",
+            "sha": "ea97f0511557c8b68f3e95291cbffcfa3a957a1f"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t005.json",
+            "sha": "5b45e34ea5e414955d3b0e83b207b77962d9cde0"
+          }
+        ],
+        "baseCommit": "1791031738998d0cf0da2d040ff9b33d09bc294c"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/13cGL-9dJcqbOvRMI-f50rwzX1r_lCV4v/view",
+        "locator": "Исходный MD, раздел 10 «Полный публичный текст», ТОП-10 и подраздел «1. Метод Лаб – 96/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t016",
@@ -2577,8 +2603,9 @@
       "expiresAt": "2026-11-09T05:18:29.936Z",
       "previousStatus": "ready",
       "taskId": "mlab-t005",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gd8if-s89b8oj6qhn"
     },
     {
       "ownerId": "chat-20261109-mw8gdy7y-bc7cu52ghc",
@@ -2683,5 +2710,5 @@
       "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
     }
   ],
-  "updatedAt": "2026-11-08T23:34:48.782Z"
+  "updatedAt": "2026-11-08T23:35:54.694Z"
 }
