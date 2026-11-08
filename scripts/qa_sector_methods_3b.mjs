@@ -62,19 +62,24 @@ try{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   assert.equal((await page.goto(base+route,{waitUntil:'domcontentloaded'}))?.status(),200);
   assert.equal(await page.locator('main h1').count(),1);
-  await page.locator('main #faq details').first().locator('summary').click();
-  assert.equal(await page.locator('main #faq details').first().getAttribute('open'),'');
+  await page.evaluate(async()=>{await document.fonts.ready;window.scrollTo({top:0,behavior:'instant'});});
+  const heading=await page.locator('main h1').boundingBox();
+  const header=await page.locator('header').first().boundingBox();
+  assert.ok(heading&&(!header||heading.y>=header.y+header.height-2),'Initial heading obscured by header '+route+' '+width);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'Overflow '+route+' '+width);
   const broken=await page.locator('main img').evaluateAll(images=>images.filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src));
   assert.deepEqual(broken,[],'Broken content image '+route);
+  // Capture the untouched initial page; a fixed header after FAQ scrolling gives a misleading stitched screenshot.
+  if(width!==1440)await page.screenshot({path:'visual-industry/3b-'+route.split('/').filter(Boolean).join('-')+'-'+width+'.png',fullPage:true,animations:'disabled'});
+  await page.locator('main #faq details').first().locator('summary').click();
+  assert.equal(await page.locator('main #faq details').first().getAttribute('open'),'');
   if(width===390){
    await page.locator('main .industry-actions [data-gaeo-intent="service"]').click();
    await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:7000});
    await page.locator('.gaeo-modal-close').click();
   }
-  if(width!==1440)await page.screenshot({path:'visual-industry/3b-'+route.split('/').filter(Boolean).join('-')+'-'+width+'.png',fullPage:true,animations:'disabled'});
   assert.deepEqual(errors,[],'Runtime errors '+route);
   await page.close();
  }
- console.log('3B browser PASS: 8 × 1440/390/320, FAQ, inquiry, internal links and no overflow; '+(external?'public origin':'local production build'));
+ console.log('3B browser PASS: 8 × 1440/390/320, initial headings, FAQ, inquiry, internal links and no overflow; '+(external?'public origin':'local production build'));
 }finally{await browser?.close();server?.kill('SIGTERM');}
