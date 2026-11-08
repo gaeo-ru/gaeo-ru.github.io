@@ -1066,9 +1066,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/mlab-t004.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8gcyff-lgyrviwru",
+        "requestId": "claim-mw8gcyff-lgyrviwru",
+        "token": "rk-mw8gd7eu-oz4shf7a71-iwsrdzp2z3e",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:18:00.329Z",
+        "expiresAt": "2026-11-09T05:18:00.329Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "orient-t003",
@@ -1930,7 +1939,19 @@
       "taskId": "mlab-t003",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8gcyff-lgyrviwru",
+      "requestId": "claim-mw8gcyff-lgyrviwru",
+      "token": "rk-mw8gd7eu-oz4shf7a71-iwsrdzp2z3e",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:00.329Z",
+      "expiresAt": "2026-11-09T05:18:00.329Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t004",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:17:51.113Z"
+  "updatedAt": "2026-11-08T23:18:00.329Z"
 }
