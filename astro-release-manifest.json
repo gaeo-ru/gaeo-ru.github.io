@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "8290799667324842cabf89b841139fc979b5993f",
-  "releasedAt": "2026-11-08T10:27:30.404Z",
+  "sourceCommit": "ba944fe3b23fc9c6cff7ad8b3a0714cae06ef466",
+  "releasedAt": "2026-11-08T10:50:41.844Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -3046,6 +3046,16 @@
       "sha256": "07a585623d9b4bfbcad6325286e96e2334b9291e6fbf15bb3391444b83a5bc47"
     },
     {
+      "path": "en/industries/industrial-automation-service-companies/index.html",
+      "kind": "html",
+      "sha256": "b9916908c5b4e12d861a72c99014c4f4f8154d5c09cc1d0e9cc0bd542e6eee23"
+    },
+    {
+      "path": "en/industries/industrial-chemical-suppliers/index.html",
+      "kind": "html",
+      "sha256": "ee786df8aa7b95b117c6d25a49894140cec43c3dca486643e62722ecb07bdcd1"
+    },
+    {
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
       "sha256": "4996ab2374fbe0037d66e18ebf7579ce61e366141b0daa348c0db082a3a28f35"
@@ -3103,7 +3113,7 @@
     {
       "path": "en/industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "e5887f88812310feb09f3609a71e4a7f985780b5df90c6898847e61c8a4e2e9a"
+      "sha256": "c0b618c3f7a6057952c8ae6a4daea1c01d05830c2f0b5072de6cff5082180f6c"
     },
     {
       "path": "en/industries/motor-insurance-lawyers/index.html",
@@ -3181,6 +3191,11 @@
       "sha256": "84bab652c30fd13cde38d505803bdd684d0f49391baeaf6a4e53d125519a7573"
     },
     {
+      "path": "en/industries/warehouse-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "b7693be65ce35259b1d9a4dc72981ce4f4f5ed137caa61b7dc5b8eef22ae0aca"
+    },
+    {
       "path": "en/industries/warehouse-industrial-parks/index.html",
       "kind": "html",
       "sha256": "7146c23f287d98c6bdc7d0cdb0e4ef1dbbb3f683bed819fedbf833980c87b784"
@@ -3203,7 +3218,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "2164621d0d4faa3263171ced4950d55a31b71bfa57c07c6c7bcb145d95f62d61"
+      "sha256": "1e73773dc4957b92bf69827afbbb02f47557be350e71aae670ce2dca3083d9c0"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3541,6 +3556,16 @@
       "sha256": "c933caeabacf77a6f73e6448c5e525e72014f46e07861da95e8b9e35b1be1292"
     },
     {
+      "path": "industries/industrial-automation-service-companies/index.html",
+      "kind": "html",
+      "sha256": "7fc02fbc788bb762d82fff718ddaf6aa331bf3c1e48795f849dfc451e0ae09cf"
+    },
+    {
+      "path": "industries/industrial-chemical-suppliers/index.html",
+      "kind": "html",
+      "sha256": "ae3d7c803eedc505306cb7cfc47f7d9ae55cf3a76a6bb40679900f897f68c9da"
+    },
+    {
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
       "sha256": "47f6f11864f9b920f6f0d760c73e451d9ec4d241717b24347b6da19f6252a190"
@@ -3598,7 +3623,7 @@
     {
       "path": "industries/metal-structures/index.html",
       "kind": "html",
-      "sha256": "9094a9d30f754a9ff6e6773a268ffb8855204bc5c8e869826552e8a181d0b414"
+      "sha256": "f2e6e165c2fa834db06b4e82fc39924aed5bb4e7b9f4235b5b1ab4862ba13dac"
     },
     {
       "path": "industries/motor-insurance-lawyers/index.html",
@@ -3674,6 +3699,11 @@
       "path": "industries/tourism/index.html",
       "kind": "html",
       "sha256": "a6fc1c4398a73653f4d7796091946aab9ee75da3971d3bc164e5d6db9f3bbfb5"
+    },
+    {
+      "path": "industries/warehouse-equipment-suppliers/index.html",
+      "kind": "html",
+      "sha256": "49d1c3f7e4c963ab088495f575129814599c1f451377c32b47ea23ea9bf3a6e8"
     },
     {
       "path": "industries/warehouse-industrial-parks/index.html",
@@ -3793,7 +3823,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "4189607c5930e988b89c527d2114320818a15913da2582b3b92337c839da36d4"
+      "sha256": "18c81af85193dfe59d3fd91fc2221e9562e3060886dca3b4ac09eace9ae44b51"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -3848,7 +3878,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "0915019a2884f17696129958b8bd83569d4d7104e32efbf48b186f1579866334"
+      "sha256": "61bcc47f147e118709b91c71752362e0cc0fdaa8f4bee56015daf138fca49008"
     }
   ]
 }
