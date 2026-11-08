@@ -957,9 +957,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/orient-t002.json",
       "earliestPublicationDate": "2026-09-14",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8gcnf4-1ac3be820q",
+        "requestId": "claim-mw8gcnf4-1ac3be820q",
+        "token": "rk-mw8gcnf4-cvnzdxtyd7v-92vwhj82gf4",
+        "mode": "standard",
+        "claimedAt": "2026-11-08T23:17:33.879Z",
+        "expiresAt": "2026-11-09T05:17:33.879Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "mlab-t001",
@@ -1867,7 +1876,19 @@
       "taskId": "orient-t001",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8gcnf4-1ac3be820q",
+      "requestId": "claim-mw8gcnf4-1ac3be820q",
+      "token": "rk-mw8gcnf4-cvnzdxtyd7v-92vwhj82gf4",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:33.879Z",
+      "expiresAt": "2026-11-09T05:17:33.879Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t002",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:17:25.861Z"
+  "updatedAt": "2026-11-08T23:17:33.879Z"
 }
