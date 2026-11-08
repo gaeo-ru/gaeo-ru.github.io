@@ -324,3 +324,26 @@ node scripts/qa_rankings_queue.mjs
 ```
 
 Проверка использует локальную модель неизменяемых Git-объектов и реальной семантики fast-forward/CAS. Она проверяет конкурирующие резервы, конкурентные и повторные результаты, утрату ответа после записи, восстановление по квитанции, истечение срока, продление, чужие пути, существующие файлы, изображения, поиск на двух дисках и второй проход Work. Отдельно проверены обязательные RU/EN/CN версии, точность клиентских URL, pending-публикации и изменение манифеста во время гонки. Тест не обращается к GitHub и не публикует сайт.
+
+## 12. Переход на текущие названия GitHub-инструментов и режим подборок
+
+Модуль сам обращается к абстрактному адаптеру с именами `mcp__codex_apps__github_...`. В некоторых новых чатах реальные инструменты называются `mcp__GitHub__fetch`, `mcp__GitHub__fetch_file` и т. д. При такой схеме передавай адаптер, который переводит имена и нормализует ответ (один из вариантов, без создания новых подключений):
+
+```javascript
+const legacyPrefix = 'mcp__codex_apps__github_';
+const call = async (name,args) => {
+  const shortName = name.startsWith(legacyPrefix) ? name.slice(legacyPrefix.length) : null;
+  const tool = tools[name] || (shortName && tools['mcp__GitHub__' + shortName]);
+  if(!tool) throw new Error('Missing connected GitHub action: ' + name);
+  const result = await tool(args);
+  return result?.result && !result?.structuredContent ? {structuredContent:result.result} : result;
+};
+const {createRankingsQueue}=Function(moduleSource.replace(/^export /gm,'')+'\nreturn {createRankingsQueue};')();
+const queue=createRankingsQueue({call});
+```
+
+`moduleSource` — содержимое **`scripts/rankings-queue.mjs` из зафиксированного SHA**. В среде без `store/load` создавай и выводи идентификаторы в отдельном вызове до первого `claim`, затем повторно передавай их литералами в следующих вызовах. Не считай локальную переменную другой изолированной среды сохраненной. Для послеошибочного восстановления используй исходные ID из результата предыдущего вызова и `recover`, а не новые ID.
+
+**Режим товарной подборки**: если задача имеет `contentType:'selection'`, `firstPlace:null` и `firstPlaceStatus:'not-applicable-selection'`, это законная запись `ready` после активации координатором. Заполняй `article.contentType:'selection'`, `article.entityType:'Product'`, все 11 позиций с точными `entry.url`, все 11 неповторяющихся партнерских ссылок в `clientLinks`, `source.firstPlaceVerification.status:'not-applicable-selection'` с указанием исходника и секции и реальной даты. Не присваивай победителя, баллы или фиктивные отзывы. Остальные правила RU/EN, отсутствия новых иллюстраций и одного коммита остаются прежними.
+
+Если текущая очередь еще помечает `INDEX-P001` как `needs_review` с указанием на старые резервы, **не обходи этот статус**: координатор переведет в `ready`, когда старые исполнители завершат свои резервы и новая версия модуля станет безопасной для всех участников.
