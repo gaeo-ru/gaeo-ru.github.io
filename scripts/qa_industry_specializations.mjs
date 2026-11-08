@@ -120,9 +120,37 @@ for(const id of [31,32]){
  }
 }
 
+// Batch 2AK completes the remaining three dedicated original bilingual pages (30, 75, 76).
+for(const [id,group] of [[30,'finance'],[75,'automotive'],[76,'automotive']]){
+ const item=industrySpecializations.find(x=>x.id===id);
+ assert.ok(item&&item.group===group,'2AK correct permanent ID and sector '+id);
+ assert.ok(item.sources.length>=3,'2AK primary sources '+id);
+ assert.equal(item.parent.ru,'/tarify/','2AK RU catalog parent '+id);
+ assert.equal(item.parent.en,'/en/pricing/','2AK EN catalog parent '+id);
+ for(const lang of ['ru','en']){
+  const c=item.content[lang];
+  assert.equal(c.heroPoints.length,3,'2AK hero facts '+id+' '+lang);
+  assert.equal(c.problems.length,3,'2AK distinct barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'2AK buyer intents '+id+' '+lang);
+  assert.ok(c.scenarios.every(s=>s.length===3),'2AK table '+id+' '+lang);
+  assert.equal(c.checks.length,3,'2AK evidence review '+id+' '+lang);
+  assert.equal(c.steps.length,4,'2AK process '+id+' '+lang);
+  assert.equal(c.faq.length,5,'2AK five FAQ '+id+' '+lang);
+  assert.ok(c.lead.length>=150&&c.proofIntro.length>=170,'2AK substantial sector content '+id+' '+lang);
+  assert.ok(JSON.stringify(c).includes('BMR'),'2AK BMR '+id+' '+lang);
+  const html=read(lang==='ru'?'/industries/':'/en/industries/');
+  assert.ok(html.includes('href="'+item.routes[lang]+'"'),'2AK industry listing backlink '+id+' '+lang);
+  const list=graph(html).find(n=>n['@type']==='ItemList');
+  assert.equal(list?.numberOfItems,18,'2AK industry directory structured items '+lang);
+  assert.equal(list.itemListElement.length,18,'2AK industry directory JSON-LD coherence '+lang);
+  assert.ok(list.itemListElement.some(n=>n.url==='https://gaeo.ru'+item.routes[lang]),'2AK industry directory JSON-LD link '+id+' '+lang);
+ }
+}
+assert.equal(industrySpecializations.length,100,'100 distinct dedicated RU/EN specializations plus seven existing non-specialization pages');
+
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64,28,77,78,79,65,104,31,32])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,17,18,59,60,61,68,69,70,71,72,73,74,100,101,102,62,63,64,28,77,78,79,65,104,31,32,30,75,76])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
