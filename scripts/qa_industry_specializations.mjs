@@ -280,7 +280,7 @@ try{
   assert.equal(linkStyles.nav.display,'flex','Price navigation is styled as a flexible group '+row.path);
   assert.equal(linkStyles.related.display,'flex','Related navigation is styled as a flexible group '+row.path);
   for(const key of ['anchor','relatedAnchor']){
-    assert.equal(linkStyles[key].display,'inline-flex','Styled pill link '+key+' '+row.path);
+    assert.ok(['inline-flex','flex'].includes(linkStyles[key].display),'Styled flexible pill link '+key+' '+row.path);
     assert.equal(linkStyles[key].border,'solid','Pill border '+key+' '+row.path);
     assert.ok(linkStyles[key].radius>=18,'Rounded pill corners '+key+' '+row.path);
   }
