@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "d6037950c6a49faf38dff0ee09daea2d23bc6120",
-  "releasedAt": "2026-11-08T21:52:24.806Z",
+  "sourceCommit": "7034fcddbfc1dc2699b7c8ffd8f7dda3c8cc01c7",
+  "releasedAt": "2026-11-08T22:04:43.545Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -1404,6 +1404,11 @@
       "path": "assets/site.js",
       "kind": "asset",
       "sha256": "c7535543f86eeb2b21d7cd5c0f56da9782e7e81eb45f52d1b855f59f9e1fcf0c"
+    },
+    {
+      "path": "assets/strategies-directory.css",
+      "kind": "asset",
+      "sha256": "776acf7bc035d8508ceed2b00d12bbfdfc2e43ef6e3ca5479c07ac1b8ac7fc59"
     },
     {
       "path": "assets/style.css",
@@ -3628,7 +3633,7 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "cefbcf5677e4e10457e6c4c9a9a0699a9980eaedc192b95fe498fae7251d5e57"
+      "sha256": "e0b1ba8fa7eb9866209cec0c7dc2ebf7266193b047c5c24faa2fb945232819cf"
     },
     {
       "path": "en/strategies/industrial-equipment-evidence/index.html",
@@ -4438,7 +4443,7 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "c4687c26fde3c95c52af7c6b9096d4ed5ef08957499924f172fa57ea413769b5"
+      "sha256": "de6f1645b253c1f44160ac717fb65e8a3e23405b7385958dd85eeb737189a6bd"
     },
     {
       "path": "strategies/industrial-equipment-evidence/index.html",
