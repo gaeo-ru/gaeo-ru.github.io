@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "f39ccdc4a81414e72c9d83346c9e70fd54dafcb5",
-  "releasedAt": "2026-11-08T22:41:15.762Z",
+  "sourceCommit": "0a34e8292235428b5b96175244bd4123113c6aac",
+  "releasedAt": "2026-11-08T23:03:34.860Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -3218,7 +3218,7 @@
     {
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "53022681126309f61466c793eeb52c7c16b12ef499f7b59a893c21ab39b3b3bd"
+      "sha256": "b813879ed6b28e4e69a349a8b8d59f19666ba995de13553a8f9c9ae72573dd9e"
     },
     {
       "path": "en/industries/insurance-brokers/index.html",
@@ -3238,7 +3238,7 @@
     {
       "path": "en/industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "76c1d239f85c0d2d06e44295a3b90c980cf263df2a76a53a854923ed34f095d0"
+      "sha256": "d080d4ab2d82f3abb797234049eb7215f9d6b3cdabb0155b4b9fbcbc03482138"
     },
     {
       "path": "en/industries/international-logistics/index.html",
@@ -3328,7 +3328,7 @@
     {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "edbd41a31367101773a65b054dfbd995932ea32a7d68bce3c257f0527986a466"
+      "sha256": "8f7fd66983ce081cfc7a002fcd25b06fb3b7a61a8ad22136fa01ecd04d446275"
     },
     {
       "path": "en/industries/pet-supplies-online-stores/index.html",
@@ -3348,7 +3348,7 @@
     {
       "path": "en/industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "c4af19fd9cdd51e6a928baf809c308ac3e29046f965529c98b5de42a6aacd8ab"
+      "sha256": "65d1c8b7d381f38fd1843d544f9551f85773277c8595fe505dc70eb5d54c5543"
     },
     {
       "path": "en/industries/private-psychologists-psychotherapists/index.html",
@@ -3633,12 +3633,17 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "4f105cf9a391f9d15359a767789e5b92810d592b09011cfedf746214e255e4a9"
+      "sha256": "f2b329ecbece0577e255c506662f082ad9f58d323451de361bc6b4f86fc21e25"
     },
     {
       "path": "en/strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "f0fcc3d2c8b29a916866b7915a3316ebd298eb363d9ab84a08720849d6a873c4"
+      "sha256": "71a276f8da8d3608a4650fb17b2e2e2e80af4d257ab707fa39970ef75e708a1a"
+    },
+    {
+      "path": "en/strategies/industrial-equipment-rfq-checklist/index.html",
+      "kind": "html",
+      "sha256": "60beaa7005777d7f999fae251a53762f2770ea8fe8c0d6fd9064e6fd5eae8124"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -3648,7 +3653,12 @@
     {
       "path": "en/strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "bc0d2a1d12cc1fe1d34cfd4ce0105f35126d6807ce674f7c4b10fc25c8253f17"
+      "sha256": "ca817c23e0dada5096bb06b24abdcf996f64ac7ffcc09f8ff2e9768194cd778d"
+    },
+    {
+      "path": "en/strategies/international-logistics-tender-checklist/index.html",
+      "kind": "html",
+      "sha256": "4cd641f867b8880f73e4248841df7f4d110791040005ecbc9844ab170cc30afc"
     },
     {
       "path": "en/strategies/legal-recommendations/index.html",
@@ -3663,7 +3673,12 @@
     {
       "path": "en/strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "6ffe124f2621b9cb206e6587c2aa2cf7fd7c3da2c6ba2b8df62aa924278a646b"
+      "sha256": "a9d1ce848c26523832178fd276f9ba3322d2f07955858e8fe0ac2df14e168736"
+    },
+    {
+      "path": "en/strategies/packaging-supplier-brief-checklist/index.html",
+      "kind": "html",
+      "sha256": "b1b828314971536e75855e3f308c1ccde673ce95e7ed6bfc6320ede6675ddd6e"
     },
     {
       "path": "en/strategies/pharma-geo-evidence/index.html",
@@ -3671,9 +3686,14 @@
       "sha256": "5346a3996e3a588b1aa30af866183406fca97b2b3405341aa296249a79a75707"
     },
     {
+      "path": "en/strategies/private-clinic-branch-facts-checklist/index.html",
+      "kind": "html",
+      "sha256": "be5c734eccb4d785adb8875583055fe43f9b8a1690114b8fb087f8e31c9f86e3"
+    },
+    {
       "path": "en/strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "a5eb23ae84de0bc7fc93d5e7560744fb4367951dae09bfd8151ef30633102f2c"
+      "sha256": "6f707684945bc6617f55af679c898270e966a94a32904d455d73b2320c7ceec2"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
@@ -4018,7 +4038,7 @@
     {
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "d7e5c2b1b27cd6b7d7dae5bd89124b89f831b93b1091f8ce31d69ea3e7679366"
+      "sha256": "a12e2cf7a2ff8922e5c55893930afcea4aa5c5e54ea6c70b4251eba665be0a21"
     },
     {
       "path": "industries/insurance-brokers/index.html",
@@ -4038,7 +4058,7 @@
     {
       "path": "industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "f07a8018bc98097feb77e62ed2bcd6fc4f372a1fce90d8a8eb263c7ce36c9b96"
+      "sha256": "76a057cf3df382d2fc6f9b744d32df894d4a516d46ca715454a4044501c49213"
     },
     {
       "path": "industries/international-logistics/index.html",
@@ -4128,7 +4148,7 @@
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "8b32ddd1d6bf99d628aabded6c8fca1708f351290d58ff5824ddaaf60f8a7114"
+      "sha256": "d05a6dcc31e3d3ff875aec7b0a6d564f6d5e5dce3cc10018e25f60499e1fbe0e"
     },
     {
       "path": "industries/pet-supplies-online-stores/index.html",
@@ -4148,7 +4168,7 @@
     {
       "path": "industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "784c48cb215c04acca64e45a951ee9629c932206a745071857c88fb99b0afa64"
+      "sha256": "f67a9e5f5900184e2967a0285fda3f10afaa5b316ed4962eb21b2b0cc1560535"
     },
     {
       "path": "industries/private-psychologists-psychotherapists/index.html",
@@ -4413,7 +4433,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "c94effc4c85a4ee13fd7cafad523bcba1ef731357be3ed7024699358b7f1448d"
+      "sha256": "44842e45ea9025608f8f60c5c0c8c416ded47ec6e9a5131c8e0869e3b2b4d9ec"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
@@ -4443,12 +4463,17 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "0f1d3edb0719806c0965155e12ff1d7a57be8e26b49719f87ddde79bed6000a6"
+      "sha256": "c20fcf0a0b6a3b2e516308aea5e680f173a4a775055e5596c83e788d7ccdcf14"
     },
     {
       "path": "strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "dc8b79a1fe5e323d533a56a113a1d410f91589d448b4200c59dc1c90458b32c3"
+      "sha256": "dd6ab147743c857c285c56a589b16bf36036dd6ca475a1127ccb8d9237d92b8a"
+    },
+    {
+      "path": "strategies/industrial-equipment-rfq-checklist/index.html",
+      "kind": "html",
+      "sha256": "671dcc4e78afa84014c96e4e32871f380e739481a062a85f3ddf95549d5de4ce"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -4458,7 +4483,12 @@
     {
       "path": "strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "86cc15a1a13fd72b78624baeb9d0e79969676f21a800c0f543ae4332d6a020b8"
+      "sha256": "844471c9dbf9617a0c78974a832206925e112c08227e27d91f35364aa16510ca"
+    },
+    {
+      "path": "strategies/international-logistics-tender-checklist/index.html",
+      "kind": "html",
+      "sha256": "6495fb9bf7cf37b9d7cb25d00b11e5766f708c205f130a6e5298a24e6a9e9258"
     },
     {
       "path": "strategies/legal-recommendations/index.html",
@@ -4473,7 +4503,12 @@
     {
       "path": "strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "996292c7215ea6a5872adc6a5fd4ed040b1ddc02538384bf3ae87cf27294f125"
+      "sha256": "5e1b23e20f4eef1eb1f1d23033fb90021d16ea6fa5c51db14f2fb143b75f0404"
+    },
+    {
+      "path": "strategies/packaging-supplier-brief-checklist/index.html",
+      "kind": "html",
+      "sha256": "65a3b71162b8362d0677b5727dfa5b8b58c37beb8d54d29f565a79777641584e"
     },
     {
       "path": "strategies/pharma-geo-evidence/index.html",
@@ -4481,9 +4516,14 @@
       "sha256": "5077b72c8e7e83983c636ed8f0ee5d540c31c19693f6b7253966bedb51852d45"
     },
     {
+      "path": "strategies/private-clinic-branch-facts-checklist/index.html",
+      "kind": "html",
+      "sha256": "162437faf40a15e2a1d48ddcc9cddca8756f65ec18241f1ba9abf703833395d2"
+    },
+    {
       "path": "strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "021ae5c81b1bd86981783d5cc502c51444291f9b92942a6fb5f424dfa9e1297d"
+      "sha256": "9c95917d942c0463f3f0364d46692fcfdda094005dcac901b970a449588a2446"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
