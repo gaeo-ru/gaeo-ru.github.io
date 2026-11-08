@@ -114,6 +114,7 @@ function render3APage(cluster,kind,lang) {
 <section class="industry-cluster-section" id="faq"><h2>${en?'Frequently asked questions':'Частые вопросы'}</h2>${faq}</section>
 <section class="industry-cluster-section"><h2>${en?'Start with an evidence-based diagnosis':'Начать с предметной диагностики'}</h2><p>${en?'Send a website and specify the actual services, geography and source documents. I will identify an appropriate unbranded prompt matrix and initial evidence gaps.':'Пришли адрес сайта, укажи реальные услуги, географию и доступные подтверждающие документы. Подберу матрицу небрендовых запросов и начальную проверку рекомендаций.'}</p><a class="button" href="${actionPath}" data-gaeo-intent="service" data-gaeo-request="${esc(d.h1)}">${en?'Request a mini-audit':'Запросить мини-аудит'}</a></section>
 </div></section>
+<div class="page-cta"></div>
 <script type="application/ld+json">${json(schema)}</script>
 </main>`;
 }
