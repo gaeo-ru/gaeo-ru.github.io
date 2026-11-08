@@ -17,6 +17,7 @@
     "check:design": "node scripts/qa_approved_design_system.mjs",
     "check:tariffs": "node scripts/qa_tariffs.mjs",
     "check:specializations": "node scripts/qa_industry_specializations.mjs",
+    "check:sector3a": "node scripts/qa_sector_clusters_3a.mjs",
     "check:evidence": "node scripts/qa_evidence_pages.mjs"
   },
   "devDependencies": {
