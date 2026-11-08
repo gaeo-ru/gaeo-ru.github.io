@@ -144,8 +144,8 @@ for(const [id,group] of [[30,'finance'],[75,'automotive'],[76,'automotive']]){
   const html=read(lang==='ru'?'/industries/':'/en/industries/');
   assert.ok(html.includes('href="'+item.routes[lang]+'"'),'2AK industry listing backlink '+id+' '+lang);
   const list=graph(html).find(n=>n['@type']==='ItemList');
-  assert.equal(list?.numberOfItems,18,'2AK industry directory structured items '+lang);
-  assert.equal(list.itemListElement.length,18,'2AK industry directory JSON-LD coherence '+lang);
+  assert.equal(list?.numberOfItems,20,'2AK + 3A industry directory structured items '+lang);
+  assert.equal(list.itemListElement.length,20,'2AK + 3A industry directory JSON-LD coherence '+lang);
   assert.ok(list.itemListElement.some(n=>n.url==='https://gaeo.ru'+item.routes[lang]),'2AK industry directory JSON-LD link '+id+' '+lang);
  }
 }

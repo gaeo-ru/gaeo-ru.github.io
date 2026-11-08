@@ -2,19 +2,21 @@ import {readFileSync,writeFileSync,mkdirSync,readdirSync} from 'node:fs';
 import {dirname,resolve} from 'node:path';
 import {serviceDetails} from '../src/data/service-detail-content.mjs';
 import {industrySpecializations} from '../src/data/industry-specializations.mjs';
+import {phase3AClusters} from '../src/data/industry-clusters-phase-3a.mjs';
 import {getPlan,priceLabel,pricingHref,serviceNodes,UPDATED} from '../src/data/pricing.mjs';
 const root=resolve('src/legacy/pages');
 const nojsFallback=readFileSync(resolve('templates/partials/nojs-fallback.html'),'utf8').trim();
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const json=d=>JSON.stringify(d).replace(/</g,'\\u003c');
 function save(path,body){mkdirSync(dirname(path),{recursive:true});let prior;try{prior=readFileSync(path,'utf8')}catch{}if(prior!==body)writeFileSync(path,body);}
-function shell({lang,route,equivalent,title,description,h1,body,collection=false,schemaMarker=true}){
+function shell({lang,route,equivalent,title,description,h1,body,collection=false,schemaMarker=true,directory=null,mainEntitySuffix=null,modifiedDate=UPDATED}){
  const en=lang==='en',ru=en?equivalent:route,english=en?route:equivalent,url='https://gaeo.ru'+route;
  const crumbs=[{name:en?'Home':'Главная',item:'https://gaeo.ru'+(en?'/en/':'/')}];
- if(route!==pricingHref(lang))crumbs.push({name:en?'Pricing':'Тарифы',item:'https://gaeo.ru'+pricingHref(lang)});
+ if(directory){crumbs.push({name:directory==='industries'?(en?'Industries':'Отрасли'):(en?'Strategies':'Стратегии'),item:'https://gaeo.ru/'+(en?'en/':'')+directory+'/'});}
+ else if(route!==pricingHref(lang))crumbs.push({name:en?'Pricing':'Тарифы',item:'https://gaeo.ru'+pricingHref(lang)});
  crumbs.push({name:h1,item:url});
  const ld={'@context':'https://schema.org','@graph':[
-  {'@type':collection?'CollectionPage':'WebPage','@id':url+'#webpage',url,name:h1,description,inLanguage:en?'en':'ru-RU',isPartOf:{'@id':'https://gaeo.ru/#website'},author:{'@id':'https://gaeo.ru/#person'},publisher:{'@id':'https://gaeo.ru/#business'},dateModified:UPDATED,mainEntity:{'@id':url+(collection?'#catalog':'#service')}},
+  {'@type':collection?'CollectionPage':'WebPage','@id':url+'#webpage',url,name:h1,description,inLanguage:en?'en':'ru-RU',isPartOf:{'@id':'https://gaeo.ru/#website'},author:{'@id':'https://gaeo.ru/#person'},publisher:{'@id':'https://gaeo.ru/#business'},dateModified:modifiedDate,mainEntity:{'@id':url+'#'+(mainEntitySuffix||(collection?'catalog':'service'))}},
   {'@type':'BreadcrumbList','@id':url+'#breadcrumb',itemListElement:crumbs.map((c,i)=>({'@type':'ListItem',position:i+1,...c}))}
  ]};
  return `<!doctype html>
@@ -80,6 +82,50 @@ for(const specialization of industrySpecializations){
   save(resolve(root,route.slice(1),'index.html'),shell({lang,route,equivalent,title:content.title,description:content.description,h1:content.h1,body:'<main><!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT --></main>',schemaMarker:false}));
  }
 }
+
+// Phase 3A sector hubs and related methodologies use the canonical shared HTML shell.
+function render3APage(cluster,kind,lang) {
+ const en=lang==='en',d=cluster[lang][kind],isHub=kind==='hub',route=cluster.routes[kind][lang],url='https://gaeo.ru'+route;
+ const sectionPath=(en?'/en/':'/')+(isHub?'industries/':'strategies/');
+ const sectionLabel=isHub?(en?'Industries':'Отрасли'):(en?'Strategies':'Стратегии');
+ const actionPath=en?'/en/#lead':'/#lead',pricePath=pricingHref(lang);
+ const crossPath=cluster.routes[isHub?'method':'hub'][lang];
+ const related=cluster.ids.map(id=>industrySpecializations.find(x=>x.id===id)).filter(Boolean);
+ const sections=d.sections.map(({title,p=[],bullets=[]})=>`<section class="industry-cluster-section"><h2>${esc(title)}</h2>${p.map(t=>`<p>${esc(t)}</p>`).join('')}${bullets.length?`<ul>${bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}</section>`).join('\n');
+ const links=related.map((x,i)=>`<article class="list-card"><div class="eyebrow">${en?'Specialization':'Специализация'} №${x.id}</div><h3><a href="${x.routes[lang]}">${esc(x.content[lang].h1)}</a></h3><p>${esc(x.content[lang].lead)}</p><a class="button outline" href="${x.routes[lang]}">${en?'Explore service':'Смотреть специализацию'}</a><p><a href="${pricePath}#industry-${String(x.id).padStart(3,'0')}">${en?'Pricing for this sector':'Тарифы этого направления'}</a></p></article>`).join('\n');
+ const linksSchema=related.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.content[lang].h1,url:'https://gaeo.ru'+x.routes[lang]}));
+ const faqSchema=d.faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}));
+ const sources=cluster.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s[lang])}</a></li>`).join('');
+ const resources=`<ul><li><a href="${crossPath}">${isHub?(en?'Sector-specific GEO methodology':'Отраслевая методика GEO'):(en?'Related industry hub':'Отраслевой хаб и специализации')}</a></li><li><a href="${en?'/en/strategies/measurement/':'/strategies/measurement/'}">${en?'How GAEO measures BMR and recommendations':'Как GAEO измеряет BMR и рекомендации нейросетей'}</a></li><li><a href="${en?'/en/cases/methodlab-ai-visibility-growth/':'/cases/methodlab-rost-neyrovidimosti-19-52-procenta/'}">${en?'Measured MethodLab case from a different industry':'Измеренный кейс MethodLab из другой отрасли'}</a> (${en?'measurement example only; no sector-specific result claimed':'только пример методики, не результат для этой отрасли'})</li><li><a href="${en?'/en/articles/geo-experts-110-ai-responses-bmr-frs-2026/':'/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/'}">${en?'GAEO research: 110 AI answers and recommendation measurement':'Исследование GAEO: 110 ответов нейросетей и измерение рекомендаций'}</a> (${en?'general methodological research; not a sector client case':'общая методология, не отраслевой клиентский кейс'})</li>${cluster.key==='automotive'?'<li><a href="'+(en?'/en/articles/agentic-commerce-readiness/':'/articles/agentnaya-torgovlya-gotovnost-internet-magazina/')+'">'+(en?'Agentic commerce research for product and parts catalogues':'Исследование агентной торговли для товарных каталогов и запчастей')+'</a></li>':''}</ul>`;
+ const schema={'@context':'https://schema.org','@graph':[
+  isHub?{'@type':'ItemList','@id':url+'#catalog',name:d.h1,numberOfItems:related.length,itemListElement:linksSchema}:{'@type':'CreativeWork','@id':url+'#method',name:d.h1,url,description:d.description,author:{'@id':'https://gaeo.ru/#person'},datePublished:'2026-11-08',dateModified:'2026-11-08',inLanguage:lang,isPartOf:{'@id':'https://gaeo.ru/#website'}},
+  {'@type':'FAQPage','@id':url+'#faq',mainEntity:faqSchema},
+  ...(isHub?[{'@type':'Service','@id':url+'#service',name:d.h1,serviceType:en?'GEO and AEO consultancy':'GEO/AEO-продвижение',provider:{'@id':'https://gaeo.ru/#business'},url,offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}]:[])
+ ]};
+ return `<main class="page-shell industry-cluster-page">
+<nav class="breadcrumbs" aria-label="${en?'Breadcrumbs':'Хлебные крошки'}"><div class="container breadcrumbs__inner"><a href="${en?'/en/':'/'}">${en?'Home':'Главная'}</a><span class="breadcrumbs__sep">›</span><a href="${sectionPath}">${sectionLabel}</a><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current" aria-current="page">${esc(d.h1)}</span></div></nav>
+<section class="inner-hero case-detail-hero"><div class="container inner-hero__grid"><div><div class="inner-eyebrow">${esc(d.eyebrow)}</div><h1>${esc(d.h1)}</h1><div class="article-meta"><span><a href="${en?'/en/professional-biography/':'/professional-biography/'}">${en?'Alexey Yakovlev':'Алексей Яковлев'}</a></span><span>${en?'Updated 8 November 2026':'Обновлено 8 ноября 2026'}</span></div><p class="inner-hero__lead">${esc(d.lead)}</p><div class="industry-actions"><a class="button" href="${actionPath}" data-gaeo-intent="service" data-gaeo-request="${esc(d.h1)}">${en?'Discuss your project':'Обсудить задачу'}</a><a class="button outline" href="${crossPath}">${isHub?(en?'Read the method':'Изучить методику'):(en?'See the industry hub':'Все специализации')}</a></div></div></div></section>
+<section class="inner-content"><div class="article-wrap"><p><strong>${esc(d.summary)}</strong></p>${sections}
+<section class="industry-cluster-section" id="specializations"><h2>${en?'Related industry services and current GEO plans':'Отраслевые специализации и действующие тарифы'}</h2><p>${en?'Each service has its own buyer questions and applicable evidence. Explore the exact scope before estimating the engagement.':'Каждая услуга основана на собственных вопросах покупателей и проверяемых условиях. Выбери специализацию, чтобы посмотреть сценарии спроса и тарифы.'}</p><div class="listing-grid">${links}</div></section>
+<section class="industry-cluster-section" id="method-and-cases"><h2>${en?'Methods, research and a comparable case example':'Методики, исследования и сопоставимый пример'}</h2><p>${en?'GAEO keeps the measurement framework separate from evidence about clients in this sector. No completed automotive or financial-services client performance is asserted by these pages.':'Методика измерения отделена от доказательств результатов конкретных клиентов. Завершенные проекты GAEO в данном сегменте этими страницами не заявляются.'}</p>${resources}</section>
+<section class="industry-cluster-section" id="prices"><h2>${en?'Published GAEO pricing and contractual BMR terms':'Тарифы GAEO и договорные условия BMR'}</h2><p>${en?'The baseline audit defines the sample for monthly reporting. Current plans, the calculator and the financial-guarantee conditions are provided on their canonical pricing pages. The guaranteed plan targets +5/+10/+15 percentage points of BMR against baseline after months 1/2/3, subject to contract.':'Стартовый замер фиксирует выборку для ежемесячных сравнений. Все цены и комплектации находятся в каноническом разделе тарифов. Для тарифа с финансовыми гарантиями договорный рост BMR от стартового замера: +5/+10/+15 п.п. по итогам месяцев 1/2/3 соответственно, на условиях договора.'}</p><ul><li><a href="${getPlan('geo',lang).href}">${en?'GEO promotion plan':'Продвижение в нейросетях'}</a></li><li><a href="${getPlan('content',lang).href}">${en?'GEO + content plan':'Продвижение с контентом'}</a></li><li><a href="${getPlan('guarantee',lang).href}">${en?'Contractually guaranteed GEO plan':'Продвижение с финансовыми гарантиями'}</a></li><li><a href="${pricePath}">${en?'All pricing, calculator and 107 sectors':'Все тарифы, калькулятор и 107 направлений'}</a></li></ul></section>
+<section class="industry-cluster-section" id="sources"><h2>${en?'Primary sources checked for this sector':'Проверенные первичные источники'}</h2><p>${en?'These sources establish the general legal context. They do not certify any named business; statuses and transaction conditions must be verified individually at the time of use.':'Источники подтверждают общие требования и правила. Они не подтверждают статус конкретной компании: юридическое лицо, полномочия и условия сделки проверяются отдельно на актуальную дату.'}</p><ul>${sources}</ul></section>
+<section class="industry-cluster-section" id="faq"><h2>${en?'Frequently asked questions':'Частые вопросы'}</h2><!-- GAEO_DESIGN:FAQ --></section>
+</div></section>
+<!-- GAEO_DESIGN:CONTACT -->
+<script type="application/ld+json">${json(schema)}</script>
+</main>`;
+}
+for(const cluster of phase3AClusters){
+ for(const lang of ['ru','en']){
+  for(const kind of ['hub','method']){
+   const route=cluster.routes[kind][lang],equivalent=cluster.routes[kind][lang==='ru'?'en':'ru'];
+   const c=cluster[lang][kind];
+   save(resolve(root,route.slice(1),'index.html'),shell({lang,route,equivalent,title:c.title,description:c.description,h1:c.h1,body:render3APage(cluster,kind,lang),collection:kind==='hub',schemaMarker:false,directory:kind==='hub'?'industries':'strategies',mainEntitySuffix:kind==='hub'?'catalog':'method',modifiedDate:'2026-11-08'}));
+  }
+ }
+}
+
 // Managed existing pages retain their URL, expert content and original schema graph.
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(resolve(dir,e.name)):e.name.endsWith('.html')?[resolve(dir,e.name)]:[]);
 for(const path of walk(root)){

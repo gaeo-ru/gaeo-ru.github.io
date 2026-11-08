@@ -9,8 +9,10 @@ const PARTIALS=resolve(process.cwd(),'templates/partials');
 export function faqItemsFor(sourcePath){
   const source=readFileSync(resolve(PAGES,sourcePath),'utf8');
   const ld=[...source.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if(ld.length!==1)throw new Error('Expected one JSON-LD graph on '+sourcePath);
-  const graph=JSON.parse(ld[0][1])['@graph']||[];
+  if(!ld.length)throw new Error('Expected JSON-LD on '+sourcePath);
+  // New bilingual GEO sector pages keep page metadata and FAQ in separate valid
+  // JSON-LD scripts, while existing pages retain their single-graph structure.
+  const graph=ld.flatMap(m=>{const parsed=JSON.parse(m[1]);return parsed['@graph']||[parsed]});
   const matches=graph.filter(n=>n['@type']==='FAQPage');
   if(matches.length!==1)throw new Error('Expected one FAQPage on '+sourcePath);
   const questions=matches[0].mainEntity;
