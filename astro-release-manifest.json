@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "4181159a77022e53cbd11caa84ba316f3e73688f",
-  "releasedAt": "2026-11-08T14:41:27.255Z",
+  "sourceCommit": "5f0b1a3e51128ce60a8e9461f80bed27eecf2d25",
+  "releasedAt": "2026-11-08T14:55:27.294Z",
   "files": [
     {
       "path": ".nojekyll",
@@ -3193,7 +3193,7 @@
     {
       "path": "en/industries/medical-care-providers/index.html",
       "kind": "html",
-      "sha256": "b6e15f0ee7d35a35eea199838dca90174f7da871b414c2cb13b3da6f3fa6a067"
+      "sha256": "a84ff08e0f0e13acc41a5c5840a014f61c5880e98e18dcc43dcc32ac08ceff9b"
     },
     {
       "path": "en/industries/medical-device-manufacturers/index.html",
@@ -3221,6 +3221,11 @@
       "sha256": "d54dca23386ce9b30a6177363bb7c03596f004035a513df2851a6eaff8acf31d"
     },
     {
+      "path": "en/industries/ophthalmology-clinics/index.html",
+      "kind": "html",
+      "sha256": "7c50831eb6f27737496b9e07733a8a5bbc5a2ab13abe2f115d67291b159dc9a4"
+    },
+    {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
       "sha256": "01ee3e48189a7ca5c6407c24657a1ca69b97477e40b0a6cbac4e0540eb767692"
@@ -3234,6 +3239,11 @@
       "path": "en/industries/pharma/index.html",
       "kind": "html",
       "sha256": "854678c670c11c672f8da807a68319210793c6bb393b8b93a85cc9b8569fe575"
+    },
+    {
+      "path": "en/industries/plastic-surgery-clinics/index.html",
+      "kind": "html",
+      "sha256": "14a09520f7c45c8fef3f5a35a28b6635cdac5a96f9f41a89d41b040724fb23f4"
     },
     {
       "path": "en/industries/private-medical-clinics/index.html",
@@ -3264,6 +3274,11 @@
       "path": "en/industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
       "sha256": "c8924608203cef20ce1a050c61019661343833c4feccc6934c3657b3618ae05e"
+    },
+    {
+      "path": "en/industries/reproductive-medicine-clinics/index.html",
+      "kind": "html",
+      "sha256": "584722e492e8e0a645c7bcae6b01fa5079938431ae8660353e7bbaa3a035457b"
     },
     {
       "path": "en/industries/residential-property-agencies/index.html",
@@ -3353,7 +3368,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "e5d22eebcac2a6f840449a55d32de6f2cc616bc2b1757a1d05e0401b162b440a"
+      "sha256": "d3331cb74276b250903e591fc328ee4f25540b3cf657cd72ed61a5eeef238f19"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -3838,7 +3853,7 @@
     {
       "path": "industries/medical-care-providers/index.html",
       "kind": "html",
-      "sha256": "6a9a30dcffac00adf0382476a9334c136b855df091fb9fbcbb24bc33c95b5dbe"
+      "sha256": "a4f088eceb23b3f8a3ec7cbe10cceedd1b55408b8c1d1f9fd12098bad4a09082"
     },
     {
       "path": "industries/medical-device-manufacturers/index.html",
@@ -3866,6 +3881,11 @@
       "sha256": "a37de550c72ec37030631001b47b5046215b195a8cda815769fcc462bf9d5b21"
     },
     {
+      "path": "industries/ophthalmology-clinics/index.html",
+      "kind": "html",
+      "sha256": "b02d90dec9078c70adcc056705e04a071fa37da1d0d742765c73ae5928512e33"
+    },
+    {
       "path": "industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
       "sha256": "528e0e2a2ca3c43be9691cdf8787756aa561f0900e7141988272a36cc73a88e4"
@@ -3879,6 +3899,11 @@
       "path": "industries/pharma/index.html",
       "kind": "html",
       "sha256": "08dbf397e1cd2c50aee2dbd63977b08d4ba3d337530116430034ba8b6a88d8e9"
+    },
+    {
+      "path": "industries/plastic-surgery-clinics/index.html",
+      "kind": "html",
+      "sha256": "2abfa183d83fe611e769d90c200cfd91369491622e3576e2d68ed0e0b2eae5ca"
     },
     {
       "path": "industries/private-medical-clinics/index.html",
@@ -3909,6 +3934,11 @@
       "path": "industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
       "sha256": "6cda642de55883f10a2fe05ab945108f2ffa65a9b38d3ec86b26ee62f10396b1"
+    },
+    {
+      "path": "industries/reproductive-medicine-clinics/index.html",
+      "kind": "html",
+      "sha256": "9d8a22857486f50c5aa2e043ae25f9aacb27db89b08e8308aad9a81f0a267ca8"
     },
     {
       "path": "industries/residential-property-agencies/index.html",
@@ -4093,7 +4123,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "728bdf23598e0e1c3f3e5e6386a5e0f789dd0793e997c56c6add72540f6783ef"
+      "sha256": "dac62cd162271e7d5a656ebcb62fbd2cc6d6bea957fab79824e09234ccfac0e6"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -4148,7 +4178,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "5e4ba61bcf5a8ea84c103152d65c9dce65ef86ff1e7dc20d1f988c56d7c77718"
+      "sha256": "a8e53b17a4d60ec8fc5c04f7e2ac9df96c9009e98d63dfd69ca99575ed069eb6"
     }
   ]
 }
