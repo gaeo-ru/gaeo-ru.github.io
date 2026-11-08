@@ -227,6 +227,18 @@ try {
     await page.close();
   }
 
+  // Without JavaScript, no links should be trapped in a closed visual widget.
+  for(const route of ['/geo-prodvizhenie-nedvizhimosti/','/en/geo-for-real-estate/']){
+    const plain=await browser.newPage({viewport:{width:390,height:844},javaScriptEnabled:false});
+    const response=await plain.goto(BASE+route,{waitUntil:'domcontentloaded',timeout:25000});
+    assert.equal(response?.status(),200,'No-JS industry page failed '+route);
+    const list=plain.locator('.industry-related-specializations [data-related-viewport]');
+    assert.ok(await plain.locator('.industry-related-specializations li a').count()>=10,'No-JS backlinks missing '+route);
+    assert.ok(await plain.locator('.industry-related-specializations [data-related-toggle]').isHidden(),'No-JS toggle should be hidden '+route);
+    assert.ok(await list.evaluate(el=>el.getBoundingClientRect().height>=el.scrollHeight-3),'No-JS must show every related link '+route);
+    await plain.close();
+  }
+
   // E-commerce catalog methodology: technical guide parity, images, mobile tables and lead form.
   for (const entry of [
     {route:'/strategies/ecommerce-catalog/',lang:'ru'},
