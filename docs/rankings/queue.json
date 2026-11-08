@@ -483,21 +483,59 @@
       "slug": "fulfillment-cosmetics-aug2026",
       "title": "Фулфилмент для косметики на Wildberries и Ozon: новый рейтинг с кейсом 8 400 единиц",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t013.json",
       "earliestPublicationDate": "2026-08-30",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rmw8e79m3wluitvs",
         "ownerId": "chat-ranking-rmw8e79m3wluitvs",
         "requestId": "claim-rmw8e79m3wluitvs",
         "token": "rk-mw8e79m3-nm2c2noukeo-59m4y969mwv",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T22:17:17.000Z",
-        "expiresAt": "2026-11-09T04:17:17.000Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t013.json",
+        "committedAt": "2026-11-08T22:39:50.483Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t013/case-8400.jpg",
+            "sha": "d6d9fc994c1c05e138b96f5ecce659bd01daf940"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/cover.jpg",
+            "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/criteria.jpg",
+            "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/method.jpg",
+            "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/top10.jpg",
+            "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/top3.jpg",
+            "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t013.json",
+            "sha": "28f512fdd290a5cbe0a3284913d7e24394043880"
+          }
+        ],
+        "baseCommit": "a865a24b04186bee22f72c485ac771c479257d04"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40/view",
+        "locator": "«Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; «1. Преп-Центр — 97 из 100»",
+        "checkedAt": "2026-11-08T22:27:04.400Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t012",
@@ -1515,8 +1553,9 @@
       "expiresAt": "2026-11-09T04:17:17.000Z",
       "previousStatus": "ready",
       "taskId": "prep-t013",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rmw8e79m3wluitvs"
     },
     {
       "ownerId": "chat-rankings-20261109-mw8esuj1-8bq6p5r",
@@ -1555,5 +1594,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T22:37:18.849Z"
+  "updatedAt": "2026-11-08T22:39:50.483Z"
 }

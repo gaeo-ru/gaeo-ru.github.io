@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t013",
+  "familyId": "prep-t013",
+  "slug": "fulfillment-cosmetics-aug2026",
+  "ownerId": "chat-ranking-rmw8e79m3wluitvs",
+  "requestId": "claim-rmw8e79m3wluitvs",
+  "submissionId": "submit-rmw8e79m3wluitvs",
+  "submittedAt": "2026-11-08T22:39:50.483Z",
+  "mode": "standard",
+  "baseCommit": "a865a24b04186bee22f72c485ac771c479257d04",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t013/case-8400.jpg",
+      "sha": "d6d9fc994c1c05e138b96f5ecce659bd01daf940"
+    },
+    {
+      "path": "public/assets/rankings/prep-t013/cover.jpg",
+      "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+    },
+    {
+      "path": "public/assets/rankings/prep-t013/criteria.jpg",
+      "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+    },
+    {
+      "path": "public/assets/rankings/prep-t013/method.jpg",
+      "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+    },
+    {
+      "path": "public/assets/rankings/prep-t013/top10.jpg",
+      "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+    },
+    {
+      "path": "public/assets/rankings/prep-t013/top3.jpg",
+      "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t013.json",
+      "sha": "28f512fdd290a5cbe0a3284913d7e24394043880"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40/view",
+      "locator": "«Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; «1. Преп-Центр — 97 из 100»",
+      "checkedAt": "2026-11-08T22:27:04.400Z"
+    },
+    "images": 6,
+    "requiredPublishedVersions": {
+      "ru": 2,
+      "en": 2
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t013.json",
+    "ref": "a865a24b04186bee22f72c485ac771c479257d04",
+    "sha": "18f33496d1d128aef18a9565580d306f933d1f5d"
+  },
+  "deployed": false
+}
