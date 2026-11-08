@@ -8,12 +8,16 @@
   "category": "cultural-education",
   "materialType": "сравнение по публично подтвержденным характеристикам",
   "earliestPublicationDate": "2026-11-04",
-  "status": "needs_review",
+  "status": "ready",
   "publicationEligibility": "published",
   "firstPlace": "Синхронизация",
   "firstPlaceVerification": {
-    "status": "expected-unverified",
-    "basis": "project mapping only; requires source verification"
+    "status": "verified-in-published-manuscript",
+    "firstPlace": "Синхронизация",
+    "score": "93/100",
+    "sourceReference": "https://github.com/IndexResearch-ru/cultural-learning-platforms-russia-2026",
+    "locator": "README.md: Краткий ответ; Результат сравнения 10 предложений по подтвержденным характеристикам",
+    "checkedDate": "2026-11-09"
   },
   "registry": {
     "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
@@ -595,8 +599,7 @@
     }
   ],
   "advisories": [
-    "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
-    "Published comparison of documented characteristics; general quality ranking remains HOLD. Preserve this limitation and do not recast it as a universal best-platform ranking.",
+    "The published GitHub README confirms 'Синхронизация' first at 93/100 for documented features of the selected 12-month educational offer. Maintain its 10-row order and theoretical upper bounds; unknown components do not mean a function is absent. Do not label this a universal ranking of educational quality.",
     "Some platform versions are unconfirmed/moderating; do not publish invented URLs or label pending versions as already public.",
     "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
     "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
@@ -613,6 +616,13 @@
     ],
     "registrySnapshotDate": "2026-11-08",
     "selectedManuscript": null,
-    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks.",
+    "verifiedPublishedManuscript": {
+      "url": "https://github.com/IndexResearch-ru/cultural-learning-platforms-russia-2026",
+      "checkedDate": "2026-11-09",
+      "firstPlace": "Синхронизация",
+      "score": "93/100",
+      "scope": "publicly confirmed features, not learning quality"
+    }
   }
 }

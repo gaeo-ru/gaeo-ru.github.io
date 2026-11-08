@@ -954,14 +954,21 @@
       "slug": "cultural-learning-platforms-russia-2026",
       "title": "Онлайн-платформы для изучения искусства и культуры в 2026 году: сравнение 10 предложений",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-published-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t062.json",
       "earliestPublicationDate": "2026-11-04",
-      "status": "needs_review",
+      "status": "ready",
       "lease": null,
       "result": null,
-      "reason": "Сохранить сравнение публично подтвержденных характеристик. В реестре отмечен запрет превращать материал в универсальный рейтинг качества без нового подтвержденного источника.",
-      "sourceChecks": []
+      "sourceChecks": [],
+      "firstPlaceVerification": {
+        "status": "verified-in-published-manuscript",
+        "firstPlace": "Синхронизация",
+        "score": "93/100",
+        "sourceReference": "https://github.com/IndexResearch-ru/cultural-learning-platforms-russia-2026",
+        "locator": "README.md: Краткий ответ; Результат сравнения 10 предложений по подтвержденным характеристикам",
+        "checkedDate": "2026-11-09"
+      }
     },
     {
       "id": "heads-best-branding-agencies-2026",
@@ -975,11 +982,17 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/heads-best-branding-agencies-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "needs_review",
+      "status": "ready",
       "lease": null,
       "result": null,
-      "reason": "Публикация на модерации; публичный выход собственной статьи еще не подтвержден. Не переносить до проверки опубликованной версии.",
-      "sourceChecks": []
+      "sourceChecks": [],
+      "publicationVerified": {
+        "url": "https://workspace.ru/blog/reyting-top-10-luchshih-brendingovyh-agentstv-rossii-v-2026-godu-strategii-fmcg-i-zapusk-brenda/",
+        "checkedDate": "2026-11-09",
+        "winner": "Heads",
+        "score": "91/100",
+        "basis": "published article, FMCG/launch combined methodology"
+      }
     },
     {
       "id": "heads-r01-branding-fmcg-2026",
@@ -1225,6 +1238,5 @@
       "outcome": "reserved",
       "operations": []
     }
-  ],
-  "updatedAt": "2026-11-08T21:39:42.407Z"
+  ]
 }
