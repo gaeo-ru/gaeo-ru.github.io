@@ -1241,18 +1241,58 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t018.json",
       "earliestPublicationDate": "2026-09-28",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "chat-gaeo-20261109-0215-p4j7bm9",
-        "requestId": "claim-gaeo-20261109-0215-p4j7bm9",
-        "token": "rk-mw8getnz-bbhq71e275-jxmlyfbo94f",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T23:19:13.973Z",
-        "expiresAt": "2026-11-09T05:19:13.973Z",
-        "previousStatus": "ready"
-      },
+      "status": "needs_work_source",
+      "lease": null,
       "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "block": {
+        "reason": "Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными.",
+        "sourceChecks": [
+          {
+            "provider": "google-drive",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-08T23:26:58Z",
+            "queries": [
+              "FBL ЛЭТУАЛЬ",
+              "ЛЭТУАЛЬ",
+              "fbl_letual",
+              "name contains 'ЛЭТУАЛЬ'",
+              "name contains 'FBL'",
+              "name contains 'летуаль'"
+            ],
+            "locations": [
+              "https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX",
+              "https://drive.google.com/drive/folders/1885HzcRJ_4MM5s0J3r28ND0pTM8BwY2K",
+              "Google Drive: поиск по названиям доступных файлов и документов"
+            ]
+          },
+          {
+            "provider": "yandex-disk",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-08T23:26:58Z",
+            "requestId": "rank-prept018-letuaru-20261109-a2",
+            "queries": [
+              "FBL",
+              "ЛЭТУАЛЬ",
+              "letual",
+              "Летуаль"
+            ],
+            "locations": [
+              "disk:/!GAEO/!Договора/Prep-Center/Статьи",
+              "disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации",
+              "disk:/!GAEO/Статьи",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-fbl-20261109-a2.json",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-ltual-20261109-a2.json",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letual-20261109-a2.json",
+              "https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letuaru-20261109-a2.json"
+            ]
+          }
+        ],
+        "at": "2026-11-08T23:27:52.617Z",
+        "ownerId": "chat-gaeo-20261109-0215-p4j7bm9"
+      }
     },
     {
       "id": "prep-t019",
@@ -2123,8 +2163,20 @@
       "expiresAt": "2026-11-09T05:19:13.973Z",
       "previousStatus": "ready",
       "taskId": "prep-t018",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-gaeo-20261109-0215-p4j7bm9-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-08T23:26:58Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX\",\"https://drive.google.com/drive/folders/1885HzcRJ_4MM5s0J3r28ND0pTM8BwY2K\",\"Google Drive: поиск по названиям доступных файлов и документов\"],\"provider\":\"google-drive\",\"queries\":[\"FBL ЛЭТУАЛЬ\",\"ЛЭТУАЛЬ\",\"fbl_letual\",\"name contains 'ЛЭТУАЛЬ'\",\"name contains 'FBL'\",\"name contains 'летуаль'\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-08T23:26:58Z\",\"complete\":true,\"locations\":[\"disk:/!GAEO/!Договора/Prep-Center/Статьи\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации\",\"disk:/!GAEO/Статьи\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-fbl-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-ltual-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letual-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letuaru-20261109-a2.json\"],\"provider\":\"yandex-disk\",\"queries\":[\"FBL\",\"ЛЭТУАЛЬ\",\"letual\",\"Летуаль\"],\"requestId\":\"rank-prept018-letuaru-20261109-a2\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-08T23:27:52.617Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "prep-t018",
+            "reason": "Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными."
+          }
+        }
+      ]
     },
     {
       "ownerId": "chat-gaeo-rankings-20261109-0215-7c91d2",
@@ -2163,5 +2215,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T23:20:42.815Z"
+  "updatedAt": "2026-11-08T23:27:52.617Z"
 }
