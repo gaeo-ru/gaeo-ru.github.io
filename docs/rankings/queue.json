@@ -120,18 +120,15 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t004.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "gaeo-rankings-live-smoke-b-20261108-mw89kz54",
-        "requestId": "claim-b-20261108-mw89kz54",
-        "token": "rk-mw89kz55-ev8qsf49vuq-bewg47kddk8",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T20:07:50.591Z",
-        "expiresAt": "2026-11-09T02:07:50.591Z",
-        "previousStatus": "ready"
-      },
+      "status": "ready",
+      "lease": null,
       "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "lastRelease": {
+        "at": "2026-11-08T20:08:19.894Z",
+        "ownerId": "gaeo-rankings-live-smoke-b-20261108-mw89kz54",
+        "reason": "Completed live connector concurrency test; no article started. Returned to the regular queue."
+      }
     },
     {
       "id": "prep-t003",
@@ -1064,8 +1061,20 @@
       "expiresAt": "2026-11-09T02:07:50.591Z",
       "previousStatus": "ready",
       "taskId": "prep-t004",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "released",
+      "operations": [
+        {
+          "id": "claim-b-20261108-mw89kz54-release",
+          "kind": "release",
+          "signature": "{\"reason\":\"Completed live connector concurrency test; no article started. Returned to the regular queue.\"}",
+          "at": "2026-11-08T20:08:19.894Z",
+          "result": {
+            "status": "released",
+            "taskId": "prep-t004",
+            "queueStatus": "ready"
+          }
+        }
+      ]
     },
     {
       "ownerId": "gaeo-rankings-live-smoke-a-20261108-mw89kz54",
@@ -1092,5 +1101,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-11-08T20:08:14.586Z"
+  "updatedAt": "2026-11-08T20:08:19.894Z"
 }
