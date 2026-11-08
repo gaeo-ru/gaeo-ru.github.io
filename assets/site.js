@@ -253,12 +253,13 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
   if(footerGrid && footerGrid.children.length >= 3){
     const left = footerGrid.children[1];
     const right = footerGrid.children[2];
-    const footerLang = right.querySelector('.footer-lang');
 
     const leftItems = isEn ? [
       ['About me','/en/professional-biography/'],
       ['How I work','/en/#process'],
       ['Cases','/en/cases/'],
+      ['GEO Promotion','/en/cases/#geo-promotion'],
+      ['Website Development','/en/cases/#website-development'],
       ['Services','/en/services/'],
       ['Industries','/en/industries/'],
       ['Strategies','/en/strategies/'],
@@ -268,6 +269,8 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Обо мне','/professional-biography/'],
       ['Как работаю','/#process'],
       ['Кейсы','/cases/'],
+      ['GEO-продвижение','/cases/#geo-promotion'],
+      ['Разработка сайтов','/cases/#website-development'],
       ['Услуги','/services/'],
       ['Отрасли','/industries/'],
       ['Стратегии','/strategies/'],
@@ -276,24 +279,24 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     ];
 
     const rightItems = isEn ? [
-      ['Rankings','/en/rankings/'],
       ['Articles','/en/articles/'],
       ['Publications','/en/publications/'],
       ['Rankings and External Mentions','/en/publications/ratings/'],
       ['Interviews and Expert Commentary','/en/publications/interviews/'],
       ['Public Case Studies','/en/publications/cases/'],
       ['Authored Publications and Research','/en/publications/articles/'],
+      ['Rankings','/en/rankings/'],
       ['Official external profiles','/en/professional-biography/#official-profiles'],
       ['Privacy policy','/en/privacy-policy/'],
       ['Personal data processing','/en/personal-data-consent/']
     ] : [
-      ['Рейтинги','/rankings/'],
       ['Статьи','/articles/'],
       ['Публикации','/publications/'],
       ['Рейтинги и внешние упоминания','/publications/ratings/'],
       ['Интервью и экспертные комментарии','/publications/interviews/'],
       ['Публичные кейсы','/publications/cases/'],
       ['Авторские публикации и исследования','/publications/articles/'],
+      ['Рейтинги','/rankings/'],
       ['Официальные внешние профили','/professional-biography/#external-profiles'],
       ['Политика конфиденциальности','/privacy-policy/'],
       ['Обработка персональных данных','/personal-data-consent/']
@@ -305,13 +308,10 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
         const a = document.createElement('a');
         if(href) a.href = href;
         a.textContent = label;
+        if(/^\/(?:en\/)?cases\/#(?:geo-promotion|website-development)$/.test(href)) a.className = 'footer-case-link';
         if(/^\/(?:en\/)?publications\/[^/]+\/$/.test(href)) a.className = 'footer-publication-link';
         if(/^\/(?:en\/)?rankings\/$/.test(href)) a.className = 'footer-rankings-link';
-        if(footerLang && column === right){
-          column.insertBefore(a, footerLang);
-        }else{
-          column.appendChild(a);
-        }
+        column.appendChild(a);
       });
     };
 
