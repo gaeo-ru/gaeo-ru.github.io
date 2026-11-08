@@ -111,6 +111,43 @@ try {
       assert.ok(terms.some(term=>term.includes(entry.lang === 'ru' ? 'От 50 промптов' : 'From 50 prompts')), 'Monthly tariff prompt scope missing');
       assert.ok(terms.some(term=>term.includes(entry.lang === 'ru' ? 'от 5 нейросетей' : '5 AI platforms')), 'Monthly tariff AI coverage missing');
     }
+    // The 107-service specialization index must be a quiet, progressively enhanced
+    // preview on the original real-estate commercial pages (RU/EN).
+    if(entry.route==='/geo-prodvizhenie-nedvizhimosti/'||entry.route==='/en/geo-for-real-estate/'){
+      const block=page.locator('.industry-related-specializations');
+      const preview=block.locator('[data-related-viewport]');
+      const toggle=block.locator('[data-related-toggle]');
+      assert.equal(await block.count(),1,'One related-specializations block '+entry.route);
+      const links=block.locator('li a');
+      assert.ok(await links.count()>=10,'All industry links remain in the server HTML '+entry.route);
+      const hrefsBefore=await links.evaluateAll(els=>els.map(el=>el.getAttribute('href')));
+      assert.ok(hrefsBefore.every(href=>href?.startsWith(entry.lang==='ru'?'/industries/':'/en/industries/')),'Related links must use their native language '+entry.route);
+      assert.ok(await toggle.isVisible(),'Show more toggle missing '+entry.route);
+      assert.equal(await toggle.getAttribute('aria-expanded'),'false','Related list starts collapsed '+entry.route);
+      assert.equal(await toggle.innerText(),entry.lang==='ru'?'Смотреть дальше':'Show more','Localized show-more label '+entry.route);
+      assert.equal(await toggle.getAttribute('aria-controls'),await preview.getAttribute('id'),'Toggle controls the actual list '+entry.route);
+      const collapsed=await preview.evaluate(el=>({
+        visibleHeight:el.getBoundingClientRect().height,fullHeight:el.scrollHeight,
+        lineHeight:parseFloat(getComputedStyle(el.querySelector('li')).lineHeight),
+        fade:getComputedStyle(el,'::after').backgroundImage,
+        bullet:getComputedStyle(el.querySelector('ul')).listStyleType
+      }));
+      assert.ok(collapsed.fullHeight>collapsed.visibleHeight+80,'List is truly clipped '+entry.route+' '+viewport.width);
+      assert.ok(collapsed.visibleHeight>=collapsed.lineHeight*3 && collapsed.visibleHeight<=collapsed.lineHeight*4.3,'Preview should occupy about four lines '+entry.route+' '+viewport.width+' '+JSON.stringify(collapsed));
+      assert.ok(collapsed.fade.includes('linear-gradient'),'Bottom fade must be visible '+entry.route);
+      assert.equal(collapsed.bullet,'none','Use restrained links without huge bullets '+entry.route);
+      await toggle.click();
+      assert.equal(await toggle.getAttribute('aria-expanded'),'true','Expand action must work '+entry.route);
+      assert.equal(await toggle.innerText(),entry.lang==='ru'?'Свернуть':'Show less','Localized collapse label '+entry.route);
+      const expanded=await preview.evaluate(el=>({height:el.getBoundingClientRect().height,fullHeight:el.scrollHeight,fade:getComputedStyle(el,'::after').content}));
+      assert.ok(expanded.height>=expanded.fullHeight-3,'Expanded list must reveal everything '+entry.route+' '+viewport.width+' '+JSON.stringify(expanded));
+      assert.equal(expanded.fade,'none','Expanded list cannot keep fade overlay '+entry.route);
+      assert.deepEqual(await links.evaluateAll(els=>els.map(el=>el.getAttribute('href'))),hrefsBefore,'Expansion cannot remove or alter backlinks '+entry.route);
+      await toggle.click();
+      assert.equal(await toggle.getAttribute('aria-expanded'),'false','Collapse action must work '+entry.route);
+      assert.ok(await preview.evaluate(el=>el.clientHeight<el.scrollHeight-80),'List should collapse again '+entry.route);
+      checks.push(entry.lang+' '+viewport.width+'px related-links preview/fade/expand/collapse/backlinks PASS');
+    }
     if(entry.ecommerce){
       assert.equal(await page.locator('.industry-framework-card').count(),5,'Five ecommerce framework indicators missing');
       assert.equal(await page.locator('.industry-scenario-table tbody tr').count(),5,'Five buying stages missing');
