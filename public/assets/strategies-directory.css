@@ -1,0 +1,7 @@
+/* Scoped to the bilingual strategies directory. Keep full text and links visible. */
+@media(max-width:760px){
+ .strategies-directory .listing-grid{grid-template-columns:minmax(0,1fr)}
+ .strategies-directory .list-card{min-width:0;overflow-wrap:anywhere}
+ .strategies-directory .list-card .button,.strategies-directory .page-cta .button{max-width:100%;white-space:normal;box-sizing:border-box}
+ .strategies-directory .listing-hero h1,.strategies-directory .page-cta h2{overflow-wrap:anywhere}
+}

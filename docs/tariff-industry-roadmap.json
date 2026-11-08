@@ -1488,7 +1488,7 @@
     "phase_3b": {
       "phase": 3,
       "batch": "3B",
-      "status": "prepared_in_isolated_branch_ci_pending",
+      "status": "published_methods_verified_directory_320_correction_in_progress",
       "work_branch": "feat/sector-methods-3b-2026-11-08",
       "records": [
         42,
@@ -1523,7 +1523,7 @@
       ],
       "source_file": "src/data/industry-methods-phase-3b.mjs",
       "public_https_browser_verified": false,
-      "next_required_step": "Full PR CI, source merge, production/main/Pages; independent public HTTPS and browser inspection remain separate",
+      "next_required_step": "Publish narrowly scoped directory wrapping correction through full production, then repeat 18-URL public acceptance; do not recreate 3B or open another PR.",
       "evidence_sources": [
         {
           "id": 42,
@@ -1551,7 +1551,15 @@
             "https://www.roszdravnadzor.gov.ru/Medactivities/Licensing"
           ]
         }
-      ]
+      ],
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/128",
+      "source_merge_commit": "e8df34a2f7fb06325b78fbb5e75db78e3c736234",
+      "initial_production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42523780898",
+      "initial_pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42525536782",
+      "initial_public_acceptance_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42525833476",
+      "directory_diagnosis_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42526494624",
+      "initial_public_https_urls_passed": 18,
+      "initial_public_browser_checks_passed": 50
     }
   },
   "status_definitions": {

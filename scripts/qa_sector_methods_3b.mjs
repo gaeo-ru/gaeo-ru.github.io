@@ -81,5 +81,19 @@ try{
   assert.deepEqual(errors,[],'Runtime errors '+route);
   await page.close();
  }
+ // The directory is part of 3B discovery and must fit narrow screens too.
+ for(const directory of ['/strategies/','/en/strategies/'])for(const width of [1440,390,320]){
+  const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
+  assert.equal((await page.goto(base+directory,{waitUntil:'networkidle'}))?.status(),200);
+  await page.evaluate(()=>document.fonts.ready);
+  assert.equal(await page.locator('main.strategies-directory').count(),1,'Scoped directory');
+  const geometry=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth,cards:[...document.querySelectorAll('main .list-card')].map(e=>({right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width,client:e.clientWidth,scroll:e.scrollWidth}))}));
+  assert.ok(geometry.document<=width+2,'Directory overflow '+directory+' '+width+' '+JSON.stringify(geometry));
+  assert.ok(geometry.cards.every(x=>x.right<=width+2&&x.scroll<=x.client+2),'Card content contained without clipping');
+  for(const entry of phase3BMethods){const lang=directory.startsWith('/en/')?'en':'ru';assert.ok(await page.locator('main a[href="'+entry.routes.method[lang]+'"]').count()>0,'All method links retained');}
+  await page.screenshot({path:'visual-industry/3b-directory-'+(directory.startsWith('/en/')?'en':'ru')+'-'+width+'.png',fullPage:true,animations:'disabled'});
+  await page.close();
+ }
+ console.log('3B directory PASS: RU/EN at 1440/390/320; original cards, links and full text retained');
  console.log('3B browser PASS: 8 × 1440/390/320, initial headings, FAQ, inquiry, internal links and no overflow; '+(external?'public origin':'local production build'));
 }finally{await browser?.close();server?.kill('SIGTERM');}
