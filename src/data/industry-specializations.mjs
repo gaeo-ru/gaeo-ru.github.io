@@ -5104,6 +5104,15 @@ for (const cluster of phase3AClusters) {
   for (const lang of ['ru','en']) {
    page.methods[lang] ||= [];
    page.methodLabels[lang] ||= [];
+   // Keep labels indexed to the existing method URLs before appending new
+   // hub/method links; do not relabel an existing measurement guide as a hub.
+   while (page.methodLabels[lang].length < page.methods[lang].length) {
+    const href=page.methods[lang][page.methodLabels[lang].length];
+    const name=href.includes('measurement')
+      ? (lang==='ru'?'Методика измерения BMR и рекомендаций':'BMR and recommendation measurement')
+      : (lang==='ru'?'Существующая тематическая методика GEO':'Existing topical GEO methodology');
+    page.methodLabels[lang].push(name);
+   }
    for (const [kind,label] of [
     ['hub',lang==='ru'?'Обзор и смежные услуги отрасли':'Sector overview and related services'],
     ['method',lang==='ru'?'Отраслевая методика GEO и проверка источников':'Sector GEO measurement and evidence method']
