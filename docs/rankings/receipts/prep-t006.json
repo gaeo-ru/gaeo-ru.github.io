@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t006",
+  "familyId": "prep-t006",
+  "slug": "construction-chemistry-fulfillment-2026",
+  "ownerId": "chat-mw8crve4-cuabv8ph2y",
+  "requestId": "claim-mw8crve4-cuabv8ph2y",
+  "submissionId": "submit-mw8crve4-cuabv8ph2y",
+  "submittedAt": "2026-11-08T21:59:12.250Z",
+  "mode": "standard",
+  "baseCommit": "d74c97e991d037f94977f96f6623adbec6a17d85",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t006/cartridge-check.jpg",
+      "sha": "96370736c27d8b1e42181eb86d73f0f5780442fe"
+    },
+    {
+      "path": "public/assets/rankings/prep-t006/cover.jpg",
+      "sha": "23ae7fb7fb82bbf6ce75232b085a65e6cf9ff9d8"
+    },
+    {
+      "path": "public/assets/rankings/prep-t006/protected-canisters.jpg",
+      "sha": "8e429d56361bf1391ac3c2114ac0b5d2455bf578"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t006.json",
+      "sha": "df0cde69d88e3d11c7aa0da4980d5f43b780165d"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 15,
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1DdYUUZfq5bfDUBmoo5UXoSg6v6dMxbwS/view",
+      "locator": "Sections 'Рейтинг 15 фулфилментов', '1. Преп-Центр — 98/100', and source scoring matrix row 1",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t006.json",
+    "ref": "d74c97e991d037f94977f96f6623adbec6a17d85",
+    "sha": "24a4cf3a9350aa6ba075b54fcb0c0b10a37629c0"
+  },
+  "deployed": false
+}

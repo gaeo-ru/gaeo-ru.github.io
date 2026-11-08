@@ -255,21 +255,47 @@
       "slug": "construction-chemistry-fulfillment-2026",
       "title": "Фулфилмент для строительной химии для Wildberries и Ozon",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t006.json",
       "earliestPublicationDate": "2026-08-18",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8crve4-cuabv8ph2y",
         "ownerId": "chat-mw8crve4-cuabv8ph2y",
         "requestId": "claim-mw8crve4-cuabv8ph2y",
         "token": "rk-mw8crve5-0y063fsopazd-thbqg9f1a2a",
-        "mode": "standard",
-        "claimedAt": "2026-11-08T21:37:11.118Z",
-        "expiresAt": "2026-11-09T03:37:11.118Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t006.json",
+        "committedAt": "2026-11-08T21:59:12.250Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t006/cartridge-check.jpg",
+            "sha": "96370736c27d8b1e42181eb86d73f0f5780442fe"
+          },
+          {
+            "path": "public/assets/rankings/prep-t006/cover.jpg",
+            "sha": "23ae7fb7fb82bbf6ce75232b085a65e6cf9ff9d8"
+          },
+          {
+            "path": "public/assets/rankings/prep-t006/protected-canisters.jpg",
+            "sha": "8e429d56361bf1391ac3c2114ac0b5d2455bf578"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t006.json",
+            "sha": "df0cde69d88e3d11c7aa0da4980d5f43b780165d"
+          }
+        ],
+        "baseCommit": "d74c97e991d037f94977f96f6623adbec6a17d85"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1DdYUUZfq5bfDUBmoo5UXoSg6v6dMxbwS/view",
+        "locator": "Sections 'Рейтинг 15 фулфилментов', '1. Преп-Центр — 98/100', and source scoring matrix row 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t009",
@@ -1281,8 +1307,9 @@
       "expiresAt": "2026-11-09T03:37:11.118Z",
       "previousStatus": "ready",
       "taskId": "prep-t006",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8crve4-cuabv8ph2y"
     },
     {
       "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
@@ -1297,5 +1324,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-08T21:56:47.078Z"
+  "updatedAt": "2026-11-08T21:59:12.250Z"
 }
