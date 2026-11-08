@@ -1,7 +1,7 @@
 /**
- * Batches 2A through 2W (including restored 2K, 2L and 2O): bilingual evidence-led GEO industry specializations.
- * Catalogue images and prices remain in their existing canonical sources.
- * No client-specific performance outcome is claimed by these pages.
+ * Evidence-led RU/EN GEO specializations, expanded in isolated industry batches.
+ * The 107-ID catalogue, approved images and canonical tariff terms remain shared.
+ * No specific client performance outcomes are inferred from sector methods.
  */
 import {industrySpecializationsBatch2E} from './industry-specializations-batch-2e.mjs';
 import {industrySpecializationsBatch2G} from './industry-specializations-batch-2g.mjs';
@@ -18,6 +18,7 @@ import {industrySpecializationsBatch2Q} from './industry-specializations-batch-2
 import {industrySpecializationsBatch2R} from './industry-specializations-batch-2r.mjs';
 import {industrySpecializationsBatch2S} from './industry-specializations-batch-2s.mjs';
 import {industrySpecializationsBatch2T} from './industry-specializations-batch-2t.mjs';
+import {industrySpecializationsBatch2Y} from './industry-specializations-batch-2y.mjs';
 import {industrySpecializationsBatch2W} from './industry-specializations-batch-2w.mjs';
 
 export const industrySpecializations = [
@@ -5050,6 +5051,7 @@ export const industrySpecializations = [
   ...industrySpecializationsBatch2R,
   ...industrySpecializationsBatch2S,
   ...industrySpecializationsBatch2T,
+  ...industrySpecializationsBatch2Y,
   ...industrySpecializationsBatch2W
 ];
 

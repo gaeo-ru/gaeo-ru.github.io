@@ -815,6 +815,33 @@
       ],
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
     },
+    "phase_2y": {
+      "phase": 2,
+      "batch": "2Y",
+      "status": "source_prepared_pr_pending",
+      "records": [
+        106,
+        107
+      ],
+      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
+      "base_source_sha": "62f75bd6a75c323a14e267c1bdfd6ba0584c19ae",
+      "source_file": "src/data/industry-specializations-batch-2y.mjs",
+      "new_industry_landing_pairs_prepared": 2,
+      "new_ru_en_urls_prepared": 4,
+      "ci_status": "not_run",
+      "source_merged": false,
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "preserved_parallel_pull_requests": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/107",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/108"
+      ],
+      "next_required_step": "Open one PR, run complete CI, reconcile concurrent 2U/2V changes, merge only after PASS; inspect main/manifest/sitemap/Pages, then direct public HTTPS desktop and mobile.",
+      "evidence_policy": "Differentiate crop and veterinary traceability; check registered agrochemicals and seed information per product. No unverified supplier credentials or client GEO outcomes.",
+      "original_catalogue_count_preserved": 107,
+      "shared_prices_and_bmr_unchanged": true
+    },
     "phase_2w": {
       "phase": 2,
       "batch": "2W",
@@ -887,8 +914,8 @@
     "total_generated_html_pages_current_release": 237,
     "total_new_specialization_pairs_in_phase_2": 62,
     "total_new_specialization_urls_in_phase_2": 124,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 0,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 2,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 4,
     "total_specialization_pairs_in_main_current_release": 62,
     "total_specialization_urls_in_main_current_release": 124,
     "total_specialization_pairs_prepared_including_2h": 30,
@@ -922,6 +949,9 @@
     "phase_2s_deployed_ru_en_urls": 4,
     "phase_2t_prepared_pairs_not_deployed": 3,
     "phase_2t_prepared_ru_en_urls_not_deployed": 6,
+    "phase_2y_prepared_pairs_not_deployed": 2,
+    "phase_2y_prepared_ru_en_urls_not_deployed": 4,
+    "phase_2y_counts_note": "Batch 2Y is prepared in an isolated branch, not included in current main release. Published 62 pairs/124 RU+EN specialization pages remain unchanged until source/production/Pages verification. Open 2U/2V PRs are independent and excluded from these 2Y-only prepared counts.",
     "phase_2w_prepared_pairs_not_deployed": 3,
     "phase_2w_prepared_specialization_urls_not_deployed": 6,
     "phase_2w_prepared_hub_urls_not_deployed": 2,
@@ -1236,6 +1266,20 @@
       "source_commit": "36c3b33346ada429c18b633a1a60e1f48515548c",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479150229",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42479863079"
+    },
+    {
+      "batch": "2Y",
+      "phase": 2,
+      "kind": "content_candidates",
+      "ids": [
+        106,
+        107
+      ],
+      "label": "Агропроизводители и поставщики товаров для агробизнеса",
+      "condition": "Two independent RU/EN evidence-led specializations; reuse current 107-industry catalogue as parent, and keep Phase 3A automotive/finance research separate. Require full PR CI and independent Pages/live acceptance.",
+      "work_status": "source_prepared_pr_pending",
+      "source_file": "src/data/industry-specializations-batch-2y.mjs",
+      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08"
     },
     {
       "batch": "2W",
@@ -5169,10 +5213,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_awaiting_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/agricultural-producers/",
+      "planned_landing_url_en": "/en/industries/agricultural-producers/",
+      "last_completed_step": "phase_2y_original_ru_en_content_added_to_isolated_branch",
+      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2y.mjs",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_397906/a266f0811cb225f76a13cb891a85e49ee1df72b8/",
+        "https://mercury.vetrf.ru/",
+        "https://checklist.fsvps.gov.ru/checks/forms/index?formId=6"
+      ],
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "public_https_browser_verified": false,
+      "release_note": "Prepared RU/EN source only; CI, source merge, production, Pages and direct live HTTPS are not yet confirmed. Original status/landing_url remain unchanged."
     },
     {
       "id": 107,
@@ -5194,10 +5252,24 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_awaiting_ci",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "source_prepared_pr_pending",
+      "next_required_step": "run_full_pr_ci_and_release",
+      "planned_landing_url_ru": "/industries/agricultural-input-suppliers/",
+      "planned_landing_url_en": "/en/industries/agricultural-input-suppliers/",
+      "last_completed_step": "phase_2y_original_ru_en_content_added_to_isolated_branch",
+      "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
+      "source_file": "src/data/industry-specializations-batch-2y.mjs",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_15221/3f0aee9b3b8b7521c4c5747c723709d9402559d0/",
+        "https://www.consultant.ru/document/cons_doc_LAW_15221/b723c4e20b05451690f199d105bf539856ebac21/",
+        "https://www.consultant.ru/document/cons_doc_LAW_478092/667b685ff1d23284deeea0b6c5cfe5fe9b0957d7/"
+      ],
+      "parent_link_ru": "/tarify/",
+      "parent_link_en": "/en/pricing/",
+      "public_https_browser_verified": false,
+      "release_note": "Prepared RU/EN source only; CI, source merge, production, Pages and direct live HTTPS are not yet confirmed. Original status/landing_url remain unchanged."
     }
   ],
   "price_source": "src/data/pricing.mjs",
@@ -5209,7 +5281,8 @@
     "research_new_subject": "Исследовать отрасль, источники и сценарии; определить родительский кластер и доказательную методику; затем подготовить RU/EN содержание.",
     "maintain_existing_landing": "Тарифы действующей страницы проверены. При следующих содержательных изменениях сохранять URL, общие цены и релевантные связи.",
     "assess_specialization_boundary": "Более широкая действующая страница и ее тарифы проверены. Отдельную специализацию создавать только после определения самостоятельного интента и содержания.",
-    "verify_live_deployment": "Открыть RU/EN посадочные на публичном https://gaeo.ru после Pages; проверить HTML, ссылки, визуальный вид и обновить реальные статусы."
+    "verify_live_deployment": "Открыть RU/EN посадочные на публичном https://gaeo.ru после Pages; проверить HTML, ссылки, визуальный вид и обновить реальные статусы.",
+    "run_full_pr_ci_and_release": "Из исходной ветки открыть один PR в актуальную astro-source и запустить полный CI с браузерной проверкой 1440/390/320. После PASS объединить, подтвердить production/main/Pages, отдельно прямой HTTPS; до live PASS URL и статус публичной посадочной не повышать."
   },
   "optional_progress_fields": [
     "catalog_status",
