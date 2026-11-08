@@ -40,6 +40,7 @@ import {industrySpecializationsBatch2AE} from './industry-specializations-batch-
 import {industrySpecializationsBatch2AF} from './industry-specializations-batch-2af.mjs';
 import {industrySpecializationsBatch2AG} from './industry-specializations-batch-2ag.mjs';
 import {industrySpecializationsBatch2AK} from './industry-specializations-batch-2ak.mjs';
+import {phase3AClusters} from './industry-clusters-phase-3a.mjs';
 
 export const industrySpecializations = [
   {
@@ -5088,6 +5089,34 @@ export const industrySpecializations = [
   ...industrySpecializationsBatch2AG,
   ...industrySpecializationsBatch2AK
 ];
+
+
+/**
+ * Phase 3A: preserve every commercial landing and its canonical tariff parent.
+ * Add a topical sector hub and independent method as complementary evidence links.
+ * The old routes, prices and 107 catalogue IDs do not change.
+ */
+for (const cluster of phase3AClusters) {
+ for (const id of cluster.ids) {
+  const page=industrySpecializations.find(item=>item.id===id);
+  if (!page) throw new Error('Missing phase 3A industry specialization #'+id);
+  page.methodLabels ||= {ru:[],en:[]};
+  for (const lang of ['ru','en']) {
+   page.methods[lang] ||= [];
+   page.methodLabels[lang] ||= [];
+   for (const [kind,label] of [
+    ['hub',lang==='ru'?'Обзор и смежные услуги отрасли':'Sector overview and related services'],
+    ['method',lang==='ru'?'Отраслевая методика GEO и проверка источников':'Sector GEO measurement and evidence method']
+   ]) {
+    const href=cluster.routes[kind][lang];
+    if (!page.methods[lang].includes(href)) {
+     page.methods[lang].push(href);
+     page.methodLabels[lang].push(label);
+    }
+   }
+  }
+ }
+}
 
 export const getIndustrySpecialization = sourcePath => industrySpecializations.find(p =>
   Object.values(p.routes).some(route => route.slice(1) + 'index.html' === sourcePath)
