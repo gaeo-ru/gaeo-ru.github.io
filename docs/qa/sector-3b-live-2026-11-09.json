@@ -1,0 +1,749 @@
+{
+  "batch": "3B",
+  "started_at": "2026-11-08T21:46:24.470Z",
+  "source_merge": "e8df34a2f7fb06325b78fbb5e75db78e3c736234",
+  "release_source": "7034fcddbfc1dc2699b7c8ffd8f7dda3c8cc01c7",
+  "directory_fix": true,
+  "pr": 128,
+  "pr_ci_run": 42521534840,
+  "production_run": 42526851803,
+  "origin": "https://gaeo.ru",
+  "form_submitted": false,
+  "https": [
+    {
+      "route": "/strategies/industrial-equipment-evidence/",
+      "status": 200,
+      "sha256": "7b90a8a3101e9db4914e82202a42186d22eee55d2436497ec2dc399fbb32c03c",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-evidence/",
+      "status": 200,
+      "sha256": "92f1f428eed73932a8a7309505ce24746310958c59fa357a9ff79247115b9808",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/strategies/packaging-material-evidence/",
+      "status": 200,
+      "sha256": "9f5154c2e4e380d0a0809a4b5466ebbd00864e0ecaa942b346bec14eba227c25",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/strategies/packaging-material-evidence/",
+      "status": 200,
+      "sha256": "e3ca5f0f56d0ed5809fa34d5468d4b35420a68b28d9117837663a853bee8a6c9",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/strategies/international-logistics-route-evidence/",
+      "status": 200,
+      "sha256": "115777a2af007a09c0411665e7f84e2b2ffd488eac7b826dde12922669172f2d",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/strategies/international-logistics-route-evidence/",
+      "status": 200,
+      "sha256": "d1e08da9e0241b1d92f55d049729e603cad5f4b2fffbddf0b52fc87ab4887cda",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/strategies/private-clinics-service-evidence/",
+      "status": 200,
+      "sha256": "eb0101f41a12bcad7863f59e3182b84162776cacc9de794a4c2952027b167bcc",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/strategies/private-clinics-service-evidence/",
+      "status": 200,
+      "sha256": "7df5956fdeb31d852f15cd97ae2e9678a391b00be408eff6dca2f0388aeb4be0",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/industries/industrial-equipment-manufacturers/",
+      "status": 200,
+      "sha256": "307ec63301969419da80742da856a4f4ce2d47b0e3ff0eca4f5f04352b89e0b7",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/industries/industrial-equipment-manufacturers/",
+      "status": 200,
+      "sha256": "00f977d5da739a5e03656c0ba27f7bd5628f0c2c4de68081c3633fe40a31f038",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/industries/packaging-container-label-manufacturers/",
+      "status": 200,
+      "sha256": "74a05de3c381960f1a044207c0a122d99112e43a25e07d2da9528bdec3d02ce7",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/industries/packaging-container-label-manufacturers/",
+      "status": 200,
+      "sha256": "03fc19bcc0ccc6df418812e5bb81bbbe695e3272dcf0f6375d05dda3be6189e9",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/industries/international-freight-forwarders/",
+      "status": 200,
+      "sha256": "2beb3a3d1751acdb2c61ba270c8bbc5b4c6150d316455f7ae0cbca2913ce3c78",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/industries/international-freight-forwarders/",
+      "status": 200,
+      "sha256": "38ce768dbddf880215b66cb75366e7bdab54aa38a150fce460708fc47cf14c72",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/industries/private-medical-clinics/",
+      "status": 200,
+      "sha256": "c9d9fabdddd90825d99693ce189175937fcffce97c9965ad5cbc372417ccaae8",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/industries/private-medical-clinics/",
+      "status": 200,
+      "sha256": "024e27e5c1f0d81d81ae8420ed2296beefd2a957f68aed1d2fb1d5ebbc0bb682",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/strategies/",
+      "status": 200,
+      "sha256": "19d165fd7e46dbe778af73885a453512846d995fc429877d5b1908bf334f8ee0",
+      "matches_main": true,
+      "sitemap": true
+    },
+    {
+      "route": "/en/strategies/",
+      "status": 200,
+      "sha256": "d69c730379fbd5e41d9ce5fc66f80ff53f208a6717649bf92ca04832e8c213d7",
+      "matches_main": true,
+      "sitemap": true
+    }
+  ],
+  "browser": [
+    {
+      "route": "/strategies/industrial-equipment-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-industrial-equipment-evidence-1440.jpg"
+    },
+    {
+      "route": "/strategies/industrial-equipment-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-industrial-equipment-evidence-390.jpg"
+    },
+    {
+      "route": "/strategies/industrial-equipment-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-industrial-equipment-evidence-320.jpg"
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-industrial-equipment-evidence-1440.jpg"
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-industrial-equipment-evidence-390.jpg"
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-industrial-equipment-evidence-320.jpg"
+    },
+    {
+      "route": "/strategies/packaging-material-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-packaging-material-evidence-1440.jpg"
+    },
+    {
+      "route": "/strategies/packaging-material-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-packaging-material-evidence-390.jpg"
+    },
+    {
+      "route": "/strategies/packaging-material-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-packaging-material-evidence-320.jpg"
+    },
+    {
+      "route": "/en/strategies/packaging-material-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-packaging-material-evidence-1440.jpg"
+    },
+    {
+      "route": "/en/strategies/packaging-material-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-packaging-material-evidence-390.jpg"
+    },
+    {
+      "route": "/en/strategies/packaging-material-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-packaging-material-evidence-320.jpg"
+    },
+    {
+      "route": "/strategies/international-logistics-route-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-international-logistics-route-evidence-1440.jpg"
+    },
+    {
+      "route": "/strategies/international-logistics-route-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-international-logistics-route-evidence-390.jpg"
+    },
+    {
+      "route": "/strategies/international-logistics-route-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-international-logistics-route-evidence-320.jpg"
+    },
+    {
+      "route": "/en/strategies/international-logistics-route-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-international-logistics-route-evidence-1440.jpg"
+    },
+    {
+      "route": "/en/strategies/international-logistics-route-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-international-logistics-route-evidence-390.jpg"
+    },
+    {
+      "route": "/en/strategies/international-logistics-route-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-international-logistics-route-evidence-320.jpg"
+    },
+    {
+      "route": "/strategies/private-clinics-service-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-private-clinics-service-evidence-1440.jpg"
+    },
+    {
+      "route": "/strategies/private-clinics-service-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-private-clinics-service-evidence-390.jpg"
+    },
+    {
+      "route": "/strategies/private-clinics-service-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "strategies-private-clinics-service-evidence-320.jpg"
+    },
+    {
+      "route": "/en/strategies/private-clinics-service-evidence/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-private-clinics-service-evidence-1440.jpg"
+    },
+    {
+      "route": "/en/strategies/private-clinics-service-evidence/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-private-clinics-service-evidence-390.jpg"
+    },
+    {
+      "route": "/en/strategies/private-clinics-service-evidence/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": 5,
+      "dialog": "opened_closed_no_submission",
+      "screenshot": "en-strategies-private-clinics-service-evidence-320.jpg"
+    },
+    {
+      "route": "/industries/industrial-equipment-manufacturers/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-industrial-equipment-manufacturers-1440.jpg"
+    },
+    {
+      "route": "/industries/industrial-equipment-manufacturers/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-industrial-equipment-manufacturers-390.jpg"
+    },
+    {
+      "route": "/industries/industrial-equipment-manufacturers/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-industrial-equipment-manufacturers-320.jpg"
+    },
+    {
+      "route": "/en/industries/industrial-equipment-manufacturers/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-industrial-equipment-manufacturers-1440.jpg"
+    },
+    {
+      "route": "/en/industries/industrial-equipment-manufacturers/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-industrial-equipment-manufacturers-390.jpg"
+    },
+    {
+      "route": "/en/industries/industrial-equipment-manufacturers/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-industrial-equipment-manufacturers-320.jpg"
+    },
+    {
+      "route": "/industries/packaging-container-label-manufacturers/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-packaging-container-label-manufacturers-1440.jpg"
+    },
+    {
+      "route": "/industries/packaging-container-label-manufacturers/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-packaging-container-label-manufacturers-390.jpg"
+    },
+    {
+      "route": "/industries/packaging-container-label-manufacturers/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-packaging-container-label-manufacturers-320.jpg"
+    },
+    {
+      "route": "/en/industries/packaging-container-label-manufacturers/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-packaging-container-label-manufacturers-1440.jpg"
+    },
+    {
+      "route": "/en/industries/packaging-container-label-manufacturers/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-packaging-container-label-manufacturers-390.jpg"
+    },
+    {
+      "route": "/en/industries/packaging-container-label-manufacturers/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-packaging-container-label-manufacturers-320.jpg"
+    },
+    {
+      "route": "/industries/international-freight-forwarders/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-international-freight-forwarders-1440.jpg"
+    },
+    {
+      "route": "/industries/international-freight-forwarders/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-international-freight-forwarders-390.jpg"
+    },
+    {
+      "route": "/industries/international-freight-forwarders/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-international-freight-forwarders-320.jpg"
+    },
+    {
+      "route": "/en/industries/international-freight-forwarders/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-international-freight-forwarders-1440.jpg"
+    },
+    {
+      "route": "/en/industries/international-freight-forwarders/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-international-freight-forwarders-390.jpg"
+    },
+    {
+      "route": "/en/industries/international-freight-forwarders/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-international-freight-forwarders-320.jpg"
+    },
+    {
+      "route": "/industries/private-medical-clinics/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-private-medical-clinics-1440.jpg"
+    },
+    {
+      "route": "/industries/private-medical-clinics/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-private-medical-clinics-390.jpg"
+    },
+    {
+      "route": "/industries/private-medical-clinics/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "industries-private-medical-clinics-320.jpg"
+    },
+    {
+      "route": "/en/industries/private-medical-clinics/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-private-medical-clinics-1440.jpg"
+    },
+    {
+      "route": "/en/industries/private-medical-clinics/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-private-medical-clinics-390.jpg"
+    },
+    {
+      "route": "/en/industries/private-medical-clinics/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 2,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-industries-private-medical-clinics-320.jpg"
+    },
+    {
+      "route": "/strategies/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "strategies-1440.jpg"
+    },
+    {
+      "route": "/strategies/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "strategies-390.jpg"
+    },
+    {
+      "route": "/strategies/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "strategies-320.jpg"
+    },
+    {
+      "route": "/en/strategies/",
+      "width": 1440,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-strategies-1440.jpg"
+    },
+    {
+      "route": "/en/strategies/",
+      "width": 390,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-strategies-390.jpg"
+    },
+    {
+      "route": "/en/strategies/",
+      "width": 320,
+      "status": 200,
+      "images_decoded": 0,
+      "no_overflow": true,
+      "h1_unobscured": true,
+      "faq": null,
+      "dialog": null,
+      "screenshot": "en-strategies-320.jpg"
+    }
+  ],
+  "status": "pass",
+  "pr_ci_status": "pass",
+  "production_status": "pass",
+  "published_commit": "36e92e8f3ee8b544d3eeb0ace2b918aa40ad9133",
+  "released_at": "2026-11-08T22:04:43.545Z",
+  "manifest_files": 899,
+  "html_pages": 349,
+  "sitemap_urls": 344,
+  "pages_run": 42528391109,
+  "pages_status": "pass",
+  "local_assets_verified": 20,
+  "verified_at": "2026-11-08T22:09:26.187Z",
+  "verified_moscow": "2026-11-09 01:09:26"
+}
