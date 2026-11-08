@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 2,
-    "next_batch": "2Z reassigned to #103/#105 in existing PR #109 after 2Y #106/#107 source merge; PR CI, production, main, Pages, external HTTPS pending",
+    "next_batch": "2AA_PR113_rebased_onto_2Z_new_CI_then_merge_release__preserve_2U_2V_2W_2X",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation.",
     "phase_2a": {
       "phase": 2,
@@ -891,24 +891,24 @@
     "catalog_published": 107,
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
-    "new_industry_landings_in_phase_2_deployed": 62,
+    "new_industry_landings_in_phase_2_deployed": 67,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 243,
-    "total_new_specialization_pairs_in_phase_2": 62,
-    "total_new_specialization_urls_in_phase_2": 124,
-    "new_industry_landings_in_phase_2_prepared_not_deployed": 2,
-    "new_industry_urls_in_phase_2_prepared_not_deployed": 4,
-    "total_specialization_pairs_in_main_current_release": 65,
-    "total_specialization_urls_in_main_current_release": 130,
+    "total_generated_html_pages_current_release": 247,
+    "total_new_specialization_pairs_in_phase_2": 67,
+    "total_new_specialization_urls_in_phase_2": 134,
+    "new_industry_landings_in_phase_2_prepared_not_deployed": 5,
+    "new_industry_urls_in_phase_2_prepared_not_deployed": 10,
+    "total_specialization_pairs_in_main_current_release": 67,
+    "total_specialization_urls_in_main_current_release": 134,
     "total_specialization_pairs_prepared_including_2h": 30,
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
     "total_specialization_urls_prepared_including_2j": 66,
-    "current_sitemap_urls": 238,
-    "main_manifest_file_count": 785,
+    "current_sitemap_urls": 242,
+    "main_manifest_file_count": 789,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
-    "phase_2_counts_note": "Current confirmed main 41040cfd (source 4116e953, released 2026-11-08T11:32:22.853Z) has 62 specialization pairs/124 RU EN URL, 237 HTML, 232 sitemap entries and 779 files. Includes 2S #52-53 (2 pairs / 4 URL). PR105 CI/production/Pages PASS, 4 main HTML+sitemap verified; direct external HTTPS remains unverified. Earlier batch counts are historical.",
+    "phase_2_counts_note": "Confirmed main 22ba9117d00fd1456ba66f388008a9a00684acbc (source 778c7ea7b05a780c3de480854e76de5738f80ce2, released 2026-11-08T13:17:47.847Z), 67 pairs/134 RU EN, 247 HTML, 242 sitemap URL, 789 files; 2Y production/Pages PASS; 2Z source merged, release not confirmed; 2AA branch PR only. External HTTPS pending.",
     "total_specialization_pairs_prepared_including_2m": 39,
     "total_specialization_urls_prepared_including_2m": 78,
     "phase_2n_prepared_pairs": 3,
@@ -931,13 +931,16 @@
     "phase_2s_deployed_ru_en_urls": 4,
     "phase_2t_prepared_pairs_not_deployed": 3,
     "phase_2t_prepared_ru_en_urls_not_deployed": 6,
-    "phase_2y_prepared_pairs_not_deployed": 2,
-    "phase_2y_prepared_ru_en_urls_not_deployed": 4,
-    "phase_2y_counts_note": "Batch 2Y: PR110 full CI PASS (134 RU EN pages at 1440/390/320) and astro-source merged 778c7ea7; 2 source specialization pairs/4 URL awaiting publication confirmation. The latest inspected main 90335eaa contains preceding 2T: 65 pairs/130 RU EN, 243 HTML/238 sitemap/785 files. Source/main/Pages for 2Y not yet claimed, direct HTTPS unverified; preserve 2U/2V.",
+    "phase_2y_prepared_pairs_not_deployed": 0,
+    "phase_2y_prepared_ru_en_urls_not_deployed": 0,
+    "phase_2y_counts_note": "2Y production 42483504645 PASS; Pages 42484278516 PASS; main 22ba9117 source 778c7ea7: 247 HTML, 242 sitemap, 789 files and 67 specialization pairs/134 bilingual URLs; external HTTPS unverified.",
     "phase_2z_prepared_pairs_not_deployed": 2,
     "phase_2z_prepared_ru_en_urls_not_deployed": 4,
     "phase_2z_prepared_hub_pages_not_deployed": 0,
-    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated."
+    "phase_2z_count_note": "2Z #103/#105 prepared in isolated PR branch; no 2Z CI/production/main/Pages/direct HTTPS yet. Earlier 2Z agriculture #106/#107 replaced by merged 2Y, not counted or duplicated.",
+    "phase_2aa_prepared_pairs_in_PR": 3,
+    "phase_2aa_prepared_ru_en_urls_in_PR": 6,
+    "phase_2aa_status_note": "PR #113 #71/#72/#74: first full CI 42484645359 PASS, then rebased on merged 2Z; new full CI and merge, production, Pages, external HTTPS pending. Production counters exclude 2AA."
   },
   "candidate_batches": [
     {
@@ -3888,10 +3891,25 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_open_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/recruitment-agencies-recruiters/",
+      "planned_landing_url_en": "/en/industries/recruitment-agencies-recruiters/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_464093/",
+        "https://mintrud.gov.ru/docs/laws/130",
+        "https://www.consultant.ru/document/cons_doc_LAW_139574/"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ]
     },
     {
       "id": 72,
@@ -3913,10 +3931,25 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_open_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/consulting-firms-independent-experts/",
+      "planned_landing_url_en": "/en/industries/consulting-firms-independent-experts/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.iso.org/standard/63501.html",
+        "https://www.nalog.gov.ru/donline/",
+        "https://mintrud.gov.ru/docs/laws/130"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ]
     },
     {
       "id": 73,
@@ -3963,10 +3996,25 @@
       "landing_url_en": null,
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "not_started",
+      "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "not_started",
-      "next_required_step": "research_new_subject"
+      "work_status": "pr_open_ci_pending",
+      "next_required_step": "full_PR_CI_then_current_source_merge_production_main_pages_external_HTTPS",
+      "work_batch": "2AA",
+      "work_branch": "feat/industry-specializations-batch-2aa-2026-11-08",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/113",
+      "source_commit": "0f27d841c4c2a10332440c123737dcddf24c055d",
+      "planned_landing_url_ru": "/industries/branding-marketing-agencies/",
+      "planned_landing_url_en": "/en/industries/branding-marketing-agencies/",
+      "last_completed_step": "phase_2aa_first_full_CI_PASS_then_rebased_on_2Z",
+      "evidence_sources": [
+        "https://www.consultant.ru/document/cons_doc_LAW_58968/2c4537e4796f6ff8b2736ed1b0d4fef08e14458e/",
+        "https://www.nalog.gov.ru/donline/",
+        "https://www.iso.org/standard/63501.html"
+      ],
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42484645359"
+      ]
     },
     {
       "id": 75,

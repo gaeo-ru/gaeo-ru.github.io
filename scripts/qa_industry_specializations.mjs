@@ -37,7 +37,21 @@ for(const item of industrySpecializations){
 }
 const ids=industrySpecializations.map(x=>x.id);
 assert.equal(new Set(ids).size,ids.length,'Duplicate catalogue specialization IDs');
-for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+for(const id of [2,3,4,5,6,8,20,21,22,23,24,25,26,33,34,35,36,37,38,40,41,58,66,81,82,83,84,85,86,87,88,89,90,91,95,96,97,98,99,10,12,13,42,43,44,45,46,48,7,9,11,55,56,57,92,93,94,49,50,51,52,53,14,15,16,106,107,103,105,71,72,74])assert.ok(ids.includes(id),'Published or prepared batch ID missing: '+id);
+// Phase 2AA: verifiable professional-services content, stable IDs 71/72/74.
+for(const id of [71,72,74]){
+ const item=industrySpecializations.find(x=>x.id===id);
+ assert.ok(item&&item.group==='professional-services','2AA professional-services group '+id);
+ assert.ok(item.sources.length>=2,'2AA sources '+id);
+ for(const lang of ['ru','en']){
+  const c=item.content[lang];
+  assert.equal(c.problems.length,3,'Buying barriers '+id+' '+lang);
+  assert.equal(c.scenarios.length,4,'Buyer questions '+id+' '+lang);
+  assert.equal(c.steps.length,4,'Work phases '+id+' '+lang);
+  assert.equal(c.faq.length,5,'FAQ count '+id+' '+lang);
+  assert.ok(c.lead.length>100&&c.proofIntro.length>100,'Sector-specific copy '+id+' '+lang);
+ }
+}
 for(const lang of ['ru','en']){
  const hub=lang==='ru'?'/industries/international-logistics/':'/en/industries/international-logistics/';
  const equivalent=lang==='ru'?'/en/industries/international-logistics/':'/industries/international-logistics/';
