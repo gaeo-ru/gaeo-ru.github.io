@@ -2483,21 +2483,51 @@
       "slug": "srochnaya-upakovka-krupnykh-partiy-2026",
       "title": "Срочная автоматизированная упаковка крупных партий",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t024.json",
       "earliestPublicationDate": "2026-11-02",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8rowld-m5gc9lgoo8",
         "ownerId": "chat-rankings-20261109-mw8rowld-m5gc9lgoo8",
         "requestId": "claim-rankings-20261109-mw8rowld-m5gc9lgoo8",
         "token": "rk-mw8rp8cj-svk5dflnnwl-tf25pk2tjt",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:35:09.349Z",
-        "expiresAt": "2026-11-09T10:35:09.349Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t024.json",
+        "committedAt": "2026-11-09T04:49:01.347Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t024/cover.jpg",
+            "sha": "c05cf3ef5d064d5bffb3845a83c77de6b48de415"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/methodology.jpg",
+            "sha": "87fb43100c146a146b851aa38ebc3d8b8d7a72ec"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/process.jpg",
+            "sha": "1dd92d7343b9a5ebc1c01349b40c24b4ecb37419"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/ranking.jpg",
+            "sha": "7ca6f28373bcb56afc87a567fdc9a68c67a0e5e5"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t024.json",
+            "sha": "4f248f98c1c8b5dec8f4290febc57fe44332770a"
+          }
+        ],
+        "baseCommit": "8ee3bddbe542f8247fd91e40c1238fb829b79505"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1HKAX9cdx85s2uGHu7DnBn7tHssnRdLGs/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-15, позиция 1; подробный блок «1. Преп-Центр — 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t062",
@@ -3403,8 +3433,9 @@
       "expiresAt": "2026-11-09T10:35:09.349Z",
       "previousStatus": "ready",
       "taskId": "prep-t024",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8rowld-m5gc9lgoo8"
     },
     {
       "ownerId": "chat-r20261109-5vlatfz42",
@@ -3492,5 +3523,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:47:54.396Z"
+  "updatedAt": "2026-11-09T04:49:01.347Z"
 }

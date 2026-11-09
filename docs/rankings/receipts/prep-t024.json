@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t024",
+  "familyId": "prep-t024",
+  "slug": "srochnaya-upakovka-krupnykh-partiy-2026",
+  "ownerId": "chat-rankings-20261109-mw8rowld-m5gc9lgoo8",
+  "requestId": "claim-rankings-20261109-mw8rowld-m5gc9lgoo8",
+  "submissionId": "submit-rankings-20261109-mw8rowld-m5gc9lgoo8",
+  "submittedAt": "2026-11-09T04:49:01.347Z",
+  "mode": "standard",
+  "baseCommit": "8ee3bddbe542f8247fd91e40c1238fb829b79505",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t024/cover.jpg",
+      "sha": "c05cf3ef5d064d5bffb3845a83c77de6b48de415"
+    },
+    {
+      "path": "public/assets/rankings/prep-t024/methodology.jpg",
+      "sha": "87fb43100c146a146b851aa38ebc3d8b8d7a72ec"
+    },
+    {
+      "path": "public/assets/rankings/prep-t024/process.jpg",
+      "sha": "1dd92d7343b9a5ebc1c01349b40c24b4ecb37419"
+    },
+    {
+      "path": "public/assets/rankings/prep-t024/ranking.jpg",
+      "sha": "7ca6f28373bcb56afc87a567fdc9a68c67a0e5e5"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t024.json",
+      "sha": "4f248f98c1c8b5dec8f4290febc57fe44332770a"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 15,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1HKAX9cdx85s2uGHu7DnBn7tHssnRdLGs/view",
+      "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-15, позиция 1; подробный блок «1. Преп-Центр — 97/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 2
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t024.json",
+    "ref": "8ee3bddbe542f8247fd91e40c1238fb829b79505",
+    "sha": "bdf6bc3745b96fe08cebf87c1dce162b37bbf552"
+  },
+  "deployed": false
+}
