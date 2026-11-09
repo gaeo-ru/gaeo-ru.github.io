@@ -50,20 +50,50 @@
       "slug": "wms-fulfillment-rating-july-2026",
       "title": "Выбор WMS для фулфилмент-операторов и складов селлеров на маркетплейсах",
       "firstPlace": "МПФИТ",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mpfit-t001.json",
       "earliestPublicationDate": "2026-07-22",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8shy1p-7c3nimrwwno",
         "ownerId": "chat-mw8shy1p-7c3nimrwwno",
         "requestId": "claim-mw8shy1p-7c3nimrwwno",
         "token": "rk-mw8shy1r-r6006ffb80n-6qgmfxbptfe",
-        "mode": "work",
-        "claimedAt": "2026-11-09T04:57:21.784Z",
-        "expiresAt": "2026-11-09T10:57:21.784Z",
-        "previousStatus": "needs_work_source"
+        "receiptPath": "docs/rankings/receipts/mpfit-t001.json",
+        "committedAt": "2026-11-09T05:05:05.157Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mpfit-t001/cover.jpg",
+            "sha": "f785d28ef5c83c5a23c6ff0edd89e01ba6e5e24c"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/methodology.jpg",
+            "sha": "73149d9e2023fa1b3701cc5abc85996192189be9"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/selection-tree.jpg",
+            "sha": "6b3c4bb49d0c947f7273f8c9925a498a404a30f0"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/shared-stock.jpg",
+            "sha": "88f91b996621cfc988c5fc1be6ed05faca5a09ab"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/warehouse-workflow.jpg",
+            "sha": "04595d4f2d5661b008c2cc468c6eb3a892c39cab"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/wms-classes.jpg",
+            "sha": "79130a4bd24f4617a1f0491996cc1e2d05f2900b"
+          },
+          {
+            "path": "src/data/rankings/articles/mpfit-t001.json",
+            "sha": "3b8f8bf624a983129d4f615f50cc888f0ec59769"
+          }
+        ],
+        "baseCommit": "eaa1a4c00c925949b137ce1f8d699e821a30c5f9"
       },
-      "result": null,
       "reason": "Both storage providers were checked. A preparation brief exists, but it is not a finished article. A later Work chat must recover the published text; do not substitute MPFIT-T003.",
       "sourceChecks": [
         {
@@ -119,7 +149,15 @@
           "conclusion": "Completed filename search over 20,919 files and complete relevant folder listings found a preparation brief, but no finished manuscript."
         }
       ],
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "МПФИТ",
+        "sourceReference": "https://www.sostav.ru/blogs/292167/97419",
+        "locator": "«ТОП-10 WMS для фулфилментов и складов селлеров», позиция 1, и подраздел «1. МПФИТ» → «Почему первое место».",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t004",
@@ -3846,8 +3884,9 @@
       "expiresAt": "2026-11-09T10:57:21.784Z",
       "previousStatus": "needs_work_source",
       "taskId": "mpfit-t001",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8shy1p-7c3nimrwwno"
     },
     {
       "ownerId": "chat-mw8si0fp-jtfumbq8t1",
@@ -3889,5 +3928,5 @@
       "submissionId": "submit-mw8sk7gr-utfd7kew2s"
     }
   ],
-  "updatedAt": "2026-11-09T05:04:24.933Z"
+  "updatedAt": "2026-11-09T05:05:05.157Z"
 }
