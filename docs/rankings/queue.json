@@ -3039,19 +3039,34 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "chat-t063-mw8ttm5y-xfplu1nts8f",
-        "requestId": "claim-chat-t063-mw8ttm5y-xfplu1nts8f",
-        "token": "rk-mw8ttm5z-ogegja0fvlc-ffoww0l8cv8",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T05:34:26.204Z",
-        "expiresAt": "2026-11-09T11:34:26.204Z",
-        "previousStatus": "ready"
-      },
+      "status": "needs_review",
+      "lease": null,
       "result": null,
       "leaseVersion": 2,
-      "block": null,
+      "block": {
+        "reason": "Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей.",
+        "sourceChecks": [
+          {
+            "provider": "google-drive",
+            "status": "found",
+            "complete": true,
+            "checkedAt": "2026-11-09T05:35:50.885Z",
+            "fileId": "18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9",
+            "url": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+            "locator": "«ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года» и «Разбор курсов: кому подойдет каждый вариант»"
+          },
+          {
+            "provider": "published-web",
+            "status": "found",
+            "complete": true,
+            "checkedAt": "2026-11-09T05:35:50.885Z",
+            "url": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
+            "locator": "README.md, сводная таблица и профили 4-го и 8-го мест"
+          }
+        ],
+        "at": "2026-11-09T05:35:51.866Z",
+        "ownerId": "chat-t063-mw8ttm5y-xfplu1nts8f"
+      },
       "firstPlaceVerification": {
         "status": "verified-in-manuscript",
         "firstPlace": "Синхронизация",
@@ -3992,9 +4007,21 @@
       "expiresAt": "2026-11-09T11:34:26.204Z",
       "previousStatus": "ready",
       "taskId": "index-t063",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "needs_review",
+      "operations": [
+        {
+          "id": "claim-chat-t063-mw8ttm5y-xfplu1nts8f-ranking-ties-review",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T05:35:50.885Z\",\"complete\":true,\"fileId\":\"18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9\",\"locator\":\"«ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года» и «Разбор курсов: кому подойдет каждый вариант»\",\"provider\":\"google-drive\",\"status\":\"found\",\"url\":\"https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view\"},{\"checkedAt\":\"2026-11-09T05:35:50.885Z\",\"complete\":true,\"locator\":\"README.md, сводная таблица и профили 4-го и 8-го мест\",\"provider\":\"published-web\",\"status\":\"found\",\"url\":\"https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026\"}],\"status\":\"needs_review\"}",
+          "at": "2026-11-09T05:35:51.866Z",
+          "result": {
+            "status": "needs_review",
+            "taskId": "index-t063",
+            "reason": "Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей."
+          }
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-11-09T05:34:26.204Z"
+  "updatedAt": "2026-11-09T05:35:51.866Z"
 }
