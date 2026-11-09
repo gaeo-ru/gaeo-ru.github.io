@@ -2245,8 +2245,16 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/heads-best-branding-agencies-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
+        "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
+        "token": "rk-mw8rpfsv-xikz3mlqil-dd1ooquj5yo",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:35:27.465Z",
+        "expiresAt": "2026-11-09T10:35:27.465Z",
+        "previousStatus": "ready"
+      },
       "result": null,
       "sourceChecks": [],
       "publicationVerified": {
@@ -2255,7 +2263,8 @@
         "winner": "Heads",
         "score": "91/100",
         "basis": "published article, FMCG/launch combined methodology"
-      }
+      },
+      "leaseVersion": 1
     },
     {
       "id": "heads-r01-branding-fmcg-2026",
@@ -3035,7 +3044,19 @@
       "taskId": "index-t062",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
+      "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
+      "token": "rk-mw8rpfsv-xikz3mlqil-dd1ooquj5yo",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:27.465Z",
+      "expiresAt": "2026-11-09T10:35:27.465Z",
+      "previousStatus": "ready",
+      "taskId": "heads-best-branding-agencies-2026",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:35:16.362Z"
+  "updatedAt": "2026-11-09T04:35:27.465Z"
 }
