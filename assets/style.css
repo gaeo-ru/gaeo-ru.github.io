@@ -70,6 +70,7 @@ header{height:78px;position:sticky;top:0;z-index:50;background:rgba(244,241,234,
 .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;position:relative;z-index:1}
 .portrait:after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,rgba(2,22,65,0),rgba(2,22,65,.14));z-index:2}
 .portrait-note{position:absolute;left:30px;bottom:26px;right:30px;color:var(--white);font:500 22px/1.35 Literata,Georgia,serif;z-index:3;text-shadow:0 2px 12px rgba(2,22,65,.25)}
+.hero .portrait--square{height:auto;aspect-ratio:1}
 .hero-proof{display:grid;grid-template-columns:repeat(3,1fr);max-width:780px;border-top:1px solid #979fa8}
 .hero-proof>div{padding:20px 25px 2px 0}
 .hero-proof b{display:block;color:var(--navy);font-size:23px;line-height:1.15;margin-bottom:6px}
@@ -1339,8 +1340,28 @@ details.price:last-child{
  .desktop-menu :is(.nav-cases__submenu,.nav-publications__submenu),
  .mobile-menu :is(.mobile-cases__chevron,.mobile-publications__chevron){transition:none}
 }
-.home-publication-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin:24px 0 28px}
-.home-publication-links a{font:600 13px/1.6 Manrope,Arial,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+.pill-links{
+ display:flex;flex-wrap:wrap;align-items:center;gap:9px 11px;max-width:100%
+}
+.pill-links>a{
+ box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+ min-height:42px;min-width:0;max-width:100%;padding:10px 16px;
+ color:#133c61;background:#f6f9fc;border:1px solid #ccdae6;border-radius:999px;
+ font:650 14px/1.35 Manrope,Arial,sans-serif;text-align:center;
+ text-decoration:none;white-space:normal;overflow-wrap:anywhere
+}
+.pill-links>a:is(:hover,:focus-visible){
+ color:#062b4b;background:#eaf5fa;border-color:#69a8c4;text-decoration:none
+}
+.pill-links>a:focus-visible{outline:2px solid #075e80;outline-offset:2px}
+.home-publication-links{margin:24px 0 28px}
+@media(max-width:720px){
+ .pill-links{gap:8px}
+ .pill-links>a{min-height:40px;padding:9px 13px;font-size:13px}
+}
+@media(max-width:420px){
+ .pill-links>a{width:100%}
+}
 
 /* Footer navigation: balanced case/publication submenus, contact labels and language control in brand column. */
 .footer-brand>.footer-lang{width:min(100%,320px);margin-top:20px;padding-top:14px}
@@ -1360,3 +1381,7 @@ footer .footer-lang--mobile{display:none!important}
  }
  footer .footer-bottom{margin-top:18px!important}
 }
+
+/* The homepage calculator and FAQ are consecutive parts of the pricing flow. */
+.tariff-calculator-section:has(+ .home-faq){padding-bottom:clamp(24px,3vw,40px)}
+.section.home-faq{padding-top:clamp(24px,3vw,40px)}
