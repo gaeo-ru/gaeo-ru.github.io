@@ -56,7 +56,7 @@ for(const lang of ['ru','en']){
  const route=lang==='ru'?'/strategies/':'/en/strategies/',html=read(route);
  const index=graph(html).find(x=>x['@type']==='ItemList'&&x['@id']==='https://gaeo.ru'+route+'#items');
  const visible=(html.match(/<article class="list-card">/g)||[]).length;
- assert.equal(visible,22,'21 existing entries plus the new 3D evidence guide '+route);
+ assert.ok(visible>=22,'Original 22 strategy entries preserved after subsequent batches '+route);
  assert.equal(index?.numberOfItems,visible,'ItemList count '+route);
  assert.equal(index?.itemListElement.length,visible,'ItemList entries '+route);
  const all=index.itemListElement.map(x=>x.url);

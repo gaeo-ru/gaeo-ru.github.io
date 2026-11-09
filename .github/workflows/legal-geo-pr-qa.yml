@@ -47,6 +47,8 @@ on:
       - 'src/data/industry-methods-phase-3b.mjs'
       - 'src/data/sector-guides-phase-3c.mjs'
       - 'src/data/sector-case-proof-phase-3d.mjs'
+      - 'src/data/sector-buyer-intents-phase-3e.mjs'
+      - 'scripts/qa_sector_buyer_intents_3e.mjs'
       - 'scripts/qa_sector_guides_3c.mjs'
       - 'scripts/qa_sector_case_proof_3d.mjs'
       - 'scripts/qa_sector_methods_3b.mjs'
@@ -108,6 +110,7 @@ jobs:
       - run: npm run check:sector3a
       - run: npm run check:sector3c
       - run: npm run check:sector3d
+      - run: npm run check:sector3e
       - run: node scripts/qa_development_cases.mjs
       - run: node scripts/qa_site_development_service.mjs
       - run: npm run check:industry

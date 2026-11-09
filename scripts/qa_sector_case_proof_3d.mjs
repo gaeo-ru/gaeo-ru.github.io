@@ -62,10 +62,10 @@ for(const lang of ['ru','en']){
  assert.ok(index.includes('href="'+route+'"'),'Visible directory link '+route);
  const list=graph(index).find(x=>x['@type']==='ItemList'&&x['@id']==='https://gaeo.ru'+directory+'#items');
  const visible=(index.match(/<article class="list-card">/g)||[]).length;
- assert.equal(visible,22,'21 prior entries plus one 3D guide '+directory);
+ assert.ok(visible>=22,'Original 22 strategy entries preserved after subsequent batches '+directory);
  assert.equal(list?.numberOfItems,visible,'Structured item count '+directory);
  assert.equal(list?.itemListElement?.length,visible,'Structured items '+directory);
- assert.equal(new Set(list.itemListElement.map(x=>x.url)).size,22,'Unique structured links '+directory);
+ assert.equal(new Set(list.itemListElement.map(x=>x.url)).size,visible,'Unique structured links '+directory);
  assert.ok(list.itemListElement.some(x=>x.url===url),'New URL in schema '+route);
 }
 if(process.argv.includes('--static')){console.log('Phase 3D static PASS: 2 original pages, 8 methodological and 8 commercial backlinks, RU/EN 22-entry directories, BMR and privacy safeguards');process.exit(0);}
