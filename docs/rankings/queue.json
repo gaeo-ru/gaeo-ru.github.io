@@ -2941,18 +2941,49 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "chat-rank-mw8sc5q1-kwr3xu8x3l",
-        "requestId": "claim-chat-rank-mw8sc5q1-kwr3xu8x3l",
-        "token": "rk-mw8sceie-m5qx2rkkx4h-njcul5kf8id",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:53:03.253Z",
-        "expiresAt": "2026-11-09T10:53:03.253Z",
-        "previousStatus": "ready"
-      },
+      "status": "needs_review",
+      "lease": null,
       "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "block": {
+        "reason": "INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата.",
+        "sourceChecks": [
+          {
+            "provider": "google-drive",
+            "status": "found",
+            "complete": true,
+            "checkedAt": "2026-11-09T04:58:07.232Z",
+            "queries": [
+              "кино для зрителей",
+              "cinema_for_viewers_russia_2026",
+              "ТОП-10 онлайн-курсов по кино"
+            ],
+            "locations": [
+              "https://drive.google.com/drive/folders/1kRCISSl8hVIhmuCFR3qxXPbeA3blfUQ9",
+              "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view"
+            ],
+            "firstPlace": "Синхронизация",
+            "score": "95/100",
+            "images": [
+              "1QLjsoSEhP1OjoQixjM_iv32YqYg37zsb",
+              "15bZGvKjv52QIvKbWm2jan4OZUX9tHc43",
+              "1U34CIRcorwcCBmQTkmQ4aLfhnCOH41Lw"
+            ]
+          },
+          {
+            "provider": "github",
+            "status": "conflict",
+            "complete": true,
+            "checkedAt": "2026-11-09T04:58:07.233Z",
+            "locations": [
+              "docs/rankings/sources/index-t063.json@477aa43838d59752a11eca1208ea732e2596a6c5"
+            ],
+            "details": "manifest.clientLinks=[]; source contains 3 affiliate links"
+          }
+        ],
+        "at": "2026-11-09T04:58:08.034Z",
+        "ownerId": "chat-rank-mw8sc5q1-kwr3xu8x3l"
+      }
     },
     {
       "id": "index-p001",
@@ -3750,8 +3781,20 @@
       "expiresAt": "2026-11-09T10:53:03.253Z",
       "previousStatus": "ready",
       "taskId": "index-t063",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "needs_review",
+      "operations": [
+        {
+          "id": "claim-chat-rank-mw8sc5q1-kwr3xu8x3l-clientlink-review",
+          "kind": "block",
+          "signature": "{\"reason\":\"INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T04:58:07.232Z\",\"complete\":true,\"firstPlace\":\"Синхронизация\",\"images\":[\"1QLjsoSEhP1OjoQixjM_iv32YqYg37zsb\",\"15bZGvKjv52QIvKbWm2jan4OZUX9tHc43\",\"1U34CIRcorwcCBmQTkmQ4aLfhnCOH41Lw\"],\"locations\":[\"https://drive.google.com/drive/folders/1kRCISSl8hVIhmuCFR3qxXPbeA3blfUQ9\",\"https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view\"],\"provider\":\"google-drive\",\"queries\":[\"кино для зрителей\",\"cinema_for_viewers_russia_2026\",\"ТОП-10 онлайн-курсов по кино\"],\"score\":\"95/100\",\"status\":\"found\"},{\"checkedAt\":\"2026-11-09T04:58:07.233Z\",\"complete\":true,\"details\":\"manifest.clientLinks=[]; source contains 3 affiliate links\",\"locations\":[\"docs/rankings/sources/index-t063.json@477aa43838d59752a11eca1208ea732e2596a6c5\"],\"provider\":\"github\",\"status\":\"conflict\"}],\"status\":\"needs_review\"}",
+          "at": "2026-11-09T04:58:08.034Z",
+          "result": {
+            "status": "needs_review",
+            "taskId": "index-t063",
+            "reason": "INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата."
+          }
+        }
+      ]
     },
     {
       "ownerId": "chat-rankings-20261109-mw8sct50-7u0kc6a5",
@@ -3802,5 +3845,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:57:57.974Z"
+  "updatedAt": "2026-11-09T04:58:08.034Z"
 }
