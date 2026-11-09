@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3I: 8 следующих непроверенных оригинальных двуязычных специализаций №22/23/24/25/26/28/29/31, по штатной независимой HTTPS/Chromium-приемке. 3H завершена: 20/100 пар публично проверены; оставшиеся 80. Клиентские кейсы №42/48/55/59 все еще заблокированы без письменного разрешения и подтверждения E3/E4.",
+    "next_batch": "3J: public HTTPS + Chromium acceptance of existing RU/EN specializations №32/33/34/35/36/37/38/40; 3I PASS, 28/100 pairs verified, 72 remain. 3F client case permissions for #42/#48/#55/#59 remain blocked.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -2131,6 +2131,39 @@
         31
       ],
       "scope_limit": "Only 16 of 200 original bilingual specialty URLs in this batch; no measured BMR growth, search indexing, or client E3/E4 proof claimed."
+    },
+    "phase_3i": {
+      "phase": 3,
+      "batch": "3I",
+      "status": "completed_public_https_chromium_verified",
+      "records": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        31
+      ],
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
+      "verification_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406/artifacts/13715329063",
+      "qa_trigger_commit": "868002b7c7d2a537626ec7175201027908f71010",
+      "verified_at": "2026-11-09T22:23:40Z",
+      "live_https_urls_passed": 16,
+      "chromium_viewport_checks_passed": 48,
+      "errors": 0,
+      "forms_submitted": false,
+      "viewport_widths": [
+        1440,
+        390,
+        320
+      ],
+      "published_main_sha": "f46c07786c5eb3c67ad70503e0436232f8f21361",
+      "published_main_source_commit": "d27905fec270ef15e1a0ef1b4c9f6823bad286ad",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42696446822",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42699654059",
+      "note": "All 16 commercial HTML URLs already existed in published main. No price, landing, HTML, or client-case change in this 3I acceptance; documentation-only source update."
     }
   },
   "status_definitions": {
@@ -2213,8 +2246,9 @@
     "phase_3a_priority_original_specialization_pairs_live_verified": 4,
     "phase_3a_independently_public_verified_urls": 20,
     "phase_3g_priority_original_specialization_pairs_live_verified": 8,
-    "total_original_specialization_pairs_public_live_accepted": 20,
-    "phase_3h_priority_original_specialization_pairs_live_verified": 8
+    "total_original_specialization_pairs_public_live_accepted": 28,
+    "phase_3h_priority_original_specialization_pairs_live_verified": 8,
+    "phase_3i_priority_original_specialization_pairs_live_verified": 8
   },
   "candidate_batches": [
     {
@@ -2767,8 +2801,34 @@
       ],
       "label": "Независимая приемка 8 правовых и финансовых специализаций",
       "condition": "Reuse original bilingual pages already in production; run independent public HTTPS 200, HTML SHA-256 compared with main, sitemap, H1, meta robots indexability, canonical, reciprocal hreflang, Service/FAQPage, 5 FAQ, image decode, tariffs, expert/CTA, modal without POST and Chromium 1440/390/320. No new pages, tariff changes or client cases.",
+      "work_status": "completed_public_https_chromium_verified",
+      "next_required_step": "Finished; proceed to 3J, IDs 32/33/34/35/36/37/38/40.",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
+      "verification_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406/artifacts/13715329063",
+      "verified_at": "2026-11-09T22:23:40Z",
+      "qa_trigger_commit": "868002b7c7d2a537626ec7175201027908f71010",
+      "published_main_sha": "f46c07786c5eb3c67ad70503e0436232f8f21361",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42696446822",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42699654059"
+    },
+    {
+      "batch": "3J",
+      "phase": 3,
+      "kind": "independent_public_specialization_acceptance",
+      "ids": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        40
+      ],
+      "label": "Независимая приемка 8 финансовых и IT-специализаций",
+      "condition": "Verify existing bilingual pages on public HTTPS, byte-for-byte main SHA256, sitemap, indexability, H1, canonical/hreflang, Service/FAQPage, 5 FAQs, decoded images, tariff and expert links, modal without POST, Chromium 1440/390/320; no duplicate pages or tariff changes.",
       "work_status": "not_started",
-      "next_required_step": "Use the existing scripts/qa_specialization_public_live.mjs and .github/workflows/specializations-public-live-qa.yml. After PASS update verified_at and landing_url_ru/en for IDs 22/23/24/25/26/28/29/31 only, then same two docs; never repeat 3G/3H."
+      "next_required_step": "Run existing scripts/qa_specialization_public_live.mjs via .github/workflows/specializations-public-live-qa.yml for 32/33/34/35/36/37/38/40; after PASS update only verified records and the same two docs."
     }
   ],
   "records": [
@@ -3743,17 +3803,17 @@
       "sheet_row": 23,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/intellectual-property-lawyers/",
+      "landing_url_en": "/en/industries/intellectual-property-lawyers/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_pages_pass_live_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/intellectual-property-lawyers/",
       "planned_landing_url_en": "/en/industries/intellectual-property-lawyers/",
-      "last_completed_step": "phase_2c_build_ci_and_pages_pass",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "work_branch": "feat/industry-specializations-batch-2c-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/72",
       "source_commit": "68674feb1ac5d0089770693d297a988afc3dff65",
@@ -3764,12 +3824,16 @@
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407616179",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42407988056",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42408356961",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
       "published_commit": "ff7ad5bee95492cfc60cf4bafdba5be344a4b554",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 23,
@@ -3795,17 +3859,17 @@
       "sheet_row": 24,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/tax-lawyers/",
+      "landing_url_en": "/en/industries/tax-lawyers/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "pr_open_rebased_ci_pending",
-      "next_required_step": "await_rebased_ci_merge_production_then_external_https",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/tax-lawyers/",
       "planned_landing_url_en": "/en/industries/tax-lawyers/",
-      "last_completed_step": "phase_2e_ru_en_content_sources_pr79_initial_ci_pass",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "work_branch": "feat/industry-specializations-batch-2e-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/79",
       "evidence_sources": [
@@ -3813,11 +3877,15 @@
         "https://www.nalog.gov.ru/rn77/service/complaint_decision/about/"
       ],
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42411906326"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42411906326",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 24,
@@ -3843,17 +3911,17 @@
       "sheet_row": 25,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/real-estate-transaction-lawyers/",
+      "landing_url_en": "/en/industries/real-estate-transaction-lawyers/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_pages_pass_live_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/real-estate-transaction-lawyers/",
       "planned_landing_url_en": "/en/industries/real-estate-transaction-lawyers/",
-      "last_completed_step": "phase_2d_build_ci_and_pages_pass",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "work_branch": "feat/industry-specializations-batch-2d-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/76",
       "source_head_commit": "eaef5b932b6229fa194091e6aee78eded44d95ff",
@@ -3864,13 +3932,17 @@
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410485987",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42410969341",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42411379587"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42411379587",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
       "source_commit": "038a05272a31c1a5ef3140b96b76c8df1d038897",
       "published_commit": "b77b9ecbb4d14cfebbb1a3f5059195f51e101ad3",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 25,
@@ -3896,17 +3968,17 @@
       "sheet_row": 26,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/motor-insurance-lawyers/",
+      "landing_url_en": "/en/industries/motor-insurance-lawyers/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "main_published_pages_in_progress",
       "evidence_level": null,
-      "work_status": "main_published_pages_in_progress",
-      "next_required_step": "verify_pages_then_external_https",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/motor-insurance-lawyers/",
       "planned_landing_url_en": "/en/industries/motor-insurance-lawyers/",
-      "last_completed_step": "phase_2g_main_and_production_pass",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "work_branch": "feat/industry-specializations-batch-2g-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/82",
       "source_commit": "ad3772f043f072f615c897bcb641bf98a8e5e89e",
@@ -3917,12 +3989,16 @@
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413158092",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42413647670",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42414395447",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
       "published_commit": "46203214c978419a9c14f54272424e364208587a",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 26,
@@ -3948,18 +4024,18 @@
       "sheet_row": 27,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/employment-migration-lawyers/",
+      "landing_url_en": "/en/industries/employment-migration-lawyers/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "bilingual_source_prepared_unverified",
       "evidence_level": null,
-      "work_status": "source_prepared_not_published",
-      "next_required_step": "pr78_ci_then_deploy_and_verify_live",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "work_branch": "feat/industry-specializations-batch-2f-2026-11-07",
       "planned_landing_url_ru": "/industries/employment-migration-lawyers/",
       "planned_landing_url_en": "/en/industries/employment-migration-lawyers/",
-      "last_completed_step": "Original RU/EN content, buyer intents, evidence limitations, FAQ and source links added to shared specialization source; source schema checked; build and public verification pending.",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "evidence_sources": [
         "https://www.consultant.ru/document/cons_doc_LAW_34683/",
         "https://www.consultant.ru/document/cons_doc_LAW_37868/"
@@ -3968,8 +4044,14 @@
       "blocker": "PR checks and live publication not completed; parallel batch 2D is not merged and 2E not present at last inspection.",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/78",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
+      ]
     },
     {
       "id": 27,
@@ -4040,14 +4122,14 @@
       "sheet_row": 29,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/audit-assurance-consulting-firms/",
+      "landing_url_en": "/en/industries/audit-assurance-consulting-firms/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_ru_en_ci_production_pages_pass_external_https_unverified",
       "evidence_level": null,
-      "work_status": "deployed_source_main_pages_pass",
-      "next_required_step": "Direct public HTTPS desktop/390/320, actual images, CTA/dialog, form, links and schema; only after external live PASS fill landing_url_ru/en and verified_at.",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/audit-assurance-consulting-firms/",
       "planned_landing_url_en": "/en/industries/audit-assurance-consulting-firms/",
       "work_branch": "feat/industry-specializations-batch-2ai-2026-11-08",
@@ -4057,17 +4139,20 @@
         "https://www.consultant.ru/document/cons_doc_LAW_83311/936cae07de7eea62c31127923f43ce2f0e2e1599/",
         "https://roskazna.gov.ru/kontrol-i-audit/nadzor-za-auditorskoj-deyatelnostyu/reestr-auditorskih-organizaciy-okazyvayuschih-auditorskie-uslugi-obschestvenno-znachimym-organizaciyam/reestr-auditorskih-organizaciy-okazyvayuschih-auditorskie-uslugi-obschestvenno-znachimym-organizaciyam"
       ],
-      "last_completed_step": "Full Astro QA, source merge, main manifest + both HTML, sitemap and GitHub Pages PASS; 2026-11-08",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/123",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42490894876",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491843172",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 29,
@@ -4085,19 +4170,19 @@
       "sheet_row": 30,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/financial-investment-advisers/",
+      "landing_url_en": "/en/industries/financial-investment-advisers/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_ru_en_ci_production_pages_pass_external_https_unverified",
       "evidence_level": null,
-      "work_status": "deployed_source_main_pages_pass",
-      "next_required_step": "Direct public HTTPS desktop/390/320, actual images, CTA/dialog, form, links and schema; only after external live PASS fill landing_url_ru/en and verified_at.",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/financial-investment-advisers/",
       "planned_landing_url_en": "/en/industries/financial-investment-advisers/",
       "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
-      "last_completed_step": "Full Astro QA, source merge, main manifest + both HTML, sitemap and GitHub Pages PASS; 2026-11-08",
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
       "evidence_sources": [
         "https://www.cbr.ru/explan/invest/",
         "https://www.cbr.ru/securities_market/registries/",
@@ -4105,18 +4190,20 @@
       ],
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
-      "public_https_browser_verified": false,
-      "verified_at": null,
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
       ],
       "source_commit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491432285",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42492293955",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
     },
     {
       "id": 30,
@@ -4171,18 +4258,24 @@
       "sheet_row": 32,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/leasing-companies/",
+      "landing_url_en": "/en/industries/leasing-companies/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_ru_en_ci_production_pages_pass_external_https_unverified",
       "evidence_level": null,
-      "work_status": "deployed_source_main_pages_pass",
-      "next_required_step": "Direct public HTTPS desktop/390/320, actual images, CTA/dialog, form, links and schema; only after external live PASS fill landing_url_ru/en and verified_at.",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
       "coverage_checked_date": "2026-11-08",
-      "last_completed_step": "Full Astro QA, source merge, main manifest + both HTML, sitemap and GitHub Pages PASS; 2026-11-08"
+      "last_completed_step": "3I independent public HTTPS 200, main SHA256 and sitemap parity; Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T22:23:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406"
+      ]
     },
     {
       "id": 32,
