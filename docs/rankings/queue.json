@@ -2111,9 +2111,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-thermoshrink-top15-oct2026.json",
       "earliestPublicationDate": "2026-10-27",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
+        "requestId": "claim-rnk-20261109-mw8r9fan-tn72pcdd",
+        "token": "rk-mw8rb3at-dmjkrex9yxh-fbepgohnqjp",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:24:02.162Z",
+        "expiresAt": "2026-11-09T10:24:02.162Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t027-shampuni-geli-top15-2026",
@@ -2930,7 +2939,19 @@
       "taskId": "ada-t017",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
+      "requestId": "claim-rnk-20261109-mw8r9fan-tn72pcdd",
+      "token": "rk-mw8rb3at-dmjkrex9yxh-fbepgohnqjp",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:24:02.162Z",
+      "expiresAt": "2026-11-09T10:24:02.162Z",
+      "previousStatus": "ready",
+      "taskId": "prep-thermoshrink-top15-oct2026",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:23:43.676Z"
+  "updatedAt": "2026-11-09T04:24:02.162Z"
 }
