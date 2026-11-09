@@ -53,8 +53,16 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/mpfit-t001.json",
       "earliestPublicationDate": "2026-07-22",
-      "status": "needs_work_source",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8shy1p-7c3nimrwwno",
+        "requestId": "claim-mw8shy1p-7c3nimrwwno",
+        "token": "rk-mw8shy1r-r6006ffb80n-6qgmfxbptfe",
+        "mode": "work",
+        "claimedAt": "2026-11-09T04:57:21.784Z",
+        "expiresAt": "2026-11-09T10:57:21.784Z",
+        "previousStatus": "needs_work_source"
+      },
       "result": null,
       "reason": "Both storage providers were checked. A preparation brief exists, but it is not a finished article. A later Work chat must recover the published text; do not substitute MPFIT-T003.",
       "sourceChecks": [
@@ -110,7 +118,8 @@
           ],
           "conclusion": "Completed filename search over 20,919 files and complete relevant folder listings found a preparation brief, but no finished manuscript."
         }
-      ]
+      ],
+      "leaseVersion": 1
     },
     {
       "id": "prep-t004",
@@ -3681,7 +3690,19 @@
       "taskId": "index-t064",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8shy1p-7c3nimrwwno",
+      "requestId": "claim-mw8shy1p-7c3nimrwwno",
+      "token": "rk-mw8shy1r-r6006ffb80n-6qgmfxbptfe",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:21.784Z",
+      "expiresAt": "2026-11-09T10:57:21.784Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "mpfit-t001",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:54:06.263Z"
+  "updatedAt": "2026-11-09T04:57:21.784Z"
 }
