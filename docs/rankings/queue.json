@@ -2870,10 +2870,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/index-t061.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "needs_work_source",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8sk7gr-utfd7kew2s",
+        "requestId": "claim-mw8sk7gr-utfd7kew2s",
+        "token": "rk-mw8sk7gr-stnfuzm5sg-ms40780tak",
+        "mode": "work",
+        "claimedAt": "2026-11-09T04:59:07.406Z",
+        "expiresAt": "2026-11-09T10:59:07.406Z",
+        "previousStatus": "needs_work_source"
+      },
       "result": null,
-      "leaseVersion": 1,
+      "leaseVersion": 2,
       "block": {
         "reason": "Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии.",
         "sourceChecks": [
@@ -3843,7 +3851,19 @@
       "taskId": "prep-t018",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8sk7gr-utfd7kew2s",
+      "requestId": "claim-mw8sk7gr-utfd7kew2s",
+      "token": "rk-mw8sk7gr-stnfuzm5sg-ms40780tak",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:59:07.406Z",
+      "expiresAt": "2026-11-09T10:59:07.406Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "index-t061",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:58:08.034Z"
+  "updatedAt": "2026-11-09T04:59:07.406Z"
 }
