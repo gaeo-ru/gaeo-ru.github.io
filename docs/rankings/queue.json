@@ -3,7 +3,7 @@
   "repository": "gaeo-ru/gaeo-ru.github.io",
   "workBranch": "rankings-staging",
   "leaseMinutes": 360,
-  "paused": true,
+  "paused": false,
   "createdDate": "2026-11-08",
   "registrySnapshotDate": "2026-11-08",
   "tasks": [
@@ -3039,34 +3039,11 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "needs_review",
+      "status": "ready",
       "lease": null,
       "result": null,
       "leaseVersion": 2,
-      "block": {
-        "reason": "Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей.",
-        "sourceChecks": [
-          {
-            "provider": "google-drive",
-            "status": "found",
-            "complete": true,
-            "checkedAt": "2026-11-09T05:35:50.885Z",
-            "fileId": "18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9",
-            "url": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
-            "locator": "«ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года» и «Разбор курсов: кому подойдет каждый вариант»"
-          },
-          {
-            "provider": "published-web",
-            "status": "found",
-            "complete": true,
-            "checkedAt": "2026-11-09T05:35:50.885Z",
-            "url": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
-            "locator": "README.md, сводная таблица и профили 4-го и 8-го мест"
-          }
-        ],
-        "at": "2026-11-09T05:35:51.866Z",
-        "ownerId": "chat-t063-mw8ttm5y-xfplu1nts8f"
-      },
+      "block": null,
       "firstPlaceVerification": {
         "status": "verified-in-manuscript",
         "firstPlace": "Синхронизация",
@@ -3076,8 +3053,9 @@
       },
       "reviewResolution": {
         "date": "2026-11-09",
-        "decision": "3 missing affiliate hrefs registered in source manifest; original first place verified in public GitHub manuscript; returned to ready.",
-        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view"
+        "decision": "Publication coordinator reviewed complete Sostav manuscript; tied 4/4 and 8/8 positions preserved through separate rank field in bilingual article, HTML and JSON-LD; 10 source courses, 6 criteria, affiliate disclosure and exact partner links verified.",
+        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+        "schemaFixCommit": "e51c674d5175985389081795cccfe95b2fd75255"
       }
     },
     {
@@ -4103,5 +4081,5 @@
       "submissionId": "submit-mw8twget-s1jgslnfrea"
     }
   ],
-  "updatedAt": "2026-11-09T05:43:07.944Z"
+  "updatedAt": "2026-11-09T06:06:38.388Z"
 }
