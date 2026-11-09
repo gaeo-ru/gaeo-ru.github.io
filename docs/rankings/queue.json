@@ -2136,9 +2136,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t027-shampuni-geli-top15-2026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+        "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+        "token": "rk-mw8rck68-d7n8gyh8xqr-zvtgrqh2l5h",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:25:10.672Z",
+        "expiresAt": "2026-11-09T10:25:10.672Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t026",
@@ -2951,7 +2960,19 @@
       "taskId": "prep-thermoshrink-top15-oct2026",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+      "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+      "token": "rk-mw8rck68-d7n8gyh8xqr-zvtgrqh2l5h",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:25:10.672Z",
+      "expiresAt": "2026-11-09T10:25:10.672Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t027-shampuni-geli-top15-2026",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:24:02.162Z"
+  "updatedAt": "2026-11-09T04:25:10.672Z"
 }
