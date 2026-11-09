@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3F: письменные разрешения и первичные E3/E4 для №42/48/55/59 остаются открыты; независимо проверить публичный HTTPS 3D/3E/3F. Следующая содержательная партия пока не назначена.",
+    "next_batch": "3F: клиентские кейсы №42/48/55/59 ожидают письменных разрешений и первичных E3/E4; публичный HTTPS 3D/3E/3F завершен PASS 16/16 URL, 48/48 Chromium. Новая содержательная партия пока не назначена.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1902,6 +1902,35 @@
       ],
       "evidence_sources": "Private GAEO audit registry: Хаб — отрасли, Хаб — факты, Источники и факты, Аудиты и заявки; bounded Gmail searches, not exhaustive of other channels",
       "public_live_note": "Source/main/Pages and build Chromium PASS; independent gaeo.ru HTTPS browser visual QA not performed from chat"
+    },
+    "public_live_3def_acceptance": {
+      "date": "2026-11-09",
+      "verified_at_utc": "2026-11-09T17:07:02Z",
+      "check_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110",
+      "action_run_id": 42661229110,
+      "artifact_name": "gaeo-sector-3def-public-live",
+      "artifact_id": 13695615335,
+      "script": "scripts/qa_sector_public_live_3f.mjs",
+      "workflow": ".github/workflows/sector-3def-live-qa.yml",
+      "published_main_sha": "598fe324fe87818a05476a3857d34b191f62f1f1",
+      "published_source_commit": "36ffe1da21dca6004670183905dfc9b933844433",
+      "tested_guides_ru_en": 8,
+      "tested_existing_commercial_ru_en": 6,
+      "tested_directory_ru_en": 2,
+      "public_https_200_and_main_sha256_matching": 16,
+      "pages_in_sitemap": 16,
+      "chromium_viewport_checks_pass": 48,
+      "viewport_widths": [
+        1440,
+        390,
+        320
+      ],
+      "errors": 0,
+      "faq_schema_canonical_hreflang_links_images_cta_checked": true,
+      "form_submitted": false,
+      "public_https_browser_verified": true,
+      "scope_limit": "3D/3E/3F listed 16 URLs only; does not assert browser acceptance of all 214 commercial URLs or search indexing",
+      "client_cases_42_48_55_59_permission_pending": true
     }
   },
   "status_definitions": {
@@ -2422,8 +2451,10 @@
       ],
       "label": "Оценка самостоятельных материалов для 3 широких RU/EN посадочных и разрешенных отраслевых фактов",
       "condition": "Сначала проверить реальную самостоятельную поисковую задачу, доступные данные E0–E4, сохранность существующих URL и актуальные параллельные работы. Только затем выбрать узкий пакет без дублей; медицинские кейсы и клиентские результаты не выдумывать.",
-      "work_status": "source_merged_pr_ci_pass_public_pending",
-      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132"
+      "work_status": "published_public_https_chromium_pass",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132",
+      "public_https_browser_verified": true,
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
     },
     {
       "batch": "3E",
@@ -2436,10 +2467,12 @@
       ],
       "label": "Покупательские GEO-интенты ЖК, B2B-юристов, ускорения и нагрузочных тестов",
       "condition": "Создать только самостоятельные методики RU/EN и ссылки из действующих посадочных, без новых тарифов и недоказанных кейсов.",
-      "work_status": "main_pages_pass_live_https_unverified",
+      "work_status": "published_public_https_chromium_pass",
       "source_commit": "b6569ffb24ce32b90671b302bd0975d195d6dcb8",
       "published_commit": "ee3a824963758e93cda94e4ea6dc3cb5f3b55b2e",
-      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42647389464"
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42647389464",
+      "public_https_browser_verified": true,
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
     },
     {
       "batch": "3F",
@@ -2453,15 +2486,16 @@
       ],
       "label": "Разрешения на раскрытие и проверка фактических доказательств E2–E4",
       "condition": "Проверить доступные исходные аудиты, сопоставимость замеров, выполненные работы и письменные разрешения на раскрытие. Без подтвержденного права не публиковать идентифицируемые или обезличенные клиентские результаты; не создавать вымышленные E3/E4 и дубли готовых коммерческих страниц.",
-      "work_status": "public_safeguards_deployed_client_cases_permission_pending",
+      "work_status": "safeguards_published_public_https_pass_client_case_permissions_pending",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/136",
       "source_commit": "36ffe1da21dca6004670183905dfc9b933844433",
       "published_commit": "598fe324fe87818a05476a3857d34b191f62f1f1",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42651860787",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42654113332",
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42657687649",
-      "public_https_browser_verified": false,
-      "next_required_step": "Close written disclosure permission and verified E3/E4 for each candidate; public HTTPS 3D/3E/3F visual QA; no new client case until sufficient evidence"
+      "public_https_browser_verified": true,
+      "next_required_step": "Confirm written permissions and primary E3/E4 for IDs 42/48/55/59 before publishing specific client cases; 3D/3E/3F public QA already PASS",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
     }
   ],
   "records": [
@@ -2502,8 +2536,9 @@
       "phase3e_buyer_intent_guide": {
         "ru": "/strategies/developer-project-evidence-checklist/",
         "en": "/en/strategies/developer-project-evidence-checklist/",
-        "source_status": "pr_open_full_ci_pending",
-        "public_https_browser_verified": false
+        "source_status": "published_public_https_chromium_pass",
+        "public_https_browser_verified": true,
+        "public_acceptance_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
       },
       "phase3e_broader_landing_unchanged": true
     },
@@ -3258,8 +3293,9 @@
       "phase3e_buyer_intent_guide": {
         "ru": "/strategies/b2b-law-firm-matter-fit/",
         "en": "/en/strategies/b2b-law-firm-matter-fit/",
-        "source_status": "pr_open_full_ci_pending",
-        "public_https_browser_verified": false
+        "source_status": "published_public_https_chromium_pass",
+        "public_https_browser_verified": true,
+        "public_acceptance_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
       },
       "phase3e_broader_landing_unchanged": true
     },
@@ -4201,8 +4237,9 @@
       "phase3e_buyer_intent_guide": {
         "ru": "/strategies/load-testing-vendor-proof/",
         "en": "/en/strategies/load-testing-vendor-proof/",
-        "source_status": "pr_open_full_ci_pending",
-        "public_https_browser_verified": false
+        "source_status": "published_public_https_chromium_pass",
+        "public_https_browser_verified": true,
+        "public_acceptance_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42661229110"
       },
       "phase3e_broader_landing_unchanged": true
     },
@@ -4349,7 +4386,9 @@
         "ru": "/strategies/sector-geo-case-proof/",
         "en": "/en/strategies/sector-geo-case-proof/",
         "public_verification": "pending"
-      }
+      },
+      "phase3f_case_proof_public_https_verified": true,
+      "phase3f_client_case_permission_status": "unverified_do_not_publish_client_facts"
     },
     {
       "id": 43,
@@ -4609,7 +4648,9 @@
         "ru": "/strategies/sector-geo-case-proof/",
         "en": "/en/strategies/sector-geo-case-proof/",
         "public_verification": "pending"
-      }
+      },
+      "phase3f_case_proof_public_https_verified": true,
+      "phase3f_client_case_permission_status": "unverified_do_not_publish_client_facts"
     },
     {
       "id": 49,
@@ -4917,7 +4958,9 @@
         "ru": "/strategies/sector-geo-case-proof/",
         "en": "/en/strategies/sector-geo-case-proof/",
         "public_verification": "pending"
-      }
+      },
+      "phase3f_case_proof_public_https_verified": true,
+      "phase3f_client_case_permission_status": "unverified_do_not_publish_client_facts"
     },
     {
       "id": 56,
@@ -5081,7 +5124,9 @@
         "ru": "/strategies/sector-geo-case-proof/",
         "en": "/en/strategies/sector-geo-case-proof/",
         "public_verification": "pending"
-      }
+      },
+      "phase3f_case_proof_public_https_verified": true,
+      "phase3f_client_case_permission_status": "unverified_do_not_publish_client_facts"
     },
     {
       "id": 60,
