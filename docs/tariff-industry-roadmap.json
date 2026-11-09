@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3F: проверить разрешения на раскрытие и фактические материалы E2–E4 по промышленному B2B, упаковке, логистике и клиникам. Прямой публичный HTTPS/Chromium 3D+3E еще не подтвержден; source/main/Pages 3E PASS.",
+    "next_batch": "3F: письменные разрешения и первичные E3/E4 для №42/48/55/59 остаются открыты; независимо проверить публичный HTTPS 3D/3E/3F. Следующая содержательная партия пока не назначена.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1835,7 +1835,7 @@
     "phase_3f": {
       "phase": 3,
       "batch": "3F",
-      "status": "queued_permission_evidence_review",
+      "status": "public_safeguards_deployed_ci_production_pages_pass_live_https_unverified_client_cases_blocked",
       "records": [
         42,
         48,
@@ -1844,7 +1844,64 @@
       ],
       "scope": "Primary evidence and disclosure permission audit; public cases only after verified rights and facts; reuse existing commercial pages and 3B/3C/3D methods.",
       "public_https_browser_verified": false,
-      "next_required_step": "Check E2–E4 sources and rights privately, confirm what can actually be disclosed before any new public case or research page."
+      "next_required_step": "Confirm written scoped disclosure permission and primary E3/E4 evidence; independently inspect public 3D/3E/3F HTTPS 1440/390/320; select any client case only after rights/evidence checks",
+      "source_branch": "astro-source",
+      "source_commit": "36ffe1da21dca6004670183905dfc9b933844433",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/136",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42651860787",
+      "ci_status": "pass",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42654113332",
+      "production_status": "pass",
+      "published_commit": "598fe324fe87818a05476a3857d34b191f62f1f1",
+      "released_at": "2026-11-09T16:43:31.498Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42657687649",
+      "pages_status": "pass",
+      "main_files": 1260,
+      "main_html": 485,
+      "main_sitemap_urls": 480,
+      "method_urls": {
+        "ru": "/strategies/sector-geo-case-proof/",
+        "en": "/en/strategies/sector-geo-case-proof/"
+      },
+      "new_public_routes": 0,
+      "existing_pages_updated": 2,
+      "disclosure_checks_per_language": 6,
+      "evidence_inventory": [
+        {
+          "id": 42,
+          "highest_confirmed": "Adjacent industrial E2 baseline only",
+          "e3": false,
+          "e4": false,
+          "written_disclosure_permission": "not_confirmed",
+          "public_case_allowed": false
+        },
+        {
+          "id": 48,
+          "highest_confirmed": "No client-specific E2-E4 confirmed",
+          "e3": false,
+          "e4": false,
+          "written_disclosure_permission": "not_confirmed",
+          "public_case_allowed": false
+        },
+        {
+          "id": 55,
+          "highest_confirmed": "Adjacent single-point foreign-trade E2 only",
+          "e3": false,
+          "e4": false,
+          "written_disclosure_permission": "not_confirmed",
+          "public_case_allowed": false
+        },
+        {
+          "id": 59,
+          "highest_confirmed": "No clinic-specific E2-E4 confirmed",
+          "e3": false,
+          "e4": false,
+          "written_disclosure_permission": "not_confirmed",
+          "public_case_allowed": false
+        }
+      ],
+      "evidence_sources": "Private GAEO audit registry: Хаб — отрасли, Хаб — факты, Источники и факты, Аудиты и заявки; bounded Gmail searches, not exhaustive of other channels",
+      "public_live_note": "Source/main/Pages and build Chromium PASS; independent gaeo.ru HTTPS browser visual QA not performed from chat"
     }
   },
   "status_definitions": {
@@ -1866,7 +1923,7 @@
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 100,
     "new_industry_landings_in_phase_2_live_verified": 0,
-    "total_generated_html_pages_current_release": 319,
+    "total_generated_html_pages_current_release": 485,
     "total_new_specialization_pairs_in_phase_2": 100,
     "total_new_specialization_urls_in_phase_2": 200,
     "new_industry_landings_in_phase_2_prepared_not_deployed": 0,
@@ -1877,8 +1934,8 @@
     "total_specialization_urls_prepared_including_2h": 60,
     "total_specialization_pairs_prepared_including_2j": 33,
     "total_specialization_urls_prepared_including_2j": 66,
-    "current_sitemap_urls": 314,
-    "main_manifest_file_count": 861,
+    "current_sitemap_urls": 480,
+    "main_manifest_file_count": 1260,
     "total_specialization_pairs_prepared_including_2i": 37,
     "total_specialization_urls_prepared_including_2i": 74,
     "phase_2_counts_note": "As of 2026-11-08 PR#114 CI 42486685930, production 42487465048, Pages 42488244643 PASS. main 62b0fd2 with source 3c5744d includes 83 bilingual specialization pairs (166 URLs), 285 generated HTML, 280 sitemap URLs, 827 manifest files. All 34 new 2U/2V/2W/2X/2AA HTML and sitemap URLs found. 2Z separately released and preserved. Direct gaeo.ru public HTTPS cannot be independently verified from this chat; live fields intentionally empty.",
@@ -2396,7 +2453,15 @@
       ],
       "label": "Разрешения на раскрытие и проверка фактических доказательств E2–E4",
       "condition": "Проверить доступные исходные аудиты, сопоставимость замеров, выполненные работы и письменные разрешения на раскрытие. Без подтвержденного права не публиковать идентифицируемые или обезличенные клиентские результаты; не создавать вымышленные E3/E4 и дубли готовых коммерческих страниц.",
-      "work_status": "queued_permission_evidence_review"
+      "work_status": "public_safeguards_deployed_client_cases_permission_pending",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/136",
+      "source_commit": "36ffe1da21dca6004670183905dfc9b933844433",
+      "published_commit": "598fe324fe87818a05476a3857d34b191f62f1f1",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42651860787",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42654113332",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42657687649",
+      "public_https_browser_verified": false,
+      "next_required_step": "Close written disclosure permission and verified E3/E4 for each candidate; public HTTPS 3D/3E/3F visual QA; no new client case until sufficient evidence"
     }
   ],
   "records": [
