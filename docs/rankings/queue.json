@@ -1983,21 +1983,47 @@
       "slug": "antarctica-ushuaia-ground-2026",
       "title": "Антарктида: круиз из Ушуайи с наземной логистикой и сопровождением",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t014.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rank-20261109-mw8r9i47-802p0wr",
         "ownerId": "chat-rank-20261109-mw8r9i47-802p0wr",
         "requestId": "claim-rank-20261109-mw8r9i47-802p0wr",
         "token": "rk-mw8r9i48-od6iovlb9r-5xl6249bqu8",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:22:48.119Z",
-        "expiresAt": "2026-11-09T10:22:48.119Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t014.json",
+        "committedAt": "2026-11-09T04:38:46.324Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t014/cover.jpg",
+            "sha": "315a3fff39b1be08972f0f48e8f4004edce750cb"
+          },
+          {
+            "path": "public/assets/rankings/ada-t014/expedition-deck.jpg",
+            "sha": "1bc99f787edfa29b7afb4aa63d2e4c392a1edcf8"
+          },
+          {
+            "path": "public/assets/rankings/ada-t014/zodiac-whale.jpg",
+            "sha": "de194045ab5d77148bdfd2a9c65c0a784a109a86"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t014.json",
+            "sha": "425a0a1dea49b0c5e8f568cfdcb294e2df52a59e"
+          }
+        ],
+        "baseCommit": "1aa13162f053f78419b03389ca42551bb54928df"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1Wsx6uXgV_8XRCnuj5DOuKREqK9m0iskX/view",
+        "locator": "Полный текст: «ТОП-10 компаний для круиза в Антарктиду из Ушуайи», пункт 1, и «1. Ada Tours – 94/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t013",
@@ -3025,8 +3051,9 @@
       "expiresAt": "2026-11-09T10:22:48.119Z",
       "previousStatus": "ready",
       "taskId": "ada-t014",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rank-20261109-mw8r9i47-802p0wr"
     },
     {
       "ownerId": "chat-mw8r8uwl-6igww7ttl7m",
@@ -3164,5 +3191,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:37:58.893Z"
+  "updatedAt": "2026-11-09T04:38:46.324Z"
 }

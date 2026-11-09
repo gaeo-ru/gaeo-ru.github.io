@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t014",
+  "familyId": "ada-t014",
+  "slug": "antarctica-ushuaia-ground-2026",
+  "ownerId": "chat-rank-20261109-mw8r9i47-802p0wr",
+  "requestId": "claim-rank-20261109-mw8r9i47-802p0wr",
+  "submissionId": "submit-rank-20261109-mw8r9i47-802p0wr",
+  "submittedAt": "2026-11-09T04:38:46.324Z",
+  "mode": "standard",
+  "baseCommit": "1aa13162f053f78419b03389ca42551bb54928df",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t014/cover.jpg",
+      "sha": "315a3fff39b1be08972f0f48e8f4004edce750cb"
+    },
+    {
+      "path": "public/assets/rankings/ada-t014/expedition-deck.jpg",
+      "sha": "1bc99f787edfa29b7afb4aa63d2e4c392a1edcf8"
+    },
+    {
+      "path": "public/assets/rankings/ada-t014/zodiac-whale.jpg",
+      "sha": "de194045ab5d77148bdfd2a9c65c0a784a109a86"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t014.json",
+      "sha": "425a0a1dea49b0c5e8f568cfdcb294e2df52a59e"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1Wsx6uXgV_8XRCnuj5DOuKREqK9m0iskX/view",
+      "locator": "Полный текст: «ТОП-10 компаний для круиза в Антарктиду из Ушуайи», пункт 1, и «1. Ada Tours – 94/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t014.json",
+    "ref": "1aa13162f053f78419b03389ca42551bb54928df",
+    "sha": "9afd1bd51c6f53362e01f4453b7cdd23f3ddae43"
+  },
+  "deployed": false
+}
