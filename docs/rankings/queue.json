@@ -2765,21 +2765,55 @@
       "slug": "gift-certificates-cultural-learning-2026",
       "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: сценарный ТОП-10 для самостоятельного обучения, 2026",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t057.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8s4zjr-yd02becybhh",
         "ownerId": "chat-mw8s4zjr-yd02becybhh",
         "requestId": "claim-mw8s4zjr-yd02becybhh",
         "token": "rk-mw8s4zjr-zvfafrhx6s-aa9p3ghr67e",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:47:17.507Z",
-        "expiresAt": "2026-11-09T10:47:17.507Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/index-t057.json",
+        "committedAt": "2026-11-09T05:08:21.169Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t057/art-video-course.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/course-notes.jpg",
+            "sha": "b6178e5d61ccdb7de8a1b71da518ba774c1fb85c"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/cover.jpg",
+            "sha": "e0bc01e952767290a5f073e8a14365ed387620f8"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/culture-discussion.jpg",
+            "sha": "2938f3fcb6abe99f4ba8b1f0d17983831331952a"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/self-study.jpg",
+            "sha": "416fb81b1ebd87e7967d54c4e74fb676b541a392"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t057.json",
+            "sha": "466c0cf5fe500fbef283b9536fdd61abe2dbae69"
+          }
+        ],
+        "baseCommit": "aaef17711fcf45ed1612f905b997302948fca83a"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1KWwmYt0pHlc33p9ytpGqMNz-iWAwij-k/view",
+        "locator": "Раздел ТОП-10, первая строка: Синхронизация 97/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "heads-r02-brand-launch-2026",
@@ -3807,8 +3841,9 @@
       "expiresAt": "2026-11-09T10:47:17.507Z",
       "previousStatus": "ready",
       "taskId": "index-t057",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8s4zjr-yd02becybhh"
     },
     {
       "ownerId": "chat-gaeo-rankings-20261109-0745-one",
@@ -3963,5 +3998,5 @@
       "submissionId": "submit-mw8sk7gr-utfd7kew2s"
     }
   ],
-  "updatedAt": "2026-11-09T05:07:36.646Z"
+  "updatedAt": "2026-11-09T05:08:21.169Z"
 }

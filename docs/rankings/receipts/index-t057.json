@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-t057",
+  "familyId": "index-t057",
+  "slug": "gift-certificates-cultural-learning-2026",
+  "ownerId": "chat-mw8s4zjr-yd02becybhh",
+  "requestId": "claim-mw8s4zjr-yd02becybhh",
+  "submissionId": "submit-mw8s4zjr-yd02becybhh",
+  "submittedAt": "2026-11-09T05:08:21.169Z",
+  "mode": "standard",
+  "baseCommit": "aaef17711fcf45ed1612f905b997302948fca83a",
+  "files": [
+    {
+      "path": "public/assets/rankings/index-t057/art-video-course.jpg",
+      "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+    },
+    {
+      "path": "public/assets/rankings/index-t057/course-notes.jpg",
+      "sha": "b6178e5d61ccdb7de8a1b71da518ba774c1fb85c"
+    },
+    {
+      "path": "public/assets/rankings/index-t057/cover.jpg",
+      "sha": "e0bc01e952767290a5f073e8a14365ed387620f8"
+    },
+    {
+      "path": "public/assets/rankings/index-t057/culture-discussion.jpg",
+      "sha": "2938f3fcb6abe99f4ba8b1f0d17983831331952a"
+    },
+    {
+      "path": "public/assets/rankings/index-t057/self-study.jpg",
+      "sha": "416fb81b1ebd87e7967d54c4e74fb676b541a392"
+    },
+    {
+      "path": "src/data/rankings/articles/index-t057.json",
+      "sha": "466c0cf5fe500fbef283b9536fdd61abe2dbae69"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Синхронизация",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Синхронизация",
+      "sourceReference": "https://drive.google.com/file/d/1KWwmYt0pHlc33p9ytpGqMNz-iWAwij-k/view",
+      "locator": "Раздел ТОП-10, первая строка: Синхронизация 97/100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 4,
+      "en": 4
+    },
+    "selectedClientLinks": 2,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-t057.json",
+    "ref": "aaef17711fcf45ed1612f905b997302948fca83a",
+    "sha": "88f6216e7484ea8e9429271ce5909b21bb6402d8"
+  },
+  "deployed": false
+}
