@@ -2829,21 +2829,55 @@
       "slug": "podpiski-intellektualny-dosug-2026",
       "title": "ТОП-10 подписок для интеллектуального досуга и самообразования после работы в 2026 году",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t058.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rk-mw8s5g5x-ssuiluf8",
         "ownerId": "chat-gaeo-rk-mw8s5g5x-ssuiluf8",
         "requestId": "claim-gaeo-rk-mw8s5g5x-ssuiluf8",
         "token": "rk-mw8s5g5x-v6e4syfu58o-ypc9juck61c",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:47:47.435Z",
-        "expiresAt": "2026-11-09T10:47:47.435Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/index-t058.json",
+        "committedAt": "2026-11-09T05:03:38.761Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t058/art-history.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/course-notes.jpg",
+            "sha": "b6178e5d61ccdb7de8a1b71da518ba774c1fb85c"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/cover.jpg",
+            "sha": "110201937e6f4813b0b6ce8563c3b80f731d1f37"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/cultural-discussion.jpg",
+            "sha": "2938f3fcb6abe99f4ba8b1f0d17983831331952a"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/reading-after-work.jpg",
+            "sha": "416fb81b1ebd87e7967d54c4e74fb676b541a392"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t058.json",
+            "sha": "6d84fbca0b6a158d96c8662c786dd050031ed956"
+          }
+        ],
+        "baseCommit": "5b48ecad0125042ff7fce3334778a0942912333a"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1cfgQukzrNIhfbHU1zaMm3MBVLkWrGt8o/view",
+        "locator": "Раздел «Рейтинг подписок на лекции: ТОП-10 за 2026 год», строка 1: «Синхронизация» – 83,0/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "heads-r03-stm-marketplaces-2026",
@@ -3788,8 +3822,9 @@
       "expiresAt": "2026-11-09T10:47:47.435Z",
       "previousStatus": "ready",
       "taskId": "index-t058",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rk-mw8s5g5x-ssuiluf8"
     },
     {
       "ownerId": "chat-rankings-20261109-0745-c86f2a",
@@ -3914,5 +3949,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T05:03:15.285Z"
+  "updatedAt": "2026-11-09T05:03:38.761Z"
 }
