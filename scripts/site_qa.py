@@ -418,7 +418,21 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             if meta_values(text, "property", "og:image:type") != ["image/jpeg"]:
                 errors.append(f"{page}: fallback og:image:type must be image/jpeg.")
         elif og_image_value == FALLBACK_URL:
-            errors.append(f"{page}: Article page must keep its own social cover, not the fallback.")
+            # Rankings without a source image intentionally reuse the site's
+            # existing social preview; unrelated Article pages keep their own cover.
+            is_image_free_ranking = (
+                str(page).replace("\\\\", "/").startswith(("rankings/", "en/rankings/"))
+                and not page_article_for_social.get("image")
+            )
+            if not is_image_free_ranking:
+                errors.append(f"{page}: Article page must keep its own social cover, not the fallback.")
+            else:
+                if meta_values(text, "property", "og:image:width") != ["1200"]:
+                    errors.append(f"{page}: fallback ranking og:image:width must be 1200.")
+                if meta_values(text, "property", "og:image:height") != ["630"]:
+                    errors.append(f"{page}: fallback ranking og:image:height must be 630.")
+                if meta_values(text, "property", "og:image:type") != ["image/jpeg"]:
+                    errors.append(f"{page}: fallback ranking og:image:type must be image/jpeg.")
 
         twitter_card = meta_values(text, "name", "twitter:card")
         twitter_title = meta_values(text, "name", "twitter:title")
