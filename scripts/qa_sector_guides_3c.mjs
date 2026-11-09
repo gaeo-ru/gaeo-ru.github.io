@@ -56,14 +56,14 @@ for(const lang of ['ru','en']){
  const route=lang==='ru'?'/strategies/':'/en/strategies/',html=read(route);
  const index=graph(html).find(x=>x['@type']==='ItemList'&&x['@id']==='https://gaeo.ru'+route+'#items');
  const visible=(html.match(/<article class="list-card">/g)||[]).length;
- assert.equal(visible,21,'Existing 17 entries plus 4 3C guides '+route);
+ assert.equal(visible,22,'21 existing entries plus the new 3D evidence guide '+route);
  assert.equal(index?.numberOfItems,visible,'ItemList count '+route);
  assert.equal(index?.itemListElement.length,visible,'ItemList entries '+route);
  const all=index.itemListElement.map(x=>x.url);
  assert.equal(new Set(all).size,all.length,'No duplicate directory entries '+route);
  for(const e of phase3CGuides)assert.ok(all.includes('https://gaeo.ru'+e.routes.method[lang]),'Included in ItemList');
 }
-if(process.argv.includes('--static')){console.log('Phase 3C static PASS: 8 editorial pages, original 8 services/methods, 21-entry RU/EN directories, 5 FAQ each, pricing and sources');process.exit(0);}
+if(process.argv.includes('--static')){console.log('Phase 3C static PASS: 8 editorial pages, original 8 services/methods, 22-entry RU/EN directories, 5 FAQ each, pricing and sources');process.exit(0);}
 const base=process.env.GAEO_QA_BASE_URL||'http://127.0.0.1:4384';
 const server=process.env.GAEO_QA_BASE_URL?null:spawn('./node_modules/.bin/astro',['preview','--host','127.0.0.1','--port','4384'],{stdio:'ignore'});
 let browser;

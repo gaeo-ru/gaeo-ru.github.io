@@ -1,5 +1,6 @@
 import {phase3BMethods} from './industry-methods-phase-3b.mjs';
 import {phase3CGuides} from './sector-guides-phase-3c.mjs';
+import {phase3DCaseProof} from './sector-case-proof-phase-3d.mjs';
 /**
  * Evidence-led RU/EN GEO specializations, expanded in isolated industry batches.
  * The 107-ID catalogue, approved images and canonical tariff terms remain shared.
@@ -5158,6 +5159,26 @@ for(const entry of phase3CGuides){
   if(!service.methods[lang].includes(href)){
    service.methods[lang].push(href);
    service.methodLabels[lang].push(entry[lang].method.h1);
+  }
+ }
+}
+
+// Phase 3D: expose one shared evidence-admissibility guide from the four existing
+// commercial specializations. No new commercial pages, IDs or tariffs.
+for(const id of phase3DCaseProof.ids){
+ const service=industrySpecializations.find(s=>s.id===id);
+ if(!service)throw new Error('Missing original commercial service for 3D #'+id);
+ service.methodLabels||={ru:[],en:[]};
+ for(const lang of ['ru','en']){
+  service.methods[lang]||=[];service.methodLabels[lang]||=[];
+  while(service.methodLabels[lang].length<service.methods[lang].length)
+   service.methodLabels[lang].push(lang==='ru'?'Связанная методика GEO':'Related GEO methodology');
+  const href=phase3DCaseProof.routes.method[lang];
+  if(!service.methods[lang].includes(href)){
+   service.methods[lang].push(href);
+   service.methodLabels[lang].push(lang==='ru'
+     ?'Проверка доказательности отраслевого GEO-кейса'
+     :'How to verify an industry GEO case study');
   }
  }
 }

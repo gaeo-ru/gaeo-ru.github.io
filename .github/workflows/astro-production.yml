@@ -53,6 +53,8 @@ jobs:
         run: npm run check:sector3a
       - name: Check phase 3C editorial checklists and industry link graph
         run: npm run check:sector3c
+      - name: Check phase 3D sector case evidence and link graph
+        run: npm run check:sector3d
       - name: Check bilingual website development cases
         run: node scripts/qa_development_cases.mjs
       - name: Check GEO website development service pages and navigation

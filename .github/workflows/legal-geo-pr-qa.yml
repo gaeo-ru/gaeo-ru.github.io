@@ -46,7 +46,9 @@ on:
       - 'scripts/qa_sector_clusters_3a.mjs'
       - 'src/data/industry-methods-phase-3b.mjs'
       - 'src/data/sector-guides-phase-3c.mjs'
+      - 'src/data/sector-case-proof-phase-3d.mjs'
       - 'scripts/qa_sector_guides_3c.mjs'
+      - 'scripts/qa_sector_case_proof_3d.mjs'
       - 'scripts/qa_sector_methods_3b.mjs'
       - 'src/data/industry-specializations-batch-*.mjs'
       - 'scripts/qa_industry_specializations.mjs'
@@ -105,6 +107,7 @@ jobs:
       - run: npm run check:specializations
       - run: npm run check:sector3a
       - run: npm run check:sector3c
+      - run: npm run check:sector3d
       - run: node scripts/qa_development_cases.mjs
       - run: node scripts/qa_site_development_service.mjs
       - run: npm run check:industry
