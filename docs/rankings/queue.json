@@ -3,7 +3,7 @@
   "repository": "gaeo-ru/gaeo-ru.github.io",
   "workBranch": "rankings-staging",
   "leaseMinutes": 360,
-  "paused": true,
+  "paused": false,
   "createdDate": "2026-11-08",
   "registrySnapshotDate": "2026-11-08",
   "tasks": [
@@ -92,7 +92,13 @@
             "sha": "3b8f8bf624a983129d4f615f50cc888f0ec59769"
           }
         ],
-        "baseCommit": "eaa1a4c00c925949b137ce1f8d699e821a30c5f9"
+        "baseCommit": "eaa1a4c00c925949b137ce1f8d699e821a30c5f9",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "reason": "Both storage providers were checked. A preparation brief exists, but it is not a finished article. A later Work chat must recover the published text; do not substitute MPFIT-T003.",
       "sourceChecks": [
@@ -206,7 +212,13 @@
             "sha": "32e519d1d6b9b7fdba29da60dacb6bdc77db1b9d"
           }
         ],
-        "baseCommit": "e017c5e7247ddb779b4867067cbe395b9b944ea7"
+        "baseCommit": "e017c5e7247ddb779b4867067cbe395b9b944ea7",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 2,
       "lastRelease": {
@@ -262,7 +274,13 @@
             "sha": "babf22754259f213ce5d386bbe6c4dbf6f61f19d"
           }
         ],
-        "baseCommit": "fc1a56547e94e945178fec1c6be267880c55fbad"
+        "baseCommit": "fc1a56547e94e945178fec1c6be267880c55fbad",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 3,
       "lastRelease": {
@@ -318,7 +336,13 @@
             "sha": "df0cde69d88e3d11c7aa0da4980d5f43b780165d"
           }
         ],
-        "baseCommit": "d74c97e991d037f94977f96f6623adbec6a17d85"
+        "baseCommit": "d74c97e991d037f94977f96f6623adbec6a17d85",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -373,7 +397,13 @@
             "sha": "c9c6e364956e7e9c80e08caa49a98d1e7fc13ae4"
           }
         ],
-        "baseCommit": "c0b24990df8e31e246dcb6a78c462b5c552f31d9"
+        "baseCommit": "c0b24990df8e31e246dcb6a78c462b5c552f31d9",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -436,7 +466,13 @@
             "sha": "80aa56a960030ac8c90e169ee80c32d0a4a096b4"
           }
         ],
-        "baseCommit": "5e843b916620c4d9cb37a2ec214b58ef7de70c96"
+        "baseCommit": "5e843b916620c4d9cb37a2ec214b58ef7de70c96",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -495,7 +531,13 @@
             "sha": "239eff08cf0434a9ac2f36d4c63d429111a91914"
           }
         ],
-        "baseCommit": "21cdcc5fa7bbefdd3306925ad501724afbb15df8"
+        "baseCommit": "21cdcc5fa7bbefdd3306925ad501724afbb15df8",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -558,7 +600,13 @@
             "sha": "28f512fdd290a5cbe0a3284913d7e24394043880"
           }
         ],
-        "baseCommit": "a865a24b04186bee22f72c485ac771c479257d04"
+        "baseCommit": "a865a24b04186bee22f72c485ac771c479257d04",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -621,7 +669,13 @@
             "sha": "e70423d078036feaddf7ae6dd14ceb466e589ec1"
           }
         ],
-        "baseCommit": "d10fb81ac7ce32d8ff9305df22151409b6e91c24"
+        "baseCommit": "d10fb81ac7ce32d8ff9305df22151409b6e91c24",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -702,7 +756,13 @@
             "sha": "9783a2fea8683e99aebf359d5a7d7a126e4ee761"
           }
         ],
-        "baseCommit": "d476951164f9270ebf5175715f712a4a0062fdbd"
+        "baseCommit": "d476951164f9270ebf5175715f712a4a0062fdbd",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -757,7 +817,13 @@
             "sha": "9b03295f205f5fc9e9672c4b67ad3ef568a9008d"
           }
         ],
-        "baseCommit": "7fd5e0f3fe048f0910b24434d8425aeb77a10cde"
+        "baseCommit": "7fd5e0f3fe048f0910b24434d8425aeb77a10cde",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -816,7 +882,13 @@
             "sha": "4e4c52d7a3327fd0b681bec84e9c264d4e38543f"
           }
         ],
-        "baseCommit": "ae4665076d1f956a9bc856620ce10457eea19e16"
+        "baseCommit": "ae4665076d1f956a9bc856620ce10457eea19e16",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -871,7 +943,13 @@
             "sha": "c994169d575b733587e6e04c8991c683b0024b3f"
           }
         ],
-        "baseCommit": "520910e44c3ba95557de6e165bfc5c4dafdfbe1b"
+        "baseCommit": "520910e44c3ba95557de6e165bfc5c4dafdfbe1b",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -926,7 +1004,13 @@
             "sha": "e1f9c3d004f378ae91f2e39505ddbb123998f5bc"
           }
         ],
-        "baseCommit": "fc18dc917d7fcd0734603abf3634e9ba0f93849b"
+        "baseCommit": "fc18dc917d7fcd0734603abf3634e9ba0f93849b",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -981,7 +1065,13 @@
             "sha": "a46d6456ce3690606d58984b0d89a9dbf5fb5556"
           }
         ],
-        "baseCommit": "a7d73281094e58e9df0f7a308cf30cd753a9d716"
+        "baseCommit": "a7d73281094e58e9df0f7a308cf30cd753a9d716",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1040,7 +1130,13 @@
             "sha": "7889950831833a46dca4e823e64dab610eb9bcff"
           }
         ],
-        "baseCommit": "8d6a14733af55708c0b5a1dd9a285d45626980e2"
+        "baseCommit": "8d6a14733af55708c0b5a1dd9a285d45626980e2",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1091,7 +1187,13 @@
             "sha": "2c7ba8c5779fe5c14c1a37534accdb7b6e3e693b"
           }
         ],
-        "baseCommit": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5"
+        "baseCommit": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1138,7 +1240,13 @@
             "sha": "372c09ce2a0b22467786a13ed7ac59f532bd9b9c"
           }
         ],
-        "baseCommit": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4"
+        "baseCommit": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1189,7 +1297,13 @@
             "sha": "8418c0a579a532ec2b0a3b4820b9fa49cef0146e"
           }
         ],
-        "baseCommit": "42325e35f9169d805caab786b6439a910a5ac3b2"
+        "baseCommit": "42325e35f9169d805caab786b6439a910a5ac3b2",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1278,7 +1392,13 @@
             "sha": "a4fbf80b9e5e28eb9f5a881e9f3636afd83eaa7a"
           }
         ],
-        "baseCommit": "f28dec1adb53c7f3eeb11f2c2c6bdbcbbedd1eb6"
+        "baseCommit": "f28dec1adb53c7f3eeb11f2c2c6bdbcbbedd1eb6",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1333,7 +1453,13 @@
             "sha": "ef4abc07445ce6f462cbb6c979f14f1aeb27df3c"
           }
         ],
-        "baseCommit": "b6232ee613f77c6e0e6f33242e9048daf04983d5"
+        "baseCommit": "b6232ee613f77c6e0e6f33242e9048daf04983d5",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1388,7 +1514,13 @@
             "sha": "28446e929562d305bef97d5957ffe193ff6fa6e0"
           }
         ],
-        "baseCommit": "e4fe9f93279252274b4143032751978490c0c59c"
+        "baseCommit": "e4fe9f93279252274b4143032751978490c0c59c",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1435,7 +1567,13 @@
             "sha": "b5c4c7994d15836769f217488ee3500005248e0e"
           }
         ],
-        "baseCommit": "1b8a290391d8f2a648be5981160ba57788080bf1"
+        "baseCommit": "1b8a290391d8f2a648be5981160ba57788080bf1",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1494,7 +1632,13 @@
             "sha": "3c811d0272bd254aa5e5a7dea7cd674c8b92a7ed"
           }
         ],
-        "baseCommit": "d0cdaaa85e5255f0989639d7ad40d1adc9ef7c57"
+        "baseCommit": "d0cdaaa85e5255f0989639d7ad40d1adc9ef7c57",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1545,7 +1689,13 @@
             "sha": "5b45e34ea5e414955d3b0e83b207b77962d9cde0"
           }
         ],
-        "baseCommit": "1791031738998d0cf0da2d040ff9b33d09bc294c"
+        "baseCommit": "1791031738998d0cf0da2d040ff9b33d09bc294c",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1600,7 +1750,13 @@
             "sha": "e0ad95132e75232adf85080484c840156616b400"
           }
         ],
-        "baseCommit": "3513dc4d86b70a76fa2090e5c53d058ca148df9a"
+        "baseCommit": "3513dc4d86b70a76fa2090e5c53d058ca148df9a",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1655,7 +1811,13 @@
             "sha": "10f2bdefe19e188f4bdb7db0b4f212b24b877ed6"
           }
         ],
-        "baseCommit": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062"
+        "baseCommit": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1706,7 +1868,13 @@
             "sha": "df7fb222687433d57aec018c100de0a2a9f0e709"
           }
         ],
-        "baseCommit": "3b8debf6680b4cd734fbfeefcd7f7e834d8138f8"
+        "baseCommit": "3b8debf6680b4cd734fbfeefcd7f7e834d8138f8",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1761,7 +1929,13 @@
             "sha": "3d17248a802f9ba5af7b52a57ac8ff83c29f08fd"
           }
         ],
-        "baseCommit": "bcac7d1752c1f0a1246b5e030ce9303f2764c85e"
+        "baseCommit": "bcac7d1752c1f0a1246b5e030ce9303f2764c85e",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 2,
       "block": null,
@@ -1812,7 +1986,13 @@
             "sha": "d352794523a0c2c97e7c4e45cda53d0865eecf30"
           }
         ],
-        "baseCommit": "f7dc9933ac28781bd2f559e70e5639ea9884f8b2"
+        "baseCommit": "f7dc9933ac28781bd2f559e70e5639ea9884f8b2",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1855,7 +2035,13 @@
             "sha": "06688710697eb970922f83d7e584ee155a4ee28e"
           }
         ],
-        "baseCommit": "91f6c0a44c8e721e00d70c519daf689d208be527"
+        "baseCommit": "91f6c0a44c8e721e00d70c519daf689d208be527",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1910,7 +2096,13 @@
             "sha": "515a0b8ff97355511bcf611010d23a46e1d3d629"
           }
         ],
-        "baseCommit": "3df57bf29e0030a51e6feb590834ed9ed7e4b286"
+        "baseCommit": "3df57bf29e0030a51e6feb590834ed9ed7e4b286",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -1973,7 +2165,13 @@
             "sha": "cbf96f2cd72e53bc6ba6f9e43230552b96700e0d"
           }
         ],
-        "baseCommit": "af7115667bd16f338f965fd58cc0bc572ce10eef"
+        "baseCommit": "af7115667bd16f338f965fd58cc0bc572ce10eef",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2040,7 +2238,13 @@
             "sha": "2bf67cfd1c63a5a0960171e49e047c3dacb1c657"
           }
         ],
-        "baseCommit": "3e18825d9fad4b59d3854e82de3ac5aab9ab5dbd"
+        "baseCommit": "3e18825d9fad4b59d3854e82de3ac5aab9ab5dbd",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2099,7 +2303,13 @@
             "sha": "a8ac2a52cf28d72f44ffa455b89e43e1d6b209d8"
           }
         ],
-        "baseCommit": "7e083be13f47d547aad4ccb0c31c7477cad32122"
+        "baseCommit": "7e083be13f47d547aad4ccb0c31c7477cad32122",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2150,7 +2360,13 @@
             "sha": "425a0a1dea49b0c5e8f568cfdcb294e2df52a59e"
           }
         ],
-        "baseCommit": "1aa13162f053f78419b03389ca42551bb54928df"
+        "baseCommit": "1aa13162f053f78419b03389ca42551bb54928df",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2197,7 +2413,13 @@
             "sha": "61489177e9347dccec840a8504fc77a66aa7d45d"
           }
         ],
-        "baseCommit": "aad1eae7c6969bf62617e5afd3156339cbe304d5"
+        "baseCommit": "aad1eae7c6969bf62617e5afd3156339cbe304d5",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2248,7 +2470,13 @@
             "sha": "6ef6ffc38d14ff62645b3d48565a8d57cc266669"
           }
         ],
-        "baseCommit": "9104413d270f709bb1c90dc371246d3172012ce7"
+        "baseCommit": "9104413d270f709bb1c90dc371246d3172012ce7",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2295,7 +2523,13 @@
             "sha": "ea3278020fa66a641677fd0a8741d69e74574f30"
           }
         ],
-        "baseCommit": "639f46729623170e0d75fa8510e4dd2026a57c07"
+        "baseCommit": "639f46729623170e0d75fa8510e4dd2026a57c07",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2346,7 +2580,13 @@
             "sha": "0a92d74ae7789641288f555a66eb8ce43fd706ef"
           }
         ],
-        "baseCommit": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b"
+        "baseCommit": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2401,7 +2641,13 @@
             "sha": "fbfca9305d1727b91ba45f2df260ee0d03f44a27"
           }
         ],
-        "baseCommit": "a5a11b3996ad6a8abfc41a37b37f3028a40d286b"
+        "baseCommit": "a5a11b3996ad6a8abfc41a37b37f3028a40d286b",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2460,7 +2706,13 @@
             "sha": "6fbbf4f23fd650d9804e1b1381cbc318f0ae49bf"
           }
         ],
-        "baseCommit": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49"
+        "baseCommit": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2515,7 +2767,13 @@
             "sha": "300b0f826ad28b5b5025581a551a3f1d7ee7bc74"
           }
         ],
-        "baseCommit": "10efd40a6702b5cd779e5c98ded6f76db45a641d"
+        "baseCommit": "10efd40a6702b5cd779e5c98ded6f76db45a641d",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2570,7 +2828,13 @@
             "sha": "4f248f98c1c8b5dec8f4290febc57fe44332770a"
           }
         ],
-        "baseCommit": "8ee3bddbe542f8247fd91e40c1238fb829b79505"
+        "baseCommit": "8ee3bddbe542f8247fd91e40c1238fb829b79505",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2621,7 +2885,13 @@
             "sha": "4122405bf23e1e8820f8ea4860b1a1dba19514f6"
           }
         ],
-        "baseCommit": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35"
+        "baseCommit": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "sourceChecks": [],
       "firstPlaceVerification": {
@@ -2681,7 +2951,13 @@
             "sha": "107e758a8213fd14850f7a392112a525c7760e7f"
           }
         ],
-        "baseCommit": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e"
+        "baseCommit": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "sourceChecks": [],
       "publicationVerified": {
@@ -2744,7 +3020,13 @@
             "sha": "cbcbcabb68dff67986f79055c1d8b73093a23aa3"
           }
         ],
-        "baseCommit": "055d7109becec913d5b26503f9c8a0cfb8655c75"
+        "baseCommit": "055d7109becec913d5b26503f9c8a0cfb8655c75",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2803,7 +3085,13 @@
             "sha": "466c0cf5fe500fbef283b9536fdd61abe2dbae69"
           }
         ],
-        "baseCommit": "aaef17711fcf45ed1612f905b997302948fca83a"
+        "baseCommit": "aaef17711fcf45ed1612f905b997302948fca83a",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2858,7 +3146,13 @@
             "sha": "a1716af135f6385a1236305e46d10c0031f5c328"
           }
         ],
-        "baseCommit": "6a002ab8b80af8a82a384135d3c205976ae51a1b"
+        "baseCommit": "6a002ab8b80af8a82a384135d3c205976ae51a1b",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2917,7 +3211,13 @@
             "sha": "6d84fbca0b6a158d96c8662c786dd050031ed956"
           }
         ],
-        "baseCommit": "5b48ecad0125042ff7fce3334778a0942912333a"
+        "baseCommit": "5b48ecad0125042ff7fce3334778a0942912333a",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -2976,7 +3276,13 @@
             "sha": "aa143aaa9db0997e8516ff62bbc61a9a68293b1c"
           }
         ],
-        "baseCommit": "ecd92a4795f6847699156c0da3a2a96f92ab387f"
+        "baseCommit": "ecd92a4795f6847699156c0da3a2a96f92ab387f",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -3015,7 +3321,13 @@
             "sha": "9774c56fd09a1b901c5a521882c84c670b1fd240"
           }
         ],
-        "baseCommit": "7a3759b5a8cd0ef1e72eddc8747bcbf0ec650cfe"
+        "baseCommit": "7a3759b5a8cd0ef1e72eddc8747bcbf0ec650cfe",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 2,
       "block": null,
@@ -3062,7 +3374,13 @@
             "sha": "ed29155f3fae2e0f02c4b7ac3884be45f8a40bf8"
           }
         ],
-        "baseCommit": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6"
+        "baseCommit": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 3,
       "block": null,
@@ -3151,7 +3469,13 @@
             "sha": "f1c426dcdb8c1ba159d53eae5e3023d3bd300f6c"
           }
         ],
-        "baseCommit": "5d35521e5d764870c8296d0314991a95e97daaa5"
+        "baseCommit": "5d35521e5d764870c8296d0314991a95e97daaa5",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "reason": null,
       "sourceChecks": [],
@@ -3218,7 +3542,13 @@
             "sha": "71a69b7182c1c07e260bad7c530b80ac8f475b08"
           }
         ],
-        "baseCommit": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e"
+        "baseCommit": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e",
+        "releaseStatus": "main-published-ci-verified-live-unchecked",
+        "releaseSourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+        "releaseMainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+        "releasedAt": "2026-11-09T07:10:49.190Z",
+        "publicHttpCheck": "not-available-to-executor"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -4116,5 +4446,5 @@
       "submissionId": "rankings-coordinator-20261109-t063-submit"
     }
   ],
-  "updatedAt": "2026-11-09T06:08:24.526Z"
+  "updatedAt": "2026-11-09T07:14:23.397Z"
 }

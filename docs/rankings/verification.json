@@ -438,5 +438,33 @@
     "The published browser check uses the runtime HTTP proxy; this is not a standalone TLS audit.",
     "The browser and queue checks refer to the recorded source commits; future staging commits require their own validation.",
     "No reservation tokens, private download URLs or proxy credentials are stored here."
+  ],
+  "subsequentReleases": [
+    {
+      "releasedAt": "2026-11-09T07:10:49.190Z",
+      "recordedAt": "2026-11-09T07:14:23.397Z",
+      "recordedAtMoscow": "09.11.2026, 10:14",
+      "sourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+      "mainCommit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+      "workflowRunId": 42574866115,
+      "workflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+      "workflowConclusion": "success",
+      "mainVerified": true,
+      "pagesBuildRequested": true,
+      "publicHttpVerified": false,
+      "publicBrowserVerified": false,
+      "totalFamilies": 58,
+      "newFamilies": 55,
+      "preexistingPilots": 3,
+      "articleLanguagePages": 116,
+      "totalRankingRoutesInSitemap": 134,
+      "rankingBrowserWidthChecks": [
+        1440,
+        390,
+        320
+      ],
+      "editorialReview": "index-t063: tied ranks 4,4 and 8,8 preserved; affiliate disclosure and exact source links validated",
+      "queueUnpaused": true
+    }
   ]
 }
