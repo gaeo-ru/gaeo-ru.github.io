@@ -197,10 +197,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t003.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "needs_work_source",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8si0fp-jtfumbq8t1",
+        "requestId": "claim-mw8si0fp-jtfumbq8t1",
+        "token": "rk-mw8si0fp-2alk0wo2vds-teyt2t71jne",
+        "mode": "work",
+        "claimedAt": "2026-11-09T04:57:29.757Z",
+        "expiresAt": "2026-11-09T10:57:29.757Z",
+        "previousStatus": "needs_work_source"
+      },
       "result": null,
-      "leaseVersion": 2,
+      "leaseVersion": 3,
       "lastRelease": {
         "at": "2026-11-08T20:08:14.586Z",
         "ownerId": "gaeo-rankings-live-smoke-a-20261108-mw89kz54",
@@ -3702,7 +3710,19 @@
       "taskId": "mpfit-t001",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8si0fp-jtfumbq8t1",
+      "requestId": "claim-mw8si0fp-jtfumbq8t1",
+      "token": "rk-mw8si0fp-2alk0wo2vds-teyt2t71jne",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:29.757Z",
+      "expiresAt": "2026-11-09T10:57:29.757Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "prep-t003",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:57:21.784Z"
+  "updatedAt": "2026-11-09T04:57:29.757Z"
 }
