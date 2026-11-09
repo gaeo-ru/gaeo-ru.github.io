@@ -246,46 +246,158 @@ def sync_business_map_schema(text: str) -> str:
     return JSONLD_RE.sub(rewrite, text)
 
 
+
+def visible_faq_questions(text: str) -> list[str]:
+    """Use the same FAQ summaries that site_qa.py validates."""
+    questions = []
+    for block in FAQ_DETAILS_RE.findall(text):
+        match = re.search(r"<summary\b[^>]*>([\s\S]*?)</summary>", block, re.I)
+        if match:
+            question = re.sub(r"\s*\+\s*$", "", clean_text(match.group(1))).strip()
+            if question:
+                questions.append(question)
+    return questions
+
+
+def faq_nodes(data) -> list[dict]:
+    """Find top-level FAQPage nodes in every supported JSON-LD container."""
+    if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+        nodes = data["@graph"]
+    elif isinstance(data, list):
+        nodes = data
+    else:
+        nodes = [data]
+    return [node for node in nodes if has_type(node, "FAQPage")]
+
+
+def faq_schema_questions(node: dict) -> list[str]:
+    return [clean_text(str(item["name"])) for item in node.get("mainEntity", [])
+            if isinstance(item, dict) and item.get("name")]
+
+
+def strip_duplicate_faq_type(node: dict) -> bool:
+    """Return True to remove a FAQ-only node; preserve non-FAQ co-types."""
+    types = node.get("@type")
+    remaining = [value for value in types if value != "FAQPage"] if isinstance(types, list) else []
+    if remaining:
+        node["@type"] = remaining if len(remaining) > 1 else remaining[0]
+        node.pop("mainEntity", None)
+        return False
+    return True
+
+
 def sync_faq_schema(text: str, page: str) -> str:
-    items = visible_faq(text)
-    match, data = load_jsonld(text)
+    """Keep one factual FAQPage across ALL JSON-LD scripts on a page.
 
-    # Legal pages may intentionally have no JSON-LD; there is nothing to sync.
-    if match is None or data is None:
-        return text
+    Prefer a canonical, already authored FAQ node. Rewrite JSON-LD only where
+    a stale/duplicated node must change. This avoids the former first-script
+    reserialization and repeated duplicate insertion in GitHub Actions.
+    """
+    questions = visible_faq_questions(text)
+    pairs = visible_faq(text)
+    canonical = canonical_url(text)
+    if questions and not canonical:
+        raise RuntimeError(f"{page}: visible FAQ exists but canonical is missing.")
+    if questions and ([question for question, _ in pairs] != questions):
+        raise RuntimeError(f"{page}: FAQ answers could not be read for all visible questions.")
 
-    data, graph = ensure_graph(data)
-    if data is None or graph is None:
-        return text
+    faq_id = canonical.rstrip("/") + "/#faq" if canonical else None
+    lang = "en-US" if html_lang(text).startswith("en") else "ru-RU"
+    blocks = []
+    locations = []
+    for match in JSONLD_RE.finditer(text):
+        try:
+            data = json.loads(match.group(2))
+        except (TypeError, ValueError):
+            continue  # site_qa.py reports invalid JSON-LD without concealing it
+        index = len(blocks)
+        blocks.append({"match": match, "data": data, "changed": False, "remove": False})
+        for node in faq_nodes(data):
+            locations.append((index, node))
 
-    graph[:] = [node for node in graph if not has_type(node, "FAQPage")]
-
-    if items:
-        canonical = canonical_url(text)
-        if not canonical:
-            raise RuntimeError(f"{page}: visible FAQ exists but canonical is missing.")
-        lang = "en-US" if html_lang(text).startswith("en") else "ru-RU"
-        graph.append(
-            {
-                "@type": "FAQPage",
-                "@id": canonical.rstrip("/") + "/#faq",
-                "inLanguage": lang,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": answer,
-                        },
-                    }
-                    for question, answer in items
-                ],
-            }
+    def rank(location):
+        index, node = location
+        entities = node.get("mainEntity") or []
+        has_answers = all(
+            isinstance(item, dict) and isinstance(item.get("acceptedAnswer"), dict)
+            and bool(item["acceptedAnswer"].get("text"))
+            for item in entities
         )
+        return (faq_schema_questions(node) == questions,
+                node.get("@id") == faq_id, has_answers,
+                node.get("@type") == "FAQPage", index)
 
-    rendered = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    return text[:match.start()] + match.group(1) + rendered + match.group(3) + text[match.end():]
+    keeper = max(locations, key=rank) if questions and locations else None
+    keeper_node = keeper[1] if keeper else None
+    for block in blocks:
+        data = block["data"]
+        if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+            graph = data["@graph"]
+            kept = []
+            for node in graph:
+                if has_type(node, "FAQPage") and node is not keeper_node:
+                    block["changed"] = True
+                    if strip_duplicate_faq_type(node):
+                        continue
+                kept.append(node)
+            if block["changed"]:
+                data["@graph"] = kept
+                if not kept and set(data) <= {"@context", "@graph"}:
+                    block["remove"] = True
+        elif isinstance(data, list):
+            kept = []
+            for node in data:
+                if has_type(node, "FAQPage") and node is not keeper_node:
+                    block["changed"] = True
+                    if strip_duplicate_faq_type(node):
+                        continue
+                kept.append(node)
+            if block["changed"]:
+                block["data"] = kept
+                block["remove"] = not bool(kept)
+        elif has_type(data, "FAQPage") and data is not keeper_node:
+            # Standalone FAQPage script: remove it, but preserve other types if mixed.
+            block["changed"] = True
+            block["remove"] = strip_duplicate_faq_type(data)
+
+    if questions:
+        entities = [
+            {"@type": "Question", "name": question,
+             "acceptedAnswer": {"@type": "Answer", "text": answer}}
+            for question, answer in pairs
+        ]
+        if keeper is not None:
+            index, node = keeper
+            desired = {"@id": faq_id, "inLanguage": lang, "mainEntity": entities}
+            for key, value in desired.items():
+                if node.get(key) != value:
+                    node[key] = value
+                    blocks[index]["changed"] = True
+        else:
+            if not blocks:
+                raise RuntimeError(f"{page}: visible FAQ exists but no parseable JSON-LD script.")
+            target = blocks[-1]
+            data, graph = ensure_graph(target["data"])
+            if data is None or graph is None:
+                raise RuntimeError(f"{page}: unsupported JSON-LD container for FAQPage.")
+            graph.append({"@type": "FAQPage", "@id": faq_id,
+                          "inLanguage": lang, "mainEntity": entities})
+            target["data"] = data
+            target["changed"] = True
+
+    # Replace from right to left so offsets stay valid. Unchanged scripts are
+    # byte-for-byte preserved (avoids cosmetic or unrelated schema diffs).
+    for block in reversed(blocks):
+        if not block["changed"]:
+            continue
+        match = block["match"]
+        rendered = "" if block["remove"] else (
+            match.group(1)
+            + json.dumps(block["data"], ensure_ascii=False, separators=(",", ":"))
+            + match.group(3)
+        )
+        text = text[:match.start()] + rendered + text[match.end():]
+    return text
 
 
 def normalize(path: Path) -> bool:

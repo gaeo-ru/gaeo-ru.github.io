@@ -31,6 +31,9 @@ jobs:
       - name: Test IndexNow retry and queue behavior
         run: python -m unittest discover -s tests -p 'test_indexnow*.py'
 
+      - name: Test JSON-LD FAQ deduplication and idempotency
+        run: python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
+
       - name: Resolve site mode
         shell: bash
         run: |
