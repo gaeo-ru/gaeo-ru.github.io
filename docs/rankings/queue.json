@@ -2160,21 +2160,51 @@
       "slug": "termo-upakovka-top15-2026",
       "title": "Серийная термоусадочная упаковка товаров для Wildberries и Ozon: ТОП-15 компаний Москвы и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-thermoshrink-top15-oct2026.json",
       "earliestPublicationDate": "2026-10-27",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rnk-20261109-mw8r9fan-tn72pcdd",
         "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
         "requestId": "claim-rnk-20261109-mw8r9fan-tn72pcdd",
         "token": "rk-mw8rb3at-dmjkrex9yxh-fbepgohnqjp",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:24:02.162Z",
-        "expiresAt": "2026-11-09T10:24:02.162Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-thermoshrink-top15-oct2026.json",
+        "committedAt": "2026-11-09T04:37:58.893Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/cover.jpg",
+            "sha": "39d26b6953c2ce6d1b8301d5a0a0e34f8d92083a"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/method.jpg",
+            "sha": "454301736c148de888d5f12b99f09f5fd7578ac5"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/process.jpg",
+            "sha": "86549897f146a26d26d1bbd2f6f9d6245fe424f7"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/ranking.jpg",
+            "sha": "ff9fe00d51b944ce48dfb0f588fdacd7d3d24f12"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-thermoshrink-top15-oct2026.json",
+            "sha": "fbfca9305d1727b91ba45f2df260ee0d03f44a27"
+          }
+        ],
+        "baseCommit": "a5a11b3996ad6a8abfc41a37b37f3028a40d286b"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1hjMjeF37tLGpL8tPLw3QsTK99gjIaRIr/view",
+        "locator": "Раздел «Кого выбрать: короткий ТОП-15», строка 1; раздел «1. Преп-Центр — 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t027-shampuni-geli-top15-2026",
@@ -3057,8 +3087,9 @@
       "expiresAt": "2026-11-09T10:24:02.162Z",
       "previousStatus": "ready",
       "taskId": "prep-thermoshrink-top15-oct2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rnk-20261109-mw8r9fan-tn72pcdd"
     },
     {
       "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
@@ -3133,5 +3164,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:36:54.960Z"
+  "updatedAt": "2026-11-09T04:37:58.893Z"
 }
