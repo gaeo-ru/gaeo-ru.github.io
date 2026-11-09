@@ -2687,21 +2687,51 @@
       "slug": "branding-fmcg-full-cycle-2026",
       "title": "FMCG: исследования, стратегия и упаковка",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r01-branding-fmcg-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8rp9hg-0xe8o78tssa",
         "ownerId": "chat-mw8rp9hg-0xe8o78tssa",
         "requestId": "claim-mw8rp9hg-0xe8o78tssa",
         "token": "rk-mw8rpwep-mxbx44it7ki-t4xpc3gi6b",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:35:33.304Z",
-        "expiresAt": "2026-11-09T10:35:33.304Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/heads-r01-branding-fmcg-2026.json",
+        "committedAt": "2026-11-09T04:54:06.263Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/cover.jpg",
+            "sha": "1eb744277e6369c71f0f303e373bdd3e6daa515b"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/full-cycle.jpg",
+            "sha": "f1c21c0eb00f37698f58fb06b4b6dbee5c1283ea"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/methodology.jpg",
+            "sha": "6bf8745c687ec949f16abe594d03f46c4617dccb"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/top-three.jpg",
+            "sha": "4f2f033cb2166293fa1d4001f460b8e7b7ae8f34"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r01-branding-fmcg-2026.json",
+            "sha": "cbcbcabb68dff67986f79055c1d8b73093a23aa3"
+          }
+        ],
+        "baseCommit": "055d7109becec913d5b26503f9c8a0cfb8655c75"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1UJymAHfupLGjXeQaIcrJq3Jx-76eG8ld/view",
+        "locator": "ПОЛНЫЙ ТЕКСТ ДЛЯ ПУБЛИКАЦИИ → Короткий ТОП-10 → 1. Heads – 95/100; Подробный разбор агентств → 1. Heads",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t057",
@@ -3564,8 +3594,9 @@
       "expiresAt": "2026-11-09T10:35:33.304Z",
       "previousStatus": "ready",
       "taskId": "heads-r01-branding-fmcg-2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8rp9hg-0xe8o78tssa"
     },
     {
       "ownerId": "chat-mw8s4zjr-yd02becybhh",
@@ -3652,5 +3683,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:53:22.232Z"
+  "updatedAt": "2026-11-09T04:54:06.263Z"
 }

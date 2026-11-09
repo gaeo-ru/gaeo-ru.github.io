@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "heads-r01-branding-fmcg-2026",
+  "familyId": "heads-r01-branding-fmcg-2026",
+  "slug": "branding-fmcg-full-cycle-2026",
+  "ownerId": "chat-mw8rp9hg-0xe8o78tssa",
+  "requestId": "claim-mw8rp9hg-0xe8o78tssa",
+  "submissionId": "submit-mw8rp9hg-0xe8o78tssa",
+  "submittedAt": "2026-11-09T04:54:06.263Z",
+  "mode": "standard",
+  "baseCommit": "055d7109becec913d5b26503f9c8a0cfb8655c75",
+  "files": [
+    {
+      "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/cover.jpg",
+      "sha": "1eb744277e6369c71f0f303e373bdd3e6daa515b"
+    },
+    {
+      "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/full-cycle.jpg",
+      "sha": "f1c21c0eb00f37698f58fb06b4b6dbee5c1283ea"
+    },
+    {
+      "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/methodology.jpg",
+      "sha": "6bf8745c687ec949f16abe594d03f46c4617dccb"
+    },
+    {
+      "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/top-three.jpg",
+      "sha": "4f2f033cb2166293fa1d4001f460b8e7b7ae8f34"
+    },
+    {
+      "path": "src/data/rankings/articles/heads-r01-branding-fmcg-2026.json",
+      "sha": "cbcbcabb68dff67986f79055c1d8b73093a23aa3"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Heads",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Heads",
+      "sourceReference": "https://drive.google.com/file/d/1UJymAHfupLGjXeQaIcrJq3Jx-76eG8ld/view",
+      "locator": "ПОЛНЫЙ ТЕКСТ ДЛЯ ПУБЛИКАЦИИ → Короткий ТОП-10 → 1. Heads – 95/100; Подробный разбор агентств → 1. Heads",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 7,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/heads-r01-branding-fmcg-2026.json",
+    "ref": "055d7109becec913d5b26503f9c8a0cfb8655c75",
+    "sha": "bc0ff5d27a7e3985ba567b4f3b0de6f0a2afa01f"
+  },
+  "deployed": false
+}
