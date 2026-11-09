@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3C complete: 4 new RU/EN practical guide pairs, 8 pages, full CI/production/Pages PASS and public 26-HTTPS/30-browser acceptance PASS. Next 3D research scope: evidence inventory E0–E4 for industry/logistics/medicine; assess independent content needs for broader reused #1/#19/#39. Do not repeat 3B/3C.",
+    "next_batch": "3D source merged and full PR CI PASS; production/main/Pages and independent public HTTPS acceptance pending. Complete those checks first. After confirmed 3D publication, start 3E evidence-permission and #1/#19/#39 distinct-intent research only, no duplicate commercial pages.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -481,7 +481,7 @@
       "qa_dev_cases_fix_commit": "1bbeddc737eb9e3bfd29423a99faf5a113905415",
       "last_verified_source_sha": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234"
     },
-    "current_expansion_phase": 2,
+    "current_expansion_phase": 3,
     "phase_2n": {
       "phase": 2,
       "batch": "2N",
@@ -1662,6 +1662,93 @@
         390,
         320
       ]
+    },
+    "phase_3d": {
+      "phase": 3,
+      "batch": "3D",
+      "status": "source_merged_pr_ci_pass_production_pages_public_pending",
+      "work_branch": "feat/sector-case-proof-3d-2026-11-09",
+      "records": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "related_broader_reviewed": [
+        1,
+        19,
+        39
+      ],
+      "scope": "Bilingual editorial proof standard; audit E0-E4 without disclosing private client details, reuse original commercial pages, 3B/3C cross-links.",
+      "new_guide_pairs": 1,
+      "new_ru_en_urls": 2,
+      "guide_urls": [
+        {
+          "ru": "/strategies/sector-geo-case-proof/",
+          "en": "/en/strategies/sector-geo-case-proof/"
+        }
+      ],
+      "source_file": "src/data/sector-case-proof-phase-3d.mjs",
+      "qa_script": "scripts/qa_sector_case_proof_3d.mjs",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132",
+      "source_merge_commit": "2c29fdfe96b02890be954cd7dfd402d4952b15e7",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42571345395",
+      "ci_status": "pass",
+      "production_status": "pending",
+      "pages_status": "pending",
+      "public_https_browser_verified": false,
+      "pre_release_dependency_fix_commit": "ccae5d0ad16785f496c02333a651f4a767049919",
+      "evidence_inventory": [
+        {
+          "sector": "industrial B2B, adjacent to #42",
+          "highest_confirmed": "E2",
+          "implementation": "unverified",
+          "repeat_measurement": false,
+          "disclosure_permission": "not_confirmed",
+          "public_case_eligible": false
+        },
+        {
+          "sector": "foreign trade and logistics, adjacent to #55",
+          "highest_confirmed": "E2",
+          "implementation": "unverified",
+          "repeat_measurement": false,
+          "disclosure_permission": "not_confirmed",
+          "public_case_eligible": false
+        },
+        {
+          "sector": "private medical clinics #59",
+          "highest_confirmed": "none_confirmed",
+          "implementation": "unverified",
+          "repeat_measurement": false,
+          "disclosure_permission": "not_confirmed",
+          "public_case_eligible": false
+        }
+      ],
+      "sensitive_source_policy": "Private original diagnostics stay outside the public repository. Do not publish names, unapproved measurements or patient information.",
+      "broader_page_assessment": [
+        {
+          "id": 1,
+          "existing_ru": "/geo-prodvizhenie-nedvizhimosti/",
+          "decision": "reuse_broader_ru_en_page",
+          "distinctive_material": "real estate GEO strategy",
+          "need_before_new_page": "distinct developer-specific intent and fresh permission-cleared evidence"
+        },
+        {
+          "id": 19,
+          "existing_ru": "/industries/legal/",
+          "decision": "reuse_broader_ru_en_page",
+          "distinctive_material": "legal recommendations and legal website methods",
+          "need_before_new_page": "distinct B2B legal advisory intent and verified separate evidence"
+        },
+        {
+          "id": 39,
+          "existing_ru": "/industries/highload-it/",
+          "decision": "reuse_broader_ru_en_page",
+          "distinctive_material": "technical B2B method and measured MethodLab case from a real narrower niche",
+          "need_before_new_page": "load-testing or speed-only buyer intent not duplicating the broad IT page"
+        }
+      ],
+      "next_required_step": "Confirm latest source production, main manifest, 2 RU/EN URLs and Pages PASS; perform independent 28-page public HTTPS and 12-viewport Chromium acceptance; then finalize docs and move to 3E."
     }
   },
   "status_definitions": {
@@ -2174,7 +2261,7 @@
     {
       "batch": "3D",
       "phase": 3,
-      "kind": "research_candidates",
+      "kind": "research_and_editorial_evidence_standard",
       "ids": [
         1,
         19,
@@ -2182,7 +2269,8 @@
       ],
       "label": "Оценка самостоятельных материалов для 3 широких RU/EN посадочных и разрешенных отраслевых фактов",
       "condition": "Сначала проверить реальную самостоятельную поисковую задачу, доступные данные E0–E4, сохранность существующих URL и актуальные параллельные работы. Только затем выбрать узкий пакет без дублей; медицинские кейсы и клиентские результаты не выдумывать.",
-      "work_status": "research_not_started"
+      "work_status": "source_merged_pr_ci_pass_public_pending",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132"
     }
   ],
   "records": [
@@ -2217,7 +2305,9 @@
       "next_required_step": "assess_specialization_boundary",
       "coverage_kind": "reused_existing_broader_bilingual_landing",
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_broader_page_assessed_date": "2026-11-09",
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
     },
     {
       "id": 2,
@@ -2964,7 +3054,9 @@
       "next_required_step": "assess_specialization_boundary",
       "coverage_kind": "reused_existing_broader_bilingual_landing",
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_broader_page_assessed_date": "2026-11-09",
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
     },
     {
       "id": 20,
@@ -3898,7 +3990,9 @@
       "next_required_step": "assess_specialization_boundary",
       "coverage_kind": "reused_existing_broader_bilingual_landing",
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_broader_page_assessed_date": "2026-11-09",
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
     },
     {
       "id": 40,
@@ -4038,7 +4132,12 @@
       "public_https_browser_verified": false,
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_proof_method": {
+        "ru": "/strategies/sector-geo-case-proof/",
+        "en": "/en/strategies/sector-geo-case-proof/",
+        "public_verification": "pending"
+      }
     },
     {
       "id": 43,
@@ -4293,7 +4392,12 @@
       "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42424572614",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_proof_method": {
+        "ru": "/strategies/sector-geo-case-proof/",
+        "en": "/en/strategies/sector-geo-case-proof/",
+        "public_verification": "pending"
+      }
     },
     {
       "id": 49,
@@ -4596,7 +4700,12 @@
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_proof_method": {
+        "ru": "/strategies/sector-geo-case-proof/",
+        "en": "/en/strategies/sector-geo-case-proof/",
+        "public_verification": "pending"
+      }
     },
     {
       "id": 56,
@@ -4755,7 +4864,12 @@
       "verified_at": null,
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-08",
+      "phase3d_proof_method": {
+        "ru": "/strategies/sector-geo-case-proof/",
+        "en": "/en/strategies/sector-geo-case-proof/",
+        "public_verification": "pending"
+      }
     },
     {
       "id": 60,
