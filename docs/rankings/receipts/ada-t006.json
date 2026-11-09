@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t006",
+  "familyId": "ada-t006",
+  "slug": "top10-antarctica-2026",
+  "ownerId": "chat-rankings-20261109-0214-gpt6-a6",
+  "requestId": "claim-rankings-20261109-0214-gpt6-a6",
+  "submissionId": "submit-rankings-20261109-0214-gpt6-a6",
+  "submittedAt": "2026-11-08T23:29:24.033Z",
+  "mode": "standard",
+  "baseCommit": "520910e44c3ba95557de6e165bfc5c4dafdfbe1b",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t006/cover.jpg",
+      "sha": "c2f81339e8209a54002298ed984fbe8343e620af"
+    },
+    {
+      "path": "public/assets/rankings/ada-t006/king-george-air-cruise.jpg",
+      "sha": "1541f8be964cfcc665a6ed44f73ce0b6e6901468"
+    },
+    {
+      "path": "public/assets/rankings/ada-t006/ushuaia-tierra-del-fuego.jpg",
+      "sha": "9177b90f9bfb50da993e6d7772d4a02e14951cf2"
+    },
+    {
+      "path": "public/assets/rankings/ada-t006/zodiac-landing.jpg",
+      "sha": "a5e56c9b825990ba1e6c78e2572c6c8d9c013707"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t006.json",
+      "sha": "c994169d575b733587e6e04c8991c683b0024b3f"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1PN1sKP0OhB1xMJMaNKgStkMWPNI_SeqE/view",
+      "locator": "Разделы «ТОП-10 компаний для поездки в Антарктиду» (позиция 1: Ada Tours — 92/100) и «1. Ada Tours — 92 из 100» (семь исходных оценок).",
+      "checkedAt": "2026-11-08T23:26:10.177Z"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t006.json",
+    "ref": "520910e44c3ba95557de6e165bfc5c4dafdfbe1b",
+    "sha": "f171d9aed4de07a469ab96d257dfa498987c4711"
+  },
+  "deployed": false
+}

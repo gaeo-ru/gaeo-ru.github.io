@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t002",
+  "familyId": "ada-t002",
+  "slug": "brazil-pod-kluch-2026",
+  "ownerId": "chat-gaeo-20261109-0133-k7m2q",
+  "requestId": "claim-gaeo-20261109-0133-k7m2q",
+  "submissionId": "submit-gaeo-20261109-0133-k7m2q",
+  "submittedAt": "2026-11-08T22:51:52.682Z",
+  "mode": "standard",
+  "baseCommit": "d476951164f9270ebf5175715f712a4a0062fdbd",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t002/amazon-logistics.jpg",
+      "sha": "67160effc3e05a1c4ab500d9f3779d4fe2eaf93c"
+    },
+    {
+      "path": "public/assets/rankings/ada-t002/guide-iguazu.jpg",
+      "sha": "80f82f53722a498ed6c235728fa1f7d12353fab9"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t002.json",
+      "sha": "9783a2fea8683e99aebf359d5a7d7a126e4ee761"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1QJWzbTAb-dHx9wJdBmPxkyy7t0Xm33Bg/view",
+      "locator": "Мой ТОП-10 компаний для тура в Бразилию под ключ; 1. Ada Tours - 96 из 100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 2,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t002.json",
+    "ref": "d476951164f9270ebf5175715f712a4a0062fdbd",
+    "sha": "9eaebdc6068743ac25ae4caa0599ec09af35e405"
+  },
+  "deployed": false
+}

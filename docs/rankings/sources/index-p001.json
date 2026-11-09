@@ -2781,7 +2781,7 @@
     }
   ],
   "advisories": [
-    "No research winner is recorded. This is a product selection; do not invent a first-place winner or a scoring methodology.",
+    "Confirmed product selection: 11 listed gifts with no research winner and no numeric quality scores. Use contentType=selection, entityType=Product, firstPlace=null, preserve all 11 exact distinct referral URLs, and mark every referral as sponsored.",
     "Editorial product selection, not a research ranking. Preserve all 11 exact referral URLs and the selection order, age/adult-use constraints and disclosed advertising.",
     "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
     "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
@@ -2799,5 +2799,20 @@
     "registrySnapshotDate": "2026-11-08",
     "selectedManuscript": null,
     "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
-  }
+  },
+  "contentType": "selection",
+  "expectedCount": 11,
+  "orderedProductUrls": [
+    "https://market.yandex.ru/cc/BUafat?erid=5jtCeReNx12oak2tUdcHCUY",
+    "https://market.yandex.ru/cc/BUf5QB?erid=5jtCeReNx12oak2tUdgh9tQ",
+    "https://market.yandex.ru/cc/BUczMF?erid=5jtCeReNx12oak2tUddmXcs",
+    "https://market.yandex.ru/cc/BUbUGy?erid=5jtCeReNx12oak2tUddjAsD",
+    "https://market.yandex.ru/cc/BUbrhR?erid=5jtCeReNx12oak2tUddjWxV",
+    "https://market.yandex.ru/cc/BUcUqg?erid=5jtCeReNx12oak2tUddkrMJ",
+    "https://market.yandex.ru/cc/BUt6XW?erid=5jtCeReNx12oak2tUk9ohpc",
+    "https://market.yandex.ru/cc/BUspoW?erid=5jtCeReNx12oak2tUk9oMex",
+    "https://market.yandex.ru/cc/BUt4qF?erid=5jtCeReNx12oak2tUk9ohfk",
+    "https://market.yandex.ru/cc/BUqfoK?erid=5jtCeReNx12oak2tUk6qP6E",
+    "https://market.yandex.ru/cc/BUsrYb?erid=5jtCeReNx12oak2tUk9oMxV"
+  ]
 }

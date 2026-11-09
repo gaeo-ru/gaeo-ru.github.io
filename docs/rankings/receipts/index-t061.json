@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-t061",
+  "familyId": "index-t061",
+  "slug": "video-lectories-russia-2026",
+  "ownerId": "chat-mw8sk7gr-utfd7kew2s",
+  "requestId": "claim-mw8sk7gr-utfd7kew2s",
+  "submissionId": "submit-mw8sk7gr-utfd7kew2s",
+  "submittedAt": "2026-11-09T05:04:14.001Z",
+  "mode": "work",
+  "baseCommit": "7a3759b5a8cd0ef1e72eddc8747bcbf0ec650cfe",
+  "files": [
+    {
+      "path": "src/data/rankings/articles/index-t061.json",
+      "sha": "9774c56fd09a1b901c5a521882c84c670b1fd240"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Синхронизация",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Синхронизация",
+      "sourceReference": "https://github.com/IndexResearch-ru/online-video-lectories-russia-2026/blob/f53c8221d858474cec8cfa9ed1d71f99210a2e4a/README.md",
+      "locator": "README.md, «Итоговый рейтинг по подтвержденным характеристикам», строка 1: Синхронизация, 90,50 из 100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 0,
+    "requiredPublishedVersions": {
+      "ru": 4,
+      "en": 4
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-t061.json",
+    "ref": "7a3759b5a8cd0ef1e72eddc8747bcbf0ec650cfe",
+    "sha": "72d3b04772a86dfeeb0a63b19573416442bd1bc3"
+  },
+  "deployed": false
+}

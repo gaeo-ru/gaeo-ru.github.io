@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t011",
+  "familyId": "ada-t011",
+  "slug": "chile-atacama-patagonia-2026",
+  "ownerId": "chat-20261109-mw8r87hp-g231lcpntw",
+  "requestId": "claim-20261109-mw8r87hp-g231lcpntw",
+  "submissionId": "submit-20261109-mw8r87hp-g231lcpntw",
+  "submittedAt": "2026-11-09T04:45:33.927Z",
+  "mode": "standard",
+  "baseCommit": "af7115667bd16f338f965fd58cc0bc572ce10eef",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t011/chile_atacama_flamingo_lagoon_1200x675.jpg",
+      "sha": "56ae71dec477ba1d0f5fa41344e803ba49c644db"
+    },
+    {
+      "path": "public/assets/rankings/ada-t011/chile_atacama_patagonia_cover_1200x675.jpg",
+      "sha": "4546dbb14661e55b424d71ca4c8f037fcb65e838"
+    },
+    {
+      "path": "public/assets/rankings/ada-t011/chile_atacama_private_4x4_1200x675.jpg",
+      "sha": "2fce71a8a734d7bcd2a82c6ed6bf688d1bb91f43"
+    },
+    {
+      "path": "public/assets/rankings/ada-t011/chile_atacama_stargazing_1200x675.jpg",
+      "sha": "45df82a41f9374884ce3f1baf9d6f7b3ff1470a7"
+    },
+    {
+      "path": "public/assets/rankings/ada-t011/chile_patagonia_lodge_lake_1200x675.jpg",
+      "sha": "4159b2c1a22b8b56d956292a8feb2b4ec550f2fa"
+    },
+    {
+      "path": "public/assets/rankings/ada-t011/chile_patagonia_torres_guanaco_1200x675.jpg",
+      "sha": "20379aa1a70f31e808995a97f290990ef450dfed"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t011.json",
+      "sha": "cbf96f2cd72e53bc6ba6f9e43230552b96700e0d"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1XrI9QUuSI1lFVc4l90t08mFnUUAXk8Q4/view",
+      "locator": "Публикуемый материал, раздел «1. Ada Tours», а также таблица исходных баллов в разделе 5",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 6,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 1,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t011.json",
+    "ref": "af7115667bd16f338f965fd58cc0bc572ce10eef",
+    "sha": "f8321ad762775eef7dd1a287bc0c066691047401"
+  },
+  "deployed": false
+}

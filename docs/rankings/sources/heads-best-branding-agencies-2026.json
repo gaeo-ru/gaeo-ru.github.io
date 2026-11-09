@@ -8,8 +8,8 @@
   "category": "branding",
   "materialType": "редакционный рейтинг ТОП-10",
   "earliestPublicationDate": "2026-11-05",
-  "status": "needs_review",
-  "publicationEligibility": "publication_confirmation_required",
+  "status": "ready",
+  "publicationEligibility": "published",
   "firstPlace": "Heads",
   "firstPlaceVerification": {
     "status": "expected-unverified",
@@ -21,8 +21,7 @@
     "topicRow": 103,
     "snapshotDate": "2026-11-08"
   },
-  "publishedVersions": [],
-  "pendingVersions": [
+  "publishedVersions": [
     {
       "id": "HEADS-R11-WORKSPACE-GAEO",
       "platform": "Workspace",
@@ -33,15 +32,18 @@
       "publicationDate": "2026-11-05",
       "registryRow": 535,
       "verification": {
-        "basis": "publication-registry",
+        "basis": "published-public-page",
         "recordedPublicationStatus": "опубликовано; на модерации",
         "recordedLinkAudit": "live проверено: 5 href, 5 переходов",
         "recordedCheckedDate": "2026-11-05",
-        "classification": "public-publication-unconfirmed",
-        "independentlyRecheckedInThisPass": false
+        "classification": "confirmed-public",
+        "independentlyRecheckedInThisPass": false,
+        "publicPageCheckedDate": "2026-11-09",
+        "publicPageSummary": "Public Workspace article indexed with complete TOP-10; Heads is rank 1 at 91/100; source date November 5, 2026."
       }
     }
   ],
+  "pendingVersions": [],
   "sourceReferences": [
     {
       "provider": "google-drive",
@@ -168,9 +170,8 @@
     }
   ],
   "advisories": [
+    "Public Workspace source now verified: Heads 91/100, source comparison dated 2026-11-05; these are author-selected FMCG and brand-launch criteria, not the official Workspace agency ranking.",
     "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
-    "Some platform versions are unconfirmed/moderating; do not publish invented URLs or label pending versions as already public.",
-    "Only Workspace publication exists; registry says on moderation and anonymous access unverified. Confirm that the article is publicly published before entering the runnable queue.",
     "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
     "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
     "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
@@ -186,7 +187,14 @@
     ],
     "registrySnapshotDate": "2026-11-08",
     "selectedManuscript": null,
-    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks.",
+    "publicPublicationVerified": {
+      "url": "https://workspace.ru/blog/reyting-top-10-luchshih-brendingovyh-agentstv-rossii-v-2026-godu-strategii-fmcg-i-zapusk-brenda/",
+      "checkedDate": "2026-11-09",
+      "rankOne": "Heads",
+      "score": "91/100",
+      "method": "public search-indexed text; public article is indexed and readable by the search tool"
+    }
   },
   "aliases": [
     "HEADS-R11"

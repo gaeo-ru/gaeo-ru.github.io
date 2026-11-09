@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "mlab-t006",
+  "familyId": "mlab-t006",
+  "slug": "realnoe-uskorenie-saytov-2026",
+  "ownerId": "chat-mw8gcwir-f0o12e8jigv",
+  "requestId": "claim-mw8gcwir-f0o12e8jigv",
+  "submissionId": "submit-mw8gcwir-f0o12e8jigv",
+  "submittedAt": "2026-11-08T23:30:14.604Z",
+  "mode": "standard",
+  "baseCommit": "3b8debf6680b4cd734fbfeefcd7f7e834d8138f8",
+  "files": [
+    {
+      "path": "public/assets/rankings/mlab-t006/bottlenecks.jpg",
+      "sha": "f8fb07b4071b0ee331a9efdde6bc47a7eb03bccc"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t006/cover.jpg",
+      "sha": "3bfd68bc142914886353c437ed34e602e7d737aa"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t006/load.jpg",
+      "sha": "eb0ec696bfb35e5ef5857deec48073ccab78b44b"
+    },
+    {
+      "path": "src/data/rankings/articles/mlab-t006.json",
+      "sha": "df7fb222687433d57aec018c100de0a2a9f0e709"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Метод Лаб",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Метод Лаб",
+      "sourceReference": "https://drive.google.com/file/d/1l1HBNLHGBe3TYY81SfofN-7t2RetWTww/view",
+      "locator": "Раздел 7 «Полный публичный текст»: «Короткий ТОП-10» и блок «1. Метод Лаб – 96/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/mlab-t006.json",
+    "ref": "3b8debf6680b4cd734fbfeefcd7f7e834d8138f8",
+    "sha": "5a54413ddd447ad2be444cd227a177b9d3a71015"
+  },
+  "deployed": false
+}

@@ -45,6 +45,10 @@ function excluded(task) {
   return task.status === 'excluded' || task.excluded === true || task.excludeFromRankings === true
     || !CATEGORIES.has(task.category) || /^(?:gaeo(?:\.ru)?|алексей\s+яковлев|alexey\s+yakovlev)$/i.test(String(task.firstPlace || '').trim());
 }
+function isSelection(item) {
+  return item?.contentType === 'selection' && item.category === 'products'
+    && item.firstPlace === null && item.firstPlaceStatus === 'not-applicable-selection';
+}
 function live(lease, at) { return lease && Number.isFinite(Date.parse(lease.expiresAt)) && Date.parse(lease.expiresAt) > at; }
 function completedSearch(check) {
   const pendingKeys = ['next_offset', 'nextOffset', 'next_page_token', 'nextPageToken', 'next_cursor', 'nextCursor'];
@@ -76,7 +80,7 @@ export function validateRankingsQueue(queue) {
     taskId(task.slug);
     if (['ready', 'reserved', 'committed'].includes(task.status)) {
       need(!excluded(task), 'EXCLUDED_TASK', `${task.id} cannot be worked in the rankings queue.`);
-      need(text(task.firstPlace), 'WINNER_UNVERIFIED', `${task.id}: a verified winner is required; use needs_review until it is known.`);
+      need(text(task.firstPlace) || isSelection(task), 'WINNER_UNVERIFIED', `${task.id}: a verified winner is required; use needs_review until it is known.`);
     }
     if (task.status === 'reserved') {
       need(task.lease && text(task.lease.token) && text(task.lease.ownerId) && text(task.lease.requestId)
@@ -96,6 +100,10 @@ export function validateRankingsSubmission(article, task, filePaths) {
   need(article && article.schemaVersion === 1, 'INVALID_ARTICLE', 'Unsupported article schema.');
   for (const key of ['id', 'familyId', 'category', 'slug', 'firstPlace']) need(article[key] === task[key], 'ARTICLE_MISMATCH', `${key} differs from the reserved task.`, {taskId: task.id});
   need(!excluded(task) && !article.excluded, 'EXCLUDED_TASK', 'This material is excluded from rankings.');
+  const selection = isSelection(task);
+  if (selection) need(article.contentType === 'selection' && article.entityType === 'Product' && article.firstPlace === null,
+    'ARTICLE_MISMATCH', 'A product selection must not invent a winning product or another entity type.');
+  else need(article.contentType !== 'selection', 'ARTICLE_MISMATCH', 'A ranked comparison cannot silently become a selection.');
   for (const key of ['sourceDate', 'publishedDate', 'modifiedDate']) date(article[key], key);
   need(article.sourceDate <= article.publishedDate && article.publishedDate <= article.modifiedDate, 'INVALID_DATE', 'Article dates are out of chronological order.');
   need(article.source && article.source.status === 'found', 'SOURCE_UNVERIFIED', 'A verified text source is required.');
@@ -104,9 +112,10 @@ export function validateRankingsSubmission(article, task, filePaths) {
   const checkedAt = proof?.checkedAt || proof?.checkedDate;
   const references = [article.source.url, article.source.sourceUrl, article.source.fileId, article.source.googleDriveFileId,
     article.source.documentId, article.source.path].filter(text);
-  need(proof?.status === 'verified-in-manuscript' && proof.firstPlace === article.firstPlace && text(proof.sourceReference)
-    && references.includes(proof.sourceReference) && text(proof.locator), 'WINNER_UNVERIFIED',
-    'Record the verified winner, the selected source URL/file ID/path, and its heading or paragraph locator before submission.');
+  const proofMatches = selection ? proof?.status === 'not-applicable-selection' && proof.firstPlace === null
+    : proof?.status === 'verified-in-manuscript' && proof.firstPlace === article.firstPlace;
+  need(proofMatches && text(proof.sourceReference) && references.includes(proof.sourceReference) && text(proof.locator),
+    'WINNER_UNVERIFIED', 'Confirm the winner or the absence of a winner, with the chosen manuscript pointer and section locator.');
   need(typeof checkedAt === 'string' && /^\d{4}-\d{2}-\d{2}(?:T[^\s]+)?$/.test(checkedAt) && !Number.isNaN(Date.parse(checkedAt)),
     'WINNER_UNVERIFIED', 'The winner verification needs its actual checkedAt or checkedDate; a real date-only record is acceptable.');
   date(checkedAt.slice(0, 10), 'winner verification date');
@@ -147,7 +156,9 @@ export function validateRankingsSubmission(article, task, filePaths) {
       && new Set(content.faq.map(item => item.question)).size === content.faq.length, 'INVALID_FAQ', `${lang} requires at least 4 complete, distinct FAQ entries.`);
     need(!/[<>]/.test(JSON.stringify(content)) && !/\[\[(?:AGENT|ВСТАВИТЬ)|\[ИЗОБРАЖЕНИЕ|TODO|TBD/i.test(JSON.stringify(content)), 'UNFINISHED_ARTICLE', `${lang} contains HTML or unfinished placeholders.`);
   }
-  need(article.ru.ranking[0].name === task.firstPlace, 'WINNER_CHANGED', 'The first-place entity differs from the source task.');
+  if (selection) need([...article.ru.ranking,...article.en.ranking].every(e => e.score === undefined || e.score === null || e.score === ''),
+    'UNSUPPORTED_SELECTION_SCORES', 'A product selection cannot invent numeric scores.');
+  else need(article.ru.ranking[0].name === task.firstPlace, 'WINNER_CHANGED', 'The first-place entity differs from the source task.');
   need(article.ru.ranking.length === article.en.ranking.length, 'RANKING_CHANGED', 'RU/EN ranking lengths differ.');
   if (task.expectedCount) need(article.ru.ranking.length === task.expectedCount, 'RANKING_CHANGED', 'The number of ranked entries differs from the source task.');
   article.ru.ranking.forEach((entry, index) => {
@@ -169,8 +180,52 @@ export function validateRankingsSubmission(article, task, filePaths) {
   need(paths.has(articlePath(task.id)), 'MISSING_ARTICLE', 'The bilingual article JSON is required.');
   for (const path of imageFiles) need(paths.has(path), 'MISSING_IMAGE', `Missing image blob: ${path}.`);
   for (const path of paths) need(path === articlePath(task.id) || imageFiles.has(path), 'UNREFERENCED_ASSET', `Unreferenced upload: ${path}.`);
-  return {languages: ['ru', 'en'], entries: article.ru.ranking.length, firstPlace: article.firstPlace,
+  return {languages: ['ru', 'en'], entries: article.ru.ranking.length, contentType: selection ? 'selection' : 'ranking', firstPlace: article.firstPlace,
     firstPlaceVerification: clone(proof), images: imageFiles.size};
+}
+
+/** The same language selection as versionsFor() and the generated-page QA. */
+export function validateRankingsSources(article, task, manifest) {
+  need(manifest && manifest.schemaVersion === 1 && manifest.id === task.id && manifest.category === task.category
+    && Array.isArray(manifest.publishedVersions) && Array.isArray(manifest.pendingVersions) && Array.isArray(manifest.clientLinks),
+    'INVALID_SOURCE_MANIFEST', 'The source manifest is missing, incomplete, or belongs to another task.');
+  need(manifest.publishedVersions.length > 0, 'PUBLICATION_UNCONFIRMED', 'The manifest has no confirmed published versions. Use needs_review.');
+  const pending = new Set(manifest.pendingVersions.map(version => version.url).filter(text));
+  const allArticleUrls = new Set([
+    ...article.versions.flatMap(version => [version.ru, version.en, version.url]),
+    ...article.clientLinks.map(link => link.url),
+    ...article.ru.ranking.map(entry => entry.url), ...article.en.ranking.map(entry => entry.url)
+  ].filter(text));
+  for (const url of pending) need(!allArticleUrls.has(url), 'PENDING_PUBLICATION', 'An unconfirmed/pending publication URL cannot appear in the article.', {taskId: task.id, url});
+  const required = {ru: new Set(), en: new Set()};
+  for (const lang of ['ru', 'en']) {
+    const linked = new Set(article.versions.map(version => version[lang] || version.url || version.ru).filter(text));
+    for (const version of manifest.publishedVersions) {
+      need(text(version.url) && text(version.platform), 'INVALID_SOURCE_MANIFEST', 'A published manifest entry has no URL or platform.');
+      need(!pending.has(version.url), 'CONFLICTING_PUBLICATION_STATUS', 'A URL is listed as both published and pending; resolve the manifest before submission.', {url: version.url});
+      if ((lang === 'ru' && version.language === 'en')
+        || (lang === 'en' && version.language === 'ru' && /indexresearch|github/i.test(version.platform))) continue;
+      required[lang].add(version.url);
+      need(linked.has(version.url), 'MISSING_PUBLISHED_VERSION', 'A registered published version is missing from the rendered language link list.',
+        {taskId: task.id, language: lang, url: version.url, platform: version.platform, sourceLanguage: version.language});
+    }
+  }
+  const registeredClients = new Set(manifest.clientLinks.map(link => link.url).filter(text));
+  for (const link of article.clientLinks) need(registeredClients.has(link.url), 'UNREGISTERED_CLIENT_URL',
+    'A selected client URL must exactly match a manifest clientLinks[].url, including its path and parameters.', {taskId: task.id, url: link.url});
+  if (isSelection(task)) {
+    const chosen = new Set(article.clientLinks.map(link => link.url));
+    const productUrls = article.ru.ranking.map(entry => entry.url);
+    need(registeredClients.size === task.expectedCount && chosen.size === registeredClients.size
+      && [...registeredClients].every(url => chosen.has(url)) && productUrls.length === task.expectedCount
+      && new Set(productUrls).size === registeredClients.size && productUrls.every(url => registeredClients.has(url)),
+      'MISSING_PRODUCT_LINK', 'A product selection must keep every exact product referral URL from the source manifest and link each product once.');
+    need(Array.isArray(manifest.orderedProductUrls) && manifest.orderedProductUrls.length === task.expectedCount
+      && manifest.orderedProductUrls.every((url, index) => productUrls[index] === url && registeredClients.has(url)),
+      'PRODUCT_ORDER_CHANGED', 'The product links must match the original source shortlist order, not merely the set of 11 referral URLs.');
+  }
+  return {requiredPublishedVersions: {ru: required.ru.size, en: required.en.size}, selectedClientLinks: article.clientLinks.length,
+    excludedPendingUrls: pending.size};
 }
 
 function unpack(result, tool) {
@@ -215,6 +270,15 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     const result = unpack(await invoke('fetch_file', {repository_full_name: repository, path, ref, encoding: 'utf-8'}), 'fetch_file');
     need(typeof result?.content === 'string', 'INVALID_GITHUB_RESPONSE', `No UTF-8 content returned for ${path}.`);
     return result;
+  }
+  async function sourceManifest(task, ref) {
+    const path = task.sourceManifest;
+    need(typeof path === 'string' && /^docs\/rankings\/sources\/[a-z0-9-]+\.json$/.test(path), 'INVALID_SOURCE_PATH', 'Missing or unsafe source manifest path.');
+    const result = await file(path, ref);
+    let manifest;
+    try { manifest = JSON.parse(result.content); } catch { fail('INVALID_SOURCE_MANIFEST', 'The source manifest is not valid JSON.'); }
+    need(manifest?.id === task.id, 'INVALID_SOURCE_MANIFEST', 'The source manifest belongs to another task.');
+    return {manifest, path, ref, sha: result.sha || null};
   }
   async function read() {
     const current = await get(`${api}/branches/${encodeURIComponent(branch)}`);
@@ -366,7 +430,7 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
       const queue = clone(snapshot.queue), at = now(), targetStatus = mode === 'work' ? 'needs_work_source' : 'ready';
       if (queue.paused === true) return {noop: true, result: {status: 'paused', mode, reason: 'The coordinator paused new claims for reconciliation or publication.'}};
       queue.claims ||= [];
-      const task = queue.tasks.find(item => (!preferredId || item.id === preferredId) && !excluded(item) && text(item.firstPlace)
+      const task = queue.tasks.find(item => (!preferredId || item.id === preferredId) && !excluded(item) && (text(item.firstPlace) || isSelection(item))
         && (item.status === targetStatus || (item.status === 'reserved' && item.lease?.mode === mode && !live(item.lease, at))));
       if (!task) return {noop: true, result: {status: 'empty', mode, reason: preferredId ? 'Requested task is unavailable in this pass.' : 'No unreserved tasks are available in this pass.'}};
       const previousStatus = task.lease?.previousStatus || targetStatus;
@@ -455,7 +519,14 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     const initial = await read(), initialTask = getTask(initial.queue, args.taskId);
     validateRankingsSubmission(article, initialTask, [...seen]);
     const initialClaim = getClaim(initial.queue, args);
-    if (!initialTask.result) requireLease(initial.queue, args, now());
+    if (!initialTask.result) {
+      requireLease(initial.queue, args, now());
+      // Reject missing versions/modified client targets before even creating blobs.
+      // A completed submission is recovered from its receipt instead of being
+      // invalidated by a later edit to the source inventory.
+      const source = await sourceManifest(initialTask, initial.headSha);
+      validateRankingsSources(article, initialTask, source.manifest);
+    }
     if (initialClaim.mode === 'standard' && !['google-drive', 'yandex-disk'].includes(article.source.provider)) fail('SOURCE_MODE_MISMATCH', 'Ordinary chats must use a verified Drive/Yandex text source; recovered published-page sources belong to the Work pass.');
     for (const item of args.files) prepared.push({path: item.path, sha: item.path === articlePath(args.taskId)
       ? returnedSha(await invoke('create_blob', {repository_full_name: repository, content: item.content, encoding: 'utf-8'}), 'create_blob') : item.sha});
@@ -473,15 +544,21 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     return atomic({inspect: sameSubmission, finish: (snapshot, task, candidate) => completeReceipt(snapshot, task, candidate), build: async snapshot => {
       const queue = clone(snapshot.queue), at = now(), {task, claim} = requireLease(queue, args, at);
       const validation = validateRankingsSubmission(article, task, prepared.map(item => item.path));
+      // Re-read at this exact head after every CAS race: a coordinator may have
+      // updated the manifest as well as another worker's queue state.
+      const source = await sourceManifest(task, snapshot.headSha);
+      const sourceValidation = validateRankingsSources(article, task, source.manifest);
       const receiptFile = receiptPath(task.id), entries = await pathEntries(snapshot.treeSha, [...prepared.map(item => item.path), receiptFile]);
       for (const [path, entry] of entries) need(!entry, 'EXISTING_CONTENT', `Existing content cannot be overwritten by a worker: ${path}.`);
       const deadline = Date.parse(task.lease.expiresAt);
       const receipt = {schemaVersion: 1, taskId: task.id, familyId: task.familyId, slug: task.slug, ownerId: args.ownerId,
         requestId: args.requestId, submissionId: args.submissionId, submittedAt: iso(at), mode: claim.mode,
-        baseCommit: snapshot.headSha, files: prepared, validation, deployed: false};
+        baseCommit: snapshot.headSha, files: prepared, validation: {...validation, ...sourceValidation},
+        sourceManifest: {path: source.path, ref: source.ref, sha: source.sha}, deployed: false};
       task.result = {submissionId: args.submissionId, ownerId: args.ownerId, requestId: args.requestId, token: args.token,
         receiptPath: receiptFile, committedAt: iso(at), files: prepared, baseCommit: snapshot.headSha};
-      task.firstPlaceStatus = 'verified-in-manuscript'; task.firstPlaceVerification = clone(article.source.firstPlaceVerification);
+      task.firstPlaceStatus = isSelection(task) ? 'not-applicable-selection' : 'verified-in-manuscript';
+      task.firstPlaceVerification = clone(article.source.firstPlaceVerification);
       task.status = 'committed'; task.lease = null; task.block = null; claim.outcome = 'committed'; claim.submissionId = args.submissionId;
       queue.updatedAt = iso(at);
       return {queue, deadline, message: `Add bilingual ranking ${task.id}: ${task.title || task.slug} [skip ci]`, entries: [
@@ -511,10 +588,8 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
     taskId(id);
     const snapshot = await read(), task = getTask(snapshot.queue, id);
     need(!ref || SHA.test(ref), 'INVALID_REF', 'A source read may be pinned only to a full commit SHA.');
-    need(typeof task.sourceManifest === 'string' && task.sourceManifest.startsWith('docs/rankings/sources/')
-      && !task.sourceManifest.includes('..') && /^docs\/rankings\/sources\/[a-z0-9-]+\.json$/.test(task.sourceManifest), 'INVALID_SOURCE_PATH', 'Missing or unsafe source manifest path.');
-    const result = await file(task.sourceManifest, ref || snapshot.headSha);
-    return {taskId: id, headSha: ref || snapshot.headSha, path: task.sourceManifest, manifest: JSON.parse(result.content)};
+    const result = await sourceManifest(task, ref || snapshot.headSha);
+    return {taskId: id, headSha: result.ref, path: result.path, manifest: result.manifest};
   }
   return Object.freeze({claim, renew, release, block, submit, recover, status, source});
 }

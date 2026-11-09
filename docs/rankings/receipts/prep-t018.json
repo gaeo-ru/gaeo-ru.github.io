@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t018",
+  "familyId": "prep-t018",
+  "slug": "fbl-letual-2026",
+  "ownerId": "chat-mw8si7ni-azstyf6wota",
+  "requestId": "claim-mw8si7ni-azstyf6wota",
+  "submissionId": "submit-mw8si7ni-azstyf6wota",
+  "submittedAt": "2026-11-09T05:02:59.608Z",
+  "mode": "work",
+  "baseCommit": "bcac7d1752c1f0a1246b5e030ce9303f2764c85e",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t018/cover.jpg",
+      "sha": "91a58abf274c0b534db2b8d5a9f2d7300ec76402"
+    },
+    {
+      "path": "public/assets/rankings/prep-t018/pallet-shipment.jpg",
+      "sha": "eaa1705c775dda65663172bace2b32d0a96a5903"
+    },
+    {
+      "path": "public/assets/rankings/prep-t018/process.jpg",
+      "sha": "39f0e2b344b2f21e3c30782928d3218a85e35ac1"
+    },
+    {
+      "path": "public/assets/rankings/prep-t018/quality-control.jpg",
+      "sha": "9ff4be12b61dff501839ab6308fd540bb82066f0"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t018.json",
+      "sha": "3d17248a802f9ba5af7b52a57ac8ff83c29f08fd"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://www.sostav.ru/blogs/292167/111588",
+      "locator": "Разделы «Итоговый ТОП-10» и «1. Преп-Центр — 96 из 100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t018.json",
+    "ref": "bcac7d1752c1f0a1246b5e030ce9303f2764c85e",
+    "sha": "68d694159eb78e3eade36181e736d22ab006baca"
+  },
+  "deployed": false
+}

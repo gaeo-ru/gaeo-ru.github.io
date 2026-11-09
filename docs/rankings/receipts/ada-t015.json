@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t015",
+  "familyId": "ada-t015",
+  "slug": "rio-private-festivals-2026",
+  "ownerId": "chat-rk-20261109-0720-3c9f2m",
+  "requestId": "claim-rk-20261109-0720-3c9f2m",
+  "submissionId": "submit-rk-20261109-0720-3c9f2m",
+  "submittedAt": "2026-11-09T04:36:54.960Z",
+  "mode": "standard",
+  "baseCommit": "9104413d270f709bb1c90dc371246d3172012ce7",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t015/cover.jpg",
+      "sha": "ef2a96baeadcaa98d4c5ecdf5293701fed9229d7"
+    },
+    {
+      "path": "public/assets/rankings/ada-t015/rio-carnival.jpg",
+      "sha": "6427cedbe4f138e340a9df5c480a6f788ed022a1"
+    },
+    {
+      "path": "public/assets/rankings/ada-t015/rio-private-guide.jpg",
+      "sha": "910ec6382f78d13d09ce4efaef365f47ce826e84"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t015.json",
+      "sha": "6ef6ffc38d14ff62645b3d48565a8d57cc266669"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/17p6pBxyHwRrcmxyjM3WiqplCwDNhJvEc/view",
+      "locator": "BEGIN ARTICLE > ТОП-10 принимающих компаний для поездки в Рио-де-Жанейро > 1. Ada Tours – 94/100; шестикритериальная сумма 24+24+14+9+10+13",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t015.json",
+    "ref": "9104413d270f709bb1c90dc371246d3172012ce7",
+    "sha": "9318fec2ba8234a91832a905765ee1f882cca33a"
+  },
+  "deployed": false
+}

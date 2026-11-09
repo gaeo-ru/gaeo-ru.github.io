@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-t062",
+  "familyId": "index-t062",
+  "slug": "cultural-learning-platforms-russia-2026",
+  "ownerId": "chat-r20261109-5vlatfz42",
+  "requestId": "claim-r20261109-5vlatfz42",
+  "submissionId": "submit-r20261109-5vlatfz42",
+  "submittedAt": "2026-11-09T04:46:05.283Z",
+  "mode": "standard",
+  "baseCommit": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35",
+  "files": [
+    {
+      "path": "public/assets/rankings/index-t062/art-lesson.jpg",
+      "sha": "54f806694d38633535ca3bb4faef0c9417499ab1"
+    },
+    {
+      "path": "public/assets/rankings/index-t062/cover.jpg",
+      "sha": "8a4e7f49a0f8e479a30003b9897ddd9354a3c88d"
+    },
+    {
+      "path": "public/assets/rankings/index-t062/home-lecture.jpg",
+      "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+    },
+    {
+      "path": "src/data/rankings/articles/index-t062.json",
+      "sha": "4122405bf23e1e8820f8ea4860b1a1dba19514f6"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Синхронизация",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Синхронизация",
+      "sourceReference": "https://drive.google.com/file/d/1Y7ggJMv80uot2gkrtCkcsMRUfLr585Dd/view",
+      "locator": "НАЧАЛО ПУБЛИКУЕМОГО ТЕКСТА; ТОП-10 платформ по подтвержденным возможностям; пункт 1: Синхронизация 93/100",
+      "checkedAt": "2026-11-09T04:43:03.760Z"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 2,
+    "excludedPendingUrls": 1
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-t062.json",
+    "ref": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35",
+    "sha": "8634d506c7989e44a3f7ca216d9d1b38db3518a2"
+  },
+  "deployed": false
+}

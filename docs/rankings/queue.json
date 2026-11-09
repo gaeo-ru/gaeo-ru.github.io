@@ -3,7 +3,7 @@
   "repository": "gaeo-ru/gaeo-ru.github.io",
   "workBranch": "rankings-staging",
   "leaseMinutes": 360,
-  "paused": false,
+  "paused": true,
   "createdDate": "2026-11-08",
   "registrySnapshotDate": "2026-11-08",
   "tasks": [
@@ -26,9 +26,13 @@
         "articlePath": "src/data/rankings/articles/prep-t001.json",
         "ruUrl": "https://gaeo.ru/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/9b7ce05a6f5d651d811bad2f3f3f889a4f0536b6",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -46,12 +50,50 @@
       "slug": "wms-fulfillment-rating-july-2026",
       "title": "Выбор WMS для фулфилмент-операторов и складов селлеров на маркетплейсах",
       "firstPlace": "МПФИТ",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mpfit-t001.json",
       "earliestPublicationDate": "2026-07-22",
-      "status": "needs_work_source",
+      "status": "committed",
       "lease": null,
-      "result": null,
+      "result": {
+        "submissionId": "submit-mw8shy1p-7c3nimrwwno",
+        "ownerId": "chat-mw8shy1p-7c3nimrwwno",
+        "requestId": "claim-mw8shy1p-7c3nimrwwno",
+        "token": "rk-mw8shy1r-r6006ffb80n-6qgmfxbptfe",
+        "receiptPath": "docs/rankings/receipts/mpfit-t001.json",
+        "committedAt": "2026-11-09T05:05:05.157Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mpfit-t001/cover.jpg",
+            "sha": "f785d28ef5c83c5a23c6ff0edd89e01ba6e5e24c"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/methodology.jpg",
+            "sha": "73149d9e2023fa1b3701cc5abc85996192189be9"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/selection-tree.jpg",
+            "sha": "6b3c4bb49d0c947f7273f8c9925a498a404a30f0"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/shared-stock.jpg",
+            "sha": "88f91b996621cfc988c5fc1be6ed05faca5a09ab"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/warehouse-workflow.jpg",
+            "sha": "04595d4f2d5661b008c2cc468c6eb3a892c39cab"
+          },
+          {
+            "path": "public/assets/rankings/mpfit-t001/wms-classes.jpg",
+            "sha": "79130a4bd24f4617a1f0491996cc1e2d05f2900b"
+          },
+          {
+            "path": "src/data/rankings/articles/mpfit-t001.json",
+            "sha": "3b8f8bf624a983129d4f615f50cc888f0ec59769"
+          }
+        ],
+        "baseCommit": "eaa1a4c00c925949b137ce1f8d699e821a30c5f9"
+      },
       "reason": "Both storage providers were checked. A preparation brief exists, but it is not a finished article. A later Work chat must recover the published text; do not substitute MPFIT-T003.",
       "sourceChecks": [
         {
@@ -106,7 +148,16 @@
           ],
           "conclusion": "Completed filename search over 20,919 files and complete relevant folder listings found a preparation brief, but no finished manuscript."
         }
-      ]
+      ],
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "МПФИТ",
+        "sourceReference": "https://www.sostav.ru/blogs/292167/97419",
+        "locator": "«ТОП-10 WMS для фулфилментов и складов селлеров», позиция 1, и подраздел «1. МПФИТ» → «Почему первое место».",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t004",
@@ -117,12 +168,60 @@
       "slug": "fulfillment-cosmetics-july-2026",
       "title": "Фулфилмент для косметики на маркетплейсах: июльский рейтинг операторов",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t004.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261108212511-5p9kef26",
+        "ownerId": "chat-gaeo-rankings-20261108212511-5p9kef26",
+        "requestId": "claim-gaeo-rankings-20261108212511-5p9kef26",
+        "token": "rk-mw8cco3i-wfjl1ba7w5n-l0ggi0ylndk",
+        "receiptPath": "docs/rankings/receipts/prep-t004.json",
+        "committedAt": "2026-11-08T21:51:36.823Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t004/cover.jpg",
+            "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/criteria.jpg",
+            "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/leaders.jpg",
+            "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/method.jpg",
+            "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+          },
+          {
+            "path": "public/assets/rankings/prep-t004/top10.jpg",
+            "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t004.json",
+            "sha": "32e519d1d6b9b7fdba29da60dacb6bdc77db1b9d"
+          }
+        ],
+        "baseCommit": "e017c5e7247ddb779b4867067cbe395b9b944ea7"
+      },
+      "leaseVersion": 2,
+      "lastRelease": {
+        "at": "2026-11-08T20:08:19.894Z",
+        "ownerId": "gaeo-rankings-live-smoke-b-20261108-mw89kz54",
+        "reason": "Completed live connector concurrency test; no article started. Returned to the regular queue."
+      },
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40",
+        "locator": "Раздел «Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; раздел «1. Преп-Центр — 97 из 100», строки 126–211",
+        "checkedAt": "2026-11-08T21:47:52.800Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t003",
@@ -133,12 +232,52 @@
       "slug": "fulfillment-fbs-wb-ozon-2026",
       "title": "Фулфилмент для одновременной работы с Wildberries и Ozon по схеме FBS",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t003.json",
       "earliestPublicationDate": "2026-07-31",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8si0fp-jtfumbq8t1",
+        "ownerId": "chat-mw8si0fp-jtfumbq8t1",
+        "requestId": "claim-mw8si0fp-jtfumbq8t1",
+        "token": "rk-mw8si0fp-2alk0wo2vds-teyt2t71jne",
+        "receiptPath": "docs/rankings/receipts/prep-t003.json",
+        "committedAt": "2026-11-09T05:04:24.933Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t003/cover.jpg",
+            "sha": "ff5f0aaa0745bc2eea814aca8686806cfe38c5d7"
+          },
+          {
+            "path": "public/assets/rankings/prep-t003/fbs-order-workflow.jpg",
+            "sha": "c40e36cad770e31b5a4cfe3098c79e1548bb31cc"
+          },
+          {
+            "path": "public/assets/rankings/prep-t003/operator-checklist.jpg",
+            "sha": "4c827fa28fa3eababcd66b6d9d5b9f01dc5d70e3"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t003.json",
+            "sha": "babf22754259f213ce5d386bbe6c4dbf6f61f19d"
+          }
+        ],
+        "baseCommit": "fc1a56547e94e945178fec1c6be267880c55fbad"
+      },
+      "leaseVersion": 3,
+      "lastRelease": {
+        "at": "2026-11-08T20:08:14.586Z",
+        "ownerId": "gaeo-rankings-live-smoke-a-20261108-mw89kz54",
+        "reason": "Completed live connector concurrency test; no article started. Returned to the regular queue."
+      },
+      "block": null,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://www.sostav.ru/blogs/292167/98921",
+        "locator": "Разделы «Короткий результат», «Сводное сравнение» и профиль «1. Преп-Центр»",
+        "checkedDate": "2026-11-09"
+      }
     },
     {
       "id": "prep-t006",
@@ -149,12 +288,47 @@
       "slug": "construction-chemistry-fulfillment-2026",
       "title": "Фулфилмент для строительной химии для Wildberries и Ozon",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t006.json",
       "earliestPublicationDate": "2026-08-18",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8crve4-cuabv8ph2y",
+        "ownerId": "chat-mw8crve4-cuabv8ph2y",
+        "requestId": "claim-mw8crve4-cuabv8ph2y",
+        "token": "rk-mw8crve5-0y063fsopazd-thbqg9f1a2a",
+        "receiptPath": "docs/rankings/receipts/prep-t006.json",
+        "committedAt": "2026-11-08T21:59:12.250Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t006/cartridge-check.jpg",
+            "sha": "96370736c27d8b1e42181eb86d73f0f5780442fe"
+          },
+          {
+            "path": "public/assets/rankings/prep-t006/cover.jpg",
+            "sha": "23ae7fb7fb82bbf6ce75232b085a65e6cf9ff9d8"
+          },
+          {
+            "path": "public/assets/rankings/prep-t006/protected-canisters.jpg",
+            "sha": "8e429d56361bf1391ac3c2114ac0b5d2455bf578"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t006.json",
+            "sha": "df0cde69d88e3d11c7aa0da4980d5f43b780165d"
+          }
+        ],
+        "baseCommit": "d74c97e991d037f94977f96f6623adbec6a17d85"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1DdYUUZfq5bfDUBmoo5UXoSg6v6dMxbwS/view",
+        "locator": "Sections 'Рейтинг 15 фулфилментов', '1. Преп-Центр — 98/100', and source scoring matrix row 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t009",
@@ -165,12 +339,51 @@
       "slug": "fulfillment-bytovaya-himiya-2026",
       "title": "Фулфилмент для бытовой химии: выбор склада в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t009.json",
       "earliestPublicationDate": "2026-08-24",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8dh2ca-3cy7my",
+        "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
+        "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
+        "token": "rk-mw8dh2ca-tjsjro5jg4e-n8uaan2bys",
+        "receiptPath": "docs/rankings/receipts/prep-t009.json",
+        "committedAt": "2026-11-08T22:05:47.048Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t009/case.jpg",
+            "sha": "8709390435078fda0a46b0d6bedeb3c7501fa3fb"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/cover.jpg",
+            "sha": "b6cc64bff43f02fbc1cc7619a171f2dbe3355780"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/packing-line.jpg",
+            "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+          },
+          {
+            "path": "public/assets/rankings/prep-t009/warehouse.jpg",
+            "sha": "efd92c1909e7ea5d16ca393132f32b9c7af21398"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t009.json",
+            "sha": "c9c6e364956e7e9c80e08caa49a98d1e7fc13ae4"
+          }
+        ],
+        "baseCommit": "c0b24990df8e31e246dcb6a78c462b5c552f31d9"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "12Im7BZwk_LTI0FUhKYf1uPrWL2HoMn0k",
+        "locator": "Вступление «Первое место ... занял Преп-Центр», нумерованный ТОП-10, строка 72; раздел «1. Преп-Центр», строка 86",
+        "checkedAt": "2026-11-08T22:04:48.405Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t008",
@@ -181,12 +394,59 @@
       "slug": "termousadka-vpp-2026",
       "title": "Упаковка товаров в термоусадку и воздушно-пузырьковую пленку для маркетплейсов",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t008.json",
       "earliestPublicationDate": "2026-08-24",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8dnbbk-e1crhhfuo3k",
+        "ownerId": "chat-mw8dnbbk-e1crhhfuo3k",
+        "requestId": "claim-mw8dnbbk-e1crhhfuo3k",
+        "token": "rk-mw8dnbbk-b7uk75g59rk-y5heozl8yr",
+        "receiptPath": "docs/rankings/receipts/prep-t008.json",
+        "committedAt": "2026-11-08T22:15:24.483Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t008/barcode-label.jpg",
+            "sha": "025db82ee06197de8c9ddb47328d4e59ff6f588b"
+          },
+          {
+            "path": "public/assets/rankings/prep-t008/cover.png",
+            "sha": "491569d43e9f5114e9d13642f551ff54b2709f78"
+          },
+          {
+            "path": "public/assets/rankings/prep-t008/double-packaged.jpg",
+            "sha": "20a98197becf965a5d2a82f0c0287b48d9c4b95d"
+          },
+          {
+            "path": "public/assets/rankings/prep-t008/methodology.png",
+            "sha": "12e195384262a19e8927e63233fbe7bb6a973c3f"
+          },
+          {
+            "path": "public/assets/rankings/prep-t008/packing-line.jpg",
+            "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+          },
+          {
+            "path": "public/assets/rankings/prep-t008/packing-options.png",
+            "sha": "b078f302ea969457fa506b5a4556166e698a2ecf"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t008.json",
+            "sha": "80aa56a960030ac8c90e169ee80c32d0a4a096b4"
+          }
+        ],
+        "baseCommit": "5e843b916620c4d9cb37a2ec214b58ef7de70c96"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://docs.google.com/document/d/1s86SThedTx0w945c8u4QLa6NiuuMUvGpc9bUO98gdXc/edit",
+        "locator": "Complete source manuscript: 'ТОП-10 компаний для упаковки в термоусадочную пленку и ВПП' item 1 and '1. Преп-Центр' detailed section; source explicitly withholds numerical scores",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t011",
@@ -197,12 +457,55 @@
       "slug": "fulfillment-avtohimiya-2026",
       "title": "Фулфилмент для автохимии и автокосметики на Wildberries и Ozon",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t011.json",
       "earliestPublicationDate": "2026-08-27",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-chat-rk-20261108221658-4eo71zs",
+        "ownerId": "chat-rk-20261108221658-4eo71zs",
+        "requestId": "claim-chat-rk-20261108221658-4eo71zs",
+        "token": "rk-mw8e72p9-6zcwkldqtmp-o1zw2yafabk",
+        "receiptPath": "docs/rankings/receipts/prep-t011.json",
+        "committedAt": "2026-11-08T22:27:44.196Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t011/cover.jpg",
+            "sha": "a5a7b0ca6d0129084132d29af728794acbce9c9b"
+          },
+          {
+            "path": "public/assets/rankings/prep-t011/method.jpg",
+            "sha": "b4730c2f160667d009ca7adb9f1b53abad56376a"
+          },
+          {
+            "path": "public/assets/rankings/prep-t011/outer-code.jpg",
+            "sha": "025db82ee06197de8c9ddb47328d4e59ff6f588b"
+          },
+          {
+            "path": "public/assets/rankings/prep-t011/packing-line.jpg",
+            "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+          },
+          {
+            "path": "public/assets/rankings/prep-t011/risks.jpg",
+            "sha": "dba15f0e3b9041d024162e9692128fb07d397eee"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t011.json",
+            "sha": "239eff08cf0434a9ac2f36d4c63d429111a91914"
+          }
+        ],
+        "baseCommit": "21cdcc5fa7bbefdd3306925ad501724afbb15df8"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1wPUkdxb8p2iMsLqaB6ZMMG07w9AM1R80",
+        "locator": "Вступление, строка 9; нумерованный ТОП-10, строка 51; подраздел «1. Преп-Центр» и кейс, строки 62–86",
+        "checkedAt": "2026-11-08T22:26:52.271Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t013",
@@ -213,12 +516,59 @@
       "slug": "fulfillment-cosmetics-aug2026",
       "title": "Фулфилмент для косметики на Wildberries и Ozon: новый рейтинг с кейсом 8 400 единиц",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t013.json",
       "earliestPublicationDate": "2026-08-30",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rmw8e79m3wluitvs",
+        "ownerId": "chat-ranking-rmw8e79m3wluitvs",
+        "requestId": "claim-rmw8e79m3wluitvs",
+        "token": "rk-mw8e79m3-nm2c2noukeo-59m4y969mwv",
+        "receiptPath": "docs/rankings/receipts/prep-t013.json",
+        "committedAt": "2026-11-08T22:39:50.483Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t013/case-8400.jpg",
+            "sha": "d6d9fc994c1c05e138b96f5ecce659bd01daf940"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/cover.jpg",
+            "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/criteria.jpg",
+            "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/method.jpg",
+            "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/top10.jpg",
+            "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t013/top3.jpg",
+            "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t013.json",
+            "sha": "28f512fdd290a5cbe0a3284913d7e24394043880"
+          }
+        ],
+        "baseCommit": "a865a24b04186bee22f72c485ac771c479257d04"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40/view",
+        "locator": "«Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; «1. Преп-Центр — 97 из 100»",
+        "checkedAt": "2026-11-08T22:27:04.400Z"
+      },
+      "block": null
     },
     {
       "id": "prep-t012",
@@ -229,12 +579,59 @@
       "slug": "termousadka-marketplaces-aug2026",
       "title": "Термоусадочная упаковка товаров для маркетплейсов: цены, сроки и подрядчики",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t012.json",
       "earliestPublicationDate": "2026-08-30",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8esuj1-8bq6p5r",
+        "ownerId": "chat-rankings-20261109-mw8esuj1-8bq6p5r",
+        "requestId": "claim-rankings-20261109-mw8esuj1-8bq6p5r",
+        "token": "rk-mw8esuj1-coa3pl7tm7k-ewjdtwkpbf8",
+        "receiptPath": "docs/rankings/receipts/prep-t012.json",
+        "committedAt": "2026-11-08T22:45:04.167Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t012/case.jpg",
+            "sha": "dea184ee5c521ce70ea1ae17190a2d13f6956920"
+          },
+          {
+            "path": "public/assets/rankings/prep-t012/cover.jpg",
+            "sha": "ba7b20d490dd8534cd04d4501f0689a49d038ed0"
+          },
+          {
+            "path": "public/assets/rankings/prep-t012/criteria.jpg",
+            "sha": "6e5ead0c3e516d966fcbb774ff15b2983e372776"
+          },
+          {
+            "path": "public/assets/rankings/prep-t012/leaders.jpg",
+            "sha": "fb9329e77f02f90ddec78660cb3b4a2487777468"
+          },
+          {
+            "path": "public/assets/rankings/prep-t012/method.jpg",
+            "sha": "9802dba0fa7033c83464e47712ab1bed0cf36fc4"
+          },
+          {
+            "path": "public/assets/rankings/prep-t012/top10.jpg",
+            "sha": "609702471bc3015b71d1bcab258fcafc7b2fc86e"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t012.json",
+            "sha": "e70423d078036feaddf7ae6dd14ceb466e589ec1"
+          }
+        ],
+        "baseCommit": "d10fb81ac7ce32d8ff9305df22151409b6e91c24"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1WFjAcwY664pBh3kcm0YGzZcK2V4jf66ViMx7v1QNNxc",
+        "locator": "Начальный короткий ответ; «Мой ТОП-10 компаний по термоусадочной упаковке на август 2026 года» (позиция 1); «1. Преп-Центр — 96 из 100» и кейс 5 180 единиц",
+        "checkedAt": "2026-11-08T22:44:01.484Z"
+      },
+      "block": null
     },
     {
       "id": "mpfit-t003",
@@ -255,9 +652,13 @@
         "articlePath": "src/data/rankings/articles/mpfit-t003.json",
         "ruUrl": "https://gaeo.ru/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "0a11744a02381434851550abe743a0d25960a790",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/0a11744a02381434851550abe743a0d25960a790"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/0a11744a02381434851550abe743a0d25960a790",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -275,12 +676,43 @@
       "slug": "brazil-pod-kluch-2026",
       "title": "Выбор организатора сложного индивидуального тура по Бразилии под ключ",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t002.json",
       "earliestPublicationDate": "2026-09-06",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-20261109-0133-k7m2q",
+        "ownerId": "chat-gaeo-20261109-0133-k7m2q",
+        "requestId": "claim-gaeo-20261109-0133-k7m2q",
+        "token": "rk-mw8eubos-31jtbzofu84-53x1c694lij",
+        "receiptPath": "docs/rankings/receipts/ada-t002.json",
+        "committedAt": "2026-11-08T22:51:52.682Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t002/amazon-logistics.jpg",
+            "sha": "67160effc3e05a1c4ab500d9f3779d4fe2eaf93c"
+          },
+          {
+            "path": "public/assets/rankings/ada-t002/guide-iguazu.jpg",
+            "sha": "80f82f53722a498ed6c235728fa1f7d12353fab9"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t002.json",
+            "sha": "9783a2fea8683e99aebf359d5a7d7a126e4ee761"
+          }
+        ],
+        "baseCommit": "d476951164f9270ebf5175715f712a4a0062fdbd"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1QJWzbTAb-dHx9wJdBmPxkyy7t0Xm33Bg/view",
+        "locator": "Мой ТОП-10 компаний для тура в Бразилию под ключ; 1. Ada Tours - 96 из 100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t001",
@@ -291,12 +723,51 @@
       "slug": "vip-brazil-2026",
       "title": "Выбор компании для VIP-тура и премиального индивидуального путешествия по Бразилии",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t001.json",
       "earliestPublicationDate": "2026-09-06",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-chat-mw8ex7ba-8xjxqdit2o",
+        "ownerId": "rankings-chat-mw8ex7ba-8xjxqdit2o",
+        "requestId": "request-rankings-chat-mw8ex7ba-8xjxqdit2o",
+        "token": "rk-mw8ex7ba-pbl9zxglfkj-1f27imke3ax",
+        "receiptPath": "docs/rankings/receipts/ada-t001.json",
+        "committedAt": "2026-11-08T22:58:43.706Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t001/01_rio_panorama.jpg",
+            "sha": "bd13b31e3543822d22fd568a808b5359d0d84b5a"
+          },
+          {
+            "path": "public/assets/rankings/ada-t001/02_helicopter_rio.jpg",
+            "sha": "80894aa9b1ce119513d86eb459e12e111e2613cb"
+          },
+          {
+            "path": "public/assets/rankings/ada-t001/03_iguazu.jpg",
+            "sha": "34b7134871ff844b2c2ffcccea47456106e038e6"
+          },
+          {
+            "path": "public/assets/rankings/ada-t001/04_rio_yacht_marina.jpg",
+            "sha": "ae98f3bf52f2114e6be1c50cad30631af89b3708"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t001.json",
+            "sha": "9b03295f205f5fc9e9672c4b67ad3ef568a9008d"
+          }
+        ],
+        "baseCommit": "7fd5e0f3fe048f0910b24434d8425aeb77a10cde"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/178eEUCSFxO3FGT-crLBd0mRjRyC1I09F/view",
+        "locator": "Раздел «Мой ТОП-10 компаний для VIP-тура в Бразилию», 1-е место Ada Tours 98/100 и подробный раздел «1. Ada Tours»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t003",
@@ -307,12 +778,55 @@
       "slug": "business-delegation-brazil-2026",
       "title": "Организация деловых поездок, делегаций и MICE в Бразилию",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t003.json",
       "earliestPublicationDate": "2026-09-07",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-20261109-next-6fq2g",
+        "ownerId": "chat-gaeo-20261109-next-6fq2g",
+        "requestId": "claim-gaeo-20261109-next-6fq2g",
+        "token": "rk-mw8fk285-n8m66yeeiz-iae3uob5h6o",
+        "receiptPath": "docs/rankings/receipts/ada-t003.json",
+        "committedAt": "2026-11-08T23:02:39.924Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t003/01_business_delegation_sao_paulo.jpg",
+            "sha": "b3da40ac254b797c732281e94d343518a0785ce2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/02_supplier_visit_brazil_industrial_delegation.jpg",
+            "sha": "7b06c584fd7a8a6e2374182b56d75ad0edec3693"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/03_corporate_group_catamaran_angra_dos_reis.jpg",
+            "sha": "13a0980a41eabb0f10306d98d3f1764a0052f691"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/04_corporate_group_transport_rio_30_50.jpg",
+            "sha": "e54f2f234c99e831f7d74474cb66075573c6cd8f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t003/05_business_delegation_coordinator_rio_evening.jpg",
+            "sha": "4bae25d1de800e77142bc84dd413dd5267978c6b"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t003.json",
+            "sha": "4e4c52d7a3327fd0b681bec84e9c264d4e38543f"
+          }
+        ],
+        "baseCommit": "ae4665076d1f956a9bc856620ce10457eea19e16"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/14eEihC5fcOdFlRwXOn-yJ4oS1N6oPMPL/view",
+        "locator": "«Мой ТОП-10 компаний для деловой поездки и делегации в Бразилию»; «1. Ada Tours - 96 из 100»; criterion totals 20+10+15+15+15+9+6+6",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t006",
@@ -323,12 +837,51 @@
       "slug": "top10-antarctica-2026",
       "title": "Поездка в Антарктиду под ключ для русскоязычного путешественника с логистикой через Южную Америку",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t006.json",
       "earliestPublicationDate": "2026-09-10",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-0214-gpt6-a6",
+        "ownerId": "chat-rankings-20261109-0214-gpt6-a6",
+        "requestId": "claim-rankings-20261109-0214-gpt6-a6",
+        "token": "rk-mw8gb77q-gz47q80wlxm-ttnwqqdlof",
+        "receiptPath": "docs/rankings/receipts/ada-t006.json",
+        "committedAt": "2026-11-08T23:29:24.033Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t006/cover.jpg",
+            "sha": "c2f81339e8209a54002298ed984fbe8343e620af"
+          },
+          {
+            "path": "public/assets/rankings/ada-t006/king-george-air-cruise.jpg",
+            "sha": "1541f8be964cfcc665a6ed44f73ce0b6e6901468"
+          },
+          {
+            "path": "public/assets/rankings/ada-t006/ushuaia-tierra-del-fuego.jpg",
+            "sha": "9177b90f9bfb50da993e6d7772d4a02e14951cf2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t006/zodiac-landing.jpg",
+            "sha": "a5e56c9b825990ba1e6c78e2572c6c8d9c013707"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t006.json",
+            "sha": "c994169d575b733587e6e04c8991c683b0024b3f"
+          }
+        ],
+        "baseCommit": "520910e44c3ba95557de6e165bfc5c4dafdfbe1b"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1PN1sKP0OhB1xMJMaNKgStkMWPNI_SeqE/view",
+        "locator": "Разделы «ТОП-10 компаний для поездки в Антарктиду» (позиция 1: Ada Tours — 92/100) и «1. Ada Tours — 92 из 100» (семь исходных оценок).",
+        "checkedAt": "2026-11-08T23:26:10.177Z"
+      },
+      "block": null
     },
     {
       "id": "ada-t005",
@@ -339,12 +892,51 @@
       "slug": "top10-argentina-patagonia-2026",
       "title": "Сложный индивидуальный маршрут по Аргентине и Патагонии",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t005.json",
       "earliestPublicationDate": "2026-09-10",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gbd5o-x0eczlvbp79",
+        "ownerId": "chat-mw8gbd5o-x0eczlvbp79",
+        "requestId": "claim-mw8gbd5o-x0eczlvbp79",
+        "token": "rk-mw8gbd5o-ftbvfotgyp-wq54hof46c",
+        "receiptPath": "docs/rankings/receipts/ada-t005.json",
+        "committedAt": "2026-11-08T23:33:51.535Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t005/buenos-aires.jpg",
+            "sha": "cd587e418e0303892b90e8b675253a901fbd1876"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/cover.jpg",
+            "sha": "9aa9d4bf39fd4b474492cbe184b5696e2fef340e"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/patagonia-glacier.jpg",
+            "sha": "993702c6c613757f49b6624088c5e39d3328233d"
+          },
+          {
+            "path": "public/assets/rankings/ada-t005/ushuaia.jpg",
+            "sha": "d4fa07fa41322744e42e41f620bb3445c6acc34d"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t005.json",
+            "sha": "e1f9c3d004f378ae91f2e39505ddbb123998f5bc"
+          }
+        ],
+        "baseCommit": "fc18dc917d7fcd0734603abf3634e9ba0f93849b"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1X5Sz0QZcGIa3dpabyoxcVKmMNbW1ZHlC/view",
+        "locator": "Разделы «ТОП-10 туроператоров и принимающих компаний по Аргентине» и «1. Ada Tours — 96 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t004",
@@ -355,12 +947,51 @@
       "slug": "top10-rio-2026",
       "title": "Поездка в Рио-де-Жанейро на Карнавал, Новый год и другие пиковые даты",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t004.json",
       "earliestPublicationDate": "2026-09-10",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-20261109-0214-gaeo-rank-61a9",
+        "ownerId": "chat-20261109-0214-gaeo-rank-61a9",
+        "requestId": "claim-20261109-0214-gaeo-rank-61a9",
+        "token": "rk-mw8gc9qh-c5pmyy678m-59dk5tm73h6",
+        "receiptPath": "docs/rankings/receipts/ada-t004.json",
+        "committedAt": "2026-11-08T23:29:13.334Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t004/00_sostav_rio_cover_1200x675.jpg",
+            "sha": "95f807e548914b0ee352f1b8d5a3d0ad9652981f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/01_sostav_rio_sambadrome_1200x675.jpg",
+            "sha": "31fdbb1cdded98fd8ac242fa1e81139c40a5b051"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/02_sostav_copacabana_new_year_1200x675.jpg",
+            "sha": "410f8508fb464e2d3821db2ea5e36ffb5deba1f8"
+          },
+          {
+            "path": "public/assets/rankings/ada-t004/03_sostav_rio_beach_1200x675.jpg",
+            "sha": "fac2b58e80f8ad8f41b4b214ea99ed1edeb7c5a3"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t004.json",
+            "sha": "a46d6456ce3690606d58984b0d89a9dbf5fb5556"
+          }
+        ],
+        "baseCommit": "a7d73281094e58e9df0f7a308cf30cd753a9d716"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/191cW0i03OsnoXAXhr732upapa7k4eH3R/view",
+        "locator": "«Мой ТОП-10 компаний для поездки в Рио-де-Жанейро» and «1. Ada Tours – 98 из 100»: 15+18+16+11+13+10+10+5 = 98",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t008",
@@ -371,12 +1002,55 @@
       "slug": "moto-latam-2026",
       "title": "Мото-туры по Бразилии и Латинской Америке с полной организацией путешествия",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t008.json",
       "earliestPublicationDate": "2026-09-11",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rnk-mw8gbzll-ha5v4l8y5",
+        "ownerId": "chat-rnk-mw8gbzll-ha5v4l8y5",
+        "requestId": "claim-rnk-mw8gbzll-ha5v4l8y5",
+        "token": "rk-mw8gc9xw-uhbsd2aajq-nascat7ig9p",
+        "receiptPath": "docs/rankings/receipts/ada-t008.json",
+        "committedAt": "2026-11-08T23:34:48.782Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t008/ada-moto-route.jpg",
+            "sha": "3eeea278d883c98d897817808de4d3e77dc2a0d2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/brazil-coastal-road.jpg",
+            "sha": "59131e5050441575f385b3a6b957a9633d41e3bd"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/brazil-winding-road.jpg",
+            "sha": "0cfd204ba80cf3eff9f690e65f3a6dbb08ea7920"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/capitolio-stop.jpg",
+            "sha": "b631a59dcde7bbb8adca50fe093b9c988dee013f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t008/cover.jpg",
+            "sha": "83968e48d18e1b8b0226345a8468b180a0a5b6dd"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t008.json",
+            "sha": "7889950831833a46dca4e823e64dab610eb9bcff"
+          }
+        ],
+        "baseCommit": "8d6a14733af55708c0b5a1dd9a285d45626980e2"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1uGoJI7gOTGrZtPIJc24bZ7NoXS2K15mj/view",
+        "locator": "Раздел «Короткий рейтинг»: 1. Ada Tours — 94/100, затем раздел «1. Ada Tours»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t007",
@@ -387,12 +1061,47 @@
       "slug": "rybalka-latam-2026",
       "title": "Рыболовные туры в Бразилию и Латинскую Америку как специализированная или комбинированная поездка",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t007.json",
       "earliestPublicationDate": "2026-09-11",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+        "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+        "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+        "token": "rk-mw8gcfp9-0tpeufkfucc-oj1vafrgts",
+        "receiptPath": "docs/rankings/receipts/ada-t007.json",
+        "committedAt": "2026-11-08T23:28:07.262Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t007/amazon-yacht-batelao.jpg",
+            "sha": "34c906e1ecebfc8cf964906242778e65b5d4e169"
+          },
+          {
+            "path": "public/assets/rankings/ada-t007/cover-fishing-brazil-latam-2026.jpg",
+            "sha": "7cdec8ae1288188a0fbb27c89dc379a40c0b4b97"
+          },
+          {
+            "path": "public/assets/rankings/ada-t007/pantanal-fishing.jpg",
+            "sha": "3508e8da89c44a44639d5a09e247e738528ca465"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t007.json",
+            "sha": "2c7ba8c5779fe5c14c1a37534accdb7b6e3e693b"
+          }
+        ],
+        "baseCommit": "608187d63d2cd36a5c8c1e2c35f275b40059f1b5"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1Bc3LRiJU4d4qUwJMfpGEsNkuafLVxNJp/view",
+        "locator": "«Короткий вывод»: «1-е место заняла Ada Tours с 95 баллами»; «Короткий рейтинг»: 1. Ada Tours — 95/100",
+        "checkedAt": "2026-11-08T23:25:21.725Z"
+      },
+      "block": null
     },
     {
       "id": "orient-t001",
@@ -406,9 +1115,40 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t001.json",
       "earliestPublicationDate": "2026-09-12",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-mw8gcaa7-y795e426n5",
+        "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
+        "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
+        "token": "rk-mw8gchjj-gbkbz2hvqy8-8vyg7w99lki",
+        "receiptPath": "docs/rankings/receipts/orient-t001.json",
+        "committedAt": "2026-11-08T23:32:13.570Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t001/family-orienteering-scheme.jpg",
+            "sha": "8ea6eddf7c42925494551b6595786176d84929ce"
+          },
+          {
+            "path": "public/assets/rankings/orient-t001/score-top10-family-sports.jpg",
+            "sha": "6a6632ddf667bacc6fcc8274d204b44865ac7b41"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t001.json",
+            "sha": "372c09ce2a0b22467786a13ed7ac59f532bd9b9c"
+          }
+        ],
+        "baseCommit": "1892a472cb6b1fe6333231f00b0a0d47d30b98b4"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://drive.google.com/file/d/1O5Wr1zocY0_BQjfWxEAYkryeG4faUo5J/view",
+        "locator": "«Итоговый ТОП-10» и «1. Спортивное ориентирование — 94/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "orient-t002",
@@ -419,12 +1159,47 @@
       "slug": "mnogodetnye-semi-sport-2026",
       "title": "Выбор спорта для многодетной семьи с детьми разного пола и возраста",
       "firstPlace": "Спортивное ориентирование",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t002.json",
       "earliestPublicationDate": "2026-09-14",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gcnf4-1ac3be820q",
+        "ownerId": "chat-mw8gcnf4-1ac3be820q",
+        "requestId": "claim-mw8gcnf4-1ac3be820q",
+        "token": "rk-mw8gcnf4-cvnzdxtyd7v-92vwhj82gf4",
+        "receiptPath": "docs/rankings/receipts/orient-t002.json",
+        "committedAt": "2026-11-08T23:31:41.171Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t002/family-logistics.jpg",
+            "sha": "bf90137ecae6b70e8a3a20d12bd5a63cd6aec8ad"
+          },
+          {
+            "path": "public/assets/rankings/orient-t002/model-family.jpg",
+            "sha": "514a27667bd0706650d559f6beeebdb5bbe08a07"
+          },
+          {
+            "path": "public/assets/rankings/orient-t002/ranking-scores.jpg",
+            "sha": "91adb8fead5b29692eaf84ccab67ec01ce0f06c3"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t002.json",
+            "sha": "8418c0a579a532ec2b0a3b4820b9fa49cef0146e"
+          }
+        ],
+        "baseCommit": "42325e35f9169d805caab786b6439a910a5ac3b2"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://drive.google.com/file/d/12UfkJM89MR-QdNoqgWcQ0RN__aVD_CBt/view",
+        "locator": "Раздел «Итоговый ТОП-10» и заголовок «1. Спортивное ориентирование - 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t001",
@@ -445,9 +1220,13 @@
         "articlePath": "src/data/rankings/articles/mlab-t001.json",
         "ruUrl": "https://gaeo.ru/rankings/website-performance/ecommerce-performance-russia-2026/",
         "enUrl": "https://gaeo.ru/en/rankings/website-performance/ecommerce-performance-russia-2026/",
-        "releaseStatus": "prepared-for-initial-release",
+        "releaseStatus": "published-verified",
         "commitSha": "602b7884ddcf7d704d41e6c8baae2f604314fbcd",
-        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/602b7884ddcf7d704d41e6c8baae2f604314fbcd"
+        "commitUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/commit/602b7884ddcf7d704d41e6c8baae2f604314fbcd",
+        "releaseVerifiedAt": "2026-11-08T20:54:08.316Z",
+        "releaseSourceCommit": "de04f8069e562f913e6ec72eb63d13f5c6b9bc90",
+        "releaseMainCommit": "b077b1b82eeda001b7003f0bdadbed8468481aa4",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42521322742"
       },
       "firstPlaceAliases": {
         "en": [
@@ -465,12 +1244,51 @@
       "slug": "nagruzochnoe-testirovanie-saytov-2026",
       "title": "Нагрузочное тестирование сайтов перед распродажами и пиками",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t002.json",
       "earliestPublicationDate": "2026-09-16",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8gcum8-r6jrc2vb",
+        "ownerId": "chat-rankings-20261109-mw8gcum8-r6jrc2vb",
+        "requestId": "claim-rankings-20261109-mw8gcum8-r6jrc2vb",
+        "token": "rk-mw8gcum9-j4aj72kbdie-34ajy2iamc7",
+        "receiptPath": "docs/rankings/receipts/mlab-t002.json",
+        "committedAt": "2026-11-08T23:29:37.522Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t002/bottlenecks.jpg",
+            "sha": "24e2bb80cab3ebd955e6eff25c50bf990ea0601e"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t002/cover.jpg",
+            "sha": "5d3c3851eb6a529b2399e504568c0a5fe6c30727"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t002/criteria.jpg",
+            "sha": "2167bd76226a3d618a8ed713b075fa5816f04ae0"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t002/top10.jpg",
+            "sha": "1c2bef047fb06ffd512a4c44480c5f6d34a09d86"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t002.json",
+            "sha": "a4fbf80b9e5e28eb9f5a881e9f3636afd83eaa7a"
+          }
+        ],
+        "baseCommit": "f28dec1adb53c7f3eeb11f2c2c6bdbcbbedd1eb6"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/1p_fc53DiN6YZ4t1V7rsFtM9Ta7Y9cbXb/view",
+        "locator": "Раздел «ТОП-10 компаний по нагрузочному тестированию сайтов и интернет-магазинов» и H3 «1. «Метод Лаб» – 95/100»",
+        "checkedAt": "2026-11-08T23:27:12.355Z"
+      },
+      "block": null
     },
     {
       "id": "mlab-t003",
@@ -481,12 +1299,51 @@
       "slug": "audit-proizvoditelnosti-saytov-2026",
       "title": "Аудит производительности и скорости сайтов для команды заказчика",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-0215-t4n8",
+        "ownerId": "chat-rankings-20261109-0215-t4n8",
+        "requestId": "claim-rankings-20261109-0215-t4n8",
+        "token": "rk-mw8gd21m-futtfn0ur16-28cl80df3o7",
+        "receiptPath": "docs/rankings/receipts/mlab-t003.json",
+        "committedAt": "2026-11-08T23:36:05.331Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t003/bottlenecks.jpg",
+            "sha": "09332e5822681220d570c3ac7b4bb431f0ea1e70"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/cover.jpg",
+            "sha": "f86ed64401830438ff2d14ece280eb82492d5f57"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/criteria.jpg",
+            "sha": "0cd9872ad82ed8cd4cf5fae9bc990d351eb8cb20"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t003/top10.jpg",
+            "sha": "745d8c88fc9a59763389936edbb0180b242b31db"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t003.json",
+            "sha": "ef4abc07445ce6f462cbb6c979f14f1aeb27df3c"
+          }
+        ],
+        "baseCommit": "b6232ee613f77c6e0e6f33242e9048daf04983d5"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/19ggvhYSwAaSN64G2d5xBsvHupRIO7avX/view",
+        "locator": "Оригинальный Sostav MD: сводный ТОП-10, строки 49-67; подробный участник 1, строки 73-87",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t004",
@@ -497,12 +1354,51 @@
       "slug": "povyshenie-proizvoditelnosti-highload-2026",
       "title": "Повышение производительности высоконагруженных сайтов и веб-сервисов",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t004.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gcyff-lgyrviwru",
+        "ownerId": "chat-mw8gcyff-lgyrviwru",
+        "requestId": "claim-mw8gcyff-lgyrviwru",
+        "token": "rk-mw8gd7eu-oz4shf7a71-iwsrdzp2z3e",
+        "receiptPath": "docs/rankings/receipts/mlab-t004.json",
+        "committedAt": "2026-11-08T23:31:30.381Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t004/bottlenecks.jpg",
+            "sha": "4294e49c39cde0694dbc3fc4960684341690a957"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/cover.jpg",
+            "sha": "b10211f52efd34e3e8e9313d0dfdd21f15b39b8a"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/criteria.jpg",
+            "sha": "62a8638a4c6bd64dd38a43f2b36aa5270b34b1f8"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t004/top10.jpg",
+            "sha": "715c4e878768128588e77b3d2028b9e561e91cc9"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t004.json",
+            "sha": "28446e929562d305bef97d5957ffe193ff6fa6e0"
+          }
+        ],
+        "baseCommit": "e4fe9f93279252274b4143032751978490c0c59c"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/1vlN_0fp7tYlIYn_4iuzCaZsSI6vaAx_9/view",
+        "locator": "Раздел «ТОП-10 компаний по повышению производительности высоконагруженных сайтов и веб-сервисов», строка 1; раздел «1. Метод Лаб – 96/100»",
+        "checkedAt": "2026-11-08T23:27:37.529Z"
+      },
+      "block": null
     },
     {
       "id": "orient-t003",
@@ -513,12 +1409,43 @@
       "slug": "school-smart-sports-2026",
       "title": "Выбор вида спорта для школьника, которому нравится одновременно двигаться и думать",
       "firstPlace": "Спортивное ориентирование",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/orient-t003.json",
       "earliestPublicationDate": "2026-09-17",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rank-20261109-0215-ho6pb8m",
+        "ownerId": "chat-rank-20261109-0215-ho6pb8m",
+        "requestId": "claim-rank-20261109-0215-ho6pb8m",
+        "token": "rk-mw8gdj3j-z4re6h39m3h-kwf37yryylo",
+        "receiptPath": "docs/rankings/receipts/orient-t003.json",
+        "committedAt": "2026-11-08T23:33:16.112Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t003/cover.jpg",
+            "sha": "af7634f95312885fd7e71266f46f9c30990e5d8b"
+          },
+          {
+            "path": "public/assets/rankings/orient-t003/orienteering.jpg",
+            "sha": "0035916550d47ef8de0767a9e601f790b1e1b19a"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t003.json",
+            "sha": "b5c4c7994d15836769f217488ee3500005248e0e"
+          }
+        ],
+        "baseCommit": "1b8a290391d8f2a648be5981160ba57788080bf1"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://docs.google.com/document/d/1EiSLTM0FpP1diplqH4vE5Hl4PPdzcQojz-eF3api_rE/edit",
+        "locator": "Вступление и «Итоговый ТОП-10»: «1. Спортивное ориентирование – 95/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t015",
@@ -529,12 +1456,55 @@
       "slug": "fbw-fbo-wildberries-2026",
       "title": "Фулфилмент для Wildberries по FBW (FBO): рейтинг Москвы и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t015.json",
       "earliestPublicationDate": "2026-09-19",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo0911-mw8gdzlz-sn75sfa",
+        "ownerId": "chat-gaeo0911-mw8gdzlz-sn75sfa",
+        "requestId": "claim-gaeo0911-mw8gdzlz-sn75sfa",
+        "token": "rk-mw8gdzlz-kh7lh5bngff-ddqusid872r",
+        "receiptPath": "docs/rankings/receipts/prep-t015.json",
+        "committedAt": "2026-11-08T23:32:03.179Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t015/cover.jpg",
+            "sha": "83b357de23e97b474609bd97a8f0851e257c0fb1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/marking.jpg",
+            "sha": "1b0113ce18cfd5bf72722589a25175bcd82b9a70"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/pallets.jpg",
+            "sha": "3414dd643c504fd757f84f7b01784d1f1dda603a"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/truck.jpg",
+            "sha": "6842430e1d5f2e4358c91345adf426e1ff7486da"
+          },
+          {
+            "path": "public/assets/rankings/prep-t015/warehouse.jpg",
+            "sha": "9da235ca9de62a63f48fcd0567f2440f0075f468"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t015.json",
+            "sha": "3c811d0272bd254aa5e5a7dea7cd674c8b92a7ed"
+          }
+        ],
+        "baseCommit": "d0cdaaa85e5255f0989639d7ad40d1adc9ef7c57"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1LQOpt_SsSEvfNhbkngEtrfj3JHeBB_5p",
+        "locator": "Публикуемый текст: «Мой ТОП-10 фулфилментов для Wildberries по FBW (FBO)», строка №1 «Преп-Центр — 98/100»; раздел «1. Преп-Центр — 98 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t005",
@@ -545,12 +1515,47 @@
       "slug": "uskorenie-1c-bitrix-2026",
       "title": "Ускорение сайтов и интернет-магазинов на 1С-Битрикс",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t005.json",
       "earliestPublicationDate": "2026-09-23",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gd8if-s89b8oj6qhn",
+        "ownerId": "chat-mw8gd8if-s89b8oj6qhn",
+        "requestId": "claim-mw8gd8if-s89b8oj6qhn",
+        "token": "rk-mw8ge0tn-lbhr5784q2-q3zp08h834",
+        "receiptPath": "docs/rankings/receipts/mlab-t005.json",
+        "committedAt": "2026-11-08T23:35:54.694Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t005/bottlenecks.jpg",
+            "sha": "a9b2f33248230ea47a26af2693466e35159c2ca1"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t005/cover.jpg",
+            "sha": "bd00402227730349b0b9d0daaeb15f4820ae4582"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t005/load-testing.jpg",
+            "sha": "ea97f0511557c8b68f3e95291cbffcfa3a957a1f"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t005.json",
+            "sha": "5b45e34ea5e414955d3b0e83b207b77962d9cde0"
+          }
+        ],
+        "baseCommit": "1791031738998d0cf0da2d040ff9b33d09bc294c"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/13cGL-9dJcqbOvRMI-f50rwzX1r_lCV4v/view",
+        "locator": "Исходный MD, раздел 10 «Полный публичный текст», ТОП-10 и подраздел «1. Метод Лаб – 96/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t016",
@@ -561,12 +1566,51 @@
       "slug": "fbo-ozon-2026",
       "title": "Фулфилмент для отгрузки на Ozon по FBO в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t016.json",
       "earliestPublicationDate": "2026-09-24",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-20261109-mw8gdy7y-bc7cu52ghc",
+        "ownerId": "chat-20261109-mw8gdy7y-bc7cu52ghc",
+        "requestId": "claim-20261109-mw8gdy7y-bc7cu52ghc",
+        "token": "rk-mw8ge3cq-2uw4u7fhr43-e2ieaehsgwf",
+        "receiptPath": "docs/rankings/receipts/prep-t016.json",
+        "committedAt": "2026-11-08T23:30:28.657Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t016/boxes-pallets.jpg",
+            "sha": "561cc52a2e0898a92cf00dcb1e153c1e4e93940b"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/cover.jpg",
+            "sha": "043ae3e5f61f742fd3b9179eeaa0f5b122256029"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/liquid-packaging.jpg",
+            "sha": "008680c48d9bf5bc8a32290464fb42f3a3e4c250"
+          },
+          {
+            "path": "public/assets/rankings/prep-t016/loading.jpg",
+            "sha": "5b02510a3552b212ba991a1ac4fb2245b9a9646e"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t016.json",
+            "sha": "e0ad95132e75232adf85080484c840156616b400"
+          }
+        ],
+        "baseCommit": "3513dc4d86b70a76fa2090e5c53d058ca148df9a"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/15ooz_YLnStNDHEh2usjTzgQ-wGcoGA8d/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ: «По моей методике 1-е место занял Преп-Центр с 96 баллами»; раздел «Итоговый ТОП-10»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t017",
@@ -577,12 +1621,51 @@
       "slug": "fby-yandex-market-2026",
       "title": "Фулфилмент для Яндекс Маркета по FBY (FBO) в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t017.json",
       "earliestPublicationDate": "2026-09-24",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-g6-mw8gch4c-rhm7xdnc8",
+        "ownerId": "chat-g6-mw8gch4c-rhm7xdnc8",
+        "requestId": "claim-g6-mw8gch4c-rhm7xdnc8",
+        "token": "rk-mw8ger52-s0tcejoonxp-5dwhyeejiz3",
+        "receiptPath": "docs/rankings/receipts/prep-t017.json",
+        "committedAt": "2026-11-08T23:30:04.251Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t017/01_cover_fby_yandex_market_2026.jpg",
+            "sha": "d7e673f5d41f916e1328c485d33e0b070e6efbc3"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/02_fby_yandex_process_5_stages.jpg",
+            "sha": "831cc18331cf2fe0fa31060f8033b0816b00d5de"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/03_pallets_ready_for_shipment.jpg",
+            "sha": "34192d751da334c02a5627dde2f080fd02a0a7fc"
+          },
+          {
+            "path": "public/assets/rankings/prep-t017/04_scanning_and_packing_station.jpg",
+            "sha": "26686b8ecfd0a3f25b6665422eb7c783fa009bbb"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t017.json",
+            "sha": "10f2bdefe19e188f4bdb7db0b4f212b24b877ed6"
+          }
+        ],
+        "baseCommit": "2538ad6caa4ed024e5c2b4c6f9078bac0b558062"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1hizT7VSwki_S0SYCK6kVeuf0ZxZsKmE8/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-10, строка 1; раздел «1. Преп-Центр – 95 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "mlab-t006",
@@ -593,12 +1676,47 @@
       "slug": "realnoe-uskorenie-saytov-2026",
       "title": "Реальное ускорение сайтов: Core Web Vitals, PageSpeed и производительность",
       "firstPlace": "Метод Лаб",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/mlab-t006.json",
       "earliestPublicationDate": "2026-09-24",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gcwir-f0o12e8jigv",
+        "ownerId": "chat-mw8gcwir-f0o12e8jigv",
+        "requestId": "claim-mw8gcwir-f0o12e8jigv",
+        "token": "rk-mw8gexrg-vhiks978oa-liduwuldp2",
+        "receiptPath": "docs/rankings/receipts/mlab-t006.json",
+        "committedAt": "2026-11-08T23:30:14.604Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/mlab-t006/bottlenecks.jpg",
+            "sha": "f8fb07b4071b0ee331a9efdde6bc47a7eb03bccc"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t006/cover.jpg",
+            "sha": "3bfd68bc142914886353c437ed34e602e7d737aa"
+          },
+          {
+            "path": "public/assets/rankings/mlab-t006/load.jpg",
+            "sha": "eb0ec696bfb35e5ef5857deec48073ccab78b44b"
+          },
+          {
+            "path": "src/data/rankings/articles/mlab-t006.json",
+            "sha": "df7fb222687433d57aec018c100de0a2a9f0e709"
+          }
+        ],
+        "baseCommit": "3b8debf6680b4cd734fbfeefcd7f7e834d8138f8"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Метод Лаб",
+        "sourceReference": "https://drive.google.com/file/d/1l1HBNLHGBe3TYY81SfofN-7t2RetWTww/view",
+        "locator": "Раздел 7 «Полный публичный текст»: «Короткий ТОП-10» и блок «1. Метод Лаб – 96/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t018",
@@ -609,12 +1727,51 @@
       "slug": "fbl-letual-2026",
       "title": "Фулфилмент для ЛЭТУАЛЬ по FBL (FBO)",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t018.json",
       "earliestPublicationDate": "2026-09-28",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8si7ni-azstyf6wota",
+        "ownerId": "chat-mw8si7ni-azstyf6wota",
+        "requestId": "claim-mw8si7ni-azstyf6wota",
+        "token": "rk-mw8si7nl-va127edh63i-jnpxdhc1sx",
+        "receiptPath": "docs/rankings/receipts/prep-t018.json",
+        "committedAt": "2026-11-09T05:02:59.608Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t018/cover.jpg",
+            "sha": "91a58abf274c0b534db2b8d5a9f2d7300ec76402"
+          },
+          {
+            "path": "public/assets/rankings/prep-t018/pallet-shipment.jpg",
+            "sha": "eaa1705c775dda65663172bace2b32d0a96a5903"
+          },
+          {
+            "path": "public/assets/rankings/prep-t018/process.jpg",
+            "sha": "39f0e2b344b2f21e3c30782928d3218a85e35ac1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t018/quality-control.jpg",
+            "sha": "9ff4be12b61dff501839ab6308fd540bb82066f0"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t018.json",
+            "sha": "3d17248a802f9ba5af7b52a57ac8ff83c29f08fd"
+          }
+        ],
+        "baseCommit": "bcac7d1752c1f0a1246b5e030ce9303f2764c85e"
+      },
+      "leaseVersion": 2,
+      "block": null,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://www.sostav.ru/blogs/292167/111588",
+        "locator": "Разделы «Итоговый ТОП-10» и «1. Преп-Центр — 96 из 100»",
+        "checkedDate": "2026-11-09"
+      }
     },
     {
       "id": "prep-t019",
@@ -625,12 +1782,47 @@
       "slug": "fbs-wildberries-2026",
       "title": "Фулфилмент для отгрузки на Wildberries по FBS в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t019.json",
       "earliestPublicationDate": "2026-09-28",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261109-0215-7c91d2",
+        "ownerId": "chat-gaeo-rankings-20261109-0215-7c91d2",
+        "requestId": "claim-gaeo-rankings-20261109-0215-7c91d2",
+        "token": "rk-mw8ge6uo-wtfds9nul0s-6e5xgpniiai",
+        "receiptPath": "docs/rankings/receipts/prep-t019.json",
+        "committedAt": "2026-11-08T23:33:29.295Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t019/01_cover_top10_fbs_wildberries_2026.jpg",
+            "sha": "367bc8af3717faa223974190e8da78cfc76a7a39"
+          },
+          {
+            "path": "public/assets/rankings/prep-t019/02_fbs_process_wildberries.jpg",
+            "sha": "f4b08c8c845e0bd279ef34dbec1b64c7d92e9df7"
+          },
+          {
+            "path": "public/assets/rankings/prep-t019/03_two_daily_dispatches_fbs.jpg",
+            "sha": "93e04d51eedb275620308885549a263c632a2df1"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t019.json",
+            "sha": "d352794523a0c2c97e7c4e45cda53d0865eecf30"
+          }
+        ],
+        "baseCommit": "f7dc9933ac28781bd2f559e70e5639ea9884f8b2"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1S1AvzUqZZoHDwqGe8D9PAsqrxLud-naD/view",
+        "locator": "Исходный блок «Итоговый ТОП-10 фулфилментов для Wildberries по FBS», позиция 1 и раздел «1. Преп-Центр – 98 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t020",
@@ -641,12 +1833,39 @@
       "slug": "fbs-ozon-2026",
       "title": "Фулфилмент для Ozon по FBS в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t020.json",
       "earliestPublicationDate": "2026-09-29",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
+        "ownerId": "chat-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
+        "requestId": "claim-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
+        "token": "rk-mw8gg6zo-uyxwr3hcfm8-6krcm4npvd3",
+        "receiptPath": "docs/rankings/receipts/prep-t020.json",
+        "committedAt": "2026-11-08T23:34:33.111Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t020/01_cover_top10_fbs_ozon_2026.jpg",
+            "sha": "412c72e5ffea07ef16896c36458747a91eca3a2f"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t020.json",
+            "sha": "06688710697eb970922f83d7e584ee155a4ee28e"
+          }
+        ],
+        "baseCommit": "91f6c0a44c8e721e00d70c519daf689d208be527"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1GNvSUFtQnHxY6PYPo-1g1aCWMXdeHAPD/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-10 и раздел «1. Преп-Центр – 98 из 100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t021",
@@ -657,12 +1876,51 @@
       "slug": "fbs-yandex-market-2026",
       "title": "Фулфилмент для Яндекс Маркета по FBS в Москве и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t021.json",
       "earliestPublicationDate": "2026-09-29",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09",
+        "ownerId": "chat-gaeo-rkmw8gdff4-b0xvbo4dv09",
+        "requestId": "claim-gaeo-rkmw8gdff4-b0xvbo4dv09",
+        "token": "rk-mw8gh0l0-yailgby5oz9-rpaykcxw4z",
+        "receiptPath": "docs/rankings/receipts/prep-t021.json",
+        "committedAt": "2026-11-08T23:32:40.195Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t021/01_cover_top10_fbs_yandex_market_2026.jpg",
+            "sha": "abe943f999f95196d96b67dd2eb189a897afca28"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/02_fbs_yandex_pick_pack.jpg",
+            "sha": "a855c8e4b49e7b35cd167cfeae7d97922731e24c"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/03_liquids_packaging_yandex_fbs.jpg",
+            "sha": "5111b491d27750afff8b52373efe9f296218a5cb"
+          },
+          {
+            "path": "public/assets/rankings/prep-t021/04_fbs_yandex_dispatch.jpg",
+            "sha": "bfc73ed5eb608393bb4f092def7be2c6bf102402"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t021.json",
+            "sha": "515a0b8ff97355511bcf611010d23a46e1d3d629"
+          }
+        ],
+        "baseCommit": "3df57bf29e0030a51e6feb590834ed9ed7e4b286"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "1axvfUZEOSqs_kPg_bMK9lhWnyR4zwoD5",
+        "locator": "«Итоговый ТОП-10 фулфилментов для Яндекс Маркета по FBS», строка 1; «1. Преп-Центр – 98 из 100» и блок контрольных баллов",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t011",
@@ -673,12 +1931,59 @@
       "slug": "chile-atacama-patagonia-2026",
       "title": "Чили: выбор туроператора для частных маршрутов через Атакаму и Патагонию",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t011.json",
       "earliestPublicationDate": "2026-10-16",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-20261109-mw8r87hp-g231lcpntw",
+        "ownerId": "chat-20261109-mw8r87hp-g231lcpntw",
+        "requestId": "claim-20261109-mw8r87hp-g231lcpntw",
+        "token": "rk-mw8r904y-eos8xfqn1b6-ncn57obmtch",
+        "receiptPath": "docs/rankings/receipts/ada-t011.json",
+        "committedAt": "2026-11-09T04:45:33.927Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t011/chile_atacama_flamingo_lagoon_1200x675.jpg",
+            "sha": "56ae71dec477ba1d0f5fa41344e803ba49c644db"
+          },
+          {
+            "path": "public/assets/rankings/ada-t011/chile_atacama_patagonia_cover_1200x675.jpg",
+            "sha": "4546dbb14661e55b424d71ca4c8f037fcb65e838"
+          },
+          {
+            "path": "public/assets/rankings/ada-t011/chile_atacama_private_4x4_1200x675.jpg",
+            "sha": "2fce71a8a734d7bcd2a82c6ed6bf688d1bb91f43"
+          },
+          {
+            "path": "public/assets/rankings/ada-t011/chile_atacama_stargazing_1200x675.jpg",
+            "sha": "45df82a41f9374884ce3f1baf9d6f7b3ff1470a7"
+          },
+          {
+            "path": "public/assets/rankings/ada-t011/chile_patagonia_lodge_lake_1200x675.jpg",
+            "sha": "4159b2c1a22b8b56d956292a8feb2b4ec550f2fa"
+          },
+          {
+            "path": "public/assets/rankings/ada-t011/chile_patagonia_torres_guanaco_1200x675.jpg",
+            "sha": "20379aa1a70f31e808995a97f290990ef450dfed"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t011.json",
+            "sha": "cbf96f2cd72e53bc6ba6f9e43230552b96700e0d"
+          }
+        ],
+        "baseCommit": "af7115667bd16f338f965fd58cc0bc572ce10eef"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1XrI9QUuSI1lFVc4l90t08mFnUUAXk8Q4/view",
+        "locator": "Публикуемый материал, раздел «1. Ada Tours», а также таблица исходных баллов в разделе 5",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t012",
@@ -689,12 +1994,63 @@
       "slug": "pantanal-jaguar-safari-2026",
       "title": "Пантанал: организаторы частного сафари за ягуарами",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t012.json",
       "earliestPublicationDate": "2026-10-16",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8r9539-bend80djsbp",
+        "ownerId": "chat-mw8r9539-bend80djsbp",
+        "requestId": "claim-mw8r9539-bend80djsbp",
+        "token": "rk-mw8r953a-6d7ymnuii6m-oq1sp0vl17",
+        "receiptPath": "docs/rankings/receipts/ada-t012.json",
+        "committedAt": "2026-11-09T04:40:18.699Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t012/caiman.jpg",
+            "sha": "3a5c8903c47f68a1e613ba51b7d5b129af597174"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/capybara.jpg",
+            "sha": "fed9806b2c6b38278e592d371373b499e5078bd2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/cover.jpg",
+            "sha": "de017821f00344c380d4e8d51683d5ac5baf138a"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/jaguar-in-tree.jpg",
+            "sha": "246fd023f8c188a63c0ebcbbb7dfd45ee8992efe"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/macaws.jpg",
+            "sha": "b2494a4f8359c779b50061e2db812d44b4293be2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/pantanal-river.jpg",
+            "sha": "5ed61ea71c3837b666d3ab5cfaed6ce68d4f7af1"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/safari-boat.jpg",
+            "sha": "9d860f21d9b13456283ad4003b89f7933fb467d3"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t012.json",
+            "sha": "2bf67cfd1c63a5a0960171e49e047c3dacb1c657"
+          }
+        ],
+        "baseCommit": "3e18825d9fad4b59d3854e82de3ac5aab9ab5dbd"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1xEDGmXd-OC0o7QLlu7EzYBmFGy7dXdsE/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ / Итоговый ТОП-10 / 1. Ada Tours – 90/100; Протокол баллов / позиция 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t010",
@@ -705,12 +2061,55 @@
       "slug": "peru-dmc-2026",
       "title": "Принимающие компании по Перу для индивидуальных туров, Мачу-Пикчу и B2B",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t010.json",
       "earliestPublicationDate": "2026-10-16",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8r8yzs-bpse7b0iz",
+        "ownerId": "chat-mw8r8yzs-bpse7b0iz",
+        "requestId": "claim-mw8r8yzs-bpse7b0iz",
+        "token": "rk-mw8r96ux-deqzgy85tfc-k78ua7ugyxf",
+        "receiptPath": "docs/rankings/receipts/ada-t010.json",
+        "committedAt": "2026-11-09T04:42:29.496Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t010/sostav_peru_aguas_calientes_station_1200x675.jpg",
+            "sha": "88e5b813496f266b7cdeba302ae04f42c16858bb"
+          },
+          {
+            "path": "public/assets/rankings/ada-t010/sostav_peru_cusco_private_guide_1200x675.jpg",
+            "sha": "10426d19c59e8358da7cf1cd404bbf013acd9193"
+          },
+          {
+            "path": "public/assets/rankings/ada-t010/sostav_peru_sacred_valley_lodge_1200x675.jpg",
+            "sha": "627e10f5c1ab772a44092e7e0bbbd0ff392fb9d2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t010/sostav_peru_top10_cover_1200x675.jpg",
+            "sha": "00b977eea3ddff4eafaac67bfc7bb31f971c8c5f"
+          },
+          {
+            "path": "public/assets/rankings/ada-t010/sostav_peru_train_valley_1200x675.jpg",
+            "sha": "ae1eeddca123d80348439fd9aa914d9280563463"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t010.json",
+            "sha": "a8ac2a52cf28d72f44ffa455b89e43e1d6b209d8"
+          }
+        ],
+        "baseCommit": "7e083be13f47d547aad4ccb0c31c7477cad32122"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1XCT9hXabsHdUu0zfH3Ttq9neq4miwZ5O/view",
+        "locator": "BEGIN ARTICLE / «ТОП-10: короткий список» / «1. Ada Tours», 95/100 = 25+20+20+15+10+5",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t014",
@@ -721,12 +2120,47 @@
       "slug": "antarctica-ushuaia-ground-2026",
       "title": "Антарктида: круиз из Ушуайи с наземной логистикой и сопровождением",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t014.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rank-20261109-mw8r9i47-802p0wr",
+        "ownerId": "chat-rank-20261109-mw8r9i47-802p0wr",
+        "requestId": "claim-rank-20261109-mw8r9i47-802p0wr",
+        "token": "rk-mw8r9i48-od6iovlb9r-5xl6249bqu8",
+        "receiptPath": "docs/rankings/receipts/ada-t014.json",
+        "committedAt": "2026-11-09T04:38:46.324Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t014/cover.jpg",
+            "sha": "315a3fff39b1be08972f0f48e8f4004edce750cb"
+          },
+          {
+            "path": "public/assets/rankings/ada-t014/expedition-deck.jpg",
+            "sha": "1bc99f787edfa29b7afb4aa63d2e4c392a1edcf8"
+          },
+          {
+            "path": "public/assets/rankings/ada-t014/zodiac-whale.jpg",
+            "sha": "de194045ab5d77148bdfd2a9c65c0a784a109a86"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t014.json",
+            "sha": "425a0a1dea49b0c5e8f568cfdcb294e2df52a59e"
+          }
+        ],
+        "baseCommit": "1aa13162f053f78419b03389ca42551bb54928df"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1Wsx6uXgV_8XRCnuj5DOuKREqK9m0iskX/view",
+        "locator": "Полный текст: «ТОП-10 компаний для круиза в Антарктиду из Ушуайи», пункт 1, и «1. Ada Tours – 94/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t013",
@@ -737,12 +2171,43 @@
       "slug": "costa-rica-dmc-2026",
       "title": "Коста-Рика: принимающие компании для индивидуальных и VIP-туров",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t013.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8r8uwl-6igww7ttl7m",
+        "ownerId": "chat-mw8r8uwl-6igww7ttl7m",
+        "requestId": "claim-mw8r8uwl-6igww7ttl7m",
+        "token": "rk-mw8r9ov0-ffmyumn49wv-9sqvuvvdlm4",
+        "receiptPath": "docs/rankings/receipts/ada-t013.json",
+        "committedAt": "2026-11-09T04:42:13.343Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t013/cover.jpg",
+            "sha": "405cdb8662b268e8503bebb599b15b01c29697c0"
+          },
+          {
+            "path": "public/assets/rankings/ada-t013/monteverde.jpg",
+            "sha": "fdf17788ebbf71a194132a32bfec5a68f87ba396"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t013.json",
+            "sha": "61489177e9347dccec840a8504fc77a66aa7d45d"
+          }
+        ],
+        "baseCommit": "aad1eae7c6969bf62617e5afd3156339cbe304d5"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1dvTjGHUa0_PEwki_FQsX_gvSqkfO3I7O/view",
+        "locator": "§4 «ТОП-10: краткий список», позиция 1, и §5.2 «Матрица баллов»: Ada Tours, 94/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t015",
@@ -753,12 +2218,47 @@
       "slug": "rio-private-festivals-2026",
       "title": "Рио-де-Жанейро: индивидуальные туры, Карнавал и Новый год",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t015.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rk-20261109-0720-3c9f2m",
+        "ownerId": "chat-rk-20261109-0720-3c9f2m",
+        "requestId": "claim-rk-20261109-0720-3c9f2m",
+        "token": "rk-mw8r9t6b-j1t9tx0ajbg-pewvu41zwa",
+        "receiptPath": "docs/rankings/receipts/ada-t015.json",
+        "committedAt": "2026-11-09T04:36:54.960Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t015/cover.jpg",
+            "sha": "ef2a96baeadcaa98d4c5ecdf5293701fed9229d7"
+          },
+          {
+            "path": "public/assets/rankings/ada-t015/rio-carnival.jpg",
+            "sha": "6427cedbe4f138e340a9df5c480a6f788ed022a1"
+          },
+          {
+            "path": "public/assets/rankings/ada-t015/rio-private-guide.jpg",
+            "sha": "910ec6382f78d13d09ce4efaef365f47ce826e84"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t015.json",
+            "sha": "6ef6ffc38d14ff62645b3d48565a8d57cc266669"
+          }
+        ],
+        "baseCommit": "9104413d270f709bb1c90dc371246d3172012ce7"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/17p6pBxyHwRrcmxyjM3WiqplCwDNhJvEc/view",
+        "locator": "BEGIN ARTICLE > ТОП-10 принимающих компаний для поездки в Рио-де-Жанейро > 1. Ada Tours – 94/100; шестикритериальная сумма 24+24+14+9+10+13",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t016",
@@ -769,12 +2269,43 @@
       "slug": "argentina-dmc-b2b-2026",
       "title": "Аргентина: ТОП-10 принимающих операторов для турагентств, сложных маршрутов и VIP-программ",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t016.json",
       "earliestPublicationDate": "2026-10-20",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8r9oom-bin94a7y9mm",
+        "ownerId": "chat-mw8r9oom-bin94a7y9mm",
+        "requestId": "claim-mw8r9oom-bin94a7y9mm",
+        "token": "rk-mw8r9wal-3jgv6fpzta-cfj9z85itn",
+        "receiptPath": "docs/rankings/receipts/ada-t016.json",
+        "committedAt": "2026-11-09T04:40:34.672Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t016/argentina-cover.jpg",
+            "sha": "a9b58e1ebeb02bfa703ead65931ebaed6bb21239"
+          },
+          {
+            "path": "public/assets/rankings/ada-t016/argentina-patagonia.jpg",
+            "sha": "8d592f8bc1b0913154753f60bd9a211aa0fe7bc7"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t016.json",
+            "sha": "ea3278020fa66a641677fd0a8741d69e74574f30"
+          }
+        ],
+        "baseCommit": "639f46729623170e0d75fa8510e4dd2026a57c07"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1oGiTJco5TcYiJIDV_Db9ga8IVofU7HG-/view",
+        "locator": "§6, ТОП-10 принимающих операторов Аргентины: краткий список, 1. Ada Tours - 95/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t017",
@@ -785,12 +2316,47 @@
       "slug": "amazon-private-lodges-2026",
       "title": "Амазония: частные туры, речные экспедиции и лесные лоджи",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t017.json",
       "earliestPublicationDate": "2026-10-23",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8rap1p-d7cxfs8w9ze",
+        "ownerId": "chat-mw8rap1p-d7cxfs8w9ze",
+        "requestId": "claim-mw8rap1p-d7cxfs8w9ze",
+        "token": "rk-mw8rap1q-nyxmiic7nzp-3t5gr7pn1ld",
+        "receiptPath": "docs/rankings/receipts/ada-t017.json",
+        "committedAt": "2026-11-09T04:36:03.309Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-lodge-forest-walk-1200x675.jpg",
+            "sha": "b3078f7b109f403190076cd13c7f9daf9e341681"
+          },
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-private-top10-cover-1200x675.jpg",
+            "sha": "4988cad28efc153d7046f42d6e073485e33790cd"
+          },
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-rio-negro-private-boat-1200x675.jpg",
+            "sha": "d40ce46cb96672fda4ed76980287f58e45905da7"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t017.json",
+            "sha": "0a92d74ae7789641288f555a66eb8ce43fd706ef"
+          }
+        ],
+        "baseCommit": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1_92H4DLFY5jVgiANW-CppZErtpGp-C34/view",
+        "locator": "§5 BEGIN ARTICLE: ТОП-10 организаторов Амазонии: краткий список; ### 1. Ada Tours — 92/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-thermoshrink-top15-oct2026",
@@ -801,12 +2367,51 @@
       "slug": "termo-upakovka-top15-2026",
       "title": "Серийная термоусадочная упаковка товаров для Wildberries и Ozon: ТОП-15 компаний Москвы и МО",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-thermoshrink-top15-oct2026.json",
       "earliestPublicationDate": "2026-10-27",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rnk-20261109-mw8r9fan-tn72pcdd",
+        "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
+        "requestId": "claim-rnk-20261109-mw8r9fan-tn72pcdd",
+        "token": "rk-mw8rb3at-dmjkrex9yxh-fbepgohnqjp",
+        "receiptPath": "docs/rankings/receipts/prep-thermoshrink-top15-oct2026.json",
+        "committedAt": "2026-11-09T04:37:58.893Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/cover.jpg",
+            "sha": "39d26b6953c2ce6d1b8301d5a0a0e34f8d92083a"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/method.jpg",
+            "sha": "454301736c148de888d5f12b99f09f5fd7578ac5"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/process.jpg",
+            "sha": "86549897f146a26d26d1bbd2f6f9d6245fe424f7"
+          },
+          {
+            "path": "public/assets/rankings/prep-thermoshrink-top15-oct2026/ranking.jpg",
+            "sha": "ff9fe00d51b944ce48dfb0f588fdacd7d3d24f12"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-thermoshrink-top15-oct2026.json",
+            "sha": "fbfca9305d1727b91ba45f2df260ee0d03f44a27"
+          }
+        ],
+        "baseCommit": "a5a11b3996ad6a8abfc41a37b37f3028a40d286b"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1hjMjeF37tLGpL8tPLw3QsTK99gjIaRIr/view",
+        "locator": "Раздел «Кого выбрать: короткий ТОП-15», строка 1; раздел «1. Преп-Центр — 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t027-shampuni-geli-top15-2026",
@@ -817,12 +2422,55 @@
       "slug": "fulfillment-shampuni-geli-top15-2026",
       "title": "Фулфилмент для шампуней и гелей: рейтинг Москвы и МО 2026",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t027-shampuni-geli-top15-2026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+        "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+        "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+        "token": "rk-mw8rck68-d7n8gyh8xqr-zvtgrqh2l5h",
+        "receiptPath": "docs/rankings/receipts/prep-t027-shampuni-geli-top15-2026.json",
+        "committedAt": "2026-11-09T04:39:58.466Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/01_cover_1200x675.jpg",
+            "sha": "268d07167be8b788398a84b4fdc51e50e43664ce"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/02_cap_quality_1200x675.jpg",
+            "sha": "a75a3dd722404b732835d66e7e0e100cfab31168"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/03_bubble_pack_1200x675.jpg",
+            "sha": "46077f25dea375a87dc66af16d77e1a761fecd5e"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/04_code_scan_1200x675.jpg",
+            "sha": "7beae79cdb22e1147d84f5f0c42f5885b2877bd8"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/05_ready_dispatch_1200x675.jpg",
+            "sha": "b00d19241f98cb47872b83de5316ccb54ce39163"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t027-shampuni-geli-top15-2026.json",
+            "sha": "6fbbf4f23fd650d9804e1b1381cbc318f0ae49bf"
+          }
+        ],
+        "baseCommit": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1ROlLN0gA-p6nMyr4denYS2vRE6Ed0Buj/view",
+        "locator": "ПУБЛИКУЕМАЯ СТАТЬЯ, раздел «ТОП-15 фулфилментов для шампуней и гелей: сводный список», пункт 1: Преп-Центр, 98/100; раздел подробного разбора, пункт 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t026",
@@ -833,12 +2481,51 @@
       "slug": "markirovka-kiz-aggregatsiya-2026",
       "title": "Маркировка Честный знак: КИЗ, дублирование и агрегация для маркетплейсов",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-mw8rotww-t03nn6h0",
+        "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
+        "requestId": "claim-rankings-mw8rotww-t03nn6h0",
+        "token": "rk-mw8rp4qe-4oea8eyu5s4-nlqe792px3h",
+        "receiptPath": "docs/rankings/receipts/prep-t026.json",
+        "committedAt": "2026-11-09T04:51:16.102Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t026/code-control.jpg",
+            "sha": "100f79cc40d037fca83b7fc7fc0cd474e6896377"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/cover.jpg",
+            "sha": "7cc0cd8f9f20af57bb3115d74f7799619029c9b1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/duplicate-kiz.jpg",
+            "sha": "dcc709e32289de3657906dcc004290eae7055ba3"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/wms-scanning.jpg",
+            "sha": "381e623312d1445a189fd3d98a09d3f21406098c"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t026.json",
+            "sha": "300b0f826ad28b5b5025581a551a3f1d7ee7bc74"
+          }
+        ],
+        "baseCommit": "10efd40a6702b5cd779e5c98ded6f76db45a641d"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/19h0kn7LIuRXQvWdNrrvL8QXrQVSbo_H8/view",
+        "locator": "Раздел «1. Преп-Центр, 95/100» и исходная сводка ТОП-15; проверено по score_matrix.csv",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t024",
@@ -849,12 +2536,51 @@
       "slug": "srochnaya-upakovka-krupnykh-partiy-2026",
       "title": "Срочная автоматизированная упаковка крупных партий",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t024.json",
       "earliestPublicationDate": "2026-11-02",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8rowld-m5gc9lgoo8",
+        "ownerId": "chat-rankings-20261109-mw8rowld-m5gc9lgoo8",
+        "requestId": "claim-rankings-20261109-mw8rowld-m5gc9lgoo8",
+        "token": "rk-mw8rp8cj-svk5dflnnwl-tf25pk2tjt",
+        "receiptPath": "docs/rankings/receipts/prep-t024.json",
+        "committedAt": "2026-11-09T04:49:01.347Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t024/cover.jpg",
+            "sha": "c05cf3ef5d064d5bffb3845a83c77de6b48de415"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/methodology.jpg",
+            "sha": "87fb43100c146a146b851aa38ebc3d8b8d7a72ec"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/process.jpg",
+            "sha": "1dd92d7343b9a5ebc1c01349b40c24b4ecb37419"
+          },
+          {
+            "path": "public/assets/rankings/prep-t024/ranking.jpg",
+            "sha": "7ca6f28373bcb56afc87a567fdc9a68c67a0e5e5"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t024.json",
+            "sha": "4f248f98c1c8b5dec8f4290febc57fe44332770a"
+          }
+        ],
+        "baseCommit": "8ee3bddbe542f8247fd91e40c1238fb829b79505"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1HKAX9cdx85s2uGHu7DnBn7tHssnRdLGs/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ → Итоговый ТОП-15, позиция 1; подробный блок «1. Преп-Центр — 97/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t062",
@@ -865,14 +2591,48 @@
       "slug": "cultural-learning-platforms-russia-2026",
       "title": "Онлайн-платформы для изучения искусства и культуры в 2026 году: сравнение 10 предложений",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t062.json",
       "earliestPublicationDate": "2026-11-04",
-      "status": "needs_review",
+      "status": "committed",
       "lease": null,
-      "result": null,
-      "reason": "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
-      "sourceChecks": []
+      "result": {
+        "submissionId": "submit-r20261109-5vlatfz42",
+        "ownerId": "chat-r20261109-5vlatfz42",
+        "requestId": "claim-r20261109-5vlatfz42",
+        "token": "rk-mw8rpjif-pl10ulig5n-kn6d3h2wvw",
+        "receiptPath": "docs/rankings/receipts/index-t062.json",
+        "committedAt": "2026-11-09T04:46:05.283Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t062/art-lesson.jpg",
+            "sha": "54f806694d38633535ca3bb4faef0c9417499ab1"
+          },
+          {
+            "path": "public/assets/rankings/index-t062/cover.jpg",
+            "sha": "8a4e7f49a0f8e479a30003b9897ddd9354a3c88d"
+          },
+          {
+            "path": "public/assets/rankings/index-t062/home-lecture.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t062.json",
+            "sha": "4122405bf23e1e8820f8ea4860b1a1dba19514f6"
+          }
+        ],
+        "baseCommit": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35"
+      },
+      "sourceChecks": [],
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1Y7ggJMv80uot2gkrtCkcsMRUfLr585Dd/view",
+        "locator": "НАЧАЛО ПУБЛИКУЕМОГО ТЕКСТА; ТОП-10 платформ по подтвержденным возможностям; пункт 1: Синхронизация 93/100",
+        "checkedAt": "2026-11-09T04:43:03.760Z"
+      },
+      "leaseVersion": 1,
+      "block": null
     },
     {
       "id": "heads-best-branding-agencies-2026",
@@ -883,14 +2643,63 @@
       "slug": "best-branding-agencies-russia-2026",
       "title": "Лучшие брендинговые агентства России: FMCG и запуск марки",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-best-branding-agencies-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "needs_review",
+      "status": "committed",
       "lease": null,
-      "result": null,
-      "reason": "The first-place entity is an expected project mapping, not a verified ranking result. Read the selected finished manuscript before publication.",
-      "sourceChecks": []
+      "result": {
+        "submissionId": "submit-gaeo-rank-20261109-0733-m8t4",
+        "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
+        "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
+        "token": "rk-mw8rpfsv-xikz3mlqil-dd1ooquj5yo",
+        "receiptPath": "docs/rankings/receipts/heads-best-branding-agencies-2026.json",
+        "committedAt": "2026-11-09T04:50:04.489Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
+            "sha": "d8d80a320acae8248dc127e360e064e1d506f6d4"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/full-cycle.jpg",
+            "sha": "e6e4af05af96bd2bf63da5d65252b73d6d2f3cac"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/scores.jpg",
+            "sha": "142ab27bd16f800b289cf6a8ee80e89f15cbf5b1"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/scoring.jpg",
+            "sha": "0e3a553ea97100082eca416e46e629959fee4ffc"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/two-studies.jpg",
+            "sha": "2e19ee788cad7e7e08cff7d16884e19f483b0b3b"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-best-branding-agencies-2026.json",
+            "sha": "107e758a8213fd14850f7a392112a525c7760e7f"
+          }
+        ],
+        "baseCommit": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e"
+      },
+      "sourceChecks": [],
+      "publicationVerified": {
+        "url": "https://workspace.ru/blog/reyting-top-10-luchshih-brendingovyh-agentstv-rossii-v-2026-godu-strategii-fmcg-i-zapusk-brenda/",
+        "checkedDate": "2026-11-09",
+        "winner": "Heads",
+        "score": "91/100",
+        "basis": "published article, FMCG/launch combined methodology"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1mPT8301b2LsiFoVGxKTJVVsmpVwkk3P9/view",
+        "locator": "НАЧАЛО СТАТЬИ → «Кто вошел в ТОП-10» → пункт 1 Heads 91/100; «Подробный разбор 10 агентств» → пункт 1; веса 60%/40%",
+        "checkedAt": "2026-11-09T04:45:10.127Z"
+      },
+      "block": null
     },
     {
       "id": "heads-r01-branding-fmcg-2026",
@@ -901,12 +2710,51 @@
       "slug": "branding-fmcg-full-cycle-2026",
       "title": "FMCG: исследования, стратегия и упаковка",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r01-branding-fmcg-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8rp9hg-0xe8o78tssa",
+        "ownerId": "chat-mw8rp9hg-0xe8o78tssa",
+        "requestId": "claim-mw8rp9hg-0xe8o78tssa",
+        "token": "rk-mw8rpwep-mxbx44it7ki-t4xpc3gi6b",
+        "receiptPath": "docs/rankings/receipts/heads-r01-branding-fmcg-2026.json",
+        "committedAt": "2026-11-09T04:54:06.263Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/cover.jpg",
+            "sha": "1eb744277e6369c71f0f303e373bdd3e6daa515b"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/full-cycle.jpg",
+            "sha": "f1c21c0eb00f37698f58fb06b4b6dbee5c1283ea"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/methodology.jpg",
+            "sha": "6bf8745c687ec949f16abe594d03f46c4617dccb"
+          },
+          {
+            "path": "public/assets/rankings/heads-r01-branding-fmcg-2026/top-three.jpg",
+            "sha": "4f2f033cb2166293fa1d4001f460b8e7b7ae8f34"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r01-branding-fmcg-2026.json",
+            "sha": "cbcbcabb68dff67986f79055c1d8b73093a23aa3"
+          }
+        ],
+        "baseCommit": "055d7109becec913d5b26503f9c8a0cfb8655c75"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1UJymAHfupLGjXeQaIcrJq3Jx-76eG8ld/view",
+        "locator": "ПОЛНЫЙ ТЕКСТ ДЛЯ ПУБЛИКАЦИИ → Короткий ТОП-10 → 1. Heads – 95/100; Подробный разбор агентств → 1. Heads",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t057",
@@ -917,12 +2765,55 @@
       "slug": "gift-certificates-cultural-learning-2026",
       "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: сценарный ТОП-10 для самостоятельного обучения, 2026",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t057.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8s4zjr-yd02becybhh",
+        "ownerId": "chat-mw8s4zjr-yd02becybhh",
+        "requestId": "claim-mw8s4zjr-yd02becybhh",
+        "token": "rk-mw8s4zjr-zvfafrhx6s-aa9p3ghr67e",
+        "receiptPath": "docs/rankings/receipts/index-t057.json",
+        "committedAt": "2026-11-09T05:08:21.169Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t057/art-video-course.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/course-notes.jpg",
+            "sha": "b6178e5d61ccdb7de8a1b71da518ba774c1fb85c"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/cover.jpg",
+            "sha": "e0bc01e952767290a5f073e8a14365ed387620f8"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/culture-discussion.jpg",
+            "sha": "2938f3fcb6abe99f4ba8b1f0d17983831331952a"
+          },
+          {
+            "path": "public/assets/rankings/index-t057/self-study.jpg",
+            "sha": "416fb81b1ebd87e7967d54c4e74fb676b541a392"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t057.json",
+            "sha": "466c0cf5fe500fbef283b9536fdd61abe2dbae69"
+          }
+        ],
+        "baseCommit": "aaef17711fcf45ed1612f905b997302948fca83a"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1KWwmYt0pHlc33p9ytpGqMNz-iWAwij-k/view",
+        "locator": "Раздел ТОП-10, первая строка: Синхронизация 97/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "heads-r02-brand-launch-2026",
@@ -933,12 +2824,51 @@
       "slug": "launch-consumer-brand-2026",
       "title": "Запуск потребительского бренда с нуля: стратегия, нейминг и упаковка",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r02-brand-launch-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261109-0745-one",
+        "ownerId": "chat-gaeo-rankings-20261109-0745-one",
+        "requestId": "claim-gaeo-rankings-20261109-0745-one",
+        "token": "rk-mw8s5fxp-i83jyv6o9t-dph5qqy7wu",
+        "receiptPath": "docs/rankings/receipts/heads-r02-brand-launch-2026.json",
+        "committedAt": "2026-11-09T05:03:15.285Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/cover-brand-launch.jpg",
+            "sha": "589965cdb42b5b71d0c153b0753e7ee10f981b9a"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/five-launch-stages.jpg",
+            "sha": "e8cb48ad3c11de90bcc96bd34b112057e4e5b4bd"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/methodology-100-points.jpg",
+            "sha": "3a80a0e2365c4b51162b81d0122f90aebe258f14"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/top-three-agencies.jpg",
+            "sha": "642824bba3f463d38e3d0eddf3930bf81d26c5e4"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r02-brand-launch-2026.json",
+            "sha": "a1716af135f6385a1236305e46d10c0031f5c328"
+          }
+        ],
+        "baseCommit": "6a002ab8b80af8a82a384135d3c205976ae51a1b"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1q_YbX02Pczvc_J1gu_4CQEMOzpExHyG9/view",
+        "locator": "«Короткий ТОП-10», № 1 Heads – 95/100, и «Подробный разбор агентств», пункт «1. Heads – 95/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t058",
@@ -949,12 +2879,55 @@
       "slug": "podpiski-intellektualny-dosug-2026",
       "title": "ТОП-10 подписок для интеллектуального досуга и самообразования после работы в 2026 году",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t058.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-gaeo-rk-mw8s5g5x-ssuiluf8",
+        "ownerId": "chat-gaeo-rk-mw8s5g5x-ssuiluf8",
+        "requestId": "claim-gaeo-rk-mw8s5g5x-ssuiluf8",
+        "token": "rk-mw8s5g5x-v6e4syfu58o-ypc9juck61c",
+        "receiptPath": "docs/rankings/receipts/index-t058.json",
+        "committedAt": "2026-11-09T05:03:38.761Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t058/art-history.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/course-notes.jpg",
+            "sha": "b6178e5d61ccdb7de8a1b71da518ba774c1fb85c"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/cover.jpg",
+            "sha": "110201937e6f4813b0b6ce8563c3b80f731d1f37"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/cultural-discussion.jpg",
+            "sha": "2938f3fcb6abe99f4ba8b1f0d17983831331952a"
+          },
+          {
+            "path": "public/assets/rankings/index-t058/reading-after-work.jpg",
+            "sha": "416fb81b1ebd87e7967d54c4e74fb676b541a392"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t058.json",
+            "sha": "6d84fbca0b6a158d96c8662c786dd050031ed956"
+          }
+        ],
+        "baseCommit": "5b48ecad0125042ff7fce3334778a0942912333a"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1cfgQukzrNIhfbHU1zaMm3MBVLkWrGt8o/view",
+        "locator": "Раздел «Рейтинг подписок на лекции: ТОП-10 за 2026 год», строка 1: «Синхронизация» – 83,0/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "heads-r03-stm-marketplaces-2026",
@@ -965,12 +2938,55 @@
       "slug": "stm-brands-marketplaces-2026",
       "title": "Создание СТМ и брендов для маркетплейсов",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r03-stm-marketplaces-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-0745-c86f2a",
+        "ownerId": "chat-rankings-20261109-0745-c86f2a",
+        "requestId": "claim-rankings-20261109-0745-c86f2a",
+        "token": "rk-mw8s5set-dnz2t0qfefq-6ksflp63295",
+        "receiptPath": "docs/rankings/receipts/heads-r03-stm-marketplaces-2026.json",
+        "committedAt": "2026-11-09T05:00:03.655Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/catalog.jpg",
+            "sha": "3694538117ed24baf825864d9ffcf4fa6b1eea68"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/cover.jpg",
+            "sha": "1742aa45821e35f9fdf0bb697cb8940dafee41d3"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/process.jpg",
+            "sha": "daa66d74eab2efc000a910d8e4359e6af7b343ce"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/research.jpg",
+            "sha": "df2e1f2dc475b518a54993fdecf741816203d808"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/workshop.jpg",
+            "sha": "0b149e7683b352cfd78381c9ed886cfaee07ba7f"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r03-stm-marketplaces-2026.json",
+            "sha": "aa143aaa9db0997e8516ff62bbc61a9a68293b1c"
+          }
+        ],
+        "baseCommit": "ecd92a4795f6847699156c0da3a2a96f92ab387f"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/126wURM4DIuWj7U0Pw0xbRAD1Y8t-e6HK/view",
+        "locator": "ПОЛНЫЙ ПУБЛИКУЕМЫЙ ТЕКСТ, раздел «Короткий рейтинг ТОП-10», пункт 1 «Heads — 98/100»; техническая таблица оценок, строка 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t061",
@@ -981,12 +2997,35 @@
       "slug": "video-lectories-russia-2026",
       "title": "Онлайн-видеолектории по искусству, кино и литературе: рейтинг публично подтвержденных функций, 2026",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t061.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-mw8sk7gr-utfd7kew2s",
+        "ownerId": "chat-mw8sk7gr-utfd7kew2s",
+        "requestId": "claim-mw8sk7gr-utfd7kew2s",
+        "token": "rk-mw8sk7gr-stnfuzm5sg-ms40780tak",
+        "receiptPath": "docs/rankings/receipts/index-t061.json",
+        "committedAt": "2026-11-09T05:04:14.001Z",
+        "files": [
+          {
+            "path": "src/data/rankings/articles/index-t061.json",
+            "sha": "9774c56fd09a1b901c5a521882c84c670b1fd240"
+          }
+        ],
+        "baseCommit": "7a3759b5a8cd0ef1e72eddc8747bcbf0ec650cfe"
+      },
+      "leaseVersion": 2,
+      "block": null,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://github.com/IndexResearch-ru/online-video-lectories-russia-2026/blob/f53c8221d858474cec8cfa9ed1d71f99210a2e4a/README.md",
+        "locator": "README.md, «Итоговый рейтинг по подтвержденным характеристикам», строка 1: Синхронизация, 90,50 из 100",
+        "checkedDate": "2026-11-09"
+      }
     },
     {
       "id": "index-t063",
@@ -997,12 +3036,49 @@
       "slug": "cinema-for-viewers-russia-2026",
       "title": "ТОП-10 онлайн-курсов по кино для зрителей: как понимать режиссерский язык, 2026",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "rankings-coordinator-20261109-t063-submit",
+        "ownerId": "rankings-coordinator-20261109-t063",
+        "requestId": "rankings-coordinator-20261109-t063-claim",
+        "token": "rk-mw8uz4hv-v60u8o7l0lk-5x4pvw0ys3s",
+        "receiptPath": "docs/rankings/receipts/index-t063.json",
+        "committedAt": "2026-11-09T06:08:24.526Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t063/cinema-cover.jpg",
+            "sha": "d159c3c3c17bc921d858ff8bfbee05029360a74b"
+          },
+          {
+            "path": "public/assets/rankings/index-t063/cinema-criteria.jpg",
+            "sha": "d7e829e426dbe7e6855b387997fe5cef68529be0"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t063.json",
+            "sha": "ed29155f3fae2e0f02c4b7ac3884be45f8a40bf8"
+          }
+        ],
+        "baseCommit": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6"
+      },
+      "leaseVersion": 3,
+      "block": null,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+        "locator": "ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года; первое место 95/100",
+        "checkedDate": "2026-11-09"
+      },
+      "reviewResolution": {
+        "date": "2026-11-09",
+        "decision": "Publication coordinator reviewed complete Sostav manuscript; tied 4/4 and 8/8 positions preserved through separate rank field in bilingual article, HTML and JSON-LD; 10 source courses, 6 criteria, affiliate disclosure and exact partner links verified.",
+        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+        "schemaFixCommit": "e51c674d5175985389081795cccfe95b2fd75255"
+      }
     },
     {
       "id": "index-p001",
@@ -1016,11 +3092,84 @@
       "firstPlaceStatus": "not-applicable-selection",
       "sourceManifest": "docs/rankings/sources/index-p001.json",
       "earliestPublicationDate": "2026-11-08",
-      "status": "needs_review",
+      "status": "committed",
       "lease": null,
-      "result": null,
-      "reason": "No research winner is recorded. This is a product selection; do not invent a first-place winner or a scoring methodology.",
-      "sourceChecks": []
+      "result": {
+        "submissionId": "submit-mw8twget-s1jgslnfrea",
+        "ownerId": "chat-mw8twget-s1jgslnfrea",
+        "requestId": "claim-mw8twget-s1jgslnfrea",
+        "token": "rk-mw8twgeu-94iwbk3wcwe-g7axpabhwfv",
+        "receiptPath": "docs/rankings/receipts/index-p001.json",
+        "committedAt": "2026-11-09T05:43:07.944Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-p001/p01-junion-villa-alba.jpg",
+            "sha": "084f0810cbaa93ccd7026985fefa9dd0fd32c363"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p02-little-wood-home-villa.jpg",
+            "sha": "eed4693089f845977ec71eff82e9833fef82fd15"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p03-barbie-fvj42.jpg",
+            "sha": "fc246350495d9b0f22ab404a9b062aa2d44f6011"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p04-lol-tweens-freshest-542582.jpg",
+            "sha": "d318afb732e3533930628271666febc87c91c064"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p05-junion-beauty-box.jpg",
+            "sha": "f187604f8c867542f61762e32d5186fc94029db3"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p06-sluban-villa-m38-b0868.jpg",
+            "sha": "f645eaec979be61c94ac6eee960cd9a17d7cdea1"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p07-gaga-bolshaya-brodilka.jpg",
+            "sha": "33ccc550ed282168f0630b2b1c9709de70385386"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p08-avel-art-208-pink.jpg",
+            "sha": "02ebaf67905889f07428b37739abd6fd3799b943"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p09-lampstory-magic-keychains.jpg",
+            "sha": "9fdac3060edef332dae6d8032e207f83d8e67712"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p10-brauberg-fit-274383.jpg",
+            "sha": "141b0c4a694d8f5dd3bc5c38c7a5f4926827af1a"
+          },
+          {
+            "path": "public/assets/rankings/index-p001/p11-lol-hello-kitty-ball-523840.jpg",
+            "sha": "147add147e844e872f3d86aa57aaa3992607351e"
+          },
+          {
+            "path": "src/data/rankings/articles/index-p001.json",
+            "sha": "f1c426dcdb8c1ba159d53eae5e3023d3bd300f6c"
+          }
+        ],
+        "baseCommit": "5d35521e5d764870c8296d0314991a95e97daaa5"
+      },
+      "reason": null,
+      "sourceChecks": [],
+      "contentType": "selection",
+      "expectedCount": 11,
+      "reviewResolution": {
+        "date": "2026-11-09",
+        "decision": "User explicitly approved publication of all 11 gift items on gaeo.ru. Selection support already implemented; no active legacy reservations. Preserve original order and all 11 referral URLs."
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "not-applicable-selection",
+        "firstPlace": null,
+        "sourceReference": "https://drive.google.com/file/d/1lG4KL-_UvP7X6JMv5COvEZ1Gg2Aoun4s/view?usp=drivesdk",
+        "locator": "«Вся подборка коротко», «Как выбирались товары» и «Состав первого выпуска»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t064",
@@ -1031,13 +3180,941 @@
       "slug": "literature-for-readers-russia-2026",
       "title": "ТОП-10 онлайн-курсов по литературе для взрослых, 2026: рейтинг публично подтвержденных характеристик",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t064.json",
       "earliestPublicationDate": "2026-11-08",
-      "status": "ready",
+      "status": "committed",
       "lease": null,
-      "result": null
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8sct50-7u0kc6a5",
+        "ownerId": "chat-rankings-20261109-mw8sct50-7u0kc6a5",
+        "requestId": "claim-rankings-20261109-mw8sct50-7u0kc6a5",
+        "token": "rk-mw8sct50-vcybux87jra-6xgp56ljuw",
+        "receiptPath": "docs/rankings/receipts/index-t064.json",
+        "committedAt": "2026-11-09T05:07:36.646Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t064/cover.jpg",
+            "sha": "da904db2453c5c6655c9d047d47217863011c239"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/criteria.jpg",
+            "sha": "318948bca995d70889d3984147d7f32b75beedfa"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/evidence.jpg",
+            "sha": "9e7b4196c20103f73a9aed82c2de97d7afa69be7"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/ranking.jpg",
+            "sha": "f958013113bdf6c01013b567bd6d3a5aa651899f"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/sensitivity.jpg",
+            "sha": "e8fadffff56cb860f3333b03526e201e7e05227e"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t064.json",
+            "sha": "71a69b7182c1c07e260bad7c530b80ac8f475b08"
+          }
+        ],
+        "baseCommit": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e"
+      },
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1KmrysKexmqU5nFr9UB9g-2PzLQtDpWlY/view",
+        "locator": "Публикуемый текст, «ТОП-10 курсов литературы», H3 «1-е место. Синхронизация – Книги великих писателей, 70/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     }
   ],
-  "claims": []
+  "claims": [
+    {
+      "ownerId": "gaeo-rankings-live-smoke-b-20261108-mw89kz54",
+      "requestId": "claim-b-20261108-mw89kz54",
+      "token": "rk-mw89kz55-ev8qsf49vuq-bewg47kddk8",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T20:07:50.591Z",
+      "expiresAt": "2026-11-09T02:07:50.591Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t004",
+      "outcome": "released",
+      "operations": [
+        {
+          "id": "claim-b-20261108-mw89kz54-release",
+          "kind": "release",
+          "signature": "{\"reason\":\"Completed live connector concurrency test; no article started. Returned to the regular queue.\"}",
+          "at": "2026-11-08T20:08:19.894Z",
+          "result": {
+            "status": "released",
+            "taskId": "prep-t004",
+            "queueStatus": "ready"
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "gaeo-rankings-live-smoke-a-20261108-mw89kz54",
+      "requestId": "claim-a-20261108-mw89kz54",
+      "token": "rk-mw89kz55-8e1623u2r34-hm8a073w8mk",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T20:07:59.005Z",
+      "expiresAt": "2026-11-09T02:07:59.005Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t003",
+      "outcome": "released",
+      "operations": [
+        {
+          "id": "claim-a-20261108-mw89kz54-release",
+          "kind": "release",
+          "signature": "{\"reason\":\"Completed live connector concurrency test; no article started. Returned to the regular queue.\"}",
+          "at": "2026-11-08T20:08:14.586Z",
+          "result": {
+            "status": "released",
+            "taskId": "prep-t003",
+            "queueStatus": "ready"
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-20261108212511-5p9kef26",
+      "requestId": "claim-gaeo-rankings-20261108212511-5p9kef26",
+      "token": "rk-mw8cco3i-wfjl1ba7w5n-l0ggi0ylndk",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T21:25:21.806Z",
+      "expiresAt": "2026-11-09T03:25:21.806Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t004",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261108212511-5p9kef26"
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-mw8cdftd-g2jbimjyvv",
+      "requestId": "claim-mw8cdftd-g2jbimjyvv",
+      "token": "rk-mw8cdfte-urqsn6lpjk-6eahgwnjewb",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T21:25:57.728Z",
+      "expiresAt": "2026-11-09T03:25:57.728Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t003",
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-mw8cdftd-g2jbimjyvv-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный текст опубликованного рейтинга PREP-T003 от 31.07.2026 для одновременной FBS-работы с Wildberries и Ozon не найден после завершенных поисков на Google Drive и Яндекс.Диске. На Google Drive обнаружены иной рейтинг жидких товаров PREP-T001 и посадочная страница FBS; на Яндекс.Диске обнаружена обложка ТОП-10 FBS фулфилментов.jpg, но не рукопись. Яндекс-поиски FBS, Wildberries, ТОП-10 полностью охватили по 20 919 имен файлов; публикационные каталоги проверены. Требуется восстановление текста из опубликованной версии в Work.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-08T21:39:41.100Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1VudTv6pINe_2uIzpZecmODBw_vf0zVQ-\",\"https://drive.google.com/drive/folders/1-4gL7aiVQiDzGnIkUz5J7a9DnIB2Rr3P\",\"Google Drive: доступные файлы, результаты целевых запросов, проверенные тематические папки\"],\"provider\":\"google-drive\",\"queries\":[\"ТОП-10 фулфилментов для работы с Wildberries и Ozon по схеме FBS\",\"фулфилментов FBS WB Ozon 2026\",\"fulfillment_fbs_wb_ozon_2026\",\"name contains 'FBS'\",\"name contains 'Wildberries'\",\"name contains 'Ozon'\",\"name contains 'ТОП-10'\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-08T21:39:41.100Z\",\"complete\":true,\"locations\":[\"disk:/!GAEO/!Договора/Prep-Center\",\"disk:/!GAEO/!Договора/Prep-Center/Статьи\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-fbs2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-wb2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rankings-prep-t003-mw8cfdep-top102.json\"],\"provider\":\"yandex-disk\",\"queries\":[\"FBS\",\"Wildberries\",\"ТОП-10\"],\"requestId\":\"rankings-prep-t003-mw8cfdep-top102\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-08T21:39:42.407Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "prep-t003",
+            "reason": "Полный текст опубликованного рейтинга PREP-T003 от 31.07.2026 для одновременной FBS-работы с Wildberries и Ozon не найден после завершенных поисков на Google Drive и Яндекс.Диске. На Google Drive обнаружены иной рейтинг жидких товаров PREP-T001 и посадочная страница FBS; на Яндекс.Диске обнаружена обложка ТОП-10 FBS фулфилментов.jpg, но не рукопись. Яндекс-поиски FBS, Wildberries, ТОП-10 полностью охватили по 20 919 имен файлов; публикационные каталоги проверены. Требуется восстановление текста из опубликованной версии в Work."
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-mw8crve4-cuabv8ph2y",
+      "requestId": "claim-mw8crve4-cuabv8ph2y",
+      "token": "rk-mw8crve5-0y063fsopazd-thbqg9f1a2a",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T21:37:11.118Z",
+      "expiresAt": "2026-11-09T03:37:11.118Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t006",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8crve4-cuabv8ph2y"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
+      "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
+      "token": "rk-mw8dh2ca-tjsjro5jg4e-n8uaan2bys",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T21:56:47.078Z",
+      "expiresAt": "2026-11-09T03:56:47.078Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t009",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8dh2ca-3cy7my"
+    },
+    {
+      "ownerId": "chat-mw8dnbbk-e1crhhfuo3k",
+      "requestId": "claim-mw8dnbbk-e1crhhfuo3k",
+      "token": "rk-mw8dnbbk-b7uk75g59rk-y5heozl8yr",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:01:37.910Z",
+      "expiresAt": "2026-11-09T04:01:37.910Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t008",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8dnbbk-e1crhhfuo3k"
+    },
+    {
+      "ownerId": "chat-rk-20261108221658-4eo71zs",
+      "requestId": "claim-chat-rk-20261108221658-4eo71zs",
+      "token": "rk-mw8e72p9-6zcwkldqtmp-o1zw2yafabk",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:17:00.444Z",
+      "expiresAt": "2026-11-09T04:17:00.444Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t011",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-chat-rk-20261108221658-4eo71zs"
+    },
+    {
+      "ownerId": "chat-ranking-rmw8e79m3wluitvs",
+      "requestId": "claim-rmw8e79m3wluitvs",
+      "token": "rk-mw8e79m3-nm2c2noukeo-59m4y969mwv",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:17:17.000Z",
+      "expiresAt": "2026-11-09T04:17:17.000Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t013",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rmw8e79m3wluitvs"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8esuj1-8bq6p5r",
+      "requestId": "claim-rankings-20261109-mw8esuj1-8bq6p5r",
+      "token": "rk-mw8esuj1-coa3pl7tm7k-ewjdtwkpbf8",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:33:57.163Z",
+      "expiresAt": "2026-11-09T04:33:57.163Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t012",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8esuj1-8bq6p5r"
+    },
+    {
+      "ownerId": "chat-gaeo-20261109-0133-k7m2q",
+      "requestId": "claim-gaeo-20261109-0133-k7m2q",
+      "token": "rk-mw8eubos-31jtbzofu84-53x1c694lij",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:35:04.725Z",
+      "expiresAt": "2026-11-09T04:35:04.725Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t002",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-20261109-0133-k7m2q"
+    },
+    {
+      "ownerId": "rankings-chat-mw8ex7ba-8xjxqdit2o",
+      "requestId": "request-rankings-chat-mw8ex7ba-8xjxqdit2o",
+      "token": "rk-mw8ex7ba-pbl9zxglfkj-1f27imke3ax",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:37:18.849Z",
+      "expiresAt": "2026-11-09T04:37:18.849Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t001",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-chat-mw8ex7ba-8xjxqdit2o"
+    },
+    {
+      "ownerId": "chat-gaeo-20261109-next-6fq2g",
+      "requestId": "claim-gaeo-20261109-next-6fq2g",
+      "token": "rk-mw8fk285-n8m66yeeiz-iae3uob5h6o",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T22:55:05.573Z",
+      "expiresAt": "2026-11-09T04:55:05.573Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t003",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-20261109-next-6fq2g"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-0214-gpt6-a6",
+      "requestId": "claim-rankings-20261109-0214-gpt6-a6",
+      "token": "rk-mw8gb77q-gz47q80wlxm-ttnwqqdlof",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:16:11.470Z",
+      "expiresAt": "2026-11-09T05:16:11.470Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t006",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-0214-gpt6-a6"
+    },
+    {
+      "ownerId": "chat-mw8gbd5o-x0eczlvbp79",
+      "requestId": "claim-mw8gbd5o-x0eczlvbp79",
+      "token": "rk-mw8gbd5o-ftbvfotgyp-wq54hof46c",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:16:19.261Z",
+      "expiresAt": "2026-11-09T05:16:19.261Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t005",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gbd5o-x0eczlvbp79"
+    },
+    {
+      "ownerId": "chat-20261109-0214-gaeo-rank-61a9",
+      "requestId": "claim-20261109-0214-gaeo-rank-61a9",
+      "token": "rk-mw8gc9qh-c5pmyy678m-59dk5tm73h6",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:01.374Z",
+      "expiresAt": "2026-11-09T05:17:01.374Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t004",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-20261109-0214-gaeo-rank-61a9"
+    },
+    {
+      "ownerId": "chat-rnk-mw8gbzll-ha5v4l8y5",
+      "requestId": "claim-rnk-mw8gbzll-ha5v4l8y5",
+      "token": "rk-mw8gc9xw-uhbsd2aajq-nascat7ig9p",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:08.768Z",
+      "expiresAt": "2026-11-09T05:17:08.768Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t008",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rnk-mw8gbzll-ha5v4l8y5"
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+      "requestId": "claim-gaeo-rankings-mw8gcfp9-94rfjgw4x7",
+      "token": "rk-mw8gcfp9-0tpeufkfucc-oj1vafrgts",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:15.728Z",
+      "expiresAt": "2026-11-09T05:17:15.728Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t007",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-mw8gcfp9-94rfjgw4x7"
+    },
+    {
+      "ownerId": "chat-rankings-mw8gcaa7-y795e426n5",
+      "requestId": "claim-rankings-mw8gcaa7-y795e426n5",
+      "token": "rk-mw8gchjj-gbkbz2hvqy8-8vyg7w99lki",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:25.861Z",
+      "expiresAt": "2026-11-09T05:17:25.861Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t001",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-mw8gcaa7-y795e426n5"
+    },
+    {
+      "ownerId": "chat-mw8gcnf4-1ac3be820q",
+      "requestId": "claim-mw8gcnf4-1ac3be820q",
+      "token": "rk-mw8gcnf4-cvnzdxtyd7v-92vwhj82gf4",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:33.879Z",
+      "expiresAt": "2026-11-09T05:17:33.879Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t002",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gcnf4-1ac3be820q"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8gcum8-r6jrc2vb",
+      "requestId": "claim-rankings-20261109-mw8gcum8-r6jrc2vb",
+      "token": "rk-mw8gcum9-j4aj72kbdie-34ajy2iamc7",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:41.388Z",
+      "expiresAt": "2026-11-09T05:17:41.388Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t002",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8gcum8-r6jrc2vb"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-0215-t4n8",
+      "requestId": "claim-rankings-20261109-0215-t4n8",
+      "token": "rk-mw8gd21m-futtfn0ur16-28cl80df3o7",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:17:51.113Z",
+      "expiresAt": "2026-11-09T05:17:51.113Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t003",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-0215-t4n8"
+    },
+    {
+      "ownerId": "chat-mw8gcyff-lgyrviwru",
+      "requestId": "claim-mw8gcyff-lgyrviwru",
+      "token": "rk-mw8gd7eu-oz4shf7a71-iwsrdzp2z3e",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:00.329Z",
+      "expiresAt": "2026-11-09T05:18:00.329Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t004",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gcyff-lgyrviwru"
+    },
+    {
+      "ownerId": "chat-rank-20261109-0215-ho6pb8m",
+      "requestId": "claim-rank-20261109-0215-ho6pb8m",
+      "token": "rk-mw8gdj3j-z4re6h39m3h-kwf37yryylo",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:08.127Z",
+      "expiresAt": "2026-11-09T05:18:08.127Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t003",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rank-20261109-0215-ho6pb8m"
+    },
+    {
+      "ownerId": "chat-gaeo0911-mw8gdzlz-sn75sfa",
+      "requestId": "claim-gaeo0911-mw8gdzlz-sn75sfa",
+      "token": "rk-mw8gdzlz-kh7lh5bngff-ddqusid872r",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:21.571Z",
+      "expiresAt": "2026-11-09T05:18:21.571Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t015",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo0911-mw8gdzlz-sn75sfa"
+    },
+    {
+      "ownerId": "chat-mw8gd8if-s89b8oj6qhn",
+      "requestId": "claim-mw8gd8if-s89b8oj6qhn",
+      "token": "rk-mw8ge0tn-lbhr5784q2-q3zp08h834",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:29.936Z",
+      "expiresAt": "2026-11-09T05:18:29.936Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t005",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gd8if-s89b8oj6qhn"
+    },
+    {
+      "ownerId": "chat-20261109-mw8gdy7y-bc7cu52ghc",
+      "requestId": "claim-20261109-mw8gdy7y-bc7cu52ghc",
+      "token": "rk-mw8ge3cq-2uw4u7fhr43-e2ieaehsgwf",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:40.760Z",
+      "expiresAt": "2026-11-09T05:18:40.760Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t016",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-20261109-mw8gdy7y-bc7cu52ghc"
+    },
+    {
+      "ownerId": "chat-g6-mw8gch4c-rhm7xdnc8",
+      "requestId": "claim-g6-mw8gch4c-rhm7xdnc8",
+      "token": "rk-mw8ger52-s0tcejoonxp-5dwhyeejiz3",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:18:57.178Z",
+      "expiresAt": "2026-11-09T05:18:57.178Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t017",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-g6-mw8gch4c-rhm7xdnc8"
+    },
+    {
+      "ownerId": "chat-mw8gcwir-f0o12e8jigv",
+      "requestId": "claim-mw8gcwir-f0o12e8jigv",
+      "token": "rk-mw8gexrg-vhiks978oa-liduwuldp2",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:19:06.425Z",
+      "expiresAt": "2026-11-09T05:19:06.425Z",
+      "previousStatus": "ready",
+      "taskId": "mlab-t006",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gcwir-f0o12e8jigv"
+    },
+    {
+      "ownerId": "chat-gaeo-20261109-0215-p4j7bm9",
+      "requestId": "claim-gaeo-20261109-0215-p4j7bm9",
+      "token": "rk-mw8getnz-bbhq71e275-jxmlyfbo94f",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:19:13.973Z",
+      "expiresAt": "2026-11-09T05:19:13.973Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t018",
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-gaeo-20261109-0215-p4j7bm9-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-08T23:26:58Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1rt-uJOVrSwSQqUDNgFd37NNgGw21yciX\",\"https://drive.google.com/drive/folders/1885HzcRJ_4MM5s0J3r28ND0pTM8BwY2K\",\"Google Drive: поиск по названиям доступных файлов и документов\"],\"provider\":\"google-drive\",\"queries\":[\"FBL ЛЭТУАЛЬ\",\"ЛЭТУАЛЬ\",\"fbl_letual\",\"name contains 'ЛЭТУАЛЬ'\",\"name contains 'FBL'\",\"name contains 'летуаль'\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-08T23:26:58Z\",\"complete\":true,\"locations\":[\"disk:/!GAEO/!Договора/Prep-Center/Статьи\",\"disk:/!GAEO/!Договора/Prep-Center/Преп-Центр - GAEO - общая папка/07_публикации\",\"disk:/!GAEO/Статьи\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-fbl-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-ltual-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letual-20261109-a2.json\",\"https://github.com/alexyakovlev79/yadisk-chatgpt-mcp/blob/main/results/rank-prept018-letuaru-20261109-a2.json\"],\"provider\":\"yandex-disk\",\"queries\":[\"FBL\",\"ЛЭТУАЛЬ\",\"letual\",\"Летуаль\"],\"requestId\":\"rank-prept018-letuaru-20261109-a2\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-08T23:27:52.617Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "prep-t018",
+            "reason": "Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными."
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-20261109-0215-7c91d2",
+      "requestId": "claim-gaeo-rankings-20261109-0215-7c91d2",
+      "token": "rk-mw8ge6uo-wtfds9nul0s-6e5xgpniiai",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:19:37.679Z",
+      "expiresAt": "2026-11-09T05:19:37.679Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t019",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261109-0215-7c91d2"
+    },
+    {
+      "ownerId": "chat-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
+      "requestId": "claim-mw8gg6zo-vjqakw5d6c-z6al4821lt8",
+      "token": "rk-mw8gg6zo-uyxwr3hcfm8-6krcm4npvd3",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:20:04.697Z",
+      "expiresAt": "2026-11-09T05:20:04.697Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t020",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8gg6zo-vjqakw5d6c-z6al4821lt8"
+    },
+    {
+      "ownerId": "chat-gaeo-rkmw8gdff4-b0xvbo4dv09",
+      "requestId": "claim-gaeo-rkmw8gdff4-b0xvbo4dv09",
+      "token": "rk-mw8gh0l0-yailgby5oz9-rpaykcxw4z",
+      "mode": "standard",
+      "claimedAt": "2026-11-08T23:20:42.815Z",
+      "expiresAt": "2026-11-09T05:20:42.815Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t021",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rkmw8gdff4-b0xvbo4dv09"
+    },
+    {
+      "ownerId": "chat-20261109-mw8r87hp-g231lcpntw",
+      "requestId": "claim-20261109-mw8r87hp-g231lcpntw",
+      "token": "rk-mw8r904y-eos8xfqn1b6-ncn57obmtch",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:24.738Z",
+      "expiresAt": "2026-11-09T10:22:24.738Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t011",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-20261109-mw8r87hp-g231lcpntw"
+    },
+    {
+      "ownerId": "chat-mw8r9539-bend80djsbp",
+      "requestId": "claim-mw8r9539-bend80djsbp",
+      "token": "rk-mw8r953a-6d7ymnuii6m-oq1sp0vl17",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:31.314Z",
+      "expiresAt": "2026-11-09T10:22:31.314Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t012",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r9539-bend80djsbp"
+    },
+    {
+      "ownerId": "chat-mw8r8yzs-bpse7b0iz",
+      "requestId": "claim-mw8r8yzs-bpse7b0iz",
+      "token": "rk-mw8r96ux-deqzgy85tfc-k78ua7ugyxf",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:39.600Z",
+      "expiresAt": "2026-11-09T10:22:39.600Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t010",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r8yzs-bpse7b0iz"
+    },
+    {
+      "ownerId": "chat-rank-20261109-mw8r9i47-802p0wr",
+      "requestId": "claim-rank-20261109-mw8r9i47-802p0wr",
+      "token": "rk-mw8r9i48-od6iovlb9r-5xl6249bqu8",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:48.119Z",
+      "expiresAt": "2026-11-09T10:22:48.119Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t014",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rank-20261109-mw8r9i47-802p0wr"
+    },
+    {
+      "ownerId": "chat-mw8r8uwl-6igww7ttl7m",
+      "requestId": "claim-mw8r8uwl-6igww7ttl7m",
+      "token": "rk-mw8r9ov0-ffmyumn49wv-9sqvuvvdlm4",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:56.826Z",
+      "expiresAt": "2026-11-09T10:22:56.826Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t013",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r8uwl-6igww7ttl7m"
+    },
+    {
+      "ownerId": "chat-rk-20261109-0720-3c9f2m",
+      "requestId": "claim-rk-20261109-0720-3c9f2m",
+      "token": "rk-mw8r9t6b-j1t9tx0ajbg-pewvu41zwa",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:23:02.596Z",
+      "expiresAt": "2026-11-09T10:23:02.596Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t015",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rk-20261109-0720-3c9f2m"
+    },
+    {
+      "ownerId": "chat-mw8r9oom-bin94a7y9mm",
+      "requestId": "claim-mw8r9oom-bin94a7y9mm",
+      "token": "rk-mw8r9wal-3jgv6fpzta-cfj9z85itn",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:23:13.330Z",
+      "expiresAt": "2026-11-09T10:23:13.330Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t016",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r9oom-bin94a7y9mm"
+    },
+    {
+      "ownerId": "chat-mw8rap1p-d7cxfs8w9ze",
+      "requestId": "claim-mw8rap1p-d7cxfs8w9ze",
+      "token": "rk-mw8rap1q-nyxmiic7nzp-3t5gr7pn1ld",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:23:43.676Z",
+      "expiresAt": "2026-11-09T10:23:43.676Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t017",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8rap1p-d7cxfs8w9ze"
+    },
+    {
+      "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
+      "requestId": "claim-rnk-20261109-mw8r9fan-tn72pcdd",
+      "token": "rk-mw8rb3at-dmjkrex9yxh-fbepgohnqjp",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:24:02.162Z",
+      "expiresAt": "2026-11-09T10:24:02.162Z",
+      "previousStatus": "ready",
+      "taskId": "prep-thermoshrink-top15-oct2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rnk-20261109-mw8r9fan-tn72pcdd"
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+      "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+      "token": "rk-mw8rck68-d7n8gyh8xqr-zvtgrqh2l5h",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:25:10.672Z",
+      "expiresAt": "2026-11-09T10:25:10.672Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t027-shampuni-geli-top15-2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf"
+    },
+    {
+      "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
+      "requestId": "claim-rankings-mw8rotww-t03nn6h0",
+      "token": "rk-mw8rp4qe-4oea8eyu5s4-nlqe792px3h",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:34:57.143Z",
+      "expiresAt": "2026-11-09T10:34:57.143Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-mw8rotww-t03nn6h0"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8rowld-m5gc9lgoo8",
+      "requestId": "claim-rankings-20261109-mw8rowld-m5gc9lgoo8",
+      "token": "rk-mw8rp8cj-svk5dflnnwl-tf25pk2tjt",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:09.349Z",
+      "expiresAt": "2026-11-09T10:35:09.349Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t024",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8rowld-m5gc9lgoo8"
+    },
+    {
+      "ownerId": "chat-r20261109-5vlatfz42",
+      "requestId": "claim-r20261109-5vlatfz42",
+      "token": "rk-mw8rpjif-pl10ulig5n-kn6d3h2wvw",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:16.362Z",
+      "expiresAt": "2026-11-09T10:35:16.362Z",
+      "previousStatus": "ready",
+      "taskId": "index-t062",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-r20261109-5vlatfz42"
+    },
+    {
+      "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
+      "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
+      "token": "rk-mw8rpfsv-xikz3mlqil-dd1ooquj5yo",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:27.465Z",
+      "expiresAt": "2026-11-09T10:35:27.465Z",
+      "previousStatus": "ready",
+      "taskId": "heads-best-branding-agencies-2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rank-20261109-0733-m8t4"
+    },
+    {
+      "ownerId": "chat-mw8rp9hg-0xe8o78tssa",
+      "requestId": "claim-mw8rp9hg-0xe8o78tssa",
+      "token": "rk-mw8rpwep-mxbx44it7ki-t4xpc3gi6b",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:33.304Z",
+      "expiresAt": "2026-11-09T10:35:33.304Z",
+      "previousStatus": "ready",
+      "taskId": "heads-r01-branding-fmcg-2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8rp9hg-0xe8o78tssa"
+    },
+    {
+      "ownerId": "chat-mw8s4zjr-yd02becybhh",
+      "requestId": "claim-mw8s4zjr-yd02becybhh",
+      "token": "rk-mw8s4zjr-zvfafrhx6s-aa9p3ghr67e",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:47:17.507Z",
+      "expiresAt": "2026-11-09T10:47:17.507Z",
+      "previousStatus": "ready",
+      "taskId": "index-t057",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8s4zjr-yd02becybhh"
+    },
+    {
+      "ownerId": "chat-gaeo-rankings-20261109-0745-one",
+      "requestId": "claim-gaeo-rankings-20261109-0745-one",
+      "token": "rk-mw8s5fxp-i83jyv6o9t-dph5qqy7wu",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:47:38.329Z",
+      "expiresAt": "2026-11-09T10:47:38.329Z",
+      "previousStatus": "ready",
+      "taskId": "heads-r02-brand-launch-2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261109-0745-one"
+    },
+    {
+      "ownerId": "chat-gaeo-rk-mw8s5g5x-ssuiluf8",
+      "requestId": "claim-gaeo-rk-mw8s5g5x-ssuiluf8",
+      "token": "rk-mw8s5g5x-v6e4syfu58o-ypc9juck61c",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:47:47.435Z",
+      "expiresAt": "2026-11-09T10:47:47.435Z",
+      "previousStatus": "ready",
+      "taskId": "index-t058",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rk-mw8s5g5x-ssuiluf8"
+    },
+    {
+      "ownerId": "chat-rankings-20261109-0745-c86f2a",
+      "requestId": "claim-rankings-20261109-0745-c86f2a",
+      "token": "rk-mw8s5set-dnz2t0qfefq-6ksflp63295",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:47:54.396Z",
+      "expiresAt": "2026-11-09T10:47:54.396Z",
+      "previousStatus": "ready",
+      "taskId": "heads-r03-stm-marketplaces-2026",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-0745-c86f2a"
+    },
+    {
+      "ownerId": "chat-rmw8s82v4-w4ak3p7yy",
+      "requestId": "claim-rmw8s82v4-w4ak3p7yy",
+      "mode": "standard",
+      "token": "rk-mw8s83fl-zhk9g8it3cg-juid23ggq4",
+      "claimedAt": "2026-11-09T04:49:41.212Z",
+      "expiresAt": "2026-11-09T10:49:41.212Z",
+      "previousStatus": "ready",
+      "taskId": "index-t061",
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-rmw8s82v4-w4ak3p7yy-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T04:57:57.074Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1snaeXLmclJL47l91LGnRuXCvqnXR0lK2\",\"https://drive.google.com/drive/folders/1ML0eyWBXtJpea6YJDgAowxX-In1riudy\",\"https://drive.google.com/drive/folders/1cRccLeO_TmOQ1EVh__eAvPYjCJIkuuoo\"],\"note\":\"Matching article in Sostav/Workspace Drive files has sourceDate 2026-11-04, not 2026-11-05; no exact index-t061 manuscript located. Drive searches returned no pending pagination.\",\"provider\":\"google-drive\",\"queries\":[\"видеолектории\",\"видеотеки\",\"video-lectories\",\"online-video\",\"лектори\",\"образовательные видеотеки\",\"видеокурсов\",\"видеолекции\",\"Синхронизация\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-09T04:57:57.074Z\",\"complete\":true,\"evidence\":[\"results/rank-t061-video-20261109-xjffqq.json (20000/20919, no matches)\",\"results/rank-t061-video-tail-20261109-esqh2l.json (919/20919, complete, no matches)\",\"results/rank-t061-synch-20261109-qq1afg.json (20000/20919, affiliate XLSX only)\",\"results/rank-t061-synch-tail-20261109-ht1e5f.json (919/20919, complete, no matches)\",\"results/rank-t061-gaeo-articles-20261109-ht5prb.json (16 items, complete)\",\"results/rank-t061-gaeo-contracts-20261109-kkntqq.json (10 items, complete)\"],\"locations\":[\"disk:/!GAEO/Статьи\",\"disk:/!GAEO/!Договора\",\"disk:/ (20 919 file names scanned in complete API searches)\"],\"provider\":\"yandex-disk\",\"queries\":[\"видеолект\",\"Синхронизац\"],\"requestId\":\"rank-t061-synch-tail-20261109-ht1e5f\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-09T04:57:57.974Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "index-t061",
+            "reason": "Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии."
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-rank-mw8sc5q1-kwr3xu8x3l",
+      "requestId": "claim-chat-rank-mw8sc5q1-kwr3xu8x3l",
+      "token": "rk-mw8sceie-m5qx2rkkx4h-njcul5kf8id",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:53:03.253Z",
+      "expiresAt": "2026-11-09T10:53:03.253Z",
+      "previousStatus": "ready",
+      "taskId": "index-t063",
+      "outcome": "needs_review",
+      "operations": [
+        {
+          "id": "claim-chat-rank-mw8sc5q1-kwr3xu8x3l-clientlink-review",
+          "kind": "block",
+          "signature": "{\"reason\":\"INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T04:58:07.232Z\",\"complete\":true,\"firstPlace\":\"Синхронизация\",\"images\":[\"1QLjsoSEhP1OjoQixjM_iv32YqYg37zsb\",\"15bZGvKjv52QIvKbWm2jan4OZUX9tHc43\",\"1U34CIRcorwcCBmQTkmQ4aLfhnCOH41Lw\"],\"locations\":[\"https://drive.google.com/drive/folders/1kRCISSl8hVIhmuCFR3qxXPbeA3blfUQ9\",\"https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view\"],\"provider\":\"google-drive\",\"queries\":[\"кино для зрителей\",\"cinema_for_viewers_russia_2026\",\"ТОП-10 онлайн-курсов по кино\"],\"score\":\"95/100\",\"status\":\"found\"},{\"checkedAt\":\"2026-11-09T04:58:07.233Z\",\"complete\":true,\"details\":\"manifest.clientLinks=[]; source contains 3 affiliate links\",\"locations\":[\"docs/rankings/sources/index-t063.json@477aa43838d59752a11eca1208ea732e2596a6c5\"],\"provider\":\"github\",\"status\":\"conflict\"}],\"status\":\"needs_review\"}",
+          "at": "2026-11-09T04:58:08.034Z",
+          "result": {
+            "status": "needs_review",
+            "taskId": "index-t063",
+            "reason": "INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата."
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-rankings-20261109-mw8sct50-7u0kc6a5",
+      "requestId": "claim-rankings-20261109-mw8sct50-7u0kc6a5",
+      "token": "rk-mw8sct50-vcybux87jra-6xgp56ljuw",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:53:22.232Z",
+      "expiresAt": "2026-11-09T10:53:22.232Z",
+      "previousStatus": "ready",
+      "taskId": "index-t064",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8sct50-7u0kc6a5"
+    },
+    {
+      "ownerId": "chat-mw8shy1p-7c3nimrwwno",
+      "requestId": "claim-mw8shy1p-7c3nimrwwno",
+      "token": "rk-mw8shy1r-r6006ffb80n-6qgmfxbptfe",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:21.784Z",
+      "expiresAt": "2026-11-09T10:57:21.784Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "mpfit-t001",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8shy1p-7c3nimrwwno"
+    },
+    {
+      "ownerId": "chat-mw8si0fp-jtfumbq8t1",
+      "requestId": "claim-mw8si0fp-jtfumbq8t1",
+      "token": "rk-mw8si0fp-2alk0wo2vds-teyt2t71jne",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:29.757Z",
+      "expiresAt": "2026-11-09T10:57:29.757Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "prep-t003",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8si0fp-jtfumbq8t1"
+    },
+    {
+      "ownerId": "chat-mw8si7ni-azstyf6wota",
+      "requestId": "claim-mw8si7ni-azstyf6wota",
+      "token": "rk-mw8si7nl-va127edh63i-jnpxdhc1sx",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:34.258Z",
+      "expiresAt": "2026-11-09T10:57:34.258Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "prep-t018",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8si7ni-azstyf6wota"
+    },
+    {
+      "ownerId": "chat-mw8sk7gr-utfd7kew2s",
+      "requestId": "claim-mw8sk7gr-utfd7kew2s",
+      "token": "rk-mw8sk7gr-stnfuzm5sg-ms40780tak",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:59:07.406Z",
+      "expiresAt": "2026-11-09T10:59:07.406Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "index-t061",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8sk7gr-utfd7kew2s"
+    },
+    {
+      "ownerId": "chat-t063-mw8ttm5y-xfplu1nts8f",
+      "requestId": "claim-chat-t063-mw8ttm5y-xfplu1nts8f",
+      "token": "rk-mw8ttm5z-ogegja0fvlc-ffoww0l8cv8",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T05:34:26.204Z",
+      "expiresAt": "2026-11-09T11:34:26.204Z",
+      "previousStatus": "ready",
+      "taskId": "index-t063",
+      "outcome": "needs_review",
+      "operations": [
+        {
+          "id": "claim-chat-t063-mw8ttm5y-xfplu1nts8f-ranking-ties-review",
+          "kind": "block",
+          "signature": "{\"reason\":\"Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T05:35:50.885Z\",\"complete\":true,\"fileId\":\"18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9\",\"locator\":\"«ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года» и «Разбор курсов: кому подойдет каждый вариант»\",\"provider\":\"google-drive\",\"status\":\"found\",\"url\":\"https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view\"},{\"checkedAt\":\"2026-11-09T05:35:50.885Z\",\"complete\":true,\"locator\":\"README.md, сводная таблица и профили 4-го и 8-го мест\",\"provider\":\"published-web\",\"status\":\"found\",\"url\":\"https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026\"}],\"status\":\"needs_review\"}",
+          "at": "2026-11-09T05:35:51.866Z",
+          "result": {
+            "status": "needs_review",
+            "taskId": "index-t063",
+            "reason": "Полный MD Sostav найден и прочитан на Google Drive. В исходнике порядок мест 1, 2, 3, 4, 4, 6, 7, 8, 8, 10: две части «Киномарафона» делят 4-е место (55/100), два курса Level One делят 8-е место (50/100). Штатные валидаторы требуют position = index + 1, а генератор использует position как место в таблице, профиле и ItemList. С текущим шаблоном вторые участники ничьих получили бы ложные 5-е и 9-е места. Для продолжения координатору нужно поддержать в общей схеме отдельное исходное место, сохранив уникальный порядковый номер для строк и якорей."
+          }
+        }
+      ]
+    },
+    {
+      "ownerId": "chat-mw8twget-s1jgslnfrea",
+      "requestId": "claim-mw8twget-s1jgslnfrea",
+      "token": "rk-mw8twgeu-94iwbk3wcwe-g7axpabhwfv",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T05:36:38.354Z",
+      "expiresAt": "2026-11-09T11:36:38.354Z",
+      "previousStatus": "ready",
+      "taskId": "index-p001",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8twget-s1jgslnfrea"
+    },
+    {
+      "ownerId": "rankings-coordinator-20261109-t063",
+      "requestId": "rankings-coordinator-20261109-t063-claim",
+      "token": "rk-mw8uz4hv-v60u8o7l0lk-5x4pvw0ys3s",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T06:06:42.572Z",
+      "expiresAt": "2026-11-09T12:06:42.572Z",
+      "previousStatus": "ready",
+      "taskId": "index-t063",
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "rankings-coordinator-20261109-t063-submit"
+    }
+  ],
+  "updatedAt": "2026-11-09T06:08:24.526Z"
 }

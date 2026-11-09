@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {createRankingsQueue, validateRankingsQueue, RANKINGS_QUEUE_PATH, RANKINGS_BRANCH} from './rankings-queue.mjs';
+import {createRankingsQueue, validateRankingsQueue, validateRankingsSources, RANKINGS_QUEUE_PATH, RANKINGS_BRANCH} from './rankings-queue.mjs';
 
 // An immutable Git model, not a copy of the queue implementation. Git ref updates
 // enforce both expected-head and fast-forward checks, including competing writers.
@@ -9,11 +9,17 @@ const hash = value => createHash('sha1').update(value).digest('hex');
 const clone = value => JSON.parse(JSON.stringify(value));
 const success = structuredContent => ({content: [{type: 'text', text: 'Action completed.'}], structuredContent, isError: false});
 const error = (code, message) => ({content: [{type: 'text', text: message}], structuredContent: {error: message, error_code: code}, isError: true});
+const manifestFor = task => ({schemaVersion: 1, id: task.id, familyId: task.familyId, category: task.category,
+  publishedVersions: [
+    {platform: 'IndexResearch', language: 'ru', url: `https://indexresearch.ru/${task.slug}.html`},
+    {platform: 'IndexResearch', language: 'en', url: `https://indexresearch.ru/en/${task.slug}.html`}
+  ], pendingVersions: [], clientLinks: []});
 class Git {
   constructor(queue, files = {}) {
     this.blobs = new Map(); this.trees = new Map(); this.commits = new Map(); this.refWrites = []; this.attempts = [];
-    this.sequence = 0; this.clock = Date.parse('2026-11-08T18:00:00Z'); this.loseNextAck = false; this.failReadback = false;
-    const initial = {...files, [RANKINGS_QUEUE_PATH]: JSON.stringify(queue), 'src/legacy/existing.html': 'existing production content', '.github/workflows/astro-production.yml': 'protected workflow'};
+    this.sequence = 0; this.clock = Date.parse('2026-11-08T18:00:00Z'); this.loseNextAck = false; this.failReadback = false; this.blobCreates = 0; this.sourceReads = [];
+    const sources = Object.fromEntries(queue.tasks.map(task => [task.sourceManifest, JSON.stringify(manifestFor(task))]));
+    const initial = {...sources, ...files, [RANKINGS_QUEUE_PATH]: JSON.stringify(queue), 'src/legacy/existing.html': 'existing production content', '.github/workflows/astro-production.yml': 'protected workflow'};
     const flat = Object.fromEntries(Object.entries(initial).map(([path, content]) => [path, {sha: this.blob(content), mode: '100644', type: 'blob'}]));
     this.head = this.commit(this.tree(flat), null, 'Initial state'); this.initialHead = this.head;
     this.call = this.call.bind(this);
@@ -28,6 +34,10 @@ class Git {
   }
   flat(ref = this.head) { return this.trees.get(this.commits.get(ref)?.tree); }
   file(path, ref = this.head) { return this.blobs.get(this.flat(ref)?.[path]?.sha); }
+  externalEdit(path, content, message = 'Coordinator updates source inventory') {
+    const flat = clone(this.flat()); flat[path] = {sha: this.blob(content), mode: '100644', type: 'blob'};
+    this.head = this.commit(this.tree(flat), this.head, message);
+  }
   queue() { return JSON.parse(this.file(RANKINGS_QUEUE_PATH)); }
   ancestors() { const list = []; for (let sha = this.head; sha; sha = this.commits.get(sha).parent) list.push(sha); return list; }
   getTree(sha) {
@@ -60,10 +70,11 @@ class Git {
       throw Error(`Unexpected fetch ${args.url}`);
     }
     if (action === 'fetch_file') {
+      if (args.path.startsWith('docs/rankings/sources/')) this.sourceReads.push({path: args.path, ref: args.ref});
       const content = this.file(args.path, args.ref), sha = this.flat(args.ref)?.[args.path]?.sha;
       return content === undefined ? error('NOT_FOUND', '404 file not found') : success({content, sha, encoding: 'utf-8'});
     }
-    if (action === 'create_blob') return success({sha: this.blob(args.content)});
+    if (action === 'create_blob') { this.blobCreates++; return success({sha: this.blob(args.content)}); }
     if (action === 'create_tree') {
       assert(args.base_tree_sha, 'Every write must retain its base tree');
       const flat = clone(this.trees.get(args.base_tree_sha));
@@ -265,7 +276,7 @@ await check('needs_review and excluded tasks never enter either queue pass', asy
   assert.equal(git.refWrites.length, 0);
 });
 await check('source manifests are read from an immutable SHA', async () => {
-  const git = new Git(queue(task('one')), {'docs/rankings/sources/one.json': JSON.stringify({familyId: 'one', versions: []})}), worker = git.worker();
+  const git = new Git(queue(task('one'))), worker = git.worker();
   const result = await worker.source({taskId: 'one', ref: git.initialHead});
   assert.equal(result.headSha, git.initialHead); assert.equal(result.manifest.familyId, 'one');
 });
@@ -310,5 +321,118 @@ await check('partial listings and pending pagination cannot be recorded as missi
   assert.equal(git.refWrites.length, 1);
   await worker.block({...args, sourceChecks: [{...google, nextPageToken: null}, {...yandex, next_offset: null}]});
   assert.equal(git.queue().tasks[0].status, 'needs_work_source');
+});
+await check('all registered RU/EN/CN versions are required before creating article blobs', async () => {
+  const item = task('one'), manifest = manifestFor(item), base = 'https://github.com/IndexResearch-ru/one-2026';
+  manifest.publishedVersions.push(
+    {platform: 'GitHub', language: 'ru', url: base}, {platform: 'GitHub', language: 'en', url: base + '-en'},
+    {platform: 'GitHub', language: 'zh', url: base + '-cn'},
+    {platform: 'IndexResearch', language: 'zh', url: 'https://indexresearch.ru/cn/one-2026.html'},
+    {platform: 'Sostav', language: 'ru', url: 'https://www.sostav.ru/blogs/example/123'}
+  );
+  const complete = article => article.versions.push(
+    {platform: 'GitHub', ru: base, en: base + '-en'},
+    {platform: 'GitHub CN', ru: base + '-cn', en: base + '-cn'},
+    {platform: 'IndexResearch CN', ru: 'https://indexresearch.ru/cn/one-2026.html', en: 'https://indexresearch.ru/cn/one-2026.html'},
+    {platform: 'Sostav', url: 'https://www.sostav.ru/blogs/example/123'}
+  );
+  const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-links', requestId: 'claim-links'});
+  await throwsCode(submit(worker, claim, 'submit-links'), 'MISSING_PUBLISHED_VERSION');
+  await throwsCode(submit(worker, claim, 'submit-links', article => { complete(article); article.versions = article.versions.filter(v => v.platform !== 'GitHub CN'); }), 'MISSING_PUBLISHED_VERSION');
+  await throwsCode(submit(worker, claim, 'submit-links', article => { complete(article); article.versions[0].en = article.versions[0].ru; }), 'MISSING_PUBLISHED_VERSION');
+  assert.equal(git.blobCreates, 0); assert.equal(git.refWrites.length, 1);
+  const result = await submit(worker, claim, 'submit-links', complete);
+  const receipt = JSON.parse(git.file(result.receiptPath));
+  assert.deepEqual(receipt.validation.requiredPublishedVersions, {ru: 5, en: 5});
+  assert.equal(receipt.sourceManifest.path, item.sourceManifest); assert.equal(receipt.sourceManifest.ref, receipt.baseCommit);
+  assert.equal(receipt.sourceManifest.sha, git.flat(receipt.baseCommit)[item.sourceManifest].sha);
+});
+await check('exact client URL subsets pass; invented paths or stripped parameters fail', async () => {
+  const item = task('one'), manifest = manifestFor(item);
+  const chosen = 'https://prep-center.ru/services/?utm_source=sostav&utm_campaign=rating';
+  manifest.clientLinks = [{url: chosen}, {url: 'https://prep-center.ru/another/?utm_source=tenchat'}, {url: 'https://prep-center.ru/third/'}];
+  const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-client', requestId: 'claim-client'});
+  const target = url => article => { article.clientLinks = [{url, label: {ru: 'Услуги', en: 'Services'}, relation: 'sponsored'}]; };
+  await throwsCode(submit(worker, claim, 'submit-client', target('https://prep-center.ru/services/')), 'UNREGISTERED_CLIENT_URL');
+  await throwsCode(submit(worker, claim, 'submit-client', target(chosen + '&new=1')), 'UNREGISTERED_CLIENT_URL');
+  assert.equal(git.blobCreates, 0);
+  const result = await submit(worker, claim, 'submit-client', target(chosen));
+  assert.equal(JSON.parse(git.file(result.receiptPath)).validation.selectedClientLinks, 1);
+});
+await check('pending URLs are blocked while additional verified publication versions remain allowed', async () => {
+  const item = task('one'), manifest = manifestFor(item), pending = 'https://workspace.ru/blog/pending-example/';
+  manifest.pendingVersions = [{platform: 'Workspace', language: 'ru', url: pending}];
+  const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-pend1', requestId: 'claim-pend1'});
+  await throwsCode(submit(worker, claim, 'submit-pend1', article => article.versions.push({platform: 'Workspace', url: pending})), 'PENDING_PUBLICATION');
+  await throwsCode(submit(worker, claim, 'submit-pend1', article => { article.ru.ranking[0].url = pending; article.en.ranking[0].url = pending; }), 'PENDING_PUBLICATION');
+  assert.equal(git.blobCreates, 0);
+  await submit(worker, claim, 'submit-pend1', article => article.versions.push({platform: 'Other verified publication', url: 'https://example.com/confirmed-publication/'}));
+  assert.equal(git.queue().tasks[0].status, 'committed');
+});
+await check('non-IR English editions do not silently replace their original RU links', async () => {
+  const item = task('one'), manifest = manifestFor(item), value = article(item);
+  const russian = 'https://example.com/ru/ranking/', english = 'https://example.com/en/ranking/';
+  manifest.publishedVersions.push({platform: 'Publisher', language: 'ru', url: russian}, {platform: 'Publisher', language: 'en', url: english});
+  value.versions.push({platform: 'Publisher', ru: russian, en: english});
+  assert.throws(() => validateRankingsSources(value, item, manifest), error => error.code === 'MISSING_PUBLISHED_VERSION' && error.details.language === 'en' && error.details.url === russian);
+  value.versions.push({platform: 'Publisher original', url: russian});
+  validateRankingsSources(value, item, manifest);
+});
+await check('manifest edits during a CAS race are revalidated before any article is accepted', async () => {
+  const item = task('one'), manifest = manifestFor(item), git = new Git(queue(item)), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-fresh', requestId: 'claim-fresh'});
+  const extra = 'https://www.sostav.ru/blogs/new-publication/123'; let edited = false;
+  git.onBeforeRef = async args => {
+    if (!edited && git.commits.get(args.sha).message.startsWith('Add bilingual ranking')) {
+      edited = true; manifest.publishedVersions.push({platform: 'Sostav', language: 'ru', url: extra});
+      git.externalEdit(item.sourceManifest, JSON.stringify(manifest));
+    }
+  };
+  await throwsCode(submit(worker, claim, 'submit-fresh'), 'MISSING_PUBLISHED_VERSION');
+  assert.equal(git.queue().tasks[0].status, 'reserved'); assert.equal(git.file('src/data/rankings/articles/one.json'), undefined);
+  assert.equal(git.refWrites.length, 1); assert.equal(new Set(git.sourceReads.map(x => x.ref)).size, 2);
+  const fix = article => article.versions.push({platform: 'Sostav', url: extra});
+  const accepted = await submit(worker, claim, 'submit-fresh', fix);
+  manifest.publishedVersions.push({platform: 'Another', language: 'ru', url: 'https://example.com/later-version/'});
+  git.externalEdit(item.sourceManifest, JSON.stringify(manifest));
+  const recovered = await submit(worker, claim, 'submit-fresh', fix);
+  assert.equal(recovered.commitSha, accepted.commitSha, 'A historical accepted submission remains idempotent after inventory changes');
+  assert.equal(git.refWrites.length, 2);
+});
+await check('editorial product shortlist has no winner or invented scores and preserves every product referral', async () => {
+  const item = {...task('products'), category: 'products', contentType: 'selection', firstPlace: null,
+    firstPlaceStatus: 'not-applicable-selection', expectedCount: 2};
+  const urls = ['https://market.yandex.ru/cc/P01?erid=source1', 'https://market.yandex.ru/cc/P02?erid=source2'];
+  const manifest = manifestFor(item); manifest.clientLinks = urls.map(url => ({url})); manifest.orderedProductUrls = urls;
+  const git = new Git(queue(item), {[item.sourceManifest]: JSON.stringify(manifest)}), worker = git.worker();
+  const claim = await worker.claim({ownerId: 'chat-products', requestId: 'claim-products'});
+  const prepare = value => {
+    value.contentType = 'selection'; value.entityType = 'Product';
+    value.source.firstPlaceVerification = {status: 'not-applicable-selection', firstPlace: null,
+      sourceReference: 'test-source-id', locator: 'TOP 11 editorial shortlist, no empirical winner', checkedDate: '2026-11-08'};
+    value.clientLinks = urls.map(url => ({url, label: {ru: 'Посмотреть товар', en: 'View item'}, relation: 'sponsored'}));
+    for(const lang of ['ru', 'en'])value[lang].ranking.forEach((entry, i) => {
+      entry.name = lang === 'ru' ? 'Товар ' + (i + 1) : 'Product ' + (i + 1);
+      entry.url = urls[i]; delete entry.score;
+    });
+  };
+  assert.equal(claim.taskId, 'products');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.ru.ranking[0].score = 95;}), 'UNSUPPORTED_SELECTION_SCORES');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {prepare(value); value.clientLinks.pop();}), 'MISSING_PRODUCT_LINK');
+  await throwsCode(submit(worker, claim, 'submit-products', value => {
+    prepare(value); for(const lang of ['ru','en']) {
+      const old=value[lang].ranking[0].url;
+      value[lang].ranking[0].url=value[lang].ranking[1].url;
+      value[lang].ranking[1].url=old;
+    }
+  }), 'PRODUCT_ORDER_CHANGED');
+  const accepted = await submit(worker, claim, 'submit-products', prepare);
+  assert.equal(accepted.status, 'committed');
+  const result = git.queue().tasks[0];
+  assert.equal(result.firstPlace, null); assert.equal(result.firstPlaceStatus, 'not-applicable-selection');
+  assert.equal(JSON.parse(git.file(result.result.receiptPath)).validation.contentType, 'selection');
 });
 console.log(`\nPASS ${checks} rankings queue checks. No production branches or remote tools were used.`);

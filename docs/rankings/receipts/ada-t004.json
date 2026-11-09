@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t004",
+  "familyId": "ada-t004",
+  "slug": "top10-rio-2026",
+  "ownerId": "chat-20261109-0214-gaeo-rank-61a9",
+  "requestId": "claim-20261109-0214-gaeo-rank-61a9",
+  "submissionId": "submit-20261109-0214-gaeo-rank-61a9",
+  "submittedAt": "2026-11-08T23:29:13.334Z",
+  "mode": "standard",
+  "baseCommit": "a7d73281094e58e9df0f7a308cf30cd753a9d716",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t004/00_sostav_rio_cover_1200x675.jpg",
+      "sha": "95f807e548914b0ee352f1b8d5a3d0ad9652981f"
+    },
+    {
+      "path": "public/assets/rankings/ada-t004/01_sostav_rio_sambadrome_1200x675.jpg",
+      "sha": "31fdbb1cdded98fd8ac242fa1e81139c40a5b051"
+    },
+    {
+      "path": "public/assets/rankings/ada-t004/02_sostav_copacabana_new_year_1200x675.jpg",
+      "sha": "410f8508fb464e2d3821db2ea5e36ffb5deba1f8"
+    },
+    {
+      "path": "public/assets/rankings/ada-t004/03_sostav_rio_beach_1200x675.jpg",
+      "sha": "fac2b58e80f8ad8f41b4b214ea99ed1edeb7c5a3"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t004.json",
+      "sha": "a46d6456ce3690606d58984b0d89a9dbf5fb5556"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/191cW0i03OsnoXAXhr732upapa7k4eH3R/view",
+      "locator": "«Мой ТОП-10 компаний для поездки в Рио-де-Жанейро» and «1. Ada Tours – 98 из 100»: 15+18+16+11+13+10+10+5 = 98",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t004.json",
+    "ref": "a7d73281094e58e9df0f7a308cf30cd753a9d716",
+    "sha": "99777a05d7bcd3f49069cf90a8d4405c80403244"
+  },
+  "deployed": false
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t019",
+  "familyId": "prep-t019",
+  "slug": "fbs-wildberries-2026",
+  "ownerId": "chat-gaeo-rankings-20261109-0215-7c91d2",
+  "requestId": "claim-gaeo-rankings-20261109-0215-7c91d2",
+  "submissionId": "submit-gaeo-rankings-20261109-0215-7c91d2",
+  "submittedAt": "2026-11-08T23:33:29.295Z",
+  "mode": "standard",
+  "baseCommit": "f7dc9933ac28781bd2f559e70e5639ea9884f8b2",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t019/01_cover_top10_fbs_wildberries_2026.jpg",
+      "sha": "367bc8af3717faa223974190e8da78cfc76a7a39"
+    },
+    {
+      "path": "public/assets/rankings/prep-t019/02_fbs_process_wildberries.jpg",
+      "sha": "f4b08c8c845e0bd279ef34dbec1b64c7d92e9df7"
+    },
+    {
+      "path": "public/assets/rankings/prep-t019/03_two_daily_dispatches_fbs.jpg",
+      "sha": "93e04d51eedb275620308885549a263c632a2df1"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t019.json",
+      "sha": "d352794523a0c2c97e7c4e45cda53d0865eecf30"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1S1AvzUqZZoHDwqGe8D9PAsqrxLud-naD/view",
+      "locator": "Исходный блок «Итоговый ТОП-10 фулфилментов для Wildberries по FBS», позиция 1 и раздел «1. Преп-Центр – 98 из 100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t019.json",
+    "ref": "f7dc9933ac28781bd2f559e70e5639ea9884f8b2",
+    "sha": "835707cc214dc71949d140f857833afe2caedf79"
+  },
+  "deployed": false
+}

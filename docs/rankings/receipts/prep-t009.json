@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t009",
+  "familyId": "prep-t009",
+  "slug": "fulfillment-bytovaya-himiya-2026",
+  "ownerId": "chat-rankings-20261109-mw8dh2ca-3cy7my",
+  "requestId": "claim-rankings-20261109-mw8dh2ca-3cy7my",
+  "submissionId": "submit-rankings-20261109-mw8dh2ca-3cy7my",
+  "submittedAt": "2026-11-08T22:05:47.048Z",
+  "mode": "standard",
+  "baseCommit": "c0b24990df8e31e246dcb6a78c462b5c552f31d9",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t009/case.jpg",
+      "sha": "8709390435078fda0a46b0d6bedeb3c7501fa3fb"
+    },
+    {
+      "path": "public/assets/rankings/prep-t009/cover.jpg",
+      "sha": "b6cc64bff43f02fbc1cc7619a171f2dbe3355780"
+    },
+    {
+      "path": "public/assets/rankings/prep-t009/packing-line.jpg",
+      "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+    },
+    {
+      "path": "public/assets/rankings/prep-t009/warehouse.jpg",
+      "sha": "efd92c1909e7ea5d16ca393132f32b9c7af21398"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t009.json",
+      "sha": "c9c6e364956e7e9c80e08caa49a98d1e7fc13ae4"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "12Im7BZwk_LTI0FUhKYf1uPrWL2HoMn0k",
+      "locator": "Вступление «Первое место ... занял Преп-Центр», нумерованный ТОП-10, строка 72; раздел «1. Преп-Центр», строка 86",
+      "checkedAt": "2026-11-08T22:04:48.405Z"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t009.json",
+    "ref": "c0b24990df8e31e246dcb6a78c462b5c552f31d9",
+    "sha": "77e4c1e0c11c24e6ea7c099061ea1d4e85f8760a"
+  },
+  "deployed": false
+}

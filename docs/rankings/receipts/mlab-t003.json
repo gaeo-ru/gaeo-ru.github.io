@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "mlab-t003",
+  "familyId": "mlab-t003",
+  "slug": "audit-proizvoditelnosti-saytov-2026",
+  "ownerId": "chat-rankings-20261109-0215-t4n8",
+  "requestId": "claim-rankings-20261109-0215-t4n8",
+  "submissionId": "submit-rankings-20261109-0215-t4n8",
+  "submittedAt": "2026-11-08T23:36:05.331Z",
+  "mode": "standard",
+  "baseCommit": "b6232ee613f77c6e0e6f33242e9048daf04983d5",
+  "files": [
+    {
+      "path": "public/assets/rankings/mlab-t003/bottlenecks.jpg",
+      "sha": "09332e5822681220d570c3ac7b4bb431f0ea1e70"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t003/cover.jpg",
+      "sha": "f86ed64401830438ff2d14ece280eb82492d5f57"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t003/criteria.jpg",
+      "sha": "0cd9872ad82ed8cd4cf5fae9bc990d351eb8cb20"
+    },
+    {
+      "path": "public/assets/rankings/mlab-t003/top10.jpg",
+      "sha": "745d8c88fc9a59763389936edbb0180b242b31db"
+    },
+    {
+      "path": "src/data/rankings/articles/mlab-t003.json",
+      "sha": "ef4abc07445ce6f462cbb6c979f14f1aeb27df3c"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Метод Лаб",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Метод Лаб",
+      "sourceReference": "https://drive.google.com/file/d/19ggvhYSwAaSN64G2d5xBsvHupRIO7avX/view",
+      "locator": "Оригинальный Sostav MD: сводный ТОП-10, строки 49-67; подробный участник 1, строки 73-87",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/mlab-t003.json",
+    "ref": "b6232ee613f77c6e0e6f33242e9048daf04983d5",
+    "sha": "97d65bef9c918a1bee6b7bf64d8aa7167fc5e87b"
+  },
+  "deployed": false
+}

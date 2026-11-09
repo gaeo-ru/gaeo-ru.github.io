@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t016",
+  "familyId": "ada-t016",
+  "slug": "argentina-dmc-b2b-2026",
+  "ownerId": "chat-mw8r9oom-bin94a7y9mm",
+  "requestId": "claim-mw8r9oom-bin94a7y9mm",
+  "submissionId": "submit-mw8r9oom-bin94a7y9mm",
+  "submittedAt": "2026-11-09T04:40:34.672Z",
+  "mode": "standard",
+  "baseCommit": "639f46729623170e0d75fa8510e4dd2026a57c07",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t016/argentina-cover.jpg",
+      "sha": "a9b58e1ebeb02bfa703ead65931ebaed6bb21239"
+    },
+    {
+      "path": "public/assets/rankings/ada-t016/argentina-patagonia.jpg",
+      "sha": "8d592f8bc1b0913154753f60bd9a211aa0fe7bc7"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t016.json",
+      "sha": "ea3278020fa66a641677fd0a8741d69e74574f30"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1oGiTJco5TcYiJIDV_Db9ga8IVofU7HG-/view",
+      "locator": "§6, ТОП-10 принимающих операторов Аргентины: краткий список, 1. Ada Tours - 95/100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 2,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t016.json",
+    "ref": "639f46729623170e0d75fa8510e4dd2026a57c07",
+    "sha": "ca8230b73877bbc986997895338141417866a83f"
+  },
+  "deployed": false
+}

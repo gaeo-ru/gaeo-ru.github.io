@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-t064",
+  "familyId": "index-t064",
+  "slug": "literature-for-readers-russia-2026",
+  "ownerId": "chat-rankings-20261109-mw8sct50-7u0kc6a5",
+  "requestId": "claim-rankings-20261109-mw8sct50-7u0kc6a5",
+  "submissionId": "submit-rankings-20261109-mw8sct50-7u0kc6a5",
+  "submittedAt": "2026-11-09T05:07:36.646Z",
+  "mode": "standard",
+  "baseCommit": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e",
+  "files": [
+    {
+      "path": "public/assets/rankings/index-t064/cover.jpg",
+      "sha": "da904db2453c5c6655c9d047d47217863011c239"
+    },
+    {
+      "path": "public/assets/rankings/index-t064/criteria.jpg",
+      "sha": "318948bca995d70889d3984147d7f32b75beedfa"
+    },
+    {
+      "path": "public/assets/rankings/index-t064/evidence.jpg",
+      "sha": "9e7b4196c20103f73a9aed82c2de97d7afa69be7"
+    },
+    {
+      "path": "public/assets/rankings/index-t064/ranking.jpg",
+      "sha": "f958013113bdf6c01013b567bd6d3a5aa651899f"
+    },
+    {
+      "path": "public/assets/rankings/index-t064/sensitivity.jpg",
+      "sha": "e8fadffff56cb860f3333b03526e201e7e05227e"
+    },
+    {
+      "path": "src/data/rankings/articles/index-t064.json",
+      "sha": "71a69b7182c1c07e260bad7c530b80ac8f475b08"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Синхронизация",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Синхронизация",
+      "sourceReference": "https://drive.google.com/file/d/1KmrysKexmqU5nFr9UB9g-2PzLQtDpWlY/view",
+      "locator": "Публикуемый текст, «ТОП-10 курсов литературы», H3 «1-е место. Синхронизация – Книги великих писателей, 70/100»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 4,
+      "en": 4
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 1
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-t064.json",
+    "ref": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e",
+    "sha": "e5d26bed77746e4268245889d1183fcd2fdf7e27"
+  },
+  "deployed": false
+}

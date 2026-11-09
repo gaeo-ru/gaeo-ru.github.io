@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-p001",
+  "familyId": "index-p001",
+  "slug": "gifts-toys-girls-7-2026",
+  "ownerId": "chat-mw8twget-s1jgslnfrea",
+  "requestId": "claim-mw8twget-s1jgslnfrea",
+  "submissionId": "submit-mw8twget-s1jgslnfrea",
+  "submittedAt": "2026-11-09T05:43:07.944Z",
+  "mode": "standard",
+  "baseCommit": "5d35521e5d764870c8296d0314991a95e97daaa5",
+  "files": [
+    {
+      "path": "public/assets/rankings/index-p001/p01-junion-villa-alba.jpg",
+      "sha": "084f0810cbaa93ccd7026985fefa9dd0fd32c363"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p02-little-wood-home-villa.jpg",
+      "sha": "eed4693089f845977ec71eff82e9833fef82fd15"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p03-barbie-fvj42.jpg",
+      "sha": "fc246350495d9b0f22ab404a9b062aa2d44f6011"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p04-lol-tweens-freshest-542582.jpg",
+      "sha": "d318afb732e3533930628271666febc87c91c064"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p05-junion-beauty-box.jpg",
+      "sha": "f187604f8c867542f61762e32d5186fc94029db3"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p06-sluban-villa-m38-b0868.jpg",
+      "sha": "f645eaec979be61c94ac6eee960cd9a17d7cdea1"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p07-gaga-bolshaya-brodilka.jpg",
+      "sha": "33ccc550ed282168f0630b2b1c9709de70385386"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p08-avel-art-208-pink.jpg",
+      "sha": "02ebaf67905889f07428b37739abd6fd3799b943"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p09-lampstory-magic-keychains.jpg",
+      "sha": "9fdac3060edef332dae6d8032e207f83d8e67712"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p10-brauberg-fit-274383.jpg",
+      "sha": "141b0c4a694d8f5dd3bc5c38c7a5f4926827af1a"
+    },
+    {
+      "path": "public/assets/rankings/index-p001/p11-lol-hello-kitty-ball-523840.jpg",
+      "sha": "147add147e844e872f3d86aa57aaa3992607351e"
+    },
+    {
+      "path": "src/data/rankings/articles/index-p001.json",
+      "sha": "f1c426dcdb8c1ba159d53eae5e3023d3bd300f6c"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 11,
+    "contentType": "selection",
+    "firstPlace": null,
+    "firstPlaceVerification": {
+      "status": "not-applicable-selection",
+      "firstPlace": null,
+      "sourceReference": "https://drive.google.com/file/d/1lG4KL-_UvP7X6JMv5COvEZ1Gg2Aoun4s/view?usp=drivesdk",
+      "locator": "«Вся подборка коротко», «Как выбирались товары» и «Состав первого выпуска»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 11,
+    "requiredPublishedVersions": {
+      "ru": 4,
+      "en": 4
+    },
+    "selectedClientLinks": 11,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-p001.json",
+    "ref": "5d35521e5d764870c8296d0314991a95e97daaa5",
+    "sha": "a7688131bb8e7053be619b8e6666c6d0c40beb67"
+  },
+  "deployed": false
+}

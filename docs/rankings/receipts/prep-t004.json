@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t004",
+  "familyId": "prep-t004",
+  "slug": "fulfillment-cosmetics-july-2026",
+  "ownerId": "chat-gaeo-rankings-20261108212511-5p9kef26",
+  "requestId": "claim-gaeo-rankings-20261108212511-5p9kef26",
+  "submissionId": "submit-gaeo-rankings-20261108212511-5p9kef26",
+  "submittedAt": "2026-11-08T21:51:36.823Z",
+  "mode": "standard",
+  "baseCommit": "e017c5e7247ddb779b4867067cbe395b9b944ea7",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t004/cover.jpg",
+      "sha": "f3fe7ba085bafd411b5b7612e055c5ccb018c894"
+    },
+    {
+      "path": "public/assets/rankings/prep-t004/criteria.jpg",
+      "sha": "bbae47b5421d081e4899e370888850d9b7e3ea93"
+    },
+    {
+      "path": "public/assets/rankings/prep-t004/leaders.jpg",
+      "sha": "1fa055fb0ad3164a87cba50920515ccaa9ced2c0"
+    },
+    {
+      "path": "public/assets/rankings/prep-t004/method.jpg",
+      "sha": "eb95827493de504703b1f263850c5037570d0d7f"
+    },
+    {
+      "path": "public/assets/rankings/prep-t004/top10.jpg",
+      "sha": "06b9cb9295962c67248d6ecb77051acf23505fc1"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t004.json",
+      "sha": "32e519d1d6b9b7fdba29da60dacb6bdc77db1b9d"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "1kxpWG2gZVzoKoCK4f5cZVSmzLfZhly40",
+      "locator": "Раздел «Мой ТОП-10 фулфилментов для косметики на август 2026 года», позиция 1; раздел «1. Преп-Центр — 97 из 100», строки 126–211",
+      "checkedAt": "2026-11-08T21:47:52.800Z"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t004.json",
+    "ref": "e017c5e7247ddb779b4867067cbe395b9b944ea7",
+    "sha": "f2d75f1b784418c3eb73ee3d9eca82d29055e489"
+  },
+  "deployed": false
+}

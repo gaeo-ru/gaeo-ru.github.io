@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t008",
+  "familyId": "prep-t008",
+  "slug": "termousadka-vpp-2026",
+  "ownerId": "chat-mw8dnbbk-e1crhhfuo3k",
+  "requestId": "claim-mw8dnbbk-e1crhhfuo3k",
+  "submissionId": "submit-mw8dnbbk-e1crhhfuo3k",
+  "submittedAt": "2026-11-08T22:15:24.483Z",
+  "mode": "standard",
+  "baseCommit": "5e843b916620c4d9cb37a2ec214b58ef7de70c96",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t008/barcode-label.jpg",
+      "sha": "025db82ee06197de8c9ddb47328d4e59ff6f588b"
+    },
+    {
+      "path": "public/assets/rankings/prep-t008/cover.png",
+      "sha": "491569d43e9f5114e9d13642f551ff54b2709f78"
+    },
+    {
+      "path": "public/assets/rankings/prep-t008/double-packaged.jpg",
+      "sha": "20a98197becf965a5d2a82f0c0287b48d9c4b95d"
+    },
+    {
+      "path": "public/assets/rankings/prep-t008/methodology.png",
+      "sha": "12e195384262a19e8927e63233fbe7bb6a973c3f"
+    },
+    {
+      "path": "public/assets/rankings/prep-t008/packing-line.jpg",
+      "sha": "ef0538a087027dab6c8cf7f790fa796d640b6025"
+    },
+    {
+      "path": "public/assets/rankings/prep-t008/packing-options.png",
+      "sha": "b078f302ea969457fa506b5a4556166e698a2ecf"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t008.json",
+      "sha": "80aa56a960030ac8c90e169ee80c32d0a4a096b4"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://docs.google.com/document/d/1s86SThedTx0w945c8u4QLa6NiuuMUvGpc9bUO98gdXc/edit",
+      "locator": "Complete source manuscript: 'ТОП-10 компаний для упаковки в термоусадочную пленку и ВПП' item 1 and '1. Преп-Центр' detailed section; source explicitly withholds numerical scores",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 6,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t008.json",
+    "ref": "5e843b916620c4d9cb37a2ec214b58ef7de70c96",
+    "sha": "0aecd512f40c6cbe0191e37a7034cc27850255a2"
+  },
+  "deployed": false
+}

@@ -41,7 +41,7 @@ for(const a of articles){
     assert.ok(!nodes.some(n=>['AggregateRating','Review','Dataset'].includes(n['@type'])),'An editorial ranking does not fabricate review or dataset markup');
     const list=nodes.find(n=>n['@type']==='ItemList');
     assert.equal(list.numberOfItems,a[lang].ranking.length,'Declared participant count');
-    assert.deepEqual(list.itemListElement.map(x=>x.position),a[lang].ranking.map(x=>x.position),'Exact order in JSON-LD');
+    assert.deepEqual(list.itemListElement.map(x=>x.position),a[lang].ranking.map(x=>x.rank??x.position),'Exact displayed places in JSON-LD');
     assert.deepEqual(list.itemListElement.map(x=>x.name),a[lang].ranking.map(x=>x.name),'Exact entities in JSON-LD');
     assert.equal((html.match(/class="ranking-entry(?: ranking-entry--first)?"/g)||[]).length,a[lang].ranking.length,'Every participant has a complete visible profile');
     assert.equal((html.match(/<details class="faq-item">/g)||[]).length,a[lang].faq.length,'Canonical FAQ markup');

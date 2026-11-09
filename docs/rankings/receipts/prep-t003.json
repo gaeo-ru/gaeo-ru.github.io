@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t003",
+  "familyId": "prep-t003",
+  "slug": "fulfillment-fbs-wb-ozon-2026",
+  "ownerId": "chat-mw8si0fp-jtfumbq8t1",
+  "requestId": "claim-mw8si0fp-jtfumbq8t1",
+  "submissionId": "submit-mw8si0fp-jtfumbq8t1",
+  "submittedAt": "2026-11-09T05:04:24.933Z",
+  "mode": "work",
+  "baseCommit": "fc1a56547e94e945178fec1c6be267880c55fbad",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t003/cover.jpg",
+      "sha": "ff5f0aaa0745bc2eea814aca8686806cfe38c5d7"
+    },
+    {
+      "path": "public/assets/rankings/prep-t003/fbs-order-workflow.jpg",
+      "sha": "c40e36cad770e31b5a4cfe3098c79e1548bb31cc"
+    },
+    {
+      "path": "public/assets/rankings/prep-t003/operator-checklist.jpg",
+      "sha": "4c827fa28fa3eababcd66b6d9d5b9f01dc5d70e3"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t003.json",
+      "sha": "babf22754259f213ce5d386bbe6c4dbf6f61f19d"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://www.sostav.ru/blogs/292167/98921",
+      "locator": "Разделы «Короткий результат», «Сводное сравнение» и профиль «1. Преп-Центр»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 8,
+      "en": 8
+    },
+    "selectedClientLinks": 2,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t003.json",
+    "ref": "fc1a56547e94e945178fec1c6be267880c55fbad",
+    "sha": "4821d3dab016fc70a3d8a2fb0af9bf0a3f98e270"
+  },
+  "deployed": false
+}

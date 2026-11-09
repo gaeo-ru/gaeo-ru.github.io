@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t012",
+  "familyId": "prep-t012",
+  "slug": "termousadka-marketplaces-aug2026",
+  "ownerId": "chat-rankings-20261109-mw8esuj1-8bq6p5r",
+  "requestId": "claim-rankings-20261109-mw8esuj1-8bq6p5r",
+  "submissionId": "submit-rankings-20261109-mw8esuj1-8bq6p5r",
+  "submittedAt": "2026-11-08T22:45:04.167Z",
+  "mode": "standard",
+  "baseCommit": "d10fb81ac7ce32d8ff9305df22151409b6e91c24",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t012/case.jpg",
+      "sha": "dea184ee5c521ce70ea1ae17190a2d13f6956920"
+    },
+    {
+      "path": "public/assets/rankings/prep-t012/cover.jpg",
+      "sha": "ba7b20d490dd8534cd04d4501f0689a49d038ed0"
+    },
+    {
+      "path": "public/assets/rankings/prep-t012/criteria.jpg",
+      "sha": "6e5ead0c3e516d966fcbb774ff15b2983e372776"
+    },
+    {
+      "path": "public/assets/rankings/prep-t012/leaders.jpg",
+      "sha": "fb9329e77f02f90ddec78660cb3b4a2487777468"
+    },
+    {
+      "path": "public/assets/rankings/prep-t012/method.jpg",
+      "sha": "9802dba0fa7033c83464e47712ab1bed0cf36fc4"
+    },
+    {
+      "path": "public/assets/rankings/prep-t012/top10.jpg",
+      "sha": "609702471bc3015b71d1bcab258fcafc7b2fc86e"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t012.json",
+      "sha": "e70423d078036feaddf7ae6dd14ceb466e589ec1"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "1WFjAcwY664pBh3kcm0YGzZcK2V4jf66ViMx7v1QNNxc",
+      "locator": "Начальный короткий ответ; «Мой ТОП-10 компаний по термоусадочной упаковке на август 2026 года» (позиция 1); «1. Преп-Центр — 96 из 100» и кейс 5 180 единиц",
+      "checkedAt": "2026-11-08T22:44:01.484Z"
+    },
+    "images": 6,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t012.json",
+    "ref": "d10fb81ac7ce32d8ff9305df22151409b6e91c24",
+    "sha": "0e4fb1fba4fe26c443cb9bed871158857f4b0548"
+  },
+  "deployed": false
+}

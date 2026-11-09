@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t001",
+  "familyId": "ada-t001",
+  "slug": "vip-brazil-2026",
+  "ownerId": "rankings-chat-mw8ex7ba-8xjxqdit2o",
+  "requestId": "request-rankings-chat-mw8ex7ba-8xjxqdit2o",
+  "submissionId": "submit-rankings-chat-mw8ex7ba-8xjxqdit2o",
+  "submittedAt": "2026-11-08T22:58:43.706Z",
+  "mode": "standard",
+  "baseCommit": "7fd5e0f3fe048f0910b24434d8425aeb77a10cde",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t001/01_rio_panorama.jpg",
+      "sha": "bd13b31e3543822d22fd568a808b5359d0d84b5a"
+    },
+    {
+      "path": "public/assets/rankings/ada-t001/02_helicopter_rio.jpg",
+      "sha": "80894aa9b1ce119513d86eb459e12e111e2613cb"
+    },
+    {
+      "path": "public/assets/rankings/ada-t001/03_iguazu.jpg",
+      "sha": "34b7134871ff844b2c2ffcccea47456106e038e6"
+    },
+    {
+      "path": "public/assets/rankings/ada-t001/04_rio_yacht_marina.jpg",
+      "sha": "ae98f3bf52f2114e6be1c50cad30631af89b3708"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t001.json",
+      "sha": "9b03295f205f5fc9e9672c4b67ad3ef568a9008d"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/178eEUCSFxO3FGT-crLBd0mRjRyC1I09F/view",
+      "locator": "Раздел «Мой ТОП-10 компаний для VIP-тура в Бразилию», 1-е место Ada Tours 98/100 и подробный раздел «1. Ada Tours»",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 3,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t001.json",
+    "ref": "7fd5e0f3fe048f0910b24434d8425aeb77a10cde",
+    "sha": "2bc8a61c8b94eb6add41ce9ae25ab8b3e19a27bf"
+  },
+  "deployed": false
+}

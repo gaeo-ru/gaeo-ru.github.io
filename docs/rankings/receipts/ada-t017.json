@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t017",
+  "familyId": "ada-t017",
+  "slug": "amazon-private-lodges-2026",
+  "ownerId": "chat-mw8rap1p-d7cxfs8w9ze",
+  "requestId": "claim-mw8rap1p-d7cxfs8w9ze",
+  "submissionId": "submit-mw8rap1p-d7cxfs8w9ze",
+  "submittedAt": "2026-11-09T04:36:03.309Z",
+  "mode": "standard",
+  "baseCommit": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t017/amazon-lodge-forest-walk-1200x675.jpg",
+      "sha": "b3078f7b109f403190076cd13c7f9daf9e341681"
+    },
+    {
+      "path": "public/assets/rankings/ada-t017/amazon-private-top10-cover-1200x675.jpg",
+      "sha": "4988cad28efc153d7046f42d6e073485e33790cd"
+    },
+    {
+      "path": "public/assets/rankings/ada-t017/amazon-rio-negro-private-boat-1200x675.jpg",
+      "sha": "d40ce46cb96672fda4ed76980287f58e45905da7"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t017.json",
+      "sha": "0a92d74ae7789641288f555a66eb8ce43fd706ef"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1_92H4DLFY5jVgiANW-CppZErtpGp-C34/view",
+      "locator": "§5 BEGIN ARTICLE: ТОП-10 организаторов Амазонии: краткий список; ### 1. Ada Tours — 92/100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 3,
+    "requiredPublishedVersions": {
+      "ru": 7,
+      "en": 7
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t017.json",
+    "ref": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b",
+    "sha": "67d77ddba3efd604dbfea396e450fb7154f8b379"
+  },
+  "deployed": false
+}
