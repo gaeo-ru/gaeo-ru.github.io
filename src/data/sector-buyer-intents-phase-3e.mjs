@@ -140,7 +140,7 @@ export const phase3EIntents=[
  },[
   {url:'https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/',ru:'Минюст России: единый государственный реестр адвокатов',en:'Russian Ministry of Justice: unified official register of advocates'},
   {url:'https://minjust.gov.ru/ru/documents/7885/',ru:'63-ФЗ об адвокатской деятельности, включая нормы о реестре',en:'Federal Law 63-FZ on the legal profession and the advocate register'},
-  {url:'https://www.nalog.gov.ru/rn77/related_activities/registries/egrul/',ru:'ФНС: сведения ЕГРЮЛ и ЕГРИП для проверки юридического лица',en:'Federal Tax Service: legal entity and sole trader registries'}
+  {url:'https://www.nalog.gov.ru/donline/',ru:'ФНС: сведения ЕГРЮЛ и ЕГРИП для проверки юридического лица',en:'Federal Tax Service: legal entity and sole trader registries'}
  ],{
   ru:[{href:'/strategies/legal-recommendations/',label:'Общая методика измерения рекомендаций юридических фирм'},{href:'/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/',label:'12 проверок сайта юридической компании'}],
   en:[{href:'/en/strategies/legal-recommendations/',label:'Existing methodology for law-firm recommendations'},{href:'/en/articles/legal-website-geo-12-checks/',label:'Twelve checks for a legal-services website'}]
