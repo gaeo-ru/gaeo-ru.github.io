@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3F: доказательства E3/E4 и письменные разрешения на публикацию кейсов №42/48/55/59 остаются открыты. Публичная проверка 3D/3E/3F завершена (16/16 URL, 48/48 Chromium), PR/production/main/Pages PASS. Следующая содержательная партия пока не назначена.",
+    "next_batch": "3A: независимая публичная приемка после PR #138, 20 URL/60 ширин; ранний запуск 59/60 (выпуск CSS еще не опубликован), production 42676590310 выполняется. 3F: клиентские E3/E4 и письменные разрешения №42/48/55/59 остаются заблокированы.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1951,6 +1951,23 @@
       "generated_html_changed_in_final_release": false,
       "final_release_verified": true,
       "final_release_note": "Full PR CI and Astro production/main/Pages PASS; original public HTTPS audited against main 598fe324 and repeated PASS after source merge; new main 3ee89374 differs from previous main only by astro-release-manifest.json, so all 16 checked HTML unchanged. No new live commercial content, tariffs, BMR changes, or client case claim."
+    },
+    "phase_3a": {
+      "status": "publication_in_progress_public_recheck_required",
+      "source_commit": "66def4449d98dafccb13740f80cf9be9c2bcb02b",
+      "pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/138",
+      "pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42674891613",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590310",
+      "premature_public_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
+      "premature_public_result": "20/20 HTTPS SHA256; 59/60 Chromium; /industries/ 320px 11px overflow on old main CSS",
+      "public_https_browser_verified": false,
+      "priority_ids": [
+        75,
+        76,
+        27,
+        30
+      ],
+      "required_followup": "After production PASS, verify sourceCommit/main SHA/Pages, rerun same public 20 URLs at 1440/390/320 and record exact verified status."
     }
   },
   "status_definitions": {
@@ -2112,8 +2129,23 @@
         30
       ],
       "label": "Авторынок и финансовые услуги из плана v3",
-      "condition": "Сначала первичные источники и собственная методика. Все 4 записи имеют приоритет 1 исходной матрицы; опубликованных отраслевых доказательств пока нет.",
-      "work_status": "research_pending_no_existing_hubs"
+      "condition": "Фактически существуют двуязычные хабы и методики автомобильного рынка и финансов, коммерческие страницы 107 направлений готовы. Следующий этап: независимая проверка публичного HTTPS и исправление 320 px на /industries/; клиентские результаты E3/E4 не утверждать без первоисточников и разрешений.",
+      "work_status": "public_acceptance_59_of_60_before_css_release",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/138",
+      "source_commit": "66def4449d98dafccb13740f80cf9be9c2bcb02b",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42674891613",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590310",
+      "public_https_browser_verified": false,
+      "public_https_partial_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
+      "public_https_partial_result": "20/20 public URLs match current main SHA256; 59/60 Chromium PASS; RU /industries/ 320px overflow 11px before PR#138 CSS production",
+      "hub_paths_ru": [
+        "/industries/automotive/",
+        "/industries/finance/"
+      ],
+      "method_paths_ru": [
+        "/strategies/automotive-buyer-evidence/",
+        "/strategies/finance-buyer-evidence/"
+      ]
     },
     {
       "batch": "3B",
