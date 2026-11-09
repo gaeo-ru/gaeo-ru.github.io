@@ -2161,9 +2161,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
+        "requestId": "claim-rankings-mw8rotww-t03nn6h0",
+        "token": "rk-mw8rp4qe-4oea8eyu5s4-nlqe792px3h",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:34:57.143Z",
+        "expiresAt": "2026-11-09T10:34:57.143Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "prep-t024",
@@ -2972,7 +2981,19 @@
       "taskId": "prep-t027-shampuni-geli-top15-2026",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
+      "requestId": "claim-rankings-mw8rotww-t03nn6h0",
+      "token": "rk-mw8rp4qe-4oea8eyu5s4-nlqe792px3h",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:34:57.143Z",
+      "expiresAt": "2026-11-09T10:34:57.143Z",
+      "previousStatus": "ready",
+      "taskId": "prep-t026",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:25:10.672Z"
+  "updatedAt": "2026-11-09T04:34:57.143Z"
 }
