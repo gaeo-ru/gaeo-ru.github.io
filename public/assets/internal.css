@@ -898,22 +898,7 @@
    These key styles must render even if Astro's generated bundle is delayed.
    The release pipeline separately checks and publishes every /_astro/ asset. */
 .industry-pricing-section .industry-pricing__explanation{margin-bottom:0}
-.industry-pricing-section .industry-pricing__quick-links{
- display:flex;flex-wrap:wrap;align-items:center;gap:9px 11px;
- margin:14px 0 0;padding:0;max-width:100%
-}
-.industry-pricing-section .industry-pricing__quick-links>a{
- box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
- min-height:42px;min-width:0;padding:10px 16px;
- color:#133c61;background:#f6f9fc;border:1px solid #ccdae6;
- border-radius:999px;font:650 14px/1.35 Manrope,Arial,sans-serif;
- text-align:center;text-decoration:none;white-space:normal;overflow-wrap:anywhere
-}
-.industry-pricing-section .industry-pricing__quick-links>a:hover,
-.industry-pricing-section .industry-pricing__quick-links>a:focus-visible{
- color:#062b4b;background:#eaf5fa;border-color:#69a8c4;text-decoration:none;
- outline-offset:3px
-}
+.industry-pricing-section .industry-pricing__quick-links{margin:14px 0 0}
 .industry-section.industry-pricing-section.industry-specialization__pricing{
  padding-bottom:12px
 }
@@ -949,8 +934,7 @@
  border-radius:9px;box-shadow:none
 }
 @media(max-width:720px){
- .industry-pricing-section .industry-pricing__quick-links{gap:8px;margin-top:12px}
- .industry-pricing-section .industry-pricing__quick-links>a{min-height:40px;padding:9px 13px;font-size:13px}
+ .industry-pricing-section .industry-pricing__quick-links{margin-top:12px}
  .industry-section.industry-pricing-section.industry-specialization__pricing{padding-bottom:10px}
  .industry-section.industry-faq-section.industry-specialization__faq{padding-top:10px}
  .industry-specialization__related-links>a{min-height:40px}
@@ -964,6 +948,5 @@
  }
 }
 @media(max-width:420px){
- .industry-pricing-section .industry-pricing__quick-links>a,
  .industry-specialization__related-links>a{width:100%;justify-content:center}
 }

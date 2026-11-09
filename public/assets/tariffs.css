@@ -56,7 +56,8 @@
 .tariff-detail__price{font-size:31px;font-weight:800;color:var(--navy);margin:25px 0 12px;line-height:1.3}
 .tariff-detail__chapter{max-width:980px;padding-top:42px;margin-top:34px;border-top:1px solid var(--line)}
 .tariff-detail__chapter h2{font-size:29px;margin-bottom:22px}.tariff-detail__chapter ul{padding-left:22px;line-height:1.75}
-.tariff-detail__chapter li+li{margin-top:8px}.tariff-related{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}
+.tariff-detail__chapter li+li{margin-top:8px}
+.tariff-related{margin:24px 0}
 .tariff-option-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
 .tariff-option-gallery article{min-width:0;border:1px solid var(--line);border-radius:10px;background:#fff;padding:18px}
 .tariff-option-gallery img{display:block;width:100%;height:auto;border-radius:7px}.tariff-option-gallery h3{font-size:21px;margin-top:18px}

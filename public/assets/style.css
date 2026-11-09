@@ -1340,8 +1340,28 @@ details.price:last-child{
  .desktop-menu :is(.nav-cases__submenu,.nav-publications__submenu),
  .mobile-menu :is(.mobile-cases__chevron,.mobile-publications__chevron){transition:none}
 }
-.home-publication-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin:24px 0 28px}
-.home-publication-links a{font:600 13px/1.6 Manrope,Arial,sans-serif;color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+.pill-links{
+ display:flex;flex-wrap:wrap;align-items:center;gap:9px 11px;max-width:100%
+}
+.pill-links>a{
+ box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;
+ min-height:42px;min-width:0;max-width:100%;padding:10px 16px;
+ color:#133c61;background:#f6f9fc;border:1px solid #ccdae6;border-radius:999px;
+ font:650 14px/1.35 Manrope,Arial,sans-serif;text-align:center;
+ text-decoration:none;white-space:normal;overflow-wrap:anywhere
+}
+.pill-links>a:is(:hover,:focus-visible){
+ color:#062b4b;background:#eaf5fa;border-color:#69a8c4;text-decoration:none
+}
+.pill-links>a:focus-visible{outline:2px solid #075e80;outline-offset:2px}
+.home-publication-links{margin:24px 0 28px}
+@media(max-width:720px){
+ .pill-links{gap:8px}
+ .pill-links>a{min-height:40px;padding:9px 13px;font-size:13px}
+}
+@media(max-width:420px){
+ .pill-links>a{width:100%}
+}
 
 /* Footer navigation: balanced case/publication submenus, contact labels and language control in brand column. */
 .footer-brand>.footer-lang{width:min(100%,320px);margin-top:20px;padding-top:14px}

@@ -170,7 +170,7 @@ function updateHomepage(lang){
   }else if(!html.includes('href="/assets/style.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/style.css?v=0">\n</head>');
   if(!html.includes('/assets/review-carousel.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/review-carousel.css?v=0">\n</head>');
   if(!html.includes('/assets/review-carousel.js'))html=html.replace('</body>','<script src="/assets/review-carousel.js?v=0" defer></script>\n</body>');
-  const navigation=`<!-- PUBLICATION_CATEGORY_LINKS_START --><nav class="home-publication-links" aria-label="${lang==='en'?'Publication sections':'Разделы публикаций'}">${categories.map(c=>`<a href="${publicationRoute(lang,c.id)}">${esc(c[lang])} →</a>`).join('')}</nav><!-- PUBLICATION_CATEGORY_LINKS_END -->`;
+  const navigation=`<!-- PUBLICATION_CATEGORY_LINKS_START --><nav class="home-publication-links pill-links" aria-label="${lang==='en'?'Publication sections':'Разделы публикаций'}">${categories.map(c=>`<a href="${publicationRoute(lang,c.id)}">${esc(c[lang])}</a>`).join('')}</nav><!-- PUBLICATION_CATEGORY_LINKS_END -->`;
   if(html.includes('<!-- PUBLICATION_CATEGORY_LINKS_START -->'))html=html.replace(/<!-- PUBLICATION_CATEGORY_LINKS_START -->[\s\S]*?<!-- PUBLICATION_CATEGORY_LINKS_END -->/,navigation);
   else if(lang==='ru')html=html.replace(/(<div class="publications mobile-fold-body" id="publicationsFoldBody">)/,navigation+'\n$1');
   save(path,html);
