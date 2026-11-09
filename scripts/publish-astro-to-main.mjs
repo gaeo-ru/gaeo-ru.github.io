@@ -20,8 +20,8 @@ function hash(path,kind){return hashContent(readFileSync(path),kind);}
 // the same production scripts. Any other parallel edit still aborts the release.
 function isVerifiedMaintenanceDelta(f){
  try{
-  const log=execFileSync('git',['-C',target,'log','-1','--format=%H%x00%s%x00%an','--',f.path],{encoding:'utf8'}).trim().split('\\0');
-  if(log.length<3||log[1]!=='Auto-maintain GAEO site metadata'||!/^github-actions\\[bot\\]$/.test(log[2]))return false;
+  const log=execFileSync('git',['-C',target,'log','-1','--format=%H%x00%s%x00%an','--',f.path],{encoding:'utf8'}).trim().split('\0');
+  if(log.length<3||log[1]!=='Auto-maintain GAEO site metadata'||!/^github-actions\[bot\]$/.test(log[2]))return false;
   const before=execFileSync('git',['-C',target,'show',log[0]+'^:'+f.path]);
   return hashContent(before,f.kind)===f.sha256;
  }catch{return false;}
