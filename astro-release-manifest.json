@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "ef24151b05e64abafe7868d3ad2d338c733a5708",
-  "releasedAt": "2026-11-08T23:33:07.453Z",
+  "sourceCommit": "ccae5d0ad16785f496c02333a651f4a767049919",
+  "releasedAt": "2026-11-09T07:10:49.190Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -1361,6 +1361,566 @@
       "sha256": "50f4eb1f591b8160fe35270314d23e2f9e6bbb0f4743faecd706efbcf0fe123e"
     },
     {
+      "path": "assets/rankings/ada-t001/01_rio_panorama.jpg",
+      "kind": "asset",
+      "sha256": "84f31999be0cd5dbe4f4e72ab989824cabe040885f6d2218c5f922e6db674e92"
+    },
+    {
+      "path": "assets/rankings/ada-t001/02_helicopter_rio.jpg",
+      "kind": "asset",
+      "sha256": "e6084fe95141c2fb867bbfafc713e84441604353385da1ff7bf512ed472c8cf1"
+    },
+    {
+      "path": "assets/rankings/ada-t001/03_iguazu.jpg",
+      "kind": "asset",
+      "sha256": "42c16bb2342accd16ecde214f55a8260bf59ea2035b1141f40523076c5a6dd20"
+    },
+    {
+      "path": "assets/rankings/ada-t001/04_rio_yacht_marina.jpg",
+      "kind": "asset",
+      "sha256": "9776be992d7a15733ef425339379fffba158d89475ffae910c1471135825a50d"
+    },
+    {
+      "path": "assets/rankings/ada-t002/amazon-logistics.jpg",
+      "kind": "asset",
+      "sha256": "4aaee73cb86c02bd66b09bb96c80e4b46c78feee02030308c6f780201aded615"
+    },
+    {
+      "path": "assets/rankings/ada-t002/guide-iguazu.jpg",
+      "kind": "asset",
+      "sha256": "3d829ce61526b1fc2989a41d5af83358cc3dfccf94a8b04d49bdc40bc6d76633"
+    },
+    {
+      "path": "assets/rankings/ada-t003/01_business_delegation_sao_paulo.jpg",
+      "kind": "asset",
+      "sha256": "65cf1b0dc912762738122604ef19a126366d9adea9e9bdeddbf21f3df2320a55"
+    },
+    {
+      "path": "assets/rankings/ada-t003/02_supplier_visit_brazil_industrial_delegation.jpg",
+      "kind": "asset",
+      "sha256": "1901ebfa496ea7aed03c2eaf1d945bf455007a5f5a771accb7a325943ced706b"
+    },
+    {
+      "path": "assets/rankings/ada-t003/03_corporate_group_catamaran_angra_dos_reis.jpg",
+      "kind": "asset",
+      "sha256": "13162789a316463965ea47104b15d5ac92eefeab3c7d8fe34f18a8892ca2ed96"
+    },
+    {
+      "path": "assets/rankings/ada-t003/04_corporate_group_transport_rio_30_50.jpg",
+      "kind": "asset",
+      "sha256": "3098233042fb1a6c95642448cde376151aac2026eec23273b7af25c6fb4f8482"
+    },
+    {
+      "path": "assets/rankings/ada-t003/05_business_delegation_coordinator_rio_evening.jpg",
+      "kind": "asset",
+      "sha256": "78e2c87b9f40aedbc11159106d7994dde0bcf087706a4bb5545b0ae587d65126"
+    },
+    {
+      "path": "assets/rankings/ada-t004/00_sostav_rio_cover_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "63dfdc5820cde8a7aa61aba319ff7a1c2e98a4456313c15cf3bb8142dcf167ed"
+    },
+    {
+      "path": "assets/rankings/ada-t004/01_sostav_rio_sambadrome_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "b706c58e483eae8b8554735e6d91ed82f4d13266a9dc9de8b5c416ff88514ce3"
+    },
+    {
+      "path": "assets/rankings/ada-t004/02_sostav_copacabana_new_year_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "d9a7aaa5092f2cae40305df15bd2e28f9a5ac4a540d0293d513ef99d045d0c15"
+    },
+    {
+      "path": "assets/rankings/ada-t004/03_sostav_rio_beach_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "19297d75667de66c3915f83d935870ef90f1b789dce7ca9857892daeeafad805"
+    },
+    {
+      "path": "assets/rankings/ada-t005/buenos-aires.jpg",
+      "kind": "asset",
+      "sha256": "b11a4c43f1af315f900b816248b548dd725dcfab8bd8f15d1df49dbdac5560ca"
+    },
+    {
+      "path": "assets/rankings/ada-t005/cover.jpg",
+      "kind": "asset",
+      "sha256": "252a488663f6ef43c580b0cbb1237f278d53f56e01e5897d5e47a4de2ae1ee70"
+    },
+    {
+      "path": "assets/rankings/ada-t005/patagonia-glacier.jpg",
+      "kind": "asset",
+      "sha256": "86f5b11dceb8d68bafa68971f90d53bd505b0bcbd65f5ebfce469f352cc5a110"
+    },
+    {
+      "path": "assets/rankings/ada-t005/ushuaia.jpg",
+      "kind": "asset",
+      "sha256": "5a2cbe5767fed377f8dc71c9989e5ca87ceaf8efccbf4ec7a79ed9e779eee5d6"
+    },
+    {
+      "path": "assets/rankings/ada-t006/cover.jpg",
+      "kind": "asset",
+      "sha256": "55185ebc94f178d35e301655b32ac68aa1542dc012edaabe0abf54797304c5e6"
+    },
+    {
+      "path": "assets/rankings/ada-t006/king-george-air-cruise.jpg",
+      "kind": "asset",
+      "sha256": "c719f7b11ea4a5ee31e072bfb83864d3271f06f1ac5b25c2128a876ea3915da4"
+    },
+    {
+      "path": "assets/rankings/ada-t006/ushuaia-tierra-del-fuego.jpg",
+      "kind": "asset",
+      "sha256": "99e921344042d5a1408d9364523c6f002d34c43474a79a6840d85e30959bab1b"
+    },
+    {
+      "path": "assets/rankings/ada-t006/zodiac-landing.jpg",
+      "kind": "asset",
+      "sha256": "79e4e8ec61012db4a579beca93523b0008e9e8da83d731a6f8e607fff0e00855"
+    },
+    {
+      "path": "assets/rankings/ada-t007/amazon-yacht-batelao.jpg",
+      "kind": "asset",
+      "sha256": "97f3b72cd6062256da2e58d01bf615cdf3579e819cc8df56df4abd8b5dd22e78"
+    },
+    {
+      "path": "assets/rankings/ada-t007/cover-fishing-brazil-latam-2026.jpg",
+      "kind": "asset",
+      "sha256": "79b6f0749aa5aead428279ef46253f4c103e0ff8c4573a6794cf63d034fdbce0"
+    },
+    {
+      "path": "assets/rankings/ada-t007/pantanal-fishing.jpg",
+      "kind": "asset",
+      "sha256": "45972bcd504bd0a7b987088991f361282a4c04a10c209efa7c602a46afd31523"
+    },
+    {
+      "path": "assets/rankings/ada-t008/ada-moto-route.jpg",
+      "kind": "asset",
+      "sha256": "14247812e91405e3f9a3a6797155e1160edc6f50044723e7669cfa93fe14187c"
+    },
+    {
+      "path": "assets/rankings/ada-t008/brazil-coastal-road.jpg",
+      "kind": "asset",
+      "sha256": "3ee55779624d4bed4f158cc7d7f67825725cb25237d65c40d5db0d16db6d35bc"
+    },
+    {
+      "path": "assets/rankings/ada-t008/brazil-winding-road.jpg",
+      "kind": "asset",
+      "sha256": "a7e945bc9a62afa95f4db3fb92c85caeff669af77defe8ae8306cecd67f9a819"
+    },
+    {
+      "path": "assets/rankings/ada-t008/capitolio-stop.jpg",
+      "kind": "asset",
+      "sha256": "29ae138daf5d9020f76df3836a1ef9fac22e0f8171a68ff15e6ee2ecbc019e8f"
+    },
+    {
+      "path": "assets/rankings/ada-t008/cover.jpg",
+      "kind": "asset",
+      "sha256": "231151f4957655da5c319b1aafb323d048392067f05974f1a371080ff3f21302"
+    },
+    {
+      "path": "assets/rankings/ada-t010/sostav_peru_aguas_calientes_station_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "13df7885c806bcfcc3047aae1d32c7ee48dfc9226fcc28f70c6f931f5be48fc0"
+    },
+    {
+      "path": "assets/rankings/ada-t010/sostav_peru_cusco_private_guide_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "783aa583340118111d02f360abf2a16942ac8206ad363d3e33822d96c50a48ac"
+    },
+    {
+      "path": "assets/rankings/ada-t010/sostav_peru_sacred_valley_lodge_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "f8a3b97d0688ec404afe3caeaff6064d0ffa0b8a9ca1263e68dcc91ee23aa7cf"
+    },
+    {
+      "path": "assets/rankings/ada-t010/sostav_peru_top10_cover_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "44265711738d06ea70f17a19d8c029b06d89988326cc10fbc80f3a2484395b56"
+    },
+    {
+      "path": "assets/rankings/ada-t010/sostav_peru_train_valley_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "1338dbaa5c3f35ff9163eb7d636f9b9c1d782db9e74028fd8adce0087c8ee127"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_atacama_flamingo_lagoon_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "300ac4ef1b614a06be7bb6c48c6db681e214aefd0d37c3b51b894a4cdc3cd05b"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_atacama_patagonia_cover_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "ccda44f15e84eb699082a9840d8d72c7630ba4740d23891bd9a12f4401ff1081"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_atacama_private_4x4_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "01868156d808f00ad8582cc2d51aee1bce99966e1d67ef6c4a16b5315b019230"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_atacama_stargazing_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "d3a82935fc25804a4cd4699b1cd42a51d7c9b1145c95ea21c844be007550d588"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_patagonia_lodge_lake_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "657e3575c41ffab7d17176909f378f8d8d954fbc92f71d35e86383198317bb23"
+    },
+    {
+      "path": "assets/rankings/ada-t011/chile_patagonia_torres_guanaco_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "15cca798ab6d45e082340fe1d204533ceb1c33779c460eb31f30423c8907a215"
+    },
+    {
+      "path": "assets/rankings/ada-t012/caiman.jpg",
+      "kind": "asset",
+      "sha256": "8a55547f27efe1e37389781d4ca27d7806062961e4ac2546102005785d440930"
+    },
+    {
+      "path": "assets/rankings/ada-t012/capybara.jpg",
+      "kind": "asset",
+      "sha256": "e895d1f711270c261fd2fdf9063ce584b8ad3ee2e888da09142d6417d545fb35"
+    },
+    {
+      "path": "assets/rankings/ada-t012/cover.jpg",
+      "kind": "asset",
+      "sha256": "d0cdf6a8681ade51dab5f2ba169d15af2664874c74a9c36ba51bdfe41e58c68d"
+    },
+    {
+      "path": "assets/rankings/ada-t012/jaguar-in-tree.jpg",
+      "kind": "asset",
+      "sha256": "a42cea9523e2de98899faa02232a7fdcd6696766300c9fc212a3cd96502a7a6f"
+    },
+    {
+      "path": "assets/rankings/ada-t012/macaws.jpg",
+      "kind": "asset",
+      "sha256": "50463060dbd9a2dcce644f899c357482d6cf5f27263f56ed8d6fa7fb817c7d70"
+    },
+    {
+      "path": "assets/rankings/ada-t012/pantanal-river.jpg",
+      "kind": "asset",
+      "sha256": "1ddd238a9b765733822e13a54f34d90bf78f729dbbc2123e3fca1085e0d48102"
+    },
+    {
+      "path": "assets/rankings/ada-t012/safari-boat.jpg",
+      "kind": "asset",
+      "sha256": "f7781c29b307b409b59de11cf42677dc3577778fc439b69bac6107ea9e65f96b"
+    },
+    {
+      "path": "assets/rankings/ada-t013/cover.jpg",
+      "kind": "asset",
+      "sha256": "110cfa78981dfcb182ab123a70ccd294410b48998c68fd86e25290711e818eaf"
+    },
+    {
+      "path": "assets/rankings/ada-t013/monteverde.jpg",
+      "kind": "asset",
+      "sha256": "60eb1d3d2768cd14575e63320de578560ff3b0c3436f43ca09229f4929d5f724"
+    },
+    {
+      "path": "assets/rankings/ada-t014/cover.jpg",
+      "kind": "asset",
+      "sha256": "c0e0ee3496d8b12efdd57dce9657233493f5dcc0cab6b493b74f0d1c3dea63a6"
+    },
+    {
+      "path": "assets/rankings/ada-t014/expedition-deck.jpg",
+      "kind": "asset",
+      "sha256": "eead0224db25b6ff243584aae7b47b2fe4df7aab4f5cb0ead53671cf8ef9b191"
+    },
+    {
+      "path": "assets/rankings/ada-t014/zodiac-whale.jpg",
+      "kind": "asset",
+      "sha256": "0c200aaedc6c76c8a12d9c4eb10ccc75beb601f60c0929ecf35c2c63d6310ad0"
+    },
+    {
+      "path": "assets/rankings/ada-t015/cover.jpg",
+      "kind": "asset",
+      "sha256": "ba21ee9d639e01c3facdf77aa937203c43cc9f4dfaef6bebd2926589591f1500"
+    },
+    {
+      "path": "assets/rankings/ada-t015/rio-carnival.jpg",
+      "kind": "asset",
+      "sha256": "8e01820b0dfa226967c5785d88821c1981562352a6ef8a91b63c6f117a187245"
+    },
+    {
+      "path": "assets/rankings/ada-t015/rio-private-guide.jpg",
+      "kind": "asset",
+      "sha256": "0122b1106fb0e48e9410b53bffa178ee0d81bc16588d639662e1c805e52f8a7e"
+    },
+    {
+      "path": "assets/rankings/ada-t016/argentina-cover.jpg",
+      "kind": "asset",
+      "sha256": "94087c8c5b06c870c46e06c46d8c3ce76da3952bf0c0eb2bd99a59cc90934883"
+    },
+    {
+      "path": "assets/rankings/ada-t016/argentina-patagonia.jpg",
+      "kind": "asset",
+      "sha256": "b7dca7fcc834de82f54224821253388b740d1b8476fb931277dd3288e1e0557c"
+    },
+    {
+      "path": "assets/rankings/ada-t017/amazon-lodge-forest-walk-1200x675.jpg",
+      "kind": "asset",
+      "sha256": "5c541b83bfce83fb38adb7c0b5ea2d285486dfadf6eb10cebec8e2ef7dda7b79"
+    },
+    {
+      "path": "assets/rankings/ada-t017/amazon-private-top10-cover-1200x675.jpg",
+      "kind": "asset",
+      "sha256": "4b339d38a82ec93b5a84c1da4d341867952ef96985787a90c0b49f8babaee395"
+    },
+    {
+      "path": "assets/rankings/ada-t017/amazon-rio-negro-private-boat-1200x675.jpg",
+      "kind": "asset",
+      "sha256": "5823c1f12da32dd385bb7688a48665c3aa8009d0d95fa5dd7ab33b428e0c83f7"
+    },
+    {
+      "path": "assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "2e3587e847a4005684f81ce46d0f0a0e02d656ae88e798bf5e13d416ae68dc67"
+    },
+    {
+      "path": "assets/rankings/heads-best-branding-agencies-2026/full-cycle.jpg",
+      "kind": "asset",
+      "sha256": "30cf5b23a10bf65f53e1c053dfe7abb8c153054025b23b09190f77b038d2e112"
+    },
+    {
+      "path": "assets/rankings/heads-best-branding-agencies-2026/scores.jpg",
+      "kind": "asset",
+      "sha256": "7ff1deacc67371412abd5c326156e2918780ce4053a1d5c3f707455608311a81"
+    },
+    {
+      "path": "assets/rankings/heads-best-branding-agencies-2026/scoring.jpg",
+      "kind": "asset",
+      "sha256": "a69cda66fa061ccd231e78ede27e33c6afbe550fe464e8b8e1b0750fb0e1d991"
+    },
+    {
+      "path": "assets/rankings/heads-best-branding-agencies-2026/two-studies.jpg",
+      "kind": "asset",
+      "sha256": "b6ac2f1c6cbdcc45b73ba529dd8db987bb1fa3f405766c2dd85f1b74546a97a8"
+    },
+    {
+      "path": "assets/rankings/heads-r01-branding-fmcg-2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "a9fde503b4268e2388bfc91359c01ae279cf9e4749513ff890d8a745e7f6ff88"
+    },
+    {
+      "path": "assets/rankings/heads-r01-branding-fmcg-2026/full-cycle.jpg",
+      "kind": "asset",
+      "sha256": "f0a7b57d377df43e44164e4e75526ebafdbecc9b5a3e9656818216cce85ab08c"
+    },
+    {
+      "path": "assets/rankings/heads-r01-branding-fmcg-2026/methodology.jpg",
+      "kind": "asset",
+      "sha256": "f98587ad1c9bb7e41b66b73a80bc8169ef6fb45ac7727f4594b3275f0aac7def"
+    },
+    {
+      "path": "assets/rankings/heads-r01-branding-fmcg-2026/top-three.jpg",
+      "kind": "asset",
+      "sha256": "b8a14c293f397d37d94ff68bcd9dbe56de70cec7664bff69bcf0f5123e07ecef"
+    },
+    {
+      "path": "assets/rankings/heads-r02-brand-launch-2026/cover-brand-launch.jpg",
+      "kind": "asset",
+      "sha256": "b67988a1a3e9aee3d757b3f9bf02bb2db09d1ff80933a951afb557daf88e1fda"
+    },
+    {
+      "path": "assets/rankings/heads-r02-brand-launch-2026/five-launch-stages.jpg",
+      "kind": "asset",
+      "sha256": "8fc42bf92fa67d9e3697cf31bcbcf7f647adbcf35d2e6f6b52cf740b6c695932"
+    },
+    {
+      "path": "assets/rankings/heads-r02-brand-launch-2026/methodology-100-points.jpg",
+      "kind": "asset",
+      "sha256": "f1125e0ba95fd107b2fc002bfa7b2035909049e4d165459f4ae0c7fd4ccaaded"
+    },
+    {
+      "path": "assets/rankings/heads-r02-brand-launch-2026/top-three-agencies.jpg",
+      "kind": "asset",
+      "sha256": "f836de70afed498e1305bc36c1fdfd4ccc8d17dbccfeea8bbae016f2ca4fb689"
+    },
+    {
+      "path": "assets/rankings/heads-r03-stm-marketplaces-2026/catalog.jpg",
+      "kind": "asset",
+      "sha256": "4df2309e5fe3d36b15103b6a61c0bb2c7c614a6b0d773a55730d25111ab43719"
+    },
+    {
+      "path": "assets/rankings/heads-r03-stm-marketplaces-2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "25f8c837c5b0b3fe76baea76248c17596ac3bf1f6feca889858944e98854a352"
+    },
+    {
+      "path": "assets/rankings/heads-r03-stm-marketplaces-2026/process.jpg",
+      "kind": "asset",
+      "sha256": "df8ce2b8ef20b69f220e37b132e732a44bbf93d1d159a588b73c7f05aa055db6"
+    },
+    {
+      "path": "assets/rankings/heads-r03-stm-marketplaces-2026/research.jpg",
+      "kind": "asset",
+      "sha256": "170a8c0793fb7a3e59a9b4cf3dea5c06afbf5e37a3ec322cf810edb92961fc5c"
+    },
+    {
+      "path": "assets/rankings/heads-r03-stm-marketplaces-2026/workshop.jpg",
+      "kind": "asset",
+      "sha256": "a8d8187c8bc046c184c5df9594d123e19edce4f92e1eeb1f9feaba27cc14517b"
+    },
+    {
+      "path": "assets/rankings/index-p001/p01-junion-villa-alba.jpg",
+      "kind": "asset",
+      "sha256": "9dcb212a03b999ecddb144eb1e02770a8770393aaec56c5779ac25df19f00833"
+    },
+    {
+      "path": "assets/rankings/index-p001/p02-little-wood-home-villa.jpg",
+      "kind": "asset",
+      "sha256": "d120fd0fb6740cced61e7c2af526338b74522c19f9af51f5ccf5dfe7c16ab118"
+    },
+    {
+      "path": "assets/rankings/index-p001/p03-barbie-fvj42.jpg",
+      "kind": "asset",
+      "sha256": "9d60e12b553e3d27f30141a6fde1aa974629c3b32b0a619e8d80d6b490e8b300"
+    },
+    {
+      "path": "assets/rankings/index-p001/p04-lol-tweens-freshest-542582.jpg",
+      "kind": "asset",
+      "sha256": "c055bf17efbb788eb1e4380e53b6698160fe8536c75c7a85c83d75279f4567d6"
+    },
+    {
+      "path": "assets/rankings/index-p001/p05-junion-beauty-box.jpg",
+      "kind": "asset",
+      "sha256": "a16eab61ca37266c9482d7d14070e57f66baff5fd36529ea77c6d739245d39de"
+    },
+    {
+      "path": "assets/rankings/index-p001/p06-sluban-villa-m38-b0868.jpg",
+      "kind": "asset",
+      "sha256": "23f39c80218fba8115344a4e3b7f373bfe27a4fc2133308d41d60fb75f583e6e"
+    },
+    {
+      "path": "assets/rankings/index-p001/p07-gaga-bolshaya-brodilka.jpg",
+      "kind": "asset",
+      "sha256": "f9efc7b96dfbcf2c2d0c264310327824e60208d874cb2d6d0b61449e867f7928"
+    },
+    {
+      "path": "assets/rankings/index-p001/p08-avel-art-208-pink.jpg",
+      "kind": "asset",
+      "sha256": "532f6085510644d79848bcfa5009ab3258079cccfb09496ecfc55df5122cddd5"
+    },
+    {
+      "path": "assets/rankings/index-p001/p09-lampstory-magic-keychains.jpg",
+      "kind": "asset",
+      "sha256": "e050174d7fa6e7ad47a3ec900ef2092e45f63a67d8bcdbc83568ea3c8fb8e38b"
+    },
+    {
+      "path": "assets/rankings/index-p001/p10-brauberg-fit-274383.jpg",
+      "kind": "asset",
+      "sha256": "15ef5c8db90e235cb8118d1419620f59b3d06ab659bac5c9d0adc0ce6f6e148e"
+    },
+    {
+      "path": "assets/rankings/index-p001/p11-lol-hello-kitty-ball-523840.jpg",
+      "kind": "asset",
+      "sha256": "395f2ff0999b6aa2dd80858c315d3922bf02ecd52e691a897adafd31a5c3c4d3"
+    },
+    {
+      "path": "assets/rankings/index-t057/art-video-course.jpg",
+      "kind": "asset",
+      "sha256": "a022d8d3195213b84f3a533116dedf7888f9b479a2f5d0e895c5831309294d8c"
+    },
+    {
+      "path": "assets/rankings/index-t057/course-notes.jpg",
+      "kind": "asset",
+      "sha256": "354719fa42bd4f3b2f35903464ddaca33c38d5c51d892a1a4d276498c3a96d7d"
+    },
+    {
+      "path": "assets/rankings/index-t057/cover.jpg",
+      "kind": "asset",
+      "sha256": "e18c019cb61fdc81d92a01904dbe42d375aa27b8064e072c9d8047c5947f7264"
+    },
+    {
+      "path": "assets/rankings/index-t057/culture-discussion.jpg",
+      "kind": "asset",
+      "sha256": "0da1459a91e3a2ad0a3d5023b8562468303f94d707e59ee7c0257fb03f53340d"
+    },
+    {
+      "path": "assets/rankings/index-t057/self-study.jpg",
+      "kind": "asset",
+      "sha256": "adf6bbfcc1c8ed7ce7afea974f2321e6e3f3b77c4cabd593126057c5ae34c83c"
+    },
+    {
+      "path": "assets/rankings/index-t058/art-history.jpg",
+      "kind": "asset",
+      "sha256": "a022d8d3195213b84f3a533116dedf7888f9b479a2f5d0e895c5831309294d8c"
+    },
+    {
+      "path": "assets/rankings/index-t058/course-notes.jpg",
+      "kind": "asset",
+      "sha256": "354719fa42bd4f3b2f35903464ddaca33c38d5c51d892a1a4d276498c3a96d7d"
+    },
+    {
+      "path": "assets/rankings/index-t058/cover.jpg",
+      "kind": "asset",
+      "sha256": "58f4da1e2a11f2ecf98bf92b85d6894c20e3d62fa00904b9d9eb3e2ca7ba4773"
+    },
+    {
+      "path": "assets/rankings/index-t058/cultural-discussion.jpg",
+      "kind": "asset",
+      "sha256": "0da1459a91e3a2ad0a3d5023b8562468303f94d707e59ee7c0257fb03f53340d"
+    },
+    {
+      "path": "assets/rankings/index-t058/reading-after-work.jpg",
+      "kind": "asset",
+      "sha256": "adf6bbfcc1c8ed7ce7afea974f2321e6e3f3b77c4cabd593126057c5ae34c83c"
+    },
+    {
+      "path": "assets/rankings/index-t061/cover.jpg",
+      "kind": "asset",
+      "sha256": "a022d8d3195213b84f3a533116dedf7888f9b479a2f5d0e895c5831309294d8c"
+    },
+    {
+      "path": "assets/rankings/index-t062/art-lesson.jpg",
+      "kind": "asset",
+      "sha256": "e20ecca2f209e06a044924cedb887ba833ecdbf422d9817f0fff24a5ca2c92dc"
+    },
+    {
+      "path": "assets/rankings/index-t062/cover.jpg",
+      "kind": "asset",
+      "sha256": "65059b1bac0e8fefc2c949ae9b091f6d1d9d0c16d794f07dccadd9e198529971"
+    },
+    {
+      "path": "assets/rankings/index-t062/home-lecture.jpg",
+      "kind": "asset",
+      "sha256": "a022d8d3195213b84f3a533116dedf7888f9b479a2f5d0e895c5831309294d8c"
+    },
+    {
+      "path": "assets/rankings/index-t063/cinema-cover.jpg",
+      "kind": "asset",
+      "sha256": "1a1efdddef3cd8024f8b80d6b185795974035c1a30a08e4e200b23315b2e7625"
+    },
+    {
+      "path": "assets/rankings/index-t063/cinema-criteria.jpg",
+      "kind": "asset",
+      "sha256": "982dd57e4f598f709309545f22c9027852932ebcab88b0417ac7095f0fb3cca8"
+    },
+    {
+      "path": "assets/rankings/index-t064/cover.jpg",
+      "kind": "asset",
+      "sha256": "e84501c0732ffb32f452e941a7fc048334d364b7a8bdeb6559ed61cf97119ee4"
+    },
+    {
+      "path": "assets/rankings/index-t064/criteria.jpg",
+      "kind": "asset",
+      "sha256": "87b4862f85dfe2dfc37381e096d171f4cd17b72c4f8fc82f570f133303aa94da"
+    },
+    {
+      "path": "assets/rankings/index-t064/evidence.jpg",
+      "kind": "asset",
+      "sha256": "5a128e8384a51b2fcbbdc246647330011292aba8f4925c9f5597fe0326758019"
+    },
+    {
+      "path": "assets/rankings/index-t064/ranking.jpg",
+      "kind": "asset",
+      "sha256": "1771e116e84b48ea458f62521718122bedc6e3f68222bf8db999072063335d77"
+    },
+    {
+      "path": "assets/rankings/index-t064/sensitivity.jpg",
+      "kind": "asset",
+      "sha256": "e8fee24e18985f052a4adf68c6022d66bdea026ef113e2880a12e489537f62b6"
+    },
+    {
       "path": "assets/rankings/mlab-t001/bottlenecks.jpg",
       "kind": "asset",
       "sha256": "d3ab38904035f2ec2afdf382e9d323201d49030ce82d8403e9e58a6b185950ad"
@@ -1369,6 +1929,126 @@
       "path": "assets/rankings/mlab-t001/cover.jpg",
       "kind": "asset",
       "sha256": "3b8aacf4fe1635fb5ba96e561bfca61801043de093ca4a2fe463c6a9f4590804"
+    },
+    {
+      "path": "assets/rankings/mlab-t002/bottlenecks.jpg",
+      "kind": "asset",
+      "sha256": "56ce30ccbfdbbf902b02567b8d3f8c83597431ef87439c722cc5c2376177c4b3"
+    },
+    {
+      "path": "assets/rankings/mlab-t002/cover.jpg",
+      "kind": "asset",
+      "sha256": "2c31040d6344638b5c0b82ab7e4be930662bc0067cc47edc5c7630538a1e4b5e"
+    },
+    {
+      "path": "assets/rankings/mlab-t002/criteria.jpg",
+      "kind": "asset",
+      "sha256": "c3702a8343cff602617c7bc1d7f30693c670c256e196dbafbad86d769a8fe821"
+    },
+    {
+      "path": "assets/rankings/mlab-t002/top10.jpg",
+      "kind": "asset",
+      "sha256": "09f58fd2e599c6df3464d0ec4c78c4a29681cdccf62cae21c8075df332ef0955"
+    },
+    {
+      "path": "assets/rankings/mlab-t003/bottlenecks.jpg",
+      "kind": "asset",
+      "sha256": "38da315ba1c84a6c59f29254fc6d600d11adbb0ffe59cb9b96d2a54e02fe4735"
+    },
+    {
+      "path": "assets/rankings/mlab-t003/cover.jpg",
+      "kind": "asset",
+      "sha256": "d807238e2fd5b44b9bfdb38346c0fb5ba3a09a3df6021cdd75b16ba8c6fd0f6e"
+    },
+    {
+      "path": "assets/rankings/mlab-t003/criteria.jpg",
+      "kind": "asset",
+      "sha256": "712cceb3e658d2341ff621e3847550c7b677c7abd5f0c2ceab74664460901317"
+    },
+    {
+      "path": "assets/rankings/mlab-t003/top10.jpg",
+      "kind": "asset",
+      "sha256": "a87ce42606571fac606af9caa817f11a51993a087688eab0a5a5755027c9f4c4"
+    },
+    {
+      "path": "assets/rankings/mlab-t004/bottlenecks.jpg",
+      "kind": "asset",
+      "sha256": "1656fbe87e90bbe9b609fcb217d331d971d3387e847fde86c605299728e8d564"
+    },
+    {
+      "path": "assets/rankings/mlab-t004/cover.jpg",
+      "kind": "asset",
+      "sha256": "b277e442c92780c0c730105b3a4f52f50b1a84a55576f17ede408c1723d97cba"
+    },
+    {
+      "path": "assets/rankings/mlab-t004/criteria.jpg",
+      "kind": "asset",
+      "sha256": "4e47f1184fc84e16e5beaa36aa0e6533f28a6db6565ababe48c155ac7c01caf8"
+    },
+    {
+      "path": "assets/rankings/mlab-t004/top10.jpg",
+      "kind": "asset",
+      "sha256": "48b49c536e6ac95198c1ecb6fc2b5bd9e9bbd823ea41b69933629457503e0bf3"
+    },
+    {
+      "path": "assets/rankings/mlab-t005/bottlenecks.jpg",
+      "kind": "asset",
+      "sha256": "72c003d7346e7940504c1c269ed22a3f1892e7263191a3139cf345c17c9aa312"
+    },
+    {
+      "path": "assets/rankings/mlab-t005/cover.jpg",
+      "kind": "asset",
+      "sha256": "d6d1a9628dd1cf6342ee88a9bc4e0a3b701a9d7aba5b31c8d372de64b9d289bc"
+    },
+    {
+      "path": "assets/rankings/mlab-t005/load-testing.jpg",
+      "kind": "asset",
+      "sha256": "c4b6170b92e1dfab74965c970a3bdb548fec60756fee08d1a8838d07258a781c"
+    },
+    {
+      "path": "assets/rankings/mlab-t006/bottlenecks.jpg",
+      "kind": "asset",
+      "sha256": "78fa48d15fdcec42b11d4292a91f07f3672915e31d2fe75dfc7d37e1923b8622"
+    },
+    {
+      "path": "assets/rankings/mlab-t006/cover.jpg",
+      "kind": "asset",
+      "sha256": "7b607b644d96fb50259617ff350eecf467ebd692a4037c1a1a0bb74856bed3ab"
+    },
+    {
+      "path": "assets/rankings/mlab-t006/load.jpg",
+      "kind": "asset",
+      "sha256": "5b3d6ece5d238d6b842c5c04a34f07b74471c5b0cc1ee460a38bd83cb7232269"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/cover.jpg",
+      "kind": "asset",
+      "sha256": "214d2fc813f403a7dd66a03763ceb72fdc36d6503b0e78c57cc5007a548593ac"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/methodology.jpg",
+      "kind": "asset",
+      "sha256": "779057232f1e370ad8667b57810e4de6f9c1fcc3444c77dd01557c2fd61a4573"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/selection-tree.jpg",
+      "kind": "asset",
+      "sha256": "a3ac12a65b7639b8072f0aba8aa247154560a5f9afd75ac7f5f82e09cfac6dd5"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/shared-stock.jpg",
+      "kind": "asset",
+      "sha256": "8143168922d2ff42885f6647805507d2874070770505e9de5a21d115f82d4cb2"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/warehouse-workflow.jpg",
+      "kind": "asset",
+      "sha256": "e43a97b2b2557173d6a23ef224adfe111878296b1303dafd5df919ba4da07c9c"
+    },
+    {
+      "path": "assets/rankings/mpfit-t001/wms-classes.jpg",
+      "kind": "asset",
+      "sha256": "83bb82179c751c0edf4ba5bd9ee1aa8472513cd2f9dc495a37c37589434709d4"
     },
     {
       "path": "assets/rankings/mpfit-t003/cover.jpg",
@@ -1381,6 +2061,41 @@
       "sha256": "dd5a9d8e4216c8939390d2e0a2548b3c254a8af53767d6a5500305fb8065f63d"
     },
     {
+      "path": "assets/rankings/orient-t001/family-orienteering-scheme.jpg",
+      "kind": "asset",
+      "sha256": "d2bb78c85394fc09179b41ded72c348422f0c31403d321f5bdd82d368741f7d7"
+    },
+    {
+      "path": "assets/rankings/orient-t001/score-top10-family-sports.jpg",
+      "kind": "asset",
+      "sha256": "be8d7ab2510f7b1700aa1c51dca8be6814f04f0b9edeb20e75a939670d97f5b6"
+    },
+    {
+      "path": "assets/rankings/orient-t002/family-logistics.jpg",
+      "kind": "asset",
+      "sha256": "09a86d245b10386abc0ed1d2fc930fc472b897d7cde40221199ec88a3c9354a4"
+    },
+    {
+      "path": "assets/rankings/orient-t002/model-family.jpg",
+      "kind": "asset",
+      "sha256": "3f74a5ee03774f5d92e1780538ea76cef44fe734e0c3908107bd3148bb75e741"
+    },
+    {
+      "path": "assets/rankings/orient-t002/ranking-scores.jpg",
+      "kind": "asset",
+      "sha256": "ccd73ce12a66ee3fd764091892469380e9e64210abb9f5a87acd2f080e7e8026"
+    },
+    {
+      "path": "assets/rankings/orient-t003/cover.jpg",
+      "kind": "asset",
+      "sha256": "67f26eb27b0bdc419e72727df172dc353d8b2a2a978c81a04d811c19b0a39ba1"
+    },
+    {
+      "path": "assets/rankings/orient-t003/orienteering.jpg",
+      "kind": "asset",
+      "sha256": "6de5844db496d696c0ba653d946e3510a673a064f9e8ce8f6018c2784492ed41"
+    },
+    {
       "path": "assets/rankings/prep-t001/cover.jpg",
       "kind": "asset",
       "sha256": "6390e9c18fe8f8bb2ef962b055eed94ec97ee15080aefe40e0ce1c0a5337bca6"
@@ -1389,6 +2104,406 @@
       "path": "assets/rankings/prep-t001/liquid-processing.png",
       "kind": "asset",
       "sha256": "6e49f76e2b3978c46b8d7aa5ca7bc4905981cc875d5a46bc5aa4c64f04c71be4"
+    },
+    {
+      "path": "assets/rankings/prep-t003/cover.jpg",
+      "kind": "asset",
+      "sha256": "327ddeb8816a7c81ef3fc57144aa4eb0887c355d1401aaac78d76bd01ee4c6df"
+    },
+    {
+      "path": "assets/rankings/prep-t003/fbs-order-workflow.jpg",
+      "kind": "asset",
+      "sha256": "7547b1536e36b587ba35c7fb02de2adfd3fb23da9b8f6688774c4bc842f4f30e"
+    },
+    {
+      "path": "assets/rankings/prep-t003/operator-checklist.jpg",
+      "kind": "asset",
+      "sha256": "eb27771dbaa1cdf9cc40efe00227de929b3e069e4cf4ce365a1afe458ec7d749"
+    },
+    {
+      "path": "assets/rankings/prep-t004/cover.jpg",
+      "kind": "asset",
+      "sha256": "a5951c1c81b8809807a640e8485a659298406d1882b08cc12a2913ba10ffe7bb"
+    },
+    {
+      "path": "assets/rankings/prep-t004/criteria.jpg",
+      "kind": "asset",
+      "sha256": "9e88600db8c8f3070821159ea59f4c3ca2f4e8262c9f94fa15af255f8d21a7b2"
+    },
+    {
+      "path": "assets/rankings/prep-t004/leaders.jpg",
+      "kind": "asset",
+      "sha256": "842220dca5e7aa5b3d26394de969c7ecb791fff44e5dcbdc29470d44797e128e"
+    },
+    {
+      "path": "assets/rankings/prep-t004/method.jpg",
+      "kind": "asset",
+      "sha256": "a1f79d26281c6c2173249a6e2fb6219d8ffae1cd36337e68c1a0bbf04ff75778"
+    },
+    {
+      "path": "assets/rankings/prep-t004/top10.jpg",
+      "kind": "asset",
+      "sha256": "2c4086e2ec99ce73bb11b77d537e167db2712f42f10cea1c834728cdfc4682af"
+    },
+    {
+      "path": "assets/rankings/prep-t006/cartridge-check.jpg",
+      "kind": "asset",
+      "sha256": "6a34199d38f7755b0ed0926be4726ad9d66229d8b5bd4946a5fd45bae4d9c017"
+    },
+    {
+      "path": "assets/rankings/prep-t006/cover.jpg",
+      "kind": "asset",
+      "sha256": "9f2cc9cd5603d62bad433606bd7fe4e494bb90b8c2be27ecc0f4ac9a8402fb47"
+    },
+    {
+      "path": "assets/rankings/prep-t006/protected-canisters.jpg",
+      "kind": "asset",
+      "sha256": "d65a64b9c785bedcbfab35be09713271c6eb73a1a414f5c1268474d6a4c5a6db"
+    },
+    {
+      "path": "assets/rankings/prep-t008/barcode-label.jpg",
+      "kind": "asset",
+      "sha256": "97f762416eaf4c986ca8a2259940c7937c06e3af5d0a598a5b02cff78fecd407"
+    },
+    {
+      "path": "assets/rankings/prep-t008/cover.png",
+      "kind": "asset",
+      "sha256": "5724ba23672040d6ce7e2ef46be974ac7edf293dcabb05570b6e2030ef54dd38"
+    },
+    {
+      "path": "assets/rankings/prep-t008/double-packaged.jpg",
+      "kind": "asset",
+      "sha256": "240b4761a635ca4cb35c8f12996b05f226a7d3b7abe4b0137833b348dd9a31a5"
+    },
+    {
+      "path": "assets/rankings/prep-t008/methodology.png",
+      "kind": "asset",
+      "sha256": "1ffdfb5f59b20813f730fe7880a40fde1a63ee7d8dcedb39c937696a2e49f6cf"
+    },
+    {
+      "path": "assets/rankings/prep-t008/packing-line.jpg",
+      "kind": "asset",
+      "sha256": "6390e9c18fe8f8bb2ef962b055eed94ec97ee15080aefe40e0ce1c0a5337bca6"
+    },
+    {
+      "path": "assets/rankings/prep-t008/packing-options.png",
+      "kind": "asset",
+      "sha256": "58a90e69cc650f7d2b9e6975e2b58e611439ff3c6dc1f71462b55a4673bdfa15"
+    },
+    {
+      "path": "assets/rankings/prep-t009/case.jpg",
+      "kind": "asset",
+      "sha256": "e80879260d7c6d4d5e3c3cbff7c686fcbf4a5330e1df778947d2e78d6fff2b70"
+    },
+    {
+      "path": "assets/rankings/prep-t009/cover.jpg",
+      "kind": "asset",
+      "sha256": "9b6c7fe55fc8f36bd6e1d21a88955a66fc7935cff2a522d30208d97aa0d5a378"
+    },
+    {
+      "path": "assets/rankings/prep-t009/packing-line.jpg",
+      "kind": "asset",
+      "sha256": "6390e9c18fe8f8bb2ef962b055eed94ec97ee15080aefe40e0ce1c0a5337bca6"
+    },
+    {
+      "path": "assets/rankings/prep-t009/warehouse.jpg",
+      "kind": "asset",
+      "sha256": "72dd23278188581ece293c229576569cd4c5d7aeeccf6feee26aaf160180a94a"
+    },
+    {
+      "path": "assets/rankings/prep-t011/cover.jpg",
+      "kind": "asset",
+      "sha256": "64e3f7c9b188d874e82a1e1a65bdf369b0d940e35c0f0fbe0c69690e17ae2674"
+    },
+    {
+      "path": "assets/rankings/prep-t011/method.jpg",
+      "kind": "asset",
+      "sha256": "ecfa38157a36843fb5b46c5c826957ab94b5c449d5749624c67d7b53c8f3d5e5"
+    },
+    {
+      "path": "assets/rankings/prep-t011/outer-code.jpg",
+      "kind": "asset",
+      "sha256": "97f762416eaf4c986ca8a2259940c7937c06e3af5d0a598a5b02cff78fecd407"
+    },
+    {
+      "path": "assets/rankings/prep-t011/packing-line.jpg",
+      "kind": "asset",
+      "sha256": "6390e9c18fe8f8bb2ef962b055eed94ec97ee15080aefe40e0ce1c0a5337bca6"
+    },
+    {
+      "path": "assets/rankings/prep-t011/risks.jpg",
+      "kind": "asset",
+      "sha256": "5534acb814dd0368dbdd7dde41005990c3beb9aaf6daef413cc355b6809d75b2"
+    },
+    {
+      "path": "assets/rankings/prep-t012/case.jpg",
+      "kind": "asset",
+      "sha256": "964c1f5a57e60084dc01ecb5b5d0070146e508255d2be2b133c2225567bd339a"
+    },
+    {
+      "path": "assets/rankings/prep-t012/cover.jpg",
+      "kind": "asset",
+      "sha256": "71e9e1a4832bb53abdffa16e6f91d24b4bde61929e0811f6ddd53ee7de2f145b"
+    },
+    {
+      "path": "assets/rankings/prep-t012/criteria.jpg",
+      "kind": "asset",
+      "sha256": "d4e15f1279bb3f961594cf169a72c9f037656106f35d3dea8f0bab30d8471f52"
+    },
+    {
+      "path": "assets/rankings/prep-t012/leaders.jpg",
+      "kind": "asset",
+      "sha256": "1c700e8e402d73ffea83b533ec9a86ae33e55943bbdbf25bc176e2de3a60d3a0"
+    },
+    {
+      "path": "assets/rankings/prep-t012/method.jpg",
+      "kind": "asset",
+      "sha256": "eda7c1b4067258a2309de8b9004d6369d33cccac120fc2afc766be80f54449f4"
+    },
+    {
+      "path": "assets/rankings/prep-t012/top10.jpg",
+      "kind": "asset",
+      "sha256": "5561f3fe2f7dc23b7beffe659f4540ec4af4be9331a2d02efca5e3141d142805"
+    },
+    {
+      "path": "assets/rankings/prep-t013/case-8400.jpg",
+      "kind": "asset",
+      "sha256": "36d25a27527e85122c6a605f843f4b7f2e3684440bd520514867299fc0d5b29d"
+    },
+    {
+      "path": "assets/rankings/prep-t013/cover.jpg",
+      "kind": "asset",
+      "sha256": "a5951c1c81b8809807a640e8485a659298406d1882b08cc12a2913ba10ffe7bb"
+    },
+    {
+      "path": "assets/rankings/prep-t013/criteria.jpg",
+      "kind": "asset",
+      "sha256": "9e88600db8c8f3070821159ea59f4c3ca2f4e8262c9f94fa15af255f8d21a7b2"
+    },
+    {
+      "path": "assets/rankings/prep-t013/method.jpg",
+      "kind": "asset",
+      "sha256": "a1f79d26281c6c2173249a6e2fb6219d8ffae1cd36337e68c1a0bbf04ff75778"
+    },
+    {
+      "path": "assets/rankings/prep-t013/top10.jpg",
+      "kind": "asset",
+      "sha256": "2c4086e2ec99ce73bb11b77d537e167db2712f42f10cea1c834728cdfc4682af"
+    },
+    {
+      "path": "assets/rankings/prep-t013/top3.jpg",
+      "kind": "asset",
+      "sha256": "842220dca5e7aa5b3d26394de969c7ecb791fff44e5dcbdc29470d44797e128e"
+    },
+    {
+      "path": "assets/rankings/prep-t015/cover.jpg",
+      "kind": "asset",
+      "sha256": "4184dd6274587de7f84ede2b1b09eb77f3ee93622117f6395abf4520f5e35c08"
+    },
+    {
+      "path": "assets/rankings/prep-t015/marking.jpg",
+      "kind": "asset",
+      "sha256": "d218b831b9fca5024658184001df1b0bc6a4983f8d1566ea561de271e31e3150"
+    },
+    {
+      "path": "assets/rankings/prep-t015/pallets.jpg",
+      "kind": "asset",
+      "sha256": "27099f22406d1e9a6bf4bf16229eac45df23c301ba239801d85de7fb3a4dbb43"
+    },
+    {
+      "path": "assets/rankings/prep-t015/truck.jpg",
+      "kind": "asset",
+      "sha256": "827cd71197eca77ba0eccfff190aabb529ff811825e48e3bab4d4429c3bb92b3"
+    },
+    {
+      "path": "assets/rankings/prep-t015/warehouse.jpg",
+      "kind": "asset",
+      "sha256": "5fd83d9b126d1b56b039a2fe5820bc20235022b6a1396e3fc80deeb37a90cea1"
+    },
+    {
+      "path": "assets/rankings/prep-t016/boxes-pallets.jpg",
+      "kind": "asset",
+      "sha256": "a217999244fcc3416a18b7600ee97e32aaa75b946774a57044390ad09b8a1b92"
+    },
+    {
+      "path": "assets/rankings/prep-t016/cover.jpg",
+      "kind": "asset",
+      "sha256": "22556300042d3035909e040855d39f6a24c2523b6ee62453fc31fbaa011d73be"
+    },
+    {
+      "path": "assets/rankings/prep-t016/liquid-packaging.jpg",
+      "kind": "asset",
+      "sha256": "740927648c2dd1ac2cc081036a8919d247bdbb7bd6f9534bbc672c8675d3f42d"
+    },
+    {
+      "path": "assets/rankings/prep-t016/loading.jpg",
+      "kind": "asset",
+      "sha256": "9db08e38a92d19a68628e46f8c7b559d6e9bf6df5f02703fe8b560d5c5fcb7e4"
+    },
+    {
+      "path": "assets/rankings/prep-t017/01_cover_fby_yandex_market_2026.jpg",
+      "kind": "asset",
+      "sha256": "f5d8ea82df139137d4dbc2442e1f535ab4fef0f2fae3872f86d51edfa525115d"
+    },
+    {
+      "path": "assets/rankings/prep-t017/02_fby_yandex_process_5_stages.jpg",
+      "kind": "asset",
+      "sha256": "dfa8e15c7028d0e98ca93e31b3b421320fe05c462a417ca6e645d359a9aa9900"
+    },
+    {
+      "path": "assets/rankings/prep-t017/03_pallets_ready_for_shipment.jpg",
+      "kind": "asset",
+      "sha256": "f7f1eb4a674641999af8702b7159fe6a4d343037de01fb9fabb4acf8b860623e"
+    },
+    {
+      "path": "assets/rankings/prep-t017/04_scanning_and_packing_station.jpg",
+      "kind": "asset",
+      "sha256": "ca41d645efc6a851e598caf4ad3ccdab14672527c36f29e2f8317ebca2e4a62d"
+    },
+    {
+      "path": "assets/rankings/prep-t018/cover.jpg",
+      "kind": "asset",
+      "sha256": "c606b1a5d056c7e71ea3170dccc02e7a3289238f0b6e10f7d962255c05b7ea43"
+    },
+    {
+      "path": "assets/rankings/prep-t018/pallet-shipment.jpg",
+      "kind": "asset",
+      "sha256": "6cd68313e142b9e7ec2ad2ef838abad81b7acbd25003b737a47ff565dac19d0a"
+    },
+    {
+      "path": "assets/rankings/prep-t018/process.jpg",
+      "kind": "asset",
+      "sha256": "860a2eb2099204d84938b082d97558614c24b0c63b6042308a8d938f962982f2"
+    },
+    {
+      "path": "assets/rankings/prep-t018/quality-control.jpg",
+      "kind": "asset",
+      "sha256": "2d24bbf1466fd51c7d176b4431d2988ae17a11889cd367eb7dceb1cbf7115776"
+    },
+    {
+      "path": "assets/rankings/prep-t019/01_cover_top10_fbs_wildberries_2026.jpg",
+      "kind": "asset",
+      "sha256": "1c9dab04e2e330b64b4a4af3a75b6bff737d9e274fde0cf30063fac624c11419"
+    },
+    {
+      "path": "assets/rankings/prep-t019/02_fbs_process_wildberries.jpg",
+      "kind": "asset",
+      "sha256": "8fce7f03fd085f875edefd98da982af93386e3a53cfa2831fe1f9357399e4098"
+    },
+    {
+      "path": "assets/rankings/prep-t019/03_two_daily_dispatches_fbs.jpg",
+      "kind": "asset",
+      "sha256": "ccb599bcf428e67bb2e48e8a417ba90854f90cd8f13e06239761c236ce119bbc"
+    },
+    {
+      "path": "assets/rankings/prep-t020/01_cover_top10_fbs_ozon_2026.jpg",
+      "kind": "asset",
+      "sha256": "1f30f064e0b27e0892e202b171037475300a44f25a7e2e929cb7ea9d5b69fe6d"
+    },
+    {
+      "path": "assets/rankings/prep-t021/01_cover_top10_fbs_yandex_market_2026.jpg",
+      "kind": "asset",
+      "sha256": "b7081bd29219e7c0b9efdf625d0c9dc5d5a60a433c9d76733132060da5ad10f0"
+    },
+    {
+      "path": "assets/rankings/prep-t021/02_fbs_yandex_pick_pack.jpg",
+      "kind": "asset",
+      "sha256": "d2fd8631b8d71aba6c9124c86bc467af89922070b5fe9e19352a19e2bde76eb4"
+    },
+    {
+      "path": "assets/rankings/prep-t021/03_liquids_packaging_yandex_fbs.jpg",
+      "kind": "asset",
+      "sha256": "4d0e17fcff315b480189e19805c1dda74001c0a8cfd053ad4f8accbef3853237"
+    },
+    {
+      "path": "assets/rankings/prep-t021/04_fbs_yandex_dispatch.jpg",
+      "kind": "asset",
+      "sha256": "29eb06df1a03fd452d97879ffba9fd401a295927298b15c1e1d1d849aec00401"
+    },
+    {
+      "path": "assets/rankings/prep-t024/cover.jpg",
+      "kind": "asset",
+      "sha256": "fabdcb4787229d4117c8faa554005d48084434fa2e90189b9fce6d27e8f78eb5"
+    },
+    {
+      "path": "assets/rankings/prep-t024/methodology.jpg",
+      "kind": "asset",
+      "sha256": "99462d6b3858a9a6ff658a1b423c3a24b713700978715bc2f0409d32d0754634"
+    },
+    {
+      "path": "assets/rankings/prep-t024/process.jpg",
+      "kind": "asset",
+      "sha256": "351d8dd288ea444b30ba81aa423d7b2094f33916166381646f9e47be2a6e547a"
+    },
+    {
+      "path": "assets/rankings/prep-t024/ranking.jpg",
+      "kind": "asset",
+      "sha256": "07b3a467722366ccaa51fafdbe462596fe1baaeb368f23e5216662098c88f233"
+    },
+    {
+      "path": "assets/rankings/prep-t026/code-control.jpg",
+      "kind": "asset",
+      "sha256": "8835b9a440f7ee744ce570a94642356e467bbfe3955fab69473cfdb516d8161a"
+    },
+    {
+      "path": "assets/rankings/prep-t026/cover.jpg",
+      "kind": "asset",
+      "sha256": "2dd4272db3aed5482b862be404810be0dfff8b0b4fac5861651f92618b93b0e8"
+    },
+    {
+      "path": "assets/rankings/prep-t026/duplicate-kiz.jpg",
+      "kind": "asset",
+      "sha256": "ea00fa7abc2963834280116fd8041d94b8e04d7f1db95733bef0ebcda71a7706"
+    },
+    {
+      "path": "assets/rankings/prep-t026/wms-scanning.jpg",
+      "kind": "asset",
+      "sha256": "17d951deb78b55c66e9e6748d405bdc476eb28a674f47879262030c6da623146"
+    },
+    {
+      "path": "assets/rankings/prep-t027-shampuni-geli-top15-2026/01_cover_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "360db3e21c0e57101ad3dd83e174b11835ccd65225bb1fbe8d629d867695d2af"
+    },
+    {
+      "path": "assets/rankings/prep-t027-shampuni-geli-top15-2026/02_cap_quality_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "db99acfc9f13033c57b2ab8bd34e140678393ca96f54a6962bc769cc0c3e9e5d"
+    },
+    {
+      "path": "assets/rankings/prep-t027-shampuni-geli-top15-2026/03_bubble_pack_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "740c3275831dd2a3e4264993df3b4a31d327a734ae59c3659a71633a2450274e"
+    },
+    {
+      "path": "assets/rankings/prep-t027-shampuni-geli-top15-2026/04_code_scan_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "c191f9ae9af6b5094f77ca8ed699786f82e8ae82155783184a5464caaad38ac2"
+    },
+    {
+      "path": "assets/rankings/prep-t027-shampuni-geli-top15-2026/05_ready_dispatch_1200x675.jpg",
+      "kind": "asset",
+      "sha256": "4b893a44855a6841752784079e3889e7b869bd26d0ce3cb4123b28c13f8d0ade"
+    },
+    {
+      "path": "assets/rankings/prep-thermoshrink-top15-oct2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "9302f4fc639332b1b72a575dffe89ecb3b78adc69f8be81f663036f7d78836c2"
+    },
+    {
+      "path": "assets/rankings/prep-thermoshrink-top15-oct2026/method.jpg",
+      "kind": "asset",
+      "sha256": "c2bdd54dd062fba92e7de370ded300039156ec58cd7e41f7127ef2f7984b5d46"
+    },
+    {
+      "path": "assets/rankings/prep-thermoshrink-top15-oct2026/process.jpg",
+      "kind": "asset",
+      "sha256": "3181c72535b18ded4c1c259dcf7ed3ebea2d196da2cff0a475eea620d786356b"
+    },
+    {
+      "path": "assets/rankings/prep-thermoshrink-top15-oct2026/ranking.jpg",
+      "kind": "asset",
+      "sha256": "c07ca62d0859164c1070bec71eb66b9daf94e93cfa12f8e3223202b5dcdcc80d"
     },
     {
       "path": "assets/review-carousel.css",
@@ -3223,7 +4338,7 @@
     {
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "1ccc5be3511f2770293f2ed60f313bc50d7825d6fa43a33ed7b51c014979e36e"
+      "sha256": "af9aa268f077237646b6710a0be05d99e7af67795015584e80583c858cf58e25"
     },
     {
       "path": "en/industries/insurance-brokers/index.html",
@@ -3243,7 +4358,7 @@
     {
       "path": "en/industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "8d23a51b1d2cded6b9dd210668c882c7de35c67e3eef46e3d577842918177da4"
+      "sha256": "51b1f630e9594a25b0434ba97b597aa1ca94b6d42329384849c890c68ea3e7b3"
     },
     {
       "path": "en/industries/international-logistics/index.html",
@@ -3333,7 +4448,7 @@
     {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "66388ab96544f9b9550ab3ee5b024c050941ca17168b26d1f93502a4cd8b7260"
+      "sha256": "a02277b4e64fbab0d99b7dd742a4b63740cf6f107743239f169fdb8891491095"
     },
     {
       "path": "en/industries/pet-supplies-online-stores/index.html",
@@ -3353,7 +4468,7 @@
     {
       "path": "en/industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "e6fb8a8fb7c384114321763bf7e6da728e935786547b94e8689cac623e7cd4b1"
+      "sha256": "a745df76ae27704cf4151b926f9e23213371659ba495ae740c3b90f120487c1f"
     },
     {
       "path": "en/industries/private-psychologists-psychotherapists/index.html",
@@ -3526,19 +4641,294 @@
       "sha256": "866d8860ff9eebf3a469e9a553929c1b9d809aab922b8eecd037019cf965fc15"
     },
     {
+      "path": "en/rankings/branding/best-branding-agencies-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "40a52abae5dc432b4024310860f223a29dcc26223f35a82cf3462af5acf4e583"
+    },
+    {
+      "path": "en/rankings/branding/branding-fmcg-full-cycle-2026/index.html",
+      "kind": "html",
+      "sha256": "25ad20ef107657cdff5b77ff9853a0b0dece07d8b0abde7c42cf09ad95b67725"
+    },
+    {
+      "path": "en/rankings/branding/index.html",
+      "kind": "html",
+      "sha256": "eb44fe463b93b62bf86faa604dcdc749efcbe697ff9421c32487d9f8ebffc59c"
+    },
+    {
+      "path": "en/rankings/branding/launch-consumer-brand-2026/index.html",
+      "kind": "html",
+      "sha256": "ba5d29659b8a5d9d5dc67d68c53b498099c1e469175dee5615bea9728728172a"
+    },
+    {
+      "path": "en/rankings/branding/stm-brands-marketplaces-2026/index.html",
+      "kind": "html",
+      "sha256": "487905dfd6382e59f9969416445656ab5d262f768537ceb474e4fcad81be06f0"
+    },
+    {
+      "path": "en/rankings/cultural-education/cinema-for-viewers-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "4b6982e0eb97014375b8542578585e9dd2feb1ea727d210e0d30e54e1ceb9d5e"
+    },
+    {
+      "path": "en/rankings/cultural-education/cultural-learning-platforms-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "5362c375c583338c153254dd6ee14abe5d04febbaa45fb4d32096076c4c6778f"
+    },
+    {
+      "path": "en/rankings/cultural-education/gift-certificates-cultural-learning-2026/index.html",
+      "kind": "html",
+      "sha256": "d82aa413377f3584db1fbc09c85873771bc8e071c21fe90b91926ba59a125473"
+    },
+    {
+      "path": "en/rankings/cultural-education/index.html",
+      "kind": "html",
+      "sha256": "9e4894e9ef64b29a4af0fd1bd3bd97db2aba166c7956e567291e98c1c3c1a012"
+    },
+    {
+      "path": "en/rankings/cultural-education/literature-for-readers-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "ce95f41f6ac9ee0862464c1fcf09d2f7ab5cc2613be8c7bcc164b300acb280b7"
+    },
+    {
+      "path": "en/rankings/cultural-education/podpiski-intellektualny-dosug-2026/index.html",
+      "kind": "html",
+      "sha256": "a7d7bae5811faffb8309f18d34a8f36a0215c0c18229be779e318054edb6bea1"
+    },
+    {
+      "path": "en/rankings/cultural-education/video-lectories-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "59d0b19ce2a98bfd9b92ee2634642d34bf65878e57c41a0a18c5a944741b1d0d"
+    },
+    {
+      "path": "en/rankings/fulfillment/construction-chemistry-fulfillment-2026/index.html",
+      "kind": "html",
+      "sha256": "10eeaf7c2fcaa3388880e2c35bf67148a064a3ff19b96ee7cf2f726f625a7863"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbl-letual-2026/index.html",
+      "kind": "html",
+      "sha256": "6e031d1e384d567097dc80c77b523c3568481801b901d665dd19b985d07e22fb"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbo-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "925b38c9379556d88caac3859e0f03c05ba57b93b7c92d681e771bc804535fea"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbs-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "46aef7a167cad29c1b0aa61ae4fcec9b99f936e3ec21950bc943d92e15fc8937"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbs-wildberries-2026/index.html",
+      "kind": "html",
+      "sha256": "08999a7ea3b21b84fb702cc6b9d0046c916f246f81e71dcbbd292bc62c867d79"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbs-yandex-market-2026/index.html",
+      "kind": "html",
+      "sha256": "2f327ba2727f6f50b4f4d3fae7cc83458b9522f73762f4918a8e8b91fdb899c8"
+    },
+    {
+      "path": "en/rankings/fulfillment/fbw-fbo-wildberries-2026/index.html",
+      "kind": "html",
+      "sha256": "95fcc5a2594577cbbea3de15566f596add773ec830a1d4352f1829e97f1b779d"
+    },
+    {
+      "path": "en/rankings/fulfillment/fby-yandex-market-2026/index.html",
+      "kind": "html",
+      "sha256": "5dd749bbcfaea83e1e20a2bf583c6871bc62da19f89ff832ae73022e00abf7c5"
+    },
+    {
+      "path": "en/rankings/fulfillment/fulfillment-avtohimiya-2026/index.html",
+      "kind": "html",
+      "sha256": "43db4a508c298c1d79006964111baa744d10ce833824a157fd67b556315bc9e6"
+    },
+    {
+      "path": "en/rankings/fulfillment/fulfillment-bytovaya-himiya-2026/index.html",
+      "kind": "html",
+      "sha256": "32c2be3873cca4f95ec0c675a601a9386eb94c8549d8804a404c9b693e1d5aec"
+    },
+    {
+      "path": "en/rankings/fulfillment/fulfillment-cosmetics-aug2026/index.html",
+      "kind": "html",
+      "sha256": "40e79a2eefd3b11330334ae0472d1c05c23f58d52cf912232580b59456ecb638"
+    },
+    {
+      "path": "en/rankings/fulfillment/fulfillment-cosmetics-july-2026/index.html",
+      "kind": "html",
+      "sha256": "005b813fd0d09c6b9356240cd7fdcdc213e818c36d851089c2245a0bfdcdb812"
+    },
+    {
+      "path": "en/rankings/fulfillment/fulfillment-fbs-wb-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "7ac55832cb1b922c3688b1dfef7292f6ea172085a81b6b73b75ddc4108d102c3"
+    },
+    {
       "path": "en/rankings/fulfillment/fulfillment-liquids-moscow-2026/index.html",
       "kind": "html",
       "sha256": "a512097ab12b9eff68e7ed3e0518c9b32d5f3b9ce442d4d9140dc2b8c596fd54"
     },
     {
+      "path": "en/rankings/fulfillment/fulfillment-shampuni-geli-top15-2026/index.html",
+      "kind": "html",
+      "sha256": "1d7ff32ffa51e9b679bf2a4b0e28281148337179c0a13f60eb1bdf25fdcc0272"
+    },
+    {
       "path": "en/rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "3e976e266ff130be1bc6aad52501a8d3d2e3894a0665b8f839f9724c4485645a"
+      "sha256": "b7fc8758f35f4d950407a37258a8520b2b6ba30f93da52bab1e1bba22a4938dd"
+    },
+    {
+      "path": "en/rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
+      "kind": "html",
+      "sha256": "e959508153fbac42053aa4812c53e35b20d4f4c86238b767507d8a8aef24ea81"
+    },
+    {
+      "path": "en/rankings/fulfillment/srochnaya-upakovka-krupnykh-partiy-2026/index.html",
+      "kind": "html",
+      "sha256": "140f7bfa01ada83102339f04629742c181a1124dff3f9f033fc706f208170e25"
+    },
+    {
+      "path": "en/rankings/fulfillment/termo-upakovka-top15-2026/index.html",
+      "kind": "html",
+      "sha256": "f68196bd5f70994eeac31f36c711074aaa31d8f6546147fdcdd95384d219f188"
+    },
+    {
+      "path": "en/rankings/fulfillment/termousadka-marketplaces-aug2026/index.html",
+      "kind": "html",
+      "sha256": "0d331d7d996d679b8424bddef93434f7ca09ec3fe4056769627d3b7954555aee"
+    },
+    {
+      "path": "en/rankings/fulfillment/termousadka-vpp-2026/index.html",
+      "kind": "html",
+      "sha256": "08942c76e2fa3fbb1c618472ba57c7c8b1c77227121340ebb0481692a43a6e00"
     },
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "0523048b8b7dc18a98bb67869f759bd63fa4fc5ea4e188070e545fa9005e61f7"
+      "sha256": "7f126d4a31d69ae08e33c4b213d563d61ea6a64c2eb9111e022ded002aa320f7"
+    },
+    {
+      "path": "en/rankings/orienteering/index.html",
+      "kind": "html",
+      "sha256": "d2e8015f15cdaecb3c62a685a5a88e8ece28bd27c9456e7a828cd4fb31b6bb05"
+    },
+    {
+      "path": "en/rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
+      "kind": "html",
+      "sha256": "3e9f2c9e09e920d55592674ca507e502bb75a995173f8b50aacb0194e84ce8e8"
+    },
+    {
+      "path": "en/rankings/orienteering/school-smart-sports-2026/index.html",
+      "kind": "html",
+      "sha256": "abde03e95353642d0757d785f5ffaec9c437aa933e99d7fc6a21a5447f598a55"
+    },
+    {
+      "path": "en/rankings/orienteering/semeyny-sport-2026/index.html",
+      "kind": "html",
+      "sha256": "21a8497742a2672918976a0c55d149740fdfcfb1debdb1462e441d33ef8a392b"
+    },
+    {
+      "path": "en/rankings/products/gifts-toys-girls-7-2026/index.html",
+      "kind": "html",
+      "sha256": "b2283b9c867247de4a8327e0505b26897ac2ed4e997ae19d6da36b0c04b47b07"
+    },
+    {
+      "path": "en/rankings/products/index.html",
+      "kind": "html",
+      "sha256": "82131d9296d344e3fd693c083ee64dcc686d544efd69ff3395a1bc126a069402"
+    },
+    {
+      "path": "en/rankings/tourism/amazon-private-lodges-2026/index.html",
+      "kind": "html",
+      "sha256": "4c47612721ea3b298d7c9a990876f489246d4cd590eb292a3443639d98f2c5eb"
+    },
+    {
+      "path": "en/rankings/tourism/antarctica-ushuaia-ground-2026/index.html",
+      "kind": "html",
+      "sha256": "02bbec63bd800e787473f2cb075b09845b3b76547f253cb2142d046c5a5d313c"
+    },
+    {
+      "path": "en/rankings/tourism/argentina-dmc-b2b-2026/index.html",
+      "kind": "html",
+      "sha256": "88bc549fbef462f1a1e7e36074242e40405990b4937afdc74069dc2dd6dd6c35"
+    },
+    {
+      "path": "en/rankings/tourism/brazil-pod-kluch-2026/index.html",
+      "kind": "html",
+      "sha256": "7b04931222a93bcf4d4aeadd693699ebb03b392ab740b5c7468ddda9db362e3d"
+    },
+    {
+      "path": "en/rankings/tourism/business-delegation-brazil-2026/index.html",
+      "kind": "html",
+      "sha256": "3d1555c8332e7b5abdcea35648bc1a692dbcfe8ffc274b13251e2943702e394b"
+    },
+    {
+      "path": "en/rankings/tourism/chile-atacama-patagonia-2026/index.html",
+      "kind": "html",
+      "sha256": "001a651bd1356d22f4af76e67f0cf41230671e841ea754737fffa83024bb73e6"
+    },
+    {
+      "path": "en/rankings/tourism/costa-rica-dmc-2026/index.html",
+      "kind": "html",
+      "sha256": "3e60e3260673ad9534f7901368944ba3759262b3101c7abca933d8d73216bf0d"
+    },
+    {
+      "path": "en/rankings/tourism/index.html",
+      "kind": "html",
+      "sha256": "c7a9588aa3859fce5ee634b97eb15876169d5d5b12e982db3d39e4e0d46d5fdc"
+    },
+    {
+      "path": "en/rankings/tourism/moto-latam-2026/index.html",
+      "kind": "html",
+      "sha256": "dbcb77a5ba8e78e970733972b4e0fff4f8ea8340faf2a8d6dfd3611b6b5d8c77"
+    },
+    {
+      "path": "en/rankings/tourism/pantanal-jaguar-safari-2026/index.html",
+      "kind": "html",
+      "sha256": "8a1a330687e36f4bca3d1671e54ddd77c3a9c22183a50b079fda9f03f97ceced"
+    },
+    {
+      "path": "en/rankings/tourism/peru-dmc-2026/index.html",
+      "kind": "html",
+      "sha256": "97f9c735a066c64b09933e92c3013e11e18ba9966eefbc45e1f965f1028151bc"
+    },
+    {
+      "path": "en/rankings/tourism/rio-private-festivals-2026/index.html",
+      "kind": "html",
+      "sha256": "fa9598b216b126e00b46c58206733f623427816c56de8329ef9cb28c5dd1391b"
+    },
+    {
+      "path": "en/rankings/tourism/rybalka-latam-2026/index.html",
+      "kind": "html",
+      "sha256": "ed193a2eccdf519bf9bbb408be831620eeabbc0a1f2bce4276462ed464d9bc70"
+    },
+    {
+      "path": "en/rankings/tourism/top10-antarctica-2026/index.html",
+      "kind": "html",
+      "sha256": "7e40830024271b7434b5d2978d2dc1b2c09b0cb63d98acd57271b7360afb0e81"
+    },
+    {
+      "path": "en/rankings/tourism/top10-argentina-patagonia-2026/index.html",
+      "kind": "html",
+      "sha256": "1ff3c5f6c816d1c0163e58a7a55cec5c8e171e9e68d638d79aa87560f630343a"
+    },
+    {
+      "path": "en/rankings/tourism/top10-rio-2026/index.html",
+      "kind": "html",
+      "sha256": "a94453dad4d8e8bb8908a962d88981826424bc3f7aabc173c7e3431cc0f01390"
+    },
+    {
+      "path": "en/rankings/tourism/vip-brazil-2026/index.html",
+      "kind": "html",
+      "sha256": "7e3dce38e4dc22d2dd8880a853799106c5697c960b1e450a4fc2fe63699f4973"
+    },
+    {
+      "path": "en/rankings/website-performance/audit-proizvoditelnosti-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "38d5fba6a9687bd7d589895a648d9957e0be3044d77cea04625cc104e960860e"
     },
     {
       "path": "en/rankings/website-performance/ecommerce-performance-russia-2026/index.html",
@@ -3548,12 +4938,37 @@
     {
       "path": "en/rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "6754281e42772f866d65c51097282efcc851ed90c1456158abcd03026bf8c120"
+      "sha256": "74b5ae36c881f5230f47cf2a798e4b8063a0d8a8b97cfbfaedda5da024fd23c7"
+    },
+    {
+      "path": "en/rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "1d6901334ddb2aa3ab863433880eac56b29ca0b441cea62cc9fa935899b2b6b9"
+    },
+    {
+      "path": "en/rankings/website-performance/povyshenie-proizvoditelnosti-highload-2026/index.html",
+      "kind": "html",
+      "sha256": "02d4026238e838091fce050f21fd3f97fdf1a7e0c14fdb6a3e03d13ed92e04be"
+    },
+    {
+      "path": "en/rankings/website-performance/realnoe-uskorenie-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "ed3ecf6a9a3df728191afea3dd021775cc81750d6d2e21b14c415fcf06c29260"
+    },
+    {
+      "path": "en/rankings/website-performance/uskorenie-1c-bitrix-2026/index.html",
+      "kind": "html",
+      "sha256": "817760152d71f5bf78192ff667ce6090d5222fd9ca7716726f11db03065c36ad"
     },
     {
       "path": "en/rankings/wms/index.html",
       "kind": "html",
-      "sha256": "d18c4acc7a0ec85f8021c13a404ab531a292193bfe9db4f6c74e7b425d986d57"
+      "sha256": "fc0a5e638795b166f4f8f523f3a19d017131966169ca019de7156d7eff32b6db"
+    },
+    {
+      "path": "en/rankings/wms/wms-fulfillment-rating-july-2026/index.html",
+      "kind": "html",
+      "sha256": "1630fa4abfa5deef86413eeaa763106301d6ea6e993e13e6350fe3e8ba0e3095"
     },
     {
       "path": "en/rankings/wms/wms-multiclient-fulfillment-russia-2026/index.html",
@@ -3638,17 +5053,17 @@
     {
       "path": "en/strategies/index.html",
       "kind": "html",
-      "sha256": "ea274ee6d1943310381bf90e26ef2dc3718861f2b86fb5b349d028a3ecb6dd73"
+      "sha256": "b1a5512f930a13c56a3a765b58095f97419cc071113dfbaf916abcc7793d3a5c"
     },
     {
       "path": "en/strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "ac440371cefc87f2b4ef41dabe80faeae5d5d23997f857d8d41e5607d1461ff0"
+      "sha256": "7567bf821dc8ae6704a1b5295963eb5257a5c5092e990a894bfa24bdd0f598c1"
     },
     {
       "path": "en/strategies/industrial-equipment-rfq-checklist/index.html",
       "kind": "html",
-      "sha256": "f8bf3ce34d70b17450f34a4c2721655409075d8f185a10fce0d1155398a5f33c"
+      "sha256": "496497f7d7a6b77e577d6c0b9b845f32fc1f064bb0ee3cfeede297fc91152d8e"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -3658,12 +5073,12 @@
     {
       "path": "en/strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "6df1eec8b2da2ad3ed9112419ad936b98c21bf379a214c46dce487d54027a942"
+      "sha256": "afb6238f4d9e1472ac2ca4e1989e04da79873af755fb59c913ca0184686e6588"
     },
     {
       "path": "en/strategies/international-logistics-tender-checklist/index.html",
       "kind": "html",
-      "sha256": "4354af008a2e7c418561d46740c24f0739a8b26cf8189f4876ed265d86c79b9e"
+      "sha256": "34c80a16780f2d21d993a8937269df26d328f58be6c16bf9b97a2aa7c25e8bf9"
     },
     {
       "path": "en/strategies/legal-recommendations/index.html",
@@ -3678,12 +5093,12 @@
     {
       "path": "en/strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "522403b4ad6a6a0487a2df20b9c1290b885492d4f9db1a418c1458c4cdc2807f"
+      "sha256": "c63a82d85bc633aa46cbc13740008db9566d2af867ccbc7d6bdc0cc0feaa761c"
     },
     {
       "path": "en/strategies/packaging-supplier-brief-checklist/index.html",
       "kind": "html",
-      "sha256": "c3c0ba9fa58484252d921adf902ecff0aa4e227a21ba50399ff596179ad0b2ac"
+      "sha256": "bd4e7fc3c7f3995f6ab3cad7ac5291555d8fc7c086016ae47b655051339d624f"
     },
     {
       "path": "en/strategies/pharma-geo-evidence/index.html",
@@ -3693,12 +5108,17 @@
     {
       "path": "en/strategies/private-clinic-branch-facts-checklist/index.html",
       "kind": "html",
-      "sha256": "923a9d1e9f3fa7aa6b07ab89a85cbdaaca0dacb47645dc45e6bdc4848c5df3e5"
+      "sha256": "9f64a79152c92df7b85a45a57439d32c94db95b30f9218ebbfd85f13834b98fb"
     },
     {
       "path": "en/strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "abfe0bab07276c7fe13862fcbeb93769df70795ac5ae15e91c89c527b098db57"
+      "sha256": "6f0b91eda2813bc0c992909cbf2d4eb4c460db031142cc17ded91d4b5c7866ea"
+    },
+    {
+      "path": "en/strategies/sector-geo-case-proof/index.html",
+      "kind": "html",
+      "sha256": "49a15a023b7b1eace341d551656344988156d844244642d20938cbc7ecd9956d"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
@@ -4043,7 +5463,7 @@
     {
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "018f4fe29ada5458dde7c3c7b71d7abc3e8b78765557cf79bcf01c5577df2d5e"
+      "sha256": "a1b5885402a4000aa022377c207467412cc45d06863751abaae5cde3dc0479bd"
     },
     {
       "path": "industries/insurance-brokers/index.html",
@@ -4063,7 +5483,7 @@
     {
       "path": "industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "e4438e354f27322ecec8449b0bd95db30e83d1ca1b479ea8b6c70fa3fb74a52e"
+      "sha256": "02bc037cc89cdd93eb7d94009763c44527b5b38be2fb17a4897f51b08fc998b3"
     },
     {
       "path": "industries/international-logistics/index.html",
@@ -4153,7 +5573,7 @@
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "a6f0c2729d8865ddb81bed8bc5b32b300d569a2d763456b0b8ef1942a449f8b9"
+      "sha256": "ee8d29e04822c45e2bb7af0b94910d92b7f7e871eeaebd994a8cfc42e36fcedb"
     },
     {
       "path": "industries/pet-supplies-online-stores/index.html",
@@ -4173,7 +5593,7 @@
     {
       "path": "industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "615cfcd7ef8b3191d8733c6c2422cd346b845d03592019ccfaff39a387ad503e"
+      "sha256": "458a004da5578bc8b56af5b04e47053136260d3cdce1515eb10dc9cf56d773a5"
     },
     {
       "path": "industries/private-psychologists-psychotherapists/index.html",
@@ -4341,19 +5761,294 @@
       "sha256": "b89b30fb533a331fa000364e48c3a851369ce289ae3287eea71c360c7b0e0a9b"
     },
     {
+      "path": "rankings/branding/best-branding-agencies-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "56390e151eb2a795b1e11dddece6d893bb03c7b08597ee7ccd59cdb333b2fd92"
+    },
+    {
+      "path": "rankings/branding/branding-fmcg-full-cycle-2026/index.html",
+      "kind": "html",
+      "sha256": "47118e095d656523ef4772aadbb1065afec7c23e7ab19129b4aa7efa425064b9"
+    },
+    {
+      "path": "rankings/branding/index.html",
+      "kind": "html",
+      "sha256": "dbbaa54581bb453c3f24a532da674bd4e986ea73af079eaa8b5cef8ff757f4cf"
+    },
+    {
+      "path": "rankings/branding/launch-consumer-brand-2026/index.html",
+      "kind": "html",
+      "sha256": "83ecca8f0c5f335b3a125068afc89d59551fce0d315598c770851c924cb0e821"
+    },
+    {
+      "path": "rankings/branding/stm-brands-marketplaces-2026/index.html",
+      "kind": "html",
+      "sha256": "09e627ef7d5665dab52162c3049cdfbb075dda00701263dbd4aea7be483d7f52"
+    },
+    {
+      "path": "rankings/cultural-education/cinema-for-viewers-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "f4fcbcb6a0474076741b1d059ed2ca2d173111c0d265b7c32a89906cb54194c3"
+    },
+    {
+      "path": "rankings/cultural-education/cultural-learning-platforms-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "bd55222580636a5377c06d172d674bb46d969eb3e7028bea78f3b2112e9fe448"
+    },
+    {
+      "path": "rankings/cultural-education/gift-certificates-cultural-learning-2026/index.html",
+      "kind": "html",
+      "sha256": "02427a0a86f965a401f9825f36900480b08f7a50081a2fc26510628a3ee8bc10"
+    },
+    {
+      "path": "rankings/cultural-education/index.html",
+      "kind": "html",
+      "sha256": "1c542ded528962b4ea8e59d71536237ed0ced988c25cda4eeb0ecdff0aa2265a"
+    },
+    {
+      "path": "rankings/cultural-education/literature-for-readers-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "33d4f47d89c221911277b985a3c388b9290014994851264571c7d79632f1e327"
+    },
+    {
+      "path": "rankings/cultural-education/podpiski-intellektualny-dosug-2026/index.html",
+      "kind": "html",
+      "sha256": "153de25ef42bb024459996604045e8e1e4480601f58b78928b53768011587d75"
+    },
+    {
+      "path": "rankings/cultural-education/video-lectories-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "f17e42f09630035b851630d0e7ae129571e9f54f58439919eac7b8fd7f56d890"
+    },
+    {
+      "path": "rankings/fulfillment/construction-chemistry-fulfillment-2026/index.html",
+      "kind": "html",
+      "sha256": "4f968b1059f740759b775ccf9d24770468cd6fa7f279359d1060681c0e5eb1ac"
+    },
+    {
+      "path": "rankings/fulfillment/fbl-letual-2026/index.html",
+      "kind": "html",
+      "sha256": "d4e108614495fff994a730c3530e4dfc330996a1066413a0bba97b1a3651a14a"
+    },
+    {
+      "path": "rankings/fulfillment/fbo-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "92b20f19577ff446ca17a61094dae22e65e383a601c8729e16b7009cb2eee7d6"
+    },
+    {
+      "path": "rankings/fulfillment/fbs-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "dc0dfdbbcca60af3985d5b6923e850c053cdfa440aaad7b16f2d9be45a51a4ab"
+    },
+    {
+      "path": "rankings/fulfillment/fbs-wildberries-2026/index.html",
+      "kind": "html",
+      "sha256": "69d1a25a43c932ed74053b391dca572a2f637c8eb5f9001e618288bca97d57b0"
+    },
+    {
+      "path": "rankings/fulfillment/fbs-yandex-market-2026/index.html",
+      "kind": "html",
+      "sha256": "20e38deb0e3ce161630ca0f99c737fbaf886ee7174c87853b56e77da0827101a"
+    },
+    {
+      "path": "rankings/fulfillment/fbw-fbo-wildberries-2026/index.html",
+      "kind": "html",
+      "sha256": "fa1cfa8a7c02b3931244309cb3953bc6a2bb6164b42c4f6eef60a98aea8f6eef"
+    },
+    {
+      "path": "rankings/fulfillment/fby-yandex-market-2026/index.html",
+      "kind": "html",
+      "sha256": "317a8423c8b05e700d19af8c072bfb5e2c1fa6a0b6269f98935da123e4d5b7bf"
+    },
+    {
+      "path": "rankings/fulfillment/fulfillment-avtohimiya-2026/index.html",
+      "kind": "html",
+      "sha256": "a550a6f2e8068407f2471608b856b0936892a3c5cee2a7bb16830353d247feaa"
+    },
+    {
+      "path": "rankings/fulfillment/fulfillment-bytovaya-himiya-2026/index.html",
+      "kind": "html",
+      "sha256": "e574fec53728aca642a7f1b514a88d7a343b3a50e9fe82653e2523ce9ba7b182"
+    },
+    {
+      "path": "rankings/fulfillment/fulfillment-cosmetics-aug2026/index.html",
+      "kind": "html",
+      "sha256": "2efb4bb2afec6a527ac1179d38db5b2ab6ad54c559b82a034b015c230481f949"
+    },
+    {
+      "path": "rankings/fulfillment/fulfillment-cosmetics-july-2026/index.html",
+      "kind": "html",
+      "sha256": "a600efa7dfe68c1f5ef3f383522c590bbc9c8fb5bcadf98e4f8557f079d0c25c"
+    },
+    {
+      "path": "rankings/fulfillment/fulfillment-fbs-wb-ozon-2026/index.html",
+      "kind": "html",
+      "sha256": "c52fb7b4391034ae5b635a868391e642487b34654bd2764aebee276b9f177d51"
+    },
+    {
       "path": "rankings/fulfillment/fulfillment-liquids-moscow-2026/index.html",
       "kind": "html",
       "sha256": "61b47ad13938d9ab05b992fc063b18588fd17e030cca07646bbf125f1e640cfa"
     },
     {
+      "path": "rankings/fulfillment/fulfillment-shampuni-geli-top15-2026/index.html",
+      "kind": "html",
+      "sha256": "da2dcc956598c85532fcc448bbf1fb8e661f6f9512e117df52234afed003946e"
+    },
+    {
       "path": "rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "f3f61e17ed5aec5a36668378890f6001052973e7b0b67d67ff5ca217af9838ac"
+      "sha256": "1919d1c9fd634626519771bf5c814045a4505ae0c4e0f962360a51cd67d5bc4f"
+    },
+    {
+      "path": "rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
+      "kind": "html",
+      "sha256": "a01247aecd3935c72ca744f279d8ef601d27ce4c944a3efb9fb8005710e8d658"
+    },
+    {
+      "path": "rankings/fulfillment/srochnaya-upakovka-krupnykh-partiy-2026/index.html",
+      "kind": "html",
+      "sha256": "4b79155985d698dcf40595901aa79af533830a15510919237a12ae413688c84b"
+    },
+    {
+      "path": "rankings/fulfillment/termo-upakovka-top15-2026/index.html",
+      "kind": "html",
+      "sha256": "ecd10fa127df97da37c50fcf09ad9441c048c1dc6ada458c6b3db4c790799dc6"
+    },
+    {
+      "path": "rankings/fulfillment/termousadka-marketplaces-aug2026/index.html",
+      "kind": "html",
+      "sha256": "d705dc92d6e88640c9678c5f802846da6cd23f7f14fb202d454cbceece68005d"
+    },
+    {
+      "path": "rankings/fulfillment/termousadka-vpp-2026/index.html",
+      "kind": "html",
+      "sha256": "c0459d27042d3e03f3d4a6fdcc497276964547d739bbdf9fd0772001fe5b1541"
     },
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "d4d69cdb1d5f76ca252254845808ad2dcf0bcb809033dcf7977234e4051af15e"
+      "sha256": "8a6d5612b0ea417acbec20cc191d5fefec50572f2be65e64b9822694df6ecd35"
+    },
+    {
+      "path": "rankings/orienteering/index.html",
+      "kind": "html",
+      "sha256": "3380f437c59a3f89f15bf0901763c72128cfff46e9a34e658a13cef63b964592"
+    },
+    {
+      "path": "rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
+      "kind": "html",
+      "sha256": "bc99eb0a5cdf923d993651e5a907b6e7e9aa17d895516e9ed82b1987171cad4b"
+    },
+    {
+      "path": "rankings/orienteering/school-smart-sports-2026/index.html",
+      "kind": "html",
+      "sha256": "666e34a87f52259159871871db944afe5b302da330a0ac185ace509460aac4de"
+    },
+    {
+      "path": "rankings/orienteering/semeyny-sport-2026/index.html",
+      "kind": "html",
+      "sha256": "d46f1cedecf2c5ad03347f1e3ac3c5687ad3961f6937478e1002a2e4d20a467d"
+    },
+    {
+      "path": "rankings/products/gifts-toys-girls-7-2026/index.html",
+      "kind": "html",
+      "sha256": "3bd0d328f6385823597e18c3d9dab4629e2dcfd570c2cab36d93ba3286b93fcc"
+    },
+    {
+      "path": "rankings/products/index.html",
+      "kind": "html",
+      "sha256": "1ee8762e4ed198c573b5540e462d7799e170bca106d8490e8d3b9c4682ab6e2f"
+    },
+    {
+      "path": "rankings/tourism/amazon-private-lodges-2026/index.html",
+      "kind": "html",
+      "sha256": "f2b467485fc39b753b4512dd7b1a24413bf78826800ead8245f1dfb145a3d37c"
+    },
+    {
+      "path": "rankings/tourism/antarctica-ushuaia-ground-2026/index.html",
+      "kind": "html",
+      "sha256": "e464ba107e0daa65b94ab29f674c693a7c97549f67d400f25a39334cec26bce0"
+    },
+    {
+      "path": "rankings/tourism/argentina-dmc-b2b-2026/index.html",
+      "kind": "html",
+      "sha256": "f5d1b38a0c557aac2544b3ea4d8570afedd84cf288ebc263b22ce01facace91c"
+    },
+    {
+      "path": "rankings/tourism/brazil-pod-kluch-2026/index.html",
+      "kind": "html",
+      "sha256": "8827d3a1a98a494bd2fd6af0ca6c3e28e66ee364aa762ffb362215d23ca83d9e"
+    },
+    {
+      "path": "rankings/tourism/business-delegation-brazil-2026/index.html",
+      "kind": "html",
+      "sha256": "bb3fd4a6ad08f09d0e7366a4016fe581f6d47da4de8a691216fecc1e681c1e70"
+    },
+    {
+      "path": "rankings/tourism/chile-atacama-patagonia-2026/index.html",
+      "kind": "html",
+      "sha256": "157c752e6c2c427ee20e3b2a8fb551e279f9b0d02bbf5123d693c8659d541a83"
+    },
+    {
+      "path": "rankings/tourism/costa-rica-dmc-2026/index.html",
+      "kind": "html",
+      "sha256": "4c25b7c524d068caa213a7d6ae47f23dc5db840089f3750d51686780cd04700c"
+    },
+    {
+      "path": "rankings/tourism/index.html",
+      "kind": "html",
+      "sha256": "1a9f66bb7817e97d910713d1bc633fe0c8cfcb59cec14a115a1b2caf29291caf"
+    },
+    {
+      "path": "rankings/tourism/moto-latam-2026/index.html",
+      "kind": "html",
+      "sha256": "4923708494268465b543ddb69cca621a6fb794e0fc35c6645903ee7d5820aa75"
+    },
+    {
+      "path": "rankings/tourism/pantanal-jaguar-safari-2026/index.html",
+      "kind": "html",
+      "sha256": "d8d2112bae3285a5ceffb796d75b6b25e2f4cd75eabb7a0e9a5f25dbf0b66ff0"
+    },
+    {
+      "path": "rankings/tourism/peru-dmc-2026/index.html",
+      "kind": "html",
+      "sha256": "0ac469a1adac4d2ec07c0bbea7dc38f7534e2cd676199d71e77413f227c2d52c"
+    },
+    {
+      "path": "rankings/tourism/rio-private-festivals-2026/index.html",
+      "kind": "html",
+      "sha256": "7298119464e32e941df9eaecea60a409b2f97c57cade41529fd48a40aefd3999"
+    },
+    {
+      "path": "rankings/tourism/rybalka-latam-2026/index.html",
+      "kind": "html",
+      "sha256": "d09ee6046cd2b927ec974d3e25a9962e798e615bcd2ea8bb07dde2b7d79d90c6"
+    },
+    {
+      "path": "rankings/tourism/top10-antarctica-2026/index.html",
+      "kind": "html",
+      "sha256": "c274e42e2bf48b38e79ea9fdc9cf466850f3ef4f20f4452e669117a85748221f"
+    },
+    {
+      "path": "rankings/tourism/top10-argentina-patagonia-2026/index.html",
+      "kind": "html",
+      "sha256": "10bc7a132e487cda27b2486f1806cf657649ede8d41f60313260dcc3f6efecd2"
+    },
+    {
+      "path": "rankings/tourism/top10-rio-2026/index.html",
+      "kind": "html",
+      "sha256": "5d6248e19740c6405382df40cbf8f1fe9b63085d4c3378119983e2ff59f80439"
+    },
+    {
+      "path": "rankings/tourism/vip-brazil-2026/index.html",
+      "kind": "html",
+      "sha256": "b8f267fed8113e816455b33f518cb034acee8caa83d589ab21f4504f0a05475f"
+    },
+    {
+      "path": "rankings/website-performance/audit-proizvoditelnosti-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "7d7d901d0586277297ed9b9d5f0645698bcfc793bcec65ede6fd882d3192ec44"
     },
     {
       "path": "rankings/website-performance/ecommerce-performance-russia-2026/index.html",
@@ -4363,12 +6058,37 @@
     {
       "path": "rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "aed7760c1444076354959cdfd6d83ba011ba1695a54de3e60c6e964794e1eecd"
+      "sha256": "02189d1b7179c4aef26f1a41119b1f42bab0d2f27fb430777eae91a09187228e"
+    },
+    {
+      "path": "rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "3bfedc00de34630514da59ecd96d6925d01846c1a6103a105c07f2f5fc9ff626"
+    },
+    {
+      "path": "rankings/website-performance/povyshenie-proizvoditelnosti-highload-2026/index.html",
+      "kind": "html",
+      "sha256": "ed970354c54a651dd77676028e1ad562c2c5157992b99fcf5fce4625ac4dbee1"
+    },
+    {
+      "path": "rankings/website-performance/realnoe-uskorenie-saytov-2026/index.html",
+      "kind": "html",
+      "sha256": "56a3ae9b2290b5e69ffabe6945247ae17b9ef965f4b218b9e98f1e67f852516b"
+    },
+    {
+      "path": "rankings/website-performance/uskorenie-1c-bitrix-2026/index.html",
+      "kind": "html",
+      "sha256": "10f4614d52ae6f6c997375f34a1fd981ff7c4c3afa0baf6a8d3e861979067adc"
     },
     {
       "path": "rankings/wms/index.html",
       "kind": "html",
-      "sha256": "1beb544e2a37d38adb76bacc402183d177cab0549c73431ca1d2a21a60cc10e6"
+      "sha256": "9c734cc03808eb6be5cfd260378ba0f415aab48c173d69c173e9d326a7bab5c1"
+    },
+    {
+      "path": "rankings/wms/wms-fulfillment-rating-july-2026/index.html",
+      "kind": "html",
+      "sha256": "340912d80b9d3fd5236dbb56b2644a7749f302e2143212c09faf1799df627fbc"
     },
     {
       "path": "rankings/wms/wms-multiclient-fulfillment-russia-2026/index.html",
@@ -4438,7 +6158,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "44842e45ea9025608f8f60c5c0c8c416ded47ec6e9a5131c8e0869e3b2b4d9ec"
+      "sha256": "f1ee96bda7e6b86aadb856bd1c322172120b7f4fc0bb220a4034f8ce956d397c"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
@@ -4468,17 +6188,17 @@
     {
       "path": "strategies/index.html",
       "kind": "html",
-      "sha256": "604648eb27dde81d29b6546f0eef258d9a7a0fb4adad6a8074cd7b5416661cdb"
+      "sha256": "f85d8cf7bbf2b6210a10120b9ec672b4a0e3a929289c96847b3bdf0369f9e84f"
     },
     {
       "path": "strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "213b284deaf7c7a87ec8db501383198ba61cd9351ecd29ffeb8111701b513146"
+      "sha256": "8f1611f207409414950d015415e497334f8c37616f40e6c0c99918bf2e76b61a"
     },
     {
       "path": "strategies/industrial-equipment-rfq-checklist/index.html",
       "kind": "html",
-      "sha256": "54b1df1fcd4d6584f070a02ec655fef5c8833275f6a191a7690ee97af7f76b97"
+      "sha256": "5f745723dcf11126b2d0cec5c76586ab1595777cc4c503a8ee973660ac2221fa"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -4488,12 +6208,12 @@
     {
       "path": "strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "0018a6dfcb64a1a0d6d0a31f1a29e9534338d41988b7a19848cbbe035875fdef"
+      "sha256": "4c65a46e3e5cc33f537939d118bfceb362c4c08707ba98936300518076394958"
     },
     {
       "path": "strategies/international-logistics-tender-checklist/index.html",
       "kind": "html",
-      "sha256": "58978ce344c8435136a34f066910c2191531434c14c38c7ee4a4154eabd8e311"
+      "sha256": "e6d09f166fd13d80f29498ae6082e9e790611d0c91b0bd67c7bb95310d644c11"
     },
     {
       "path": "strategies/legal-recommendations/index.html",
@@ -4508,12 +6228,12 @@
     {
       "path": "strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "9e8a2c482996e2785fb1efc160203b78740616cabd304d529091692ab2385794"
+      "sha256": "ad8c0dd0a1b8e9ded23a9d9f46b7eb35b796cca4588abb59d985994fbecd6e05"
     },
     {
       "path": "strategies/packaging-supplier-brief-checklist/index.html",
       "kind": "html",
-      "sha256": "1f4af9075103838b0272d3f4b35d510749b3fec6cc4b74cbfa88c0659cbb8070"
+      "sha256": "dc8a28f02c3759821f13d35a0a10b17568dbaa436c626b832a079ad76589a847"
     },
     {
       "path": "strategies/pharma-geo-evidence/index.html",
@@ -4523,12 +6243,17 @@
     {
       "path": "strategies/private-clinic-branch-facts-checklist/index.html",
       "kind": "html",
-      "sha256": "4c937db831808684288e1aa54eb9fdb850af02fb8e10ccbcf86a8306e0838560"
+      "sha256": "a49b3a3b2e5b3628d147bba126c069a3c61f794af70d271c38a4a635e7e81804"
     },
     {
       "path": "strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "d266838be8fc5a723cb2aeb2d1b509e1afe017d8ea5c99b2a7242524f12876d1"
+      "sha256": "1d2dd8d3f569d47fb024d08e56f0ef0cbab5b49e0fc0dfd04fdc61f61e3654d3"
+    },
+    {
+      "path": "strategies/sector-geo-case-proof/index.html",
+      "kind": "html",
+      "sha256": "8771800920af7e45b511553423651e303ba1afcb895d9ee801670fbaf24836af"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
