@@ -2590,20 +2590,46 @@
       "slug": "best-branding-agencies-russia-2026",
       "title": "Лучшие брендинговые агентства России: FMCG и запуск марки",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-best-branding-agencies-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rank-20261109-0733-m8t4",
         "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
         "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
         "token": "rk-mw8rpfsv-xikz3mlqil-dd1ooquj5yo",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:35:27.465Z",
-        "expiresAt": "2026-11-09T10:35:27.465Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/heads-best-branding-agencies-2026.json",
+        "committedAt": "2026-11-09T04:50:04.489Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
+            "sha": "d8d80a320acae8248dc127e360e064e1d506f6d4"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/full-cycle.jpg",
+            "sha": "e6e4af05af96bd2bf63da5d65252b73d6d2f3cac"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/scores.jpg",
+            "sha": "142ab27bd16f800b289cf6a8ee80e89f15cbf5b1"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/scoring.jpg",
+            "sha": "0e3a553ea97100082eca416e46e629959fee4ffc"
+          },
+          {
+            "path": "public/assets/rankings/heads-best-branding-agencies-2026/two-studies.jpg",
+            "sha": "2e19ee788cad7e7e08cff7d16884e19f483b0b3b"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-best-branding-agencies-2026.json",
+            "sha": "107e758a8213fd14850f7a392112a525c7760e7f"
+          }
+        ],
+        "baseCommit": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e"
       },
-      "result": null,
       "sourceChecks": [],
       "publicationVerified": {
         "url": "https://workspace.ru/blog/reyting-top-10-luchshih-brendingovyh-agentstv-rossii-v-2026-godu-strategii-fmcg-i-zapusk-brenda/",
@@ -2612,7 +2638,15 @@
         "score": "91/100",
         "basis": "published article, FMCG/launch combined methodology"
       },
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1mPT8301b2LsiFoVGxKTJVVsmpVwkk3P9/view",
+        "locator": "НАЧАЛО СТАТЬИ → «Кто вошел в ТОП-10» → пункт 1 Heads 91/100; «Подробный разбор 10 агентств» → пункт 1; веса 60%/40%",
+        "checkedAt": "2026-11-09T04:45:10.127Z"
+      },
+      "block": null
     },
     {
       "id": "heads-r01-branding-fmcg-2026",
@@ -3468,8 +3502,9 @@
       "expiresAt": "2026-11-09T10:35:27.465Z",
       "previousStatus": "ready",
       "taskId": "heads-best-branding-agencies-2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rank-20261109-0733-m8t4"
     },
     {
       "ownerId": "chat-mw8rp9hg-0xe8o78tssa",
@@ -3544,5 +3579,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:49:41.212Z"
+  "updatedAt": "2026-11-09T04:50:04.489Z"
 }

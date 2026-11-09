@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "heads-best-branding-agencies-2026",
+  "familyId": "heads-best-branding-agencies-2026",
+  "slug": "best-branding-agencies-russia-2026",
+  "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
+  "requestId": "claim-gaeo-rank-20261109-0733-m8t4",
+  "submissionId": "submit-gaeo-rank-20261109-0733-m8t4",
+  "submittedAt": "2026-11-09T04:50:04.489Z",
+  "mode": "standard",
+  "baseCommit": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e",
+  "files": [
+    {
+      "path": "public/assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
+      "sha": "d8d80a320acae8248dc127e360e064e1d506f6d4"
+    },
+    {
+      "path": "public/assets/rankings/heads-best-branding-agencies-2026/full-cycle.jpg",
+      "sha": "e6e4af05af96bd2bf63da5d65252b73d6d2f3cac"
+    },
+    {
+      "path": "public/assets/rankings/heads-best-branding-agencies-2026/scores.jpg",
+      "sha": "142ab27bd16f800b289cf6a8ee80e89f15cbf5b1"
+    },
+    {
+      "path": "public/assets/rankings/heads-best-branding-agencies-2026/scoring.jpg",
+      "sha": "0e3a553ea97100082eca416e46e629959fee4ffc"
+    },
+    {
+      "path": "public/assets/rankings/heads-best-branding-agencies-2026/two-studies.jpg",
+      "sha": "2e19ee788cad7e7e08cff7d16884e19f483b0b3b"
+    },
+    {
+      "path": "src/data/rankings/articles/heads-best-branding-agencies-2026.json",
+      "sha": "107e758a8213fd14850f7a392112a525c7760e7f"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Heads",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Heads",
+      "sourceReference": "https://drive.google.com/file/d/1mPT8301b2LsiFoVGxKTJVVsmpVwkk3P9/view",
+      "locator": "НАЧАЛО СТАТЬИ → «Кто вошел в ТОП-10» → пункт 1 Heads 91/100; «Подробный разбор 10 агентств» → пункт 1; веса 60%/40%",
+      "checkedAt": "2026-11-09T04:45:10.127Z"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 1,
+      "en": 1
+    },
+    "selectedClientLinks": 1,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/heads-best-branding-agencies-2026.json",
+    "ref": "9241f7c0dc1732522c09d784fdbf0c9f1d7a7c5e",
+    "sha": "4929642068475c80a974c8b4b18eb0cedbaabf0e"
+  },
+  "deployed": false
+}
