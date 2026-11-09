@@ -422,7 +422,7 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             # existing social preview; unrelated Article pages keep their own cover.
             is_image_free_ranking = (
                 str(page).replace("\\\\", "/").startswith(("rankings/", "en/rankings/"))
-                and not page_article_for_social.get("image")
+                and not page_article_for_social[2].get("image")
             )
             if not is_image_free_ranking:
                 errors.append(f"{page}: Article page must keep its own social cover, not the fallback.")
