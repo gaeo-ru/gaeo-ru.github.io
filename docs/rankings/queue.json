@@ -1961,9 +1961,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/ada-t010.json",
       "earliestPublicationDate": "2026-10-16",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8r8yzs-bpse7b0iz",
+        "requestId": "claim-mw8r8yzs-bpse7b0iz",
+        "token": "rk-mw8r96ux-deqzgy85tfc-k78ua7ugyxf",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:22:39.600Z",
+        "expiresAt": "2026-11-09T10:22:39.600Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "ada-t014",
@@ -2804,7 +2813,19 @@
       "taskId": "ada-t012",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8r8yzs-bpse7b0iz",
+      "requestId": "claim-mw8r8yzs-bpse7b0iz",
+      "token": "rk-mw8r96ux-deqzgy85tfc-k78ua7ugyxf",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:22:39.600Z",
+      "expiresAt": "2026-11-09T10:22:39.600Z",
+      "previousStatus": "ready",
+      "taskId": "ada-t010",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:22:31.314Z"
+  "updatedAt": "2026-11-09T04:22:39.600Z"
 }
