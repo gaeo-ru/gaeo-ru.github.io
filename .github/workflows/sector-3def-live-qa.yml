@@ -1,0 +1,62 @@
+name: GAEO independent public HTTPS review for sectors 3D 3E 3F
+
+on:
+  push:
+    branches:
+      - 'qa/sector-3def-live-*'
+      - astro-source
+    paths:
+      - 'scripts/qa_sector_public_live_3f.mjs'
+      - '.github/workflows/sector-3def-live-qa.yml'
+  pull_request:
+    branches: [astro-source]
+    paths:
+      - 'scripts/qa_sector_public_live_3f.mjs'
+      - '.github/workflows/sector-3def-live-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gaeo-sector-3def-public
+  cancel-in-progress: false
+
+jobs:
+  public-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout canonical source
+        uses: actions/checkout@v4
+      - name: Checkout current published main without changing it
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published-main
+      - name: Record exact source and main revisions
+        shell: bash
+        run: |
+          echo "PUBLISHED_MAIN_SHA=$(git -C published-main rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "Source SHA: $(git rev-parse HEAD)"
+          echo "Published main SHA: $(git -C published-main rev-parse HEAD)"
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install chromium
+      - name: Audit actual HTTPS pages, published HTML, links, FAQ, images and form on 1440/390/320
+        env:
+          GAEO_PUBLIC_ORIGIN: https://gaeo.ru
+        run: node scripts/qa_sector_public_live_3f.mjs
+      - name: Upload independent HTTPS acceptance report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-sector-3def-public-live
+          path: visual-sector-live/
+          if-no-files-found: warn
+          retention-days: 21
