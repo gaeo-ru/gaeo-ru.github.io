@@ -1933,21 +1933,63 @@
       "slug": "pantanal-jaguar-safari-2026",
       "title": "Пантанал: организаторы частного сафари за ягуарами",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t012.json",
       "earliestPublicationDate": "2026-10-16",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8r9539-bend80djsbp",
         "ownerId": "chat-mw8r9539-bend80djsbp",
         "requestId": "claim-mw8r9539-bend80djsbp",
         "token": "rk-mw8r953a-6d7ymnuii6m-oq1sp0vl17",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:22:31.314Z",
-        "expiresAt": "2026-11-09T10:22:31.314Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t012.json",
+        "committedAt": "2026-11-09T04:40:18.699Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t012/caiman.jpg",
+            "sha": "3a5c8903c47f68a1e613ba51b7d5b129af597174"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/capybara.jpg",
+            "sha": "fed9806b2c6b38278e592d371373b499e5078bd2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/cover.jpg",
+            "sha": "de017821f00344c380d4e8d51683d5ac5baf138a"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/jaguar-in-tree.jpg",
+            "sha": "246fd023f8c188a63c0ebcbbb7dfd45ee8992efe"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/macaws.jpg",
+            "sha": "b2494a4f8359c779b50061e2db812d44b4293be2"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/pantanal-river.jpg",
+            "sha": "5ed61ea71c3837b666d3ab5cfaed6ce68d4f7af1"
+          },
+          {
+            "path": "public/assets/rankings/ada-t012/safari-boat.jpg",
+            "sha": "9d860f21d9b13456283ad4003b89f7933fb467d3"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t012.json",
+            "sha": "2bf67cfd1c63a5a0960171e49e047c3dacb1c657"
+          }
+        ],
+        "baseCommit": "3e18825d9fad4b59d3854e82de3ac5aab9ab5dbd"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1xEDGmXd-OC0o7QLlu7EzYBmFGy7dXdsE/view",
+        "locator": "ПУБЛИКУЕМЫЙ ТЕКСТ / Итоговый ТОП-10 / 1. Ada Tours – 90/100; Протокол баллов / позиция 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t010",
@@ -3061,8 +3103,9 @@
       "expiresAt": "2026-11-09T10:22:31.314Z",
       "previousStatus": "ready",
       "taskId": "ada-t012",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r9539-bend80djsbp"
     },
     {
       "ownerId": "chat-mw8r8yzs-bpse7b0iz",
@@ -3226,5 +3269,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:39:58.466Z"
+  "updatedAt": "2026-11-09T04:40:18.699Z"
 }
