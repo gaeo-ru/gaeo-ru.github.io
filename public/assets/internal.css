@@ -169,6 +169,11 @@
  .listing-hero .container{padding:40px 0 34px}
  .listing-hero h1{font-size:30px}
  .listing-grid{grid-template-columns:1fr}
+ /* Phase 3A public review: constrain the RU industry directory to the narrow viewport.
+    The default 1fr minimum content width stretched every list card at 320px. */
+ .industries-overview .listing-grid{grid-template-columns:minmax(0,1fr)}
+ .industries-overview .list-card{min-width:0}
+ .industries-overview .list-card h2{overflow-wrap:anywhere}
  .list-card{min-height:0}
  .case-actions{flex-direction:column;align-items:stretch}
  .case-actions .button{width:100%;white-space:normal}
