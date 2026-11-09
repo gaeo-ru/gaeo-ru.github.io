@@ -1,5 +1,28 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3I: независимая публичная приемка 8 RU/EN специализаций (10 ноября 2026, 01:23 МСК)
+
+**Фаза 3: 3I закрыта, следующая партия 3J.** Независимо проверены действующие двуязычные коммерческие страницы №22/23/24/25/26/28/29/31. Тарифы, существующие URL, исходные коммерческие тексты и клиентские кейсы в этой партии не менялись.
+
+**Публичная приемка:** [GitHub Actions run 42711306406](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406) **PASS**, завершена 2026-11-09T22:23:47Z. По логу в 2026-11-09T22:23:40Z: **16/16 реальных HTTPS URL (HTTP 200, SHA-256 совпадает с опубликованным main и URL включены в публичный sitemap.xml), 48/48 Chromium-сценариев на 1440/390/320 px, 0 ошибок**. Проверены отсутствие noindex, 1 H1, title/description, canonical/hreflang, 5 видимых FAQ/FAQPage, Service JSON-LD, канонические тарифы, биография, CTA, реальные изображения, отсутствие горизонтального переполнения и открытие/закрытие формы при 390 px без POST. [Артефакт: JSON + 48 скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42711306406/artifacts/13715329063), размер 20 892 218 байт. Отдельный [QA-trigger-коммит `868002b7`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/868002b7c7d2a537626ec7175201027908f71010) создан только в изолированной QA-ветке; производственный скрипт не менялся.
+
+| ID | Отрасль | RU | EN |
+|---:|---|---|---|
+| 22 | Юристы по интеллектуальной собственности | [RU](https://gaeo.ru/industries/intellectual-property-lawyers/) | [EN](https://gaeo.ru/en/industries/intellectual-property-lawyers/) |
+| 23 | Налоговые юристы и консультанты | [RU](https://gaeo.ru/industries/tax-lawyers/) | [EN](https://gaeo.ru/en/industries/tax-lawyers/) |
+| 24 | Юристы по сделкам с недвижимостью | [RU](https://gaeo.ru/industries/real-estate-transaction-lawyers/) | [EN](https://gaeo.ru/en/industries/real-estate-transaction-lawyers/) |
+| 25 | Автоюристы и юристы по страховым спорам | [RU](https://gaeo.ru/industries/motor-insurance-lawyers/) | [EN](https://gaeo.ru/en/industries/motor-insurance-lawyers/) |
+| 26 | Юристы по трудовому и миграционному праву | [RU](https://gaeo.ru/industries/employment-migration-lawyers/) | [EN](https://gaeo.ru/en/industries/employment-migration-lawyers/) |
+| 28 | Аудиторские и консалтинговые компании | [RU](https://gaeo.ru/industries/audit-assurance-consulting-firms/) | [EN](https://gaeo.ru/en/industries/audit-assurance-consulting-firms/) |
+| 29 | Финансовые и инвестиционные консультанты | [RU](https://gaeo.ru/industries/financial-investment-advisers/) | [EN](https://gaeo.ru/en/industries/financial-investment-advisers/) |
+| 31 | Лизинговые компании | [RU](https://gaeo.ru/industries/leasing-companies/) | [EN](https://gaeo.ru/en/industries/leasing-companies/) |
+
+**Production / GitHub Pages:** проверка проводилась на опубликованной ревизии [main `f46c07786c5eb3c67ad70503e0436232f8f21361`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/f46c07786c5eb3c67ad70503e0436232f8f21361), манифест `sourceCommit=d27905fec270ef15e1a0ef1b4c9f6823bad286ad`. Для этого main ранее завершились [production PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42696446822) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42699654059). Поскольку 3I не меняет HTML/активы, новая сборка и деплой сайта не требуются; проверена именно публичная версия. Документационный коммит фиксирует приемку и точку продолжения.
+
+**Прогресс:** 28/100 оригинальных двуязычных специализаций (56 коммерческих URL) проверены публично, **72 пары ожидают приемки**. Результат не доказывает индексацию, BMR, новые заявки или право публикации клиентских кейсов. Разрешения и первичные E3/E4 для 3F №42/48/55/59 еще требуются.
+
+**Следующая партия 3J:** проверить уже опубликованные №32/33/34/35/36/37/38/40 (финтех и платежи, корпоративное ПО, CRM/ERP, WMS/TMS, интеграторы, кибербезопасность, облака/ЦОД, электронный документооборот). Повторить существующий публичный HTTPS/Chromium-контроль, после фактического PASS обновить только соответствующие записи и эти же 2 документа.
+
 ## Партия 3H: публичная приемка 8 RU/EN специализаций завершена (9–10 ноября 2026)
 
 **Текущая фаза 3, партия 3H закрыта; далее партия 3I.** По приоритету реестра, без создания повторных коммерческих страниц, проверены уже опубликованные самостоятельные RU/EN-специализации **№12/13/14/15/16/17/20/21**: студии дизайна интерьеров, ремонт жилья, ремонт коммерческих помещений, окна, фасадное остекление, инженерно-монтажные компании, банкротство, семейные и наследственные юристы. Для этих 8 записей указаны подтвержденные `landing_url_ru/en`, `verified_at=2026-11-09T20:49:35Z` и ссылки на независимую публичную проверку. **Итого 20/100 оригинальных двуязычных специализаций (40 коммерческих URL) прошли индивидуальную независимую приемку; остаются 80 пар.**
