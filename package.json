@@ -21,7 +21,8 @@
     "check:evidence": "node scripts/qa_evidence_pages.mjs",
     "check:rankings": "node scripts/qa_rankings.mjs",
     "check:sector3b": "node scripts/qa_sector_methods_3b.mjs",
-    "check:sector3c": "node scripts/qa_sector_guides_3c.mjs"
+    "check:sector3c": "node scripts/qa_sector_guides_3c.mjs",
+    "check:sector3d": "node scripts/qa_sector_case_proof_3d.mjs"
   },
   "devDependencies": {
     "astro": "^6.4.6",
