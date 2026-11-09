@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Refresh the EXISTING 15 services in the version 1.4 feed from pricing.mjs.
- * Persistent IDs are provider identities: never rename or silently add them.
- * The 107 industry offers and new core services require a separate export phase.
+ * Synchronize prices in the expanded Yandex feed without rewriting provider
+ * copy, media or links. The legacy 15-offer export also syncs its metadata.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { PRICES, platforms, getPlan, serviceHref } from '../src/data/pricing.mjs';
+import { industries } from '../src/data/industry-catalog.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const FEED = path.join(ROOT, 'public/gaeo-services.yml.xml');
@@ -30,6 +30,16 @@ export const existingServiceMapping = Object.freeze({
   'claude-addon': { platform: 'claude' },
   'grok-addon': { platform: 'grok' },
 });
+
+const expandedServiceMapping = {
+  ...existingServiceMapping,
+  'geo-guarantee': { plan: 'guarantee' },
+  'website-development': { plan: 'development' },
+  'yandex-alice-addon': { platform: 'yandex-alice' },
+  'google-ai-mode-addon': { platform: 'google-ai-mode' },
+  'additional-prompts-10': { plan: 'prompts' },
+  ...Object.fromEntries(industries.map(industry => [industry.id, { plan: 'geo' }])),
+};
 
 const xmlEscape = text => String(text)
   .replace(/&/g, '&amp;')
@@ -55,8 +65,8 @@ function moscowTimestamp() {
   return new Date(Date.now() + 3 * 60 * 60 * 1000).toISOString().slice(0, 19) + '+03:00';
 }
 
-export function serviceFeedRecord(persistentId) {
-  const mapping = existingServiceMapping[persistentId];
+export function serviceFeedRecord(persistentId, mappings = existingServiceMapping) {
+  const mapping = Object.hasOwn(mappings, persistentId) && mappings[persistentId];
   if (!mapping) throw new Error(`No approved mapping for existing feed ID: ${persistentId}`);
   let offer;
   if (mapping.plan) {
@@ -90,22 +100,31 @@ export function serviceFeedRecord(persistentId) {
 
 export function synchronizeServiceFeed(source, { updatedAt = moscowTimestamp(), verifyImages = true } = {}) {
   if (!/<services_feed\b[^>]*version="1\.4"/.test(source)) throw new Error('Expected services_feed version 1.4');
+  const expanded = source.includes('<persistent_id>industry-001</persistent_id>');
+  const mappings = expanded ? expandedServiceMapping : existingServiceMapping;
   const seen = new Set();
   let updated = source.replace(/<service>[^]*?<\/service>/g, block => {
     const id = block.match(/<persistent_id>([^<]+)<\/persistent_id>/)?.[1];
     if (!id || seen.has(id)) throw new Error(`Missing or duplicate service persistent_id: ${id}`);
     seen.add(id);
-    const offer = serviceFeedRecord(id);
+    const offer = serviceFeedRecord(id, mappings);
+    const prices = block.match(/<price>[^]*?<\/price>/g) || [];
+    if (prices.length !== 1) throw new Error(`Expected 1 price block in ${id}`);
+    if (expanded) {
+      const photo = block.match(/<photo_url>https:\/\/gaeo\.ru(\/assets\/[^<]+)<\/photo_url>/)?.[1];
+      if (verifyImages && (!photo || !fs.existsSync(path.join(ROOT, 'public', photo)))) {
+        throw new Error(`Missing local feed photograph for ${id}`);
+      }
+      return block.replace(prices[0], priceXml(offer));
+    }
     if (verifyImages && !fs.existsSync(path.join(ROOT, 'public', offer.photo))) throw new Error(`Missing feed photograph: ${offer.photo}`);
     let next = replaceTag(block, 'url', offer.url);
     next = replaceTag(next, 'name', offer.name);
     next = replaceTag(next, 'photo_url', ORIGIN + offer.photo);
     next = replaceTag(next, 'description', offer.description);
-    const prices = next.match(/<price>[^]*?<\/price>/g) || [];
-    if (prices.length !== 1) throw new Error(`Expected 1 price block in ${id}`);
-    return next.replace(/<price>[^]*?<\/price>/, priceXml(offer));
+    return next.replace(prices[0], priceXml(offer));
   });
-  const expected = Object.keys(existingServiceMapping);
+  const expected = Object.keys(mappings);
   if (seen.size !== expected.length || expected.some(id => !seen.has(id))) {
     throw new Error('Existing service identities changed. Review the export scope before updating the mapping.');
   }
@@ -125,9 +144,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
     if (changed) {
       console.error('Service feed differs from canonical pricing. Run node scripts/sync-service-feed.mjs.');
       process.exitCode = 1;
-    } else console.log(`Service feed matches pricing.mjs (${Object.keys(existingServiceMapping).length} persistent IDs).`);
+    } else console.log('Service feed matches pricing.mjs.');
   } else {
     if (changed) fs.writeFileSync(FEED, updated);
-    console.log(`Service feed ${changed ? 'updated' : 'already current'} (${Object.keys(existingServiceMapping).length} persistent IDs).`);
+    console.log(`Service feed ${changed ? 'updated' : 'already current'}.`);
   }
 }

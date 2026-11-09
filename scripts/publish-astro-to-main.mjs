@@ -50,7 +50,14 @@ const errors=[];
 for(const f of expected){
  const p=resolve(target,f.path);
  if(!existsSync(p))errors.push('Missing published file '+f.path);
- else if(hash(p,f.kind)!==f.sha256)errors.push('Unmerged edit on published main: '+f.path);
+ else{
+  const publishedHash=hash(p,f.kind);
+  if(publishedHash===f.sha256)continue;
+  // A parallel edit is safe to adopt when the source build reproduces it.
+  const built=resolve(dist,f.path);
+  if(!stagedPaths.has(f.path)||!existsSync(built)||hash(built,f.kind)!==publishedHash)
+   errors.push('Unmerged edit on published main: '+f.path);
+ }
 }
 for(const f of files)if(!existsSync(resolve(dist,f.path)))errors.push('Astro did not build '+f.path);
 if(errors.length){console.error(errors.slice(0,30).join('\n'));throw Error('SAFE PUBLISH ABORTED: '+errors.length+' differences');}
