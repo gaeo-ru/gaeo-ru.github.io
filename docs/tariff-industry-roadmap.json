@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3A публичная приемка завершена: PR #138, production/main/Pages PASS, 20/20 HTTPS SHA256, 60/60 Chromium; 4 специализации №27/30/75/76 live-verified. 3F: №42/48/55/59 клиентские кейсы заблокированы до письменных разрешений E3/E4. Следующая новая содержательная партия еще не назначена.",
+    "next_batch": "3A публичная приемка завершена: 20/20 HTTPS, 60/60 Chromium, №27/30/75/76 live-verified. Следующая техническая задача из действующего handoff: выборочная независимая проверка еще не принятых 96 оригинальных RU/EN специализаций, приоритет назначать по реестру. Клиентские 3F-кейсы №42/48/55/59 заблокированы до письменных разрешений и E3/E4; новых коммерческих страниц и тарифов не создавать.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1967,7 +1967,7 @@
         27,
         30
       ],
-      "required_followup": "Only new fact-based content or new changes warrant recheck. 3F client cases require consent and verifiable E3/E4.",
+      "required_followup": "Select next unverified commercial RU/EN specialization batch per existing handoff and current evidence; 96 original pairs remain without individual public Chromium acceptance. 3F client cases require consent and verifiable E3/E4.",
       "published_commit": "bda45af35a55872012931198a4ae3ff049fab038",
       "released_at": "2026-11-09T19:04:27.868Z",
       "production_status": "pass",
@@ -2175,7 +2175,7 @@
       "verification_attempt": 2,
       "public_qa": "20/20 public HTTPS SHA256 matched published main; 60/60 Chromium on 1440/390/320; 0 errors; 60 screenshots artifact 13700864745",
       "verified_at": "2026-11-09T19:06:51Z",
-      "next_required_step": "3A verified. Client-specific 3F #42/48/55/59 needs written disclosure permission and comparable primary E3/E4; no new content batch assigned."
+      "next_required_step": "3A PASS, pick next public HTTPS QA subset from 96 original unverified specialization pairs per existing handoff. E3/E4 client disclosures require written permission."
     },
     {
       "batch": "3B",
