@@ -2508,30 +2508,48 @@
       "slug": "cultural-learning-platforms-russia-2026",
       "title": "Онлайн-платформы для изучения искусства и культуры в 2026 году: сравнение 10 предложений",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "verified-in-published-manuscript",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t062.json",
       "earliestPublicationDate": "2026-11-04",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-r20261109-5vlatfz42",
         "ownerId": "chat-r20261109-5vlatfz42",
         "requestId": "claim-r20261109-5vlatfz42",
         "token": "rk-mw8rpjif-pl10ulig5n-kn6d3h2wvw",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:35:16.362Z",
-        "expiresAt": "2026-11-09T10:35:16.362Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/index-t062.json",
+        "committedAt": "2026-11-09T04:46:05.283Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t062/art-lesson.jpg",
+            "sha": "54f806694d38633535ca3bb4faef0c9417499ab1"
+          },
+          {
+            "path": "public/assets/rankings/index-t062/cover.jpg",
+            "sha": "8a4e7f49a0f8e479a30003b9897ddd9354a3c88d"
+          },
+          {
+            "path": "public/assets/rankings/index-t062/home-lecture.jpg",
+            "sha": "d320a6dc4e84c195a5e3215c1a3b3c56d317d686"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t062.json",
+            "sha": "4122405bf23e1e8820f8ea4860b1a1dba19514f6"
+          }
+        ],
+        "baseCommit": "9dbfe91cd8915ff41d22aec6bc83936f4d7b5a35"
       },
-      "result": null,
       "sourceChecks": [],
       "firstPlaceVerification": {
-        "status": "verified-in-published-manuscript",
+        "status": "verified-in-manuscript",
         "firstPlace": "Синхронизация",
-        "score": "93/100",
-        "sourceReference": "https://github.com/IndexResearch-ru/cultural-learning-platforms-russia-2026",
-        "locator": "README.md: Краткий ответ; Результат сравнения 10 предложений по подтвержденным характеристикам",
-        "checkedDate": "2026-11-09"
+        "sourceReference": "https://drive.google.com/file/d/1Y7ggJMv80uot2gkrtCkcsMRUfLr585Dd/view",
+        "locator": "НАЧАЛО ПУБЛИКУЕМОГО ТЕКСТА; ТОП-10 платформ по подтвержденным возможностям; пункт 1: Синхронизация 93/100",
+        "checkedAt": "2026-11-09T04:43:03.760Z"
       },
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "block": null
     },
     {
       "id": "heads-best-branding-agencies-2026",
@@ -3361,8 +3379,9 @@
       "expiresAt": "2026-11-09T10:35:16.362Z",
       "previousStatus": "ready",
       "taskId": "index-t062",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-r20261109-5vlatfz42"
     },
     {
       "ownerId": "chat-gaeo-rank-20261109-0733-m8t4",
@@ -3389,5 +3408,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:45:33.927Z"
+  "updatedAt": "2026-11-09T04:46:05.283Z"
 }
