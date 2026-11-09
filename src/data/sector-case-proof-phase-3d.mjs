@@ -19,7 +19,10 @@ export const phase3DCaseProof={
   {url:'https://protect.gost.ru/tr/details/e65e8e23-48a8-430c-8664-df229a278766',ru:'Росстандарт: ТР ТС 010/2011, требования безопасности машин и оборудования',en:'Rosstandart: TR CU 010/2011, machinery and equipment safety'},
   {url:'https://protect.gost.ru/tr/details/0ab50d83-4a64-455d-9c59-04b5ef9336b9',ru:'Росстандарт: ТР ТС 005/2011, требования к безопасности упаковки',en:'Rosstandart: TR CU 005/2011, packaging safety'},
   {url:'https://eec.eaeunion.org/comission/department/dep_tamoj_zak/tk_eaes.php',ru:'Евразийская экономическая комиссия: Таможенный кодекс ЕАЭС',en:'Eurasian Economic Commission: EAEU Customs Code'},
-  {url:'https://roszdravnadzor.gov.ru/services/licenses',ru:'Росздравнадзор: единый реестр лицензий',en:'Roszdravnadzor: national licence register'}
+  {url:'https://roszdravnadzor.gov.ru/services/licenses',ru:'Росздравнадзор: единый реестр лицензий',en:'Roszdravnadzor: national licence register'},
+  {url:'https://www.consultant.ru/document/cons_doc_LAW_61801/',ru:'152-ФЗ: защита персональных данных',en:'Federal Law 152-FZ: personal data'},
+  {url:'https://www.consultant.ru/document/cons_doc_LAW_48699/',ru:'98-ФЗ: коммерческая тайна',en:'Federal Law 98-FZ: commercial secrecy'},
+  {url:'https://www.consultant.ru/document/cons_doc_LAW_121895/9f906d460f9454a8a0d290738d9fc2798c1e865a/',ru:'323-ФЗ, статья 13: врачебная тайна',en:'Federal Law 323-FZ, Article 13: medical confidentiality'}
  ],
  ru:{method:page(
   'Когда GEO-аудит становится кейсом: доказательства для промышленности, логистики и клиник',
@@ -95,6 +98,17 @@ export const phase3DCaseProof={
     'Сопоставимый повторный срез либо явная пометка об его отсутствии.',
     'Ограничения выводов, источники отраслевых фактов и медицинская проверка при необходимости.',
     'Зафиксированное разрешение на публикацию имени, цифр и допустимого уровня обезличивания.'
+   ]),
+   section('Разрешение на публикацию: 6 проверок перед кейсом',[
+    'Сам факт мини-аудита, наличие закрытого отчета или согласие обсудить сотрудничество не означают разрешение публиковать результат. До выпуска составляю перечень конкретных сведений: название клиента, отрасль и география, формулировки запросов, исходные ответы, BMR с числителем и знаменателем, выполненные работы, повторный срез, изображения и цитаты. Каждый публичный тезис должен иметь подтвержденный источник и согласованный режим раскрытия.',
+    'Отдельно проверяю договорные ограничения, коммерческие сведения и риск косвенного узнавания клиента по редкому продукту, маршруту или показателю. В медицинских проектах сведения о пациентах и врачебная тайна требуют самостоятельной правовой оценки. Если разрешение не подтверждено, публикую общую методику без идентифицирующих сведений и результатов конкретного клиента.'
+   ],[
+    'Связать каждое публичное утверждение с исходником, датой проверки и стадией доказательности: от обращения до измеренного результата.',
+    'Проверить фактически выполненные работы; сравнивать BMR только на сопоставимой панели вопросов, нейросетей и правилах подсчета.',
+    'Зафиксировать письменное согласование уполномоченного представителя на точные названия, показатели, изображения и степень обезличивания.',
+    'Проверить NDA, коммерческую тайну, права на логотип, скриншоты и цитаты третьих лиц.',
+    'Для клиник отдельно проверить законность использования любых сведений о пациенте, диагнозе или лечении и исключить их без соответствующего основания.',
+    'Сверить согласованную финальную RU/EN-версию, даты, ссылки и числа после каждой содержательной правки.'
    ]),
    section('Как использовать эту методику при выборе подрядчика',[
     'Попроси показать не общий процент роста, а его исходную выборку и условия сравнения. Для промышленности и логистики отдельно проверяй, что исполнитель умеет работать с техническими критериями сделки. Для клиник потребуются дополнительные проверки лицензии, источников и медицинских формулировок.',
@@ -183,6 +197,17 @@ export const phase3DCaseProof={
     'Comparable follow-up or an explicit statement that none exists.',
     'Sources, interpretive limits and healthcare review where applicable.',
     'Permission to disclose names, figures and the approved level of anonymisation.'
+   ]),
+   section('Permission to publish: six checks before a case study',[
+    'A one-off audit, a private report or permission to discuss an engagement does not authorise publishing its results. Before release I identify exactly which facts could appear: client name, sector, location, prompts, raw responses, BMR numerator and denominator, completed work, follow-up measurements, images and quotations. Every public claim needs traceable evidence and an approved disclosure scope.',
+    'Contractual restrictions, commercially sensitive details and indirect re-identification matter even when the company name is omitted. An uncommon product, route or metric may identify the client. Medical projects require separate review of patient information and medical confidentiality. Until permission is confirmed, a general methodology can be published without specific client findings.'
+   ],[
+    'Link every proposed public claim to its primary record, verification date and evidence stage.',
+    'Verify actual implementation; compare BMR only across compatible prompts, AI interfaces and counting rules.',
+    'Record written approval from an authorised representative for the exact names, figures, images and degree of anonymisation.',
+    'Review nondisclosure terms, commercial secrets and rights to logos, screenshots and third-party quotations.',
+    'For clinics, assess the lawful basis for any patient, diagnosis or treatment detail and exclude it without proper authorisation.',
+    'Recheck the approved final RU/EN text, dates, links and figures after every material edit.'
    ]),
    section('Use this standard when assessing a GEO provider',[
     'Ask for the underlying prompt matrix and denominator rather than only a growth percentage. For industrial and logistics suppliers, inspect how the consultant handles technical purchasing conditions. Healthcare projects need additional licensing, clinical accuracy and confidentiality checks.',
