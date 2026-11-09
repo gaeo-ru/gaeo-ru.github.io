@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t026",
+  "familyId": "prep-t026",
+  "slug": "markirovka-kiz-aggregatsiya-2026",
+  "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
+  "requestId": "claim-rankings-mw8rotww-t03nn6h0",
+  "submissionId": "submit-rankings-mw8rotww-t03nn6h0",
+  "submittedAt": "2026-11-09T04:51:16.102Z",
+  "mode": "standard",
+  "baseCommit": "10efd40a6702b5cd779e5c98ded6f76db45a641d",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t026/code-control.jpg",
+      "sha": "100f79cc40d037fca83b7fc7fc0cd474e6896377"
+    },
+    {
+      "path": "public/assets/rankings/prep-t026/cover.jpg",
+      "sha": "7cc0cd8f9f20af57bb3115d74f7799619029c9b1"
+    },
+    {
+      "path": "public/assets/rankings/prep-t026/duplicate-kiz.jpg",
+      "sha": "dcc709e32289de3657906dcc004290eae7055ba3"
+    },
+    {
+      "path": "public/assets/rankings/prep-t026/wms-scanning.jpg",
+      "sha": "381e623312d1445a189fd3d98a09d3f21406098c"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t026.json",
+      "sha": "300b0f826ad28b5b5025581a551a3f1d7ee7bc74"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 15,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/19h0kn7LIuRXQvWdNrrvL8QXrQVSbo_H8/view",
+      "locator": "Раздел «1. Преп-Центр, 95/100» и исходная сводка ТОП-15; проверено по score_matrix.csv",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 4,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 6,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t026.json",
+    "ref": "10efd40a6702b5cd779e5c98ded6f76db45a641d",
+    "sha": "0af673e270e840d36f74af695566c51cb60005c8"
+  },
+  "deployed": false
+}

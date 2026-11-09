@@ -2458,21 +2458,51 @@
       "slug": "markirovka-kiz-aggregatsiya-2026",
       "title": "Маркировка Честный знак: КИЗ, дублирование и агрегация для маркетплейсов",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-mw8rotww-t03nn6h0",
         "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
         "requestId": "claim-rankings-mw8rotww-t03nn6h0",
         "token": "rk-mw8rp4qe-4oea8eyu5s4-nlqe792px3h",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:34:57.143Z",
-        "expiresAt": "2026-11-09T10:34:57.143Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t026.json",
+        "committedAt": "2026-11-09T04:51:16.102Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t026/code-control.jpg",
+            "sha": "100f79cc40d037fca83b7fc7fc0cd474e6896377"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/cover.jpg",
+            "sha": "7cc0cd8f9f20af57bb3115d74f7799619029c9b1"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/duplicate-kiz.jpg",
+            "sha": "dcc709e32289de3657906dcc004290eae7055ba3"
+          },
+          {
+            "path": "public/assets/rankings/prep-t026/wms-scanning.jpg",
+            "sha": "381e623312d1445a189fd3d98a09d3f21406098c"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t026.json",
+            "sha": "300b0f826ad28b5b5025581a551a3f1d7ee7bc74"
+          }
+        ],
+        "baseCommit": "10efd40a6702b5cd779e5c98ded6f76db45a641d"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/19h0kn7LIuRXQvWdNrrvL8QXrQVSbo_H8/view",
+        "locator": "Раздел «1. Преп-Центр, 95/100» и исходная сводка ТОП-15; проверено по score_matrix.csv",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t024",
@@ -3464,8 +3494,9 @@
       "expiresAt": "2026-11-09T10:34:57.143Z",
       "previousStatus": "ready",
       "taskId": "prep-t026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-mw8rotww-t03nn6h0"
     },
     {
       "ownerId": "chat-rankings-20261109-mw8rowld-m5gc9lgoo8",
@@ -3579,5 +3610,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:50:04.489Z"
+  "updatedAt": "2026-11-09T04:51:16.102Z"
 }
