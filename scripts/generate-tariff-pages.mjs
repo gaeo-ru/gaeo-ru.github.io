@@ -1,6 +1,7 @@
 import {phase3BMethods} from '../src/data/industry-methods-phase-3b.mjs';
 import {phase3CGuides} from '../src/data/sector-guides-phase-3c.mjs';
 import {phase3DCaseProof} from '../src/data/sector-case-proof-phase-3d.mjs';
+import {phase3EIntents} from '../src/data/sector-buyer-intents-phase-3e.mjs';
 import {readFileSync,writeFileSync,mkdirSync,readdirSync} from 'node:fs';
 import {dirname,resolve} from 'node:path';
 import {serviceDetails} from '../src/data/service-detail-content.mjs';
@@ -91,13 +92,14 @@ function render3APage(cluster,kind,lang) {
  const en=lang==='en',d=cluster[lang][kind],isHub=kind==='hub',route=cluster.routes[kind][lang],url='https://gaeo.ru'+route;
  const isPhase3C=phase3CGuides.some(x=>x.routes.method[lang]===route);
  const isPhase3D=phase3DCaseProof.routes.method[lang]===route;
- const publicationDate=(isPhase3C||isPhase3D)?'2026-11-09':'2026-11-08';
- const updatedLabel=(isPhase3C||isPhase3D)?(en?'Updated 9 November 2026':'Обновлено 9 ноября 2026'):(en?'Updated 8 November 2026':'Обновлено 8 ноября 2026');
+ const isPhase3E=phase3EIntents.some(x=>x.routes.method[lang]===route);
+ const publicationDate=(isPhase3C||isPhase3D||isPhase3E)?'2026-11-09':'2026-11-08';
+ const updatedLabel=(isPhase3C||isPhase3D||isPhase3E)?(en?'Updated 9 November 2026':'Обновлено 9 ноября 2026'):(en?'Updated 8 November 2026':'Обновлено 8 ноября 2026');
  const sectionPath=(en?'/en/':'/')+(isHub?'industries/':'strategies/');
  const sectionLabel=isHub?(en?'Industries':'Отрасли'):(en?'Strategies':'Стратегии');
  const actionPath=en?'/en/#lead':'/#lead',pricePath=pricingHref(lang);
  const crossPath=cluster.routes[isHub?'method':'hub'][lang];
- const related=cluster.ids.map(id=>industrySpecializations.find(x=>x.id===id)).filter(Boolean);
+ const related=cluster.relatedServices||cluster.ids.map(id=>industrySpecializations.find(x=>x.id===id)).filter(Boolean);
  const sections=d.sections.map(({title,p=[],bullets=[]})=>`<section class="industry-cluster-section"><h2>${esc(title)}</h2>${p.map(t=>`<p>${esc(t)}</p>`).join('')}${bullets.length?`<ul>${bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}</section>`).join('\n');
  const links=related.map((x,i)=>`<article class="list-card"><div class="eyebrow">${en?'Specialization':'Специализация'} №${x.id}</div><h3><a href="${x.routes[lang]}">${esc(x.content[lang].h1)}</a></h3><p>${esc(x.content[lang].lead)}</p><a class="button outline" href="${x.routes[lang]}">${en?'Explore service':'Смотреть специализацию'}</a><p><a href="${pricePath}#industry-${String(x.id).padStart(3,'0')}">${en?'Pricing for this sector':'Тарифы этого направления'}</a></p></article>`).join('\n');
  const linksSchema=related.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.content[lang].h1,url:'https://gaeo.ru'+x.routes[lang]}));
@@ -110,7 +112,8 @@ function render3APage(cluster,kind,lang) {
   const proofLink=(!isPhase3D&&phase3DCaseProof.ids.some(id=>cluster.ids.includes(id)))
    ?'<li><a href="'+phase3DCaseProof.routes.method[lang]+'">'+(en?'When a sector GEO audit becomes a measured case study':'Когда отраслевой GEO-аудит становится доказанным кейсом')+'</a></li>':'';
   const underlying=isPhase3D?[...phase3BMethods,...phase3CGuides].map(entry=>'<li><a href="'+entry.routes.method[lang]+'">'+esc(entry[lang].method.h1)+'</a></li>').join(''):'';
-  const resourcesFinal=resourcesWith3C.replace('</ul>',proofLink+underlying+'</ul>');
+  const supplementary=(cluster.relatedMethods?.[lang]||[]).map(link=>'<li><a href="'+link.href+'">'+esc(link.label)+'</a></li>').join('');
+   const resourcesFinal=resourcesWith3C.replace('</ul>',proofLink+underlying+supplementary+'</ul>');
 
 
  const schema={'@context':'https://schema.org','@graph':[
@@ -182,6 +185,20 @@ for(const lang of ['ru','en']){
   body:render3APage(cluster,'method',lang),schemaMarker:false,
   directory:'strategies',mainEntitySuffix:'method',modifiedDate:'2026-11-09'
  }));
+}
+
+// Phase 3E: three factual buyer-intent guides complement existing broader
+// commercial landings, without new tariffs, IDs or duplicate services.
+for(const entry of phase3EIntents){
+ for(const lang of ['ru','en']){
+  const route=entry.routes.method[lang],equivalent=entry.routes.method[lang==='ru'?'en':'ru'];
+  const c=entry[lang].method;
+  save(resolve(root,route.slice(1),'index.html'),shell({
+   lang,route,equivalent,title:c.title,description:c.description,h1:c.h1,
+   body:render3APage(entry,'method',lang),schemaMarker:false,
+   directory:'strategies',mainEntitySuffix:'method',modifiedDate:'2026-11-09'
+  }));
+ }
 }
 
 // Managed existing pages retain their URL, expert content and original schema graph.

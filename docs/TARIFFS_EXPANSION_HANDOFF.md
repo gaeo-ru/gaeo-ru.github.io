@@ -1,5 +1,22 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3E: проверка покупательских интентов в 3 широких отраслях (9 ноября 2026)
+
+**Статус: [PR №133](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/133) открыт, полный CI ожидает проверки.** Подготовлены 3 оригинальные RU/EN экспертные методики (6 страниц), но до PASS PR CI, source merge, нового production и Pages эти адреса считаются плановыми, публичный HTTPS не проверен.
+
+| № в каталоге | Отдельная методика | RU | EN |
+| ---: | --- | --- | --- |
+| 1 | Проверка ЖК, застройщика, корпуса, проектной декларации и рекомендации | `/strategies/developer-project-evidence-checklist/` | `/en/strategies/developer-project-evidence-checklist/` |
+| 19 | B2B-юристы: предмет дела, статус, реестры, практика и допустимые доказательства | `/strategies/b2b-law-firm-matter-fit/` | `/en/strategies/b2b-law-firm-matter-fit/` |
+| 39 | Сайт: Core Web Vitals, независимый аудит, k6, сценарии нагрузки и приемка | `/strategies/load-testing-vendor-proof/` | `/en/strategies/load-testing-vendor-proof/` |
+
+Источник страниц: `src/data/sector-buyer-intents-phase-3e.mjs`, общий генератор `scripts/generate-tariff-pages.mjs`. Новая проверка `scripts/qa_sector_buyer_intents_3e.mjs` добавлена в PR и production CI. Каждая языковая версия содержит 6 аналитических разделов и 5 FAQ. Добавлены self-canonical, hreflang, `CreativeWork`, FAQ, ссылки на нормативные/технические источники и исходные коммерческие страницы. Индексы стратегий RU/EN расширены с 22 до 25 записей с согласованным `ItemList`. Действующие услуги №1/19/39, 107 ID и 100 самостоятельных специализаций, цены и гарантии BMR не менялись; новые клиентские кейсы и платные замеры не заявлены.
+
+**3D: GitHub-публикация теперь подтверждена.** [PR #132](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132), [PR CI 42571345395](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42571345395) PASS, [production 42574866115](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115) PASS; `main/astro-release-manifest.json` имеет `sourceCommit=ccae5d0ad16785f496c02333a651f4a767049919`, `releasedAt=2026-11-09T07:10:49.190Z`, 1253 файла. Оба RU/EN HTML 3D присутствуют в `main`, оба URL присутствуют в sitemap (всего 474 URL); [Pages 42577678314](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42577678314) PASS для `main=46c5a4b8102fe24dad1960352e99a4b75217b498`. Более поздний `main=c286009ed60cab26e94fcbbeac07538bb0e1b968` сохраняет 3D и прошел [Pages 42585460157](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42585460157). Прямой HTTPS/Chromium с `gaeo.ru` в текущем чате недоступен; **публичная браузерная приемка 3D остается неподтвержденной**.
+
+**Точка продолжения:** проверить полный CI конечного SHA PR #133, безопасно объединить, подтвердить production, новый `main`, 6 HTML и sitemap, Pages. Затем независимый HTTPS/Chromium QA 3D+3E на 1440/390/320, FAQ, форму, ссылки и изображения. Если сеть по-прежнему недоступна, не повышать `public_https_browser_verified`. После 3E следующий предмет 3F: проверка разрешений на публикацию E2–E4 и новые доказательные материалы без дублирования посадочных и тарифов.
+
+
 ## Партия 3D: доказательность отраслевых GEO-кейсов, исходный код и полный PR CI (9 ноября 2026)
 
 **Статус на этом этапе: исходники объединены, полный PR CI успешно завершен, публикация production/Pages ожидает своей очереди.** Не считать данный промежуточный статус публичной приемкой. Проверка и выпуск выполняются штатно, без ручной записи в main. Итог после публикации будет обновлен здесь же.

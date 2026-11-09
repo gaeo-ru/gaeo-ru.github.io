@@ -79,6 +79,7 @@ export const industryCommercialPages = {
       },
       "note": "Выборка небольшая и относится к одному объекту. Цифры не следует переносить на другие ЖК или трактовать как гарантии роста.",
       "links": [
+        {"href": "/strategies/developer-project-evidence-checklist/", "label": "Проверка корпуса, проектной декларации и ответа нейросети"},
         {
           "href": "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
           "label": "Полная методика исследования"
@@ -371,6 +372,7 @@ export const industryCommercialPages = {
       },
       "note": "This small sample concerns one project. It is not a forecast for other developments or a guarantee of future growth.",
       "links": [
+        {"href": "/en/strategies/developer-project-evidence-checklist/", "label": "Verify building, developer and declaration in AI answers"},
         {
           "href": "/en/articles/geo-for-real-estate/",
           "label": "Read the detailed methodology"
@@ -2103,6 +2105,7 @@ export const industryCommercialPages = {
     ],
     "note": "Это исходная диагностика. Работы по продвижению и их результаты здесь не заявлены. Клиентские данные и точная матрица не публикуются.",
     "links": [
+        {"href": "/strategies/b2b-law-firm-matter-fit/", "label": "Как проверять юридическую фирму по конкретному делу и полномочиям"},
       {
         "href": "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/",
         "label": "12 проверок сайта юридической компании: адвокатский статус, источники, Schema.org"
@@ -2439,6 +2442,7 @@ export const industryCommercialPages = {
     ],
     "note": "This is initial diagnostic work, not proof of completed GEO promotion. No confidential client materials are published.",
     "links": [
+        {"href": "/en/strategies/b2b-law-firm-matter-fit/", "label": "B2B legal matter fit and advocate status verification"},
       {
         "href": "/en/articles/legal-website-geo-12-checks/",
         "label": "12 checks for a law firm's website, credentials, sources and structured data"

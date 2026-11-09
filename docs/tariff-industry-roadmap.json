@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3D source merged and full PR CI PASS; production/main/Pages and independent public HTTPS acceptance pending. Complete those checks first. After confirmed 3D publication, start 3E evidence-permission and #1/#19/#39 distinct-intent research only, no duplicate commercial pages.",
+    "next_batch": "3E PR #133 full CI pending. After PASS merge safely, confirm production/main/6 HTML/sitemap/Pages and public HTTPS; 3D direct HTTPS remains unverified. Then 3F permission-cleared E2-E4 evidence research.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1666,7 +1666,7 @@
     "phase_3d": {
       "phase": 3,
       "batch": "3D",
-      "status": "source_merged_pr_ci_pass_production_pages_public_pending",
+      "status": "main_pages_pass_live_https_unverified",
       "work_branch": "feat/sector-case-proof-3d-2026-11-09",
       "records": [
         42,
@@ -1694,8 +1694,8 @@
       "source_merge_commit": "2c29fdfe96b02890be954cd7dfd402d4952b15e7",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42571345395",
       "ci_status": "pass",
-      "production_status": "pending",
-      "pages_status": "pending",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
       "pre_release_dependency_fix_commit": "ccae5d0ad16785f496c02333a651f4a767049919",
       "evidence_inventory": [
@@ -1748,7 +1748,67 @@
           "need_before_new_page": "load-testing or speed-only buyer intent not duplicating the broad IT page"
         }
       ],
-      "next_required_step": "Confirm latest source production, main manifest, 2 RU/EN URLs and Pages PASS; perform independent 28-page public HTTPS and 12-viewport Chromium acceptance; then finalize docs and move to 3E."
+      "next_required_step": "Independent 3D public HTTPS and Chromium; 3E PR #133 full CI, merge, production, main, Pages, live verification.",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42574866115",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42577678314",
+      "published_commit": "46c5a4b8102fe24dad1960352e99a4b75217b498",
+      "release_manifest_source_commit": "ccae5d0ad16785f496c02333a651f4a767049919",
+      "released_at": "2026-11-09T07:10:49.190Z",
+      "main_manifest_files": 1253,
+      "main_sitemap_urls": 474,
+      "main_new_html_verified": 2,
+      "main_sitemap_new_urls_verified": 2,
+      "public_https_limitation": "Direct gaeo.ru access failed. GitHub source, main, sitemap and Pages PASS are not a substitute for a public browser pass."
+    },
+    "phase_3e": {
+      "phase": 3,
+      "batch": "3E",
+      "status": "source_prepared_pr_ci_pending",
+      "records": [
+        1,
+        19,
+        39
+      ],
+      "scope": "Three original bilingual buyer-intent guides linked from existing broader commercial landing pages; no new service/ID/pricing/client claims",
+      "new_guide_pairs": 3,
+      "new_ru_en_urls": 6,
+      "guide_urls": [
+        {
+          "id": 1,
+          "ru": "/strategies/developer-project-evidence-checklist/",
+          "en": "/en/strategies/developer-project-evidence-checklist/"
+        },
+        {
+          "id": 19,
+          "ru": "/strategies/b2b-law-firm-matter-fit/",
+          "en": "/en/strategies/b2b-law-firm-matter-fit/"
+        },
+        {
+          "id": 39,
+          "ru": "/strategies/load-testing-vendor-proof/",
+          "en": "/en/strategies/load-testing-vendor-proof/"
+        }
+      ],
+      "source_file": "src/data/sector-buyer-intents-phase-3e.mjs",
+      "qa_script": "scripts/qa_sector_buyer_intents_3e.mjs",
+      "work_branch": "feat/sector-buyer-intents-3e-2026-11-09",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/133",
+      "ci_status": "pending",
+      "production_status": "not_published",
+      "pages_status": "not_published",
+      "public_https_browser_verified": false,
+      "reused_existing_commercial_ru": [
+        "/geo-prodvizhenie-nedvizhimosti/",
+        "/industries/legal/",
+        "/industries/highload-it/"
+      ],
+      "reused_existing_commercial_en": [
+        "/en/geo-for-real-estate/",
+        "/en/industries/legal/",
+        "/en/industries/highload-it/"
+      ],
+      "planned_directory_items": 25,
+      "next_required_step": "Full PR CI on final head, safe source merge, main manifest/sitemap/Pages, independent public HTTPS & Chromium; then update canonical 2 docs."
     }
   },
   "status_definitions": {
@@ -2271,6 +2331,19 @@
       "condition": "Сначала проверить реальную самостоятельную поисковую задачу, доступные данные E0–E4, сохранность существующих URL и актуальные параллельные работы. Только затем выбрать узкий пакет без дублей; медицинские кейсы и клиентские результаты не выдумывать.",
       "work_status": "source_merged_pr_ci_pass_public_pending",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/132"
+    },
+    {
+      "batch": "3E",
+      "phase": 3,
+      "kind": "editorial_buyer_intent_research",
+      "ids": [
+        1,
+        19,
+        39
+      ],
+      "label": "Покупательские GEO-интенты ЖК, B2B-юристов, ускорения и нагрузочных тестов",
+      "condition": "Создать только самостоятельные методики RU/EN и ссылки из действующих посадочных, без новых тарифов и недоказанных кейсов.",
+      "work_status": "source_prepared_pr_ci_pending"
     }
   ],
   "records": [
@@ -2307,7 +2380,14 @@
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
       "coverage_checked_date": "2026-11-08",
       "phase3d_broader_page_assessed_date": "2026-11-09",
-      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established",
+      "phase3e_buyer_intent_guide": {
+        "ru": "/strategies/developer-project-evidence-checklist/",
+        "en": "/en/strategies/developer-project-evidence-checklist/",
+        "source_status": "pr_open_full_ci_pending",
+        "public_https_browser_verified": false
+      },
+      "phase3e_broader_landing_unchanged": true
     },
     {
       "id": 2,
@@ -3056,7 +3136,14 @@
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
       "coverage_checked_date": "2026-11-08",
       "phase3d_broader_page_assessed_date": "2026-11-09",
-      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established",
+      "phase3e_buyer_intent_guide": {
+        "ru": "/strategies/b2b-law-firm-matter-fit/",
+        "en": "/en/strategies/b2b-law-firm-matter-fit/",
+        "source_status": "pr_open_full_ci_pending",
+        "public_https_browser_verified": false
+      },
+      "phase3e_broader_landing_unchanged": true
     },
     {
       "id": 20,
@@ -3992,7 +4079,14 @@
       "coverage_release_status": "existing_ru_en_html_with_three_tariffs_checked_in_main_external_https_unverified",
       "coverage_checked_date": "2026-11-08",
       "phase3d_broader_page_assessed_date": "2026-11-09",
-      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established"
+      "phase3d_broader_page_decision": "keep_existing_ru_en_landing; no duplicate until a distinct, substantiated commercial intent is established",
+      "phase3e_buyer_intent_guide": {
+        "ru": "/strategies/load-testing-vendor-proof/",
+        "en": "/en/strategies/load-testing-vendor-proof/",
+        "source_status": "pr_open_full_ci_pending",
+        "public_https_browser_verified": false
+      },
+      "phase3e_broader_landing_unchanged": true
     },
     {
       "id": 40,
