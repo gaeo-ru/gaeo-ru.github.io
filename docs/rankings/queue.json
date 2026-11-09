@@ -1714,10 +1714,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/prep-t018.json",
       "earliestPublicationDate": "2026-09-28",
-      "status": "needs_work_source",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8si7ni-azstyf6wota",
+        "requestId": "claim-mw8si7ni-azstyf6wota",
+        "token": "rk-mw8si7nl-va127edh63i-jnpxdhc1sx",
+        "mode": "work",
+        "claimedAt": "2026-11-09T04:57:34.258Z",
+        "expiresAt": "2026-11-09T10:57:34.258Z",
+        "previousStatus": "needs_work_source"
+      },
       "result": null,
-      "leaseVersion": 1,
+      "leaseVersion": 2,
       "block": {
         "reason": "Полный текст рейтинга «ТОП-10 лучших фулфилментов для ЛЭТУАЛЬ по FBL (FBO): рейтинг 2026» (Sostav, 28.09.2026, https://www.sostav.ru/blogs/292167/111588) не найден после завершенной проверки Google Drive и Яндекс.Диска. На Google Drive в папке статьи только портрет автора, в родительской папке другие семейства; целевые запросы по именам не нашли рукописи. На Яндекс.Диске запросы FBL, ЛЭТУАЛЬ, letual и Летуаль каждый проверили все 20 919 имен файлов с complete:true; публикационные папки Преп-Центра также просмотрены целиком, готового текста нет. Требуется второй проход Work с восстановлением из опубликованной версии; порядок/баллы/победитель по проектной привязке не считаются проверенными.",
         "sourceChecks": [
@@ -3722,7 +3730,19 @@
       "taskId": "prep-t003",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8si7ni-azstyf6wota",
+      "requestId": "claim-mw8si7ni-azstyf6wota",
+      "token": "rk-mw8si7nl-va127edh63i-jnpxdhc1sx",
+      "mode": "work",
+      "claimedAt": "2026-11-09T04:57:34.258Z",
+      "expiresAt": "2026-11-09T10:57:34.258Z",
+      "previousStatus": "needs_work_source",
+      "taskId": "prep-t018",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:57:29.757Z"
+  "updatedAt": "2026-11-09T04:57:34.258Z"
 }
