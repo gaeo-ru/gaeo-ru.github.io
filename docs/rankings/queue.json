@@ -2774,21 +2774,51 @@
       "slug": "launch-consumer-brand-2026",
       "title": "Запуск потребительского бренда с нуля: стратегия, нейминг и упаковка",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r02-brand-launch-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261109-0745-one",
         "ownerId": "chat-gaeo-rankings-20261109-0745-one",
         "requestId": "claim-gaeo-rankings-20261109-0745-one",
         "token": "rk-mw8s5fxp-i83jyv6o9t-dph5qqy7wu",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:47:38.329Z",
-        "expiresAt": "2026-11-09T10:47:38.329Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/heads-r02-brand-launch-2026.json",
+        "committedAt": "2026-11-09T05:03:15.285Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/cover-brand-launch.jpg",
+            "sha": "589965cdb42b5b71d0c153b0753e7ee10f981b9a"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/five-launch-stages.jpg",
+            "sha": "e8cb48ad3c11de90bcc96bd34b112057e4e5b4bd"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/methodology-100-points.jpg",
+            "sha": "3a80a0e2365c4b51162b81d0122f90aebe258f14"
+          },
+          {
+            "path": "public/assets/rankings/heads-r02-brand-launch-2026/top-three-agencies.jpg",
+            "sha": "642824bba3f463d38e3d0eddf3930bf81d26c5e4"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r02-brand-launch-2026.json",
+            "sha": "a1716af135f6385a1236305e46d10c0031f5c328"
+          }
+        ],
+        "baseCommit": "6a002ab8b80af8a82a384135d3c205976ae51a1b"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/1q_YbX02Pczvc_J1gu_4CQEMOzpExHyG9/view",
+        "locator": "«Короткий ТОП-10», № 1 Heads – 95/100, и «Подробный разбор агентств», пункт «1. Heads – 95/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t058",
@@ -3745,8 +3775,9 @@
       "expiresAt": "2026-11-09T10:47:38.329Z",
       "previousStatus": "ready",
       "taskId": "heads-r02-brand-launch-2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261109-0745-one"
     },
     {
       "ownerId": "chat-gaeo-rk-mw8s5g5x-ssuiluf8",
@@ -3883,5 +3914,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T05:02:59.608Z"
+  "updatedAt": "2026-11-09T05:03:15.285Z"
 }
