@@ -128,7 +128,7 @@ try{
     const pages=graph.filter(x=>x['@type']==='FAQPage');
     assert(pages.length===1&&pages[0].mainEntity?.length===count,'FAQPage JSON-LD parity');
     for(let i=0;i<count;i++){
-     const visible=normalize(await faq.nth(i).locator('summary').textContent());
+     const visible=normalize(await faq.nth(i).locator('summary span:not(.faq-toggle)').first().textContent());
      assert(visible===normalize(pages[0].mainEntity[i].name),'FAQ question mismatch '+i);
     }
     assert(graph.some(x=>x['@type']==='Service'),'Missing Service schema');
