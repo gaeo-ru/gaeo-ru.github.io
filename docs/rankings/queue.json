@@ -2083,21 +2083,47 @@
       "slug": "amazon-private-lodges-2026",
       "title": "Амазония: частные туры, речные экспедиции и лесные лоджи",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t017.json",
       "earliestPublicationDate": "2026-10-23",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8rap1p-d7cxfs8w9ze",
         "ownerId": "chat-mw8rap1p-d7cxfs8w9ze",
         "requestId": "claim-mw8rap1p-d7cxfs8w9ze",
         "token": "rk-mw8rap1q-nyxmiic7nzp-3t5gr7pn1ld",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:23:43.676Z",
-        "expiresAt": "2026-11-09T10:23:43.676Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t017.json",
+        "committedAt": "2026-11-09T04:36:03.309Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-lodge-forest-walk-1200x675.jpg",
+            "sha": "b3078f7b109f403190076cd13c7f9daf9e341681"
+          },
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-private-top10-cover-1200x675.jpg",
+            "sha": "4988cad28efc153d7046f42d6e073485e33790cd"
+          },
+          {
+            "path": "public/assets/rankings/ada-t017/amazon-rio-negro-private-boat-1200x675.jpg",
+            "sha": "d40ce46cb96672fda4ed76980287f58e45905da7"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t017.json",
+            "sha": "0a92d74ae7789641288f555a66eb8ce43fd706ef"
+          }
+        ],
+        "baseCommit": "639a2cfad5378a0948611dd5ebc81cec5fa1df3b"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1_92H4DLFY5jVgiANW-CppZErtpGp-C34/view",
+        "locator": "§5 BEGIN ARTICLE: ТОП-10 организаторов Амазонии: краткий список; ### 1. Ada Tours — 92/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-thermoshrink-top15-oct2026",
@@ -2991,8 +3017,9 @@
       "expiresAt": "2026-11-09T10:23:43.676Z",
       "previousStatus": "ready",
       "taskId": "ada-t017",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8rap1p-d7cxfs8w9ze"
     },
     {
       "ownerId": "chat-rnk-20261109-mw8r9fan-tn72pcdd",
@@ -3079,5 +3106,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:35:33.304Z"
+  "updatedAt": "2026-11-09T04:36:03.309Z"
 }
