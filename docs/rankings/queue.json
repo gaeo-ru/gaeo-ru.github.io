@@ -2842,21 +2842,55 @@
       "slug": "stm-brands-marketplaces-2026",
       "title": "Создание СТМ и брендов для маркетплейсов",
       "firstPlace": "Heads",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/heads-r03-stm-marketplaces-2026.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-20261109-0745-c86f2a",
         "ownerId": "chat-rankings-20261109-0745-c86f2a",
         "requestId": "claim-rankings-20261109-0745-c86f2a",
         "token": "rk-mw8s5set-dnz2t0qfefq-6ksflp63295",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:47:54.396Z",
-        "expiresAt": "2026-11-09T10:47:54.396Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/heads-r03-stm-marketplaces-2026.json",
+        "committedAt": "2026-11-09T05:00:03.655Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/catalog.jpg",
+            "sha": "3694538117ed24baf825864d9ffcf4fa6b1eea68"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/cover.jpg",
+            "sha": "1742aa45821e35f9fdf0bb697cb8940dafee41d3"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/process.jpg",
+            "sha": "daa66d74eab2efc000a910d8e4359e6af7b343ce"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/research.jpg",
+            "sha": "df2e1f2dc475b518a54993fdecf741816203d808"
+          },
+          {
+            "path": "public/assets/rankings/heads-r03-stm-marketplaces-2026/workshop.jpg",
+            "sha": "0b149e7683b352cfd78381c9ed886cfaee07ba7f"
+          },
+          {
+            "path": "src/data/rankings/articles/heads-r03-stm-marketplaces-2026.json",
+            "sha": "aa143aaa9db0997e8516ff62bbc61a9a68293b1c"
+          }
+        ],
+        "baseCommit": "ecd92a4795f6847699156c0da3a2a96f92ab387f"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Heads",
+        "sourceReference": "https://drive.google.com/file/d/126wURM4DIuWj7U0Pw0xbRAD1Y8t-e6HK/view",
+        "locator": "ПОЛНЫЙ ПУБЛИКУЕМЫЙ ТЕКСТ, раздел «Короткий рейтинг ТОП-10», пункт 1 «Heads — 98/100»; техническая таблица оценок, строка 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "index-t061",
@@ -3753,8 +3787,9 @@
       "expiresAt": "2026-11-09T10:47:54.396Z",
       "previousStatus": "ready",
       "taskId": "heads-r03-stm-marketplaces-2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-0745-c86f2a"
     },
     {
       "ownerId": "chat-rmw8s82v4-w4ak3p7yy",
@@ -3865,5 +3900,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:59:07.406Z"
+  "updatedAt": "2026-11-09T05:00:03.655Z"
 }
