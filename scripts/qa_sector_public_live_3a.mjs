@@ -78,7 +78,15 @@ try{
     check(await page.locator('link[rel="canonical"]').getAttribute('href')==='https://gaeo.ru'+route,'Wrong self canonical');
     for(const lang of ['ru','en'])
      check(await page.locator('link[rel="alternate"][hreflang="'+lang+'"]').getAttribute('href')==='https://gaeo.ru'+item.routes[lang],'Wrong '+lang+' hreflang');
-    check(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),'Horizontal overflow at '+width);
+    const geometry=await page.evaluate(()=>{
+      const viewport=innerWidth,delta=document.documentElement.scrollWidth-viewport;
+      const offenders=[...document.querySelectorAll('body *')].map(el=>{
+       const r=el.getBoundingClientRect();return {el,right:Math.round(r.right),left:Math.round(r.left),width:Math.round(r.width)};
+      }).filter(x=>x.right>viewport+2||x.left< -2).sort((a,b)=>b.right-a.right).slice(0,8)
+       .map(x=>({tag:x.el.tagName,cls:String(x.el.className).slice(0,90),right:x.right,left:x.left,width:x.width,text:String(x.el.textContent).trim().slice(0,100)}));
+      return {delta,offenders};
+    });
+    check(geometry.delta<=2,'Horizontal overflow at '+width+': '+JSON.stringify(geometry));
     outcome.no_overflow=true;
     const hero=await page.locator('main h1').first().boundingBox();
     check(hero&&hero.x>=-2&&hero.x+hero.width<=width+2,'Clipped H1 at '+width);
