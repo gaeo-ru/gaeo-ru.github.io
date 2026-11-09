@@ -2870,18 +2870,64 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/index-t061.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "reserved",
-      "lease": {
-        "ownerId": "chat-rmw8s82v4-w4ak3p7yy",
-        "requestId": "claim-rmw8s82v4-w4ak3p7yy",
-        "mode": "standard",
-        "token": "rk-mw8s83fl-zhk9g8it3cg-juid23ggq4",
-        "claimedAt": "2026-11-09T04:49:41.212Z",
-        "expiresAt": "2026-11-09T10:49:41.212Z",
-        "previousStatus": "ready"
-      },
+      "status": "needs_work_source",
+      "lease": null,
       "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "block": {
+        "reason": "Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии.",
+        "sourceChecks": [
+          {
+            "provider": "google-drive",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-09T04:57:57.074Z",
+            "queries": [
+              "видеолектории",
+              "видеотеки",
+              "video-lectories",
+              "online-video",
+              "лектори",
+              "образовательные видеотеки",
+              "видеокурсов",
+              "видеолекции",
+              "Синхронизация"
+            ],
+            "locations": [
+              "https://drive.google.com/drive/folders/1snaeXLmclJL47l91LGnRuXCvqnXR0lK2",
+              "https://drive.google.com/drive/folders/1ML0eyWBXtJpea6YJDgAowxX-In1riudy",
+              "https://drive.google.com/drive/folders/1cRccLeO_TmOQ1EVh__eAvPYjCJIkuuoo"
+            ],
+            "note": "Matching article in Sostav/Workspace Drive files has sourceDate 2026-11-04, not 2026-11-05; no exact index-t061 manuscript located. Drive searches returned no pending pagination."
+          },
+          {
+            "provider": "yandex-disk",
+            "status": "not_found",
+            "complete": true,
+            "checkedAt": "2026-11-09T04:57:57.074Z",
+            "queries": [
+              "видеолект",
+              "Синхронизац"
+            ],
+            "locations": [
+              "disk:/!GAEO/Статьи",
+              "disk:/!GAEO/!Договора",
+              "disk:/ (20 919 file names scanned in complete API searches)"
+            ],
+            "requestId": "rank-t061-synch-tail-20261109-ht1e5f",
+            "evidence": [
+              "results/rank-t061-video-20261109-xjffqq.json (20000/20919, no matches)",
+              "results/rank-t061-video-tail-20261109-esqh2l.json (919/20919, complete, no matches)",
+              "results/rank-t061-synch-20261109-qq1afg.json (20000/20919, affiliate XLSX only)",
+              "results/rank-t061-synch-tail-20261109-ht1e5f.json (919/20919, complete, no matches)",
+              "results/rank-t061-gaeo-articles-20261109-ht5prb.json (16 items, complete)",
+              "results/rank-t061-gaeo-contracts-20261109-kkntqq.json (10 items, complete)"
+            ]
+          }
+        ],
+        "at": "2026-11-09T04:57:57.974Z",
+        "ownerId": "chat-rmw8s82v4-w4ak3p7yy"
+      }
     },
     {
       "id": "index-t063",
@@ -3680,8 +3726,20 @@
       "expiresAt": "2026-11-09T10:49:41.212Z",
       "previousStatus": "ready",
       "taskId": "index-t061",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "needs_work_source",
+      "operations": [
+        {
+          "id": "claim-rmw8s82v4-w4ak3p7yy-source-block",
+          "kind": "block",
+          "signature": "{\"reason\":\"Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии.\",\"sourceChecks\":[{\"checkedAt\":\"2026-11-09T04:57:57.074Z\",\"complete\":true,\"locations\":[\"https://drive.google.com/drive/folders/1snaeXLmclJL47l91LGnRuXCvqnXR0lK2\",\"https://drive.google.com/drive/folders/1ML0eyWBXtJpea6YJDgAowxX-In1riudy\",\"https://drive.google.com/drive/folders/1cRccLeO_TmOQ1EVh__eAvPYjCJIkuuoo\"],\"note\":\"Matching article in Sostav/Workspace Drive files has sourceDate 2026-11-04, not 2026-11-05; no exact index-t061 manuscript located. Drive searches returned no pending pagination.\",\"provider\":\"google-drive\",\"queries\":[\"видеолектории\",\"видеотеки\",\"video-lectories\",\"online-video\",\"лектори\",\"образовательные видеотеки\",\"видеокурсов\",\"видеолекции\",\"Синхронизация\"],\"status\":\"not_found\"},{\"checkedAt\":\"2026-11-09T04:57:57.074Z\",\"complete\":true,\"evidence\":[\"results/rank-t061-video-20261109-xjffqq.json (20000/20919, no matches)\",\"results/rank-t061-video-tail-20261109-esqh2l.json (919/20919, complete, no matches)\",\"results/rank-t061-synch-20261109-qq1afg.json (20000/20919, affiliate XLSX only)\",\"results/rank-t061-synch-tail-20261109-ht1e5f.json (919/20919, complete, no matches)\",\"results/rank-t061-gaeo-articles-20261109-ht5prb.json (16 items, complete)\",\"results/rank-t061-gaeo-contracts-20261109-kkntqq.json (10 items, complete)\"],\"locations\":[\"disk:/!GAEO/Статьи\",\"disk:/!GAEO/!Договора\",\"disk:/ (20 919 file names scanned in complete API searches)\"],\"provider\":\"yandex-disk\",\"queries\":[\"видеолект\",\"Синхронизац\"],\"requestId\":\"rank-t061-synch-tail-20261109-ht1e5f\",\"status\":\"not_found\"}],\"status\":\"needs_work_source\"}",
+          "at": "2026-11-09T04:57:57.974Z",
+          "result": {
+            "status": "needs_work_source",
+            "taskId": "index-t061",
+            "reason": "Готовый полный текст рейтинга онлайн-видеолекториев от 05.11.2026 (INDEX-T061) не найден на Google Drive и Яндекс.Диске. Найденные Google Drive материалы по культурным платформам относятся к другому исследованию от 04.11.2026 с иными баллами и не могут служить исходником. На Яндекс.Диске завершены два полных поиска по именам 20 919 файлов ('видеолект' и 'Синхронизац'); найден только XLSX с партнерскими ссылками. Проверены профильные папки /!GAEO/Статьи и /!GAEO/!Договора. Для восстановления полного текста нужен второй проход Work по подтвержденной публичной версии."
+          }
+        }
+      ]
     },
     {
       "ownerId": "chat-rank-mw8sc5q1-kwr3xu8x3l",
@@ -3744,5 +3802,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:57:34.258Z"
+  "updatedAt": "2026-11-09T04:57:57.974Z"
 }
