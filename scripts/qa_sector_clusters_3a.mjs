@@ -99,5 +99,18 @@ try{
   }
   await page.close();
  }
- console.log('Phase 3A browser QA PASS: 8 pages × 1440/390/320, dialogs, link graph and no overflow');
+ // Directory listings were not covered by the original 3A browser smoke test.
+ // Protect the real 320px layout regression observed on /industries/.
+ for(const path of ['/industries/','/en/industries/']){
+  const page=await browser.newPage({viewport:{width:320,height:900}});
+  try{
+   const response=await page.goto(base+path,{waitUntil:'domcontentloaded',timeout:20000});
+   assert.equal(response?.status(),200,'Directory HTTP '+path);
+   assert.equal(await page.locator('main h1').count(),1,'Directory H1 '+path);
+   assert.ok(await page.locator('main .listing-grid .list-card').count()>=20,'Industry listing completeness '+path);
+   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+   assert.ok(overflow<=2,'Industry directory overflow '+path+' @320px: '+overflow);
+  }finally{await page.close()}
+ }
+ console.log('Phase 3A browser QA PASS: 8 pages × 1440/390/320 + 2 industry directory pages @320px; dialogs, link graph and no overflow');
 }finally{await browser?.close();server.kill('SIGTERM')}
