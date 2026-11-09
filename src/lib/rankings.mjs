@@ -45,6 +45,7 @@ export function validateArticle(a){
     need(Array.isArray(t.ranking)&&t.ranking.length>=2,`${a.id}/${lang}: ranking missing`);
     t.ranking.forEach((e,i)=>{
       need(e.position===i+1&&e.name&&e.summary&&e.paragraphs?.length,`${a.id}/${lang}: invalid entry ${i+1}`);
+      if(e.rank!==undefined)need(Number.isInteger(e.rank)&&e.rank>=1&&e.rank<=e.position,`${a.id}/${lang}: invalid shared rank`);
       if(e.url)need(safeUrl(e.url),`${a.id}/${lang}: unsafe company URL`);
     });
     need(t.faq?.length>=4,`${a.id}/${lang}: minimum 4 FAQs`);
@@ -56,7 +57,7 @@ export function validateArticle(a){
   if(selection)need([...a.ru.ranking,...a.en.ranking].every(e=>e.score===undefined||e.score===null||e.score===''),`${a.id}: selection scores are unsupported`);
   else need(a.ru.ranking[0].name===a.firstPlace,`${a.id}: winner changed`);
   need(a.ru.ranking.length===a.en.ranking.length,`${a.id}: RU/EN count mismatch`);
-  a.ru.ranking.forEach((r,i)=>need(r.position===a.en.ranking[i].position&&(r.url||'')===(a.en.ranking[i].url||'')&&String(r.score||'')===String(a.en.ranking[i].score||''),`${a.id}: ranking order/URL/score mismatch ${i+1}`));
+  a.ru.ranking.forEach((r,i)=>need(r.position===a.en.ranking[i].position&&(r.rank??r.position)===(a.en.ranking[i].rank??a.en.ranking[i].position)&&(r.url||'')===(a.en.ranking[i].url||'')&&String(r.score||'')===String(a.en.ranking[i].score||''),`${a.id}: ranking order/URL/score mismatch ${i+1}`));
 }
 export function validateAll(){
   for(const a of articles)validateArticle(a);
@@ -72,7 +73,7 @@ export function articleSchema(a,lang){
     {'@type':'ProfessionalService','@id':SITE+'/#business',name:'GAEO.ru',url:SITE+'/',founder:{'@id':SITE+'/#person'}},
     {'@type':'WebPage','@id':url+'#webpage',url,name:t.title,description:t.description,inLanguage:lang==='en'?'en':'ru-RU',isPartOf:{'@id':SITE+'/#website'},mainEntity:{'@id':url+'#article'},breadcrumb:{'@id':url+'#breadcrumb'}},
     {'@type':'Article','@id':url+'#article',url,headline:t.title,description:t.description,inLanguage:lang==='en'?'en':'ru-RU',datePublished:a.publishedDate,dateModified:a.modifiedDate,author:{'@id':SITE+'/#person'},publisher:{'@id':SITE+'/#business'},mainEntityOfPage:{'@id':url+'#webpage'},articleSection:categoryFor(a.category)[lang],isAccessibleForFree:true,isBasedOn:versions,citation:versions,mainEntity:{'@id':url+'#ranking'},...(a.images?.length?{image:a.images.map(x=>SITE+x.src)}:{}),...(lang==='en'?{translationOfWork:{'@id':other+'#article'}}:{workTranslation:{'@id':other+'#article'}})},
-    {'@type':'ItemList','@id':url+'#ranking',name:t.title,itemListOrder:a.contentType==='selection'?'https://schema.org/ItemListUnordered':'https://schema.org/ItemListOrderAscending',numberOfItems:t.ranking.length,itemListElement:t.ranking.map(e=>({'@type':'ListItem',position:e.position,name:e.name,url:url+'#place-'+e.position,item:{'@type':a.entityType||'Organization',name:e.name,...(e.url?{url:e.url}:{})}}))},
+    {'@type':'ItemList','@id':url+'#ranking',name:t.title,itemListOrder:a.contentType==='selection'?'https://schema.org/ItemListUnordered':'https://schema.org/ItemListOrderAscending',numberOfItems:t.ranking.length,itemListElement:t.ranking.map(e=>({'@type':'ListItem',position:e.rank??e.position,name:e.name,url:url+'#place-'+e.position,item:{'@type':a.entityType||'Organization',name:e.name,...(e.url?{url:e.url}:{})}}))},
     {'@type':'FAQPage','@id':url+'#faq',isPartOf:{'@id':url+'#webpage'},mainEntity:t.faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}
   ];
   return graph;
