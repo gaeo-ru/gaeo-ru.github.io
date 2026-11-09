@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<services_feed version="1.4" date="2026-11-07T22:58:55+03:00">
+<?xml version="1.0" encoding="UTF-8"?>
+<services_feed version="1.4" date="2026-11-09T08:22:18.627Z">
   <source>
     <name>GAEO.ru</name>
     <url>https://gaeo.ru/</url>
@@ -13,8 +13,98 @@
     </category>
     <category>
       <persistent_id>internet-promotion</persistent_id>
-      <name>Услуги интернет-продвижения</name>
+      <name>GEO/AEO и интернет-продвижение</name>
       <parent_id>business-services</parent_id>
+    </category>
+    <category>
+      <persistent_id>website-development</persistent_id>
+      <name>Разработка сайтов</name>
+      <parent_id>business-services</parent_id>
+    </category>
+    <category>
+      <persistent_id>geo-platforms</persistent_id>
+      <name>Продвижение в отдельных нейросетях</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>geo-measurement</persistent_id>
+      <name>Замеры видимости в нейросетях</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-real-estate</persistent_id>
+      <name>GEO-продвижение: Недвижимость</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-construction</persistent_id>
+      <name>GEO-продвижение: Строительство и инженерные услуги</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-legal</persistent_id>
+      <name>GEO-продвижение: Юридические услуги</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-finance</persistent_id>
+      <name>GEO-продвижение: Финансы, страхование и учет</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-it</persistent_id>
+      <name>GEO-продвижение: IT и корпоративное ПО</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-industry</persistent_id>
+      <name>GEO-продвижение: Промышленность и оборудование</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-logistics</persistent_id>
+      <name>GEO-продвижение: Логистика и ВЭД</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-healthcare</persistent_id>
+      <name>GEO-продвижение: Медицина и фармацевтика</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-education-consulting</persistent_id>
+      <name>GEO-продвижение: Образование, кадры и консалтинг</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-marketing</persistent_id>
+      <name>GEO-продвижение: Маркетинг и реклама</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-automotive</persistent_id>
+      <name>GEO-продвижение: Автомобильный рынок</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-travel-hospitality</persistent_id>
+      <name>GEO-продвижение: Туризм и HoReCa</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-ecommerce</persistent_id>
+      <name>GEO-продвижение: Электронная коммерция и бренды</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-local-services</persistent_id>
+      <name>GEO-продвижение: Локальные услуги</name>
+      <parent_id>internet-promotion</parent_id>
+    </category>
+    <category>
+      <persistent_id>sector-agriculture</persistent_id>
+      <name>GEO-продвижение: Агробизнес</name>
+      <parent_id>internet-promotion</parent_id>
     </category>
   </categories>
   <executors>
@@ -23,7 +113,7 @@
       <url>https://gaeo.ru/professional-biography/</url>
       <is_organization>0</is_organization>
       <name>Алексей Яковлев</name>
-      <description>Эксперт по GEO / AEO продвижению в нейросетях. С 2008 года в SEO. Провел более 1000 бизнес-аудитов.</description>
+      <description>Независимый эксперт GAEO.ru по GEO/AEO-продвижению бизнеса в ответах нейросетей и разработке сайтов. Работаю лично. Опыт в SEO и интернет-маркетинге с 2008 года.</description>
       <contacts>
         <phones>
           <phone is_primary="1">+79264242333</phone>
@@ -39,11 +129,6 @@
         <contract>1</contract>
       </trust>
       <geo_info>
-        <addresses>
-          <address>
-            <text>Москва, 13-я Парковая ул., д.27, корп.1</text>
-          </address>
-        </addresses>
         <service_areas>
           <area>
             <text>Россия</text>
@@ -55,21 +140,21 @@
           <url>https://gaeo.ru/services/free-audit/</url>
           <persistent_id>quick-geo-audit</persistent_id>
           <name>Бесплатный мини-аудит</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-measurement</category_id>
           <where>online</where>
           <price>
             <is_free>1</is_free>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/04.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/04-960.webp</photo_url>
           </photos>
-          <description>Первый взгляд на видимость бренда и точки роста. До 5 промптов и до 5 нейросетей. До 3 страниц с выводами. 1 рабочий день после получения данных.</description>
+          <description>Проверка видимости бренда по выборке до 5 запросов в 5 нейросетях. Краткий отчет с выводами до 3 страниц, срок подготовки 1 рабочий день после получения данных.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/geo-audit/</url>
           <persistent_id>full-geo-audit</persistent_id>
           <name>Полный GEO-аудит</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-measurement</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -78,9 +163,9 @@
             </exact>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/03.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/03-960.webp</photo_url>
           </photos>
-          <description>Диагностика, разбор конкурентов и план работ. До 100 промптов и до 11 нейросетей. Отчет на 25–35 страницах. Погружение в бизнес и план GEO-работ. 3–5 рабочих дней после получения данных.</description>
+          <description>Анализ рекомендаций по выборке до 100 запросов и до 11 нейросетей, сайта и конкурентов. Отчет на 25–35 страницах и план продвижения на 3–6 месяцев. Срок 3–5 рабочих дней после получения данных.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/geo-promotion/</url>
@@ -96,9 +181,9 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/18.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/18-960.webp</photo_url>
           </photos>
-          <description>Веду стратегию; ваша команда внедряет ТЗ на сайт и контент. От 50 промптов и от 5 нейросетей. Карта интентов и ТЗ на доработки сайта. ТЗ на экспертный контент. Дистрибуция, ссылки и репутация. Отчетность 1 раз в месяц. Предоплата за текущий месяц.</description>
+          <description>GEO-продвижение бизнеса в ответах нейросетей: от 50 запросов и от 5 нейросетей, стратегия, ТЗ на сайт и экспертный контент для команды, публикации, ссылки и репутация. Ежемесячный отчет.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/geo-content/</url>
@@ -114,33 +199,50 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/19.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/19-960.webp</photo_url>
           </photos>
-          <description>Изучаю ваш продукт, создаю контент и организую публикации. Все работы базового GEO-продвижения. От 50 промптов и от 5 нейросетей. Создание экспертного контента. Организация публикаций и дистрибуция. Сам дорабатываю сайт или готовлю ТЗ для вашей команды. Предоплата за текущий месяц.</description>
+          <description>GEO-продвижение с созданием экспертного контента и организацией публикаций. От 50 запросов и от 5 нейросетей, доработка сайта или ТЗ для команды, работа со ссылками и репутацией, ежемесячные замеры.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/services/additional-platforms/#alice</url>
-          <persistent_id>alice-ai-addon</persistent_id>
-          <name>GEO-продвижение в Алиса</name>
+          <url>https://gaeo.ru/services/geo-guarantee/</url>
+          <persistent_id>geo-guarantee</persistent_id>
+          <name>GEO-продвижение с финансовыми гарантиями</name>
           <category_id>internet-promotion</category_id>
           <where>online</where>
           <price>
-            <exact>
-              <value>10000</value>
+            <from>
+              <value>114900</value>
               <currency>RUB</currency>
-            </exact>
+            </from>
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/06.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/02-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Алиса. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>GEO-продвижение с контентом и финансовыми гарантиями по договору. Ежемесячные замеры видимости бренда по согласованным запросам, цели роста упоминаний и оплата с учетом достижения результатов.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/website-development/</url>
+          <persistent_id>website-development</persistent_id>
+          <name>Разработка сайтов под GEO и SEO</name>
+          <category_id>website-development</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>69900</value>
+              <currency>RUB</currency>
+            </from>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/01-960.webp</photo_url>
+          </photos>
+          <description>Разработка, редизайн и перенос сайтов на Astro и GitHub Pages. Структура и страницы под SEO/GEO, перенос материалов, техническая оптимизация, формы заявок и автоматизация обновлений по согласованию.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/additional-platforms/#chatgpt</url>
           <persistent_id>chatgpt-addon</persistent_id>
           <name>GEO-продвижение в ChatGPT</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -150,15 +252,15 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/07.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/07-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в ChatGPT. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в ChatGPT. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
         </service>
         <service>
-          <url>https://gaeo.ru/services/additional-platforms/#gemini</url>
-          <persistent_id>gemini-addon</persistent_id>
-          <name>GEO-продвижение в Gemini</name>
-          <category_id>internet-promotion</category_id>
+          <url>https://gaeo.ru/services/additional-platforms/#alice</url>
+          <persistent_id>alice-ai-addon</persistent_id>
+          <name>GEO-продвижение в Алиса</name>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -168,15 +270,33 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/08.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/06-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Gemini. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Алиса. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#yandex-alice</url>
+          <persistent_id>yandex-alice-addon</persistent_id>
+          <name>GEO-продвижение в Яндекс с Алисой</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/17-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Яндекс с Алисой. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/additional-platforms/#google-ai-overviews</url>
           <persistent_id>google-ai-overviews-addon</persistent_id>
           <name>GEO-продвижение в Google AI Overviews</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -186,15 +306,51 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/10.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/10-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Google AI Overviews. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Google AI Overviews. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#google-ai-mode</url>
+          <persistent_id>google-ai-mode-addon</persistent_id>
+          <name>GEO-продвижение в Google AI Mode</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/09-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Google AI Mode. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#gemini</url>
+          <persistent_id>gemini-addon</persistent_id>
+          <name>GEO-продвижение в Gemini</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/08-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Gemini. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/additional-platforms/#perplexity</url>
           <persistent_id>perplexity-addon</persistent_id>
           <name>GEO-продвижение в Perplexity</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -204,15 +360,15 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/12.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/12-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Perplexity. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Perplexity. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/additional-platforms/#deepseek</url>
           <persistent_id>deepseek-addon</persistent_id>
           <name>GEO-продвижение в DeepSeek</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -222,87 +378,15 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/11.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/11-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в DeepSeek. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
-        </service>
-        <service>
-          <url>https://gaeo.ru/services/additional-platforms/#gigachat</url>
-          <persistent_id>gigachat-addon</persistent_id>
-          <name>GEO-продвижение в GigaChat</name>
-          <category_id>internet-promotion</category_id>
-          <where>online</where>
-          <price>
-            <exact>
-              <value>10000</value>
-              <currency>RUB</currency>
-            </exact>
-            <unit>месяц</unit>
-          </price>
-          <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/13.jpg</photo_url>
-          </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в GigaChat. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
-        </service>
-        <service>
-          <url>https://gaeo.ru/services/additional-platforms/#copilot</url>
-          <persistent_id>copilot-addon</persistent_id>
-          <name>GEO-продвижение в Microsoft Copilot</name>
-          <category_id>internet-promotion</category_id>
-          <where>online</where>
-          <price>
-            <exact>
-              <value>10000</value>
-              <currency>RUB</currency>
-            </exact>
-            <unit>месяц</unit>
-          </price>
-          <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/14.jpg</photo_url>
-          </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Microsoft Copilot. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
-        </service>
-        <service>
-          <url>https://gaeo.ru/services/additional-platforms/#qwen</url>
-          <persistent_id>qwen-addon</persistent_id>
-          <name>GEO-продвижение в Qwen</name>
-          <category_id>internet-promotion</category_id>
-          <where>online</where>
-          <price>
-            <exact>
-              <value>10000</value>
-              <currency>RUB</currency>
-            </exact>
-            <unit>месяц</unit>
-          </price>
-          <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/15.jpg</photo_url>
-          </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Qwen. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
-        </service>
-        <service>
-          <url>https://gaeo.ru/services/additional-platforms/#claude</url>
-          <persistent_id>claude-addon</persistent_id>
-          <name>GEO-продвижение в Claude</name>
-          <category_id>internet-promotion</category_id>
-          <where>online</where>
-          <price>
-            <exact>
-              <value>10000</value>
-              <currency>RUB</currency>
-            </exact>
-            <unit>месяц</unit>
-          </price>
-          <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/16.jpg</photo_url>
-          </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Claude. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в DeepSeek. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
         </service>
         <service>
           <url>https://gaeo.ru/services/additional-platforms/#grok</url>
           <persistent_id>grok-addon</persistent_id>
           <name>GEO-продвижение в Grok</name>
-          <category_id>internet-promotion</category_id>
+          <category_id>geo-platforms</category_id>
           <where>online</where>
           <price>
             <exact>
@@ -312,9 +396,2025 @@
             <unit>месяц</unit>
           </price>
           <photos>
-            <photo_url>https://gaeo.ru/assets/tariffs/services/05.jpg</photo_url>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/05-960.webp</photo_url>
           </photos>
-          <description>Целенаправленное GEO-продвижение и мониторинг в Grok. Для 6-й и каждой следующей нейросети сверх 5 в базовом наборе. Подключается дополнительно к базовому тарифу продвижения.</description>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Grok. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#gigachat</url>
+          <persistent_id>gigachat-addon</persistent_id>
+          <name>GEO-продвижение в GigaChat</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/13-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в GigaChat. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#copilot</url>
+          <persistent_id>copilot-addon</persistent_id>
+          <name>GEO-продвижение в Microsoft Copilot</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/14-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Microsoft Copilot. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#qwen</url>
+          <persistent_id>qwen-addon</persistent_id>
+          <name>GEO-продвижение в Qwen</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/15-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Qwen. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-platforms/#claude</url>
+          <persistent_id>claude-addon</persistent_id>
+          <name>GEO-продвижение в Claude</name>
+          <category_id>geo-platforms</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/16-960.webp</photo_url>
+          </photos>
+          <description>Дополнительное продвижение и регулярный мониторинг видимости в Claude. В базовый тариф включены 5 выбранных нейросетей. Опция за 10 000 ₽/мес. применяется при подключении 6-й и каждой последующей нейросети.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/services/additional-prompts/</url>
+          <persistent_id>additional-prompts-10</persistent_id>
+          <name>Дополнительные 10 запросов для GEO-замеров</name>
+          <category_id>geo-measurement</category_id>
+          <where>online</where>
+          <price>
+            <exact>
+              <value>10000</value>
+              <currency>RUB</currency>
+            </exact>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/services/18-960.webp</photo_url>
+          </photos>
+          <description>Расширение выборки GEO-замеров на 10 запросов сверх 50 в базовом тарифе. Новые формулировки включаются в регулярный мониторинг выбранных нейросетей и ежемесячный отчет. Стоимость каждого пакета 10 000 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/geo-prodvizhenie-nedvizhimosti/</url>
+          <persistent_id>industry-001</persistent_id>
+          <name>Продвижение в ответах нейросетей для застройщиков жилых комплексов</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-001-960.webp</photo_url>
+          </photos>
+          <description>Покупатели сравнивают ЖК по району и ипотеке. Проверяю запросы о планировках, сроках сдачи, школах и транспорте. Усиливаю сведения об объектах для рекомендаций нейросетей. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cottage-communities/</url>
+          <persistent_id>industry-002</persistent_id>
+          <name>Продвижение в ответах нейросетей для коттеджных поселков</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-002-960.webp</photo_url>
+          </photos>
+          <description>Поселки выбирают по коммуникациям и дорогам. Учитываю вопросы о статусе земли, газе, охране, школе, инфраструктуре и управляющей компании; уточняю факты о поселке. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/residential-property-agencies/</url>
+          <persistent_id>industry-003</persistent_id>
+          <name>Продвижение в ответах нейросетей для агентств недвижимости</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-003-960.webp</photo_url>
+          </photos>
+          <description>Выбор агентства зависит от типа сделки и района. Проверяю запросы о покупке новостройки, вторичном рынке, комиссии и сопровождении сделки; показываю сильные стороны агентства. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/luxury-real-estate-agencies/</url>
+          <persistent_id>industry-004</persistent_id>
+          <name>Продвижение в ответах нейросетей для агентств элитной недвижимости</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-004-960.webp</photo_url>
+          </photos>
+          <description>Элитные объекты сравнивают по приватности и месту. Прорабатываю запросы о пентхаусах, резиденциях, статусных локациях, конфиденциальности сделки и экспертности брокеров. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/commercial-property-agencies/</url>
+          <persistent_id>industry-005</persistent_id>
+          <name>Продвижение в ответах нейросетей для агентств коммерческой недвижимости</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-005-960.webp</photo_url>
+          </photos>
+          <description>Арендаторы сравнивают склады и офисы по параметрам. Проверяю запросы о классах объектов, ставках, погрузке, мощности, транспортной доступности и условиях договора. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/warehouse-industrial-parks/</url>
+          <persistent_id>industry-006</persistent_id>
+          <name>Продвижение в ответах нейросетей для собственников складских и индустриальных парков</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-006-960.webp</photo_url>
+          </photos>
+          <description>Склад выбирают по высоте, воротам и логистике. Раскрываю температурные режимы, грузовые въезды, мощности, инженерные сети, сроки аренды и параметры помещений. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/property-management-companies/</url>
+          <persistent_id>industry-007</persistent_id>
+          <name>Продвижение в ответах нейросетей для управляющих компаний недвижимости</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-007-960.webp</photo_url>
+          </photos>
+          <description>Управляющую компанию выбирают по качеству сервиса. Проверяю запросы о стоимости обслуживания, аварийных заявках, прозрачности платежей и управлении коммерческими объектами. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/self-storage-services/</url>
+          <persistent_id>industry-008</persistent_id>
+          <name>Продвижение в ответах нейросетей для сервисов индивидуального хранения</name>
+          <category_id>sector-real-estate</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-008-960.webp</photo_url>
+          </photos>
+          <description>Хранение вещей выбирают по безопасности и сроку. Выделяю запросы о размерах боксов, доступе 24/7, климате, страховании, цене и хранении во время ремонта. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/country-house-builders/</url>
+          <persistent_id>industry-009</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по строительству загородных домов</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-009-960.webp</photo_url>
+          </photos>
+          <description>Дом выбирают по материалам, смете и срокам. Сравниваю запросы о каркасе, газобетоне, кирпиче и клееном брусе; усиливаю кейсы построенных домов и комплектации. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/commercial-industrial-general-contractors/</url>
+          <persistent_id>industry-010</persistent_id>
+          <name>Продвижение в ответах нейросетей для строительных генподрядчиков</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-010-960.webp</photo_url>
+          </photos>
+          <description>Генподрядчика выбирают по объектам и допускам. Работаю с запросами о строительстве складов, цехов, коммерческих зданий, сметах, сроках и выполненных проектах. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/architectural-design-bureaus/</url>
+          <persistent_id>industry-011</persistent_id>
+          <name>Продвижение в ответах нейросетей для архитектурных и проектных бюро</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-011-960.webp</photo_url>
+          </photos>
+          <description>Проектировщика выбирают по опыту сложных объектов. Разбираю вопросы о генпроектировании, стадиях П/Р, авторском надзоре, согласовании и портфолио бюро. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/interior-design-studios/</url>
+          <persistent_id>industry-012</persistent_id>
+          <name>Продвижение в ответах нейросетей для студий дизайна интерьеров</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-012-960.webp</photo_url>
+          </photos>
+          <description>Дизайн интерьера сравнивают по стилю и бюджету. Проверяю запросы о комплектации, авторском надзоре, ремонте под ключ и проектах конкретных дизайнеров. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/residential-renovation-contractors/</url>
+          <persistent_id>industry-013</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по ремонту квартир и домов</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-013-960.webp</photo_url>
+          </photos>
+          <description>Подрядчика по ремонту ищут по сложности задач. Выделяю запросы о вторичке, скрытых работах, инженерных системах, гарантиях, смете и фотографиях завершенных ремонтов. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/commercial-fit-out-contractors/</url>
+          <persistent_id>industry-014</persistent_id>
+          <name>Продвижение в ответах нейросетей для подрядчиков по ремонту коммерческих помещений</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-014-960.webp</photo_url>
+          </photos>
+          <description>Ремонт офисов выбирают по срокам и режиму работ. Учитываю ночные работы в ТЦ, ремонт без остановки бизнеса, допуски, инженерные сети, отделку и реальные кейсы. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/window-manufacturers-installers/</url>
+          <persistent_id>industry-015</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей и установщиков окон</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-015-960.webp</photo_url>
+          </photos>
+          <description>Окна выбирают по теплу, профилю и монтажу. Проверяю запросы о ПВХ, стеклопакетах, шумоизоляции, энергосбережении и остеклении коттеджей; уточняю гарантии. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/facade-specialist-glazing-companies/</url>
+          <persistent_id>industry-016</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по фасадному остеклению</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-016-960.webp</photo_url>
+          </photos>
+          <description>Остекление фасада выбирают по техническим нормам. Работаю с вопросами о алюминиевых системах, витражах, противопожарных конструкциях, сертификатах и монтаже. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/engineering-installation-contractors/</url>
+          <persistent_id>industry-017</persistent_id>
+          <name>Продвижение в ответах нейросетей для инженерных и монтажных компаний</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-017-960.webp</photo_url>
+          </photos>
+          <description>Инженерного подрядчика выбирают по расчетам и опыту. Прорабатываю запросы о вентиляции, кондиционировании, электроснабжении, проектировании и монтаже на сложных объектах. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/landscape-site-improvement-contractors/</url>
+          <persistent_id>industry-018</persistent_id>
+          <name>Продвижение в ответах нейросетей для ландшафтных компаний</name>
+          <category_id>sector-construction</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-018-960.webp</photo_url>
+          </photos>
+          <description>Участки благоустраивают под климат и рельеф. Учитываю дренаж, мощение, озеленение, проект участка, полив и сезонные работы; показываю выполненные проекты. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/legal/</url>
+          <persistent_id>industry-019</persistent_id>
+          <name>Продвижение в ответах нейросетей для юридических компаний</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-019-960.webp</photo_url>
+          </photos>
+          <description>Бизнес ищет юристов по конкретным видам споров. Разделяю корпоративные конфликты, договоры, взыскания, арбитраж и ВЭД; усиливаю судебную практику и экспертные профили. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/bankruptcy-lawyers/</url>
+          <persistent_id>industry-020</persistent_id>
+          <name>Продвижение в ответах нейросетей для юристов по банкротству</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-020-960.webp</photo_url>
+          </photos>
+          <description>Банкротство выбирают по условиям и последствиям. Проверяю вопросы о списании долгов, процедурах для компаний и граждан, сроках, судебной практике и рисках. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/family-inheritance-lawyers/</url>
+          <persistent_id>industry-021</persistent_id>
+          <name>Продвижение в ответах нейросетей для семейных и наследственных юристов</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-021-960.webp</photo_url>
+          </photos>
+          <description>Семейного юриста выбирают по деликатным делам. Прорабатываю запросы о разводе, алиментах, разделе имущества, наследстве, оспаривании завещаний и практике адвоката. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/intellectual-property-lawyers/</url>
+          <persistent_id>industry-022</persistent_id>
+          <name>Продвижение в ответах нейросетей для юристов по интеллектуальной собственности</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-022-960.webp</photo_url>
+          </photos>
+          <description>Защиту бренда ищут по типам нарушений. Проверяю запросы о регистрации товарного знака, спорах на маркетплейсах, лицензиях и защите интеллектуальных прав. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/tax-lawyers/</url>
+          <persistent_id>industry-023</persistent_id>
+          <name>Продвижение в ответах нейросетей для налоговых юристов и консультантов</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-023-960.webp</photo_url>
+          </photos>
+          <description>Налогового юриста выбирают по опыту споров. Выделяю вопросы о выездных проверках, доначислениях, налоговых рисках, оспаривании решений ФНС и судебной практике. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/real-estate-transaction-lawyers/</url>
+          <persistent_id>industry-024</persistent_id>
+          <name>Продвижение в ответах нейросетей для юристов по сделкам с недвижимостью</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-024-960.webp</photo_url>
+          </photos>
+          <description>Юриста по недвижимости выбирают по надежности. Разбираю запросы о проверке объекта, договоре купли-продажи, долях, рисках новостроек и спорах с застройщиком. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/motor-insurance-lawyers/</url>
+          <persistent_id>industry-025</persistent_id>
+          <name>Продвижение в ответах нейросетей для автоюристов</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-025-960.webp</photo_url>
+          </photos>
+          <description>Автоюриста ищут после ДТП и отказа в выплате. Прорабатываю вопросы о страховых спорах, лишении прав, экспертизе, взыскании ущерба и судебной практике. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/employment-migration-lawyers/</url>
+          <persistent_id>industry-026</persistent_id>
+          <name>Продвижение в ответах нейросетей для юристов по трудовому и миграционному праву</name>
+          <category_id>sector-legal</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-026-960.webp</photo_url>
+          </photos>
+          <description>Кадровые споры требуют отраслевой экспертизы. Разделяю запросы об увольнениях, зарплате, трудовых проверках, разрешениях на работу и найме иностранных сотрудников. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/outsourced-accounting-services/</url>
+          <persistent_id>industry-027</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по бухгалтерскому аутсорсингу</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-027-960.webp</photo_url>
+          </photos>
+          <description>Аутсорсинг бухгалтерии выбирают по задачам бизнеса. Проверяю запросы по УСН, НДС, зарплате, отчетности, работе селлеров и ответственности бухгалтера. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/audit-assurance-consulting-firms/</url>
+          <persistent_id>industry-028</persistent_id>
+          <name>Продвижение в ответах нейросетей для аудиторских и консалтинговых компаний</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-028-960.webp</photo_url>
+          </photos>
+          <description>Аудиторскую компанию выбирают по стандартам. Разбираю запросы об обязательном аудите, внутреннем контроле, финансовой отчетности, отраслевом опыте и методике. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/financial-investment-advisers/</url>
+          <persistent_id>industry-029</persistent_id>
+          <name>Продвижение в ответах нейросетей для финансовых и инвестиционных консультантов</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-029-960.webp</photo_url>
+          </photos>
+          <description>Финансовых консультантов сравнивают по специализации. Прорабатываю вопросы об инвестиционном планировании, управлении капиталом, рисках и прозрачности условий. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/insurance-brokers/</url>
+          <persistent_id>industry-030</persistent_id>
+          <name>Продвижение в ответах нейросетей для страховых брокеров</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-030-960.webp</photo_url>
+          </photos>
+          <description>Страхового брокера выбирают по рискам и выплатам. Проверяю запросы о корпоративном страховании, ответственности, имуществе, исключениях из покрытия и сопровождении убытков. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/leasing-companies/</url>
+          <persistent_id>industry-031</persistent_id>
+          <name>Продвижение в ответах нейросетей для лизинговых компаний</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-031-960.webp</photo_url>
+          </photos>
+          <description>Лизинг сравнивают по авансу и полной стоимости. Разбираю запросы о транспорте, оборудовании, графиках платежей, выкупе, субсидиях и условиях для компаний. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/fintech-payment-services/</url>
+          <persistent_id>industry-032</persistent_id>
+          <name>Продвижение в ответах нейросетей для финтех-компаний и платежных сервисов</name>
+          <category_id>sector-finance</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-032-960.webp</photo_url>
+          </photos>
+          <description>Финтех выбирают по надежности операций и тарифам. Проверяю вопросы об оплате зарубежных подписок, документах, лимитах, валюте, комплаенсе и прозрачности комиссий. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/enterprise-software/</url>
+          <persistent_id>industry-033</persistent_id>
+          <name>Продвижение в ответах нейросетей для разработчиков корпоративного ПО</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-033-960.webp</photo_url>
+          </photos>
+          <description>Корпоративное ПО сравнивают по интеграциям. Прорабатываю запросы о СУБД, архитектуре, масштабируемости, импортозамещении, SLA и внедрениях в отрасли. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/crm-erp-platforms/</url>
+          <persistent_id>industry-034</persistent_id>
+          <name>Продвижение в ответах нейросетей для CRM- и ERP-систем</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-034-960.webp</photo_url>
+          </photos>
+          <description>CRM и ERP выбирают по процессам и стоимости. Проверяю запросы об автоматизации продаж, складском учете, интеграции с 1С, внедрении и стоимости владения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/wms-tms/</url>
+          <persistent_id>industry-035</persistent_id>
+          <name>Продвижение в ответах нейросетей для разработчиков WMS и TMS</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-035-960.webp</photo_url>
+          </photos>
+          <description>WMS и TMS выбирают по работе склада и маршрутов. Разбираю вопросы об адресном хранении, партиях, маркировке, интеграциях, маршрутизации и внедрении без простоев. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/systems-integrators-it-outsourcers/</url>
+          <persistent_id>industry-036</persistent_id>
+          <name>Продвижение в ответах нейросетей для системных интеграторов и IT-аутсорсеров</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-036-960.webp</photo_url>
+          </photos>
+          <description>Интегратора выбирают по стэку и реальным внедрениям. Прорабатываю запросы о 1С, миграции, поддержке, системной интеграции, отраслевой специфике и уровне обслуживания. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cybersecurity-providers/</url>
+          <persistent_id>industry-037</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по кибербезопасности</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-037-960.webp</photo_url>
+          </photos>
+          <description>Киберзащиту выбирают по угрозам и требованиям. Проверяю вопросы об аудитах безопасности, защите данных, SOC, тестах проникновения и отраслевом комплаенсе. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cloud-providers-data-centres/</url>
+          <persistent_id>industry-038</persistent_id>
+          <name>Продвижение в ответах нейросетей для облачных провайдеров и дата-центров</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-038-960.webp</photo_url>
+          </photos>
+          <description>Облако и ЦОД сравнивают по SLA и мощности. Разбираю запросы о выделенных серверах, резервировании, размещении данных, отказоустойчивости и стоимости инфраструктуры. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/highload-it/</url>
+          <persistent_id>industry-039</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по ускорению сайтов и нагрузочному тестированию</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-039-960.webp</photo_url>
+          </photos>
+          <description>Ускорение сайта оценивают по метрикам и нагрузке. Проверяю запросы о Core Web Vitals, 1С-Битрикс, производительности БД, нагрузочных тестах и подтвержденных замерах. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/electronic-document-flow/</url>
+          <persistent_id>industry-040</persistent_id>
+          <name>Продвижение в ответах нейросетей для сервисов электронного документооборота</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-040-960.webp</photo_url>
+          </photos>
+          <description>ЭДО выбирают по интеграциям и документообороту. Прорабатываю вопросы об электронных подписях, роуминге операторов, интеграции с 1С и стоимости подключения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/bi-analytics-platforms/</url>
+          <persistent_id>industry-041</persistent_id>
+          <name>Продвижение в ответах нейросетей для BI-платформ и аналитических сервисов</name>
+          <category_id>sector-it</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-041-960.webp</photo_url>
+          </photos>
+          <description>BI-платформы сравнивают по данным и отчетности. Проверяю запросы о дашбордах, источниках данных, интеграциях, аналитике продаж, скорости внедрения и примерах отраслевых задач. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/industrial-equipment-manufacturers/</url>
+          <persistent_id>industry-042</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей промышленного оборудования</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-042-960.webp</photo_url>
+          </photos>
+          <description>Станки выбирают по характеристикам и производству. Прорабатываю запросы о мощности, точности, сервисе, запчастях, окупаемости и подборе оборудования под технологические процессы. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/food-processing-equipment-suppliers/</url>
+          <persistent_id>industry-043</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков оборудования для пищевых производств</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-043-960.webp</photo_url>
+          </photos>
+          <description>Пищевое оборудование выбирают под линии и сырье. Проверяю запросы о дозаторах, упаковочных линиях, производительности, санитарных требованиях и внедренных проектах. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/pump-compressor-suppliers/</url>
+          <persistent_id>industry-044</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков насосного и компрессорного оборудования</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-044-960.webp</photo_url>
+          </photos>
+          <description>Насосы и компрессоры подбирают по режимам работы. Учитываю давление, расход, среду, энергоэффективность, производительность, запасные части и сервис для промышленности и ЖКХ. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/laboratory-measurement-equipment-suppliers/</url>
+          <persistent_id>industry-045</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков лабораторного оборудования</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-045-960.webp</photo_url>
+          </photos>
+          <description>Лабораторное оборудование выбирают по точности. Разбираю запросы о методах измерений, поверке, совместимости расходников, технической поддержке и условиях поставки. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/electrical-cable-product-suppliers/</url>
+          <persistent_id>industry-046</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков электротехнической продукции</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-046-960.webp</photo_url>
+          </photos>
+          <description>Кабель подбирают по стандартам и нагрузкам. Прорабатываю запросы о маркировке, сечениях, пожарной безопасности, сертификатах и наличии у поставщика. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/metal-structures/</url>
+          <persistent_id>industry-047</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей металлоконструкций</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-047-960.webp</photo_url>
+          </photos>
+          <description>Металлоконструкции выбирают по расчетам и объектам. Проверяю запросы об изготовлении ферм, колонн, антикоррозионной защите, сроках производства и монтаже. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/packaging-container-label-manufacturers/</url>
+          <persistent_id>industry-048</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей упаковки и тары</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-048-960.webp</photo_url>
+          </photos>
+          <description>Упаковку выбирают под товар и тираж. Учитываю картон, полимерную тару, этикетки, защитные свойства, печать, минимальную партию и требования заказчика. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/warehouse-equipment-suppliers/</url>
+          <persistent_id>industry-049</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков складского оборудования</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-049-960.webp</photo_url>
+          </photos>
+          <description>Стеллажи выбирают по нагрузкам и типу склада. Разбираю вопросы о паллетных стеллажах, мезонинах, расчетах нагрузки, монтаже и работе с WMS. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/industrial-chemical-suppliers/</url>
+          <persistent_id>industry-050</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков промышленной химии</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-050-960.webp</photo_url>
+          </photos>
+          <description>Промышленную химию выбирают по применению. Проверяю запросы о совместимости с материалами, технических паспортах, условиях поставки и отраслевых регламентах. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/industrial-automation-service-companies/</url>
+          <persistent_id>industry-051</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по промышленной автоматизации</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-051-960.webp</photo_url>
+          </photos>
+          <description>Автоматизацию выбирают по эффекту на производство. Прорабатываю вопросы о контроллерах, линиях, промышленном ПО, модернизации без простоя и сервисном обслуживании. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/building-material-manufacturers/</url>
+          <persistent_id>industry-052</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей строительных материалов</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-052-960.webp</photo_url>
+          </photos>
+          <description>Стройматериалы выбирают по условиям применения. Учитываю теплопроводность, прочность, морозостойкость, сертификаты, сравнение смесей и проектные требования. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/workwear-ppe-suppliers/</url>
+          <persistent_id>industry-053</persistent_id>
+          <name>Продвижение в ответах нейросетей для поставщиков спецодежды и СИЗ</name>
+          <category_id>sector-industry</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-053-960.webp</photo_url>
+          </photos>
+          <description>Спецодежду выбирают по защите и нормативам. Разбираю запросы о СИЗ, климатических условиях, размерах, отраслевых требованиях, сертификации и оптовых поставках. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/fulfillment/</url>
+          <persistent_id>industry-054</persistent_id>
+          <name>Продвижение в ответах нейросетей для фулфилмент-операторов</name>
+          <category_id>sector-logistics</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-054-960.webp</photo_url>
+          </photos>
+          <description>Фулфилмент выбирают по товару и режиму отгрузки. Проверяю запросы о жидких товарах, маркировке, FBO/FBS, WMS, скорости приемки, стоимости операций и работе с возвратами. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/international-freight-forwarders/</url>
+          <persistent_id>industry-055</persistent_id>
+          <name>Продвижение в ответах нейросетей для международных логистических компаний</name>
+          <category_id>sector-logistics</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-055-960.webp</photo_url>
+          </photos>
+          <description>Перевозчика выбирают по маршруту и документам. Прорабатываю запросы о доставке из Китая, сборных грузах, сроках, страховке, таможне и отслеживании. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/customs-representatives/</url>
+          <persistent_id>industry-056</persistent_id>
+          <name>Продвижение в ответах нейросетей для таможенных представителей</name>
+          <category_id>sector-logistics</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-056-960.webp</photo_url>
+          </photos>
+          <description>Таможенного представителя ищут по типу товара. Учитываю классификацию ТН ВЭД, декларации, разрешительные документы, сложные грузы и судебную практику по спорам. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/import-trade-support/</url>
+          <persistent_id>industry-057</persistent_id>
+          <name>Продвижение в ответах нейросетей для импортеров и компаний по ВЭД</name>
+          <category_id>sector-logistics</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-057-960.webp</photo_url>
+          </photos>
+          <description>Импортера выбирают по легальности и прозрачности. Проверяю запросы о контрактах, ВЭД, оплате, сертификации, параллельном импорте и доставке оборудования. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/warehouse-storage-3pl/</url>
+          <persistent_id>industry-058</persistent_id>
+          <name>Продвижение в ответах нейросетей для операторов складской логистики</name>
+          <category_id>sector-logistics</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-058-960.webp</photo_url>
+          </photos>
+          <description>Складское хранение выбирают по режиму и цене. Разбираю запросы о температуре, доступе к остаткам, адресном хранении, обработке паллет, кросс-докинге и SLA. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/private-medical-clinics/</url>
+          <persistent_id>industry-059</persistent_id>
+          <name>Продвижение в ответах нейросетей для частных медицинских клиник</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-059-960.webp</photo_url>
+          </photos>
+          <description>Клинику выбирают по врачам, профилю и лицензии. Проверяю запросы о конкретных направлениях, квалификации специалистов, оборудовании, записи и достоверности медицинских сведений. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/dental-clinics/</url>
+          <persistent_id>industry-060</persistent_id>
+          <name>Продвижение в ответах нейросетей для стоматологических клиник</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-060-960.webp</photo_url>
+          </photos>
+          <description>Стоматологию выбирают по методам и врачам. Прорабатываю запросы об имплантации, ортодонтии, детском приеме, диагностике, стоимости и профессиональных профилях врачей. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/diagnostic-centres-medical-laboratories/</url>
+          <persistent_id>industry-061</persistent_id>
+          <name>Продвижение в ответах нейросетей для диагностических центров и медицинских лабораторий</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-061-960.webp</photo_url>
+          </photos>
+          <description>Диагностику выбирают по точности и срокам. Разбираю запросы об анализах, МРТ/КТ, подготовке, оборудовании, сроках результатов и лицензиях; уточняю факты по услугам. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/ophthalmology-clinics/</url>
+          <persistent_id>industry-062</persistent_id>
+          <name>Продвижение в ответах нейросетей для офтальмологических клиник</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-062-960.webp</photo_url>
+          </photos>
+          <description>Офтальмологию выбирают по методам обследования. Проверяю запросы о диагностике зрения, коррекции, оборудовании, квалификации врачей и медицинских показаниях без обещаний лечения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/plastic-surgery-clinics/</url>
+          <persistent_id>industry-063</persistent_id>
+          <name>Продвижение в ответах нейросетей для клиник пластической хирургии</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-063-960.webp</photo_url>
+          </photos>
+          <description>Пластическую хирургию выбирают по безопасности. Учитываю специализацию хирургов, консультации, противопоказания, реабилитацию и проверяемый опыт клиники без медицинских обещаний. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/reproductive-medicine-clinics/</url>
+          <persistent_id>industry-064</persistent_id>
+          <name>Продвижение в ответах нейросетей для клиник репродуктивной медицины</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-064-960.webp</photo_url>
+          </photos>
+          <description>Репродуктивную клинику выбирают по протоколам. Проверяю запросы об ЭКО, обследованиях, программах, опыте врачей и требованиях к пациентам; точно отражаю ограничения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/rehabilitation-centres/</url>
+          <persistent_id>industry-065</persistent_id>
+          <name>Продвижение в ответах нейросетей для реабилитационных центров</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-065-960.webp</photo_url>
+          </photos>
+          <description>Реабилитацию выбирают по профилю и программе. Прорабатываю вопросы о восстановлении после операций и травм, составе команды, оборудовании и допустимых направлениях лечения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/medical-device-manufacturers/</url>
+          <persistent_id>industry-066</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей медицинских изделий</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-066-960.webp</photo_url>
+          </photos>
+          <description>Медизделия выбирают по назначению и документам. Учитываю регистрационные удостоверения, ограничения применения, совместимость, комплектацию и аудиторию закупщиков. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/pharma/</url>
+          <persistent_id>industry-067</persistent_id>
+          <name>Продвижение в ответах нейросетей для фармацевтических компаний</name>
+          <category_id>sector-healthcare</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-067-960.webp</photo_url>
+          </photos>
+          <description>Лекарства сравнивают по проверяемым сведениям. Работаю с запросами о зарегистрированных препаратах, разрешенных показаниях и официальных инструкциях без недостоверных обещаний. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/private-schools/</url>
+          <persistent_id>industry-068</persistent_id>
+          <name>Продвижение в ответах нейросетей для частных школ</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-068-960.webp</photo_url>
+          </photos>
+          <description>Частную школу выбирают по программе и результатам. Разбираю запросы о классах, преподавателях, ЕГЭ, поступлении выпускников, стоимости, филиалах и формате обучения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/online-schools-edtech/</url>
+          <persistent_id>industry-069</persistent_id>
+          <name>Продвижение в ответах нейросетей для онлайн-школ и EdTech-компаний</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-069-960.webp</photo_url>
+          </photos>
+          <description>Онлайн-обучение выбирают по целям и методике. Проверяю запросы о программах, квалификации преподавателей, поддержке учащихся, проверке навыков и документах об обучении. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/universities-business-schools/</url>
+          <persistent_id>industry-070</persistent_id>
+          <name>Продвижение в ответах нейросетей для вузов и бизнес-школ</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-070-960.webp</photo_url>
+          </photos>
+          <description>Вуз выбирают по программе, карьере и стоимости. Учитываю аккредитацию, профили подготовки, практику, условия поступления, MBA и карьерные траектории выпускников. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/recruitment-agencies-recruiters/</url>
+          <persistent_id>industry-071</persistent_id>
+          <name>Продвижение в ответах нейросетей для кадровых агентств</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-071-960.webp</photo_url>
+          </photos>
+          <description>Рекрутера выбирают по отрасли и сроку закрытия. Прорабатываю запросы о подборе производственного персонала, IT-специалистов, управленцев, методике оценки и гарантиях замены. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/consulting-firms-independent-experts/</url>
+          <persistent_id>industry-072</persistent_id>
+          <name>Продвижение в ответах нейросетей для консалтинговых компаний и экспертов</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-072-960.webp</photo_url>
+          </photos>
+          <description>Эксперта выбирают по компетенциям и кейсам. Уточняю специализацию, измеримые результаты, независимые публикации, отраслевой опыт и запросы о выборе консультанта. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/childrens-education-centres/</url>
+          <persistent_id>industry-073</persistent_id>
+          <name>Продвижение в ответах нейросетей для детских образовательных центров</name>
+          <category_id>sector-education-consulting</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-073-960.webp</photo_url>
+          </photos>
+          <description>Детский центр выбирают по программе и возрасту. Разбираю запросы о подготовке к школе, кружках, расписании, квалификации педагогов, безопасности и территориальной доступности. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/branding-marketing-agencies/</url>
+          <persistent_id>industry-074</persistent_id>
+          <name>Продвижение в ответах нейросетей для брендинговых и маркетинговых агентств</name>
+          <category_id>sector-marketing</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-074-960.webp</photo_url>
+          </photos>
+          <description>Брендинговое агентство выбирают по задачам. Проверяю запросы о ребрендинге, дизайне упаковки FMCG, исследованиях потребителей, портфолио и составе команды. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/car-dealerships/</url>
+          <persistent_id>industry-075</persistent_id>
+          <name>Продвижение в ответах нейросетей для автодилеров</name>
+          <category_id>sector-automotive</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-075-960.webp</photo_url>
+          </photos>
+          <description>Автосалон выбирают по моделям и условиям сделки. Учитываю комплектации, наличие, трейд-ин, кредит, лизинг, гарантию и реальные отзывы; разделяю новый и подержанный транспорт. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/vehicle-sourcing-import/</url>
+          <persistent_id>industry-076</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по подбору и импорту автомобилей</name>
+          <category_id>sector-automotive</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-076-960.webp</photo_url>
+          </photos>
+          <description>Импорт автомобиля выбирают по расчету и рискам. Разбираю запросы об аукционах США, автомобилях из ОАЭ и Европы, пошлинах, сроках доставки, проверке истории и комплектации. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/auto-repair-shops/</url>
+          <persistent_id>industry-077</persistent_id>
+          <name>Продвижение в ответах нейросетей для автосервисов</name>
+          <category_id>sector-automotive</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-077-960.webp</photo_url>
+          </photos>
+          <description>Автосервис выбирают по марке и неисправности. Проверяю запросы о диагностике, ремонте двигателя, электронике, стоимости нормочаса, гарантии и специалистах сервиса. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/commercial-vehicle-machinery-dealers/</url>
+          <persistent_id>industry-078</persistent_id>
+          <name>Продвижение в ответах нейросетей для дилеров коммерческого транспорта и спецтехники</name>
+          <category_id>sector-automotive</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-078-960.webp</photo_url>
+          </photos>
+          <description>Коммерческий транспорт выбирают под задачи бизнеса. Учитываю грузоподъемность, тип кузова, лизинг, стоимость владения, сервис и применимость техники к разным перевозкам. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/motorcycle-powersports-dealers/</url>
+          <persistent_id>industry-079</persistent_id>
+          <name>Продвижение в ответах нейросетей для дилеров мотоциклов и мототехники</name>
+          <category_id>sector-automotive</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-079-960.webp</photo_url>
+          </photos>
+          <description>Мототехнику сравнивают по назначению и сервису. Прорабатываю запросы о дорожных и внедорожных моделях, объеме двигателя, экипировке, гарантии и обслуживании. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/tourism/</url>
+          <persistent_id>industry-080</persistent_id>
+          <name>Продвижение в ответах нейросетей для туроператоров и туристических агентств</name>
+          <category_id>sector-travel-hospitality</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-080-960.webp</photo_url>
+          </photos>
+          <description>Туры выбирают по маршруту и формату отдыха. Разбираю запросы о странах, визах, сезонности, индивидуальных поездках, гидах, длительности и прямой работе с туроператором. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/corporate-travel-mice/</url>
+          <persistent_id>industry-081</persistent_id>
+          <name>Продвижение в ответах нейросетей для организаторов корпоративных поездок и MICE</name>
+          <category_id>sector-travel-hospitality</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-081-960.webp</photo_url>
+          </photos>
+          <description>MICE выбирают по логистике и качеству программы. Проверяю запросы о корпоративных поездках, делегациях, площадках, трансферах, мероприятиях и организации групп под ключ. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/hotels-country-resorts/</url>
+          <persistent_id>industry-082</persistent_id>
+          <name>Продвижение в ответах нейросетей для отелей и загородных курортов</name>
+          <category_id>sector-travel-hospitality</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-082-960.webp</photo_url>
+          </photos>
+          <description>Отель выбирают по месту, услугам и сезону. Разбираю запросы о семейных выходных, СПА, номерах, питании, отдыхе с детьми, доступности и реальных условиях размещения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/restaurants-coffee-chains/</url>
+          <persistent_id>industry-083</persistent_id>
+          <name>Продвижение в ответах нейросетей для ресторанов и сетей кофеен</name>
+          <category_id>sector-travel-hospitality</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-083-960.webp</photo_url>
+          </photos>
+          <description>Ресторан выбирают по кухне и случаю посещения. Учитываю меню, доставку, мероприятия, корпоративные ужины, расположение, атмосферу и отзывы по конкретным филиалам. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/furniture/</url>
+          <persistent_id>industry-084</persistent_id>
+          <name>Продвижение в ответах нейросетей для мебельных фабрик и магазинов мебели</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-084-960.webp</photo_url>
+          </photos>
+          <description>Мебель выбирают по размеру, материалу и стилю. Проверяю запросы о кухнях на заказ, встроенной мебели, матрасах, фурнитуре, дизайне, сроках изготовления и примерах работ. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/contract-cosmetics-manufacturers/</url>
+          <persistent_id>industry-085</persistent_id>
+          <name>Продвижение в ответах нейросетей для контрактных производителей косметики</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-085-960.webp</photo_url>
+          </photos>
+          <description>Контрактное производство выбирают по рецептуре. Разбираю запросы о разработке формул, партиях под СТМ, упаковке, лабораторных испытаниях и производстве кремов и шампуней. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/electronics-appliances-online-stores/</url>
+          <persistent_id>industry-086</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов электроники и бытовой техники</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-086-960.webp</photo_url>
+          </photos>
+          <description>Технику выбирают по характеристикам и совместимости. Прорабатываю запросы о ноутбуках, бытовых приборах, гарантиях, наличии, сравнении моделей и выборе надежного продавца. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/home-improvement-online-stores/</url>
+          <persistent_id>industry-087</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов товаров для дома и ремонта</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-087-960.webp</photo_url>
+          </photos>
+          <description>Товары для дома сравнивают по задачам ремонта. Учитываю стройматериалы, сантехнику, свет, инструменты, уход за поверхностями и применимость товаров в быту. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/auto-parts-online-stores/</url>
+          <persistent_id>industry-088</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов автозапчастей</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-088-960.webp</photo_url>
+          </photos>
+          <description>Автозапчасть выбирают по совместимости с машиной. Проверяю запросы о VIN, артикулах, брендах, аналогах, сроках доставки, гарантии и подборе деталей для конкретных моделей. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cosmetics-perfume-online-stores/</url>
+          <persistent_id>industry-089</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов косметики и парфюмерии</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-089-960.webp</photo_url>
+          </photos>
+          <description>Косметику выбирают по составу и типу кожи. Разбираю запросы о средствах для волос, лица и тела, совместимости, составе, объеме и выборе официального продавца. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/childrens-products-toys-online-stores/</url>
+          <persistent_id>industry-090</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов детских товаров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-090-960.webp</photo_url>
+          </photos>
+          <description>Игрушки выбирают по возрасту и безопасности. Учитываю развивающие функции, материалы, возрастные ограничения, сертификаты, размеры и сценарии подарков. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/pet-supplies-online-stores/</url>
+          <persistent_id>industry-091</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов зоотоваров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-091-960.webp</photo_url>
+          </photos>
+          <description>Зоотовары выбирают по потребностям питомца. Прорабатываю запросы о кормах, возрастах животных, составах, аксессуарах, совместимости и ассортименте магазина. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/sports-goods-nutrition-stores/</url>
+          <persistent_id>industry-092</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов спортивных товаров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-092-960.webp</photo_url>
+          </photos>
+          <description>Спорттовары выбирают по цели и нагрузке. Проверяю запросы о тренажерах, инвентаре, размерах, домашнем фитнесе и достоверных характеристиках спортивного питания. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/medical-supplies-online-stores/</url>
+          <persistent_id>industry-093</persistent_id>
+          <name>Продвижение в ответах нейросетей для интернет-магазинов медицинских товаров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-093-960.webp</photo_url>
+          </photos>
+          <description>Медтовары выбирают по назначению и регистрации. Учитываю тонометры, расходные материалы, оборудование для домашнего ухода, документы и ограничения применения. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cosmetics-brands/</url>
+          <persistent_id>industry-094</persistent_id>
+          <name>Продвижение в ответах нейросетей для косметических брендов</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-094-960.webp</photo_url>
+          </photos>
+          <description>Косметический бренд выбирают по составу и доверию. Разбираю запросы об уходе, ингредиентах, применении, оригинальности продукции, производителе и сравнении линеек. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/jewelry-brands-workshops/</url>
+          <persistent_id>industry-095</persistent_id>
+          <name>Продвижение в ответах нейросетей для ювелирных брендов и мастерских</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-095-960.webp</photo_url>
+          </photos>
+          <description>Украшения выбирают по материалу и мастеру. Проверяю запросы о золоте, драгоценных камнях, индивидуальных заказах, сертификатах, размерах и дизайне. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/fashion-apparel-brands/</url>
+          <persistent_id>industry-096</persistent_id>
+          <name>Продвижение в ответах нейросетей для брендов одежды и аксессуаров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-096-960.webp</photo_url>
+          </photos>
+          <description>Одежду выбирают по посадке и материалам. Прорабатываю запросы о размерах, сезонности, составе ткани, уходе, коллекциях и покупке у официального бренда. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/food-producers-retailers/</url>
+          <persistent_id>industry-097</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей и продавцов продуктов питания</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-097-960.webp</photo_url>
+          </photos>
+          <description>Продукты выбирают по составу и способу применения. Разбираю запросы о ингредиентах, сроках хранения, происхождении, пищевой маркировке и оптовых поставках в HoReCa. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/children-product-manufacturers/</url>
+          <persistent_id>industry-098</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей детских товаров</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-098-960.webp</photo_url>
+          </photos>
+          <description>Детские товары выбирают по возрасту и нормам. Учитываю игрушки, детскую мебель, эргономику, безопасность, сертификаты, материалы и способы использования. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/household-chemistry-brands/</url>
+          <persistent_id>industry-099</persistent_id>
+          <name>Продвижение в ответах нейросетей для брендов бытовой химии</name>
+          <category_id>sector-ecommerce</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-099-960.webp</photo_url>
+          </photos>
+          <description>Бытовую химию выбирают по поверхности и задаче. Проверяю запросы о моющих средствах, составах, концентрации, совместимости с материалами и безопасном применении. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/beauty-salons-cosmetology-practices/</url>
+          <persistent_id>industry-100</persistent_id>
+          <name>Продвижение в ответах нейросетей для салонов красоты и косметологов</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-100-960.webp</photo_url>
+          </photos>
+          <description>Косметолога выбирают по квалификации и процедуре. Разбираю запросы о лазерной эпиляции, аппаратах, противопоказаниях, опыте специалиста и ценах без медицинских обещаний. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/cleaning-companies/</url>
+          <persistent_id>industry-101</persistent_id>
+          <name>Продвижение в ответах нейросетей для клининговых компаний</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-101-960.webp</photo_url>
+          </photos>
+          <description>Клининг выбирают по объекту и составу работ. Учитываю уборку квартир, офисов, сложные загрязнения, регулярность, средства, гарантии качества и географию выезда. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/home-appliance-repair-services/</url>
+          <persistent_id>industry-102</persistent_id>
+          <name>Продвижение в ответах нейросетей для сервисов ремонта бытовой техники</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-102-960.webp</photo_url>
+          </photos>
+          <description>Мастера по технике ищут по модели и поломке. Проверяю запросы о ремонте холодильников, стиральных машин, срочном выезде, диагностике, запчастях и гарантии. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/security-cctv-companies/</url>
+          <persistent_id>industry-103</persistent_id>
+          <name>Продвижение в ответах нейросетей для охранных компаний и установщиков видеонаблюдения</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-103-960.webp</photo_url>
+          </photos>
+          <description>Охрану выбирают по рискам и составу системы. Прорабатываю запросы о видеонаблюдении, СКУД, охранной сигнализации, монтажных проектах и сервисе для объектов. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/private-psychologists-psychotherapists/</url>
+          <persistent_id>industry-104</persistent_id>
+          <name>Продвижение в ответах нейросетей для частных психологов и психотерапевтов</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-104-960.webp</photo_url>
+          </photos>
+          <description>Психолога выбирают по подходу и специализации. Учитываю квалификацию, формат консультаций, направления практики, конфиденциальность и границы психологической помощи. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/construction-equipment-rental/</url>
+          <persistent_id>industry-105</persistent_id>
+          <name>Продвижение в ответах нейросетей для компаний по аренде спецтехники</name>
+          <category_id>sector-local-services</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-105-960.webp</photo_url>
+          </photos>
+          <description>Спецтехнику арендуют под объект и сроки. Разбираю запросы об экскаваторах, подъемниках, грузоподъемности, машино-часах, доставке техники и условиях аренды. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/agricultural-producers/</url>
+          <persistent_id>industry-106</persistent_id>
+          <name>Продвижение в ответах нейросетей для сельскохозяйственных предприятий</name>
+          <category_id>sector-agriculture</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-106-960.webp</photo_url>
+          </photos>
+          <description>Агропредприятия выбирают партнеров по специализации. Проверяю запросы о выращиваемых культурах, технологии производства, поставках, качестве продукции и сезонности. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
+        </service>
+        <service>
+          <url>https://gaeo.ru/industries/agricultural-input-suppliers/</url>
+          <persistent_id>industry-107</persistent_id>
+          <name>Продвижение в ответах нейросетей для производителей и поставщиков товаров для агробизнеса</name>
+          <category_id>sector-agriculture</category_id>
+          <where>online</where>
+          <price>
+            <from>
+              <value>79900</value>
+              <currency>RUB</currency>
+            </from>
+            <unit>месяц</unit>
+          </price>
+          <photos>
+            <photo_url>https://gaeo.ru/assets/tariffs/industries/industry-107-960.webp</photo_url>
+          </photos>
+          <description>Агропродукцию выбирают по нормам и применению. Учитываю кормовые добавки, сельхозоборудование, сертификацию, рекомендации производителя и задачи фермерских хозяйств. GEO-продвижение от 79 900 ₽/мес.; с экспертным контентом от 99 900 ₽/мес.; с финансовыми гарантиями от 114 900 ₽/мес.</description>
         </service>
       </services>
     </executor>
