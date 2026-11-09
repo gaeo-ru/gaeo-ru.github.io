@@ -1,0 +1,61 @@
+name: GAEO bilingual industry specializations independent public acceptance
+
+on:
+  push:
+    branches:
+      - 'qa/industry-specializations-public-*'
+      - astro-source
+    paths:
+      - 'scripts/qa_specialization_public_live.mjs'
+      - '.github/workflows/specializations-public-live-qa.yml'
+  pull_request:
+    branches: [astro-source]
+    paths:
+      - 'scripts/qa_specialization_public_live.mjs'
+      - '.github/workflows/specializations-public-live-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gaeo-specializations-public
+  cancel-in-progress: false
+
+jobs:
+  public-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout canonical source
+        uses: actions/checkout@v4
+      - name: Checkout published main for byte-for-byte comparison
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published-main
+      - name: Record published revision
+        run: |
+          echo "PUBLISHED_MAIN_SHA=$(git -C published-main rev-parse HEAD)" >> "$GITHUB_ENV"
+          git rev-parse HEAD
+          git -C published-main rev-parse HEAD
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install chromium
+      - name: Check first eight unverified priority-1 bilingual specializations on public GAEO
+        env:
+          GAEO_PUBLIC_ORIGIN: https://gaeo.ru
+          GAEO_LIVE_BATCH_SIZE: '8'
+        run: node scripts/qa_specialization_public_live.mjs
+      - name: Archive report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-specializations-public-live
+          path: visual-specialization-live/
+          if-no-files-found: warn
+          retention-days: 21
