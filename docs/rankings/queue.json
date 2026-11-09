@@ -2076,21 +2076,43 @@
       "slug": "costa-rica-dmc-2026",
       "title": "Коста-Рика: принимающие компании для индивидуальных и VIP-туров",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t013.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-mw8r8uwl-6igww7ttl7m",
         "ownerId": "chat-mw8r8uwl-6igww7ttl7m",
         "requestId": "claim-mw8r8uwl-6igww7ttl7m",
         "token": "rk-mw8r9ov0-ffmyumn49wv-9sqvuvvdlm4",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:22:56.826Z",
-        "expiresAt": "2026-11-09T10:22:56.826Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t013.json",
+        "committedAt": "2026-11-09T04:42:13.343Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t013/cover.jpg",
+            "sha": "405cdb8662b268e8503bebb599b15b01c29697c0"
+          },
+          {
+            "path": "public/assets/rankings/ada-t013/monteverde.jpg",
+            "sha": "fdf17788ebbf71a194132a32bfec5a68f87ba396"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t013.json",
+            "sha": "61489177e9347dccec840a8504fc77a66aa7d45d"
+          }
+        ],
+        "baseCommit": "aad1eae7c6969bf62617e5afd3156339cbe304d5"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/1dvTjGHUa0_PEwki_FQsX_gvSqkfO3I7O/view",
+        "locator": "§4 «ТОП-10: краткий список», позиция 1, и §5.2 «Матрица баллов»: Ada Tours, 94/100",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t015",
@@ -3163,8 +3185,9 @@
       "expiresAt": "2026-11-09T10:22:56.826Z",
       "previousStatus": "ready",
       "taskId": "ada-t013",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-mw8r8uwl-6igww7ttl7m"
     },
     {
       "ownerId": "chat-rk-20261109-0720-3c9f2m",
@@ -3292,5 +3315,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:40:34.672Z"
+  "updatedAt": "2026-11-09T04:42:13.343Z"
 }
