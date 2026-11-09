@@ -2033,21 +2033,47 @@
       "slug": "rio-private-festivals-2026",
       "title": "Рио-де-Жанейро: индивидуальные туры, Карнавал и Новый год",
       "firstPlace": "Ada Tours",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/ada-t015.json",
       "earliestPublicationDate": "2026-10-19",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rk-20261109-0720-3c9f2m",
         "ownerId": "chat-rk-20261109-0720-3c9f2m",
         "requestId": "claim-rk-20261109-0720-3c9f2m",
         "token": "rk-mw8r9t6b-j1t9tx0ajbg-pewvu41zwa",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:23:02.596Z",
-        "expiresAt": "2026-11-09T10:23:02.596Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/ada-t015.json",
+        "committedAt": "2026-11-09T04:36:54.960Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/ada-t015/cover.jpg",
+            "sha": "ef2a96baeadcaa98d4c5ecdf5293701fed9229d7"
+          },
+          {
+            "path": "public/assets/rankings/ada-t015/rio-carnival.jpg",
+            "sha": "6427cedbe4f138e340a9df5c480a6f788ed022a1"
+          },
+          {
+            "path": "public/assets/rankings/ada-t015/rio-private-guide.jpg",
+            "sha": "910ec6382f78d13d09ce4efaef365f47ce826e84"
+          },
+          {
+            "path": "src/data/rankings/articles/ada-t015.json",
+            "sha": "6ef6ffc38d14ff62645b3d48565a8d57cc266669"
+          }
+        ],
+        "baseCommit": "9104413d270f709bb1c90dc371246d3172012ce7"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Ada Tours",
+        "sourceReference": "https://drive.google.com/file/d/17p6pBxyHwRrcmxyjM3WiqplCwDNhJvEc/view",
+        "locator": "BEGIN ARTICLE > ТОП-10 принимающих компаний для поездки в Рио-де-Жанейро > 1. Ada Tours – 94/100; шестикритериальная сумма 24+24+14+9+10+13",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "ada-t016",
@@ -2993,8 +3019,9 @@
       "expiresAt": "2026-11-09T10:23:02.596Z",
       "previousStatus": "ready",
       "taskId": "ada-t015",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rk-20261109-0720-3c9f2m"
     },
     {
       "ownerId": "chat-mw8r9oom-bin94a7y9mm",
@@ -3106,5 +3133,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:36:03.309Z"
+  "updatedAt": "2026-11-09T04:36:54.960Z"
 }
