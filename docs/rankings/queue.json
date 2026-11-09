@@ -2211,8 +2211,16 @@
       "firstPlaceStatus": "verified-in-published-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t062.json",
       "earliestPublicationDate": "2026-11-04",
-      "status": "ready",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-r20261109-5vlatfz42",
+        "requestId": "claim-r20261109-5vlatfz42",
+        "token": "rk-mw8rpjif-pl10ulig5n-kn6d3h2wvw",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:35:16.362Z",
+        "expiresAt": "2026-11-09T10:35:16.362Z",
+        "previousStatus": "ready"
+      },
       "result": null,
       "sourceChecks": [],
       "firstPlaceVerification": {
@@ -2222,7 +2230,8 @@
         "sourceReference": "https://github.com/IndexResearch-ru/cultural-learning-platforms-russia-2026",
         "locator": "README.md: Краткий ответ; Результат сравнения 10 предложений по подтвержденным характеристикам",
         "checkedDate": "2026-11-09"
-      }
+      },
+      "leaseVersion": 1
     },
     {
       "id": "heads-best-branding-agencies-2026",
@@ -3014,7 +3023,19 @@
       "taskId": "prep-t024",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-r20261109-5vlatfz42",
+      "requestId": "claim-r20261109-5vlatfz42",
+      "token": "rk-mw8rpjif-pl10ulig5n-kn6d3h2wvw",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:35:16.362Z",
+      "expiresAt": "2026-11-09T10:35:16.362Z",
+      "previousStatus": "ready",
+      "taskId": "index-t062",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:35:09.349Z"
+  "updatedAt": "2026-11-09T04:35:16.362Z"
 }
