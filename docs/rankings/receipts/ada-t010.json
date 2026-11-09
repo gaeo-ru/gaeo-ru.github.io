@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "ada-t010",
+  "familyId": "ada-t010",
+  "slug": "peru-dmc-2026",
+  "ownerId": "chat-mw8r8yzs-bpse7b0iz",
+  "requestId": "claim-mw8r8yzs-bpse7b0iz",
+  "submissionId": "submit-mw8r8yzs-bpse7b0iz",
+  "submittedAt": "2026-11-09T04:42:29.496Z",
+  "mode": "standard",
+  "baseCommit": "7e083be13f47d547aad4ccb0c31c7477cad32122",
+  "files": [
+    {
+      "path": "public/assets/rankings/ada-t010/sostav_peru_aguas_calientes_station_1200x675.jpg",
+      "sha": "88e5b813496f266b7cdeba302ae04f42c16858bb"
+    },
+    {
+      "path": "public/assets/rankings/ada-t010/sostav_peru_cusco_private_guide_1200x675.jpg",
+      "sha": "10426d19c59e8358da7cf1cd404bbf013acd9193"
+    },
+    {
+      "path": "public/assets/rankings/ada-t010/sostav_peru_sacred_valley_lodge_1200x675.jpg",
+      "sha": "627e10f5c1ab772a44092e7e0bbbd0ff392fb9d2"
+    },
+    {
+      "path": "public/assets/rankings/ada-t010/sostav_peru_top10_cover_1200x675.jpg",
+      "sha": "00b977eea3ddff4eafaac67bfc7bb31f971c8c5f"
+    },
+    {
+      "path": "public/assets/rankings/ada-t010/sostav_peru_train_valley_1200x675.jpg",
+      "sha": "ae1eeddca123d80348439fd9aa914d9280563463"
+    },
+    {
+      "path": "src/data/rankings/articles/ada-t010.json",
+      "sha": "a8ac2a52cf28d72f44ffa455b89e43e1d6b209d8"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Ada Tours",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Ada Tours",
+      "sourceReference": "https://drive.google.com/file/d/1XCT9hXabsHdUu0zfH3Ttq9neq4miwZ5O/view",
+      "locator": "BEGIN ARTICLE / «ТОП-10: короткий список» / «1. Ada Tours», 95/100 = 25+20+20+15+10+5",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 4,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/ada-t010.json",
+    "ref": "7e083be13f47d547aad4ccb0c31c7477cad32122",
+    "sha": "9c476d9b9a8f8f93285b4d01a75ac298bae55930"
+  },
+  "deployed": false
+}
