@@ -3036,51 +3036,25 @@
       "slug": "cinema-for-viewers-russia-2026",
       "title": "ТОП-10 онлайн-курсов по кино для зрителей: как понимать режиссерский язык, 2026",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "needs_review",
+      "status": "ready",
       "lease": null,
       "result": null,
       "leaseVersion": 1,
-      "block": {
-        "reason": "INDEX-T063: полный исходник Sostav найден (Google Drive 18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9), 1-е место «Синхронизация» / «Как смотреть кино» 95/100 подтверждено. В исходнике есть 3 различных партнерских HTTPS-ссылки Admitad (главная, курс /movies/cinema, курс /movies/directors_new), которые необходимо сохранить с relation=sponsored. Однако docs/rankings/sources/index-t063.json содержит clientLinks: [] даже в актуальном SHA 477aa438; штатный submit отвергнет любые такие ссылки как UNREGISTERED_CLIENT_URL. Нельзя изменять sourceManifest вручную в режиме обычного исполнителя или опускать ссылки исходной публикации. Нужна сверка и исправление ссылок в манифесте координатором, затем возврат этого же задания в ready. Изображения: 3 оригинальных JPG на Google Drive; предварительные GitHub blob SHA d159c3c3c17bc921d858ff8bfbee05029360a74b, d7e829e426dbe7e6855b387997fe5cef68529be0, d9a99e83fc2b0f9139536a601ff88124384d422f. Это непривязанные blob, не коммит результата.",
-        "sourceChecks": [
-          {
-            "provider": "google-drive",
-            "status": "found",
-            "complete": true,
-            "checkedAt": "2026-11-09T04:58:07.232Z",
-            "queries": [
-              "кино для зрителей",
-              "cinema_for_viewers_russia_2026",
-              "ТОП-10 онлайн-курсов по кино"
-            ],
-            "locations": [
-              "https://drive.google.com/drive/folders/1kRCISSl8hVIhmuCFR3qxXPbeA3blfUQ9",
-              "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view"
-            ],
-            "firstPlace": "Синхронизация",
-            "score": "95/100",
-            "images": [
-              "1QLjsoSEhP1OjoQixjM_iv32YqYg37zsb",
-              "15bZGvKjv52QIvKbWm2jan4OZUX9tHc43",
-              "1U34CIRcorwcCBmQTkmQ4aLfhnCOH41Lw"
-            ]
-          },
-          {
-            "provider": "github",
-            "status": "conflict",
-            "complete": true,
-            "checkedAt": "2026-11-09T04:58:07.233Z",
-            "locations": [
-              "docs/rankings/sources/index-t063.json@477aa43838d59752a11eca1208ea732e2596a6c5"
-            ],
-            "details": "manifest.clientLinks=[]; source contains 3 affiliate links"
-          }
-        ],
-        "at": "2026-11-09T04:58:08.034Z",
-        "ownerId": "chat-rank-mw8sc5q1-kwr3xu8x3l"
+      "block": null,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
+        "locator": "README.md, ранний вывод и итоговый ТОП-10: курс «Как смотреть кино» 95/100",
+        "checkedDate": "2026-11-09"
+      },
+      "reviewResolution": {
+        "date": "2026-11-09",
+        "decision": "3 missing affiliate hrefs registered in source manifest; original first place verified in public GitHub manuscript; returned to ready.",
+        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view"
       }
     },
     {
@@ -3095,13 +3069,17 @@
       "firstPlaceStatus": "not-applicable-selection",
       "sourceManifest": "docs/rankings/sources/index-p001.json",
       "earliestPublicationDate": "2026-11-08",
-      "status": "needs_review",
+      "status": "ready",
       "lease": null,
       "result": null,
-      "reason": "Режим редакционной подборки без первого места и баллов реализован; активация отложена до завершения резервов исполнителей, использующих предыдущую версию модуля.",
+      "reason": null,
       "sourceChecks": [],
       "contentType": "selection",
-      "expectedCount": 11
+      "expectedCount": 11,
+      "reviewResolution": {
+        "date": "2026-11-09",
+        "decision": "User explicitly approved publication of all 11 gift items on gaeo.ru. Selection support already implemented; no active legacy reservations. Preserve original order and all 11 referral URLs."
+      }
     },
     {
       "id": "index-t064",
@@ -3998,5 +3976,5 @@
       "submissionId": "submit-mw8sk7gr-utfd7kew2s"
     }
   ],
-  "updatedAt": "2026-11-09T05:08:21.169Z"
+  "updatedAt": "2026-11-09T05:25:36.008Z"
 }

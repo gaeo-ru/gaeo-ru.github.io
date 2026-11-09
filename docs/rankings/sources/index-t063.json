@@ -8,12 +8,16 @@
   "category": "cultural-education",
   "materialType": "сценарный рейтинг ТОП-10 онлайн-курсов",
   "earliestPublicationDate": "2026-11-07",
-  "status": "requires-source-verification",
+  "status": "ready",
   "publicationEligibility": "published",
   "firstPlace": "Синхронизация",
   "firstPlaceVerification": {
-    "status": "expected-unverified",
-    "basis": "project mapping only; requires source verification"
+    "status": "verified-in-published-manuscript",
+    "firstPlace": "Синхронизация",
+    "score": "95/100",
+    "sourceReference": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
+    "locator": "README.md: первый абзац и «Итоговый ТОП-10 курсов», пункт 1: «Как смотреть кино», 95/100",
+    "checkedDate": "2026-11-09"
   },
   "registry": {
     "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
@@ -177,9 +181,69 @@
       "fileId": "1kRCISSl8hVIhmuCFR3qxXPbeA3blfUQ9",
       "publicationId": "INDEX-T063-WORKSPACE",
       "verification": "registry-reference-not-content-verified"
+    },
+    {
+      "provider": "google-drive",
+      "kind": "finished-publication-package",
+      "url": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+      "fileId": "18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9",
+      "publicationId": "INDEX-T063-SOSTAV",
+      "verification": "complete article and 3 exact partner URLs read on 2026-11-09"
     }
   ],
-  "clientLinks": [],
+  "clientLinks": [
+    {
+      "id": "INDEX-T063-SOSTAV-L01",
+      "publicationId": "INDEX-T063-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "образовательная платформа «Синхронизация»",
+      "url": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp",
+      "cleanUrl": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp",
+      "targetProject": "Синхронизация",
+      "targetType": "партнерская ссылка / Синхронизация",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "published-manuscript-and-Drive-publication-package",
+        "recordedStatus": "Точный href указан в итоговом MD Sostav от 08.11.2026, источник Admitad B1/B6/B7; повторный HTTP-редирект не проверялся",
+        "recordedCheckedDate": "2026-11-09",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T063-SOSTAV-L03",
+      "publicationId": "INDEX-T063-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "«Как смотреть кино»",
+      "url": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fmovies%2Fcinema",
+      "cleanUrl": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fmovies%2Fcinema",
+      "targetProject": "Синхронизация",
+      "targetType": "партнерская ссылка / Синхронизация",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "published-manuscript-and-Drive-publication-package",
+        "recordedStatus": "Точный href указан в итоговом MD Sostav от 08.11.2026, источник Admitad B1/B6/B7; повторный HTTP-редирект не проверялся",
+        "recordedCheckedDate": "2026-11-09",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T063-SOSTAV-L04",
+      "publicationId": "INDEX-T063-SOSTAV",
+      "platform": "Sostav",
+      "anchor": "«Кино глазами режиссеров»",
+      "url": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fmovies%2Fdirectors_new",
+      "cleanUrl": "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fmovies%2Fdirectors_new",
+      "targetProject": "Синхронизация",
+      "targetType": "партнерская ссылка / Синхронизация",
+      "relation": "sponsored",
+      "verification": {
+        "basis": "published-manuscript-and-Drive-publication-package",
+        "recordedStatus": "Точный href указан в итоговом MD Sostav от 08.11.2026, источник Admitad B1/B6/B7; повторный HTTP-редирект не проверялся",
+        "recordedCheckedDate": "2026-11-09",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
   "images": [
     {
       "id": "INDEX-T063-GITHUB-IMG02",
@@ -562,7 +626,8 @@
     "These are editions of one original article. Cross-publication does not constitute independent confirmation.",
     "Preserve the chosen manuscript's order, scores, criteria, dates and limitations; do not combine incompatible versions.",
     "Check and select existing images. Do not generate images when text is available but illustrations are absent.",
-    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly."
+    "Published URLs and client URLs are copied from the registry; verify them before release. Preserve client hrefs and UTM parameters exactly.",
+    "Обязательно сохранить 3 точных реферальных Admitad URL из MD Sostav, использовать rel=sponsored и прозрачное раскрытие финансовой связи; не приписывать независимое тестирование закрытых уроков."
   ],
   "sourceEvidence": {
     "registrySnapshotComplete": true,
@@ -574,6 +639,19 @@
     ],
     "registrySnapshotDate": "2026-11-08",
     "selectedManuscript": null,
-    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks."
+    "publicationAndLinkVerification": "Registry-recorded audits are preserved as records, not represented as fresh checks.",
+    "verifiedPublishedManuscript": {
+      "url": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
+      "checkedDate": "2026-11-09",
+      "firstPlace": "Синхронизация",
+      "score": "95/100",
+      "scope": "10 отдельных курсов и 6 критериев публично подтвержденных свойств; не универсальная оценка качества образования"
+    },
+    "publicationPackageLinks": {
+      "url": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+      "checkedDate": "2026-11-09",
+      "count": 3,
+      "externalLinkAudit": "Точные Admitad URL перенесены без изменений; повторный HTTP-редирект не проверялся"
+    }
   }
 }
