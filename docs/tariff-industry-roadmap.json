@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3E PR #133 full CI pending. After PASS merge safely, confirm production/main/6 HTML/sitemap/Pages and public HTTPS; 3D direct HTTPS remains unverified. Then 3F permission-cleared E2-E4 evidence research.",
+    "next_batch": "3F: проверить разрешения на раскрытие и фактические материалы E2–E4 по промышленному B2B, упаковке, логистике и клиникам. Прямой публичный HTTPS/Chromium 3D+3E еще не подтвержден; source/main/Pages 3E PASS.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1763,7 +1763,7 @@
     "phase_3e": {
       "phase": 3,
       "batch": "3E",
-      "status": "source_prepared_pr_ci_pending",
+      "status": "main_pages_pass_live_https_unverified",
       "records": [
         1,
         19,
@@ -1793,9 +1793,9 @@
       "qa_script": "scripts/qa_sector_buyer_intents_3e.mjs",
       "work_branch": "feat/sector-buyer-intents-3e-2026-11-09",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/133",
-      "ci_status": "pending",
-      "production_status": "not_published",
-      "pages_status": "not_published",
+      "ci_status": "pass",
+      "production_status": "pass",
+      "pages_status": "pass",
       "public_https_browser_verified": false,
       "reused_existing_commercial_ru": [
         "/geo-prodvizhenie-nedvizhimosti/",
@@ -1808,7 +1808,43 @@
         "/en/industries/highload-it/"
       ],
       "planned_directory_items": 25,
-      "next_required_step": "Full PR CI on final head, safe source merge, main manifest/sitemap/Pages, independent public HTTPS & Chromium; then update canonical 2 docs."
+      "next_required_step": "Independent public HTTPS/Chromium for 3D+3E on 1440/390/320; then 3F E2-E4 disclosure permission and proof research. Preserve pricing/guarantees, no duplicate landing pages.",
+      "content_source_merge_commit": "a3c0335f9993cba52c61539f5ad34257c3e1b36d",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42591705832",
+      "maintenance_reconciliation_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/134",
+      "publication_fix_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/135",
+      "publication_fix_pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42641611819",
+      "publication_fix_details": "Correct normalized production sitemap and migration-map staging prerequisites; pin available Rollup archive after npm 4.68.2 HTTP 404. Shared tariff pricing and BMR guarantee unchanged.",
+      "source_commit": "b6569ffb24ce32b90671b302bd0975d195d6dcb8",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42644086778",
+      "published_commit": "ee3a824963758e93cda94e4ea6dc3cb5f3b55b2e",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42647389464",
+      "released_at": "2026-11-09T15:42:24.570Z",
+      "main_manifest_files": 1260,
+      "main_html_pages": 485,
+      "main_sitemap_urls": 480,
+      "main_new_html_verified": 6,
+      "main_sitemap_new_urls_verified": 6,
+      "verification_widths_ci": [
+        1440,
+        390,
+        320
+      ],
+      "public_https_limitation": "Direct public gaeo.ru HTML/Chromium unavailable from current conversation. Production main and Pages PASS do not prove external HTTPS/browser acceptance; leave verified_at and live landing fields unset."
+    },
+    "phase_3f": {
+      "phase": 3,
+      "batch": "3F",
+      "status": "queued_permission_evidence_review",
+      "records": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "scope": "Primary evidence and disclosure permission audit; public cases only after verified rights and facts; reuse existing commercial pages and 3B/3C/3D methods.",
+      "public_https_browser_verified": false,
+      "next_required_step": "Check E2–E4 sources and rights privately, confirm what can actually be disclosed before any new public case or research page."
     }
   },
   "status_definitions": {
@@ -2343,7 +2379,24 @@
       ],
       "label": "Покупательские GEO-интенты ЖК, B2B-юристов, ускорения и нагрузочных тестов",
       "condition": "Создать только самостоятельные методики RU/EN и ссылки из действующих посадочных, без новых тарифов и недоказанных кейсов.",
-      "work_status": "source_prepared_pr_ci_pending"
+      "work_status": "main_pages_pass_live_https_unverified",
+      "source_commit": "b6569ffb24ce32b90671b302bd0975d195d6dcb8",
+      "published_commit": "ee3a824963758e93cda94e4ea6dc3cb5f3b55b2e",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42647389464"
+    },
+    {
+      "batch": "3F",
+      "phase": 3,
+      "kind": "research_candidates",
+      "ids": [
+        42,
+        48,
+        55,
+        59
+      ],
+      "label": "Разрешения на раскрытие и проверка фактических доказательств E2–E4",
+      "condition": "Проверить доступные исходные аудиты, сопоставимость замеров, выполненные работы и письменные разрешения на раскрытие. Без подтвержденного права не публиковать идентифицируемые или обезличенные клиентские результаты; не создавать вымышленные E3/E4 и дубли готовых коммерческих страниц.",
+      "work_status": "queued_permission_evidence_review"
     }
   ],
   "records": [
