@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "node scripts/generate-evidence-pages.mjs && node scripts/generate-tariff-pages.mjs && node scripts/sync-service-feed.mjs && node scripts/generate-ranking-pages.mjs && astro build",
+    "build": "node scripts/generate-evidence-pages.mjs && node scripts/generate-tariff-pages.mjs && node scripts/sync-service-feed.mjs && node scripts/generate-2gis-feed.mjs && node scripts/generate-ranking-pages.mjs && astro build",
     "check:parity": "node scripts/astro-parity.mjs",
     "check:visual": "node scripts/astro-visual-parity.mjs",
     "check:industry": "node scripts/astro-industry-browser-qa.mjs",
