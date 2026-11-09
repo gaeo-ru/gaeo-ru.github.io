@@ -33,7 +33,7 @@ if(entries.length!==20||new Set(entries.map(x=>x.route)).size!==20)
  throw Error('Unexpected phase 3A route inventory (expected 20 unique URLs)');
 const sha=b=>createHash('sha256').update(b).digest('hex');
 function check(ok,msg){if(!ok)throw Error(msg)}
-const report={batch:'3A-public-acceptance',origin,
+const report={batch:'3A-public-acceptance',review_stage:'post_pages_source_66def444',origin,
  started_at:new Date().toISOString(),source_branch:'astro-source',
  published_main_sha:process.env.PUBLISHED_MAIN_SHA||null,form_submitted:false,
  scope:{unique_urls:entries.length,viewport_widths:widths,priority_catalogue_ids:priorityIds},
