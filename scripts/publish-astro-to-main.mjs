@@ -9,10 +9,22 @@ if(!['preflight','publish'].includes(mode))throw Error('Use preflight or publish
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>{
  const p=resolve(dir,e.name);return e.isDirectory()?walk(p):e.isFile()?[p]:[];
 });
-function hash(path,kind){
- const bytes=readFileSync(path);
+function hashContent(bytes,kind){
  const body=kind==='html'?bytes.toString('utf8').replace(/\r\n/g,'\n').replace(/>\s+</g,'><').trim():bytes;
  return createHash('sha256').update(body).digest('hex');
+}
+function hash(path,kind){return hashContent(readFileSync(path),kind);}
+// main automatically refreshes metadata after a generated release. A bot-only
+// maintenance delta is safe to supersede when the previous blob is identical
+// to the recorded release manifest, and the new build has been normalized by
+// the same production scripts. Any other parallel edit still aborts the release.
+function isVerifiedMaintenanceDelta(f){
+ try{
+  const log=execFileSync('git',['-C',target,'log','-1','--format=%H%x00%s%x00%an','--',f.path],{encoding:'utf8'}).trim().split('\\0');
+  if(log.length<3||log[1]!=='Auto-maintain GAEO site metadata'||!/^github-actions\\[bot\\]$/.test(log[2]))return false;
+  const before=execFileSync('git',['-C',target,'show',log[0]+'^:'+f.path]);
+  return hashContent(before,f.kind)===f.sha256;
+ }catch{return false;}
 }
 const sourcePages=resolve(base,'src/legacy/pages'),sourceAssets=resolve(base,'public');
 // Astro component-scoped CSS/JS is emitted under dist/_astro. Publishing only
@@ -55,8 +67,11 @@ for(const f of expected){
   if(publishedHash===f.sha256)continue;
   // A parallel edit is safe to adopt when the source build reproduces it.
   const built=resolve(dist,f.path);
-  if(!stagedPaths.has(f.path)||!existsSync(built)||hash(built,f.kind)!==publishedHash)
+  if(!stagedPaths.has(f.path)||!existsSync(built)||
+    (hash(built,f.kind)!==publishedHash&&!isVerifiedMaintenanceDelta(f)))
    errors.push('Unmerged edit on published main: '+f.path);
+  else if(hash(built,f.kind)!==publishedHash)
+   console.log('Validated main metadata maintenance for '+f.path);
  }
 }
 for(const f of files)if(!existsSync(resolve(dist,f.path)))errors.push('Astro did not build '+f.path);
