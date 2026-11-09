@@ -65,6 +65,31 @@ jobs:
         run: npm run check:research
       - name: Verify narrow labels in mobile scrollable tables across site
         run: node scripts/qa_mobile_scroll_tables.mjs
+      - name: Reconcile generated Astro output with production-maintained metadata
+        run: |
+          set -euo pipefail
+          # main's maintenance job normalizes the published HTML. Do the same
+          # on the Astro build before the parallel-edit protection compares hashes.
+          # These helpers are staging-only and never enter the published files list.
+          mkdir -p dist/scripts dist/templates
+          cp scripts/*.py dist/scripts/
+          cp -R templates/partials dist/templates/
+          cp SITE_MODE robots.production.txt dist/
+          (
+            cd dist
+            python scripts/ensure_indexability.py
+            python scripts/ensure_site_chrome.py
+            python scripts/ensure_hub_cta.py
+            python scripts/ensure_font_loading.py
+            python scripts/ensure_site_metadata.py
+            python scripts/ensure_article_dates.py
+            python scripts/ensure_social_preview.py
+            python scripts/ensure_analytics.py
+            python scripts/ensure_form_config.py
+            python scripts/ensure_asset_versions.py
+            python scripts/site_qa.py --mode production
+          )
+          python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
