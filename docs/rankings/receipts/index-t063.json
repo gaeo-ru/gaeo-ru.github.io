@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "taskId": "index-t063",
+  "familyId": "index-t063",
+  "slug": "cinema-for-viewers-russia-2026",
+  "ownerId": "rankings-coordinator-20261109-t063",
+  "requestId": "rankings-coordinator-20261109-t063-claim",
+  "submissionId": "rankings-coordinator-20261109-t063-submit",
+  "submittedAt": "2026-11-09T06:08:24.526Z",
+  "mode": "standard",
+  "baseCommit": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6",
+  "files": [
+    {
+      "path": "public/assets/rankings/index-t063/cinema-cover.jpg",
+      "sha": "d159c3c3c17bc921d858ff8bfbee05029360a74b"
+    },
+    {
+      "path": "public/assets/rankings/index-t063/cinema-criteria.jpg",
+      "sha": "d7e829e426dbe7e6855b387997fe5cef68529be0"
+    },
+    {
+      "path": "src/data/rankings/articles/index-t063.json",
+      "sha": "ed29155f3fae2e0f02c4b7ac3884be45f8a40bf8"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Синхронизация",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Синхронизация",
+      "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+      "locator": "ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года; первое место 95/100",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 2,
+    "requiredPublishedVersions": {
+      "ru": 5,
+      "en": 5
+    },
+    "selectedClientLinks": 3,
+    "excludedPendingUrls": 1
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/index-t063.json",
+    "ref": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6",
+    "sha": "36ce18a45c6190db11d7344f860f6ed08412f520"
+  },
+  "deployed": false
+}

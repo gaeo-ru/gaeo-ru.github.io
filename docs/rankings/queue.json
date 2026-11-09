@@ -3039,24 +3039,38 @@
       "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t063.json",
       "earliestPublicationDate": "2026-11-07",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "rankings-coordinator-20261109-t063-submit",
         "ownerId": "rankings-coordinator-20261109-t063",
         "requestId": "rankings-coordinator-20261109-t063-claim",
         "token": "rk-mw8uz4hv-v60u8o7l0lk-5x4pvw0ys3s",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T06:06:42.572Z",
-        "expiresAt": "2026-11-09T12:06:42.572Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/index-t063.json",
+        "committedAt": "2026-11-09T06:08:24.526Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t063/cinema-cover.jpg",
+            "sha": "d159c3c3c17bc921d858ff8bfbee05029360a74b"
+          },
+          {
+            "path": "public/assets/rankings/index-t063/cinema-criteria.jpg",
+            "sha": "d7e829e426dbe7e6855b387997fe5cef68529be0"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t063.json",
+            "sha": "ed29155f3fae2e0f02c4b7ac3884be45f8a40bf8"
+          }
+        ],
+        "baseCommit": "52f9eccc5cd7299bba4c3d906b8e981f3e7923e6"
       },
-      "result": null,
       "leaseVersion": 3,
       "block": null,
       "firstPlaceVerification": {
         "status": "verified-in-manuscript",
         "firstPlace": "Синхронизация",
-        "sourceReference": "https://github.com/IndexResearch-ru/cinema-for-viewers-russia-2026",
-        "locator": "README.md, ранний вывод и итоговый ТОП-10: курс «Как смотреть кино» 95/100",
+        "sourceReference": "https://drive.google.com/file/d/18AjCUNoQ4_FAkNFAB-IHF4bGkbWSMFx9/view",
+        "locator": "ТОП-10 онлайн-курсов по кино: результаты на ноябрь 2026 года; первое место 95/100",
         "checkedDate": "2026-11-09"
       },
       "reviewResolution": {
@@ -4097,9 +4111,10 @@
       "expiresAt": "2026-11-09T12:06:42.572Z",
       "previousStatus": "ready",
       "taskId": "index-t063",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "rankings-coordinator-20261109-t063-submit"
     }
   ],
-  "updatedAt": "2026-11-09T06:06:49.095Z"
+  "updatedAt": "2026-11-09T06:08:24.526Z"
 }
