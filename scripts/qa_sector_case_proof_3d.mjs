@@ -24,6 +24,12 @@ for(const lang of ['ru','en']){
  const route=phase3DCaseProof.routes.method[lang];
  const other=phase3DCaseProof.routes.method[en?'ru':'en'];
  const html=read(route),c=phase3DCaseProof[lang].method;
+ const permissionTitle=en?'Permission to publish: six checks before a case study':'Разрешение на публикацию: 6 проверок перед кейсом';
+ const permissionSections=c.sections.filter(s=>s.title===permissionTitle);
+ assert.equal(permissionSections.length,1,'Exactly one substantive 3F permission section '+route);
+ assert.equal(permissionSections[0].bullets.length,6,'Six distinct publication checks '+route);
+ assert.ok(html.includes(permissionTitle),'3F permission method visible in rendered HTML '+route);
+
  const url='https://gaeo.ru'+route,nodes=graph(html);
  assert.equal((html.match(/<h1\b/g)||[]).length,1,'One visible H1 '+route);
  assert.ok(html.includes('<html lang="'+lang+'">'),'Correct HTML language '+route);
