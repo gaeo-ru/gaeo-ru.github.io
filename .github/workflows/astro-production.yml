@@ -74,7 +74,7 @@ jobs:
           mkdir -p dist/scripts dist/templates
           cp scripts/*.py dist/scripts/
           cp -R templates/partials dist/templates/
-          cp SITE_MODE robots.production.txt dist/
+          cp SITE_MODE robots.production.txt MIGRATION_URL_MAP.md dist/
           (
             cd dist
             python scripts/ensure_indexability.py
@@ -87,6 +87,9 @@ jobs:
             python scripts/ensure_analytics.py
             python scripts/ensure_form_config.py
             python scripts/ensure_asset_versions.py
+            # Metadata normalization changes dates/schema: regenerate the exact sitemap
+            # tested by site_qa rather than checking the pre-normalized Astro sitemap.
+            python scripts/build_sitemap.py > /dev/null
             python scripts/site_qa.py --mode production
           )
           python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
