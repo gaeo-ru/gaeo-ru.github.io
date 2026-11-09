@@ -66,7 +66,7 @@ try{
     headers:{'cache-control':'no-cache'}
    });
    assert(response.status===200,'Public HTTP '+response.status);
-   assert(!/\\bnoindex\\b/i.test(response.headers.get('x-robots-tag')||''),'Unexpected X-Robots-Tag noindex');
+   assert(!/\bnoindex\b/i.test(response.headers.get('x-robots-tag')||''),'Unexpected X-Robots-Tag noindex');
    const bytes=Buffer.from(await response.arrayBuffer());
    const mainPath=resolve('published-main',item.route.slice(1),'index.html');
    assert(existsSync(mainPath),'Missing main HTML '+item.route);
@@ -100,7 +100,8 @@ try{
     assert(await page.locator('html').getAttribute('lang')===item.lang,'Wrong HTML lang');
     assert(await page.title()!=='','Missing HTML title');
     assert(await page.locator('meta[name="description"]').count()===1,'Missing/duplicate description');
-    assert(!(await page.locator('meta[name="robots"]').allTextContents()).some(s=>/\\bnoindex\\b/i.test(s)),'Robots meta noindex');
+    const robotsTags=await page.locator('meta[name="robots"]').evaluateAll(els=>els.map(el=>el.getAttribute('content')||''));
+    assert(!robotsTags.some(s=>/\bnoindex\b/i.test(s)),'Robots meta noindex');
     assert(await page.locator('link[rel="canonical"]').count()===1,'Missing/duplicate canonical');
     assert(await page.locator('link[rel="canonical"]').getAttribute('href')===url,'Wrong self canonical');
     for(const lang of ['ru','en']){
