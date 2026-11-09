@@ -2621,9 +2621,18 @@
       "firstPlaceStatus": "expected-unverified",
       "sourceManifest": "docs/rankings/sources/index-t057.json",
       "earliestPublicationDate": "2026-11-05",
-      "status": "ready",
-      "lease": null,
-      "result": null
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-mw8s4zjr-yd02becybhh",
+        "requestId": "claim-mw8s4zjr-yd02becybhh",
+        "token": "rk-mw8s4zjr-zvfafrhx6s-aa9p3ghr67e",
+        "mode": "standard",
+        "claimedAt": "2026-11-09T04:47:17.507Z",
+        "expiresAt": "2026-11-09T10:47:17.507Z",
+        "previousStatus": "ready"
+      },
+      "result": null,
+      "leaseVersion": 1
     },
     {
       "id": "heads-r02-brand-launch-2026",
@@ -3406,7 +3415,19 @@
       "taskId": "heads-r01-branding-fmcg-2026",
       "outcome": "reserved",
       "operations": []
+    },
+    {
+      "ownerId": "chat-mw8s4zjr-yd02becybhh",
+      "requestId": "claim-mw8s4zjr-yd02becybhh",
+      "token": "rk-mw8s4zjr-zvfafrhx6s-aa9p3ghr67e",
+      "mode": "standard",
+      "claimedAt": "2026-11-09T04:47:17.507Z",
+      "expiresAt": "2026-11-09T10:47:17.507Z",
+      "previousStatus": "ready",
+      "taskId": "index-t057",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:46:05.283Z"
+  "updatedAt": "2026-11-09T04:47:17.507Z"
 }
