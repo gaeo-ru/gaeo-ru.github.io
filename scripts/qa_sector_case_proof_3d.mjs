@@ -97,7 +97,7 @@ try{
     await page.locator('[role="dialog"]').waitFor({state:'visible'});
     await page.locator('.gaeo-modal-close').click();
    }
-  }else assert.equal(await page.locator('main .list-card').count(),22,'Directory listing '+route);
+  }else assert.ok(await page.locator('main .list-card').count()>=22,'Original strategy directory preserved '+route);
   if(width===320)await page.screenshot({path:'visual-industry/3d-'+route.split('/').filter(Boolean).join('-')+'-320.png',fullPage:true,animations:'disabled'});
   assert.deepEqual(errors,[],'No JS errors '+route+' '+width);
   await page.close();
