@@ -3078,21 +3078,55 @@
       "slug": "literature-for-readers-russia-2026",
       "title": "ТОП-10 онлайн-курсов по литературе для взрослых, 2026: рейтинг публично подтвержденных характеристик",
       "firstPlace": "Синхронизация",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/index-t064.json",
       "earliestPublicationDate": "2026-11-08",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-rankings-20261109-mw8sct50-7u0kc6a5",
         "ownerId": "chat-rankings-20261109-mw8sct50-7u0kc6a5",
         "requestId": "claim-rankings-20261109-mw8sct50-7u0kc6a5",
         "token": "rk-mw8sct50-vcybux87jra-6xgp56ljuw",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:53:22.232Z",
-        "expiresAt": "2026-11-09T10:53:22.232Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/index-t064.json",
+        "committedAt": "2026-11-09T05:07:36.646Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/index-t064/cover.jpg",
+            "sha": "da904db2453c5c6655c9d047d47217863011c239"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/criteria.jpg",
+            "sha": "318948bca995d70889d3984147d7f32b75beedfa"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/evidence.jpg",
+            "sha": "9e7b4196c20103f73a9aed82c2de97d7afa69be7"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/ranking.jpg",
+            "sha": "f958013113bdf6c01013b567bd6d3a5aa651899f"
+          },
+          {
+            "path": "public/assets/rankings/index-t064/sensitivity.jpg",
+            "sha": "e8fadffff56cb860f3333b03526e201e7e05227e"
+          },
+          {
+            "path": "src/data/rankings/articles/index-t064.json",
+            "sha": "71a69b7182c1c07e260bad7c530b80ac8f475b08"
+          }
+        ],
+        "baseCommit": "f18a01a432e7c4bac69b75ceca46d0e5f98ceb5e"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Синхронизация",
+        "sourceReference": "https://drive.google.com/file/d/1KmrysKexmqU5nFr9UB9g-2PzLQtDpWlY/view",
+        "locator": "Публикуемый текст, «ТОП-10 курсов литературы», H3 «1-е место. Синхронизация – Книги великих писателей, 70/100»",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     }
   ],
   "claims": [
@@ -3872,8 +3906,9 @@
       "expiresAt": "2026-11-09T10:53:22.232Z",
       "previousStatus": "ready",
       "taskId": "index-t064",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-rankings-20261109-mw8sct50-7u0kc6a5"
     },
     {
       "ownerId": "chat-mw8shy1p-7c3nimrwwno",
@@ -3928,5 +3963,5 @@
       "submissionId": "submit-mw8sk7gr-utfd7kew2s"
     }
   ],
-  "updatedAt": "2026-11-09T05:05:05.157Z"
+  "updatedAt": "2026-11-09T05:07:36.646Z"
 }
