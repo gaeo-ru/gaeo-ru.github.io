@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3A: независимая публичная приемка после PR #138, 20 URL/60 ширин; ранний запуск 59/60 (выпуск CSS еще не опубликован), production 42676590310 выполняется. 3F: клиентские E3/E4 и письменные разрешения №42/48/55/59 остаются заблокированы.",
+    "next_batch": "3A публичная приемка завершена: PR #138, production/main/Pages PASS, 20/20 HTTPS SHA256, 60/60 Chromium; 4 специализации №27/30/75/76 live-verified. 3F: №42/48/55/59 клиентские кейсы заблокированы до письменных разрешений E3/E4. Следующая новая содержательная партия еще не назначена.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1953,21 +1953,38 @@
       "final_release_note": "Full PR CI and Astro production/main/Pages PASS; original public HTTPS audited against main 598fe324 and repeated PASS after source merge; new main 3ee89374 differs from previous main only by astro-release-manifest.json, so all 16 checked HTML unchanged. No new live commercial content, tariffs, BMR changes, or client case claim."
     },
     "phase_3a": {
-      "status": "publication_in_progress_public_recheck_required",
+      "status": "published_public_https_chromium_pass",
       "source_commit": "66def4449d98dafccb13740f80cf9be9c2bcb02b",
       "pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/138",
       "pr_ci": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42674891613",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590310",
       "premature_public_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
       "premature_public_result": "20/20 HTTPS SHA256; 59/60 Chromium; /industries/ 320px 11px overflow on old main CSS",
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "priority_ids": [
         75,
         76,
         27,
         30
       ],
-      "required_followup": "After production PASS, verify sourceCommit/main SHA/Pages, rerun same public 20 URLs at 1440/390/320 and record exact verified status."
+      "required_followup": "Only new fact-based content or new changes warrant recheck. 3F client cases require consent and verifiable E3/E4.",
+      "published_commit": "bda45af35a55872012931198a4ae3ff049fab038",
+      "released_at": "2026-11-09T19:04:27.868Z",
+      "production_status": "pass",
+      "pages_status": "pass",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42679857222",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
+      "verification_attempt": 2,
+      "public_html_sha256_matches": 20,
+      "public_chromium_pass": 60,
+      "public_chromium_errors": 0,
+      "public_screen_widths": [
+        1440,
+        390,
+        320
+      ],
+      "public_screenshots_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439/artifacts/13700864745",
+      "checked_at": "2026-11-09T19:06:51Z"
     }
   },
   "status_definitions": {
@@ -1988,7 +2005,7 @@
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 100,
-    "new_industry_landings_in_phase_2_live_verified": 0,
+    "new_industry_landings_in_phase_2_live_verified": 4,
     "total_generated_html_pages_current_release": 485,
     "total_new_specialization_pairs_in_phase_2": 100,
     "total_new_specialization_urls_in_phase_2": 200,
@@ -2046,7 +2063,11 @@
     "phase_2ak_deployed_pairs": 3,
     "phase_2ak_deployed_ru_en_urls": 6,
     "phase_2ak_prepared_pairs_not_deployed": 0,
-    "phase_2ak_prepared_ru_en_urls_not_deployed": 0
+    "phase_2ak_prepared_ru_en_urls_not_deployed": 0,
+    "phase_3a_live_verified_specialization_pairs": 4,
+    "phase_3a_live_verified_specialization_urls": 8,
+    "phase_3a_other_live_verified_urls": 12,
+    "phase_3a_total_live_verified_urls": 20
   },
   "candidate_batches": [
     {
@@ -2130,12 +2151,12 @@
       ],
       "label": "Авторынок и финансовые услуги из плана v3",
       "condition": "Фактически существуют двуязычные хабы и методики автомобильного рынка и финансов, коммерческие страницы 107 направлений готовы. Следующий этап: независимая проверка публичного HTTPS и исправление 320 px на /industries/; клиентские результаты E3/E4 не утверждать без первоисточников и разрешений.",
-      "work_status": "public_acceptance_59_of_60_before_css_release",
+      "work_status": "published_public_https_chromium_pass",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/138",
       "source_commit": "66def4449d98dafccb13740f80cf9be9c2bcb02b",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42674891613",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590310",
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "public_https_partial_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
       "public_https_partial_result": "20/20 public URLs match current main SHA256; 59/60 Chromium PASS; RU /industries/ 320px overflow 11px before PR#138 CSS production",
       "hub_paths_ru": [
@@ -2145,7 +2166,16 @@
       "method_paths_ru": [
         "/strategies/automotive-buyer-evidence/",
         "/strategies/financial-services-evidence/"
-      ]
+      ],
+      "production_status": "pass",
+      "pages_status": "pass",
+      "published_main_commit": "bda45af35a55872012931198a4ae3ff049fab038",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42679857222",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
+      "verification_attempt": 2,
+      "public_qa": "20/20 public HTTPS SHA256 matched published main; 60/60 Chromium on 1440/390/320; 0 errors; 60 screenshots artifact 13700864745",
+      "verified_at": "2026-11-09T19:06:51Z",
+      "next_required_step": "3A verified. Client-specific 3F #42/48/55/59 needs written disclosure permission and comparable primary E3/E4; no new content batch assigned."
     },
     {
       "batch": "3B",
@@ -3725,19 +3755,19 @@
       "sheet_row": 28,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/outsourced-accounting-services/",
+      "landing_url_en": "/en/industries/outsourced-accounting-services/",
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "deployed_ru_en_ci_production_pages_pass_external_https_unverified",
+      "content_status": "deployed_original_bilingual_industry_landing_public_https_verified",
       "evidence_level": null,
-      "work_status": "deployed_source_main_pages_pass",
-      "next_required_step": "Direct public HTTPS desktop/390/320, actual images, CTA/dialog, form, links and schema; only after external live PASS fill landing_url_ru/en and verified_at.",
+      "work_status": "deployed_public_https_browser_verified",
+      "next_required_step": "Monitor live indexing and GEO measurement as distinct future tasks; no claim of client E3/E4.",
       "planned_landing_url_ru": "/industries/outsourced-accounting-services/",
       "planned_landing_url_en": "/en/industries/outsourced-accounting-services/",
       "work_branch": "feat/industry-specializations-batch-2ah-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2ah.mjs",
-      "last_completed_step": "Full Astro QA, source merge, main manifest + both HTML, sitemap and GitHub Pages PASS; 2026-11-08",
+      "last_completed_step": "Phase 3A final: source 66def444, production 42676590310 PASS, main bda45af3, Pages 42679857222 PASS, public 42676590439 attempt 2 PASS (20/20 URLs; 60/60 widths)",
       "evidence_sources": [
         "https://www.consultant.ru/document/cons_doc_LAW_122855/56dc96d26dd9e8b6922341ab162acc7e10d57ddf/",
         "https://www.nalog.gov.ru/rn77/taxation/submission_statements/",
@@ -3745,18 +3775,20 @@
       ],
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
-      "public_https_browser_verified": false,
-      "verified_at": null,
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-09T19:06:51Z",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
       "verification_urls": [
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/121",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439"
       ],
       "source_commit": "2faed64b24fa91d8d4382b886e5c901a3cd45207",
       "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42491432285",
       "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42492293955",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "deployed_public_https_chromium_verified_3a",
+      "coverage_checked_date": "2026-11-09",
+      "public_verification_scope": "Phase 3A commercial selection #27/#30/#75/#76 only; broader 107 × 2 inventory not fully live-audited"
     },
     {
       "id": 28,
@@ -3868,18 +3900,24 @@
       "sheet_row": 31,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/insurance-brokers/",
+      "landing_url_en": "/en/industries/insurance-brokers/",
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "deployed_original_bilingual_industry_landing_ci_pages_pass",
+      "content_status": "deployed_original_bilingual_industry_landing_public_https_verified",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_main_pages_pass_external_https_unverified",
-      "next_required_step": "Внешний HTTPS desktop/390/320 всех новых RU/EN URL, изображения, CTA/форма, ссылки и canonical; заполнить landing_url_ru/en и verified_at только после прямой public-проверки.",
+      "work_status": "deployed_public_https_browser_verified",
+      "next_required_step": "Monitor live indexing and GEO measurement as distinct future tasks; no claim of client E3/E4.",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "coverage_checked_date": "2026-11-08",
-      "last_completed_step": "2AK content b66923a, source integration de81cdb, production 42498571360 PASS, main ba3ec1b six new HTML+sitemap PASS, GitHub Pages 42500285914 PASS"
+      "coverage_release_status": "deployed_public_https_chromium_verified_3a",
+      "coverage_checked_date": "2026-11-09",
+      "last_completed_step": "Phase 3A final: source 66def444, production 42676590310 PASS, main bda45af3, Pages 42679857222 PASS, public 42676590439 attempt 2 PASS (20/20 URLs; 60/60 widths)",
+      "verified_at": "2026-11-09T19:06:51Z",
+      "public_https_browser_verified": true,
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439"
+      ],
+      "public_verification_scope": "Phase 3A commercial selection #27/#30/#75/#76 only; broader 107 × 2 inventory not fully live-audited"
     },
     {
       "id": 31,
@@ -5831,18 +5869,24 @@
       "sheet_row": 76,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/car-dealerships/",
+      "landing_url_en": "/en/industries/car-dealerships/",
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "deployed_original_bilingual_industry_landing_ci_pages_pass",
+      "content_status": "deployed_original_bilingual_industry_landing_public_https_verified",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_main_pages_pass_external_https_unverified",
-      "next_required_step": "Внешний HTTPS desktop/390/320 всех новых RU/EN URL, изображения, CTA/форма, ссылки и canonical; заполнить landing_url_ru/en и verified_at только после прямой public-проверки.",
+      "work_status": "deployed_public_https_browser_verified",
+      "next_required_step": "Monitor live indexing and GEO measurement as distinct future tasks; no claim of client E3/E4.",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "coverage_checked_date": "2026-11-08",
-      "last_completed_step": "2AK content b66923a, source integration de81cdb, production 42498571360 PASS, main ba3ec1b six new HTML+sitemap PASS, GitHub Pages 42500285914 PASS"
+      "coverage_release_status": "deployed_public_https_chromium_verified_3a",
+      "coverage_checked_date": "2026-11-09",
+      "last_completed_step": "Phase 3A final: source 66def444, production 42676590310 PASS, main bda45af3, Pages 42679857222 PASS, public 42676590439 attempt 2 PASS (20/20 URLs; 60/60 widths)",
+      "verified_at": "2026-11-09T19:06:51Z",
+      "public_https_browser_verified": true,
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439"
+      ],
+      "public_verification_scope": "Phase 3A commercial selection #27/#30/#75/#76 only; broader 107 × 2 inventory not fully live-audited"
     },
     {
       "id": 76,
@@ -5860,18 +5904,24 @@
       "sheet_row": 77,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/vehicle-sourcing-import/",
+      "landing_url_en": "/en/industries/vehicle-sourcing-import/",
       "status": "needs_content",
       "match_scope": "none",
-      "content_status": "deployed_original_bilingual_industry_landing_ci_pages_pass",
+      "content_status": "deployed_original_bilingual_industry_landing_public_https_verified",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_main_pages_pass_external_https_unverified",
-      "next_required_step": "Внешний HTTPS desktop/390/320 всех новых RU/EN URL, изображения, CTA/форма, ссылки и canonical; заполнить landing_url_ru/en и verified_at только после прямой public-проверки.",
+      "work_status": "deployed_public_https_browser_verified",
+      "next_required_step": "Monitor live indexing and GEO measurement as distinct future tasks; no claim of client E3/E4.",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "coverage_checked_date": "2026-11-08",
-      "last_completed_step": "2AK content b66923a, source integration de81cdb, production 42498571360 PASS, main ba3ec1b six new HTML+sitemap PASS, GitHub Pages 42500285914 PASS"
+      "coverage_release_status": "deployed_public_https_chromium_verified_3a",
+      "coverage_checked_date": "2026-11-09",
+      "last_completed_step": "Phase 3A final: source 66def444, production 42676590310 PASS, main bda45af3, Pages 42679857222 PASS, public 42676590439 attempt 2 PASS (20/20 URLs; 60/60 widths)",
+      "verified_at": "2026-11-09T19:06:51Z",
+      "public_https_browser_verified": true,
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439"
+      ],
+      "public_verification_scope": "Phase 3A commercial selection #27/#30/#75/#76 only; broader 107 × 2 inventory not fully live-audited"
     },
     {
       "id": 77,
@@ -7439,6 +7489,21 @@
       75,
       76
     ],
-    "completion_note": "107 businesses mapped to 107 RU+EN landing pairs (214 pages): 100 original dedicated bilingual specializations + 7 earlier bilingual commercial landings. Three earlier broad reuse pages #1,#19,#39 are not independently written dedicated specializations; exact content remains an optional future improvement."
+    "completion_note": "107 businesses mapped to 107 RU+EN landing pairs (214 pages): 100 original dedicated bilingual specializations + 7 earlier bilingual commercial landings. Three earlier broad reuse pages #1,#19,#39 are not independently written dedicated specializations; exact content remains an optional future improvement.",
+    "partial_public_https_phase_3a": {
+      "verified_at": "2026-11-09T19:06:51Z",
+      "priority_ids": [
+        27,
+        30,
+        75,
+        76
+      ],
+      "commercial_urls_verified": 8,
+      "cluster_method_and_directory_urls_verified": 12,
+      "total_public_urls_verified": 20,
+      "result": "20/20 HTTPS main checksum, 60/60 Chromium responsive PASS",
+      "run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42676590439",
+      "note": "Independent check only for this selection. public_direct_https_browser_checked remains false for the entire 214-URL inventory."
+    }
   }
 }
