@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3F: клиентские кейсы №42/48/55/59 ожидают письменных разрешений и первичных E3/E4; публичный HTTPS 3D/3E/3F завершен PASS 16/16 URL, 48/48 Chromium. Новая содержательная партия пока не назначена.",
+    "next_batch": "3F: доказательства E3/E4 и письменные разрешения на публикацию кейсов №42/48/55/59 остаются открыты. Публичная проверка 3D/3E/3F завершена (16/16 URL, 48/48 Chromium), PR/production/main/Pages PASS. Следующая содержательная партия пока не назначена.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -1930,7 +1930,27 @@
       "form_submitted": false,
       "public_https_browser_verified": true,
       "scope_limit": "3D/3E/3F listed 16 URLs only; does not assert browser acceptance of all 214 commercial URLs or search indexing",
-      "client_cases_42_48_55_59_permission_pending": true
+      "client_cases_42_48_55_59_permission_pending": true,
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/137",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42662244598",
+      "pr_ci_status": "pass",
+      "merge_source_sha": "8d9d5350eda1ca86c571a76fd56cdf3300562a36",
+      "post_merge_live_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42664287089",
+      "post_merge_live_status": "pass",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42664287665",
+      "production_status": "pass",
+      "published_main_sha_after_release": "3ee89374bafebdb4ee17b2f1a45289599b0f4d52",
+      "release_manifest_source_commit": "8d9d5350eda1ca86c571a76fd56cdf3300562a36",
+      "released_at": "2026-11-09T17:41:04.622Z",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42667039700",
+      "pages_status": "pass",
+      "cancelled_duplicate_pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42667034204",
+      "main_diff_only": [
+        "astro-release-manifest.json"
+      ],
+      "generated_html_changed_in_final_release": false,
+      "final_release_verified": true,
+      "final_release_note": "Full PR CI and Astro production/main/Pages PASS; original public HTTPS audited against main 598fe324 and repeated PASS after source merge; new main 3ee89374 differs from previous main only by astro-release-manifest.json, so all 16 checked HTML unchanged. No new live commercial content, tariffs, BMR changes, or client case claim."
     }
   },
   "status_definitions": {
