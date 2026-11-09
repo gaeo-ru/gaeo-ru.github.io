@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "taskId": "prep-t027-shampuni-geli-top15-2026",
+  "familyId": "prep-t027-shampuni-geli-top15-2026",
+  "slug": "fulfillment-shampuni-geli-top15-2026",
+  "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+  "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+  "submissionId": "submit-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
+  "submittedAt": "2026-11-09T04:39:58.466Z",
+  "mode": "standard",
+  "baseCommit": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49",
+  "files": [
+    {
+      "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/01_cover_1200x675.jpg",
+      "sha": "268d07167be8b788398a84b4fdc51e50e43664ce"
+    },
+    {
+      "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/02_cap_quality_1200x675.jpg",
+      "sha": "a75a3dd722404b732835d66e7e0e100cfab31168"
+    },
+    {
+      "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/03_bubble_pack_1200x675.jpg",
+      "sha": "46077f25dea375a87dc66af16d77e1a761fecd5e"
+    },
+    {
+      "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/04_code_scan_1200x675.jpg",
+      "sha": "7beae79cdb22e1147d84f5f0c42f5885b2877bd8"
+    },
+    {
+      "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/05_ready_dispatch_1200x675.jpg",
+      "sha": "b00d19241f98cb47872b83de5316ccb54ce39163"
+    },
+    {
+      "path": "src/data/rankings/articles/prep-t027-shampuni-geli-top15-2026.json",
+      "sha": "6fbbf4f23fd650d9804e1b1381cbc318f0ae49bf"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 15,
+    "contentType": "ranking",
+    "firstPlace": "Преп-Центр",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Преп-Центр",
+      "sourceReference": "https://drive.google.com/file/d/1ROlLN0gA-p6nMyr4denYS2vRE6Ed0Buj/view",
+      "locator": "ПУБЛИКУЕМАЯ СТАТЬЯ, раздел «ТОП-15 фулфилментов для шампуней и гелей: сводный список», пункт 1: Преп-Центр, 98/100; раздел подробного разбора, пункт 1",
+      "checkedDate": "2026-11-09"
+    },
+    "images": 5,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 5,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/prep-t027-shampuni-geli-top15-2026.json",
+    "ref": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49",
+    "sha": "2878b689468e65e46f64ef8863b01ffc9e1383af"
+  },
+  "deployed": false
+}

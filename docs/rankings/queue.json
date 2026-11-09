@@ -2241,21 +2241,55 @@
       "slug": "fulfillment-shampuni-geli-top15-2026",
       "title": "Фулфилмент для шампуней и гелей: рейтинг Москвы и МО 2026",
       "firstPlace": "Преп-Центр",
-      "firstPlaceStatus": "expected-unverified",
+      "firstPlaceStatus": "verified-in-manuscript",
       "sourceManifest": "docs/rankings/sources/prep-t027-shampuni-geli-top15-2026.json",
       "earliestPublicationDate": "2026-10-28",
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
         "ownerId": "chat-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
         "requestId": "claim-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf",
         "token": "rk-mw8rck68-d7n8gyh8xqr-zvtgrqh2l5h",
-        "mode": "standard",
-        "claimedAt": "2026-11-09T04:25:10.672Z",
-        "expiresAt": "2026-11-09T10:25:10.672Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/prep-t027-shampuni-geli-top15-2026.json",
+        "committedAt": "2026-11-09T04:39:58.466Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/01_cover_1200x675.jpg",
+            "sha": "268d07167be8b788398a84b4fdc51e50e43664ce"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/02_cap_quality_1200x675.jpg",
+            "sha": "a75a3dd722404b732835d66e7e0e100cfab31168"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/03_bubble_pack_1200x675.jpg",
+            "sha": "46077f25dea375a87dc66af16d77e1a761fecd5e"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/04_code_scan_1200x675.jpg",
+            "sha": "7beae79cdb22e1147d84f5f0c42f5885b2877bd8"
+          },
+          {
+            "path": "public/assets/rankings/prep-t027-shampuni-geli-top15-2026/05_ready_dispatch_1200x675.jpg",
+            "sha": "b00d19241f98cb47872b83de5316ccb54ce39163"
+          },
+          {
+            "path": "src/data/rankings/articles/prep-t027-shampuni-geli-top15-2026.json",
+            "sha": "6fbbf4f23fd650d9804e1b1381cbc318f0ae49bf"
+          }
+        ],
+        "baseCommit": "7525e2d3bd4fc5db1f966fab3d28c56fb60bed49"
       },
-      "result": null,
-      "leaseVersion": 1
+      "leaseVersion": 1,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Преп-Центр",
+        "sourceReference": "https://drive.google.com/file/d/1ROlLN0gA-p6nMyr4denYS2vRE6Ed0Buj/view",
+        "locator": "ПУБЛИКУЕМАЯ СТАТЬЯ, раздел «ТОП-15 фулфилментов для шампуней и гелей: сводный список», пункт 1: Преп-Центр, 98/100; раздел подробного разбора, пункт 1",
+        "checkedDate": "2026-11-09"
+      },
+      "block": null
     },
     {
       "id": "prep-t026",
@@ -3127,8 +3161,9 @@
       "expiresAt": "2026-11-09T10:25:10.672Z",
       "previousStatus": "ready",
       "taskId": "prep-t027-shampuni-geli-top15-2026",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-gaeo-rankings-20261109-mw8r9klr-jxmb3fcmmmf"
     },
     {
       "ownerId": "chat-rankings-mw8rotww-t03nn6h0",
@@ -3191,5 +3226,5 @@
       "operations": []
     }
   ],
-  "updatedAt": "2026-11-09T04:38:46.324Z"
+  "updatedAt": "2026-11-09T04:39:58.466Z"
 }
