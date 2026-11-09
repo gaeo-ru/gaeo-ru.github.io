@@ -51,6 +51,7 @@ on:
       - 'scripts/qa_sector_buyer_intents_3e.mjs'
       - 'scripts/qa_sector_guides_3c.mjs'
       - 'scripts/qa_sector_case_proof_3d.mjs'
+      - 'scripts/qa_sector_public_live_3f.mjs'
       - 'scripts/qa_sector_methods_3b.mjs'
       - 'src/data/industry-specializations-batch-*.mjs'
       - 'scripts/qa_industry_specializations.mjs'
