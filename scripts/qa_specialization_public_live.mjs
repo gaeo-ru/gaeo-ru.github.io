@@ -166,6 +166,12 @@ try{
     }
     assert(pageErrors.length===0,'JavaScript errors: '+pageErrors.join(' | '));
     assert(formPosts===0,'Unexpected POST; form was not authorized to submit');
+    // Capture the first-screen view after image decoding: scrolling while checking media
+    // can leave sticky UI or freshly decoded WebP offscreen during full-page capture.
+    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+    await page.waitForFunction(()=>window.scrollY===0);
+    await page.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+    await page.waitForTimeout(300);
     await page.screenshot({path:resolve(out,filename),fullPage:true,type:'jpeg',
      quality:60,animations:'disabled',timeout:40000});
     outcome.screenshot=filename;
