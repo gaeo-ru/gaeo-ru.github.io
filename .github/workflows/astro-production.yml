@@ -169,3 +169,10 @@ jobs:
             visual-rankings/
           if-no-files-found: ignore
           retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gaeo-phase4b-link-matrix-json
+          path: visual-hub-funnel/gaeo-phase4b-link-matrix.json
+          if-no-files-found: ignore
+          retention-days: 14
