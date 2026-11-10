@@ -1,5 +1,28 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3M: независимая публичная приемка медицинских специализаций и частных школ (10 ноября 2026, 15:38 МСК)
+
+**Фаза 3, партия 3M завершена; следующая 3N.** Независимо приняты 8 уже опубликованных оригинальных двуязычных специализаций №60/61/62/63/64/65/66/68: **16 публичных RU/EN URL**. Новые страницы, тарифы, общие компоненты, изображения и клиентские кейсы не создавались и не менялись.
+
+**Фактическая публичная проверка:** [GitHub Actions №42817254720](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42817254720) **PASS**, завершена 10.11.2026 в 12:37:55 UTC. По итоговой строке скрипта в 12:37:53 UTC: **16/16 реальных HTTPS URL** с HTTP 200, побайтовым SHA-256 HTML, совпадающим с опубликованным `main`, и присутствием в публичном `sitemap.xml`; **48/48 Chromium-проверок** при 1440/390/320 px, **0 ошибок**. Проверены один H1, title/description, отсутствие noindex, self-canonical, взаимные RU/EN hreflang, пять видимых FAQ и FAQPage JSON-LD, Service, декодирование изображений, три канонические тарифные ссылки, переход к биографии, CTA, отсутствие горизонтального переполнения, открытие и закрытие формы на 390 px **без POST**. [Артефакт: JSON-отчет и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42817254720/artifacts/13764407612), 20 546 585 байт.
+
+| ID | Специализация | RU | EN |
+|---:|---|---|---|
+| 60 | Стоматологические клиники | [RU](https://gaeo.ru/industries/dental-clinics/) | [EN](https://gaeo.ru/en/industries/dental-clinics/) |
+| 61 | Диагностические центры и медицинские лаборатории | [RU](https://gaeo.ru/industries/diagnostic-centres-medical-laboratories/) | [EN](https://gaeo.ru/en/industries/diagnostic-centres-medical-laboratories/) |
+| 62 | Офтальмологические клиники | [RU](https://gaeo.ru/industries/ophthalmology-clinics/) | [EN](https://gaeo.ru/en/industries/ophthalmology-clinics/) |
+| 63 | Клиники пластической хирургии | [RU](https://gaeo.ru/industries/plastic-surgery-clinics/) | [EN](https://gaeo.ru/en/industries/plastic-surgery-clinics/) |
+| 64 | Клиники репродуктивной медицины | [RU](https://gaeo.ru/industries/reproductive-medicine-clinics/) | [EN](https://gaeo.ru/en/industries/reproductive-medicine-clinics/) |
+| 65 | Реабилитационные центры | [RU](https://gaeo.ru/industries/rehabilitation-centres/) | [EN](https://gaeo.ru/en/industries/rehabilitation-centres/) |
+| 66 | Производители медицинских изделий | [RU](https://gaeo.ru/industries/medical-device-manufacturers/) | [EN](https://gaeo.ru/en/industries/medical-device-manufacturers/) |
+| 68 | Частные школы | [RU](https://gaeo.ru/industries/private-schools/) | [EN](https://gaeo.ru/en/industries/private-schools/) |
+
+**Коммиты, CI и Pages:** независимый запуск инициирован [QA-триггером `f1fd228a`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/f1fd228a375a3d2a75eb6a6ed216b67c44c21a64) в изолированной ветке `qa/industry-specializations-public-3m-2026-11-10`; служебный комментарий-триггер не переносится в production. Исходная точка `astro-source` перед проверкой: [`fe86f795`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/fe86f795c57e944964bb3cf63997e11bb89bf882); опубликованная ревизия [`main c4f34883`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/c4f34883b52298bb32e2164dbed2fe550d5a31f8) с `astro-release-manifest.json.sourceCommit=3cec72b91952734869894d3bdce10ae9bbcdbe75`. Для этой опубликованной версии независимо подтверждены [Astro production PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42769347653) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42771341119). В партии 3M HTML не изменялся, повторный деплой уже опубликованных страниц не нужен; в `astro-source` фиксируются результаты и точка продолжения.
+
+**Прогресс и ограничения:** публично приняты **60/100 оригинальных двуязычных специализаций** (120 URL), **40 пар остаются**. Эта приемка не является проверкой поисковой индексации, BMR, заявок, отправки формы, медицинской результативности или разрешений на раскрытие клиентских E3/E4. Исторические `status=needs_content` и `content_status` сохранены как инвентарные поля; реальный результат записан в `work_status=public_https_browser_accepted` и полях проверки.
+
+**Следующая партия 3N:** проверить существующие №69/70/71/72/77/78/81/82: онлайн-школы и EdTech, вузы и бизнес-школы, рекрутеры, консалтинг и независимые эксперты, автосервисы, коммерческий транспорт, корпоративные поездки/MICE, отели и курорты. Использовать `scripts/qa_specialization_public_live.mjs` и `.github/workflows/specializations-public-live-qa.yml`; для №77/78 маршруты брать из фактического модуля 2AE, так как старые поля плановых URL пусты. После подтвержденного PASS обновлять только соответствующие строки и эти же 2 документа. Сохранять 107 каталоговых ID, 100 оригинальных специализаций, согласованные тарифы и договорные показатели BMR.
+
 ## Партия 3L: независимая публичная приемка промышленной химии, логистики и медицины (10 ноября 2026, 12:38 МСК)
 
 **Фаза 3, партия 3L завершена; следующая 3M.** Приняты следующие 8 существующих оригинальных двуязычных специализаций №50/51/52/55/56/57/58/59, **16 публичных RU/EN URL**. Новые страницы, тарифы, кейсы, исходные изображения и общий шаблон не менялись.
