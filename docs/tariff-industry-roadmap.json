@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 3,
-    "next_batch": "3O: independently verify existing bilingual specializations IDs 84/85/106/7/8/18/53/73, using the established public HTTPS SHA-256/sitemap and Chromium 1440/390/320 test; 3N PASS, 68/100 original pairs accepted, 32 remain. Do not create duplicate pages or change agreed tariffs.",
+    "next_batch": "3P: independently verify existing bilingual original specializations IDs 74/79/83/86/87/88/89/90 using established HTTPS SHA-256 vs published main, sitemap and Chromium 1440/390/320. 3O PASS, 76/100 original pairs accepted, 24 remain. Preserve original URLs, 107 IDs, approved tariffs and evidence policy.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -2330,7 +2330,7 @@
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 100,
-    "new_industry_landings_in_phase_2_live_verified": 68,
+    "new_industry_landings_in_phase_2_live_verified": 76,
     "total_generated_html_pages_current_release": 485,
     "total_new_specialization_pairs_in_phase_2": 100,
     "total_new_specialization_urls_in_phase_2": 200,
@@ -2392,14 +2392,16 @@
     "phase_3a_priority_original_specialization_pairs_live_verified": 4,
     "phase_3a_independently_public_verified_urls": 20,
     "phase_3g_priority_original_specialization_pairs_live_verified": 8,
-    "total_original_specialization_pairs_public_live_accepted": 68,
+    "total_original_specialization_pairs_public_live_accepted": 76,
     "phase_3h_priority_original_specialization_pairs_live_verified": 8,
     "phase_3i_priority_original_specialization_pairs_live_verified": 8,
     "phase_3k_priority_original_specialization_pairs_live_verified": 8,
     "phase_3m_priority_original_specialization_pairs_live_verified": 8,
     "phase_3m_independently_public_verified_urls": 16,
     "phase_3n_priority_original_specialization_pairs_live_verified": 8,
-    "phase_3n_independently_public_verified_urls": 16
+    "phase_3n_independently_public_verified_urls": 16,
+    "phase_3o_priority_original_specialization_pairs_live_verified": 8,
+    "phase_3o_independently_public_verified_urls": 16
   },
   "candidate_batches": [
     {
@@ -3108,8 +3110,34 @@
       ],
       "label": "Публичная приемка мебели, косметики, агробизнеса, недвижимости, благоустройства, СИЗ и детского образования",
       "condition": "Only previously existing original RU/EN specializations: HTTPS 200 and byte-for-byte SHA256 vs published main, public sitemap, indexability, canonical/hreflang, Service/FAQPage/5 FAQ, decoded images, tariff links, biography, CTA and dialog without POST; Chromium 1440/390/320. Preserve existing tariffs, 107 IDs and evidence controls.",
+      "work_status": "completed_public_https_chromium_verified",
+      "next_required_step": "Finished; proceed to 3P IDs 74/79/83/86/87/88/89/90. Preserve original pages, 107 IDs, approved tariffs and evidence policy.",
+      "verified_at": "2026-11-10T13:55:40Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
+      "verification_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182/artifacts/13770640994",
+      "qa_trigger_commit": "9fb7ba5fca6c347e22caa20f35318f44217ea3b1",
+      "published_main_sha": "030fddc02330021cf2b22be4c0ce0b68c84b2986",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42822129575",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42825300764"
+    },
+    {
+      "batch": "3P",
+      "phase": 3,
+      "kind": "independent_public_specialization_acceptance",
+      "ids": [
+        74,
+        79,
+        83,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "label": "Независимая приемка брендинга, мототехники, ресторанов и интернет-магазинов",
+      "condition": "Verify only existing original RU/EN specializations on public HTTPS 200, SHA256 vs published main, public sitemap, indexability, title/H1/canonical/reciprocal hreflang, Service+FAQPage/5 FAQ, decoded images, tariff and biography links, CTA/modal without POST, Chromium 1440/390/320. Derive routes from canonical source if historical planned URL is absent; no duplicate pages or tariff/evidence changes.",
       "work_status": "not_started",
-      "next_required_step": "Run existing scripts/qa_specialization_public_live.mjs in a fresh isolated QA branch, then record exact PASS and public links in the same two documents."
+      "next_required_step": "Run existing scripts/qa_specialization_public_live.mjs in isolated QA branch for IDs 74/79/83/86/87/88/89/90, record actual PASS and links in the same two documents."
     }
   ],
   "records": [
@@ -3417,20 +3445,26 @@
       "sheet_row": 8,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/property-management-companies/",
+      "landing_url_en": "/en/industries/property-management-companies/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "bilingual_landing_deployed_live_unverified",
       "evidence_level": null,
-      "work_status": "deployed_pr_ci_production_pages_pass_external_https_unverified",
-      "next_required_step": "independent_public_https_desktop_mobile_check_before_live_fields",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "source_commit": "8290799667324842cabf89b841139fc979b5993f",
       "published_commit": "d6423dbf01d7ce802a6a3a0d42d06edc7792bdd0",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/103",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T13:55:40Z",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
+      ]
     },
     {
       "id": 8,
@@ -3448,17 +3482,17 @@
       "sheet_row": 9,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/self-storage-services/",
+      "landing_url_en": "/en/industries/self-storage-services/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "full_bilingual_content_prepared_in_branch",
       "evidence_level": null,
-      "work_status": "source_merged_ci_pass_production_pending",
-      "next_required_step": "verify_production_pages_and_external_https",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/self-storage-services/",
       "planned_landing_url_en": "/en/industries/self-storage-services/",
-      "last_completed_step": "phase_2m_source_merged_full_pr_ci_pass_78_pages",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "work_branch": "feat/industry-specializations-batch-2m-2026-11-08",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/90",
       "evidence_sources": [
@@ -3467,8 +3501,13 @@
       ],
       "source_commit": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T13:55:40Z",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
+      ]
     },
     {
       "id": 9,
@@ -3872,14 +3911,14 @@
       "sheet_row": 19,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/landscape-site-improvement-contractors/",
+      "landing_url_en": "/en/industries/landscape-site-improvement-contractors/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "work_batch": "2U",
       "work_branch": "feat/industry-specializations-batch-2u-2026-11-08",
       "planned_landing_url_ru": "/industries/landscape-site-improvement-contractors/",
@@ -3889,17 +3928,20 @@
         "https://protect.gost.ru/gost/details/c4141c07-9d4b-441f-8396-4baa6243fade",
         "https://www.consultant.ru/document/cons_doc_LAW_546063/"
       ],
-      "last_completed_step": "phase_2_consolidated_pr_ci_production_main_sitemap_pages_pass",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "related_methodology_ru": "/geo-prodvizhenie-nedvizhimosti/",
       "related_methodology_en": "/en/geo-for-real-estate/",
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/114",
       "source_commit": "3c5744d5b03d96f71d9ad4cc00ebe10b6258d639",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T13:55:40Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
+      ]
     },
     {
       "id": 19,
@@ -5624,15 +5666,15 @@
       "sheet_row": 54,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/workwear-ppe-suppliers/",
+      "landing_url_en": "/en/industries/workwear-ppe-suppliers/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_public_https_then_finalize_landing_status",
-      "last_completed_step": "phase_2s_pr105_ci_production_main_pages_pass_124_ru_en_pages",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "planned_landing_url_ru": "/industries/workwear-ppe-suppliers/",
       "planned_landing_url_en": "/en/industries/workwear-ppe-suppliers/",
       "work_branch": "feat/industry-specializations-batch-2s-2026-11-08",
@@ -5642,18 +5684,20 @@
         "https://www.consultant.ru/document/cons_doc_LAW_405210/",
         "https://docs.eaeunion.org/documents/461/"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/105",
       "source_commit": "4116e953de0ec7fdf058d27289470e1aa7a21581",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42474862014",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42475518887",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42476203426",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
       ],
       "published_commit": "41040cfd9ce93fac16d44c5325568db4c5ccfc17",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verified_at": "2026-11-10T13:55:40Z"
     },
     {
       "id": 54,
@@ -6528,20 +6572,25 @@
       "sheet_row": 74,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/childrens-education-centres/",
+      "landing_url_en": "/en/industries/childrens-education-centres/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "Independent HTTPS desktop/390/320 verify both #73 pages, images, FAQ, CTA, form, backlinks, hreflang; only after live PASS set landing_url_ru/en and verified_at.",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/childrens-education-centres/",
       "planned_landing_url_en": "/en/industries/childrens-education-centres/",
-      "last_completed_step": "PR #115 CI 42489335076 PASS (168 RU/EN at 1440/390/320); source 4181159a; production 42490282854 PASS, main 256d77dd 2 new HTML/sitemap verified, Pages 42491047417 PASS. Direct public HTTPS unverified.",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T13:55:40Z",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
+      ]
     },
     {
       "id": 74,
@@ -6971,17 +7020,17 @@
       "sheet_row": 85,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/furniture/",
+      "landing_url_en": "/en/industries/furniture/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_pages_pass_live_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/furniture/",
       "planned_landing_url_en": "/en/industries/furniture/",
-      "last_completed_step": "phase_2a_build_ci_and_pages_pass",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "work_branch": "feat/industry-specializations-batch-2a-2026-11-07",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/67",
       "source_commit": "1049f01f7c3a629542d326f30996a3738568bd51",
@@ -6992,11 +7041,14 @@
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42399702118",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42400123064",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42400474076"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42400474076",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
       ],
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T13:55:40Z"
     },
     {
       "id": 85,
@@ -7014,17 +7066,17 @@
       "sheet_row": 86,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/contract-cosmetics-manufacturers/",
+      "landing_url_en": "/en/industries/contract-cosmetics-manufacturers/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_public_https_then_finalize_landing_status",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/contract-cosmetics-manufacturers/",
       "planned_landing_url_en": "/en/industries/contract-cosmetics-manufacturers/",
-      "last_completed_step": "phase_2h_build_ci_main_and_pages_pass",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "work_branch": "feat/industry-specializations-batch-2h-2026-11-08",
       "evidence_sources": [
         "https://protect.gost.ru/tr/details/c99ec20c-e44d-43bc-8dd6-1e9af5fb3002",
@@ -7037,12 +7089,14 @@
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42416053802",
         "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42416629011",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42417032810"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42417032810",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verified_at": "2026-11-10T13:55:40Z"
     },
     {
       "id": 86,
@@ -7992,17 +8046,17 @@
       "sheet_row": 107,
       "priority": 1,
       "priority_label": "1 — высокий",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/agricultural-producers/",
+      "landing_url_en": "/en/industries/agricultural-producers/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "source_merged_awaiting_production",
       "evidence_level": null,
-      "work_status": "source_merged_ci_pass_production_pending",
-      "next_required_step": "confirm_production_main_pages_then_live",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/agricultural-producers/",
       "planned_landing_url_en": "/en/industries/agricultural-producers/",
-      "last_completed_step": "phase_2y_pr110_ci_42482700724_pass_and_source_merge_778c7ea7",
+      "last_completed_step": "3O independent live HTTPS 200, published-main SHA256 + sitemap parity; 1440/390/320 Chromium PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182",
       "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "evidence_sources": [
@@ -8012,17 +8066,19 @@
       ],
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "release_note": "Source merged after full PR CI PASS including 134 RU/EN pages at 1440/390/320; production/main/Pages and direct external public HTTPS still unverified. Retain planned URL and no live status promotion.",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
       "source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182"
       ],
       "coverage_kind": "dedicated_original_bilingual_specialization",
-      "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_release_status": "public_https_chromium_pass_1440_390_320",
+      "coverage_checked_date": "2026-11-08",
+      "verified_at": "2026-11-10T13:55:40Z"
     },
     {
       "id": 107,
