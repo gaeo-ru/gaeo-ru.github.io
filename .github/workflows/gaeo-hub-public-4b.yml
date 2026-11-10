@@ -1,0 +1,32 @@
+name: GAEO phase 4B independent public reused-landing QA
+on:
+  push:
+    branches: [qa/gaeo-hub-public-4b-2026-11-10]
+permissions:
+  contents: read
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published-main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install project dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install chromium
+      - name: Compare 14 public reused-industry pages with published main and capture 42 viewport checks
+        run: node scripts/qa_hub_public_4b.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gaeo-phase-4b-public-reused-landings
+          path: visual-hub-public-4b/
+          if-no-files-found: ignore
+          retention-days: 14
