@@ -1,4 +1,5 @@
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
+// QA-only trigger for 3J (32,33,34,35,36,37,38,40); registry controls selection.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
 import {createHash} from 'node:crypto';
