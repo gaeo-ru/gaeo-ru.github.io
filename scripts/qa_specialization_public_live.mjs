@@ -1,3 +1,4 @@
+// Batch 3P acceptance trigger (2026-11-10): original first 8 unverified by priority/ID. QA branch only; production source unchanged.
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
