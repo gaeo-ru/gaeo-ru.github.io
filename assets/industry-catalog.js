@@ -63,19 +63,39 @@
       row.forEach(element => { element.open = expand; });
     });
 
+    // Retain the query locally only to suppress repeated identical filters.
+    // Never transmit search text or data-search to the counter.
+    let lastReportedFilter = normalize(search.value) + '|' + group.value;
+    const reportFilter = () => {
+      const query = normalize(search.value);
+      const signature = query + '|' + group.value;
+      if (signature === lastReportedFilter) return;
+      lastReportedFilter = signature;
+      if (window.GAEOAnalytics && typeof window.GAEOAnalytics.goal === 'function') {
+        window.GAEOAnalytics.goal('industry_catalog_filter', {
+          group_id: group.value || 'all',
+          search_active: query.length > 0,
+          result_count: cards.filter(card => !card.element.hidden).length,
+          total_count: cards.length,
+        });
+      }
+    };
+
     let timer;
     search.addEventListener('input', () => {
       window.clearTimeout(timer);
-      timer = window.setTimeout(render, 100);
+      timer = window.setTimeout(() => { render(); reportFilter(); }, 100);
     });
     group.addEventListener('change', () => {
       window.clearTimeout(timer);
       render();
+      reportFilter();
     });
     form.addEventListener('submit', event => {
       event.preventDefault();
       window.clearTimeout(timer);
       render();
+      reportFilter();
     });
     form.addEventListener('reset', event => {
       event.preventDefault();
@@ -83,6 +103,7 @@
       search.value = '';
       group.value = '';
       render();
+      reportFilter();
       search.focus();
     });
 
@@ -93,6 +114,7 @@
       search.value = '';
       group.value = '';
       render();
+      lastReportedFilter = normalize(search.value) + '|' + group.value;
       target.element.scrollIntoView({ block: 'start' });
     };
     window.addEventListener('hashchange', revealLinkedCard);

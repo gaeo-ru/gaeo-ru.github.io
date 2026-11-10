@@ -1245,6 +1245,17 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
     document.body.appendChild(overlay);
     document.body.classList.add('gaeo-modal-open');
 
+    // Count only actual user-opened dialogs. Keep the prefilled inquiry and
+    // all contact fields out of the analytics goal.
+    if(window.GAEOAnalytics && typeof window.GAEOAnalytics.goal === 'function'){
+      window.GAEOAnalytics.goal('lead_form_open',{
+        form_mode:'modal',
+        intent:serviceIntent?'service':(opener?.dataset?.gaeoIntent==='audit'?'audit':'general'),
+        lang:lang,
+        page_path:location.pathname
+      });
+    }
+
     overlay.querySelector('.gaeo-modal-close').addEventListener('click',closeModal);
     overlay.addEventListener('mousedown',function(e){ if(e.target === overlay) closeModal(); });
     document.addEventListener('keydown',onModalKeydown);
