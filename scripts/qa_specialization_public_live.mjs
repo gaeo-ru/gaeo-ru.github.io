@@ -193,3 +193,5 @@ finally{
  if(report.errors.length)console.error(report.errors.slice(0,40).join('\n'));
  if(report.status!=='pass')process.exitCode=1;
 }
+
+// QA trigger: phase 3N, original bilingual specialization IDs 69,70,71,72,77,78,81,82; isolated branch only.
