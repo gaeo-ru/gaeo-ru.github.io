@@ -1,5 +1,29 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3O: независимая публичная приемка мебели, косметики, агробизнеса, недвижимости и других отраслей (10 ноября 2026, 16:55 МСК)
+
+**Фаза 3, партия 3O завершена; следующая 3P.** Приняты 8 ранее опубликованных оригинальных двуязычных специализаций №84/85/106/7/8/18/53/73, всего **16 RU/EN страниц**. Существующие тарифы, каталог 107 ID, шаблоны, методики, исследования, отраслевые страницы, изображения, договорные обещания BMR и клиентские E3/E4 не изменялись; повторных URL и публикаций не создавалось.
+
+**Независимая публичная приемка:** [GitHub Actions №42828840182](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182) **PASS**, завершена 10.11.2026 в 13:55:45 UTC. Итоговая строка скрипта в 13:55:40 UTC: **16/16 HTTPS URL** с HTTP 200, побайтовым совпадением SHA-256 публичного HTML с опубликованной `main` и наличием URL в публичном `sitemap.xml`; **48/48 Chromium-проверок** на 1440, 390 и 320 px, **0 ошибок**. Проверены единственный H1, title/description, отсутствие noindex, self-canonical, взаимные RU/EN hreflang, 5 FAQ и соответствующая FAQPage JSON-LD, Service, изображения с декодированием, 3 канонические тарифные ссылки, биография Алексея, CTA, отсутствие горизонтального переполнения, открытие/закрытие формы на 390 px **без POST и заявок**. [JSON-отчет и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42828840182/artifacts/13770640994), 20 431 154 байт.
+
+| ID | Специализация | RU | EN |
+|---:|---|---|---|
+| 84 | Мебельные фабрики и магазины мебели | [RU](https://gaeo.ru/industries/furniture/) | [EN](https://gaeo.ru/en/industries/furniture/) |
+| 85 | Контрактные производители косметики | [RU](https://gaeo.ru/industries/contract-cosmetics-manufacturers/) | [EN](https://gaeo.ru/en/industries/contract-cosmetics-manufacturers/) |
+| 106 | Сельскохозяйственные предприятия | [RU](https://gaeo.ru/industries/agricultural-producers/) | [EN](https://gaeo.ru/en/industries/agricultural-producers/) |
+| 7 | Управляющие компании недвижимости | [RU](https://gaeo.ru/industries/property-management-companies/) | [EN](https://gaeo.ru/en/industries/property-management-companies/) |
+| 8 | Сервисы индивидуального хранения | [RU](https://gaeo.ru/industries/self-storage-services/) | [EN](https://gaeo.ru/en/industries/self-storage-services/) |
+| 18 | Ландшафтные и благоустроительные компании | [RU](https://gaeo.ru/industries/landscape-site-improvement-contractors/) | [EN](https://gaeo.ru/en/industries/landscape-site-improvement-contractors/) |
+| 53 | Поставщики спецодежды и СИЗ | [RU](https://gaeo.ru/industries/workwear-ppe-suppliers/) | [EN](https://gaeo.ru/en/industries/workwear-ppe-suppliers/) |
+| 73 | Детские образовательные центры | [RU](https://gaeo.ru/industries/childrens-education-centres/) | [EN](https://gaeo.ru/en/industries/childrens-education-centres/) |
+
+**Коммиты, CI и GitHub Pages:** QA запуск инициирован [коммитом `9fb7ba5f`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/9fb7ba5fca6c347e22caa20f35318f44217ea3b1) на изолированной ветке `qa/industry-specializations-public-3o-2026-11-10`; служебный комментарий-триггер остается только в QA-ветке. Проверена существующая публикация [`main 030fddc0`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/030fddc02330021cf2b22be4c0ce0b68c84b2986), `astro-release-manifest.json.sourceCommit=5060bd4d6fc3f174334c42e3aa370dfb1d63e382`. Для нее подтверждены [производственный Astro CI PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42822129575) и [Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42825300764). Новые HTML-изменения для этой партии не нужны; после фиксации реестра штатный pipeline самостоятельно определит публикацию. Не считать предшествующие CI/Pages подтверждением будущего коммита документов.
+
+**Прогресс и пределы приемки:** независимо принято **76/100 оригинальных двуязычных специализаций**, 152 публичных URL; **24 пары остаются**. Первоначальные `status=needs_content` / `content_status` сохраняются как инвентарная история, фактический результат фиксируется в `work_status=public_https_browser_accepted`, `public_https_browser_verified=true`, `landing_url_ru/en`, `verified_at` и ссылке на запуск. Публичная проверка подтверждает техническую доступность и состояние страниц на момент теста, но не поисковую индексацию, BMR, обращения, доставку формы, результаты клиентов или согласия на публикацию E3/E4.
+
+**Следующая партия 3P:** независимая приемка существующих двуязычных специализаций **№74/79/83/86/87/88/89/90**: брендинговые и маркетинговые агентства, дилеры мототехники, рестораны и сети кофеен, интернет-магазины электроники, товаров для дома и ремонта, автозапчастей, косметики и парфюмерии, детских товаров и игрушек. Выбирать штатной сортировкой еще не принятых `priority/id` в `scripts/qa_specialization_public_live.mjs`; для отсутствующих исторических плановых URL брать реальные `routes` из исходных модулей. Выполнить такой же HTTPS/main SHA256/sitemap/Chromium-тест, затем обновить **эти же 2 документа** и только проверенные строки реестра. Не менять тарифы или клиентские показатели.
+
+
 ## Партия 3N: независимая публичная приемка образования, консалтинга, автоуслуг и туризма (10 ноября 2026, 16:05 МСК)
 
 **Фаза 3, партия 3N завершена; следующая 3O.** Проверены 8 уже существующих оригинальных двуязычных специализаций №69/70/71/72/77/78/81/82: **16 публичных RU/EN страниц**. Новых коммерческих страниц, методик, кейсов, изображений и тарифов эта приемка не создавала; общий шаблон, договорные показатели BMR и 107 каталоговых ID не менялись.
