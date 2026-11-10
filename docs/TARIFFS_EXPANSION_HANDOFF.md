@@ -1,5 +1,30 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+
+## Партия 3J: независимая публичная приемка финансов и IT (10 ноября 2026, 06:51 МСК)
+
+**Фаза 3: партия 3J закрыта; следующая 3K.** Взята следующая незавершенная партия строго по `docs/tariff-industry-roadmap.json`: №32/33/34/35/36/37/38/40. Это 8 уже опубликованных оригинальных RU/EN специализаций. **Новых страниц, тарифных изменений и клиентских кейсов не создано.**
+
+**Доказательства:** [независимый GitHub Actions run 42751988022](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42751988022) **PASS**, завершен 10.11.2026 в 03:51:22 UTC. В [журнале проверки](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42751988022) в 03:51:16 UTC зафиксировано **16/16 публичных HTTPS URL (HTTP 200 + SHA-256 побайтово совпадает с main + включение в живой sitemap.xml), 48/48 Chromium-проверок (1440/390/320 px), 0 ошибок**. Проверены отсутствие noindex, H1, meta title/description, self-canonical, взаимные hreflang, 5 видимых FAQ и FAQPage, Service JSON-LD, оригинальные изображения (decode), канонические тарифы, ссылка на биографию, CTA и открытие/закрытие формы на 390 px **без POST**. [Артефакт: JSON и 48 полностраничных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42751988022/artifacts/13734391029), 20 226 832 байта. Запуск выполнен [QA-trigger-коммитом `5a0b5b03`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/5a0b5b0362a6fc51a6371665d64f2c663edd1279) в отдельной ветке `qa/industry-specializations-public-3j-2026-11-10`; содержание production не менялось.
+
+| ID | Отрасль | RU | EN |
+|---:|---|---|---|
+| 32 | Финтех и платежные сервисы | [RU](https://gaeo.ru/industries/fintech-payment-services/) | [EN](https://gaeo.ru/en/industries/fintech-payment-services/) |
+| 33 | Разработчики корпоративного ПО | [RU](https://gaeo.ru/industries/enterprise-software/) | [EN](https://gaeo.ru/en/industries/enterprise-software/) |
+| 34 | CRM и ERP | [RU](https://gaeo.ru/industries/crm-erp-platforms/) | [EN](https://gaeo.ru/en/industries/crm-erp-platforms/) |
+| 35 | WMS и TMS | [RU](https://gaeo.ru/industries/wms-tms/) | [EN](https://gaeo.ru/en/industries/wms-tms/) |
+| 36 | IT-интеграторы и аутсорсинг | [RU](https://gaeo.ru/industries/systems-integrators-it-outsourcers/) | [EN](https://gaeo.ru/en/industries/systems-integrators-it-outsourcers/) |
+| 37 | Кибербезопасность | [RU](https://gaeo.ru/industries/cybersecurity-providers/) | [EN](https://gaeo.ru/en/industries/cybersecurity-providers/) |
+| 38 | Облачные провайдеры и ЦОД | [RU](https://gaeo.ru/industries/cloud-providers-data-centres/) | [EN](https://gaeo.ru/en/industries/cloud-providers-data-centres/) |
+| 40 | Электронный документооборот | [RU](https://gaeo.ru/industries/electronic-document-flow/) | [EN](https://gaeo.ru/en/industries/electronic-document-flow/) |
+
+**Точка публикации:** проверена уже опубликованная ревизия [main `f46c0778`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/f46c07786c5eb3c67ad70503e0436232f8f21361) с `astro-release-manifest.json.sourceCommit=d27905fec270ef15e1a0ef1b4c9f6823bad286ad`. Для этой версии ранее завершены [Astro production PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42696446822) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42699654059). 3J не вносит изменений в HTML, CSS, JS или изображения; нового деплоя сайта не требуется. В исходную ветку фиксируются только подтвержденные адреса, статусы и точка продолжения.
+
+**Прогресс:** 36/100 оригинальных двуязычных специализаций (72 коммерческих URL) прошли индивидуальный публичный контроль, **64 пары еще ожидают проверку**. Не заявляем индексацию, рост BMR, получение заявок, отправку формы или право раскрывать клиентские результаты. Для 3F №42/48/55/59 по-прежнему нужны письменные разрешения и первичные E3/E4.
+
+**Следующая партия 3K:** независимо проверить №41/42/43/44/45/46/48/49: BI и аналитические сервисы, производители промышленного, пищевого, насосного, лабораторного и электротехнического оборудования, упаковка, складское оборудование. Использовать тот же рабочий скрипт и workflow, обновить только фактически подтвержденные записи и эти же документы после PASS. Сохранить все 107 направлений, 100 оригинальных специализаций, действующие цены, гарантии и URL.
+
+
 ## Партия 3I: независимая публичная приемка 8 RU/EN специализаций (10 ноября 2026, 01:23 МСК)
 
 **Фаза 3: 3I закрыта, следующая партия 3J.** Независимо проверены действующие двуязычные коммерческие страницы №22/23/24/25/26/28/29/31. Тарифы, существующие URL, исходные коммерческие тексты и клиентские кейсы в этой партии не менялись.
