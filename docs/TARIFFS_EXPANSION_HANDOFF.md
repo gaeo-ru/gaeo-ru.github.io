@@ -1,5 +1,28 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3K: публичная приемка BI и промышленного оборудования (10 ноября 2026, 09:27 МСК)
+
+**Фаза 3, партия 3K закрыта; следующая 3L.** По реестру без повторного создания страниц проверены 8 ранее опубликованных оригинальных двуязычных специализаций №41/42/43/44/45/46/48/49 (16 URL). Тарифы, тексты действующих посадочных, гарантии, форма и клиентские кейсы не менялись.
+
+**Независимая публичная приемка:** [GitHub Actions №42768445172](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42768445172) **PASS**, завершена 10.11.2026 в 06:26:58 UTC. Последняя строка проверки в 06:26:51 UTC: **16/16 публичных HTTPS URL (HTTP 200, побайтовый SHA-256 HTML совпадает с опубликованным `main`, страницы присутствуют в публичном sitemap.xml); 48/48 Chromium-сценариев (1440/390/320 px); 0 ошибок.** Проверены отсутствие `noindex`, единственный H1, title/description, self-canonical, взаимные hreflang, 5 видимых FAQ и FAQPage JSON-LD, Service, оригинальные изображения с декодированием, тарифные ссылки, биография, CTA, отсутствие горизонтального переполнения и открытие/закрытие модального окна на 390 px **без POST**. [Артефакт: JSON-отчет и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42768445172/artifacts/13740752736), размер 20 887 588 байт.
+
+| ID | Направление | RU | EN |
+|---:|---|---|---|
+| 41 | BI и аналитические сервисы | [RU](https://gaeo.ru/industries/bi-analytics-platforms/) | [EN](https://gaeo.ru/en/industries/bi-analytics-platforms/) |
+| 42 | Промышленное оборудование | [RU](https://gaeo.ru/industries/industrial-equipment-manufacturers/) | [EN](https://gaeo.ru/en/industries/industrial-equipment-manufacturers/) |
+| 43 | Пищевое оборудование | [RU](https://gaeo.ru/industries/food-processing-equipment-suppliers/) | [EN](https://gaeo.ru/en/industries/food-processing-equipment-suppliers/) |
+| 44 | Насосы и компрессоры | [RU](https://gaeo.ru/industries/pump-compressor-suppliers/) | [EN](https://gaeo.ru/en/industries/pump-compressor-suppliers/) |
+| 45 | Лабораторное оборудование | [RU](https://gaeo.ru/industries/laboratory-measurement-equipment-suppliers/) | [EN](https://gaeo.ru/en/industries/laboratory-measurement-equipment-suppliers/) |
+| 46 | Электротехника и кабель | [RU](https://gaeo.ru/industries/electrical-cable-product-suppliers/) | [EN](https://gaeo.ru/en/industries/electrical-cable-product-suppliers/) |
+| 48 | Упаковка, тара и этикетки | [RU](https://gaeo.ru/industries/packaging-container-label-manufacturers/) | [EN](https://gaeo.ru/en/industries/packaging-container-label-manufacturers/) |
+| 49 | Складское оборудование | [RU](https://gaeo.ru/industries/warehouse-equipment-suppliers/) | [EN](https://gaeo.ru/en/industries/warehouse-equipment-suppliers/) |
+
+**Коммиты и публикация:** независимую проверку инициировал [QA-trigger `45abc6d0`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/45abc6d0e52f9c7c6a17c9b92b65b5a7f1bc0b55) на изолированной ветке `qa/industry-specializations-public-3k-2026-11-10`. [PR #144](https://github.com/gaeo-ru/gaeo-ru.github.io/pull/144) фиксирует документы и точку продолжения; временная строка-триггер исключена из итоговых изменений. Проверена существующая production-ревизия [main `f46c0778`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/f46c07786c5eb3c67ad70503e0436232f8f21361), манифест содержит `sourceCommit=d27905fec270ef15e1a0ef1b4c9f6823bad286ad`. Для нее успешно завершены [Astro production 42696446822](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42696446822) и [GitHub Pages 42699654059](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42699654059). **Новых HTML/изображений не публиковали: проверка относится к уже опубликованным страницам и не требует повторного развертывания тех же URL.**
+
+**Прогресс:** публично приняты **44/100 оригинальных RU/EN специализаций** (88 URL); **56 пар остаются** без индивидуальной публичной приемки. Не подтверждались поисковая индексация, увеличение BMR, заявки и результаты клиентского продвижения; формы не отправлялись. Для клиентских кейсов 3F №42/48/55/59 по-прежнему необходимы письменные разрешения и первичные E3/E4.
+
+**Следующая партия 3L:** независимая публичная HTTPS/Chromium-проверка существующих RU/EN специализаций №50/51/52/55/56/57/58/59: промышленная химия, промышленная автоматизация и сервис, стройматериалы, международная логистика, таможенные представители, ВЭД, складская логистика и частные клиники. Использовать тот же штатный workflow и скрипт, после фактического PASS обновить только подтвержденные записи и эти же 2 документа. Сохранять 107 направлений, 100 оригинальных специализаций, цены и текущие URL.
+
 
 ## Партия 3J: независимая публичная приемка финансов и IT (10 ноября 2026, 06:51 МСК)
 
