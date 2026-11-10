@@ -1,3 +1,4 @@
+// QA trigger 3R 2026-11-10: verify final 8 existing RU/EN original specializations #99/100/101/102/103/104/105/107. No production content changes.
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
