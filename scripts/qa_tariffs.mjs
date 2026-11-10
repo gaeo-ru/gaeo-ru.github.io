@@ -161,12 +161,31 @@ const browser=await chromium.launch({headless:true,
 mkdirSync('visual-tariffs',{recursive:true});
 try{
  const page=await browser.newPage();const errors=[];page.on('pageerror',error=>errors.push(error.message));
+ // Observe actual browser goal calls without external network or test submissions.
+ await page.addInitScript(()=>{
+  window.__gaeo4aGoals=[];
+  let analytics;
+  Object.defineProperty(window,'GAEOAnalytics',{
+   configurable:true,
+   get(){return analytics;},
+   set(value){
+    analytics={...value,goal:(name,params)=>{
+     window.__gaeo4aGoals.push({name,params:JSON.parse(JSON.stringify(params||{}))});
+     return true;
+    }};
+   }
+  });
+ });
  for(const width of [1440,1100,390,320]){
   await page.setViewportSize({width,height:900});
   for(const route of ['/','/en/','/tarify/','/en/pricing/','/services/geo-guarantee/','/en/services/geo-guarantee/','/services/additional-platforms/','/services/website-development/','/industries/legal/']){
    if(width===1100&&!['/tarify/','/en/pricing/'].includes(route))continue;
    await page.goto(origin+route,{waitUntil:'domcontentloaded'});
    await page.locator('h1').waitFor();
+   if(route==='/tarify/'||route==='/en/pricing/'){
+    await page.waitForFunction(()=>Boolean(window.GAEOAnalytics && document.querySelector('[data-industry-catalog]')?.dataset.catalogReady==='true'));
+    assert.deepEqual(await page.evaluate(()=>window.__gaeo4aGoals),[],'4A: no automatic goals on first render '+width+' '+route);
+   }
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
    if(width!==1100)assert.equal(overflow,false,'No horizontal overflow '+width+' '+route); // Existing non-tariff styles overflow at intermediate desktop widths.
    if(['/', '/en/', '/tarify/', '/en/pricing/'].includes(route)){
@@ -252,6 +271,9 @@ try{
     await calculator.locator('[name="platform"][value="gemini"]').check();
     await calculator.locator('[name="blocks"]').fill('2');
     await calculator.locator('[name="plan"]').selectOption('guarantee');
+    const planGoalsBefore=await page.evaluate(()=>window.__gaeo4aGoals.filter(e=>e.name==='tariff_plan_select').length);
+    await calculator.locator('[name="plan"]').evaluate(el=>el.dispatchEvent(new Event('change',{bubbles:true})));
+    assert.equal(await page.evaluate(()=>window.__gaeo4aGoals.filter(e=>e.name==='tariff_plan_select').length),planGoalsBefore,'4A: identical plan change is suppressed');
     assert.match(await calculator.locator('[data-total]').innerText(),/144[\s,\u00a0\u202f]?900/,'Interactive formula');
     await calculator.locator('[data-quote-inquiry]').click();
     await page.locator('.gaeo-modal textarea[name="comment"]').waitFor();
@@ -270,6 +292,12 @@ try{
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),0,'Empty search state');
     await catalog.locator('[data-catalog-empty] button[type="reset"]').click();
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),107,'Reset restores all categories');
+    const groupSelect=catalog.locator('[data-catalog-group]');
+    const firstGroup=await groupSelect.locator('option:not([value=""])').first().getAttribute('value');
+    await groupSelect.selectOption(firstGroup);
+    assert.ok((await catalog.locator('[data-catalog-item]:visible').count())<107,'Industry group narrows results');
+    await groupSelect.selectOption('');
+    assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),107,'Clearing group restores results');
     const illustrations=catalog.locator('[data-catalog-item]:visible .industry-catalog__image img');
     const currentUrl=page.url();
     await illustrations.first().click();
@@ -291,6 +319,27 @@ try{
     await catalog.locator('#industry-019 img').scrollIntoViewIfNeeded();
     await page.waitForFunction(()=>{const img=document.querySelector('#industry-019 img');return img.complete&&img.naturalWidth>0});
     if(width!==320)await page.screenshot({path:'visual-tariffs/catalog-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
+    const observedGoals=await page.evaluate(()=>window.__gaeo4aGoals);
+    const goalsNamed=name=>observedGoals.filter(goal=>goal.name===name);
+    assert.ok(goalsNamed('tariff_calculation_change').length>=5,'4A: user calculator changes tracked '+width+' '+route);
+    assert.equal(goalsNamed('tariff_plan_select').length,1,'4A: one genuine plan selection '+width+' '+route);
+    assert.equal(goalsNamed('lead_form_open').length,3,'4A: three opened lead dialogs '+width+' '+route);
+    assert.deepEqual(goalsNamed('lead_form_open').map(goal=>goal.params.intent),['service','audit','service'],'4A: dialog intents');
+    assert.ok(goalsNamed('industry_catalog_filter').length>=5,'4A: search, reset and industry group changes '+width+' '+route);
+    assert.ok(goalsNamed('industry_catalog_filter').some(goal=>goal.params.result_count===0),'4A: empty search result tracked');
+    assert.ok(goalsNamed('industry_catalog_filter').some(goal=>goal.params.group_id!=='all'),'4A: group ID tracked');
+    assert.equal(goalsNamed('lead_submit_success').length,0,'4A: no test leads sent');
+    for(const goal of observedGoals){
+     assert.doesNotMatch(JSON.stringify(goal.params),/WMS|no-such-industry-zzzz|Расчет GEO|GEO estimate|data-gaeo-request|@/i,'4A: no search, inquiry or contact details in goals');
+     if(['tariff_calculation_change','tariff_plan_select'].includes(goal.name)){
+      assert.ok(['geo','content','guarantee'].includes(goal.params.plan_id),'4A: canonical plan ID');
+      assert.equal(typeof goal.params.total_amount,'number','4A: numeric total');
+     }
+     if(goal.name==='industry_catalog_filter'){
+      assert.equal(goal.params.total_count,107,'4A: complete catalog');
+      assert.equal(typeof goal.params.search_active,'boolean','4A: search only as boolean');
+     }
+    }
     // Every visible title must navigate to a standalone industry page.
     if(width===1440||width===390){
      const currentLang=route.startsWith('/en/')?'en':'ru';
