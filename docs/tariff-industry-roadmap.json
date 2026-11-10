@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 4,
-    "next_batch": "4B: verify real Metrika goal receipt and safe analytics funnel, then inspect RU/EN information hub link graph/indexability and fix only confirmed gaps; no duplicate pages or paid checks.",
+    "next_batch": "4B continuation: full PR CI, source/main/Pages and public acceptance for link matrix; then verify real Yandex Metrika goal receipt and search indexation from authorized accounts. No duplicates or paid checks.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -2358,6 +2358,36 @@
       "paid_brandfound_checks": 0,
       "limitations": "Browser goal() calls validated; no independent evidence of receipt in Metrika dashboard, lead delivery, indexing, client impact, BMR growth or ROI.",
       "next_batch": "4B"
+    },
+    "phase_4b": {
+      "phase": 4,
+      "batch": "4B",
+      "status": "implementation_in_pr_full_ci_and_release_pending",
+      "code_branch": "feat/gaeo-hub-funnel-phase-4b-2026-11-10",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/152",
+      "initial_code_commit": "c1fb7305d4fa8315f162207ccb2d6a3b318149a2",
+      "check_integration_commit": "02a77b9f483b0221709c86c049dde66c9599dc5d",
+      "artifacts_workflow_commit": "8944bfec29c6e027105fbbd4c17e875e885cac2a",
+      "initial_pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42881031795",
+      "initial_check_tariffs_status": "pass",
+      "full_pr_ci_status": "pending",
+      "source_merge_commit": null,
+      "production_run": null,
+      "main_commit": null,
+      "pages_run": null,
+      "public_qa_run": null,
+      "expected_catalog_categories": 107,
+      "expected_landing_urls_ru_en": 214,
+      "original_specialization_pairs": 100,
+      "reused_existing_bilingual_pairs": 7,
+      "report_path": "visual-hub-funnel/gaeo-phase4b-link-matrix.json",
+      "metrika_counter_id": 109744589,
+      "metrika_goal_receipt_verified": false,
+      "search_indexing_verified": false,
+      "no_test_lead_post": true,
+      "paid_brandfound_runs": 0,
+      "scope_note": "All 214 routes are checked against generated HTML. This does not prove external live HTTPS, search indexing, Metrika goal receipt or real leads. Keep 4B open until those separately verifiable results are recorded.",
+      "next_required_step": "Complete full PR CI and release, inspect JSON matrix and direct public site, then confirm four real goals in authorized Metrika and indexation in applicable webmaster accounts."
     }
   },
   "status_definitions": {
@@ -3272,8 +3302,12 @@
       "ids": [],
       "label": "Проверка приема целей Метрики, матрицы индексации и перелинковки информационного хаба",
       "condition": "Confirm actual receipt/interpretation of the four phase 4A goals in the existing Metrika counter without personal data or test lead submissions; establish a baseline of indexability and internal link paths from 107 tariffs to relevant methods, research, cases and contact on RU/EN pages. Fix only verified gaps in canonical sources; no duplicate pages, tariff changes, unsupported evidence claims or paid BrandFound measurements without cost/balance review.",
-      "work_status": "not_started",
-      "next_required_step": "Audit current GAEO analytics goals in Metrika if access exists; map published tariff/industry/methodology/research/case links and public sitemap/canonical/indexability before any changes."
+      "work_status": "in_progress_static_matrix_qa_integrated_ci_running",
+      "next_required_step": "Finish full PR CI #42881031795 and release PR #152; verify report and public Pages, then obtain real Metrika-goal receipt and actual search-indexation evidence.",
+      "work_branch": "feat/gaeo-hub-funnel-phase-4b-2026-11-10",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/152",
+      "initial_pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42881031795",
+      "report_path": "visual-hub-funnel/gaeo-phase4b-link-matrix.json"
     }
   ],
   "records": [
