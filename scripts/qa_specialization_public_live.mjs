@@ -1,4 +1,5 @@
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
+// QA-only trigger 3M (60,61,62,63,64,65,66,68); existing registry controls the selected IDs.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
 import {createHash} from 'node:crypto';
