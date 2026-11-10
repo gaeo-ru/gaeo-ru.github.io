@@ -1,5 +1,28 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3N: независимая публичная приемка образования, консалтинга, автоуслуг и туризма (10 ноября 2026, 16:05 МСК)
+
+**Фаза 3, партия 3N завершена; следующая 3O.** Проверены 8 уже существующих оригинальных двуязычных специализаций №69/70/71/72/77/78/81/82: **16 публичных RU/EN страниц**. Новых коммерческих страниц, методик, кейсов, изображений и тарифов эта приемка не создавала; общий шаблон, договорные показатели BMR и 107 каталоговых ID не менялись.
+
+**Независимый публичный контроль:** [GitHub Actions №42821130013](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42821130013) **PASS**, завершен 10.11.2026 в 13:05:35 UTC; итоговая строка скрипта в 13:05:30 UTC: **16/16 публичных HTTPS URL**, HTTP 200 и побайтовое совпадение SHA-256 HTML с `main`, наличие всех URL в публичном sitemap.xml; **48/48 Chromium-проверок** на 1440, 390 и 320 px, **0 ошибок**. Проверены 1 H1, title/description, отсутствие noindex, self-canonical, взаимные RU/EN hreflang, 5 видимых FAQ и соответствующая FAQPage JSON-LD, Service, изображения с декодированием, 3 ссылки на канонические тарифы, биография Алексея, CTA, отсутствие горизонтального переполнения и открытие/закрытие формы на 390 px **без POST**. [Артефакт JSON-отчета и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42821130013/artifacts/13766437053), 20 035 107 байт.
+
+| ID | Специализация | RU | EN |
+|---:|---|---|---|
+| 69 | Онлайн-школы и EdTech | [RU](https://gaeo.ru/industries/online-schools-edtech/) | [EN](https://gaeo.ru/en/industries/online-schools-edtech/) |
+| 70 | Вузы и бизнес-школы | [RU](https://gaeo.ru/industries/universities-business-schools/) | [EN](https://gaeo.ru/en/industries/universities-business-schools/) |
+| 71 | Кадровые агентства и рекрутеры | [RU](https://gaeo.ru/industries/recruitment-agencies-recruiters/) | [EN](https://gaeo.ru/en/industries/recruitment-agencies-recruiters/) |
+| 72 | Консалтинговые компании и независимые эксперты | [RU](https://gaeo.ru/industries/consulting-firms-independent-experts/) | [EN](https://gaeo.ru/en/industries/consulting-firms-independent-experts/) |
+| 77 | Автосервисы и СТО | [RU](https://gaeo.ru/industries/auto-repair-shops/) | [EN](https://gaeo.ru/en/industries/auto-repair-shops/) |
+| 78 | Дилеры коммерческого транспорта и спецтехники | [RU](https://gaeo.ru/industries/commercial-vehicle-machinery-dealers/) | [EN](https://gaeo.ru/en/industries/commercial-vehicle-machinery-dealers/) |
+| 81 | Организаторы корпоративных поездок и MICE | [RU](https://gaeo.ru/industries/corporate-travel-mice/) | [EN](https://gaeo.ru/en/industries/corporate-travel-mice/) |
+| 82 | Отели, загородные гостиницы и курорты | [RU](https://gaeo.ru/industries/hotels-country-resorts/) | [EN](https://gaeo.ru/en/industries/hotels-country-resorts/) |
+
+**Коммиты, CI и Pages:** независимый тест инициирован [QA-триггером `79a10a86`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/79a10a8664ee8cef348857e5f761f07dc2e24670) в изолированной ветке `qa/industry-specializations-public-3n-2026-11-10`; служебный комментарий не переносится в `astro-source` или `main`. Исходная точка `astro-source` перед проверкой: [`81c9e8c6`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/81c9e8c636941b2a7b776babf7909e7f855d1608). Проверенная существующая публикация: [`main c4f34883`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/c4f34883b52298bb32e2164dbed2fe550d5a31f8), `astro-release-manifest.json.sourceCommit=3cec72b91952734869894d3bdce10ae9bbcdbe75`; ее [Astro production CI PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42769347653) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42771341119) подтверждены повторно. **Повторная публикация неизмененных HTML не нужна**: результаты и точка продолжения фиксируются в этих же исходных документах через штатный PR в `astro-source`.
+
+**Прогресс и пределы приемки:** **68/100 оригинальных двуязычных специализаций** (136 URL) независимо приняты публичным браузером; **32 пары остаются**. Для №77/78 прежние пустые поля URL восстановлены по фактическим маршрутам модуля 2AE, подтвержденным публичной проверкой. Исторические `status=needs_content` сохранены как инвентарные поля: факт приемки хранится в `work_status=public_https_browser_accepted`, `landing_url_ru/en` и `verified_at`. Этот тест не доказывает поисковую индексацию, рост BMR, заявки, успешную доставку формы или клиентские E3/E4 и право на раскрытие кейсов.
+
+**Следующая партия 3O:** независимая проверка существующих оригинальных RU/EN специализаций №84/85/106/7/8/18/53/73: мебель, контрактная косметика, агропредприятия, управляющие компании недвижимости, индивидуальное хранение, ландшафтные услуги, спецодежда/СИЗ, детские образовательные центры. Выбирать через штатную сортировку еще не принятых `priority/id` в `scripts/qa_specialization_public_live.mjs`. Сначала публичная HTTPS/Chromium-проверка, после PASS обновить только эти 2 документа и соответствующие строки реестра. Не менять согласованные тарифы, не дублировать URL, не выдумывать результаты клиентов.
+
 ## Партия 3M: независимая публичная приемка медицинских специализаций и частных школ (10 ноября 2026, 15:38 МСК)
 
 **Фаза 3, партия 3M завершена; следующая 3N.** Независимо приняты 8 уже опубликованных оригинальных двуязычных специализаций №60/61/62/63/64/65/66/68: **16 публичных RU/EN URL**. Новые страницы, тарифы, общие компоненты, изображения и клиентские кейсы не создавались и не менялись.
