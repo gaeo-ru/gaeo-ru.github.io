@@ -2330,7 +2330,7 @@
     "new_industry_landings_in_phase_1": 0,
     "existing_industry_pages_with_shared_pricing": 8,
     "new_industry_landings_in_phase_2_deployed": 100,
-    "new_industry_landings_in_phase_2_live_verified": 92,
+    "new_industry_landings_in_phase_2_live_verified": 100,
     "total_generated_html_pages_current_release": 485,
     "total_new_specialization_pairs_in_phase_2": 100,
     "total_new_specialization_urls_in_phase_2": 200,
@@ -2392,7 +2392,7 @@
     "phase_3a_priority_original_specialization_pairs_live_verified": 4,
     "phase_3a_independently_public_verified_urls": 20,
     "phase_3g_priority_original_specialization_pairs_live_verified": 8,
-    "total_original_specialization_pairs_public_live_accepted": 92,
+    "total_original_specialization_pairs_public_live_accepted": 100,
     "phase_3h_priority_original_specialization_pairs_live_verified": 8,
     "phase_3i_priority_original_specialization_pairs_live_verified": 8,
     "phase_3k_priority_original_specialization_pairs_live_verified": 8,
@@ -2405,7 +2405,9 @@
     "phase_3p_priority_original_specialization_pairs_live_verified": 8,
     "phase_3p_independently_public_verified_urls": 16,
     "phase_3q_priority_original_specialization_pairs_live_verified": 8,
-    "phase_3q_independently_public_verified_urls": 16
+    "phase_3q_independently_public_verified_urls": 16,
+    "phase_3r_priority_original_specialization_pairs_live_verified": 8,
+    "phase_3r_independently_public_verified_urls": 16
   },
   "candidate_batches": [
     {
@@ -3192,8 +3194,26 @@
       ],
       "label": "Финальная независимая приемка бытовой химии, красоты, клининга, ремонта, охраны, психологов, спецтехники и агробизнеса",
       "condition": "Check only original existing bilingual RU/EN production specializations via scripts/qa_specialization_public_live.mjs, public HTTPS 200, SHA256 byte parity against published main, sitemap, H1/title/description, no noindex, reciprocal hreflang, canonical, visible FAQ/FAQPage/Service, images, canonical tariff and expert links, CTA/modal without POST; Chromium 1440/390/320. For missing historical routes resolve originals from source. Do not create duplicates, rewrite approved tariffs or invent client case outcomes.",
+      "work_status": "completed_public_https_chromium_verified",
+      "next_required_step": "Finished: all 100 original bilingual specialization pairs independently public accepted. Continue phase 4A analytics instrumentation, preserving existing tariff catalog and pages.",
+      "verified_at": "2026-11-10T17:06:29Z",
+      "verification_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+      "verification_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653",
+      "qa_trigger_commit": "6ad1e44796030ca45dc548199e8f707610b50732",
+      "published_main_sha": "89cf47df063d61aa185451ca45557b3b8def17c8",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42854979230",
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42858095491",
+      "pages_status_note": "First attempt failed after 10-minute syncing_files timeout; failed-job rerun started; independent public 16/16 HTML/main SHA256 confirms actual currently served pages."
+    },
+    {
+      "batch": "4A",
+      "phase": 4,
+      "kind": "analytics_events_and_attribution",
+      "ids": [],
+      "label": "События тарифов, калькулятора, фильтров и открытия формы на существующей аналитике GAEO",
+      "condition": "Inspect canonical site.js, analytics.js and already recorded goals; add only missing GAEOAnalytics.goal events lead_form_open, tariff_plan_select, tariff_calculation_change and industry_catalog_filter. No duplicate lead_submit_success; no raw search string, request text, email or phone. Exclude automatic initial calculation and repeated identical user configurations. Verify actual client events at desktop/390/320, unchanged tariffs, links, forms; PR CI, source merge, production/main/Pages then independent HTTPS.",
       "work_status": "not_started",
-      "next_required_step": "After 3Q acceptance use the existing isolated QA workflow to verify precisely IDs 99/100/101/102/103/104/105/107, then update these same two documents. Do not accept until public HTTPS/Chromium PASS."
+      "next_required_step": "Audit current analytics wiring and instrument only missing human-triggered events; do not start paid BrandFound checks solely for this task."
     }
   ],
   "records": [
@@ -7868,14 +7888,14 @@
       "sheet_row": 100,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/household-chemistry-brands/",
+      "landing_url_en": "/en/industries/household-chemistry-brands/",
       "status": "catalog_ready",
       "match_scope": "related_only",
       "content_status": "source_prepared_not_published",
       "evidence_level": null,
-      "work_status": "source_prepared_pr_ci_pending",
-      "next_required_step": "PR_CI_then_merge_release_manifest_sitemap_pages_direct_HTTPS",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "work_batch": "2J",
       "planned_landing_url_ru": "/industries/household-chemistry-brands/",
       "planned_landing_url_en": "/en/industries/household-chemistry-brands/",
@@ -7883,12 +7903,19 @@
         "https://markirovka.ru/knowledge/tovarnye-gruppy/kosmetika-bytovaya-himiya/kosmetika-bytovaya-khimiya-i-tovary-lichnoy-gigieny-podlezhashchie-obyazatelnoy-markirovke",
         "https://zpp.rospotrebnadzor.ru/news/federal/575174"
       ],
-      "last_completed_step": "phase_2j_bilingual_content_and_qa_id_registration",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
       "work_branch": "feat/industry-specializations-batch-2j-2026-11-08",
       "source_commit": "4dadd2bb8dfe5c80a8c11c0adc7918cb06f19736",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T17:06:29Z",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ],
+      "source_file": "src/data/industry-specializations-batch-2j.mjs"
     },
     {
       "id": 100,
@@ -7906,15 +7933,15 @@
       "sheet_row": 101,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/beauty-salons-cosmetology-practices/",
+      "landing_url_en": "/en/industries/beauty-salons-cosmetology-practices/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
-      "last_completed_step": "phase_2_consolidated_pr_ci_production_main_sitemap_pages_pass",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
       "planned_landing_url_ru": "/industries/beauty-salons-cosmetology-practices/",
       "planned_landing_url_en": "/en/industries/beauty-salons-cosmetology-practices/",
       "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
@@ -7924,15 +7951,19 @@
         "https://www.roszdravnadzor.gov.ru/medactivities/licensing/news/35556",
         "https://www.consultant.ru/document/cons_doc_LAW_363382/"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "work_batch": "2X",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/114",
       "source_commit": "3c5744d5b03d96f71d9ad4cc00ebe10b6258d639",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T17:06:29Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ]
     },
     {
       "id": 101,
@@ -7950,15 +7981,15 @@
       "sheet_row": 102,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/cleaning-companies/",
+      "landing_url_en": "/en/industries/cleaning-companies/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
-      "last_completed_step": "phase_2_consolidated_pr_ci_production_main_sitemap_pages_pass",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
       "planned_landing_url_ru": "/industries/cleaning-companies/",
       "planned_landing_url_en": "/en/industries/cleaning-companies/",
       "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
@@ -7968,15 +7999,19 @@
         "https://protect.gost.ru/gost/details/487c0d2e-6c5f-4803-9a86-3b430f1434f1",
         "https://protect.gost.ru/gost/details/c0ff12a0-655e-47db-9c30-6dbf2499eeba"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "work_batch": "2X",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/114",
       "source_commit": "3c5744d5b03d96f71d9ad4cc00ebe10b6258d639",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T17:06:29Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ]
     },
     {
       "id": 102,
@@ -7994,15 +8029,15 @@
       "sheet_row": 103,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/home-appliance-repair-services/",
+      "landing_url_en": "/en/industries/home-appliance-repair-services/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
-      "last_completed_step": "phase_2_consolidated_pr_ci_production_main_sitemap_pages_pass",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
       "planned_landing_url_ru": "/industries/home-appliance-repair-services/",
       "planned_landing_url_en": "/en/industries/home-appliance-repair-services/",
       "work_branch": "feat/industry-specializations-batch-2x-2026-11-08",
@@ -8012,15 +8047,19 @@
         "https://www.consultant.ru/document/cons_doc_LAW_363382/",
         "https://zpp.rospotrebnadzor.ru/news/federal/536006"
       ],
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "work_batch": "2X",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/114",
       "source_commit": "3c5744d5b03d96f71d9ad4cc00ebe10b6258d639",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T17:06:29Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ]
     },
     {
       "id": 103,
@@ -8038,20 +8077,20 @@
       "sheet_row": 104,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/security-cctv-companies/",
+      "landing_url_en": "/en/industries/security-cctv-companies/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/security-cctv-companies/",
       "planned_landing_url_en": "/en/industries/security-cctv-companies/",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs",
-      "last_completed_step": "phase_2z_pr_ci_production_main_sitemap_pages_pass",
-      "public_https_browser_verified": false,
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+      "public_https_browser_verified": true,
       "evidence_sources": [
         "https://rosguard.gov.ru/News/Article/federalnyj-zakon-reguliruyushhij-chastnuyu-oxrannuyu-deyatelnost-vstupil-v-silu-1-sentyabrya-2026-g",
         "https://www.rosguard.gov.ru/page/index/voprosy-chastnoj-oxrannoj-deyatelnosti",
@@ -8059,10 +8098,14 @@
       ],
       "source_commit": "79c2b4fe6a3d60de177ed5eb743d384e60448a11",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T17:06:29Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ]
     },
     {
       "id": 104,
@@ -8080,18 +8123,27 @@
       "sheet_row": 105,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/private-psychologists-psychotherapists/",
+      "landing_url_en": "/en/industries/private-psychologists-psychotherapists/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_ru_en_ci_production_pages_pass_external_https_unverified",
       "evidence_level": null,
-      "work_status": "deployed_source_main_pages_pass",
-      "next_required_step": "Direct public HTTPS desktop/390/320, actual images, CTA/dialog, form, links and schema; only after external live PASS fill landing_url_ru/en and verified_at.",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08",
-      "last_completed_step": "Full Astro QA, source merge, main manifest + both HTML, sitemap and GitHub Pages PASS; 2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+      "planned_landing_url_ru": "/industries/private-psychologists-psychotherapists/",
+      "planned_landing_url_en": "/en/industries/private-psychologists-psychotherapists/",
+      "public_https_browser_verified": true,
+      "verified_at": "2026-11-10T17:06:29Z",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ],
+      "source_file": "src/data/industry-specializations-batch-2af.mjs"
     },
     {
       "id": 105,
@@ -8109,20 +8161,20 @@
       "sheet_row": 106,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/construction-equipment-rental/",
+      "landing_url_en": "/en/industries/construction-equipment-rental/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "deployed_pending_public_https_check",
       "evidence_level": null,
-      "work_status": "deployed_ci_production_pages_pass_live_https_unverified",
-      "next_required_step": "verify_live_deployment",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/construction-equipment-rental/",
       "planned_landing_url_en": "/en/industries/construction-equipment-rental/",
       "work_branch": "feat/industry-specializations-batch-2z-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2z.mjs",
-      "last_completed_step": "phase_2z_pr_ci_production_main_sitemap_pages_pass",
-      "public_https_browser_verified": false,
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+      "public_https_browser_verified": true,
       "evidence_sources": [
         "https://www.consultant.ru/document/cons_doc_LAW_535444/",
         "https://www.consultant.ru/document/cons_doc_LAW_9027/1ffe0cb622bfbe86c61d7d6df4c8c6011dfb45fe/",
@@ -8130,10 +8182,14 @@
       ],
       "source_commit": "79c2b4fe6a3d60de177ed5eb743d384e60448a11",
       "published_commit": "62b0fd2b2b7b080ffef182704177b8baeb83b7af",
-      "verified_at": null,
+      "verified_at": "2026-11-10T17:06:29Z",
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verification_urls": [
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
+      ]
     },
     {
       "id": 106,
@@ -8201,17 +8257,17 @@
       "sheet_row": 108,
       "priority": 2,
       "priority_label": "2 — хороший",
-      "landing_url_ru": null,
-      "landing_url_en": null,
+      "landing_url_ru": "/industries/agricultural-input-suppliers/",
+      "landing_url_en": "/en/industries/agricultural-input-suppliers/",
       "status": "needs_content",
       "match_scope": "none",
       "content_status": "source_merged_awaiting_production",
       "evidence_level": null,
-      "work_status": "source_merged_ci_pass_production_pending",
-      "next_required_step": "confirm_production_main_pages_then_live",
+      "work_status": "public_https_browser_accepted",
+      "next_required_step": "maintain_existing_landing",
       "planned_landing_url_ru": "/industries/agricultural-input-suppliers/",
       "planned_landing_url_en": "/en/industries/agricultural-input-suppliers/",
-      "last_completed_step": "phase_2y_pr110_ci_42482700724_pass_and_source_merge_778c7ea7",
+      "last_completed_step": "3R independent public HTTPS 200, SHA256 parity with main, sitemap, Chromium 1440/390/320 PASS; https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
       "work_branch": "feat/industry-specializations-batch-2y-2026-11-08",
       "source_file": "src/data/industry-specializations-batch-2y.mjs",
       "evidence_sources": [
@@ -8221,17 +8277,20 @@
       ],
       "parent_link_ru": "/tarify/",
       "parent_link_en": "/en/pricing/",
-      "public_https_browser_verified": false,
+      "public_https_browser_verified": true,
       "release_note": "Source merged after full PR CI PASS including 134 RU/EN pages at 1440/390/320; production/main/Pages and direct external public HTTPS still unverified. Retain planned URL and no live status promotion.",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
       "source_commit": "778c7ea7b05a780c3de480854e76de5738f80ce2",
       "verification_urls": [
         "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/110",
-        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724"
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42482700724",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+        "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653"
       ],
       "coverage_kind": "dedicated_original_bilingual_specialization",
       "coverage_release_status": "production_main_pages_pass_external_https_unverified",
-      "coverage_checked_date": "2026-11-08"
+      "coverage_checked_date": "2026-11-10",
+      "verified_at": "2026-11-10T17:06:29Z"
     }
   ],
   "price_source": "src/data/pricing.mjs",
@@ -8447,6 +8506,13 @@
     "phase_3q_original_specialization_pairs_live_verified": 92,
     "phase_3q_public_check_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42853848433",
     "phase_3q_public_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42853848433/artifacts/13781492986",
-    "phase_3q_scope_note": "Independent acceptance of exactly 16 existing original bilingual specialization URLs #91-98 on public HTTPS. HTTP 200, exact main SHA256 parity, sitemap, one H1, title/description, no noindex, self canonical, reciprocal hreflang, Service/FAQPage with five FAQs, decoded images, approved tariff/biography links, CTA and modal without POST, 48 Chromium checks on 1440/390/320, zero errors. Excludes whole-site scan, search indexing, BMR, lead delivery and client E3/E4."
+    "phase_3q_scope_note": "Independent acceptance of exactly 16 existing original bilingual specialization URLs #91-98 on public HTTPS. HTTP 200, exact main SHA256 parity, sitemap, one H1, title/description, no noindex, self canonical, reciprocal hreflang, Service/FAQPage with five FAQs, decoded images, approved tariff/biography links, CTA and modal without POST, 48 Chromium checks on 1440/390/320, zero errors. Excludes whole-site scan, search indexing, BMR, lead delivery and client E3/E4.",
+    "phase_3r_priority_pairs_live_checked": 8,
+    "phase_3r_original_specialization_pairs_live_verified": 100,
+    "phase_3r_public_check_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383",
+    "phase_3r_public_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42861284383/artifacts/13785655653",
+    "phase_3r_scope_note": "Exactly 16 live HTTPS original RU/EN specializations #99/100/101/102/103/104/105/107 independently accepted with public/main SHA256 parity, sitemap, metadata, self canonical, reciprocal hreflang, Service/FAQPage 5 FAQs, decoded images, canonical tariffs, biography, CTA, modal without POST, 48 Chromium checks (1440/390/320), 0 errors. 100/100 original pairs completed; no claim of all-site 214-URL crawl, BMR or lead delivery.",
+    "phase_3r_published_main_sha": "89cf47df063d61aa185451ca45557b3b8def17c8",
+    "phase_3r_pages_note": "Pages 42858095491 first attempt timeout on syncing_files; rerun pending; independent public HTTPS 16/16 parity confirmed."
   }
 }
