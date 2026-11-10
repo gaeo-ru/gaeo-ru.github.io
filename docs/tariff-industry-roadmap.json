@@ -63,8 +63,8 @@
       "css_js_byte_matches": 10,
       "sitemap_new_urls_present": 16
     },
-    "next_phase": 3,
-    "next_batch": "3R: independently verify the last 8 existing original RU/EN specializations IDs 99/100/101/102/103/104/105/107; 3Q PASS, 92/100 accepted. Reuse current source and published pages; no new tariff or client-case claims.",
+    "next_phase": 4,
+    "next_batch": "4B: verify real Metrika goal receipt and safe analytics funnel, then inspect RU/EN information hub link graph/indexability and fix only confirmed gaps; no duplicate pages or paid checks.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -481,7 +481,7 @@
       "qa_dev_cases_fix_commit": "1bbeddc737eb9e3bfd29423a99faf5a113905415",
       "last_verified_source_sha": "04dd7039ecf8120adffa154c9faf2a9c9fb3d234"
     },
-    "current_expansion_phase": 3,
+    "current_expansion_phase": 4,
     "phase_2n": {
       "phase": 2,
       "batch": "2N",
@@ -2310,6 +2310,54 @@
         81,
         82
       ]
+    },
+    "phase_4a": {
+      "phase": 4,
+      "batch": "4A",
+      "status": "completed_full_pr_ci_production_pages_independent_public_chromium_pass",
+      "goals": [
+        "lead_form_open",
+        "tariff_plan_select",
+        "tariff_calculation_change",
+        "industry_catalog_filter"
+      ],
+      "baseline_goal_preserved": "lead_submit_success",
+      "code_commit": "d6b3016e8c78e2c98fdd861c18eea772a43b468b",
+      "work_branch": "feat/gaeo-tariff-analytics-phase-4a-2026-11-10",
+      "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/151",
+      "source_merge_commit": "6694d6a4e0b776fb9e75b9499df812f71d826d23",
+      "pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42870840687",
+      "pr_ci_status": "pass",
+      "production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42873241826",
+      "production_status": "pass",
+      "published_main_sha": "6636ed84991d8b79711469847fdd207c4c3db808",
+      "published_manifest_source_commit": "6694d6a4e0b776fb9e75b9499df812f71d826d23",
+      "released_at": "2026-11-10T18:35:08.845Z",
+      "published_files": 1260,
+      "published_html": 485,
+      "published_sitemap_urls": 480,
+      "pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42876734510",
+      "pages_status": "pass",
+      "public_qa_branch": "qa/industry-specializations-public-4a-2026-11-10",
+      "public_qa_trigger_commit": "746de3cb1631833f0739ba732263510ef315a155",
+      "public_qa_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42876979089",
+      "public_qa_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42876979089/artifacts/13791713476",
+      "public_qa_status": "pass",
+      "public_asset_sha256_parity": "4/4",
+      "public_chromium_checks": "6/6",
+      "public_chromium_widths": [
+        1440,
+        390,
+        320
+      ],
+      "public_errors": 0,
+      "test_lead_posts": 0,
+      "verified_at": "2026-11-10T18:37:38Z",
+      "approved_prices_changed": false,
+      "new_pages_created": 0,
+      "paid_brandfound_checks": 0,
+      "limitations": "Browser goal() calls validated; no independent evidence of receipt in Metrika dashboard, lead delivery, indexing, client impact, BMR growth or ROI.",
+      "next_batch": "4B"
     }
   },
   "status_definitions": {
@@ -3212,8 +3260,20 @@
       "ids": [],
       "label": "События тарифов, калькулятора, фильтров и открытия формы на существующей аналитике GAEO",
       "condition": "Inspect canonical site.js, analytics.js and already recorded goals; add only missing GAEOAnalytics.goal events lead_form_open, tariff_plan_select, tariff_calculation_change and industry_catalog_filter. No duplicate lead_submit_success; no raw search string, request text, email or phone. Exclude automatic initial calculation and repeated identical user configurations. Verify actual client events at desktop/390/320, unchanged tariffs, links, forms; PR CI, source merge, production/main/Pages then independent HTTPS.",
+      "work_status": "completed_pr_ci_production_pages_public_https_chromium_pass",
+      "next_required_step": "Finished; continue phase 4B: verify actual Metrika goal receipt and attribution, inspect RU/EN hub link graph and indexing without creating pages or running paid BrandFound checks.",
+      "verified_at": "2026-11-10T18:37:38Z",
+      "last_completed_step": "Four GAEOAnalytics.goal events accepted after full PR CI 42870840687, production 42873241826, main 6636ed84, Pages 42876734510 and independent 4/4 public asset SHA256 plus 6/6 public Chromium 42876979089. No test lead POST."
+    },
+    {
+      "batch": "4B",
+      "phase": 4,
+      "kind": "analytics_funnel_and_information_hub_link_audit",
+      "ids": [],
+      "label": "Проверка приема целей Метрики, матрицы индексации и перелинковки информационного хаба",
+      "condition": "Confirm actual receipt/interpretation of the four phase 4A goals in the existing Metrika counter without personal data or test lead submissions; establish a baseline of indexability and internal link paths from 107 tariffs to relevant methods, research, cases and contact on RU/EN pages. Fix only verified gaps in canonical sources; no duplicate pages, tariff changes, unsupported evidence claims or paid BrandFound measurements without cost/balance review.",
       "work_status": "not_started",
-      "next_required_step": "Audit current analytics wiring and instrument only missing human-triggered events; do not start paid BrandFound checks solely for this task."
+      "next_required_step": "Audit current GAEO analytics goals in Metrika if access exists; map published tariff/industry/methodology/research/case links and public sitemap/canonical/indexability before any changes."
     }
   ],
   "records": [
