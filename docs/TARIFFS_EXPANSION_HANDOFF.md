@@ -1,5 +1,31 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3L: независимая публичная приемка промышленной химии, логистики и медицины (10 ноября 2026, 12:38 МСК)
+
+**Фаза 3, партия 3L завершена; следующая 3M.** Приняты следующие 8 существующих оригинальных двуязычных специализаций №50/51/52/55/56/57/58/59, **16 публичных RU/EN URL**. Новые страницы, тарифы, кейсы, исходные изображения и общий шаблон не менялись.
+
+**Подтверждение независимой проверки:** [GitHub Actions №42792312078](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42792312078) **PASS**, завершился 10.11.2026 в 09:38:54 UTC. Итоговая строка лога, 09:38:47 UTC: **16/16 реальных HTTPS URL с HTTP 200 и побайтовым SHA-256, совпадающим с HTML опубликованной ветки main; все 16 URL найдены в публичном sitemap.xml; 48/48 Chromium-проверок на 1440/390/320 px, 0 ошибок.** Проверены 1 H1, корректные title/description, отсутствие noindex, self-canonical, взаимные RU/EN hreflang, 5 видимых FAQ и совпадающая FAQPage JSON-LD, Service, декодирование изображений, 3 ссылки на канонические тарифы, биография эксперта, CTA, отсутствие горизонтального переполнения, открытие и закрытие формы на 390 px **без POST**. [Артефакт: JSON-отчет и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42792312078/artifacts/13752451115), 20 278 257 байт.
+
+| ID | Специализация | RU | EN |
+|---:|---|---|---|
+| 50 | Промышленная химия | [RU](https://gaeo.ru/industries/industrial-chemical-suppliers/) | [EN](https://gaeo.ru/en/industries/industrial-chemical-suppliers/) |
+| 51 | Промышленная автоматизация и сервис | [RU](https://gaeo.ru/industries/industrial-automation-service-companies/) | [EN](https://gaeo.ru/en/industries/industrial-automation-service-companies/) |
+| 52 | Строительные материалы | [RU](https://gaeo.ru/industries/building-material-manufacturers/) | [EN](https://gaeo.ru/en/industries/building-material-manufacturers/) |
+| 55 | Международная логистика | [RU](https://gaeo.ru/industries/international-logistics/) | [EN](https://gaeo.ru/en/industries/international-logistics/) |
+| 56 | Таможенные представители | [RU](https://gaeo.ru/industries/customs-representatives/) | [EN](https://gaeo.ru/en/industries/customs-representatives/) |
+| 57 | Импорт и сопровождение ВЭД | [RU](https://gaeo.ru/industries/import-trade-support/) | [EN](https://gaeo.ru/en/industries/import-trade-support/) |
+| 58 | Складская логистика и хранение | [RU](https://gaeo.ru/industries/warehouse-storage-3pl/) | [EN](https://gaeo.ru/en/industries/warehouse-storage-3pl/) |
+| 59 | Частные клиники | [RU](https://gaeo.ru/industries/private-medical-clinics/) | [EN](https://gaeo.ru/en/industries/private-medical-clinics/) |
+
+**Публикация и коммиты:** тест вызван [QA-триггером `74ab6c14`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/74ab6c14332cd79d87e7a930c17fa39a4ea4578b) на отдельной ветке `qa/industry-specializations-public-3l-2026-11-10`; эта строка-триггер не переносится в production. Сверена существующая версия [main `c4f34883`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/c4f34883b52298bb32e2164dbed2fe550d5a31f8), ее `astro-release-manifest.json.sourceCommit=3cec72b91952734869894d3bdce10ae9bbcdbe75`. Для этой ревизии ранее подтверждены [Astro production PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42769347653) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42771341119). **Повторный деплой HTML не выполнялся**, поскольку страницы уже опубликованы, а в исходниках 3L выполнена только независимая проверка и документационная приемка.
+
+**Прогресс и ограничения:** 52/100 оригинальных RU/EN пар (104 страницы) приняты индивидуальным публичным тестом; **48 пар остаются**. Эти тесты не доказывают поисковую индексацию, BMR, новые заявки, отправку формы, клиентские результаты или наличие согласий на раскрытие данных. У №55/59 право публикации клиентских E3/E4 по-прежнему отдельно не подтверждено. Исторический флаг `status=needs_content` в реестре отражает первоначальное сопоставление и не подменяет фактический статус `work_status=public_https_browser_accepted`.
+
+**Синхронизация реестра:** устаревший `candidate_batches[3K].work_status=not_started` исправлен по ранее подтвержденному [PASS 42768445172](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42768445172); повторного запуска 3K нет.
+
+**Следующая партия 3M:** публичная проверка существующих пар №60/61/62/63/64/65/66/68: стоматология, диагностика, офтальмология, пластическая хирургия, репродуктивная медицина, реабилитация, медицинские изделия и частные школы. Использовать прежние `scripts/qa_specialization_public_live.mjs` и `.github/workflows/specializations-public-live-qa.yml` без создания дублирующих страниц. После подтвержденного PASS обновить только соответствующие строки и эти же 2 документа. Не менять 107 каталоговых ID, 100 оригинальных специализаций, тарифы и договорную гарантию BMR.
+
+
 ## Партия 3K: публичная приемка BI и промышленного оборудования (10 ноября 2026, 09:27 МСК)
 
 **Фаза 3, партия 3K закрыта; следующая 3L.** По реестру без повторного создания страниц проверены 8 ранее опубликованных оригинальных двуязычных специализаций №41/42/43/44/45/46/48/49 (16 URL). Тарифы, тексты действующих посадочных, гарантии, форма и клиентские кейсы не менялись.
