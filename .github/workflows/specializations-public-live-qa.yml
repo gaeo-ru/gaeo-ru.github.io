@@ -1,4 +1,4 @@
-name: GAEO bilingual industry specializations independent public acceptance
+name: GAEO 4A independent public analytics acceptance
 
 on:
   push:
@@ -46,16 +46,15 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npx playwright install chromium
-      - name: Check first eight unverified priority-1 bilingual specializations on public GAEO
+      - name: Check published GAEO 4A analytics and browser behavior
         env:
           GAEO_PUBLIC_ORIGIN: https://gaeo.ru
-          GAEO_LIVE_BATCH_SIZE: '8'
-        run: node scripts/qa_specialization_public_live.mjs
-      - name: Archive report and screenshots
+        run: node scripts/qa_analytics_public_4a.mjs
+      - name: Archive GAEO 4A public acceptance evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gaeo-specializations-public-live
-          path: visual-specialization-live/
-          if-no-files-found: warn
+          name: gaeo-analytics-4a-public-live
+          path: visual-analytics-4a/
+          if-no-files-found: error
           retention-days: 21
