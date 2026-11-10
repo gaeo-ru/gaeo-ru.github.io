@@ -1,5 +1,28 @@
 # GAEO: тарифы, каталог 107 направлений и отраслевые посадочные
 
+## Партия 3Q: независимая публичная приемка восьми товарных и брендовых специализаций (10 ноября 2026, 19:23 МСК)
+
+**Фаза 3, партия 3Q завершена; следующая 3R.** Независимо приняты 8 существующих оригинальных двуязычных специализаций №91/92/93/94/95/96/97/98: **16 публичных RU/EN URL**. Каталог 107 тарифных направлений, согласованные цены, 100 существующих оригинальных коммерческих пар, изображения, отраслевые методики и исследования, общие шаблоны, договорные гарантии BMR и клиентские E3/E4 не менялись. Новые HTML-страницы и формы не создавались.
+
+**Независимая публичная приемка:** [GitHub Actions №42853848433](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42853848433) **PASS**, 10.11.2026 в 16:23:30 UTC. Итог скрипта в 16:23:24 UTC: **16/16 публичных HTTPS URL** с HTTP 200, побайтовым совпадением SHA-256 HTML с опубликованной веткой `main` и присутствием URL в публичном `sitemap.xml`; **48/48 Chromium-проверок** при ширинах 1440, 390 и 320 px, **0 ошибок**. Проверены ровно 1 H1, title/description, отсутствие noindex, self-canonical, взаимные RU/EN hreflang, 5 видимых FAQ и согласованная FAQPage JSON-LD, Service, декодирование изображений, 3 канонические тарифные ссылки, биография Алексея, CTA и отсутствие горизонтального переполнения. На 390 px открытие и закрытие формы подтверждено **без POST и без отправки заявок**. [JSON-отчет и 48 полноразмерных скриншотов](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42853848433/artifacts/13781492986), 20 482 630 байт.
+
+| ID | Специализация | RU | EN |
+|---:|---|---|---|
+| 91 | Интернет-магазины товаров для животных | [RU](https://gaeo.ru/industries/pet-supplies-online-stores/) | [EN](https://gaeo.ru/en/industries/pet-supplies-online-stores/) |
+| 92 | Интернет-магазины спортивных товаров и питания | [RU](https://gaeo.ru/industries/sports-goods-nutrition-stores/) | [EN](https://gaeo.ru/en/industries/sports-goods-nutrition-stores/) |
+| 93 | Интернет-магазины медицинских товаров и оборудования | [RU](https://gaeo.ru/industries/medical-supplies-online-stores/) | [EN](https://gaeo.ru/en/industries/medical-supplies-online-stores/) |
+| 94 | Косметические бренды | [RU](https://gaeo.ru/industries/cosmetics-brands/) | [EN](https://gaeo.ru/en/industries/cosmetics-brands/) |
+| 95 | Ювелирные бренды и мастерские | [RU](https://gaeo.ru/industries/jewelry-brands-workshops/) | [EN](https://gaeo.ru/en/industries/jewelry-brands-workshops/) |
+| 96 | Бренды одежды и аксессуаров | [RU](https://gaeo.ru/industries/fashion-apparel-brands/) | [EN](https://gaeo.ru/en/industries/fashion-apparel-brands/) |
+| 97 | Производители и продавцы продуктов питания | [RU](https://gaeo.ru/industries/food-producers-retailers/) | [EN](https://gaeo.ru/en/industries/food-producers-retailers/) |
+| 98 | Производители детских товаров | [RU](https://gaeo.ru/industries/children-product-manufacturers/) | [EN](https://gaeo.ru/en/industries/children-product-manufacturers/) |
+
+**Коммиты, CI и Pages:** проверка инициирована [служебным QA-коммитом `6c95ddfd`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/6c95ddfdf58b5f9328aacb666b6f18f76ab6e34d) в изолированной ветке `qa/industry-specializations-public-3q-2026-11-10`; ее комментарий-триггер не переносится в `astro-source` или `main`. Проверенная уже опубликованная версия: [`main bda23c61`](https://github.com/gaeo-ru/gaeo-ru.github.io/commit/bda23c611f306d9237c1e1d326601718c15ef2dd); `astro-release-manifest.json.sourceCommit=a155113ddd9404556e4d97498e3d727859072d0b`. Для этой версии подтверждены [Astro production CI PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42837016221) и [GitHub Pages PASS](https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42840168505). **Статусы относятся к проверенной публикации; последующий коммит этих 2 документов требует собственных CI и проверки.**
+
+**Прогресс и ограничения:** независимо принято **92/100 оригинальных двуязычных специализаций**, 184 RU/EN URL; **осталось 8 пар**. Исторические `status/content_status` оставлены без переписывания; приемка фиксируется в `work_status=public_https_browser_accepted`, `public_https_browser_verified=true`, `landing_url_ru/en`, `verified_at` и ссылках на QA. Результат не доказывает индексацию, рост BMR, заявки, доставку формы, клиентские результаты или согласие на раскрытие E3/E4.
+
+**Следующая партия 3R:** штатная сортировка еще не принятых оригинальных специализаций дает последние 8 №99/100/101/102/103/104/105/107: бытовая химия, косметологические кабинеты, клининг, ремонт техники, охранные компании, частные психологи, аренда спецтехники и поставщики товаров для агробизнеса. Проверить существующие RU/EN URL тем же сценарием публичного HTTPS/main SHA-256/sitemap и Chromium 1440/390/320. Восстанавливать пустые исторические URL только по каноническим исходникам, без новых дублей и изменения тарифов. По результату обновить **эти же 2 документа**.
+
 ## Партия 3P: независимая публичная приемка брендинга, мототехники, ресторанов и e-commerce (10 ноября 2026, 17:37 МСК)
 
 **Фаза 3, партия 3P завершена; следующая 3Q.** Независимо приняты 8 уже созданных оригинальных двуязычных специализаций №74/79/83/86/87/88/89/90, **16 существующих RU/EN URL**. Каталог 107 направлений, согласованные тарифы, изображения, отраслевые методики, исследования, коммерческие исходники, общие шаблоны, договорные BMR и клиентские E3/E4 не менялись. Повторные страницы, формы и новые заявки не создавались.
