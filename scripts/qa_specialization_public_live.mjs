@@ -1,4 +1,5 @@
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
+// QA-only trigger batch 3K (41,42,43,44,45,46,48,49); registry controls selection.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
 import {createHash} from 'node:crypto';
