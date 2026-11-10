@@ -21,16 +21,33 @@
    root.querySelector('[data-platform-count]').textContent=en?`${count} selected. ${extra} additional. ${count<5?'The plan includes 5; the remaining choices can be agreed before launch.':''}`:`Выбрано ${count}. Дополнительных: ${extra}. ${count<5?'В тариф входит 5, оставшиеся согласуем до начала работ.':''}`;
    const names=checked.map(input=>input.parentElement.querySelector('span').textContent).join(', ');
    root.querySelector('[data-quote-inquiry]').dataset.gaeoRequest=en?`GEO estimate: ${plan.name}. ${prompts} prompts. Platforms: ${names||'to be agreed'}. Additional platforms: ${extra}; additional prompt blocks: ${blocks}. From ${format(total)}/month.`:`Расчет GEO: ${plan.name}. ${prompts} запросов. Нейросети: ${names||'согласуем'}. Дополнительных нейросетей: ${extra}; пакетов запросов: ${blocks}. От ${format(total)}/мес.`;
+   // Return only stable, non-personal dimensions. The detailed scope
+   // is used only to prefill the real lead form, not to report analytics.
+   return {
+    key:plan.id+'|'+checked.map(input=>input.value).sort().join(',')+'|'+blocks,
+    params:{plan_id:plan.id,platform_count:count,prompt_blocks:blocks,total_amount:total,lang:config.lang}
+   };
+  }
+  let lastCommittedCalculation=update().key;
+  function emitCalculationGoal(goalName){
+   const state=update();
+   if(state.key===lastCommittedCalculation)return;
+   lastCommittedCalculation=state.key;
+   if(window.GAEOAnalytics && typeof window.GAEOAnalytics.goal==='function'){
+    window.GAEOAnalytics.goal(goalName,state.params);
+   }
   }
   root.addEventListener('click',event=>{
    const button=event.target.closest('[data-prompt-adjust]');
    if(!button||!root.contains(button))return;
    blocksInput.value=String(Math.max(0,Math.min(100,clampBlocks()+Number(button.dataset.promptAdjust))));
-   update();
+   emitCalculationGoal('tariff_calculation_change');
   });
   root.addEventListener('input',update);
-  root.addEventListener('change',()=>{blocksInput.value=String(clampBlocks());update();});
-  update();
+  root.addEventListener('change',event=>{
+   blocksInput.value=String(clampBlocks());
+   emitCalculationGoal(event.target===planSelect?'tariff_plan_select':'tariff_calculation_change');
+  });
  });
 
  /* Align both CTA controls in each desktop row with the longest tariff card.
