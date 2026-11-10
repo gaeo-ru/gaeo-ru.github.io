@@ -1,3 +1,4 @@
+// Batch 3O independent public verification trigger (2026-11-10): use existing unverified priority/id selection; isolated QA branch.
 // Reusable public-site acceptance of unpublished-QA bilingual GAEO industry specializations.
 // Does not create or alter pages, submit forms, or infer client evidence.
 import {chromium} from 'playwright';
