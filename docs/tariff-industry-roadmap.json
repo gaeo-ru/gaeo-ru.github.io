@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_date": "2026-11-10",
+  "updated_date": "2026-11-11",
   "purpose": "Единый машиночитаемый реестр расширения 107 тарифных направлений; использовать вместе с docs/TARIFFS_EXPANSION_HANDOFF.md.",
   "sources": {
     "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1FE6v_bRBNqzSD2eBRW7j7V34srZNTgWFVlAte-xwtUE/edit",
@@ -64,7 +64,7 @@
       "sitemap_new_urls_present": 16
     },
     "next_phase": 4,
-    "next_batch": "4B continuation: actual four-goal receipt in Yandex Metrika #109744589 and search indexing in authorized Webmaster/Search Console; static links and 7 reused public pairs already verified. No 4C until evidence.",
+    "next_batch": "4B remaining: confirm actual four-goal receipt in authorized Yandex Metrika #109744589 and actual indexing of 214 bilingual routes in Yandex Webmaster/Search Console. CI/Pages/static links and independent public RU/EN reusable landing QA are PASS. Do not start 4C until evidence.",
     "note": "These SHAs identify the verified functional release. Later documentation-only commits may advance astro-source/main without changing the checked pricing implementation. Batch 2AB #73 published in main 256d77dd with PR CI/production/Pages PASS; direct public HTTPS remains unverified. Do not include #73 in a new candidate batch. Parallel batch 2AD source merged, its release verification is separate.",
     "phase_2a": {
       "phase": 2,
@@ -2387,7 +2387,7 @@
       "no_test_lead_post": true,
       "paid_brandfound_runs": 0,
       "scope_note": "All 214 routes are checked against generated HTML. This does not prove external live HTTPS, search indexing, Metrika goal receipt or real leads. Keep 4B open until those separately verifiable results are recorded.",
-      "next_required_step": "Read real anonymized four-goal receipts from authorized Yandex Metrika counter 109744589, and independent indexation data from authorized Yandex Webmaster/Search Console. Keep 4B open until verified; no artificial POST, paid runs or new 4C.",
+      "next_required_step": "Technically released and QA passed. Next: authorized receipt data for four goals in Yandex Metrika counter #109744589, and real indexation evidence for 214 RU/EN URLs in Yandex Webmaster/Search Console. Until verified continue 4B, do not launch 4C.",
       "full_pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42882176077",
       "production_status": "pass",
       "published_manifest_source_commit": "6e69f9a4420c629c27e5b273c308c92ff9ea78ca",
@@ -2421,7 +2421,31 @@
       "public_qa_test_posts": 0,
       "public_qa_scope": "Seven reused bilingual landing pairs (14 URLs), checked before final 4B main release; main 4A-to-4B changed manifest and sitemap only, not HTML. 100 original bilingual pairs independently accepted in phases 3A-3R; this is not full-current-SHA 214-URL HTTPS recheck.",
       "compact_matrix_artifact_name": "gaeo-phase4b-link-matrix-json",
-      "compact_matrix_artifact_status": "workflow_config_added_verify_next_production_run"
+      "compact_matrix_artifact_status": "published_ci_artifact_verified",
+      "docs_sync_source_commit": "9540258fe005e86a65e0cdffc8a2e931cb77de93",
+      "docs_sync_production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42900638821",
+      "docs_sync_production_status": "pass",
+      "docs_sync_main_commit": "274de26a6b567bd6ead5acd050ed9b8fafe750e5",
+      "docs_sync_main_html_diff": "No HTML or sitemap changed vs previous main 2b633423; only astro-release-manifest.json.",
+      "docs_sync_released_at": "2026-11-10T21:19:38.993Z",
+      "docs_sync_pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42903976128",
+      "docs_sync_pages_status": "pass",
+      "compact_matrix_artifact_url": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42900638821/artifacts/13804935461",
+      "editorial_links_distribution": {
+        "one": 44,
+        "two": 118,
+        "three": 40,
+        "four": 6,
+        "five": 6,
+        "none": 0
+      },
+      "public_qa_after_release_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42904187442",
+      "public_qa_after_release_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42904187442/artifacts/13805215109",
+      "public_qa_after_release_status": "pass",
+      "public_qa_after_release_https_sha256_ok": 14,
+      "public_qa_after_release_chromium_pass": 42,
+      "public_qa_after_release_errors": 0,
+      "public_qa_after_release_posts": 0
     }
   },
   "status_definitions": {
@@ -3336,12 +3360,17 @@
       "ids": [],
       "label": "Проверка приема целей Метрики, матрицы индексации и перелинковки информационного хаба",
       "condition": "Confirm actual receipt/interpretation of the four phase 4A goals in the existing Metrika counter without personal data or test lead submissions; establish a baseline of indexability and internal link paths from 107 tariffs to relevant methods, research, cases and contact on RU/EN pages. Fix only verified gaps in canonical sources; no duplicate pages, tariff changes, unsupported evidence claims or paid BrandFound measurements without cost/balance review.",
-      "work_status": "in_progress_static_matrix_qa_integrated_ci_running",
-      "next_required_step": "Finish full PR CI #42881031795 and release PR #152; verify report and public Pages, then obtain real Metrika-goal receipt and actual search-indexation evidence.",
+      "work_status": "released_static_matrix_and_public_reused_accepted_metrika_indexation_pending",
+      "next_required_step": "Техническая 4B принята: PR CI 42882176077, production 42900638821, main 274de26a, Pages 42903976128, отчет 13804935461, публичные 14/14 и 42/42 42904187442 PASS. Теперь проверить получение 4 фактических целей в Метрике №109744589 и индексацию 214 RU/EN URL в доступном Яндекс Вебмастере/Search Console. Не открывать 4C до подтверждения данных.",
       "work_branch": "feat/gaeo-hub-funnel-phase-4b-2026-11-10",
       "pull_request": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/152",
       "initial_pr_ci_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42881031795",
-      "report_path": "visual-hub-funnel/gaeo-phase4b-link-matrix.json"
+      "report_path": "visual-hub-funnel/gaeo-phase4b-link-matrix.json",
+      "final_production_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42900638821",
+      "final_published_main": "274de26a6b567bd6ead5acd050ed9b8fafe750e5",
+      "final_pages_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42903976128",
+      "final_public_qa_run": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42904187442",
+      "compact_matrix_artifact": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/42900638821/artifacts/13804935461"
     }
   ],
   "records": [
