@@ -15,6 +15,7 @@
     "check:research": "node scripts/qa_research_article_layout.mjs",
     "check:anchors": "node scripts/qa_internal_anchor_links.mjs",
     "check:design": "node scripts/qa_approved_design_system.mjs",
+    "check:entities": "node scripts/qa_entity_schema.mjs",
     "check:tariffs": "node scripts/qa_tariffs.mjs && node scripts/qa_hub_funnel_4b.mjs && node scripts/verify-hub-signals-4b.mjs --dry-run",
     "check:specializations": "node scripts/qa_industry_specializations.mjs",
     "check:sector3a": "node scripts/qa_sector_clusters_3a.mjs && node scripts/qa_sector_methods_3b.mjs",
