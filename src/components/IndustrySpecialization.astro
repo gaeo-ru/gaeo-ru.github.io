@@ -11,7 +11,7 @@ const path=page.routes[lang],url='https://gaeo.ru'+path;
 const image='/assets/tariffs/industries/industry-'+String(page.id).padStart(3,'0')+'-960.webp';
 const offerIds=['geo','content','guarantee'];
 const schema={'@context':'https://schema.org','@graph':[
- {'@type':'Service','@id':url+'#service',name:c.h1,description:c.description,url,serviceType:en?'GEO promotion for '+page.slug:'GEO-продвижение отраслевой специализации',provider:{'@id':'https://gaeo.ru/#business'},areaServed:en?'Worldwide':'Россия и международные рынки',offers:offerIds.map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))},
+ {'@type':'Service','@id':url+'#service',name:c.h1,description:c.description,url,serviceType:c.h1,audience:{'@type':'BusinessAudience',audienceType:c.eyebrow},provider:{'@id':'https://gaeo.ru/#business'},areaServed:en?'Worldwide':'Россия и международные рынки',offers:offerIds.map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))},
  {'@type':'FAQPage','@id':url+'#faq',mainEntity:c.faq.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))}
 ]};
 const lead=en?'/en/#lead':'/#lead',methodLinks=page.methods[lang];
