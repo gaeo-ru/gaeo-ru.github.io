@@ -36,7 +36,7 @@ for(const lang of ['ru','en']){
     assert.equal(company.logo?.['@id'],base+'#logo','Company logo '+route);
     assert.equal(company.hasOfferCatalog?.['@id'],base+(lang==='en'?'en/pricing/':'tarify/')+'#catalog','Service catalog '+route);
     for(const slug of cases)
-      assert(expert.workExample?.some(x=>x['@id']===base+(lang==='en'?'en/':'')+'cases/'+slug+'/#article'),'Verified case '+slug+' '+route);
+      assert(expert.subjectOf?.some(x=>x['@id']===base+(lang==='en'?'en/':'')+'cases/'+slug+'/#article'),'Verified case '+slug+' '+route);
     if(route.includes('biography'))
       assert(expert.hasOccupation?.skills?.some(x=>x.includes('Schema.org')),'Technical skills '+route);
   }
