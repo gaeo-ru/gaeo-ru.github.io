@@ -1,0 +1,46 @@
+name: GAEO 4B independent public home-to-industry verification
+on:
+  push:
+    branches:
+      - 'qa/gaeo-hub-home-public-4b-*'
+    paths:
+      - '.github/workflows/gaeo-hub-home-public-qa.yml'
+      - 'scripts/qa_hub_home_public_4b.mjs'
+permissions:
+  contents: read
+concurrency:
+  group: gaeo-hub-home-public-4b
+  cancel-in-progress: false
+jobs:
+  live-home-hub-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout QA-only verification script
+        uses: actions/checkout@v4
+      - name: Checkout currently published main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published-main
+      - name: Record published main SHA
+        run: echo "PUBLISHED_MAIN_SHA=$(git -C published-main rev-parse HEAD)" >> "$GITHUB_ENV"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install read-only Chromium test dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install chromium
+      - name: Verify public GAEO home → industries → sector paths at 1440/390/320
+        env:
+          GAEO_PUBLIC_ORIGIN: https://gaeo.ru
+        run: node scripts/qa_hub_home_public_4b.mjs
+      - name: Save public HTTPS report and 30 screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-4b-home-hub-public-qa
+          path: visual-hub-home-public/
+          if-no-files-found: warn
+          retention-days: 14
