@@ -4,7 +4,8 @@ export const PRICES = Object.freeze({free:0,audit:29900,geo:79900,content:99900,
 export const BASE_PLATFORMS=5;
 export const BASE_PROMPTS=50;
 export const PROMPT_BLOCK=10;
-export const UPDATED='2026-11-07';
+// Verified last service and structured-data revision; not a build timestamp.
+export const UPDATED='2026-11-11';
 // Agreed by Alexey in this task: cumulative targets relative to the initial BMR.
 export const GUARANTEE_TARGETS=[{month:1,points:5},{month:2,points:10},{month:3,points:15}];
 export const platforms=[
@@ -70,7 +71,9 @@ export function offerNode(id,lang='ru'){
 }
 export function serviceNodes(id,lang='ru'){
  const p=getPlan(id,lang),url='https://gaeo.ru'+p.href;
- return [{'@type':'Service','@id':url+'#service',url,name:p.name,description:p.summary+' '+p.items.join('. '),serviceType:p.name,provider:{'@id':'https://gaeo.ru/#business'},offers:{'@id':url+'#offer'}},offerNode(id,lang)];
+ const cases=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
+  const proof=p.id==='development'?{subjectOf:cases.map(slug=>({'@id':'https://gaeo.ru'+(lang==='en'?'/en':'')+'/cases/'+slug+'/#article'}))}:{};
+  return [{'@type':'Service','@id':url+'#service',url,name:p.name,description:p.summary+' '+p.items.join('. '),serviceType:p.name,provider:{'@id':'https://gaeo.ru/#business'},offers:{'@id':url+'#offer'},...proof},offerNode(id,lang)];
 }
 export function pricingGraph(lang='ru'){
  const all=allPlans(lang),url='https://gaeo.ru'+pricingHref(lang);
