@@ -105,7 +105,8 @@ async function checkGSC(token,siteUrl){
   ss.not_indexed=ss.routes.filter(x=>x.status==='not_indexed').length;
   ss.other_canonical=ss.routes.filter(x=>x.status==='other_canonical').length;
   ss.unknown=214-ss.indexed-ss.not_indexed-ss.other_canonical;
-  ss.indexing_statuses_verified=ss.checked_urls===214 && !report.errors.length;
+  // Do not let an unrelated Metrika/Webmaster error invalidate a complete GSC URL inspection.
+  ss.indexing_statuses_verified=ss.checked_urls===214 && !ss.routes.some(row=>row.error);
   ss.status=ss.indexing_statuses_verified?'all_routes_inspected':ss.checked_urls?'partial_inspection':'failed_or_missing';
 }
 
