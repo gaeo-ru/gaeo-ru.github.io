@@ -173,7 +173,7 @@ async function checkWebmaster(token){
   }
   // The documented maximum is 50,000 URLs. Truncation is not absence evidence.
   w.sampled_pages=sample.length;
-  w.sample_complete=total!==null && total<=50000 && sample.length===total;
+  w.sample_complete=total!==null && total<50000 && sample.length===total; // exactly 50k may be truncated by API
   w.routes=classifyWebmasterRoutes(entries,sample,w.sample_complete);
   const count=status=>w.routes.filter(r=>r.status===status).length;
   w.exact_https_in_search=count('in_search_exact_https');
