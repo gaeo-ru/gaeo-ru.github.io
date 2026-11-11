@@ -61,6 +61,17 @@ for(const lang of ['ru','en']){
     assert(dev.subjectOf?.some(x=>x['@id']===base+(lang==='en'?'en/':'')+'cases/'+slug+'/#article'),'Development case proof '+slug+' '+lang);
 }
 
+for(const lang of ['ru','en']){
+  const prefix=lang==='en'?'/en':'';
+  const serviceId=base+(lang==='en'?'en/':'')+'services/website-development/#service';
+  for(const slug of cases){
+    const route=prefix+'/cases/'+slug+'/';
+    const article=findId(route,base+route.replace(/^\//,'')+'#article');
+    assert(article,'Development case Article '+route);
+    assert(article.about?.some(x=>x['@id']===serviceId),'Case points back to website development '+route);
+  }
+}
+
 for(const entry of industrySpecializations){
   for(const lang of ['ru','en']){
     const route=entry.routes[lang],s=serviceAt(route);
