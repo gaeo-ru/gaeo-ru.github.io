@@ -10,8 +10,8 @@ const pages=[
 ];
 const pairs=[[pages[0],pages[1]],[pages[2],pages[3]]];
 const edges={
- '/':['/industries/metal-structures/'],
- '/en/':['/en/industries/metal-structures/'],
+ '/':['/industries/'],
+ '/en/':['/en/industries/'],
  '/industries/':['/industries/metal-structures/'],
  '/en/industries/':['/en/industries/metal-structures/'],
  '/strategies/':['/strategies/industrial-supplier-evidence/'],

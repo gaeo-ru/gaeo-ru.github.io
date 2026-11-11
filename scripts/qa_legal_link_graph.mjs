@@ -4,8 +4,8 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 const dist=resolve(process.cwd(),'dist'),origin='https://gaeo.ru';
 const cases={
- '/':['/industries/legal/'],
- '/en/':['/en/industries/legal/'],
+ '/':['/industries/'],
+ '/en/':['/en/industries/'],
  '/industries/':['/industries/legal/'],
  '/en/industries/':['/en/industries/legal/'],
  '/strategies/':['/strategies/legal-recommendations/'],
