@@ -2107,6 +2107,10 @@ export const industryCommercialPages = {
       "note": "Открытые первичные источники сверены 11 ноября 2026 года. Это воспроизводимый разбор классов доказательств и ограниченная исходная диагностика, не заявленный результат продвижения юридической практики.",
       "links": [
         {
+          "href": "/strategies/b2b-law-firm-matter-fit/",
+          "label": "Выбор B2B-юридической фирмы: предмет дела, полномочия и доказательства"
+        },
+        {
           "href": "/strategies/legal-recommendations/",
           "label": "Методика GEO для юридических практик"
         },
@@ -2463,6 +2467,10 @@ export const industryCommercialPages = {
     ],
     "note": "Primary source functions checked on 11 November 2026. This is a reproducible evidence comparison plus a limited baseline, not a completed client-outcome case study.",
     "links": [
+      {
+        "href": "/en/strategies/b2b-law-firm-matter-fit/",
+        "label": "Choosing B2B law counsel by matter, authority and verifiable practice"
+      },
       {
         "href": "/en/strategies/legal-recommendations/",
         "label": "The methodology for legal AI recommendations"
