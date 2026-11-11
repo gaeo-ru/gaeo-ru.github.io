@@ -35,6 +35,8 @@ const report = {
   expected_routes:214, checked_period:{from,to},
   metrika:{counter_id:COUNTER_ID, status:'not_checked', goals:GOALS.map(name=>({name,configured:null,reaches:null})), goal_receipt_verified:false},
   search_console:{status:'not_checked', property:null, checked_urls:0, indexed:0, not_indexed:0, other_canonical:0, unknown:214, indexing_statuses_verified:false, routes:[]},
+  yandex_webmaster:{status:'not_checked', verified_host:false, host_id:null, sampled_pages:null, sample_complete:false,
+    exact_https_in_search:0, other_variant_in_search:0, not_seen_in_sample:214, all_214_exact_https_in_search:false, routes:[]},
   errors:[],
 };
 
@@ -107,14 +109,100 @@ async function checkGSC(token,siteUrl){
   ss.status=ss.indexing_statuses_verified?'all_routes_inspected':ss.checked_urls?'partial_inspection':'failed_or_missing';
 }
 
+
+/**
+ * Yandex Webmaster's read-only "pages in search" API is separate from its
+ * crawl/indexing samples. Its result is a list of pages actually shown as
+ * participating in search, limited to 50,000 site URLs.
+ * https://yandex.ru/dev/webmaster/doc/ru/reference/hosts-indexing-insearch-samples
+ * Absence from a partial/lagging sample must never be labelled "not indexed".
+ */
+function classifyWebmasterRoutes(targets, samples, complete){
+  const byPath=new Map();
+  for(const row of samples){
+    if(!row || typeof row.url!=='string') continue;
+    let parsed;
+    try {parsed=new URL(row.url);} catch {continue;}
+    if(parsed.hostname!=='gaeo.ru' && parsed.hostname!=='www.gaeo.ru') continue;
+    const path=parsed.pathname.replace(/\/+$/,'')+'/';
+    const list=byPath.get(path)||[];
+    list.push({url:parsed.origin+parsed.pathname,exactOrigin:parsed.origin==='https://gaeo.ru',
+      hasParameters:Boolean(parsed.search),last_access:row.last_access||null});
+    byPath.set(path,list);
+  }
+  return targets.map(entry=>{
+    const path=new URL(entry.url).pathname.replace(/\/+$/,'')+'/';
+    const candidates=byPath.get(path)||[];
+    const exact=candidates.find(r=>r.url===entry.url && !r.hasParameters);
+    const alternative=candidates.find(r=>r.exactOrigin)||candidates[0];
+    const found=exact||alternative;
+    return {...entry,status:exact?'in_search_exact_https':found?'in_search_other_variant':complete?'not_seen_in_complete_sample':'unknown_sample_incomplete',
+      observed_url:found?found.url:null,last_access:found?found.last_access:null};
+  });
+}
+
+async function checkWebmaster(token){
+  const w=report.yandex_webmaster;
+  const api='https://api.webmaster.yandex.net/v4';
+  const user=await json(api+'/user',token);
+  if(!Number.isInteger(user.user_id)) throw Error('Yandex Webmaster: no numeric user_id');
+  const hostList=await json(api+'/user/'+user.user_id+'/hosts',token);
+  if(!Array.isArray(hostList.hosts)) throw Error('Yandex Webmaster: no hosts array');
+  const verified=hostList.hosts.filter(h=>{
+    try {const u=new URL(h.ascii_host_url);return h.verified===true && u.origin==='https://gaeo.ru';}
+    catch {return false;}
+  });
+  if(verified.length!==1 || !verified[0].host_id) throw Error('Yandex Webmaster: expected exactly one verified https://gaeo.ru host');
+  const host=verified[0];
+  w.verified_host=true;
+  w.host_id=host.host_id;
+  const root=api+'/user/'+user.user_id+'/hosts/'+encodeURIComponent(host.host_id);
+  const sample=[];
+  let total=null;
+  while(sample.length<50000 && (total===null || sample.length<total)){
+    const params=new URLSearchParams({offset:String(sample.length),limit:'100'});
+    const page=await json(root+'/search-urls/in-search/samples?'+params,token);
+    if(!Number.isInteger(page.count) || page.count<0 || !Array.isArray(page.samples))
+      throw Error('Yandex Webmaster: unexpected search samples response');
+    if(total!==null && page.count!==total) throw Error('Yandex Webmaster: search inventory changed during pagination; rerun');
+    total=page.count;
+    if(!page.samples.length && sample.length<Math.min(total,50000))
+      throw Error('Yandex Webmaster: prematurely empty search sample');
+    if(page.samples.length>100) throw Error('Yandex Webmaster: unexpected page size');
+    sample.push(...page.samples);
+  }
+  // The documented maximum is 50,000 URLs. Truncation is not absence evidence.
+  w.sampled_pages=sample.length;
+  w.sample_complete=total!==null && total<50000 && sample.length===total; // exactly 50k may be truncated by API
+  w.routes=classifyWebmasterRoutes(entries,sample,w.sample_complete);
+  const count=status=>w.routes.filter(r=>r.status===status).length;
+  w.exact_https_in_search=count('in_search_exact_https');
+  w.other_variant_in_search=count('in_search_other_variant');
+  w.not_seen_in_sample=214-w.exact_https_in_search-w.other_variant_in_search;
+  w.all_214_exact_https_in_search=w.exact_https_in_search===214 && w.sample_complete;
+  w.status=w.all_214_exact_https_in_search?'all_routes_confirmed_in_search':
+    w.sample_complete?'complete_sample_partial_coverage':'sample_incomplete';
+}
+
+if(dry){
+  const synthetic=classifyWebmasterRoutes(entries.slice(0,3),[
+    {url:entries[0].url,last_access:'2026-11-11'},
+    {url:'http://gaeo.ru'+new URL(entries[1].url).pathname,last_access:'2026-11-11'},
+  ],true);
+  if(synthetic.map(x=>x.status).join('|')!=='in_search_exact_https|in_search_other_variant|not_seen_in_complete_sample')
+    throw Error('Yandex Webmaster synthetic mapping self-test failed');
+}
+
 if(!dry){
   const mt=process.env.YANDEX_METRIKA_READ_TOKEN;
   const gt=process.env.GSC_READ_ACCESS_TOKEN;
-  if(!mt&&!gt) throw Error('Set YANDEX_METRIKA_READ_TOKEN or GSC_READ_ACCESS_TOKEN, or use --dry-run');
+  const wt=process.env.YANDEX_WEBMASTER_READ_TOKEN;
+  if(!mt&&!gt&&!wt) throw Error('Set YANDEX_METRIKA_READ_TOKEN, GSC_READ_ACCESS_TOKEN or YANDEX_WEBMASTER_READ_TOKEN, or use --dry-run');
   if(mt){try{await checkMetrika(mt);}catch(e){report.metrika.status='error';report.errors.push('Metrika: '+String(e.message||e));}}
   if(gt){try{await checkGSC(gt,process.env.GSC_SITE_URL);}catch(e){report.search_console.status='error';report.errors.push('GSC: '+String(e.message||e));}}
+  if(wt){try{await checkWebmaster(wt);}catch(e){report.yandex_webmaster.status='error';report.errors.push('Webmaster: '+String(e.message||e));}}
 }
 mkdirSync(dirname(output),{recursive:true});
 writeFileSync(output,JSON.stringify(report,null,2)+'\n');
-console.log('GAEO 4B evidence: '+report.metrika.status+'; GSC '+report.search_console.checked_urls+'/214; indexed '+report.search_console.indexed+'; errors '+report.errors.length+'; '+output);
+console.log('GAEO 4B evidence: '+report.metrika.status+'; GSC '+report.search_console.checked_urls+'/214; indexed '+report.search_console.indexed+'; Yandex Webmaster '+report.yandex_webmaster.exact_https_in_search+'/214 exact in search, '+report.yandex_webmaster.status+'; errors '+report.errors.length+'; '+output);
 if(report.errors.length) process.exitCode=1;
