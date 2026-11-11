@@ -65,6 +65,7 @@ on:
       - 'scripts/generate-tariff-pages.mjs'
       - 'scripts/sync-service-feed.mjs'
       - 'scripts/qa_tariffs.mjs'
+      - 'scripts/verify-hub-signals-4b.mjs'
       - 'public/gaeo-services.yml.xml'
       - 'src/components/**'
       - 'scripts/qa_legal_link_graph.mjs'
