@@ -27,6 +27,7 @@ jobs:
           npm install --no-audit --no-fund
           npm run build
           npm run check:parity
+          npm run check:entities
           npm run check:anchors
           npm run check:design
           npm run check:rankings
