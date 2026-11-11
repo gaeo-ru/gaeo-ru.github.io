@@ -36,7 +36,7 @@ const report = {
   metrika:{counter_id:COUNTER_ID, status:'not_checked', goals:GOALS.map(name=>({name,configured:null,reaches:null})), goal_receipt_verified:false},
   search_console:{status:'not_checked', property:null, checked_urls:0, indexed:0, not_indexed:0, other_canonical:0, unknown:214, indexing_statuses_verified:false, routes:[]},
   yandex_webmaster:{status:'not_checked', verified_host:false, host_id:null, sampled_pages:null, sample_complete:false,
-    exact_https_in_search:0, other_origin_in_search:0, not_seen_in_sample:214, all_214_exact_https_in_search:false, routes:[]},
+    exact_https_in_search:0, other_variant_in_search:0, not_seen_in_sample:214, all_214_exact_https_in_search:false, routes:[]},
   errors:[],
 };
 
@@ -177,8 +177,8 @@ async function checkWebmaster(token){
   w.routes=classifyWebmasterRoutes(entries,sample,w.sample_complete);
   const count=status=>w.routes.filter(r=>r.status===status).length;
   w.exact_https_in_search=count('in_search_exact_https');
-  w.other_origin_in_search=count('in_search_other_variant');
-  w.not_seen_in_sample=214-w.exact_https_in_search-w.other_origin_in_search;
+  w.other_variant_in_search=count('in_search_other_variant');
+  w.not_seen_in_sample=214-w.exact_https_in_search-w.other_variant_in_search;
   w.all_214_exact_https_in_search=w.exact_https_in_search===214 && w.sample_complete;
   w.status=w.all_214_exact_https_in_search?'all_routes_confirmed_in_search':
     w.sample_complete?'complete_sample_partial_coverage':'sample_incomplete';
