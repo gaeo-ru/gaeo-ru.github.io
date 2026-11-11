@@ -4,8 +4,9 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 const root=resolve(process.cwd(),'dist');
 const required={
- '/': ['/industries/ecommerce/'],
- '/en/': ['/en/industries/ecommerce/'],
+ // The homepages intentionally lead to the industry directory; the directory links to e-commerce.
+ '/': ['/industries/'],
+ '/en/': ['/en/industries/'],
  '/industries/': ['/industries/ecommerce/'],
  '/en/industries/': ['/en/industries/ecommerce/'],
  '/strategies/': ['/strategies/ecommerce-measurement/','/strategies/ecommerce-catalog/'],
