@@ -469,13 +469,14 @@
       "coverage": "reused_existing_landing",
       "quality": "needs_deeper_b2b_proof",
       "priority": 1,
-      "status": "queued_for_upgrade",
+      "status": "in_progress",
       "why": "Юридическая страница объемная и содержит обезличенную диагностику, но для узкого B2B-интента недостаточно собственных измерений и различимых доказательств.",
       "upgrade_focus": "Усилить существующую /industries/legal/ именно для выбора B2B-юридической фирмы: корпоративные споры, проверка квалификации, доказательная практика и собственный диагностический материал без NDA.",
-      "work_branch": null,
+      "work_branch": "feat/gaeo-sector-19-b2b-legal-evidence-2026-11-11",
       "work_pr": null,
       "published_upgrade_commit": null,
-      "last_public_verification": null
+      "last_public_verification": null,
+      "work_note": "11.11.2026: in-progress on isolated branch. Target: strengthen existing RU/EN legal service pages for B2B matter fit, official source hierarchy, legal practice evidence, and fix unsupported link; preserve NDA, shared pricing and current URLs."
     },
     {
       "id": 20,
