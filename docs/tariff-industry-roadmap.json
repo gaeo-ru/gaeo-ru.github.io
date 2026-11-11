@@ -473,10 +473,10 @@
       "why": "Юридическая страница объемная и содержит обезличенную диагностику, но для узкого B2B-интента недостаточно собственных измерений и различимых доказательств.",
       "upgrade_focus": "Усилить существующую /industries/legal/ именно для выбора B2B-юридической фирмы: корпоративные споры, проверка квалификации, доказательная практика и собственный диагностический материал без NDA.",
       "work_branch": "feat/gaeo-sector-19-b2b-legal-evidence-2026-11-11",
-      "work_pr": null,
+      "work_pr": "https://github.com/gaeo-ru/gaeo-ru.github.io/pull/158",
       "published_upgrade_commit": null,
       "last_public_verification": null,
-      "work_note": "11.11.2026: in-progress on isolated branch. Target: strengthen existing RU/EN legal service pages for B2B matter fit, official source hierarchy, legal practice evidence, and fix unsupported link; preserve NDA, shared pricing and current URLs."
+      "work_note": "11.11.2026: RU/EN B2B legal landing content upgraded on isolated branch: 7 matter-specific prompts, primary FNS/KAD/Minjust evidence comparison, clearer confidentiality; removed a link to nonexistent b2b-law-firm-matter-fit strategy. Pending PR CI, production, Pages and public acceptance. No new URLs, prices or client outcome claims."
     },
     {
       "id": 20,
