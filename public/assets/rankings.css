@@ -25,6 +25,9 @@
 .ranking-card__link>img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#edf3f6}
 .ranking-card__body{padding:23px;display:flex;flex:1;flex-direction:column}
 .ranking-card__meta{font-size:11px;line-height:1.6;color:#697f91;margin-bottom:13px}
+/* One visible H2 groups the H3 article cards on each ranking category page. */
+.ranking-category-subheading{font-family:Literata,Georgia,serif;font-size:25px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 22px}
+@media(max-width:720px){.ranking-category-subheading{font-size:22px}}
 .ranking-card h3{font-family:Literata,Georgia,serif;font-size:23px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 13px}
 .ranking-card p{font-size:13px;line-height:1.75;color:#536777;margin:0 0 24px}
 .ranking-card__read{font-size:12px;font-weight:700;color:#16657d;margin-top:auto;display:flex;justify-content:space-between;gap:12px}
