@@ -1060,6 +1060,105 @@ def check_migration_url_contract() -> None:
             )
 
 
+
+def check_seo_semantic_quality(page_texts: dict[Path, str]) -> None:
+    """Audit indexable pages together, not just one page at a time.
+
+    Basic presence, robots, canonical, hreflang and sitemap checks are handled
+    elsewhere in this module. This check catches cross-page keyword collisions,
+    accidental repeated snippets, and editorial heading outliers.
+    """
+    from collections import defaultdict
+
+    titles: dict[str, list[str]] = defaultdict(list)
+    descriptions: dict[str, list[str]] = defaultdict(list)
+    h1_values: dict[str, list[str]] = defaultdict(list)
+    short_titles: list[str] = []
+    long_titles: list[str] = []
+    short_descriptions: list[str] = []
+    long_descriptions: list[str] = []
+    missing_h2: list[str] = []
+    heading_gaps: list[str] = []
+    indexable_count = 0
+
+    for path, text in sorted(page_texts.items(), key=lambda item: relpath(item[0])):
+        page = relpath(path)
+        if page in INTENTIONAL_NOINDEX or "noindex" in ",".join(
+            meta_values(text, "name", "robots")
+        ).lower():
+            continue
+        indexable_count += 1
+        raw_title = TITLE_RE.findall(text)
+        raw_desc = meta_values(text, "name", "description")
+        raw_h1 = H1_RE.findall(text)
+        if len(raw_title) != 1 or len(raw_desc) != 1 or len(raw_h1) != 1:
+            continue
+
+        title = clean_text(raw_title[0])
+        description = clean_text(raw_desc[0])
+        heading = clean_text(raw_h1[0])
+        titles[title.casefold()].append(page)
+        descriptions[description.casefold()].append(page)
+        h1_values[heading.casefold()].append(page)
+
+        if len(title) < 30:
+            short_titles.append(page)
+        if len(title) > 115:
+            long_titles.append(page)
+        if len(description) < 75:
+            short_descriptions.append(page)
+        if len(description) > 210:
+            long_descriptions.append(page)
+
+        # Headings are read from real HTML, not inferred from bold styling.
+        body = text.split("</head>", 1)[-1]
+        headings = list(re.finditer(r"<h([123])\b[^>]*>", body, re.I))
+        h2s = [m for m in headings if m.group(1) == "2"]
+        h3s = [m for m in headings if m.group(1) == "3"]
+        if not h2s:
+            missing_h2.append(page)
+        elif h3s and h3s[0].start() < h2s[0].start():
+            heading_gaps.append(page)
+
+    for label, groups in (("title", titles), ("description", descriptions)):
+        for value, paths in groups.items():
+            if len(paths) > 1:
+                errors.append(
+                    f"SEO duplicate {label} on {len(paths)} indexable URLs: "
+                    + ", ".join(paths[:12]) + f"; text={value[:120]!r}"
+                )
+
+    def outlier(label: str, paths: list[str]) -> None:
+        if paths:
+            warnings.append(
+                f"SEO {label}: {len(paths)} pages; examples: " + ", ".join(paths[:12])
+            )
+
+    outlier("title shorter than 30 characters", short_titles)
+    outlier("title longer than 115 characters (review, not a fixed search limit)", long_titles)
+    outlier("description shorter than 75 characters", short_descriptions)
+    outlier("description longer than 210 characters (review, not a fixed search limit)", long_descriptions)
+    outlier("without H2 section headings", missing_h2)
+    outlier("H3 appears before first H2", heading_gaps)
+
+    duplicated_h1 = {key: pages for key, pages in h1_values.items() if len(pages) > 1}
+    if duplicated_h1:
+        sample = list(duplicated_h1.items())[:8]
+        warnings.append(
+            f"SEO shared H1 across {len(duplicated_h1)} groups; check intent separation: "
+            + "; ".join(f"{key[:65]}: {', '.join(pages[:4])}" for key, pages in sample)
+        )
+
+    print(f"SEO_INDEXABLE_PAGES={indexable_count}")
+    print(f"SEO_UNIQUE_TITLES={len(titles)}")
+    print(f"SEO_UNIQUE_DESCRIPTIONS={len(descriptions)}")
+    print(f"SEO_DUPLICATE_TITLE_GROUPS={sum(len(x)>1 for x in titles.values())}")
+    print(f"SEO_DUPLICATE_DESCRIPTION_GROUPS={sum(len(x)>1 for x in descriptions.values())}")
+    print(f"SEO_H1_COLLISION_GROUPS={len(duplicated_h1)}")
+    print(f"SEO_H2_MISSING={len(missing_h2)}")
+    print(f"SEO_H3_BEFORE_H2={len(heading_gaps)}")
+
+
 def main() -> int:
     parser = ArgumentParser(description="Technical SEO/GEO QA for GAEO.ru.")
     parser.add_argument("--mode", choices=("staging", "prelaunch", "production"), default="staging")
@@ -1084,6 +1183,7 @@ def main() -> int:
         check_page(path, args.mode, page_texts)
 
     check_hreflang_reciprocity(page_texts)
+    check_seo_semantic_quality(page_texts)
     check_nojs_static_content(page_texts)
     check_assets_css_js()
     check_social_preview_bundle()
