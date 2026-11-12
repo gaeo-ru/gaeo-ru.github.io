@@ -62,13 +62,17 @@ for(const lang of ['ru','en']){
  const en=lang==='en';
  for(const [slug,page] of Object.entries(serviceDetails[lang])){
   const plan=getPlan(slug,lang),other=getPlan(slug,en?'ru':'en');
-  const title=plan.name+' '+(plan.id==='free'?'':priceLabel(plan,lang))+' | GAEO.ru';
+  const seoNames={
+   ru:{free:'Бесплатный мини-аудит GEO-видимости бренда в нейросетях',audit:'Полный GEO-аудит сайта и видимости бренда',geo:'GEO-продвижение бизнеса в нейросетях',content:'GEO-продвижение в нейросетях с контентом',guarantee:'GEO-продвижение в нейросетях с финансовыми гарантиями'},
+   en:{free:'Free GEO audit of brand visibility in AI search',audit:'Full GEO audit of website and AI visibility',geo:'GEO promotion for AI search visibility',content:'GEO promotion with expert content',guarantee:'GEO promotion with financial guarantees'}
+  };
+  const title=(seoNames[lang][plan.id]||plan.name)+(plan.id==='free'?'':' '+priceLabel(plan,lang))+' | GAEO.ru';
   const description=page.description;
   save(resolve(root,plan.href.slice(1),'index.html'),shell({lang,route:plan.href,equivalent:other.href,title,description,h1:page.title,body:'<!-- GAEO_TARIFF:DETAIL -->'}));
  }
  const route=pricingHref(lang),equivalent=pricingHref(en?'ru':'en');
  const h1=en?'GEO pricing, services and 107 business categories':'Тарифы GEO: услуги и 107 направлений бизнеса';
- const title=en?'GEO pricing and services: audit, promotion, websites | GAEO.ru':'Тарифы GEO-продвижения, аудит и разработка сайтов | GAEO.ru';
+ const title=en?'GEO pricing for AI search: audits, services and websites | GAEO.ru':'GEO-продвижение в нейросетях: цены, тарифы и аудит | GAEO.ru';
  const description=en?'Compare GAEO services: free mini-audit, full audit, GEO promotion, content, contractual BMR growth and websites. Calculate extras and explore 107 business categories.':'Тарифы GAEO: бесплатный и полный аудит, GEO-продвижение, контент, финансовые гарантии роста BMR и разработка сайтов. Калькулятор опций и 107 направлений бизнеса.';
  const body=`<main class="tariff-page"><section class="section-sm tariff-page__intro"><div class="container"><nav class="tariff-breadcrumbs" aria-label="${en?'Breadcrumbs':'Хлебные крошки'}"><a href="${en?'/en/':'/'}">${en?'Home':'Главная'}</a> / ${en?'Pricing':'Тарифы'}</nav><div class="eyebrow">GAEO · ${en?'Alexey Yakovlev':'Алексей Яковлев'}</div><h1>${h1}</h1><p class="tariff-lead">${en?'Find the right service, compare responsibilities and choose the scope for your business.':'Найдите подходящую услугу, сравните ответственность за внедрение и выберите объем работ для вашего бизнеса.'}</p><div class="tariff-related pill-links"><a href="${route}#pricing">${en?'6 services':'6 услуг'}</a><a href="${route}#calculator">${en?'Calculator':'Калькулятор'}</a><a href="${route}#compare">${en?'Compare plans':'Сравнение тарифов'}</a><a href="${route}#industry-catalog">${en?'107 business categories':'107 направлений'}</a></div></div></section>
 <!-- GAEO_TARIFF:OVERVIEW -->
