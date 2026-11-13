@@ -56,6 +56,18 @@ for(const a of articles){
       for(const platform of ['Sostav','TenChat'])
         assert.ok(versionsFor(a,lang).some(v=>v.platform===platform&&html.includes('href="'+esc(v.url)+'"')),'Literature article has '+platform+' published version');
     }
+
+    const registry=JSON.parse(readFileSync('src/data/rankings/publication-registry-links.json','utf8'));
+    const registryKey=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const family=Object.entries(registry.families).find(([id])=>registryKey(id)===registryKey(a.familyId)||registryKey(id)===registryKey(a.id))?.[1];
+    if(family){
+      for(const edition of family.versions){
+        assert.ok(html.includes('href="'+esc(edition.url)+'"'),`${a.id}/${lang}: published ${edition.platform} version missing`);
+      }
+      for(const target of family.sostavLinks.filter(l=>l.commercial)){
+        assert.ok(html.includes('href="'+esc(target.url)+'"'),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
+      }
+    }
     const linked=new Set(versionsFor(a,lang).map(v=>v.url));
     if(manifest?.publishedVersions){
       for(const v of manifest.publishedVersions){
