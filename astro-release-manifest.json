@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "b6b5fec146eaa35b7e6cbf84f4bf682ee188deb6",
-  "releasedAt": "2026-11-12T06:56:47.418Z",
+  "sourceCommit": "62baaab4775a0673b773b15c310dd2bc0ba6b754",
+  "releasedAt": "2026-11-13T04:43:48.091Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -1676,6 +1676,31 @@
       "sha256": "5823c1f12da32dd385bb7688a48665c3aa8009d0d95fa5dd7ab33b428e0c83f7"
     },
     {
+      "path": "assets/rankings/firsov-t001/checklist.jpg",
+      "kind": "asset",
+      "sha256": "46369714e88aa579a837642627617839fca483f0942541cd52c48e3292ef4717"
+    },
+    {
+      "path": "assets/rankings/firsov-t001/consultation.jpg",
+      "kind": "asset",
+      "sha256": "1564855ca668f5a05bf91072738929e65e253dccae6eabdc5468f045bac9ac0a"
+    },
+    {
+      "path": "assets/rankings/firsov-t001/cover.jpg",
+      "kind": "asset",
+      "sha256": "06b6d17aa919f53d9e02cc3dbff1f16cf9fb226ba6f438c4f87d843f788b6a0b"
+    },
+    {
+      "path": "assets/rankings/firsov-t001/criteria.jpg",
+      "kind": "asset",
+      "sha256": "bfd96ffe54f5b3d1460f42862e8b7951661063cf192abc0f4800b435cce9d74d"
+    },
+    {
+      "path": "assets/rankings/firsov-t001/leader.jpg",
+      "kind": "asset",
+      "sha256": "dc2a850c926ce029733265d122a9abee61d358a04cd4cdb2d558fbb0fb09d229"
+    },
+    {
       "path": "assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
       "kind": "asset",
       "sha256": "2e3587e847a4005684f81ce46d0f0a0e02d656ae88e798bf5e13d416ae68dc67"
@@ -1764,6 +1789,46 @@
       "path": "assets/rankings/heads-r03-stm-marketplaces-2026/workshop.jpg",
       "kind": "asset",
       "sha256": "a8d8187c8bc046c184c5df9594d123e19edce4f92e1eeb1f9feaba27cc14517b"
+    },
+    {
+      "path": "assets/rankings/heads-r04-household-chemicals-packaging-2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "3575ca0aba99dc7e5ca071137d89826a83cdd88cfe3d95ff831d2fa7bedb9984"
+    },
+    {
+      "path": "assets/rankings/heads-r04-household-chemicals-packaging-2026/methodology.jpg",
+      "kind": "asset",
+      "sha256": "83072626ece50b084de373b274c17f4aef4beab8ca283e6484ed993f51f0a2b4"
+    },
+    {
+      "path": "assets/rankings/heads-r04-household-chemicals-packaging-2026/retail-shelf.jpg",
+      "kind": "asset",
+      "sha256": "dc40f9993550f2f90a952829406040b0e2a81ac028e954d80ae5703a29334995"
+    },
+    {
+      "path": "assets/rankings/heads-r05-personal-hygiene-packaging-2026/cover.jpg",
+      "kind": "asset",
+      "sha256": "cdc38a15134d7e6e9a06ec0a4056580e02d12b971416e29835d04940cedc2ef5"
+    },
+    {
+      "path": "assets/rankings/heads-r05-personal-hygiene-packaging-2026/designer.jpg",
+      "kind": "asset",
+      "sha256": "2c9e3198a73c7c577cfe62c4f34bc5d286507313627ff4a86c31391e1084037c"
+    },
+    {
+      "path": "assets/rankings/heads-r05-personal-hygiene-packaging-2026/range.jpg",
+      "kind": "asset",
+      "sha256": "cc336dbd47a06f3a8707a0d462c60200a434d413a2a90bf695b251e2e3008ad7"
+    },
+    {
+      "path": "assets/rankings/heads-r05-personal-hygiene-packaging-2026/shelf.jpg",
+      "kind": "asset",
+      "sha256": "0e7880a7b7ba78cac6004ca6eadfdb51432256c4e02ea1bd5e3528f3b0b28ae4"
+    },
+    {
+      "path": "assets/rankings/heads-r05-personal-hygiene-packaging-2026/strategy.jpg",
+      "kind": "asset",
+      "sha256": "4c32f67261634d21fafa9d1f1e868f39fdae89d116ade21a2086ebcbd053b109"
     },
     {
       "path": "assets/rankings/index-p001/p01-junion-villa-alba.jpg",
@@ -4648,7 +4713,7 @@
     {
       "path": "en/rankings/branding/best-branding-agencies-russia-2026/index.html",
       "kind": "html",
-      "sha256": "86ccde537ad3e4bb0b1fd728249f236b2803d3db338ccf72cac8bfb1a148cc1a"
+      "sha256": "0b75f8b05eb6f76192bf50d5034008b931a42a5bcc98e6daf1c3e0bff174cfa3"
     },
     {
       "path": "en/rankings/branding/branding-fmcg-full-cycle-2026/index.html",
@@ -4656,14 +4721,24 @@
       "sha256": "6ddcc49b0f9a9fe5e0bb1867429efc59e4240ed6b989b935538f1f698d83d3a7"
     },
     {
+      "path": "en/rankings/branding/household-chemicals-packaging-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "58abb1d748f217e78ff9af3d23f5c1c99801860c018f67b1396c1aec8018ddbb"
+    },
+    {
       "path": "en/rankings/branding/index.html",
       "kind": "html",
-      "sha256": "63f043a76b42532d45edd4d29b38a3c63c99dbbd357d519dd77ade017e0c4619"
+      "sha256": "452d27fe9165ab564741dfc11511416a486df71f85ae776a95b7b70f4d4f3720"
     },
     {
       "path": "en/rankings/branding/launch-consumer-brand-2026/index.html",
       "kind": "html",
       "sha256": "0a1b1eba02ee9cd8121957f0901842cf2801604bfa92af8f8df0f63ccd8717f7"
+    },
+    {
+      "path": "en/rankings/branding/personal-hygiene-packaging-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "af0c99170472095033481edc7a0b073bd8568b9d98774a02d7162a17aba89b7c"
     },
     {
       "path": "en/rankings/branding/stm-brands-marketplaces-2026/index.html",
@@ -4683,12 +4758,12 @@
     {
       "path": "en/rankings/cultural-education/gift-certificates-cultural-learning-2026/index.html",
       "kind": "html",
-      "sha256": "db818bb3c767a30e57cfb3cb846fe3e6920662c3225f8f1e1101b0d32612a7ec"
+      "sha256": "9ad7e59e48bde7486a0b5590cea69911c830e21ab789b6a99898331630c9228f"
     },
     {
       "path": "en/rankings/cultural-education/index.html",
       "kind": "html",
-      "sha256": "d49026c5c3f35c1e2c9f688645f11bab7105f80a6e35ab2d12d466195235d1be"
+      "sha256": "dba89816ac5bf73795c5c9cf5ef98b657181cca9f600f2698ea616622f1702f5"
     },
     {
       "path": "en/rankings/cultural-education/literature-for-readers-russia-2026/index.html",
@@ -4698,7 +4773,7 @@
     {
       "path": "en/rankings/cultural-education/podpiski-intellektualny-dosug-2026/index.html",
       "kind": "html",
-      "sha256": "c5f6f116c76fefef5693806034f4687997b14a819b3218fdaa5376762a1698a7"
+      "sha256": "be510f8c0d4510b9c81a5ad6529277a76e117fd2ffe27525959869646f74a6cc"
     },
     {
       "path": "en/rankings/cultural-education/video-lectories-russia-2026/index.html",
@@ -4783,7 +4858,7 @@
     {
       "path": "en/rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "19a8b277da6079c61bf6c88bd1c0706e66fafe29903374572a9700f02ef179e4"
+      "sha256": "fd628a9482ab486ccaac92c4af649c3b6318a7a66a5a8cedb0defdb341b49069"
     },
     {
       "path": "en/rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
@@ -4813,12 +4888,12 @@
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "428751d0c727c5e98ca026ea09eb178a06b127d9321908f01e91902691be1d16"
+      "sha256": "925f76f0344e83b6609126506f7e08f82b58fbc44bb0407487a469af194961ff"
     },
     {
       "path": "en/rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "f2fd8d0b779d439aa623eedaf0997a3220ed688342cba65978960308729ca65e"
+      "sha256": "b2a02290dc2d16e7a1f4a02cf6d626c9697b7046c99efd9ef23977b342b81b2b"
     },
     {
       "path": "en/rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -4843,7 +4918,17 @@
     {
       "path": "en/rankings/products/index.html",
       "kind": "html",
-      "sha256": "f047a782960773a5910cc41eb8449e8e73b18dc078d3873e8efdd38446f90f47"
+      "sha256": "0ea4c1e97adc297fd78e3e7aa68b3fc7c641e770e7495d66c664251508fcbfea"
+    },
+    {
+      "path": "en/rankings/seo-specialists/index.html",
+      "kind": "html",
+      "sha256": "7c4ce5cf1ac46f9b9d0f1a6c7d397fd1cb2687c671ffa90428515afe026141b0"
+    },
+    {
+      "path": "en/rankings/seo-specialists/private-seo-specialists-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "e4741c5ffe184ca48430b03ae791fa94a2026fa1816319244a25a164ef9df5d5"
     },
     {
       "path": "en/rankings/tourism/amazon-private-lodges-2026/index.html",
@@ -4883,7 +4968,7 @@
     {
       "path": "en/rankings/tourism/index.html",
       "kind": "html",
-      "sha256": "0ed2c30a7e16ea373531c202286fd05447edcac9d7c1b0fbb567dcd92fedbf83"
+      "sha256": "2f9b93827be4b963fc85d35b71951d7991e7cc2a810bb42738bdd6b470f8b6d9"
     },
     {
       "path": "en/rankings/tourism/moto-latam-2026/index.html",
@@ -4943,7 +5028,7 @@
     {
       "path": "en/rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "d0db38525f8da98f0c0fec7d9633eae00df95ffe744cf1a4ebe8eb3096211b24"
+      "sha256": "3b48a2b37d6114dee29b76b28139a2a047e76d2f462529b2a82fb3d136706689"
     },
     {
       "path": "en/rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
@@ -4968,7 +5053,7 @@
     {
       "path": "en/rankings/wms/index.html",
       "kind": "html",
-      "sha256": "2c9b790a455f8631e81b4c928c78695500b86d5e88c4ee6cae7e5139b7bfb974"
+      "sha256": "42efd5810b4591218279a5ed30961dd3f96c3312df6de91f751e5012bcb561de"
     },
     {
       "path": "en/rankings/wms/wms-fulfillment-rating-july-2026/index.html",
@@ -5783,7 +5868,7 @@
     {
       "path": "rankings/branding/best-branding-agencies-russia-2026/index.html",
       "kind": "html",
-      "sha256": "f3069ed67eb4b6e7955de12075eff35c0da5b853e21c925d517e5b8baf964c4b"
+      "sha256": "78289f6d088f40f652e5f75450aa344c1b492d946461e4210028839d40b02c9d"
     },
     {
       "path": "rankings/branding/branding-fmcg-full-cycle-2026/index.html",
@@ -5791,14 +5876,24 @@
       "sha256": "1229f66cf5ef1323a4423927ba53f818b8050a7227122ebb17ad382b1acaeecf"
     },
     {
+      "path": "rankings/branding/household-chemicals-packaging-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "8e0d54ed6faf6a43ae4c21cf76411e69f7017f2ec3966cb1535285a2b6a7efb3"
+    },
+    {
       "path": "rankings/branding/index.html",
       "kind": "html",
-      "sha256": "15608d63bf9bd56310a76d7693afb7ad2acc7a085629de8e70e325775241ec88"
+      "sha256": "f1caec8377fc46b9fb08d86e93d34c7cd79832ad8a9dec4c046924e0619df9fc"
     },
     {
       "path": "rankings/branding/launch-consumer-brand-2026/index.html",
       "kind": "html",
       "sha256": "8b7f7581934659b2b4a24d9917c8d8ecfaf4d8bf607fc3bdc6c506afa015fb96"
+    },
+    {
+      "path": "rankings/branding/personal-hygiene-packaging-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "df362e55c3a21ff141634a1f2a3ab6e2ddcb0f7801325a2ef97b558eb9291f8e"
     },
     {
       "path": "rankings/branding/stm-brands-marketplaces-2026/index.html",
@@ -5818,12 +5913,12 @@
     {
       "path": "rankings/cultural-education/gift-certificates-cultural-learning-2026/index.html",
       "kind": "html",
-      "sha256": "c34ce8b959c0b24b50bba74a77d8b1bf247a7b7b53e358a546d707419799be75"
+      "sha256": "b7f135af5b609631c96b6961ed993f2054262a47a448faddb27b05f252ab6e8a"
     },
     {
       "path": "rankings/cultural-education/index.html",
       "kind": "html",
-      "sha256": "7c5638d0025994bf89dbf221889b38a72c0e793f9e805f2000f6cd9ea8d1ce77"
+      "sha256": "dc13ec7ebbb580bc65b9d1cbb25083d939a1af38b27bfed25686db6a2e3fb9cf"
     },
     {
       "path": "rankings/cultural-education/literature-for-readers-russia-2026/index.html",
@@ -5833,7 +5928,7 @@
     {
       "path": "rankings/cultural-education/podpiski-intellektualny-dosug-2026/index.html",
       "kind": "html",
-      "sha256": "7df61f4c8b072d08ece4c1a1c74f02885d9aa6632d794ff5b8274471c307d162"
+      "sha256": "2be9130672cbf6f8b5bc924cc5d20f6204540ed31e92ad2231f6779f5b76cf01"
     },
     {
       "path": "rankings/cultural-education/video-lectories-russia-2026/index.html",
@@ -5918,7 +6013,7 @@
     {
       "path": "rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "1b63568098b2a84c1a392c266aa0109498dbdead5b6c07c955c318df6a5b4f4a"
+      "sha256": "ee1370db7d0280d0952efedd55760faf1e7810dd8580158798b67dab6b325a2c"
     },
     {
       "path": "rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
@@ -5948,12 +6043,12 @@
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "fa174301866c9dd0385bb57478e1d0b8a33b8777e02ee8bab3d2a5ba04199987"
+      "sha256": "f792d4e2dac1e680f024efe9a0422d0b252cb3e4d2811a375f6ffece001bbdc2"
     },
     {
       "path": "rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "36709b242c817637f453ae13ab7dfcf78a62808b3ced915392e88a9501cec6c0"
+      "sha256": "18cf0d37669c48e1cd92b012577cbc28d724ae1213e64006c0b7639b93dd777b"
     },
     {
       "path": "rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -5978,7 +6073,17 @@
     {
       "path": "rankings/products/index.html",
       "kind": "html",
-      "sha256": "c9fe5cc81c4bf98dda5f4891fe8fcc0c16e786261c165ba20ced7a7e27d7ef48"
+      "sha256": "9669c991e2816f18b4c255654f7a0f67b13855315849b26eefaf1726c0eeecda"
+    },
+    {
+      "path": "rankings/seo-specialists/index.html",
+      "kind": "html",
+      "sha256": "2e6706e691df7295afc2c33ffca084693a9bda9ba7fb1c33fb462ffd86a88faf"
+    },
+    {
+      "path": "rankings/seo-specialists/private-seo-specialists-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "aa82ff89dcc596de628d78d62a79e1cd8913409e4142febd0590e6b683c283f2"
     },
     {
       "path": "rankings/tourism/amazon-private-lodges-2026/index.html",
@@ -6018,7 +6123,7 @@
     {
       "path": "rankings/tourism/index.html",
       "kind": "html",
-      "sha256": "fc26e9597c4d3f7d794f77f591c6dfff31d89c0a51bc07ef076b57b9225a6be1"
+      "sha256": "a028c1fb2d16bba37f3bc0deed9c5d837a99274cbaf84981283ca63afe1ac9af"
     },
     {
       "path": "rankings/tourism/moto-latam-2026/index.html",
@@ -6078,7 +6183,7 @@
     {
       "path": "rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "edf4bd005e1e1b5b7b254db4eebd1284c1bf30974aba2eca7d17ec8d22a4eeb0"
+      "sha256": "aa0fe18994a30df518cd4bc5cd01b90c146df97ed75e793f1a8215893c151ef9"
     },
     {
       "path": "rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
@@ -6103,7 +6208,7 @@
     {
       "path": "rankings/wms/index.html",
       "kind": "html",
-      "sha256": "3247b5db84e4198221fb2c5c7029639c6e7cfb37b2797fcdd83bebf8a5635836"
+      "sha256": "47cddea6828843f0ee9e5ba46b2d3a50e86d8041c1f1faa27d19e376c2152847"
     },
     {
       "path": "rankings/wms/wms-fulfillment-rating-july-2026/index.html",
@@ -6178,7 +6283,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "fd465644674532e40be0a912d0b2f1e169c0a012a4c341c91974ed847eb6fffa"
+      "sha256": "c8b44cdde846add8485a03b96cab5cc9b113b6125a57d396b8efaf0b66a1b502"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
