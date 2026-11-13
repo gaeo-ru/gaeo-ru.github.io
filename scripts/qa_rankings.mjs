@@ -11,7 +11,7 @@ const read=path=>readFileSync(resolve(dist,path.slice(1),'index.html'),'utf8');
 const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const paths=[];
 assert.equal(categories[0].id,'products','Products precedes every research category');
-assert.equal(categories.length,8,'The eight included IndexResearch categories');
+assert.equal(categories.length,9,'Eight original research categories plus independent SEO specialists');
 for(const lang of ['ru','en']){
   const index=read(route(lang));paths.push(route(lang));
   assert.equal(graph(index).find(n=>n['@type']==='ItemList').numberOfItems,articles.length,'One index entry per article family');
