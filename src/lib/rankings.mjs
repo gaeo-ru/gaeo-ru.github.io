@@ -4,6 +4,55 @@ import {resolve} from 'node:path';
 export const SITE='https://gaeo.ru';
 export const categories=JSON.parse(readFileSync(new URL('../data/rankings/categories.json',import.meta.url),'utf8'));
 export const articleDirectory=resolve('src/data/rankings/articles');
+
+const syncAffiliates=JSON.parse(readFileSync(new URL('../data/rankings/synchronize-admitad-links.json',import.meta.url),'utf8'));
+export const synchronizeAffiliateUrls=new Set(syncAffiliates.links.map(link=>link.url));
+const synchronizeByPath=new Map(syncAffiliates.links.map(link=>{
+  const destination=new URL(link.destination);
+  return [(destination.pathname.replace(/\/+$/,'')||'/').toLowerCase(),link];
+}));
+export function isDirectSynchronizationUrl(value){
+  if(!value)return false;
+  try{
+    const hostname=new URL(value).hostname.toLowerCase();
+    return hostname==='synchronize.ru'||hostname.endsWith('.synchronize.ru');
+  }catch{return false;}
+}
+// Returns the exact XLSX affiliate URL for a known Synchronizatsiya destination.
+// Unknown direct destinations have NO advertising link: never synthesize ulp/erid.
+export function resolveSynchronizationLink(value){
+  if(!isDirectSynchronizationUrl(value))return value;
+  const url=new URL(value);
+  const path=(url.pathname.replace(/\/+$/,'')||'/').toLowerCase();
+  return synchronizeByPath.get(path)?.url||null;
+}
+function enforceSynchronizationAffiliates(article){
+  const clientLinks=[],seen=new Set();
+  for(const link of article.clientLinks||[]){
+    const url=resolveSynchronizationLink(link.url);
+    if(!url)continue;
+    const k=targetKey(url);
+    if(seen.has(k))continue;
+    seen.add(k);
+    const affiliate=syncAffiliates.links.find(item=>item.url===url);
+    clientLinks.push({
+      ...link,url,
+      ...(affiliate&&isDirectSynchronizationUrl(link.url)?{
+        relation:'sponsored',
+        label:{ru:link.label?.ru||affiliate.title.ru,en:'Synchronizatsiya: '+affiliate.title.en}
+      }:{})
+    });
+  }
+  const rank=lang=>({...article[lang],ranking:article[lang].ranking.map(entry=>{
+    if(!entry.url||!isDirectSynchronizationUrl(entry.url))return entry;
+    const url=resolveSynchronizationLink(entry.url);
+    if(url)return {...entry,url};
+    const {url:ignored,...rest}=entry;
+    return rest;
+  })});
+  return {...article,clientLinks,ru:rank('ru'),en:rank('en')};
+}
+
 // A dated, read-only snapshot of exact published editions and author links in GAEO's
 // publication registry. Article JSON is still canonical for its editorial text.
 // Enrichment is deliberately additive and does not rewrite the article's research.
@@ -52,24 +101,11 @@ function enrichRanking(a){
     });
     targets.add(k);
   }
-  // The source's former online-course URL returns HTTP 404. This is the
-  // confirmed, separately labelled historical course page, not a claim
-  // that the archived course is currently available to purchase.
-  if(a.id==='index-t064'){
-    const course='https://synchronize.ru/knigi-velikih-pisateley';
-    if(!targets.has(targetKey(course)))clientLinks.push({
-      url:course,
-      label:{ru:'«Книги великих писателей»: страница курса',en:"Great Writers' Books: course page in Russian"},
-      sourceAnchor:{ru:'«Книги великих писателей»',en:"Great Writers' Books"},
-      relation:'source',
-      sourceNote:'Official course page; no available dates shown at last verification'
-    });
-  }
   return {...a,versions,clientLinks};
 }
 export const articles=existsSync(articleDirectory)
   ?readdirSync(articleDirectory).filter(x=>x.endsWith('.json')).sort()
-    .map(x=>enrichRanking(JSON.parse(readFileSync(resolve(articleDirectory,x),'utf8'))))
+    .map(x=>enforceSynchronizationAffiliates(enrichRanking(JSON.parse(readFileSync(resolve(articleDirectory,x),'utf8')))))
   :[];
 export const route=(lang,category='',slug='')=>`${lang==='en'?'/en':''}/rankings/${category?category+'/':''}${slug?slug+'/':''}`;
 export const articleRoute=(a,lang)=>route(lang,a.category,a.slug);
