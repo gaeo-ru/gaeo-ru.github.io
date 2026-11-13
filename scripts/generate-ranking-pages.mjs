@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync,mkdirSync,existsSync,readdirSync,rmSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
-import {SITE,categories,articles,route,articleRoute,categoryArticles,categoryFor,versionsFor,formatDate,validateAll,articleSchema} from '../src/lib/rankings.mjs';
+import {SITE,categories,articles,route,articleRoute,categoryArticles,categoryFor,versionsFor,formatDate,validateAll,articleSchema,synchronizeAffiliateUrls} from '../src/lib/rankings.mjs';
 
 validateAll();
 const ROOT=resolve('src/legacy/pages');
@@ -99,7 +99,18 @@ function clientLinks(a,lang,inline){
 }
 
 function makeInlineLinks(a,lang){
-  const links=(a.clientLinks||[]).filter(l=>l.url&&l.label?.[lang]);
+  // This archived literary course has no dedicated affiliate URL in the XLSX.
+  // Keep its title as plain text; link the existing research-evidence phrase.
+  const editorial=a.id==='index-t064'?[{
+    url:lang==='en'
+      ?'https://indexresearch.ru/en/reports/literature-for-readers-russia-2026/'
+      :'https://indexresearch.ru/reports/literature-for-readers-russia-2026/',
+    label:{ru:'В исходной десятке',en:'First place belongs'},
+    sourceAnchor:{ru:'В исходной десятке',en:'First place belongs'},
+    relation:'source',
+    editorial:true
+  }]:[];
+  const links=[...(a.clientLinks||[]),...editorial].filter(l=>l.url&&l.label?.[lang]);
   const used=new Set();
   const normalize=value=>String(value||'').toLocaleLowerCase().replace(/[\s«»"'.,:;!?()[\]{}]+/g,'');
   const hrefKey=value=>{
@@ -126,7 +137,6 @@ function makeInlineLinks(a,lang){
   function render(value,context='body'){
     const raw=String(value??''),lower=raw.toLocaleLowerCase(),matches=[];
     for(const l of links){
-      if(a.id==='index-t064'&&l.url==='https://synchronize.ru/knigi-velikih-pisateley'&&context!=='entry')continue;
       const id=hrefKey(l.url);if(used.has(id))continue;
       for(const anchor of variants(l)){
         const at=lower.indexOf(anchor.toLocaleLowerCase());
@@ -157,7 +167,7 @@ function makeInlineLinks(a,lang){
     const l=choices[0].l;used.add(hrefKey(l.url));
     return link(l,entry.name);
   }
-  return {render,heading,remaining:()=>links.filter(l=>!used.has(hrefKey(l.url)))};
+  return {render,heading,remaining:()=>links.filter(l=>!l.editorial&&!used.has(hrefKey(l.url)))};
 }
 
 function buildArticle(a,lang){
@@ -175,7 +185,7 @@ ${t.context?.length?`<section class="ranking-context"><h2>${esc(t.contextTitle||
 <section id="methodology"><h2>${labels[1]}</h2>${richParagraphs(t.methodology)}${t.criteria?.length?`<ul class="ranking-criteria">${t.criteria.map(k=>`<li><strong>${esc(k.name)}</strong>${k.weight?` <span>${esc(k.weight)}</span>`:''}${k.description?`<p>${esc(k.description)}</p>`:''}</li>`).join('')}</ul>`:''}</section>
 ${isSelection?'':figure(a.images?.[1],lang)}
 <section id="comparison"><h2>${isSelection?(en?'Product shortlist':'Подборка товаров'):(en?'The ranking at a glance':'Рейтинг в одной таблице')}</h2><p class="ranking-table-hint">${en?'Select a participant to read the full profile. On small screens, scroll horizontally to see all columns.':'Нажми на участника, чтобы перейти к подробному разбору. На небольшом экране таблицу можно прокрутить вправо.'}</p><div class="ranking-table-scroll" role="region" tabindex="0" aria-label="${en?'Comparison table; scroll horizontally on narrow screens':'Таблица сравнения, на узком экране прокручивается по горизонтали'}"><table class="ranking-table"><thead><tr><th scope="col">№</th><th scope="col">${en?'Participant':'Участник'}</th>${hasScores?`<th scope="col">${en?'Score':'Баллы'}</th>`:''}<th scope="col">${en?'Main consideration':'Главное при выборе'}</th></tr></thead><tbody>${t.ranking.map(e=>`<tr${!isSelection&&e.position===1?' class="ranking-table__leader"':''}><td>${e.rank??e.position}</td><th scope="row"><a href="${path}#place-${e.position}">${esc(e.name)}</a></th>${hasScores?`<td class="ranking-score">${esc(e.score||'')}</td>`:''}<td>${esc(e.summary)}</td></tr>`).join('')}</tbody></table></div></section>
-<section id="participants"><h2>${isSelection?(en?'Products in the shortlist':'Товары в подборке'):(en?'Participant profiles':'Подробно об участниках')}</h2>${t.ranking.map(e=>`<section id="place-${e.position}" class="ranking-entry${!isSelection&&e.position===1?' ranking-entry--first':''}"><div class="ranking-entry__heading"><span class="ranking-position" aria-label="${isSelection?(en?'Item':'Позиция подборки'):(en?'Position':'Место')} ${e.rank??e.position}">${String(e.rank??e.position).padStart(2,'0')}</span><div><h3>${inline.heading(e,isSelection)}</h3>${e.score?`<p class="ranking-entry__score">${esc(e.score)}${en?' points in the original comparison':' баллов в исходном сравнении'}</p>`:''}</div></div><p class="ranking-entry__summary">${inline.render(e.summary,'entry')}</p>${richParagraphs(e.paragraphs)}${e.strengths?.length?`<ul>${e.strengths.map(s=>`<li>${inline.render(s)}</li>`).join('')}</ul>`:''}${e.caution?`<p class="ranking-entry__check"><strong>${en?'Check before choosing':'Что уточнить'}:</strong> ${inline.render(e.caution)}</p>`:''}${e.url?`<p class="ranking-entry__website">${external(e.url,isSelection?(en?'View this product':'Посмотреть товар'):(en?'Company website':'Сайт участника'),isSelection||(e.position===1&&a.clientLinks?.some(l=>l.relation==='sponsored')))}</p>`:''}${isSelection?(a.images||[]).filter(img=>img.productPosition===e.position).map(img=>figure(img,lang)).join(''):''}</section>`).join('')}</section>
+<section id="participants"><h2>${isSelection?(en?'Products in the shortlist':'Товары в подборке'):(en?'Participant profiles':'Подробно об участниках')}</h2>${t.ranking.map(e=>`<section id="place-${e.position}" class="ranking-entry${!isSelection&&e.position===1?' ranking-entry--first':''}"><div class="ranking-entry__heading"><span class="ranking-position" aria-label="${isSelection?(en?'Item':'Позиция подборки'):(en?'Position':'Место')} ${e.rank??e.position}">${String(e.rank??e.position).padStart(2,'0')}</span><div><h3>${inline.heading(e,isSelection)}</h3>${e.score?`<p class="ranking-entry__score">${esc(e.score)}${en?' points in the original comparison':' баллов в исходном сравнении'}</p>`:''}</div></div><p class="ranking-entry__summary">${inline.render(e.summary,'entry')}</p>${richParagraphs(e.paragraphs)}${e.strengths?.length?`<ul>${e.strengths.map(s=>`<li>${inline.render(s)}</li>`).join('')}</ul>`:''}${e.caution?`<p class="ranking-entry__check"><strong>${en?'Check before choosing':'Что уточнить'}:</strong> ${inline.render(e.caution)}</p>`:''}${e.url?`<p class="ranking-entry__website">${external(e.url,isSelection?(en?'View this product':'Посмотреть товар'):(en?'Company website':'Сайт участника'),isSelection||synchronizeAffiliateUrls.has(e.url)||(e.position===1&&a.clientLinks?.some(l=>l.relation==='sponsored')))}</p>`:''}${isSelection?(a.images||[]).filter(img=>img.productPosition===e.position).map(img=>figure(img,lang)).join(''):''}</section>`).join('')}</section>
 ${isSelection?'':(a.images||[]).slice(2).map(img=>figure(img,lang)).join('')}
 <section id="selection"><h2>${isSelection?(en?'How to choose among these products':'Как выбрать подходящий товар'):(en?'How to use this ranking':'Как использовать рейтинг при выборе')}</h2>${richParagraphs(t.selection)}</section>
 ${clientLinks(a,lang,inline)}

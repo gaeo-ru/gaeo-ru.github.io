@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync,mkdirSync,writeFileSync} from 'node:fs';
 import {resolve,extname} from 'node:path';
 import {createServer} from 'node:http';
-import {articles,categories,categoryArticles,route,articleRoute,versionsFor,validateAll,SITE} from '../src/lib/rankings.mjs';
+import {articles,categories,categoryArticles,route,articleRoute,versionsFor,validateAll,SITE,resolveSynchronizationLink,isDirectSynchronizationUrl,synchronizeAffiliateUrls} from '../src/lib/rankings.mjs';
 
 validateAll();
 const dist=resolve('dist');
@@ -57,14 +57,22 @@ for(const a of articles){
     assert.deepEqual(nodes.find(n=>n['@type']==='FAQPage').mainEntity.map(f=>[f.name,f.acceptedAnswer.text]),a[lang].faq.map(f=>[f.question,f.answer]),'FAQ schema is generated from the visible answers');
     for(const f of a[lang].faq)assert.ok(html.includes(esc(f.question))&&html.includes(esc(f.answer)),'FAQ text visible without JavaScript');
     for(const v of versionsFor(a,lang))assert.ok(html.includes(`href="${esc(v.url)}"`),'Publication version retained '+v.url);
-    const linkedTargets=new Set([...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
-      .map(match=>canonicalHref(match[1].replace(/&amp;/g,'&'))));
+    const authorHrefs=[...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
+      .map(match=>match[1].replace(/&amp;/g,'&'));
+    for(const href of authorHrefs){
+      assert.ok(!isDirectSynchronizationUrl(href),`${a.id}/${lang}: direct Synchronizatsiya link is prohibited: ${href}`);
+      if(href.includes('kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799'))
+        assert.ok(synchronizeAffiliateUrls.has(href),`${a.id}/${lang}: unknown Synchronizatsiya affiliate URL ${href}`);
+    }
+    const linkedTargets=new Set(authorHrefs.map(canonicalHref));
     for(const l of a.clientLinks)
       assert.ok(linkedTargets.has(canonicalHref(l.url)),`${a.id}/${lang}: registered destination missing ${l.url}`);
     if(a.id==='index-t064'){
-      const course='https://synchronize.ru/knigi-velikih-pisateley';
-      assert.ok(html.includes('href="'+course+'" target="_blank" rel="noopener noreferrer"'),'Correct course page linked');
-      assert.ok(html.includes('>'+ (lang==='ru'?'«Книги великих писателей»':"Great Writers' Books")+'</a>'),'Course title is a clickable anchor within the existing article text');
+      assert.ok(!html.includes('href="https://synchronize.ru/knigi-velikih-pisateley"'),'No affiliate exists for the archived literature course; title must remain plain');
+      const label=lang==='ru'?'В исходной десятке':'First place belongs';
+      const research=lang==='en'?'https://indexresearch.ru/en/reports/literature-for-readers-russia-2026/':'https://indexresearch.ru/reports/literature-for-readers-russia-2026/';
+      assert.ok(html.includes('href="'+research+'" target="_blank" rel="noopener noreferrer">'+label+'</a>'),'Literature article cites research inside the existing participant paragraph');
+      assert.ok(authorHrefs.filter(href=>href===research).length>=2,'Literature research appears in contextual text and source versions');
       for(const platform of ['Sostav','TenChat'])
         assert.ok(versionsFor(a,lang).some(v=>v.platform===platform&&html.includes('href="'+esc(v.url)+'"')),'Literature article has '+platform+' published version');
     }
@@ -77,7 +85,9 @@ for(const a of articles){
         assert.ok(html.includes('href="'+esc(edition.url)+'"'),`${a.id}/${lang}: published ${edition.platform} version missing`);
       }
       for(const target of family.sostavLinks.filter(l=>l.commercial)){
-        assert.ok(linkedTargets.has(canonicalHref(target.url)),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
+        const verified=resolveSynchronizationLink(target.url);
+        if(!verified)continue; // XLSX has no affiliate for this direct commercial destination.
+        assert.ok(linkedTargets.has(canonicalHref(verified)),`${a.id}/${lang}: verified destination for Sostav registry row ${target.registryRow} missing`);
       }
     }
     const linked=new Set(versionsFor(a,lang).map(v=>v.url));
