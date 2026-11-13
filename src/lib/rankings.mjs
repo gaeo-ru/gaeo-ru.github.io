@@ -32,11 +32,11 @@ function linkLabelEN(a,source){
 function enrichRanking(a){
   const snapshot=registeredFamilies.get(key(a.familyId))||registeredFamilies.get(key(a.id));
   if(!snapshot)return a;
-  const versions=[...(a.versions||[])],seen=new Set(versions.map(versionKey));
+  const versions=[...(a.versions||[])],seen=new Set(versions.map(v=>v.ru||v.url||''));
   for(const v of snapshot.versions||[]){
     if(!/^https:\/\/\S+$/.test(v.url))continue;
     const item={platform:v.platform,ru:v.url,en:v.url,label:{ru:v.platform,en:v.platform+(/Sostav|TenChat/i.test(v.platform)?' (Russian)':'')}};
-    const id=versionKey(item);
+    const id=item.ru;
     if(!seen.has(id)){versions.push(item);seen.add(id);}
   }
   const clientLinks=[...(a.clientLinks||[])],targets=new Set(clientLinks.map(l=>targetKey(l.url)));
