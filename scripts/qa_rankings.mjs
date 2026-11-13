@@ -57,7 +57,7 @@ for(const a of articles){
     assert.deepEqual(nodes.find(n=>n['@type']==='FAQPage').mainEntity.map(f=>[f.name,f.acceptedAnswer.text]),a[lang].faq.map(f=>[f.question,f.answer]),'FAQ schema is generated from the visible answers');
     for(const f of a[lang].faq)assert.ok(html.includes(esc(f.question))&&html.includes(esc(f.answer)),'FAQ text visible without JavaScript');
     for(const v of versionsFor(a,lang))assert.ok(html.includes(`href="${esc(v.url)}"`),'Publication version retained '+v.url);
-    const authorHrefs=[...html.matchAll(/<a\\b[^>]*\\shref="([^"]+)"/g)]
+    const authorHrefs=[...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
       .map(match=>match[1].replace(/&amp;/g,'&'));
     for(const href of authorHrefs){
       assert.ok(!isDirectSynchronizationUrl(href),`${a.id}/${lang}: direct Synchronizatsiya link is prohibited: ${href}`);
