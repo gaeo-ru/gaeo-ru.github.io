@@ -99,7 +99,18 @@ function clientLinks(a,lang,inline){
 }
 
 function makeInlineLinks(a,lang){
-  const links=(a.clientLinks||[]).filter(l=>l.url&&l.label?.[lang]);
+  // This archived literary course has no dedicated affiliate URL in the XLSX.
+  // Keep its title as plain text; link the existing research-evidence phrase.
+  const editorial=a.id==='index-t064'?[{
+    url:lang==='en'
+      ?'https://indexresearch.ru/en/reports/literature-for-readers-russia-2026/'
+      :'https://indexresearch.ru/reports/literature-for-readers-russia-2026/',
+    label:{ru:'В исходной десятке',en:'First place belongs'},
+    sourceAnchor:{ru:'В исходной десятке',en:'First place belongs'},
+    relation:'source',
+    editorial:true
+  }]:[];
+  const links=[...(a.clientLinks||[]),...editorial].filter(l=>l.url&&l.label?.[lang]);
   const used=new Set();
   const normalize=value=>String(value||'').toLocaleLowerCase().replace(/[\s«»"'.,:;!?()[\]{}]+/g,'');
   const hrefKey=value=>{
@@ -126,7 +137,6 @@ function makeInlineLinks(a,lang){
   function render(value,context='body'){
     const raw=String(value??''),lower=raw.toLocaleLowerCase(),matches=[];
     for(const l of links){
-      if(a.id==='index-t064'&&l.url==='https://synchronize.ru/knigi-velikih-pisateley'&&context!=='entry')continue;
       const id=hrefKey(l.url);if(used.has(id))continue;
       for(const anchor of variants(l)){
         const at=lower.indexOf(anchor.toLocaleLowerCase());
@@ -157,7 +167,7 @@ function makeInlineLinks(a,lang){
     const l=choices[0].l;used.add(hrefKey(l.url));
     return link(l,entry.name);
   }
-  return {render,heading,remaining:()=>links.filter(l=>!used.has(hrefKey(l.url)))};
+  return {render,heading,remaining:()=>links.filter(l=>!l.editorial&&!used.has(hrefKey(l.url)))};
 }
 
 function buildArticle(a,lang){
