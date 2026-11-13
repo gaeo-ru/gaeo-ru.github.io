@@ -48,7 +48,26 @@ for(const a of articles){
     assert.deepEqual(nodes.find(n=>n['@type']==='FAQPage').mainEntity.map(f=>[f.name,f.acceptedAnswer.text]),a[lang].faq.map(f=>[f.question,f.answer]),'FAQ schema is generated from the visible answers');
     for(const f of a[lang].faq)assert.ok(html.includes(esc(f.question))&&html.includes(esc(f.answer)),'FAQ text visible without JavaScript');
     for(const v of versionsFor(a,lang))assert.ok(html.includes(`href="${esc(v.url)}"`),'Publication version retained '+v.url);
-    for(const l of a.clientLinks)assert.ok(html.includes(`href="${esc(l.url)}" target="_blank" rel="sponsored noopener noreferrer"`),'Exact registered client link retained');
+    for(const l of a.clientLinks)assert.ok(html.includes(`href="${esc(l.url)}" target="_blank" rel="${l.relation==='sponsored'?'sponsored ':''}noopener noreferrer"`),'Exact registered client link retained');
+    if(a.id==='index-t064'){
+      const course='https://synchronize.ru/knigi-velikih-pisateley';
+      assert.ok(html.includes('href="'+course+'" target="_blank" rel="noopener noreferrer"'),'Correct course page linked');
+      assert.ok(html.includes('>'+ (lang==='ru'?'«Книги великих писателей»':"Great Writers' Books")+'</a>'),'Course title is a clickable anchor within the existing article text');
+      for(const platform of ['Sostav','TenChat'])
+        assert.ok(versionsFor(a,lang).some(v=>v.platform===platform&&html.includes('href="'+esc(v.url)+'"')),'Literature article has '+platform+' published version');
+    }
+
+    const registry=JSON.parse(readFileSync('src/data/rankings/publication-registry-links.json','utf8'));
+    const registryKey=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const family=Object.entries(registry.families).find(([id])=>registryKey(id)===registryKey(a.familyId)||registryKey(id)===registryKey(a.id))?.[1];
+    if(family){
+      for(const edition of family.versions){
+        assert.ok(html.includes('href="'+esc(edition.url)+'"'),`${a.id}/${lang}: published ${edition.platform} version missing`);
+      }
+      for(const target of family.sostavLinks.filter(l=>l.commercial)){
+        assert.ok(html.includes('href="'+esc(target.url)+'"'),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
+      }
+    }
     const linked=new Set(versionsFor(a,lang).map(v=>v.url));
     if(manifest?.publishedVersions){
       for(const v of manifest.publishedVersions){

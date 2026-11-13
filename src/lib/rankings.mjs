@@ -4,7 +4,73 @@ import {resolve} from 'node:path';
 export const SITE='https://gaeo.ru';
 export const categories=JSON.parse(readFileSync(new URL('../data/rankings/categories.json',import.meta.url),'utf8'));
 export const articleDirectory=resolve('src/data/rankings/articles');
-export const articles=existsSync(articleDirectory)?readdirSync(articleDirectory).filter(x=>x.endsWith('.json')).sort().map(x=>JSON.parse(readFileSync(resolve(articleDirectory,x),'utf8'))):[];
+// A dated, read-only snapshot of exact published editions and author links in GAEO's
+// publication registry. Article JSON is still canonical for its editorial text.
+// Enrichment is deliberately additive and does not rewrite the article's research.
+const publicationRegistry=JSON.parse(readFileSync(new URL('../data/rankings/publication-registry-links.json',import.meta.url),'utf8'));
+const key=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const registeredFamilies=new Map(Object.entries(publicationRegistry.families||{}).map(([id,value])=>[key(id),value]));
+export const registrySnapshotDate=publicationRegistry.snapshotDate;
+
+function targetKey(value){
+  try{
+    const url=new URL(value);
+    url.hash='';
+    // Only measurement tags may be ignored for detecting the same destination.
+    // Affiliate destination, erid and other non-UTM parameters remain significant.
+    for(const name of [...url.searchParams.keys()])if(name.toLowerCase().startsWith('utm_'))url.searchParams.delete(name);
+    return url.hostname.replace(/^www\./,'').toLowerCase()+url.pathname.replace(/\/+$/,'')+url.search;
+  }catch{return String(value);}
+}
+const versionKey=v=>String(v.platform||'').toLowerCase()+'|'+String(v.ru||v.url||'');
+function linkLabelEN(a,source){
+  const site=new URL(source.url).hostname.replace(/^www\./,'');
+  const type=source.kind||'';
+  const kind=/подписк/i.test(type)?'subscription information':/каталог/i.test(type)?'course catalogue':/сертификат/i.test(type)?'gift certificates':/кейс|проект/i.test(type)?'case study':/услуг|тариф/i.test(type)?'service details':/курс/i.test(type)?'course details':/профил/i.test(type)?'company profile':/главная/i.test(type)?'official website':'relevant details';
+  return site+': '+kind+(source.anchor?' ('+source.anchor+')':'');
+}
+function enrichRanking(a){
+  const snapshot=registeredFamilies.get(key(a.familyId))||registeredFamilies.get(key(a.id));
+  if(!snapshot)return a;
+  const versions=[...(a.versions||[])],seen=new Set(versions.map(v=>v.ru||v.url||''));
+  for(const v of snapshot.versions||[]){
+    if(!/^https:\/\/\S+$/.test(v.url))continue;
+    const item={platform:v.platform,ru:v.url,en:v.url,label:{ru:v.platform,en:v.platform+(/Sostav|TenChat/i.test(v.platform)?' (Russian)':'')}};
+    const id=item.ru;
+    if(!seen.has(id)){versions.push(item);seen.add(id);}
+  }
+  const clientLinks=[...(a.clientLinks||[])],targets=new Set(clientLinks.map(l=>targetKey(l.url)));
+  for(const source of snapshot.sostavLinks||[]){
+    if(!source.commercial||!/^https:\/\/\S+$/.test(source.url))continue;
+    const k=targetKey(source.url);if(targets.has(k))continue;
+    clientLinks.push({
+      url:source.url,
+      label:{ru:source.anchor||'Ссылка на профильную страницу',en:linkLabelEN(a,source)},
+      relation:'sponsored',
+      sourceAnchor:{ru:source.anchor||'',en:''},
+      sourceRegistryRow:source.registryRow
+    });
+    targets.add(k);
+  }
+  // The source's former online-course URL returns HTTP 404. This is the
+  // confirmed, separately labelled historical course page, not a claim
+  // that the archived course is currently available to purchase.
+  if(a.id==='index-t064'){
+    const course='https://synchronize.ru/knigi-velikih-pisateley';
+    if(!targets.has(targetKey(course)))clientLinks.push({
+      url:course,
+      label:{ru:'«Книги великих писателей»: страница курса',en:"Great Writers' Books: course page in Russian"},
+      sourceAnchor:{ru:'«Книги великих писателей»',en:"Great Writers' Books"},
+      relation:'source',
+      sourceNote:'Official course page; no available dates shown at last verification'
+    });
+  }
+  return {...a,versions,clientLinks};
+}
+export const articles=existsSync(articleDirectory)
+  ?readdirSync(articleDirectory).filter(x=>x.endsWith('.json')).sort()
+    .map(x=>enrichRanking(JSON.parse(readFileSync(resolve(articleDirectory,x),'utf8'))))
+  :[];
 export const route=(lang,category='',slug='')=>`${lang==='en'?'/en':''}/rankings/${category?category+'/':''}${slug?slug+'/':''}`;
 export const articleRoute=(a,lang)=>route(lang,a.category,a.slug);
 export const categoryArticles=id=>articles.filter(a=>a.category===id).sort((a,b)=>b.sourceDate.localeCompare(a.sourceDate)||a.id.localeCompare(b.id));

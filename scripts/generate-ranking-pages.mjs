@@ -92,26 +92,93 @@ function buildCategory(c,lang){
   save(path,shell({lang,path,equivalent:route(en?'ru':'en',c.id),title:`${name}: ${en?'rankings and comparisons':'рейтинги и сравнения'} | GAEO.ru`,description,body,graph:collectionGraph(lang,path,name,description,list),crumbs:breadcrumbs(lang,path,c)}));
 }
 function figure(img,lang,hero=false){if(!img)return '';return `<figure class="ranking-figure${hero?' ranking-figure--hero':''}"><img src="${img.src}" alt="${esc(img.alt[lang])}" width="${img.width}" height="${img.height}" loading="${hero?'eager':'lazy'}" decoding="async"${hero?' fetchpriority="high"':''}>${img.caption?.[lang]?`<figcaption>${esc(img.caption[lang])}</figcaption>`:''}</figure>`;}
-function clientLinks(a,lang){
-  if(!a.clientLinks?.length)return '';
-  return `<aside class="ranking-client-links"><h3>${lang==='en'?'Company and service details':'Компания и профильные услуги'}</h3><ul>${a.clientLinks.map(l=>`<li>${external(l.url,l.label[lang],l.relation==='sponsored')}</li>`).join('')}</ul></aside>`;
+function clientLinks(a,lang,inline){
+  const links=inline.remaining();
+  if(!links.length)return '';
+  return `<aside class="ranking-client-links"><h3>${lang==='en'?'Company and service details':'Компания и профильные услуги'}</h3><ul>${links.map(l=>`<li>${external(l.url,l.label[lang],l.relation==='sponsored')}</li>`).join('')}</ul></aside>`;
 }
+
+function makeInlineLinks(a,lang){
+  const links=(a.clientLinks||[]).filter(l=>l.url&&l.label?.[lang]);
+  const used=new Set();
+  const normalize=value=>String(value||'').toLocaleLowerCase().replace(/[\s«»"'.,:;!?()[\]{}]+/g,'');
+  const hrefKey=value=>{
+    try{
+      const u=new URL(value);
+      u.hash='';
+      for(const name of [...u.searchParams.keys()])if(name.toLowerCase().startsWith('utm_'))u.searchParams.delete(name);
+      return u.hostname.replace(/^www\./,'').toLowerCase()+u.pathname.replace(/\/+$/,'')+u.search;
+    }catch{return String(value);}
+  };
+  const link=(l,label)=>external(l.url,label,l.relation==='sponsored');
+  const variants=l=>{
+    const originals=[l.sourceAnchor?.[lang],l.label?.[lang]].filter(Boolean);
+    const out=[...originals];
+    for(const value of originals){
+      const colon=value.indexOf(': ');
+      if(colon>=2)out.push(value.slice(colon+2));
+      // The source text can omit quote marks while retaining the exact course name.
+      const quote=value.match(/«([^»]{5,})»/);
+      if(quote)out.push(quote[1]);
+    }
+    return [...new Set(out.filter(v=>v.length>=5&&!/^(здесь|подробнее|ссылка|главная|сайт)$/i.test(v)))];
+  };
+  function render(value,context='body'){
+    const raw=String(value??''),lower=raw.toLocaleLowerCase(),matches=[];
+    for(const l of links){
+      if(a.id==='index-t064'&&l.url==='https://synchronize.ru/knigi-velikih-pisateley'&&context!=='entry')continue;
+      const id=hrefKey(l.url);if(used.has(id))continue;
+      for(const anchor of variants(l)){
+        const at=lower.indexOf(anchor.toLocaleLowerCase());
+        if(at>=0){matches.push({at,len:anchor.length,l,id});break;}
+      }
+    }
+    matches.sort((x,y)=>x.at-y.at||y.len-x.len);
+    let cursor=0,html='';
+    for(const m of matches){
+      if(m.at<cursor||used.has(m.id))continue;
+      html+=esc(raw.slice(cursor,m.at))+link(m.l,raw.slice(m.at,m.at+m.len));
+      cursor=m.at+m.len;used.add(m.id);
+    }
+    return html+esc(raw.slice(cursor));
+  }
+  function heading(entry,selection){
+    if(!selection&&entry.position!==1)return esc(entry.name);
+    const name=normalize(entry.name),original=normalize(entry.originalName||a.firstPlace||'');
+    const choices=links.filter(l=>!used.has(hrefKey(l.url))).map(l=>{
+      const labels=[l.label?.[lang],l.label?.ru,l.sourceAnchor?.ru].filter(Boolean).map(normalize);
+      let match=labels.some(label=>(name.length>=4&&label.includes(name))||(original.length>=4&&label.includes(original)));
+      // A product heading should only link to the matching product, never to another seller.
+      if(selection&&!labels.some(label=>label===name||label.includes(name)))match=false;
+      const main=/(?:главная|официальный сайт|официальная страница|learning platform|official website|website)/i.test((l.label?.ru||'')+' '+(l.label?.en||'')+' '+(l.sourceAnchor?.ru||''))||/^(?:\/)?$/.test(new URL(l.url).pathname)||/Admitad \/ главная/i.test(l.sourceAnchor?.ru||'');
+      return {l,score:(match?5:0)+(main?2:0)};
+    }).filter(x=>x.score>=5).sort((x,y)=>y.score-x.score);
+    if(!choices.length)return esc(entry.name);
+    const l=choices[0].l;used.add(hrefKey(l.url));
+    return link(l,entry.name);
+  }
+  return {render,heading,remaining:()=>links.filter(l=>!used.has(hrefKey(l.url)))};
+}
+
 function buildArticle(a,lang){
   const en=lang==='en',t=a[lang],path=articleRoute(a,lang),c=categoryFor(a.category),isSelection=a.contentType==='selection',hasScores=t.ranking.some(e=>e.score!==undefined);
+  const inline=makeInlineLinks(a,lang);
+  const richParagraphs=items=>items.map(p=>`<p>${inline.render(p)}</p>`).join('\n');
   const words=[...t.intro,...t.methodology,...t.ranking.flatMap(e=>[e.summary,...e.paragraphs,...(e.strengths||[]),e.caution||'']),...t.selection,...t.conclusion].join(' ').split(/\s+/).length;
   const ids=['summary','methodology','comparison','participants','selection','faq','versions'];
   const labels=en?['At a glance','Methodology','Comparison table','The participants','How to choose','FAQ','Published versions']:['Короткий ответ','Методика','Сравнение','Участники','Как выбрать','Вопросы и ответы','Версии публикации'];
   const toc=`<nav class="ranking-toc" aria-label="${en?'In this article':'Содержание статьи'}">${ids.map((id,i)=>`<a href="${path}#${id}">${labels[i]}</a>`).join('')}</nav>`;
   const provenance=isSelection?(en?`This is a new edition of an earlier editorial product shortlist. No research winner or product-test scores are claimed; source order and published-version links are retained.`:`Это новая редакция ранее опубликованной подборки товаров. Здесь нет победителя исследования и испытательных баллов; порядок товаров и ссылки на версии сохранены.`):(en?`This is a new editorial version of an earlier comparison. The original ranking and data date are retained; the links below lead to other versions of the same material.`:`Это новая редакционная версия ранее опубликованного сравнения. Порядок участников и дата исходных данных сохранены; внизу собраны другие версии этого материала.`);
   const body=`<main class="page-shell ranking-article" data-ranking-id="${a.id}"><article><section class="ranking-article-hero"><div class="article-wrap"><a class="ranking-eyebrow" href="${route(lang,c.id)}">${esc(c[lang])}</a><h1>${esc(t.title)}</h1><div class="article-meta"><span>${en?'Published':'Опубликовано'}: ${formatDate(a.publishedDate,lang)}</span><span>${en?'Updated':'Обновлено'}: ${formatDate(a.modifiedDate,lang)}</span><span>${Math.max(1,Math.ceil(words/(en?220:180)))} ${en?'min read':'мин чтения'}</span></div><p class="ranking-byline"><a href="${en?'/en':''}/professional-biography/">${en?'Alexey Yakovlev':'Алексей Яковлев'}</a> · ${en?'GAEO editorial version':'Редакционная версия GAEO'}</p><p class="ranking-data-date">${isSelection?(en?'Original selection date':'Дата исходной подборки'):(en?'Original data as of':'Данные исходного рейтинга')}: <time datetime="${a.dataAsOf||a.sourceDate}">${formatDate(a.dataAsOf||a.sourceDate,lang)}</time></p>${toc}${isSelection?'':figure(a.images?.[0],lang,true)}</div></section><div class="article-wrap ranking-body">
-<section id="summary"><div class="ranking-answer"><span class="ranking-answer__label">${labels[0]}</span><p>${esc(t.shortAnswer||t.intro[0])}</p></div>${paragraphs(t.intro)}</section>
-${t.context?.length?`<section class="ranking-context"><h2>${esc(t.contextTitle||(en?'What this comparison covers':'Что сравниваем'))}</h2>${paragraphs(t.context)}</section>`:''}
-<section id="methodology"><h2>${labels[1]}</h2>${paragraphs(t.methodology)}${t.criteria?.length?`<ul class="ranking-criteria">${t.criteria.map(k=>`<li><strong>${esc(k.name)}</strong>${k.weight?` <span>${esc(k.weight)}</span>`:''}${k.description?`<p>${esc(k.description)}</p>`:''}</li>`).join('')}</ul>`:''}</section>
+<section id="summary"><div class="ranking-answer"><span class="ranking-answer__label">${labels[0]}</span><p>${inline.render(t.shortAnswer||t.intro[0])}</p></div>${richParagraphs(t.intro)}</section>
+${t.context?.length?`<section class="ranking-context"><h2>${esc(t.contextTitle||(en?'What this comparison covers':'Что сравниваем'))}</h2>${richParagraphs(t.context)}</section>`:''}
+<section id="methodology"><h2>${labels[1]}</h2>${richParagraphs(t.methodology)}${t.criteria?.length?`<ul class="ranking-criteria">${t.criteria.map(k=>`<li><strong>${esc(k.name)}</strong>${k.weight?` <span>${esc(k.weight)}</span>`:''}${k.description?`<p>${esc(k.description)}</p>`:''}</li>`).join('')}</ul>`:''}</section>
 ${isSelection?'':figure(a.images?.[1],lang)}
 <section id="comparison"><h2>${isSelection?(en?'Product shortlist':'Подборка товаров'):(en?'The ranking at a glance':'Рейтинг в одной таблице')}</h2><p class="ranking-table-hint">${en?'Select a participant to read the full profile. On small screens, scroll horizontally to see all columns.':'Нажми на участника, чтобы перейти к подробному разбору. На небольшом экране таблицу можно прокрутить вправо.'}</p><div class="ranking-table-scroll" role="region" tabindex="0" aria-label="${en?'Comparison table; scroll horizontally on narrow screens':'Таблица сравнения, на узком экране прокручивается по горизонтали'}"><table class="ranking-table"><thead><tr><th scope="col">№</th><th scope="col">${en?'Participant':'Участник'}</th>${hasScores?`<th scope="col">${en?'Score':'Баллы'}</th>`:''}<th scope="col">${en?'Main consideration':'Главное при выборе'}</th></tr></thead><tbody>${t.ranking.map(e=>`<tr${!isSelection&&e.position===1?' class="ranking-table__leader"':''}><td>${e.rank??e.position}</td><th scope="row"><a href="${path}#place-${e.position}">${esc(e.name)}</a></th>${hasScores?`<td class="ranking-score">${esc(e.score||'')}</td>`:''}<td>${esc(e.summary)}</td></tr>`).join('')}</tbody></table></div></section>
-<section id="participants"><h2>${isSelection?(en?'Products in the shortlist':'Товары в подборке'):(en?'Participant profiles':'Подробно об участниках')}</h2>${t.ranking.map(e=>`<section id="place-${e.position}" class="ranking-entry${!isSelection&&e.position===1?' ranking-entry--first':''}"><div class="ranking-entry__heading"><span class="ranking-position" aria-label="${isSelection?(en?'Item':'Позиция подборки'):(en?'Position':'Место')} ${e.rank??e.position}">${String(e.rank??e.position).padStart(2,'0')}</span><div><h3>${esc(e.name)}</h3>${e.score?`<p class="ranking-entry__score">${esc(e.score)}${en?' points in the original comparison':' баллов в исходном сравнении'}</p>`:''}</div></div><p class="ranking-entry__summary">${esc(e.summary)}</p>${paragraphs(e.paragraphs)}${e.strengths?.length?`<ul>${e.strengths.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`:''}${e.caution?`<p class="ranking-entry__check"><strong>${en?'Check before choosing':'Что уточнить'}:</strong> ${esc(e.caution)}</p>`:''}${e.url?`<p class="ranking-entry__website">${external(e.url,isSelection?(en?'View this product':'Посмотреть товар'):(en?'Company website':'Сайт участника'),isSelection||(e.position===1&&a.clientLinks?.some(l=>l.relation==='sponsored')))}</p>`:''}${!isSelection&&e.position===1?clientLinks(a,lang):''}${isSelection?(a.images||[]).filter(img=>img.productPosition===e.position).map(img=>figure(img,lang)).join(''):''}</section>`).join('')}</section>
+<section id="participants"><h2>${isSelection?(en?'Products in the shortlist':'Товары в подборке'):(en?'Participant profiles':'Подробно об участниках')}</h2>${t.ranking.map(e=>`<section id="place-${e.position}" class="ranking-entry${!isSelection&&e.position===1?' ranking-entry--first':''}"><div class="ranking-entry__heading"><span class="ranking-position" aria-label="${isSelection?(en?'Item':'Позиция подборки'):(en?'Position':'Место')} ${e.rank??e.position}">${String(e.rank??e.position).padStart(2,'0')}</span><div><h3>${inline.heading(e,isSelection)}</h3>${e.score?`<p class="ranking-entry__score">${esc(e.score)}${en?' points in the original comparison':' баллов в исходном сравнении'}</p>`:''}</div></div><p class="ranking-entry__summary">${inline.render(e.summary,'entry')}</p>${richParagraphs(e.paragraphs)}${e.strengths?.length?`<ul>${e.strengths.map(s=>`<li>${inline.render(s)}</li>`).join('')}</ul>`:''}${e.caution?`<p class="ranking-entry__check"><strong>${en?'Check before choosing':'Что уточнить'}:</strong> ${inline.render(e.caution)}</p>`:''}${e.url?`<p class="ranking-entry__website">${external(e.url,isSelection?(en?'View this product':'Посмотреть товар'):(en?'Company website':'Сайт участника'),isSelection||(e.position===1&&a.clientLinks?.some(l=>l.relation==='sponsored')))}</p>`:''}${isSelection?(a.images||[]).filter(img=>img.productPosition===e.position).map(img=>figure(img,lang)).join(''):''}</section>`).join('')}</section>
 ${isSelection?'':(a.images||[]).slice(2).map(img=>figure(img,lang)).join('')}
-<section id="selection"><h2>${isSelection?(en?'How to choose among these products':'Как выбрать подходящий товар'):(en?'How to use this ranking':'Как использовать рейтинг при выборе')}</h2>${paragraphs(t.selection)}</section>
+<section id="selection"><h2>${isSelection?(en?'How to choose among these products':'Как выбрать подходящий товар'):(en?'How to use this ranking':'Как использовать рейтинг при выборе')}</h2>${richParagraphs(t.selection)}</section>
+${clientLinks(a,lang,inline)}
 <section id="faq"><h2>${labels[5]}</h2><!-- GAEO_DESIGN:FAQ --></section>
 <section class="ranking-conclusion"><h2>${en?'What the comparison shows':'Выводы'}</h2>${paragraphs(t.conclusion)}</section>
 <section id="versions" class="ranking-versions"><h2>${labels[6]}</h2><p class="ranking-provenance">${provenance}</p>${a.source.originalAuthor?.[lang]?`<p class="ranking-original-author">${en?'Original author':'Автор исходной публикации'}: ${esc(a.source.originalAuthor[lang])}</p>`:''}${a.disclosure?.[lang]?`<p class="ranking-disclosure">${esc(a.disclosure[lang])}</p>`:''}<p>${isSelection?(en?'Other published editions of this product selection:':'Другие опубликованные версии подборки:'):(en?'Other publications of this comparison and its research data:':'Другие публикации этого сравнения и его исследовательские данные:')}</p><ul>${versionsFor(a,lang).map(v=>`<li>${external(v.url,v.label)}</li>`).join('')}</ul></section>
