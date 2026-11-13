@@ -64,8 +64,21 @@ for(const a of articles){
       for(const edition of family.versions){
         assert.ok(html.includes('href="'+esc(edition.url)+'"'),`${a.id}/${lang}: published ${edition.platform} version missing`);
       }
+      const canonicalHref=address=>{
+        try{
+          const url=new URL(address);
+          url.hash='';
+          for(const param of [...url.searchParams.keys()])
+            if(param.toLowerCase().startsWith('utm_'))url.searchParams.delete(param);
+          return url.hostname.replace(/^www\\./,'').toLowerCase()+url.pathname.replace(/\\/+$/,'')+url.search;
+        }catch{return String(address);}
+      };
+      const renderedDestinations=new Set(
+        [...html.matchAll(/<a\\b[^>]*\\shref="([^"]+)"/g)]
+          .map(match=>canonicalHref(match[1].replace(/&amp;/g,'&')))
+      );
       for(const target of family.sostavLinks.filter(l=>l.commercial)){
-        assert.ok(html.includes('href="'+esc(target.url)+'"'),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
+        assert.ok(renderedDestinations.has(canonicalHref(target.url)),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
       }
     }
     const linked=new Set(versionsFor(a,lang).map(v=>v.url));
