@@ -70,11 +70,11 @@ for(const a of articles){
           url.hash='';
           for(const param of [...url.searchParams.keys()])
             if(param.toLowerCase().startsWith('utm_'))url.searchParams.delete(param);
-          return url.hostname.replace(/^www\\./,'').toLowerCase()+url.pathname.replace(/\\/+$/,'')+url.search;
+          return url.hostname.replace(/^www\./,'').toLowerCase()+url.pathname.replace(/\/+$/,'')+url.search;
         }catch{return String(address);}
       };
       const renderedDestinations=new Set(
-        [...html.matchAll(/<a\\b[^>]*\\shref="([^"]+)"/g)]
+        [...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
           .map(match=>canonicalHref(match[1].replace(/&amp;/g,'&')))
       );
       for(const target of family.sostavLinks.filter(l=>l.commercial)){
