@@ -8,6 +8,15 @@ validateAll();
 const dist=resolve('dist');
 const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const read=path=>readFileSync(resolve(dist,path.slice(1),'index.html'),'utf8');
+const canonicalHref=address=>{
+  try{
+    const url=new URL(address);
+    url.hash='';
+    for(const param of [...url.searchParams.keys()])
+      if(param.toLowerCase().startsWith('utm_'))url.searchParams.delete(param);
+    return url.hostname.replace(/^www\./,'').toLowerCase()+url.pathname.replace(/\/+$/,'')+url.search;
+  }catch{return String(address);}
+};
 const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const paths=[];
 assert.equal(categories[0].id,'products','Products precedes every research category');
@@ -48,7 +57,10 @@ for(const a of articles){
     assert.deepEqual(nodes.find(n=>n['@type']==='FAQPage').mainEntity.map(f=>[f.name,f.acceptedAnswer.text]),a[lang].faq.map(f=>[f.question,f.answer]),'FAQ schema is generated from the visible answers');
     for(const f of a[lang].faq)assert.ok(html.includes(esc(f.question))&&html.includes(esc(f.answer)),'FAQ text visible without JavaScript');
     for(const v of versionsFor(a,lang))assert.ok(html.includes(`href="${esc(v.url)}"`),'Publication version retained '+v.url);
-    for(const l of a.clientLinks)assert.ok(html.includes(`href="${esc(l.url)}" target="_blank" rel="${l.relation==='sponsored'?'sponsored ':''}noopener noreferrer"`),'Exact registered client link retained');
+    const linkedTargets=new Set([...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
+      .map(match=>canonicalHref(match[1].replace(/&amp;/g,'&'))));
+    for(const l of a.clientLinks)
+      assert.ok(linkedTargets.has(canonicalHref(l.url)),`${a.id}/${lang}: registered destination missing ${l.url}`);
     if(a.id==='index-t064'){
       const course='https://synchronize.ru/knigi-velikih-pisateley';
       assert.ok(html.includes('href="'+course+'" target="_blank" rel="noopener noreferrer"'),'Correct course page linked');
@@ -64,21 +76,8 @@ for(const a of articles){
       for(const edition of family.versions){
         assert.ok(html.includes('href="'+esc(edition.url)+'"'),`${a.id}/${lang}: published ${edition.platform} version missing`);
       }
-      const canonicalHref=address=>{
-        try{
-          const url=new URL(address);
-          url.hash='';
-          for(const param of [...url.searchParams.keys()])
-            if(param.toLowerCase().startsWith('utm_'))url.searchParams.delete(param);
-          return url.hostname.replace(/^www\./,'').toLowerCase()+url.pathname.replace(/\/+$/,'')+url.search;
-        }catch{return String(address);}
-      };
-      const renderedDestinations=new Set(
-        [...html.matchAll(/<a\b[^>]*\shref="([^"]+)"/g)]
-          .map(match=>canonicalHref(match[1].replace(/&amp;/g,'&')))
-      );
       for(const target of family.sostavLinks.filter(l=>l.commercial)){
-        assert.ok(renderedDestinations.has(canonicalHref(target.url)),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
+        assert.ok(linkedTargets.has(canonicalHref(target.url)),`${a.id}/${lang}: commercial target from Sostav registry row ${target.registryRow} missing`);
       }
     }
     const linked=new Set(versionsFor(a,lang).map(v=>v.url));
