@@ -17,6 +17,41 @@
 .tariff-actions{display:flex;flex-direction:column;gap:15px;align-items:flex-start}
 .tariff-actions .button{font-size:14px;text-align:center;width:100%;padding-inline:12px}
 .tariff-text-link{color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:4px;line-height:1.55}
+
+/* Homepage pricing-to-catalog link is a prominent, compact secondary CTA.
+   Keep the full pricing directory link in its original text-link style. */
+.tariff-overview .tariff-text-link--home{
+ display:inline-flex;align-items:center;justify-content:space-between;gap:18px;
+ box-sizing:border-box;max-width:100%;min-height:58px;margin-top:12px;
+ padding:13px 15px 13px 20px;
+ border:1px solid #b8dce3;border-radius:14px;
+ color:#0b4562;background:#eaf7fa;
+ font-size:15px;font-weight:750;line-height:1.45;
+ text-decoration:none;box-shadow:0 4px 18px rgba(2,22,65,.045);
+ transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.tariff-overview .tariff-text-link--home:hover,
+.tariff-overview .tariff-text-link--home:focus-visible{
+ background:#d9f3f8;border-color:#65b7c8;color:#073951;
+ text-decoration:none;box-shadow:0 6px 22px rgba(2,22,65,.085);
+}
+.tariff-overview .tariff-text-link--home:focus-visible{outline:3px solid #0e5ed7;outline-offset:3px}
+.tariff-overview .tariff-text-link--home .tariff-text-link__arrow{
+ display:inline-flex;align-items:center;justify-content:center;
+ flex:0 0 34px;width:34px;height:34px;
+ border-radius:50%;background:#021641;color:#02e5f9;
+ font-size:20px;font-weight:650;line-height:1;
+}
+@media(max-width:720px){
+ .tariff-overview .tariff-text-link--home{
+  width:100%;min-height:64px;padding:14px 12px 14px 16px;
+  font-size:14px;gap:12px;
+ }
+ .tariff-overview .tariff-text-link--home .tariff-text-link__arrow{
+  flex-basis:32px;width:32px;height:32px;
+ }
+}
+
 .tariff-note{font-size:14px;line-height:1.7;color:var(--muted)}
 .tariff-calculator-section{background:var(--paper);border-block:1px solid var(--line)}
 .tariff-calculator{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;margin-top:34px;align-items:start}

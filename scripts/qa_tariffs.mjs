@@ -58,6 +58,9 @@ const industryItems=getIndustryCatalog(lang);
   assert.ok(original?.hubLink?.relation==='existing_service','Legacy industry has its own commercial landing '+number);
   assert.equal(original.detailLink,original.hubLink.href,'Previously published industry page is the true title destination '+number);
  }
+ const home=read(lang==='en'?'/en/':'/');
+ assert.ok(home.includes('class="tariff-text-link tariff-text-link--home"'),'Homepage pricing comparison is a styled CTA '+lang);
+ assert.ok(home.includes('href="'+catalogue+'"><span>'),'Homepage comparison points to the canonical catalogue '+lang);
  for(const route of [lang==='en'?'/en/':'/',catalogue]){
   const source=read(route);
   assert.equal((source.match(/data-plan="/g)||[]).length,6,'All 6 main plans on '+route);
