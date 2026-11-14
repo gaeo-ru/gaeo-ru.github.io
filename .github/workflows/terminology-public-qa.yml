@@ -1,0 +1,105 @@
+name: GAEO terminology public acceptance
+
+on:
+  push:
+    branches:
+      - qa-terminology-public-20261115
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gaeo-terminology-public-20261115
+  cancel-in-progress: false
+
+jobs:
+  public-acceptance:
+    if: github.ref == 'refs/heads/qa-terminology-public-20261115'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GAEO_EXPECTED_SOURCE_COMMIT: f683a1d8a2ae05a6a26e70d6e317e6eb3266362b
+    steps:
+      - name: Check out read-only QA source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install test dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium
+        run: npx playwright install chromium
+
+      - name: Wait up to 25 minutes for the expected public release
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { mkdirSync, writeFileSync } from 'node:fs';
+          const expected = process.env.GAEO_EXPECTED_SOURCE_COMMIT;
+          const deadline = Date.now() + 25 * 60 * 1000;
+          const evidence = 'visual-terminology-public';
+          mkdirSync(evidence, { recursive: true });
+          const result = {
+            expectedSourceCommit: expected, startedAt: new Date().toISOString(),
+            status: 'waiting', attempts: []
+          };
+          const save = () => writeFileSync(`${evidence}/release-wait.json`, JSON.stringify(result, null, 2) + '\n');
+          save();
+          while (Date.now() < deadline) {
+            const attempt = { checkedAt: new Date().toISOString() };
+            try {
+              const url = new URL('https://gaeo.ru/astro-release-manifest.json');
+              url.searchParams.set('qa_source', expected);
+              url.searchParams.set('t', String(Date.now()));
+              const response = await fetch(url, {
+                headers: { 'cache-control': 'no-cache', pragma: 'no-cache' },
+                signal: AbortSignal.timeout(Math.max(1, Math.min(15000, deadline - Date.now())))
+              });
+              attempt.httpStatus = response.status;
+              if (!response.ok) throw new Error(`Manifest HTTP ${response.status}`);
+              const manifest = await response.json();
+              attempt.sourceCommit = manifest.sourceCommit || null;
+              attempt.releasedAt = manifest.releasedAt || null;
+              if (manifest.schema === 1 && manifest.engine === 'Astro' &&
+                  manifest.sourceBranch === 'astro-source' && manifest.sourceCommit === expected) {
+                result.status = 'matched';
+                result.matchedAt = new Date().toISOString();
+                result.attempts.push(attempt);
+                writeFileSync(`${evidence}/release-manifest-waited.json`, JSON.stringify(manifest, null, 2) + '\n');
+                save();
+                console.log(`Expected release is public: sourceCommit=${manifest.sourceCommit}`);
+                process.exit(0);
+              }
+              console.log(`Waiting for ${expected}; public sourceCommit=${attempt.sourceCommit}`);
+            } catch (error) {
+              attempt.error = String(error.message || error);
+              console.log(`Public manifest not ready: ${attempt.error}`);
+            }
+            result.attempts.push(attempt);
+            save();
+            const pause = Math.max(0, Math.min(30000, deadline - Date.now()));
+            if (pause) await new Promise(resolve => setTimeout(resolve, pause));
+          }
+          result.status = 'timeout';
+          result.completedAt = new Date().toISOString();
+          save();
+          throw new Error(`Expected public sourceCommit was not observed within 25 minutes: ${expected}`);
+          NODE
+
+      - name: Verify public terminology at desktop and mobile widths
+        run: node scripts/qa_terminology_public.mjs
+
+      - name: Preserve public screenshots and verification results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaeo-terminology-public-20261115
+          path: visual-terminology-public/
+          if-no-files-found: warn
+          retention-days: 14
