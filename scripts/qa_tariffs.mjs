@@ -60,7 +60,7 @@ const industryItems=getIndustryCatalog(lang);
  }
  const home=read(lang==='en'?'/en/':'/');
  assert.ok(home.includes('class="tariff-text-link tariff-text-link--home"'),'Homepage pricing comparison is a styled CTA '+lang);
- assert.ok(home.includes('href="'+catalogue+'"><span>'),'Homepage comparison points to the canonical catalogue '+lang);
+ assert.ok(home.includes('href="'+catalogue+'">')&&home.includes('class="tariff-text-link__arrow"'),'Homepage comparison points to the canonical catalogue '+lang);
  for(const route of [lang==='en'?'/en/':'/',catalogue]){
   const source=read(route);
   assert.equal((source.match(/data-plan="/g)||[]).length,6,'All 6 main plans on '+route);
