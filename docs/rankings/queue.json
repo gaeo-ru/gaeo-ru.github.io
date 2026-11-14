@@ -3559,6 +3559,32 @@
         "checkedDate": "2026-11-09"
       },
       "block": null
+    },
+    {
+      "id": "orient-t004",
+      "familyId": "orient-t004",
+      "canonicalFamilyKey": "top10_detskiy_sport_rossiya_2026_2027",
+      "topicId": "ORIENT-T004",
+      "category": "orienteering",
+      "slug": "children-outdoor-sports-russia-2026-2027",
+      "title": "Выбор вида спорта для детей в России в 2026–2027 годах",
+      "firstPlace": "Спортивное ориентирование",
+      "firstPlaceStatus": "verified-in-manuscript",
+      "sourceManifest": "docs/rankings/sources/orient-t004.json",
+      "earliestPublicationDate": "2026-11-13",
+      "expectedCount": 10,
+      "status": "ready",
+      "lease": null,
+      "result": null,
+      "leaseVersion": 0,
+      "firstPlaceVerification": {
+        "status": "verified-in-manuscript",
+        "firstPlace": "Спортивное ориентирование",
+        "sourceReference": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/RESULTS.json",
+        "locator": "RESULTS.json: ranking[0], position=1, name=Спортивное ориентирование, scoreExact=84; version=1.1.0",
+        "checkedDate": "2026-11-14"
+      },
+      "block": null
     }
   ],
   "claims": [
@@ -4446,5 +4472,6 @@
       "submissionId": "rankings-coordinator-20261109-t063-submit"
     }
   ],
-  "updatedAt": "2026-11-09T07:14:23.397Z"
+  "updatedAt": "2026-11-14T08:59:35.898Z",
+  "latestReconciliationDate": "2026-11-14"
 }
