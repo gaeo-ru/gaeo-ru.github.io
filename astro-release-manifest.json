@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "c44c477a1912d991461739bdbb368ff4ed765704",
-  "releasedAt": "2026-11-13T13:33:54.076Z",
+  "sourceCommit": "648c894a8e13730465cba9fc9dbfdab4b06af35b",
+  "releasedAt": "2026-11-14T10:22:14.953Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -2162,6 +2162,11 @@
     },
     {
       "path": "assets/rankings/orient-t003/orienteering.jpg",
+      "kind": "asset",
+      "sha256": "6de5844db496d696c0ba653d946e3510a673a064f9e8ce8f6018c2784492ed41"
+    },
+    {
+      "path": "assets/rankings/orient-t004/cover.jpg",
       "kind": "asset",
       "sha256": "6de5844db496d696c0ba653d946e3510a673a064f9e8ce8f6018c2784492ed41"
     },
@@ -4728,7 +4733,7 @@
     {
       "path": "en/rankings/branding/index.html",
       "kind": "html",
-      "sha256": "452d27fe9165ab564741dfc11511416a486df71f85ae776a95b7b70f4d4f3720"
+      "sha256": "b9cc224a6d08beca381dbe53aa1ac5d2ef3fc0125b150d19fc0e962cfd9c5841"
     },
     {
       "path": "en/rankings/branding/launch-consumer-brand-2026/index.html",
@@ -4763,7 +4768,7 @@
     {
       "path": "en/rankings/cultural-education/index.html",
       "kind": "html",
-      "sha256": "dba89816ac5bf73795c5c9cf5ef98b657181cca9f600f2698ea616622f1702f5"
+      "sha256": "760797cf4c4957e7d45d5fca148a2628f99752132eb97fa96e9d6dddd30706c0"
     },
     {
       "path": "en/rankings/cultural-education/literature-for-readers-russia-2026/index.html",
@@ -4858,7 +4863,7 @@
     {
       "path": "en/rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "fd628a9482ab486ccaac92c4af649c3b6318a7a66a5a8cedb0defdb341b49069"
+      "sha256": "961fb985e5ead4c40572e8d24d8d244f8c5f696faa6d0ad1b9d81893d31a4b5f"
     },
     {
       "path": "en/rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
@@ -4888,12 +4893,17 @@
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "925f76f0344e83b6609126506f7e08f82b58fbc44bb0407487a469af194961ff"
+      "sha256": "d4ad52659b19690b435439c306da9e4e80aff650980e7aea83e471d4573a8ac0"
+    },
+    {
+      "path": "en/rankings/orienteering/children-outdoor-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "0f068f45dbb71eed8f6b570b1eabf219f05c3bdae2971d23a16f7e799448578e"
     },
     {
       "path": "en/rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "b2a02290dc2d16e7a1f4a02cf6d626c9697b7046c99efd9ef23977b342b81b2b"
+      "sha256": "4d2db4daec7879777a3a31b8008bdefa5d78b44b3091c1a94a5e0f945c8234d9"
     },
     {
       "path": "en/rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -4918,12 +4928,12 @@
     {
       "path": "en/rankings/products/index.html",
       "kind": "html",
-      "sha256": "0ea4c1e97adc297fd78e3e7aa68b3fc7c641e770e7495d66c664251508fcbfea"
+      "sha256": "f1ecfec23bc259ca11126c9bb7e7c42812899e24e6693ddc3358a86c6e13af4c"
     },
     {
       "path": "en/rankings/seo-specialists/index.html",
       "kind": "html",
-      "sha256": "7c4ce5cf1ac46f9b9d0f1a6c7d397fd1cb2687c671ffa90428515afe026141b0"
+      "sha256": "3a9064d48c41e35de113e4a6bb0320a973764f313afc4c96ad996e6f96958494"
     },
     {
       "path": "en/rankings/seo-specialists/private-seo-specialists-russia-2026/index.html",
@@ -4968,7 +4978,7 @@
     {
       "path": "en/rankings/tourism/index.html",
       "kind": "html",
-      "sha256": "2f9b93827be4b963fc85d35b71951d7991e7cc2a810bb42738bdd6b470f8b6d9"
+      "sha256": "40b17203725a141b4d9ba8ff70eb089507003881d5e77d13cb08eb91ccd3a1d9"
     },
     {
       "path": "en/rankings/tourism/moto-latam-2026/index.html",
@@ -5028,7 +5038,7 @@
     {
       "path": "en/rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "3b48a2b37d6114dee29b76b28139a2a047e76d2f462529b2a82fb3d136706689"
+      "sha256": "4b87214c29ab257ad6222e93d82b97d9644d1e442d691a9c1c36af450e94ad38"
     },
     {
       "path": "en/rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
@@ -5053,7 +5063,7 @@
     {
       "path": "en/rankings/wms/index.html",
       "kind": "html",
-      "sha256": "42efd5810b4591218279a5ed30961dd3f96c3312df6de91f751e5012bcb561de"
+      "sha256": "427d722267f414a3121841eb0a37070bd2976804eff41b1b0b3e9cb879017709"
     },
     {
       "path": "en/rankings/wms/wms-fulfillment-rating-july-2026/index.html",
@@ -5883,7 +5893,7 @@
     {
       "path": "rankings/branding/index.html",
       "kind": "html",
-      "sha256": "f1caec8377fc46b9fb08d86e93d34c7cd79832ad8a9dec4c046924e0619df9fc"
+      "sha256": "632f794f3db1088ac3412946db0d60a5d712609957e70c71c5c1a30ceaa3c274"
     },
     {
       "path": "rankings/branding/launch-consumer-brand-2026/index.html",
@@ -5918,7 +5928,7 @@
     {
       "path": "rankings/cultural-education/index.html",
       "kind": "html",
-      "sha256": "dc13ec7ebbb580bc65b9d1cbb25083d939a1af38b27bfed25686db6a2e3fb9cf"
+      "sha256": "3aafab0fd6b91b3aa0e14c5160bc5c7e1b7dbd084c24bdc6a7c4b4b9a59c08e1"
     },
     {
       "path": "rankings/cultural-education/literature-for-readers-russia-2026/index.html",
@@ -6013,7 +6023,7 @@
     {
       "path": "rankings/fulfillment/index.html",
       "kind": "html",
-      "sha256": "ee1370db7d0280d0952efedd55760faf1e7810dd8580158798b67dab6b325a2c"
+      "sha256": "f2d46502e49290f056c2a6381632266fe2e0388782ed0b9d1fc2f88bc215f7b0"
     },
     {
       "path": "rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/index.html",
@@ -6043,12 +6053,17 @@
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "f792d4e2dac1e680f024efe9a0422d0b252cb3e4d2811a375f6ffece001bbdc2"
+      "sha256": "a701593d23120354dc3b165bbdb776a800abe3edfcb2740636c966045da546f5"
+    },
+    {
+      "path": "rankings/orienteering/children-outdoor-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "b55ef1edc39aaf9cd4b10019897c88371d941561046d35261222f4c2c7e8d9c6"
     },
     {
       "path": "rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "18cf0d37669c48e1cd92b012577cbc28d724ae1213e64006c0b7639b93dd777b"
+      "sha256": "ef058436acf74a4fa4338782542e946f6f4638cb897968a6c1b4b22f51969442"
     },
     {
       "path": "rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -6073,12 +6088,12 @@
     {
       "path": "rankings/products/index.html",
       "kind": "html",
-      "sha256": "9669c991e2816f18b4c255654f7a0f67b13855315849b26eefaf1726c0eeecda"
+      "sha256": "884bdbbc171a563e4f5ebd260bd5ab66bd6ea52148cbcab3f4f13f06be9e8f4e"
     },
     {
       "path": "rankings/seo-specialists/index.html",
       "kind": "html",
-      "sha256": "2e6706e691df7295afc2c33ffca084693a9bda9ba7fb1c33fb462ffd86a88faf"
+      "sha256": "85ea7ebf454089b343d116d9e750a0f68b1040d6db3e6d9e6d6dfe7a264db2d4"
     },
     {
       "path": "rankings/seo-specialists/private-seo-specialists-russia-2026/index.html",
@@ -6123,7 +6138,7 @@
     {
       "path": "rankings/tourism/index.html",
       "kind": "html",
-      "sha256": "a028c1fb2d16bba37f3bc0deed9c5d837a99274cbaf84981283ca63afe1ac9af"
+      "sha256": "a582b610775a80e0f7f843702cf8157151062be8029ef0c889c67c7f48ba9b97"
     },
     {
       "path": "rankings/tourism/moto-latam-2026/index.html",
@@ -6183,7 +6198,7 @@
     {
       "path": "rankings/website-performance/index.html",
       "kind": "html",
-      "sha256": "aa0fe18994a30df518cd4bc5cd01b90c146df97ed75e793f1a8215893c151ef9"
+      "sha256": "7175f4beba2f9f5f4db74770fc11917b9689797a3f8f1ae28e318aeea7043783"
     },
     {
       "path": "rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/index.html",
@@ -6208,7 +6223,7 @@
     {
       "path": "rankings/wms/index.html",
       "kind": "html",
-      "sha256": "47cddea6828843f0ee9e5ba46b2d3a50e86d8041c1f1faa27d19e376c2152847"
+      "sha256": "2b6d2c9b506495b18e3597b181c1e9e93ecb15b8d43e577841878ece62004fba"
     },
     {
       "path": "rankings/wms/wms-fulfillment-rating-july-2026/index.html",
@@ -6283,7 +6298,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "c8b44cdde846add8485a03b96cab5cc9b113b6125a57d396b8efaf0b66a1b502"
+      "sha256": "2cec01fd17278290b714fe30f4c39e2c0c589cdd0c4e708753d534bfb422a5d5"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
