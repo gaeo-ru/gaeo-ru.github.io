@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: gaeo-terminology-public-20261115
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   public-acceptance:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      GAEO_EXPECTED_SOURCE_COMMIT: 57a6a92ee963939c424ff9a9926f285f709f1cbb
+      GAEO_EXPECTED_SOURCE_COMMIT: ec0c9b5134f317e190c7732822e8c554eb303da9
     steps:
       - name: Check out read-only QA source
         uses: actions/checkout@v4

@@ -5,11 +5,13 @@ import { chromium } from 'playwright';
 const TERM_DEFINITIONS = {
   ru: {
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
+    AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети'
   },
   en: {
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
+    AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer'
   }
@@ -18,11 +20,11 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '57a6a92ee963939c424ff9a9926f285f709f1cbb';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || 'ec0c9b5134f317e190c7732822e8c554eb303da9';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
-  '/tarify/', '/strategies/measurement/', '/industries/legal/',
+  '/tarify/', '/strategies/measurement/', '/industries/legal/', '/professional-biography/',
   '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
@@ -75,7 +77,7 @@ async function dimensions(page) {
 }
 
 async function firstVisibleTerm(page, term) {
-  // Prefer informative headings/prose over breadcrumbs or an adjacent link icon.
+  // Prefer informative headings/prose; links keep their original behavior and markup.
   const control = `[data-gaeo-term="${term}"]:not(.gaeo-term-trigger--reference)`;
   for (const selector of [`main h1 ${control}`, `main h2 ${control}`, `main p ${control}`, `main ${control}`, `body ${control}`, `body [data-gaeo-term="${term}"]`]) {
     for (const candidate of await page.locator(selector).all()) if (await candidate.isVisible()) return candidate;
@@ -133,14 +135,15 @@ try {
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'BMR', 'SoV'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
-      assert.ok(control.button && control.name && control.mark, 'Accessible term control ' + JSON.stringify(control));
+      assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
       assert.equal(control.controls, 'gaeo-term-tooltip');
       assert.equal(control.description, TERM_DEFINITIONS[lang][control.term], 'Accessible definition ' + control.term);
       if (control.labelStyle !== null) assert.equal(control.labelStyle, 'dotted', 'Dotted underline ' + control.term);
     }
+    assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'Links keep their original markup without added term controls');
     const before = await dimensions(page);
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
@@ -150,13 +153,14 @@ try {
       assert.ok(current.controlCounts.SoV > 0, 'Measurement page SoV control');
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
+    if (route === '/professional-biography/') assert.ok(current.controlCounts.AEO > 0, 'Biography page AEO control');
 
     // Capture tops before any tooltip interaction or automatic scrolling.
     if ([1440, 390].includes(viewport.width) && ['/', '/services/'].includes(route)) {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'BMR', 'SoV']) {
+    for (const term of ['GEO', 'AEO', 'BMR', 'SoV']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
@@ -173,11 +177,12 @@ try {
       current.clickedTerms.push({ term, bounds: box });
       const capture = [1440, 390].includes(viewport.width) &&
         ((route === '/strategies/measurement/' && ['BMR', 'SoV'].includes(term)) ||
-         (route === '/services/geo-audit/' && term === 'GEO'));
+         (route === '/services/geo-audit/' && term === 'GEO') ||
+         (route === '/professional-biography/' && term === 'AEO'));
       if (capture) {
         // Reset the reading window immediately before capturing the live popup.
         await trigger.click();
-        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : 'geo-audit'}-${term}-tooltip`);
+        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : 'geo-audit'}-${term}-tooltip`);
       }
       await page.keyboard.press('Escape');
       assert.equal(await tooltip.isVisible(), false, 'Escape dismisses live tooltip');
