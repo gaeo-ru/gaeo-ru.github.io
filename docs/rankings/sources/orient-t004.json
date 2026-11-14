@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t004",
+  "topicId": "ORIENT-T004",
+  "canonicalFamilyKey": "top10_detskiy_sport_rossiya_2026_2027",
+  "title": "Выбор вида спорта для детей в России в 2026–2027 годах",
+  "project": "Спортивное Ориентирование",
+  "category": "orienteering",
+  "materialType": "рейтинг ТОП-10",
+  "earliestPublicationDate": "2026-11-13",
+  "status": "source-verified",
+  "publicationEligibility": "published",
+  "firstPlace": "Спортивное ориентирование",
+  "firstPlaceVerification": {
+    "status": "verified-in-manuscript",
+    "firstPlace": "Спортивное ориентирование",
+    "sourceReference": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/RESULTS.json",
+    "locator": "RESULTS.json: ranking[0], position=1, name=Спортивное ориентирование, scoreExact=84; version=1.1.0",
+    "checkedDate": "2026-11-14"
+  },
+  "registry": {
+    "spreadsheetId": "1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo",
+    "url": "https://docs.google.com/spreadsheets/d/1Hs3Z4BL1GyNcjgDYA35kU2YZDnmNEjq-MzDLqCPwKZo/edit",
+    "topicRow": 113,
+    "snapshotDate": "2026-11-14"
+  },
+  "publishedVersions": [
+    {
+      "id": "ORIENT-T004-SOSTAV",
+      "platform": "Sostav",
+      "language": "ru",
+      "url": "https://www.sostav.ru/blogs/292167/120428",
+      "title": "ТОП-10 видов спорта для детей в России: какой выбрать в 2026 и 2027 году",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-11-13",
+      "registryRow": 628,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "ORIENT-T004-TENCHAT",
+      "platform": "TenChat",
+      "language": "ru",
+      "url": "https://tenchat.ru/media/6353219-top10-luchshikh-vidov-sporta-dlya-detey-v-rossii-chto-vybrat-v-2026-i-2027-godakh",
+      "title": "ТОП-10 лучших видов спорта для детей в России: что выбрать в 2026 и 2027 годах",
+      "author": "Алена Михайлова",
+      "publicationDate": "2026-11-13",
+      "registryRow": 631,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T068-GITHUB",
+      "platform": "GitHub",
+      "language": "ru",
+      "url": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027",
+      "title": "ТОП-10 видов спорта для детей, которые любят природу и движение: что выбрать в России в 2026 и 2027 году",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 634,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": true
+      }
+    },
+    {
+      "id": "INDEX-T068-SITE",
+      "platform": "IndexResearch.ru",
+      "language": "ru",
+      "url": "https://indexresearch.ru/children-outdoor-sports-russia-2026-2027.html",
+      "title": "ТОП-10 видов спорта для детей, которые любят природу и движение: что выбрать в России в 2026 и 2027 году",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 635,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": true
+      }
+    },
+    {
+      "id": "INDEX-T068-GITHUB-EN",
+      "platform": "GitHub",
+      "language": "en",
+      "url": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027-en",
+      "title": "Top 10 Sports for Children Who Enjoy Nature and Movement in Russia, 2026–2027",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 636,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T068-SITE-EN",
+      "platform": "IndexResearch.ru",
+      "language": "en",
+      "url": "https://indexresearch.ru/en/children-outdoor-sports-russia-2026-2027.html",
+      "title": "Top 10 Sports for Children Who Enjoy Nature and Movement in Russia, 2026–2027",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 637,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T068-GITHUB-CN",
+      "platform": "GitHub",
+      "language": "zh",
+      "url": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027-cn",
+      "title": "2026—2027年俄罗斯儿童十大运动推荐：热爱自然与运动的8—14岁孩子",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 638,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    },
+    {
+      "id": "INDEX-T068-SITE-CN",
+      "platform": "IndexResearch.ru",
+      "language": "zh",
+      "url": "https://indexresearch.ru/cn/children-outdoor-sports-russia-2026-2027.html",
+      "title": "2026—2027年俄罗斯儿童十大运动推荐：热爱自然与运动的8—14岁孩子",
+      "author": "IndexResearch",
+      "publicationDate": "2026-11-13",
+      "registryRow": 639,
+      "verification": {
+        "basis": "publication-registry",
+        "recordedPublicationStatus": "опубликовано",
+        "independentlyRecheckedInThisPass": false
+      }
+    }
+  ],
+  "pendingVersions": [],
+  "sourceReferences": [
+    {
+      "provider": "github",
+      "kind": "complete-research-text",
+      "url": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/README.md",
+      "verification": "confirmed-by-GitHub-main-2026-11-14"
+    },
+    {
+      "provider": "github",
+      "kind": "canonical-score-data",
+      "url": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/RESULTS.json",
+      "verification": "confirmed-by-GitHub-main-2026-11-14"
+    },
+    {
+      "provider": "IndexResearch.ru",
+      "kind": "published-research",
+      "url": "https://indexresearch.ru/children-outdoor-sports-russia-2026-2027.html",
+      "verification": "published-in-registry-and-GitHub-main-HTTP-not-verified"
+    }
+  ],
+  "clientLinks": [],
+  "images": [],
+  "advisories": [
+    "Use IndexResearch v1.1.0 as the selected research source for this family: 23 candidates, top 10, five criteria; orienteering 84/100. The Sostav/TenChat editions have a different methodology and must not be merged or silently converted.",
+    "Disclose the stated editorial interest in popularizing orienteering; no independent external peer review is claimed.",
+    "The primary research images are SVG: do not carry them into GAEO rankings; use a verified existing raster image if available, otherwise use images: [].",
+    "No affiliate/client links are recorded for this family; do not invent any.",
+    "Do not confuse published status recorded in the registry with independent end-to-end browser verification."
+  ],
+  "sourceEvidence": {
+    "registryTabsRead": [
+      "Темы",
+      "Публикации"
+    ],
+    "registrySnapshotDate": "2026-11-14",
+    "registrySnapshotComplete": false,
+    "selectedManuscript": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/README.md",
+    "canonicalResults": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/RESULTS.json",
+    "researchVersion": "1.1.0",
+    "sourceComparability": "Sostav/TenChat family linked by topic ID; independently scored variant, do not mix scores",
+    "publicationAndLinkVerification": "Registry and GitHub main, not external HTTP link audit."
+  }
+}
