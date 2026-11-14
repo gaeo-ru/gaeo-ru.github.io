@@ -2,11 +2,13 @@
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
+    AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети'
   }),
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
+    AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer'
   })
@@ -15,10 +17,11 @@ export const TERM_DEFINITIONS = Object.freeze({
 export const TERM_HINT_DURATION = 6500;
 const FULL_NAMES = {
   GEO: 'Generative\\s+Engine\\s+Optimization',
+  AEO: 'Answer\\s+Engine\\s+Optimization',
   BMR: 'Brand\\s+Mention\\s+Rate',
   SoV: 'Share\\s+of\\s+Voice'
 };
-const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|BMR|SoV|SOV)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|BMR|SoV|SOV)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -35,6 +38,7 @@ function alreadyExplained(context, start, end, term) {
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
   const meaning = term === 'GEO'
     ? 'продвижение(?:\\s+(?:бизнеса|бренда|компании))?\\s+в\\s+(?:нейросетях|ответах(?:\\s+нейросетей)?|рекомендациях(?:\\s+нейросетей)?)'
+    : term === 'AEO' ? 'продвижение\\s+контента\\s+в\\s+источники\\s+ответов\\s+нейросетей'
     : term === 'BMR' ? 'доля\\s+упоминаний(?:\\s+бренда)?(?:\\s+в\\s+ответах(?:\\s+нейросетей)?)?'
       : 'доля\\s+упоминаний\\s+бренда\\s+среди\\s+всех\\s+брендов';
   return new RegExp('^\\s*[(:—–-]\\s*(?:это\\s+)?' + meaning, 'i').test(after) ||
@@ -57,11 +61,10 @@ const EXCLUDED = [
   'script', 'style', 'noscript', 'textarea', 'input', 'select', 'option',
   'pre', 'code', 'kbd', 'samp', 'svg', 'math', 'canvas', 'template', 'iframe',
   '[contenteditable]:not([contenteditable="false"])', '[data-term-hints="off"]',
-  '[data-gaeo-term]', '[data-gaeo-term-reference]', '[data-gaeo-term-definitions]',
+  '[data-gaeo-term]', '[data-gaeo-term-definitions]',
   '.gaeo-term-tooltip', 'abbr[title]', '[role="tooltip"]'
 ].join(',');
 const INTERACTIVE = 'a[href],button,summary,label,[role="button"],[role="link"]';
-const REFERENCE_EXCLUDED = 'nav,header,form,summary,label,[role="navigation"],[role="menu"],.mobile-menu';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
 
 export function installTermHints(doc = document) {
@@ -89,27 +92,19 @@ export function installTermHints(doc = document) {
   tooltip.hidden = true;
   doc.body.append(descriptions, tooltip);
   let active = null, timer = null, frame = null;
-  const referenceControls = new WeakMap();
-
-  function makeTrigger(term, text, reference = false) {
+  function makeTrigger(term, text) {
     const trigger = doc.createElement('button');
     trigger.type = 'button';
-    trigger.className = `gaeo-term-trigger${reference ? ' gaeo-term-trigger--reference' : ''}`;
+    trigger.className = 'gaeo-term-trigger';
     trigger.dataset.gaeoTerm = term;
     trigger.setAttribute('aria-label', labels(term));
     trigger.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
     trigger.setAttribute('aria-controls', tooltip.id);
     trigger.setAttribute('aria-expanded', 'false');
-    if (!reference) {
-      const label = doc.createElement('span');
-      label.className = 'gaeo-term-label';
-      label.textContent = text;
-      trigger.append(label);
-    }
-    const mark = doc.createElement('span');
-    mark.className = 'gaeo-term-mark';
-    mark.setAttribute('aria-hidden', 'true');
-    trigger.append(mark);
+    const label = doc.createElement('span');
+    label.className = 'gaeo-term-label';
+    label.textContent = text;
+    trigger.append(label);
     return trigger;
   }
 
@@ -121,95 +116,40 @@ export function installTermHints(doc = document) {
     return { context: container.textContent, offset: range.toString().length };
   }
 
-  // A tooltip must never steal the action of a link or create nested buttons.
-  // Inline links receive an adjacent, separately focusable question mark.
-  // Navigation, form controls, disclosure controls and entire linked cards keep
-  // their native interaction and layout; surrounding prose remains annotated.
-  function canAnnotateReference(element) {
-    if (element.closest(REFERENCE_EXCLUDED)) return false;
-    const display = win.getComputedStyle(element).display;
-    return ['inline', 'inline-block', 'inline-flex'].includes(display);
-  }
-
-  function referenceTerms(reference) {
-    const terms = new Set();
-    const walker = doc.createTreeWalker(reference, win.NodeFilter.SHOW_TEXT);
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      if (node.parentElement.closest(EXCLUDED)) continue;
-      for (const match of findTermMatches(node.data, contextFor(node))) terms.add(match.term);
-    }
-    return terms;
-  }
-
+  // Links and other interactive elements remain entirely unchanged. Only terms
+  // in ordinary text receive a dotted button, without a separate visual marker.
   function enhance(root) {
-    if (!root || !root.isConnected || root.closest?.(EXCLUDED)) return;
+    if (!root || !root.isConnected) return;
+    // A later renderer may move already decorated text into a link/control.
+    // Restore its original text rather than leave nested interactive elements.
+    const moved = root.matches?.('[data-gaeo-term]') ? [root] : [...(root.querySelectorAll?.('[data-gaeo-term]') || [])];
+    for (const trigger of moved) if (trigger.parentElement?.closest(INTERACTIVE)) {
+      if (trigger === active) hide();
+      trigger.replaceWith(doc.createTextNode(trigger.textContent));
+    }
+    if (!root.isConnected || root.closest?.(EXCLUDED) || root.closest?.(INTERACTIVE)) return;
     const nodes = [];
     if (root.nodeType === 3) nodes.push(root);
     else {
       const walker = doc.createTreeWalker(root, win.NodeFilter.SHOW_TEXT);
       while (walker.nextNode()) nodes.push(walker.currentNode);
     }
-    const references = new Set();
-    const enclosing = root.parentElement?.closest(INTERACTIVE) || root.closest?.(INTERACTIVE);
-    if (enclosing && referenceControls.has(enclosing)) references.add(enclosing);
-    for (const reference of root.querySelectorAll?.(INTERACTIVE) || []) {
-      if (referenceControls.has(reference)) references.add(reference);
-    }
     for (const node of nodes) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
+      if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|BMR|SoV|SOV)/.test(text)) continue;
-      let interactive = node.parentElement.closest(INTERACTIVE);
-      // Always use the outer interactive control if old markup contains nesting.
-      if (interactive) while (interactive.parentElement?.closest(INTERACTIVE)) interactive = interactive.parentElement.closest(INTERACTIVE);
-      if (interactive && !canAnnotateReference(interactive)) continue;
-      if (interactive && node.parentElement.closest('[data-gaeo-term-link-label]')) {
-        references.add(interactive);
-        continue;
-      }
+      if (!/(?:GEO|AEO|BMR|SoV|SOV)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
-      if (interactive) references.add(interactive);
       const fragment = doc.createDocumentFragment();
       let cursor = 0;
       for (const match of matches) {
         fragment.append(doc.createTextNode(text.slice(cursor, match.start)));
-        if (interactive) {
-          const label = doc.createElement('span');
-          label.className = 'gaeo-term-link-label';
-          label.dataset.gaeoTermLinkLabel = '';
-          label.textContent = match.text;
-          fragment.append(label);
-        } else fragment.append(makeTrigger(match.term, match.text));
+        fragment.append(makeTrigger(match.term, match.text));
         cursor = match.end;
       }
       fragment.append(doc.createTextNode(text.slice(cursor)));
       node.replaceWith(fragment);
-    }
-    for (const reference of references) {
-      const terms = canAnnotateReference(reference) ? referenceTerms(reference) : new Set();
-      for (const label of reference.querySelectorAll('[data-gaeo-term-link-label]')) {
-        if (!findTermMatches(label.textContent).length) label.replaceWith(...label.childNodes);
-      }
-      let controls = referenceControls.get(reference);
-      if (!terms.size) {
-        controls?.remove();
-        referenceControls.delete(reference);
-        continue;
-      }
-      if (!controls?.isConnected) {
-        controls = doc.createElement('span');
-        controls.className = 'gaeo-term-reference';
-        controls.dataset.gaeoTermReference = '';
-        reference.after(controls);
-        referenceControls.set(reference, controls);
-      }
-      const signature = [...terms].join(',');
-      if (controls.dataset.gaeoTermReference !== signature) {
-        controls.replaceChildren(...[...terms].map(term => makeTrigger(term, term, true)));
-        controls.dataset.gaeoTermReference = signature;
-      }
     }
   }
 
@@ -296,11 +236,6 @@ export function installTermHints(doc = document) {
       if (record.target.parentElement?.closest(EXCLUDED) || record.target.closest?.(EXCLUDED)) continue;
       if (record.type === 'characterData') pending.add(record.target.parentElement);
       for (const node of record.addedNodes || []) if (node.nodeType === 1 || node.nodeType === 3) pending.add(node.nodeType === 3 ? node.parentElement : node);
-      for (const node of record.removedNodes || []) {
-        if (node.isConnected || node.nodeType !== 1) continue;
-        referenceControls.get(node)?.remove();
-        for (const reference of node.querySelectorAll?.(INTERACTIVE) || []) referenceControls.get(reference)?.remove();
-      }
     }
     if (active && !active.isConnected) hide();
     if (!pending.size || scheduled) return;
