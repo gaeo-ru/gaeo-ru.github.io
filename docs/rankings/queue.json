@@ -3573,10 +3573,18 @@
       "sourceManifest": "docs/rankings/sources/orient-t004.json",
       "earliestPublicationDate": "2026-11-13",
       "expectedCount": 10,
-      "status": "ready",
-      "lease": null,
+      "status": "reserved",
+      "lease": {
+        "ownerId": "chat-orient-t004-20261114-main",
+        "requestId": "claim-orient-t004-20261114-main",
+        "token": "rk-mwg7w8m2-kpu5dxdugt-pw870q574y",
+        "mode": "standard",
+        "claimedAt": "2026-11-14T09:42:46.506Z",
+        "expiresAt": "2026-11-14T15:42:46.506Z",
+        "previousStatus": "ready"
+      },
       "result": null,
-      "leaseVersion": 0,
+      "leaseVersion": 1,
       "firstPlaceVerification": {
         "status": "verified-in-manuscript",
         "firstPlace": "Спортивное ориентирование",
@@ -4470,8 +4478,20 @@
       "outcome": "committed",
       "operations": [],
       "submissionId": "rankings-coordinator-20261109-t063-submit"
+    },
+    {
+      "ownerId": "chat-orient-t004-20261114-main",
+      "requestId": "claim-orient-t004-20261114-main",
+      "token": "rk-mwg7w8m2-kpu5dxdugt-pw870q574y",
+      "mode": "standard",
+      "claimedAt": "2026-11-14T09:42:46.506Z",
+      "expiresAt": "2026-11-14T15:42:46.506Z",
+      "previousStatus": "ready",
+      "taskId": "orient-t004",
+      "outcome": "reserved",
+      "operations": []
     }
   ],
-  "updatedAt": "2026-11-14T08:59:35.898Z",
+  "updatedAt": "2026-11-14T09:42:46.506Z",
   "latestReconciliationDate": "2026-11-14"
 }
