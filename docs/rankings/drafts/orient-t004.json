@@ -354,41 +354,48 @@
     "description": "IndexResearch ranks orienteering first with 84/100, football at 73.5 and cross-country skiing at 68.5, using five criteria.",
     "shortAnswer": "For children aged 8–14 who enjoy nature and movement, IndexResearch ranked orienteering first with 84/100.",
     "intro": [
-      "Families looking for an active sport for a child who enjoys solving problems may want tasks in which new decisions arise during movement. In this comparison, 'thinking' refers to reading changing situations and choosing the next action at speed.",
-      "This English edition is newly written from the original September 2026 manuscript by Alena Mikhailova. It retains all ten sports, their ranking positions, numerical scores and selection criteria. It is a family-oriented editorial comparison, not an IQ test or a fresh evaluation of sports clubs.",
-      "Chess was excluded because substantial physical activity was required. Swimming and athletics offer real physical exercise, but the source placed greater emphasis on handling changing information during an activity."
+      "Which sport should a child aged eight to fourteen try if outdoor movement and independent decisions matter most? In IndexResearch's scenario ranking dated 13 November 2026, orienteering leads with 84/100, followed by football at 73.5 and cross-country skiing at 68.5.",
+      "The initiators disclose an interest in promoting orienteering. They state that clubs, federations and the rated sports did not pay for the research. GAEO presents an editorial adaptation of published research version 1.1.0 rather than claiming to have conducted an independent sports-club survey.",
+      "Twenty-three disciplines entered the original comparison and ten appear in the published ranking. The model considers the first twelve months of beginner training for children with particular interests, not general medical benefits or availability at a local club."
     ],
-    "contextTitle": "What it means to make decisions while moving",
+    "contextTitle": "A scenario for a particular child, not a universal winner",
     "context": [
-      "Sports research distinguishes open-skill activities, where the environment keeps changing, from closed-skill tasks under more predictable conditions. Ball games and orienteering present frequent new inputs; in a steady endurance event, pacing and technique can take more of the attention.",
-      "Some studies investigate how training affects specific executive functions, but that does not establish automatic improvement in a child's grades or IQ. This ranking examines the demands of the sports themselves."
+      "Natural exposure means regular activity involving parks, woodland, open water or other real terrain. Simply playing in an outdoor stadium is not treated as an equivalent experience. Team sports remain valid candidates but receive lower scores on that criterion.",
+      "Independent choices take different forms. Orienteering requires route finding from a map; football requires reading players and choosing actions in a changing game. A child drawn to team play could reasonably prefer a lower-ranked sport."
     ],
     "methodology": [
-      "The source uses five criteria worth 100 points in total: compatibility with school schedules (30), cognitive decisions made during movement (25), physical load (20), ability to start at school age (15) and everyday accessibility (10). The same weights are applied to every sport.",
-      "The figures date from September 2026. Orienteering scored 28+25+19+15+8=95, table tennis 29+22+17+15+9=92 and badminton 28+22+18+14+9=91. All other published scores and positions are preserved, with no new survey of sports clubs.",
-      "The original says that ties are broken by the higher cognitive score. This matches basketball ahead of sport climbing at 90, but not tennis ahead of football at 86: football earned 23 cognitive points and tennis 22. Positions eight and nine are kept as originally published; the methodological inconsistency is disclosed rather than silently corrected.",
-      "These criteria give substantial weight to a school timetable. A family prioritising endurance, a nearby facility or team participation could reasonably arrive at a different shortlist."
+      "IndexResearch applied one set of five criteria to twenty-three sports. Each criterion was graded from zero to ten using a published editorial rubric, weighted and summed on a 100-point scale. The source dataset contains 115 graded cells with explanations and supporting references.",
+      "Natural-terrain exposure carries 30% of the total, and independent decisions while moving carry 25%. Beginner suitability at ages eight to fourteen, essential resources for initial training and possibilities for progression each contribute 15%.",
+      "Orienteering received criterion grades of 8, 9, 9, 8 and 8, which produce a total of 84/100 using those weights. RESULTS.json and SCORE_MATRIX.csv contain the other candidates' original grades and scores.",
+      "Popularity, participant numbers, club counts and media prominence carry no weight. The study did not measure IQ gains, academic results, medical benefits, comparative injury rates or actual local vacancies.",
+      "The authors tested 5,000 permitted combinations of weights, with orienteering still leading when the initial editorial grades remained fixed. That result illustrates sensitivity to the weights; it does not validate every initial judgment or demonstrate universal superiority.",
+      "A Sostav publication on the same broad theme used another scoring framework. This edition preserves only IndexResearch 1.1.0 scores. Basketball and volleyball share fifth place on 67.5 points; the following sport occupies seventh place."
     ],
     "criteria": [
       {
-        "name": "Compatibility with school",
-        "weight": "30 points"
+        "name": "Regular exposure to natural terrain",
+        "weight": "30%",
+        "description": "Whether real natural surroundings form a normal part of practice."
       },
       {
-        "name": "Decisions made during movement",
-        "weight": "25 points"
+        "name": "Independent decisions during activity",
+        "weight": "25%",
+        "description": "How frequently changing conditions require choices in motion."
       },
       {
-        "name": "Physical effort",
-        "weight": "20 points"
+        "name": "Suitability for starting from zero",
+        "weight": "15%",
+        "description": "Age thresholds and feasibility of learning the basics at 8–14."
       },
       {
-        "name": "Starting at school age",
-        "weight": "15 points"
+        "name": "First-year resources",
+        "weight": "15%",
+        "description": "Facilities and equipment without inventing typical prices."
       },
       {
-        "name": "Everyday accessibility",
-        "weight": "10 points"
+        "name": "Long-term progression",
+        "weight": "15%",
+        "description": "Opportunities to develop skills in later age groups."
       }
     ],
     "ranking": [
@@ -397,50 +404,75 @@
         "name": "Orienteering",
         "originalName": "Спортивное ориентирование",
         "score": 84,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Map navigation and independent route choice in natural terrain.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "An orienteer interprets a sports map while moving through a park or forest, finding controls and selecting routes between them. Navigation affects performance alongside physical speed, so real terrain and decisions are central to the activity.",
+          "A beginner needs an appropriate course, a map of the actual training area and clear supervision. The cited formal training entry age is eight; demanding night competitions do not describe the first-year scenario."
+        ],
+        "strengths": [
+          "Using a map and choosing routes while moving outdoors."
+        ],
+        "caution": "Check the terrain, map quality, safety rules and supervision for beginners."
       },
       {
         "position": 2,
         "name": "Football",
         "originalName": "Футбол",
         "score": 73.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Fast tactical choices in a changing team game.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Football players continually track teammates and defenders, choose passes and reposition to create space. The decision-making demands explain its strong grade despite having no map-based navigation.",
+          "Normal youth practice uses a prepared football pitch rather than natural terrain. For a child who values teamwork, football may be a better personal fit than the highest-rated navigation sport."
+        ],
+        "strengths": [
+          "Rapid tactical action and cooperation."
+        ],
+        "caution": "Ask about age groups, playing time and training workload."
       },
       {
         "position": 3,
         "name": "Cross-country skiing",
         "originalName": "Лыжные гонки",
         "score": 68.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Winter outdoor routes with seasonal constraints.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Cross-country skiing provides regular exercise on open trails with changing ground and weather. The model credits natural exposure and opportunities to build skills through later stages.",
+          "Unlike orienteering, the track is usually fixed, leaving fewer decisions about where to go. Snow conditions, prepared courses and skis affect regular access to lessons."
+        ],
+        "strengths": [
+          "Outdoor terrain and a structured progression."
+        ],
+        "caution": "Confirm seasonal training, suitable trails and equipment needs."
       },
       {
         "position": 4,
         "name": "Competitive sports tourism",
         "originalName": "Спортивный туризм",
         "score": 68.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Technical sporting routes and obstacle decisions.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Competitive sports tourism includes timed courses, technical obstacles and physical choices, sometimes in natural surroundings. The exact format can demand a mixture of movement and practical skills.",
+          "The source evaluates regulated sporting disciplines rather than informal family hiking. Some courses use artificial obstacles; minimum starting ages and required equipment vary."
+        ],
+        "strengths": [
+          "Physical activity with technical challenges."
+        ],
+        "caution": "Check the specific discipline, entry age, obstacles and mandatory gear."
       },
       {
         "position": 5,
         "name": "Basketball",
         "originalName": "Баскетбол",
         "score": 67.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Fast court play and coordinated decisions.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Basketball players repeatedly decide how to pass, move and shoot in response to changing defensive positions. These tactical choices explain its strong decision-making grade.",
+          "Beginners typically train in gyms or on marked courts rather than natural terrain. Equipment requirements are modest, but suitable age grouping and beginner coaching still matter."
+        ],
+        "strengths": [
+          "Frequent tactical choices in a team setting."
+        ],
+        "caution": "Look at actual play time and how the coach handles new players."
       },
       {
         "position": 6,
@@ -448,87 +480,125 @@
         "name": "Volleyball",
         "originalName": "Волейбол",
         "score": 67.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "A shared fifth position with basketball.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Volleyball players read ball trajectories and coordinate the next action after every touch. Its five grades match basketball's, so the source places both sports fifth.",
+          "Early training commonly takes place in a gym or on a prepared court. The original ranking has two entries at position five and then moves to position seven."
+        ],
+        "strengths": [
+          "Responsive teamwork and gradual technical development."
+        ],
+        "caution": "Check beginner instruction, group age and active playing time."
       },
       {
         "position": 7,
         "name": "Athletics",
         "originalName": "Легкая атлетика",
         "score": 67,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Regular running with limited personal equipment.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Introductory athletics provides a sustained physical challenge with relatively few personal items to buy. The source awarded strong grades for initial resources and progression over time.",
+          "In most disciplines the direction of travel is predetermined, with decisions focusing on pace and technique. Natural settings are possible but are not integral to many standard events."
+        ],
+        "strengths": [
+          "Manageable beginner equipment and several progression routes."
+        ],
+        "caution": "Find out which athletics events the local group actually teaches."
       },
       {
         "position": 8,
         "name": "Cycling",
         "originalName": "Велосипедный спорт",
         "score": 66,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Terrain and line choice in some cycling disciplines.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Mountain biking and certain other cycling formats require decisions about a path through uneven ground and turns. This supports the nature and changing-action dimensions in the model.",
+          "Those conditions do not describe all cycling events or casual city rides. A bicycle, protection and a safe training track can make entry more demanding in resources."
+        ],
+        "strengths": [
+          "Terrain awareness and movement choices in selected disciplines."
+        ],
+        "caution": "Verify the cycling specialty, safe course and protective equipment."
       },
       {
         "position": 9,
         "name": "Rowing sports",
         "originalName": "Гребной спорт",
         "score": 63.5,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Open-water training with specialist facilities.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Rowing combines physical work, movement coordination and exposure to waterways. The study considered supervised sports training, not a recreational boat outing.",
+          "Participation requires a suitable waterfront base and water-safety arrangements. The source matrix gives a formal initial training age of ten, reducing suitability for the youngest children in the eight-to-fourteen group."
+        ],
+        "strengths": [
+          "Natural waterways and gradual development of technical skills."
+        ],
+        "caution": "Confirm intake age, supervision, water safety and facilities."
       },
       {
         "position": 10,
         "name": "Tennis",
         "originalName": "Теннис",
         "score": 63,
-        "summary": "Comparison under the original IndexResearch scenario.",
+        "summary": "Independent shot decisions during rallies.",
         "paragraphs": [
-          "Editorial discussion of the source sport and its score."
-        ]
+          "Tennis demands that a player watch the opponent and choose the timing, pace and placement of each shot. Decision-making remains strong even though natural terrain is largely irrelevant.",
+          "Regular practice needs a court, racket and suitable teaching programme. A child who enjoys individual competition may prefer tennis despite its lower combined score in this specific model."
+        ],
+        "strengths": [
+          "Self-directed tactical choices against an opponent."
+        ],
+        "caution": "Check court access, equipment and the coaching programme for beginners."
       }
     ],
     "selection": [
-      "Children who enjoy maps, finding routes and independent choices can begin with orienteering. Navigation during the race is the essential task; knowing the capitals of different countries is not required.",
-      "Children interested in anticipating one opponent may prefer table tennis, badminton, tennis or fencing. Climbing presents a movement puzzle, while basketball and football offer more complex team situations.",
-      "Judo requires comfort with contact. Cross-country skiing focuses on endurance and pacing. Swimming and running, although excluded by this particular methodology, may be stronger choices when regular physical activity is the family's primary goal.",
-      "Visit a training session and judge the coach, travel time and timetable. A local club that a child enjoys attending can matter more than a few points in a published comparison."
+      "Start with what the child actually enjoys: finding routes, playing with a team, covering distance or mastering a technical skill. The scores reflect one set of priorities, while a child's motivation is more important than a few points.",
+      "For orienteering, arrange a beginner trial using an easy sports map. Ask how coaches supervise children on the course, where control points are placed and which safety instructions are provided before leaving the start.",
+      "For ball sports, inspect how much time learners spend playing. For skiing, cycling or rowing, check seasonal access, distance to the facilities and the equipment families must provide.",
+      "Compare real clubs rather than abstract sporting labels. A nearby welcoming group with a qualified coach and a practical timetable can be a better choice than a more highly ranked sport with difficult access.",
+      "The original IndexResearch project publishes all twenty-three candidates, 115 editorial grades, the scoring model and source references. Its 13 November 2026 data should not be presented as new measurements from 2027."
     ],
     "faq": [
       {
-        "question": "Why did orienteering rank first?",
-        "answer": "It scored 95/100 in the September 2026 editorial ranking. Athletes navigate with maps while running and repeatedly change their route choices. The original gives it 25/25 for cognitive decisions and 15/15 for entry at school age."
+        "question": "What sport ranked first for children who enjoy nature and movement?",
+        "answer": "Orienteering scored 84/100 in IndexResearch's scenario comparison dated 13 November 2026. It combines natural terrain with independent route decisions from a sports map."
       },
       {
-        "question": "Does orienteering improve IQ or school marks?",
-        "answer": "The ranking does not establish such effects. It assesses the demands of a sport rather than children's measured intelligence. Research on particular executive functions does not guarantee higher grades."
+        "question": "Why did football rank second despite not being a forest sport?",
+        "answer": "Football earned 73.5/100 because it involves frequent decisions in a rapidly changing game. Its natural-setting grade was lower than orienteering's, and that criterion has substantial weight."
       },
       {
-        "question": "Can a child begin one of these sports at age 12 to 14?",
-        "answer": "Recreational practice and first competitions are possible in many of these disciplines at that age. High-performance pathways differ, so families should discuss age groups, preparation and expectations with coaches."
+        "question": "Why do basketball and volleyball share fifth place?",
+        "answer": "Both received exactly 67.5/100 with identical relevant criterion grades. The source places both fifth and the next sport seventh; the GAEO ranking preserves this tie."
       },
       {
-        "question": "Why are chess and swimming missing?",
-        "answer": "Chess does not meet the substantial physical-workload condition. Swimming does, but an individual race usually presents a more predictable external environment than a ball game or navigation course. This is a feature of the source methodology, not a judgement against swimming."
+        "question": "Was the popularity of each sport measured?",
+        "answer": "No. Participation counts, club numbers, federation scale and media visibility have zero weight in the scoring formula. The model compares the nature of the sporting task and beginner conditions."
       },
       {
-        "question": "Why is football ninth when tennis also has 86 points?",
-        "answer": "This is the original published order. It conflicts with the source's stated cognitive tie-break: football earned 23 out of 25 for cognition, tennis 22. The edition retains those positions and explains the inconsistency."
+        "question": "At what age can formal orienteering training begin?",
+        "answer": "The cited Russian federal standard, adopted by Ministry of Sport order No. 903 of 5 November 2025, gives eight as the minimum age for initial training. Informal map games may take place earlier but are not that formal training stage."
       },
       {
-        "question": "What should families consider beyond the scores?",
-        "answer": "The child's interests, coach, age group, timetable and travel. A welcoming nearby club can be more suitable than a higher-ranked activity that is difficult to attend regularly."
+        "question": "Does a child need school geography knowledge?",
+        "answer": "No. Beginners learn sports map symbols, terrain matching and basic route choices. Memorising countries or capitals is not a prerequisite for starting orienteering."
+      },
+      {
+        "question": "What do the 5,000 recalculations prove?",
+        "answer": "The authors varied weights across a permitted range and orienteering remained first with fixed initial grades. This shows robustness within that model, not medical benefit or error-free editorial judgments."
+      },
+      {
+        "question": "Can the ranking identify nearby sports clubs with available places?",
+        "answer": "No. The research did not audit regional participation, openings, coaching quality or local schedules. Families must check those details directly."
+      },
+      {
+        "question": "How does this differ from the previous school sports ranking?",
+        "answer": "This page uses IndexResearch 1.1.0 with twenty-three candidates and five criteria, resulting in an 84-point leader. An older comparison of sports that involve thinking while moving used a different scoring framework."
       }
     ],
     "conclusion": [
-      "Orienteering leads this September 2026 source comparison with 95/100 for combining endurance, map reading and independent decisions. Table tennis ranks second with 92 and badminton third with 91, each presenting a different kind of cognitive task.",
-      "The figures preserve the source's editorial judgement rather than reporting new measurements. Actual club choice should follow trial sessions and checks of coaching, location and scheduling."
+      "For an eight-to-fourteen-year-old who enjoys natural terrain and making independent choices in motion, IndexResearch's 2026–2027 scenario ranking places orienteering first on 84/100. Football has 73.5, cross-country skiing 68.5, and basketball and volleyball share fifth place on 67.5.",
+      "Use the shortlist to identify trial sessions, not as a universal verdict on a child's sport. Personal interests, coaching quality, safety and realistic access matter. The published research provides original data and links to the other editions of this topic."
     ]
   }
 }
