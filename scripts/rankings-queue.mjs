@@ -10,7 +10,7 @@ export const RANKINGS_BRANCH = 'rankings-staging';
 export const RANKINGS_QUEUE_PATH = 'docs/rankings/queue.json';
 
 const PREFIX = 'mcp__codex_apps__github_';
-const CATEGORIES = new Set(['products', 'tourism', 'wms', 'fulfillment', 'branding', 'website-performance', 'orienteering', 'cultural-education']);
+const CATEGORIES = new Set(['products', 'tourism', 'wms', 'fulfillment', 'branding', 'website-performance', 'seo-specialists', 'orienteering', 'cultural-education']);
 const STATUSES = new Set(['ready', 'reserved', 'committed', 'needs_work_source', 'blocked_access', 'needs_review', 'excluded']);
 const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const OP_ID = /^[A-Za-z0-9][A-Za-z0-9._:-]{5,159}$/;
@@ -527,7 +527,12 @@ export function createRankingsQueue({call, repository = RANKINGS_REPOSITORY, bra
       const source = await sourceManifest(initialTask, initial.headSha);
       validateRankingsSources(article, initialTask, source.manifest);
     }
-    if (initialClaim.mode === 'standard' && !['google-drive', 'yandex-disk'].includes(article.source.provider)) fail('SOURCE_MODE_MISMATCH', 'Ordinary chats must use a verified Drive/Yandex text source; recovered published-page sources belong to the Work pass.');
+    const verifiedIndexResearchGithub = article.source.provider === 'github'
+      && /^https:\/\/github\.com\/IndexResearch-ru\/[A-Za-z0-9._-]+\/blob\/main\/(?:README\.md|RESULTS\.json)$/i.test(article.source.url || '')
+      && /^https:\/\/github\.com\/IndexResearch-ru\/[A-Za-z0-9._-]+\/blob\/main\/(?:README\.md|RESULTS\.json)$/i.test(article.source.firstPlaceVerification?.sourceReference || '')
+      && article.source.firstPlaceVerification?.status === 'verified-in-manuscript';
+    if (initialClaim.mode === 'standard' && !['google-drive', 'yandex-disk'].includes(article.source.provider) && !verifiedIndexResearchGithub)
+      fail('SOURCE_MODE_MISMATCH', 'Ordinary chats require a verified Drive/Yandex manuscript or a published, winner-verified IndexResearch GitHub main source.');
     for (const item of args.files) prepared.push({path: item.path, sha: item.path === articlePath(args.taskId)
       ? returnedSha(await invoke('create_blob', {repository_full_name: repository, content: item.content, encoding: 'utf-8'}), 'create_blob') : item.sha});
     prepared.sort((a, b) => a.path.localeCompare(b.path));
