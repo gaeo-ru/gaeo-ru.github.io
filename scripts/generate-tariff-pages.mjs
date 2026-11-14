@@ -105,7 +105,7 @@ function render3APage(cluster,kind,lang) {
  const crossPath=cluster.routes[isHub?'method':'hub'][lang];
  const related=cluster.relatedServices||cluster.ids.map(id=>industrySpecializations.find(x=>x.id===id)).filter(Boolean);
  const sections=d.sections.map(({title,p=[],bullets=[]})=>`<section class="industry-cluster-section"><h2>${esc(title)}</h2>${p.map(t=>`<p>${esc(t)}</p>`).join('')}${bullets.length?`<ul>${bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}</section>`).join('\n');
- const links=related.map((x,i)=>`<article class="list-card"><div class="eyebrow">${en?'Specialization':'Специализация'} №${x.id}</div><h3><a href="${x.routes[lang]}">${esc(x.content[lang].h1)}</a></h3><p>${esc(x.content[lang].lead)}</p><a class="button outline" href="${x.routes[lang]}">${en?'Explore service':'Смотреть специализацию'}</a><p><a href="${pricePath}#industry-${String(x.id).padStart(3,'0')}">${en?'Pricing for this sector':'Тарифы этого направления'}</a></p></article>`).join('\n');
+ const links=related.map(x=>`<article class="list-card"><h3><a href="${x.routes[lang]}">${esc(x.content[lang].h1)}</a></h3><p>${esc(x.content[lang].lead)}</p><div class="industry-cluster-card__actions"><a class="button outline" href="${x.routes[lang]}">${en?'Explore service':'Смотреть специализацию'}</a><a class="button industry-cluster-card__tariffs" href="${pricePath}#industry-${String(x.id).padStart(3,'0')}">${en?'Pricing for this sector':'Тарифы этого направления'} <span aria-hidden="true">→</span></a></div></article>`).join('\n');
  const linksSchema=related.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.content[lang].h1,url:'https://gaeo.ru'+x.routes[lang]}));
  const faqSchema=d.faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}));
  const sources=cluster.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s[lang])}</a></li>`).join('');
@@ -135,7 +135,7 @@ function render3APage(cluster,kind,lang) {
 <section class="industry-cluster-section" id="sources"><h2>${en?'Primary sources checked for this sector':'Проверенные первичные источники'}</h2><p>${en?'These sources establish the general legal context. They do not certify any named business; statuses and transaction conditions must be verified individually at the time of use.':'Источники подтверждают общие требования и правила. Они не подтверждают статус конкретной компании: юридическое лицо, полномочия и условия сделки проверяются отдельно на актуальную дату.'}</p><ul>${sources}</ul></section>
 <section class="industry-cluster-section" id="faq"><h2>${en?'Frequently asked questions':'Частые вопросы'}</h2><!-- GAEO_DESIGN:FAQ --></section>
 </div></section>
-<!-- GAEO_DESIGN:CONTACT -->
+<div class="container industry-cluster-contact"><!-- GAEO_DESIGN:CONTACT --></div>
 <script type="application/ld+json">${json(schema)}</script>
 </main>`;
 }

@@ -955,3 +955,52 @@
 @media(max-width:420px){
  .industry-specialization__related-links>a{width:100%;justify-content:center}
 }
+
+/* Shared styling for the sector hub/method pages generated from one canonical template. */
+.industry-cluster-page .industry-cluster-card__actions{
+ display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:auto;
+}
+.industry-cluster-page .list-card .industry-cluster-card__actions .button{
+ display:inline-flex;align-items:center;justify-content:center;
+ box-sizing:border-box;width:100%;min-width:0;max-width:100%;
+ min-height:46px;margin:0;padding:11px 15px;
+ font-size:14px;line-height:1.4;text-align:center;white-space:normal;
+}
+.industry-cluster-page .list-card .industry-cluster-card__actions .industry-cluster-card__tariffs{
+ color:#07546a;background:#e8f6f9;border-color:#aed8df;
+ border-radius:10px;text-decoration:none;
+}
+.industry-cluster-page .list-card .industry-cluster-card__actions .industry-cluster-card__tariffs:hover,
+.industry-cluster-page .list-card .industry-cluster-card__actions .industry-cluster-card__tariffs:focus-visible{
+ color:#053f54;background:#d7f2f6;border-color:#67b7c7;text-decoration:none;
+}
+.industry-cluster-page .industry-cluster-card__tariffs span{margin-left:8px;font-size:18px;line-height:1}
+.industry-cluster-page>.inner-content{padding-bottom:42px}
+.industry-cluster-page .industry-cluster-contact{padding:0 0 clamp(48px,6vw,76px)}
+.industry-cluster-page .industry-cluster-contact .site-service__section{
+ box-sizing:border-box;max-width:920px;margin:0 auto;
+ padding:clamp(24px,3vw,38px);
+ background:var(--paper);border:1px solid #dae6eb;border-radius:20px;
+}
+.industry-cluster-page .industry-cluster-contact .site-service__section h2{
+ max-width:100%;margin:0 0 18px;
+ font-size:clamp(26px,3vw,34px);line-height:1.18;overflow-wrap:break-word;
+}
+.industry-cluster-page .industry-cluster-contact .site-service__section p{
+ max-width:740px;margin:0 0 24px;color:#34475b;font-size:16px;line-height:1.7;
+}
+.industry-cluster-page .industry-cluster-contact .site-service__section .button{
+ max-width:100%;white-space:normal;text-align:center;
+}
+@media(max-width:640px){
+ .industry-cluster-page>.inner-content{padding-bottom:28px}
+ .industry-cluster-page .industry-cluster-contact .site-service__section{
+  padding:24px 18px;border-radius:16px;
+ }
+ .industry-cluster-page .industry-cluster-contact .site-service__section h2{
+  font-size:clamp(25px,6.5vw,30px);
+ }
+ .industry-cluster-page .industry-cluster-contact .site-service__section p{
+  font-size:15px;line-height:1.65;
+ }
+}

@@ -37,6 +37,10 @@ for(const cluster of phase3AClusters){
    assert.ok(html.includes('id="faq"')&&html.includes('id="sources"'),'Visible FAQ and sources '+path);
    assert.equal((html.match(/<details class="faq-item">/g)||[]).length,c.faq.length,'FAQ count '+path);
    assert.ok((html.match(/<section class="industry-cluster-section">/g)||[]).length>=6,'Individual content sections '+path);
+   assert.ok(!html.includes((en?'Specialization':'Специализация')+' №'),'No specialization numbers '+path);
+   assert.ok(html.includes('class="industry-cluster-card__actions"'),'Styled service actions '+path);
+   assert.ok(html.includes('class="button industry-cluster-card__tariffs"'),'Styled tariff action '+path);
+   assert.ok(html.includes('class="container industry-cluster-contact"'),'Contact inset wrapper '+path);
    assert.ok(html.includes('href="'+cluster.routes[kind==='hub'?'method':'hub'][lang]+'"'),'Direct related method/hub '+path);
    assert.ok(html.includes('data-gaeo-intent="service"'),'Inquiry button '+path);
    assert.ok(html.includes('+5/+10/+15'),'Contractual BMR unchanged '+path);
@@ -88,6 +92,9 @@ try{
   assert.equal(response?.status(),200,'HTTP '+path);
   assert.equal(await page.locator('main h1').count(),1,'Browser H1 '+path);
   assert.ok(await page.locator('main .listing-grid .list-card').count()>=5,'Visible sector connections '+path);
+  const contact=await page.locator('.industry-cluster-contact .site-service__section').boundingBox();
+  assert.ok(contact&&contact.x>=10&&contact.x+contact.width<=width-10,
+   'Contact content must remain inset '+path+' @'+width);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
   assert.ok(overflow<=2,'Horizontal overflow '+path+' @ '+width+'px: '+overflow);
   assert.equal(errors.length,0,'JS runtime errors '+path+' '+errors.join('; '));
