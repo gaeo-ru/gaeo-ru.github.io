@@ -269,7 +269,7 @@ document.querySelectorAll('.mobile-fold-section').forEach(section => {
       ['Обо мне','/professional-biography/'],
       ['Как работаю','/#process'],
       ['Кейсы','/cases/'],
-      ['GEO-продвижение','/cases/#geo-promotion'],
+      ['Продвижение в нейросетях','/cases/#geo-promotion'],
       ['Разработка сайтов','/cases/#website-development'],
       ['Услуги','/services/'],
       ['Отрасли','/industries/'],
