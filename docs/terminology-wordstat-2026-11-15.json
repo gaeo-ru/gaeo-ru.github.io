@@ -1,0 +1,159 @@
+{
+  "observedDateMoscow": "2026-11-15",
+  "source": "https://wordstat.yandex.ru/",
+  "report": "Топы запросов",
+  "caveat": "На сайте есть предупреждение о временной недоступности части данных. Для разных формулировок отображаются разные периоды; сравнение ограничено одинаковыми периодами. total взят из строки Общее число запросов, а не из вложенных строк таблицы. Нулевая или недоступная детализация не доказывает отсутствия спроса. Широкие частоты не суммировать.",
+  "queries": [
+    {
+      "query": "продвижение +в нейросетях",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 729,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false
+    },
+    {
+      "query": "\"продвижение +в нейросетях\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 95,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false
+    },
+    {
+      "query": "продвижение +через нейросети",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 34,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8"
+    },
+    {
+      "query": "продвижение +в ии",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 809,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D0%B2%20%D0%B8%D0%B8"
+    },
+    {
+      "query": "geo продвижение",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 1507,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=geo%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    {
+      "query": "\"geo продвижение\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 281,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%22geo%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%22"
+    },
+    {
+      "query": "\"продвижение +в ии\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 12,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%22%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D0%B2%20%D0%B8%D0%B8%22"
+    },
+    {
+      "query": "продвижение +в ответах нейросетей",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 42,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D0%B2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0%D1%85%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9"
+    },
+    {
+      "query": "продвижение +в рекомендациях нейросетей",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 3,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D0%B2%20%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D1%8F%D1%85%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9"
+    },
+    {
+      "query": "продвижение бизнеса +в нейросетях",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 30,
+      "period": "09.09.2026–08.10.2026",
+      "rowsUnavailable": false,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%2B%D0%B2%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D1%8F%D1%85"
+    },
+    {
+      "query": "продвижение бренда +в нейросетях",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 22,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B1%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%2B%D0%B2%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D1%8F%D1%85"
+    },
+    {
+      "query": "вывод +в ответы нейросетей",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 6701,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%20%2B%D0%B2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9"
+    },
+    {
+      "query": "вывод +в рекомендации нейросетей",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 3,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%20%2B%D0%B2%20%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9"
+    },
+    {
+      "query": "\"продвижение +в ответах нейросетей\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 4,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%22%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D0%B2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0%D1%85%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9%22"
+    },
+    {
+      "query": "\"продвижение +через нейросети\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 0,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%22%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%2B%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8%22"
+    },
+    {
+      "query": "\"вывод +в ответы нейросетей\"",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 0,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%22%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%20%2B%D0%B2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B5%D0%B9%22"
+    },
+    {
+      "query": "вывод бренда +в ответы ии",
+      "region": "Россия",
+      "devices": "Все",
+      "total": 0,
+      "period": "13.10.2026–13.11.2026",
+      "rowsUnavailable": true,
+      "url": "https://wordstat.yandex.ru/?region=225&view=table&words=%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%20%D0%B1%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%2B%D0%B2%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B%20%D0%B8%D0%B8"
+    }
+  ]
+}

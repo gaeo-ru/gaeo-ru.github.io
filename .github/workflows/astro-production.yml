@@ -41,6 +41,11 @@ jobs:
         run: node scripts/qa_industrial_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
         run: npx playwright install chromium
+      - name: Verify accessible terminology hints and timed interactions
+        run: |
+          node --test tests/term-hints.test.mjs
+          node tests/term-hints.browser.mjs
+          node scripts/qa_terminology_site.mjs
       - name: Verify bilingual rankings, images and FAQ at desktop and mobile widths
         run: node scripts/qa_rankings.mjs --browser
       - name: Verify publications, reviews and carousel
@@ -170,6 +175,7 @@ jobs:
             visual-tariffs/
             visual-hub-funnel/
             visual-rankings/
+            visual-terminology/
           if-no-files-found: ignore
           retention-days: 14
       - uses: actions/upload-artifact@v4

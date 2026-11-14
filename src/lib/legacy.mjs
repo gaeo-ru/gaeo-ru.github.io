@@ -1,5 +1,6 @@
 import {readdirSync,readFileSync} from 'node:fs';
 import {resolve,relative,sep} from 'node:path';
+import {injectTermHintAssets} from './term-hint-assets.mjs';
 const ROOT=process.cwd(),PAGES=resolve(ROOT,'src/legacy/pages'),PARTIALS=resolve(ROOT,'templates/partials');
 const MARKERS=/<!-- SITE_HEADER_START -->[\s\S]*?<!-- SITE_HEADER_END -->|<!-- SITE_FOOTER_START -->[\s\S]*?<!-- SITE_FOOTER_END -->|<div class="page-cta">[\s\S]*?<\/div>|<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->|<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->|<!-- GAEO_DESIGN:(?:FAQ|CONTACT|SERVICES|WHEN|STEPS|CASES) -->|<!-- GAEO_TARIFF:(?:OVERVIEW|CALCULATOR|COMPARISON|CATALOG|DETAIL|SCHEMA|INDUSTRY|DEVELOPMENT) -->/g;
 function walk(dir){
@@ -42,7 +43,7 @@ function chrome(original,kind,lang){
 export function tokenizeLegacyPage(rel){
  const file=resolve(PAGES,rel);
  if(!file.startsWith(PAGES+sep))throw Error('Invalid legacy path '+rel);
- const src=readFileSync(file,'utf8'),lang=rel.startsWith('en/')?'en':'ru';
+ const src=injectTermHintAssets(readFileSync(file,'utf8')),lang=rel.startsWith('en/')?'en':'ru';
  const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')||src.includes('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->');
  const hasApprovedContact=src.includes('<!-- GAEO_DESIGN:CONTACT -->');
  // A managed Astro contact component is the sole lead block on new pages.

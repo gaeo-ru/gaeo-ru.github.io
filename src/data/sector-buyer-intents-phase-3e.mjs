@@ -21,7 +21,7 @@ function method(id,key,slug,landing,sources,relatedMethods,ru,en) {
 }
 export const phase3EIntents=[
  method(1,'developer-project-intents','developer-project-evidence-checklist',{
-  ru:{route:'/geo-prodvizhenie-nedvizhimosti/',name:'GEO-продвижение недвижимости и девелоперов',lead:'Действующая коммерческая страница GAEO для жилых комплексов и застройщиков, с отраслевым аудитом и тарифами.'},
+  ru:{route:'/geo-prodvizhenie-nedvizhimosti/',name:'Продвижение недвижимости и девелоперов в нейросетях',lead:'Действующая коммерческая страница GAEO для жилых комплексов и застройщиков, с отраслевым аудитом и тарифами.'},
   en:{route:'/en/geo-for-real-estate/',name:'GEO for real estate developers',lead:'The existing GAEO commercial page for real estate GEO services, baseline audits and pricing.'}
  },[
   {url:'https://xn--80az8a.xn--d1aqf.xn--p1ai/',ru:'ЕИСЖС «наш.дом.рф»: сведения о проектах, застройщиках и проектных декларациях',en:'Official unified housing construction information system: projects, developers and declarations'},
@@ -90,7 +90,7 @@ export const phase3EIntents=[
    faq('Упоминание девелопера означает рекомендацию конкретного ЖК?','Нет. Нужно проверить, назван ли именно подходящий проект или корпус и соответствует ли он бюджету, сроку и географии вопроса.'),
    faq('Можно ли считать сроки из рекламного объявления подтвержденными?','Только после проверки их источника и актуальности. Для применимых строящихся объектов сверяются ЕИСЖС, проектная декларация и относящиеся к сделке документы.'),
    faq('Что делать, если у ЖК несколько очередей?','Собирать отдельные сущности по корпусам и этапам. Утверждения о сроках и наличии квартир должны относиться к нужной очереди, а не к названию комплекса в целом.'),
-   faq('Нужен ли новый тариф GEO для застройщиков?','Нет. У GAEO действует единая ценовая модель и коммерческая страница по недвижимости. Этот материал дополняет проверку отраслевой фактуры.'),
+   faq('Нужен ли отдельный тариф продвижения в нейросетях для застройщиков?','Нет. У GAEO действует единая ценовая модель и коммерческая страница по недвижимости. Этот материал дополняет проверку отраслевой фактуры.'),
    faq('Доказывает ли этот текст, что GAEO улучшил рекомендации конкретного ЖК?','Нет. Это практическая методика, а не новый результат клиента. Опубликованный предаудит недвижимости имеет собственные дату, выборку и ограничения.')
   ]),
  {
@@ -135,7 +135,7 @@ export const phase3EIntents=[
   eyebrow:'GEO / AEO · buyer intent evidence'
  }),
  method(19,'b2b-legal-matter-fit','b2b-law-firm-matter-fit',{
-  ru:{route:'/industries/legal/',name:'GEO-продвижение юридических компаний',lead:'Действующая отраслевая страница GAEO для юридических услуг, профессиональных сведений и тарифов.'},
+  ru:{route:'/industries/legal/',name:'Продвижение юридических компаний в нейросетях',lead:'Действующая отраслевая страница GAEO для юридических услуг, профессиональных сведений и тарифов.'},
   en:{route:'/en/industries/legal/',name:'GEO for law firms and legal practices',lead:'The existing commercial guide for legal-service GEO, proof and pricing.'}
  },[
   {url:'https://minjust.gov.ru/ru/pages/advokaty-rossijskoj-federacii/',ru:'Минюст России: единый государственный реестр адвокатов',en:'Russian Ministry of Justice: unified official register of advocates'},
@@ -147,7 +147,7 @@ export const phase3EIntents=[
  },
  page(
   'Как нейросети выбирают юридическую фирму для бизнеса: дело, полномочия и проверяемая практика',
-  'Практическая матрица GEO для B2B-юристов: задачи компании, отрасль, статус адвоката, полномочия, договор и источники без вымышленных результатов.',
+  'Как нейросети рекомендуют B2B-юристов: задачи компании, отрасль, статус адвоката, полномочия, договор и источники. Матрица проверки ответов.',
   'Компания ищет юридического советника по конкретной сделке или спору, а не самого известного юриста вообще. Ответ нейросети должен соотнести правовую задачу со специализацией исполнителя, регионом, моделью работы по договору и проверяемой практикой.',
   'Проверяем соответствие юридической фирмы конкретному делу: компетенцию, команду, статус заявленных адвокатов, применимость опыта и условия взаимодействия.',
   [
@@ -250,7 +250,7 @@ export const phase3EIntents=[
   eyebrow:'GEO / AEO · buyer intent evidence'
  }),
  method(39,'load-test-vendor-evidence','load-testing-vendor-proof',{
-  ru:{route:'/industries/highload-it/',name:'GEO-продвижение технических IT-подрядчиков',lead:'Действующая коммерческая страница GAEO для ускорения сайтов, highload и технических услуг.'},
+  ru:{route:'/industries/highload-it/',name:'Продвижение технических IT-подрядчиков в нейросетях',lead:'Действующая коммерческая страница GAEO для ускорения сайтов, highload и технических услуг.'},
   en:{route:'/en/industries/highload-it/',name:'GEO for technical IT service providers',lead:'The existing GAEO highload and technical B2B service page.'}
  },[
   {url:'https://developers.google.com/search/docs/appearance/core-web-vitals',ru:'Google Search Central: Core Web Vitals, LCP, INP и CLS',en:'Google Search Central: Core Web Vitals (LCP, INP, CLS)'},
@@ -261,7 +261,7 @@ export const phase3EIntents=[
   en:[{href:'/en/strategies/technical-b2b-vendor-evidence/',label:'Existing technical B2B GEO method'},{href:'/en/cases/methodlab-ai-visibility-growth/',label:'MethodLab case: measured AI visibility, not load-test performance'}]
  },
  page(
-  'Кого выбрать для ускорения сайта и нагрузочного тестирования: проверка подрядчика для GEO',
+  'Как нейросети рекомендуют подрядчика для ускорения сайта и нагрузочного тестирования',
   'Как проверить подрядчика по ускорению сайта и нагрузочному тестированию: Core Web Vitals, протоколы k6, условия испытания и доказательства.',
   'Запрос «сайт тормозит» не равен запросу «проверить выдерживаемую нагрузку». Первый может относиться к скорости интерфейса, второй требует модели трафика, среды тестирования и критериев отказа. Поэтому нейросети нужно давать доказательства именно той услуги, которую ищет заказчик.',
   'Сравниваем технических подрядчиков по задаче: показатели реальных пользователей, протокол нагрузочного тестирования, воспроизводимые условия и ответственность за исправление.',

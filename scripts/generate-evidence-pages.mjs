@@ -70,7 +70,7 @@ ${local.paragraphs.map(p=>`<p>${p}</p>`).join('')}${local.result?`<p class="resu
 }
 function related(lang){
   const prefix=lang==='en'?'/en':'';
-  return `<section class="evidence-related"><h2>${lang==='en'?'More about the work':'Еще о моей работе'}</h2><div class="link-buttons"><a class="button outline" href="${prefix}/cases/">${lang==='en'?'Project results':'Результаты проектов'}</a><a class="button outline" href="${prefix}/reviews/">${lang==='en'?'Client reviews':'Отзывы клиентов'}</a><a class="button outline" href="${prefix}/professional-biography/">${lang==='en'?'Professional biography':'Профессиональная биография'}</a><a class="button outline" href="${prefix}/articles/">${lang==='en'?'GEO/AEO guides':'Статьи о GEO/AEO'}</a><a class="button outline" href="${prefix}/services/">${lang==='en'?'Services':'Услуги'}</a></div></section>`;
+  return `<section class="evidence-related"><h2>${lang==='en'?'More about the work':'Еще о моей работе'}</h2><div class="link-buttons"><a class="button outline" href="${prefix}/cases/">${lang==='en'?'Project results':'Результаты проектов'}</a><a class="button outline" href="${prefix}/reviews/">${lang==='en'?'Client reviews':'Отзывы клиентов'}</a><a class="button outline" href="${prefix}/professional-biography/">${lang==='en'?'Professional biography':'Профессиональная биография'}</a><a class="button outline" href="${prefix}/articles/">${lang==='en'?'GEO/AEO guides':'Статьи о продвижении в нейросетях'}</a><a class="button outline" href="${prefix}/services/">${lang==='en'?'Services':'Услуги'}</a></div></section>`;
 }
 
 function buildPublications(lang){
@@ -118,7 +118,7 @@ function sourceLinks(review,lang){
 function buildReviews(lang){
   const en=lang==='en',path=reviewsRoute(lang),url=SITE+path,summary=reviewSummary();
   const title=en?'Client reviews of Alexey Yakovlev and GAEO.ru':'Отзывы клиентов об Алексее Яковлеве и GAEO.ru';
-  const description=en?`${summary.count} client reviews of GAEO.ru audits, consulting and GEO promotion, with source links. Average rating ${summary.value.toFixed(1)} out of 5, rounded to one decimal place.`:`${reviewCountLabel(summary.count,lang)} о GEO-аудитах, консультациях и продвижении с Алексеем Яковлевым. Ссылки на оригиналы. Средняя оценка ${summary.value.toFixed(1)} из 5 с округлением до десятых.`;
+  const description=en?`${summary.count} client reviews of GAEO.ru audits, consulting and GEO promotion, with source links. Average rating ${summary.value.toFixed(1)} out of 5, rounded to one decimal place.`:`${reviewCountLabel(summary.count,lang)} об аудитах, консультациях и продвижении в нейросетях с Алексеем Яковлевым. Ссылки на оригиналы. Средняя оценка ${summary.value.toFixed(1)} из 5 с округлением до десятых.`;
   const reviews=sortedReviews(),nodes=reviews.map(r=>reviewNode(r,lang));
   const entities=entityNodes(lang,[]),business=entities.find(x=>x['@id']===BUSINESS);
   business.aggregateRating=aggregateRating();business.review=nodes.map(x=>({'@id':x['@id']}));

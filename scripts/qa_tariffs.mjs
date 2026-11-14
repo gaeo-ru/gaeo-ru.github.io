@@ -31,7 +31,7 @@ for(const lang of ['ru','en']){
  assert.equal((html.match(/<div class="industry-catalog__image">/g)||[]).length,107,'All industry illustrations render without direct image links');
  assert.equal((html.match(/<a class="industry-catalog__image"/g)||[]).length,0,'No industry image links to raw files');
  assert.equal((html.match(/class="button industry-catalog__contact"/g)||[]).length,107,'All industry CTAs use primary styling');
- assert.ok(!html.includes('GEO: от 79 900 ₽/мес.; GEO + контент:'),'Industry inquiry context does not copy all tariff prices');
+ assert.doesNotMatch(html, /(?:GEO|Продвижение(?: в нейросетях)?): от 79 900 ₽\/мес\.; (?:GEO \+ контент|Продвижение и контент):/, 'Industry inquiry context does not copy all tariff prices');
  assert.ok(!html.includes('GEO: from RUB 79,900/month; GEO + content:'),'English inquiry context does not copy all tariff prices');
  for(const phrase of (lang==='ru'?[
   'Сам дорабатываю сайт или готовлю ТЗ','Сам все внедряю и дорабатываю','1 раз в месяц, с целью BMR по договору','Предоплата за текущий месяц'
@@ -309,7 +309,7 @@ try{
     await page.locator('.gaeo-modal textarea[name="comment"]').waitFor();
     const industryMessage=await page.locator('.gaeo-modal textarea[name="comment"]').inputValue();
     assert.ok(industryMessage.includes(route.startsWith('/en/')?'Industry:':'Отрасль:'),'Prefilled industry label survives');
-    assert.doesNotMatch(industryMessage,/(?:GEO:\s*(?:от|from)|GEO \+ контент:\s*от|Финансовые гарантии:\s*от|Contract guarantees:\s*from)/,'Prices are not copied into industry inquiry');
+    assert.doesNotMatch(industryMessage,/(?:(?:GEO|Продвижение(?: в нейросетях)?):\s*(?:от|from)|(?:GEO \+ контент|Продвижение и контент):\s*от|(?:Финансовые гарантии|Продвижение с финансовыми гарантиями):\s*от|Contract guarantees:\s*from)/,'Prices are not copied into industry inquiry');
     await page.locator('.gaeo-modal-close').click();
     const examples=catalog.locator('[data-catalog-item]:visible .industry-catalog__examples');
     const rowSize=width>=1200?3:width>700?2:1;
@@ -333,7 +333,7 @@ try{
     assert.ok(goalsNamed('industry_catalog_filter').some(goal=>goal.params.group_id!=='all'),'4A: group ID tracked');
     assert.equal(goalsNamed('lead_submit_success').length,0,'4A: no test leads sent');
     for(const goal of observedGoals){
-     assert.doesNotMatch(JSON.stringify(goal.params),/WMS|no-such-industry-zzzz|Расчет GEO|GEO estimate|data-gaeo-request|@/i,'4A: no search, inquiry or contact details in goals');
+     assert.doesNotMatch(JSON.stringify(goal.params),/WMS|no-such-industry-zzzz|Расчет GEO|Расчет продвижения в нейросетях|GEO estimate|data-gaeo-request|@/i,'4A: no search, inquiry or contact details in goals');
      if(['tariff_calculation_change','tariff_plan_select'].includes(goal.name)){
       assert.ok(['geo','content','guarantee'].includes(goal.params.plan_id),'4A: canonical plan ID');
       assert.equal(typeof goal.params.total_amount,'number','4A: numeric total');

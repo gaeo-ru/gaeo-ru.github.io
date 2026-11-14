@@ -9,8 +9,8 @@ const groups = getIndustryGroups(lang);
 const leadHref = en ? '/en/#lead' : '/#lead';
 const price = value => money(value, lang);
 const prices = [
-  { label: 'GEO', value: PRICES.geo },
-  { label: en ? 'GEO + content' : 'GEO + контент', value: PRICES.content },
+  { label: en ? 'GEO' : 'Продвижение', value: PRICES.geo },
+  { label: en ? 'GEO + content' : 'Продвижение и контент', value: PRICES.content },
   { label: en ? 'Contract guarantees' : 'Финансовые гарантии', value: PRICES.guarantee },
 ];
 const copy = en ? {
@@ -34,7 +34,7 @@ const copy = en ? {
   noResultsContact: 'Discuss another business category',
   terms: 'Prices are monthly starting rates in RUB. The scope of work and financial guarantees for visibility growth are agreed in the contract.',
 } : {
-  eyebrow: 'GEO по отраслям',
+  eyebrow: 'Продвижение в нейросетях по отраслям',
   title: 'Найдите направление для своего бизнеса',
   intro: '107 направлений со своими запросами покупателей и задачами продвижения. Выберите отрасль или найдите свою компанию по услуге, товару и специализации.',
   hint: 'Например: юристы, WMS, коттеджные поселки или зоотовары.',
@@ -88,7 +88,7 @@ const copy = en ? {
       {items.map(item => <article class="industry-catalog__card" id={item.id} data-catalog-item data-group={item.groupId} data-search={[item.category, item.categoryEn, item.title, item.titleEn, item.group, item.groupEn, item.intro, item.introEn, ...item.specialties, ...item.specialtiesEn, item.searchAliases].join(' ')} aria-labelledby={`${item.id}-title`}>
         <div class="industry-catalog__card-top">
           <div class="industry-catalog__image">
-            <img src={item.image.small} srcset={`${item.image.small} 480w, ${item.image.large} 960w`} sizes="(max-width: 420px) 88px, 120px" width={item.image.width} height={item.image.height} loading="lazy" decoding="async" alt={en ? `GAEO service illustration: ${item.name}` : `GEO-продвижение: ${item.name}`} />
+            <img src={item.image.small} srcset={`${item.image.small} 480w, ${item.image.large} 960w`} sizes="(max-width: 420px) 88px, 120px" width={item.image.width} height={item.image.height} loading="lazy" decoding="async" alt={en ? `GAEO service illustration: ${item.name}` : `Продвижение в нейросетях: ${item.name}`} />
           </div>
           <div class="industry-catalog__card-heading">
             <p class="industry-catalog__group">{item.groupName}</p>

@@ -4,18 +4,18 @@ export const designPageContent = {
   "services/index.html": {
     "services": [
       {
-        "title": "GEO-аудит и продвижение в нейросетях",
+        "title": "Аудит и продвижение в нейросетях",
         "text": "Проверяю, кого рекомендуют ChatGPT, Алиса и другие нейросети по вопросам ваших покупателей. Разбираю причины ответов, составляю план и сопровождаю работу над сайтом и внешними источниками.",
         "features": [
           "Мини-аудит текущих рекомендаций",
-          "Платный подробный GEO-аудит",
+          "Подробный аудит сайта и ответов нейросетей",
           "Сопровождение продвижения и повторные замеры"
         ],
         "href": "/#pricing",
-        "cta": "Посмотреть тарифы GEO"
+        "cta": "Тарифы продвижения"
       },
       {
-        "title": "Разработка и редизайн сайтов под GEO",
+        "title": "Разработка и редизайн сайтов под нейросети",
         "text": "Проектирую структуру, страницы, контент и технические требования к сайту. Организую создание или обновление, проверяю SEO, Schema.org, языковые версии, работу форм и качество публикации.",
         "features": [
           "Создание сайта с нуля или переезд",
@@ -30,7 +30,7 @@ export const designPageContent = {
   "en/services/index.html": {
     "services": [
       {
-        "title": "GEO audits and AI search visibility",
+        "title": "AI search audits and brand visibility",
         "text": "I test recommendations in ChatGPT, Yandex Alice and other AI services, study the sources behind them, prepare an action plan and oversee work on the website and external references.",
         "features": [
           "Initial visibility assessment",
@@ -38,10 +38,10 @@ export const designPageContent = {
           "Implementation support and follow-up measurements"
         ],
         "href": "/en/#pricing",
-        "cta": "See GEO pricing"
+        "cta": "See AI visibility pricing"
       },
       {
-        "title": "Website development for SEO and GEO",
+        "title": "Website development for search and AI answers",
         "text": "I design site architecture, content models and implementation requirements. Work can include a new site, a migration or a redesign, with checks for structured data, language versions, forms and release quality.",
         "features": [
           "New websites and platform migrations",
@@ -75,7 +75,7 @@ export const designPageContent = {
       },
       {
         "title": "Проектирую страницы и данные",
-        "text": "Формирую структуру URL, виды страниц, источники информации, требования к дизайну, контенту и техническому SEO/GEO."
+        "text": "Формирую структуру URL, виды страниц, источники информации, требования к дизайну, контенту, поисковой оптимизации и доступности сайта для нейросетей."
       },
       {
         "title": "Организую реализацию",

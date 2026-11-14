@@ -63,7 +63,7 @@ for(const lang of ['ru','en']){
  for(const [slug,page] of Object.entries(serviceDetails[lang])){
   const plan=getPlan(slug,lang),other=getPlan(slug,en?'ru':'en');
   const seoNames={
-   ru:{free:'Бесплатный мини-аудит GEO-видимости бренда в нейросетях',audit:'Полный GEO-аудит сайта и видимости бренда',geo:'GEO-продвижение бизнеса в нейросетях',content:'GEO-продвижение в нейросетях с контентом',guarantee:'GEO-продвижение в нейросетях с финансовыми гарантиями'},
+   ru:{free:'Бесплатный аудит бренда в нейросетях',audit:'Аудит сайта и бренда в нейросетях (GEO-аудит)',geo:'Продвижение бизнеса в нейросетях (GEO)',content:'Продвижение в нейросетях с контентом',guarantee:'Продвижение в нейросетях с финансовыми гарантиями'},
    en:{free:'Free GEO audit of brand visibility in AI search',audit:'Full GEO audit of website and AI visibility',geo:'GEO promotion for AI search visibility',content:'GEO promotion with expert content',guarantee:'GEO promotion with financial guarantees'}
   };
   const title=(seoNames[lang][plan.id]||plan.name)+(plan.id==='free'?'':' '+priceLabel(plan,lang))+' | GAEO.ru';
@@ -71,9 +71,9 @@ for(const lang of ['ru','en']){
   save(resolve(root,plan.href.slice(1),'index.html'),shell({lang,route:plan.href,equivalent:other.href,title,description,h1:page.title,body:'<!-- GAEO_TARIFF:DETAIL -->'}));
  }
  const route=pricingHref(lang),equivalent=pricingHref(en?'ru':'en');
- const h1=en?'GEO pricing, services and 107 business categories':'Тарифы GEO: услуги и 107 направлений бизнеса';
- const title=en?'GEO pricing for AI search: audits, services and websites | GAEO.ru':'GEO-продвижение в нейросетях: цены, тарифы и аудит | GAEO.ru';
- const description=en?'Compare GAEO services: free mini-audit, full audit, GEO promotion, content, contractual BMR growth and websites. Calculate extras and explore 107 business categories.':'Тарифы GAEO: бесплатный и полный аудит, GEO-продвижение, контент, финансовые гарантии роста BMR и разработка сайтов. Калькулятор опций и 107 направлений бизнеса.';
+ const h1=en?'GEO pricing, services and 107 business categories':'Продвижение в нейросетях: тарифы и услуги';
+ const title=en?'GEO pricing for AI search: audits, services and websites | GAEO.ru':'Продвижение в нейросетях: цены, тарифы и аудит | GAEO.ru';
+ const description=en?'Compare GAEO services: free mini-audit, full audit, GEO promotion, content, contractual BMR growth and websites. Calculate extras and explore 107 business categories.':'Цены на продвижение бизнеса в нейросетях (GEO), аудит, контент и разработку сайтов. Финансовые гарантии роста BMR, калькулятор и 107 направлений бизнеса.';
  const body=`<main class="tariff-page"><section class="section-sm tariff-page__intro"><div class="container"><nav class="tariff-breadcrumbs" aria-label="${en?'Breadcrumbs':'Хлебные крошки'}"><a href="${en?'/en/':'/'}">${en?'Home':'Главная'}</a> / ${en?'Pricing':'Тарифы'}</nav><div class="eyebrow">GAEO · ${en?'Alexey Yakovlev':'Алексей Яковлев'}</div><h1>${h1}</h1><p class="tariff-lead">${en?'Find the right service, compare responsibilities and choose the scope for your business.':'Найдите подходящую услугу, сравните ответственность за внедрение и выберите объем работ для вашего бизнеса.'}</p><div class="tariff-related pill-links"><a href="${route}#pricing">${en?'6 services':'6 услуг'}</a><a href="${route}#calculator">${en?'Calculator':'Калькулятор'}</a><a href="${route}#compare">${en?'Compare plans':'Сравнение тарифов'}</a><a href="${route}#industry-catalog">${en?'107 business categories':'107 направлений'}</a></div></div></section>
 <!-- GAEO_TARIFF:OVERVIEW -->
 <!-- GAEO_TARIFF:CALCULATOR -->
@@ -110,7 +110,7 @@ function render3APage(cluster,kind,lang) {
  if(cluster.methodOnly&&!isPhase3C&&!isPhase3D&&!linkedServiceName)throw new Error('Missing linked service title for '+route);
  const linkedServiceLabel=linkedServiceName
   ? linkedServiceName+': '+(en?'services, audit and pricing':'услуги, аудит и тарифы')
-  : (en?'GEO services, audit and pricing':'GEO-услуги, аудит и тарифы');
+  : (en?'GEO services, audit and pricing':'Продвижение в нейросетях, аудит и тарифы');
  const sections=d.sections.map(({title,p=[],bullets=[]})=>`<section class="industry-cluster-section"><h2>${esc(title)}</h2>${p.map(t=>`<p>${esc(t)}</p>`).join('')}${bullets.length?`<ul>${bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}</section>`).join('\n');
  const links=related.map(x=>`<article class="list-card"><h3><a href="${x.routes[lang]}">${esc(x.content[lang].h1)}</a></h3><p>${esc(x.content[lang].lead)}</p><div class="industry-cluster-card__actions"><a class="button outline" href="${x.routes[lang]}">${en?'Explore service':'Смотреть специализацию'}</a><a class="button industry-cluster-card__tariffs" href="${pricePath}#industry-${String(x.id).padStart(3,'0')}">${en?'Pricing for this sector':'Тарифы этого направления'} <span aria-hidden="true">→</span></a></div></article>`).join('\n');
  const linksSchema=related.map((x,i)=>({'@type':'ListItem',position:i+1,name:x.content[lang].h1,url:'https://gaeo.ru'+x.routes[lang]}));
@@ -130,7 +130,7 @@ function render3APage(cluster,kind,lang) {
  const schema={'@context':'https://schema.org','@graph':[
   isHub?{'@type':'ItemList','@id':url+'#catalog',name:d.h1,numberOfItems:related.length,itemListElement:linksSchema}:{'@type':'CreativeWork','@id':url+'#method',name:d.h1,url,description:d.description,author:{'@id':'https://gaeo.ru/#person'},datePublished:publicationDate,dateModified:publicationDate,inLanguage:lang,isPartOf:{'@id':'https://gaeo.ru/#website'}},
   {'@type':'FAQPage','@id':url+'#faq',mainEntity:faqSchema},
-  ...(isHub?[{'@type':'Service','@id':url+'#service',name:d.h1,serviceType:en?'GEO and AEO consultancy':'GEO/AEO-продвижение',provider:{'@id':'https://gaeo.ru/#business'},url,offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}]:[])
+  ...(isHub?[{'@type':'Service','@id':url+'#service',name:d.h1,serviceType:en?'GEO and AEO consultancy':'Продвижение бизнеса в ответах нейросетей (GEO)',provider:{'@id':'https://gaeo.ru/#business'},url,offers:['geo','content','guarantee'].map(id=>({'@id':'https://gaeo.ru'+getPlan(id,lang).href+'#offer'}))}]:[])
  ]};
  return `<main class="page-shell industry-cluster-page">
 <nav class="breadcrumbs" aria-label="${en?'Breadcrumbs':'Хлебные крошки'}"><div class="container breadcrumbs__inner"><a href="${en?'/en/':'/'}">${en?'Home':'Главная'}</a><span class="breadcrumbs__sep">›</span><a href="${sectionPath}">${sectionLabel}</a><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current" aria-current="page">${esc(d.h1)}</span></div></nav>

@@ -22,7 +22,7 @@ const en = page.language === 'en';
         <a class="button" href={page.primaryCta.href}>{page.primaryCta.text}</a>
         <a class="button outline" href={page.secondaryCta.href}>{page.secondaryCta.text}</a>
       </div>
-      <p class="industry-hero__byline">{en ? 'Personally led by' : 'Лично ведет'} <a href={page.about.link.href}>{page.about.name}</a>, {en ? 'GEO/AEO consultant' : 'независимый GEO/AEO-эксперт'}</p>
+      <p class="industry-hero__byline">{en ? 'Personally led by' : 'Лично ведет'} <a href={page.about.link.href}>{page.about.name}</a>, {en ? 'GEO/AEO consultant' : 'эксперт по продвижению в нейросетях (GEO)'}</p>
     </div>
     <figure class={`industry-hero__media industry-commercial__media ${page.heroImage.native?'industry-commercial__media--native':'industry-commercial__media--image'}`}>
       {page.heroImage.native ? (
@@ -224,7 +224,7 @@ const en = page.language === 'en';
 <section class="industry-section industry-faq-section" aria-labelledby="industry-faq-title">
   <div class="container industry-faq-container">
     <div class="industry-eyebrow">FAQ</div>
-    <h2 id="industry-faq-title">{page.faqTitle || (en ? 'Frequently asked questions' : 'Частые вопросы о GEO-продвижении недвижимости')}</h2>
+    <h2 id="industry-faq-title">{page.faqTitle || (en ? 'Frequently asked questions' : 'Вопросы о продвижении недвижимости в нейросетях')}</h2>
     <FAQAccordion items={page.faq} paragraphAnswers={true}/>
   </div>
 </section>

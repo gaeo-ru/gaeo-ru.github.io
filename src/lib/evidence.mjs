@@ -11,7 +11,7 @@ export const categories = [
   {id:'ratings', ru:'Рейтинги и внешние упоминания', en:'Rankings and external mentions',
     intro:{ru:'Рейтинги, обзоры рынка и профессиональные каталоги, в которых представлены GAEO.ru и Алексей Яковлев. Места и баллы относятся к методикам авторов и дате исследования.', en:'Rankings, market reviews and professional directories featuring GAEO.ru and Alexey Yakovlev. Positions and scores reflect each publisher’s methodology and research date.'}},
   {id:'interviews', ru:'Интервью и экспертные комментарии', en:'Interviews and expert commentary',
-    intro:{ru:'Интервью, ответы на вопросы редакций и экспертные комментарии Алексея Яковлева о GEO, AEO, поиске, маркетинге и продажах.', en:'Interviews, editorial questions and expert commentary by Alexey Yakovlev on GEO, AEO, search, marketing and sales.'}},
+    intro:{ru:'Интервью, ответы на вопросы редакций и экспертные комментарии Алексея Яковлева о продвижении в нейросетях (GEO), поиске, маркетинге и продажах.', en:'Interviews, editorial questions and expert commentary by Alexey Yakovlev on GEO, AEO, search, marketing and sales.'}},
   {id:'cases', ru:'Публичные кейсы', en:'Public case studies',
     intro:{ru:'Опубликованные кейсы GAEO.ru и клиентских проектов: исходная задача, выполненная работа, результаты и ограничения замеров. Ссылки ведут к полным разборам и внешним публикациям.', en:'Published GAEO.ru and client case studies covering the starting point, work performed, results and measurement limitations. Follow the links to full reports and external publications.'}},
   {id:'articles', ru:'Авторские публикации и исследования', en:'Authored articles and research',

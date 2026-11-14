@@ -1,0 +1,4150 @@
+{
+  "dateMoscow": "2026-11-15",
+  "scope": "Все HTML-страницы собранного сайта; текстовые вхождения до клиентской разметки. Включает уже расшифрованные термины, свернутый FAQ и навигационные исключения; не равно числу кнопок подсказок. Метаданные, JSON-LD, код и SVG не учитываются.",
+  "pages": 495,
+  "pagesWithTerms": 419,
+  "totals": {
+    "GEO": 4612,
+    "BMR": 1825,
+    "SoV": 7
+  },
+  "byLanguage": {
+    "ru": {
+      "GEO": 835,
+      "BMR": 950,
+      "SoV": 4
+    },
+    "en": {
+      "GEO": 3777,
+      "BMR": 875,
+      "SoV": 3
+    }
+  },
+  "routes": [
+    {
+      "route": "/404.html",
+      "lang": "ru",
+      "title": "Страница не найдена — GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/articles/agentnaya-torgovlya-gotovnost-internet-magazina/",
+      "lang": "ru",
+      "title": "AI-агенты и интернет-магазины: 12 проверок готовности к покупкам | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/",
+      "lang": "ru",
+      "title": "GEO-специалисты в ответах нейросетей: 110 ответов, BMR и FRS | GAEO.ru",
+      "terms": {
+        "BMR": 16,
+        "GEO": 10
+      }
+    },
+    {
+      "route": "/articles/",
+      "lang": "ru",
+      "title": "Статьи о продвижении в нейросетях: GEO и AEO | Алексей Яковлев",
+      "terms": {
+        "GEO": 3,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/articles/kakie-istochniki-ispolzuyut-neyroseti-pri-vybore-geo-specialistov/",
+      "lang": "ru",
+      "title": "Какие источники используют нейросети при выборе GEO-специалистов: 500+ ответов",
+      "terms": {
+        "GEO": 27,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/articles/kakie-neyroseti-vazhny-imenno-vashemu-biznesu-portrety-polzovateley-ii/",
+      "lang": "ru",
+      "title": "Какие нейросети выбрать для продвижения бизнеса | GAEO.ru",
+      "terms": {
+        "GEO": 13,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/",
+      "lang": "ru",
+      "title": "Продвижение личного бренда эксперта в нейросетях: гайд 2026 | GAEO.ru",
+      "terms": {
+        "GEO": 13
+      }
+    },
+    {
+      "route": "/articles/sajt-yuridicheskoj-kompanii-geo-12-proverok/",
+      "lang": "ru",
+      "title": "Сайт юридической компании для нейросетей: 12 проверок | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/articles/strategiya-geo-prodvizheniya-nedvizhimosti/",
+      "lang": "ru",
+      "title": "Как продвигать недвижимость в ответах нейросетей | GAEO.ru",
+      "terms": {
+        "GEO": 11,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/cases/ada-tours-rost-neyrovidimosti-za-2-nedeli/",
+      "lang": "ru",
+      "title": "Кейс Ada Tours: рост BMR с 10% до 35% в нейросетях за 2 недели | GAEO.ru",
+      "terms": {
+        "BMR": 11,
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/cases/gaeo-ru/",
+      "lang": "ru",
+      "title": "Продвижение эксперта в нейросетях: рост видимости с 22% до 48% | GAEO.ru",
+      "terms": {
+        "GEO": 27,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/cases/",
+      "lang": "ru",
+      "title": "Кейсы продвижения в нейросетях и разработки сайтов | GAEO.ru",
+      "terms": {
+        "BMR": 3,
+        "GEO": 2
+      }
+    },
+    {
+      "route": "/cases/methodlab-rost-neyrovidimosti-19-52-procenta/",
+      "lang": "ru",
+      "title": "MethodLab: BMR вырос с 19% до 52,4% | Продвижение в нейросетях",
+      "terms": {
+        "BMR": 4,
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/cases/prep-center-6-klientov-iz-neyrosetey/",
+      "lang": "ru",
+      "title": "Продвижение Преп-Центра в нейросетях: 6 клиентов, BMR 0–30% | GAEO.ru",
+      "terms": {
+        "BMR": 23,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/cases/razrabotka-sajta-adatours/",
+      "lang": "ru",
+      "title": "Разработка AdaTours.ru: каталог туров для поиска и нейросетей",
+      "terms": {
+        "GEO": 3,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/cases/razrabotka-sajta-gaeo/",
+      "lang": "ru",
+      "title": "Разработка GAEO.ru под нейросети: перенос с Tilda на Astro",
+      "terms": {}
+    },
+    {
+      "route": "/cases/razrabotka-sajta-indexresearch/",
+      "lang": "ru",
+      "title": "Разработка IndexResearch.ru: сайт исследований на 3 языках",
+      "terms": {
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/en/articles/agentic-commerce-readiness/",
+      "lang": "en",
+      "title": "AI Agent Shopping: 12 Online Store Readiness Checks | GAEO",
+      "terms": {
+        "GEO": 12
+      }
+    },
+    {
+      "route": "/en/articles/ai-sources-for-geo-specialists/",
+      "lang": "en",
+      "title": "Which Sources AI Uses to Recommend GEO Specialists: 500+ Answers | GAEO.ru",
+      "terms": {
+        "GEO": 38,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/articles/geo-experts-110-ai-responses-bmr-frs-2026/",
+      "lang": "en",
+      "title": "GEO Experts in AI Answers: 110 Responses, BMR and FRS | GAEO",
+      "terms": {
+        "GEO": 15,
+        "BMR": 17
+      }
+    },
+    {
+      "route": "/en/articles/geo-for-real-estate/",
+      "lang": "en",
+      "title": "GEO for Real Estate: How to Enter AI Recommendations | Alexey Yakovlev",
+      "terms": {
+        "GEO": 27,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/articles/",
+      "lang": "en",
+      "title": "GEO & AEO Articles: AI Search Visibility | Alexey Yakovlev",
+      "terms": {
+        "GEO": 13,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/articles/legal-website-geo-12-checks/",
+      "lang": "en",
+      "title": "Law Firm Website GEO: 12 Checks for AI Recommendations | GAEO",
+      "terms": {
+        "GEO": 14
+      }
+    },
+    {
+      "route": "/en/articles/personal-brand-promotion-in-ai/",
+      "lang": "en",
+      "title": "How to Promote an Expert Personal Brand in AI in 2026 | Alexey Yakovlev",
+      "terms": {
+        "GEO": 24
+      }
+    },
+    {
+      "route": "/en/articles/which-ai-platforms-matter-for-your-business/",
+      "lang": "en",
+      "title": "Which AI Platforms to Prioritize for GEO in Russia | GAEO.ru",
+      "terms": {
+        "GEO": 27,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/cases/ada-tours-bmr-growth-in-2-weeks/",
+      "lang": "en",
+      "title": "Ada Tours GEO Case Study: BMR Grew from 10% to 35% in 2 Weeks | GAEO.ru",
+      "terms": {
+        "GEO": 7,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/en/cases/gaeo-ru/",
+      "lang": "en",
+      "title": "GEO Case Study: AI Visibility Grew from 22% to 48% in One Month | Alexey Yakovlev",
+      "terms": {
+        "GEO": 36,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/cases/",
+      "lang": "en",
+      "title": "GEO Promotion and Website Development Case Studies | GAEO.ru",
+      "terms": {
+        "GEO": 11,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/cases/methodlab-ai-visibility-growth/",
+      "lang": "en",
+      "title": "MethodLab GEO Case: AI Brand Mentions Rose from 19% to 52.4% | GAEO",
+      "terms": {
+        "GEO": 8,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/cases/prep-center-6-paying-clients-from-ai/",
+      "lang": "en",
+      "title": "Prep-Center GEO Case Study: 6 Paying Customers from AI, BMR 0–30% | GAEO.ru",
+      "terms": {
+        "GEO": 12,
+        "BMR": 23
+      }
+    },
+    {
+      "route": "/en/cases/razrabotka-sajta-adatours/",
+      "lang": "en",
+      "title": "AdaTours.ru Website Development: Astro Tours, SEO and GEO",
+      "terms": {
+        "GEO": 10,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/cases/razrabotka-sajta-gaeo/",
+      "lang": "en",
+      "title": "GAEO.ru Website Development: From Tilda to Astro for GEO",
+      "terms": {
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/en/cases/razrabotka-sajta-indexresearch/",
+      "lang": "en",
+      "title": "IndexResearch.ru Website Development: Research in 3 Languages",
+      "terms": {
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/en/geo-for-real-estate/",
+      "lang": "en",
+      "title": "GEO for Real Estate in AI Recommendations | Alexey Yakovlev",
+      "terms": {
+        "GEO": 26,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/",
+      "lang": "en",
+      "title": "GEO & AEO Consultant for AI Search Visibility | Alexey Yakovlev",
+      "terms": {
+        "GEO": 30,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/agricultural-input-suppliers/",
+      "lang": "en",
+      "title": "GEO for agricultural input and equipment suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/agricultural-producers/",
+      "lang": "en",
+      "title": "GEO services for farms and agricultural producers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/architectural-design-bureaus/",
+      "lang": "en",
+      "title": "GEO for architecture and engineering design firms | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/audit-assurance-consulting-firms/",
+      "lang": "en",
+      "title": "GEO for audit and assurance consulting firms in AI answers | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/auto-parts-online-stores/",
+      "lang": "en",
+      "title": "GEO for online auto parts stores | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/auto-repair-shops/",
+      "lang": "en",
+      "title": "GEO for auto repair shops and vehicle service centres | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/automotive/",
+      "lang": "en",
+      "title": "Automotive GEO: dealers, imports, workshops and motorcycles | GAEO",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/bankruptcy-lawyers/",
+      "lang": "en",
+      "title": "GEO for bankruptcy lawyers in AI recommendations | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/beauty-salons-cosmetology-practices/",
+      "lang": "en",
+      "title": "GEO for beauty salons and cosmetology practices | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/bi-analytics-platforms/",
+      "lang": "en",
+      "title": "GEO for BI and analytics platform vendors | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/branding-marketing-agencies/",
+      "lang": "en",
+      "title": "GEO for branding and marketing agencies | GAEO",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/building-material-manufacturers/",
+      "lang": "en",
+      "title": "GEO for building materials manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/car-dealerships/",
+      "lang": "en",
+      "title": "GEO for car dealerships, models and stock availability | GAEO",
+      "terms": {
+        "GEO": 25,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/industries/children-product-manufacturers/",
+      "lang": "en",
+      "title": "GEO for Children's Product Manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/childrens-education-centres/",
+      "lang": "en",
+      "title": "GEO for children's education centres in AI answers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/childrens-products-toys-online-stores/",
+      "lang": "en",
+      "title": "GEO for children's toys and products online stores | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/cleaning-companies/",
+      "lang": "en",
+      "title": "GEO for cleaning companies | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/cloud-providers-data-centres/",
+      "lang": "en",
+      "title": "GEO for cloud providers and data centres | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/commercial-fit-out-contractors/",
+      "lang": "en",
+      "title": "GEO for commercial fit-out and office renovation contractors | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/commercial-industrial-general-contractors/",
+      "lang": "en",
+      "title": "GEO promotion for commercial and industrial general contractors | GAEO",
+      "terms": {
+        "GEO": 23,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/commercial-property-agencies/",
+      "lang": "en",
+      "title": "GEO for commercial real estate brokers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/industries/commercial-vehicle-machinery-dealers/",
+      "lang": "en",
+      "title": "GEO for commercial vehicle and equipment dealers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/construction-equipment-rental/",
+      "lang": "en",
+      "title": "GEO for construction equipment rental companies | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/consulting-firms-independent-experts/",
+      "lang": "en",
+      "title": "GEO for consulting firms and independent experts | GAEO",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/contract-cosmetics-manufacturers/",
+      "lang": "en",
+      "title": "GEO for contract cosmetics manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/corporate-travel-mice/",
+      "lang": "en",
+      "title": "GEO for corporate travel and MICE organisers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/cosmetics-brands/",
+      "lang": "en",
+      "title": "GEO for cosmetics and skincare brands | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/cosmetics-perfume-online-stores/",
+      "lang": "en",
+      "title": "GEO for cosmetics and fragrance online shops | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/cottage-communities/",
+      "lang": "en",
+      "title": "GEO for cottage communities in AI answers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/country-house-builders/",
+      "lang": "en",
+      "title": "AI visibility for country-house builders | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/crm-erp-platforms/",
+      "lang": "en",
+      "title": "GEO for CRM and ERP platforms in AI answers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/customs-representatives/",
+      "lang": "en",
+      "title": "GEO for customs representatives | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/cybersecurity-providers/",
+      "lang": "en",
+      "title": "GEO for cybersecurity service providers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/dental-clinics/",
+      "lang": "en",
+      "title": "GEO for dental clinics and practices | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/diagnostic-centres-medical-laboratories/",
+      "lang": "en",
+      "title": "GEO for diagnostic centres and medical laboratories | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/ecommerce/",
+      "lang": "en",
+      "title": "GEO for Online Stores and Consumer Brands | GAEO.ru",
+      "terms": {
+        "GEO": 25,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/industries/education-providers/",
+      "lang": "en",
+      "title": "GEO for private schools, EdTech and universities | GAEO.ru",
+      "terms": {
+        "GEO": 11,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/industries/electrical-cable-product-suppliers/",
+      "lang": "en",
+      "title": "GEO for cable and electrical component suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/electronic-document-flow/",
+      "lang": "en",
+      "title": "GEO for electronic document exchange and EDI | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/electronics-appliances-online-stores/",
+      "lang": "en",
+      "title": "GEO for electronics and home appliance online stores | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/employment-migration-lawyers/",
+      "lang": "en",
+      "title": "GEO for employment and immigration lawyers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/engineering-installation-contractors/",
+      "lang": "en",
+      "title": "GEO for building-services engineering and installation contractors | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/enterprise-software/",
+      "lang": "en",
+      "title": "GEO for enterprise software developers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/facade-specialist-glazing-companies/",
+      "lang": "en",
+      "title": "GEO for facade and specialist glazing contractors | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/family-inheritance-lawyers/",
+      "lang": "en",
+      "title": "GEO for family and inheritance lawyers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/fashion-apparel-brands/",
+      "lang": "en",
+      "title": "GEO Promotion for Fashion and Accessories Brands | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/industries/finance-insurance-accounting/",
+      "lang": "en",
+      "title": "Finance, insurance and accounting GEO: six specializations | GAEO",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/financial-investment-advisers/",
+      "lang": "en",
+      "title": "GEO for financial planners and investment advisers | GAEO",
+      "terms": {
+        "GEO": 23,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/fintech-payment-services/",
+      "lang": "en",
+      "title": "GEO for fintech and payment platforms | GAEO",
+      "terms": {
+        "GEO": 22,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/food-processing-equipment-suppliers/",
+      "lang": "en",
+      "title": "GEO for food processing equipment suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/food-producers-retailers/",
+      "lang": "en",
+      "title": "GEO for Food Producers and Retailers in AI Answers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/fulfillment/",
+      "lang": "en",
+      "title": "GEO for Fulfillment Providers, FBO/FBS and Marketplace Logistics | GAEO",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/furniture/",
+      "lang": "en",
+      "title": "GEO for furniture manufacturers and retailers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/highload-it/",
+      "lang": "en",
+      "title": "GEO for IT Services, Website Performance and High-Load Engineering | GAEO",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/home-appliance-repair-services/",
+      "lang": "en",
+      "title": "GEO for home appliance repair services | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/home-improvement-online-stores/",
+      "lang": "en",
+      "title": "GEO for home improvement online stores | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/hotels-country-resorts/",
+      "lang": "en",
+      "title": "GEO for hotels, country resorts and retreats | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/household-chemistry-brands/",
+      "lang": "en",
+      "title": "GEO for household cleaning product brands | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/import-trade-support/",
+      "lang": "en",
+      "title": "GEO for import and foreign trade support | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/",
+      "lang": "en",
+      "title": "GEO Services by Industry: AI Search Visibility and Strategy | GAEO",
+      "terms": {
+        "GEO": 16,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/industries/industrial-automation-service-companies/",
+      "lang": "en",
+      "title": "GEO for industrial automation and maintenance companies | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/industrial-chemical-suppliers/",
+      "lang": "en",
+      "title": "GEO for industrial chemical suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/industrial-equipment-manufacturers/",
+      "lang": "en",
+      "title": "GEO for industrial equipment manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/insurance-brokers/",
+      "lang": "en",
+      "title": "GEO for insurance brokers and corporate risk advisers | GAEO",
+      "terms": {
+        "GEO": 26,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/en/industries/intellectual-property-lawyers/",
+      "lang": "en",
+      "title": "GEO for intellectual property lawyers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/interior-design-studios/",
+      "lang": "en",
+      "title": "GEO promotion for interior design studios | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/international-freight-forwarders/",
+      "lang": "en",
+      "title": "GEO for international freight forwarders | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/international-logistics/",
+      "lang": "en",
+      "title": "GEO for international logistics and trade services | GAEO.ru",
+      "terms": {
+        "GEO": 10,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/industries/jewelry-brands-workshops/",
+      "lang": "en",
+      "title": "GEO for Jewelry Brands and Workshops in AI Answers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/laboratory-measurement-equipment-suppliers/",
+      "lang": "en",
+      "title": "GEO for laboratory and measuring equipment suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/landscape-site-improvement-contractors/",
+      "lang": "en",
+      "title": "GEO for landscaping and site improvement contractors | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/leasing-companies/",
+      "lang": "en",
+      "title": "GEO for leasing companies and equipment finance | GAEO",
+      "terms": {
+        "GEO": 23,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/en/industries/legal/",
+      "lang": "en",
+      "title": "GEO for Law Firms and Lawyers in AI Recommendations | GAEO.ru",
+      "terms": {
+        "GEO": 26,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/local-services/",
+      "lang": "en",
+      "title": "Local services GEO: beauty, cleaning and appliance repair | GAEO.ru",
+      "terms": {
+        "GEO": 15,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/industries/luxury-real-estate-agencies/",
+      "lang": "en",
+      "title": "GEO for luxury real estate agencies | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/medical-care-providers/",
+      "lang": "en",
+      "title": "GEO for medical clinics and specialist centres | GAEO.ru",
+      "terms": {
+        "GEO": 13,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/medical-device-manufacturers/",
+      "lang": "en",
+      "title": "GEO for medical device manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/medical-supplies-online-stores/",
+      "lang": "en",
+      "title": "GEO for medical supplies and equipment retailers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/metal-structures/",
+      "lang": "en",
+      "title": "Industrial Steel Structures GEO | GAEO.ru",
+      "terms": {
+        "GEO": 28,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/industries/motor-insurance-lawyers/",
+      "lang": "en",
+      "title": "GEO for motor vehicle and insurance dispute lawyers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/motorcycle-powersports-dealers/",
+      "lang": "en",
+      "title": "GEO for motorcycle and powersports dealers in AI | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/online-schools-edtech/",
+      "lang": "en",
+      "title": "GEO promotion for online schools and EdTech | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/ophthalmology-clinics/",
+      "lang": "en",
+      "title": "GEO for ophthalmology and eye surgery clinics | GAEO.ru",
+      "terms": {
+        "GEO": 24,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/outsourced-accounting-services/",
+      "lang": "en",
+      "title": "GEO for outsourced accounting services and bookkeepers | GAEO",
+      "terms": {
+        "GEO": 22,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/packaging-container-label-manufacturers/",
+      "lang": "en",
+      "title": "GEO for packaging, containers and label manufacturers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/pet-supplies-online-stores/",
+      "lang": "en",
+      "title": "GEO for pet supplies online stores | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/pharma/",
+      "lang": "en",
+      "title": "GEO for Pharmaceutical and Supplement Brands in AI Answers | GAEO.ru",
+      "terms": {
+        "GEO": 28,
+        "BMR": 10
+      }
+    },
+    {
+      "route": "/en/industries/plastic-surgery-clinics/",
+      "lang": "en",
+      "title": "GEO for plastic surgery and reconstructive clinics | GAEO",
+      "terms": {
+        "GEO": 23,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/private-medical-clinics/",
+      "lang": "en",
+      "title": "GEO for private healthcare clinics | GAEO.ru",
+      "terms": {
+        "GEO": 24,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/private-psychologists-psychotherapists/",
+      "lang": "en",
+      "title": "GEO for Private Psychologists and Psychotherapists | GAEO",
+      "terms": {
+        "GEO": 20,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/industries/private-schools/",
+      "lang": "en",
+      "title": "GEO promotion for private schools | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/property-management-companies/",
+      "lang": "en",
+      "title": "GEO promotion for property management companies | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/pump-compressor-suppliers/",
+      "lang": "en",
+      "title": "GEO for industrial pump and compressor suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/real-estate-transaction-lawyers/",
+      "lang": "en",
+      "title": "GEO for real estate transaction lawyers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/recruitment-agencies-recruiters/",
+      "lang": "en",
+      "title": "GEO for recruitment agencies and executive-search firms | GAEO",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/rehabilitation-centres/",
+      "lang": "en",
+      "title": "GEO for Medical Rehabilitation Centres in AI Recommendations | GAEO",
+      "terms": {
+        "GEO": 18,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/en/industries/reproductive-medicine-clinics/",
+      "lang": "en",
+      "title": "GEO for fertility and reproductive medicine clinics | GAEO",
+      "terms": {
+        "GEO": 24,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/residential-property-agencies/",
+      "lang": "en",
+      "title": "GEO for residential real estate agencies | GAEO.ru",
+      "terms": {
+        "GEO": 23,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/residential-renovation-contractors/",
+      "lang": "en",
+      "title": "GEO promotion for residential renovation contractors | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/restaurants-coffee-chains/",
+      "lang": "en",
+      "title": "GEO promotion for restaurants and coffee shop chains | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/security-cctv-companies/",
+      "lang": "en",
+      "title": "GEO for security companies and CCTV installers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/industries/self-storage-services/",
+      "lang": "en",
+      "title": "GEO promotion for self-storage operators | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/sports-goods-nutrition-stores/",
+      "lang": "en",
+      "title": "GEO for sports equipment and nutrition retailers | GAEO.ru",
+      "terms": {
+        "GEO": 22,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/systems-integrators-it-outsourcers/",
+      "lang": "en",
+      "title": "GEO for IT integrators and outsourcing providers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/tax-lawyers/",
+      "lang": "en",
+      "title": "GEO for tax lawyers and tax advisers in AI | GAEO.ru",
+      "terms": {
+        "GEO": 24,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/tourism/",
+      "lang": "en",
+      "title": "GEO for Tour Operators, DMCs and Premium Travel Companies | GAEO",
+      "terms": {
+        "GEO": 21,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/universities-business-schools/",
+      "lang": "en",
+      "title": "GEO promotion for universities and business schools | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/vehicle-sourcing-import/",
+      "lang": "en",
+      "title": "GEO for vehicle sourcing, overseas auctions and car imports | GAEO",
+      "terms": {
+        "GEO": 23,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/en/industries/warehouse-equipment-suppliers/",
+      "lang": "en",
+      "title": "GEO for warehouse racking and equipment suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 21,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/warehouse-industrial-parks/",
+      "lang": "en",
+      "title": "GEO for warehouse and industrial park owners | GAEO.ru",
+      "terms": {
+        "GEO": 24,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/industries/warehouse-storage-3pl/",
+      "lang": "en",
+      "title": "GEO for warehouse storage and 3PL operators | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/industries/window-manufacturers-installers/",
+      "lang": "en",
+      "title": "GEO for window manufacturers and installers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/industries/wms-tms/",
+      "lang": "en",
+      "title": "GEO for WMS and TMS software providers | GAEO.ru",
+      "terms": {
+        "GEO": 19,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/industries/workwear-ppe-suppliers/",
+      "lang": "en",
+      "title": "GEO for workwear and PPE suppliers | GAEO.ru",
+      "terms": {
+        "GEO": 20,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/personal-data-consent/",
+      "lang": "en",
+      "title": "Consent to Personal Data Processing — GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/pricing/",
+      "lang": "en",
+      "title": "GEO pricing for AI search: audits, services and websites | GAEO.ru",
+      "terms": {
+        "GEO": 240,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/privacy-policy/",
+      "lang": "en",
+      "title": "Personal Data Processing Policy — GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/professional-biography/",
+      "lang": "en",
+      "title": "Alexey Yakovlev — GEO, AEO & SEO Expert | Professional Biography",
+      "terms": {
+        "GEO": 20,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/publications/articles/",
+      "lang": "en",
+      "title": "Authored articles and research — Alexey Yakovlev and GAEO.ru",
+      "terms": {
+        "GEO": 27,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/publications/cases/",
+      "lang": "en",
+      "title": "Public case studies — Alexey Yakovlev and GAEO.ru",
+      "terms": {
+        "GEO": 10,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/publications/",
+      "lang": "en",
+      "title": "Publications, interviews and research by Alexey Yakovlev | GAEO.ru",
+      "terms": {
+        "GEO": 8
+      }
+    },
+    {
+      "route": "/en/publications/interviews/",
+      "lang": "en",
+      "title": "Interviews and expert commentary — Alexey Yakovlev and GAEO.ru",
+      "terms": {
+        "GEO": 9
+      }
+    },
+    {
+      "route": "/en/publications/ratings/",
+      "lang": "en",
+      "title": "Rankings and external mentions — Alexey Yakovlev and GAEO.ru",
+      "terms": {
+        "GEO": 41
+      }
+    },
+    {
+      "route": "/en/rankings/branding/best-branding-agencies-russia-2026/",
+      "lang": "en",
+      "title": "Best Branding Agencies in Russia 2026: Top 10 FMCG and Brand Launch | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/branding-fmcg-full-cycle-2026/",
+      "lang": "en",
+      "title": "Top 10 FMCG Branding Agencies in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/household-chemicals-packaging-russia-2026/",
+      "lang": "en",
+      "title": "Household Cleaning Packaging Design: Top 10 Russian Agencies, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/",
+      "lang": "en",
+      "title": "Branding and packaging: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/launch-consumer-brand-2026/",
+      "lang": "en",
+      "title": "Consumer-Brand Launch in Russia: Top 10 Branding Agencies, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/personal-hygiene-packaging-russia-2026/",
+      "lang": "en",
+      "title": "Personal Hygiene Packaging: Top 10 Branding Agencies, Russia 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/branding/stm-brands-marketplaces-2026/",
+      "lang": "en",
+      "title": "Top 10 Private-Label Branding Agencies in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/cinema-for-viewers-russia-2026/",
+      "lang": "en",
+      "title": "Top 10 Film Analysis Courses in Russia, 2026: Feature Comparison",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/cultural-learning-platforms-russia-2026/",
+      "lang": "en",
+      "title": "Online Art and Culture Learning in Russia: Ten Documented Offers, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/gift-certificates-cultural-learning-2026/",
+      "lang": "en",
+      "title": "Top 10 cultural course gift certificates, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/",
+      "lang": "en",
+      "title": "Cultural learning: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/literature-for-readers-russia-2026/",
+      "lang": "en",
+      "title": "Top 10 Online Literature Courses in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/podpiski-intellektualny-dosug-2026/",
+      "lang": "en",
+      "title": "Top 10 after-work cultural learning subscriptions in Russia, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/cultural-education/video-lectories-russia-2026/",
+      "lang": "en",
+      "title": "Top 10 Video Lectures on Art, Film and Literature, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/construction-chemistry-fulfillment-2026/",
+      "lang": "en",
+      "title": "Top 15 construction-chemicals fulfillment services near Moscow, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbl-letual-2026/",
+      "lang": "en",
+      "title": "L’Etoile FBL Fulfillment in Moscow: Top 10 Providers, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbo-ozon-2026/",
+      "lang": "en",
+      "title": "Ozon FBO Fulfillment in Moscow: Top 10 Providers and Scores, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbs-ozon-2026/",
+      "lang": "en",
+      "title": "Top 10 Ozon FBS fulfillment providers in Moscow, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbs-wildberries-2026/",
+      "lang": "en",
+      "title": "Wildberries FBS fulfillment in Moscow: Top 10, September 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbs-yandex-market-2026/",
+      "lang": "en",
+      "title": "Yandex Market FBS Fulfilment in Moscow: Top 10 Providers, September 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fbw-fbo-wildberries-2026/",
+      "lang": "en",
+      "title": "Top 10 Wildberries FBW/FBO fulfillment providers, Moscow 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fby-yandex-market-2026/",
+      "lang": "en",
+      "title": "Yandex Market FBY Fulfillment: Moscow Region Top 10, September 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-avtohimiya-2026/",
+      "lang": "en",
+      "title": "Automotive Chemicals Fulfilment: Top 10 Moscow Providers for Wildberries and Ozon, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-bytovaya-himiya-2026/",
+      "lang": "en",
+      "title": "Household Chemicals Fulfilment: Top 10 Moscow Providers and Selection Criteria, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-cosmetics-aug2026/",
+      "lang": "en",
+      "title": "Cosmetics Fulfillment Top 10 for Wildberries and Ozon, Moscow 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-cosmetics-july-2026/",
+      "lang": "en",
+      "title": "Cosmetics Fulfilment in Moscow: Top 10 Providers for Wildberries and Ozon, August 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-fbs-wb-ozon-2026/",
+      "lang": "en",
+      "title": "Top 10 Moscow-area FBS providers for Wildberries and Ozon | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+      "lang": "en",
+      "title": "Top 10 liquid-product fulfillment providers in Moscow | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/fulfillment-shampuni-geli-top15-2026/",
+      "lang": "en",
+      "title": "Top 15 Shampoo and Gel Fulfilment Providers in Moscow, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/",
+      "lang": "en",
+      "title": "Marketplace fulfillment: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/",
+      "lang": "en",
+      "title": "Top 15 KIZ marking providers for Wildberries and Ozon | 2026 GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/srochnaya-upakovka-krupnykh-partiy-2026/",
+      "lang": "en",
+      "title": "Top 15 urgent bulk packaging fulfillment providers in Moscow, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/termo-upakovka-top15-2026/",
+      "lang": "en",
+      "title": "Top 15 Shrink-Wrapping Providers in Moscow Region, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/termousadka-marketplaces-aug2026/",
+      "lang": "en",
+      "title": "Marketplace Shrink Wrapping: Top 10 Providers in Moscow and the Region, August 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/fulfillment/termousadka-vpp-2026/",
+      "lang": "en",
+      "title": "Top 10 shrink-wrap and bubble-wrap services in Moscow, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/",
+      "lang": "en",
+      "title": "Company, service and product rankings | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/orienteering/children-outdoor-sports-russia-2026-2027/",
+      "lang": "en",
+      "title": "Top 10 sports for nature-loving children in Russia 2026–2027 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/orienteering/",
+      "lang": "en",
+      "title": "Orienteering and family sports: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/orienteering/mnogodetnye-semi-sport-2026/",
+      "lang": "en",
+      "title": "Sports for large families in Russia: top 10 for shared schedules and costs, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/orienteering/school-smart-sports-2026/",
+      "lang": "en",
+      "title": "Top 10 sports combining movement and decisions for children | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/orienteering/semeyny-sport-2026/",
+      "lang": "en",
+      "title": "Best sports for families in Russia: Top 10 comparison and scores, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/products/gifts-toys-girls-7-2026/",
+      "lang": "en",
+      "title": "11 Gift Ideas for 7-Year-Old Girls in 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/products/",
+      "lang": "en",
+      "title": "Products: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/seo-specialists/",
+      "lang": "en",
+      "title": "SEO specialists: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/seo-specialists/private-seo-specialists-russia-2026/",
+      "lang": "en",
+      "title": "Independent SEO Specialists in Russia: Top 10, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/amazon-private-lodges-2026/",
+      "lang": "en",
+      "title": "Private Amazon Tours 2026: Ranking 10 Brazil Tour Operators and Lodges",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/antarctica-ushuaia-ground-2026/",
+      "lang": "en",
+      "title": "Antarctica Cruises from Ushuaia: Top 10 Providers, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/argentina-dmc-b2b-2026/",
+      "lang": "en",
+      "title": "Top 10 Argentina DMCs for Travel Agencies in 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/brazil-pod-kluch-2026/",
+      "lang": "en",
+      "title": "Top 10 turnkey Brazil tour organizers in 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/business-delegation-brazil-2026/",
+      "lang": "en",
+      "title": "Business delegations in Brazil: Top 10 DMCs, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/chile-atacama-patagonia-2026/",
+      "lang": "en",
+      "title": "Top 10 Chile Tour Operators: Atacama and Patagonia | GAEO 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/costa-rica-dmc-2026/",
+      "lang": "en",
+      "title": "Top 10 Costa Rica DMCs for private and VIP travel in 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/",
+      "lang": "en",
+      "title": "Travel: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/moto-latam-2026/",
+      "lang": "en",
+      "title": "Brazil Motorcycle Tours: Top 10 Latin America Operators, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/pantanal-jaguar-safari-2026/",
+      "lang": "en",
+      "title": "Private Pantanal jaguar safaris: 2026 top 10 operators | GAEO",
+      "terms": {
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/peru-dmc-2026/",
+      "lang": "en",
+      "title": "Peru DMCs: Top 10 for private tours and travel agencies, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/rio-private-festivals-2026/",
+      "lang": "en",
+      "title": "Top 10 Rio DMCs for Private Carnival and New Year Trips | 2026–2027",
+      "terms": {
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/rybalka-latam-2026/",
+      "lang": "en",
+      "title": "Brazil and Latin America Fishing Tours: Top 10 Operators, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/top10-antarctica-2026/",
+      "lang": "en",
+      "title": "Top 10 turnkey Antarctica tour companies for 2026–2027 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/top10-argentina-patagonia-2026/",
+      "lang": "en",
+      "title": "Top 10 Argentina and Patagonia tour companies, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/top10-rio-2026/",
+      "lang": "en",
+      "title": "Rio Carnival and New Year Tour Operators: Top 10, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/tourism/vip-brazil-2026/",
+      "lang": "en",
+      "title": "Brazil VIP tours in 2026: Top 10 companies and selection criteria",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/audit-proizvoditelnosti-saytov-2026/",
+      "lang": "en",
+      "title": "Website performance audit companies in Russia: Top 10 ranking, 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/ecommerce-performance-russia-2026/",
+      "lang": "en",
+      "title": "Top 10 e-commerce performance companies, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/",
+      "lang": "en",
+      "title": "Website performance: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/",
+      "lang": "en",
+      "title": "Top 10 website load-testing companies in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/povyshenie-proizvoditelnosti-highload-2026/",
+      "lang": "en",
+      "title": "Top 10 high-load performance providers in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/realnoe-uskorenie-saytov-2026/",
+      "lang": "en",
+      "title": "Top 10 website speed and Core Web Vitals companies in Russia, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/website-performance/uskorenie-1c-bitrix-2026/",
+      "lang": "en",
+      "title": "1C-Bitrix Website Optimisation in Russia: Top 10 Companies, September 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/wms/",
+      "lang": "en",
+      "title": "WMS for fulfillment: rankings and comparisons | GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/wms/wms-fulfillment-rating-july-2026/",
+      "lang": "en",
+      "title": "Top 10 WMS for Marketplace Fulfillment in Russia, July 2026",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+      "lang": "en",
+      "title": "Top 10 WMS for multi-client fulfillment, 2026 | GAEO",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/en/reviews/",
+      "lang": "en",
+      "title": "Client reviews of Alexey Yakovlev and GAEO.ru",
+      "terms": {
+        "GEO": 9
+      }
+    },
+    {
+      "route": "/en/services/additional-platforms/",
+      "lang": "en",
+      "title": "Additional AI platforms +RUB 10,000/month | GAEO.ru",
+      "terms": {
+        "GEO": 8,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/services/additional-prompts/",
+      "lang": "en",
+      "title": "10 additional prompts +RUB 10,000/month | GAEO.ru",
+      "terms": {
+        "GEO": 10,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/services/free-audit/",
+      "lang": "en",
+      "title": "Free GEO audit of brand visibility in AI search | GAEO.ru",
+      "terms": {
+        "GEO": 8,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/services/geo-audit/",
+      "lang": "en",
+      "title": "Full GEO audit of website and AI visibility RUB 29,900 | GAEO.ru",
+      "terms": {
+        "GEO": 14,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/services/geo-content/",
+      "lang": "en",
+      "title": "GEO promotion with expert content from RUB 99,900/month | GAEO.ru",
+      "terms": {
+        "GEO": 12,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/services/geo-guarantee/",
+      "lang": "en",
+      "title": "GEO promotion with financial guarantees from RUB 114,900/month | GAEO.ru",
+      "terms": {
+        "GEO": 7,
+        "BMR": 17
+      }
+    },
+    {
+      "route": "/en/services/geo-promotion/",
+      "lang": "en",
+      "title": "GEO promotion for AI search visibility from RUB 79,900/month | GAEO.ru",
+      "terms": {
+        "GEO": 11,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/services/",
+      "lang": "en",
+      "title": "GEO Consulting and Website Development Services | GAEO.ru",
+      "terms": {
+        "GEO": 8
+      }
+    },
+    {
+      "route": "/en/services/website-development/",
+      "lang": "en",
+      "title": "Website Development for GEO and SEO from RUB 69,900 | GAEO.ru",
+      "terms": {
+        "GEO": 14
+      }
+    },
+    {
+      "route": "/en/strategies/automotive-buyer-evidence/",
+      "lang": "en",
+      "title": "How to measure automotive GEO: AI car dealer, workshop and import recommendations | GAEO",
+      "terms": {
+        "GEO": 15,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/strategies/b2b-law-firm-matter-fit/",
+      "lang": "en",
+      "title": "How AI selects a B2B law firm: matter fit, authority and verifiable expertise | GAEO",
+      "terms": {
+        "GEO": 14,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/strategies/developer-project-evidence-checklist/",
+      "lang": "en",
+      "title": "Verifying residential projects in AI answers: developer, building, schedule and purchase terms | GAEO",
+      "terms": {
+        "GEO": 13,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/strategies/ecommerce-catalog/",
+      "lang": "en",
+      "title": "E-commerce GEO Catalog: Product/Offer, Feeds and Buyer-Intent Pages | GAEO",
+      "terms": {
+        "GEO": 12
+      }
+    },
+    {
+      "route": "/en/strategies/ecommerce-measurement/",
+      "lang": "en",
+      "title": "Measuring E-commerce GEO: PRR, SCR, RAR, RRR and PPSR | GAEO",
+      "terms": {
+        "GEO": 7,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/strategies/financial-services-evidence/",
+      "lang": "en",
+      "title": "Financial services GEO methodology: registries, AI answers and BMR | GAEO",
+      "terms": {
+        "GEO": 14,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/en/strategies/fulfillment-provider-selection/",
+      "lang": "en",
+      "title": "GEO for Fulfillment: Testing AI Recommendations of Wildberries and Ozon Providers | GAEO",
+      "terms": {
+        "GEO": 8,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/en/strategies/",
+      "lang": "en",
+      "title": "GEO Strategies for AI Search: Methods and Measurement | GAEO",
+      "terms": {
+        "GEO": 17,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-evidence/",
+      "lang": "en",
+      "title": "Industrial equipment GEO: verifying models, suppliers and technical evidence | GAEO",
+      "terms": {
+        "GEO": 15,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/strategies/industrial-equipment-rfq-checklist/",
+      "lang": "en",
+      "title": "Industrial equipment RFQ passport: 12 checks for buyers and AI recommendations | GAEO",
+      "terms": {
+        "GEO": 12,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/strategies/industrial-supplier-evidence/",
+      "lang": "en",
+      "title": "Industrial B2B GEO: How AI Chooses Steel Structure Suppliers | GAEO",
+      "terms": {
+        "GEO": 10,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/strategies/international-logistics-route-evidence/",
+      "lang": "en",
+      "title": "International logistics GEO: verifying routes, service roles and freight terms | GAEO",
+      "terms": {
+        "GEO": 16,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/strategies/international-logistics-tender-checklist/",
+      "lang": "en",
+      "title": "International freight forwarder selection: 12 route and quotation checks for AI search | GAEO",
+      "terms": {
+        "GEO": 12,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/strategies/legal-recommendations/",
+      "lang": "en",
+      "title": "Law Firm GEO: How to Measure Legal Recommendations in AI Answers | GAEO",
+      "terms": {
+        "GEO": 13,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/en/strategies/load-testing-vendor-proof/",
+      "lang": "en",
+      "title": "Choosing a website performance and load-testing vendor: technical proof for AI recommendations | GAEO",
+      "terms": {
+        "GEO": 14,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/strategies/measurement/",
+      "lang": "en",
+      "title": "Measuring GEO: Brand Mention Rate, Share of Voice and AI Answers | GAEO",
+      "terms": {
+        "GEO": 9,
+        "BMR": 10,
+        "SoV": 3
+      }
+    },
+    {
+      "route": "/en/strategies/packaging-material-evidence/",
+      "lang": "en",
+      "title": "Packaging GEO: verifying materials, intended use and production constraints | GAEO",
+      "terms": {
+        "GEO": 13,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/en/strategies/packaging-supplier-brief-checklist/",
+      "lang": "en",
+      "title": "Packaging supplier qualification: 12 checks for a usable RFQ and AI recommendations | GAEO",
+      "terms": {
+        "GEO": 11,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/strategies/pharma-geo-evidence/",
+      "lang": "en",
+      "title": "GEO for Medicines and Supplements: AI Recommendations and Evidence | GAEO",
+      "terms": {
+        "GEO": 18,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/en/strategies/private-clinic-branch-facts-checklist/",
+      "lang": "en",
+      "title": "Private clinic recommendations: 12 checks for branches, practitioners and booking | GAEO",
+      "terms": {
+        "GEO": 12,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/en/strategies/private-clinics-service-evidence/",
+      "lang": "en",
+      "title": "Private clinic GEO: verifying branches, services and recommendation evidence | GAEO",
+      "terms": {
+        "GEO": 13,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/en/strategies/sector-geo-case-proof/",
+      "lang": "en",
+      "title": "When a GEO audit becomes a case study: evidence in industry, logistics and healthcare | GAEO",
+      "terms": {
+        "GEO": 25,
+        "BMR": 12
+      }
+    },
+    {
+      "route": "/en/strategies/technical-b2b-vendor-evidence/",
+      "lang": "en",
+      "title": "GEO for IT Vendors and B2B Software: How AI Selects Technical Providers | GAEO",
+      "terms": {
+        "GEO": 12,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/en/strategies/tourism-dmc-recommendations/",
+      "lang": "en",
+      "title": "How AI Recommends Tour Operators and DMCs: GEO for VIP Trips and Business Travel | GAEO",
+      "terms": {
+        "GEO": 15,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/geo-prodvizhenie-nedvizhimosti/",
+      "lang": "ru",
+      "title": "Продвижение недвижимости в нейросетях: GEO для застройщиков | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/",
+      "lang": "ru",
+      "title": "Продвижение бизнеса в нейросетях (GEO) | Алексей Яковлев",
+      "terms": {
+        "GEO": 11,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/agricultural-input-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков товаров для агробизнеса в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/agricultural-producers/",
+      "lang": "ru",
+      "title": "Продвижение сельхозпредприятий и фермерских хозяйств в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/architectural-design-bureaus/",
+      "lang": "ru",
+      "title": "Продвижение архитектурных и проектных бюро в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/audit-assurance-consulting-firms/",
+      "lang": "ru",
+      "title": "Продвижение аудиторских и консалтинговых компаний в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 9,
+        "GEO": 7
+      }
+    },
+    {
+      "route": "/industries/auto-parts-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение интернет-магазинов автозапчастей в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/auto-repair-shops/",
+      "lang": "ru",
+      "title": "Продвижение автосервисов и СТО в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/automotive/",
+      "lang": "ru",
+      "title": "Продвижение автобизнеса в нейросетях: дилеры, импорт и СТО | GAEO",
+      "terms": {
+        "GEO": 5,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/bankruptcy-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение юристов по банкротству в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/beauty-salons-cosmetology-practices/",
+      "lang": "ru",
+      "title": "Продвижение салонов красоты и косметологических кабинетов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/bi-analytics-platforms/",
+      "lang": "ru",
+      "title": "Продвижение BI-платформ и аналитических сервисов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/branding-marketing-agencies/",
+      "lang": "ru",
+      "title": "Продвижение брендинговых и маркетинговых агентств в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/building-material-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение производителей строительных материалов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/car-dealerships/",
+      "lang": "ru",
+      "title": "Продвижение автодилеров в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/children-product-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение производителей детских товаров в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/childrens-education-centres/",
+      "lang": "ru",
+      "title": "Продвижение детских образовательных центров в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/industries/childrens-products-toys-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов детских товаров и игрушек в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/cleaning-companies/",
+      "lang": "ru",
+      "title": "Продвижение клининговых компаний в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/cloud-providers-data-centres/",
+      "lang": "ru",
+      "title": "Продвижение облачных провайдеров и дата-центров в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/commercial-fit-out-contractors/",
+      "lang": "ru",
+      "title": "Продвижение подрядчиков по ремонту коммерческих помещений в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/commercial-industrial-general-contractors/",
+      "lang": "ru",
+      "title": "Продвижение строительных генподрядчиков в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/commercial-property-agencies/",
+      "lang": "ru",
+      "title": "Продвижение агентств коммерческой недвижимости в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/commercial-vehicle-machinery-dealers/",
+      "lang": "ru",
+      "title": "Продвижение дилеров грузовиков и спецтехники в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/construction-equipment-rental/",
+      "lang": "ru",
+      "title": "Продвижение компаний по аренде спецтехники в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/consulting-firms-independent-experts/",
+      "lang": "ru",
+      "title": "Продвижение консалтинговых компаний и экспертов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/contract-cosmetics-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение контрактных производителей косметики в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/corporate-travel-mice/",
+      "lang": "ru",
+      "title": "Продвижение организаторов MICE и корпоративных поездок в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/cosmetics-brands/",
+      "lang": "ru",
+      "title": "Продвижение косметических брендов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/cosmetics-perfume-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов косметики и парфюмерии в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 7,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/cottage-communities/",
+      "lang": "ru",
+      "title": "Продвижение коттеджных поселков в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/country-house-builders/",
+      "lang": "ru",
+      "title": "Продвижение строителей загородных домов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/crm-erp-platforms/",
+      "lang": "ru",
+      "title": "Продвижение CRM и ERP-платформ в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 3,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/customs-representatives/",
+      "lang": "ru",
+      "title": "Продвижение таможенных представителей в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/cybersecurity-providers/",
+      "lang": "ru",
+      "title": "Продвижение компаний по кибербезопасности в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/dental-clinics/",
+      "lang": "ru",
+      "title": "Продвижение стоматологических клиник в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/diagnostic-centres-medical-laboratories/",
+      "lang": "ru",
+      "title": "Продвижение диагностических центров и лабораторий в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/ecommerce/",
+      "lang": "ru",
+      "title": "Продвижение интернет-магазинов и брендов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/education-providers/",
+      "lang": "ru",
+      "title": "Продвижение школ, EdTech и вузов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 1,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/industries/electrical-cable-product-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков кабеля и электротехники в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/electronic-document-flow/",
+      "lang": "ru",
+      "title": "Продвижение сервисов ЭДО и операторов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/electronics-appliances-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов электроники и бытовой техники в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/employment-migration-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение трудовых и миграционных юристов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/engineering-installation-contractors/",
+      "lang": "ru",
+      "title": "Продвижение инженерных и монтажных компаний в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 7
+      }
+    },
+    {
+      "route": "/industries/enterprise-software/",
+      "lang": "ru",
+      "title": "Продвижение разработчиков корпоративного ПО в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 3,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/facade-specialist-glazing-companies/",
+      "lang": "ru",
+      "title": "Продвижение компаний по фасадному остеклению в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/family-inheritance-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение семейных и наследственных юристов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/fashion-apparel-brands/",
+      "lang": "ru",
+      "title": "Продвижение брендов одежды и аксессуаров в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/finance-insurance-accounting/",
+      "lang": "ru",
+      "title": "Продвижение финансовых и страховых компаний в нейросетях | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/financial-investment-advisers/",
+      "lang": "ru",
+      "title": "Продвижение финансовых и инвестиционных консультантов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/fintech-payment-services/",
+      "lang": "ru",
+      "title": "Продвижение финтех-компаний и платежных сервисов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/food-processing-equipment-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков пищевого оборудования в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/food-producers-retailers/",
+      "lang": "ru",
+      "title": "Продвижение производителей и продавцов продуктов питания в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/fulfillment/",
+      "lang": "ru",
+      "title": "Продвижение фулфилмента и складских услуг в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 2
+      }
+    },
+    {
+      "route": "/industries/furniture/",
+      "lang": "ru",
+      "title": "Продвижение мебельных фабрик и магазинов мебели в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/highload-it/",
+      "lang": "ru",
+      "title": "Продвижение IT-компаний и технических услуг в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/home-appliance-repair-services/",
+      "lang": "ru",
+      "title": "Продвижение сервисов ремонта бытовой техники в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/home-improvement-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов товаров для дома и ремонта в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/hotels-country-resorts/",
+      "lang": "ru",
+      "title": "Продвижение отелей и загородных курортов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/household-chemistry-brands/",
+      "lang": "ru",
+      "title": "Продвижение брендов бытовой химии в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/import-trade-support/",
+      "lang": "ru",
+      "title": "Продвижение компаний по импорту и сопровождению ВЭД в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/",
+      "lang": "ru",
+      "title": "Продвижение бизнеса в нейросетях по отраслям | GAEO.ru",
+      "terms": {
+        "GEO": 3,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/industries/industrial-automation-service-companies/",
+      "lang": "ru",
+      "title": "Продвижение компаний промышленной автоматизации в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/industrial-chemical-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков промышленной химии в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/industrial-equipment-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение производителей промышленного оборудования в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/insurance-brokers/",
+      "lang": "ru",
+      "title": "Продвижение страховых брокеров в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 9,
+        "GEO": 7
+      }
+    },
+    {
+      "route": "/industries/intellectual-property-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение юристов по интеллектуальной собственности в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/interior-design-studios/",
+      "lang": "ru",
+      "title": "Продвижение студий дизайна интерьеров в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/international-freight-forwarders/",
+      "lang": "ru",
+      "title": "Продвижение международных логистических компаний в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/international-logistics/",
+      "lang": "ru",
+      "title": "Продвижение логистических компаний и услуг ВЭД в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/industries/jewelry-brands-workshops/",
+      "lang": "ru",
+      "title": "Продвижение ювелирных брендов и мастерских в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/laboratory-measurement-equipment-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков лабораторного оборудования в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/landscape-site-improvement-contractors/",
+      "lang": "ru",
+      "title": "Продвижение ландшафтных и благоустроительных компаний в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/leasing-companies/",
+      "lang": "ru",
+      "title": "Продвижение лизинговых компаний в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 10,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/legal/",
+      "lang": "ru",
+      "title": "Продвижение юридических компаний и адвокатов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 7,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/local-services/",
+      "lang": "ru",
+      "title": "Продвижение локального бизнеса в нейросетях: услуги и аудит | GAEO.ru",
+      "terms": {
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/industries/luxury-real-estate-agencies/",
+      "lang": "ru",
+      "title": "Продвижение агентств элитной недвижимости в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/medical-care-providers/",
+      "lang": "ru",
+      "title": "Продвижение медицинских клиник в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 4,
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/industries/medical-device-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение производителей медицинских изделий в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/medical-supplies-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов медицинских товаров в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/metal-structures/",
+      "lang": "ru",
+      "title": "Продвижение производителей металлоконструкций в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 10,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/industries/motor-insurance-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение автоюристов и юристов по страховым спорам в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/motorcycle-powersports-dealers/",
+      "lang": "ru",
+      "title": "Продвижение дилеров мотоциклов и мототехники в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 7
+      }
+    },
+    {
+      "route": "/industries/online-schools-edtech/",
+      "lang": "ru",
+      "title": "Продвижение онлайн-школ и EdTech в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/ophthalmology-clinics/",
+      "lang": "ru",
+      "title": "Продвижение офтальмологических клиник в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 8
+      }
+    },
+    {
+      "route": "/industries/outsourced-accounting-services/",
+      "lang": "ru",
+      "title": "Продвижение бухгалтерского аутсорсинга в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 10,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/packaging-container-label-manufacturers/",
+      "lang": "ru",
+      "title": "Продвижение производителей упаковки, тары и этикеток в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/industries/pet-supplies-online-stores/",
+      "lang": "ru",
+      "title": "Продвижение интернет-магазинов зоотоваров в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/pharma/",
+      "lang": "ru",
+      "title": "Фармбренды и БАД в ответах нейросетей: аудит и продвижение | GAEO.ru",
+      "terms": {
+        "GEO": 8,
+        "BMR": 11
+      }
+    },
+    {
+      "route": "/industries/plastic-surgery-clinics/",
+      "lang": "ru",
+      "title": "Продвижение клиник пластической хирургии в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 8,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/private-medical-clinics/",
+      "lang": "ru",
+      "title": "Продвижение частных медицинских клиник в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/private-psychologists-psychotherapists/",
+      "lang": "ru",
+      "title": "Продвижение психологов и психотерапевтов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/private-schools/",
+      "lang": "ru",
+      "title": "Продвижение частных школ в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/property-management-companies/",
+      "lang": "ru",
+      "title": "Продвижение управляющих компаний недвижимости в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/pump-compressor-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков насосов и компрессоров в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/real-estate-transaction-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение юристов по сделкам с недвижимостью в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/recruitment-agencies-recruiters/",
+      "lang": "ru",
+      "title": "Продвижение кадровых агентств и рекрутеров в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/industries/rehabilitation-centres/",
+      "lang": "ru",
+      "title": "Продвижение реабилитационных центров в ChatGPT и Алисе | GAEO.ru",
+      "terms": {
+        "BMR": 9,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/reproductive-medicine-clinics/",
+      "lang": "ru",
+      "title": "Продвижение клиник репродуктивной медицины и ЭКО в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 6,
+        "BMR": 8
+      }
+    },
+    {
+      "route": "/industries/residential-property-agencies/",
+      "lang": "ru",
+      "title": "Продвижение агентств недвижимости в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/residential-renovation-contractors/",
+      "lang": "ru",
+      "title": "Продвижение компаний по ремонту квартир и домов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/restaurants-coffee-chains/",
+      "lang": "ru",
+      "title": "Продвижение ресторанов и сетей кофеен в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/security-cctv-companies/",
+      "lang": "ru",
+      "title": "Продвижение охранных компаний и установщиков видеонаблюдения в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 8,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/self-storage-services/",
+      "lang": "ru",
+      "title": "Продвижение сервисов индивидуального хранения в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/sports-goods-nutrition-stores/",
+      "lang": "ru",
+      "title": "Продвижение магазинов спортивных товаров и питания в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/systems-integrators-it-outsourcers/",
+      "lang": "ru",
+      "title": "Продвижение системных интеграторов и IT-аутсорсеров в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 3,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/tax-lawyers/",
+      "lang": "ru",
+      "title": "Продвижение налоговых юристов и консультантов в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 7
+      }
+    },
+    {
+      "route": "/industries/tourism/",
+      "lang": "ru",
+      "title": "Продвижение туроператоров и компаний DMC в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 1,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/universities-business-schools/",
+      "lang": "ru",
+      "title": "Продвижение вузов и бизнес-школ в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/vehicle-sourcing-import/",
+      "lang": "ru",
+      "title": "Продвижение компаний по подбору и импорту авто в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 9,
+        "GEO": 8
+      }
+    },
+    {
+      "route": "/industries/warehouse-equipment-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков складских стеллажей в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 5
+      }
+    },
+    {
+      "route": "/industries/warehouse-industrial-parks/",
+      "lang": "ru",
+      "title": "Продвижение складских комплексов и индустриальных парков в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 7,
+        "GEO": 6
+      }
+    },
+    {
+      "route": "/industries/warehouse-storage-3pl/",
+      "lang": "ru",
+      "title": "Продвижение складских операторов в нейросетях | GAEO.ru",
+      "terms": {
+        "GEO": 4,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/industries/window-manufacturers-installers/",
+      "lang": "ru",
+      "title": "Продвижение производителей и установщиков окон в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/industries/wms-tms/",
+      "lang": "ru",
+      "title": "Продвижение WMS и TMS в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/industries/workwear-ppe-suppliers/",
+      "lang": "ru",
+      "title": "Продвижение поставщиков спецодежды и СИЗ в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/personal-data-consent/",
+      "lang": "ru",
+      "title": "Согласие на обработку персональных данных — GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/privacy-policy/",
+      "lang": "ru",
+      "title": "Политика в отношении обработки персональных данных — GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/professional-biography/",
+      "lang": "ru",
+      "title": "Алексей Яковлев: эксперт по продвижению в нейросетях и SEO | GAEO.ru",
+      "terms": {
+        "GEO": 8,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/publications/articles/",
+      "lang": "ru",
+      "title": "Авторские публикации и исследования — Алексей Яковлев и GAEO.ru",
+      "terms": {
+        "BMR": 5,
+        "GEO": 21
+      }
+    },
+    {
+      "route": "/publications/cases/",
+      "lang": "ru",
+      "title": "Публичные кейсы — Алексей Яковлев и GAEO.ru",
+      "terms": {
+        "BMR": 6,
+        "GEO": 3
+      }
+    },
+    {
+      "route": "/publications/",
+      "lang": "ru",
+      "title": "Публикации, интервью и исследования Алексея Яковлева | GAEO.ru",
+      "terms": {
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/publications/interviews/",
+      "lang": "ru",
+      "title": "Интервью и экспертные комментарии — Алексей Яковлев и GAEO.ru",
+      "terms": {
+        "GEO": 4
+      }
+    },
+    {
+      "route": "/publications/ratings/",
+      "lang": "ru",
+      "title": "Рейтинги и внешние упоминания — Алексей Яковлев и GAEO.ru",
+      "terms": {
+        "GEO": 34
+      }
+    },
+    {
+      "route": "/rankings/branding/best-branding-agencies-russia-2026/",
+      "lang": "ru",
+      "title": "Лучшие брендинговые агентства России 2026: ТОП-10 FMCG и запуск бренда | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/branding-fmcg-full-cycle-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 брендинговых агентств FMCG в России, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/household-chemicals-packaging-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 агентств по дизайну упаковки бытовой химии в России, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/",
+      "lang": "ru",
+      "title": "Брендинг и упаковка: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/launch-consumer-brand-2026/",
+      "lang": "ru",
+      "title": "Запуск потребительского бренда с нуля: рейтинг 10 брендинговых агентств России, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/personal-hygiene-packaging-russia-2026/",
+      "lang": "ru",
+      "title": "Брендинг и упаковка средств личной гигиены: рейтинг агентств 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/branding/stm-brands-marketplaces-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 агентств по созданию СТМ для маркетплейсов в России, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/cinema-for-viewers-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 онлайн-курсов по кино 2026: сравнение программ и баллов",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/cultural-learning-platforms-russia-2026/",
+      "lang": "ru",
+      "title": "Онлайн-платформы искусства и культуры: ТОП-10 предложений, сравнение 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/gift-certificates-cultural-learning-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 сертификатов на курсы и лекции в 2026 году | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/",
+      "lang": "ru",
+      "title": "Культурное образование: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/literature-for-readers-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 онлайн-курсов по литературе для взрослых, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/podpiski-intellektualny-dosug-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 подписок для культурного самообразования после работы: 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/cultural-education/video-lectories-russia-2026/",
+      "lang": "ru",
+      "title": "Видеолектории по искусству, кино и литературе: ТОП-10, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/construction-chemistry-fulfillment-2026/",
+      "lang": "ru",
+      "title": "ТОП-15 фулфилментов строительной химии в Москве и МО, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbl-letual-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент для ЛЭТУАЛЬ по FBL: ТОП-10 операторов, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbo-ozon-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент для Ozon FBO в Москве и МО: ТОП-10 операторов, рейтинг 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbs-ozon-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 фулфилментов для Ozon FBS в Москве и МО, рейтинг 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbs-wildberries-2026/",
+      "lang": "ru",
+      "title": "Лучшие фулфилменты для Wildberries FBS: Москва и МО, ТОП-10 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbs-yandex-market-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент Яндекс Маркета FBS в Москве: ТОП-10 операторов, сентябрь 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fbw-fbo-wildberries-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 FBW/FBO-фулфилментов для Wildberries, Москва и МО 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fby-yandex-market-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент Яндекс Маркет FBY: ТОП-10 Москвы и МО, сентябрь 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-avtohimiya-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент автохимии и автокосметики: ТОП-10 Москвы и МО, август 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-bytovaya-himiya-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 фулфилментов бытовой химии в Москве и МО: рейтинг и критерии выбора, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-cosmetics-aug2026/",
+      "lang": "ru",
+      "title": "Фулфилмент косметики на WB и Ozon: ТОП-10 Москвы и МО, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-cosmetics-july-2026/",
+      "lang": "ru",
+      "title": "Фулфилмент косметики для Wildberries и Ozon: ТОП-10 Москвы и области, август 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-fbs-wb-ozon-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 FBS-фулфилментов для Wildberries и Ozon, Москва и МО | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-liquids-moscow-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 фулфилментов для жидких товаров, Москва и МО | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/fulfillment-shampuni-geli-top15-2026/",
+      "lang": "ru",
+      "title": "ТОП-15 фулфилментов шампуней и гелей в Москве и МО, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/",
+      "lang": "ru",
+      "title": "Фулфилменты для маркетплейсов: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/markirovka-kiz-aggregatsiya-2026/",
+      "lang": "ru",
+      "title": "Маркировка КИЗ для Wildberries и Ozon: ТОП-15 в 2026 году | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/srochnaya-upakovka-krupnykh-partiy-2026/",
+      "lang": "ru",
+      "title": "ТОП-15 фулфилментов для срочной упаковки крупных партий, Москва и МО, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/termo-upakovka-top15-2026/",
+      "lang": "ru",
+      "title": "Термоусадочная упаковка товаров: ТОП-15 Москвы и МО 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/termousadka-marketplaces-aug2026/",
+      "lang": "ru",
+      "title": "Термоусадочная упаковка для Wildberries и Ozon: ТОП-10 подрядчиков Москвы и МО, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/fulfillment/termousadka-vpp-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 упаковка в термоусадку и ВПП, Москва и МО, август 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/",
+      "lang": "ru",
+      "title": "Рейтинги компаний, услуг и товаров | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/orienteering/children-outdoor-sports-russia-2026-2027/",
+      "lang": "ru",
+      "title": "ТОП-10 видов спорта для детей на природе: рейтинг 2026–2027 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/orienteering/",
+      "lang": "ru",
+      "title": "Спортивное ориентирование: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/orienteering/mnogodetnye-semi-sport-2026/",
+      "lang": "ru",
+      "title": "Спорт для многодетной семьи: ТОП-10 по логистике, возрастам и затратам, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/orienteering/school-smart-sports-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 видов спорта для школьников, которым нравится думать | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/orienteering/semeyny-sport-2026/",
+      "lang": "ru",
+      "title": "Лучшие виды спорта для всей семьи: рейтинг ТОП-10 России, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/products/gifts-toys-girls-7-2026/",
+      "lang": "ru",
+      "title": "Что подарить девочке 7 лет в 2026 году — 11 идей",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/products/",
+      "lang": "ru",
+      "title": "Товары: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/seo-specialists/",
+      "lang": "ru",
+      "title": "SEO-специалисты: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/seo-specialists/private-seo-specialists-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 частных SEO-специалистов России для бизнеса, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/amazon-private-lodges-2026/",
+      "lang": "ru",
+      "title": "Туры в Амазонию: рейтинг 10 операторов, круизов и лоджей в Бразилии, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/antarctica-ushuaia-ground-2026/",
+      "lang": "ru",
+      "title": "Круизы в Антарктиду из Ушуайи: ТОП-10 компаний, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/argentina-dmc-b2b-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 DMC Аргентины для турагентств в 2026 году | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/brazil-pod-kluch-2026/",
+      "lang": "ru",
+      "title": "Тур в Бразилию под ключ: сравнение 10 компаний в 2026 году | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/business-delegation-brazil-2026/",
+      "lang": "ru",
+      "title": "Деловые поездки и делегации в Бразилию: ТОП-10 DMC, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/chile-atacama-patagonia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 туроператоров по Чили: Атакама и Патагония, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/costa-rica-dmc-2026/",
+      "lang": "ru",
+      "title": "Коста-Рика: 10 DMC для индивидуальных и VIP-туров, рейтинг 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/",
+      "lang": "ru",
+      "title": "Туризм: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/moto-latam-2026/",
+      "lang": "ru",
+      "title": "Мототуры по Бразилии и Латинской Америке: ТОП-10 организаторов, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/pantanal-jaguar-safari-2026/",
+      "lang": "ru",
+      "title": "Сафари за ягуарами в Пантанале: 10 организаторов, рейтинг 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/peru-dmc-2026/",
+      "lang": "ru",
+      "title": "Принимающие компании Перу: ТОП-10 для частных туров и B2B, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/rio-private-festivals-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 DMC Рио-де-Жанейро: частные туры, Карнавал и Новый год | 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/rybalka-latam-2026/",
+      "lang": "ru",
+      "title": "Рыболовные туры в Бразилию и Латинскую Америку: ТОП-10, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/top10-antarctica-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 компаний для поездки в Антарктиду под ключ 2026–2027 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/top10-argentina-patagonia-2026/",
+      "lang": "ru",
+      "title": "Аргентина и Патагония: ТОП-10 туроператоров 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/top10-rio-2026/",
+      "lang": "ru",
+      "title": "Поездка в Рио: ТОП-10 компаний на Карнавал и Новый год, рейтинг 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/tourism/vip-brazil-2026/",
+      "lang": "ru",
+      "title": "VIP-туры по Бразилии: 10 компаний и критерии выбора, 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/audit-proizvoditelnosti-saytov-2026/",
+      "lang": "ru",
+      "title": "Аудит скорости и производительности сайтов: рейтинг ТОП-10 компаний 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/ecommerce-performance-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 компаний по ускорению интернет-магазинов, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/",
+      "lang": "ru",
+      "title": "Ускорение сайтов: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/nagruzochnoe-testirovanie-saytov-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 компаний по нагрузочному тестированию сайтов, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/povyshenie-proizvoditelnosti-highload-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 highload-оптимизаторов 2026: компании и критерии | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/realnoe-uskorenie-saytov-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 компаний по ускорению сайтов, Core Web Vitals и PageSpeed, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/website-performance/uskorenie-1c-bitrix-2026/",
+      "lang": "ru",
+      "title": "Ускорение сайтов на 1С-Битрикс: ТОП-10 компаний, рейтинг сентября 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/wms/",
+      "lang": "ru",
+      "title": "WMS для фулфилментов: рейтинги и сравнения | GAEO.ru",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/wms/wms-fulfillment-rating-july-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 WMS для фулфилмента и складов селлеров: Россия, июль 2026",
+      "terms": {}
+    },
+    {
+      "route": "/rankings/wms/wms-multiclient-fulfillment-russia-2026/",
+      "lang": "ru",
+      "title": "ТОП-10 WMS для мультиклиентского фулфилмента, 2026 | GAEO",
+      "terms": {}
+    },
+    {
+      "route": "/reviews/",
+      "lang": "ru",
+      "title": "Отзывы клиентов об Алексее Яковлеве и GAEO.ru",
+      "terms": {
+        "GEO": 2
+      }
+    },
+    {
+      "route": "/services/additional-platforms/",
+      "lang": "ru",
+      "title": "Дополнительные нейросети +10 000 ₽/мес. | GAEO.ru",
+      "terms": {
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/services/additional-prompts/",
+      "lang": "ru",
+      "title": "Еще 10 запросов +10 000 ₽/мес. | GAEO.ru",
+      "terms": {
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/services/free-audit/",
+      "lang": "ru",
+      "title": "Бесплатный аудит бренда в нейросетях | GAEO.ru",
+      "terms": {
+        "BMR": 1,
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/services/geo-audit/",
+      "lang": "ru",
+      "title": "Аудит сайта и бренда в нейросетях (GEO-аудит) 29 900 ₽ | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/services/geo-content/",
+      "lang": "ru",
+      "title": "Продвижение в нейросетях с контентом от 99 900 ₽/мес. | GAEO.ru",
+      "terms": {
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/services/geo-guarantee/",
+      "lang": "ru",
+      "title": "Продвижение в нейросетях с финансовыми гарантиями от 114 900 ₽/мес. | GAEO.ru",
+      "terms": {
+        "BMR": 19
+      }
+    },
+    {
+      "route": "/services/geo-promotion/",
+      "lang": "ru",
+      "title": "Продвижение бизнеса в нейросетях (GEO) от 79 900 ₽/мес. | GAEO.ru",
+      "terms": {
+        "GEO": 2,
+        "BMR": 2
+      }
+    },
+    {
+      "route": "/services/",
+      "lang": "ru",
+      "title": "Продвижение в нейросетях и разработка сайтов | Алексей Яковлев",
+      "terms": {
+        "GEO": 1
+      }
+    },
+    {
+      "route": "/services/website-development/",
+      "lang": "ru",
+      "title": "Разработка сайтов под нейросети и SEO от 69 900 ₽ | GAEO.ru",
+      "terms": {
+        "GEO": 2
+      }
+    },
+    {
+      "route": "/strategies/automotive-buyer-evidence/",
+      "lang": "ru",
+      "title": "Методика GEO для авторынка: дилеры, импорт, СТО и мототехника | GAEO",
+      "terms": {
+        "BMR": 11
+      }
+    },
+    {
+      "route": "/strategies/b2b-law-firm-matter-fit/",
+      "lang": "ru",
+      "title": "Как нейросети выбирают юридическую фирму для бизнеса: дело, полномочия и проверяемая практика | GAEO",
+      "terms": {
+        "GEO": 4,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/strategies/developer-project-evidence-checklist/",
+      "lang": "ru",
+      "title": "ЖК в ответах нейросетей: как проверить застройщика, корпус и реальные условия покупки | GAEO",
+      "terms": {
+        "GEO": 2,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/strategies/ecommerce-catalog/",
+      "lang": "ru",
+      "title": "Каталог интернет-магазина для нейросетей: Product/Offer и сценарии | GAEO",
+      "terms": {
+        "GEO": 4,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/strategies/ecommerce-measurement/",
+      "lang": "ru",
+      "title": "Как измерять рекомендации товаров и магазинов в нейросетях | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/strategies/financial-services-evidence/",
+      "lang": "ru",
+      "title": "Методика GEO в финансах: лицензии, реестры, рекомендации и BMR | GAEO",
+      "terms": {
+        "BMR": 11
+      }
+    },
+    {
+      "route": "/strategies/fulfillment-provider-selection/",
+      "lang": "ru",
+      "title": "Как нейросети рекомендуют фулфилмент для Wildberries и Ozon | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/strategies/",
+      "lang": "ru",
+      "title": "Стратегии продвижения в нейросетях: методы и измерение | GAEO.ru",
+      "terms": {
+        "GEO": 5,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/strategies/industrial-equipment-evidence/",
+      "lang": "ru",
+      "title": "Как нейросети рекомендуют промышленное оборудование: проверка моделей и поставщиков | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/strategies/industrial-equipment-rfq-checklist/",
+      "lang": "ru",
+      "title": "Как подготовить паспорт промышленного оборудования для закупщика и нейросетей: 12 проверок | GAEO",
+      "terms": {
+        "GEO": 2,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/strategies/industrial-supplier-evidence/",
+      "lang": "ru",
+      "title": "Как нейросети выбирают завод металлоконструкций | Методика GAEO",
+      "terms": {
+        "GEO": 7,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/strategies/international-logistics-route-evidence/",
+      "lang": "ru",
+      "title": "Рекомендации логистических компаний в нейросетях: проверка маршрута и условий перевозки | GAEO",
+      "terms": {
+        "GEO": 4,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/strategies/international-logistics-tender-checklist/",
+      "lang": "ru",
+      "title": "Выбор международного экспедитора через нейросети: 12 вопросов к маршруту и ставке | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/strategies/legal-recommendations/",
+      "lang": "ru",
+      "title": "Как проверять рекомендации юридических компаний в нейросетях | GAEO",
+      "terms": {
+        "GEO": 7,
+        "BMR": 1
+      }
+    },
+    {
+      "route": "/strategies/load-testing-vendor-proof/",
+      "lang": "ru",
+      "title": "Как нейросети рекомендуют подрядчика для ускорения сайта и нагрузочного тестирования | GAEO",
+      "terms": {
+        "GEO": 4,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/strategies/measurement/",
+      "lang": "ru",
+      "title": "Как измерять продвижение в нейросетях: BMR и Share of Voice | GAEO",
+      "terms": {
+        "BMR": 11,
+        "GEO": 1,
+        "SoV": 4
+      }
+    },
+    {
+      "route": "/strategies/packaging-material-evidence/",
+      "lang": "ru",
+      "title": "Как нейросети рекомендуют производителей упаковки: материал, назначение и тираж | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 6
+      }
+    },
+    {
+      "route": "/strategies/packaging-supplier-brief-checklist/",
+      "lang": "ru",
+      "title": "Поставщик упаковки в ответах нейросетей: 12 пунктов технического задания и проверки фактов | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/strategies/pharma-geo-evidence/",
+      "lang": "ru",
+      "title": "Лекарства и БАД в ответах нейросетей: факты и ошибки | GAEO",
+      "terms": {
+        "GEO": 5,
+        "BMR": 9
+      }
+    },
+    {
+      "route": "/strategies/private-clinic-branch-facts-checklist/",
+      "lang": "ru",
+      "title": "Частная клиника в рекомендациях нейросетей: 12 проверок филиала, врача и записи | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 4
+      }
+    },
+    {
+      "route": "/strategies/private-clinics-service-evidence/",
+      "lang": "ru",
+      "title": "Рекомендации частных клиник в нейросетях: проверка филиалов и услуг | GAEO",
+      "terms": {
+        "GEO": 3,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/strategies/sector-geo-case-proof/",
+      "lang": "ru",
+      "title": "Как подтвердить результат продвижения в нейросетях: промышленность, логистика и клиники | GAEO",
+      "terms": {
+        "GEO": 6,
+        "BMR": 11
+      }
+    },
+    {
+      "route": "/strategies/technical-b2b-vendor-evidence/",
+      "lang": "ru",
+      "title": "Как нейросети выбирают IT-подрядчиков и B2B-ПО | Методика GAEO",
+      "terms": {
+        "GEO": 7,
+        "BMR": 3
+      }
+    },
+    {
+      "route": "/strategies/tourism-dmc-recommendations/",
+      "lang": "ru",
+      "title": "Как нейросети выбирают туроператора: VIP-туры и деловые поездки | GAEO",
+      "terms": {
+        "GEO": 9,
+        "BMR": 5
+      }
+    },
+    {
+      "route": "/tarify/",
+      "lang": "ru",
+      "title": "Продвижение в нейросетях: цены, тарифы и аудит | GAEO.ru",
+      "terms": {
+        "GEO": 1,
+        "BMR": 8
+      }
+    }
+  ]
+}
