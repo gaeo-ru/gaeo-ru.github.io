@@ -26,6 +26,7 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npm run build
+          node scripts/qa_contract_wording.mjs
           npm run check:parity
           npm run check:entities
           npm run check:anchors
@@ -94,6 +95,7 @@ jobs:
             python scripts/site_qa.py --mode production
           )
           python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
+          node scripts/qa_contract_wording.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
