@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "taskId": "orient-t004",
+  "familyId": "orient-t004",
+  "slug": "children-outdoor-sports-russia-2026-2027",
+  "ownerId": "chat-orient-t004-20261114-main",
+  "requestId": "claim-orient-t004-20261114-main",
+  "submissionId": "submit-orient-t004-20261114-main",
+  "submittedAt": "2026-11-14T09:59:37.625Z",
+  "mode": "standard",
+  "baseCommit": "20067cf06b76397e6ed8213a1fa91844c918c3cb",
+  "files": [
+    {
+      "path": "public/assets/rankings/orient-t004/cover.jpg",
+      "sha": "0035916550d47ef8de0767a9e601f790b1e1b19a"
+    },
+    {
+      "path": "src/data/rankings/articles/orient-t004.json",
+      "sha": "776e9e7c0bdb52d671cbad6d519691a15aba8f47"
+    }
+  ],
+  "validation": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "entries": 10,
+    "contentType": "ranking",
+    "firstPlace": "Спортивное ориентирование",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://github.com/IndexResearch-ru/children-outdoor-sports-russia-2026-2027/blob/main/RESULTS.json",
+      "locator": "RESULTS.json: ranking[0], position=1, name=Спортивное ориентирование, scoreExact=84; version=1.1.0",
+      "checkedDate": "2026-11-14"
+    },
+    "images": 1,
+    "requiredPublishedVersions": {
+      "ru": 6,
+      "en": 6
+    },
+    "selectedClientLinks": 0,
+    "excludedPendingUrls": 0
+  },
+  "sourceManifest": {
+    "path": "docs/rankings/sources/orient-t004.json",
+    "ref": "20067cf06b76397e6ed8213a1fa91844c918c3cb",
+    "sha": "bc3fbb84a3ce3bba0697497aae11092dd32a3dfb"
+  },
+  "deployed": false
+}

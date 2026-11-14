@@ -3573,17 +3573,27 @@
       "sourceManifest": "docs/rankings/sources/orient-t004.json",
       "earliestPublicationDate": "2026-11-13",
       "expectedCount": 10,
-      "status": "reserved",
-      "lease": {
+      "status": "committed",
+      "lease": null,
+      "result": {
+        "submissionId": "submit-orient-t004-20261114-main",
         "ownerId": "chat-orient-t004-20261114-main",
         "requestId": "claim-orient-t004-20261114-main",
         "token": "rk-mwg7w8m2-kpu5dxdugt-pw870q574y",
-        "mode": "standard",
-        "claimedAt": "2026-11-14T09:42:46.506Z",
-        "expiresAt": "2026-11-14T15:42:46.506Z",
-        "previousStatus": "ready"
+        "receiptPath": "docs/rankings/receipts/orient-t004.json",
+        "committedAt": "2026-11-14T09:59:37.625Z",
+        "files": [
+          {
+            "path": "public/assets/rankings/orient-t004/cover.jpg",
+            "sha": "0035916550d47ef8de0767a9e601f790b1e1b19a"
+          },
+          {
+            "path": "src/data/rankings/articles/orient-t004.json",
+            "sha": "776e9e7c0bdb52d671cbad6d519691a15aba8f47"
+          }
+        ],
+        "baseCommit": "20067cf06b76397e6ed8213a1fa91844c918c3cb"
       },
-      "result": null,
       "leaseVersion": 1,
       "firstPlaceVerification": {
         "status": "verified-in-manuscript",
@@ -4488,10 +4498,11 @@
       "expiresAt": "2026-11-14T15:42:46.506Z",
       "previousStatus": "ready",
       "taskId": "orient-t004",
-      "outcome": "reserved",
-      "operations": []
+      "outcome": "committed",
+      "operations": [],
+      "submissionId": "submit-orient-t004-20261114-main"
     }
   ],
-  "updatedAt": "2026-11-14T09:42:46.506Z",
+  "updatedAt": "2026-11-14T09:59:37.625Z",
   "latestReconciliationDate": "2026-11-14"
 }
