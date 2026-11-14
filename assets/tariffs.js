@@ -20,7 +20,7 @@
    root.querySelector('[data-scope]').textContent=en?`${prompts} prompts · ${count} selected platforms`:`${prompts} запросов · выбрано нейросетей: ${count}`;
    root.querySelector('[data-platform-count]').textContent=en?`${count} selected. ${extra} additional. ${count<5?'The plan includes 5; the remaining choices can be agreed before launch.':''}`:`Выбрано ${count}. Дополнительных: ${extra}. ${count<5?'В тариф входит 5, оставшиеся согласуем до начала работ.':''}`;
    const names=checked.map(input=>input.parentElement.querySelector('span').textContent).join(', ');
-   root.querySelector('[data-quote-inquiry]').dataset.gaeoRequest=en?`GEO estimate: ${plan.name}. ${prompts} prompts. Platforms: ${names||'to be agreed'}. Additional platforms: ${extra}; additional prompt blocks: ${blocks}. From ${format(total)}/month.`:`Расчет GEO: ${plan.name}. ${prompts} запросов. Нейросети: ${names||'согласуем'}. Дополнительных нейросетей: ${extra}; пакетов запросов: ${blocks}. От ${format(total)}/мес.`;
+   root.querySelector('[data-quote-inquiry]').dataset.gaeoRequest=en?`GEO estimate: ${plan.name}. ${prompts} prompts. Platforms: ${names||'to be agreed'}. Additional platforms: ${extra}; additional prompt blocks: ${blocks}. From ${format(total)}/month.`:`Расчет продвижения в нейросетях: ${plan.name}. ${prompts} запросов. Нейросети: ${names||'согласуем'}. Дополнительных нейросетей: ${extra}; пакетов запросов: ${blocks}. От ${format(total)}/мес.`;
    // Return only stable, non-personal dimensions. The detailed scope
    // is used only to prefill the real lead form, not to report analytics.
    return {
