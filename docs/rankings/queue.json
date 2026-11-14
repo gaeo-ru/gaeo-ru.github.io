@@ -3592,7 +3592,14 @@
             "sha": "776e9e7c0bdb52d671cbad6d519691a15aba8f47"
           }
         ],
-        "baseCommit": "20067cf06b76397e6ed8213a1fa91844c918c3cb"
+        "baseCommit": "20067cf06b76397e6ed8213a1fa91844c918c3cb",
+        "releaseStatus": "pages-deployed-ci-verified-live-http-unchecked",
+        "releaseSourceCommit": "648c894a8e13730465cba9fc9dbfdab4b06af35b",
+        "releaseMainCommit": "0634e3d00375228a99db978280f877c1d85f390d",
+        "releaseWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/43583236597",
+        "releasePagesWorkflowUrl": "https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/43584977593",
+        "publicHttpCheck": "direct-HTTP-unavailable-to-executor",
+        "releaseVerifiedDate": "2026-11-14"
       },
       "leaseVersion": 1,
       "firstPlaceVerification": {
@@ -4503,6 +4510,6 @@
       "submissionId": "submit-orient-t004-20261114-main"
     }
   ],
-  "updatedAt": "2026-11-14T09:59:37.625Z",
+  "updatedAt": "2026-11-14T10:25:42.457Z",
   "latestReconciliationDate": "2026-11-14"
 }
