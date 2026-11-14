@@ -11,6 +11,23 @@
 
 **Контрольный снимок 14.11.2026:** по `main/rankings/index.html` — **61 материал в 9 рубриках**; `sitemap.xml` — **142 URL** (122 статьи RU/EN, 18 страниц рубрик, 2 индекса). К 58 семействам исходной миграции добавлены Heads R04, Heads R05 и FIRSOV-T001. Статьи ORIENT-T004/T005/T006 опубликованы на внешних площадках 13.11, но пока отсутствуют в сборке GAEO. GEO-рейтинги в интересах GAEO/Алексея исключены. **Эти цифры датированы и не заменяют новую проверку.**
 
+## Выпуск рейтинга ORIENT-T004 (14.11.2026)
+
+**Выпущено:** семейство `ORIENT-T004`, «ТОП-10 видов спорта для детей 8–14 лет, любящих природу», методика IndexResearch v1.1.0 (срез 13.11.2026), 10 участников, 5 критериев, ориентирование 84/100; у баскетбола и волейбола равное 5-е место. Русская и английская редакции, одна существующая фотография, 9 FAQ на каждом языке и ссылки на 8 исходных площадочных/языковых версий.
+
+- RU: https://gaeo.ru/rankings/orienteering/children-outdoor-sports-russia-2026-2027/
+- EN: https://gaeo.ru/en/rankings/orienteering/children-outdoor-sports-russia-2026-2027/
+- Staging commit: https://github.com/gaeo-ru/gaeo-ru.github.io/commit/15d7692dec4cc7299c78b2abdd632660ced49361
+- Astro-source: https://github.com/gaeo-ru/gaeo-ru.github.io/commit/648c894a8e13730465cba9fc9dbfdab4b06af35b
+- Сборочный workflow SUCCESS: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/43583236597
+- Публичный `main`: `0634e3d00375228a99db978280f877c1d85f390d`
+- GitHub Pages build and deployment SUCCESS: https://github.com/gaeo-ru/gaeo-ru.github.io/actions/runs/43584977593
+- `main/rankings/index.html`: **62 материала / 9 категорий**, `main/sitemap.xml`: **144 URL раздела** (62 × 2 статьи, 9 × 2 рубрик, 2 индекса).
+- Две версии, 12 исходящих ссылок и 2 использования одного JPG зарегистрированы в едином реестре; после финальной проверки статусы «main и CI SUCCESS, внешний HTTP не проверен».
+- Внешний прямой HTTP/браузерный доступ к `gaeo.ru` из текущих инструментов не получен. Не выдавать за ручную визуальную проверку публичной страницы; GitHub Pages и HTML `main` подтверждены.
+
+Мониторинг автопополнения **отключен**, `is_enabled=false`, по прямой команде пользователя. Не возобновлять автоматически.
+
 ## Пополнение очереди с 14.11.2026
 
 Мониторинг **отключен 14.11.2026 по поручению пользователя**. Ранее проверка выполнялась раз в час через ChatGPT Automations, ID `6af82424e88c8191864cddc55b30523c`. Актуальный протокол: [RANKINGS_AUTO_ENQUEUE.md](RANKINGS_AUTO_ENQUEUE.md), детерминированный отбор: `scripts/rankings-autofill-core.mjs`. Условие — подтвержденный русский рейтинг IndexResearch.ru и хотя бы одна опубликованная рейтинговая статья того же `ID темы` на Sostav, TenChat, Workspace, Klerk, Oborot, DTF или vc.ru. Исключать GEO/GAEO, дубли и уже опубликованные страницы. **Постановка в очередь сама по себе не публикует статью на сайте.**
