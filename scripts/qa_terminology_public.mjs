@@ -7,24 +7,29 @@ const TERM_DEFINITIONS = {
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
-    SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети'
+    SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
+    WMS: 'WMS (Warehouse Management System) — система управления складом.',
+    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.'
   },
   en: {
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
-    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer'
+    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
+    WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
   }
 };
 
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '7834ae53f6c4623afb91c497fe873f9f7b9a33e0';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '2cd492b7efb66fdd0c5e41d6d85aa8b8e99559f8';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
-  '/tarify/', '/strategies/measurement/', '/industries/legal/', '/professional-biography/',
+  '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
+  '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
   '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
@@ -135,7 +140,7 @@ try {
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -154,13 +159,16 @@ try {
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
     if (route === '/professional-biography/') assert.ok(current.controlCounts.AEO > 0, 'Biography page AEO control');
+    if (route === '/rankings/wms/') assert.ok(current.controlCounts.WMS > 0, 'WMS must be explained on WMS ranking');
+    if (route === '/industries/fulfillment/' || route === '/en/industries/fulfillment/')
+      assert.ok(current.controlCounts.Fulfillment > 0, 'Fulfillment term must be explained on industry page');
 
     // Capture tops before any tooltip interaction or automatic scrolling.
     if ([1440, 390].includes(viewport.width) && ['/', '/services/'].includes(route)) {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV']) {
+    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
@@ -178,11 +186,13 @@ try {
       const capture = [1440, 390].includes(viewport.width) &&
         ((route === '/strategies/measurement/' && ['BMR', 'SoV'].includes(term)) ||
          (route === '/services/geo-audit/' && term === 'GEO') ||
-         (route === '/professional-biography/' && term === 'AEO'));
+         (route === '/professional-biography/' && term === 'AEO') ||
+         (route === '/rankings/wms/' && term === 'WMS') ||
+         (route === '/industries/fulfillment/' && term === 'Fulfillment'));
       if (capture) {
         // Reset the reading window immediately before capturing the live popup.
         await trigger.click();
-        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : 'geo-audit'}-${term}-tooltip`);
+        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : route === '/rankings/wms/' ? 'warehouse' : route === '/industries/fulfillment/' ? 'fulfillment' : 'geo-audit'}-${term}-tooltip`);
       }
       if (current.clickedTerms.length === 1) {
         await tooltip.click();
