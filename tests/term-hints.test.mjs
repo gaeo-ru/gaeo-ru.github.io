@@ -27,7 +27,7 @@ test('adjacent expansions need no duplicate help', () => {
     'Share of Voice (SoV)', 'продвижение в нейросетях (GEO)',
     'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
     'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
-    'WMS — система управления складом.', 'Фулфилмент (Fulfillment)', 'Фулфилмент — комплекс логистических услуг'
+    'WMS — система управления складом.', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
   ]) assert.deepEqual(findTermMatches(value), [], value);
   const context = 'Показатель BMR (Brand Mention Rate) изменился.';
   assert.deepEqual(findTermMatches('BMR', { context, offset: 11 }), []);
