@@ -8,6 +8,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
     WMS: 'WMS (Warehouse Management System) — система управления складом.',
     Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.',
+    BrandFound: 'BrandFound - сервис мониторинга ответов нейросетей',
     AIStart: 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.'
   }),
   en: Object.freeze({
@@ -18,6 +19,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
     Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.',
+    BrandFound: 'BrandFound - a service for monitoring AI responses',
     AIStart: "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks."
   })
 });
@@ -33,7 +35,7 @@ const FULL_NAMES = {
   Fulfillment: 'Fulfillment'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -70,8 +72,9 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
     const value = match[0];
     const term = value === 'SOV' ? 'SoV'
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
+      : /^brandfound$/i.test(value) ? 'BrandFound'
       : value;
-    if (isAddress(text, start, end) || alreadyExplained(context, offset + start, offset + end, term)) continue;
+    if (isAddress(text, start, end) || (term !== 'BrandFound' && alreadyExplained(context, offset + start, offset + end, term))) continue;
     matches.push({ start, end, term, text: match[0] });
   }
   return matches;
@@ -145,6 +148,18 @@ export function installTermHints(doc = document) {
     return button;
   }
 
+  function brandFoundLinkIsExplained(link) {
+    const context = link.closest(CONTEXT);
+    if (!context) return false;
+    const range = doc.createRange();
+    range.selectNodeContents(context);
+    range.setEndBefore(link);
+    const before = range.toString().length;
+    const after = context.textContent.slice(before + link.textContent.length, before + link.textContent.length + 160);
+    return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:сервис|платформа|инструмент)\s+(?:для\s+)?(?:мониторинга|отслеживания|анализа)\s+(?:ответов|упоминаний)/i.test(after) ||
+      /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?(?:service|platform|tool)\s+(?:for\s+)?(?:monitoring|tracking)\s+(?:AI\s+)?(?:answers|responses)/i.test(after);
+  }
+
   // Wrap the original anchor with its independent help icons so they align
   // with the FIRST line of a multi-line link, without changing the href.
   function enhanceLinks(root) {
@@ -157,7 +172,14 @@ export function installTermHints(doc = document) {
         !link.closest(EXCLUDED) &&
         !link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') &&
         !link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]');
-      const terms = allowed ? [...new Set(findTermMatches(link.textContent).map(hit => hit.term))] : [];
+      if (allowed && /^brandfound$/i.test(link.textContent.trim())) {
+        link.href = 'https://brandfound.ai/?ref=ZML17L';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+      const terms = allowed ? [...new Set(findTermMatches(link.textContent)
+        .filter(hit => hit.term !== 'BrandFound' || !brandFoundLinkIsExplained(link))
+        .map(hit => hit.term))] : [];
       if (!terms.length) {
         if (wrapper) {
           if (active && wrapper.contains(active)) hide();
@@ -216,19 +238,28 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
       let cursor = 0;
       for (const match of matches) {
         fragment.append(doc.createTextNode(text.slice(cursor, match.start)));
-        fragment.append(makeTrigger(match.term, match.text));
+        if (match.term === 'BrandFound') {
+          const link = doc.createElement('a');
+          link.href = 'https://brandfound.ai/?ref=ZML17L';
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = match.text;
+          fragment.append(link);
+        } else fragment.append(makeTrigger(match.term, match.text));
         cursor = match.end;
       }
       fragment.append(doc.createTextNode(text.slice(cursor)));
       node.replaceWith(fragment);
     }
+    // BrandFound anchors created from text nodes need their help controls immediately.
+    if (root.nodeType === 1 || root.nodeType === 9) enhanceLinks(root);
   }
 
   function place() {
