@@ -222,6 +222,8 @@ try {
         assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').allTextContents(), terms.map(term => TERM_DEFINITIONS[lang][term]));
         assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').evaluateAll(entries => entries.map(entry => getComputedStyle(entry).borderTopWidth)),
           ['0px', ...terms.slice(1).map(() => '1px')], 'Each pair of definitions has a horizontal separator');
+        if (viewport.width === 1440) assert.ok(await tooltip.evaluate(element => element.scrollHeight <= element.clientHeight),
+          'Grouped definitions are fully visible when there is room beside the trigger');
         await page.keyboard.press('Escape');
       }
     }

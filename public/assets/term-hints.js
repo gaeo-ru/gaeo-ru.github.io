@@ -698,18 +698,27 @@ export function installTermHints(doc = document) {
     const maxHeight = Math.max(80, bounds.height - margin * 2);
     tooltip.style.maxHeight = `${maxHeight}px`;
     const box = tooltip.getBoundingClientRect();
-    const left = Math.min(Math.max(bounds.left + margin, anchor.left + (anchor.width - box.width) / 2), bounds.left + bounds.width - box.width - margin);
     const above = anchor.top - gap - bounds.top - margin;
     const below = bounds.top + bounds.height - margin - anchor.bottom - gap;
+    const spaceLeft = anchor.left - gap - bounds.left - margin;
+    const spaceRight = bounds.left + bounds.width - margin - anchor.right - gap;
+    let side = null;
+    if (box.height > Math.max(above, below)) {
+      if (box.width <= spaceRight) side = 'right';
+      else if (box.width <= spaceLeft) side = 'left';
+    }
+    const centeredLeft = anchor.left + (anchor.width - box.width) / 2;
+    const preferredLeft = side === 'left' ? anchor.left - gap - box.width : side === 'right' ? anchor.right + gap : centeredLeft;
+    const left = Math.min(Math.max(bounds.left + margin, preferredLeft), bounds.left + bounds.width - box.width - margin);
     const placeBelow = box.height <= below || (box.height > above && below >= above);
     // A tall tooltip must stay clear of its own trigger and scroll if needed.
-    tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
+    if (!side) tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
     const height = tooltip.getBoundingClientRect().height;
-    const preferredTop = placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
+    const preferredTop = side ? anchor.top + (anchor.height - height) / 2 : placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
     const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - height - margin);
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
-    tooltip.dataset.placement = placeBelow ? 'below' : 'above';
+    tooltip.dataset.placement = side || (placeBelow ? 'below' : 'above');
     tooltip.style.setProperty('--gaeo-term-arrow', `${Math.min(box.width - 18, Math.max(18, anchor.left + anchor.width / 2 - left))}px`);
   }
 
