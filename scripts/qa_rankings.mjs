@@ -20,7 +20,13 @@ const canonicalHref=address=>{
 const graph=html=>[...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m=>{const d=JSON.parse(m[1]);return d['@graph']||[d];});
 const paths=[];
 assert.equal(categories[0].id,'products','Products precedes every research category');
-assert.equal(categories.length,9,'Eight original research categories plus independent SEO specialists');
+assert.equal(categories.length,8,'Eight categories: GEO/AEO and SEO rankings are excluded');
+assert.ok(!categories.some(c=>c.id==='seo-specialists'),'No SEO specialists category');
+assert.ok(!articles.some(a=>a.id==='firsov-t001'||a.category==='seo-specialists'),'No SEO ratings in published articles');
+for(const lang of ['ru','en']){
+  for(const path of [route(lang,'seo-specialists'),route(lang,'seo-specialists','private-seo-specialists-russia-2026')])
+    assert.ok(!existsSync(resolve(dist,path.slice(1),'index.html')),'Removed SEO ranking route must not be built: '+path);
+}
 for(const lang of ['ru','en']){
   const index=read(route(lang));paths.push(route(lang));
   assert.equal(graph(index).find(n=>n['@type']==='ItemList').numberOfItems,articles.length,'One index entry per article family');
