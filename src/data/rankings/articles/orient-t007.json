@@ -1,0 +1,756 @@
+{
+  "schemaVersion": 1,
+  "id": "orient-t007",
+  "familyId": "orient-t007",
+  "registryTopicId": "ORIENT-T007",
+  "registryFamilyId": "individualnyy_sport_deti_2026_2027",
+  "category": "orienteering",
+  "slug": "individual-childrens-sports-russia-2026-2027",
+  "firstPlace": "Спортивное ориентирование",
+  "entityType": "Thing",
+  "sourceDate": "2026-11-15",
+  "dataAsOf": "2026-11-15",
+  "publishedDate": "2026-11-15",
+  "modifiedDate": "2026-11-15",
+  "source": {
+    "status": "found",
+    "provider": "github",
+    "url": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027/blob/main/README.md",
+    "sourceUrl": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027/blob/main/RESULTS.json",
+    "originalAuthor": {
+      "ru": "IndexResearch",
+      "en": "IndexResearch"
+    },
+    "selectedVersion": "IndexResearch v1.0.0, 15 November 2026; 19 scored disciplines; 8 criteria",
+    "checkedDate": "2026-11-15",
+    "firstPlaceVerification": {
+      "status": "verified-in-manuscript",
+      "firstPlace": "Спортивное ориентирование",
+      "sourceReference": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027/blob/main/RESULTS.json",
+      "locator": "RESULTS.json: results[0].sport, place=1, score=82; version 1.0.0",
+      "checkedDate": "2026-11-15"
+    }
+  },
+  "disclosure": {
+    "ru": "Инициаторы IndexResearch заинтересованы в популяризации спортивного ориентирования. По их сообщению, спортивные организации не оплачивали места; независимого рецензирования исследования не проводилось. GAEO выпускает собственную редакцию версии 1.0.0 с сохранением итоговых данных. Опубликованные статьи Алены Михайловой на Sostav и TenChat относятся к той же теме, но применяют другую модель из 6 критериев, где ориентирование набрало 92/100. Здесь 8 критериев и 82/100. Ссылки на ФСОР и Orgeo размещены для получения правил и сведений о стартах; эти ресурсы не присваивали баллы участникам.",
+    "en": "The IndexResearch initiators are interested in promoting orienteering. They report that sports organisations did not pay for placements; this research was not independently peer-reviewed. GAEO publishes a separately written edition of IndexResearch v1.0.0. Earlier related articles by Alena Mikhaylova on Sostav and TenChat use a different six-criterion model (orienteering: 92/100). This edition uses eight criteria and 82/100. Links to the federation and Orgeo provide access to rules and events; those services did not assign the scores."
+  },
+  "versions": [
+    {
+      "platform": "Sostav",
+      "ru": "https://www.sostav.ru/blogs/292167/120752",
+      "label": {
+        "ru": "Sostav: статья Алены Михайловой, другая методика (92/100)",
+        "en": "Sostav: Alena Mikhaylova's related ranking (Russian; different scoring, 92/100)"
+      }
+    },
+    {
+      "platform": "TenChat",
+      "ru": "https://tenchat.ru/media/6360236-top10-luchshikh-individualnykh-vidov-sporta-dlya-detey-v-rossii-reyting-20262027",
+      "label": {
+        "ru": "TenChat: редакция Алены Михайловой, другая шкала",
+        "en": "TenChat: related Russian-language edition with different methodology"
+      }
+    },
+    {
+      "platform": "IndexResearch",
+      "ru": "https://indexresearch.ru/individual-childrens-sports-russia-2026-2027.html",
+      "en": "https://indexresearch.ru/en/individual-childrens-sports-russia-2026-2027.html",
+      "label": {
+        "ru": "IndexResearch: опубликованное полное исследование, 82/100",
+        "en": "IndexResearch: complete research report and 82/100 score"
+      }
+    },
+    {
+      "platform": "GitHub",
+      "ru": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027",
+      "en": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027-en",
+      "label": {
+        "ru": "GitHub: исходные оценки, критерии, формулы и источники",
+        "en": "GitHub: source data, criteria, calculations and evidence"
+      }
+    },
+    {
+      "platform": "IndexResearch CN",
+      "ru": "https://indexresearch.ru/cn/individual-childrens-sports-russia-2026-2027.html",
+      "en": "https://indexresearch.ru/cn/individual-childrens-sports-russia-2026-2027.html",
+      "label": {
+        "ru": "IndexResearch: китайская редакция",
+        "en": "IndexResearch: Chinese report"
+      }
+    },
+    {
+      "platform": "GitHub CN",
+      "ru": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027-cn",
+      "en": "https://github.com/IndexResearch-ru/individual-childrens-sports-russia-2026-2027-cn",
+      "label": {
+        "ru": "GitHub: исследование на китайском языке",
+        "en": "GitHub: Chinese source edition"
+      }
+    }
+  ],
+  "clientLinks": [
+    {
+      "url": "https://rufso.ru/",
+      "label": {
+        "ru": "Федерация спортивного ориентирования России: информация о дисциплинах и правилах",
+        "en": "Russian Orienteering Federation: disciplines, rules and events"
+      },
+      "sourceAnchor": {
+        "ru": "Федерация спортивного ориентирования России",
+        "en": "Russian Orienteering Federation"
+      },
+      "relation": "sponsored"
+    },
+    {
+      "url": "https://orgeo.ru/",
+      "label": {
+        "ru": "Orgeo: календарь соревнований и регистрация на мероприятия",
+        "en": "Orgeo: event listings and entry information"
+      },
+      "sourceAnchor": {
+        "ru": "Orgeo",
+        "en": "Orgeo"
+      },
+      "relation": "sponsored"
+    }
+  ],
+  "images": [
+    {
+      "src": "/assets/rankings/orient-t007/top10_individual_children_2026_2027_cover.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Обложка ТОП-10 индивидуальных видов спорта для детей: юная ориентировщица с картой возле КП",
+        "en": "Existing Russian cover for the top 10 individual sports for children, showing a young orienteer"
+      },
+      "caption": {
+        "ru": "Обложка из редакционного комплекта Sostav, постановочная иллюстрация с русским текстом.",
+        "en": "Existing Russian-language editorial cover from the Sostav pack; digitally created, not documentary photography."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1q0fbm9qpIiIq83H6ZGry-KRRSfB_9Yyd/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t007/individual_sports_overview_2026.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Группа подростков с картой, спортивными ракетками и экипировкой для разных дисциплин",
+        "en": "Children representing several sports with an orienteering map, rackets and equipment"
+      },
+      "caption": {
+        "ru": "Иллюстрация разнообразия индивидуальных занятий, созданная для версии Sostav.",
+        "en": "Digitally created illustration of different individual activities from the Sostav pack."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1zEyUT7QH9ArY_iFydTHuynDe2DOR7twn/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t007/individual_orienteering_run_2026.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Юная спортсменка бежит по лесной дистанции ориентирования с картой у контрольного пункта",
+        "en": "Young athlete runs through woodland with an orienteering map near a control flag"
+      },
+      "caption": {
+        "ru": "Кроссовое ориентирование сочетает движение с выбором пути по карте. Постановочная иллюстрация.",
+        "en": "Foot orienteering links movement with map-based decisions; digitally created illustration."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1QkMf5FI1DqOl7ZbCwM_a9u8-WzRFPH0q/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t007/individual_orienteering_navigation_2026.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Школьник читает карту рядом с контрольным пунктом в лесопарке",
+        "en": "Schoolboy reads a sports map beside an orienteering control in a wooded park"
+      },
+      "caption": {
+        "ru": "На вводном занятии сначала осваивают карту и условные знаки. Иллюстрация из Sostav.",
+        "en": "A first lesson focuses on map symbols and terrain; illustration from the Sostav pack."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/15DpDHDAjbN93Xj_Lf4YXepxlg790bTiV/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t007/first_orienteering_lesson_children_russia_2026.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Тренер объясняет детям спортивную карту на занятии по ориентированию",
+        "en": "Coach explaining an orienteering map to children during an introductory lesson"
+      },
+      "caption": {
+        "ru": "Начальные тренировки проводят под присмотром инструктора. Иллюстрация.",
+        "en": "Introductory sessions should be supervised; digitally created illustration."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1NJwaJvbLoiR-sBboq6p0zyu9uXvMCBB7/view"
+    },
+    {
+      "src": "/assets/rankings/orient-t007/parent_child_coach_sports_section_russia_2026.jpg",
+      "width": 1200,
+      "height": 675,
+      "alt": {
+        "ru": "Родитель и ребенок обсуждают спортивную секцию с тренером в зале",
+        "en": "Parent and child discuss sports club options with a coach in a sports hall"
+      },
+      "caption": {
+        "ru": "Перед записью полезно обсудить уровень подготовки, расписание и безопасность.",
+        "en": "Before enrolling, discuss ability level, training schedules and safety."
+      },
+      "sourceUrl": "https://drive.google.com/file/d/1bmoawCeEuQagTO1-H7U9BXfrbaaGDl2c/view"
+    }
+  ],
+  "ru": {
+    "title": "ТОП-10 индивидуальных видов спорта для детей 8–16 лет: рейтинг России 2026–2027",
+    "seoTitle": "Индивидуальные виды спорта для детей 8–16 лет: ТОП-10 России 2026–2027 | GAEO",
+    "description": "ТОП-10 индивидуальных видов спорта для детей в России: ориентирование 82/100, бадминтон 78, боулдеринг 77. Сравнение 19 дисциплин по 8 критериям.",
+    "shortAnswer": "В исследовании IndexResearch о первом годе занятий детей 8–16 лет спортивное ориентирование заняло 1-е место с 82/100, бадминтон получил 78, а боулдеринг 77.",
+    "intro": [
+      "Ребенку нравится спорт, но его не привлекают командные игры. Как найти занятие, где прогресс будет зависеть от его собственных решений, а тренировки не превратятся в погоню за результатом товарищей? IndexResearch сравнил 19 личных спортивных дисциплин для школьников 8–16 лет.",
+      "По редакционной модели от 15 ноября 2026 года первым стало спортивное ориентирование (82/100). За ним идут бадминтон (78) и скалолазание в дисциплине боулдеринг (77). Сравнение касается первых 12 месяцев занятий, а не спортивных достижений на профессиональном уровне.",
+      "Для статьи GAEO использованы исходные результаты и методика IndexResearch v1.0.0, а изображения взяты из готового комплекта Sostav в папке этой темы на Google Диске. Формулировки и композиция текста подготовлены отдельно."
+    ],
+    "contextTitle": "Что исследование считает индивидуальным спортом",
+    "context": [
+      "Индивидуальная дисциплина подразумевает личный результат на дистанции, в упражнении или поединке. Ребенок при этом может заниматься в группе и общаться со сверстниками. Важен формат спортивного результата, поэтому командные игры не участвовали в основной выборке.",
+      "Исследователи рассмотрели 20 кандидатов и допустили 19. Шахматы не прошли критерий обязательной физической двигательной практики. Для каждого вида спорта заранее выбрали конкретную дисциплину: например, одиночный бадминтон, кросс-классику ориентирования или боулдеринг, а не весь спектр упражнений и соревнований.",
+      "Возраст 8–16 лет охватывает разные этапы подготовки. Оценки показывают пригодность дисциплины хотя бы для части диапазона, но не гарантируют прием 16-летнего новичка в конкретную спортивную школу."
+    ],
+    "methodology": [
+      "Итоговые баллы рассчитываются по 8 критериям. Каждому свойству дисциплины присваивается оценка от 0 до 4; она умножается на вес соответствующего критерия и переводится в шкалу до 100. Весовая модель фиксировалась до окончательного выставления оценок.",
+      "Больше всего влияют физическая активность (18%), самостоятельные решения (16%) и наблюдаемость личного прогресса (14%). Еще по 12% приходятся на возможность иметь личную учебную задачу без соперника и пригодность для начинающих. Разнообразие движений и сложность обязательной инфраструктуры имеют по 10%, регулярность занятий — 8%.",
+      "В опубликованной матрице 19 участников и 152 оценочных ячейки с обоснованиями; перечень содержит 38 источников. Всего рассмотрены 20 кандидатов. Количество детей в секциях и медийная известность получили вес 0%. Сами числа остаются экспертными оценками, нормативные источники не утверждали баллы IndexResearch.",
+      "После чернового расчета исследователи скорректировали 24 экспертные ячейки. Поэтому 5000 пересчетов весов, выполненные на черновой матрице, нельзя выдавать за проверку устойчивости окончательного рейтинга. Внешнего независимого рецензирования нет.",
+      "В версиях Sostav и TenChat спортивное ориентирование имеет 92/100 по другой методике из 6 критериев; там в тройку входят легкая атлетика и плавание. Здесь сохранена завершенная схема IndexResearch из 8 критериев. Баллы и состав участников этих редакций смешивать нельзя."
+    ],
+    "criteria": [
+      {
+        "name": "Динамическая физическая активность",
+        "weight": "18%",
+        "description": "Насколько активно ребенок движется во время основной дисциплины."
+      },
+      {
+        "name": "Разнообразие двигательных навыков",
+        "weight": "10%",
+        "description": "Разные движения, техника и координационные задачи."
+      },
+      {
+        "name": "Самостоятельные решения во время выполнения задачи",
+        "weight": "16%",
+        "description": "Сколько решений спортсмен принимает сам во время упражнения."
+      },
+      {
+        "name": "Наблюдаемость личного прогресса",
+        "weight": "14%",
+        "description": "Возможность наблюдать собственный спортивный результат со временем."
+      },
+      {
+        "name": "Самостоятельная учебная задача без обязательного соперника",
+        "weight": "12%",
+        "description": "Есть ли личная учебная задача без необходимости играть против соперника."
+      },
+      {
+        "name": "Пригодность для новичков 8–16 лет",
+        "weight": "12%",
+        "description": "Возможность осваивать дисциплину с нуля в части возрастного диапазона 8–16 лет."
+      },
+      {
+        "name": "Простота обязательной инфраструктуры и инвентаря",
+        "weight": "10%",
+        "description": "Какие площадки и вещи необходимы для занятий, без выдуманных средних цен."
+      },
+      {
+        "name": "Регулярность основной практики в учебном году",
+        "weight": "8%",
+        "description": "Можно ли тренироваться в основной дисциплине регулярно во время учебного года."
+      }
+    ],
+    "ranking": [
+      {
+        "position": 1,
+        "rank": 1,
+        "name": "Спортивное ориентирование",
+        "score": 82,
+        "summary": "Кроссовая личная дистанция: карта, контрольные пункты и собственное решение о пути.",
+        "paragraphs": [
+          "Ребенок получает карту и проходит контрольные пункты в установленном порядке, выбирая путь между ними. Чтобы не потерять время, приходится сопоставлять карту с лесными дорожками, рельефом и реальными ориентирами. Отдельно оценивается скорость движения, отдельно проявляется точность навигации.",
+          "В модели оценена именно личная кроссовая дисциплина: лыжные и велосипедные варианты не повышали ее балл. Результат измеряется временем и корректностью прохождения КП, хотя разные дистанции нельзя напрямую сравнить. Для начала подойдут организованная учебная тренировка и короткий маршрут с инструктажем. Правила можно изучить в Федерации спортивного ориентирования России, а мероприятия и условия заявок посмотреть на Orgeo."
+        ],
+        "strengths": [
+          "Самостоятельный маршрут и решения во время движения.",
+          "Личный результат и разные задачи на новых картах."
+        ],
+        "caution": "Нужны актуальная спортивная карта, безопасный район и обучающий взрослый. Прием подростка в конкретную спортивную школу и доступность секции рядом с домом исследование не подтверждало."
+      },
+      {
+        "position": 2,
+        "rank": 2,
+        "name": "Бадминтон",
+        "score": 78,
+        "summary": "Короткие игровые эпизоды с быстрыми перемещениями и самостоятельным выбором ударов.",
+        "paragraphs": [
+          "В одиночном бадминтоне спортсмен реагирует на действия соперника, выбирает позицию и направление удара. Разнообразие движений высокое: ускорения, торможение, работа у сетки и на задней линии сменяют друг друга.",
+          "Счет позволяет отслеживать выступления, но результат сильно зависит от уровня противника. При наличии подходящего зала тренировки можно продолжать весь учебный год. Для стабильного освоения техники нужны корт, ракетка и тренер."
+        ],
+        "strengths": [
+          "Разнообразная техника и быстрые решения.",
+          "Возможность круглогодичных занятий в зале."
+        ],
+        "caution": "Уточни размер группы и наличие подходящего корта: обычная игра на улице не заменяет регулярную подготовку в спортивной секции."
+      },
+      {
+        "position": 3,
+        "rank": 3,
+        "name": "Скалолазание",
+        "score": 77,
+        "summary": "Поиск последовательности движений на коротких трассах при индивидуальном зачете.",
+        "paragraphs": [
+          "В боулдеринге ребенку нужно разобраться, какие зацепы и движения помогут пройти короткую трассу. Одну задачу можно попробовать разными способами: силу приходится сочетать с координацией и анализом собственных ошибок.",
+          "Исследование оценивает личный боулдеринг, а не все виды скалолазания сразу. Прогресс фиксируют по пройденным трассам и попыткам, однако при смене маршрутов сравнение осложняется. Крытый скалодром позволяет тренироваться в течение года."
+        ],
+        "strengths": [
+          "Самостоятельное решение двигательной задачи.",
+          "Зальные условия для регулярных тренировок."
+        ],
+        "caution": "Для первых занятий нужны квалифицированный тренер, подходящий скалодром и безопасные маты; самостоятельные попытки без инструктажа недопустимы."
+      },
+      {
+        "position": 4,
+        "rank": 4,
+        "name": "Спортивная радиопеленгация",
+        "score": 76.5,
+        "summary": "Поиск передатчиков на местности соединяет бег, выбор пути и работу с приемником.",
+        "paragraphs": [
+          "В спортивной радиопеленгации участник получает сигналы передатчиков и сам определяет, как добраться до нужных точек. Дисциплина связана с бегом по местности, ориентацией и пониманием работы оборудования.",
+          "Личное время и прохождение точек дают измеримый итог, но соревнования проходят на разных трассах. Новичку понадобится обучение работе с радиопеленгатором и организация занятия на подходящей местности."
+        ],
+        "strengths": [
+          "Высокая самостоятельность в поиске.",
+          "Связь двигательной и технической подготовки."
+        ],
+        "caution": "Оборудование и клубы встречаются не повсеместно; перед записью следует выяснить, предоставляется ли приемник."
+      },
+      {
+        "position": 5,
+        "rank": 5,
+        "name": "Велосипедный спорт",
+        "score": 76,
+        "summary": "Личная гонка по пересеченной местности с контролем велосипеда и собственной скоростью.",
+        "paragraphs": [
+          "В маунтинбайке кросс-кантри ребенок движется по обозначенному природному маршруту, выбирает траекторию на неровном покрытии и распределяет усилия на подъемах. Управление велосипедом требует постепенного освоения.",
+          "На одинаковых трассах можно сравнивать время собственных заездов. Нужны исправный велосипед, шлем и безопасное место для тренировок; зимой условия основной дисциплины во многих регионах меняются."
+        ],
+        "strengths": [
+          "Выразительная техника и измеримое время.",
+          "Разные природные препятствия."
+        ],
+        "caution": "Перед первым занятием проверь защиту, состояние велосипеда и подготовленность площадки; сложные спуски новичку не подходят."
+      },
+      {
+        "position": 6,
+        "rank": 5,
+        "name": "Триатлон",
+        "score": 76,
+        "summary": "Личная дистанция с несколькими видами нагрузки и понятным итоговым временем.",
+        "paragraphs": [
+          "Триатлон объединяет плавание, велосипедный этап и бег. Ребенок осваивает разные двигательные навыки, учится переключаться между этапами и распределять силы по дистанции.",
+          "В исследовании рассматривается личный триатлон соответствующей возрастной группы. Для первого года нужны отдельные условия для плавания и велосипеда, безопасный беговой участок, снаряжение и грамотная программа подготовки. По ресурсам это один из самых сложных вариантов первой десятки."
+        ],
+        "strengths": [
+          "Разные виды движения в одной дисциплине.",
+          "Личный итог по времени."
+        ],
+        "caution": "Регулярная подготовка требует нескольких площадок и внимательного контроля нагрузки, особенно на водном этапе."
+      },
+      {
+        "position": 7,
+        "rank": 7,
+        "name": "Теннис",
+        "score": 73,
+        "summary": "Индивидуальный матч с самостоятельной тактикой, техникой удара и перемещениями.",
+        "paragraphs": [
+          "В теннисе спортсмен постоянно выбирает направление подачи, силу удара и позицию на корте. Каждое очко складывается из собственных решений и реакции на действия соперника.",
+          "Матчи имеют личный счет, но сравнение результатов зависит от уровня оппонентов. Для занятий нужен корт и ракетка. Крытое помещение позволяет продолжать игру в течение учебного года при наличии доступного времени."
+        ],
+        "strengths": [
+          "Много тактических решений.",
+          "Регулярная практика в крытом зале при наличии доступа."
+        ],
+        "caution": "Стоимость и доступность корта сильно различаются, поэтому следует выяснить условия пробного занятия."
+      },
+      {
+        "position": 8,
+        "rank": 8,
+        "name": "Лыжные гонки",
+        "score": 72.5,
+        "summary": "Дистанция на лыжах с личным временем и выбором темпа на подготовленной трассе.",
+        "paragraphs": [
+          "Лыжные гонки развивают умение двигаться по разному рельефу, выбирать темп и технику на подъеме или спуске. В соревнованиях с раздельным стартом ребенок получает собственный результат по времени.",
+          "Обязательны снежная трасса, лыжи и ботинки. В теплый период можно заниматься общей подготовкой, но она не заменяет основную лыжную дисциплину в модели рейтинга. Поэтому сезонность снижает итоговый балл."
+        ],
+        "strengths": [
+          "Сравнимое личное время на одной дистанции.",
+          "Продолжительная двигательная работа."
+        ],
+        "caution": "Уточни устойчивость снежного сезона, наличие проката и подготовленной трассы."
+      },
+      {
+        "position": 9,
+        "rank": 9,
+        "name": "Дзюдо",
+        "score": 71.5,
+        "summary": "Личный поединок, в котором техника и решения зависят от действий соперника.",
+        "paragraphs": [
+          "В дзюдо ребенок осваивает броски, удержания, перемещения и тактические варианты. Во время схватки нужно быстро оценивать положение соперника и принимать решение.",
+          "Поединки проходят в возрастных и весовых категориях. Соревновательный счет и победы фиксируются, но напрямую сопоставлять результаты разных соперников трудно. Занятия возможны круглый год в оборудованном зале."
+        ],
+        "strengths": [
+          "Много вариантов движения и решений.",
+          "Доступность зальной практики независимо от сезона."
+        ],
+        "caution": "Ключевые условия — тренер, подходящая возрастная группа, татами и правильное освоение страховки при падении."
+      },
+      {
+        "position": 10,
+        "rank": 9,
+        "name": "Тхэквондо (ВТФ)",
+        "score": 71.5,
+        "summary": "Личный поединок с быстрыми ударами, перемещениями и самостоятельной тактикой.",
+        "paragraphs": [
+          "В тхэквондо (ВТФ) спортсмен выбирает момент атаки, направление удара и дистанцию. Соревнования в личном керуги требуют реагировать на изменения положения соперника.",
+          "Баллы и результат поединка учитываются, но зависят от условий встречи и другого спортсмена. Для регулярных занятий нужны зал, тренер и защитная экипировка; сезонность обычно меньше, чем у природных дисциплин."
+        ],
+        "strengths": [
+          "Самостоятельные тактические решения.",
+          "Возможность регулярной практики в помещении."
+        ],
+        "caution": "Нужны корректная защитная экипировка и тренер, который учитывает возраст и уровень ребенка."
+      }
+    ],
+    "selection": [
+      "Начни с интереса самого ребенка. Если ему нравятся карты и поиск пути, узнай об учебных занятиях по спортивному ориентированию. Федерация спортивного ориентирования России публикует официальные правила, а Orgeo помогает найти мероприятия и регистрацию. На первом старте особенно важны инструктаж и подходящая по возрасту дистанция.",
+      "Если ребенку ближе быстрая игра против соперника, рассмотрите одиночный бадминтон или теннис. Если интереснее решать двигательные задачи на трассе, можно попробовать боулдеринг. Для любителей природных дистанций подойдут пробные занятия кросс-кантри или лыжными гонками при наличии местной инфраструктуры.",
+      "Для семьи полезнее всего сравнить расстояние до секции, расписание, занятия в группе и компетентность тренера. Выясни, какие предметы экипировки действительно нужны в первый месяц, а что можно взять напрокат. Для 8-летнего и 16-летнего новичка доступные программы могут различаться.",
+      "Первое место в рейтинге означает соответствие определенному сценарию. Оно не заменяет оценки здоровья ребенка, рекомендаций специалистов и пробного занятия в конкретной секции. Для каждой дисциплины есть собственные условия безопасности."
+    ],
+    "faq": [
+      {
+        "question": "Какой индивидуальный вид спорта для детей занял 1-е место?",
+        "answer": "В исследовании IndexResearch от 15 ноября 2026 года спортивное ориентирование в дисциплине кросс-классика получило 82/100. Далее идут бадминтон (78) и боулдеринг (77)."
+      },
+      {
+        "question": "Почему на Sostav указаны другие баллы и тройка лидеров?",
+        "answer": "Публикация Sostav использует редакционную модель из 6 критериев, в которой ориентирование получает 92/100, а далее стоят легкая атлетика и плавание. Здесь использованы 8 критериев и окончательный расчет IndexResearch 1.0.0. Это разные сравнения внутри одной темы."
+      },
+      {
+        "question": "Индивидуальный спорт означает занятия без других детей?",
+        "answer": "Нет. Тренировки часто групповые. Индивидуальность относится к результату на личной дистанции, в упражнении или одиночном поединке."
+      },
+      {
+        "question": "Почему велосипедный спорт и триатлон оба на 5-м месте?",
+        "answer": "В окончательной матрице обе дисциплины получили по 76/100. При равных баллах авторы сохраняют общее место, поэтому после 2 пятых мест идет 7-е."
+      },
+      {
+        "question": "Почему дзюдо и тхэквондо разделили 9-е место?",
+        "answer": "Оба вида спорта набрали 71,5/100 по выбранным личным дисциплинам. Разные сильные и слабые стороны сложились в одинаковую итоговую оценку."
+      },
+      {
+        "question": "Подходит ли спортивное ориентирование новичку в 16 лет?",
+        "answer": "Вводное занятие может подойти, если организатор допускает эту возрастную группу. Исследование не проверяло прием 16-летних новичков в конкретные спортивные школы. Наличие групп нужно уточнять напрямую."
+      },
+      {
+        "question": "Почему шахматы не включили в сравнение?",
+        "answer": "Авторы заранее установили условие обязательной физической двигательной активности. Шахматы не прошли это условие, поэтому из 20 первоначальных кандидатов оценивались 19."
+      },
+      {
+        "question": "Можно ли считать рейтинг исследованием пользы и безопасности спорта?",
+        "answer": "Нет. Методика не оценивает вероятность травм, медицинскую пригодность или влияние тренировок на интеллект. Это сравнение свойств 19 личных дисциплин для первого года занятий."
+      },
+      {
+        "question": "Можно ли воспроизвести итоговые оценки?",
+        "answer": "Да. В GitHub IndexResearch доступны RESULTS.json, SCORE_MATRIX.csv, SCORING_MODEL.csv, шкалы RUBRICS.csv и calculate.py, а также 152 обоснования оценок и реестр источников."
+      }
+    ],
+    "conclusion": [
+      "В сценарии первого года занятий ребенка 8–16 лет спортивное ориентирование заняло 1-е место с 82/100. Оно выделяется самостоятельными маршрутными решениями при физической нагрузке. Бадминтон и боулдеринг получили 78 и 77 баллов.",
+      "Числа помогают выбрать несколько дисциплин для пробных занятий, но окончательное решение зависит от интереса ребенка, подходящей группы, тренера, дороги и безопасных условий. Разница в баллах не заменяет этих проверок."
+    ]
+  },
+  "en": {
+    "title": "Top 10 Individual Sports for Children Aged 8–16 in Russia, 2026–2027",
+    "seoTitle": "Top 10 Individual Sports for Children in Russia (Ages 8–16) | GAEO",
+    "description": "Compare 10 individual sports for children in Russia: orienteering 82/100, badminton 78, bouldering 77. An IndexResearch study of 19 disciplines and 8 criteria.",
+    "shortAnswer": "In IndexResearch's first-year comparison of individual sports for children aged 8–16, foot orienteering ranked first with 82/100, ahead of badminton (78) and bouldering (77).",
+    "intro": [
+      "A child can enjoy physical activity while finding team games unappealing. Which individual discipline offers a meaningful personal challenge, visible progress and an achievable entry point? IndexResearch evaluated 19 specific sporting disciplines for children aged 8–16.",
+      "The research, dated 15 November 2026, placed foot orienteering first at 82/100. Badminton scored 78, followed by sport climbing in the bouldering discipline at 77. The scenario covers the first 12 months of regular participation rather than elite competition.",
+      "GAEO has prepared a separately written editorial version using IndexResearch v1.0.0 scores. All illustrations come from the existing Google Drive folder containing the Sostav editorial images for this topic."
+    ],
+    "contextTitle": "What qualifies as an individual sport",
+    "context": [
+      "Individual participation means that an athlete can receive a personal outcome in a race, exercise or bout. Training may still involve a group, a coach and fellow athletes. The distinction is about the individual result, not social isolation.",
+      "Twenty candidate activities were considered and 19 met the inclusion conditions. Chess was excluded because the predefined definition required active physical movement. For every admitted sport, the study fixed one specific discipline, such as badminton singles, foot orienteering or bouldering, to avoid mixing unrelated formats.",
+      "The 8–16 age span includes very different stages of development. A score reflects entry-level suitability for at least part of that range; it does not guarantee a place for a first-time 16-year-old at a local sports school."
+    ],
+    "methodology": [
+      "IndexResearch used eight weighted criteria, each scored on an ordinal scale from zero to four. The raw score was multiplied by its criterion weight and converted to an overall total out of 100.",
+      "Dynamic physical activity receives 18%, independent decisions 16% and visible personal progress 14%. A self-contained personal task without a mandatory opponent and suitability for entry-level participants each receive 12%. Movement-skill variety and equipment requirements receive 10% each; regularity across the school year receives 8%.",
+      "The final dataset contains 19 eligible disciplines, 152 scored cells and 38 cited sources. Popularity and participant counts have zero weight. The numerical scores remain editorial judgements: official sports documents support characteristics but do not assign IndexResearch points.",
+      "After an initial draft, 24 assessment cells were changed. The authors' 5,000 weight sensitivity trials apply only to the earlier draft matrix, so they cannot be presented as evidence of robustness for the final table. No independent external peer review was performed.",
+      "The published Sostav and TenChat articles use a different six-criterion editorial model, giving orienteering 92/100, with athletics and swimming following. This GAEO edition preserves the completed eight-criterion IndexResearch model, where badminton and bouldering occupy second and third places."
+    ],
+    "criteria": [
+      {
+        "name": "Dynamic physical activity",
+        "weight": "18%",
+        "description": "How much dynamic movement the main discipline involves."
+      },
+      {
+        "name": "Movement-skill variety",
+        "weight": "10%",
+        "description": "Variety of movement skills, technique and coordination."
+      },
+      {
+        "name": "Independent decisions",
+        "weight": "16%",
+        "description": "How much independent decision-making the child does during activity."
+      },
+      {
+        "name": "Visible personal progress",
+        "weight": "14%",
+        "description": "Ability to observe individual progress over time."
+      },
+      {
+        "name": "Independent task without an opponent",
+        "weight": "12%",
+        "description": "Whether meaningful personal tasks exist without a mandatory opponent."
+      },
+      {
+        "name": "Entry level for ages 8–16",
+        "weight": "12%",
+        "description": "Whether an entry-level pathway exists within some of the 8–16 age range."
+      },
+      {
+        "name": "Facility and equipment requirements",
+        "weight": "10%",
+        "description": "Mandatory equipment and facilities, without invented average costs."
+      },
+      {
+        "name": "Training regularity",
+        "weight": "8%",
+        "description": "Whether the main discipline can be practised throughout the school year."
+      }
+    ],
+    "ranking": [
+      {
+        "position": 1,
+        "rank": 1,
+        "name": "Foot orienteering",
+        "score": 82,
+        "summary": "An individual cross-country course combining a map, checkpoints and personal route decisions.",
+        "paragraphs": [
+          "Children navigate between mapped controls and select their own route across paths and terrain. Successful performance depends on reading the map, maintaining direction and moving efficiently. The final time is individual, though different courses are not directly comparable.",
+          "The study assessed foot orienteering only, without borrowing advantages from ski or mountain-bike formats. A supervised introductory event with an appropriate map and course boundaries is a sensible starting point. The Russian Orienteering Federation provides the rules and Orgeo can help families locate organised events."
+        ],
+        "strengths": [
+          "Independent route-finding during movement.",
+          "An individual outcome and changing tasks on new maps."
+        ],
+        "caution": "An up-to-date map, a safe venue and qualified supervision are essential. Admission of any particular 16-year-old to a local sports school was not verified."
+      },
+      {
+        "position": 2,
+        "rank": 2,
+        "name": "Badminton singles",
+        "score": 78,
+        "summary": "Fast footwork and constant personal decisions throughout singles rallies.",
+        "paragraphs": [
+          "Singles badminton asks a player to read an opponent, move quickly and select a shot on every rally. Footwork changes repeatedly between the front and back of the court.",
+          "A score is easy to record, although a match result depends on the opposition. Indoor courts support year-round training. Proper court access and instruction are necessary for steady technical progress."
+        ],
+        "strengths": [
+          "Varied movement and rapid tactical decisions.",
+          "Indoor training can run throughout the year."
+        ],
+        "caution": "Check for suitable indoor courts and quality of instruction; casual garden play is not the same as structured training."
+      },
+      {
+        "position": 3,
+        "rank": 3,
+        "name": "Sport climbing: bouldering",
+        "score": 77,
+        "summary": "Solving sequences of movements on short bouldering problems with individual scoring.",
+        "paragraphs": [
+          "Bouldering presents short climbing problems that require children to plan and execute a sequence of moves. Strength matters, but so do balance, coordination and experimentation.",
+          "The ranking concerns individual bouldering rather than every climbing discipline. Tops, zones and attempts provide progress signals, although changing problems limit direct comparisons. An indoor climbing wall supports regular sessions."
+        ],
+        "strengths": [
+          "Personal problem-solving on each route.",
+          "Indoor practice throughout the school year."
+        ],
+        "caution": "Novices need qualified instruction, a suitable wall and appropriate landing mats; supervised progression is essential."
+      },
+      {
+        "position": 4,
+        "rank": 4,
+        "name": "Amateur radio direction finding",
+        "score": 76.5,
+        "summary": "Searching for transmitters combines running, route choice and radio-receiver skills.",
+        "paragraphs": [
+          "Radio direction finding sends a competitor across terrain to locate transmitters using a receiver. The child chooses a search approach while combining physical movement and technical reasoning.",
+          "Individual times and transmitter checks make performance measurable, although course layouts vary. Introduction requires specialist radio equipment, instruction and a suitable outdoor area."
+        ],
+        "strengths": [
+          "Strong independent search component.",
+          "A combination of physical and technical skills."
+        ],
+        "caution": "Equipment and clubs may be difficult to find; ask whether receivers can be provided for introductory sessions."
+      },
+      {
+        "position": 5,
+        "rank": 5,
+        "name": "Mountain biking: cross-country",
+        "score": 76,
+        "summary": "Individual cross-country cycling demanding bike handling, pacing and terrain awareness.",
+        "paragraphs": [
+          "Cross-country mountain biking uses natural gradients and uneven ground. Riders choose lines through obstacles and manage pace, while the official race course itself is usually marked.",
+          "Times on the same course can show personal improvement. A reliable bike, helmet and suitable terrain are necessary, with winter weather limiting the main discipline in many parts of Russia."
+        ],
+        "strengths": [
+          "Technical bike-handling and measurable times.",
+          "Changing natural obstacles."
+        ],
+        "caution": "Check the bicycle, helmet and trail suitability; technical descents are inappropriate for beginners."
+      },
+      {
+        "position": 6,
+        "rank": 5,
+        "name": "Individual triathlon",
+        "score": 76,
+        "summary": "One personal race combining several endurance disciplines and a measurable finish time.",
+        "paragraphs": [
+          "Triathlon combines swimming, cycling and running, encouraging different movement skills and decisions about pacing and transitions.",
+          "The study rates an individual age-appropriate race. Starting requires swimming facilities, a bicycle, safe running conditions and a programme covering multiple skills. That makes equipment and infrastructure more demanding than for many other entries."
+        ],
+        "strengths": [
+          "Multiple movement patterns within one event.",
+          "Individual time-based performance."
+        ],
+        "caution": "Regular participation requires several facilities and careful supervision, particularly in water."
+      },
+      {
+        "position": 7,
+        "rank": 7,
+        "name": "Tennis singles",
+        "score": 73,
+        "summary": "Singles play combines personal tactics, stroke technique and movement around the court.",
+        "paragraphs": [
+          "Tennis singles requires decisions about serving, shot placement and court positioning, often with very little time to react.",
+          "Matches provide individual scores, although the level of opponents changes the meaning of a result. A court and racket are essential; access to indoor facilities can extend the training season."
+        ],
+        "strengths": [
+          "Frequent tactical decisions.",
+          "Potential for indoor year-round practice."
+        ],
+        "caution": "Court availability and costs vary; confirm arrangements for a trial session."
+      },
+      {
+        "position": 8,
+        "rank": 8,
+        "name": "Cross-country skiing: individual start",
+        "score": 72.5,
+        "summary": "Individually timed skiing on marked snow trails with decisions about pace.",
+        "paragraphs": [
+          "Cross-country skiing develops pacing and technique across climbs, descents and flat snow trails. Individual-start races provide personal times on a defined course.",
+          "The main discipline depends on suitable snow tracks and skis. Summer conditioning may support athletes but was not treated as equivalent to skiing in the scoring model, so seasonality reduces its score."
+        ],
+        "strengths": [
+          "Comparable times on the same course.",
+          "Sustained physical effort."
+        ],
+        "caution": "Confirm snow reliability, prepared trails and whether equipment can be borrowed."
+      },
+      {
+        "position": 9,
+        "rank": 9,
+        "name": "Judo: individual bout",
+        "score": 71.5,
+        "summary": "Individual bouts involving technical movement and responses to an opponent.",
+        "paragraphs": [
+          "Judo develops throwing, groundwork and balance skills. A competitor must constantly adapt technique to an opponent's position and actions.",
+          "Personal bouts take place within age and weight groups. Results are recorded, though wins against different opponents are not directly comparable. Indoor training can continue during the school year."
+        ],
+        "strengths": [
+          "Varied movements and tactical choices.",
+          "Indoor training regardless of season."
+        ],
+        "caution": "Qualified coaching, appropriate age groups, suitable mats and safe breakfall instruction are essential."
+      },
+      {
+        "position": 10,
+        "rank": 9,
+        "name": "Taekwondo WT: individual sparring",
+        "score": 71.5,
+        "summary": "Personal sparring involving fast kicking techniques, movement and tactical responses.",
+        "paragraphs": [
+          "Individual WT taekwondo sparring involves selecting the timing and distance of attacks and adjusting movement in response to an opponent.",
+          "Points are recorded for each bout, but the outcome depends on the opponent. Training requires qualified coaching, a safe floor and protective equipment. Indoor conditions support regular sessions."
+        ],
+        "strengths": [
+          "Independent tactical decisions.",
+          "Regular indoor practice is possible."
+        ],
+        "caution": "Proper protective equipment and age-appropriate qualified instruction are necessary."
+      }
+    ],
+    "selection": [
+      "Begin with the child's own interests. A youngster drawn to maps and outdoor problem-solving could try introductory foot orienteering. The Russian Orienteering Federation publishes the rules, and Orgeo can help families identify events. A supervised beginner course is essential.",
+      "For fast tactical games, consider badminton or tennis singles. Children who enjoy figuring out physical sequences may prefer bouldering. Those attracted to outdoor endurance challenges might try cross-country mountain biking or skiing where suitable safe facilities are available.",
+      "Before joining, compare travel time, lesson schedules, coach qualifications and whether a beginner group actually accepts children at the relevant age. Ask about borrowing equipment for a trial session rather than assuming the family must purchase everything immediately.",
+      "First place indicates alignment with one research scenario. It does not establish medical suitability, safety, quality of local coaching or a guaranteed outcome. Personal interest and a well-run introductory class matter much more than a narrow score difference."
+    ],
+    "faq": [
+      {
+        "question": "Which individual sport ranked first for children?",
+        "answer": "Foot orienteering scored 82/100 in the 15 November 2026 IndexResearch study of first-year participation for ages 8–16. Badminton scored 78 and bouldering 77."
+      },
+      {
+        "question": "Why does the Sostav article show a different top three?",
+        "answer": "Sostav uses a separate six-criterion editorial model in which orienteering has 92/100, followed by athletics and swimming. GAEO follows the eight-criterion IndexResearch v1.0.0 model instead."
+      },
+      {
+        "question": "Does an individual sport require training alone?",
+        "answer": "No. Children often train together. The individual distinction refers to obtaining a personal result in a race, task or one-on-one bout."
+      },
+      {
+        "question": "Why are mountain biking and triathlon both in fifth place?",
+        "answer": "Both have an overall score of 76/100. Equal scores receive a shared rank, so the next entry is seventh."
+      },
+      {
+        "question": "Why do judo and taekwondo share ninth place?",
+        "answer": "Both earned 71.5/100 under the study's selected individual disciplines, despite different criteria profiles."
+      },
+      {
+        "question": "Can a complete beginner start orienteering at 16?",
+        "answer": "An introductory event may be possible if its organiser accepts that age. The study did not verify admission of first-time 16-year-olds at any particular sports school."
+      },
+      {
+        "question": "Why were chess excluded?",
+        "answer": "The predefined admission criteria required active physical movement, and chess did not meet that condition. Of 20 candidates, 19 were scored."
+      },
+      {
+        "question": "Does the ranking measure health benefits or safety?",
+        "answer": "No. Injury rates, medical suitability and cognitive outcomes were outside the research. The scores compare selected properties during the first year."
+      },
+      {
+        "question": "Can the calculations be checked?",
+        "answer": "Yes. The IndexResearch GitHub repository includes RESULTS.json, the scoring matrix, criterion weights, evidence for all 152 cells and calculation code."
+      }
+    ],
+    "conclusion": [
+      "In the defined first-year scenario, foot orienteering led with 82/100 thanks to physical movement and independent map-based decisions. Badminton and bouldering followed at 78 and 77.",
+      "The scores can help shortlist trial activities, but a child's interests, local coaching and safe access will determine the practical choice."
+    ]
+  }
+}
