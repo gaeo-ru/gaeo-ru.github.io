@@ -44,6 +44,8 @@ try{
   if(path.startsWith('docs/')||path==='README.md'||path.startsWith('.github/ISSUE_TEMPLATE/'))continue;
   if(/^src\/legacy\/pages\/.+\.html$/.test(path)){
    const route=fromSourcePath(path);
+   // The error template has no ordinary canonical and affects global fallback handling.
+   if(route==='/404.html'){markFull('Special 404 template changed');continue;}
    pages.add(route);
    // A page can contain an industry-specific integration or a fragile mobile table.
    // These dependencies matter even when the changed source file is local.
