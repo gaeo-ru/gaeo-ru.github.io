@@ -10,7 +10,7 @@ import { TERM_DEFINITIONS } from '../public/assets/term-hints.js';
 const root = resolve('dist');
 const evidence = resolve('visual-terminology');
 const routes = [
-  '/', '/services/', '/services/website-development/', '/services/geo-audit/',
+  '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
   '/en/', '/en/services/', '/en/strategies/measurement/'
@@ -129,21 +129,40 @@ try {
       controls: element.getAttribute('aria-controls'),
       nested: Boolean(element.parentElement.closest('a[href],button,summary,label,[role="button"],[role="link"]')),
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
-      labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
+      linkHelp: element.matches('.gaeo-term-link-help'),
+      labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
     current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
-      assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
+      assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
       assert.equal(control.controls, 'gaeo-term-tooltip');
       assert.equal(control.description, TERM_DEFINITIONS[lang][control.term], 'Accessible definition ' + control.term);
       if (control.labelStyle !== null) assert.equal(control.labelStyle, 'dotted', 'Dotted underline ' + control.term);
     }
-    assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'Links keep their original markup without added term controls');
+    assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'No controls nested inside anchors');
+    assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question marks in navigation');
+    if (route === '/cases/' || route === '/en/cases/') {
+      const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
+      const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
+      assert.equal(await title.count(), 1, 'MethodLab title link exists');
+      assert.equal(await icon.count(), 1, 'One independent ? follows the unexpanded BMR link');
+      assert.equal(await icon.getAttribute('data-gaeo-term'), 'BMR');
+      assert.equal(await icon.textContent(), '?');
+      assert.equal(await title.locator('button').count(), 0, 'Link text cannot contain a button');
+      assert.equal(await icon.evaluate(el => getComputedStyle(el).display), 'inline-flex');
+    }
     const before = await dimensions(page);
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
     if (route === '/') assert.ok(current.controlCounts.BMR > 0, 'Homepage needs an explanation for its BMR metric');
+    if (route === '/' && viewport.width === 1440) {
+      const dotted = page.locator('.hero-proof [data-gaeo-term="AIStart"]');
+      await dotted.hover();
+      assert.ok(await page.locator('#gaeo-term-tooltip').isVisible(), 'Desktop history tooltip appears on mouse hover');
+      await page.mouse.move(0, 0);
+      assert.equal(await page.locator('#gaeo-term-tooltip').isVisible(), false, 'Desktop tooltip disappears as soon as the cursor leaves');
+    }
     if (route === '/' || route === '/en/') {
       assert.equal(current.controlCounts.AIStart, 1, 'History hint exists exactly once on ' + route);
       const proof = await page.locator('.hero-proof').innerText();
