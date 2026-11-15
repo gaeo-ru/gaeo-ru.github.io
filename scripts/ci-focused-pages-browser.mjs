@@ -67,6 +67,7 @@ try{
     }
    }
    assert.deepEqual(errors,[],'Browser errors on '+route);
+   await page.evaluate(()=>scrollTo(0,0));
    const safe=(route.replace(/^\/|\/$/g,'').replaceAll('/','-')||'home');
    await page.screenshot({
     path:'visual-ci-focused/'+safe+'-'+width+'.png',
