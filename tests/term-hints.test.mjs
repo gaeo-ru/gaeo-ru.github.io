@@ -133,3 +133,28 @@ test('BrandFound editorial mentions become static referral links, with metadata 
   assert.ok(linked.includes('<p>https://brandfound.ai/</p>'));
   assert.equal(injectTermHintAssets(linked), injectTermHintAssets(injectTermHintAssets(linked)));
 });
+
+
+test('approved Russian glossary favors longest abbreviations and avoids excluded words', () => {
+  assert.deepEqual(findTermMatches('ТН ВЭД/ОКПД2, ВЭД, ГИС ЖКХ, ГИС МТ, ГИС, АСУ ТП, PHP-FPM')
+    .map(hit => hit.term), ['ТН ВЭД', 'ОКПД2', 'ВЭД', 'ГИС ЖКХ', 'ГИС МТ', 'ГИС', 'АСУ ТП', 'PHP-FPM']);
+  assert.deepEqual(findTermMatches('ВМК и ВМиК').map(hit => hit.term), ['ВМК', 'ВМК']);
+  assert.deepEqual(findTermMatches('FBO/FBS, FBL, 3PL').map(hit => hit.term), ['FBO', 'FBS', 'FBL', '3PL']);
+  assert.deepEqual(findTermMatches('ФИО, ИНН, ООО, РФ, ЖК, МГУ, ИИ').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('ТН ВЭД (товарная номенклатура внешнеэкономической деятельности)').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches("FBL (Fulfillment by L'Étoile)").map(hit => hit.term), []);
+  assert.equal(TERM_DEFINITIONS.ru.FBL, "FBL (Fulfillment by L'Étoile) - продажи со складов ЛЭТУАЛЬ");
+  for (const term of ['ЦА', 'ЛПР', 'КАСКО', 'МП', 'ТО', 'ТТК', 'МО', 'МПГУ', 'ВМК', 'МДФ', 'УФ'])
+    assert.ok(TERM_DEFINITIONS.ru[term], 'Missing approved special term: ' + term);
+});
+test('ambiguous RU terms are context-sensitive; extensions do not appear in English', () => {
+  assert.deepEqual(findTermMatches('SPA, сауна, массаж').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('SPA в серверном рендеринге').map(hit => hit.term), ['SPA']);
+  assert.deepEqual(findTermMatches('South American Tours (SAT)').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('FAT/SAT при приемке оборудования').map(hit => hit.term), ['FAT', 'SAT']);
+  assert.deepEqual(findTermMatches('Общий договор ТО не подписан').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('Плановое ТО автомобиля').map(hit => hit.term), ['ТО']);
+  assert.deepEqual(findTermMatches('МП с товарами маркетплейса').map(hit => hit.term), ['МП']);
+  assert.deepEqual(findTermMatches('Новая ГИС ЖКХ и BMR', { language: 'en' }).map(hit => hit.term), ['BMR']);
+  assert.deepEqual(findTermMatches('ВМиК', { language: 'en' }), []);
+});
