@@ -27,27 +27,36 @@
   outline-offset: 3px;
   border-radius: 3px;
 }
+.gaeo-term-trigger--phrase {
+  white-space: normal;
+}
+/* Use inline flow so the help follows the last line, not the first line. */
 .gaeo-term-link-inline {
-  display: inline-flex;
+  display: inline;
   box-sizing: border-box;
-  align-items: flex-start;
-  column-gap: 6px;
-  max-width: 100%;
-  min-width: 0;
   vertical-align: baseline;
+}
+/* Reserve room at the end of the anchor for one or more help controls. */
+.gaeo-term-link-inline:not(.gaeo-term-link-inline--block) > a {
+  padding-inline-end: var(--gaeo-term-help-space, 26px);
+  margin-inline-end: calc(0px - var(--gaeo-term-help-space, 26px));
 }
 .gaeo-term-link-inline--block {
   display: flex;
+  align-items: flex-end;
   width: 100%;
+  min-width: 0;
 }
-.gaeo-term-link-inline > a {
-  flex: 0 1 auto;
+.gaeo-term-link-inline--block > a {
+  flex: 1 1 auto;
   min-width: 0;
 }
 .gaeo-term-link-inline > .gaeo-term-link-help.gaeo-term-link-help {
+  position: relative;
+  z-index: 1;
   flex: 0 0 18px;
-  margin: .12em 0 0;
-  vertical-align: top;
+  margin: 0 0 0 6px;
+  vertical-align: -.12em;
 }
 .gaeo-term-link-help.gaeo-term-link-help {
   all: unset;

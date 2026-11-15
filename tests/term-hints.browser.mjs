@@ -17,12 +17,14 @@ try {
   page.on('pageerror', error => errors.push(String(error)));
   await page.setContent(`<!doctype html><html lang="ru"><head>
     <title>GEO, AEO, BMR, SoV</title><meta name="description" content="GEO test">
-    <style>body{margin:16px;font:16px/1.6 Arial,sans-serif}h1{font-size:48px;line-height:1.1}a.card{display:block}.scroll-table{overflow:auto;max-width:100%}#case-heading{max-width:260px;font-size:26px;line-height:1.2}</style>
+    <style>body{margin:16px;font:16px/1.6 Arial,sans-serif}h1{font-size:48px;line-height:1.1}a.card{display:block}.scroll-table{overflow:auto;max-width:100%}#case-heading{max-width:260px;font-size:26px;line-height:1.2}#orphan-period{max-width:280px;font-size:26px;line-height:1.2}</style>
     <script type="application/ld+json">{"name":"GEO","metric":"BMR"}</script>
   </head><body>
     <header><nav><a id="nav" href="#destination">GEO</a></nav></header>
     <h1 id="heading">Сравнение <span>GEO</span> и SEO</h1>
     <p id="metrics">Измеряем BMR и SoV.</p>
+    <p id="full-metrics">Измеряем Brand Mention Rate и Share of Voice.</p>
+    <p id="full-expanded">Brand Mention Rate (BMR), Share of Voice (SoV).</p>
     <p id="aeo">AEO помогает подготовить контент.</p>
     <p id="seo">SEO помогает оптимизировать сайт.</p>
     <p id="seo-expanded">SEO (Search Engine Optimization) помогает бизнесу.</p>
@@ -34,6 +36,8 @@ try {
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
     <main><p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR, SoV, WMS и фулфилмент</a></p>
     <h3 id="case-heading"><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3>
+    <p id="orphan-period"><a href="#case">Как измерять BMR, Share of Voice и качество рекомендаций</a>.</p>
+    <p id="punctuation-context"><a href="#case">Как измерять BMR</a>. Следом идет пояснение.</p>
     <div class="tariff-actions"><a class="button" id="tariff-cta" href="#destination">GEO promotion</a></div>
     <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
     <p id="expanded-seo-link"><a href="#expanded">SEO (Search Engine Optimization)</a></p>
@@ -64,6 +68,12 @@ try {
   assert.equal(await page.locator('#expanded-seo-link .gaeo-term-link-help').count(), 0);
   assert.equal(await page.locator('#seo-linked .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#metric-cell [data-gaeo-term="BMR"]').count(), 1);
+  assert.equal(await page.locator('#full-metrics [data-gaeo-term="BMR"]').count(), 1);
+  assert.equal(await page.locator('#full-metrics [data-gaeo-term="SoV"]').count(), 1);
+  assert.equal(await page.locator('#full-expanded [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#orphan-period .gaeo-term-link-help').count(), 2);
+  assert.ok(!(await page.locator('#orphan-period').textContent()).trim().endsWith('.'), 'No orphaned final period after help icons');
+  assert.ok((await page.locator('#punctuation-context').textContent()).includes('. Следом идет пояснение.'), 'Sentence punctuation remains when prose continues');
   assert.equal(await page.locator('#compound [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="AEO"]').count(), 1);
   assert.equal(await page.locator('#aeo [data-gaeo-term="AEO"]').count(), 1);
@@ -90,14 +100,18 @@ try {
   assert.equal(headingStyle.font, headingStyle.parent, 'Heading type size is inherited');
   assert.equal(headingStyle.label, 'dotted');
   const geometry = await page.locator('#case-heading .gaeo-term-link-inline').evaluate(group => {
-    const a = group.querySelector('a').getBoundingClientRect();
-    const icon = group.querySelector('.gaeo-term-link-help').getBoundingClientRect();
-    const lh = parseFloat(getComputedStyle(group.querySelector('a')).lineHeight);
-    return { top: a.top, height: a.height, iconTop: icon.top, iconBottom: icon.bottom, lh };
+    const anchor = group.querySelector('a'), lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+    const last = lines.at(-1), icon = group.querySelector('.gaeo-term-link-help').getBoundingClientRect();
+    return { count: lines.length, lastTop: last.top, lastBottom: last.bottom, iconTop: icon.top, iconBottom: icon.bottom };
   });
-  assert.ok(geometry.height > geometry.lh * 1.5, 'Long linked heading wraps onto multiple lines');
-  assert.ok(geometry.iconTop >= geometry.top - 1 && geometry.iconBottom <= geometry.top + geometry.lh + 5,
-    'Question mark aligns with FIRST line: ' + JSON.stringify(geometry));
+  assert.ok(geometry.count >= 2, 'Long linked heading wraps onto multiple lines');
+  assert.ok(geometry.iconTop >= geometry.lastTop - 8 && geometry.iconBottom <= geometry.lastBottom + 10,
+    'Question mark aligns with LAST line: ' + JSON.stringify(geometry));
+  const secondDefinition = page.locator('#orphan-period .gaeo-term-link-help[data-gaeo-term="SoV"]');
+  await secondDefinition.click();
+  assert.equal(await page.locator('#gaeo-term-tooltip').textContent(),
+    'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети');
+  await page.keyboard.press('Escape');
 
   // Only the dotted acronym opens the exact definition; no icon is inserted.
   const bmr = page.locator('#metrics [data-gaeo-term="BMR"]');
@@ -256,7 +270,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: first-line help circles, SEO glossary, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
+  console.log(`Term hint browser QA passed: last-line help circles, full metric names, punctuation, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
 } finally {
   await browser.close();
 }

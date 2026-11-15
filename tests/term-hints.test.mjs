@@ -10,6 +10,9 @@ test('standalone terms in normal copy, headings and metric labels', () => {
   assert.deepEqual(findTermMatches('GEO/AEO-эксперт, BMR/SoV').map(match => match.term), ['GEO', 'AEO', 'BMR', 'SoV']);
   assert.deepEqual(findTermMatches('SEO/GEO-проверки, SEO для бизнеса').map(hit => hit.term), ['SEO','GEO','SEO']);
   assert.deepEqual(findTermMatches('SEOLOG mySEO SEO2'), []);
+  assert.deepEqual(findTermMatches('Brand Mention Rate и Share of Voice').map(hit => hit.term), ['BMR', 'SoV']);
+  assert.deepEqual(findTermMatches('brand mention rate; share of voice').map(hit => hit.term), ['BMR', 'SoV']);
+  assert.deepEqual(findTermMatches('Brand Mention Rates, Share of Voices, myBrand Mention Rate'), []);
   assert.deepEqual(findTermMatches('WMS/TMS, фулфилмент, Фулфилмента, фулфилментом, фулфилменты, фулфилментов и Fulfillment').map(match => match.term),
     ['WMS', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment']);
   assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
@@ -27,7 +30,10 @@ test('adjacent expansions need no duplicate help', () => {
     'SEO (Search Engine Optimization)', 'Search Engine Optimization (SEO)', 'SEO — продвижение сайта в поисковых системах',
     'Answer Engine Optimization (AEO)', 'AEO - продвижение контента в источники ответов нейросетей',
     'BMR — Brand Mention Rate',
-    'Share of Voice (SoV)', 'продвижение в нейросетях (GEO)',
+    'Share of Voice (SoV)', 'SoV — Share of Voice', 'Brand Mention Rate (BMR)',
+    'Brand Mention Rate — доля упоминаний бренда в ответах нейросетей',
+    'Share of Voice — доля упоминаний бренда среди всех брендов',
+    'продвижение в нейросетях (GEO)',
     'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
     'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
     'WMS — система управления складом.', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
