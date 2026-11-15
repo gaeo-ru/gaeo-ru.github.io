@@ -41,7 +41,7 @@ try{
    assert.equal(await page.locator('h1').count(),1,'Missing/duplicate H1: '+route);
    // Specialization batches already run static QA over all 100 bilingual pairs.
    // Here only the edited pairs receive actual responsive/browser checks.
-   if(await page.locator('main .industry-specialization').count()){
+   if(await page.locator('main .industry-specialization__hero').count()){
     assert.equal(await page.locator('main details.faq-item').count(),5,'Specialization FAQ '+route);
     assert.equal(await page.locator('main .industry-scenario-table tbody tr').count(),4,'Specialization buyer intents '+route);
     assert.equal(await page.locator('main .industry-pricing-section [data-plan]').count(),3,'Specialization pricing '+route);
