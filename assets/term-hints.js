@@ -2,6 +2,7 @@
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
+    SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
@@ -11,6 +12,7 @@ export const TERM_DEFINITIONS = Object.freeze({
   }),
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
+    SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
@@ -23,6 +25,7 @@ export const TERM_DEFINITIONS = Object.freeze({
 export const TERM_HINT_DURATION = 5000;
 const FULL_NAMES = {
   GEO: 'Generative\\s+Engine\\s+Optimization',
+  SEO: 'Search\\s+Engine\\s+Optimization',
   AEO: 'Answer\\s+Engine\\s+Optimization',
   BMR: 'Brand\\s+Mention\\s+Rate',
   SoV: 'Share\\s+of\\s+Voice',
@@ -30,7 +33,7 @@ const FULL_NAMES = {
   Fulfillment: 'Fulfillment'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -50,6 +53,7 @@ function alreadyExplained(context, start, end, term) {
   const meaning = term === 'GEO'
     ? 'продвижение(?:\\s+(?:бизнеса|бренда|компании))?\\s+в\\s+(?:нейросетях|ответах(?:\\s+нейросетей)?|рекомендациях(?:\\s+нейросетей)?)'
     : term === 'AEO' ? 'продвижение\\s+контента\\s+в\\s+источники\\s+ответов\\s+нейросетей'
+    : term === 'SEO' ? 'продвижение\\s+сайта\\s+в\\s+поисковых\\s+системах'
     : term === 'BMR' ? 'доля\\s+упоминаний(?:\\s+бренда)?(?:\\s+в\\s+ответах(?:\\s+нейросетей)?)?'
       : term === 'SoV' ? 'доля\\s+упоминаний\\s+бренда\\s+среди\\s+всех\\s+брендов'
       : term === 'WMS' ? 'система\\s+управления\\s+складом'
@@ -82,6 +86,7 @@ const EXCLUDED = [
 ].join(',');
 const INTERACTIVE = 'a[href],button,summary,label,[role="button"],[role="link"]';
 const LINK_HELP_SELECTOR = '[data-gaeo-term-link-help]';
+const LINK_WRAPPER_SELECTOR = '.gaeo-term-link-inline';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
 
 export function installTermHints(doc = document) {
@@ -140,31 +145,41 @@ export function installTermHints(doc = document) {
     return button;
   }
 
-  // Explain terms inside links with a separate icon, preserving the link itself.
+  // Wrap the original anchor with its independent help icons so they align
+  // with the FIRST line of a multi-line link, without changing the href.
   function enhanceLinks(root) {
     const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
     for (const link of links) {
-      if (!link.isConnected || !link.closest('main,article') ||
-          link.closest('header,footer,nav,aside,[data-term-hints="off"],[contenteditable="true"]') ||
-          link.closest(EXCLUDED) ||
-          link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') ||
-          link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]')) continue;
-      const terms = [...new Set(findTermMatches(link.textContent).map(hit => hit.term))];
-      const old = [];
-      for (let next = link.nextSibling; next?.nodeType === 1 && next.matches?.(LINK_HELP_SELECTOR); next = next.nextSibling) {
-        old.push(next);
+      if (!link.isConnected) continue;
+      let wrapper = link.parentElement?.matches(LINK_WRAPPER_SELECTOR) ? link.parentElement : null;
+      const allowed = link.closest('main,article') &&
+        !link.closest('header,footer,nav,aside,[data-term-hints="off"],[contenteditable="true"]') &&
+        !link.closest(EXCLUDED) &&
+        !link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') &&
+        !link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]');
+      const terms = allowed ? [...new Set(findTermMatches(link.textContent).map(hit => hit.term))] : [];
+      if (!terms.length) {
+        if (wrapper) {
+          if (active && wrapper.contains(active)) hide();
+          wrapper.replaceWith(link);
+        }
+        continue;
       }
-      if (terms.length === old.length && terms.every((term, i) => term === old[i].dataset.gaeoTerm)) continue;
-      for (const button of old) {
+      if (!wrapper) {
+        const block = /^(?:block|flex|grid|table|list-item)$/.test(win.getComputedStyle(link).display);
+        wrapper = doc.createElement('span');
+        wrapper.className = 'gaeo-term-link-inline';
+        if (block) wrapper.classList.add('gaeo-term-link-inline--block');
+        link.replaceWith(wrapper);
+        wrapper.append(link);
+      }
+      const existing = [...wrapper.children].filter(child => child.matches?.(LINK_HELP_SELECTOR));
+      if (terms.length === existing.length && terms.every((term, i) => term === existing[i].dataset.gaeoTerm)) continue;
+      for (const button of existing) {
         if (button === active) hide();
         button.remove();
       }
-      let previous = link;
-      for (const term of terms) {
-        const button = makeLinkHelp(term);
-        previous.after(button);
-        previous = button;
-      }
+      for (const term of terms) wrapper.append(makeLinkHelp(term));
     }
   }
 
@@ -201,7 +216,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
