@@ -26,10 +26,10 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '3dafe6b99e446b4034348d3cb515ed0153e6d136';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || 'a6b652e5e904f42fd39c65cd200121312ae22310';
 const evidence = resolve('visual-terminology-public');
 const routes = [
-  '/', '/services/', '/services/website-development/', '/services/geo-audit/',
+  '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
   '/en/', '/en/services/', '/en/strategies/measurement/'
@@ -140,21 +140,47 @@ try {
       controls: element.getAttribute('aria-controls'),
       nested: Boolean(element.parentElement.closest('a[href],button,summary,label,[role="button"],[role="link"]')),
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
-      labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
+      linkHelp: element.matches('.gaeo-term-link-help'),
+      labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
     current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
-      assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
+      assert.ok(control.button && control.name && !control.mark, 'Accessible inline term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
       assert.equal(control.controls, 'gaeo-term-tooltip');
       assert.equal(control.description, TERM_DEFINITIONS[lang][control.term], 'Accessible definition ' + control.term);
       if (control.labelStyle !== null) assert.equal(control.labelStyle, 'dotted', 'Dotted underline ' + control.term);
     }
-    assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'Links keep their original markup without added term controls');
+    assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'No nested controls in hyperlinks');
+    assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question icon in navigation');
+    if (route === '/cases/' || route === '/en/cases/') {
+      const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
+      const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
+      assert.equal(await title.count(), 1, 'MethodLab linked heading exists');
+      assert.equal(await icon.count(), 1, 'BMR in MethodLab link has exactly one help button');
+      assert.equal(await icon.getAttribute('data-gaeo-term'), 'BMR');
+      assert.equal(await icon.textContent(), '?');
+      assert.equal(await title.locator('button').count(), 0, 'Link markup remains unchanged');
+      if ([1440, 390].includes(viewport.width)) {
+        await icon.scrollIntoViewIfNeeded();
+        await screenshot(page, current, 'cases-BMR-link-help');
+      }
+      await icon.hover();
+      assert.equal(await page.locator('#gaeo-term-tooltip').textContent(), TERM_DEFINITIONS[lang].BMR);
+      await page.mouse.move(0, 0);
+      assert.equal(await page.locator('#gaeo-term-tooltip').isVisible(), false, 'Question icon tooltip hides on mouseout');
+    }
     const before = await dimensions(page);
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
     if (route === '/') assert.ok(current.controlCounts.BMR > 0, 'Homepage needs an explanation for its BMR metric');
+    if (route === '/' && viewport.width === 1440) {
+      const year = page.locator('.hero-proof [data-gaeo-term="AIStart"]');
+      await year.hover();
+      assert.ok(await page.locator('#gaeo-term-tooltip').isVisible(), 'History hint appears on desktop hover');
+      await page.mouse.move(0, 0);
+      assert.equal(await page.locator('#gaeo-term-tooltip').isVisible(), false, 'History hint immediately closes after moving cursor away');
+    }
     if (route === '/' || route === '/en/') {
       assert.equal(current.controlCounts.AIStart, 1, 'Exactly one contextual history tooltip ' + route);
       const heroText = await page.locator('.hero-proof').innerText();
