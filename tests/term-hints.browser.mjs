@@ -101,7 +101,7 @@ try {
     elements => elements.map(element => element.dataset.gaeoTerm)
   ), ['SchemaOrg', 'Interlinking', 'ContentDistribution', 'Intent', 'Prompt']);
   assert.equal(await page.locator('#schema-context [data-gaeo-term]').count(), 0);
-  assert.equal(await page.locator('#schema-source > a').getAttribute('href'), 'https://schema.org/LegalService');
+  assert.equal(await page.locator('#schema-source a').getAttribute('href'), 'https://schema.org/LegalService');
   assert.equal(await page.locator('#schema-marketing [data-gaeo-term="SchemaOrg"] .gaeo-term-label').evaluate(
     element => getComputedStyle(element).textDecorationStyle
   ), 'dotted');
