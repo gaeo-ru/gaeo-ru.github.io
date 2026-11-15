@@ -24,6 +24,7 @@ try {
     <h1 id="heading">Сравнение <span>GEO</span> и SEO</h1>
     <p id="metrics">Измеряем BMR и SoV.</p>
     <p id="full-metrics">Измеряем Brand Mention Rate и Share of Voice.</p>
+    <h2 id="large-full-metric" style="max-width:180px;font:40px/1.15 Arial,sans-serif">Brand Mention Rate</h2>
     <p id="full-expanded">Brand Mention Rate (BMR), Share of Voice (SoV).</p>
     <p id="aeo">AEO помогает подготовить контент.</p>
     <p id="seo">SEO помогает оптимизировать сайт.</p>
@@ -69,6 +70,12 @@ try {
   assert.equal(await page.locator('#seo-linked .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#metric-cell [data-gaeo-term="BMR"]').count(), 1);
   assert.equal(await page.locator('#full-metrics [data-gaeo-term="BMR"]').count(), 1);
+  const phraseBounds = await page.locator('#large-full-metric .gaeo-term-label').evaluate(label => {
+    const region = label.closest('h2').getBoundingClientRect();
+    const fragments = [...label.getClientRects()].filter(rect => rect.width > 0);
+    return { width: fragments.length, within: fragments.every(rect => rect.left >= region.left - 1 && rect.right <= region.right + 1) };
+  });
+  assert.ok(phraseBounds.width >= 2 && phraseBounds.within, 'Full metric name wraps inside a narrow heading');
   assert.equal(await page.locator('#full-metrics [data-gaeo-term="SoV"]').count(), 1);
   assert.equal(await page.locator('#full-expanded [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#orphan-period .gaeo-term-link-help').count(), 2);
