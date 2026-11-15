@@ -15,7 +15,7 @@ export const categories = [
   {id:'cases', ru:'Публичные кейсы', en:'Public case studies',
     intro:{ru:'Опубликованные кейсы GAEO.ru и клиентских проектов: исходная задача, выполненная работа, результаты и ограничения замеров. Ссылки ведут к полным разборам и внешним публикациям.', en:'Published GAEO.ru and client case studies covering the starting point, work performed, results and measurement limitations. Follow the links to full reports and external publications.'}},
   {id:'articles', ru:'Авторские публикации и исследования', en:'Authored articles and research',
-    intro:{ru:'Статьи Алексея Яковлева и исследования с его участием о продвижении в нейросетях, источниках ответов, e-commerce и оценке результатов. У исследований раскрыты данные и связь с GAEO.', en:'Articles by Alexey Yakovlev and research involving him on AI visibility, answer sources, e-commerce and measurement. Research entries disclose their data and relationship with GAEO.'}}
+    intro:{ru:'Статьи Алексея Яковлева и исследования о продвижении в нейросетях, источниках ответов, e-commerce и оценке результатов. Ссылки ведут к полным публикациям, методикам и данным.', en:'Articles by Alexey Yakovlev and research on AI visibility, answer sources, e-commerce and measurement. Links lead to original publications, methodology and source data.'}}
 ];
 
 export const publicationRoute = (lang, category='') => `${lang==='en'?'/en':''}/publications/${category?category+'/':''}`;

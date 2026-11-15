@@ -42,6 +42,11 @@ for(const lang of ['ru','en']){
     total+=expected.length;
   }
   assert.equal(total,publications.items.length,'Exactly one category per entry');
+  // Do not reproduce research affiliations or funding notices from external studies on GAEO.ru.
+  for(const path of [hubPath,publicationRoute(lang,'articles')]){
+    assert.doesNotMatch(read(path),/(соосновател|оплатил (?:замер|исходный)|организовала и оплатила|связь с GAEO|связь с участником|связь раскрыта|с его участием|co-founded|co-founder|GAEO funded|GAEO organized|GAEO’s funding|relationship (?:with GAEO|is disclosed)|research involving him)/i,'No research affiliation or funding notices on '+path);
+  }
+
   const reviewHtml=read(reviewsRoute(lang)),reviewGraph=graph(reviewHtml);
   const reviewNodes=reviewGraph.filter(x=>x['@type']==='Review');
   assert.equal(reviewNodes.length,reviewData.items.length,'One Review node per visible card');
