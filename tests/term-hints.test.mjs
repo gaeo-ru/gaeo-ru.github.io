@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { findTermMatches, TERM_DEFINITIONS, TERM_HINT_DURATION } from '../public/assets/term-hints.js';
-import { injectTermHintAssets } from '../src/lib/term-hint-assets.mjs';
+import { injectTermHintAssets, linkBrandFoundMentions } from '../src/lib/term-hint-assets.mjs';
 
 test('standalone terms in normal copy, headings and metric labels', () => {
   const source = 'GEO-продвижение: BMR 22%, SoV 15%. SEO/AEO и GAEO.ru. SOV';
@@ -57,6 +57,10 @@ test('exact user wording and the requested display duration are retained', () =>
   assert.equal(TERM_DEFINITIONS.ru.AIStart, 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
   assert.equal(TERM_DEFINITIONS.en.AIStart, "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks.");
   assert.deepEqual(findTermMatches('С 1997 года изучаю ИИ, с 2008 года занимаюсь SEO').map(hit => hit.term), ['SEO'], 'The year is contextual; SEO receives a tooltip');
+  assert.equal(TERM_DEFINITIONS.ru.BrandFound, 'BrandFound - сервис мониторинга ответов нейросетей');
+  assert.equal(TERM_DEFINITIONS.en.BrandFound, 'BrandFound - a service for monitoring AI responses');
+  assert.deepEqual(findTermMatches('BrandFound и Brandfound').map(match => match.term), ['BrandFound', 'BrandFound']);
+  assert.deepEqual(findTermMatches('https://brandfound.ai/ и myBrandFound'), []);
   for (const definition of Object.values(TERM_DEFINITIONS.en)) assert.doesNotMatch(definition, /[А-Яа-я]/);
 });
 
@@ -69,4 +73,18 @@ test('global asset injection is idempotent and leaves metadata/content intact', 
   assert.ok(enhanced.includes('<title>GEO & BMR</title>'));
   assert.ok(enhanced.includes('<script type="application/ld+json">{"name":"GEO"}</script>'));
   assert.ok(enhanced.includes('<h1>BMR</h1>'));
+});
+
+test('BrandFound editorial mentions become static referral links, with metadata and existing anchors preserved', () => {
+  const source = '<html><head><title>BrandFound</title><meta content="BrandFound"><script type="application/ld+json">{"name":"BrandFound"}</script></head><body><header>BrandFound</header><main><p>Выгрузка BrandFound и brandfound.</p><p>BrandFound - сервис мониторинга ответов нейросетей.</p><p><a href="/other/">BrandFound</a></p><p><a href="https://app.brandfound.ai/">BrandFound</a></p><p>https://brandfound.ai/</p><pre>BrandFound</pre></main></body></html>';
+  const linked = linkBrandFoundMentions(source);
+  assert.equal(linkBrandFoundMentions(linked), linked);
+  assert.equal((linked.match(/href="https:\/\/brandfound\.ai\/\?ref=ZML17L"/g) || []).length, 4);
+  assert.ok(linked.includes('<title>BrandFound</title>'));
+  assert.ok(linked.includes('<header>BrandFound</header>'));
+  assert.ok(linked.includes('<a href="/other/">BrandFound</a>'));
+  assert.ok(!linked.includes('href="https://app.brandfound.ai/"'), 'Old login homepage link is upgraded');
+  assert.ok(linked.includes('<pre>BrandFound</pre>'));
+  assert.ok(linked.includes('<p>https://brandfound.ai/</p>'));
+  assert.equal(injectTermHintAssets(linked), injectTermHintAssets(injectTermHintAssets(linked)));
 });

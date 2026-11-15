@@ -12,6 +12,7 @@ const evidence = resolve('visual-terminology');
 const routes = [
   '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
+  '/cases/methodlab-rost-neyrovidimosti-19-52-procenta/', '/en/cases/methodlab-ai-visibility-growth/',
   '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
   '/en/', '/en/services/', '/en/strategies/measurement/'
 ];
@@ -132,7 +133,7 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -164,6 +165,22 @@ try {
       assert.ok(geometry.circleTop >= geometry.top - 1 &&
         geometry.circleBottom <= geometry.top + geometry.lineHeight + 5,
         'Circle must align with first line of BMR link: ' + JSON.stringify(geometry));
+    }
+    if (viewport.width <= 390) {
+      const mobileLanguages = page.locator('#mobileMenu > .mobile-langs');
+      assert.equal(await mobileLanguages.count(), 1, 'RU/EN language switch is the last mobile menu item ' + route);
+      assert.equal(await page.locator('#mobileMenu > :last-child').getAttribute('class'), 'mobile-langs');
+      for (const code of ['ru', 'en']) {
+        const mobile = await mobileLanguages.locator('.lang-' + code).getAttribute('href');
+        const desktop = await page.locator('#desktopMenu .langs .lang-' + code).getAttribute('href');
+        assert.equal(mobile, desktop, 'Mobile language link must use the correct equivalent page ' + route + ' ' + code);
+      }
+    }
+    if (route.includes('/cases/methodlab-')) {
+      const brandFoundLinks = page.locator('main a[href="https://brandfound.ai/?ref=ZML17L"]');
+      assert.ok(await brandFoundLinks.count() >= 1, 'MethodLab must link BrandFound to personal referral ' + route);
+      assert.ok(await page.locator('main .gaeo-term-link-help[data-gaeo-term="BrandFound"]').count() >= 1,
+        'MethodLab must explain BrandFound without changing its linked text ' + route);
     }
     const before = await dimensions(page);
     current.documentWidth = before.document;
@@ -206,7 +223,7 @@ try {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
+    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'BrandFound', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
