@@ -358,6 +358,9 @@ const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
 const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+// Russian spellings of GEO in editorial headings, without confusing geographic terms.
+const RU_GEO_TERMS = /(?<![\p{L}\p{N}_])(?:гео[-‐‑–](?:продвижени|специалист|эксперт|аудит|агентств|консультант|оптимизаци)[\p{L}]*|геопродвижени[\p{L}]*|геоспециалист[\p{L}]*|гео(?![-‐‑–]))(?![\p{L}\p{N}_])/giu;
+const RU_GEO_QUICK_TERMS = new RegExp(RU_GEO_TERMS.source, 'iu');
 const RU_WORD_QUICK_TERMS = new RegExp(RU_WORD_TERMS.source, 'iu');
 const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
 const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
@@ -424,7 +427,9 @@ function alreadyExplained(context, start, end, term, spelling) {
       : term === 'Ecommerce' ? 'электронная\\s+коммерция'
       : term === 'STM' ? 'собственная\\s+торговая\\s+марка'
       : 'комплекс\\s+логистических\\s+услуг';
-  return new RegExp('^\\s*[(:—–-]\\s*(?:это\\s+)?' + meaning, 'i').test(after) ||
+  // A tight hyphen in GEO-продвижение joins a word; it does not introduce a definition.
+  // Keep suppressing a duplicate hint for a colon, parenthesis, or explanatory dash.
+  return new RegExp('^\\s*(?:(?:[(:—–])\\s*|-(?=\\s)\\s+)(?:это\\s+)?' + meaning, 'i').test(after) ||
     new RegExp(meaning + '\\s*\\(\\s*$', 'i').test(before);
 }
 
@@ -432,7 +437,7 @@ function alreadyExplained(context, start, end, term, spelling) {
 export function findTermMatches(text, { context = text, offset = 0, language = 'ru' } = {}) {
   const matches = [];
   const candidates = [...text.matchAll(TERMS)];
-  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS), ...text.matchAll(RU_WORD_TERMS));
+  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS), ...text.matchAll(RU_WORD_TERMS), ...text.matchAll(RU_GEO_TERMS));
   candidates.sort((a, b) => a.index - b.index || b[0].length - a[0].length);
   let consumedUntil = -1;
   for (const match of candidates) {
@@ -449,6 +454,7 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^фид/iu.test(value) ? 'Feed'
       : /^кейс/iu.test(value) ? 'CaseStudy'
       : /^контент/iu.test(value) ? 'Content'
+      : /^гео/iu.test(value) ? 'GEO'
       : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'
@@ -686,7 +692,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (isProtectedInteractive(node.parentElement)) continue;
       const text = node.data;
-      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && (EXTRA_QUICK_TERMS.test(text) || RU_WORD_QUICK_TERMS.test(text)))) continue;
+      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && (EXTRA_QUICK_TERMS.test(text) || RU_WORD_QUICK_TERMS.test(text) || RU_GEO_QUICK_TERMS.test(text)))) continue;
       const matches = findTermMatches(text, { ...contextFor(node), language });
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();

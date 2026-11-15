@@ -18,6 +18,38 @@ test('standalone terms in normal copy, headings and metric labels', () => {
   assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
 });
 
+test('GEO glossary hints are consistent in hyphenated publication headings', () => {
+  const latinHeadings = [
+    'Безопасное и агрессивное GEO-продвижение в нейросетях: вождение и работа в кепке',
+    'Стратегия GEO-продвижения недвижимости в нейросетях на базе кейса премиального ЖК в Москве под NDA',
+    'Персональное GEO-продвижение бизнеса: ТОП-10 специалистов России, 2026',
+    'Каких GEO-специалистов России чаще называют нейросети: BMR по 110 ответам',
+    'GEO/AEO-продвижение бизнеса в нейросетях: ТОП-10 подрядчиков России, 2026',
+    'GEO-аудит и GEO-эксперт в сфере недвижимости'
+  ];
+  for (const heading of latinHeadings) {
+    const geo = findTermMatches(heading).filter(hit => hit.term === 'GEO');
+    assert.ok(geo.length > 0, 'Missing GEO explanation in heading: ' + heading);
+    assert.ok(geo.every(hit => hit.text === 'GEO'), 'Only the acronym should be dotted: ' + heading);
+  }
+  for (const heading of [
+    'ГЕО-продвижение в нейросетях', 'гео-продвижения бренда',
+    'Геопродвижение бизнеса', 'геопродвижения в нейросетях',
+    'Геоспециалисты России', 'гео-специалистов по продвижению'
+  ]) assert.equal(findTermMatches(heading).filter(hit => hit.term === 'GEO').length, 1, heading);
+
+  for (const explanation of [
+    'GEO — продвижение в рекомендациях нейросетей',
+    'GEO: продвижение в нейросетях',
+    'GEO - продвижение в нейросетях',
+    'ГЕО — продвижение в рекомендациях нейросетей'
+  ]) assert.deepEqual(findTermMatches(explanation), [], 'Existing definition should not need a hint: ' + explanation);
+  for (const geography of ['география', 'геоинформатика', 'геолокация', 'гео-данные', 'геология']) {
+    assert.deepEqual(findTermMatches(geography), [], 'Do not treat geography as GEO: ' + geography);
+  }
+  assert.deepEqual(findTermMatches('геопродвижение геоспециалисты', { language: 'en' }), []);
+});
+
 test('E-commerce and СТМ have global glossary matches with proper boundaries', () => {
   assert.deepEqual(findTermMatches('E-commerce, e-Commerce, ecommerce, E-COMMERCE, СТМ и стм').map(hit => hit.term),
     ['Ecommerce', 'Ecommerce', 'Ecommerce', 'Ecommerce', 'STM', 'STM']);

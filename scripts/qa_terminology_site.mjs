@@ -14,7 +14,7 @@ const routes = [
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/cases/methodlab-rost-neyrovidimosti-19-52-procenta/', '/en/cases/methodlab-ai-visibility-growth/',
   '/rankings/wms/', '/professional-biography/', '/en/professional-biography/', '/en/industries/fulfillment/',
-  '/strategies/ecommerce-measurement/', '/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/',
+  '/strategies/ecommerce-measurement/', '/publications/articles/', '/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/',
   '/industries/tourism/', '/strategies/industrial-supplier-evidence/', '/industries/architectural-design-bureaus/',
   '/en/', '/en/services/', '/en/strategies/measurement/', '/strategies/', '/en/strategies/'
 ];
@@ -169,6 +169,27 @@ try {
       return [{ text: anchor.textContent.trim(), first: first?.toJSON(), hit: hit.toJSON(), circle: circle.toJSON() }];
     }));
     assert.deepEqual(misalignedIcons, [], 'Question marks start at the top of the first linked line and retain their hit area');
+    if (route === '/publications/articles/') {
+      // Regression: an explanatory-looking GEO-продвижение compound is not a definition.
+      for (const title of [
+        'Безопасное и агрессивное GEO-продвижение',
+        'Стратегия GEO-продвижения недвижимости',
+        'Каких GEO-специалистов России',
+        'GEO/AEO-продвижение бизнеса'
+      ]) {
+        const heading = page.locator('.publication-item h2').filter({ hasText: title });
+        assert.equal(await heading.count(), 1, 'Unique publication title: ' + title);
+        const term = heading.locator('.gaeo-term-trigger[data-gaeo-term="GEO"]');
+        assert.equal(await term.count(), 1, 'GEO must be dotted in publication title: ' + title);
+        assert.equal(await term.locator('.gaeo-term-label').textContent(), 'GEO');
+        assert.equal(await term.locator('.gaeo-term-label').evaluate(el => getComputedStyle(el).textDecorationStyle),
+          'dotted', 'Consistent glossary style in title: ' + title);
+      }
+      if (viewport.width === 390) {
+        await page.locator('.publication-item h2').filter({ hasText: 'Безопасное и агрессивное GEO-продвижение' }).scrollIntoViewIfNeeded();
+        await screenshot(page, current, 'publications-geo-title');
+      }
+    }
     if (route === '/cases/' || route === '/en/cases/') {
       assert.ok(await page.locator('#geo-promotion h3 .gaeo-term-link-inline').count() >= 2, 'BMR titles retain independent help icons');
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
