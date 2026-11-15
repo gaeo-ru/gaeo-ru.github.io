@@ -1,6 +1,228 @@
 /** Shared, progressively enhanced explanations of GAEO's specialist terms. */
+/** Shared, progressively enhanced explanations of GAEO's specialist terms. */
+/** Approved abbreviations actually found in the Russian content; English pages keep their existing glossary. */
+const RU_EXTRA_GLOSSARY = Object.freeze({
+  "B2B": "B2B (Business-to-Business) - продажи товаров и услуг одним компаниям другим",
+  "B2C": "B2C (Business-to-Consumer) - продажи товаров и услуг конечным потребителям",
+  "DTC": "DTC (Direct-to-Consumer) - прямые продажи производителя потребителю без посредников",
+  "FMCG": "FMCG (Fast-Moving Consumer Goods) - товары повседневного спроса с высокой оборачиваемостью",
+  "HoReCa": "HoReCa (Hotels, Restaurants, Catering) - гостиницы, рестораны и общественное питание",
+  "EdTech": "EdTech (Education Technology) - образовательные технологии и цифровые образовательные продукты",
+  "AdTech": "AdTech (Advertising Technology) - технологии автоматизации и управления рекламой",
+  "PropTech": "PropTech (Property Technology) - цифровые технологии и сервисы для недвижимости",
+  "HR": "HR (Human Resources) - управление персоналом и подбор сотрудников",
+  "IT": "IT (Information Technology) - информационные технологии",
+  "ИТ": "ИТ (информационные технологии) - программное обеспечение, оборудование и методы обработки информации",
+  "PR": "PR (Public Relations) - связи с общественностью",
+  "FAQ": "FAQ (Frequently Asked Questions) - часто задаваемые вопросы и ответы на них",
+  "NDA": "NDA (Non-Disclosure Agreement) - соглашение о конфиденциальности",
+  "KPI": "KPI (Key Performance Indicator) - ключевой показатель эффективности",
+  "ROI": "ROI (Return on Investment) - рентабельность инвестиций",
+  "ROMI": "ROMI (Return on Marketing Investment) - рентабельность маркетинговых инвестиций",
+  "LTV": "LTV (Lifetime Value) - ценность клиента за весь период отношений с компанией",
+  "CPL": "CPL (Cost per Lead) - стоимость привлечения одного потенциального клиента",
+  "CRM": "CRM (Customer Relationship Management) - система управления отношениями с клиентами",
+  "ERP": "ERP (Enterprise Resource Planning) - система управления ресурсами предприятия",
+  "BI": "BI (Business Intelligence) - бизнес-аналитика: сбор, обработка и визуализация данных",
+  "CIO": "CIO (Chief Information Officer) - руководитель информационных технологий компании",
+  "VIP": "VIP (Very Important Person) - особо важный клиент; в туризме персональное обслуживание повышенного уровня",
+  "AI": "AI (Artificial Intelligence) - искусственный интеллект",
+  "MCP": "MCP (Model Context Protocol) - протокол подключения нейросетей к внешним инструментам и источникам данных",
+  "A2A": "A2A (Agent2Agent Protocol) - протокол взаимодействия ИИ-агентов друг с другом",
+  "ACP": "ACP (Agentic Commerce Protocol) - протокол агентной коммерции для покупок через нейросети",
+  "UCP": "UCP (Universal Commerce Protocol) - универсальный протокол электронной торговли с участием ИИ-агентов",
+  "YCP": "YCP (Yandex Commerce Protocol) - протокол Яндекса для интеграции интернет-магазинов с ИИ-покупками",
+  "API": "API (Application Programming Interface) - программный интерфейс взаимодействия приложений",
+  "SDK": "SDK (Software Development Kit) - комплект инструментов для разработки программ",
+  "JSON-LD": "JSON-LD (JavaScript Object Notation for Linked Data) - формат представления структурированных связанных данных",
+  "URL": "URL (Uniform Resource Locator) - адрес интернет-ресурса",
+  "HTML": "HTML (HyperText Markup Language) - язык разметки веб-страниц",
+  "CSS": "CSS (Cascading Style Sheets) - язык описания оформления веб-страниц",
+  "PHP": "PHP (PHP: Hypertext Preprocessor) - серверный язык программирования, широко используемый для сайтов",
+  "SQL": "SQL (Structured Query Language) - язык запросов к реляционным базам данных",
+  "CMS": "CMS (Content Management System) - система управления содержимым сайта",
+  "CDN": "CDN (Content Delivery Network) - сеть серверов для быстрой доставки содержимого сайта",
+  "SSR": "SSR (Server-Side Rendering) - формирование HTML-страницы на сервере",
+  "SSG": "SSG (Static Site Generation) - предварительная генерация статических страниц сайта",
+  "SPA": "SPA (Single-Page Application) - одностраничное веб-приложение",
+  "QA": "QA (Quality Assurance) - обеспечение и проверка качества программного продукта",
+  "APM": "APM (Application Performance Monitoring) - мониторинг производительности приложений",
+  "ORM": "ORM (Object-Relational Mapping) - технология работы с реляционной базой данных через программные объекты",
+  "CPU": "CPU (Central Processing Unit) - центральный процессор",
+  "RAM": "RAM (Random Access Memory) - оперативная память",
+  "RPS": "RPS (Requests per Second) - количество запросов в секунду",
+  "TTFB": "TTFB (Time to First Byte) - время до получения первого байта ответа сервера",
+  "LCP": "LCP (Largest Contentful Paint) - время отображения крупнейшего содержательного элемента страницы",
+  "INP": "INP (Interaction to Next Paint) - показатель отзывчивости страницы на действия пользователя",
+  "CLS": "CLS (Cumulative Layout Shift) - показатель смещения элементов страницы при загрузке",
+  "IaaS": "IaaS (Infrastructure as a Service) - инфраструктура как услуга",
+  "PaaS": "PaaS (Platform as a Service) - платформа как услуга",
+  "SaaS": "SaaS (Software as a Service) - программное обеспечение как услуга",
+  "RLS": "RLS (Row-Level Security) - разграничение доступа к отдельным строкам данных",
+  "SLA": "SLA (Service Level Agreement) - соглашение об уровне предоставления услуг",
+  "RTO": "RTO (Recovery Time Objective) - целевое время восстановления после сбоя",
+  "RPO": "RPO (Recovery Point Objective) - максимально допустимый период потери данных при восстановлении",
+  "SOC": "SOC (Security Operations Center) - центр мониторинга и реагирования на события информационной безопасности",
+  "MDR": "MDR (Managed Detection and Response) - управляемое обнаружение киберугроз и реагирование на них",
+  "CSF": "CSF (Cybersecurity Framework) - система управления рисками кибербезопасности",
+  "NIST": "NIST (National Institute of Standards and Technology) - Национальный институт стандартов и технологий США",
+  "SSDF": "SSDF (Secure Software Development Framework) - методика безопасной разработки программного обеспечения",
+  "ISO": "ISO (International Organization for Standardization) - Международная организация по стандартизации; ISO является официальным обозначением, а не побуквенной аббревиатурой",
+  "IEC": "IEC (International Electrotechnical Commission) - Международная электротехническая комиссия",
+  "PHP-FPM": "PHP-FPM (PHP FastCGI Process Manager) - менеджер процессов PHP для обработки серверных запросов",
+  "3PL": "3PL (Third-Party Logistics) - логистические услуги стороннего оператора",
+  "FBO": "FBO (Fulfillment by Operator) - продажа со склада маркетплейса, который хранит товар и обрабатывает заказы",
+  "FBS": "FBS (Fulfillment by Seller) - продажа со склада продавца с доставкой через маркетплейс",
+  "FBW": "FBW (Fulfillment by Wildberries) - продажи со складов Wildberries",
+  "FBY": "FBY (Fulfillment by Yandex) - продажи со складов Яндекс Маркета",
+  "FBL": "FBL (Fulfillment by L'Étoile) - Продажи со складов ЛЭТУАЛЬ",
+  "DBS": "DBS (Delivery by Seller) - продажа и доставка товара силами продавца",
+  "FIFO": "FIFO (First In, First Out) - первым поступил, первым выбыл; принцип складского учета",
+  "LIFO": "LIFO (Last In, First Out) - последним поступил, первым выбыл",
+  "WCS": "WCS (Warehouse Control System) - система управления складским оборудованием и автоматикой",
+  "TMS": "TMS (Transportation Management System) - система управления перевозками",
+  "GS1": "GS1 (международная система стандартов GS1) - стандарты идентификации товаров и логистических единиц",
+  "GTIN": "GTIN (Global Trade Item Number) - глобальный номер товарной единицы",
+  "SSCC": "SSCC (Serial Shipping Container Code) - серийный код транспортной упаковки",
+  "EAN": "EAN (European Article Number) - историческое название международного товарного номера, используемого в штрихкодах",
+  "QR": "QR (Quick Response) - двумерный код для быстрого считывания информации",
+  "YML": "YML (Yandex Market Language) - формат товарного каталога для Яндекс Маркета",
+  "OEM": "OEM (Original Equipment Manufacturer) - производитель оригинального оборудования или комплектующих",
+  "ACES": "ACES (Aftermarket Catalog Exchange Standard) - стандарт обмена данными о совместимости автозапчастей с автомобилями",
+  "PIES": "PIES (Product Information Exchange Standard) - стандарт обмена характеристиками и описаниями автозапчастей",
+  "EAC": "EAC (Eurasian Conformity) - знак обращения продукции на рынке ЕАЭС",
+  "MOQ": "MOQ (Minimum Order Quantity) - минимальный объем заказа или партии",
+  "INCI": "INCI (International Nomenclature of Cosmetic Ingredients) - международная номенклатура косметических ингредиентов",
+  "GMP": "GMP (Good Manufacturing Practice) - надлежащая производственная практика",
+  "CIP": "CIP (Cleaning-in-Place) - мойка производственного оборудования без разборки",
+  "FAT": "FAT (Factory Acceptance Test) - заводские приемочные испытания оборудования",
+  "SAT": "SAT (Site Acceptance Test) - приемочные испытания оборудования на объекте заказчика",
+  "DDP": "DDP (Delivered Duty Paid) - условие поставки с оплатой импортных пошлин продавцом",
+  "DDU": "DDU (Delivered Duty Unpaid) - устаревшее условие поставки без оплаты импортных пошлин продавцом",
+  "PLC": "PLC (Programmable Logic Controller) - программируемый логический контроллер",
+  "SCADA": "SCADA (Supervisory Control and Data Acquisition) - система диспетчерского управления и сбора данных",
+  "OT": "OT (Operational Technology) - промышленные технологии управления оборудованием",
+  "CCTV": "CCTV (Closed-Circuit Television) - система видеонаблюдения",
+  "AV": "AV (Audiovisual) - аудиовизуальное оборудование для мероприятий",
+  "АСУ ТП": "АСУ ТП (автоматизированная система управления технологическим процессом) - система автоматического контроля и управления промышленными процессами",
+  "БД": "БД (база данных) - организованный набор данных для хранения, поиска и обработки",
+  "ВПП": "ВПП (воздушно-пузырчатая пленка) - защитный упаковочный материал с воздушными пузырьками",
+  "ВЭД": "ВЭД (внешнеэкономическая деятельность) - торговые и другие операции с зарубежными партнерами",
+  "ГИС": "ГИС (государственная информационная система) - государственная цифровая система хранения и обработки сведений",
+  "ГИС МТ": "ГИС МТ (государственная информационная система мониторинга оборота маркируемых товаров) - система учета маркируемой продукции, используемая в «Честном знаке»",
+  "ГИС ЖКХ": "ГИС ЖКХ (государственная информационная система жилищно-коммунального хозяйства) - государственная система сведений об объектах и услугах ЖКХ",
+  "ГИСП": "ГИСП (государственная информационная система промышленности) - информационная система о промышленности и производителях",
+  "ГК РФ": "ГК РФ (Гражданский кодекс Российской Федерации) - законодательный акт, регулирующий гражданско-правовые отношения",
+  "ГОСТ": "ГОСТ (государственный стандарт) - обозначение национальных и межгосударственных стандартов",
+  "ЕАЭС": "ЕАЭС (Евразийский экономический союз) - межгосударственное объединение с едиными правилами экономического сотрудничества",
+  "ЕЭК": "ЕЭК (Евразийская экономическая комиссия) - регулирующий орган Евразийского экономического союза",
+  "ЕГРН": "ЕГРН (Единый государственный реестр недвижимости) - официальный реестр объектов недвижимости и зарегистрированных прав",
+  "ЕГРЮЛ": "ЕГРЮЛ (Единый государственный реестр юридических лиц) - государственный реестр зарегистрированных организаций",
+  "ЕГРИП": "ЕГРИП (Единый государственный реестр индивидуальных предпринимателей) - государственный реестр предпринимателей",
+  "ЕИСЖС": "ЕИСЖС (единая информационная система жилищного строительства) - система раскрытия сведений о жилищном строительстве и застройщиках",
+  "ЕФРСБ": "ЕФРСБ (Единый федеральный реестр сведений о банкротстве) - реестр сообщений о процедурах банкротства",
+  "ЖКХ": "ЖКХ (жилищно-коммунальное хозяйство) - эксплуатация жилья и предоставление коммунальных услуг",
+  "ИБ": "ИБ (информационная безопасность) - защита информации и информационных систем",
+  "ИЖС": "ИЖС (индивидуальное жилищное строительство) - строительство индивидуальных жилых домов",
+  "ИКТ": "ИКТ (информационно-коммуникационные технологии) - технологии обработки и передачи информации",
+  "КАД": "КАД (картотека арбитражных дел) - электронная база судебных дел арбитражных судов",
+  "КИЗ": "КИЗ (контрольный (идентификационный) знак) - средство идентификации маркированной продукции",
+  "КИГУ": "КИГУ (код идентификации групповой упаковки) - код для учета групповой упаковки маркированных товаров",
+  "КИТУ": "КИТУ (код идентификации транспортной упаковки) - код для учета транспортной упаковки маркированных товаров",
+  "КПД": "КПД (коэффициент полезного действия) - отношение полезной энергии или работы к затраченной",
+  "МКД": "МКД (многоквартирный дом) - жилое здание с несколькими квартирами",
+  "МЧД": "МЧД (машиночитаемая доверенность) - электронная доверенность с данными о полномочиях представителя",
+  "НДС": "НДС (налог на добавленную стоимость) - косвенный налог, включаемый в стоимость облагаемых товаров и услуг",
+  "НИОКР": "НИОКР (научно-исследовательские и опытно-конструкторские работы) - исследования и разработки новых технических решений",
+  "НПС": "НПС (национальная платежная система) - система денежных переводов и платежных сервисов",
+  "ОКПД2": "ОКПД2 (Общероссийский классификатор продукции по видам экономической деятельности) - система кодов видов продукции и услуг",
+  "ОВ": "ОВ (отопление и вентиляция) - раздел инженерной документации",
+  "ВК": "ВК (водоснабжение и канализация) - раздел инженерной документации",
+  "ПО": "ПО (программное обеспечение) - компьютерные программы и связанные с ними компоненты",
+  "ПВЗ": "ПВЗ (пункт выдачи заказов) - место получения заказанных товаров",
+  "ПВД": "ПВД (полиэтилен высокого давления) - полимер, используемый в упаковочных материалах",
+  "ПНД": "ПНД (полиэтилен низкого давления) - полимер, используемый в упаковке и трубах",
+  "ПОФ": "ПОФ (полиолефиновая пленка) - упаковочная термоусадочная пленка",
+  "БОПП": "БОПП (биаксиально-ориентированная полипропиленовая пленка) - прочный прозрачный упаковочный материал",
+  "ПВХ": "ПВХ (поливинилхлорид) - полимер, используемый в оконных профилях и упаковке",
+  "РБУ": "РБУ (растворобетонный узел) - оборудование для приготовления бетона",
+  "РЦ": "РЦ (распределительный центр) - логистический объект обработки и распределения товаров",
+  "СИ": "СИ (средство измерений) - устройство для измерения физических величин",
+  "СИЗ": "СИЗ (средства индивидуальной защиты) - оборудование и одежда для защиты работников",
+  "СЗР": "СЗР (средства защиты растений) - препараты и средства защиты сельскохозяйственных культур",
+  "СУБД": "СУБД (система управления базами данных) - программная система для хранения, поиска и изменения данных",
+  "СП": "СП (свод правил) - нормативный документ с требованиями к строительству и другим процессам",
+  "СПОТ": "СПОТ (система подтверждения ожидания поставки товаров) - механизм контроля определенных импортных поставок",
+  "СТО": "СТО (станция технического обслуживания) - организация по ремонту и обслуживанию автомобилей",
+  "СЭП": "СЭП (система электронных паспортов) - цифровая система учета паспортов транспортных средств",
+  "ТН ВЭД": "ТН ВЭД (товарная номенклатура внешнеэкономической деятельности) - классификация товаров для таможенного оформления",
+  "ТР ТС": "ТР ТС (технический регламент Таможенного союза) - документ с обязательными требованиями к безопасности продукции",
+  "ТСД": "ТСД (терминал сбора данных) - устройство для сканирования кодов и складского учета",
+  "УК": "УК (управляющая компания) - организация, управляющая зданием или объектом недвижимости",
+  "УИН": "УИН (уникальный идентификационный номер) - в ювелирной маркировке уникальный номер изделия",
+  "УПД": "УПД (универсальный передаточный документ) - документ, объединяющий передаточные и учетные сведения",
+  "УСН": "УСН (упрощенная система налогообложения) - специальный налоговый режим для бизнеса",
+  "ФГИС": "ФГИС (федеральная государственная информационная система) - государственная информационная система федерального уровня",
+  "ФЗ": "ФЗ (федеральный закон) - закон Российской Федерации",
+  "ФИПС": "ФИПС (Федеральный институт промышленной собственности) - организация в системе Роспатента",
+  "ФНС": "ФНС (Федеральная налоговая служба) - налоговый орган России",
+  "ФПА": "ФПА (Федеральная палата адвокатов Российской Федерации) - организация адвокатского самоуправления",
+  "ФСБ": "ФСБ (Федеральная служба безопасности) - федеральный орган России",
+  "ФСТЭК": "ФСТЭК (Федеральная служба по техническому и экспортному контролю) - федеральный орган России",
+  "ФТС": "ФТС (Федеральная таможенная служба) - таможенный орган России",
+  "ЦОД": "ЦОД (центр обработки данных) - площадка для размещения серверного и сетевого оборудования",
+  "ЧОО": "ЧОО (частная охранная организация) - компания, оказывающая охранные услуги",
+  "ЭДО": "ЭДО (электронный документооборот) - обмен юридически значимыми электронными документами",
+  "ЭОМ": "ЭОМ (электрооборудование и электроосвещение) - раздел инженерной документации",
+  "КЭП": "КЭП (квалифицированная электронная подпись) - вид электронной подписи с установленной юридической силой",
+  "БАД": "БАД (биологически активная добавка) - добавка к пище, не являющаяся лекарственным препаратом",
+  "МНН": "МНН (международное непатентованное наименование) - общепринятое название действующего вещества лекарства",
+  "ГРЛС": "ГРЛС (государственный реестр лекарственных средств) - официальный российский реестр лекарственных препаратов",
+  "ЭПК": "ЭПК (эйкозапентаеновая кислота) - омега-3 жирная кислота",
+  "ДГК": "ДГК (докозагексаеновая кислота) - омега-3 жирная кислота",
+  "ЭКО": "ЭКО (экстракорпоральное оплодотворение) - метод вспомогательной репродукции",
+  "ВРТ": "ВРТ (вспомогательные репродуктивные технологии) - медицинские методы лечения бесплодия",
+  "ОМС": "ОМС (обязательное медицинское страхование) - государственная система страхового финансирования медицинской помощи",
+  "УЗИ": "УЗИ (ультразвуковое исследование) - диагностика с использованием ультразвука",
+  "МРТ": "МРТ (магнитно-резонансная томография) - метод медицинской визуализации",
+  "КТ": "КТ (компьютерная томография) - рентгеновская послойная диагностика",
+  "ВОЗ": "ВОЗ (Всемирная организация здравоохранения) - специализированное учреждение ООН по здравоохранению",
+  "NIH": "NIH (National Institutes of Health) - Национальные институты здоровья США",
+  "EMA": "EMA (European Medicines Agency) - Европейское агентство лекарственных средств",
+  "ФМБА": "ФМБА (Федеральное медико-биологическое агентство) - федеральный орган России",
+  "MBA": "MBA (Master of Business Administration) - программа управленческого образования и соответствующая квалификация",
+  "ЕГЭ": "ЕГЭ (единый государственный экзамен) - форма государственной итоговой аттестации",
+  "IQ": "IQ (Intelligence Quotient) - коэффициент интеллекта по результатам стандартизированного тестирования",
+  "FIT": "FIT (Free Independent Traveler) - индивидуальный турист или индивидуально организованная поездка",
+  "IATA": "IATA (International Air Transport Association) - Международная ассоциация воздушного транспорта",
+  "IAATO": "IAATO (International Association of Antarctica Tour Operators) - Международная ассоциация туроператоров Антарктики",
+  "ICCA": "ICCA (International Congress and Convention Association) - Международная ассоциация конгрессов и конференций",
+  "ICT": "ICT (Instituto Costarricense de Turismo) - Институт туризма Коста-Рики",
+  "CST": "CST (Certification for Sustainable Tourism) - сертификация устойчивого туризма",
+  "CONAF": "CONAF (Corporación Nacional Forestal) - Национальная лесная корпорация Чили",
+  "LIESA": "LIESA (Liga Independente das Escolas de Samba do Rio de Janeiro) - Независимая лига школ самбы Рио-де-Жанейро",
+  "LATA": "LATA (Latin American Travel Association) - Латиноамериканская туристическая ассоциация",
+  "WSAVA": "WSAVA (World Small Animal Veterinary Association) - Всемирная ветеринарная ассоциация мелких домашних животных",
+  "FEDIAF": "FEDIAF (European Pet Food Industry Federation) - Европейская федерация индустрии кормов для домашних животных",
+  "ФСОР": "ФСОР (Федерация спортивного ориентирования России) - российская спортивная федерация",
+  "ВФЛА": "ВФЛА (Всероссийская федерация легкой атлетики) - российская спортивная федерация",
+  "ФЛГР": "ФЛГР (Федерация лыжных гонок России) - российская спортивная федерация",
+  "ЦА": "ЦА (целевая аудитория) - группа потенциальных клиентов или пользователей продукта",
+  "ЛПР": "ЛПР (лицо, принимающее решение) - человек, имеющий полномочия выбрать поставщика или одобрить покупку",
+  "КАСКО": "КАСКО - добровольное страхование транспортного средства от установленных договором рисков",
+  "МП": "МП (маркетплейс) - торговая интернет-площадка, на которой товары продают разные продавцы",
+  "ТО": "ТО (техническое обслуживание) - плановые работы для поддержания автомобиля в исправном состоянии",
+  "ТТК": "ТТК (Третье транспортное кольцо) - кольцевая автомобильная дорога Москвы",
+  "МО": "МО (Московская область) - субъект Российской Федерации, окружающий Москву",
+  "МПГУ": "МПГУ (Московский педагогический государственный университет) - российский педагогический университет",
+  "ВМК": "ВМК (факультет вычислительной математики и кибернетики МГУ) - факультет Московского государственного университета; встречается также написание «ВМиК»",
+  "МДФ": "МДФ (древесноволокнистая плита средней плотности) - плитный материал для производства мебели",
+  "УФ": "УФ (ультрафиолетовый) - относящийся к ультрафиолетовому излучению",
+});
+
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
+    ...RU_EXTRA_GLOSSARY,
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
     GitHub: 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.',
@@ -104,8 +326,22 @@ const FULL_NAMES = {
 // Both Russian case forms and English spelling map to one glossary entry.
 const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
+// Longest-match-first Russian glossary; works on source text without changing URLs or links.
+const EXTRA_ALIASES = Object.freeze({ 'ВМиК': 'ВМК' });
+const extraSpelling = Object.keys(RU_EXTRA_GLOSSARY).concat(Object.keys(EXTRA_ALIASES));
+const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
+  .map(value => value.split(/\s+/u).map(part =>
+    part.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+  ).join('\\s+')).join('|');
+const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
+  ')(?![\\p{L}\\p{N}_])', 'gu');
+const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
+const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
+
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
+  // A slash between standalone abbreviations is not a file path.
+  if (/^[([«"']*(?:[А-ЯЁA-Z0-9]{2,}|ТН\s+ВЭД)(?:\/[А-ЯЁA-Z0-9]{2,})+(?:$|[^\w/])/u.test(token)) return false;
   // GEO/AEO and similar editorial compounds are not URL paths.
   if (/^[([«"']*(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)\/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)(?:$|[^\w/])/.test(token)) return false;
   if (/^[([«"']*(?:[А-Я]{2,4}|[A-Z]{2,5})\/(?:[А-Я]{2,4}|[A-Z]{2,5})(?:$|[^\p{L}\p{N}_/])/u.test(token)) return false;
@@ -128,6 +364,16 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
+  const extraDefinition = RU_EXTRA_GLOSSARY[term];
+  if (extraDefinition) {
+    const expansion = extraDefinition.match(/^[^(]+\(([^)]+)\)/u)?.[1];
+    if (!expansion) return false;
+    const full = expansion.split(/\s+/u).map(part =>
+      part.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+    ).join('\\s+');
+    return new RegExp('^\\s*(?:[(:—–-]\\s*)?\\(?' + full + '\\)?', 'iu').test(after) ||
+      new RegExp(full + '\\s*\\(\\s*$', 'iu').test(before);
+  }
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
@@ -146,10 +392,16 @@ function alreadyExplained(context, start, end, term, spelling) {
 }
 
 /** Match visible standalone terms, retaining original spelling and character offsets. */
-export function findTermMatches(text, { context = text, offset = 0 } = {}) {
+export function findTermMatches(text, { context = text, offset = 0, language = 'ru' } = {}) {
   const matches = [];
-  for (const match of text.matchAll(TERMS)) {
+  const candidates = [...text.matchAll(TERMS)];
+  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS));
+  candidates.sort((a, b) => a.index - b.index || b[0].length - a[0].length);
+  let consumedUntil = -1;
+  for (const match of candidates) {
     const start = match.index, end = start + match[0].length;
+    if (start < consumedUntil) continue;
+    consumedUntil = end;
     const value = match[0];
     const term = /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
@@ -168,7 +420,24 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
       : /^[Ff][Rr][Ss]$/.test(value) ? 'FRS'
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
       : /^brandfound$/i.test(value) ? 'BrandFound'
-      : value;
+      : (EXTRA_ALIASES[value] || value);
+    // When an abbreviation is already followed by its full name, the whole
+    // parenthetical expansion is explained. Do not decorate nested words
+    // such as "Fulfillment" inside "FBL (Fulfillment by L'Étoile)".
+    const expansion = RU_EXTRA_GLOSSARY[term]?.match(/^[^(]+\(([^)]+)\)/u)?.[1];
+    if (expansion) {
+      const parenthetical = text.slice(end).match(/^\s*\(([^)]+)\)/u);
+      if (parenthetical && parenthetical[1].trim().toLocaleLowerCase('ru') === expansion.toLocaleLowerCase('ru')) {
+        consumedUntil = end + parenthetical[0].length;
+      }
+    }
+    // Constrain ambiguous abbreviations to the intended industry context.
+    const nearby = context.slice(Math.max(0, offset + start - 120), offset + end + 120);
+    if (term === 'ТО' && !/(?:авто|машин|запчаст|двигател|модел|ремонт|планов|детал|сервис)/iu.test(nearby)) continue;
+    if (term === 'МП' && !/(?:маркетплейс|селлер|товар|постав|отгруз|склад)/iu.test(nearby)) continue;
+    if (term === 'МО' && !/(?:Москв|Подмосков|област|Пушкино|Коледин|Подольск|Мытищ|Люберц)/iu.test(nearby)) continue;
+    if (term === 'SPA' && !/(?:рендер|веб-приложен|разработ|JavaScript|PHP|frontend|frontend|серверн|одностраничн)/iu.test(nearby)) continue;
+    if (term === 'SAT' && !/(?:FAT|приемочн|испытан|монтаж|оборудован|заводск)/iu.test(nearby)) continue;
     if (isAddress(text, start, end) || (term !== 'BrandFound' && alreadyExplained(context, offset + start, offset + end, term, value))) continue;
     matches.push({ start, end, term, text: match[0] });
   }
@@ -178,6 +447,7 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
 const EXCLUDED = [
   'script', 'style', 'noscript', 'textarea', 'input', 'select', 'option',
   'pre', 'code', 'kbd', 'samp', 'svg', 'math', 'canvas', 'template', 'iframe',
+  'footer', '[role="contentinfo"]', '.site-footer',
   '[contenteditable]:not([contenteditable="false"])', '[data-term-hints="off"]',
   '[data-gaeo-term]', '[data-gaeo-term-definitions]',
   '.gaeo-term-tooltip', 'abbr[title]', '[role="tooltip"]'
@@ -195,6 +465,10 @@ const LINK_HELP_SELECTOR = '[data-gaeo-term-link-help]';
 const LINK_WRAPPER_SELECTOR = '.gaeo-term-link-inline';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
 
+/** Stable ARIA IDs must never contain spaces from multiword abbreviations. */
+const descriptionId = term => 'gaeo-term-description-' +
+  term.toLowerCase().replace(/[^\p{L}\p{N}_-]+/gu, '-');
+
 export function installTermHints(doc = document) {
   if (!doc.body || doc.documentElement.dataset.gaeoTermHints === 'ready') return;
   doc.documentElement.dataset.gaeoTermHints = 'ready';
@@ -209,7 +483,7 @@ export function installTermHints(doc = document) {
   descriptions.dataset.gaeoTermDefinitions = '';
   for (const [term, definition] of Object.entries(definitions)) {
     const description = doc.createElement('span');
-    description.id = `gaeo-term-description-${term.toLowerCase()}`;
+    description.id = descriptionId(term);
     description.textContent = definition;
     descriptions.append(description);
   }
@@ -228,7 +502,7 @@ export function installTermHints(doc = document) {
     if (text.includes(' ')) trigger.classList.add('gaeo-term-trigger--phrase');
     trigger.dataset.gaeoTerm = term;
     trigger.setAttribute('aria-label', labels(term));
-    trigger.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
+    trigger.setAttribute('aria-describedby', descriptionId(term));
     trigger.setAttribute('aria-controls', tooltip.id);
     trigger.setAttribute('aria-expanded', 'false');
     const label = doc.createElement('span');
@@ -245,7 +519,7 @@ export function installTermHints(doc = document) {
     button.dataset.gaeoTerm = term;
     button.dataset.gaeoTermLinkHelp = '';
     button.setAttribute('aria-label', labels(term));
-    button.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
+    button.setAttribute('aria-describedby', descriptionId(term));
     button.setAttribute('aria-controls', tooltip.id);
     button.setAttribute('aria-expanded', 'false');
     button.textContent = '?';
@@ -292,7 +566,7 @@ export function installTermHints(doc = document) {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
       }
-      const terms = allowed ? [...new Set(findTermMatches(link.textContent)
+      const terms = allowed ? [...new Set(findTermMatches(link.textContent, { language })
         .filter(hit => hit.term !== 'BrandFound' || !brandFoundLinkIsExplained(link))
         .map(hit => hit.term))] : [];
       if (!terms.length) {
@@ -355,8 +629,8 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (isProtectedInteractive(node.parentElement)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
-      const matches = findTermMatches(text, contextFor(node));
+      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && EXTRA_QUICK_TERMS.test(text))) continue;
+      const matches = findTermMatches(text, { ...contextFor(node), language });
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
       let cursor = 0;
