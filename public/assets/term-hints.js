@@ -146,7 +146,9 @@ export function installTermHints(doc = document) {
     for (const link of links) {
       if (!link.isConnected || !link.closest('main,article') ||
           link.closest('header,footer,nav,aside,[data-term-hints="off"],[contenteditable="true"]') ||
-          link.closest(EXCLUDED) || link.closest('button,[role="button"]')) continue;
+          link.closest(EXCLUDED) ||
+          link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') ||
+          link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]')) continue;
       const terms = [...new Set(findTermMatches(link.textContent).map(hit => hit.term))];
       const old = [];
       for (let next = link.nextSibling; next?.nodeType === 1 && next.matches?.(LINK_HELP_SELECTOR); next = next.nextSibling) {
