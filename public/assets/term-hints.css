@@ -27,6 +27,28 @@
   outline-offset: 3px;
   border-radius: 3px;
 }
+.gaeo-term-link-inline {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  column-gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+  vertical-align: baseline;
+}
+.gaeo-term-link-inline--block {
+  display: flex;
+  width: 100%;
+}
+.gaeo-term-link-inline > a {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.gaeo-term-link-inline > .gaeo-term-link-help.gaeo-term-link-help {
+  flex: 0 0 18px;
+  margin: .12em 0 0;
+  vertical-align: top;
+}
 .gaeo-term-link-help.gaeo-term-link-help {
   all: unset;
   box-sizing: border-box;
