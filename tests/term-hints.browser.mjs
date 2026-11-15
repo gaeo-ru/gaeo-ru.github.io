@@ -17,13 +17,15 @@ try {
   page.on('pageerror', error => errors.push(String(error)));
   await page.setContent(`<!doctype html><html lang="ru"><head>
     <title>GEO, AEO, BMR, SoV</title><meta name="description" content="GEO test">
-    <style>body{margin:16px;font:16px/1.6 Arial,sans-serif}h1{font-size:48px;line-height:1.1}a.card{display:block}.scroll-table{overflow:auto;max-width:100%}</style>
+    <style>body{margin:16px;font:16px/1.6 Arial,sans-serif}h1{font-size:48px;line-height:1.1}a.card{display:block}.scroll-table{overflow:auto;max-width:100%}#case-heading{max-width:260px;font-size:26px;line-height:1.2}</style>
     <script type="application/ld+json">{"name":"GEO","metric":"BMR"}</script>
   </head><body>
     <header><nav><a id="nav" href="#destination">GEO</a></nav></header>
     <h1 id="heading">Сравнение <span>GEO</span> и SEO</h1>
     <p id="metrics">Измеряем BMR и SoV.</p>
     <p id="aeo">AEO помогает подготовить контент.</p>
+    <p id="seo">SEO помогает оптимизировать сайт.</p>
+    <p id="seo-expanded">SEO (Search Engine Optimization) помогает бизнесу.</p>
     <p id="historical">Начал учиться: <b><button type="button" class="gaeo-term-trigger" data-gaeo-term="AIStart" aria-label="Как началось изучение ИИ" aria-describedby="gaeo-term-description-aistart" aria-controls="gaeo-term-tooltip" aria-expanded="false"><span class="gaeo-term-label">с 1997 года</span></button></b></p>
     <p id="warehouse">WMS и фулфилмент помогают складу. Для фулфилмента и фулфилментов.</p>
     <p id="warehouse-expanded">WMS (Warehouse Management System) и Фулфилмент (Fulfillment).</p>
@@ -34,6 +36,8 @@ try {
     <h3 id="case-heading"><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3>
     <div class="tariff-actions"><a class="button" id="tariff-cta" href="#destination">GEO promotion</a></div>
     <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
+    <p id="expanded-seo-link"><a href="#expanded">SEO (Search Engine Optimization)</a></p>
+    <h3 id="seo-linked"><a href="#seo-case">Разработка сайта с SEO/GEO-проверками</a></h3>
     <a class="card" href="#destination">GEO: ссылка на целую карточку</a>
     <p id="compound">GEO/AEO-эксперт</p>
     <div class="scroll-table"><table><tr><th>Показатель</th><th id="metric-cell">BMR</th></tr></table></div>
@@ -52,6 +56,11 @@ try {
   await page.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
   const tooltip = page.locator('#gaeo-term-tooltip');
   assert.equal(await page.locator('#heading [data-gaeo-term="GEO"]').count(), 1);
+  assert.equal(await page.locator('#heading [data-gaeo-term="SEO"]').count(), 1);
+  assert.equal(await page.locator('#seo [data-gaeo-term="SEO"]').count(), 1);
+  assert.equal(await page.locator('#seo-expanded [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#expanded-seo-link .gaeo-term-link-help').count(), 0);
+  assert.equal(await page.locator('#seo-linked .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#metric-cell [data-gaeo-term="BMR"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="AEO"]').count(), 1);
@@ -62,17 +71,26 @@ try {
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
   assert.equal(await page.locator('#already [data-gaeo-term], #already-aeo [data-gaeo-term], #code [data-gaeo-term], #brand [data-gaeo-term], #off [data-gaeo-term], header [data-gaeo-term], form [data-gaeo-term], a [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No obsolete controls');
-  assert.equal(await page.locator('#case-heading a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR case link has separate question icon');
+  assert.equal(await page.locator('#case-heading .gaeo-term-link-inline > a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR help icon follows link in wrapper');
   assert.equal(await page.locator('#expanded-link .gaeo-term-link-help').count(), 0, 'Expanded BMR needs no icon');
   assert.equal(await page.locator('#tariff-cta + .gaeo-term-link-help, .tariff-actions .gaeo-term-link-help').count(), 0, 'Pricing and CTA links stay free of question icons');
   assert.equal(await page.locator('nav .gaeo-term-link-help, a .gaeo-term-link-help').count(), 0, 'No nested or navigational help controls');
-  assert.equal(await page.locator('#inline-link + .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
+  assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
   assert.equal(await page.locator('script[type="application/ld+json"]').textContent(), '{"name":"GEO","metric":"BMR"}');
   assert.equal(await page.locator('#faq-answer').textContent(), 'GEO помогает бренду. BMR измеряет долю ответов.', 'Term buttons do not change FAQ text/schema parity');
-  const headingStyle = await page.locator('#heading [data-gaeo-term]').evaluate(el => ({ font: getComputedStyle(el).fontSize, parent: getComputedStyle(el.closest('h1')).fontSize, label: getComputedStyle(el.querySelector('.gaeo-term-label')).textDecorationStyle }));
+  const headingStyle = await page.locator('#heading [data-gaeo-term="GEO"]').evaluate(el => ({ font: getComputedStyle(el).fontSize, parent: getComputedStyle(el.closest('h1')).fontSize, label: getComputedStyle(el.querySelector('.gaeo-term-label')).textDecorationStyle }));
   assert.equal(headingStyle.font, headingStyle.parent, 'Heading type size is inherited');
   assert.equal(headingStyle.label, 'dotted');
+  const geometry = await page.locator('#case-heading .gaeo-term-link-inline').evaluate(group => {
+    const a = group.querySelector('a').getBoundingClientRect();
+    const icon = group.querySelector('.gaeo-term-link-help').getBoundingClientRect();
+    const lh = parseFloat(getComputedStyle(group.querySelector('a')).lineHeight);
+    return { top: a.top, height: a.height, iconTop: icon.top, iconBottom: icon.bottom, lh };
+  });
+  assert.ok(geometry.height > geometry.lh * 1.5, 'Long linked heading wraps onto multiple lines');
+  assert.ok(geometry.iconTop >= geometry.top - 1 && geometry.iconBottom <= geometry.top + geometry.lh + 5,
+    'Question mark aligns with FIRST line: ' + JSON.stringify(geometry));
 
   // Only the dotted acronym opens the exact definition; no icon is inserted.
   const bmr = page.locator('#metrics [data-gaeo-term="BMR"]');
@@ -112,7 +130,7 @@ try {
   assert.ok(await tooltip.isVisible(), 'Desktop: hovering over the dotted term opens help');
   await page.mouse.move(0, 0);
   assert.equal(await tooltip.isVisible(), false, 'Desktop: mouseout hides the tip immediately');
-  const caseHelp = page.locator('#case-heading a + .gaeo-term-link-help');
+  const caseHelp = page.locator('#case-heading .gaeo-term-link-inline > .gaeo-term-link-help');
   await caseHelp.hover();
   assert.equal(await tooltip.textContent(), 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей');
   await page.mouse.move(0, 0);
@@ -151,8 +169,8 @@ try {
   await page.evaluate(() => { document.querySelector('#inline-link').textContent = 'Методика GEO/AEO'; });
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   assert.equal(await page.locator('#inline-link').innerHTML(), 'Методика GEO/AEO', 'Updated link text stays unmodified');
-  await page.waitForFunction(() => document.querySelectorAll('#inline-link + .gaeo-term-link-help').length === 1);
-  assert.equal(await page.locator('#inline-link + .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Link icon list adapts after replacement');
+  await page.waitForFunction(() => document.querySelector('#inline-link')?.parentElement?.querySelectorAll(':scope > .gaeo-term-link-help').length === 2);
+  assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Dynamic linked terms preserved');
   assert.equal(await page.locator('.gaeo-term-reference,.gaeo-term-link-label').count(), 0);
   // If another renderer moves an existing term into a link, restore plain text.
   await page.evaluate(() => {
@@ -201,7 +219,7 @@ try {
   await touch.addScriptTag({ type: 'module', content: js });
   const touchTrigger = touch.locator('p [data-gaeo-term="BMR"]');
   const touchTip = touch.locator('#gaeo-term-tooltip');
-  assert.equal(await touch.locator('h3 a + .gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1);
+  assert.equal(await touch.locator('h3 .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1);
   await touchTrigger.tap();
   const started = Date.now();
   await touch.waitForTimeout(3900);
@@ -209,18 +227,19 @@ try {
   await touch.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
   assert.equal(await touchTip.isVisible(), false, 'Touch: five-second timeout works');
   const elapsed = Date.now() - started;
-  await touch.locator('h3 a + .gaeo-term-link-help').tap();
+  await touch.locator('h3 .gaeo-term-link-inline > .gaeo-term-link-help').tap();
   assert.ok(await touchTip.isVisible(), 'Touch: question icon opens definition');
   await touchTip.tap();
   assert.equal(await touchTip.isVisible(), false, 'Touch: tap on popup dismisses it');
 
   const english = await browser.newPage({ viewport: { width: 320, height: 640 } });
-  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, BMR, SoV, WMS and Fulfillment</p></body></html>');
+  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, SEO, BMR, SoV, WMS and Fulfillment</p></body></html>');
   await english.addStyleTag({ content: css });
   await english.addScriptTag({ type: 'module', content: js });
   for (const [term, definition] of Object.entries({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
+    SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
@@ -230,7 +249,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: mouse-only hover, independent link question icons, 6 terms and AI history, keyboard and dynamic text, mobile touch timeout at ${elapsed} ms.`);
+  console.log(`Term hint browser QA passed: first-line help circles, SEO glossary, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
 } finally {
   await browser.close();
 }
