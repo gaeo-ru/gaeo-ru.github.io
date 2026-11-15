@@ -36,8 +36,29 @@ test('GitHub is recognized in ordinary prose and not inside longer names', () =>
     'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.');
 });
 
+test('Added 20 terms: e-commerce, research, travel, manufacturing, vehicles, site development', () => {
+  const text = 'FRS shortlist SKU PRR SCR RAR RRR PPSR DMC MICE КМ КМД СКУД VIN ЭПТС PSI Astro ТЗ СРО BIM';
+  assert.deepEqual(findTermMatches(text).map(hit => hit.term), ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]);
+  assert.deepEqual(findTermMatches('frs Shortlist SHORTLIST shortlists astro ASTRO').map(hit => hit.term),
+    ['FRS', 'Shortlist', 'Shortlist', 'Shortlist', 'Astro', 'Astro']);
+  assert.deepEqual(findTermMatches('КМ/КМД и VIP/MICE').map(hit => hit.term), ['KM', 'KMD', 'MICE']);
+  assert.deepEqual(findTermMatches('12 км, километр, КМД12, магазинSKU, SKU_1, AstroJS, VINO, VIN123'), []);
+  for (const term of ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]) {
+    assert.ok(TERM_DEFINITIONS.ru[term], 'Russian definition missing: ' + term);
+    assert.ok(TERM_DEFINITIONS.en[term], 'English definition missing: ' + term);
+    assert.doesNotMatch(TERM_DEFINITIONS.en[term], /[А-Яа-я]/);
+  }
+  assert.equal(TERM_DEFINITIONS.ru.PSI,
+    'PSI (PageSpeed Insights) - сервис от Google для анализа производительности и скорости загрузки страницы сайта.');
+  assert.equal(TERM_DEFINITIONS.ru.Astro,
+    'Astro — инструмент для разработки контентных сайтов: блогов, лендингов, портфолио, каталогов, интернет-магазинов, документации.');
+  assert.match(TERM_DEFINITIONS.ru.FRS, /порядок упоминания, а не обязательно рекомендацию/);
+  assert.match(TERM_DEFINITIONS.ru.RAR, /среди ответов, где соответствующий критерий/);
+  assert.match(TERM_DEFINITIONS.ru.PPSR, /парных тестах/);
+});
+
 test('URLs, email addresses and file paths are not decorated', () => {
-  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json', 'WMS@example.ru', '/docs/WMS/TMS', 'фулфилмент.ru', 'https://example.com/fulfillment/', 'https://example.com/e-commerce/', 'https://example.com/СТМ/', 'СТМ@example.ru', 'https://github.com/gaeo-ru/', 'github.com', 'GitHub@example.com', '/docs/GitHub/index.html']) {
+  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json', 'WMS@example.ru', '/docs/WMS/TMS', 'фулфилмент.ru', 'https://example.com/fulfillment/', 'https://example.com/e-commerce/', 'https://example.com/СТМ/', 'СТМ@example.ru', 'https://github.com/gaeo-ru/', 'github.com', 'GitHub@example.com', '/docs/GitHub/index.html', 'PSI@example.ru', 'https://example.com/Astro/', 'https://example.org/VIN/', '/docs/SKU/data.json', 'www.DMC.com']) {
     assert.deepEqual(findTermMatches(value), [], value);
   }
 });
@@ -54,7 +75,7 @@ test('adjacent expansions need no duplicate help', () => {
     'продвижение в нейросетях (GEO)',
     'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
     'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
-    'WMS — система управления складом.', 'E-commerce - электронная коммерция', 'E-commerce (Electronic Commerce)', 'СТМ - собственная торговая марка', 'СТМ (собственная торговая марка)', 'GitHub — это онлайн-платформа для хранения кода', 'GitHub is an online platform', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
+    'WMS — система управления складом.', 'E-commerce - электронная коммерция', 'E-commerce (Electronic Commerce)', 'СТМ - собственная торговая марка', 'СТМ (собственная торговая марка)', 'GitHub — это онлайн-платформа для хранения кода', 'GitHub is an online platform', 'FRS (First Recommendation Share)', 'PRR (Product Recommendation Rate)', 'SCR (Seller Criterion Rate)', 'RAR (Retailer Association Rate)', 'RRR (Retailer Recommendation Rate)', 'PPSR (Price Premium Survival Rate)', 'SKU (Stock Keeping Unit)', 'DMC (Destination Management Company)', 'MICE (Meetings, Incentives, Conferences, Exhibitions)', 'PSI (PageSpeed Insights)', 'КМ (конструкции металлические)', 'КМД (конструкции металлические деталировочные)', 'СКУД (система контроля и управления доступом)', 'VIN (Vehicle Identification Number)', 'ЭПТС (электронный паспорт транспортного средства)', 'ТЗ (техническое задание)', 'СРО (саморегулируемая организация)', 'BIM (Building Information Modeling)', 'Astro — инструмент для разработки контентных сайтов', 'Shortlist (short list)', 'shortlist — короткий список', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
   ]) assert.deepEqual(findTermMatches(value), [], value);
   const context = 'Показатель BMR (Brand Mention Rate) изменился.';
   assert.deepEqual(findTermMatches('BMR', { context, offset: 11 }), []);
