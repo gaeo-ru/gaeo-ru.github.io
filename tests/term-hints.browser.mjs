@@ -92,6 +92,11 @@ try {
     <p id="content-inflections">Контент, контента, контенту, контентом, контенте, контенты, контентов, контентам, контентами, контентах.</p>
     <p id="content-defined">Контент — это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует.</p>
     <p id="content-linked"><a href="#destination">Контент и кейсы</a></p>
+    <p id="repository-inflections">Репозиторий, репозитория, репозиторию, репозиторием, репозитории, репозиториев, репозиториям, репозиториями, репозиториях.</p>
+    <p id="repository-explained">Репозиторий — хранилище файлов проекта.</p>
+    <p id="case-technical">SEO: Title, description, canonical, hreflang. Workflow GitHub Actions. Письма с формы отправляются через Yandex Cloud Postbox. CTA приглашает оставить заявку.</p>
+    <p id="pr-excluded">PR и PRR: второе сокращение поясняется.</p>
+    <p id="technical-link"><a href="#destination">Title, description, hreflang и CTA для SEO</a></p>
     <p id="destination">Цель ссылки</p></main>
     <footer id="footer-terms"><p>ИНН, ФНС, BMR, GEO, КИЗ и FBL не подчеркиваются в подвале</p></footer>
   </body></html>`);
@@ -103,6 +108,19 @@ try {
   await page.addScriptTag({ type: 'module', content: js });
   await page.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
   const tooltip = page.locator('#gaeo-term-tooltip');
+  assert.deepEqual(await page.locator('#repository-inflections [data-gaeo-term]').evaluateAll(
+    els => els.map(el => el.dataset.gaeoTerm)), Array(9).fill('Repository'));
+  assert.equal(await page.locator('#repository-explained [data-gaeo-term]').count(), 0);
+  assert.deepEqual(await page.locator('#case-technical [data-gaeo-term]').evaluateAll(
+    els => els.map(el => el.dataset.gaeoTerm)),
+    ['SEO','Title','description','canonical','hreflang','workflow','GitHub','Postbox','CTA']);
+  assert.deepEqual(await page.locator('#pr-excluded [data-gaeo-term]').evaluateAll(
+    els => els.map(el => el.dataset.gaeoTerm)), ['PRR']);
+  assert.equal(await page.locator('#technical-link .gaeo-term-link-help').count(), 1);
+  assert.equal(await page.locator('#technical-link .gaeo-term-link-help').getAttribute('data-gaeo-term'),
+    'Title|description|hreflang|CTA|SEO');
+  assert.equal(await page.locator('#technical-link .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+
   assert.deepEqual(await page.locator('#case-inflections [data-gaeo-term]').evaluateAll(
     els => els.map(el => el.dataset.gaeoTerm)), Array(10).fill('CaseStudy'));
   assert.equal(await page.locator('#case-defined [data-gaeo-term]').count(), 0);
