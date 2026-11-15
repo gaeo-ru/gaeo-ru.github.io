@@ -30,12 +30,11 @@
 .gaeo-term-trigger.gaeo-term-trigger--phrase {
   white-space: normal;
 }
-/* Flex keeps the link and separate help controls together, including on narrow
-   screens. Align the controls with the last visual line of the linked text. */
+/* Keep the help controls beside the first line of the link when it wraps. */
 .gaeo-term-link-inline {
   display: inline-flex;
   box-sizing: border-box;
-  align-items: flex-end;
+  align-items: first baseline;
   max-width: 100%;
   min-width: 0;
   vertical-align: baseline;
@@ -43,6 +42,8 @@
 .gaeo-term-link-inline > a {
   flex: 0 1 auto;
   min-width: 0;
+  /* Card links can inherit auto margins, which disable baseline alignment. */
+  margin-block-start: 0;
   white-space: normal;
   overflow-wrap: anywhere;
 }
@@ -53,41 +54,49 @@
 .gaeo-term-link-inline--block > a {
   flex: 1 1 auto;
 }
-.gaeo-term-link-inline > .gaeo-term-link-help.gaeo-term-link-help {
-  position: relative;
-  z-index: 1;
-  flex: 0 0 18px;
-  margin: 0 0 0 6px;
-  vertical-align: bottom;
-}
-.gaeo-term-link-help.gaeo-term-link-help {
-  position: relative;
-  z-index: 1;
-  flex: 0 0 18px;
-  margin: 0 0 0 6px;
-  vertical-align: -.12em;
-}
 .gaeo-term-link-help.gaeo-term-link-help {
   all: unset;
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: 0.1em;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  flex: 0 0 18px;
   width: 18px;
   height: 18px;
-  margin-left: 6px;
-  border: 1px solid currentColor;
+  margin-inline-start: 6px;
   border-radius: 50%;
   color: #355577;
-  background: transparent;
-  font: 700 12px/1 Manrope, Arial, sans-serif;
+  font: inherit;
+  line-height: 18px;
   cursor: help;
   -webkit-tap-highlight-color: transparent;
+}
+.gaeo-term-link-help::before {
+  /* Supply a text baseline in the surrounding font, independent of the icon. */
+  content: '\00a0';
+}
+/* A linked card beginning with an image has no text baseline on its first row. */
+.gaeo-term-link-inline--block:has(> a > :is(img, picture):first-child) > .gaeo-term-link-help {
+  align-self: flex-start;
+  margin-block-start: 2px;
+}
+.gaeo-term-link-icon {
+  box-sizing: border-box;
+  position: absolute;
+  inset: 2px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font: 700 10px/1 Manrope, Arial, sans-serif;
+  pointer-events: none;
 }
 .gaeo-term-link-help:hover,
 .gaeo-term-link-help:focus-visible {
   color: #005fc5;
+}
+.gaeo-term-link-help:hover .gaeo-term-link-icon,
+.gaeo-term-link-help:focus-visible .gaeo-term-link-icon {
   background: #ecf5ff;
 }
 .gaeo-term-link-help:focus-visible {
@@ -116,6 +125,11 @@
   white-space: normal;
 }
 .gaeo-term-tooltip[hidden] { display: none; }
+.gaeo-term-tooltip-entry + .gaeo-term-tooltip-entry {
+  margin-block-start: 8px;
+  padding-block-start: 8px;
+  border-block-start: 1px solid #c4d7df;
+}
 @media (forced-colors: active) {
   .gaeo-term-tooltip { background: Canvas; color: CanvasText; border: 1px solid CanvasText; }
 }

@@ -223,6 +223,11 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     ...RU_EXTRA_GLOSSARY,
+    SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
+    Interlinking: 'Перелинковка - система внутренних ссылок между страницами сайта, помогающая посетителям и поисковым роботам находить связанные материалы.',
+    ContentDistribution: 'Дистрибуция контента - распространение статей, исследований и других материалов по подходящим площадкам и каналам, чтобы их увидела целевая аудитория.',
+    Intent: 'Интент - цель или потребность человека, стоящая за его поисковым запросом или вопросом нейросети.',
+    Prompt: 'Промпт - текст запроса или инструкции, которую человек передает нейросети для получения ответа или выполнения задачи.',
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
     GitHub: 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.',
@@ -257,6 +262,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     AIStart: 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.'
   }),
   en: Object.freeze({
+    SchemaOrg: 'Schema.org - a shared vocabulary of types and properties for structured data describing organizations, products, articles and other entities.',
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
     GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.',
@@ -324,7 +330,7 @@ const FULL_NAMES = {
   BIM: 'Building\\s+Information\\s+Modeling'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 // Longest-match-first Russian glossary; works on source text without changing URLs or links.
 const EXTRA_ALIASES = Object.freeze({ 'ВМиК': 'ВМК' });
@@ -335,11 +341,16 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
   ).join('\\s+')).join('|');
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
+// Russian inflected words are matched only on Russian pages.
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+const RU_WORD_QUICK_TERMS = new RegExp(RU_WORD_TERMS.source, 'iu');
 const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
 const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
+  // The vocabulary's own name is a term, not an external URL; full URLs remain excluded.
+  if (/^[«"'\[(]*schema\.org[»"'\]),.;!?]*$/i.test(token)) return false;
   // A slash between standalone abbreviations is not a file path.
   if (/^[([«"']*(?:[А-ЯЁA-Z0-9]{2,}|ТН\s+ВЭД)(?:\/[А-ЯЁA-Z0-9]{2,})+(?:$|[^\w/])/u.test(token)) return false;
   // GEO/AEO and similar editorial compounds are not URL paths.
@@ -359,6 +370,12 @@ function alreadyExplained(context, start, end, term, spelling) {
       (/\b(?:SoV|SOV)\s*(?:\(|[:—–-])\s*$/i.test(before) || /^\s*\(\s*(?:SoV|SOV)\s*\)/i.test(after))) return true;
   // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
+  if (term === 'SchemaOrg') return /^\s*(?:[(:—–-]\s*)?(?:(?:общий|единый)\s+)?словарь\s+(?:типов|структурированн|данных)/iu.test(after) ||
+    /^\s*(?:[(:—–-]\s*)?(?:a\s+)?(?:shared\s+)?vocabulary\s+(?:of|for)\b/i.test(after);
+  if (term === 'Interlinking') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:система\s+внутренних\s+ссылок|внутренние\s+ссылки)/iu.test(after);
+  if (term === 'ContentDistribution') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?распространение\s+(?:контента|материалов|публикаций|статей)/iu.test(after);
+  if (term === 'Intent') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:цель|потребность)\s+(?:пользователя|человека|поискового\s+запроса)/iu.test(after);
+  if (term === 'Prompt') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:текст\s+)?(?:запрос|инструкц)[\p{L}]*\s+(?:для|к|нейросет)/iu.test(after);
   if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
@@ -375,6 +392,7 @@ function alreadyExplained(context, start, end, term, spelling) {
       new RegExp(full + '\\s*\\(\\s*$', 'iu').test(before);
   }
   const name = FULL_NAMES[term];
+  if (!name) return false;
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
   const meaning = term === 'GEO'
@@ -395,7 +413,7 @@ function alreadyExplained(context, start, end, term, spelling) {
 export function findTermMatches(text, { context = text, offset = 0, language = 'ru' } = {}) {
   const matches = [];
   const candidates = [...text.matchAll(TERMS)];
-  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS));
+  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS), ...text.matchAll(RU_WORD_TERMS));
   candidates.sort((a, b) => a.index - b.index || b[0].length - a[0].length);
   let consumedUntil = -1;
   for (const match of candidates) {
@@ -403,7 +421,12 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (start < consumedUntil) continue;
     consumedUntil = end;
     const value = match[0];
-    const term = /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
+    const term = /^schema\.org$/i.test(value) ? 'SchemaOrg'
+      : /^перелинковк|^перелинковок/iu.test(value) ? 'Interlinking'
+      : /^дистрибуци/iu.test(value) ? 'ContentDistribution'
+      : /^интент/iu.test(value) ? 'Intent'
+      : /^промпт/iu.test(value) ? 'Prompt'
+      : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'
       : /^[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)$/u.test(value) ? 'Ecommerce'
@@ -438,6 +461,10 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (term === 'МО' && !/(?:Москв|Подмосков|област|Пушкино|Коледин|Подольск|Мытищ|Люберц)/iu.test(nearby)) continue;
     if (term === 'SPA' && !/(?:рендер|веб-приложен|разработ|JavaScript|PHP|frontend|frontend|серверн|одностраничн)/iu.test(nearby)) continue;
     if (term === 'SAT' && !/(?:FAT|приемочн|испытан|монтаж|оборудован|заводск)/iu.test(nearby)) continue;
+    // "Дистрибуция" also refers to physical goods; the glossary covers content distribution only.
+    if (term === 'ContentDistribution' &&
+        /(?:товар|поставк|оптов|дилер|логист|склад|торговых\s+сет)/iu.test(nearby) &&
+        !/(?:контент|публикац|стат(?:ей|ьи|ью)|материал|редакц|медиаплощад|соцсет)/iu.test(nearby)) continue;
     if (isAddress(text, start, end) || (term !== 'BrandFound' && alreadyExplained(context, offset + start, offset + end, term, value))) continue;
     matches.push({ start, end, term, text: match[0] });
   }
@@ -476,8 +503,8 @@ export function installTermHints(doc = document) {
   const language = doc.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'ru';
   const definitions = TERM_DEFINITIONS[language];
   const labels = language === 'en'
-    ? term => `Explain ${({Ecommerce:'E-commerce',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО'}[term] || term)}`
-    : term => `Что означает ${({Fulfillment:'фулфилмент',Ecommerce:'E-commerce',STM:'СТМ',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО',Shortlist:'shortlist'}[term] || term)}`;
+    ? term => `Explain ${({SchemaOrg:'Schema.org',Ecommerce:'E-commerce',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО'}[term] || term)}`
+    : term => `Что означает ${({SchemaOrg:'Schema.org',Interlinking:'перелинковка',ContentDistribution:'дистрибуция контента',Intent:'интент',Prompt:'промпт',Fulfillment:'фулфилмент',Ecommerce:'E-commerce',STM:'СТМ',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО',Shortlist:'shortlist'}[term] || term)}`;
   const descriptions = doc.createElement('div');
   descriptions.hidden = true;
   descriptions.dataset.gaeoTermDefinitions = '';
@@ -512,17 +539,22 @@ export function installTermHints(doc = document) {
     return trigger;
   }
 
-  function makeLinkHelp(term) {
+  function makeLinkHelp(terms) {
     const button = doc.createElement('button');
     button.type = 'button';
     button.className = 'gaeo-term-link-help';
-    button.dataset.gaeoTerm = term;
+    button.dataset.gaeoTerm = terms.join('|');
     button.dataset.gaeoTermLinkHelp = '';
-    button.setAttribute('aria-label', labels(term));
-    button.setAttribute('aria-describedby', descriptionId(term));
+    button.setAttribute('aria-label', terms.length === 1 ? labels(terms[0]) :
+      language === 'en' ? 'Explain the terms in this link' : 'Расшифровки терминов в ссылке');
+    button.setAttribute('aria-describedby', terms.map(descriptionId).join(' '));
     button.setAttribute('aria-controls', tooltip.id);
     button.setAttribute('aria-expanded', 'false');
-    button.textContent = '?';
+    const icon = doc.createElement('span');
+    icon.className = 'gaeo-term-link-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = '?';
+    button.append(icon);
     return button;
   }
 
@@ -549,10 +581,10 @@ export function installTermHints(doc = document) {
     tail.data = tail.data.replace('.', '');
   }
 
-  // The original anchor remains intact and its help controls follow the
-  // LAST visual line even when the anchor wraps across multiple lines.
+  // Keep the original anchor intact, with one help control beside it.
   function enhanceLinks(root) {
-    const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
+    const enclosingLink = root.closest?.('a[href]');
+    const links = enclosingLink ? [enclosingLink] : [...(root.querySelectorAll?.('a[href]') || [])];
     for (const link of links) {
       if (!link.isConnected) continue;
       let wrapper = link.parentElement?.matches(LINK_WRAPPER_SELECTOR) ? link.parentElement : null;
@@ -584,15 +616,13 @@ export function installTermHints(doc = document) {
         link.replaceWith(wrapper);
         wrapper.append(link);
       }
-      wrapper.style.setProperty('--gaeo-term-help-space', `${terms.length * 24 + 2}px`);
       removeOrphanPeriod(wrapper);
-      const existing = [...wrapper.children].filter(child => child.matches?.(LINK_HELP_SELECTOR));
-      if (terms.length === existing.length && terms.every((term, i) => term === existing[i].dataset.gaeoTerm)) continue;
-      for (const button of existing) {
-        if (button === active) hide();
-        button.remove();
-      }
-      for (const term of terms) wrapper.append(makeLinkHelp(term));
+      const existing = wrapper.querySelector(`:scope > ${LINK_HELP_SELECTOR}`);
+      if (existing?.dataset.gaeoTerm === terms.join('|')) continue;
+      if (existing && existing === active) hide();
+      const button = makeLinkHelp(terms);
+      if (existing) existing.replaceWith(button);
+      else wrapper.append(button);
     }
   }
 
@@ -629,7 +659,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (isProtectedInteractive(node.parentElement)) continue;
       const text = node.data;
-      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && EXTRA_QUICK_TERMS.test(text))) continue;
+      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && (EXTRA_QUICK_TERMS.test(text) || RU_WORD_QUICK_TERMS.test(text)))) continue;
       const matches = findTermMatches(text, { ...contextFor(node), language });
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
@@ -665,15 +695,21 @@ export function installTermHints(doc = document) {
     };
     const margin = 12, gap = 10;
     tooltip.style.maxWidth = `${Math.min(380, Math.max(120, bounds.width - margin * 2))}px`;
-    tooltip.style.maxHeight = `${Math.max(80, bounds.height - margin * 2)}px`;
+    const maxHeight = Math.max(80, bounds.height - margin * 2);
+    tooltip.style.maxHeight = `${maxHeight}px`;
     const box = tooltip.getBoundingClientRect();
     const left = Math.min(Math.max(bounds.left + margin, anchor.left + (anchor.width - box.width) / 2), bounds.left + bounds.width - box.width - margin);
-    const fitsBelow = anchor.bottom + gap + box.height <= bounds.top + bounds.height - margin;
-    const preferredTop = fitsBelow ? anchor.bottom + gap : anchor.top - box.height - gap;
-    const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - box.height - margin);
+    const above = anchor.top - gap - bounds.top - margin;
+    const below = bounds.top + bounds.height - margin - anchor.bottom - gap;
+    const placeBelow = box.height <= below || (box.height > above && below >= above);
+    // A tall tooltip must stay clear of its own trigger and scroll if needed.
+    tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
+    const height = tooltip.getBoundingClientRect().height;
+    const preferredTop = placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
+    const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - height - margin);
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
-    tooltip.dataset.placement = fitsBelow ? 'below' : 'above';
+    tooltip.dataset.placement = placeBelow ? 'below' : 'above';
     tooltip.style.setProperty('--gaeo-term-arrow', `${Math.min(box.width - 18, Math.max(18, anchor.left + anchor.width / 2 - left))}px`);
   }
 
@@ -687,16 +723,23 @@ export function installTermHints(doc = document) {
   }
 
   function show(trigger, mode = 'timed') {
-    if (!definitions[trigger.dataset.gaeoTerm]) return;
+    const terms = trigger.dataset.gaeoTerm.split('|').filter(term => Object.hasOwn(definitions, term));
+    if (!terms.length) return;
     if (active && active !== trigger) active.setAttribute('aria-expanded', 'false');
     active = trigger;
     activeMode = mode;
-    tooltip.textContent = definitions[trigger.dataset.gaeoTerm];
+    tooltip.replaceChildren(...terms.map(term => {
+      const entry = doc.createElement('div');
+      entry.className = 'gaeo-term-tooltip-entry';
+      entry.textContent = definitions[term];
+      return entry;
+    }));
     tooltip.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
     place();
     if (timer) win.clearTimeout(timer);
-    timer = mode === 'hover' ? null : win.setTimeout(hide, TERM_HINT_DURATION);
+    const touch = lastInput === 'touch' || win.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    timer = mode === 'hover' ? null : win.setTimeout(hide, TERM_HINT_DURATION * (touch ? terms.length : 1));
   }
 
   doc.addEventListener('click', event => {
@@ -713,6 +756,15 @@ export function installTermHints(doc = document) {
     event.stopPropagation();
     hide();
   });
+  tooltip.addEventListener('pointerenter', () => {
+    if (activeMode === 'hover' && timer) {
+      win.clearTimeout(timer);
+      timer = null;
+    }
+  });
+  tooltip.addEventListener('pointerleave', () => {
+    if (activeMode === 'hover') hide();
+  });
   doc.addEventListener('pointerdown', event => {
     lastInput = event.pointerType || 'mouse';
     if (active && !event.target.closest?.('[data-gaeo-term],.gaeo-term-tooltip')) hide();
@@ -728,7 +780,11 @@ export function installTermHints(doc = document) {
   doc.addEventListener('pointerout', event => {
     if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
     const trigger = event.target.closest?.('[data-gaeo-term]');
-    if (trigger === active && activeMode === 'hover' && !trigger.contains(event.relatedTarget)) hide();
+    if (trigger !== active || activeMode !== 'hover' || trigger.contains(event.relatedTarget)) return;
+    if (tooltip.childElementCount > 1 && tooltip.scrollHeight > tooltip.clientHeight) {
+      // Allow the pointer to cross the gap into a scrollable group.
+      timer = win.setTimeout(hide, 200);
+    } else hide();
   }, { passive: true });
   doc.addEventListener('focusin', event => {
     const trigger = event.target.closest?.('[data-gaeo-term]');
@@ -744,7 +800,9 @@ export function installTermHints(doc = document) {
     frame = win.requestAnimationFrame(() => { frame = null; if (active) place(); });
   };
   win.addEventListener('resize', reposition, { passive: true });
-  doc.addEventListener('scroll', reposition, { capture: true, passive: true });
+  doc.addEventListener('scroll', event => {
+    if (event.target !== tooltip) reposition();
+  }, { capture: true, passive: true });
   win.visualViewport?.addEventListener('resize', reposition, { passive: true });
   win.visualViewport?.addEventListener('scroll', reposition, { passive: true });
 
@@ -756,6 +814,8 @@ export function installTermHints(doc = document) {
     for (const record of records) {
       if (record.target.parentElement?.closest(EXCLUDED) || record.target.closest?.(EXCLUDED)) continue;
       if (record.type === 'characterData') pending.add(record.target.parentElement);
+      const link = record.target.closest?.('a[href]');
+      if (link) pending.add(link);
       for (const node of record.addedNodes || []) if (node.nodeType === 1 || node.nodeType === 3) pending.add(node.nodeType === 3 ? node.parentElement : node);
     }
     if (active && !active.isConnected) hide();
