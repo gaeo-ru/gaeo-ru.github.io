@@ -158,7 +158,9 @@ try {
         'Question icon retains flex layout inside the top-aligned link group');
       const geometry = await icon.evaluate(button => {
         const anchor = button.parentElement.querySelector('a');
-        const lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+        const range = document.createRange();
+        range.selectNodeContents(anchor);
+        const lines = [...range.getClientRects()].filter(rect => rect.width > 0);
         const last = lines.at(-1), circle = button.getBoundingClientRect();
         return { lastTop: last.top, lastBottom: last.bottom, circleTop: circle.top, circleBottom: circle.bottom };
       });
@@ -189,7 +191,9 @@ try {
         ['BMR', 'SoV'], 'Full and abbreviated metrics both have their original definitions');
       const pos = await measurement.evaluate(element => {
         const anchor = element.querySelector('.gaeo-term-link-inline > a');
-        const lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+        const range = document.createRange();
+        range.selectNodeContents(anchor);
+        const lines = [...range.getClientRects()].filter(rect => rect.width > 0);
         const last = lines.at(-1);
         return { lines: lines.length, lastTop: last.top, lastBottom: last.bottom,
           icons: [...element.querySelectorAll('.gaeo-term-link-help')].map(icon => {
