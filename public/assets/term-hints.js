@@ -2,7 +2,10 @@
 /** Shared, progressively enhanced explanations of GAEO's specialist terms. */
 /** Approved abbreviations actually found in the Russian content; English pages keep their existing glossary. */
 const RU_EXTRA_GLOSSARY = Object.freeze({
-  "B2B": "B2B (Business-to-Business) - продажи товаров и услуг одним компаниям другим",
+  "Core Web Vitals": "Core Web Vitals (основные веб-показатели) — метрики Google, оценивающие загрузку, отзывчивость и визуальную стабильность веб-страницы: LCP, INP и CLS.",
+  "JavaScript": "JavaScript — язык программирования, который обеспечивает интерактивность и динамическое изменение содержимого веб-страниц.",
+  "canonical": "canonical (канонический URL) — указание поисковым роботам предпочтительного адреса страницы среди дублей и очень похожих страниц; обычно задаётся через rel=\"canonical\".",
+  "B2B": "B2B (Business-to-Business) - продажи товаров и услуг одними компаниями - другим",
   "B2C": "B2C (Business-to-Consumer) - продажи товаров и услуг конечным потребителям",
   "DTC": "DTC (Direct-to-Consumer) - прямые продажи производителя потребителю без посредников",
   "FMCG": "FMCG (Fast-Moving Consumer Goods) - товары повседневного спроса с высокой оборачиваемостью",
@@ -223,6 +226,8 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     ...RU_EXTRA_GLOSSARY,
+    Indexing: 'Индексация — обработка найденных поисковыми роботами страниц и добавление сведений о них в поисковый индекс. Наличие страницы в индексе не гарантирует показ в поиске.',
+    Feed: 'Фид — структурированная выгрузка данных (например, товаров, цен, остатков) из сайта или учетной системы для автоматической передачи поисковым сервисам, торговым площадкам и другим системам.',
     SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
     Interlinking: 'Перелинковка - система внутренних ссылок между страницами сайта, помогающая посетителям и поисковым роботам находить связанные материалы.',
     ContentDistribution: 'Дистрибуция контента - распространение статей, исследований и других материалов по подходящим площадкам и каналам, чтобы их увидела целевая аудитория.',
@@ -333,7 +338,15 @@ const FULL_NAMES = {
 const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 // Longest-match-first Russian glossary; works on source text without changing URLs or links.
-const EXTRA_ALIASES = Object.freeze({ 'ВМиК': 'ВМК' });
+const EXTRA_ALIASES = Object.freeze({
+  'ВМиК': 'ВМК',
+  'Canonical': 'canonical',
+  'Javascript': 'JavaScript',
+  'javascript': 'JavaScript',
+  'JAVASCRIPT': 'JavaScript',
+  'core web vitals': 'Core Web Vitals',
+  'Core web vitals': 'Core Web Vitals'
+});
 const extraSpelling = Object.keys(RU_EXTRA_GLOSSARY).concat(Object.keys(EXTRA_ALIASES));
 const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
   .map(value => value.split(/\s+/u).map(part =>
@@ -342,7 +355,7 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
 const RU_WORD_QUICK_TERMS = new RegExp(RU_WORD_TERMS.source, 'iu');
 const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
 const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
@@ -381,6 +394,8 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
+  if (term === 'Indexing') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:обработк|процесс\s+(?:обработки|включения)|включени)[\p{L}\s-]*\s+(?:страниц|сайтов|документов|в\s+поисковый\s+индекс)/iu.test(after);
+  if (term === 'Feed') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:структурированн|файл|выгрузк)[\p{L}\s-]*\s+(?:данных|товаров|каталога)/iu.test(after);
   const extraDefinition = RU_EXTRA_GLOSSARY[term];
   if (extraDefinition) {
     const expansion = extraDefinition.match(/^[^(]+\(([^)]+)\)/u)?.[1];
@@ -426,6 +441,8 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^дистрибуци/iu.test(value) ? 'ContentDistribution'
       : /^интент/iu.test(value) ? 'Intent'
       : /^промпт/iu.test(value) ? 'Prompt'
+      : /^индексаци/iu.test(value) ? 'Indexing'
+      : /^фид/iu.test(value) ? 'Feed'
       : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'
@@ -459,6 +476,10 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (term === 'ТО' && !/(?:авто|машин|запчаст|двигател|модел|ремонт|планов|детал|сервис)/iu.test(nearby)) continue;
     if (term === 'МП' && !/(?:маркетплейс|селлер|товар|постав|отгруз|склад)/iu.test(nearby)) continue;
     if (term === 'МО' && !/(?:Москв|Подмосков|област|Пушкино|Коледин|Подольск|Мытищ|Люберц)/iu.test(nearby)) continue;
+    // "Индексация" also describes salary/pension adjustments, outside this SEO glossary.
+    if (term === 'Indexing' &&
+        /(?:пенси|зарплат|оклад|пособи|выплат|инфляц|МРОТ|заработн|доход)/iu.test(nearby) &&
+        !/(?:поисков|робот|страниц|сайт|URL|контент|документ|canonical|краулинг|Google|Яндекс|SEO|GEO)/iu.test(nearby)) continue;
     if (term === 'SPA' && !/(?:рендер|веб-приложен|разработ|JavaScript|PHP|frontend|frontend|серверн|одностраничн)/iu.test(nearby)) continue;
     if (term === 'SAT' && !/(?:FAT|приемочн|испытан|монтаж|оборудован|заводск)/iu.test(nearby)) continue;
     // "Дистрибуция" also refers to physical goods; the glossary covers content distribution only.
