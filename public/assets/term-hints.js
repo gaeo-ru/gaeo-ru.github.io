@@ -156,8 +156,8 @@ export function installTermHints(doc = document) {
     range.setEndBefore(link);
     const before = range.toString().length;
     const after = context.textContent.slice(before + link.textContent.length, before + link.textContent.length + 160);
-    return /^\\s*(?:[(:—–-]\\s*)?(?:это\\s+)?(?:сервис|платформа|инструмент)\\s+(?:для\\s+)?(?:мониторинга|отслеживания|анализа)\\s+(?:ответов|упоминаний)/i.test(after) ||
-      /^\\s*(?:[(:—–-]\\s*)?(?:is\\s+(?:an?\\s+)?)?(?:service|platform|tool)\\s+(?:for\\s+)?(?:monitoring|tracking)\\s+(?:AI\\s+)?(?:answers|responses)/i.test(after);
+    return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:сервис|платформа|инструмент)\s+(?:для\s+)?(?:мониторинга|отслеживания|анализа)\s+(?:ответов|упоминаний)/i.test(after) ||
+      /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?(?:service|platform|tool)\s+(?:for\s+)?(?:monitoring|tracking)\s+(?:AI\s+)?(?:answers|responses)/i.test(after);
   }
 
   // Wrap the original anchor with its independent help icons so they align
