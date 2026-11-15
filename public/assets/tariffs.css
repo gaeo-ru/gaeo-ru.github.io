@@ -42,6 +42,8 @@
  border-radius:50%;background:#021641;color:#02e5f9;
  font-size:20px;font-weight:650;line-height:1;
 }
+/* Correct the baseline within the circle without moving the circle itself. */
+.tariff-overview .tariff-text-link--home .tariff-text-link__arrow-glyph{display:block;line-height:1;transform:translateY(-3px)}
 @media(max-width:720px){
  .tariff-overview .tariff-text-link--home{
   width:100%;min-height:64px;padding:14px 12px 14px 16px;
@@ -59,6 +61,40 @@
 .tariff-field{display:grid;gap:10px;font-weight:700;font-size:15px}
 .tariff-field select,.tariff-field input{width:100%;min-height:48px;border:1px solid #a2adbb;border-radius:7px;padding:11px 12px;font:inherit;color:var(--navy);background:#fff}
 .tariff-field small{font-size:13px;font-weight:400;color:var(--muted);line-height:1.5}
+/* The select remains the no-script fallback and calculator's source of truth. */
+.tariff-plan-picker{position:relative;min-width:0;font-weight:500}
+.tariff-plan-picker[hidden],.tariff-plan-picker__options[hidden]{display:none}
+.tariff-plan-picker__trigger{
+ position:relative;display:flex;align-items:center;box-sizing:border-box;
+ width:100%;min-height:62px;padding:11px 50px 11px 12px;
+ border:1px solid #a2adbb;border-radius:7px;background:#fff;color:var(--navy);
+ font:inherit;font-size:16px;font-weight:500;line-height:1.35;text-align:left;cursor:pointer;
+}
+.tariff-plan-picker__trigger [data-plan-current]{display:block;min-width:0;white-space:normal;overflow-wrap:break-word}
+.tariff-plan-picker__trigger::after{
+ content:"";position:absolute;right:18px;top:50%;width:0;height:0;
+ border-left:8px solid transparent;border-right:8px solid transparent;border-top:9px solid var(--navy);
+ transform:translateY(-35%);pointer-events:none;
+}
+.tariff-plan-picker__trigger[aria-expanded="true"]::after{transform:translateY(-70%) rotate(180deg)}
+.tariff-plan-picker__trigger:focus-visible,.tariff-plan-picker__option:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.tariff-plan-picker__options{
+ position:absolute;z-index:20;top:calc(100% + 6px);left:0;right:0;
+ display:grid;box-sizing:border-box;max-height:min(50vh,360px);overflow-y:auto;
+ border:1px solid #a2adbb;border-radius:8px;background:#fff;
+ box-shadow:0 8px 24px rgba(2,22,65,.16);
+}
+.tariff-plan-picker__option{
+ display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+ width:100%;padding:12px 14px;border:0;border-radius:0;
+ background:#fff;color:var(--navy);font:inherit;text-align:left;cursor:pointer;
+}
+.tariff-plan-picker__option+.tariff-plan-picker__option{border-top:1px solid var(--line)}
+.tariff-plan-picker__option:hover,.tariff-plan-picker__option:focus-visible{background:#edf4ff}
+.tariff-plan-picker__option[aria-selected="true"]{background:#eaf7fa}
+.tariff-plan-picker__name{font-size:16px;line-height:1.35;white-space:normal;overflow-wrap:break-word}
+.tariff-plan-picker__price{font-size:13px;line-height:1.35;color:var(--muted);white-space:normal}
+@media(max-width:720px){.tariff-plan-picker__trigger{min-height:68px}}
 .tariff-field :is(input,select):focus-visible,.tariff-platform-options input:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .tariff-platforms{border:0;padding:0;margin:28px 0 0;min-width:0}
 .tariff-platforms legend{font-weight:700;margin:0 0 12px;font-size:15px}
