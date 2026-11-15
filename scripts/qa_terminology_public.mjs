@@ -26,7 +26,7 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || 'a6b652e5e904f42fd39c65cd200121312ae22310';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '1ad1e303e3f314776c688fa832720ead70e7efeb';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
@@ -153,6 +153,8 @@ try {
     }
     assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'No nested controls in hyperlinks');
     assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question icon in navigation');
+    assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
+      'Tariff and conversion actions retain their original alignment');
     if (route === '/cases/' || route === '/en/cases/') {
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
       const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
