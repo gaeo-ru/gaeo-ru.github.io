@@ -220,3 +220,10 @@ test('B2B wording and RU-only glossary for Web Vitals, JavaScript, canonical, in
     []
   );
 });
+
+
+test('PR glossary definition uses the approved communication meaning', () => {
+  assert.equal(TERM_DEFINITIONS.ru.PR,
+    'PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание');
+  assert.deepEqual(findTermMatches('PR и PRR').map(hit => hit.term), ['PR', 'PRR']);
+});
