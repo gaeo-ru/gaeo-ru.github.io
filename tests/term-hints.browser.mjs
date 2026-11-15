@@ -185,14 +185,20 @@ try {
     const textRange = document.createRange();
     textRange.selectNodeContents(anchor);
     const lines = [...textRange.getClientRects()].filter(rect => rect.width > 0);
-    const last = lines.at(-1), icon = group.querySelector('.gaeo-term-link-help').getBoundingClientRect();
-    return { count: lines.length, lastTop: last.top, lastBottom: last.bottom, iconTop: icon.top, iconBottom: icon.bottom };
+    const button = group.querySelector('.gaeo-term-link-help');
+    const icon = button.querySelector('.gaeo-term-link-icon').getBoundingClientRect();
+    const hit = button.getBoundingClientRect();
+    return { count: lines.length, firstTop: lines[0].top, firstBottom: lines[0].bottom,
+      iconTop: icon.top, iconSize: [icon.width, icon.height], hitSize: [hit.width, hit.height] };
   });
   assert.ok(geometry.count >= 2, 'Long linked heading wraps onto multiple lines');
-  assert.ok(geometry.iconTop >= geometry.lastTop - 8 && geometry.iconBottom <= geometry.lastBottom + 10,
-    'Question mark aligns with LAST line: ' + JSON.stringify(geometry));
+  assert.ok(geometry.iconTop >= geometry.firstTop - 4 &&
+    geometry.iconTop < (geometry.firstTop + geometry.firstBottom) / 2,
+    'Question mark aligns with the top of the first line: ' + JSON.stringify(geometry));
+  assert.deepEqual(geometry.iconSize, [14, 14]);
+  assert.deepEqual(geometry.hitSize, [18, 18]);
   const secondDefinition = page.locator('#orphan-period .gaeo-term-link-help[data-gaeo-term="SoV"]');
-  await secondDefinition.click();
+  await secondDefinition.click({ position: { x: 1, y: 9 } });
   assert.equal(await page.locator('#gaeo-term-tooltip').textContent(),
     'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети');
   await page.keyboard.press('Escape');
@@ -428,7 +434,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: last-line help circles, full metric names, punctuation, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
+  console.log(`Term hint browser QA passed: first-line help circles, full metric names, punctuation, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
 } finally {
   await browser.close();
 }

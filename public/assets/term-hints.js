@@ -549,7 +549,11 @@ export function installTermHints(doc = document) {
     button.setAttribute('aria-describedby', descriptionId(term));
     button.setAttribute('aria-controls', tooltip.id);
     button.setAttribute('aria-expanded', 'false');
-    button.textContent = '?';
+    const icon = doc.createElement('span');
+    icon.className = 'gaeo-term-link-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = '?';
+    button.append(icon);
     return button;
   }
 
@@ -576,8 +580,7 @@ export function installTermHints(doc = document) {
     tail.data = tail.data.replace('.', '');
   }
 
-  // The original anchor remains intact and its help controls follow the
-  // LAST visual line even when the anchor wraps across multiple lines.
+  // Keep the original anchor intact, with separate help controls beside it.
   function enhanceLinks(root) {
     const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
     for (const link of links) {

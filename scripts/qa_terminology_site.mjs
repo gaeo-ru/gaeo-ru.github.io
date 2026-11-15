@@ -151,6 +151,18 @@ try {
     assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question marks in navigation');
     assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
       'No glossary icons inside pricing and conversion buttons');
+    const misalignedIcons = await page.locator('.gaeo-term-link-help:visible').evaluateAll(buttons => buttons.flatMap(button => {
+      const anchor = button.parentElement.querySelector('a');
+      const range = document.createRange();
+      range.selectNodeContents(anchor);
+      const first = [...range.getClientRects()].find(rect => rect.width > 0);
+      const hit = button.getBoundingClientRect();
+      const circle = button.querySelector('.gaeo-term-link-icon').getBoundingClientRect();
+      const aligned = first && circle.top >= first.top - 4 && circle.top < (first.top + first.bottom) / 2;
+      if (aligned && hit.width === 18 && hit.height === 18 && circle.width === 14 && circle.height === 14) return [];
+      return [{ text: anchor.textContent.trim(), first: first?.toJSON(), hit: hit.toJSON(), circle: circle.toJSON() }];
+    }));
+    assert.deepEqual(misalignedIcons, [], 'Question marks start at the top of the first linked line and retain their hit area');
     if (route === '/cases/' || route === '/en/cases/') {
       assert.ok(await page.locator('#geo-promotion h3 .gaeo-term-link-inline').count() >= 2, 'BMR titles retain independent help icons');
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
@@ -160,19 +172,6 @@ try {
       assert.equal(await icon.getAttribute('data-gaeo-term'), 'BMR');
       assert.equal(await icon.textContent(), '?');
       assert.equal(await title.locator('button').count(), 0, 'Link text cannot contain a button');
-      assert.ok(['flex', 'inline-flex'].includes(await icon.evaluate(el => getComputedStyle(el).display)),
-        'Question icon retains flex layout inside the top-aligned link group');
-      const geometry = await icon.evaluate(button => {
-        const anchor = button.parentElement.querySelector('a');
-        const range = document.createRange();
-        range.selectNodeContents(anchor);
-        const lines = [...range.getClientRects()].filter(rect => rect.width > 0);
-        const last = lines.at(-1), circle = button.getBoundingClientRect();
-        return { lastTop: last.top, lastBottom: last.bottom, circleTop: circle.top, circleBottom: circle.bottom };
-      });
-      assert.ok(geometry.circleTop >= geometry.lastTop - 8 &&
-        geometry.circleBottom <= geometry.lastBottom + 10,
-        'Circle must align with LAST line of BMR link: ' + JSON.stringify(geometry));
     }
     if (viewport.width <= 390) {
       const mobileLanguages = page.locator('#mobileMenu > .mobile-langs');
@@ -199,19 +198,12 @@ try {
         const anchor = element.querySelector('.gaeo-term-link-inline > a');
         const range = document.createRange();
         range.selectNodeContents(anchor);
-        const lines = [...range.getClientRects()].filter(rect => rect.width > 0);
-        const last = lines.at(-1);
-        return { lines: lines.length, lastTop: last.top, lastBottom: last.bottom,
-          icons: [...element.querySelectorAll('.gaeo-term-link-help')].map(icon => {
-            const rect = icon.getBoundingClientRect();
-            return { top: rect.top, bottom: rect.bottom };
-          }), trailing: anchor.parentElement.nextSibling?.textContent.trim() || '' };
+        const lines = new Set([...range.getClientRects()].filter(rect => rect.width > 0).map(rect => rect.top));
+        return { lines: lines.size, trailing: anchor.parentElement.nextSibling?.textContent.trim() || '' };
       });
       assert.equal(pos.trailing, '', 'No orphan period after measurement link');
       if (viewport.width <= 390) {
         assert.ok(pos.lines >= 2, 'Measurement link wraps on a phone');
-        assert.ok(pos.icons.every(icon => icon.top >= pos.lastTop - 8 && icon.bottom <= pos.lastBottom + 10),
-          'Tooltip icons align with the LAST linked line: ' + JSON.stringify(pos));
       }
     }
     const before = await dimensions(page);
