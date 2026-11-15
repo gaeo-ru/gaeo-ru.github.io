@@ -405,6 +405,12 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
   .hero-proof b{
     font-size:17px;
   }
+  /* Align one-line audit count with the last line of wrapped year headings. */
+  .hero-proof>div>b{
+    display:flex;
+    align-items:flex-end;
+    min-height:2.3em;
+  }
   .hero-proof span{
     font-size:10.5px;
   }
