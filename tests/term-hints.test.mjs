@@ -254,10 +254,10 @@ test('B2B wording and RU-only glossary for Web Vitals, JavaScript, canonical, in
 });
 
 
-test('PR glossary definition uses the approved communication meaning', () => {
-  assert.equal(TERM_DEFINITIONS.ru.PR,
-    'PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание');
-  assert.deepEqual(findTermMatches('PR и PRR').map(hit => hit.term), ['PR', 'PRR']);
+test('Ambiguous PR is excluded without affecting PRR', () => {
+  assert.equal(TERM_DEFINITIONS.ru.PR, undefined);
+  assert.deepEqual(findTermMatches('PR и PRR').map(hit => hit.term), ['PRR']);
+  assert.deepEqual(findTermMatches('PR', {language: 'en'}), []);
 });
 
 
@@ -284,4 +284,37 @@ test('«контент»: approved meaning, singular/plural declensions, boundar
   assert.deepEqual(findTermMatches('контентный контентщик контент24 контентность'), []);
   assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content','CaseStudy']);
   assert.deepEqual(findTermMatches('контент и кейсы', {language:'en'}), []);
+});
+
+
+test('«репозиторий»: singular and plural cases, safe boundaries and original meaning', () => {
+  assert.equal(TERM_DEFINITIONS.ru.Repository,
+    'Репозиторий — хранилище файлов проекта и истории их изменений. Обычно используется с системой контроля версий Git для отслеживания правок и совместной разработки.');
+  const forms = ['Репозиторий', 'репозитория', 'репозиторию', 'репозиторием',
+    'репозитории', 'репозиториев', 'репозиториям', 'репозиториями', 'репозиториях'];
+  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'Repository'));
+  assert.deepEqual(findTermMatches('Кейсы, контент и репозитории').map(hit => hit.term),
+    ['CaseStudy','Content','Repository']);
+  assert.deepEqual(findTermMatches('Репозиторий — хранилище файлов проекта'), []);
+  assert.deepEqual(findTermMatches('репозиториальный антирепозиторий репозиторий2'), []);
+  assert.deepEqual(findTermMatches('/docs/репозиторий/index.html'), []);
+  assert.deepEqual(findTermMatches('Репозиторий', {language:'en'}), []);
+});
+test('Six technical glossary terms from the GAEO website development case', () => {
+  for (const key of ['workflow','Title','description','hreflang','Postbox','CTA'])
+    assert.ok(TERM_DEFINITIONS.ru[key], 'No RU definition for '+key);
+  assert.match(TERM_DEFINITIONS.ru.Postbox, /Yandex Cloud Postbox/);
+  assert.match(TERM_DEFINITIONS.ru.CTA, /Call to Action/);
+  assert.deepEqual(findTermMatches('SEO: Title, description, canonical, hreflang').map(x=>x.term),
+    ['SEO','Title','description','canonical','hreflang']);
+  assert.deepEqual(findTermMatches('GitHub workflow запускает проверки').map(x=>x.term),
+    ['GitHub','workflow']);
+  assert.deepEqual(findTermMatches('Форма сайта отправляет письма через Yandex Cloud Postbox').map(x=>x.term),
+    ['Postbox']);
+  assert.deepEqual(findTermMatches('Кнопка CTA отправляет заявку').map(x=>x.term), ['CTA']);
+  assert.deepEqual(findTermMatches('Это книга: Title и description автора').map(x=>x.term), []);
+  assert.deepEqual(findTermMatches('Postbox в городе без электронной почты').map(x=>x.term), []);
+  assert.deepEqual(findTermMatches('PR, PRR, workflow, Title, description, hreflang, Postbox, CTA, репозитории',
+    {language: 'en'}).map(x=>x.term), ['PRR']);
+  assert.deepEqual(findTermMatches('https://example.com/description/'), []);
 });
