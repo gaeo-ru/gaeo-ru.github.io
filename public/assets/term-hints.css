@@ -30,47 +30,37 @@
 .gaeo-term-trigger.gaeo-term-trigger--phrase {
   white-space: normal;
 }
-/* Use inline flow so the help follows the last line, not the first line. */
+/* Flex keeps the link and separate help controls together, including on narrow
+   screens. Align the controls with the last visual line of the linked text. */
 .gaeo-term-link-inline {
-  display: inline;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
-/* Reserve room at the end of the anchor for one or more help controls. */
-.gaeo-term-link-inline:not(.gaeo-term-link-inline--block) > a {
-  padding-inline-end: var(--gaeo-term-help-space, 26px);
-  margin-inline-end: calc(0px - var(--gaeo-term-help-space, 26px));
-}
-.gaeo-term-link-inline--block {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  min-width: 0;
-}
-.gaeo-term-link-inline--block > a {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-/* Keep case-title help beside the final link line even at 320px. */
-#geo-promotion .list-card h3 .gaeo-term-link-inline,
-.cases-listing-content .dev-case-listing__service .gaeo-term-link-inline,
-.catalog-guide .gaeo-term-link-inline {
   display: inline-flex;
+  box-sizing: border-box;
   align-items: flex-end;
   max-width: 100%;
   min-width: 0;
+  vertical-align: baseline;
 }
-#geo-promotion .list-card h3 .gaeo-term-link-inline > a,
-.cases-listing-content .dev-case-listing__service .gaeo-term-link-inline > a,
-.catalog-guide .gaeo-term-link-inline > a {
+.gaeo-term-link-inline > a {
   flex: 0 1 auto;
   min-width: 0;
-  padding-inline-end: 0;
-  margin-inline-end: 0;
   white-space: normal;
   overflow-wrap: anywhere;
 }
+.gaeo-term-link-inline--block {
+  display: flex;
+  width: 100%;
+}
+.gaeo-term-link-inline--block > a {
+  flex: 1 1 auto;
+}
 .gaeo-term-link-inline > .gaeo-term-link-help.gaeo-term-link-help {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 18px;
+  margin: 0 0 0 6px;
+  vertical-align: bottom;
+}
+.gaeo-term-link-help.gaeo-term-link-help {
   position: relative;
   z-index: 1;
   flex: 0 0 18px;
