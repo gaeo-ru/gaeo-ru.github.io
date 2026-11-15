@@ -16,7 +16,7 @@ jobs:
   public-acceptance:
     if: github.ref == 'refs/heads/qa-terminology-public-20261115'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 75
     env:
       GAEO_EXPECTED_SOURCE_COMMIT: 4231c29622a890f6808870f3c38a83c86696b548
     steps:
@@ -36,13 +36,13 @@ jobs:
       - name: Install Chromium
         run: npx playwright install chromium
 
-      - name: Wait up to 25 minutes for the expected public release
+      - name: Wait up to 55 minutes for the expected public release
         shell: bash
         run: |
           node --input-type=module <<'NODE'
           import { mkdirSync, writeFileSync } from 'node:fs';
           const expected = process.env.GAEO_EXPECTED_SOURCE_COMMIT;
-          const deadline = Date.now() + 25 * 60 * 1000;
+          const deadline = Date.now() + 55 * 60 * 1000;
           const evidence = 'visual-terminology-public';
           mkdirSync(evidence, { recursive: true });
           const result = {
@@ -89,7 +89,7 @@ jobs:
           result.status = 'timeout';
           result.completedAt = new Date().toISOString();
           save();
-          throw new Error(`Expected public sourceCommit was not observed within 25 minutes: ${expected}`);
+          throw new Error(`Expected public sourceCommit was not observed within 55 minutes: ${expected}`);
           NODE
 
       - name: Verify public terminology at desktop and mobile widths
