@@ -35,7 +35,7 @@ const FULL_NAMES = {
   Fulfillment: 'Fulfillment'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -44,9 +44,15 @@ function isAddress(text, start, end) {
   return /(?:https?:\/\/|www\.|mailto:|[\w.+-]+@|\/[\w./-]*|\.(?:ru|com|org|net|io|ai)\b)/i.test(token);
 }
 
-function alreadyExplained(context, start, end, term) {
+function alreadyExplained(context, start, end, term, spelling) {
   const before = context.slice(Math.max(0, start - 180), start);
   const after = context.slice(end, end + 180);
+  // When a metric name expands an adjacent abbreviation, the expansion
+  // is already visible and neither form needs a redundant help control.
+  if (term === 'BMR' && /^Brand\s+Mention\s+Rate$/i.test(spelling) &&
+      (/\bBMR\s*(?:\(|[:—–-])\s*$/i.test(before) || /^\s*\(\s*BMR\s*\)/i.test(after))) return true;
+  if (term === 'SoV' && /^Share\s+of\s+Voice$/i.test(spelling) &&
+      (/\b(?:SoV|SOV)\s*(?:\(|[:—–-])\s*$/i.test(before) || /^\s*\(\s*(?:SoV|SOV)\s*\)/i.test(after))) return true;
   // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
   const name = FULL_NAMES[term];
@@ -70,11 +76,13 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
   for (const match of text.matchAll(TERMS)) {
     const start = match.index, end = start + match[0].length;
     const value = match[0];
-    const term = value === 'SOV' ? 'SoV'
+    const term = /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
+      : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
+      : value === 'SOV' ? 'SoV'
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
       : /^brandfound$/i.test(value) ? 'BrandFound'
       : value;
-    if (isAddress(text, start, end) || (term !== 'BrandFound' && alreadyExplained(context, offset + start, offset + end, term))) continue;
+    if (isAddress(text, start, end) || (term !== 'BrandFound' && alreadyExplained(context, offset + start, offset + end, term, value))) continue;
     matches.push({ start, end, term, text: match[0] });
   }
   return matches;
@@ -122,6 +130,7 @@ export function installTermHints(doc = document) {
     const trigger = doc.createElement('button');
     trigger.type = 'button';
     trigger.className = 'gaeo-term-trigger';
+    if (text.includes(' ')) trigger.classList.add('gaeo-term-trigger--phrase');
     trigger.dataset.gaeoTerm = term;
     trigger.setAttribute('aria-label', labels(term));
     trigger.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
@@ -160,8 +169,19 @@ export function installTermHints(doc = document) {
       /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?(?:service|platform|tool)\s+(?:for\s+)?(?:monitoring|tracking)\s+(?:AI\s+)?(?:answers|responses)/i.test(after);
   }
 
-  // Wrap the original anchor with its independent help icons so they align
-  // with the FIRST line of a multi-line link, without changing the href.
+  // An orphaned terminal dot is visually separated from a wrapped link by
+  // its independent help icon. Drop only the dot if nothing follows it.
+  function removeOrphanPeriod(wrapper) {
+    const tail = wrapper.nextSibling;
+    if (tail?.nodeType !== 3 || !/^\s*\.\s*$/u.test(tail.data)) return;
+    for (let next = tail.nextSibling; next; next = next.nextSibling) {
+      if (next.nodeType !== 3 || next.data.trim()) return;
+    }
+    tail.data = tail.data.replace('.', '');
+  }
+
+  // The original anchor remains intact and its help controls follow the
+  // LAST visual line even when the anchor wraps across multiple lines.
   function enhanceLinks(root) {
     const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
     for (const link of links) {
@@ -195,6 +215,8 @@ export function installTermHints(doc = document) {
         link.replaceWith(wrapper);
         wrapper.append(link);
       }
+      wrapper.style.setProperty('--gaeo-term-help-space', `${terms.length * 24 + 2}px`);
+      removeOrphanPeriod(wrapper);
       const existing = [...wrapper.children].filter(child => child.matches?.(LINK_HELP_SELECTOR));
       if (terms.length === existing.length && terms.every((term, i) => term === existing[i].dataset.gaeoTerm)) continue;
       for (const button of existing) {
@@ -238,7 +260,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
