@@ -20,7 +20,7 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || 'ec0c9b5134f317e190c7732822e8c554eb303da9';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '7834ae53f6c4623afb91c497fe873f9f7b9a33e0';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
@@ -184,8 +184,24 @@ try {
         await trigger.click();
         await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : 'geo-audit'}-${term}-tooltip`);
       }
+      if (current.clickedTerms.length === 1) {
+        await tooltip.click();
+        assert.equal(await tooltip.isVisible(), false, 'Clicking the live explanation dismisses it');
+        assert.equal(await trigger.getAttribute('aria-expanded'), 'false', 'Dismissal resets accessibility state');
+        await trigger.click();
+        assert.ok(await tooltip.isVisible(), 'Term can be reopened after clicking the explanation');
+      }
       await page.keyboard.press('Escape');
       assert.equal(await tooltip.isVisible(), false, 'Escape dismisses live tooltip');
+      if (route === '/' && viewport.width === 390 && term === 'BMR') {
+        await trigger.click();
+        const timingStart = Date.now();
+        await page.waitForTimeout(3900);
+        assert.ok(await tooltip.isVisible(), 'Live tooltip remains visible before five seconds');
+        await page.waitForTimeout(Math.max(0, 5400 - (Date.now() - timingStart)));
+        assert.equal(await tooltip.isVisible(), false, 'Live tooltip automatically closes after five seconds');
+        current.timerVerifiedMs = Date.now() - timingStart;
+      }
       await page.mouse.move(0, 0);
     }
     const after = await dimensions(page);
