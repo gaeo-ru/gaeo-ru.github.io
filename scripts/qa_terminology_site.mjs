@@ -14,6 +14,8 @@ const routes = [
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/cases/methodlab-rost-neyrovidimosti-19-52-procenta/', '/en/cases/methodlab-ai-visibility-growth/',
   '/rankings/wms/', '/professional-biography/', '/en/professional-biography/', '/en/industries/fulfillment/',
+  '/strategies/ecommerce-measurement/', '/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/',
+  '/industries/tourism/', '/strategies/industrial-supplier-evidence/', '/industries/architectural-design-bureaus/',
   '/en/', '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
@@ -133,7 +135,7 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -246,6 +248,21 @@ try {
     }
     if (route === '/services/website-development/')
       assert.ok(current.controlCounts.GitHub > 0, 'Website development page has a GitHub hint');
+    if (route === '/strategies/ecommerce-measurement/')
+      for (const term of ['PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'SKU'])
+        assert.ok(current.controlCounts[term] > 0, 'E-commerce methodology must explain ' + term);
+    if (route === '/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/')
+      assert.ok(current.controlCounts.FRS > 0, 'FRS research article needs glossary help');
+    if (route === '/industries/tourism/') {
+      assert.ok(current.controlCounts.DMC > 0, 'DMC tourism definition');
+      assert.ok(current.controlCounts.MICE > 0, 'MICE tourism definition');
+    }
+    if (route === '/strategies/industrial-supplier-evidence/')
+      for (const term of ['KM', 'KMD'])
+        assert.ok(current.controlCounts[term] > 0, 'Metal structure documentation term ' + term);
+    if (route === '/industries/architectural-design-bureaus/')
+      for (const term of ['SRO', 'BIM', 'TZ'])
+        assert.ok(current.controlCounts[term] > 0, 'Architectural design bureau term ' + term);
     if (route === '/rankings/wms/') assert.ok(current.controlCounts.WMS > 0, 'WMS ranking page must explain WMS');
     if (route === '/industries/fulfillment/' || route === '/en/industries/fulfillment/')
       assert.ok(current.controlCounts.Fulfillment > 0, 'Fulfillment industry page must explain its category');
@@ -255,7 +272,7 @@ try {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'BrandFound', 'AIStart']) {
+    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
