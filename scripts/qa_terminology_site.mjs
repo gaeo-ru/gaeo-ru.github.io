@@ -132,7 +132,7 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -145,6 +145,7 @@ try {
     assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
       'No glossary icons inside pricing and conversion buttons');
     if (route === '/cases/' || route === '/en/cases/') {
+      assert.ok(await page.locator('#geo-promotion h3 .gaeo-term-link-inline').count() >= 2, 'BMR titles use a common first-line wrapper');
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
       const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
       assert.equal(await title.count(), 1, 'MethodLab title link exists');
@@ -153,6 +154,15 @@ try {
       assert.equal(await icon.textContent(), '?');
       assert.equal(await title.locator('button').count(), 0, 'Link text cannot contain a button');
       assert.equal(await icon.evaluate(el => getComputedStyle(el).display), 'inline-flex');
+      const geometry = await icon.evaluate(button => {
+        const anchor = button.parentElement.querySelector('a');
+        const link = anchor.getBoundingClientRect(), circle = button.getBoundingClientRect();
+        const lineHeight = parseFloat(getComputedStyle(anchor).lineHeight);
+        return { top: link.top, height: link.height, circleTop: circle.top, circleBottom: circle.bottom, lineHeight };
+      });
+      assert.ok(geometry.circleTop >= geometry.top - 1 &&
+        geometry.circleBottom <= geometry.top + geometry.lineHeight + 5,
+        'Circle must align with first line of BMR link: ' + JSON.stringify(geometry));
     }
     const before = await dimensions(page);
     current.documentWidth = before.document;
@@ -179,6 +189,12 @@ try {
       assert.ok(current.controlCounts.SoV > 0, 'Measurement page SoV control');
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
+    if (route === '/cases/') {
+      assert.ok(current.controlCounts.SEO > 0, 'SEO explanations added to development case text');
+      const text = await page.locator('main').innerText();
+      assert.ok(text.includes('Посмотрите, что входит'), 'Polite CTA text');
+      assert.ok(!text.includes('Посмотри, что входит'), 'No informal CTA');
+    }
     if (route === '/professional-biography/') assert.ok(current.controlCounts.AEO > 0, 'Biography page AEO control');
     if (route === '/rankings/wms/') assert.ok(current.controlCounts.WMS > 0, 'WMS ranking page must explain WMS');
     if (route === '/industries/fulfillment/' || route === '/en/industries/fulfillment/')
@@ -189,7 +205,7 @@ try {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
+    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
