@@ -99,6 +99,8 @@ try {
   assert.equal(await page.locator('#sat-tech [data-gaeo-term="SAT"]').count(), 1);
   assert.equal(await page.locator('#full-expand-fbl [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#footer-terms [data-gaeo-term], #footer-terms .gaeo-term-link-help').count(), 0);
+  assert.equal(await page.locator('#ru-longest [data-gaeo-term="ТН ВЭД"]').getAttribute('aria-describedby'), 'gaeo-term-description-тн-вэд');
+  assert.ok(await page.locator('#ru-longest [data-gaeo-term="ТН ВЭД"]').evaluate(el => !!document.getElementById(el.getAttribute('aria-describedby'))));
   assert.equal(await page.locator('#new-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
   assert.equal(await page.locator('#new-link .gaeo-term-link-help').count(), 2);
 
