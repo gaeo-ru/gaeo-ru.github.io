@@ -421,6 +421,16 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
       : /^brandfound$/i.test(value) ? 'BrandFound'
       : (EXTRA_ALIASES[value] || value);
+    // When an abbreviation is already followed by its full name, the whole
+    // parenthetical expansion is explained. Do not decorate nested words
+    // such as "Fulfillment" inside "FBL (Fulfillment by L'Étoile)".
+    const expansion = RU_EXTRA_GLOSSARY[term]?.match(/^[^(]+\(([^)]+)\)/u)?.[1];
+    if (expansion) {
+      const parenthetical = text.slice(end).match(/^\s*\(([^)]+)\)/u);
+      if (parenthetical && parenthetical[1].trim().toLocaleLowerCase('ru') === expansion.toLocaleLowerCase('ru')) {
+        consumedUntil = end + parenthetical[0].length;
+      }
+    }
     // Constrain ambiguous abbreviations to the intended industry context.
     const nearby = context.slice(Math.max(0, offset + start - 120), offset + end + 120);
     if (term === 'ТО' && !/(?:авто|машин|запчаст|двигател|модел|ремонт|планов|детал|сервис)/iu.test(nearby)) continue;
