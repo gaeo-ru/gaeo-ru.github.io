@@ -12,7 +12,18 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
   <div class="tariff-calculator" data-tariff-calculator>
    <script type="application/json" data-tariff-config set:html={JSON.stringify(config)}/>
    <div class="tariff-calculator__controls">
-    <label class="tariff-field"><span>{en?'Monthly plan':'Тариф продвижения'}</span><select name="plan">{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select></label>
+    <div class="tariff-field tariff-plan-field">
+     <span id={'tariff-plan-label-'+lang}>{en?'Monthly plan':'Тариф продвижения'}</span>
+     <select name="plan" aria-labelledby={'tariff-plan-label-'+lang}>{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select>
+     <div class="tariff-plan-picker" data-plan-picker hidden>
+      <button type="button" class="tariff-plan-picker__trigger" data-plan-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls={'tariff-plan-options-'+lang} aria-labelledby={'tariff-plan-label-'+lang+' tariff-plan-current-'+lang}>
+       <span id={'tariff-plan-current-'+lang} data-plan-current>{monthly[0].name}</span>
+      </button>
+      <div class="tariff-plan-picker__options" id={'tariff-plan-options-'+lang} data-plan-options role="listbox" aria-labelledby={'tariff-plan-label-'+lang} hidden>
+       {monthly.map((p,i)=><button type="button" class="tariff-plan-picker__option" role="option" aria-selected={i===0?'true':'false'} data-plan-choice={p.id}><span class="tariff-plan-picker__name">{p.name}</span><span class="tariff-plan-picker__price">{priceLabel(p,lang)}</span></button>)}
+      </div>
+     </div>
+    </div>
     <fieldset class="tariff-platforms"><legend>{en?'AI platforms and search interfaces':'Нейросети и поисковые интерфейсы'}</legend><div class="tariff-platform-options">{platforms.map((p,i)=><label><input type="checkbox" name="platform" value={p.id} checked={i<5}/><span>{en?p.nameEn:p.name}</span></label>)}</div></fieldset>
     <p class="tariff-note" data-platform-count>{en?'5 selected. No platform surcharge.':'Выбрано 5. Доплаты за нейросети нет.'}</p>
     <div class="tariff-field tariff-prompts">
