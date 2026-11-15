@@ -155,10 +155,12 @@ try {
       const anchor = button.parentElement.querySelector('a');
       const range = document.createRange();
       range.selectNodeContents(anchor);
-      const first = [...range.getClientRects()].find(rect => rect.width > 0);
+      const image = anchor.querySelector(':scope > :is(img, picture):first-child');
+      const first = image?.getBoundingClientRect() ?? [...range.getClientRects()].find(rect => rect.width > 0);
       const hit = button.getBoundingClientRect();
       const circle = button.querySelector('.gaeo-term-link-icon').getBoundingClientRect();
-      const aligned = first && circle.top >= first.top - 4 && circle.top < (first.top + first.bottom) / 2;
+      const aligned = first && (image ? Math.abs(circle.top - first.top) <= 5 :
+        circle.top >= first.top - 4 && circle.top < (first.top + first.bottom) / 2);
       if (aligned && hit.width === 18 && hit.height === 18 && circle.width === 14 && circle.height === 14) return [];
       return [{ text: anchor.textContent.trim(), first: first?.toJSON(), hit: hit.toJSON(), circle: circle.toJSON() }];
     }));

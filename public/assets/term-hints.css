@@ -75,6 +75,11 @@
   /* Supply a text baseline in the surrounding font, independent of the icon. */
   content: '\00a0';
 }
+/* A linked card beginning with an image has no text baseline on its first row. */
+.gaeo-term-link-inline--block:has(> a > :is(img, picture):first-child) > .gaeo-term-link-help {
+  align-self: flex-start;
+  margin-block-start: 2px;
+}
 .gaeo-term-link-icon {
   box-sizing: border-box;
   position: absolute;
