@@ -203,7 +203,7 @@ test('B2B wording and RU-only glossary for Web Vitals, JavaScript, canonical, in
   assert.deepEqual(
     findTermMatches('Индексация сайта, индексации страниц, индексацию URL, индексацией робота, об индексациях сайтов')
       .map(hit => hit.term),
-    ['Indexing', 'Indexing', 'Indexing', 'Indexing', 'Indexing']
+    ['Indexing', 'Indexing', 'Indexing', 'URL', 'Indexing', 'Indexing']
   );
   assert.deepEqual(
     findTermMatches('Фид, фида, фиду, фидом, фиды, фидов, фидами, в фидах')

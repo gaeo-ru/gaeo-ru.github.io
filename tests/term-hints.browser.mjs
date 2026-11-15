@@ -99,10 +99,12 @@ try {
   const tooltip = page.locator('#gaeo-term-tooltip');
   assert.deepEqual(await page.locator('#glossary-added [data-gaeo-term]').evaluateAll(
     elements => elements.map(element => element.dataset.gaeoTerm)),
-    ['Core Web Vitals', 'JavaScript', 'canonical', 'Indexing', 'Indexing', 'Indexing', 'Indexing', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed']);
+    ['Core Web Vitals', 'JavaScript', 'canonical', 'Indexing', 'Indexing', 'Indexing', 'URL', 'Indexing', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed']);
   assert.equal(await page.locator('#glossary-finance [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#glossary-linked > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
-  assert.equal(await page.locator('#glossary-linked .gaeo-term-link-help').count(), 2);
+  const glossaryLinkHelp = page.locator('#glossary-linked .gaeo-term-link-help');
+  assert.equal(await glossaryLinkHelp.count(), 1);
+  assert.equal(await glossaryLinkHelp.getAttribute('data-gaeo-term'), 'Core Web Vitals|canonical');
   assert.equal(await page.locator('footer [data-gaeo-term]').count(), 0);
 
   assert.deepEqual(await page.locator('#ru-longest [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
