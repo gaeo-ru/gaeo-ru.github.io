@@ -285,3 +285,20 @@ test('«контент»: approved meaning, singular/plural declensions, boundar
   assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content','CaseStudy']);
   assert.deepEqual(findTermMatches('контент и кейсы', {language:'en'}), []);
 });
+
+
+test('«репозиторий»: complete singular/plural inflection, precise definition and safe boundaries', () => {
+  assert.equal(TERM_DEFINITIONS.ru.Repository,
+    'Репозиторий — хранилище файлов проекта и истории их изменений. Обычно используется с системой контроля версий Git для отслеживания правок и совместной разработки.');
+  const forms = ['Репозиторий', 'репозитория', 'репозиторию', 'репозиторием',
+    'репозитории', 'репозиториев', 'репозиториям', 'репозиториями', 'репозиториях'];
+  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'Repository'));
+  assert.deepEqual(findTermMatches('Репозитории и репозиторий GitHub').map(hit => hit.term),
+    ['Repository', 'Repository', 'GitHub']);
+  assert.deepEqual(findTermMatches('Репозиторий — хранилище файлов проекта'), []);
+  assert.deepEqual(findTermMatches('репозиториальный антирепозиторий репозиторий2 репозиторийный'), []);
+  assert.deepEqual(findTermMatches('/docs/репозиторий/index.html'), []);
+  assert.deepEqual(findTermMatches('Репозиторий GitHub', {language:'en'}).map(hit => hit.term), ['GitHub']);
+  assert.deepEqual(findTermMatches('Кейсы, контент и репозитории').map(hit => hit.term),
+    ['CaseStudy','Content','Repository']);
+});
