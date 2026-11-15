@@ -72,7 +72,11 @@ export function linkBrandFoundMentions(html) {
       continue;
     }
     const after = tagEnd(html, cursor);
-    const tag = html.slice(cursor, after);
+    let tag = html.slice(cursor, after);
+    // Preserve the original linked text while upgrading old service-home links.
+    if (/^<a\b/i.test(tag) && /^\s*BrandFound\s*<\/a\s*>/i.test(html.slice(after))) {
+      tag = tag.replace(/\bhref=(["'])https?:\/\/(?:app\.)?brandfound\.ai\/?(?:\?[^"']*)?\1/i, `href="${referral}"`);
+    }
     result += tag;
     cursor = after;
     const m = /^<\s*(\/?)\s*([a-z][\w:-]*)\b/i.exec(tag);
