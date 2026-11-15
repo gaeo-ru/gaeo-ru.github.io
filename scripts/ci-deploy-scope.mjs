@@ -72,8 +72,18 @@ try{
   if(path.startsWith('src/data/rankings/')){changedGroups.add('rankings');continue;}
   if(path==='src/data/publications.json'||path==='src/data/reviews.json'){changedGroups.add('evidence');continue;}
   if(path==='src/data/2gis-services.json'){changedGroups.add('tariffs');continue;}
-  if(/^src\/data\/industry-specializations(?:-batch-[a-z0-9]+)?\.mjs$/.test(path)){
-   changedGroups.add('specializations');continue;
+  if(path==='src/data/industry-specializations.mjs'){
+   markFull('Shared 100-specialization aggregator changed');continue;
+  }
+  if(/^src\/data\/industry-specializations-batch-[a-z0-9]+\.mjs$/.test(path)){
+   changedGroups.add('specializations');
+   try{
+    const exports=await import(new URL('../'+path,import.meta.url));
+    const items=Object.values(exports).find(value=>Array.isArray(value)&&value.every(item=>item?.routes?.ru&&item?.routes?.en));
+    if(!items?.length)throw Error('No static bilingual route array');
+    for(const item of items){pages.add(item.routes.ru);pages.add(item.routes.en);}
+   }catch(e){markFull('Cannot determine affected specializations in '+path+': '+e.message);}
+   continue;
   }
   if(path==='src/data/industry-commercial-pages.mjs'){
    changedGroups.add('industry');continue;
@@ -102,7 +112,7 @@ set('baseline',base);
 set('routes',JSON.stringify([...pages].sort()));
 set('title_paths',JSON.stringify(changedTitlePaths));
 set('titles_changed',changedTitlePaths.length>0);
-set('focused_browser',pages.size>0);
+set('focused_browser',pages.size>0&&pages.size<=8);
 for(const group of ['rankings','industry','specializations','evidence','tariffs','sector3a','sector3c','sector3d','sector3e','development','ecommerce','legal','industrial','tables'])set('check_'+group,active(group));
 set('check_terms',full);
 set('check_research',full);
