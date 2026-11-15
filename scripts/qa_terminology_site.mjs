@@ -16,7 +16,7 @@ const routes = [
   '/rankings/wms/', '/professional-biography/', '/en/professional-biography/', '/en/industries/fulfillment/',
   '/strategies/ecommerce-measurement/', '/articles/geo-spetsialisty-110-otvetov-bmr-frs-2026/',
   '/industries/tourism/', '/strategies/industrial-supplier-evidence/', '/industries/architectural-design-bureaus/',
-  '/en/', '/en/services/', '/en/strategies/measurement/'
+  '/en/', '/en/services/', '/en/strategies/measurement/', '/strategies/', '/en/strategies/'
 ];
 const viewports = [
   { width: 1440, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 720 }
@@ -76,8 +76,9 @@ async function dimensions(page) {
 
 async function firstVisibleTerm(page, term) {
   // Prefer informative headings/prose over breadcrumbs or an adjacent link icon.
-  const control = `[data-gaeo-term="${term}"]:not(.gaeo-term-trigger--reference)`;
-  for (const selector of [`main h1 ${control}`, `main h2 ${control}`, `main p ${control}`, `main ${control}`, `body ${control}`, `body [data-gaeo-term="${term}"]`]) {
+  const attribute = 'data-gaeo-term';
+  const control = `:is([${attribute}="${term}"],[${attribute}^="${term}|"],[${attribute}*="|${term}|"],[${attribute}$="|${term}"]):not(.gaeo-term-trigger--reference)`;
+  for (const selector of [`main h1 ${control}`, `main h2 ${control}`, `main p ${control}`, `main ${control}`, `body ${control}`]) {
     for (const candidate of await page.locator(selector).all()) if (await candidate.isVisible()) return candidate;
   }
   return null;
@@ -125,10 +126,10 @@ try {
     assert.deepEqual(initialization, { ready: 'ready', styles: 1, scripts: 1, descriptions: 1, tooltips: 1 }, 'Single initialization ' + route);
     current.initialization = initialization;
     const controls = await page.locator('[data-gaeo-term]').evaluateAll(elements => elements.map(element => ({
-      term: element.dataset.gaeoTerm,
+      terms: element.dataset.gaeoTerm.split('|'),
       button: element.tagName === 'BUTTON' && element.getAttribute('type') === 'button',
       name: element.getAttribute('aria-label'),
-      description: document.getElementById(element.getAttribute('aria-describedby'))?.textContent,
+      descriptions: element.getAttribute('aria-describedby')?.split(' ').map(id => document.getElementById(id)?.textContent),
       controls: element.getAttribute('aria-controls'),
       nested: (() => {
         const ancestor = element.parentElement.closest('a[href],button,summary,label,[role="button"],[role="link"]');
@@ -139,18 +140,21 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.terms.includes(term)).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
       assert.equal(control.controls, 'gaeo-term-tooltip');
-      assert.equal(control.description, TERM_DEFINITIONS[lang][control.term], 'Accessible definition ' + control.term);
-      if (control.labelStyle !== null) assert.equal(control.labelStyle, 'dotted', 'Dotted underline ' + control.term);
+      assert.deepEqual(control.descriptions, control.terms.map(term => TERM_DEFINITIONS[lang][term]), 'Accessible definitions ' + control.terms.join(', '));
+      if (control.labelStyle !== null) assert.equal(control.labelStyle, 'dotted', 'Dotted underline ' + control.terms[0]);
     }
     assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'No controls nested inside anchors');
     assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question marks in navigation');
     assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
       'No glossary icons inside pricing and conversion buttons');
+    assert.deepEqual(await page.locator('.gaeo-term-link-inline').evaluateAll(groups => groups.flatMap(group =>
+      group.querySelectorAll(':scope > .gaeo-term-link-help').length === 1 ? [] : [group.textContent.trim()])), [],
+      'Each linked group has exactly one help button');
     const misalignedIcons = await page.locator('.gaeo-term-link-help:visible').evaluateAll(buttons => buttons.flatMap(button => {
       const anchor = button.parentElement.querySelector('a');
       const range = document.createRange();
@@ -194,8 +198,8 @@ try {
       const measurement = page.locator('main p').filter({ hasText: label }).last();
       assert.equal(await measurement.count(), 1, 'Measurement link exists on ' + route);
       const help = measurement.locator('.gaeo-term-link-help');
-      assert.deepEqual(await help.evaluateAll(elements => elements.map(element => element.dataset.gaeoTerm)),
-        ['BMR', 'SoV'], 'Full and abbreviated metrics both have their original definitions');
+      assert.equal(await help.count(), 1);
+      assert.equal(await help.getAttribute('data-gaeo-term'), 'BMR|SoV', 'Both metric definitions share one button');
       const pos = await measurement.evaluate(element => {
         const anchor = element.querySelector('.gaeo-term-link-inline > a');
         const range = document.createRange();
@@ -204,8 +208,21 @@ try {
         return { lines: lines.size, trailing: anchor.parentElement.nextSibling?.textContent.trim() || '' };
       });
       assert.equal(pos.trailing, '', 'No orphan period after measurement link');
-      if (viewport.width <= 390) {
+      if (viewport.width === 320) {
         assert.ok(pos.lines >= 2, 'Measurement link wraps on a phone');
+      }
+    }
+    if (route === '/strategies/' || route === '/en/strategies/') {
+      for (const [slug, terms] of [['measurement', ['BMR', 'SoV']], ['ecommerce-measurement', ['PRR', 'SCR', 'RAR', 'RRR', 'PPSR']]]) {
+        const link = page.locator(`h2 a[href="${route}${slug}/"]`);
+        const help = link.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
+        assert.equal(await help.count(), 1, 'One button beside the ' + slug + ' link');
+        await help.click();
+        const tooltip = page.locator('#gaeo-term-tooltip');
+        assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').allTextContents(), terms.map(term => TERM_DEFINITIONS[lang][term]));
+        assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').evaluateAll(entries => entries.map(entry => getComputedStyle(entry).borderTopWidth)),
+          ['0px', ...terms.slice(1).map(() => '1px')], 'Each pair of definitions has a horizontal separator');
+        await page.keyboard.press('Escape');
       }
     }
     const before = await dimensions(page);
@@ -294,7 +311,9 @@ try {
       await trigger.click();
       const tooltip = page.locator('#gaeo-term-tooltip');
       assert.ok(await tooltip.isVisible(), 'Term hint opens ' + term + ' ' + route);
-      assert.equal(await tooltip.textContent(), TERM_DEFINITIONS[lang][term], 'Exact live definition ' + term + ' ' + route);
+      const shownTerms = (await trigger.getAttribute('data-gaeo-term')).split('|');
+      assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').allTextContents(),
+        shownTerms.map(key => TERM_DEFINITIONS[lang][key]), 'Exact live definitions ' + term + ' ' + route);
       assert.equal(await trigger.getAttribute('aria-expanded'), 'true');
       const box = await tooltip.boundingBox();
       assert.ok(box && box.x >= 10 && box.x + box.width <= viewport.width - 10,

@@ -539,14 +539,15 @@ export function installTermHints(doc = document) {
     return trigger;
   }
 
-  function makeLinkHelp(term) {
+  function makeLinkHelp(terms) {
     const button = doc.createElement('button');
     button.type = 'button';
     button.className = 'gaeo-term-link-help';
-    button.dataset.gaeoTerm = term;
+    button.dataset.gaeoTerm = terms.join('|');
     button.dataset.gaeoTermLinkHelp = '';
-    button.setAttribute('aria-label', labels(term));
-    button.setAttribute('aria-describedby', descriptionId(term));
+    button.setAttribute('aria-label', terms.length === 1 ? labels(terms[0]) :
+      language === 'en' ? 'Explain the terms in this link' : 'Расшифровки терминов в ссылке');
+    button.setAttribute('aria-describedby', terms.map(descriptionId).join(' '));
     button.setAttribute('aria-controls', tooltip.id);
     button.setAttribute('aria-expanded', 'false');
     const icon = doc.createElement('span');
@@ -580,9 +581,10 @@ export function installTermHints(doc = document) {
     tail.data = tail.data.replace('.', '');
   }
 
-  // Keep the original anchor intact, with separate help controls beside it.
+  // Keep the original anchor intact, with one help control beside it.
   function enhanceLinks(root) {
-    const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
+    const enclosingLink = root.closest?.('a[href]');
+    const links = enclosingLink ? [enclosingLink] : [...(root.querySelectorAll?.('a[href]') || [])];
     for (const link of links) {
       if (!link.isConnected) continue;
       let wrapper = link.parentElement?.matches(LINK_WRAPPER_SELECTOR) ? link.parentElement : null;
@@ -614,15 +616,13 @@ export function installTermHints(doc = document) {
         link.replaceWith(wrapper);
         wrapper.append(link);
       }
-      wrapper.style.setProperty('--gaeo-term-help-space', `${terms.length * 24 + 2}px`);
       removeOrphanPeriod(wrapper);
-      const existing = [...wrapper.children].filter(child => child.matches?.(LINK_HELP_SELECTOR));
-      if (terms.length === existing.length && terms.every((term, i) => term === existing[i].dataset.gaeoTerm)) continue;
-      for (const button of existing) {
-        if (button === active) hide();
-        button.remove();
-      }
-      for (const term of terms) wrapper.append(makeLinkHelp(term));
+      const existing = wrapper.querySelector(`:scope > ${LINK_HELP_SELECTOR}`);
+      if (existing?.dataset.gaeoTerm === terms.join('|')) continue;
+      if (existing && existing === active) hide();
+      const button = makeLinkHelp(terms);
+      if (existing) existing.replaceWith(button);
+      else wrapper.append(button);
     }
   }
 
@@ -695,15 +695,21 @@ export function installTermHints(doc = document) {
     };
     const margin = 12, gap = 10;
     tooltip.style.maxWidth = `${Math.min(380, Math.max(120, bounds.width - margin * 2))}px`;
-    tooltip.style.maxHeight = `${Math.max(80, bounds.height - margin * 2)}px`;
+    const maxHeight = Math.max(80, bounds.height - margin * 2);
+    tooltip.style.maxHeight = `${maxHeight}px`;
     const box = tooltip.getBoundingClientRect();
     const left = Math.min(Math.max(bounds.left + margin, anchor.left + (anchor.width - box.width) / 2), bounds.left + bounds.width - box.width - margin);
-    const fitsBelow = anchor.bottom + gap + box.height <= bounds.top + bounds.height - margin;
-    const preferredTop = fitsBelow ? anchor.bottom + gap : anchor.top - box.height - gap;
-    const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - box.height - margin);
+    const above = anchor.top - gap - bounds.top - margin;
+    const below = bounds.top + bounds.height - margin - anchor.bottom - gap;
+    const placeBelow = box.height <= below || (box.height > above && below >= above);
+    // A tall tooltip must stay clear of its own trigger and scroll if needed.
+    tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
+    const height = tooltip.getBoundingClientRect().height;
+    const preferredTop = placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
+    const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - height - margin);
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
-    tooltip.dataset.placement = fitsBelow ? 'below' : 'above';
+    tooltip.dataset.placement = placeBelow ? 'below' : 'above';
     tooltip.style.setProperty('--gaeo-term-arrow', `${Math.min(box.width - 18, Math.max(18, anchor.left + anchor.width / 2 - left))}px`);
   }
 
@@ -717,16 +723,23 @@ export function installTermHints(doc = document) {
   }
 
   function show(trigger, mode = 'timed') {
-    if (!definitions[trigger.dataset.gaeoTerm]) return;
+    const terms = trigger.dataset.gaeoTerm.split('|').filter(term => Object.hasOwn(definitions, term));
+    if (!terms.length) return;
     if (active && active !== trigger) active.setAttribute('aria-expanded', 'false');
     active = trigger;
     activeMode = mode;
-    tooltip.textContent = definitions[trigger.dataset.gaeoTerm];
+    tooltip.replaceChildren(...terms.map(term => {
+      const entry = doc.createElement('div');
+      entry.className = 'gaeo-term-tooltip-entry';
+      entry.textContent = definitions[term];
+      return entry;
+    }));
     tooltip.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
     place();
     if (timer) win.clearTimeout(timer);
-    timer = mode === 'hover' ? null : win.setTimeout(hide, TERM_HINT_DURATION);
+    const touch = lastInput === 'touch' || win.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    timer = mode === 'hover' ? null : win.setTimeout(hide, TERM_HINT_DURATION * (touch ? terms.length : 1));
   }
 
   doc.addEventListener('click', event => {
@@ -743,6 +756,15 @@ export function installTermHints(doc = document) {
     event.stopPropagation();
     hide();
   });
+  tooltip.addEventListener('pointerenter', () => {
+    if (activeMode === 'hover' && timer) {
+      win.clearTimeout(timer);
+      timer = null;
+    }
+  });
+  tooltip.addEventListener('pointerleave', () => {
+    if (activeMode === 'hover') hide();
+  });
   doc.addEventListener('pointerdown', event => {
     lastInput = event.pointerType || 'mouse';
     if (active && !event.target.closest?.('[data-gaeo-term],.gaeo-term-tooltip')) hide();
@@ -758,7 +780,11 @@ export function installTermHints(doc = document) {
   doc.addEventListener('pointerout', event => {
     if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
     const trigger = event.target.closest?.('[data-gaeo-term]');
-    if (trigger === active && activeMode === 'hover' && !trigger.contains(event.relatedTarget)) hide();
+    if (trigger !== active || activeMode !== 'hover' || trigger.contains(event.relatedTarget)) return;
+    if (tooltip.childElementCount > 1 && tooltip.scrollHeight > tooltip.clientHeight) {
+      // Allow the pointer to cross the gap into a scrollable group.
+      timer = win.setTimeout(hide, 200);
+    } else hide();
   }, { passive: true });
   doc.addEventListener('focusin', event => {
     const trigger = event.target.closest?.('[data-gaeo-term]');
@@ -774,7 +800,9 @@ export function installTermHints(doc = document) {
     frame = win.requestAnimationFrame(() => { frame = null; if (active) place(); });
   };
   win.addEventListener('resize', reposition, { passive: true });
-  doc.addEventListener('scroll', reposition, { capture: true, passive: true });
+  doc.addEventListener('scroll', event => {
+    if (event.target !== tooltip) reposition();
+  }, { capture: true, passive: true });
   win.visualViewport?.addEventListener('resize', reposition, { passive: true });
   win.visualViewport?.addEventListener('scroll', reposition, { passive: true });
 
@@ -786,6 +814,8 @@ export function installTermHints(doc = document) {
     for (const record of records) {
       if (record.target.parentElement?.closest(EXCLUDED) || record.target.closest?.(EXCLUDED)) continue;
       if (record.type === 'characterData') pending.add(record.target.parentElement);
+      const link = record.target.closest?.('a[href]');
+      if (link) pending.add(link);
       for (const node of record.addedNodes || []) if (node.nodeType === 1 || node.nodeType === 3) pending.add(node.nodeType === 3 ? node.parentElement : node);
     }
     if (active && !active.isConnected) hide();

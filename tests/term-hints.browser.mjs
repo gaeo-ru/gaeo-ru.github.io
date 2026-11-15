@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
+import { TERM_DEFINITIONS } from '../public/assets/term-hints.js';
 
 // Run with: node tests/term-hints.browser.mjs
 // This fixture deliberately exercises interaction and dynamic content, rather
@@ -113,14 +114,14 @@ try {
   assert.equal(await page.locator('#ru-longest [data-gaeo-term="ТН ВЭД"]').getAttribute('aria-describedby'), 'gaeo-term-description-тн-вэд');
   assert.ok(await page.locator('#ru-longest [data-gaeo-term="ТН ВЭД"]').evaluate(el => !!document.getElementById(el.getAttribute('aria-describedby'))));
   assert.equal(await page.locator('#new-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
-  assert.equal(await page.locator('#new-link .gaeo-term-link-help').count(), 2);
+  assert.equal(await page.locator('#new-link .gaeo-term-link-help').count(), 1);
 
   assert.equal(await page.locator('#heading [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#heading [data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#seo [data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#seo-expanded [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#expanded-seo-link .gaeo-term-link-help').count(), 0);
-  assert.equal(await page.locator('#seo-linked .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="SEO"]').count(), 1);
+  assert.equal(await page.locator('#seo-linked .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="SEO|GEO"]').count(), 1);
   assert.equal(await page.locator('#metric-cell [data-gaeo-term="BMR"]').count(), 1);
   assert.equal(await page.locator('#full-metrics [data-gaeo-term="BMR"]').count(), 1);
   const phraseBounds = await page.locator('#large-full-metric .gaeo-term-label').evaluate(label => {
@@ -131,8 +132,8 @@ try {
   assert.ok(phraseBounds.width >= 2 && phraseBounds.within, 'Full metric name wraps inside a narrow heading');
   assert.equal(await page.locator('#full-metrics [data-gaeo-term="SoV"]').count(), 1);
   assert.equal(await page.locator('#full-expanded [data-gaeo-term]').count(), 0);
-  assert.equal(await page.locator('#orphan-period .gaeo-term-link-help').count(), 2);
-  assert.ok(!(await page.locator('#orphan-period').textContent()).trim().endsWith('.'), 'No orphaned final period after help icons');
+  assert.equal(await page.locator('#orphan-period .gaeo-term-link-help').count(), 1);
+  assert.ok(!(await page.locator('#orphan-period').textContent()).trim().endsWith('.'), 'No orphaned final period after the help icon');
   assert.ok((await page.locator('#punctuation-context').textContent()).includes('. Следом идет пояснение.'), 'Sentence punctuation remains when prose continues');
   assert.equal(await page.locator('#compound [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="AEO"]').count(), 1);
@@ -168,7 +169,7 @@ try {
     el => getComputedStyle(el).textDecorationStyle);
   assert.equal(auditDotted, 'dotted', 'Tariff summary keeps the site-wide dotted underline');
   assert.equal(await page.locator('nav .gaeo-term-link-help, a .gaeo-term-link-help').count(), 0, 'No nested or navigational help controls');
-  assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
+  assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help').count(), 1, 'Inline content link gets one help button');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
   assert.equal(await page.locator('script[type="application/ld+json"]').textContent(), '{"name":"GEO","metric":"BMR"}');
   assert.equal(await page.locator('#faq-answer').textContent(), 'GEO помогает бренду. BMR измеряет долю ответов.', 'Term buttons do not change FAQ text/schema parity');
@@ -197,10 +198,10 @@ try {
     'Question mark aligns with the top of the first line: ' + JSON.stringify(geometry));
   assert.deepEqual(geometry.iconSize, [14, 14]);
   assert.deepEqual(geometry.hitSize, [18, 18]);
-  const secondDefinition = page.locator('#orphan-period .gaeo-term-link-help[data-gaeo-term="SoV"]');
-  await secondDefinition.click({ position: { x: 1, y: 9 } });
-  assert.equal(await page.locator('#gaeo-term-tooltip').textContent(),
-    'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети');
+  const metricHelp = page.locator('#orphan-period .gaeo-term-link-help');
+  assert.equal(await metricHelp.getAttribute('aria-describedby'), 'gaeo-term-description-bmr gaeo-term-description-sov');
+  await metricHelp.click({ position: { x: 1, y: 9 } });
+  assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').allTextContents(), [TERM_DEFINITIONS.ru.BMR, TERM_DEFINITIONS.ru.SoV]);
   await page.keyboard.press('Escape');
 
   // Only the dotted acronym opens the exact definition; no icon is inserted.
@@ -330,11 +331,15 @@ try {
   const count = await page.locator('[data-gaeo-term]').count();
   await page.addScriptTag({ type: 'module', content: js });
   assert.equal(await page.locator('[data-gaeo-term]').count(), count, 'Repeat install does not duplicate controls');
-  await page.evaluate(() => { document.querySelector('#inline-link').textContent = 'Методика GEO/AEO'; });
+  await page.evaluate(() => { document.querySelector('#inline-link').innerHTML = 'Методика <em>GEO/AEO</em>'; });
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-  assert.equal(await page.locator('#inline-link').innerHTML(), 'Методика GEO/AEO', 'Updated link text stays unmodified');
-  await page.waitForFunction(() => document.querySelector('#inline-link')?.parentElement?.querySelectorAll(':scope > .gaeo-term-link-help').length === 2);
-  assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Dynamic linked terms preserved');
+  assert.equal(await page.locator('#inline-link').innerHTML(), 'Методика <em>GEO/AEO</em>', 'Updated link markup stays unmodified');
+  await page.waitForFunction(() => document.querySelector('#inline-link + .gaeo-term-link-help')?.dataset.gaeoTerm === 'GEO|AEO');
+  await page.locator('#inline-link + .gaeo-term-link-help').click();
+  assert.ok(await tooltip.isVisible());
+  await page.evaluate(() => { document.querySelector('#inline-link em').firstChild.data = 'BMR'; });
+  await page.waitForFunction(() => document.querySelector('#inline-link + .gaeo-term-link-help')?.dataset.gaeoTerm === 'BMR');
+  assert.equal(await tooltip.isVisible(), false, 'Updating a linked term closes the stale popup');
   assert.equal(await page.locator('.gaeo-term-reference,.gaeo-term-link-label').count(), 0);
   // If another renderer moves an existing term into a link, restore plain text.
   await page.evaluate(() => {
@@ -374,24 +379,34 @@ try {
   assert.equal(await tooltip.isVisible(), false, 'Desktop: leave closes regardless of elapsed time');
   assert.deepEqual(errors, []);
 
-  // On touch devices, tap opens help for five seconds, then closes automatically.
+  // Touch reading time is five seconds per definition.
   const touch = await browser.newPage({
     viewport: { width: 320, height: 640 }, hasTouch: true, isMobile: true
   });
-  await touch.setContent('<!doctype html><html lang="ru"><body><main><p>Измеряем BMR.</p><h3><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3></main></body></html>');
+  await touch.clock.install();
+  await touch.setContent(`<!doctype html><html lang="ru"><head><meta name="viewport" content="width=device-width"></head><body><main>
+    <p>Измеряем BMR.</p><h3><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3>
+    <h3 id="two-terms"><a href="#case">Как измерять BMR, Share of Voice и качество рекомендаций</a></h3>
+    <h3 id="five-terms"><a href="#case">PRR, SCR, RAR, RRR, PPSR: оцениваем ответы</a></h3>
+    </main></body></html>`);
   await touch.addStyleTag({ content: css });
   await touch.addScriptTag({ type: 'module', content: js });
-  const touchTrigger = touch.locator('p [data-gaeo-term="BMR"]');
   const touchTip = touch.locator('#gaeo-term-tooltip');
   assert.equal(await touch.locator('h3 .gaeo-term-link-inline > .gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1);
-  await touchTrigger.tap();
-  const started = Date.now();
-  await touch.waitForTimeout(3900);
-  assert.ok(await touchTip.isVisible(), 'Touch: five-second hint remains visible');
-  await touch.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
-  assert.equal(await touchTip.isVisible(), false, 'Touch: five-second timeout works');
-  const elapsed = Date.now() - started;
-  await touch.locator('h3 .gaeo-term-link-inline > .gaeo-term-link-help').tap();
+  const timers = [['p [data-gaeo-term="BMR"]', ['BMR'], 5000],
+    ['#two-terms .gaeo-term-link-help', ['BMR', 'SoV'], 10000],
+    ['#five-terms .gaeo-term-link-help', ['PRR', 'SCR', 'RAR', 'RRR', 'PPSR'], 25000]];
+  for (const [selector, terms, duration] of timers) {
+    const trigger = touch.locator(selector);
+    assert.equal(await trigger.count(), 1);
+    await trigger.tap();
+    assert.deepEqual(await touchTip.locator('.gaeo-term-tooltip-entry').allTextContents(), terms.map(term => TERM_DEFINITIONS.ru[term]));
+    await touch.clock.fastForward(duration - 600);
+    assert.ok(await touchTip.isVisible(), `Touch: ${terms.length} definitions stay visible before ${duration} ms`);
+    await touch.clock.fastForward(1000);
+    assert.equal(await touchTip.isVisible(), false, `Touch: ${terms.length} definitions close after ${duration} ms`);
+  }
+  await touch.locator('#five-terms .gaeo-term-link-help').tap();
   assert.ok(await touchTip.isVisible(), 'Touch: question icon opens definition');
   await touchTip.tap();
   assert.equal(await touchTip.isVisible(), false, 'Touch: tap on popup dismisses it');
@@ -434,7 +449,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: first-line help circles, full metric names, punctuation, mouseout, keyboard, dynamic links, mobile touch timeout ${elapsed} ms.`);
+  console.log('Term hint browser QA passed: first-line help circles, grouped definitions, dynamic links and 5/10/25-second touch timers.');
 } finally {
   await browser.close();
 }

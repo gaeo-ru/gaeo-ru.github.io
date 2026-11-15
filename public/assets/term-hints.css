@@ -125,6 +125,11 @@
   white-space: normal;
 }
 .gaeo-term-tooltip[hidden] { display: none; }
+.gaeo-term-tooltip-entry + .gaeo-term-tooltip-entry {
+  margin-block-start: 8px;
+  padding-block-start: 8px;
+  border-block-start: 1px solid #c4d7df;
+}
 @media (forced-colors: active) {
   .gaeo-term-tooltip { background: Canvas; color: CanvasText; border: 1px solid CanvasText; }
 }
