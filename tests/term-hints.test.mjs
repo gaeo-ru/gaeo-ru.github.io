@@ -26,8 +26,18 @@ test('E-commerce and СТМ have global glossary matches with proper boundaries'
   assert.equal(TERM_DEFINITIONS.ru.STM, 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.');
 });
 
+test('GitHub is recognized in ordinary prose and not inside longer names', () => {
+  assert.deepEqual(findTermMatches('GitHub, github, Github, GITHUB и GitHub Pages').map(hit => hit.term),
+    ['GitHub', 'GitHub', 'GitHub', 'GitHub', 'GitHub']);
+  assert.deepEqual(findTermMatches('myGitHub GitHub123 GitHubness GitHub_'), []);
+  assert.equal(TERM_DEFINITIONS.ru.GitHub,
+    'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
+  assert.equal(TERM_DEFINITIONS.en.GitHub,
+    'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.');
+});
+
 test('URLs, email addresses and file paths are not decorated', () => {
-  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json', 'WMS@example.ru', '/docs/WMS/TMS', 'фулфилмент.ru', 'https://example.com/fulfillment/', 'https://example.com/e-commerce/', 'https://example.com/СТМ/', 'СТМ@example.ru']) {
+  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json', 'WMS@example.ru', '/docs/WMS/TMS', 'фулфилмент.ru', 'https://example.com/fulfillment/', 'https://example.com/e-commerce/', 'https://example.com/СТМ/', 'СТМ@example.ru', 'https://github.com/gaeo-ru/', 'github.com', 'GitHub@example.com', '/docs/GitHub/index.html']) {
     assert.deepEqual(findTermMatches(value), [], value);
   }
 });
@@ -44,7 +54,7 @@ test('adjacent expansions need no duplicate help', () => {
     'продвижение в нейросетях (GEO)',
     'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
     'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
-    'WMS — система управления складом.', 'E-commerce - электронная коммерция', 'E-commerce (Electronic Commerce)', 'СТМ - собственная торговая марка', 'СТМ (собственная торговая марка)', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
+    'WMS — система управления складом.', 'E-commerce - электронная коммерция', 'E-commerce (Electronic Commerce)', 'СТМ - собственная торговая марка', 'СТМ (собственная торговая марка)', 'GitHub — это онлайн-платформа для хранения кода', 'GitHub is an online platform', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
   ]) assert.deepEqual(findTermMatches(value), [], value);
   const context = 'Показатель BMR (Brand Mention Rate) изменился.';
   assert.deepEqual(findTermMatches('BMR', { context, offset: 11 }), []);

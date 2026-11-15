@@ -32,6 +32,8 @@ try {
     <p id="historical">Начал учиться: <b><button type="button" class="gaeo-term-trigger" data-gaeo-term="AIStart" aria-label="Как началось изучение ИИ" aria-describedby="gaeo-term-description-aistart" aria-controls="gaeo-term-tooltip" aria-expanded="false"><span class="gaeo-term-label">с 1997 года</span></button></b></p>
     <p id="warehouse">WMS и фулфилмент помогают складу. Для фулфилмента и фулфилментов.</p>
     <p id="warehouse-expanded">WMS (Warehouse Management System) и Фулфилмент (Fulfillment).</p>
+    <p id="github">Разработка на GitHub и GitHub Pages.</p>
+    <p id="github-explained">GitHub — это онлайн-платформа для хранения кода.</p>
     <p id="commerce">Опыт E-commerce, e-commerce и СТМ.</p>
     <p id="commerce-expanded">E-commerce - электронная коммерция; СТМ - собственная торговая марка.</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
@@ -42,6 +44,7 @@ try {
     <p id="orphan-period"><a href="#case">Как измерять BMR, Share of Voice и качество рекомендаций</a>.</p>
     <p id="punctuation-context"><a href="#case">Как измерять BMR</a>. Следом идет пояснение.</p>
     <div class="tariff-actions"><a class="button" id="tariff-cta" href="#destination">GEO promotion</a></div>
+    <p id="github-link"><a href="#destination">Исходники на GitHub</a></p>
     <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
     <p id="expanded-seo-link"><a href="#expanded">SEO (Search Engine Optimization)</a></p>
     <h3 id="seo-linked"><a href="#seo-case">Разработка сайта с SEO/GEO-проверками</a></h3>
@@ -90,6 +93,10 @@ try {
   assert.equal(await page.locator('#warehouse [data-gaeo-term="WMS"]').count(), 1);
   assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
+  assert.equal(await page.locator('#github [data-gaeo-term="GitHub"]').count(), 2, 'GitHub and GitHub Pages are explained');
+  assert.equal(await page.locator('#github-explained [data-gaeo-term]').count(), 0, 'No hint where GitHub is already defined');
+  assert.equal(await page.locator('#github-link .gaeo-term-link-help[data-gaeo-term="GitHub"]').count(), 1, 'GitHub within a link gets independent help');
+  assert.equal(await page.locator('#github-link a [data-gaeo-term]').count(), 0, 'GitHub link has no dotted underline');
   assert.equal(await page.locator('#commerce [data-gaeo-term="Ecommerce"]').count(), 2);
   assert.equal(await page.locator('#commerce [data-gaeo-term="STM"]').count(), 1);
   assert.equal(await page.locator('#commerce-expanded [data-gaeo-term]').count(), 0, 'Inline E-commerce and СТМ explanations require no hints');
@@ -167,6 +174,14 @@ try {
   await page.locator('#commerce [data-gaeo-term="STM"]').click();
   assert.equal(await tooltip.textContent(), 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.');
   await tooltip.evaluate(el => el.click());
+
+  await page.locator('#github [data-gaeo-term="GitHub"]').first().click();
+  assert.equal(await tooltip.textContent(), 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
+  await tooltip.evaluate(element => element.click());
+  assert.equal(await tooltip.isVisible(), false);
+  await page.locator('#github-link .gaeo-term-link-help[data-gaeo-term="GitHub"]').click();
+  assert.equal(await tooltip.textContent(), 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
+  await tooltip.evaluate(element => element.click());
 
   // Mouse hover has no persistence once the pointer leaves the dotted text or the ?.
   await bmr.hover();
@@ -276,7 +291,7 @@ try {
   assert.equal(await touchTip.isVisible(), false, 'Touch: tap on popup dismisses it');
 
   const english = await browser.newPage({ viewport: { width: 320, height: 640 } });
-  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, SEO, BMR, SoV, WMS and Fulfillment</p></body></html>');
+  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, SEO, BMR, SoV, WMS, Fulfillment and GitHub</p></body></html>');
   await english.addStyleTag({ content: css });
   await english.addScriptTag({ type: 'module', content: js });
   for (const [term, definition] of Object.entries({
@@ -286,7 +301,8 @@ try {
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
-    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.',
+    GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.'
   })) {
     await english.locator(`[data-gaeo-term="${term}"]`).click();
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);

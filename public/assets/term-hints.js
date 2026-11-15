@@ -3,6 +3,7 @@ export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
+    GitHub: 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.',
     Ecommerce: 'E-commerce - электронная коммерция: интернет-магазины и продажа товаров с маркетплейсов',
     STM: 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
@@ -16,6 +17,7 @@ export const TERM_DEFINITIONS = Object.freeze({
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
+    GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.',
     Ecommerce: 'E-commerce - electronic commerce: online stores and selling goods on marketplaces',
     STM: "STM (private label) - goods manufactured or imported under the brand owner's name. The trademark is usually registered with Rospatent.",
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
@@ -41,7 +43,7 @@ const FULL_NAMES = {
   STM: 'собственная\\s+торговая\\s+марка'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -61,6 +63,8 @@ function alreadyExplained(context, start, end, term, spelling) {
       (/\b(?:SoV|SOV)\s*(?:\(|[:—–-])\s*$/i.test(before) || /^\s*\(\s*(?:SoV|SOV)\s*\)/i.test(after))) return true;
   // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
+  if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа\b/i.test(after) ||
+    /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
@@ -89,6 +93,7 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
       : value === 'SOV' ? 'SoV'
       : /^[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)$/u.test(value) ? 'Ecommerce'
       : /^[Сс][Тт][Мм]$/u.test(value) ? 'STM'
+      : /^github$/i.test(value) ? 'GitHub'
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
       : /^brandfound$/i.test(value) ? 'BrandFound'
       : value;
@@ -270,7 +275,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
