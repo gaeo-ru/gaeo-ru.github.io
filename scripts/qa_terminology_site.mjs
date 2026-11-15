@@ -153,7 +153,8 @@ try {
       assert.equal(await icon.getAttribute('data-gaeo-term'), 'BMR');
       assert.equal(await icon.textContent(), '?');
       assert.equal(await title.locator('button').count(), 0, 'Link text cannot contain a button');
-      assert.equal(await icon.evaluate(el => getComputedStyle(el).display), 'inline-flex');
+      assert.ok(['flex', 'inline-flex'].includes(await icon.evaluate(el => getComputedStyle(el).display)),
+        'Question icon retains flex layout inside the top-aligned link group');
       const geometry = await icon.evaluate(button => {
         const anchor = button.parentElement.querySelector('a');
         const link = anchor.getBoundingClientRect(), circle = button.getBoundingClientRect();
