@@ -34,6 +34,8 @@ test('adjacent expansions need no duplicate help', () => {
   const aeoContext = 'Термин AEO (Answer Engine Optimization) уже раскрыт.';
   assert.deepEqual(findTermMatches('AEO', { context: aeoContext, offset: 7 }), []);
   assert.equal(findTermMatches('BMR вырос с 22% до 48%.')[0].term, 'BMR');
+  assert.deepEqual(findTermMatches('MethodLab: BMR вырос с 19% до 52,4%').map(x => x.term), ['BMR']);
+  assert.deepEqual(findTermMatches('BMR (Brand Mention Rate)').map(x => x.term), [], 'Already expanded BMR in a link needs no question icon');
 });
 
 test('exact user wording and the requested display duration are retained', () => {
