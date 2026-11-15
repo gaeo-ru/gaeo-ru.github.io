@@ -258,6 +258,8 @@ export function installTermHints(doc = document) {
       fragment.append(doc.createTextNode(text.slice(cursor)));
       node.replaceWith(fragment);
     }
+    // BrandFound anchors created from text nodes need their help controls immediately.
+    if (root.nodeType === 1 || root.nodeType === 9) enhanceLinks(root);
   }
 
   function place() {
