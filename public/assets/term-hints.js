@@ -2,6 +2,12 @@
 /** Shared, progressively enhanced explanations of GAEO's specialist terms. */
 /** Approved abbreviations actually found in the Russian content; English pages keep their existing glossary. */
 const RU_EXTRA_GLOSSARY = Object.freeze({
+  "workflow": "Workflow — последовательность шагов рабочего процесса; в GitHub Actions это автоматизированный сценарий сборки, проверок и публикации сайта.",
+  "Title": "Title (HTML-тег title) — заголовок страницы, который показывается во вкладке браузера и может использоваться поисковыми системами как заголовок результата поиска.",
+  "description": "description (meta description) — краткое описание страницы в метатеге HTML; поисковая система может использовать его при создании сниппета.",
+  "hreflang": "hreflang — атрибут, который указывает язык и при необходимости регион альтернативной версии страницы, помогая поисковым системам выбрать подходящую версию.",
+  "Postbox": "Yandex Cloud Postbox — облачный сервис Яндекса для отправки электронных писем, в том числе заявок и уведомлений с сайта.",
+  "CTA": "CTA (Call to Action) — призыв к действию: кнопка, ссылка или текст, предлагающие посетителю выполнить целевое действие, например оставить заявку.",
   "Core Web Vitals": "Core Web Vitals (основные веб-показатели) — метрики Google, оценивающие загрузку, отзывчивость и визуальную стабильность веб-страницы: LCP, INP и CLS.",
   "JavaScript": "JavaScript — язык программирования, который обеспечивает интерактивность и динамическое изменение содержимого веб-страниц.",
   "canonical": "canonical (канонический URL) — указание поисковым роботам предпочтительного адреса страницы среди дублей и очень похожих страниц; обычно задаётся через rel=\"canonical\".",
@@ -16,7 +22,6 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
   "HR": "HR (Human Resources) - управление персоналом и подбор сотрудников",
   "IT": "IT (Information Technology) - информационные технологии",
   "ИТ": "ИТ (информационные технологии) - программное обеспечение, оборудование и методы обработки информации",
-  "PR": "PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание",
   "FAQ": "FAQ (Frequently Asked Questions) - часто задаваемые вопросы и ответы на них",
   "NDA": "NDA (Non-Disclosure Agreement) - соглашение о конфиденциальности",
   "KPI": "KPI (Key Performance Indicator) - ключевой показатель эффективности",
@@ -230,6 +235,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     Feed: 'Фид — структурированная выгрузка данных (например, товаров, цен, остатков) из сайта или учетной системы для автоматической передачи поисковым сервисам, торговым площадкам и другим системам.',
     CaseStudy: 'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата',
     Content: 'Контент - это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует',
+    Repository: 'Репозиторий — хранилище файлов проекта и истории их изменений. Обычно используется с системой контроля версий Git для отслеживания правок и совместной разработки.',
     SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
     Interlinking: 'Перелинковка - система внутренних ссылок между страницами сайта, помогающая посетителям и поисковым роботам находить связанные материалы.',
     ContentDistribution: 'Дистрибуция контента - распространение статей, исследований и других материалов по подходящим площадкам и каналам, чтобы их увидела целевая аудитория.',
@@ -347,7 +353,19 @@ const EXTRA_ALIASES = Object.freeze({
   'javascript': 'JavaScript',
   'JAVASCRIPT': 'JavaScript',
   'core web vitals': 'Core Web Vitals',
-  'Core web vitals': 'Core Web Vitals'
+  'Core web vitals': 'Core Web Vitals',
+  'Workflow': 'workflow',
+  'WORKFLOW': 'workflow',
+  'title': 'Title',
+  'TITLE': 'Title',
+  'Description': 'description',
+  'DESCRIPTION': 'description',
+  'Hreflang': 'hreflang',
+  'HREFLANG': 'hreflang',
+  'postbox': 'Postbox',
+  'POSTBOX': 'Postbox',
+  'cta': 'CTA',
+  'Cta': 'CTA'
 });
 const extraSpelling = Object.keys(RU_EXTRA_GLOSSARY).concat(Object.keys(EXTRA_ALIASES));
 const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
@@ -357,7 +375,7 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?|репозитори(?:ями|ям|ях|ев|ем|й|я|ю|и))(?![\p{L}\p{N}_])/giu;
 // Russian spellings of GEO in editorial headings, without confusing geographic terms.
 const RU_GEO_TERMS = /(?<![\p{L}\p{N}_])(?:гео[-‐‑–](?:продвижени|специалист|эксперт|аудит|агентств|консультант|оптимизаци)[\p{L}]*|геопродвижени[\p{L}]*|геоспециалист[\p{L}]*|гео(?![-‐‑–]))(?![\p{L}\p{N}_])/giu;
 const RU_GEO_QUICK_TERMS = new RegExp(RU_GEO_TERMS.source, 'iu');
@@ -403,6 +421,7 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Feed') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:структурированн|файл|выгрузк)[\p{L}\s-]*\s+(?:данных|товаров|каталога)/iu.test(after);
   if (term === 'CaseStudy') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?подробное\s+описание\s+реальной\s+ситуации/iu.test(after);
   if (term === 'Content') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?любое\s+информационное\s+наполнение\s+сайта/iu.test(after);
+  if (term === 'Repository') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?хранилище\s+файлов\s+проекта/iu.test(after);
   const extraDefinition = RU_EXTRA_GLOSSARY[term];
   if (extraDefinition) {
     const expansion = extraDefinition.match(/^[^(]+\(([^)]+)\)/u)?.[1];
@@ -454,6 +473,7 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^фид/iu.test(value) ? 'Feed'
       : /^кейс/iu.test(value) ? 'CaseStudy'
       : /^контент/iu.test(value) ? 'Content'
+      : /^репозитори/iu.test(value) ? 'Repository'
       : /^гео/iu.test(value) ? 'GEO'
       : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
@@ -492,6 +512,12 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (term === 'Indexing' &&
         /(?:пенси|зарплат|оклад|пособи|выплат|инфляц|МРОТ|заработн|доход)/iu.test(nearby) &&
         !/(?:поисков|робот|страниц|сайт|URL|контент|документ|canonical|краулинг|Google|Яндекс|SEO|GEO)/iu.test(nearby)) continue;
+    // Title and description only have SEO metadata meanings in relevant context.
+    if ((term === 'Title' || term === 'description') &&
+        !/(?:SEO|H1|canonical|hreflang|HTML|мета(?:тег|данн)|поисков|сниппет|индексаци|заголов[а-я]*\s+страниц|тег\s+title|мета\s+описани)/iu.test(nearby)) continue;
+    // Postbox is Yandex Cloud's mail-delivery service, not any generic mailbox.
+    if (term === 'Postbox' &&
+        !/(?:Yandex|Cloud|Яндекс|SMTP|транзакцион|отправк|отправля|письм|email|рассылк|уведом|заявк|формы?)/iu.test(nearby)) continue;
     if (term === 'SPA' && !/(?:рендер|веб-приложен|разработ|JavaScript|PHP|frontend|frontend|серверн|одностраничн)/iu.test(nearby)) continue;
     if (term === 'SAT' && !/(?:FAT|приемочн|испытан|монтаж|оборудован|заводск)/iu.test(nearby)) continue;
     // "Дистрибуция" also refers to physical goods; the glossary covers content distribution only.
