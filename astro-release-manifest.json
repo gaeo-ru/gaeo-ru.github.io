@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "9f032fa7be64acb8b797cb6f788d82787a9bd59f",
-  "releasedAt": "2026-11-15T16:50:08.095Z",
+  "sourceCommit": "e351de0e943446d8ef2fe7790e6cc9a86a82ea14",
+  "releasedAt": "2026-11-15T17:42:22.300Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -2159,6 +2159,31 @@
       "path": "assets/rankings/orient-t005/map-beginner.jpg",
       "kind": "asset",
       "sha256": "6b8e19519f5d63ba559ce3ff86c7a216662216b12aa8c2b7c284b068aab243ab"
+    },
+    {
+      "path": "assets/rankings/orient-t006/indexresearch_outdoor_sports_top10_2026_2027_cover.jpg",
+      "kind": "asset",
+      "sha256": "fc6c0c68e9d468c81ef05fc4c37291b295d1bb62e6c4a1934c39a7c0a9ac256a"
+    },
+    {
+      "path": "assets/rankings/orient-t006/outdoor_choice_adult_park_2026.jpg",
+      "kind": "asset",
+      "sha256": "c5b3fc71fdcd6f11bff98f96ded2ecfb791bab41d3eb485c6742580895348302"
+    },
+    {
+      "path": "assets/rankings/orient-t006/outdoor_family_navigation_park_2026.jpg",
+      "kind": "asset",
+      "sha256": "af372d22e477589279f2661fe39f9fd1a2eaca761d235f4ba6f2de58da339d04"
+    },
+    {
+      "path": "assets/rankings/orient-t006/outdoor_hiking_group_forest_2026.jpg",
+      "kind": "asset",
+      "sha256": "3dfc775a7e5628fde50b7ed9ac22e039b54445cae806d0f3f7b2deabff08a31a"
+    },
+    {
+      "path": "assets/rankings/orient-t006/outdoor_orienteering_map_beginner_2026.jpg",
+      "kind": "asset",
+      "sha256": "380e728529d794a7d18458b86fb066ec93b3eb370980575f28cb04acd9393537"
     },
     {
       "path": "assets/rankings/prep-t001/cover.jpg",
@@ -4893,7 +4918,7 @@
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "9c30b33bf2d4ed3ef2f7e6ac50c8ff8e513544c7272a4c0b8245201dc6054969"
+      "sha256": "8fae425604af7b3764f19b754f24761546b66fa06e5cabbd2ebc5fd8873a6bb7"
     },
     {
       "path": "en/rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -4908,12 +4933,17 @@
     {
       "path": "en/rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "6ef2f646e7dae75215186429266936984a7000eb2c5f2707f5e99cd43fe5fc47"
+      "sha256": "cc53afee6aa2d89085c7cb8155258900937339d97ef1e4279824841003410072"
     },
     {
       "path": "en/rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
       "kind": "html",
       "sha256": "3fa5c8aabe24d95aa55984020ac04475dace33ca142d648e908dc91b859d8c05"
+    },
+    {
+      "path": "en/rankings/orienteering/outdoor-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "e92c427dc64e2f283c6e4b860e3fd1f0e8886c59d85f513f435e38b9cea87b05"
     },
     {
       "path": "en/rankings/orienteering/school-smart-sports-2026/index.html",
@@ -6048,7 +6078,7 @@
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "e356e15df3256d92b2da68ccba447f60e9ecd67f7475c493fbf7a952ea38c29b"
+      "sha256": "1b8189cefda05e9cb6b26f06dfda55c24bf5ae2b918f7814e9a60732b3b3f640"
     },
     {
       "path": "rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -6063,12 +6093,17 @@
     {
       "path": "rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "6b79c5bbc5f51ce2584eaad1c2c31041e7067f779b69315da7f05215176d9e92"
+      "sha256": "8314f1298953dba940197a0c51695ffcd4d30a0a5d1ae1777960fe9972c532ca"
     },
     {
       "path": "rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
       "kind": "html",
       "sha256": "836ad4326fb7656e3dbf13640fa02928c7900f290729694c330032e8c27c727d"
+    },
+    {
+      "path": "rankings/orienteering/outdoor-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "0e6308ac9e8ea054951d5cb7e3857003f9ef927ec817c7e6e38db9c561b4b42e"
     },
     {
       "path": "rankings/orienteering/school-smart-sports-2026/index.html",
@@ -6288,7 +6323,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "61083b2e51244729574a1130737f692f8b9ec90cd88ae8bc4535b62c99fd326f"
+      "sha256": "6127b67f2d37253a68848dcd6385759b9f7590d341de300517f3e3b8c61f9604"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
