@@ -124,7 +124,7 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
   if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
-  if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки\b/i.test(after) ||
+  if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
   const name = FULL_NAMES[term];
