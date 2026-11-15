@@ -252,7 +252,7 @@ try {
   assert.equal(await tooltip.isVisible(), false);
   await page.locator('#aeo [data-gaeo-term="AEO"]').click();
   assert.equal(await tooltip.textContent(), 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей');
-  assert.equal(await page.locator('#aeo .gaeo-term-label').evaluate(element => getComputedStyle(element).textDecorationStyle), 'dotted', 'The active term keeps its dotted underline');
+  assert.equal(await page.locator('#aeo [data-gaeo-term="AEO"] .gaeo-term-label').evaluate(element => getComputedStyle(element).textDecorationStyle), 'dotted', 'The active term keeps its dotted underline');
   await page.keyboard.press('Escape');
   await page.locator('#historical [data-gaeo-term="AIStart"]').click();
   assert.equal(await tooltip.textContent(), 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
