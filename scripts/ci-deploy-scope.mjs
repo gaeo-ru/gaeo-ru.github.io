@@ -45,7 +45,14 @@ try{
  for(const path of paths){
   if(path.startsWith('docs/')||path==='README.md'||path.startsWith('.github/ISSUE_TEMPLATE/'))continue;
   if(/^src\/legacy\/pages\/.+\.html$/.test(path)){
-   pages.add(fromSourcePath(path));
+   const route=fromSourcePath(path);
+   pages.add(route);
+   // A page can contain an industry-specific integration or a fragile mobile table.
+   // These dependencies matter even when the changed source file is local.
+   if(/(?:ecommerce|agentnaya-torgovlya)/i.test(route))changedGroups.add('ecommerce');
+   if(/(?:legal|yuridichesk)/i.test(route))changedGroups.add('legal');
+   if(/(?:industrial|b2b|metal-structures)/i.test(route))changedGroups.add('industrial');
+   if(/(?:ecommerce-measurement|ecommerce-catalog|agentnaya-torgovlya|geo-spetsialisty-110|legal-website|sajt-yuridicheskoj|tarify|pricing|legal-recommendations)/i.test(route))changedGroups.add('tables');
    let previous,current;
    try{
     previous=repoRead(base,path);
@@ -96,11 +103,11 @@ set('routes',JSON.stringify([...pages].sort()));
 set('title_paths',JSON.stringify(changedTitlePaths));
 set('titles_changed',changedTitlePaths.length>0);
 set('focused_browser',pages.size>0);
-for(const group of ['rankings','industry','specializations','evidence','tariffs','sector3a','sector3c','sector3d','sector3e','development'])set('check_'+group,active(group));
+for(const group of ['rankings','industry','specializations','evidence','tariffs','sector3a','sector3c','sector3d','sector3e','development','ecommerce','legal','industrial','tables'])set('check_'+group,active(group));
 set('check_terms',full);
 set('check_research',full);
-set('check_tables',full);
-set('chromium',full||pages.size>0||active('rankings')||active('industry')||active('specializations')||active('evidence')||active('tariffs')||active('sector3a')||active('development'));
+set('check_tables',full||changedGroups.has('tables'));
+set('chromium',full||pages.size>0||active('rankings')||active('industry')||active('specializations')||active('evidence')||active('tariffs')||active('sector3a')||active('development')||active('tables'));
 const info='GAEO_CI_SCOPE '+JSON.stringify({
  mode,files:outputs.files||'unknown',baseline:base.slice(0,12),
  routes:[...pages],titlePaths:changedTitlePaths,groups:[...changedGroups],reasons
