@@ -142,6 +142,8 @@ try {
     }
     assert.equal(await page.locator('a [data-gaeo-term], a .gaeo-term-link-label, .gaeo-term-reference').count(), 0, 'No controls nested inside anchors');
     assert.equal(await page.locator('header .gaeo-term-link-help, nav .gaeo-term-link-help, footer .gaeo-term-link-help').count(), 0, 'No question marks in navigation');
+    assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
+      'No glossary icons inside pricing and conversion buttons');
     if (route === '/cases/' || route === '/en/cases/') {
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
       const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
