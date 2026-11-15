@@ -5,9 +5,11 @@ import { injectTermHintAssets } from '../src/lib/term-hint-assets.mjs';
 
 test('standalone terms in normal copy, headings and metric labels', () => {
   const source = 'GEO-продвижение: BMR 22%, SoV 15%. SEO/AEO и GAEO.ru. SOV';
-  assert.deepEqual(findTermMatches(source).map(match => match.term), ['GEO', 'BMR', 'SoV', 'AEO', 'SoV']);
+  assert.deepEqual(findTermMatches(source).map(match => match.term), ['GEO', 'BMR', 'SoV', 'SEO', 'AEO', 'SoV']);
   assert.deepEqual(findTermMatches('НЕGEO GEOLOGY _GEO GEO2 myBMR SOVEREIGN GAEO _AEO AEO2'), []);
   assert.deepEqual(findTermMatches('GEO/AEO-эксперт, BMR/SoV').map(match => match.term), ['GEO', 'AEO', 'BMR', 'SoV']);
+  assert.deepEqual(findTermMatches('SEO/GEO-проверки, SEO для бизнеса').map(hit => hit.term), ['SEO','GEO','SEO']);
+  assert.deepEqual(findTermMatches('SEOLOG mySEO SEO2'), []);
   assert.deepEqual(findTermMatches('WMS/TMS, фулфилмент, Фулфилмента, фулфилментом, фулфилменты, фулфилментов и Fulfillment').map(match => match.term),
     ['WMS', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment']);
   assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
@@ -22,6 +24,7 @@ test('URLs, email addresses and file paths are not decorated', () => {
 test('adjacent expansions need no duplicate help', () => {
   for (const value of [
     'GEO (Generative Engine Optimization)', 'AEO (Answer Engine Optimization)',
+    'SEO (Search Engine Optimization)', 'Search Engine Optimization (SEO)', 'SEO — продвижение сайта в поисковых системах',
     'Answer Engine Optimization (AEO)', 'AEO - продвижение контента в источники ответов нейросетей',
     'BMR — Brand Mention Rate',
     'Share of Voice (SoV)', 'продвижение в нейросетях (GEO)',
@@ -41,6 +44,8 @@ test('adjacent expansions need no duplicate help', () => {
 test('exact user wording and the requested display duration are retained', () => {
   assert.equal(TERM_HINT_DURATION, 5000);
   assert.equal(TERM_DEFINITIONS.ru.GEO, 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей');
+  assert.equal(TERM_DEFINITIONS.ru.SEO, 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах');
+  assert.equal(TERM_DEFINITIONS.en.SEO, 'SEO (Search Engine Optimization) - website promotion in search engines');
   assert.equal(TERM_DEFINITIONS.ru.AEO, 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей');
   assert.equal(TERM_DEFINITIONS.en.AEO, 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers');
   assert.equal(TERM_DEFINITIONS.ru.BMR, 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей');
@@ -51,7 +56,7 @@ test('exact user wording and the requested display duration are retained', () =>
   assert.equal(TERM_DEFINITIONS.en.Fulfillment, 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.');
   assert.equal(TERM_DEFINITIONS.ru.AIStart, 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
   assert.equal(TERM_DEFINITIONS.en.AIStart, "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks.");
-  assert.deepEqual(findTermMatches('С 1997 года изучаю ИИ, с 2008 года занимаюсь SEO'), [], 'The historic year is contextual and never globally decorated');
+  assert.deepEqual(findTermMatches('С 1997 года изучаю ИИ, с 2008 года занимаюсь SEO').map(hit => hit.term), ['SEO'], 'The year is contextual; SEO receives a tooltip');
   for (const definition of Object.values(TERM_DEFINITIONS.en)) assert.doesNotMatch(definition, /[А-Яа-я]/);
 });
 
