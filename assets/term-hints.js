@@ -3,6 +3,8 @@ export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
+    Ecommerce: 'E-commerce - электронная коммерция: интернет-магазины и продажа товаров с маркетплейсов',
+    STM: 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
@@ -14,6 +16,8 @@ export const TERM_DEFINITIONS = Object.freeze({
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
+    Ecommerce: 'E-commerce - electronic commerce: online stores and selling goods on marketplaces',
+    STM: "STM (private label) - goods manufactured or imported under the brand owner's name. The trademark is usually registered with Rospatent.",
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
@@ -32,10 +36,12 @@ const FULL_NAMES = {
   BMR: 'Brand\\s+Mention\\s+Rate',
   SoV: 'Share\\s+of\\s+Voice',
   WMS: 'Warehouse\\s+Management\\s+System',
-  Fulfillment: 'Fulfillment'
+  Fulfillment: 'Fulfillment',
+  Ecommerce: 'Electronic\\s+Commerce',
+  STM: 'собственная\\s+торговая\\s+марка'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -65,6 +71,8 @@ function alreadyExplained(context, start, end, term, spelling) {
     : term === 'BMR' ? 'доля\\s+упоминаний(?:\\s+бренда)?(?:\\s+в\\s+ответах(?:\\s+нейросетей)?)?'
       : term === 'SoV' ? 'доля\\s+упоминаний\\s+бренда\\s+среди\\s+всех\\s+брендов'
       : term === 'WMS' ? 'система\\s+управления\\s+складом'
+      : term === 'Ecommerce' ? 'электронная\\s+коммерция'
+      : term === 'STM' ? 'собственная\\s+торговая\\s+марка'
       : 'комплекс\\s+логистических\\s+услуг';
   return new RegExp('^\\s*[(:—–-]\\s*(?:это\\s+)?' + meaning, 'i').test(after) ||
     new RegExp(meaning + '\\s*\\(\\s*$', 'i').test(before);
@@ -79,6 +87,8 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
     const term = /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'
+      : /^[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)$/u.test(value) ? 'Ecommerce'
+      : /^[Сс][Тт][Мм]$/u.test(value) ? 'STM'
       : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
       : /^brandfound$/i.test(value) ? 'BrandFound'
       : value;
@@ -107,8 +117,8 @@ export function installTermHints(doc = document) {
   const language = doc.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'ru';
   const definitions = TERM_DEFINITIONS[language];
   const labels = language === 'en'
-    ? term => `Explain ${term}`
-    : term => `Что означает ${term === 'Fulfillment' ? 'фулфилмент' : term}`;
+    ? term => `Explain ${term === 'Ecommerce' ? 'E-commerce' : term}`
+    : term => `Что означает ${term === 'Fulfillment' ? 'фулфилмент' : term === 'Ecommerce' ? 'E-commerce' : term === 'STM' ? 'СТМ' : term}`;
   const descriptions = doc.createElement('div');
   descriptions.hidden = true;
   descriptions.dataset.gaeoTermDefinitions = '';
@@ -260,7 +270,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
