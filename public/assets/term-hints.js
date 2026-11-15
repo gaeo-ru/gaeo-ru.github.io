@@ -48,15 +48,15 @@ export const TERM_DEFINITIONS = Object.freeze({
     PPSR: 'PPSR (Price Premium Survival Rate) - the share of paired AI answers retaining the retailer recommendation despite a cheaper offer for an identical SKU, measured at different price gaps.',
     DMC: 'DMC (Destination Management Company) - a local travel operator coordinating destination services such as transfers, accommodation, excursions and trip support.',
     MICE: 'MICE (Meetings, Incentives, Conferences, Exhibitions) - business tourism involving meetings, incentive trips, conferences and exhibitions.',
-    KM: 'КМ (metal structures, steel structure design drawings) - the Russian working-documentation stage defining metal structure design solutions and requirements.',
-    KMD: 'КМД (metal structure detailing drawings) - Russian fabrication and erection detail drawings developed from KM design documentation.',
-    SKUD: 'СКУД (access control and management system) - hardware and software used to authorize, monitor and record access by people or vehicles to a site.',
+    KM: 'KM (metal structures, steel structure design drawings) - the Russian working-documentation stage defining metal structure design solutions and requirements.',
+    KMD: 'KMD (metal structure detailing drawings) - Russian fabrication and erection detail drawings developed from KM design documentation.',
+    SKUD: 'SKUD (access control and management system) - hardware and software used to authorize, monitor and record access by people or vehicles to a site.',
     VIN: 'VIN (Vehicle Identification Number) - a manufacturer-assigned identifier used to distinguish an individual vehicle.',
-    EPTS: 'ЭПТС (electronic vehicle passport) - Russia\'s digital vehicle document containing identification and technical information.',
+    EPTS: 'EPTS (electronic vehicle passport) - Russia\'s digital vehicle document containing identification and technical information.',
     PSI: 'PSI (PageSpeed Insights) - Google\'s service for analyzing a webpage\'s performance and loading speed.',
     Astro: 'Astro is a tool for building content-focused websites, including blogs, landing pages, portfolios, catalogs, online stores and documentation.',
-    TZ: 'ТЗ (technical specification) - a document defining work requirements, expected deliverables and acceptance criteria.',
-    SRO: 'СРО (self-regulatory organization) - an association of industry professionals that sets standards and oversees member compliance. Membership may be required for certain construction and design activities in Russia.',
+    TZ: 'TZ (technical specification) - a document defining work requirements, expected deliverables and acceptance criteria.',
+    SRO: 'SRO (self-regulatory organization) - an association of industry professionals that sets standards and oversees member compliance. Membership may be required for certain construction and design activities in Russia.',
     BIM: 'BIM (Building Information Modeling) - creating and using a digital model of a building or infrastructure asset across design, construction and operation.',
     Ecommerce: 'E-commerce - electronic commerce: online stores and selling goods on marketplaces',
     STM: "STM (private label) - goods manufactured or imported under the brand owner's name. The trademark is usually registered with Rospatent.",
@@ -102,7 +102,7 @@ const FULL_NAMES = {
   BIM: 'Building\\s+Information\\s+Modeling'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss]hortlists?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|СКУД|VIN|ЭПТС|PSI|[Aa]stro|ТЗ|СРО|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|VIN|ЭПТС|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|СРО|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
@@ -126,7 +126,7 @@ function alreadyExplained(context, start, end, term, spelling) {
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки\b/i.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
-  if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список\b/i.test(after);
+  if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
@@ -156,10 +156,10 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
       : /^[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)$/u.test(value) ? 'Ecommerce'
       : /^[Сс][Тт][Мм]$/u.test(value) ? 'STM'
       : /^github$/i.test(value) ? 'GitHub'
-      : /^[Ss]hortlists?$/.test(value) ? 'Shortlist'
-      : /^[Aa]stro$/.test(value) ? 'Astro'
-      : value === 'КМ' ? 'KM'
-      : value === 'КМД' ? 'KMD'
+      : /^shortlists?$/i.test(value) ? 'Shortlist'
+      : /^astro$/i.test(value) ? 'Astro'
+      : (value === 'КМ' || value === 'KM') ? 'KM'
+      : (value === 'КМД' || value === 'KMD') ? 'KMD'
       : value === 'СКУД' ? 'SKUD'
       : value === 'ЭПТС' ? 'EPTS'
       : value === 'ТЗ' ? 'TZ'
@@ -346,7 +346,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss]hortlists?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|СКУД|VIN|ЭПТС|PSI|[Aa]stro|ТЗ|СРО|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
+      if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|VIN|ЭПТС|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|СРО|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
