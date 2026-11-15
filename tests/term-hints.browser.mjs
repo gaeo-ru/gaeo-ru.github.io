@@ -32,6 +32,7 @@ try {
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
     <main><p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR, SoV, WMS и фулфилмент</a></p>
     <h3 id="case-heading"><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3>
+    <div class="tariff-actions"><a class="button" id="tariff-cta" href="#destination">GEO promotion</a></div>
     <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
     <a class="card" href="#destination">GEO: ссылка на целую карточку</a>
     <p id="compound">GEO/AEO-эксперт</p>
@@ -63,6 +64,7 @@ try {
   assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No obsolete controls');
   assert.equal(await page.locator('#case-heading a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR case link has separate question icon');
   assert.equal(await page.locator('#expanded-link .gaeo-term-link-help').count(), 0, 'Expanded BMR needs no icon');
+  assert.equal(await page.locator('#tariff-cta + .gaeo-term-link-help, .tariff-actions .gaeo-term-link-help').count(), 0, 'Pricing and CTA links stay free of question icons');
   assert.equal(await page.locator('nav .gaeo-term-link-help, a .gaeo-term-link-help').count(), 0, 'No nested or navigational help controls');
   assert.equal(await page.locator('#inline-link + .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
