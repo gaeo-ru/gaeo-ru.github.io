@@ -55,6 +55,17 @@ try {
     <p id="compound">GEO/AEO-эксперт</p>
     <div class="scroll-table"><table><tr><th>Показатель</th><th id="metric-cell">BMR</th></tr></table></div>
     <p id="faq-answer">GEO помогает бренду. BMR измеряет долю ответов.</p>
+    <section class="tariff-plans">
+      <details class="price tariff-plan" open data-plan="audit" id="audit-tariff">
+        <summary class="price-summary" id="audit-summary"><div><h3>Полный аудит рекомендаций нейросетей</h3><p class="tariff-summary">GEO-аудит сайта и ответов нейросетей</p></div><span aria-hidden="true">×</span></summary>
+        <div class="price-details"><p>До 100 промптов и до 11 нейросетей</p></div>
+      </details>
+      <details class="price tariff-plan" open data-plan="geo" id="geo-tariff">
+        <summary class="price-summary"><div><h3>Продвижение в нейросетях</h3><p class="tariff-summary">ТЗ на сайт и GEO-контент</p></div></summary>
+        <div class="price-details"><p>Работы</p></div>
+      </details>
+    </section>
+    <details id="faq-accordion"><summary>GEO и BMR: что означают термины?</summary><p>Подробное объяснение</p></details>
     <p id="brandfound-referral">Выгрузка BrandFound содержит ответы.</p>
     <p id="brandfound-explained">BrandFound — сервис мониторинга ответов нейросетей.</p>
     <pre id="code">GEO BMR SoV</pre><p data-term-hints="off" id="off">GEO</p>
@@ -113,6 +124,15 @@ try {
   assert.equal(await page.locator('#case-heading .gaeo-term-link-inline > a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR help icon follows link in wrapper');
   assert.equal(await page.locator('#expanded-link .gaeo-term-link-help').count(), 0, 'Expanded BMR needs no icon');
   assert.equal(await page.locator('#tariff-cta + .gaeo-term-link-help, .tariff-actions .gaeo-term-link-help').count(), 0, 'Pricing and CTA links stay free of question icons');
+  assert.equal(await page.locator('#audit-tariff .tariff-summary [data-gaeo-term="GEO"]').count(), 1,
+    'GEO in expandable tariff description has a dotted glossary button');
+  assert.equal(await page.locator('#geo-tariff .tariff-summary [data-gaeo-term="TZ"]').count(), 1,
+    'ТЗ in another tariff description gets an explanation');
+  assert.equal(await page.locator('#faq-accordion summary [data-gaeo-term]').count(), 0,
+    'Unrelated interactive FAQ summaries stay untouched');
+  const auditDotted = await page.locator('#audit-tariff .tariff-summary .gaeo-term-label').evaluate(
+    el => getComputedStyle(el).textDecorationStyle);
+  assert.equal(auditDotted, 'dotted', 'Tariff summary keeps the site-wide dotted underline');
   assert.equal(await page.locator('nav .gaeo-term-link-help, a .gaeo-term-link-help').count(), 0, 'No nested or navigational help controls');
   assert.equal(await page.locator('#inline-link').locator('xpath=..').locator(':scope > .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
@@ -198,6 +218,37 @@ try {
     assert.ok((await tooltip.textContent()).length > 30, 'Full glossary definition for ' + term);
     await page.keyboard.press('Escape');
   }
+  // The term button inside a native <summary> opens help without toggling
+  // the native details. Other parts of that same summary keep their toggle.
+  const auditDetails = page.locator('#audit-tariff');
+  const auditTerm = page.locator('#audit-tariff .tariff-summary [data-gaeo-term="GEO"]');
+  assert.ok(await auditDetails.evaluate(el => el.open), 'Audit tariff begins expanded');
+  await auditTerm.click();
+  assert.ok(await tooltip.isVisible(), 'GEO tooltip opens from the tariff description');
+  assert.equal(await tooltip.textContent(),
+    'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей');
+  assert.ok(await auditDetails.evaluate(el => el.open), 'Clicking dotted GEO does not collapse the tariff');
+  await page.keyboard.press('Escape');
+  await page.locator('#audit-summary h3').click();
+  assert.equal(await auditDetails.evaluate(el => el.open), false, 'Clicking the rest of the summary closes the tariff');
+  await page.locator('#audit-summary').focus();
+  await page.keyboard.press('Enter');
+  assert.ok(await auditDetails.evaluate(el => el.open), 'Summary stays accessible with keyboard Enter');
+  await auditTerm.focus();
+  await page.keyboard.press('Enter');
+  assert.ok(await tooltip.isVisible(), 'Keyboard Enter opens tariff-term help');
+  assert.ok(await auditDetails.evaluate(el => el.open), 'Keyboard activation of the term does not collapse the tariff');
+  await page.keyboard.press('Escape');
+  await page.evaluate(() => {
+    document.querySelector('#audit-tariff .tariff-summary').textContent = 'GEO-аудит и ТЗ на сайт';
+  });
+  await page.waitForFunction(() =>
+    document.querySelectorAll('#audit-tariff .tariff-summary [data-gaeo-term]').length === 2);
+  assert.deepEqual(await page.locator('#audit-tariff .tariff-summary [data-gaeo-term]')
+    .evaluateAll(items => items.map(el => el.dataset.gaeoTerm)), ['GEO', 'TZ'],
+    'Dynamically replaced tariff text is decorated once');
+  assert.equal(await page.locator('#audit-tariff .tariff-summary button button').count(), 0);
+
   // Mouse hover has no persistence once the pointer leaves the dotted text or the ?.
   await bmr.hover();
   assert.ok(await tooltip.isVisible(), 'Desktop: hovering over the dotted term opens help');

@@ -183,6 +183,14 @@ const EXCLUDED = [
   '.gaeo-term-tooltip', 'abbr[title]', '[role="tooltip"]'
 ].join(',');
 const INTERACTIVE = 'a[href],button,summary,label,[role="button"],[role="link"]';
+// Tariff details are native expandable controls, but their ordinary text
+// also needs glossary explanations. Permit only text inside their summary;
+// nested links/buttons remain protected interactive elements.
+const TARIFF_SUMMARY = '.tariff-plans > details.tariff-plan > summary.price-summary';
+function isProtectedInteractive(element) {
+  const closest = element?.closest?.(INTERACTIVE);
+  return Boolean(closest && !(closest.matches('summary.price-summary') && element.closest(TARIFF_SUMMARY)));
+}
 const LINK_HELP_SELECTOR = '[data-gaeo-term-link-help]';
 const LINK_WRAPPER_SELECTOR = '.gaeo-term-link-inline';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
@@ -275,7 +283,7 @@ export function installTermHints(doc = document) {
       if (!link.isConnected) continue;
       let wrapper = link.parentElement?.matches(LINK_WRAPPER_SELECTOR) ? link.parentElement : null;
       const allowed = link.closest('main,article') &&
-        !link.closest('header,footer,nav,aside,[data-term-hints="off"],[contenteditable="true"]') &&
+        !link.closest('header,footer,nav,aside,summary,[data-term-hints="off"],[contenteditable="true"]') &&
         !link.closest(EXCLUDED) &&
         !link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') &&
         !link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]');
@@ -329,14 +337,14 @@ export function installTermHints(doc = document) {
     // A later renderer may move already decorated text into a link/control.
     // Restore its original text rather than leave nested interactive elements.
     const moved = root.matches?.('[data-gaeo-term]') ? [root] : [...(root.querySelectorAll?.('[data-gaeo-term]') || [])];
-    for (const trigger of moved) if (trigger.parentElement?.closest(INTERACTIVE)) {
+    for (const trigger of moved) if (isProtectedInteractive(trigger.parentElement)) {
       if (trigger === active) hide();
       if (trigger.matches(LINK_HELP_SELECTOR)) trigger.remove();
       else trigger.replaceWith(doc.createTextNode(trigger.textContent));
     }
     if (!root.isConnected || root.closest?.(EXCLUDED)) return;
     enhanceLinks(root);
-    if (root.closest?.(INTERACTIVE)) return;
+    if (isProtectedInteractive(root)) return;
     const nodes = [];
     if (root.nodeType === 3) nodes.push(root);
     else {
@@ -345,7 +353,7 @@ export function installTermHints(doc = document) {
     }
     for (const node of nodes) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
-      if (node.parentElement.closest(INTERACTIVE)) continue;
+      if (isProtectedInteractive(node.parentElement)) continue;
       const text = node.data;
       if (!/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment|[Bb]rand[Ff]ound|BRANDFOUND)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
@@ -354,7 +362,7 @@ export function installTermHints(doc = document) {
       let cursor = 0;
       for (const match of matches) {
         fragment.append(doc.createTextNode(text.slice(cursor, match.start)));
-        if (match.term === 'BrandFound') {
+        if (match.term === 'BrandFound' && !node.parentElement.closest(TARIFF_SUMMARY)) {
           const link = doc.createElement('a');
           link.href = 'https://brandfound.ai/?ref=ZML17L';
           link.target = '_blank';
