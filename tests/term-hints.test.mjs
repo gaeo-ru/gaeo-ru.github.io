@@ -227,3 +227,16 @@ test('PR glossary definition uses the approved communication meaning', () => {
     'PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание');
   assert.deepEqual(findTermMatches('PR и PRR').map(hit => hit.term), ['PR', 'PRR']);
 });
+
+
+test('«кейс»: singular/plural cases, site context, boundaries and exact approved definition', () => {
+  assert.equal(TERM_DEFINITIONS.ru.CaseStudy,
+    'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата');
+  const forms = ['Кейс', 'кейса', 'кейсу', 'кейсом', 'кейсе', 'кейсы', 'кейсов', 'кейсам', 'кейсами', 'кейсах'];
+  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'CaseStudy'));
+  assert.deepEqual(findTermMatches('кейсовый кейс-стади кейсик Кейс24 анти-кейс').map(hit => hit.term),
+    ['CaseStudy']);
+  assert.deepEqual(findTermMatches('Кейсы — подробное описание реальной ситуации'), ['CaseStudy']
+    .map(() => ({ start: 0, end: 5, term: 'CaseStudy', text: 'Кейсы' })));
+  assert.deepEqual(findTermMatches('кейс и кейсы', { language: 'en' }), []);
+});
