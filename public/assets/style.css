@@ -405,12 +405,6 @@ footer a{display:block;text-decoration:none;color:#dbe5f3;margin:10px 0;font-siz
   .hero-proof b{
     font-size:17px;
   }
-  /* Align one-line audit count with the last line of wrapped year headings. */
-  .hero-proof>div>b{
-    display:flex;
-    align-items:flex-end;
-    min-height:2.3em;
-  }
   .hero-proof span{
     font-size:10.5px;
   }
@@ -1391,3 +1385,11 @@ footer .footer-lang--mobile{display:none!important}
 /* The homepage calculator and FAQ are consecutive parts of the pricing flow. */
 .tariff-calculator-section:has(+ .home-faq){padding-bottom:clamp(24px,3vw,40px)}
 .section.home-faq{padding-top:clamp(24px,3vw,40px)}
+
+/* Share the heading and caption rows across the three hero facts. This
+   bottoms-aligns shorter headings only when neighboring ones wrap. */
+@media(max-width:720px){
+  .hero-proof{grid-template-rows:auto auto}
+  .hero-proof>div{display:grid;grid-row:span 2;grid-template-rows:subgrid}
+  .hero-proof>div>b{align-self:end}
+}
