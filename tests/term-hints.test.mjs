@@ -36,6 +36,35 @@ test('GitHub is recognized in ordinary prose and not inside longer names', () =>
     'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.');
 });
 
+test('Schema.org has a glossary hint in prose while URLs and explicit definitions remain untouched', () => {
+  assert.deepEqual(findTermMatches('В разметке Schema.org описаны товары и услуги.').map(hit => hit.term), ['SchemaOrg']);
+  assert.deepEqual(findTermMatches('schema.org, SCHEMA.ORG, Schema.org.').map(hit => hit.term), ['SchemaOrg', 'SchemaOrg', 'SchemaOrg']);
+  for (const path of ['https://schema.org/LegalService', 'www.schema.org', 'schema.org/Person', 'Schema.org@example.ru']) {
+    assert.deepEqual(findTermMatches(path), [], path);
+  }
+  assert.deepEqual(findTermMatches('Schema.org - общий словарь типов и свойств для структурированных данных'), []);
+  assert.ok(TERM_DEFINITIONS.ru.SchemaOrg.includes('структурированной разметки'));
+  assert.match(TERM_DEFINITIONS.en.SchemaOrg, /shared vocabulary/);
+});
+
+test('Russian content-marketing terminology is matched in all cases without changing unrelated words', () => {
+  const samples = {
+    Interlinking: 'перелинковка перелинковки перелинковке перелинковку перелинковкой перелинковкою перелинковок перелинковкам перелинковками перелинковках',
+    ContentDistribution: 'дистрибуция дистрибуции дистрибуцию дистрибуцией дистрибуциею дистрибуций дистрибуциям дистрибуциями дистрибуциях',
+    Intent: 'интент интента интенту интентом интенте интенты интентов интентам интентами интентах',
+    Prompt: 'промпт промпта промпту промптом промпте промпты промптов промптам промптами промптах'
+  };
+  for (const [term, phrase] of Object.entries(samples)) {
+    assert.deepEqual(findTermMatches(phrase).map(hit => hit.term), Array(phrase.split(' ').length).fill(term), term);
+    assert.ok(TERM_DEFINITIONS.ru[term], 'Missing definition for ' + term);
+  }
+  assert.deepEqual(findTermMatches('Перелинковка, интент и промпт.').map(hit => hit.term), ['Interlinking', 'Intent', 'Prompt']);
+  assert.deepEqual(findTermMatches('План дистрибуции контента на площадках').map(hit => hit.term), ['ContentDistribution']);
+  assert.deepEqual(findTermMatches('Дистрибуция товаров и логистика по складам'), []);
+  assert.deepEqual(findTermMatches('промптинг, суперинтент, перепромптовать, перелинковочный'), []);
+  assert.deepEqual(findTermMatches('перелинковка интент промпт', { language: 'en' }), []);
+});
+
 test('Added 20 terms: e-commerce, research, travel, manufacturing, vehicles, site development', () => {
   const text = 'FRS shortlist SKU PRR SCR RAR RRR PPSR DMC MICE КМ КМД СКУД VIN ЭПТС PSI Astro ТЗ СРО BIM';
   assert.deepEqual(findTermMatches(text).map(hit => hit.term), ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]);
