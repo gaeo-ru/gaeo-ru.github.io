@@ -146,7 +146,7 @@ try {
     assert.equal(await page.locator('.tariff-actions .gaeo-term-link-help, .case-actions .gaeo-term-link-help').count(), 0,
       'No glossary icons inside pricing and conversion buttons');
     if (route === '/cases/' || route === '/en/cases/') {
-      assert.ok(await page.locator('#geo-promotion h3 .gaeo-term-link-inline').count() >= 2, 'BMR titles use a common first-line wrapper');
+      assert.ok(await page.locator('#geo-promotion h3 .gaeo-term-link-inline').count() >= 2, 'BMR titles retain independent help icons');
       const title = page.locator('#geo-promotion .list-card h3 a').filter({ hasText: 'MethodLab' });
       const icon = title.locator('xpath=following-sibling::button[contains(@class,"gaeo-term-link-help")]');
       assert.equal(await title.count(), 1, 'MethodLab title link exists');
@@ -158,13 +158,13 @@ try {
         'Question icon retains flex layout inside the top-aligned link group');
       const geometry = await icon.evaluate(button => {
         const anchor = button.parentElement.querySelector('a');
-        const link = anchor.getBoundingClientRect(), circle = button.getBoundingClientRect();
-        const lineHeight = parseFloat(getComputedStyle(anchor).lineHeight);
-        return { top: link.top, height: link.height, circleTop: circle.top, circleBottom: circle.bottom, lineHeight };
+        const lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+        const last = lines.at(-1), circle = button.getBoundingClientRect();
+        return { lastTop: last.top, lastBottom: last.bottom, circleTop: circle.top, circleBottom: circle.bottom };
       });
-      assert.ok(geometry.circleTop >= geometry.top - 1 &&
-        geometry.circleBottom <= geometry.top + geometry.lineHeight + 5,
-        'Circle must align with first line of BMR link: ' + JSON.stringify(geometry));
+      assert.ok(geometry.circleTop >= geometry.lastTop - 8 &&
+        geometry.circleBottom <= geometry.lastBottom + 10,
+        'Circle must align with LAST line of BMR link: ' + JSON.stringify(geometry));
     }
     if (viewport.width <= 390) {
       const mobileLanguages = page.locator('#mobileMenu > .mobile-langs');
@@ -181,6 +181,28 @@ try {
       assert.ok(await brandFoundLinks.count() >= 1, 'MethodLab must link BrandFound to personal referral ' + route);
       assert.ok(await page.locator('main .gaeo-term-link-help[data-gaeo-term="BrandFound"]').count() >= 1,
         'MethodLab must explain BrandFound without changing its linked text ' + route);
+      const label = lang === 'ru' ? 'Как измерять BMR, Share of Voice' : 'How to measure BMR, Share of Voice';
+      const measurement = page.locator('main p').filter({ hasText: label }).last();
+      assert.equal(await measurement.count(), 1, 'Measurement link exists on ' + route);
+      const help = measurement.locator('.gaeo-term-link-help');
+      assert.deepEqual(await help.evaluateAll(elements => elements.map(element => element.dataset.gaeoTerm)),
+        ['BMR', 'SoV'], 'Full and abbreviated metrics both have their original definitions');
+      const pos = await measurement.evaluate(element => {
+        const anchor = element.querySelector('.gaeo-term-link-inline > a');
+        const lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+        const last = lines.at(-1);
+        return { lines: lines.length, lastTop: last.top, lastBottom: last.bottom,
+          icons: [...element.querySelectorAll('.gaeo-term-link-help')].map(icon => {
+            const rect = icon.getBoundingClientRect();
+            return { top: rect.top, bottom: rect.bottom };
+          }), trailing: anchor.parentElement.nextSibling?.textContent.trim() || '' };
+      });
+      assert.equal(pos.trailing, '', 'No orphan period after measurement link');
+      if (viewport.width <= 390) {
+        assert.ok(pos.lines >= 2, 'Measurement link wraps on a phone');
+        assert.ok(pos.icons.every(icon => icon.top >= pos.lastTop - 8 && icon.bottom <= pos.lastBottom + 10),
+          'Tooltip icons align with the LAST linked line: ' + JSON.stringify(pos));
+      }
     }
     const before = await dimensions(page);
     current.documentWidth = before.document;
