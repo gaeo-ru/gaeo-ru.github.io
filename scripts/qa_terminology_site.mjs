@@ -130,7 +130,11 @@ try {
       name: element.getAttribute('aria-label'),
       description: document.getElementById(element.getAttribute('aria-describedby'))?.textContent,
       controls: element.getAttribute('aria-controls'),
-      nested: Boolean(element.parentElement.closest('a[href],button,summary,label,[role="button"],[role="link"]')),
+      nested: (() => {
+        const ancestor = element.parentElement.closest('a[href],button,summary,label,[role="button"],[role="link"]');
+        return Boolean(ancestor && !(ancestor.matches('summary.price-summary') &&
+          ancestor.closest('.tariff-plans > details.tariff-plan')));
+      })(),
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
@@ -235,6 +239,23 @@ try {
       assert.ok(current.controlCounts.SoV > 0, 'Measurement page SoV control');
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
+    if (route === '/tarify/') {
+      const audit = page.locator('.tariff-plans > details.tariff-plan[data-plan="audit"]');
+      const term = audit.locator('summary.price-summary .tariff-summary [data-gaeo-term="GEO"]');
+      assert.equal(await term.count(), 1, 'Full-audit tariff must underline GEO in its summary');
+      assert.equal(await term.locator('.gaeo-term-label').evaluate(el => getComputedStyle(el).textDecorationStyle),
+        'dotted', 'GEO tariff text uses dotted underline');
+      assert.ok(await audit.evaluate(el => el.open), 'Audit tariff initially expanded');
+      await term.click();
+      assert.equal(await page.locator('#gaeo-term-tooltip').textContent(),
+        TERM_DEFINITIONS[lang].GEO, 'GEO tariff tooltip shows the shared definition');
+      assert.ok(await audit.evaluate(el => el.open), 'Tapping term does not collapse tariff');
+      await page.keyboard.press('Escape');
+      await audit.locator('summary.price-summary h3').click();
+      assert.equal(await audit.evaluate(el => el.open), false, 'Tapping heading still collapses tariff');
+      await audit.locator('summary.price-summary h3').click();
+      assert.ok(await audit.evaluate(el => el.open), 'Tapping heading still expands tariff');
+    }
     if (route === '/cases/') {
       assert.ok(current.controlCounts.SEO > 0, 'SEO explanations added to development case text');
       const text = await page.locator('main').innerText();
