@@ -9,7 +9,8 @@ const TERM_DEFINITIONS = {
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
     WMS: 'WMS (Warehouse Management System) — система управления складом.',
-    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.'
+    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.',
+    AIStart: 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.'
   },
   en: {
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
@@ -17,20 +18,21 @@ const TERM_DEFINITIONS = {
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
-    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.',
+    AIStart: "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks."
   }
 };
 
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '3aed3cc829e51726b207a30702204a4792ec1cc6';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '3dafe6b99e446b4034348d3cb515ed0153e6d136';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
-  '/en/services/', '/en/strategies/measurement/'
+  '/en/', '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
   { width: 1440, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 720 }
@@ -140,7 +142,7 @@ try {
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -153,6 +155,15 @@ try {
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
     if (route === '/') assert.ok(current.controlCounts.BMR > 0, 'Homepage needs an explanation for its BMR metric');
+    if (route === '/' || route === '/en/') {
+      assert.equal(current.controlCounts.AIStart, 1, 'Exactly one contextual history tooltip ' + route);
+      const heroText = await page.locator('.hero-proof').innerText();
+      assert.ok(heroText.includes(lang === 'ru' ? 'с 1997 года' : 'since 1997'), 'Correct first AI year ' + route);
+      assert.ok(!heroText.includes('1998'), 'Outdated first AI year gone ' + route);
+      const trustText = await page.locator('.trustbar').innerText();
+      assert.ok(trustText.includes('70+'), '70+ publication count ' + route);
+      assert.ok(!trustText.includes('40+'), 'Legacy 40+ count gone ' + route);
+    }
     if (route === '/strategies/measurement/') {
       assert.ok(current.controlCounts.BMR > 0, 'Measurement page BMR control');
       assert.ok(current.controlCounts.SoV > 0, 'Measurement page SoV control');
@@ -164,11 +175,11 @@ try {
       assert.ok(current.controlCounts.Fulfillment > 0, 'Fulfillment term must be explained on industry page');
 
     // Capture tops before any tooltip interaction or automatic scrolling.
-    if ([1440, 390].includes(viewport.width) && ['/', '/services/'].includes(route)) {
+    if ([1440, 390].includes(viewport.width) && ['/', '/en/', '/services/'].includes(route)) {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
-      await screenshot(page, current, route === '/' ? 'home-top' : 'services-top');
+      await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment']) {
+    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
@@ -188,11 +199,12 @@ try {
          (route === '/services/geo-audit/' && term === 'GEO') ||
          (route === '/professional-biography/' && term === 'AEO') ||
          (route === '/rankings/wms/' && term === 'WMS') ||
-         (route === '/industries/fulfillment/' && term === 'Fulfillment'));
+         (route === '/industries/fulfillment/' && term === 'Fulfillment') ||
+         ((route === '/' || route === '/en/') && term === 'AIStart'));
       if (capture) {
         // Reset the reading window immediately before capturing the live popup.
         await trigger.click();
-        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : route === '/rankings/wms/' ? 'warehouse' : route === '/industries/fulfillment/' ? 'fulfillment' : 'geo-audit'}-${term}-tooltip`);
+        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : route === '/rankings/wms/' ? 'warehouse' : route === '/industries/fulfillment/' ? 'fulfillment' : route === '/' ? 'home' : route === '/en/' ? 'en-home' : 'geo-audit'}-${term}-tooltip`);
       }
       if (current.clickedTerms.length === 1) {
         await tooltip.click();
