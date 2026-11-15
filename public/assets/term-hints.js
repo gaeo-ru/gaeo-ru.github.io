@@ -63,7 +63,7 @@ function alreadyExplained(context, start, end, term, spelling) {
       (/\b(?:SoV|SOV)\s*(?:\(|[:—–-])\s*$/i.test(before) || /^\s*\(\s*(?:SoV|SOV)\s*\)/i.test(after))) return true;
   // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
-  if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа\b/i.test(after) ||
+  if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
