@@ -42,6 +42,8 @@ try {
     <p id="compound">GEO/AEO-эксперт</p>
     <div class="scroll-table"><table><tr><th>Показатель</th><th id="metric-cell">BMR</th></tr></table></div>
     <p id="faq-answer">GEO помогает бренду. BMR измеряет долю ответов.</p>
+    <p id="brandfound-referral">Выгрузка BrandFound содержит ответы.</p>
+    <p id="brandfound-explained">BrandFound — сервис мониторинга ответов нейросетей.</p>
     <pre id="code">GEO BMR SoV</pre><p data-term-hints="off" id="off">GEO</p>
     <form><label for="input">BMR</label><input id="input" value="GEO"><button>GEO</button></form>
     <div id="dynamic"></div><button id="outside" type="button">Закрыть подсказку</button>
@@ -79,6 +81,11 @@ try {
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
   assert.equal(await page.locator('script[type="application/ld+json"]').textContent(), '{"name":"GEO","metric":"BMR"}');
   assert.equal(await page.locator('#faq-answer').textContent(), 'GEO помогает бренду. BMR измеряет долю ответов.', 'Term buttons do not change FAQ text/schema parity');
+  await page.waitForFunction(() => document.querySelector('#brandfound-referral .gaeo-term-link-help'));
+  assert.equal(await page.locator('#brandfound-referral a').getAttribute('href'), 'https://brandfound.ai/?ref=ZML17L');
+  assert.equal(await page.locator('#brandfound-referral .gaeo-term-link-help').count(), 1);
+  assert.equal(await page.locator('#brandfound-explained a').getAttribute('href'), 'https://brandfound.ai/?ref=ZML17L');
+  assert.equal(await page.locator('#brandfound-explained .gaeo-term-link-help').count(), 0, 'Explained BrandFound needs no help icon');
   const headingStyle = await page.locator('#heading [data-gaeo-term="GEO"]').evaluate(el => ({ font: getComputedStyle(el).fontSize, parent: getComputedStyle(el.closest('h1')).fontSize, label: getComputedStyle(el.querySelector('.gaeo-term-label')).textDecorationStyle }));
   assert.equal(headingStyle.font, headingStyle.parent, 'Heading type size is inherited');
   assert.equal(headingStyle.label, 'dotted');
