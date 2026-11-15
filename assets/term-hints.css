@@ -27,6 +27,33 @@
   outline-offset: 3px;
   border-radius: 3px;
 }
+.gaeo-term-link-help.gaeo-term-link-help {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: 0.1em;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: #355577;
+  background: transparent;
+  font: 700 12px/1 Manrope, Arial, sans-serif;
+  cursor: help;
+  -webkit-tap-highlight-color: transparent;
+}
+.gaeo-term-link-help:hover,
+.gaeo-term-link-help:focus-visible {
+  color: #005fc5;
+  background: #ecf5ff;
+}
+.gaeo-term-link-help:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
 .gaeo-term-tooltip {
   box-sizing: border-box;
   position: fixed;
@@ -55,4 +82,5 @@
 @media print {
   .gaeo-term-tooltip { display: none !important; }
   .gaeo-term-trigger .gaeo-term-label { text-decoration: none; }
+  .gaeo-term-link-help { display: none !important; }
 }

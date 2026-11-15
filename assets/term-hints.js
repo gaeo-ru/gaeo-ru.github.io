@@ -81,6 +81,7 @@ const EXCLUDED = [
   '.gaeo-term-tooltip', 'abbr[title]', '[role="tooltip"]'
 ].join(',');
 const INTERACTIVE = 'a[href],button,summary,label,[role="button"],[role="link"]';
+const LINK_HELP_SELECTOR = '[data-gaeo-term-link-help]';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
 
 export function installTermHints(doc = document) {
@@ -107,7 +108,8 @@ export function installTermHints(doc = document) {
   tooltip.setAttribute('role', 'tooltip');
   tooltip.hidden = true;
   doc.body.append(descriptions, tooltip);
-  let active = null, timer = null, frame = null;
+  let active = null, timer = null, frame = null, activeMode = null;
+  let lastInput = null;
   function makeTrigger(term, text) {
     const trigger = doc.createElement('button');
     trigger.type = 'button';
@@ -122,6 +124,48 @@ export function installTermHints(doc = document) {
     label.textContent = text;
     trigger.append(label);
     return trigger;
+  }
+
+  function makeLinkHelp(term) {
+    const button = doc.createElement('button');
+    button.type = 'button';
+    button.className = 'gaeo-term-link-help';
+    button.dataset.gaeoTerm = term;
+    button.dataset.gaeoTermLinkHelp = '';
+    button.setAttribute('aria-label', labels(term));
+    button.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
+    button.setAttribute('aria-controls', tooltip.id);
+    button.setAttribute('aria-expanded', 'false');
+    button.textContent = '?';
+    return button;
+  }
+
+  // Explain terms inside links with a separate icon, preserving the link itself.
+  function enhanceLinks(root) {
+    const links = root.matches?.('a[href]') ? [root] : [...(root.querySelectorAll?.('a[href]') || [])];
+    for (const link of links) {
+      if (!link.isConnected || !link.closest('main,article') ||
+          link.closest('header,footer,nav,aside,[data-term-hints="off"],[contenteditable="true"]') ||
+          link.closest(EXCLUDED) ||
+          link.closest('button,[role="button"],.tariff-actions,.case-actions,.hero-actions,.cta-actions') ||
+          link.matches('.button,.btn,[role="button"],[class*="button"],[class*="btn"],[class*="cta"]')) continue;
+      const terms = [...new Set(findTermMatches(link.textContent).map(hit => hit.term))];
+      const old = [];
+      for (let next = link.nextSibling; next?.nodeType === 1 && next.matches?.(LINK_HELP_SELECTOR); next = next.nextSibling) {
+        old.push(next);
+      }
+      if (terms.length === old.length && terms.every((term, i) => term === old[i].dataset.gaeoTerm)) continue;
+      for (const button of old) {
+        if (button === active) hide();
+        button.remove();
+      }
+      let previous = link;
+      for (const term of terms) {
+        const button = makeLinkHelp(term);
+        previous.after(button);
+        previous = button;
+      }
+    }
   }
 
   function contextFor(node) {
@@ -141,9 +185,12 @@ export function installTermHints(doc = document) {
     const moved = root.matches?.('[data-gaeo-term]') ? [root] : [...(root.querySelectorAll?.('[data-gaeo-term]') || [])];
     for (const trigger of moved) if (trigger.parentElement?.closest(INTERACTIVE)) {
       if (trigger === active) hide();
-      trigger.replaceWith(doc.createTextNode(trigger.textContent));
+      if (trigger.matches(LINK_HELP_SELECTOR)) trigger.remove();
+      else trigger.replaceWith(doc.createTextNode(trigger.textContent));
     }
-    if (!root.isConnected || root.closest?.(EXCLUDED) || root.closest?.(INTERACTIVE)) return;
+    if (!root.isConnected || root.closest?.(EXCLUDED)) return;
+    enhanceLinks(root);
+    if (root.closest?.(INTERACTIVE)) return;
     const nodes = [];
     if (root.nodeType === 3) nodes.push(root);
     else {
@@ -198,19 +245,21 @@ export function installTermHints(doc = document) {
     timer = null;
     active?.setAttribute('aria-expanded', 'false');
     active = null;
+    activeMode = null;
     tooltip.hidden = true;
   }
 
-  function show(trigger) {
+  function show(trigger, mode = 'timed') {
     if (!definitions[trigger.dataset.gaeoTerm]) return;
     if (active && active !== trigger) active.setAttribute('aria-expanded', 'false');
     active = trigger;
+    activeMode = mode;
     tooltip.textContent = definitions[trigger.dataset.gaeoTerm];
     tooltip.hidden = false;
     trigger.setAttribute('aria-expanded', 'true');
     place();
     if (timer) win.clearTimeout(timer);
-    timer = win.setTimeout(hide, TERM_HINT_DURATION);
+    timer = mode === 'hover' ? null : win.setTimeout(hide, TERM_HINT_DURATION);
   }
 
   doc.addEventListener('click', event => {
@@ -218,7 +267,9 @@ export function installTermHints(doc = document) {
     if (!trigger) return;
     event.preventDefault();
     event.stopPropagation();
-    show(trigger);
+    if (lastInput === 'mouse') {
+      if (active !== trigger && trigger.matches(':hover')) show(trigger, 'hover');
+    } else show(trigger);
   });
   // A tap or click on the open explanation closes it immediately.
   tooltip.addEventListener('click', event => {
@@ -226,19 +277,31 @@ export function installTermHints(doc = document) {
     hide();
   });
   doc.addEventListener('pointerdown', event => {
+    lastInput = event.pointerType || 'mouse';
     if (active && !event.target.closest?.('[data-gaeo-term],.gaeo-term-tooltip')) hide();
   }, { passive: true });
   doc.addEventListener('pointerover', event => {
-    if (event.pointerType && event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+    if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
     const trigger = event.target.closest?.('[data-gaeo-term]');
-    if (trigger && !trigger.contains(event.relatedTarget)) show(trigger);
+    if (trigger && !trigger.contains(event.relatedTarget)) {
+      lastInput = 'mouse';
+      show(trigger, 'hover');
+    }
+  }, { passive: true });
+  doc.addEventListener('pointerout', event => {
+    if (event.pointerType !== 'mouse' && event.pointerType !== 'pen') return;
+    const trigger = event.target.closest?.('[data-gaeo-term]');
+    if (trigger === active && activeMode === 'hover' && !trigger.contains(event.relatedTarget)) hide();
   }, { passive: true });
   doc.addEventListener('focusin', event => {
     const trigger = event.target.closest?.('[data-gaeo-term]');
-    if (trigger) show(trigger);
-    else if (active) hide();
+    if (trigger && lastInput !== 'mouse') show(trigger);
+    else if (!trigger && active) hide();
   });
-  doc.addEventListener('keydown', event => { if (event.key === 'Escape') hide(); });
+  doc.addEventListener('keydown', event => {
+    lastInput = 'keyboard';
+    if (event.key === 'Escape') hide();
+  });
   const reposition = () => {
     if (!active || frame !== null) return;
     frame = win.requestAnimationFrame(() => { frame = null; if (active) place(); });
