@@ -24,7 +24,7 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '2cd492b7efb66fdd0c5e41d6d85aa8b8e99559f8';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '4231c29622a890f6808870f3c38a83c86696b548';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
