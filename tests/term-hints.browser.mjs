@@ -71,7 +71,16 @@ try {
     <pre id="code">GEO BMR SoV</pre><p data-term-hints="off" id="off">GEO</p>
     <form><label for="input">BMR</label><input id="input" value="GEO"><button>GEO</button></form>
     <div id="dynamic"></div><button id="outside" type="button">Закрыть подсказку</button>
+    <p id="ru-longest">ТН ВЭД/ОКПД2, ГИС ЖКХ, ГИС МТ, ВЭД, FBL и FBO/FBS, ВМК и ВМиК.</p>
+    <p id="car-context">Плановое ТО автомобиля, МП для товаров маркетплейса, склад Москвы и МО.</p>
+    <p id="spa-hotel">SPA, сауна и массаж в отеле.</p>
+    <p id="spa-tech">SPA для серверного рендеринга.</p>
+    <p id="sat-travel">South American Tours (SAT) организует туры.</p>
+    <p id="sat-tech">FAT/SAT при приемке оборудования.</p>
+    <p id="new-link"><a href="#destination">ТН ВЭД и FBL</a></p>
+    <p id="full-expand-fbl">FBL (Fulfillment by L'Étoile)</p>
     <p id="destination">Цель ссылки</p></main>
+    <footer id="footer-terms"><p>ИНН, ФНС, BMR, GEO, КИЗ и FBL не подчеркиваются в подвале</p></footer>
   </body></html>`);
   const originalLink = await page.locator('#inline-link').evaluate(element => ({
     html: element.innerHTML, decoration: getComputedStyle(element).textDecorationStyle,
@@ -81,6 +90,18 @@ try {
   await page.addScriptTag({ type: 'module', content: js });
   await page.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
   const tooltip = page.locator('#gaeo-term-tooltip');
+  assert.deepEqual(await page.locator('#ru-longest [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
+    ['ТН ВЭД', 'ОКПД2', 'ГИС ЖКХ', 'ГИС МТ', 'ВЭД', 'FBL', 'FBO', 'FBS', 'ВМК', 'ВМК']);
+  assert.deepEqual(await page.locator('#car-context [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
+    ['ТО', 'МП', 'МО']);
+  assert.equal(await page.locator('#spa-hotel [data-gaeo-term], #sat-travel [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#spa-tech [data-gaeo-term="SPA"]').count(), 1);
+  assert.equal(await page.locator('#sat-tech [data-gaeo-term="SAT"]').count(), 1);
+  assert.equal(await page.locator('#full-expand-fbl [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#footer-terms [data-gaeo-term], #footer-terms .gaeo-term-link-help').count(), 0);
+  assert.equal(await page.locator('#new-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+  assert.equal(await page.locator('#new-link .gaeo-term-link-help').count(), 2);
+
   assert.equal(await page.locator('#heading [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#heading [data-gaeo-term="SEO"]').count(), 1);
   assert.equal(await page.locator('#seo [data-gaeo-term="SEO"]').count(), 1);
