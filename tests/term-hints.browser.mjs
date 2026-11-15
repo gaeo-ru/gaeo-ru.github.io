@@ -39,6 +39,9 @@ try {
     <p id="new-terms">FRS shortlist SKU PRR SCR RAR RRR PPSR DMC MICE КМ/КМД СКУД VIN ЭПТС PSI Astro ТЗ СРО BIM</p>
     <p id="terms-expanded">PRR (Product Recommendation Rate), PSI (PageSpeed Insights), КМД (конструкции металлические деталировочные), Astro — инструмент для разработки контентных сайтов.</p>
     <p id="lower-distance">До объекта 20 км, на схеме используются КМ и КМД.</p>
+    <p id="schema-marketing">Schema.org, перелинковку, дистрибуцией контента, интентами и промптов.</p>
+    <p id="schema-context">Дистрибуция товаров и логистика по складам.</p>
+    <p id="schema-source"><a href="https://schema.org/LegalService">Schema.org</a> - официальный словарь.</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
     <p id="already-aeo"><strong>AEO</strong> (Answer Engine Optimization)</p>
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
@@ -94,6 +97,14 @@ try {
     ['ТН ВЭД', 'ОКПД2', 'ГИС ЖКХ', 'ГИС МТ', 'ВЭД', 'FBL', 'FBO', 'FBS', 'ВМК', 'ВМК']);
   assert.deepEqual(await page.locator('#car-context [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
     ['ТО', 'МП', 'МО']);
+  assert.deepEqual(await page.locator('#schema-marketing [data-gaeo-term]').evaluateAll(
+    elements => elements.map(element => element.dataset.gaeoTerm)
+  ), ['SchemaOrg', 'Interlinking', 'ContentDistribution', 'Intent', 'Prompt']);
+  assert.equal(await page.locator('#schema-context [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#schema-source a').getAttribute('href'), 'https://schema.org/LegalService');
+  assert.equal(await page.locator('#schema-marketing [data-gaeo-term="SchemaOrg"] .gaeo-term-label').evaluate(
+    element => getComputedStyle(element).textDecorationStyle
+  ), 'dotted');
   assert.equal(await page.locator('#spa-hotel [data-gaeo-term], #sat-travel [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#spa-tech [data-gaeo-term="SPA"]').count(), 1);
   assert.equal(await page.locator('#sat-tech [data-gaeo-term="SAT"]').count(), 1);
