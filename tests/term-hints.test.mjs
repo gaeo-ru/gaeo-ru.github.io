@@ -76,13 +76,14 @@ test('global asset injection is idempotent and leaves metadata/content intact', 
 });
 
 test('BrandFound editorial mentions become static referral links, with metadata and existing anchors preserved', () => {
-  const source = '<html><head><title>BrandFound</title><meta content="BrandFound"><script type="application/ld+json">{"name":"BrandFound"}</script></head><body><header>BrandFound</header><main><p>Выгрузка BrandFound и brandfound.</p><p>BrandFound - сервис мониторинга ответов нейросетей.</p><p><a href="/other/">BrandFound</a></p><p>https://brandfound.ai/</p><pre>BrandFound</pre></main></body></html>';
+  const source = '<html><head><title>BrandFound</title><meta content="BrandFound"><script type="application/ld+json">{"name":"BrandFound"}</script></head><body><header>BrandFound</header><main><p>Выгрузка BrandFound и brandfound.</p><p>BrandFound - сервис мониторинга ответов нейросетей.</p><p><a href="/other/">BrandFound</a></p><p><a href="https://app.brandfound.ai/">BrandFound</a></p><p>https://brandfound.ai/</p><pre>BrandFound</pre></main></body></html>';
   const linked = linkBrandFoundMentions(source);
   assert.equal(linkBrandFoundMentions(linked), linked);
-  assert.equal((linked.match(/href="https:\/\/brandfound\.ai\/\?ref=ZML17L"/g) || []).length, 3);
+  assert.equal((linked.match(/href="https:\/\/brandfound\.ai\/\?ref=ZML17L"/g) || []).length, 4);
   assert.ok(linked.includes('<title>BrandFound</title>'));
   assert.ok(linked.includes('<header>BrandFound</header>'));
   assert.ok(linked.includes('<a href="/other/">BrandFound</a>'));
+  assert.ok(!linked.includes('href="https://app.brandfound.ai/"'), 'Old login homepage link is upgraded');
   assert.ok(linked.includes('<pre>BrandFound</pre>'));
   assert.ok(linked.includes('<p>https://brandfound.ai/</p>'));
   assert.equal(injectTermHintAssets(linked), injectTermHintAssets(injectTermHintAssets(linked)));
