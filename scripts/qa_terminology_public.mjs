@@ -5,6 +5,7 @@ import { chromium } from 'playwright';
 const TERM_DEFINITIONS = {
   ru: {
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
+    SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
@@ -14,6 +15,7 @@ const TERM_DEFINITIONS = {
   },
   en: {
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
+    SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
@@ -26,7 +28,7 @@ const TERM_DEFINITIONS = {
 // Read-only acceptance of the publicly released website. No local build or server.
 // Only term-hint buttons are clicked; forms and publishing endpoints are untouched.
 const base = 'https://gaeo.ru';
-const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || '1ad1e303e3f314776c688fa832720ead70e7efeb';
+const expectedSourceCommit = process.env.GAEO_EXPECTED_SOURCE_COMMIT || 'ac8fd49d503cfbc83d6a040d4115009ec3cc2c26';
 const evidence = resolve('visual-terminology-public');
 const routes = [
   '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
@@ -143,7 +145,7 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible inline term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -163,12 +165,23 @@ try {
       assert.equal(await icon.getAttribute('data-gaeo-term'), 'BMR');
       assert.equal(await icon.textContent(), '?');
       assert.equal(await title.locator('button').count(), 0, 'Link markup remains unchanged');
+      const alignment = await icon.evaluate(button => {
+        const anchor = button.parentElement.querySelector('a');
+        const text = anchor.getBoundingClientRect(), marker = button.getBoundingClientRect();
+        const lineHeight = parseFloat(getComputedStyle(anchor).lineHeight);
+        return { textTop: text.top, textHeight: text.height, iconTop: marker.top, iconBottom: marker.bottom, lineHeight };
+      });
+      assert.ok(alignment.iconTop >= alignment.textTop - 1 &&
+        alignment.iconBottom <= alignment.textTop + alignment.lineHeight + 5,
+        'Icon must align with FIRST line of wrapped case title: ' + JSON.stringify(alignment));
+      assert.equal(await title.locator('xpath=..').getAttribute('class'), 'gaeo-term-link-inline', 'Link and help icon share an alignment wrapper');
       if ([1440, 390].includes(viewport.width)) {
         await icon.scrollIntoViewIfNeeded();
         await screenshot(page, current, 'cases-BMR-link-help');
       }
       await icon.hover();
       assert.equal(await page.locator('#gaeo-term-tooltip').textContent(), TERM_DEFINITIONS[lang].BMR);
+      if ([1440, 390].includes(viewport.width)) await screenshot(page, current, 'cases-BMR-tooltip');
       await page.mouse.move(0, 0);
       assert.equal(await page.locator('#gaeo-term-tooltip').isVisible(), false, 'Question icon tooltip hides on mouseout');
     }
@@ -176,6 +189,12 @@ try {
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
     if (route === '/') assert.ok(current.controlCounts.BMR > 0, 'Homepage needs an explanation for its BMR metric');
+    if (route === '/cases/') {
+      assert.ok(current.controlCounts.SEO > 0, 'SEO explanations are visible in development case prose');
+      const text = await page.locator('main').innerText();
+      assert.ok(text.includes('Посмотрите, что входит'), 'Polite link text is visible');
+      assert.ok(!text.includes('Посмотри, что входит'), 'Informal link text removed');
+    }
     if (route === '/' && viewport.width === 1440) {
       const year = page.locator('.hero-proof [data-gaeo-term="AIStart"]');
       await year.hover();
@@ -207,7 +226,7 @@ try {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
+    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
@@ -235,7 +254,7 @@ try {
         await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : route === '/rankings/wms/' ? 'warehouse' : route === '/industries/fulfillment/' ? 'fulfillment' : route === '/' ? 'home' : route === '/en/' ? 'en-home' : 'geo-audit'}-${term}-tooltip`);
       }
       if (current.clickedTerms.length === 1) {
-        await tooltip.click();
+        await tooltip.evaluate(el => el.click());
         assert.equal(await tooltip.isVisible(), false, 'Clicking the live explanation dismisses it');
         assert.equal(await trigger.getAttribute('aria-expanded'), 'false', 'Dismissal resets accessibility state');
         await trigger.click();
@@ -243,15 +262,7 @@ try {
       }
       await page.keyboard.press('Escape');
       assert.equal(await tooltip.isVisible(), false, 'Escape dismisses live tooltip');
-      if (route === '/' && viewport.width === 390 && term === 'BMR') {
-        await trigger.click();
-        const timingStart = Date.now();
-        await page.waitForTimeout(3900);
-        assert.ok(await tooltip.isVisible(), 'Live tooltip remains visible before five seconds');
-        await page.waitForTimeout(Math.max(0, 5400 - (Date.now() - timingStart)));
-        assert.equal(await tooltip.isVisible(), false, 'Live tooltip automatically closes after five seconds');
-        current.timerVerifiedMs = Date.now() - timingStart;
-      }
+
       await page.mouse.move(0, 0);
     }
     const after = await dimensions(page);
@@ -263,6 +274,25 @@ try {
     currentPage = null;
     save();
   }
+  // Verify the actual five-second timeout on a touch-capable mobile browser,
+  // not with a desktop mouse artificially narrowed to 390 pixels.
+  const touch = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  await touch.goto(base + '/?qa_source=' + expectedSourceCommit, { waitUntil: 'domcontentloaded', timeout: 40000 });
+  await touch.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
+  const touchTerm = touch.locator('.hero-proof [data-gaeo-term="AIStart"]');
+  const touchTip = touch.locator('#gaeo-term-tooltip');
+  await touchTerm.tap();
+  const started = Date.now();
+  await touch.waitForTimeout(3900);
+  assert.ok(await touchTip.isVisible(), 'Touch tip remains visible before five seconds');
+  await touch.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
+  assert.equal(await touchTip.isVisible(), false, 'Touch tip auto-closes after five seconds');
+  await touchTerm.tap();
+  assert.ok(await touchTip.isVisible());
+  await touchTip.tap();
+  assert.equal(await touchTip.isVisible(), false, 'Touch tap-to-dismiss works');
+  summary.touchTestMs = Date.now() - started;
+  await touch.close();
   await verifyPublicRelease('after');
   summary.status = 'passed';
   summary.completedAt = new Date().toISOString();
