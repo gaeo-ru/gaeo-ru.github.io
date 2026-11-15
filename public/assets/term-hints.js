@@ -41,7 +41,7 @@ function alreadyExplained(context, start, end, term) {
   const before = context.slice(Math.max(0, start - 180), start);
   const after = context.slice(end, end + 180);
   // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
-  if (term === 'Fulfillment' && /(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before)) return true;
+  if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
