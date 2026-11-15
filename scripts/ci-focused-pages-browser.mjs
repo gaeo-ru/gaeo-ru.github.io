@@ -50,6 +50,16 @@ try{
     await media.evaluate(el=>el.decode());
     assert.ok(await media.evaluate(el=>el.naturalWidth>0),'Specialization image failed '+route);
    }
+   if(/^\/(?:en\/)?rankings\/[^/]+\/[^/]+\/$/.test(route)){
+    const entries=page.locator('main .ranking-entry');
+    assert.ok(await entries.count()>0,'Ranking participants are absent on '+route);
+    const faq=page.locator('main details.faq-item').first();
+    assert.ok(await faq.count()>0,'Ranking FAQ is absent on '+route);
+    await faq.locator('summary').click();
+    assert.ok(await faq.evaluate(el=>el.open),'Ranking FAQ does not open on '+route);
+    await faq.locator('summary').click();
+    assert.ok(!await faq.evaluate(el=>el.open),'Ranking FAQ does not close on '+route);
+   }
    const lang=route.startsWith('/en/')?'en':'ru';
    assert.equal(await page.locator('html').getAttribute('lang'),lang,'Wrong page language '+route);
    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
