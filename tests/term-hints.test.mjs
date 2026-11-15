@@ -59,7 +59,7 @@ test('Russian content-marketing terminology is matched in all cases without chan
     assert.ok(TERM_DEFINITIONS.ru[term], 'Missing definition for ' + term);
   }
   assert.deepEqual(findTermMatches('Перелинковка, интент и промпт.').map(hit => hit.term), ['Interlinking', 'Intent', 'Prompt']);
-  assert.deepEqual(findTermMatches('План дистрибуции контента на площадках').map(hit => hit.term), ['ContentDistribution']);
+  assert.deepEqual(findTermMatches('План дистрибуции контента на площадках').map(hit => hit.term), ['ContentDistribution','Content']);
   assert.deepEqual(findTermMatches('Дистрибуция товаров и логистика по складам'), []);
   assert.deepEqual(findTermMatches('промптинг, суперинтент, перепромптовать, перелинковочный'), []);
   assert.deepEqual(findTermMatches('перелинковка интент промпт', { language: 'en' }), []);
@@ -105,7 +105,7 @@ test('adjacent expansions need no duplicate help', () => {
     'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
     'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
     'WMS — система управления складом.', 'E-commerce - электронная коммерция', 'E-commerce (Electronic Commerce)', 'СТМ - собственная торговая марка', 'СТМ (собственная торговая марка)', 'GitHub — это онлайн-платформа для хранения кода', 'GitHub is an online platform', 'FRS (First Recommendation Share)', 'PRR (Product Recommendation Rate)', 'SCR (Seller Criterion Rate)', 'RAR (Retailer Association Rate)', 'RRR (Retailer Recommendation Rate)', 'PPSR (Price Premium Survival Rate)', 'SKU (Stock Keeping Unit)', 'DMC (Destination Management Company)', 'MICE (Meetings, Incentives, Conferences, Exhibitions)', 'PSI (PageSpeed Insights)', 'КМ (конструкции металлические)', 'КМД (конструкции металлические деталировочные)', 'СКУД (система контроля и управления доступом)', 'VIN (Vehicle Identification Number)', 'ЭПТС (электронный паспорт транспортного средства)', 'ТЗ (техническое задание)', 'СРО (саморегулируемая организация)', 'BIM (Building Information Modeling)', 'Astro — инструмент для разработки контентных сайтов', 'Shortlist (short list)', 'shortlist — короткий список', 'Фулфилмент (Fulfillment)', 'Fulfillment (Фулфилмент)', 'Фулфилмент — комплекс логистических услуг'
-  ]) assert.deepEqual(findTermMatches(value), [], value);
+  ]) assert.deepEqual(findTermMatches(value).filter(hit => hit.term !== 'Content'), [], value);
   const context = 'Показатель BMR (Brand Mention Rate) изменился.';
   assert.deepEqual(findTermMatches('BMR', { context, offset: 11 }), []);
   const aeoContext = 'Термин AEO (Answer Engine Optimization) уже раскрыт.';
@@ -226,4 +226,30 @@ test('PR glossary definition uses the approved communication meaning', () => {
   assert.equal(TERM_DEFINITIONS.ru.PR,
     'PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание');
   assert.deepEqual(findTermMatches('PR и PRR').map(hit => hit.term), ['PR', 'PRR']);
+});
+
+
+test('«кейс»: singular/plural cases, site context, boundaries and exact approved definition', () => {
+  assert.equal(TERM_DEFINITIONS.ru.CaseStudy,
+    'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата');
+  const forms = ['Кейс', 'кейса', 'кейсу', 'кейсом', 'кейсе', 'кейсы', 'кейсов', 'кейсам', 'кейсами', 'кейсах'];
+  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'CaseStudy'));
+  assert.deepEqual(findTermMatches('кейсовый кейсик Кейс24 антикейс').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('Кейсы — подробное описание реальной ситуации'), []);
+  assert.deepEqual(findTermMatches('кейс и кейсы').map(hit => hit.term), ['CaseStudy','CaseStudy']);
+  assert.deepEqual(findTermMatches('кейс и кейсы', { language: 'en' }), []);
+});
+
+
+test('«контент»: approved meaning, singular/plural declensions, boundaries and no English injection', () => {
+  assert.equal(TERM_DEFINITIONS.ru.Content,
+    'Контент - это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует');
+  const forms = ['Контент', 'контента', 'контенту', 'контентом', 'контенте',
+    'контенты', 'контентов', 'контентам', 'контентами', 'контентах'];
+  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term),
+    forms.map(() => 'Content'));
+  assert.deepEqual(findTermMatches('Контент — это любое информационное наполнение сайта'), []);
+  assert.deepEqual(findTermMatches('контентный контентщик контент24 контентность'), []);
+  assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content','CaseStudy']);
+  assert.deepEqual(findTermMatches('контент и кейсы', {language:'en'}), []);
 });

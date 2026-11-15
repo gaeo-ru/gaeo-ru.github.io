@@ -228,6 +228,8 @@ export const TERM_DEFINITIONS = Object.freeze({
     ...RU_EXTRA_GLOSSARY,
     Indexing: 'Индексация — обработка найденных поисковыми роботами страниц и добавление сведений о них в поисковый индекс. Наличие страницы в индексе не гарантирует показ в поиске.',
     Feed: 'Фид — структурированная выгрузка данных (например, товаров, цен, остатков) из сайта или учетной системы для автоматической передачи поисковым сервисам, торговым площадкам и другим системам.',
+    CaseStudy: 'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата',
+    Content: 'Контент - это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует',
     SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
     Interlinking: 'Перелинковка - система внутренних ссылок между страницами сайта, помогающая посетителям и поисковым роботам находить связанные материалы.',
     ContentDistribution: 'Дистрибуция контента - распространение статей, исследований и других материалов по подходящим площадкам и каналам, чтобы их увидела целевая аудитория.',
@@ -355,7 +357,7 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
 const RU_WORD_QUICK_TERMS = new RegExp(RU_WORD_TERMS.source, 'iu');
 const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
 const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
@@ -396,6 +398,8 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
   if (term === 'Indexing') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:обработк|процесс\s+(?:обработки|включения)|включени)[\p{L}\s-]*\s+(?:страниц|сайтов|документов|в\s+поисковый\s+индекс)/iu.test(after);
   if (term === 'Feed') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:структурированн|файл|выгрузк)[\p{L}\s-]*\s+(?:данных|товаров|каталога)/iu.test(after);
+  if (term === 'CaseStudy') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?подробное\s+описание\s+реальной\s+ситуации/iu.test(after);
+  if (term === 'Content') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?любое\s+информационное\s+наполнение\s+сайта/iu.test(after);
   const extraDefinition = RU_EXTRA_GLOSSARY[term];
   if (extraDefinition) {
     const expansion = extraDefinition.match(/^[^(]+\(([^)]+)\)/u)?.[1];
@@ -443,6 +447,8 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^промпт/iu.test(value) ? 'Prompt'
       : /^индексаци/iu.test(value) ? 'Indexing'
       : /^фид/iu.test(value) ? 'Feed'
+      : /^кейс/iu.test(value) ? 'CaseStudy'
+      : /^контент/iu.test(value) ? 'Content'
       : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'

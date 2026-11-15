@@ -86,6 +86,12 @@ try {
     <p id="glossary-added">Core Web Vitals, JavaScript, canonical, индексация сайта, индексации страниц, индексацию URL, индексацией поискового робота, фид, фида, фидом, фиды и фидах.</p>
     <p id="glossary-finance">Индексация пенсий и зарплат.</p>
     <p id="glossary-linked"><a href="#destination">Core Web Vitals и canonical</a></p>
+    <p id="case-inflections">Кейс, кейса, кейсу, кейсом, кейсе, кейсы, кейсов, кейсам, кейсами, кейсах.</p>
+    <p id="case-defined">Кейс — подробное описание реальной ситуации, проблемы или задачи.</p>
+    <p id="case-link"><a href="#destination">Кейсы клиентов и подробные кейсы</a></p>
+    <p id="content-inflections">Контент, контента, контенту, контентом, контенте, контенты, контентов, контентам, контентами, контентах.</p>
+    <p id="content-defined">Контент — это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует.</p>
+    <p id="content-linked"><a href="#destination">Контент и кейсы</a></p>
     <p id="destination">Цель ссылки</p></main>
     <footer id="footer-terms"><p>ИНН, ФНС, BMR, GEO, КИЗ и FBL не подчеркиваются в подвале</p></footer>
   </body></html>`);
@@ -97,6 +103,18 @@ try {
   await page.addScriptTag({ type: 'module', content: js });
   await page.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
   const tooltip = page.locator('#gaeo-term-tooltip');
+  assert.deepEqual(await page.locator('#case-inflections [data-gaeo-term]').evaluateAll(
+    els => els.map(el => el.dataset.gaeoTerm)), Array(10).fill('CaseStudy'));
+  assert.equal(await page.locator('#case-defined [data-gaeo-term]').count(), 0);
+  assert.deepEqual(await page.locator('#content-inflections [data-gaeo-term]').evaluateAll(
+    els => els.map(el => el.dataset.gaeoTerm)), Array(10).fill('Content'));
+  assert.equal(await page.locator('#content-defined [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#content-linked > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+  assert.equal(await page.locator('#content-linked .gaeo-term-link-help').count(), 1);
+  assert.equal(await page.locator('#content-linked .gaeo-term-link-help').getAttribute('data-gaeo-term'), 'Content|CaseStudy');
+  assert.equal(await page.locator('#case-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+  assert.equal(await page.locator('#case-link .gaeo-term-link-help[data-gaeo-term="CaseStudy"]').count(), 1);
+
   assert.deepEqual(await page.locator('#glossary-added [data-gaeo-term]').evaluateAll(
     elements => elements.map(element => element.dataset.gaeoTerm)),
     ['Core Web Vitals', 'JavaScript', 'canonical', 'Indexing', 'Indexing', 'Indexing', 'URL', 'Indexing', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed']);
@@ -113,7 +131,7 @@ try {
     ['ТО', 'МП', 'МО']);
   assert.deepEqual(await page.locator('#schema-marketing [data-gaeo-term]').evaluateAll(
     elements => elements.map(element => element.dataset.gaeoTerm)
-  ), ['SchemaOrg', 'Interlinking', 'ContentDistribution', 'Intent', 'Prompt']);
+  ), ['SchemaOrg', 'Interlinking', 'ContentDistribution', 'Content', 'Intent', 'Prompt']);
   assert.equal(await page.locator('#schema-context [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#schema-source a').getAttribute('href'), 'https://schema.org/LegalService');
   assert.equal(await page.locator('#schema-marketing [data-gaeo-term="SchemaOrg"] .gaeo-term-label').evaluate(
