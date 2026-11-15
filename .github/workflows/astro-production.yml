@@ -25,13 +25,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check out published release for incremental QA baseline
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          path: published
-          fetch-depth: 0
-          persist-credentials: true
+      - name: Fetch last published release manifest
+        run: git fetch origin main:refs/remotes/origin/main
       - name: Select tests by changes since last published source commit
         id: scope
         run: node scripts/ci-deploy-scope.mjs
@@ -146,10 +141,13 @@ jobs:
           GAEO_CI_ROUTES: ${{ steps.scope.outputs.routes }}
           GAEO_CI_MODE: ${{ steps.scope.outputs.mode }}
         run: node scripts/ci-focused-pages-browser.mjs
-      - name: Refresh published main before conflict protection
-        run: |
-          git -C published fetch origin main:refs/remotes/origin/main
-          git -C published checkout --detach origin/main
+      - name: Check out existing public GitHub Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: published
+          fetch-depth: 0
+          persist-credentials: true
       - name: Prevent overwriting parallel changes on main
         id: safety
         run: node scripts/publish-astro-to-main.mjs preflight
