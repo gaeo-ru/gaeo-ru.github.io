@@ -2,7 +2,10 @@
 /** Shared, progressively enhanced explanations of GAEO's specialist terms. */
 /** Approved abbreviations actually found in the Russian content; English pages keep their existing glossary. */
 const RU_EXTRA_GLOSSARY = Object.freeze({
-  "B2B": "B2B (Business-to-Business) - продажи товаров и услуг одним компаниям другим",
+  "Core Web Vitals": "Core Web Vitals (основные веб-показатели) — метрики Google, оценивающие загрузку, отзывчивость и визуальную стабильность веб-страницы: LCP, INP и CLS.",
+  "JavaScript": "JavaScript — язык программирования, который обеспечивает интерактивность и динамическое изменение содержимого веб-страниц.",
+  "canonical": "canonical (канонический URL) — указание поисковым роботам предпочтительного адреса страницы среди дублей и очень похожих страниц; обычно задаётся через rel=\"canonical\".",
+  "B2B": "B2B (Business-to-Business) - продажи товаров и услуг одними компаниями - другим",
   "B2C": "B2C (Business-to-Consumer) - продажи товаров и услуг конечным потребителям",
   "DTC": "DTC (Direct-to-Consumer) - прямые продажи производителя потребителю без посредников",
   "FMCG": "FMCG (Fast-Moving Consumer Goods) - товары повседневного спроса с высокой оборачиваемостью",
@@ -13,7 +16,7 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
   "HR": "HR (Human Resources) - управление персоналом и подбор сотрудников",
   "IT": "IT (Information Technology) - информационные технологии",
   "ИТ": "ИТ (информационные технологии) - программное обеспечение, оборудование и методы обработки информации",
-  "PR": "PR (Public Relations) - связи с общественностью",
+  "PR": "PR (Public Relations) - управление коммуникациями организации с её целевой аудиторией, с целью наладить устойчивые связи, доверие и взаимопонимание",
   "FAQ": "FAQ (Frequently Asked Questions) - часто задаваемые вопросы и ответы на них",
   "NDA": "NDA (Non-Disclosure Agreement) - соглашение о конфиденциальности",
   "KPI": "KPI (Key Performance Indicator) - ключевой показатель эффективности",
@@ -223,6 +226,10 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
 export const TERM_DEFINITIONS = Object.freeze({
   ru: Object.freeze({
     ...RU_EXTRA_GLOSSARY,
+    Indexing: 'Индексация — обработка найденных поисковыми роботами страниц и добавление сведений о них в поисковый индекс. Наличие страницы в индексе не гарантирует показ в поиске.',
+    Feed: 'Фид — структурированная выгрузка данных (например, товаров, цен, остатков) из сайта или учетной системы для автоматической передачи поисковым сервисам, торговым площадкам и другим системам.',
+    CaseStudy: 'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата',
+    Content: 'Контент - это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует',
     SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
     Interlinking: 'Перелинковка - система внутренних ссылок между страницами сайта, помогающая посетителям и поисковым роботам находить связанные материалы.',
     ContentDistribution: 'Дистрибуция контента - распространение статей, исследований и других материалов по подходящим площадкам и каналам, чтобы их увидела целевая аудитория.',
@@ -333,7 +340,15 @@ const FULL_NAMES = {
 const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 // Longest-match-first Russian glossary; works on source text without changing URLs or links.
-const EXTRA_ALIASES = Object.freeze({ 'ВМиК': 'ВМК' });
+const EXTRA_ALIASES = Object.freeze({
+  'ВМиК': 'ВМК',
+  'Canonical': 'canonical',
+  'Javascript': 'JavaScript',
+  'javascript': 'JavaScript',
+  'JAVASCRIPT': 'JavaScript',
+  'core web vitals': 'Core Web Vitals',
+  'Core web vitals': 'Core Web Vitals'
+});
 const extraSpelling = Object.keys(RU_EXTRA_GLOSSARY).concat(Object.keys(EXTRA_ALIASES));
 const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
   .map(value => value.split(/\s+/u).map(part =>
@@ -342,7 +357,10 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?)(?![\p{L}\p{N}_])/giu;
+// Russian spellings of GEO in editorial headings, without confusing geographic terms.
+const RU_GEO_TERMS = /(?<![\p{L}\p{N}_])(?:гео[-‐‑–](?:продвижени|специалист|эксперт|аудит|агентств|консультант|оптимизаци)[\p{L}]*|геопродвижени[\p{L}]*|геоспециалист[\p{L}]*|гео(?![-‐‑–]))(?![\p{L}\p{N}_])/giu;
+const RU_GEO_QUICK_TERMS = new RegExp(RU_GEO_TERMS.source, 'iu');
 const RU_WORD_QUICK_TERMS = new RegExp(RU_WORD_TERMS.source, 'iu');
 const CORE_QUICK_TERMS = new RegExp(TERMS.source, 'u');
 const EXTRA_QUICK_TERMS = new RegExp(EXTRA_TERMS.source, 'u');
@@ -381,6 +399,10 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
+  if (term === 'Indexing') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:обработк|процесс\s+(?:обработки|включения)|включени)[\p{L}\s-]*\s+(?:страниц|сайтов|документов|в\s+поисковый\s+индекс)/iu.test(after);
+  if (term === 'Feed') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:структурированн|файл|выгрузк)[\p{L}\s-]*\s+(?:данных|товаров|каталога)/iu.test(after);
+  if (term === 'CaseStudy') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?подробное\s+описание\s+реальной\s+ситуации/iu.test(after);
+  if (term === 'Content') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?любое\s+информационное\s+наполнение\s+сайта/iu.test(after);
   const extraDefinition = RU_EXTRA_GLOSSARY[term];
   if (extraDefinition) {
     const expansion = extraDefinition.match(/^[^(]+\(([^)]+)\)/u)?.[1];
@@ -405,7 +427,9 @@ function alreadyExplained(context, start, end, term, spelling) {
       : term === 'Ecommerce' ? 'электронная\\s+коммерция'
       : term === 'STM' ? 'собственная\\s+торговая\\s+марка'
       : 'комплекс\\s+логистических\\s+услуг';
-  return new RegExp('^\\s*[(:—–-]\\s*(?:это\\s+)?' + meaning, 'i').test(after) ||
+  // A tight hyphen in GEO-продвижение joins a word; it does not introduce a definition.
+  // Keep suppressing a duplicate hint for a colon, parenthesis, or explanatory dash.
+  return new RegExp('^\\s*(?:(?:[(:—–])\\s*|-(?=\\s)\\s+)(?:это\\s+)?' + meaning, 'i').test(after) ||
     new RegExp(meaning + '\\s*\\(\\s*$', 'i').test(before);
 }
 
@@ -413,7 +437,7 @@ function alreadyExplained(context, start, end, term, spelling) {
 export function findTermMatches(text, { context = text, offset = 0, language = 'ru' } = {}) {
   const matches = [];
   const candidates = [...text.matchAll(TERMS)];
-  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS), ...text.matchAll(RU_WORD_TERMS));
+  if (language === 'ru') candidates.push(...text.matchAll(EXTRA_TERMS), ...text.matchAll(RU_WORD_TERMS), ...text.matchAll(RU_GEO_TERMS));
   candidates.sort((a, b) => a.index - b.index || b[0].length - a[0].length);
   let consumedUntil = -1;
   for (const match of candidates) {
@@ -426,6 +450,11 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^дистрибуци/iu.test(value) ? 'ContentDistribution'
       : /^интент/iu.test(value) ? 'Intent'
       : /^промпт/iu.test(value) ? 'Prompt'
+      : /^индексаци/iu.test(value) ? 'Indexing'
+      : /^фид/iu.test(value) ? 'Feed'
+      : /^кейс/iu.test(value) ? 'CaseStudy'
+      : /^контент/iu.test(value) ? 'Content'
+      : /^гео/iu.test(value) ? 'GEO'
       : /^Brand\s+Mention\s+Rate$/i.test(value) ? 'BMR'
       : /^Share\s+of\s+Voice$/i.test(value) ? 'SoV'
       : value === 'SOV' ? 'SoV'
@@ -459,6 +488,10 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (term === 'ТО' && !/(?:авто|машин|запчаст|двигател|модел|ремонт|планов|детал|сервис)/iu.test(nearby)) continue;
     if (term === 'МП' && !/(?:маркетплейс|селлер|товар|постав|отгруз|склад)/iu.test(nearby)) continue;
     if (term === 'МО' && !/(?:Москв|Подмосков|област|Пушкино|Коледин|Подольск|Мытищ|Люберц)/iu.test(nearby)) continue;
+    // "Индексация" also describes salary/pension adjustments, outside this SEO glossary.
+    if (term === 'Indexing' &&
+        /(?:пенси|зарплат|оклад|пособи|выплат|инфляц|МРОТ|заработн|доход)/iu.test(nearby) &&
+        !/(?:поисков|робот|страниц|сайт|URL|контент|документ|canonical|краулинг|Google|Яндекс|SEO|GEO)/iu.test(nearby)) continue;
     if (term === 'SPA' && !/(?:рендер|веб-приложен|разработ|JavaScript|PHP|frontend|frontend|серверн|одностраничн)/iu.test(nearby)) continue;
     if (term === 'SAT' && !/(?:FAT|приемочн|испытан|монтаж|оборудован|заводск)/iu.test(nearby)) continue;
     // "Дистрибуция" also refers to physical goods; the glossary covers content distribution only.
@@ -659,7 +692,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (isProtectedInteractive(node.parentElement)) continue;
       const text = node.data;
-      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && (EXTRA_QUICK_TERMS.test(text) || RU_WORD_QUICK_TERMS.test(text)))) continue;
+      if (!CORE_QUICK_TERMS.test(text) && !(language === 'ru' && (EXTRA_QUICK_TERMS.test(text) || RU_WORD_QUICK_TERMS.test(text) || RU_GEO_QUICK_TERMS.test(text)))) continue;
       const matches = findTermMatches(text, { ...contextFor(node), language });
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
@@ -698,18 +731,27 @@ export function installTermHints(doc = document) {
     const maxHeight = Math.max(80, bounds.height - margin * 2);
     tooltip.style.maxHeight = `${maxHeight}px`;
     const box = tooltip.getBoundingClientRect();
-    const left = Math.min(Math.max(bounds.left + margin, anchor.left + (anchor.width - box.width) / 2), bounds.left + bounds.width - box.width - margin);
     const above = anchor.top - gap - bounds.top - margin;
     const below = bounds.top + bounds.height - margin - anchor.bottom - gap;
+    const spaceLeft = anchor.left - gap - bounds.left - margin;
+    const spaceRight = bounds.left + bounds.width - margin - anchor.right - gap;
+    let side = null;
+    if (box.height > Math.max(above, below)) {
+      if (box.width <= spaceRight) side = 'right';
+      else if (box.width <= spaceLeft) side = 'left';
+    }
+    const centeredLeft = anchor.left + (anchor.width - box.width) / 2;
+    const preferredLeft = side === 'left' ? anchor.left - gap - box.width : side === 'right' ? anchor.right + gap : centeredLeft;
+    const left = Math.min(Math.max(bounds.left + margin, preferredLeft), bounds.left + bounds.width - box.width - margin);
     const placeBelow = box.height <= below || (box.height > above && below >= above);
     // A tall tooltip must stay clear of its own trigger and scroll if needed.
-    tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
+    if (!side) tooltip.style.maxHeight = `${Math.max(28, Math.min(maxHeight, placeBelow ? below : above))}px`;
     const height = tooltip.getBoundingClientRect().height;
-    const preferredTop = placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
+    const preferredTop = side ? anchor.top + (anchor.height - height) / 2 : placeBelow ? anchor.bottom + gap : anchor.top - height - gap;
     const top = Math.min(Math.max(bounds.top + margin, preferredTop), bounds.top + bounds.height - height - margin);
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
-    tooltip.dataset.placement = placeBelow ? 'below' : 'above';
+    tooltip.dataset.placement = side || (placeBelow ? 'below' : 'above');
     tooltip.style.setProperty('--gaeo-term-arrow', `${Math.min(box.width - 18, Math.max(18, anchor.left + anchor.width / 2 - left))}px`);
   }
 
