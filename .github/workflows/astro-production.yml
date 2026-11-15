@@ -2,6 +2,9 @@ name: Build Astro and safely publish to GAEO.ru
 on:
   push:
     branches: [astro-source]
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,9 +20,16 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Fetch last published release manifest
+        run: git fetch origin main:refs/remotes/origin/main
+      - name: Select tests by changes since last published source commit
+        id: scope
+        run: node scripts/ci-deploy-scope.mjs
       - name: Check GAEO editorial rules
         run: node scripts/qa_editorial_contrasts.mjs
       - name: Install and build Astro source
@@ -33,44 +43,72 @@ jobs:
           npm run check:design
           npm run check:rankings
           node scripts/qa_rankings_queue.mjs
+      - name: Check incoming links when a page title changes
+        if: steps.scope.outputs.focused_browser == 'true'
+        env:
+          GAEO_CI_ROUTES: ${{ steps.scope.outputs.routes }}
+        run: node scripts/ci-inbound-title-links.mjs
       - name: Check e-commerce article, methodology, and conversion links
+        if: steps.scope.outputs.check_ecommerce == 'true'
         run: node scripts/qa_ecommerce_link_graph.mjs
       - name: Validate legal GEO pages and cross-links
+        if: steps.scope.outputs.check_legal == 'true'
         run: node scripts/qa_legal_link_graph.mjs
       - name: Validate industrial B2B GEO pages and source evidence
+        if: steps.scope.outputs.check_industrial == 'true'
         run: node scripts/qa_industrial_link_graph.mjs
       - name: Install Chromium for industry landing browser QA
+        if: steps.scope.outputs.chromium == 'true'
         run: npx playwright install chromium
       - name: Verify accessible terminology hints and timed interactions
+        if: steps.scope.outputs.check_terms == 'true'
         run: |
           node --test tests/term-hints.test.mjs
           node tests/term-hints.browser.mjs
           node scripts/qa_terminology_site.mjs
       - name: Verify bilingual rankings, images and FAQ at desktop and mobile widths
+        if: steps.scope.outputs.check_rankings == 'true'
         run: node scripts/qa_rankings.mjs --browser
       - name: Verify publications, reviews and carousel
+        if: steps.scope.outputs.check_evidence == 'true'
         run: npm run check:evidence
       - name: Verify pricing, catalogue, calculator and inquiry handoff
+        if: steps.scope.outputs.check_tariffs == 'true'
         run: npm run check:tariffs
       - name: Check industry landings at desktop and mobile widths
+        if: steps.scope.outputs.check_industry == 'true'
         run: npm run check:industry
-      - name: Check four bilingual industry specializations and incoming links
-        run: npm run check:specializations
+      - name: Check bilingual industry specializations and incoming links
+        if: steps.scope.outputs.check_specializations == 'true'
+        run: |
+          if [ "${{ steps.scope.outputs.mode }}" = "full" ]; then
+            npm run check:specializations
+          else
+            npm run check:specializations -- --static
+          fi
       - name: Check phase 3A automotive and finance GEO hubs and methods
+        if: steps.scope.outputs.check_sector3a == 'true'
         run: npm run check:sector3a
       - name: Check phase 3C editorial checklists and industry link graph
+        if: steps.scope.outputs.check_sector3c == 'true'
         run: npm run check:sector3c
       - name: Check phase 3D sector case evidence and link graph
+        if: steps.scope.outputs.check_sector3d == 'true'
         run: npm run check:sector3d
       - name: Check phase 3E buyer-intent guides and commercial-page links
+        if: steps.scope.outputs.check_sector3e == 'true'
         run: npm run check:sector3e
       - name: Check bilingual website development cases
+        if: steps.scope.outputs.check_development == 'true'
         run: node scripts/qa_development_cases.mjs
       - name: Check GEO website development service pages and navigation
+        if: steps.scope.outputs.check_development == 'true'
         run: node scripts/qa_site_development_service.mjs
       - name: Verify bilingual research article responsive layout
+        if: steps.scope.outputs.check_research == 'true'
         run: npm run check:research
       - name: Verify narrow labels in mobile scrollable tables across site
+        if: steps.scope.outputs.check_tables == 'true'
         run: node scripts/qa_mobile_scroll_tables.mjs
       - name: Reconcile generated Astro output with production-maintained metadata
         run: |
@@ -101,6 +139,12 @@ jobs:
           )
           python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
           node scripts/qa_contract_wording.mjs
+      - name: Browser smoke test changed pages at desktop and mobile widths
+        if: steps.scope.outputs.focused_browser == 'true'
+        env:
+          GAEO_CI_ROUTES: ${{ steps.scope.outputs.routes }}
+          GAEO_CI_MODE: ${{ steps.scope.outputs.mode }}
+        run: node scripts/ci-focused-pages-browser.mjs
       - name: Check out existing public GitHub Pages branch
         uses: actions/checkout@v4
         with:
@@ -111,9 +155,6 @@ jobs:
       - name: Prevent overwriting parallel changes on main
         id: safety
         run: node scripts/publish-astro-to-main.mjs preflight
-      - name: Install browser for first release
-        if: steps.safety.outputs.initial == 'true'
-        run: npx playwright install chromium
       - name: Pixel-compare with production before first release
         if: steps.safety.outputs.initial == 'true'
         run: npm run check:visual
@@ -176,6 +217,7 @@ jobs:
             visual-hub-funnel/
             visual-rankings/
             visual-terminology/
+            visual-ci-focused/
           if-no-files-found: ignore
           retention-days: 14
       - uses: actions/upload-artifact@v4
