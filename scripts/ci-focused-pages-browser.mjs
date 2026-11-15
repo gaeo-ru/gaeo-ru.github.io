@@ -39,6 +39,17 @@ try{
    const response=await page.goto(base+route,{waitUntil:'domcontentloaded',timeout:25000});
    assert.equal(response?.status(),200,'Missing page '+route);
    assert.equal(await page.locator('h1').count(),1,'Missing/duplicate H1: '+route);
+   // Specialization batches already run static QA over all 100 bilingual pairs.
+   // Here only the edited pairs receive actual responsive/browser checks.
+   if(await page.locator('main .industry-specialization').count()){
+    assert.equal(await page.locator('main details.faq-item').count(),5,'Specialization FAQ '+route);
+    assert.equal(await page.locator('main .industry-scenario-table tbody tr').count(),4,'Specialization buyer intents '+route);
+    assert.equal(await page.locator('main .industry-pricing-section [data-plan]').count(),3,'Specialization pricing '+route);
+    const media=page.locator('main .industry-specialization__media img');
+    assert.equal(await media.count(),1,'Specialization image '+route);
+    await media.evaluate(el=>el.decode());
+    assert.ok(await media.evaluate(el=>el.naturalWidth>0),'Specialization image failed '+route);
+   }
    const lang=route.startsWith('/en/')?'en':'ru';
    assert.equal(await page.locator('html').getAttribute('lang'),lang,'Wrong page language '+route);
    const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
