@@ -32,6 +32,8 @@ try {
     <p id="historical">Начал учиться: <b><button type="button" class="gaeo-term-trigger" data-gaeo-term="AIStart" aria-label="Как началось изучение ИИ" aria-describedby="gaeo-term-description-aistart" aria-controls="gaeo-term-tooltip" aria-expanded="false"><span class="gaeo-term-label">с 1997 года</span></button></b></p>
     <p id="warehouse">WMS и фулфилмент помогают складу. Для фулфилмента и фулфилментов.</p>
     <p id="warehouse-expanded">WMS (Warehouse Management System) и Фулфилмент (Fulfillment).</p>
+    <p id="commerce">Опыт E-commerce, e-commerce и СТМ.</p>
+    <p id="commerce-expanded">E-commerce - электронная коммерция; СТМ - собственная торговая марка.</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
     <p id="already-aeo"><strong>AEO</strong> (Answer Engine Optimization)</p>
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
@@ -88,6 +90,9 @@ try {
   assert.equal(await page.locator('#warehouse [data-gaeo-term="WMS"]').count(), 1);
   assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
+  assert.equal(await page.locator('#commerce [data-gaeo-term="Ecommerce"]').count(), 2);
+  assert.equal(await page.locator('#commerce [data-gaeo-term="STM"]').count(), 1);
+  assert.equal(await page.locator('#commerce-expanded [data-gaeo-term]').count(), 0, 'Inline E-commerce and СТМ explanations require no hints');
   assert.equal(await page.locator('#already [data-gaeo-term], #already-aeo [data-gaeo-term], #code [data-gaeo-term], #brand [data-gaeo-term], #off [data-gaeo-term], header [data-gaeo-term], form [data-gaeo-term], a [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No obsolete controls');
   assert.equal(await page.locator('#case-heading .gaeo-term-link-inline > a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR help icon follows link in wrapper');
@@ -155,6 +160,13 @@ try {
   assert.equal(await tooltip.textContent(), 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
   await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false, 'Fulfillment explanation closes on click');
+
+  await page.locator('#commerce [data-gaeo-term="Ecommerce"]').first().click();
+  assert.equal(await tooltip.textContent(), 'E-commerce - электронная коммерция: интернет-магазины и продажа товаров с маркетплейсов');
+  await tooltip.evaluate(el => el.click());
+  await page.locator('#commerce [data-gaeo-term="STM"]').click();
+  assert.equal(await tooltip.textContent(), 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.');
+  await tooltip.evaluate(el => el.click());
 
   // Mouse hover has no persistence once the pointer leaves the dotted text or the ?.
   await bmr.hover();
