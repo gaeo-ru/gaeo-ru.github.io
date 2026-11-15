@@ -4,6 +4,7 @@ import {readFileSync, appendFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
 const changedGroups=new Set();
+let rankingsArticlesOnly=true;
 const pages=new Set();
 const changedTitlePaths=[];
 let structural=false, full=false;
@@ -69,7 +70,20 @@ try{
    }
    continue;
   }
-  if(path.startsWith('src/data/rankings/')){changedGroups.add('rankings');continue;}
+  if(/^src\/data\/rankings\/articles\/[^/]+\.json$/.test(path)){
+   changedGroups.add('rankings');
+   try{
+    const current=JSON.parse(readFileSync(path,'utf8'));
+    const previous=JSON.parse(repoRead(base,path));
+    if(!current.category||!current.slug||current.category!==previous.category||current.slug!==previous.slug)
+     throw Error('Added/deleted/moved ranking requires full validation');
+    for(const lang of ['ru','en'])pages.add((lang==='en'?'/en':'')+'/rankings/'+current.category+'/'+current.slug+'/');
+   }catch(e){markFull('Cannot scope ranking article '+path+': '+e.message);}
+   continue;
+  }
+  if(path.startsWith('src/data/rankings/')){
+   changedGroups.add('rankings');rankingsArticlesOnly=false;continue;
+  }
   if(path==='src/data/publications.json'||path==='src/data/reviews.json'){changedGroups.add('evidence');continue;}
   if(path==='src/data/2gis-services.json'){changedGroups.add('tariffs');continue;}
   if(path==='src/data/industry-specializations.mjs'){
@@ -114,6 +128,8 @@ set('title_paths',JSON.stringify(changedTitlePaths));
 set('titles_changed',changedTitlePaths.length>0);
 set('focused_browser',pages.size>0&&pages.size<=8);
 for(const group of ['rankings','industry','specializations','evidence','tariffs','sector3a','sector3c','sector3d','sector3e','development','ecommerce','legal','industrial','tables'])set('check_'+group,active(group));
+// Ranking article text/data changes use static global QA plus two focused pages.
+if(!full&&rankingsArticlesOnly&&changedGroups.has('rankings'))set('check_rankings',false);
 set('check_terms',full);
 set('check_research',full);
 set('check_tables',full||changedGroups.has('tables'));
