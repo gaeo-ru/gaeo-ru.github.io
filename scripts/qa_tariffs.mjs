@@ -192,21 +192,39 @@ try{
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
    if(width!==1100)assert.equal(overflow,false,'No horizontal overflow '+width+' '+route); // Existing non-tariff styles overflow at intermediate desktop widths.
    if(['/', '/en/', '/tarify/', '/en/pricing/'].includes(route)){
-    // Shared select styling must survive the calculator/catalogue CSS loaded after style.css.
-    const selectStyles=await page.locator('[data-tariff-calculator] select, [data-industry-catalog] select').evaluateAll(elements=>elements.map(element=>{
-     const css=getComputedStyle(element);
-     return {appearance:css.appearance,paddingRight:parseFloat(css.paddingRight),backgroundImage:css.backgroundImage,backgroundPosition:css.backgroundPosition};
-    }));
-    assert.ok(selectStyles.length>0,'At least one native dropdown exists '+route);
-    for(const style of selectStyles){
-     assert.equal(style.appearance,'none','Custom dropdown arrow '+width+' '+route);
-     assert.ok(style.paddingRight>=54,'Dropdown text stays clear of inset arrow '+width+' '+route);
-     assert.ok(style.backgroundImage.includes('linear-gradient')&&style.backgroundPosition.includes('31px')&&style.backgroundPosition.includes('21px'),
-      'Dark arrow is visibly inset '+width+' '+route+' '+JSON.stringify(style));
+    // The calculator uses a wrapping picker; the industry filter remains native.
+    const picker=page.locator('[data-tariff-calculator] [data-plan-picker]');
+    assert.equal(await picker.isVisible(),true,'Multiline picker is visible '+width+' '+route);
+    assert.equal(await picker.locator('[data-plan-choice]').count(),3,'Three monthly plans available');
+    assert.equal(await page.locator('[data-tariff-calculator] select[name="plan"]').isHidden(),true,'Native no-script select hidden after enhancement');
+    const planTrigger=picker.locator('[data-plan-trigger]');
+    const guaranteed=picker.locator('[data-plan-choice="guarantee"] .tariff-plan-picker__name');
+    await planTrigger.click();
+    assert.equal(await picker.locator('[data-plan-options]').isVisible(),true,'Picker opens '+width+' '+route);
+    const wrapping=await guaranteed.evaluate(el=>{
+     const css=getComputedStyle(el),r=el.getBoundingClientRect();
+     return {height:r.height,lineHeight:parseFloat(css.lineHeight),whiteSpace:css.whiteSpace,text:el.textContent};
+    });
+    assert.equal(wrapping.whiteSpace,'normal','Tariff names permit wrapping');
+    assert.ok(wrapping.height<=wrapping.lineHeight*2+3,'Longest tariff name fits in two lines '+width+' '+route+' '+JSON.stringify(wrapping));
+    await planTrigger.press('Escape');
+    assert.equal(await picker.locator('[data-plan-options]').isHidden(),true,'Escape closes picker');
+    if(route==='/tarify/'||route==='/en/pricing/'){
+     const selectStyles=await page.locator('[data-industry-catalog] select').evaluateAll(elements=>elements.map(element=>{
+      const css=getComputedStyle(element);
+      return {appearance:css.appearance,paddingRight:parseFloat(css.paddingRight),backgroundImage:css.backgroundImage,backgroundPosition:css.backgroundPosition};
+     }));
+     assert.ok(selectStyles.length>0,'Industry filter retains a native dropdown '+route);
+     for(const style of selectStyles){
+      assert.equal(style.appearance,'none','Custom dropdown arrow '+width+' '+route);
+      assert.ok(style.paddingRight>=54,'Dropdown text stays clear of inset arrow '+width+' '+route);
+      assert.ok(style.backgroundImage.includes('linear-gradient')&&style.backgroundPosition.includes('31px')&&style.backgroundPosition.includes('21px'),
+       'Dark arrow is visibly inset '+width+' '+route+' '+JSON.stringify(style));
+     }
     }
     if((width===390||width===1440)&&(route==='/tarify/'||route==='/en/pricing/')){
      const lang=route.startsWith('/en/')?'en':'ru';
-     await page.locator('[data-tariff-calculator] select[name="plan"]').screenshot({path:'visual-tariffs/select-plan-'+lang+'-'+width+'.png'});
+     await planTrigger.screenshot({path:'visual-tariffs/select-plan-'+lang+'-'+width+'.png'});
      await page.locator('[data-industry-catalog] select[data-catalog-group]').screenshot({path:'visual-tariffs/select-industry-'+lang+'-'+width+'.png'});
     }
     const control=page.locator('[data-tariff-calculator]');
@@ -273,8 +291,11 @@ try{
     const calculator=page.locator('[data-tariff-calculator]');
     await calculator.locator('[name="platform"][value="gemini"]').check();
     await calculator.locator('[name="blocks"]').fill('2');
-    await calculator.locator('[name="plan"]').selectOption('guarantee');
+    await calculator.locator('[data-plan-trigger]').click();
+    await calculator.locator('[data-plan-choice="guarantee"]').click();
+    assert.equal(await calculator.locator('[name="plan"]').inputValue(),'guarantee','Custom picker updates the canonical plan');
     const planGoalsBefore=await page.evaluate(()=>window.__gaeo4aGoals.filter(e=>e.name==='tariff_plan_select').length);
+    assert.ok(planGoalsBefore>=1,'User choice emits the plan conversion event');
     await calculator.locator('[name="plan"]').evaluate(el=>el.dispatchEvent(new Event('change',{bubbles:true})));
     assert.equal(await page.evaluate(()=>window.__gaeo4aGoals.filter(e=>e.name==='tariff_plan_select').length),planGoalsBefore,'4A: identical plan change is suppressed');
     assert.match(await calculator.locator('[data-total]').innerText(),/144[\s,\u00a0\u202f]?900/,'Interactive formula');

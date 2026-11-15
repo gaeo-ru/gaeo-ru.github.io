@@ -12,7 +12,7 @@ const {lang='ru',open=false}=Astro.props;const en=lang==='en';
   <p class="tariff-note">{en?'Monthly promotion starts with 50 prompts and 5 AI platforms. The final scope, implementation responsibilities and contractual targets are agreed before work starts.':'Базовый объем продвижения: 50 промптов и 5 нейросетей. До начала работ фиксируем состав задач, ответственность за внедрение и показатели, закрепленные в договоре.'}</p>
   <a class={open?'tariff-text-link':'tariff-text-link tariff-text-link--home'} href={pricingHref(lang)+(open?'#industry-catalog':'')}>
     <span>{en?'Compare plans and browse 107 business categories':'Сравнить тарифы и найти свое направление среди 107 категорий'}</span>
-    <span class="tariff-text-link__arrow" aria-hidden="true">→</span>
+    <span class="tariff-text-link__arrow" aria-hidden="true"><span class="tariff-text-link__arrow-glyph">→</span></span>
   </a>
  </div>
 </section>
