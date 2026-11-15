@@ -14,7 +14,7 @@ test('standalone terms in normal copy, headings and metric labels', () => {
   assert.deepEqual(findTermMatches('brand mention rate; share of voice').map(hit => hit.term), ['BMR', 'SoV']);
   assert.deepEqual(findTermMatches('Brand Mention Rates, Share of Voices, myBrand Mention Rate'), []);
   assert.deepEqual(findTermMatches('WMS/TMS, фулфилмент, Фулфилмента, фулфилментом, фулфилменты, фулфилментов и Fulfillment').map(match => match.term),
-    ['WMS', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment']);
+    ['WMS', 'TMS', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment']);
   assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
 });
 
@@ -41,7 +41,7 @@ test('Added 20 terms: e-commerce, research, travel, manufacturing, vehicles, sit
   assert.deepEqual(findTermMatches(text).map(hit => hit.term), ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]);
   assert.deepEqual(findTermMatches('frs Shortlist SHORTLIST shortlists astro ASTRO').map(hit => hit.term),
     ['FRS', 'Shortlist', 'Shortlist', 'Shortlist', 'Astro', 'Astro']);
-  assert.deepEqual(findTermMatches('КМ/КМД и VIP/MICE').map(hit => hit.term), ['KM', 'KMD', 'MICE']);
+  assert.deepEqual(findTermMatches('КМ/КМД и VIP/MICE').map(hit => hit.term), ['KM', 'KMD', 'VIP', 'MICE']);
   assert.deepEqual(findTermMatches('12 км, километр, КМД12, магазинSKU, SKU_1, AstroJS, VINO, VIN123'), []);
   for (const term of ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]) {
     assert.ok(TERM_DEFINITIONS.ru[term], 'Russian definition missing: ' + term);
