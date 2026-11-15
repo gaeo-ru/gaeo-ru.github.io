@@ -4,13 +4,17 @@ export const TERM_DEFINITIONS = Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
-    SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети'
+    SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
+    WMS: 'WMS (Warehouse Management System) — система управления складом.',
+    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.'
   }),
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
-    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer'
+    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
+    WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
   })
 });
 
@@ -19,20 +23,25 @@ const FULL_NAMES = {
   GEO: 'Generative\\s+Engine\\s+Optimization',
   AEO: 'Answer\\s+Engine\\s+Optimization',
   BMR: 'Brand\\s+Mention\\s+Rate',
-  SoV: 'Share\\s+of\\s+Voice'
+  SoV: 'Share\\s+of\\s+Voice',
+  WMS: 'Warehouse\\s+Management\\s+System',
+  Fulfillment: 'Fulfillment'
 };
-const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|BMR|SoV|SOV)(?![\p{L}\p{N}_])/gu;
+// Both Russian case forms and English spelling map to one glossary entry.
+const TERMS = /(?<![\p{L}\p{N}_])(?:GEO|AEO|BMR|SoV|SOV|WMS|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?)(?![\p{L}\p{N}_])/gu;
 
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
   // GEO/AEO and similar editorial compounds are not URL paths.
-  if (/^[([«"']*(?:GEO|AEO|SEO|BMR|SoV|SOV)\/(?:GEO|AEO|SEO|BMR|SoV|SOV)(?:$|[^\w/])/.test(token)) return false;
+  if (/^[([«"']*(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)\/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)(?:$|[^\w/])/.test(token)) return false;
   return /(?:https?:\/\/|www\.|mailto:|[\w.+-]+@|\/[\w./-]*|\.(?:ru|com|org|net|io|ai)\b)/i.test(token);
 }
 
 function alreadyExplained(context, start, end, term) {
   const before = context.slice(Math.max(0, start - 180), start);
   const after = context.slice(end, end + 180);
+  // A bilingual parenthesis is already an explicit expansion; neither word needs a hint.
+  if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
   const name = FULL_NAMES[term];
   if (new RegExp('^\\s*(?:[(:—–-]\\s*)?' + name, 'i').test(after) ||
       new RegExp(name + '\\s*[(：:]?\\s*$', 'i').test(before)) return true;
@@ -40,7 +49,9 @@ function alreadyExplained(context, start, end, term) {
     ? 'продвижение(?:\\s+(?:бизнеса|бренда|компании))?\\s+в\\s+(?:нейросетях|ответах(?:\\s+нейросетей)?|рекомендациях(?:\\s+нейросетей)?)'
     : term === 'AEO' ? 'продвижение\\s+контента\\s+в\\s+источники\\s+ответов\\s+нейросетей'
     : term === 'BMR' ? 'доля\\s+упоминаний(?:\\s+бренда)?(?:\\s+в\\s+ответах(?:\\s+нейросетей)?)?'
-      : 'доля\\s+упоминаний\\s+бренда\\s+среди\\s+всех\\s+брендов';
+      : term === 'SoV' ? 'доля\\s+упоминаний\\s+бренда\\s+среди\\s+всех\\s+брендов'
+      : term === 'WMS' ? 'система\\s+управления\\s+складом'
+      : 'комплекс\\s+логистических\\s+услуг';
   return new RegExp('^\\s*[(:—–-]\\s*(?:это\\s+)?' + meaning, 'i').test(after) ||
     new RegExp(meaning + '\\s*\\(\\s*$', 'i').test(before);
 }
@@ -50,7 +61,10 @@ export function findTermMatches(text, { context = text, offset = 0 } = {}) {
   const matches = [];
   for (const match of text.matchAll(TERMS)) {
     const start = match.index, end = start + match[0].length;
-    const term = match[0] === 'SOV' ? 'SoV' : match[0];
+    const value = match[0];
+    const term = value === 'SOV' ? 'SoV'
+      : /^(?:[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/u.test(value) ? 'Fulfillment'
+      : value;
     if (isAddress(text, start, end) || alreadyExplained(context, offset + start, offset + end, term)) continue;
     matches.push({ start, end, term, text: match[0] });
   }
@@ -75,7 +89,7 @@ export function installTermHints(doc = document) {
   const definitions = TERM_DEFINITIONS[language];
   const labels = language === 'en'
     ? term => `Explain ${term}`
-    : term => `Что означает ${term}`;
+    : term => `Что означает ${term === 'Fulfillment' ? 'фулфилмент' : term}`;
   const descriptions = doc.createElement('div');
   descriptions.hidden = true;
   descriptions.dataset.gaeoTermDefinitions = '';
@@ -138,7 +152,7 @@ export function installTermHints(doc = document) {
       if (!node.isConnected || !node.parentElement || node.parentElement.closest(EXCLUDED)) continue;
       if (node.parentElement.closest(INTERACTIVE)) continue;
       const text = node.data;
-      if (!/(?:GEO|AEO|BMR|SoV|SOV)/.test(text)) continue;
+      if (!/(?:GEO|AEO|BMR|SoV|SOV|WMS|[Фф]улфилмент|ФУЛФИЛМЕНТ|[Ff]ulfill?ment)/.test(text)) continue;
       const matches = findTermMatches(text, contextFor(node));
       if (!matches.length) continue;
       const fragment = doc.createDocumentFragment();
