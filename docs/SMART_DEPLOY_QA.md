@@ -19,7 +19,7 @@ Unknown/missing baseline, a large change set, a new/deleted page, modified share
 | Only text nodes within one existing src/legacy/pages/**/*.html, with unchanged markup and H1/title | text-only | Build + all-page static SEO/link QA + browser smoke for the changed route at 1440/390 px |
 | Markup, attributes, images or links on a specific existing HTML page | page-structure | Same static QA + changed-route browser smoke at 1440/390/320 px |
 | Title or H1 on a legacy or generated specialization page | page-structure/profile | Browser QA for the changed route(s); audit ALL generated pages for obsolete incoming anchor labels, link title attributes and linked JSON-LD names/headlines |
-| Ranking data | profile/rankings | Ranking browser QA |
+| One ranking article JSON | profile/rankings | Full static ranking QA; browser check only the edited RU/EN article pair, including FAQ and responsive geometry |
 | One industry specialization batch | profile/specializations | Full static QA for all specializations, browser QA only for the RU/EN pages in that batch |
 | Industry commercial data | profile/industry | Industry browser QA |
 | Publications or reviews data | profile/evidence | Evidence/carousel QA |
@@ -27,7 +27,7 @@ Unknown/missing baseline, a large change set, a new/deleted page, modified share
 | Sector 3A / 3C / 3D / 3E data | profile/sector | Matching sector QA |
 | Shared/unknown/large changes | full | All suites |
 
-A changed page in the e-commerce, legal or industrial groups additionally invokes its graph validator. Individual specialization batch files declare their own RU/EN routes; edits to the shared specialization aggregator still require full QA. Routes with sensitive mobile tables also run table-layout QA.
+Global ranking index/registry data changes still trigger the complete ranking browser suite. A changed page in the e-commerce, legal or industrial groups additionally invokes its graph validator. Individual specialization batch files declare their own RU/EN routes; edits to the shared specialization aggregator still require full QA. Routes with sensitive mobile tables also run table-layout QA.
 
 A simple edit to a heading inside a case can affect the names shown on the home page, case listing, related article links and structured data. The incoming-link audit runs across the *entire* generated site even in page-structure mode. Its error names the canonical source page that must be fixed. Generated output is not patched directly, because the next Astro build would overwrite it. Deliberately shortened navigation labels are permitted; exact obsolete names/values are rejected.
 
