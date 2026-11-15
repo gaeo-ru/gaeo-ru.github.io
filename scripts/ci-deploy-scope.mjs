@@ -1,6 +1,6 @@
 // Select QA by changes since the last *published* source commit, not HEAD^.
 // Pending commits from cancelled/failed workflows are therefore never skipped.
-import {readFileSync, appendFileSync, existsSync} from 'node:fs';
+import {readFileSync, appendFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
 const changedGroups=new Set();
@@ -33,9 +33,7 @@ const outputs={};
 const set=(key,value)=>outputs[key]=String(value);
 let base='';
 try{
- const manifestPath='published/astro-release-manifest.json';
- if(!existsSync(manifestPath))throw Error('No published release manifest');
- const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+ const manifest=JSON.parse(repoRead('origin/main','astro-release-manifest.json'));
  base=manifest.sourceCommit;
  if(!/^[0-9a-f]{40}$/.test(base))throw Error('Missing valid sourceCommit in published manifest');
  run('cat-file','-e',base+'^{commit}');
