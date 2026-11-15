@@ -107,6 +107,7 @@ const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+o
 function isAddress(text, start, end) {
   const token = text.slice(0, start).split(/\s/).pop() + text.slice(start, end) + text.slice(end).split(/\s/)[0];
   // GEO/AEO and similar editorial compounds are not URL paths.
+  if (/^[([«"']*(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)\/(?:GEO|AEO|SEO|BMR|SoV|SOV|WMS|TMS)(?:$|[^\w/])/.test(token)) return false;
   if (/^[([«"']*(?:[А-Я]{2,4}|[A-Z]{2,5})\/(?:[А-Я]{2,4}|[A-Z]{2,5})(?:$|[^\p{L}\p{N}_/])/u.test(token)) return false;
   return /(?:https?:\/\/|www\.|mailto:|[\w.+-]+@|\/[\w./-]*|\.(?:ru|com|org|net|io|ai)\b)/i.test(token);
 }
