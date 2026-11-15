@@ -10,7 +10,7 @@ export const RANKINGS_BRANCH = 'rankings-staging';
 export const RANKINGS_QUEUE_PATH = 'docs/rankings/queue.json';
 
 const PREFIX = 'mcp__codex_apps__github_';
-const CATEGORIES = new Set(['products', 'tourism', 'wms', 'fulfillment', 'branding', 'website-performance', 'seo-specialists', 'orienteering', 'cultural-education']);
+const CATEGORIES = new Set(['products', 'tourism', 'wms', 'fulfillment', 'branding', 'website-performance', 'orienteering', 'cultural-education']);
 const STATUSES = new Set(['ready', 'reserved', 'committed', 'needs_work_source', 'blocked_access', 'needs_review', 'excluded']);
 const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const OP_ID = /^[A-Za-z0-9][A-Za-z0-9._:-]{5,159}$/;
@@ -43,7 +43,10 @@ function safeUrl(value, label) {
 }
 function excluded(task) {
   return task.status === 'excluded' || task.excluded === true || task.excludeFromRankings === true
-    || !CATEGORIES.has(task.category) || /^(?:gaeo(?:\.ru)?|алексей\s+яковлев|alexey\s+yakovlev)$/i.test(String(task.firstPlace || '').trim());
+    || !CATEGORIES.has(task.category)
+    || /(?:^|\W)(?:GEO|AEO|SEO|СЕО)(?:\W|$)/i.test(String(task.title || ''))
+    || /поисков(?:ое|ого)\s+продвижен/i.test(String(task.title || ''))
+    || /^(?:gaeo(?:\.ru)?|алексей\s+яковлев|alexey\s+yakovlev)$/i.test(String(task.firstPlace || '').trim());
 }
 function isSelection(item) {
   return item?.contentType === 'selection' && item.category === 'products'

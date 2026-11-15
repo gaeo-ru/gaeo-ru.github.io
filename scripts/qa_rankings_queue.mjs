@@ -143,6 +143,13 @@ await check('production targets, duplicated families, and unknown winners fail c
   assert.throws(() => validateRankingsQueue(queue({...task('one'), firstPlace: null})), error => error.code === 'WINNER_UNVERIFIED');
   validateRankingsQueue(queue({...task('one', 'needs_review'), firstPlace: null}));
 });
+await check('SEO/GEO rankings and removed category are excluded from queue', async () => {
+  for (const t of [
+    {...task('seo-category'),category:'seo-specialists'},
+    {...task('seo-title'),title:'ТОП-10 SEO-специалистов'},
+    {...task('geo-title'),title:'Рейтинг GEO-агентств'}
+  ]) assert.throws(() => validateRankingsQueue(queue(t)), err => err.code === 'EXCLUDED_TASK');
+});
 await check('simultaneous workers reserve different articles without losing claims', async () => {
   const git = new Git(queue(task('one'), task('two'))), a = git.worker(), b = git.worker();
   const [x, y] = await Promise.all([a.claim({ownerId: 'chat-aaaa', requestId: 'claim-aaaa'}), b.claim({ownerId: 'chat-bbbb', requestId: 'claim-bbbb'})]);

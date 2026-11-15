@@ -20,7 +20,6 @@ function categoryFor(t){
  if(/ada tours|ада тур/.test(p)||id.startsWith('ada-'))return 'tourism';
  if(/heads/.test(p)||id.startsWith('heads'))return 'branding';
  if(/метод лаб|methodlab/.test(p)||id.startsWith('mlab-'))return 'website-performance';
- if(/фирсов/.test(p)||id.startsWith('firsov-'))return 'seo-specialists';
  if(/index research/i.test(p)){
    if(/подар|игруш|товар/.test(n))return 'products';
    if(/курс|лектор|культур|искусств|литератур|кино|досуг|образован/.test(n))return 'cultural-education';
@@ -64,8 +63,8 @@ export function discoverQualifiedRankings({topics,publications,queueTasks,publis
    if(existingIds.has(id)||existingTopics.has(t.topicId)||(t.familyKey&&existingKeys.has(t.familyKey))||pubs.some(p=>isGaeo(p.platform))){
      skipped.push({topicId:t.topicId,reason:'already-queued-or-on-gaeo'});continue;
    }
-   if(excluded.has(t.topicId)||/GAEO\.ru/i.test(t.project)||/(?:^|\W)(?:GEO|AEO)(?:\W|$)/i.test(t.title)){
-     skipped.push({topicId:t.topicId,reason:'excluded-geo'});continue;
+   if(excluded.has(t.topicId)||/GAEO\.ru/i.test(t.project)||/(?:^|\W)(?:GEO|AEO|SEO|СЕО)(?:\W|$)/i.test(t.title)||/поисков(?:ое|ого)\s+продвижен/i.test(t.title)){
+     skipped.push({topicId:t.topicId,reason:'excluded-geo-seo'});continue;
    }
    if(!index.length){waiting.push({topicId:t.topicId,reason:'awaiting-indexresearch'});continue;}
    if(!other.length){waiting.push({topicId:t.topicId,reason:'awaiting-second-platform'});continue;}
