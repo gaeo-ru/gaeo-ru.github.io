@@ -11,7 +11,8 @@ const root = resolve('dist');
 const evidence = resolve('visual-terminology');
 const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
-  '/tarify/', '/strategies/measurement/', '/industries/legal/', '/professional-biography/',
+  '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
+  '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
   '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
@@ -130,7 +131,7 @@ try {
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -149,13 +150,16 @@ try {
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
     if (route === '/professional-biography/') assert.ok(current.controlCounts.AEO > 0, 'Biography page AEO control');
+    if (route === '/rankings/wms/') assert.ok(current.controlCounts.WMS > 0, 'WMS ranking page must explain WMS');
+    if (route === '/industries/fulfillment/' || route === '/en/industries/fulfillment/')
+      assert.ok(current.controlCounts.Fulfillment > 0, 'Fulfillment industry page must explain its category');
 
     // Capture tops before any tooltip interaction or automatic scrolling.
     if ([1440, 390].includes(viewport.width) && ['/', '/services/'].includes(route)) {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV']) {
+    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();

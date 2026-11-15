@@ -8,10 +8,13 @@ test('standalone terms in normal copy, headings and metric labels', () => {
   assert.deepEqual(findTermMatches(source).map(match => match.term), ['GEO', 'BMR', 'SoV', 'AEO', 'SoV']);
   assert.deepEqual(findTermMatches('НЕGEO GEOLOGY _GEO GEO2 myBMR SOVEREIGN GAEO _AEO AEO2'), []);
   assert.deepEqual(findTermMatches('GEO/AEO-эксперт, BMR/SoV').map(match => match.term), ['GEO', 'AEO', 'BMR', 'SoV']);
+  assert.deepEqual(findTermMatches('WMS/TMS, фулфилмент, Фулфилмента, фулфилментом, фулфилменты, фулфилментов и Fulfillment').map(match => match.term),
+    ['WMS', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment', 'Fulfillment']);
+  assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
 });
 
 test('URLs, email addresses and file paths are not decorated', () => {
-  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json']) {
+  for (const value of ['https://gaeo.ru/GEO/', 'GEO@example.ru', 'www.GEO.com', '/assets/GEO/data.json', 'GEO.ru', 'AEO@example.ru', '/assets/AEO/data.json', 'WMS@example.ru', '/docs/WMS/TMS', 'фулфилмент.ru', 'https://example.com/fulfillment/']) {
     assert.deepEqual(findTermMatches(value), [], value);
   }
 });
@@ -22,7 +25,9 @@ test('adjacent expansions need no duplicate help', () => {
     'Answer Engine Optimization (AEO)', 'AEO - продвижение контента в источники ответов нейросетей',
     'BMR — Brand Mention Rate',
     'Share of Voice (SoV)', 'продвижение в нейросетях (GEO)',
-    'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей'
+    'GEO — продвижение в рекомендациях нейросетей', 'BMR: доля упоминаний бренда в ответах нейросетей',
+    'WMS (Warehouse Management System)', 'Warehouse Management System (WMS)',
+    'WMS — система управления складом.', 'Фулфилмент (Fulfillment)', 'Фулфилмент — комплекс логистических услуг'
   ]) assert.deepEqual(findTermMatches(value), [], value);
   const context = 'Показатель BMR (Brand Mention Rate) изменился.';
   assert.deepEqual(findTermMatches('BMR', { context, offset: 11 }), []);
@@ -38,6 +43,10 @@ test('exact user wording and the requested display duration are retained', () =>
   assert.equal(TERM_DEFINITIONS.en.AEO, 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers');
   assert.equal(TERM_DEFINITIONS.ru.BMR, 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей');
   assert.equal(TERM_DEFINITIONS.ru.SoV, 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети');
+  assert.equal(TERM_DEFINITIONS.ru.WMS, 'WMS (Warehouse Management System) — система управления складом.');
+  assert.equal(TERM_DEFINITIONS.ru.Fulfillment, 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
+  assert.equal(TERM_DEFINITIONS.en.WMS, 'WMS (Warehouse Management System) — a warehouse management system.');
+  assert.equal(TERM_DEFINITIONS.en.Fulfillment, 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.');
   for (const definition of Object.values(TERM_DEFINITIONS.en)) assert.doesNotMatch(definition, /[А-Яа-я]/);
 });
 

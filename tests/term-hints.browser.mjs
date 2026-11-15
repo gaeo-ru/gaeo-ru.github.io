@@ -24,10 +24,12 @@ try {
     <h1 id="heading">Сравнение <span>GEO</span> и SEO</h1>
     <p id="metrics">Измеряем BMR и SoV.</p>
     <p id="aeo">AEO помогает подготовить контент.</p>
+    <p id="warehouse">WMS и фулфилмент помогают складу. Для фулфилмента и фулфилментов.</p>
+    <p id="warehouse-expanded">WMS (Warehouse Management System) и Фулфилмент (Fulfillment).</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
     <p id="already-aeo"><strong>AEO</strong> (Answer Engine Optimization)</p>
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
-    <p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR и SoV</a></p>
+    <p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR, SoV, WMS и фулфилмент</a></p>
     <a class="card" href="#destination">GEO: ссылка на целую карточку</a>
     <p id="compound">GEO/AEO-эксперт</p>
     <div class="scroll-table"><table><tr><th>Показатель</th><th id="metric-cell">BMR</th></tr></table></div>
@@ -50,6 +52,9 @@ try {
   assert.equal(await page.locator('#compound [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="AEO"]').count(), 1);
   assert.equal(await page.locator('#aeo [data-gaeo-term="AEO"]').count(), 1);
+  assert.equal(await page.locator('#warehouse [data-gaeo-term="WMS"]').count(), 1);
+  assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
+  assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
   assert.equal(await page.locator('#already [data-gaeo-term], #already-aeo [data-gaeo-term], #code [data-gaeo-term], #brand [data-gaeo-term], #off [data-gaeo-term], header [data-gaeo-term], form [data-gaeo-term], a [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No circles, icons or added link markup');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
@@ -78,6 +83,14 @@ try {
   assert.equal(await tooltip.textContent(), 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей');
   assert.equal(await page.locator('#aeo .gaeo-term-label').evaluate(element => getComputedStyle(element).textDecorationStyle), 'dotted', 'The active term keeps its dotted underline');
   await page.keyboard.press('Escape');
+  await page.locator('#warehouse [data-gaeo-term="WMS"]').click();
+  assert.equal(await tooltip.textContent(), 'WMS (Warehouse Management System) — система управления складом.');
+  await tooltip.click();
+  assert.equal(await tooltip.isVisible(), false, 'WMS explanation closes on click');
+  await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').first().click();
+  assert.equal(await tooltip.textContent(), 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
+  await tooltip.click();
+  assert.equal(await tooltip.isVisible(), false, 'Fulfillment explanation closes on click');
 
   // Native button keyboard interaction remains available after timed dismissal.
   await bmr.focus();
@@ -132,6 +145,15 @@ try {
   assert.ok(box.x >= 10 && box.x + box.width <= 310, JSON.stringify(box));
   assert.ok(box.y >= 10 && box.y + box.height <= 630, JSON.stringify(box));
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 320);
+  await page.keyboard.press('Escape');
+  const fulfillmentTrigger = page.locator('#warehouse [data-gaeo-term="Fulfillment"]').first();
+  await fulfillmentTrigger.click();
+  assert.equal(await tooltip.textContent(), 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
+  const longTipBox = await tooltip.boundingBox();
+  assert.ok(longTipBox && longTipBox.x >= 10 && longTipBox.x + longTipBox.width <= 310 && longTipBox.y >= 10 && longTipBox.y + longTipBox.height <= 630,
+    'Long Russian fulfillment hint remains inside mobile viewport: ' + JSON.stringify(longTipBox));
+  await tooltip.click();
+  assert.equal(await tooltip.isVisible(), false);
   assert.equal(await page.locator('button button, a button').count(), 0, 'No nested interactive controls');
 
   // Real elapsed time checks the new five-second reading window.
@@ -147,20 +169,22 @@ try {
   assert.deepEqual(errors, []);
 
   const english = await browser.newPage({ viewport: { width: 320, height: 640 } });
-  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, BMR and SoV</p></body></html>');
+  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, BMR, SoV, WMS and Fulfillment</p></body></html>');
   await english.addStyleTag({ content: css });
   await english.addScriptTag({ type: 'module', content: js });
   for (const [term, definition] of Object.entries({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     AEO: 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers',
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
-    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer'
+    SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
+    WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
   })) {
     await english.locator(`[data-gaeo-term="${term}"]`).click();
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: 4 terms, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
+  console.log(`Term hint browser QA passed: 6 terms, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
 } finally {
   await browser.close();
 }
