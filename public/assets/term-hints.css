@@ -27,7 +27,7 @@
   outline-offset: 3px;
   border-radius: 3px;
 }
-.gaeo-term-trigger--phrase {
+.gaeo-term-trigger.gaeo-term-trigger--phrase {
   white-space: normal;
 }
 /* Use inline flow so the help follows the last line, not the first line. */
