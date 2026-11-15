@@ -51,6 +51,19 @@
   flex: 1 1 auto;
   min-width: 0;
 }
+/* Keep case-title help beside the final link line even at 320px. */
+#geo-promotion .list-card h3 .gaeo-term-link-inline {
+  display: inline-flex;
+  align-items: flex-end;
+  max-width: 100%;
+  min-width: 0;
+}
+#geo-promotion .list-card h3 .gaeo-term-link-inline > a {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding-inline-end: 0;
+  margin-inline-end: 0;
+}
 .gaeo-term-link-inline > .gaeo-term-link-help.gaeo-term-link-help {
   position: relative;
   z-index: 1;
