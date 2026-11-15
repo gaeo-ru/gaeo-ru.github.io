@@ -143,7 +143,7 @@ test('approved Russian glossary favors longest abbreviations and avoids excluded
   assert.deepEqual(findTermMatches('ФИО, ИНН, ООО, РФ, ЖК, МГУ, ИИ').map(hit => hit.term), []);
   assert.deepEqual(findTermMatches('ТН ВЭД (товарная номенклатура внешнеэкономической деятельности)').map(hit => hit.term), []);
   assert.deepEqual(findTermMatches("FBL (Fulfillment by L'Étoile)").map(hit => hit.term), []);
-  assert.equal(TERM_DEFINITIONS.ru.FBL, "FBL (Fulfillment by L'Étoile) - продажи со складов ЛЭТУАЛЬ");
+  assert.equal(TERM_DEFINITIONS.ru.FBL, "FBL (Fulfillment by L'Étoile) - Продажи со складов ЛЭТУАЛЬ");
   for (const term of ['ЦА', 'ЛПР', 'КАСКО', 'МП', 'ТО', 'ТТК', 'МО', 'МПГУ', 'ВМК', 'МДФ', 'УФ'])
     assert.ok(TERM_DEFINITIONS.ru[term], 'Missing approved special term: ' + term);
 });
