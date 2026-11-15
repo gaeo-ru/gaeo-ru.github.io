@@ -68,6 +68,10 @@ try {
   assert.equal(await tooltip.isVisible(), false);
   await bmr.click();
   assert.ok(await tooltip.isVisible());
+  await tooltip.click();
+  assert.equal(await tooltip.isVisible(), false, 'Clicking the displayed explanation closes it');
+  await bmr.click();
+  assert.ok(await tooltip.isVisible(), 'Clicking the term opens the explanation again');
   await page.locator('#outside').click();
   assert.equal(await tooltip.isVisible(), false);
   await page.locator('#aeo [data-gaeo-term="AEO"]').click();
@@ -130,13 +134,13 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 320);
   assert.equal(await page.locator('button button, a button').count(), 0, 'No nested interactive controls');
 
-  // Real elapsed time checks the requested 6–7 second reading window.
+  // Real elapsed time checks the new five-second reading window.
   await sov.click();
   const started = Date.now();
-  await page.waitForTimeout(5000);
-  assert.ok(await tooltip.isVisible(), 'The hint remains visible long enough to read');
-  await page.waitForTimeout(Math.max(0, 6900 - (Date.now() - started)));
-  assert.equal(await tooltip.isVisible(), false, 'The hint closes within the requested reading window');
+  await page.waitForTimeout(3900);
+  assert.ok(await tooltip.isVisible(), 'The hint remains visible before five seconds');
+  await page.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
+  assert.equal(await tooltip.isVisible(), false, 'The hint automatically closes after five seconds');
   const elapsed = Date.now() - started;
   await sov.press('Enter');
   assert.ok(await tooltip.isVisible(), 'The hint can be reopened after timeout');
@@ -156,7 +160,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: 4 terms, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 5 s and closed when checked at ${elapsed} ms.`);
+  console.log(`Term hint browser QA passed: 4 terms, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
 } finally {
   await browser.close();
 }

@@ -14,7 +14,7 @@ export const TERM_DEFINITIONS = Object.freeze({
   })
 });
 
-export const TERM_HINT_DURATION = 6500;
+export const TERM_HINT_DURATION = 5000;
 const FULL_NAMES = {
   GEO: 'Generative\\s+Engine\\s+Optimization',
   AEO: 'Answer\\s+Engine\\s+Optimization',
@@ -203,6 +203,11 @@ export function installTermHints(doc = document) {
     event.preventDefault();
     event.stopPropagation();
     show(trigger);
+  });
+  // A tap or click on the open explanation closes it immediately.
+  tooltip.addEventListener('click', event => {
+    event.stopPropagation();
+    hide();
   });
   doc.addEventListener('pointerdown', event => {
     if (active && !event.target.closest?.('[data-gaeo-term],.gaeo-term-tooltip')) hide();

@@ -32,7 +32,7 @@ test('adjacent expansions need no duplicate help', () => {
 });
 
 test('exact user wording and the requested display duration are retained', () => {
-  assert.equal(TERM_HINT_DURATION, 6500);
+  assert.equal(TERM_HINT_DURATION, 5000);
   assert.equal(TERM_DEFINITIONS.ru.GEO, 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей');
   assert.equal(TERM_DEFINITIONS.ru.AEO, 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей');
   assert.equal(TERM_DEFINITIONS.en.AEO, 'AEO (Answer Engine Optimization) - promoting content into sources used in AI answers');
