@@ -43,11 +43,10 @@ jobs:
           npm run check:design
           npm run check:rankings
           node scripts/qa_rankings_queue.mjs
-      - name: Check incoming link titles when a page heading changes
-        if: steps.scope.outputs.titles_changed == 'true'
+      - name: Check incoming links when a page title changes
+        if: steps.scope.outputs.focused_browser == 'true'
         env:
-          GAEO_CI_BASELINE: ${{ steps.scope.outputs.baseline }}
-          GAEO_CI_TITLE_PATHS: ${{ steps.scope.outputs.title_paths }}
+          GAEO_CI_ROUTES: ${{ steps.scope.outputs.routes }}
         run: node scripts/ci-inbound-title-links.mjs
       - name: Check e-commerce article, methodology, and conversion links
         if: steps.scope.outputs.check_ecommerce == 'true'
@@ -79,9 +78,14 @@ jobs:
       - name: Check industry landings at desktop and mobile widths
         if: steps.scope.outputs.check_industry == 'true'
         run: npm run check:industry
-      - name: Check four bilingual industry specializations and incoming links
+      - name: Check bilingual industry specializations and incoming links
         if: steps.scope.outputs.check_specializations == 'true'
-        run: npm run check:specializations
+        run: |
+          if [ "${{ steps.scope.outputs.mode }}" = "full" ]; then
+            npm run check:specializations
+          else
+            npm run check:specializations -- --static
+          fi
       - name: Check phase 3A automotive and finance GEO hubs and methods
         if: steps.scope.outputs.check_sector3a == 'true'
         run: npm run check:sector3a
