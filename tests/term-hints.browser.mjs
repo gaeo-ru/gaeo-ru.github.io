@@ -30,7 +30,9 @@ try {
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
     <p id="already-aeo"><strong>AEO</strong> (Answer Engine Optimization)</p>
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
-    <p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR, SoV, WMS и фулфилмент</a></p>
+    <main><p><a id="inline-link" href="#destination">Методика <em>GEO/AEO</em>, BMR, SoV, WMS и фулфилмент</a></p>
+    <h3 id="case-heading"><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3>
+    <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
     <a class="card" href="#destination">GEO: ссылка на целую карточку</a>
     <p id="compound">GEO/AEO-эксперт</p>
     <div class="scroll-table"><table><tr><th>Показатель</th><th id="metric-cell">BMR</th></tr></table></div>
@@ -38,7 +40,7 @@ try {
     <pre id="code">GEO BMR SoV</pre><p data-term-hints="off" id="off">GEO</p>
     <form><label for="input">BMR</label><input id="input" value="GEO"><button>GEO</button></form>
     <div id="dynamic"></div><button id="outside" type="button">Закрыть подсказку</button>
-    <p id="destination">Цель ссылки</p>
+    <p id="destination">Цель ссылки</p></main>
   </body></html>`);
   const originalLink = await page.locator('#inline-link').evaluate(element => ({
     html: element.innerHTML, decoration: getComputedStyle(element).textDecorationStyle,
@@ -58,7 +60,11 @@ try {
   assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
   assert.equal(await page.locator('#already [data-gaeo-term], #already-aeo [data-gaeo-term], #code [data-gaeo-term], #brand [data-gaeo-term], #off [data-gaeo-term], header [data-gaeo-term], form [data-gaeo-term], a [data-gaeo-term]').count(), 0);
-  assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No circles, icons or added link markup');
+  assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No obsolete controls');
+  assert.equal(await page.locator('#case-heading a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR case link has separate question icon');
+  assert.equal(await page.locator('#expanded-link .gaeo-term-link-help').count(), 0, 'Expanded BMR needs no icon');
+  assert.equal(await page.locator('nav .gaeo-term-link-help, a .gaeo-term-link-help').count(), 0, 'No nested or navigational help controls');
+  assert.equal(await page.locator('#inline-link + .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Inline content link gets question help');
   assert.equal(await page.title(), 'GEO, AEO, BMR, SoV');
   assert.equal(await page.locator('script[type="application/ld+json"]').textContent(), '{"name":"GEO","metric":"BMR"}');
   assert.equal(await page.locator('#faq-answer').textContent(), 'GEO помогает бренду. BMR измеряет долю ответов.', 'Term buttons do not change FAQ text/schema parity');
@@ -75,7 +81,7 @@ try {
   assert.equal(await tooltip.isVisible(), false);
   await bmr.click();
   assert.ok(await tooltip.isVisible());
-  await tooltip.click();
+  await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false, 'Clicking the displayed explanation closes it');
   await bmr.click();
   assert.ok(await tooltip.isVisible(), 'Clicking the term opens the explanation again');
@@ -88,16 +94,27 @@ try {
   await page.locator('#historical [data-gaeo-term="AIStart"]').click();
   assert.equal(await tooltip.textContent(), 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
   assert.equal(await page.locator('#historical .gaeo-term-label').evaluate(el => getComputedStyle(el).textDecorationStyle), 'dotted');
-  await tooltip.click();
+  await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false, 'Manual history hint closes on click');
   await page.locator('#warehouse [data-gaeo-term="WMS"]').click();
   assert.equal(await tooltip.textContent(), 'WMS (Warehouse Management System) — система управления складом.');
-  await tooltip.click();
+  await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false, 'WMS explanation closes on click');
   await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').first().click();
   assert.equal(await tooltip.textContent(), 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
-  await tooltip.click();
+  await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false, 'Fulfillment explanation closes on click');
+
+  // Mouse hover has no persistence once the pointer leaves the dotted text or the ?.
+  await bmr.hover();
+  assert.ok(await tooltip.isVisible(), 'Desktop: hovering over the dotted term opens help');
+  await page.mouse.move(0, 0);
+  assert.equal(await tooltip.isVisible(), false, 'Desktop: mouseout hides the tip immediately');
+  const caseHelp = page.locator('#case-heading a + .gaeo-term-link-help');
+  await caseHelp.hover();
+  assert.equal(await tooltip.textContent(), 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей');
+  await page.mouse.move(0, 0);
+  assert.equal(await tooltip.isVisible(), false, 'Desktop: leaving the ? hides help');
 
   // Native button keyboard interaction remains available after timed dismissal.
   await bmr.focus();
@@ -132,6 +149,8 @@ try {
   await page.evaluate(() => { document.querySelector('#inline-link').textContent = 'Методика GEO/AEO'; });
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   assert.equal(await page.locator('#inline-link').innerHTML(), 'Методика GEO/AEO', 'Updated link text stays unmodified');
+  await page.waitForFunction(() => document.querySelectorAll('#inline-link + .gaeo-term-link-help').length === 1);
+  assert.equal(await page.locator('#inline-link + .gaeo-term-link-help[data-gaeo-term="GEO"]').count(), 1, 'Link icon list adapts after replacement');
   assert.equal(await page.locator('.gaeo-term-reference,.gaeo-term-link-label').count(), 0);
   // If another renderer moves an existing term into a link, restore plain text.
   await page.evaluate(() => {
@@ -159,21 +178,39 @@ try {
   const longTipBox = await tooltip.boundingBox();
   assert.ok(longTipBox && longTipBox.x >= 10 && longTipBox.x + longTipBox.width <= 310 && longTipBox.y >= 10 && longTipBox.y + longTipBox.height <= 630,
     'Long Russian fulfillment hint remains inside mobile viewport: ' + JSON.stringify(longTipBox));
-  await tooltip.click();
+  await tooltip.evaluate(el => el.click());
   assert.equal(await tooltip.isVisible(), false);
   assert.equal(await page.locator('button button, a button').count(), 0, 'No nested interactive controls');
 
-  // Real elapsed time checks the new five-second reading window.
-  await sov.click();
-  const started = Date.now();
-  await page.waitForTimeout(3900);
-  assert.ok(await tooltip.isVisible(), 'The hint remains visible before five seconds');
-  await page.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
-  assert.equal(await tooltip.isVisible(), false, 'The hint automatically closes after five seconds');
-  const elapsed = Date.now() - started;
-  await sov.press('Enter');
-  assert.ok(await tooltip.isVisible(), 'The hint can be reopened after timeout');
+  // With a mouse, the explanation stays visible beyond five seconds while hovered.
+  await sov.hover();
+  await page.waitForTimeout(5200);
+  assert.ok(await tooltip.isVisible(), 'Desktop: no timeout during continued hover');
+  await page.mouse.move(0, 0);
+  assert.equal(await tooltip.isVisible(), false, 'Desktop: leave closes regardless of elapsed time');
   assert.deepEqual(errors, []);
+
+  // On touch devices, tap opens help for five seconds, then closes automatically.
+  const touch = await browser.newPage({
+    viewport: { width: 320, height: 640 }, hasTouch: true, isMobile: true
+  });
+  await touch.setContent('<!doctype html><html lang="ru"><body><main><p>Измеряем BMR.</p><h3><a href="#case">MethodLab: BMR вырос с 19% до 52,4%</a></h3></main></body></html>');
+  await touch.addStyleTag({ content: css });
+  await touch.addScriptTag({ type: 'module', content: js });
+  const touchTrigger = touch.locator('p [data-gaeo-term="BMR"]');
+  const touchTip = touch.locator('#gaeo-term-tooltip');
+  assert.equal(await touch.locator('h3 a + .gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1);
+  await touchTrigger.tap();
+  const started = Date.now();
+  await touch.waitForTimeout(3900);
+  assert.ok(await touchTip.isVisible(), 'Touch: five-second hint remains visible');
+  await touch.waitForTimeout(Math.max(0, 5400 - (Date.now() - started)));
+  assert.equal(await touchTip.isVisible(), false, 'Touch: five-second timeout works');
+  const elapsed = Date.now() - started;
+  await touch.locator('h3 a + .gaeo-term-link-help').tap();
+  assert.ok(await touchTip.isVisible(), 'Touch: question icon opens definition');
+  await touchTip.tap();
+  assert.equal(await touchTip.isVisible(), false, 'Touch: tap on popup dismisses it');
 
   const english = await browser.newPage({ viewport: { width: 320, height: 640 } });
   await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, BMR, SoV, WMS and Fulfillment</p></body></html>');
@@ -191,7 +228,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: 6 glossary terms plus manually attached AI history hint, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
+  console.log(`Term hint browser QA passed: mouse-only hover, independent link question icons, 6 terms and AI history, keyboard and dynamic text, mobile touch timeout at ${elapsed} ms.`);
 } finally {
   await browser.close();
 }
