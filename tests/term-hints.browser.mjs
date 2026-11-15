@@ -83,6 +83,9 @@ try {
     <p id="sat-tech">FAT/SAT при приемке оборудования.</p>
     <p id="new-link"><a href="#destination">ТН ВЭД и FBL</a></p>
     <p id="full-expand-fbl">FBL (Fulfillment by L'Étoile)</p>
+    <p id="glossary-added">Core Web Vitals, JavaScript, canonical, индексация сайта, индексации страниц, индексацию URL, индексацией поискового робота, фид, фида, фидом, фиды и фидах.</p>
+    <p id="glossary-finance">Индексация пенсий и зарплат.</p>
+    <p id="glossary-linked"><a href="#destination">Core Web Vitals и canonical</a></p>
     <p id="destination">Цель ссылки</p></main>
     <footer id="footer-terms"><p>ИНН, ФНС, BMR, GEO, КИЗ и FBL не подчеркиваются в подвале</p></footer>
   </body></html>`);
@@ -94,6 +97,14 @@ try {
   await page.addScriptTag({ type: 'module', content: js });
   await page.waitForFunction(() => document.documentElement.dataset.gaeoTermHints === 'ready');
   const tooltip = page.locator('#gaeo-term-tooltip');
+  assert.deepEqual(await page.locator('#glossary-added [data-gaeo-term]').evaluateAll(
+    elements => elements.map(element => element.dataset.gaeoTerm)),
+    ['Core Web Vitals', 'JavaScript', 'canonical', 'Indexing', 'Indexing', 'Indexing', 'Indexing', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed']);
+  assert.equal(await page.locator('#glossary-finance [data-gaeo-term]').count(), 0);
+  assert.equal(await page.locator('#glossary-linked > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+  assert.equal(await page.locator('#glossary-linked .gaeo-term-link-help').count(), 2);
+  assert.equal(await page.locator('footer [data-gaeo-term]').count(), 0);
+
   assert.deepEqual(await page.locator('#ru-longest [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
     ['ТН ВЭД', 'ОКПД2', 'ГИС ЖКХ', 'ГИС МТ', 'ВЭД', 'FBL', 'FBO', 'FBS', 'ВМК', 'ВМК']);
   assert.deepEqual(await page.locator('#car-context [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
