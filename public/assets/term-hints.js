@@ -75,7 +75,7 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
   "FBS": "FBS (Fulfillment by Seller) - продажа со склада продавца с доставкой через маркетплейс",
   "FBW": "FBW (Fulfillment by Wildberries) - продажи со складов Wildberries",
   "FBY": "FBY (Fulfillment by Yandex) - продажи со складов Яндекс Маркета",
-  "FBL": "FBL (Fulfillment by L'Étoile) - продажи со складов ЛЭТУАЛЬ",
+  "FBL": "FBL (Fulfillment by L'Étoile) - Продажи со складов ЛЭТУАЛЬ",
   "DBS": "DBS (Delivery by Seller) - продажа и доставка товара силами продавца",
   "FIFO": "FIFO (First In, First Out) - первым поступил, первым выбыл; принцип складского учета",
   "LIFO": "LIFO (Last In, First Out) - последним поступил, первым выбыл",
@@ -455,6 +455,10 @@ const LINK_HELP_SELECTOR = '[data-gaeo-term-link-help]';
 const LINK_WRAPPER_SELECTOR = '.gaeo-term-link-inline';
 const CONTEXT = 'p,li,td,th,dt,dd,h1,h2,h3,h4,h5,h6,figcaption,blockquote,summary,label';
 
+/** Stable ARIA IDs must never contain spaces from multiword abbreviations. */
+const descriptionId = term => 'gaeo-term-description-' +
+  term.toLowerCase().replace(/[^\p{L}\p{N}_-]+/gu, '-');
+
 export function installTermHints(doc = document) {
   if (!doc.body || doc.documentElement.dataset.gaeoTermHints === 'ready') return;
   doc.documentElement.dataset.gaeoTermHints = 'ready';
@@ -469,7 +473,7 @@ export function installTermHints(doc = document) {
   descriptions.dataset.gaeoTermDefinitions = '';
   for (const [term, definition] of Object.entries(definitions)) {
     const description = doc.createElement('span');
-    description.id = `gaeo-term-description-${term.toLowerCase()}`;
+    description.id = descriptionId(term);
     description.textContent = definition;
     descriptions.append(description);
   }
@@ -488,7 +492,7 @@ export function installTermHints(doc = document) {
     if (text.includes(' ')) trigger.classList.add('gaeo-term-trigger--phrase');
     trigger.dataset.gaeoTerm = term;
     trigger.setAttribute('aria-label', labels(term));
-    trigger.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
+    trigger.setAttribute('aria-describedby', descriptionId(term));
     trigger.setAttribute('aria-controls', tooltip.id);
     trigger.setAttribute('aria-expanded', 'false');
     const label = doc.createElement('span');
@@ -505,7 +509,7 @@ export function installTermHints(doc = document) {
     button.dataset.gaeoTerm = term;
     button.dataset.gaeoTermLinkHelp = '';
     button.setAttribute('aria-label', labels(term));
-    button.setAttribute('aria-describedby', `gaeo-term-description-${term.toLowerCase()}`);
+    button.setAttribute('aria-describedby', descriptionId(term));
     button.setAttribute('aria-controls', tooltip.id);
     button.setAttribute('aria-expanded', 'false');
     button.textContent = '?';
