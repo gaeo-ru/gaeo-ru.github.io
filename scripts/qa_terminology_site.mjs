@@ -13,7 +13,7 @@ const routes = [
   '/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/rankings/wms/', '/professional-biography/', '/en/industries/fulfillment/',
-  '/en/services/', '/en/strategies/measurement/'
+  '/en/', '/en/services/', '/en/strategies/measurement/'
 ];
 const viewports = [
   { width: 1440, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 720 }
@@ -131,7 +131,7 @@ try {
       mark: Boolean(element.querySelector('.gaeo-term-mark[aria-hidden="true"]')),
       labelStyle: element.classList.contains('gaeo-term-trigger--reference') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment'].map(term => [term, controls.filter(control => control.term === term).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart'].map(term => [term, controls.filter(control => control.term === term).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Plain accessible term control without a question icon ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -144,6 +144,15 @@ try {
     current.documentWidth = before.document;
     assert.ok(before.document <= viewport.width + 1, 'Document overflow: ' + JSON.stringify(before));
     if (route === '/') assert.ok(current.controlCounts.BMR > 0, 'Homepage needs an explanation for its BMR metric');
+    if (route === '/' || route === '/en/') {
+      assert.equal(current.controlCounts.AIStart, 1, 'History hint exists exactly once on ' + route);
+      const proof = await page.locator('.hero-proof').innerText();
+      assert.ok(proof.includes(lang === 'ru' ? 'с 1997 года' : 'since 1997'), 'Correct first AI-study year');
+      assert.ok(!proof.includes('1998'), 'No old AI-study year in hero');
+      const statistics = await page.locator('.trustbar').innerText();
+      assert.ok(statistics.includes('70+'), 'Publications statement reflects documented count');
+      assert.ok(!statistics.includes('40+'), 'Legacy publications count removed');
+    }
     if (route === '/strategies/measurement/') {
       assert.ok(current.controlCounts.BMR > 0, 'Measurement page BMR control');
       assert.ok(current.controlCounts.SoV > 0, 'Measurement page SoV control');
@@ -155,11 +164,11 @@ try {
       assert.ok(current.controlCounts.Fulfillment > 0, 'Fulfillment industry page must explain its category');
 
     // Capture tops before any tooltip interaction or automatic scrolling.
-    if ([1440, 390].includes(viewport.width) && ['/', '/services/'].includes(route)) {
+    if ([1440, 390].includes(viewport.width) && ['/', '/en/', '/services/'].includes(route)) {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
-      await screenshot(page, current, route === '/' ? 'home-top' : 'services-top');
+      await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment']) {
+    for (const term of ['GEO', 'AEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
@@ -177,11 +186,12 @@ try {
       const capture = [1440, 390].includes(viewport.width) &&
         ((route === '/strategies/measurement/' && ['BMR', 'SoV'].includes(term)) ||
          (route === '/services/geo-audit/' && term === 'GEO') ||
-         (route === '/professional-biography/' && term === 'AEO'));
+         (route === '/professional-biography/' && term === 'AEO') ||
+         ((route === '/' || route === '/en/') && term === 'AIStart'));
       if (capture) {
         // Reset the reading window immediately before capturing the live popup.
         await trigger.click();
-        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : 'geo-audit'}-${term}-tooltip`);
+        await screenshot(page, current, `${route === '/strategies/measurement/' ? 'measurement' : route === '/professional-biography/' ? 'biography' : route === '/' ? 'home' : route === '/en/' ? 'en-home' : 'geo-audit'}-${term}-tooltip`);
       }
       await page.keyboard.press('Escape');
       assert.equal(await tooltip.isVisible(), false, 'Escape dismisses live tooltip');

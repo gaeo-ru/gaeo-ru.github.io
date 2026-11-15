@@ -47,6 +47,9 @@ test('exact user wording and the requested display duration are retained', () =>
   assert.equal(TERM_DEFINITIONS.ru.Fulfillment, 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.');
   assert.equal(TERM_DEFINITIONS.en.WMS, 'WMS (Warehouse Management System) — a warehouse management system.');
   assert.equal(TERM_DEFINITIONS.en.Fulfillment, 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.');
+  assert.equal(TERM_DEFINITIONS.ru.AIStart, 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
+  assert.equal(TERM_DEFINITIONS.en.AIStart, "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks.");
+  assert.deepEqual(findTermMatches('С 1997 года изучаю ИИ, с 2008 года занимаюсь SEO'), [], 'The historic year is contextual and never globally decorated');
   for (const definition of Object.values(TERM_DEFINITIONS.en)) assert.doesNotMatch(definition, /[А-Яа-я]/);
 });
 

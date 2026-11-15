@@ -6,7 +6,8 @@ export const TERM_DEFINITIONS = Object.freeze({
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
     WMS: 'WMS (Warehouse Management System) — система управления складом.',
-    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.'
+    Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.',
+    AIStart: 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.'
   }),
   en: Object.freeze({
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
@@ -14,7 +15,8 @@ export const TERM_DEFINITIONS = Object.freeze({
     BMR: 'BMR (Brand Mention Rate) - the share of AI answers that mention a brand',
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
-    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.'
+    Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.',
+    AIStart: "In 1997–1998, I studied under Vladimir Nikolayevich Pilshchikov, an associate professor at Moscow State University's Faculty of Computational Mathematics and Cybernetics and creator of the USSR's first programming system for AI tasks."
   })
 });
 

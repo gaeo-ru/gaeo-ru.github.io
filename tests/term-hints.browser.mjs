@@ -24,6 +24,7 @@ try {
     <h1 id="heading">Сравнение <span>GEO</span> и SEO</h1>
     <p id="metrics">Измеряем BMR и SoV.</p>
     <p id="aeo">AEO помогает подготовить контент.</p>
+    <p id="historical">Начал учиться: <b><button type="button" class="gaeo-term-trigger" data-gaeo-term="AIStart" aria-label="Как началось изучение ИИ" aria-describedby="gaeo-term-description-aistart" aria-controls="gaeo-term-tooltip" aria-expanded="false"><span class="gaeo-term-label">с 1997 года</span></button></b></p>
     <p id="warehouse">WMS и фулфилмент помогают складу. Для фулфилмента и фулфилментов.</p>
     <p id="warehouse-expanded">WMS (Warehouse Management System) и Фулфилмент (Fulfillment).</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
@@ -52,6 +53,7 @@ try {
   assert.equal(await page.locator('#compound [data-gaeo-term="GEO"]').count(), 1);
   assert.equal(await page.locator('#compound [data-gaeo-term="AEO"]').count(), 1);
   assert.equal(await page.locator('#aeo [data-gaeo-term="AEO"]').count(), 1);
+  assert.equal(await page.locator('#historical [data-gaeo-term="AIStart"]').count(), 1);
   assert.equal(await page.locator('#warehouse [data-gaeo-term="WMS"]').count(), 1);
   assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
@@ -83,6 +85,11 @@ try {
   assert.equal(await tooltip.textContent(), 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей');
   assert.equal(await page.locator('#aeo .gaeo-term-label').evaluate(element => getComputedStyle(element).textDecorationStyle), 'dotted', 'The active term keeps its dotted underline');
   await page.keyboard.press('Escape');
+  await page.locator('#historical [data-gaeo-term="AIStart"]').click();
+  assert.equal(await tooltip.textContent(), 'В 1997–1998 годах учился у Владимира Николаевича Пильщикова, доцента ВМиК МГУ, создателя первой в СССР системы программирования для задач ИИ.');
+  assert.equal(await page.locator('#historical .gaeo-term-label').evaluate(el => getComputedStyle(el).textDecorationStyle), 'dotted');
+  await tooltip.click();
+  assert.equal(await tooltip.isVisible(), false, 'Manual history hint closes on click');
   await page.locator('#warehouse [data-gaeo-term="WMS"]').click();
   assert.equal(await tooltip.textContent(), 'WMS (Warehouse Management System) — система управления складом.');
   await tooltip.click();
@@ -184,7 +191,7 @@ try {
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
   }
   assert.equal(await english.locator('.gaeo-term-mark,.gaeo-term-reference').count(), 0);
-  console.log(`Term hint browser QA passed: 6 terms, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
+  console.log(`Term hint browser QA passed: 6 glossary terms plus manually attached AI history hint, dotted text without icons, unchanged links, keyboard, mutation, idempotence, language, 320 px layout, visible at 3.9 s and closed when checked at ${elapsed} ms, click-to-dismiss.`);
 } finally {
   await browser.close();
 }
