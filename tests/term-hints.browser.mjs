@@ -36,6 +36,9 @@ try {
     <p id="github-explained">GitHub — это онлайн-платформа для хранения кода.</p>
     <p id="commerce">Опыт E-commerce, e-commerce и СТМ.</p>
     <p id="commerce-expanded">E-commerce - электронная коммерция; СТМ - собственная торговая марка.</p>
+    <p id="new-terms">FRS shortlist SKU PRR SCR RAR RRR PPSR DMC MICE КМ/КМД СКУД VIN ЭПТС PSI Astro ТЗ СРО BIM</p>
+    <p id="terms-expanded">PRR (Product Recommendation Rate), PSI (PageSpeed Insights), КМД (конструкции металлические деталировочные), Astro — инструмент для разработки контентных сайтов.</p>
+    <p id="lower-distance">До объекта 20 км, на схеме используются КМ и КМД.</p>
     <p id="already"><b>GEO</b> (Generative Engine Optimization)</p>
     <p id="already-aeo"><strong>AEO</strong> (Answer Engine Optimization)</p>
     <p id="brand">GAEO.ru, GEOLOGY, GEO@example.ru, https://example.ru/GEO/</p>
@@ -100,6 +103,11 @@ try {
   assert.equal(await page.locator('#commerce [data-gaeo-term="Ecommerce"]').count(), 2);
   assert.equal(await page.locator('#commerce [data-gaeo-term="STM"]').count(), 1);
   assert.equal(await page.locator('#commerce-expanded [data-gaeo-term]').count(), 0, 'Inline E-commerce and СТМ explanations require no hints');
+  assert.deepEqual(await page.locator('#new-terms [data-gaeo-term]').evaluateAll(els => els.map(e => e.dataset.gaeoTerm)),
+    ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]);
+  assert.equal(await page.locator('#terms-expanded [data-gaeo-term]').count(), 0, 'No duplicate glossary hints for defined terms');
+  assert.equal(await page.locator('#lower-distance [data-gaeo-term="KM"]').count(), 1, 'Uppercase КМ is not lowercase км');
+  assert.equal(await page.locator('#lower-distance [data-gaeo-term="KMD"]').count(), 1);
   assert.equal(await page.locator('#already [data-gaeo-term], #already-aeo [data-gaeo-term], #code [data-gaeo-term], #brand [data-gaeo-term], #off [data-gaeo-term], header [data-gaeo-term], form [data-gaeo-term], a [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('.gaeo-term-mark,.gaeo-term-reference,.gaeo-term-link-label,[data-gaeo-term-link-label]').count(), 0, 'No obsolete controls');
   assert.equal(await page.locator('#case-heading .gaeo-term-link-inline > a + button.gaeo-term-link-help[data-gaeo-term="BMR"]').count(), 1, 'BMR help icon follows link in wrapper');
@@ -183,6 +191,13 @@ try {
   assert.equal(await tooltip.textContent(), 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
   await tooltip.evaluate(element => element.click());
 
+  for (const term of ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]) {
+    const trigger = page.locator('#new-terms [data-gaeo-term="' + term + '"]').first();
+    await trigger.click();
+    assert.ok(await tooltip.isVisible(), 'Tooltip visible for ' + term);
+    assert.ok((await tooltip.textContent()).length > 30, 'Full glossary definition for ' + term);
+    await page.keyboard.press('Escape');
+  }
   // Mouse hover has no persistence once the pointer leaves the dotted text or the ?.
   await bmr.hover();
   assert.ok(await tooltip.isVisible(), 'Desktop: hovering over the dotted term opens help');
@@ -291,7 +306,7 @@ try {
   assert.equal(await touchTip.isVisible(), false, 'Touch: tap on popup dismisses it');
 
   const english = await browser.newPage({ viewport: { width: 320, height: 640 } });
-  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, SEO, BMR, SoV, WMS, Fulfillment and GitHub</p></body></html>');
+  await english.setContent('<!doctype html><html lang="en"><head><title>Terms</title></head><body><p>GEO, AEO, SEO, BMR, SoV, WMS, Fulfillment, GitHub, FRS, shortlist, SKU, PRR, SCR, RAR, RRR, PPSR, DMC, MICE, KM, KMD, SKUD, VIN, EPTS, PSI, Astro, TZ, SRO and BIM</p></body></html>');
   await english.addStyleTag({ content: css });
   await english.addScriptTag({ type: 'module', content: js });
   for (const [term, definition] of Object.entries({
@@ -302,7 +317,27 @@ try {
     SoV: 'SoV (Share of Voice) - a brand’s share of mentions among all brands mentioned in an AI answer',
     WMS: 'WMS (Warehouse Management System) — a warehouse management system.',
     Fulfillment: 'Fulfillment — e-commerce logistics services covering the full order cycle, from receiving goods at a warehouse to shipping to buyers and handling returns.',
-    GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.'
+    GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.',
+    FRS: 'FRS (First Recommendation Share) - the share of AI answers in which a participant is the first recognized full person name. It measures mention order, not necessarily a recommendation.',
+    Shortlist: 'Shortlist (short list) - a small selection of providers, candidates or options retained for further consideration.',
+    SKU: 'SKU (Stock Keeping Unit) - an inventory unit identifying a specific product variant with its characteristics and configuration.',
+    PRR: 'PRR (Product Recommendation Rate) - the share of relevant product-selection AI answers recommending the target product or product line.',
+    SCR: 'SCR (Seller Criterion Rate) - the share of AI answers spontaneously adding a seller-selection criterion when the user did not specify one.',
+    RAR: 'RAR (Retailer Association Rate) - the share of answers correctly linking a real benefit to the target retailer, among answers where the relevant seller criterion appeared.',
+    RRR: 'RRR (Retailer Recommendation Rate) - the share of eligible AI answers explicitly suggesting the target retailer as a purchase option.',
+    PPSR: 'PPSR (Price Premium Survival Rate) - the share of paired AI answers retaining the retailer recommendation despite a cheaper offer for an identical SKU, measured at different price gaps.',
+    DMC: 'DMC (Destination Management Company) - a local travel operator coordinating destination services such as transfers, accommodation, excursions and trip support.',
+    MICE: 'MICE (Meetings, Incentives, Conferences, Exhibitions) - business tourism involving meetings, incentive trips, conferences and exhibitions.',
+    KM: 'KM (metal structures, steel structure design drawings) - the Russian working-documentation stage defining metal structure design solutions and requirements.',
+    KMD: 'KMD (metal structure detailing drawings) - Russian fabrication and erection detail drawings developed from KM design documentation.',
+    SKUD: 'SKUD (access control and management system) - hardware and software used to authorize, monitor and record access by people or vehicles to a site.',
+    VIN: 'VIN (Vehicle Identification Number) - a manufacturer-assigned identifier used to distinguish an individual vehicle.',
+    EPTS: 'EPTS (electronic vehicle passport) - Russia\'s digital vehicle document containing identification and technical information.',
+    PSI: 'PSI (PageSpeed Insights) - Google\'s service for analyzing a webpage\'s performance and loading speed.',
+    Astro: 'Astro is a tool for building content-focused websites, including blogs, landing pages, portfolios, catalogs, online stores and documentation.',
+    TZ: 'TZ (technical specification) - a document defining work requirements, expected deliverables and acceptance criteria.',
+    SRO: 'SRO (self-regulatory organization) - an association of industry professionals that sets standards and oversees member compliance. Membership may be required for certain construction and design activities in Russia.',
+    BIM: 'BIM (Building Information Modeling) - creating and using a digital model of a building or infrastructure asset across design, construction and operation.'
   })) {
     await english.locator(`[data-gaeo-term="${term}"]`).click();
     assert.equal(await english.locator('#gaeo-term-tooltip').textContent(), definition);
