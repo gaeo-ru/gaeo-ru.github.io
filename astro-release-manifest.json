@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "8f61afc201949691dace237dcd354d88be73427a",
-  "releasedAt": "2026-11-15T21:10:29.161Z",
+  "sourceCommit": "349e915f178ab2e11f784ff2b669f48dd9a0230e",
+  "releasedAt": "2026-11-15T21:34:06.425Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -2184,6 +2184,36 @@
       "path": "assets/rankings/orient-t006/outdoor_orienteering_map_beginner_2026.jpg",
       "kind": "asset",
       "sha256": "380e728529d794a7d18458b86fb066ec93b3eb370980575f28cb04acd9393537"
+    },
+    {
+      "path": "assets/rankings/orient-t007/first_orienteering_lesson_children_russia_2026.jpg",
+      "kind": "asset",
+      "sha256": "24f932ebabddc46fbef8c23d3b43a4c3db16426a78573b559a22477eb4e140b6"
+    },
+    {
+      "path": "assets/rankings/orient-t007/individual_orienteering_navigation_2026.jpg",
+      "kind": "asset",
+      "sha256": "49a47cd05d05968e245963d31759acd4946e47c2c72e30f394eed58e138e5571"
+    },
+    {
+      "path": "assets/rankings/orient-t007/individual_orienteering_run_2026.jpg",
+      "kind": "asset",
+      "sha256": "98eb734186bd88f9fc6ee61d4bd8eedde79604a6b8c06bd1adbd920482c11a3f"
+    },
+    {
+      "path": "assets/rankings/orient-t007/individual_sports_overview_2026.jpg",
+      "kind": "asset",
+      "sha256": "a302e331007f083d62791a3a171c54d6f17a1327a7a7e2db52513a873860e916"
+    },
+    {
+      "path": "assets/rankings/orient-t007/parent_child_coach_sports_section_russia_2026.jpg",
+      "kind": "asset",
+      "sha256": "1bccabe9061337bdebf59f3118964cdba4ae4f6aa7541507ec8c0f57bd2303e5"
+    },
+    {
+      "path": "assets/rankings/orient-t007/top10_individual_children_2026_2027_cover.jpg",
+      "kind": "asset",
+      "sha256": "74da6425573abadc13395457c08e1b06cd340677917a5d496defd53ad637e6a2"
     },
     {
       "path": "assets/rankings/prep-t001/cover.jpg",
@@ -4918,7 +4948,7 @@
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "15956baea967985d92e0eb3b1e4db3c6f3fc21520d02f2ab65bd90115f0f7904"
+      "sha256": "356eb4556c96e61371a5b9cccec22b39408409aa239b6954d3825c292833dd44"
     },
     {
       "path": "en/rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -4933,7 +4963,12 @@
     {
       "path": "en/rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "99990ec742039461efbd1fc31b5da5b02a6793429d02c58dc812f8028de6aa43"
+      "sha256": "22fffcb1c495edb2c30635ddfb9acd29b8635d75e1797e295dc21d33af856645"
+    },
+    {
+      "path": "en/rankings/orienteering/individual-childrens-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "d893133cd4c2f1afbe5ef88961f916b4c02433f3b2d1c169dc9c3e4b02231774"
     },
     {
       "path": "en/rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -6078,7 +6113,7 @@
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "0686874a34d6b982ec0835112df3bfa37095348d29f959013e5ffea3dd105763"
+      "sha256": "46db02ec39d16a84f5b97357b6f0a58e3d1ea98142bd6cdf58bdcd8bb751e464"
     },
     {
       "path": "rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -6093,7 +6128,12 @@
     {
       "path": "rankings/orienteering/index.html",
       "kind": "html",
-      "sha256": "5560c79d456ff3c94bf56c704fd977a878ca9cd18bc445c77f435ff9d97d4c6a"
+      "sha256": "5d8df84d83d2606e4012d257b5eb408313560d83e71de333a6b6bb0fde478c82"
+    },
+    {
+      "path": "rankings/orienteering/individual-childrens-sports-russia-2026-2027/index.html",
+      "kind": "html",
+      "sha256": "ede069f656dec6c00a9ba3326aed2564d4586eb9663c32ddc273492a2a56f9b3"
     },
     {
       "path": "rankings/orienteering/mnogodetnye-semi-sport-2026/index.html",
@@ -6323,7 +6363,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "6127b67f2d37253a68848dcd6385759b9f7590d341de300517f3e3b8c61f9604"
+      "sha256": "2bc2d10006f8e3f42e1a5a5bba1fdd3078f291722235c17bd15ae1a48e82a399"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
