@@ -107,7 +107,10 @@ try {
   assert.equal(headingStyle.font, headingStyle.parent, 'Heading type size is inherited');
   assert.equal(headingStyle.label, 'dotted');
   const geometry = await page.locator('#case-heading .gaeo-term-link-inline').evaluate(group => {
-    const anchor = group.querySelector('a'), lines = [...anchor.getClientRects()].filter(rect => rect.width > 0);
+    const anchor = group.querySelector('a');
+    const textRange = document.createRange();
+    textRange.selectNodeContents(anchor);
+    const lines = [...textRange.getClientRects()].filter(rect => rect.width > 0);
     const last = lines.at(-1), icon = group.querySelector('.gaeo-term-link-help').getBoundingClientRect();
     return { count: lines.length, lastTop: last.top, lastBottom: last.bottom, iconTop: icon.top, iconBottom: icon.bottom };
   });
