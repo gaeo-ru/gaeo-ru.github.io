@@ -187,3 +187,36 @@ test('ambiguous RU terms are context-sensitive; extensions do not appear in Engl
   assert.deepEqual(findTermMatches('Новая ГИС ЖКХ и BMR', { language: 'en' }).map(hit => hit.term), ['BMR']);
   assert.deepEqual(findTermMatches('ВМиК', { language: 'en' }), []);
 });
+
+
+test('B2B wording and RU-only glossary for Web Vitals, JavaScript, canonical, indexing and feeds', () => {
+  assert.equal(TERM_DEFINITIONS.ru.B2B, 'B2B (Business-to-Business) - продажи товаров и услуг одними компаниями - другим');
+  assert.match(TERM_DEFINITIONS.ru['Core Web Vitals'], /LCP, INP и CLS/);
+  assert.match(TERM_DEFINITIONS.ru.JavaScript, /язык программирования/);
+  assert.match(TERM_DEFINITIONS.ru.canonical, /предпочтительного адреса страницы/);
+  assert.match(TERM_DEFINITIONS.ru.Indexing, /поисковый индекс/);
+  assert.match(TERM_DEFINITIONS.ru.Feed, /выгрузка данных/);
+  assert.deepEqual(
+    findTermMatches('Core Web Vitals, JavaScript, canonical и Canonical, Javascript и javascript').map(hit => hit.term),
+    ['Core Web Vitals', 'JavaScript', 'canonical', 'canonical', 'JavaScript', 'JavaScript']
+  );
+  assert.deepEqual(
+    findTermMatches('Индексация сайта, индексации страниц, индексацию URL, индексацией робота, об индексациях сайтов')
+      .map(hit => hit.term),
+    ['Indexing', 'Indexing', 'Indexing', 'Indexing', 'Indexing']
+  );
+  assert.deepEqual(
+    findTermMatches('Фид, фида, фиду, фидом, фиды, фидов, фидами, в фидах')
+      .map(hit => hit.term),
+    ['Feed', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed', 'Feed']
+  );
+  assert.deepEqual(findTermMatches('Индексация зарплат и пенсий'), []);
+  assert.deepEqual(findTermMatches('Конфиденциальность, фидер и фидбек'), []);
+  assert.deepEqual(findTermMatches('canonical (канонический URL)').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('Core Web Vitals (основные веб-показатели)').map(hit => hit.term), []);
+  assert.deepEqual(findTermMatches('https://example.ru/canonical/'), []);
+  assert.deepEqual(
+    findTermMatches('Core Web Vitals, JavaScript, canonical, индексация, фид', { language: 'en' }),
+    []
+  );
+});
