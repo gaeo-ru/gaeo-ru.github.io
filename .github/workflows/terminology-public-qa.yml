@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 75
     env:
-      GAEO_EXPECTED_SOURCE_COMMIT: 3dafe6b99e446b4034348d3cb515ed0153e6d136
+      GAEO_EXPECTED_SOURCE_COMMIT: a6b652e5e904f42fd39c65cd200121312ae22310
     steps:
       - name: Check out read-only QA source
         uses: actions/checkout@v4
