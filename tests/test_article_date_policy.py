@@ -11,10 +11,10 @@ from scripts import ensure_article_dates as dates
 BASE = "https://gaeo.ru/cases/example/"
 
 
-def page(published="2026-10-26", modified="2026-10-26", lang="ru", ranking=False, extra=False):
+def page(published="2026-10-26", modified="2026-10-26", lang="ru", ranking=False, extra=False, kind="Article"):
     graph = {
         "@context": "https://schema.org",
-        "@graph": [{"@type": "Article", "@id": BASE + "#article",
+        "@graph": [{"@type": kind, "@id": BASE + "#article",
                     "datePublished": published, "dateModified": modified}],
     }
     if ranking:
@@ -75,6 +75,15 @@ class DatePolicyTests(unittest.TestCase):
         self.assertIn('<time datetime="2026-10-26">October 26, 2026</time>', first)
         self.assertIn("<span>5 min read</span>", first)
         self.assertEqual(first.count('class="article-date"'), 1)
+
+    def test_creativework_case_normalized_with_og_dates(self):
+        first, second = normalize_twice(page(lang="en", kind="CreativeWork"))
+        self.assertEqual(first, second)
+        self.assertIn('<time datetime="2026-10-26">October 26, 2026</time>', first)
+        self.assertEqual(first.count('property="article:published_time"'), 1)
+        self.assertEqual(first.count('property="article:modified_time"'), 1)
+        self.assertNotIn("Published:", first)
+        self.assertNotIn("Updated:", first)
 
     def test_bad_chronology_rejected(self):
         with tempfile.TemporaryDirectory(dir=dates.ROOT) as directory:
