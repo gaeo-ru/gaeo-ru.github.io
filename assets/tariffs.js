@@ -11,10 +11,13 @@
    const trigger=picker.querySelector('[data-plan-trigger]');
    const choicesPanel=picker.querySelector('[data-plan-options]');
    const current=picker.querySelector('[data-plan-current]');
+   const currentName=current.querySelector('[data-plan-name]');
+   const currentPrice=current.querySelector('[data-plan-price]');
    const choices=[...picker.querySelectorAll('[data-plan-choice]')];
    const syncPicker=()=>{
     const plan=config.plans.find(p=>p.id===planSelect.value)||config.plans[0];
-    current.textContent=plan.name;
+    currentName.textContent=plan.name;
+    currentPrice.textContent=plan.label;
     choices.forEach(choice=>choice.setAttribute('aria-selected',String(choice.dataset.planChoice===plan.id)));
    };
    const closePicker=(focusTrigger=false)=>{
