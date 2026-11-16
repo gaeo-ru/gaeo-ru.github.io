@@ -58,10 +58,20 @@ test('E-commerce and СТМ have global glossary matches with proper boundaries'
   assert.equal(TERM_DEFINITIONS.ru.STM, 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.');
 });
 
-test('GitHub is recognized in ordinary prose and not inside longer names', () => {
+test('GitHub Pages takes priority over GitHub, including inside links', () => {
   assert.deepEqual(findTermMatches('GitHub, github, Github, GITHUB и GitHub Pages').map(hit => hit.term),
-    ['GitHub', 'GitHub', 'GitHub', 'GitHub', 'GitHub']);
-  assert.deepEqual(findTermMatches('myGitHub GitHub123 GitHubness GitHub_'), []);
+    ['GitHub', 'GitHub', 'GitHub', 'GitHub', 'GitHubPages']);
+  assert.deepEqual(findTermMatches('GitHub Pages и GitHub, github pages, GITHUB PAGES').map(hit => hit.term),
+    ['GitHubPages', 'GitHub', 'GitHubPages', 'GitHubPages']);
+  assert.deepEqual(findTermMatches('GitHub Pages и GitHub', { language: 'en' }).map(hit => hit.term),
+    ['GitHubPages', 'GitHub']);
+  assert.deepEqual(findTermMatches('GitHub Pages').map(hit => hit.text), ['GitHub Pages'],
+    'The entire phrase receives one explanation; GitHub is not nested within it');
+  assert.deepEqual(findTermMatches('myGitHub GitHub123 GitHubness GitHub_ myGitHub Pages'), []);
+  assert.equal(TERM_DEFINITIONS.ru.GitHubPages,
+    'GitHub Pages — сервис GitHub для размещения статических сайтов. Он публикует файлы сайта из репозитория без отдельного веб-сервера.');
+  assert.equal(TERM_DEFINITIONS.en.GitHubPages,
+    'GitHub Pages is a GitHub service for hosting static websites directly from a repository.');
   assert.equal(TERM_DEFINITIONS.ru.GitHub,
     'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
   assert.equal(TERM_DEFINITIONS.en.GitHub,

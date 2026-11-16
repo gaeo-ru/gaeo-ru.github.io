@@ -242,6 +242,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     Prompt: 'Промпт - текст запроса или инструкции, которую человек передает нейросети для получения ответа или выполнения задачи.',
     GEO: 'GEO (Generative Engine Optimization) - продвижение в рекомендациях нейросетей',
     SEO: 'SEO (Search Engine Optimization) - продвижение сайта в поисковых системах',
+    GitHubPages: 'GitHub Pages — сервис GitHub для размещения статических сайтов. Он публикует файлы сайта из репозитория без отдельного веб-сервера.',
     GitHub: 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.',
     FRS: 'FRS (First Recommendation Share) - доля ответов нейросетей, в которых имя участника первым встречается среди распознанных полных имен. Измеряет порядок упоминания, а не обязательно рекомендацию.',
     Shortlist: 'Shortlist (short list) - короткий список предварительно отобранных компаний, специалистов или других вариантов для дальнейшего выбора.',
@@ -277,6 +278,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     SchemaOrg: 'Schema.org - a shared vocabulary of types and properties for structured data describing organizations, products, articles and other entities.',
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
+    GitHubPages: 'GitHub Pages is a GitHub service for hosting static websites directly from a repository.',
     GitHub: 'GitHub is an online platform for hosting code, managing its versions and collaborating on projects.',
     FRS: 'FRS (First Recommendation Share) - the share of AI answers in which a participant is the first recognized full person name. It measures mention order, not necessarily a recommendation.',
     Shortlist: 'Shortlist (short list) - a small selection of providers, candidates or options retained for further consideration.',
@@ -342,7 +344,7 @@ const FULL_NAMES = {
   BIM: 'Building\\s+Information\\s+Modeling'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|[Gg][Ii][Tt][Hh][Uu][Bb]|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Gg][Ii][Tt][Hh][Uu][Bb]\s+[Pp][Aa][Gg][Ee][Ss]|[Gg][Ii][Tt][Hh][Uu][Bb])|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 // Longest-match-first Russian glossary; works on source text without changing URLs or links.
 const EXTRA_ALIASES = Object.freeze({
@@ -413,6 +415,8 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Prompt') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:текст\s+)?(?:запрос|инструкц)[\p{L}]*\s+(?:для|к|нейросет)/iu.test(after);
   if (term === 'GitHub') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?онлайн-платформа(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?online\s+platform\b/i.test(after);
+  if (term === 'GitHubPages') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:сервис|хостинг)\s+(?:GitHub\s+)?(?:для\s+)?(?:размещения|публикации|хостинга)\s+(?:статических\s+)?сайт/iu.test(after) ||
+    /^\s*(?:[(:—–-]\s*)?(?:is\s+)?(?:a\s+)?GitHub\s+service\s+for\s+hosting\s+static\s+websites/i.test(after);
   if (term === 'Astro') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?инструмент\s+для\s+разработки(?![\p{L}\p{N}])/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:is\s+(?:an?\s+)?)?tool\s+for\s+building\b/i.test(after);
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
@@ -477,6 +481,7 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : value === 'SOV' ? 'SoV'
       : /^[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)$/u.test(value) ? 'Ecommerce'
       : /^[Сс][Тт][Мм]$/u.test(value) ? 'STM'
+      : /^github\s+pages$/i.test(value) ? 'GitHubPages'
       : /^github$/i.test(value) ? 'GitHub'
       : /^shortlists?$/i.test(value) ? 'Shortlist'
       : /^astro$/i.test(value) ? 'Astro'
@@ -559,8 +564,8 @@ export function installTermHints(doc = document) {
   const language = doc.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'ru';
   const definitions = TERM_DEFINITIONS[language];
   const labels = language === 'en'
-    ? term => `Explain ${({SchemaOrg:'Schema.org',Ecommerce:'E-commerce',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО'}[term] || term)}`
-    : term => `Что означает ${({SchemaOrg:'Schema.org',Interlinking:'перелинковка',ContentDistribution:'дистрибуция контента',Intent:'интент',Prompt:'промпт',Fulfillment:'фулфилмент',Ecommerce:'E-commerce',STM:'СТМ',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО',Shortlist:'shortlist'}[term] || term)}`;
+    ? term => `Explain ${({SchemaOrg:'Schema.org',GitHubPages:'GitHub Pages',Ecommerce:'E-commerce',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО'}[term] || term)}`
+    : term => `Что означает ${({SchemaOrg:'Schema.org',GitHubPages:'GitHub Pages',Interlinking:'перелинковка',ContentDistribution:'дистрибуция контента',Intent:'интент',Prompt:'промпт',Fulfillment:'фулфилмент',Ecommerce:'E-commerce',STM:'СТМ',KM:'КМ',KMD:'КМД',SKUD:'СКУД',EPTS:'ЭПТС',TZ:'ТЗ',SRO:'СРО',Shortlist:'shortlist'}[term] || term)}`;
   const descriptions = doc.createElement('div');
   descriptions.hidden = true;
   descriptions.dataset.gaeoTermDefinitions = '';

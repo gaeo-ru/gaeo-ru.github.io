@@ -52,6 +52,8 @@ try {
     <p id="punctuation-context"><a href="#case">Как измерять BMR</a>. Следом идет пояснение.</p>
     <div class="tariff-actions"><a class="button" id="tariff-cta" href="#destination">GEO promotion</a></div>
     <p id="github-link"><a href="#destination">Исходники на GitHub</a></p>
+    <p id="github-pages-link"><a href="#destination">Развернуть на GitHub Pages</a></p>
+    <p id="github-combined-link"><a href="#destination">GitHub Pages и GitHub</a></p>
     <p id="expanded-link"><a href="#expanded">BMR (Brand Mention Rate)</a></p>
     <p id="expanded-seo-link"><a href="#expanded">SEO (Search Engine Optimization)</a></p>
     <h3 id="seo-linked"><a href="#seo-case">Разработка сайта с SEO/GEO-проверками</a></h3>
@@ -192,9 +194,13 @@ try {
   assert.equal(await page.locator('#warehouse [data-gaeo-term="WMS"]').count(), 1);
   assert.equal(await page.locator('#warehouse [data-gaeo-term="Fulfillment"]').count(), 3);
   assert.equal(await page.locator('#warehouse-expanded [data-gaeo-term]').count(), 0, 'Adjacent full definitions require no popup');
-  assert.equal(await page.locator('#github [data-gaeo-term="GitHub"]').count(), 2, 'GitHub and GitHub Pages are explained');
+  assert.equal(await page.locator('#github [data-gaeo-term="GitHub"]').count(), 1, 'Standalone GitHub is explained once');
+  assert.equal(await page.locator('#github [data-gaeo-term="GitHubPages"]').count(), 1, 'GitHub Pages is one distinct phrase without nested GitHub');
   assert.equal(await page.locator('#github-explained [data-gaeo-term]').count(), 0, 'No hint where GitHub is already defined');
   assert.equal(await page.locator('#github-link .gaeo-term-link-help[data-gaeo-term="GitHub"]').count(), 1, 'GitHub within a link gets independent help');
+  assert.equal(await page.locator('#github-pages-link .gaeo-term-link-help[data-gaeo-term="GitHubPages"]').count(), 1, 'Linked GitHub Pages gets one help icon');
+  assert.equal(await page.locator('#github-combined-link .gaeo-term-link-help').count(), 1, 'Two terms in one link share one icon');
+  assert.equal(await page.locator('#github-combined-link .gaeo-term-link-help').getAttribute('data-gaeo-term'), 'GitHubPages|GitHub', 'The longer term is first');
   assert.equal(await page.locator('#github-link a [data-gaeo-term]').count(), 0, 'GitHub link has no dotted underline');
   assert.equal(await page.locator('#commerce [data-gaeo-term="Ecommerce"]').count(), 2);
   assert.equal(await page.locator('#commerce [data-gaeo-term="STM"]').count(), 1);
@@ -300,6 +306,13 @@ try {
   assert.equal(await tooltip.isVisible(), false);
   await page.locator('#github-link .gaeo-term-link-help[data-gaeo-term="GitHub"]').click();
   assert.equal(await tooltip.textContent(), 'GitHub — это онлайн-платформа для хранения кода, управления его версиями и совместной работы над проектами.');
+  await tooltip.evaluate(element => element.click());
+  await page.locator('#github-pages-link .gaeo-term-link-help').click();
+  assert.equal(await tooltip.textContent(), TERM_DEFINITIONS.ru.GitHubPages);
+  await tooltip.evaluate(element => element.click());
+  await page.locator('#github-combined-link .gaeo-term-link-help').click();
+  assert.deepEqual(await tooltip.locator('.gaeo-term-tooltip-entry').allTextContents(),
+    [TERM_DEFINITIONS.ru.GitHubPages, TERM_DEFINITIONS.ru.GitHub]);
   await tooltip.evaluate(element => element.click());
 
   for (const term of ["FRS","Shortlist","SKU","PRR","SCR","RAR","RRR","PPSR","DMC","MICE","KM","KMD","SKUD","VIN","EPTS","PSI","Astro","TZ","SRO","BIM"]) {

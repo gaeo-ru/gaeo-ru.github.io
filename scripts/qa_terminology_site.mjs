@@ -10,7 +10,7 @@ import { TERM_DEFINITIONS } from '../public/assets/term-hints.js';
 const root = resolve('dist');
 const evidence = resolve('visual-terminology');
 const routes = [
-  '/', '/cases/', '/en/cases/', '/services/', '/services/website-development/', '/services/geo-audit/',
+  '/', '/cases/', '/en/cases/', '/cases/razrabotka-sajta-gaeo/', '/en/cases/razrabotka-sajta-gaeo/', '/services/', '/services/website-development/', '/services/geo-audit/',
   '/tarify/', '/strategies/measurement/', '/industries/legal/', '/industries/fulfillment/',
   '/cases/methodlab-rost-neyrovidimosti-19-52-procenta/', '/en/cases/methodlab-ai-visibility-growth/',
   '/rankings/wms/', '/professional-biography/', '/en/professional-biography/', '/en/industries/fulfillment/',
@@ -140,7 +140,7 @@ try {
       linkHelp: element.matches('.gaeo-term-link-help'),
       labelStyle: element.matches('.gaeo-term-link-help') ? null : getComputedStyle(element.querySelector('.gaeo-term-label')).textDecorationStyle
     })));
-    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.terms.includes(term)).length]));
+    current.controlCounts = Object.fromEntries(['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'GitHubPages', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart'].map(term => [term, controls.filter(control => control.terms.includes(term)).length]));
     for (const control of controls) {
       assert.ok(control.button && control.name && !control.mark, 'Accessible standalone term control ' + JSON.stringify(control));
       assert.equal(control.nested, false, 'Term button nested inside another interactive control');
@@ -299,10 +299,21 @@ try {
     if (route === '/professional-biography/') assert.ok(current.controlCounts.AEO > 0, 'Biography page AEO control');
     if (route === '/professional-biography/' || route === '/en/professional-biography/') {
       assert.ok(current.controlCounts.Ecommerce > 0, 'Biography has an E-commerce term hint on ' + route);
-      assert.ok(current.controlCounts.GitHub > 0, 'Biography has a GitHub term hint on ' + route);
+      assert.ok(current.controlCounts.GitHub + current.controlCounts.GitHubPages > 0, 'Biography has a GitHub or GitHub Pages hint on ' + route);
     }
     if (route === '/services/website-development/')
-      assert.ok(current.controlCounts.GitHub > 0, 'Website development page has a GitHub hint');
+      assert.ok(current.controlCounts.GitHub + current.controlCounts.GitHubPages > 0, 'Website development page explains GitHub or GitHub Pages');
+    if (route === '/cases/razrabotka-sajta-gaeo/' || route === '/en/cases/razrabotka-sajta-gaeo/') {
+      assert.ok(current.controlCounts.GitHubPages > 0, 'GAEO development case explains GitHub Pages separately');
+      const dateDot = await page.locator('.article-meta > .article-date').evaluate(element => ({
+        before: getComputedStyle(element, '::before').content,
+        width: getComputedStyle(element, '::before').width,
+        height: getComputedStyle(element, '::before').height
+      }));
+      assert.equal(dateDot.before, '""', 'A decorative circular marker separates author and editorial date');
+      assert.equal(dateDot.width, '4px');
+      assert.equal(dateDot.height, '4px');
+    }
     if (route === '/strategies/ecommerce-measurement/')
       for (const term of ['PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'SKU'])
         assert.ok(current.controlCounts[term] > 0, 'E-commerce methodology must explain ' + term);
@@ -327,7 +338,7 @@ try {
       await page.evaluate(() => scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       await screenshot(page, current, route === '/' ? 'home-top' : route === '/en/' ? 'en-home-top' : 'services-top');
     }
-    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart']) {
+    for (const term of ['GEO', 'AEO', 'SEO', 'BMR', 'SoV', 'WMS', 'Fulfillment', 'Ecommerce', 'STM', 'GitHub', 'GitHubPages', 'FRS', 'Shortlist', 'SKU', 'PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'DMC', 'MICE', 'KM', 'KMD', 'SKUD', 'VIN', 'EPTS', 'PSI', 'Astro', 'TZ', 'SRO', 'BIM', 'BrandFound', 'AIStart']) {
       const trigger = await firstVisibleTerm(page, term);
       if (!trigger) continue; // Explained terms and closed FAQ answers need no forced control.
       await trigger.scrollIntoViewIfNeeded();
