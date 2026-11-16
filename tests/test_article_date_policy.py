@@ -43,6 +43,12 @@ def normalize_twice(source):
 
 
 class DatePolicyTests(unittest.TestCase):
+    def test_author_date_separator_is_declared_in_shared_styles(self):
+        css = (dates.ROOT / "public" / "assets" / "internal.css").read_text(encoding="utf-8")
+        self.assertIn(".article-meta > .article-date:not(:first-child)::before", css)
+        self.assertIn("flex:0 0 4px;width:4px;height:4px;", css)
+        self.assertIn("border-radius:50%", css)
+
     def test_unedited_ru_has_one_date_preserves_badges(self):
         first, second = normalize_twice(page(extra=True))
         self.assertEqual(first, second)

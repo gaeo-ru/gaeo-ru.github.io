@@ -305,14 +305,6 @@ try {
       assert.ok(current.controlCounts.GitHub + current.controlCounts.GitHubPages > 0, 'Website development page explains GitHub or GitHub Pages');
     if (route === '/cases/razrabotka-sajta-gaeo/' || route === '/en/cases/razrabotka-sajta-gaeo/') {
       assert.ok(current.controlCounts.GitHubPages > 0, 'GAEO development case explains GitHub Pages separately');
-      const dateDot = await page.locator('.article-meta > .article-date').evaluate(element => ({
-        before: getComputedStyle(element, '::before').content,
-        width: getComputedStyle(element, '::before').width,
-        height: getComputedStyle(element, '::before').height
-      }));
-      assert.equal(dateDot.before, '""', 'A decorative circular marker separates author and editorial date');
-      assert.equal(dateDot.width, '4px');
-      assert.equal(dateDot.height, '4px');
     }
     if (route === '/strategies/ecommerce-measurement/')
       for (const term of ['PRR', 'SCR', 'RAR', 'RRR', 'PPSR', 'SKU'])
