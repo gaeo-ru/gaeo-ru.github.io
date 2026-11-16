@@ -117,7 +117,7 @@ for(const [rel,blocks] of Object.entries(approved)){
    assert.equal(count(source,'<!-- GAEO_DESIGN:'+block+' -->'),0,'Unexpected component on '+rel);
   }
  }
- if(/^(?:en\\/)?cases\\/razrabotka-sajta-prep-center\\/index\\.html$/.test(rel)){
+ if(/^(?:en\/)?cases\/razrabotka-sajta-prep-center\/index\.html$/.test(rel)){
   const ctaStart=source.indexOf('<div class="page-cta">');
   assert.ok(ctaStart>source.indexOf('<!-- GAEO_DESIGN:FAQ -->'),'Prep-Center CTA comes after shared FAQ '+rel);
   assert.equal(count(source,'class="page-cta"'),1,'One source CTA '+rel);
