@@ -68,6 +68,8 @@ const industryItems=getIndustryCatalog(lang);
   assert.equal((source.match(/name="platform"/g)||[]).length,13,'All 13 available platforms');
   const config=JSON.parse(source.match(/<script type="application\/json" data-tariff-config>([\s\S]*?)<\/script>/)[1]);
   assert.deepEqual(config.plans.map(p=>p.amount),[79900,99900,114900],'Browser uses canonical plan prices');
+  assert.ok(config.plans.every(p=>p.label.includes(lang==='en'?'/month':'/мес.')),'Each plan has its canonical monthly starting price');
+  assert.ok(source.includes('data-plan-price'),'Collapsed plan picker renders its price');
  }
  const guaranteeHtml=read((lang==='en'?'/en':'')+'/services/geo-guarantee/');
  const mainPart=guaranteeHtml.match(/<main class="tariff-detail">([\s\S]*?)<\/main>/)?.[1]||'';
@@ -192,12 +194,13 @@ try{
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
    if(width!==1100)assert.equal(overflow,false,'No horizontal overflow '+width+' '+route); // Existing non-tariff styles overflow at intermediate desktop widths.
    if(['/', '/en/', '/tarify/', '/en/pricing/'].includes(route)){
-    // The calculator uses a wrapping picker; the industry filter remains native.
+    // Both tariff and industry controls use accessible inline dropdowns.
     const picker=page.locator('[data-tariff-calculator] [data-plan-picker]');
     assert.equal(await picker.isVisible(),true,'Multiline picker is visible '+width+' '+route);
     assert.equal(await picker.locator('[data-plan-choice]').count(),3,'Three monthly plans available');
     assert.equal(await page.locator('[data-tariff-calculator] select[name="plan"]').isHidden(),true,'Native no-script select hidden after enhancement');
     const planTrigger=picker.locator('[data-plan-trigger]');
+    assert.match(await planTrigger.locator('[data-plan-price]').innerText(),/79[\s,\u00a0\u202f]?900/,'Starting price visible in collapsed plan '+width+' '+route);
     const guaranteed=picker.locator('[data-plan-choice="guarantee"] .tariff-plan-picker__name');
     await planTrigger.click();
     assert.equal(await picker.locator('[data-plan-options]').isVisible(),true,'Picker opens '+width+' '+route);
@@ -210,22 +213,32 @@ try{
     await planTrigger.press('Escape');
     assert.equal(await picker.locator('[data-plan-options]').isHidden(),true,'Escape closes picker');
     if(route==='/tarify/'||route==='/en/pricing/'){
-     const selectStyles=await page.locator('[data-industry-catalog] select').evaluateAll(elements=>elements.map(element=>{
-      const css=getComputedStyle(element);
-      return {appearance:css.appearance,paddingRight:parseFloat(css.paddingRight),backgroundImage:css.backgroundImage,backgroundPosition:css.backgroundPosition};
-     }));
-     assert.ok(selectStyles.length>0,'Industry filter retains a native dropdown '+route);
-     for(const style of selectStyles){
-      assert.equal(style.appearance,'none','Custom dropdown arrow '+width+' '+route);
-      assert.ok(style.paddingRight>=54,'Dropdown text stays clear of inset arrow '+width+' '+route);
-      assert.ok(style.backgroundImage.includes('linear-gradient')&&style.backgroundPosition.includes('31px')&&style.backgroundPosition.includes('21px'),
-       'Dark arrow is visibly inset '+width+' '+route+' '+JSON.stringify(style));
-     }
+     const catalog=page.locator('[data-industry-catalog]');
+     const industryPicker=catalog.locator('[data-industry-picker]');
+     const industryTrigger=industryPicker.locator('[data-industry-trigger]');
+     const industryOptions=industryPicker.locator('[data-industry-options]');
+     assert.equal(await industryPicker.isVisible(),true,'Industry picker is custom-enhanced '+width+' '+route);
+     assert.equal(await catalog.locator('[data-catalog-group]').isHidden(),true,'Native select is hidden after enhancement');
+     assert.equal(await industryTrigger.innerText(),route.startsWith('/en/')?'All industries':'Все отрасли','Default industry label');
+     await industryTrigger.click();
+     assert.equal(await industryOptions.isVisible(),true,'Industry list opens inline '+width+' '+route);
+     assert.equal(await industryPicker.locator('[data-industry-choice]').count(),
+      await catalog.locator('[data-catalog-group] option').count(),'Every industry group retained');
+     const dropdown=await industryOptions.evaluate(element=>{
+      const r=element.getBoundingClientRect();
+      return {left:r.left,right:r.right,viewport:innerWidth,scrollable:element.scrollHeight>element.clientHeight};
+     });
+     assert.ok(dropdown.left>=0&&dropdown.right<=width+1,'Industry menu fits viewport '+width+' '+route+' '+JSON.stringify(dropdown));
+     assert.equal(dropdown.scrollable,true,'Long industry list scrolls within its popup');
+     if(width===390||width===1440)
+      await industryPicker.screenshot({path:'visual-tariffs/industry-open-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
+     await industryTrigger.press('Escape');
+     assert.equal(await industryOptions.isHidden(),true,'Escape closes industry list');
     }
     if((width===390||width===1440)&&(route==='/tarify/'||route==='/en/pricing/')){
      const lang=route.startsWith('/en/')?'en':'ru';
      await planTrigger.screenshot({path:'visual-tariffs/select-plan-'+lang+'-'+width+'.png'});
-     await page.locator('[data-industry-catalog] select[data-catalog-group]').screenshot({path:'visual-tariffs/select-industry-'+lang+'-'+width+'.png'});
+     await page.locator('[data-industry-catalog] [data-industry-trigger]').screenshot({path:'visual-tariffs/select-industry-'+lang+'-'+width+'.png'});
     }
     const control=page.locator('[data-tariff-calculator]');
     const blocks=control.locator('[name="blocks"]');
@@ -294,6 +307,7 @@ try{
     await calculator.locator('[data-plan-trigger]').click();
     await calculator.locator('[data-plan-choice="guarantee"]').click();
     assert.equal(await calculator.locator('[name="plan"]').inputValue(),'guarantee','Custom picker updates the canonical plan');
+    assert.match(await calculator.locator('[data-plan-price]').innerText(),/114[\s,\u00a0\u202f]?900/,'Collapsed plan price follows selected tariff');
     const planGoalsBefore=await page.evaluate(()=>window.__gaeo4aGoals.filter(e=>e.name==='tariff_plan_select').length);
     assert.ok(planGoalsBefore>=1,'User choice emits the plan conversion event');
     await calculator.locator('[name="plan"]').evaluate(el=>el.dispatchEvent(new Event('change',{bubbles:true})));
@@ -317,10 +331,17 @@ try{
     await catalog.locator('[data-catalog-empty] button[type="reset"]').click();
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),107,'Reset restores all categories');
     const groupSelect=catalog.locator('[data-catalog-group]');
+    const groupPicker=catalog.locator('[data-industry-picker]');
+    const groupTrigger=groupPicker.locator('[data-industry-trigger]');
     const firstGroup=await groupSelect.locator('option:not([value=""])').first().getAttribute('value');
-    await groupSelect.selectOption(firstGroup);
+    await groupTrigger.click();
+    await groupPicker.locator('[data-industry-choice]').nth(1).click();
+    assert.equal(await groupSelect.inputValue(),firstGroup,'Custom picker updates canonical industry select');
+    assert.equal(await groupTrigger.getAttribute('aria-expanded'),'false','Selecting a group closes the picker');
     assert.ok((await catalog.locator('[data-catalog-item]:visible').count())<107,'Industry group narrows results');
-    await groupSelect.selectOption('');
+    await catalog.locator('.industry-catalog__reset').click();
+    assert.equal(await groupSelect.inputValue(),'','Reset clears native industry group');
+    assert.equal(await groupTrigger.innerText(),route.startsWith('/en/')?'All industries':'Все отрасли','Reset synchronizes custom label');
     assert.equal(await catalog.locator('[data-catalog-item]:visible').count(),107,'Clearing group restores results');
     const illustrations=catalog.locator('[data-catalog-item]:visible .industry-catalog__image img');
     const currentUrl=page.url();
