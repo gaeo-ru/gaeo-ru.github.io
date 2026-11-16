@@ -144,6 +144,10 @@ for(const path of pricingPaths){
   assert.equal(staticCards,6,'All 6 plans must be static and non-collapsible '+path);
   assert.equal(details,0,'No collapsible cards on the tariff directory '+path);
   assert.ok(!html.match(/<article class="price tariff-plan"[\s\S]*?class="price-toggle"/),'No collapse controls on tariff directory '+path);
+ }else if(path.includes('/industries/')){
+  assert.equal(staticCards,3,'All 3 industry plans must stay permanently expanded '+path);
+  assert.equal(details,0,'No collapsible tariff cards on industry pages '+path);
+  assert.equal((html.match(/class="price-toggle"/g)||[]).length,0,'No collapse crosses on industry tariff cards '+path);
  }else{
   assert.equal(staticCards,0,'Keep existing accordions on non-directory pages '+path);
   assert.ok(details===3||details===6,'Expected 3 industry or 6 homepage plan accordions on '+path);
@@ -443,6 +447,7 @@ try{
   for(const route of [
    '/industries/metal-structures/','/en/industries/metal-structures/',
    '/industries/legal/','/en/industries/legal/',
+   '/industries/tourism/','/en/industries/tourism/',
    '/industries/bankruptcy-lawyers/','/en/industries/bankruptcy-lawyers/'
   ]){
    await page.goto(origin+route,{waitUntil:'domcontentloaded'});
@@ -450,7 +455,7 @@ try{
    await page.evaluate(()=>document.fonts.ready);
    await page.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
    const rows=await page.evaluate(()=>{
-    const cards=[...document.querySelectorAll('.tariff-plans > details.tariff-plan[open]')];
+    const cards=[...document.querySelectorAll('.tariff-plans > article.tariff-plan')];
     const out=[];
     for(const card of cards){
      const top=card.getBoundingClientRect().top;
@@ -460,9 +465,17 @@ try{
      row.buttonTops.push(button.getBoundingClientRect().top);
      row.actions.push(getComputedStyle(card.querySelector('.tariff-actions')).marginTop);
     }
-    return {cards:cards.length,rows:out,docWidth:document.documentElement.scrollWidth,viewport:innerWidth};
+    return {cards:cards.length,rows:out,docWidth:document.documentElement.scrollWidth,viewport:innerWidth,
+      collapsible:document.querySelectorAll('.tariff-plans > details.tariff-plan').length,
+      toggles:document.querySelectorAll('.tariff-plans .price-toggle').length,
+      allVisible:cards.every(card=>getComputedStyle(card.querySelector('.price-details')).display!=='none'),
+      staticCursor:cards.every(card=>getComputedStyle(card.querySelector('.price-summary')).cursor!=='pointer')};
    });
    assert.equal(rows.cards,3,'Three industry plans on '+route);
+   assert.equal(rows.collapsible,0,'Industry tariffs are never collapsible '+route);
+   assert.equal(rows.toggles,0,'Industry tariffs have no collapse crosses '+route);
+   assert.equal(rows.allVisible,true,'All tariff contents remain visible '+route);
+   assert.equal(rows.staticCursor,true,'Industry tariff headings are non-interactive '+route);
    if(width>720)for(const row of rows.rows){
     if(row.buttonTops.length<2)continue;
     assert.ok(Math.max(...row.buttonTops)-Math.min(...row.buttonTops)<=3,
