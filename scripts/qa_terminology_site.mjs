@@ -274,21 +274,22 @@ try {
     }
     if (route === '/services/geo-audit/') assert.ok(current.controlCounts.GEO > 0, 'Audit page GEO control');
     if (route === '/tarify/') {
-      const audit = page.locator('.tariff-plans > details.tariff-plan[data-plan="audit"]');
-      const term = audit.locator('summary.price-summary .tariff-summary [data-gaeo-term="GEO"]');
+      // The full pricing directory deliberately uses permanent article cards.
+      // The homepage still uses collapsible <details>, verified elsewhere.
+      const audit = page.locator('.tariff-plans > article.tariff-plan[data-plan="audit"]');
+      const term = audit.locator('.price-summary .tariff-summary [data-gaeo-term="GEO"]');
       assert.equal(await term.count(), 1, 'Full-audit tariff must underline GEO in its summary');
       assert.equal(await term.locator('.gaeo-term-label').evaluate(el => getComputedStyle(el).textDecorationStyle),
         'dotted', 'GEO tariff text uses dotted underline');
-      assert.ok(await audit.evaluate(el => el.open), 'Audit tariff initially expanded');
+      assert.ok(await audit.locator('.price-details').isVisible(), 'Audit scope remains visible');
       await term.click();
       assert.equal(await page.locator('#gaeo-term-tooltip').textContent(),
         TERM_DEFINITIONS[lang].GEO, 'GEO tariff tooltip shows the shared definition');
-      assert.ok(await audit.evaluate(el => el.open), 'Tapping term does not collapse tariff');
+      assert.ok(await audit.locator('.price-details').isVisible(), 'Tapping term does not hide the scope');
       await page.keyboard.press('Escape');
-      await audit.locator('summary.price-summary h3').click();
-      assert.equal(await audit.evaluate(el => el.open), false, 'Tapping heading still collapses tariff');
-      await audit.locator('summary.price-summary h3').click();
-      assert.ok(await audit.evaluate(el => el.open), 'Tapping heading still expands tariff');
+      await audit.locator('.price-summary h3').click();
+      assert.ok(await audit.locator('.price-details').isVisible(), 'Tapping heading cannot collapse the tariff');
+      assert.equal(await audit.locator('.price-toggle').count(), 0, 'Permanent pricing cards have no collapse toggle');
     }
     if (route === '/cases/') {
       assert.ok(current.controlCounts.SEO > 0, 'SEO explanations added to development case text');
