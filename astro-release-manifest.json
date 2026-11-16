@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "4a01d6a32c847a9dc864eddaf597cd4f6415ae61",
-  "releasedAt": "2026-11-16T07:37:34.501Z",
+  "sourceCommit": "e3997c2436f602ee6313ed114d7d4364596004ad",
+  "releasedAt": "2026-11-16T09:41:14.470Z",
   "files": [
     {
       "path": "_astro/LegacyPage.B73wXqis.css",
@@ -264,6 +264,21 @@
       "path": "assets/cases/methodlab-bmr-case-cover-2026.webp",
       "kind": "asset",
       "sha256": "4aa26bbc98743818a64b309e86caf6fa7ca8dc787bacd9d8eae93817c18c40bb"
+    },
+    {
+      "path": "assets/cases/prep-recovery-calculator.jpg",
+      "kind": "asset",
+      "sha256": "f34076ad7181ede7391ed772399b486071f08c5c706dff452bbbd47985a4c95a"
+    },
+    {
+      "path": "assets/cases/prep-recovery-cover.png",
+      "kind": "asset",
+      "sha256": "5d3583bbcc4e1b822af10e7640e602a81dab98108f548d8639c4699865c990c3"
+    },
+    {
+      "path": "assets/cases/prep-recovery-home.jpg",
+      "kind": "asset",
+      "sha256": "c4740b1eda4d84c9cef6f4abb1b8a991767d41924836fe04232b103e0956b054"
     },
     {
       "path": "assets/cases/prepcenter-6-paying-clients-cover-2026.jpg",
@@ -2638,7 +2653,7 @@
     {
       "path": "assets/site-development.css",
       "kind": "asset",
-      "sha256": "a3edd50a86c204493d9f988c9da8464aec024fa81aa4bacb54972af7cb1e5960"
+      "sha256": "336a282d4a222ea6c116dacaf5799cc55a970600774059f67180e939a686012b"
     },
     {
       "path": "assets/site.js",
@@ -4023,7 +4038,7 @@
     {
       "path": "cases/index.html",
       "kind": "html",
-      "sha256": "3e099d057483c3df97b778d247d7fdefe3458a39ee4deb4b049ff5ed949eef1a"
+      "sha256": "03c262c319f23f7ed6e6bd91f67a395fafda537588029a3f67481498f48cab1f"
     },
     {
       "path": "cases/methodlab-rost-neyrovidimosti-19-52-procenta/index.html",
@@ -4038,7 +4053,7 @@
     {
       "path": "cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "e1d8ec38c47cfcef6701b05a498f72ec9e4357aa7c6dd40ccec24b9583ac0f54"
+      "sha256": "b47875087ef5df900d933a53b3883f1affd343af03197f501144f01bb3ed9a14"
     },
     {
       "path": "cases/razrabotka-sajta-gaeo/index.html",
@@ -4049,6 +4064,11 @@
       "path": "cases/razrabotka-sajta-indexresearch/index.html",
       "kind": "html",
       "sha256": "ce2a716cb7a1ae87c9b62778871931ba57dfc040018498b4ab8d5af1c9b284d7"
+    },
+    {
+      "path": "cases/razrabotka-sajta-prep-center/index.html",
+      "kind": "html",
+      "sha256": "12f819da8ee12dc627853b4c94c7a113b7d666e205b23debc8b538f8b08e0839"
     },
     {
       "path": "CNAME",
@@ -4118,7 +4138,7 @@
     {
       "path": "en/cases/index.html",
       "kind": "html",
-      "sha256": "0ab72987228721d942a17635fbdd3843210131a2e6a35a8bfe378d59a01316d9"
+      "sha256": "3accd78d916135d628d418a9f0cbdb01a1c08691e76a34d29b4790d5acfdd195"
     },
     {
       "path": "en/cases/methodlab-ai-visibility-growth/index.html",
@@ -4133,7 +4153,7 @@
     {
       "path": "en/cases/razrabotka-sajta-adatours/index.html",
       "kind": "html",
-      "sha256": "6268174ea44c1a8c8e5ac5fbcf37be236eaec607acfd7e74bbfa0dcd8fe1a0e8"
+      "sha256": "e861c9c02ba3467f3f72e5b5420a86350c69946c7005eff14982d782f2c0ae24"
     },
     {
       "path": "en/cases/razrabotka-sajta-gaeo/index.html",
@@ -4146,6 +4166,11 @@
       "sha256": "f9386d4b77cb04bdc82f82a6a2f7743dcb5cb611a2e5486160f544f51a15b1d8"
     },
     {
+      "path": "en/cases/razrabotka-sajta-prep-center/index.html",
+      "kind": "html",
+      "sha256": "dd012750af903bc167e887a9deecd78f02efb4419badb73f008012efcf07accc"
+    },
+    {
       "path": "en/geo-for-real-estate/index.html",
       "kind": "html",
       "sha256": "fb877e5eaa4afe0fee3dec2910b16323af713ad9780fa7891efebea4d755cb86"
@@ -4153,182 +4178,182 @@
     {
       "path": "en/index.html",
       "kind": "html",
-      "sha256": "a55052a8397709738fa795ea869fe34730928a9ce2af31da9961650e9c9d7dba"
+      "sha256": "7fd2511165877c62b6b6d9f04811cc249eeec28223dd488f648bd3f678c06810"
     },
     {
       "path": "en/industries/agricultural-input-suppliers/index.html",
       "kind": "html",
-      "sha256": "b42208fad2d039d954892128b1bc31349adfd9d0324a848c7493c56cef3f0adf"
+      "sha256": "2c1b3da571bebff775db36d5770b52d4c8b89a3cd2611b90a66a67186fdbe03f"
     },
     {
       "path": "en/industries/agricultural-producers/index.html",
       "kind": "html",
-      "sha256": "ac1712dd04f79604e4024336b59c296aceaa43c0456c10903dc11928999465a1"
+      "sha256": "326725d7ca8afabc06c726383ffa4532198e8af9b2b595bdd1311548f28a012a"
     },
     {
       "path": "en/industries/architectural-design-bureaus/index.html",
       "kind": "html",
-      "sha256": "3decedf2266e7ef71fb40a3f2900533280e9d7bb20dd0de64572722164868659"
+      "sha256": "f0b96a3e8e534fb65764aa5499bff655ee4b6e7dfcb6964f340ce3afffeee513"
     },
     {
       "path": "en/industries/audit-assurance-consulting-firms/index.html",
       "kind": "html",
-      "sha256": "afeb2fd60560d386dd7dfd3b483f36eb0036762428cc84b077f2b3909e830ae8"
+      "sha256": "c985ad75c739ebbeac56a68f36063c580222b347740730bed8ebd03c763a6e92"
     },
     {
       "path": "en/industries/auto-parts-online-stores/index.html",
       "kind": "html",
-      "sha256": "589abe5bdf75ed70cbb69e34042eca4ebbe6f11f5b5b15307bfdb8a74df65206"
+      "sha256": "675ee4acc8ec55272cc2a551b2023af8f23f1ecf69b69f06b296b7d358ec93b3"
     },
     {
       "path": "en/industries/auto-repair-shops/index.html",
       "kind": "html",
-      "sha256": "3c4c032b03cb51cfa4e301ef2fea59918648163398056841ab77dfdf6b03a686"
+      "sha256": "dbeb19614edbd0ed564b66bd508e226f1f27dc93702c2eac9bee4c93b2baeaab"
     },
     {
       "path": "en/industries/automotive/index.html",
       "kind": "html",
-      "sha256": "ba7c99df37ab87396f9276457225dd6c8defa160fe39b661ca6c4bb55dd06dc8"
+      "sha256": "354d8742e5d4fbd279cf6cf8cf09e27e07ed7664dfa7dd54fee05748b3515a02"
     },
     {
       "path": "en/industries/bankruptcy-lawyers/index.html",
       "kind": "html",
-      "sha256": "458ed5a89396f384a5ff47296801c46f24b0f254c6fea3651ae99c4d830e617d"
+      "sha256": "dd3c9776372fb74c2e3277eea4601ec1e7449ee54b259e3179b6d69cbdc8c5a2"
     },
     {
       "path": "en/industries/beauty-salons-cosmetology-practices/index.html",
       "kind": "html",
-      "sha256": "9a2e7151fdfa03aa7baea4d876c4511e45e1c342495163df35b8c4bed718040f"
+      "sha256": "1259f49e1e1fa976ced315c66351906ede94fefbc1953f162ac6d9018923b3c3"
     },
     {
       "path": "en/industries/bi-analytics-platforms/index.html",
       "kind": "html",
-      "sha256": "d95c42613828c3840023a5794b86f5d4bb80209fb24afd1049064e329837fc51"
+      "sha256": "26da64fe3a3899d80aac04da3efb7ef9c5fbb9d84af057c822fa88427e2d76e3"
     },
     {
       "path": "en/industries/branding-marketing-agencies/index.html",
       "kind": "html",
-      "sha256": "d8d2422767f7da56d0ec1b88f34ca2c7ec185b15b28fd58b4e0138035862fea8"
+      "sha256": "140a947e7ecc1bf1c2e9a7286aa3fc3418d4bc6ea99b5e856b7c4a595c369825"
     },
     {
       "path": "en/industries/building-material-manufacturers/index.html",
       "kind": "html",
-      "sha256": "2b454ac88d845d4f35fe3dd3fb64125a8968d41aac20c258dbfe49a18f5f1b8f"
+      "sha256": "fdad1eb2377561025ee0026c3dfbc18d78ff4b860dfae270f2cb855c7b0adad0"
     },
     {
       "path": "en/industries/car-dealerships/index.html",
       "kind": "html",
-      "sha256": "37093456b7959fc94a9a5fa8b983b0285fe55bffad5d554a420218c20150f378"
+      "sha256": "05fdb3c88cbd58fe6adfe3cd8d3a6ce92d2a69068164c59f5f7491de6ca39a86"
     },
     {
       "path": "en/industries/children-product-manufacturers/index.html",
       "kind": "html",
-      "sha256": "5c04036a29e0565cf244d32c615d6f9ec9e1b7dcf668b0fb4e4d3dbe6f484d35"
+      "sha256": "3574a097c2a1a7f4e6fd064fdfc15b261161066d5aa6838beeb48f8ad0344092"
     },
     {
       "path": "en/industries/childrens-education-centres/index.html",
       "kind": "html",
-      "sha256": "fc45f490407c4b1250a0509f488035cce514bc9a163ef38a8228f47ffee15aa4"
+      "sha256": "564b143ec396864ad05767fe4225d5040887d296476d5b20f461ec8ca4bcc000"
     },
     {
       "path": "en/industries/childrens-products-toys-online-stores/index.html",
       "kind": "html",
-      "sha256": "5979876530c850ff24d61dcc7cecc6c599e9286f800a1f308cc5bba854a000e1"
+      "sha256": "38f3eaf40ca5ada3032ec5634d52ac3df34bbe4d0e326ea60555379b67590412"
     },
     {
       "path": "en/industries/cleaning-companies/index.html",
       "kind": "html",
-      "sha256": "bbc66bd4c78415ff3d58db8fab9fbab336394bf7ac787ba7805ce393d2b4f04f"
+      "sha256": "5e2bf76f05da8fce3a109e4ae711a68475bf1e2f5fea82577a43dbcce3777997"
     },
     {
       "path": "en/industries/cloud-providers-data-centres/index.html",
       "kind": "html",
-      "sha256": "202ca6cbe9cf08cf6fd913092b3686924c8d7581123d9fcfa29147e19e842870"
+      "sha256": "75dc4c27630ed8753324e960c037fbdadd64ab0bd470b4ea8be911dc646996d6"
     },
     {
       "path": "en/industries/commercial-fit-out-contractors/index.html",
       "kind": "html",
-      "sha256": "d246326158979b0ee3ccbfb7663e278f6245f6ca07024f79a8a2430af40d1c07"
+      "sha256": "d2321d65e2c1d1219fab9506dc1ea8a4ea587ef0a0ca7406aabfd26c1ed8059d"
     },
     {
       "path": "en/industries/commercial-industrial-general-contractors/index.html",
       "kind": "html",
-      "sha256": "00f514c72536b91eca5b60b5ca00f3a921b8dee9d594cccb7fde06b330ae0c16"
+      "sha256": "1f45aa8a882f42187867cd85cf7a4f1a4ded8b74d74397675db142b847f71aae"
     },
     {
       "path": "en/industries/commercial-property-agencies/index.html",
       "kind": "html",
-      "sha256": "b8151f6c0d0bbf9f1f6b7323084a4f8673ef26653e419c82c2800883531f8b1f"
+      "sha256": "e162071d1c6200cbc1513822bb9270fa293179fc58f654e2179454764fe57967"
     },
     {
       "path": "en/industries/commercial-vehicle-machinery-dealers/index.html",
       "kind": "html",
-      "sha256": "517f008005c73da51327338b28de122c8ed910d3c6b715a4725e056b8447d930"
+      "sha256": "39a28fcaee13d237cfe0b92fcf95b1cd7493c2611b7dc9c64e1ab9d13f8ebbd1"
     },
     {
       "path": "en/industries/construction-equipment-rental/index.html",
       "kind": "html",
-      "sha256": "6845182bba5d8a7e32c014562b943330c1f3f07f163602cdf004054aef9bd5d1"
+      "sha256": "a9f9bbe148d069447a8850cc8d6c1a400ec6bda2726f73da21b6b63f81e3f5e0"
     },
     {
       "path": "en/industries/consulting-firms-independent-experts/index.html",
       "kind": "html",
-      "sha256": "d476bfea2db00326dedbe46b9be68080faca2fe6d82212c0d5fe8e432ca918d3"
+      "sha256": "0b17a2cb3b9546a39d4448165acc881f7a514d0939b271415c2a3c8862d43e83"
     },
     {
       "path": "en/industries/contract-cosmetics-manufacturers/index.html",
       "kind": "html",
-      "sha256": "551209223305d6c5ee1c0411f6168e49a83b5cea2ec4488b861ea4679845a01c"
+      "sha256": "e3c49da4c071c5de803ee13a0942cb2f3c4a78d80d5e8e6b8c4b281b1c3f1d0d"
     },
     {
       "path": "en/industries/corporate-travel-mice/index.html",
       "kind": "html",
-      "sha256": "94851e727044dc696de90184738eb29d3f0442c34880978f110c4e0f9afcb4ae"
+      "sha256": "622cc4c27dba420c96dc3949f993c17e1b39ec1e91395ae2df3602875a8b40b1"
     },
     {
       "path": "en/industries/cosmetics-brands/index.html",
       "kind": "html",
-      "sha256": "9798cf0de05142982fe7b1535691dff723afe3f585bdb500579bcbb407a839c5"
+      "sha256": "91704018b8395a2d918caea30f1055d9921a19ce95af02b17557e979cd4bc4ff"
     },
     {
       "path": "en/industries/cosmetics-perfume-online-stores/index.html",
       "kind": "html",
-      "sha256": "cc74a0a91afd2125892ca9273a6d1cb9f6f781290a8b55325afe4292372c249d"
+      "sha256": "3ffb68b94707a97da3666e11af57b67b66cbc1ea4056b8b0b0d6aa67954db571"
     },
     {
       "path": "en/industries/cottage-communities/index.html",
       "kind": "html",
-      "sha256": "2a243fac43a4dd481c94868a10d335348eec6d5b7a189fdbc80a95923a960239"
+      "sha256": "356ae192570909d081992fc8ceba7cdae04705b1219e23bf992b2b3315741706"
     },
     {
       "path": "en/industries/country-house-builders/index.html",
       "kind": "html",
-      "sha256": "95fe318cc2c4f520386f898b37fe168c85f5b7a211e80d6f8b1ce56b7357a879"
+      "sha256": "a7d92827a08b135888b787acf519686b9aaf7d1ce52d29ccd21d674f36c38acd"
     },
     {
       "path": "en/industries/crm-erp-platforms/index.html",
       "kind": "html",
-      "sha256": "89446de8d7313eb19711beb35781afe9ccc640f885d03d29fa33c65da5d07d21"
+      "sha256": "fa77a662edb72cb7f9df91636f27d81eaeb9ec414e7a852cb51adde6e7066280"
     },
     {
       "path": "en/industries/customs-representatives/index.html",
       "kind": "html",
-      "sha256": "109fad04da960846098fa2dec82aab063ba84a88109115c0d0c6cf268229e591"
+      "sha256": "12b4eb08ce11c240c4b9c91acdba4bae97022392bd4c1c2a2198d007b2cd2a9a"
     },
     {
       "path": "en/industries/cybersecurity-providers/index.html",
       "kind": "html",
-      "sha256": "e947e25389afb22b4c2bbfa3d283209ff345d4e86205f420f91a7f72afad4635"
+      "sha256": "90d31c2e2af51638121cea0710a721eab96db82c697f4622aeca542c8c3f159c"
     },
     {
       "path": "en/industries/dental-clinics/index.html",
       "kind": "html",
-      "sha256": "6ebb5c70d8b9816470bbdceb27e99390d8755dbb944ff17fab8e47e3453323e4"
+      "sha256": "506ca1ed543d3467f21dd2aec0ce15cc2d826291b51bdd9766400be50f5fcb01"
     },
     {
       "path": "en/industries/diagnostic-centres-medical-laboratories/index.html",
       "kind": "html",
-      "sha256": "2ae0f787d9bf45c30385ef498faeda3a43ff7c6851b615639bc30a265a87b8a8"
+      "sha256": "45a3569daaf0e21949402b991f7c4cc58cc5cb71f47e18585b4596d432e66861"
     },
     {
       "path": "en/industries/ecommerce/index.html",
@@ -4343,72 +4368,72 @@
     {
       "path": "en/industries/electrical-cable-product-suppliers/index.html",
       "kind": "html",
-      "sha256": "5da609c26ededccb8aeb9dc0810043a54dbc9b4359900a2f14130162223daa3d"
+      "sha256": "cb1165161f73d514666adf091e4ddc9d4a19fb00ba6df4be4e691517c29376fc"
     },
     {
       "path": "en/industries/electronic-document-flow/index.html",
       "kind": "html",
-      "sha256": "0817be4de0eceabc6124f9a0715016f33672fba5f4be597ed47ca76afb4ce3cb"
+      "sha256": "2fdae0f7de783d831d68ec02430dba615531a75802a6e69e0a4c9a8fe41115f1"
     },
     {
       "path": "en/industries/electronics-appliances-online-stores/index.html",
       "kind": "html",
-      "sha256": "97ba84dcfb6b43096f2cb23f8dcc6ef080bd670bc5d4aa34d8c066e31414ea2f"
+      "sha256": "9e38605cf430c1ad5a0939f981f17cd719eba63741bdbff64794d86bdca28057"
     },
     {
       "path": "en/industries/employment-migration-lawyers/index.html",
       "kind": "html",
-      "sha256": "71fc859bb63887b0e67136091b9119e4861d2ebaedd342129c2b4f9cb0341e3e"
+      "sha256": "c5b61acae86b99ec121078d30257fa3565a5292ea42c2d0f92201de7ce955b69"
     },
     {
       "path": "en/industries/engineering-installation-contractors/index.html",
       "kind": "html",
-      "sha256": "3422d52118b2a450674c9db73381d7358e04ac9f6e8315619b4af974fd9ba5b6"
+      "sha256": "598821eca760bb5bb886c3011f3dfae4b256cb5d9b089bb6bac5505053027d33"
     },
     {
       "path": "en/industries/enterprise-software/index.html",
       "kind": "html",
-      "sha256": "628502fe4a6a2ce354762148da65895ecf1fec740f60fdb6e25f64d78a8a091b"
+      "sha256": "54e9ffb750af5f7399f0e575fa6fa3962087908358d4b77cb780427e2cb25701"
     },
     {
       "path": "en/industries/facade-specialist-glazing-companies/index.html",
       "kind": "html",
-      "sha256": "da42e66631bb20d70f116355460c684af59738549bf18783fdfcf991dc8ff9b0"
+      "sha256": "0e0ffa0173caf63a16378742d505aac382eb719d6f917e6fa2ec47da95dbd1e0"
     },
     {
       "path": "en/industries/family-inheritance-lawyers/index.html",
       "kind": "html",
-      "sha256": "8d788b9a0a32dddb2708fec31cc158149b3f6a48a11d23e74b9c6d4d19f740fb"
+      "sha256": "480ac02aa655d1e05efc9c6318f46863e5d762a9643a095b1961fddbf382ae12"
     },
     {
       "path": "en/industries/fashion-apparel-brands/index.html",
       "kind": "html",
-      "sha256": "8c97e04781a328b8a59efffdc9ee64936f253633fb84920064a849b198556acf"
+      "sha256": "1b266848df1c38ae6ac773a22afff08177609c34d773465ff0de7f7973c2205c"
     },
     {
       "path": "en/industries/finance-insurance-accounting/index.html",
       "kind": "html",
-      "sha256": "b4ddec59d34746ef4bf185ff418f2b25cb6378f5e412a40c760b719ef38b2c16"
+      "sha256": "94eda9e64c750461eda443c64d1860ae71d7897e5cd358cd4a3184307a4a7963"
     },
     {
       "path": "en/industries/financial-investment-advisers/index.html",
       "kind": "html",
-      "sha256": "9b4301109756a8c83c81a88e3cb32127dba5223e46fc12692fa7c49286363911"
+      "sha256": "d38e7c89b8fee9ce4265adc21432e8559f3dbb72fc7e77eabf37b8e328f7016f"
     },
     {
       "path": "en/industries/fintech-payment-services/index.html",
       "kind": "html",
-      "sha256": "cdb8a68b50161fa70ddca213ef40ba40da9a0dfa4b82fd1d8181b616260a447d"
+      "sha256": "f346d7bcef0c9ee31fc873c3271cc73dfc06cc47e2a154b0772cc22206b6b2f7"
     },
     {
       "path": "en/industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "b1c0cb0155d3e9f3adb5e0ffa35a861810b78eab3d8a141eacbea30b68db967b"
+      "sha256": "e4e537fbe636be1022b1ebdac94e7ebec260fb82c9e238a426f261ea959ba97b"
     },
     {
       "path": "en/industries/food-producers-retailers/index.html",
       "kind": "html",
-      "sha256": "1a89bbfb586350a04b7d29a16eea3ea5dfd3f6cb07dae309470df9bf4b98559a"
+      "sha256": "6b2246346074eac8e9bc4ad76d286388ca47d9dc734de292cbd3c1b51d1b2f7f"
     },
     {
       "path": "en/industries/fulfillment/index.html",
@@ -4418,7 +4443,7 @@
     {
       "path": "en/industries/furniture/index.html",
       "kind": "html",
-      "sha256": "cc0802d317e4519acd85144d7325573508da755655049d71c169c444a30369c3"
+      "sha256": "5b1f4b2e3534848ac85670a6f36e088ccc054bdf70b02079a75b8d12f877dac3"
     },
     {
       "path": "en/industries/highload-it/index.html",
@@ -4428,27 +4453,27 @@
     {
       "path": "en/industries/home-appliance-repair-services/index.html",
       "kind": "html",
-      "sha256": "5cd51aed225589615beb292e842bfab1520f166a634a7983c8ff67f221a6f70a"
+      "sha256": "bea2f8ff1b68df94a0430080fa203093adbc0de3ea20bbc1a9befdc9e112648e"
     },
     {
       "path": "en/industries/home-improvement-online-stores/index.html",
       "kind": "html",
-      "sha256": "924809ac6fca6e157b1050df0d849dab2d418e2a6e4eb5fde801ba49ab6fbbeb"
+      "sha256": "ba40fe59c8805bfc8fa365d6f6ba2ad2f1e3a5b7a1d36fb6f90f4316120dd7f8"
     },
     {
       "path": "en/industries/hotels-country-resorts/index.html",
       "kind": "html",
-      "sha256": "699297341ce0a39b3aaefa7c3eeb974bb4f08e081c2b62773100e478d9f28603"
+      "sha256": "161ba3084483774db8f6bb81e0f032ebb5c67ffa2e685d9a98e44c45432de08d"
     },
     {
       "path": "en/industries/household-chemistry-brands/index.html",
       "kind": "html",
-      "sha256": "df5162251510ed6b7c97205f49d1756a5ac2a41771fffd684120cf15610592a9"
+      "sha256": "ababcfc1747a615ce6ae306db64e5f6db7cc0fa12ff9e97eda69a47ea6a5feac"
     },
     {
       "path": "en/industries/import-trade-support/index.html",
       "kind": "html",
-      "sha256": "23f998ba5aa08e6daab73ed5722d12ed209251bfffa8a4862519db956eb89ae1"
+      "sha256": "897e4542e834942318d5ff5c12f425c091e0efaf2390effbef368a98e4f769e6"
     },
     {
       "path": "en/industries/index.html",
@@ -4458,37 +4483,37 @@
     {
       "path": "en/industries/industrial-automation-service-companies/index.html",
       "kind": "html",
-      "sha256": "00843500bd293fdacd8bc3fdc7ce71b7a32d11c091b97f04851f82ebef6f80a7"
+      "sha256": "192d49cdb130675db92d2956ed7261fbb22176e8e17fac725c2ef6406bfed22f"
     },
     {
       "path": "en/industries/industrial-chemical-suppliers/index.html",
       "kind": "html",
-      "sha256": "551c3800a9de09e82db59aeb8d2a5264d366878e2045b8f28bccd34089bf17d9"
+      "sha256": "39ed047bb8777a768d217b7b0961304143a423f6fdd9dce804bf9fad1f7a0c3b"
     },
     {
       "path": "en/industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "06a0e0b45728f67dcb2f3a7eb27e55c6c3bd9f7b38520dabb2bf7243087d7678"
+      "sha256": "8c83f99784e44c88c5d67a56739587d26e499903848de896658b9e72e58b2cc0"
     },
     {
       "path": "en/industries/insurance-brokers/index.html",
       "kind": "html",
-      "sha256": "c5750b037121f00698485b3e6edb5a4df897101e2373a25a12b895a53a27e4b0"
+      "sha256": "3a141cdeca57a56ef3b33e81978e4540c8eed80f7174b3f7ee584f5567ecc22f"
     },
     {
       "path": "en/industries/intellectual-property-lawyers/index.html",
       "kind": "html",
-      "sha256": "7540e0efacb53721cd7b9dbacc5cbf85fae43fc1549def6d1ba205adf3fb36ec"
+      "sha256": "c1b585a0c152276b05d871b946b90bd41c5588d193d417d074fc4021d921f462"
     },
     {
       "path": "en/industries/interior-design-studios/index.html",
       "kind": "html",
-      "sha256": "f763c037b9b0eb80753be792441b2ae57432d14f4f6b65daa6597b95370fe050"
+      "sha256": "0ded6c91748f6fe234c6178a65c640d85a4cac9a98b1cf43e5b8af961a50e1ea"
     },
     {
       "path": "en/industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "45beff566faceccf5381525d5f1123b0e44b700d3e1eed7771c077d2f7f375bd"
+      "sha256": "50f633fac51ce4eaede19acfe34b149d2e60f4e330bbd9ef4f4dc6117beed4db"
     },
     {
       "path": "en/industries/international-logistics/index.html",
@@ -4498,22 +4523,22 @@
     {
       "path": "en/industries/jewelry-brands-workshops/index.html",
       "kind": "html",
-      "sha256": "b7ebde3b08df59a1d39dad6fca08e41ca80403f25c626cf02548ceec9c5f4f46"
+      "sha256": "3938a1f94ca22d0e1ea2e72cb9d1aafa86a7f8bdfe86ddd9d6c4f01f5d9d7506"
     },
     {
       "path": "en/industries/laboratory-measurement-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "924fc0d23a052ddc8cdf014c4f0f618a38f078af5f41430a69f097ec7bdb71b2"
+      "sha256": "d057b8c180228c8db96fc9b6c42e5ec14ff4b5fe7ed851de806cff8261a444f2"
     },
     {
       "path": "en/industries/landscape-site-improvement-contractors/index.html",
       "kind": "html",
-      "sha256": "03007396936bcb17d9b5f4bde105d05d96ab618b416b75ad9a540d4b7a91fd2d"
+      "sha256": "2f41b66d4c13d1166bfa229530c092e201fdcfe018fc6f50d222f917dc40966d"
     },
     {
       "path": "en/industries/leasing-companies/index.html",
       "kind": "html",
-      "sha256": "5bbd1aafbd2d3942372c304912d9704d560012071d16fbe065bc4d675d973033"
+      "sha256": "8918e0704e3b404ce4e11fc3e5ace05d04e41627eba18bd9cf707ab053faa329"
     },
     {
       "path": "en/industries/legal/index.html",
@@ -4528,7 +4553,7 @@
     {
       "path": "en/industries/luxury-real-estate-agencies/index.html",
       "kind": "html",
-      "sha256": "5abfedce5059b1e7fc71f0dd3e284b7cec30d60c61a9b50fd40a81ef9efa9deb"
+      "sha256": "e6808cdefd5060017e4017060491337f9fa6e6c33a5c6fee42ef5987d28d0d6e"
     },
     {
       "path": "en/industries/medical-care-providers/index.html",
@@ -4538,12 +4563,12 @@
     {
       "path": "en/industries/medical-device-manufacturers/index.html",
       "kind": "html",
-      "sha256": "36ebffccd6a5b065b82eb568bf4c0c2310e6430b822a93171181516d67541428"
+      "sha256": "bddd617491c0cc48bbee07148e25b931a42c5939c0c1355b76d8a2b6fca8845f"
     },
     {
       "path": "en/industries/medical-supplies-online-stores/index.html",
       "kind": "html",
-      "sha256": "b10bb5a33caf7f43db791d4186dabce2be63b0faa5e4771a6fdd7468b46391e1"
+      "sha256": "d0daf43e66e90f673196b322bc3e2214d58828ea52c6861423fa064bd225f232"
     },
     {
       "path": "en/industries/metal-structures/index.html",
@@ -4553,37 +4578,37 @@
     {
       "path": "en/industries/motor-insurance-lawyers/index.html",
       "kind": "html",
-      "sha256": "a64824743ae9dc0c2ad9ba9e6a9462b55675d4c97c99fa435fad9cf9da13d720"
+      "sha256": "5844aad16dfaa994013d03d82640c472847cb7b4d9a575403ef4ea392ae0fcf2"
     },
     {
       "path": "en/industries/motorcycle-powersports-dealers/index.html",
       "kind": "html",
-      "sha256": "06031189186123e5ed1190a553c7041cc61be7ae653df635909805491bf779e3"
+      "sha256": "829b63689e66fefde4187ad1b9a6c0cd7ab3fe9386247cd3afc770a7b2e123ca"
     },
     {
       "path": "en/industries/online-schools-edtech/index.html",
       "kind": "html",
-      "sha256": "383855d714058dead9d3c936ba9a6e1ec0a6c09a421a5cb21e5b3a2a0ae115fc"
+      "sha256": "60f75644616388b9196de426439d81117b3f6425c32de40d4acd7b23cbfb56cd"
     },
     {
       "path": "en/industries/ophthalmology-clinics/index.html",
       "kind": "html",
-      "sha256": "1ca937f76d640dea58748e76c2eba7c33ed49796048981dd5a4d134f972854e8"
+      "sha256": "481f93accf4dab64df26bb73cdb6419815d3d99cbdd6c7add15cf7283d90bf11"
     },
     {
       "path": "en/industries/outsourced-accounting-services/index.html",
       "kind": "html",
-      "sha256": "2d1a951972d4692d66a2e3a38468fb4d18cd5fefc96418612cf550de4db763ae"
+      "sha256": "74bb77ea42177b6f76097f1924d3fc864dc70e6c60c9778a5c51ccf56e73b2c2"
     },
     {
       "path": "en/industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "068fc2dc2b9b0f03d0cf68a66ca683907e28845e0c3652051461751781218415"
+      "sha256": "ed93af582db50d5d9ae2804b65dbfe1dabff478f63ce1ac110bde690c4678111"
     },
     {
       "path": "en/industries/pet-supplies-online-stores/index.html",
       "kind": "html",
-      "sha256": "7c8f3042127c14825a4062a1120a05c73ddcbfc911aed91b8998147efaabd9c6"
+      "sha256": "d742805d07826b8a75e5e94e02b13e4292c55c683899a179408f900b697be492"
     },
     {
       "path": "en/industries/pharma/index.html",
@@ -4593,92 +4618,92 @@
     {
       "path": "en/industries/plastic-surgery-clinics/index.html",
       "kind": "html",
-      "sha256": "3252744ec6430f6941ca8ab2cb5584b385aac7d6df533ef972c1b5f8c52b9967"
+      "sha256": "e0e910705644298f66d9accb44e390886f47d39d6ed622d623d5d6886b60fae4"
     },
     {
       "path": "en/industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "ccf707461a36404eff1a2d35e67e4585bc25b4ccea9ae26a7581f1c20b6904a5"
+      "sha256": "19a4e7cf490e2620768bade1329159537d8a43b1aa51ffb7f350fedb9bea63a1"
     },
     {
       "path": "en/industries/private-psychologists-psychotherapists/index.html",
       "kind": "html",
-      "sha256": "210f3f5a8b490c7024c96adfaad5163272c110712f0621a9c2b5c1a4fa9eae7d"
+      "sha256": "2bb1f8f96ddcf389fd9c1850ec0d84e8abeaead562ff4a51451e49c535022637"
     },
     {
       "path": "en/industries/private-schools/index.html",
       "kind": "html",
-      "sha256": "72d475cf2e27231beb78360907deab0cbefb9b92aad8b6821018f17a752790a9"
+      "sha256": "53ddefc3f158dc470e42de8e27b50dd22a57130ad63faf894ad80b034eadc1fd"
     },
     {
       "path": "en/industries/property-management-companies/index.html",
       "kind": "html",
-      "sha256": "a6cb1ca5bd14f72258dda00ea82d304bcbc1306e24321085486dc49bab6782c4"
+      "sha256": "b8a5d2b9a9bd2b0fbf57c2b62839a7a45e7dd7eec103c89cfa29f1462d7dd7d2"
     },
     {
       "path": "en/industries/pump-compressor-suppliers/index.html",
       "kind": "html",
-      "sha256": "e32a73c9b4a43b47d83afbc7f43aa10a3b0aa3ed96d4c73c7ec4bad65639ecae"
+      "sha256": "2c09cd396e3f357273714dd24cc00c133bf9b02a05f6a237ff80cd1d7b770057"
     },
     {
       "path": "en/industries/real-estate-transaction-lawyers/index.html",
       "kind": "html",
-      "sha256": "8b2e200fd31b7db9edc815801fc1af4da6cfec06b8dfc2f100c70bc868bfc387"
+      "sha256": "74329fd7dba38be197b98ddbfb51f313f9b779490219a506c81c53b7419c59ea"
     },
     {
       "path": "en/industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
-      "sha256": "52ddfb96f61f5e8462d3b989580608e0e0f535e58bdb9c679b366b430a5f1ccc"
+      "sha256": "11bd5d3c702dedfd542e7032a5b9d29c515048bedd643d1c70384f08dd56b81a"
     },
     {
       "path": "en/industries/rehabilitation-centres/index.html",
       "kind": "html",
-      "sha256": "9d4ef6b796b7199b26ed781b46c88d15cba712fd6f033c4ad08a45363eb4d168"
+      "sha256": "7dd4889fe4010262caf1629ccb2cc6ad1f424e113aeb694a8f2635e243aff2d8"
     },
     {
       "path": "en/industries/reproductive-medicine-clinics/index.html",
       "kind": "html",
-      "sha256": "29911f588dd0d19bffcb432f6ffeb164b6a576d5ee33741b2951af0938a3eb87"
+      "sha256": "334dbf1a5f776c04b0bee313c4deed5690872e7efba6f1fa2f08d2f191d21473"
     },
     {
       "path": "en/industries/residential-property-agencies/index.html",
       "kind": "html",
-      "sha256": "1c27bc320f83d394bbaf229170f2d484829a03e7f955463b6c0a3266a7f93871"
+      "sha256": "d84b3c700c8cd394622153952e7a0d3d39a2ba27a0e47607f94e44c0c113c33e"
     },
     {
       "path": "en/industries/residential-renovation-contractors/index.html",
       "kind": "html",
-      "sha256": "a8a94e73b083d7082c9cf9e38c6850b622142e9fc0a8925bc5781d9c7d6cd427"
+      "sha256": "ef0fd82f4b4fa06adf4c8fe16d695ac96eb9e74c8a23edc85e14baa897074653"
     },
     {
       "path": "en/industries/restaurants-coffee-chains/index.html",
       "kind": "html",
-      "sha256": "5590d56e95479e062f9fcff2b5fe7884f134570f08de81977e21aef0e17cb93a"
+      "sha256": "ba83791eb6c34ed196599d519a53e95c73e8bc1811feacce28e96e5df8039fd2"
     },
     {
       "path": "en/industries/security-cctv-companies/index.html",
       "kind": "html",
-      "sha256": "3b6cd9c0415226b9c696150dff02a86b317f7429dc9f1f081d51cd173c5124f2"
+      "sha256": "0bbc7f6b1d223b792cd04bfea2e7b5223b03269b662937b7ec34ccf01adbe7e2"
     },
     {
       "path": "en/industries/self-storage-services/index.html",
       "kind": "html",
-      "sha256": "76940f1365e79d8fa354e3517821f8e06a3a1afb0163fb16980d5ae564efcf84"
+      "sha256": "7aebe05201b3dd94408ff5e3fe8767edf855e5bf9f2e8193d231bdfdc239daca"
     },
     {
       "path": "en/industries/sports-goods-nutrition-stores/index.html",
       "kind": "html",
-      "sha256": "e9464775aa13dccc30c710fdf396de33dd452413bb22c0b0b7b10986553cc7bc"
+      "sha256": "628eb1caa50507acee9455833d45561c685ec355ec3b6cdaa301eea129e751e1"
     },
     {
       "path": "en/industries/systems-integrators-it-outsourcers/index.html",
       "kind": "html",
-      "sha256": "ff7c1ed58be6f051557033f907514cd1d73f7481a95f0c86109e6e39f01d086d"
+      "sha256": "ba8d30958b921ce9d07b0c5b0a2e47a377071ba51e828fabb8d179a8dc4b9f84"
     },
     {
       "path": "en/industries/tax-lawyers/index.html",
       "kind": "html",
-      "sha256": "ab6ff99b1d135020d1378ebd51628a9b3af241ba5570f06237650364a06d4466"
+      "sha256": "8102d6d5329950af53f612af9e92a5e1e9bec272a6fb3d8941d569aced00454d"
     },
     {
       "path": "en/industries/tourism/index.html",
@@ -4688,42 +4713,42 @@
     {
       "path": "en/industries/universities-business-schools/index.html",
       "kind": "html",
-      "sha256": "9ca79880fff97895c0776d8df28fba7d2738f5af6bcdf27ee0b5b7411b12089b"
+      "sha256": "dd5020c66f4fd8de837bbacbeda812b2708144e3502eab6e2ffa136e6d9b3cfd"
     },
     {
       "path": "en/industries/vehicle-sourcing-import/index.html",
       "kind": "html",
-      "sha256": "e99359fcbe5215b817212977adb501a035c18ede0627f9aa129f8c8f86a285f9"
+      "sha256": "5e9b94a2e7c21b8f31d62f9dd11fa5f3ddb9865c00382fb3255e3c9862c71132"
     },
     {
       "path": "en/industries/warehouse-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "7b75af74f787d340721894415a763e0cb7ff8f3d7a08b3bcd022b17bbd74c797"
+      "sha256": "c94e81340cf800a6807d6716804261cf6efd0054edccccb813c4d5ca514979ff"
     },
     {
       "path": "en/industries/warehouse-industrial-parks/index.html",
       "kind": "html",
-      "sha256": "55849e1122fe0956b34dc59b01e36d81d0fec49825b4bc8a38ad515314715ba9"
+      "sha256": "aab1052c8a7e2c9d067634153022f3e5e0c982657771a34bcd2cef76e4de9fcf"
     },
     {
       "path": "en/industries/warehouse-storage-3pl/index.html",
       "kind": "html",
-      "sha256": "7fc500378f8debafd34f119915d900bf30f5cd80ef81af3734a437164f45b9ed"
+      "sha256": "f80ee7e5f3dfd84639a3d26e7dfa6aeadeb1b38996a0fb892ac940008ef9b74a"
     },
     {
       "path": "en/industries/window-manufacturers-installers/index.html",
       "kind": "html",
-      "sha256": "fcb1c59eac1fed517e201a8728cd41ef27fb8248ee860a3761e4e8106714a150"
+      "sha256": "3891b4e801f1f8e14fb22d4ecc624ca1adf5ec997aaa990bfd70636f15af823d"
     },
     {
       "path": "en/industries/wms-tms/index.html",
       "kind": "html",
-      "sha256": "0a54e6d59c5e73ed30b1a8ad589e202506b07c67a0ae7ede671d9c5877b1c1d4"
+      "sha256": "87723cb4fd87ba9eb66edc79b8a21f426524fd4a774338e1e1a9153b254fb7a3"
     },
     {
       "path": "en/industries/workwear-ppe-suppliers/index.html",
       "kind": "html",
-      "sha256": "8d604e4d99d5cba11c8cc06aa405801eb4c9b160d1902c6ba849d55a85c59ca0"
+      "sha256": "621f9091eeeab3123ffaa5dbca643c39fdd4f598b1de9f00e0b6b821b7d17e7f"
     },
     {
       "path": "en/personal-data-consent/index.html",
@@ -4733,7 +4758,7 @@
     {
       "path": "en/pricing/index.html",
       "kind": "html",
-      "sha256": "28a9b8c6df52bd4159aafe8d6624147a3e99a20eb0c111059d72d0460666373b"
+      "sha256": "765e2c6c1a5145af7c7a0ca528428e7a0c4d1ff52a762e90ffe6aa90d0f7b5eb"
     },
     {
       "path": "en/privacy-policy/index.html",
@@ -4743,32 +4768,32 @@
     {
       "path": "en/professional-biography/index.html",
       "kind": "html",
-      "sha256": "e7fc670960f79e479fea9f33afc55c16fbe11f28109db256a7e06abe06cdba15"
+      "sha256": "7c68a9367cd704ac3257ca6c100391512efd192b9f5c7235229fd205e8e943b3"
     },
     {
       "path": "en/publications/articles/index.html",
       "kind": "html",
-      "sha256": "c3c7a28c60ab53a7cd3cfe00daad78acaa61051d7c810833dc8a3b190a501532"
+      "sha256": "3ca074e2b1b5a892ba1e33d17d0ead0f82427600cc595a5cfc88a3f9616dab98"
     },
     {
       "path": "en/publications/cases/index.html",
       "kind": "html",
-      "sha256": "57a78b161d22499a4a11ae78e1e9316986e221c8eb17ab773964b708778b4346"
+      "sha256": "626a01bcb4b9bca377c29ee339a3c8eb65e25e7d9db5bc3ace3e6b4eaba541b8"
     },
     {
       "path": "en/publications/index.html",
       "kind": "html",
-      "sha256": "00087dd8f7767f9258edf2c6266f8ce8ed24eeaa6f46370fa97b82fe1aaa2fd5"
+      "sha256": "fe62a8a00aa92a7dd396d7344f6a02b923f3e8922a2eaff7657a6d73bac70641"
     },
     {
       "path": "en/publications/interviews/index.html",
       "kind": "html",
-      "sha256": "3a6014a7bd39ba25722552780810e39b9e9f633b02a39a47b521ee63710edd0f"
+      "sha256": "9d3d5ee54201f0628fda182e5540147afb506cc27ce8279bac29aebe784a418c"
     },
     {
       "path": "en/publications/ratings/index.html",
       "kind": "html",
-      "sha256": "b253d833380ee3f04dfe18035e955d97e76dbe2b7956a1c3cbf7f9f357644321"
+      "sha256": "8a125a2ae97d5b239bfa99da91c1b54d2a00ab5e72ecc6ac4d0f36a029cd4f50"
     },
     {
       "path": "en/rankings/branding/best-branding-agencies-russia-2026/index.html",
@@ -5138,67 +5163,67 @@
     {
       "path": "en/reviews/index.html",
       "kind": "html",
-      "sha256": "ad21f2dcf0a064b9df8ca3f9304a419f4d55159df941d3c91bf5d50a3cde79dd"
+      "sha256": "b77b15dd303b4563410dae30b2439d0e340ad09fc0af93fbca748f6c871a3c86"
     },
     {
       "path": "en/services/additional-platforms/index.html",
       "kind": "html",
-      "sha256": "98ee9dd415b452f8c621617bf3780c53fd326c9e556ee97e5d96a31f1472fe38"
+      "sha256": "01ecbdc3a0a0a10500b01ad454d0dd4288b8b71b82efe44c7a4393c981398706"
     },
     {
       "path": "en/services/additional-prompts/index.html",
       "kind": "html",
-      "sha256": "0102a627397d65f3a6ac22dbfede60071f00831194e5a56e96a460ef306656e1"
+      "sha256": "748cc7101ea6ac8b250706a44ebe94eb4a6da6c93095abc9eaa73b8508c518de"
     },
     {
       "path": "en/services/free-audit/index.html",
       "kind": "html",
-      "sha256": "8c464df969bf88e8a3e558c9cf1de5299381c1d96ec1fe3316eac75ba74239c7"
+      "sha256": "9a7a7e2ee796cf777caa0b806cf3c9526087eeb664c71ce6b22fa1165179c030"
     },
     {
       "path": "en/services/geo-audit/index.html",
       "kind": "html",
-      "sha256": "ccc4c4ed4da6122dda3b2ae70fc820763a1ed6b8689555b961b340693f73327f"
+      "sha256": "18a97d50a43148f5ace4b84c557dce8bfa068bf8bc44e6d04c8542fc980f0def"
     },
     {
       "path": "en/services/geo-content/index.html",
       "kind": "html",
-      "sha256": "be2211a1542022e4ada7e95f723547ce06878cc1c130a34cdebb28a28ce698e1"
+      "sha256": "8aeab86a0d0f65280053f54013ba75e73cb96d6d239d03274204fd26ef875133"
     },
     {
       "path": "en/services/geo-guarantee/index.html",
       "kind": "html",
-      "sha256": "8cea3c92c447c4a3b6b94cb98b845040401f359389ee67472ae2f8fa0fbae666"
+      "sha256": "d0dc0a63e06f86d262dcdbf6b1b10180a67a885f53a5731016a4f2e2b982b234"
     },
     {
       "path": "en/services/geo-promotion/index.html",
       "kind": "html",
-      "sha256": "ceccd0c18b5f49aadff38fc29b09e58140268bb66720bb535839b21a2cb503d7"
+      "sha256": "43d10db36d6fecbeed6d18ee70518b98372e72289eee8ae15cfe9d07bafd1d17"
     },
     {
       "path": "en/services/index.html",
       "kind": "html",
-      "sha256": "1d7274ab3384eb41b8afd58c9ad987f85e1e92e22bd27448a189af90071bf370"
+      "sha256": "1159cf32b74fa7fa7d1918f59cb0a1d394cf286287b2741777beca5c74d5c075"
     },
     {
       "path": "en/services/website-development/index.html",
       "kind": "html",
-      "sha256": "509dfe6701c1588cc6dd61ff065ab60456548c8198316350851ced69f41f882f"
+      "sha256": "1f518aec579f1414f99d56c88842be949471d77620ec228abc3b9ecfbb128bdd"
     },
     {
       "path": "en/strategies/automotive-buyer-evidence/index.html",
       "kind": "html",
-      "sha256": "5d8bf9289ffaba28fcb62bdc38db00d904d522d2813d81e9675e01ed97b84d92"
+      "sha256": "e8c559de65075074af6994fc030b85bde75af007f06311d5128a664901f5e927"
     },
     {
       "path": "en/strategies/b2b-law-firm-matter-fit/index.html",
       "kind": "html",
-      "sha256": "82ac64acd5f6e31f19d11955ce2a286a827d6c9dd8ce6edefbbeafa9fe7377fe"
+      "sha256": "534be4eee212ebcb56bad591b72acbb6fdec3db22fee4194d324f3a1316e24da"
     },
     {
       "path": "en/strategies/developer-project-evidence-checklist/index.html",
       "kind": "html",
-      "sha256": "5a5adf207036588307872422cdccb95b8d778c7e6d125c6ea98bd7736676d10d"
+      "sha256": "ad332b32d120739a03a733dbeb92e934fda3d2a7c08ed3b2d61d605613dbef0c"
     },
     {
       "path": "en/strategies/ecommerce-catalog/index.html",
@@ -5213,7 +5238,7 @@
     {
       "path": "en/strategies/financial-services-evidence/index.html",
       "kind": "html",
-      "sha256": "203f549a50bb57e8a10c8c557d7f64d30e7410690ba86b10ed5ffa53b7889d83"
+      "sha256": "0071a8fafa279e662a1f7ea855d89d84a08703e0ebc52b7abd70111f10b9899b"
     },
     {
       "path": "en/strategies/fulfillment-provider-selection/index.html",
@@ -5228,12 +5253,12 @@
     {
       "path": "en/strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "be6159fe8ab792a4ecef048919cffd5f948aa363912d198a33cfcceebdec2a27"
+      "sha256": "c30b25439640b0a7eef76b734d41c6eaeb74a41f8e99138740a57bd3d4a1dc23"
     },
     {
       "path": "en/strategies/industrial-equipment-rfq-checklist/index.html",
       "kind": "html",
-      "sha256": "edf2fcea15304e9006bd58abb2b27e109abe220b0701ad936d39f23a782cda5e"
+      "sha256": "279a293c1c7370f957c48234dd25331c6603aab996c95d5600b384b875c38c51"
     },
     {
       "path": "en/strategies/industrial-supplier-evidence/index.html",
@@ -5243,12 +5268,12 @@
     {
       "path": "en/strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "20267e7d06efd5d0656db3fc66b544cb1e4148eb62f805982368ee90c54ba0f8"
+      "sha256": "d3119a8d0245471ef9e7a6b38e43b0afb772bfe94934d7a63fdc85691414e19e"
     },
     {
       "path": "en/strategies/international-logistics-tender-checklist/index.html",
       "kind": "html",
-      "sha256": "9c03a29b839cfb1b5d225b8b47688004712e89d83de46f78e33474ff639948e2"
+      "sha256": "8e01b644d9c9469fbda2c41c71d2f839b894d06c71bceca7b0c0fd7aaf6a1c0e"
     },
     {
       "path": "en/strategies/legal-recommendations/index.html",
@@ -5258,7 +5283,7 @@
     {
       "path": "en/strategies/load-testing-vendor-proof/index.html",
       "kind": "html",
-      "sha256": "5d15d0f9a8f0a73e7534698041be2c6b81f5757151d82e4206b17ec017294bbf"
+      "sha256": "2d87fdc9f17e4d5c42731af79a44cf331c66e89fa3ff358e1be49832230ce849"
     },
     {
       "path": "en/strategies/measurement/index.html",
@@ -5268,12 +5293,12 @@
     {
       "path": "en/strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "3d8f39546fdf92ab3634649454d87600c91874d8ebb5de39e9d58feed4a0676c"
+      "sha256": "6fbe9563c3091e331bec65737c63b3fc86890a9dc29fbd0d7025a789b4620e6d"
     },
     {
       "path": "en/strategies/packaging-supplier-brief-checklist/index.html",
       "kind": "html",
-      "sha256": "092a68a07c68dee0c01aa0e106b5b6fd1a89c4bc674fd0d065604c92d45ad6dc"
+      "sha256": "723e43704b13465915ee7332d872a9ccc05e40aae3b8094d2adef32c900ef250"
     },
     {
       "path": "en/strategies/pharma-geo-evidence/index.html",
@@ -5283,17 +5308,17 @@
     {
       "path": "en/strategies/private-clinic-branch-facts-checklist/index.html",
       "kind": "html",
-      "sha256": "61a0d5b7b3976e365e4df4659d57f2ca8a9ef937447986169a82a7e54649813d"
+      "sha256": "b7f3946133c1810df35f87ae608b0291490ad4349191b2d3d2f9411fdfa1b130"
     },
     {
       "path": "en/strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "f7a3c972737e40442a02e0e50b089619ad061d93b70479257b3e7cc1cb87c413"
+      "sha256": "7e87ec669427cad057142d5bfd12414bb9a39bea7a85ea398d45ba79a9e1b1d2"
     },
     {
       "path": "en/strategies/sector-geo-case-proof/index.html",
       "kind": "html",
-      "sha256": "6e1e2b96024f0450b176700a26fc25d248a7bbcd2cdad6dc61283a4b715c2804"
+      "sha256": "ea9239d204e2ab31ce7c147280f824791e5663122e9c1620f5548572ad14d347"
     },
     {
       "path": "en/strategies/technical-b2b-vendor-evidence/index.html",
@@ -5323,182 +5348,182 @@
     {
       "path": "index.html",
       "kind": "html",
-      "sha256": "3c7d4dae2bbf04c66b82eafe5545262dde83920cea7330ed7d7dba966aa11ce7"
+      "sha256": "7848f07c210da830af8f209a6d5f3db5e801daa962d8fd4bef8fdffdfd81e362"
     },
     {
       "path": "industries/agricultural-input-suppliers/index.html",
       "kind": "html",
-      "sha256": "4e26b18dae7318a14683a5fa2a18550daa5d00ba277c1985dcd1fe5fd9b90b80"
+      "sha256": "0eb11729770a76be06115130429b2ed45622a6adc6858e3729b3bdab60af11ff"
     },
     {
       "path": "industries/agricultural-producers/index.html",
       "kind": "html",
-      "sha256": "96a151408695aee6d24068278d87bce5f9bee5f6cd0ea5e62702dd51a302fae9"
+      "sha256": "10a7506bcf986f054c63450f37d410c20669653332ad2dd6d034764da1518d78"
     },
     {
       "path": "industries/architectural-design-bureaus/index.html",
       "kind": "html",
-      "sha256": "340d7c94d32b2ac27dfdff1987ed1e255f63fe38adff1fcbfa3a64b6cf0ce3ee"
+      "sha256": "6a94f65fd46bf6861e7fe4296d005690f336884a13a935d78be5a0fd781e8bd2"
     },
     {
       "path": "industries/audit-assurance-consulting-firms/index.html",
       "kind": "html",
-      "sha256": "c10f9e0ba6452b5101c124a1b85b1d7398fe00f12277d4741f7e310ec7be9d1e"
+      "sha256": "e168fba5913cdcc2aa65cbc3fa839f1359ecf2c1baeffc428a391baf24b8802b"
     },
     {
       "path": "industries/auto-parts-online-stores/index.html",
       "kind": "html",
-      "sha256": "3e9d8dbf337d405f5360e4ec759662eeaa77e83b4d2c565c4fe7b85e612df65a"
+      "sha256": "d031cd15dedf5493dbb1b35452acf1ebd20e48af3fb7dbdd4e7787562469a227"
     },
     {
       "path": "industries/auto-repair-shops/index.html",
       "kind": "html",
-      "sha256": "28897b301d5e507adfb098b6a022485c58c999d912bd7e0a58c401b0a30f9e5a"
+      "sha256": "9f0887c48dca49c7f040750b6e32f8d188d49fe19c9c780934407655c4b97295"
     },
     {
       "path": "industries/automotive/index.html",
       "kind": "html",
-      "sha256": "896a1fb00f4705f933906699151ad8347cb162e8a30fc0551bf1aa9731787ad2"
+      "sha256": "8fc1f3bedd80f5737c3d6e924c5ab19c75dff2d5c708d669df5a1a1672e4b5db"
     },
     {
       "path": "industries/bankruptcy-lawyers/index.html",
       "kind": "html",
-      "sha256": "13ad6a6710d776493747eecdc186a21fd81eb5f8c65916e0283661ac706d81a0"
+      "sha256": "0cb9b47a08228ce581ae8cb093a2a03b23ae4feb79b92ae89133baa8fc3a6498"
     },
     {
       "path": "industries/beauty-salons-cosmetology-practices/index.html",
       "kind": "html",
-      "sha256": "edfb5fee62339b067135695a26246a3e1bd0281f9e2e1f45ee7dec22741900e1"
+      "sha256": "d99f9b8532124e4b563144b502bde8eb2652e699e67d2cf434898736ca54c0b5"
     },
     {
       "path": "industries/bi-analytics-platforms/index.html",
       "kind": "html",
-      "sha256": "5a45399a1f9e0a7c2db85bbaeff0a8905e30ea5811d067028ec1c6e20e7b0d34"
+      "sha256": "36f6e238ed23434fc463beac8386c46b2382d82eb83bb7cb176bf482350b5528"
     },
     {
       "path": "industries/branding-marketing-agencies/index.html",
       "kind": "html",
-      "sha256": "59caeb3f22403f95fb30bc0a8382027ac7eb3e17daf2157eb26b64aea59911df"
+      "sha256": "6b68157405c9ee7f4ae48fa98a9451391549bb90f25e8da80db9d30130f2a24e"
     },
     {
       "path": "industries/building-material-manufacturers/index.html",
       "kind": "html",
-      "sha256": "b2584bc3ff12f1d5239e315364c0da992135022296d65f6f0fd85f5aad40a262"
+      "sha256": "8041fba6ecea90da3f5bf066f9b3e200b51ea0b899a7af4f843e0eebb86b40e3"
     },
     {
       "path": "industries/car-dealerships/index.html",
       "kind": "html",
-      "sha256": "6abe35f80ce18c40b704cea4dbb9fbe76937975e0ec18a0aaa357e39d93ee01b"
+      "sha256": "0eff3d088d443828fdd503661c4ab80eaa256e8bd83fd0d76ec136b9bd4b4ff2"
     },
     {
       "path": "industries/children-product-manufacturers/index.html",
       "kind": "html",
-      "sha256": "12e8c7e163f12bf723bea5aadc54d2062d4cf01d137a44175cda25e7afd3c22b"
+      "sha256": "6a54731729bcb111b17c741d6ec6bd74a341d70b74a9fc4f14e10255fa7dc9c5"
     },
     {
       "path": "industries/childrens-education-centres/index.html",
       "kind": "html",
-      "sha256": "87fc581626655d928472c3e965c851d3245308da6d5f2aa1efc9c38b9c910964"
+      "sha256": "4d5c681613066b9952087f0e6459413e818c9248137b18ec2df966e959835fef"
     },
     {
       "path": "industries/childrens-products-toys-online-stores/index.html",
       "kind": "html",
-      "sha256": "ebf1263e62433ace6c7e2a439d50265502157a81c74b627e1689e3e97230bb25"
+      "sha256": "604f43836fef65912d7fdc3bfd7782cdac4a3878ed6e56512affc45417887a57"
     },
     {
       "path": "industries/cleaning-companies/index.html",
       "kind": "html",
-      "sha256": "71fd0d74b0b56f5ff82c1d289ed61b59f3e3c5f7bfc42d148b5ccd76cf768d31"
+      "sha256": "0350d3dc116a70462d847c8f526d4e77859f698c66b385a0bd80497ca6207329"
     },
     {
       "path": "industries/cloud-providers-data-centres/index.html",
       "kind": "html",
-      "sha256": "6f4cacadc62685603606f508c4711b0a477ff86b2ca550e7397bc27d2c739d66"
+      "sha256": "133117566856f35ebb7698d61232d6d8543be85dc8cb01d9462eeb7e9579dc9c"
     },
     {
       "path": "industries/commercial-fit-out-contractors/index.html",
       "kind": "html",
-      "sha256": "d596491c9a917aaf532792efdf6c62badbf22996de56c077100efbbcabd6eba7"
+      "sha256": "c2b00f40d65b7714604faaab9921ddb4a1e65005eafbfa0e261a6e522b5c77fb"
     },
     {
       "path": "industries/commercial-industrial-general-contractors/index.html",
       "kind": "html",
-      "sha256": "fa7d82d8e8025312ce12f157e27b9d9a09bd45869c48d90af646a9e027559177"
+      "sha256": "00d63eaf1079b7d95c1e609a2293eeeffccf7515a761eb46598816a065af1c55"
     },
     {
       "path": "industries/commercial-property-agencies/index.html",
       "kind": "html",
-      "sha256": "b7b004cfd22a98466538de205eace9b5db688abd219fff5d5ca25abf5b151884"
+      "sha256": "cd213bd2fe19a4121fa89a7ab3c78916c2575ff98a3176ca8ad4a012a5870b8d"
     },
     {
       "path": "industries/commercial-vehicle-machinery-dealers/index.html",
       "kind": "html",
-      "sha256": "581d0d3109a997f58d3f882a61a2d95b8fbe053905b6ee84c13e1e3cba8c542f"
+      "sha256": "5f782d510b1afa08adc66030d4978c960e037c88ccbcf888ab395cbf6fac6c8a"
     },
     {
       "path": "industries/construction-equipment-rental/index.html",
       "kind": "html",
-      "sha256": "8e1aed8d829a05ad5e9fde241d835dbf9c176f37f51fe360b7ff660dfccbbd2d"
+      "sha256": "9341a8fef8d77de5db1f4f05d5f469cda211e1cfca8d770cf7fdd1b7d2077f2c"
     },
     {
       "path": "industries/consulting-firms-independent-experts/index.html",
       "kind": "html",
-      "sha256": "00e99d77fba16c9d6fc26f4e59f7760586a5568f20d726bdd67223eb2f459db5"
+      "sha256": "ca7a90b6ff2accb8cd282f0a540b2b35f5525e6adf9b0e8e94a7a891b7cacfbb"
     },
     {
       "path": "industries/contract-cosmetics-manufacturers/index.html",
       "kind": "html",
-      "sha256": "e93a0d32c764bc60aaa6ee7a933a30a831fc5190a3b1b7a798d637277f7484ce"
+      "sha256": "75b006a7ef765d196b53b98c0010bfd34d71d7d5e198abacba1a3ada2fbc6932"
     },
     {
       "path": "industries/corporate-travel-mice/index.html",
       "kind": "html",
-      "sha256": "715650ef5f6522621c48f83f0de16d6780a0c2ee3dea7c60a6cb1f50d9a8400f"
+      "sha256": "e26209733bac2a469475c85bfdef18e66ab0f0f9072cd6ab021491f445702684"
     },
     {
       "path": "industries/cosmetics-brands/index.html",
       "kind": "html",
-      "sha256": "2db2808fec3a08007d7c1bbdcebc3510e3f5106f5d490edc2a5435fd0245aa32"
+      "sha256": "e8eb6233d67e8c215c9986f591bb60d91ff4e1799b537beffeb8ce1d337261b6"
     },
     {
       "path": "industries/cosmetics-perfume-online-stores/index.html",
       "kind": "html",
-      "sha256": "7106fc70a432b1a99813942d27564c0561a7d86ede7eb02d367329a30cf4aa16"
+      "sha256": "af5f189b9653fe65e10c3b46f7d0118f953f889454576add1564d9925c555146"
     },
     {
       "path": "industries/cottage-communities/index.html",
       "kind": "html",
-      "sha256": "25367d3231bfbc47286607aa9e68d909047d4de2b7213ab94bd694929f48b9bc"
+      "sha256": "b87ada7761bcd6f662cfc2ee9b115f0b77eb3abdc2036d62746e60028c8ea09b"
     },
     {
       "path": "industries/country-house-builders/index.html",
       "kind": "html",
-      "sha256": "36e154e68dc6ce2cd0f5f7cd85f1adaaef07c9bfedbf78ea645864d1b9705378"
+      "sha256": "32e702e234d6bd100522e24b151662174564ee1411a59b83b3b36dbf1b2bb6c3"
     },
     {
       "path": "industries/crm-erp-platforms/index.html",
       "kind": "html",
-      "sha256": "393eb01c66e77b82fc6c755bd9e47bd732d1a70ed6b922f77fb048d3b7417bf2"
+      "sha256": "672b5fd910e95a2f00fcd71ac775a370a7efdba57cfe13457c1c2c33c0d7079e"
     },
     {
       "path": "industries/customs-representatives/index.html",
       "kind": "html",
-      "sha256": "fe934f7c3c2d6bb2533fd52c04550e8c716b202013828fd15f63b03db246c5b7"
+      "sha256": "4a38d366ae1c87cde8a744bda3db510c2d5b10450e0e875daa072d98dcdf9dd1"
     },
     {
       "path": "industries/cybersecurity-providers/index.html",
       "kind": "html",
-      "sha256": "883d7d7c0047d5c4f9810f2aae97f147a1bb94c1b9bce5a533c0e30ed7558447"
+      "sha256": "74d520a54da80788677dd1af10c5fcdbde73ef967fd0c220d744d3699daf8a61"
     },
     {
       "path": "industries/dental-clinics/index.html",
       "kind": "html",
-      "sha256": "5291b9581f6477b3dea21454a72ae2820e32ba533dc6fc07db081f1c5698b178"
+      "sha256": "2392cc0d8f80b8a6b9618806e6b1c56194fff205db2a94384ca3d34efc9ba094"
     },
     {
       "path": "industries/diagnostic-centres-medical-laboratories/index.html",
       "kind": "html",
-      "sha256": "6ba71bb77638d474fcd0faec3b3da99c2c2d480242f6074529889df79cd86a30"
+      "sha256": "92b23519099be1185019690873805993883eecc3d922119a9346e94a5f2d39c1"
     },
     {
       "path": "industries/ecommerce/index.html",
@@ -5513,72 +5538,72 @@
     {
       "path": "industries/electrical-cable-product-suppliers/index.html",
       "kind": "html",
-      "sha256": "68cf5fcd0142cdd05b38767be8a16a9941cc9c7544ba04cfe362351976a5ce32"
+      "sha256": "7e07d223c295d48f59780ab0ec87e1c92157560b4c301df8187d5586f902b0a6"
     },
     {
       "path": "industries/electronic-document-flow/index.html",
       "kind": "html",
-      "sha256": "47b784e967190b23fa35c5e5d95aa462d0f28d647d8dd04431eef7c5b1e37c5a"
+      "sha256": "b53bf47e6d768522b95c50f611999e773f48ad1d896b081f0186a33b206ee748"
     },
     {
       "path": "industries/electronics-appliances-online-stores/index.html",
       "kind": "html",
-      "sha256": "c8ca98b08f022ffc8dbfd33e7763cbea5daec80d6c9441b57ab88d45c4867715"
+      "sha256": "181d1f70fee86c20d9ebd1af91d23247138e323445826e1cd2723c336af0c216"
     },
     {
       "path": "industries/employment-migration-lawyers/index.html",
       "kind": "html",
-      "sha256": "1877f34dc429b656e022d587973c055616508765396df4cece5fad80426af736"
+      "sha256": "32aa8678f2af8567d3231c1369b0d1c6093cbbad0cb47321f1b6e7bc84839dc9"
     },
     {
       "path": "industries/engineering-installation-contractors/index.html",
       "kind": "html",
-      "sha256": "257958eb37730f87105281b5f4b11112e7161f806408d96677b59027e53e7cec"
+      "sha256": "9b1ea4644615ca41d861161001155290a85d1e5d8c895bb8ab3962b4f130acef"
     },
     {
       "path": "industries/enterprise-software/index.html",
       "kind": "html",
-      "sha256": "e281bcbd31b99dd111164d2a990b6131e4df6dc76d8ce92e0a10416be1cce7f8"
+      "sha256": "261642bc297f32b42260391f78b8ddac58e85d21920d9d68bcbb8450c35715b3"
     },
     {
       "path": "industries/facade-specialist-glazing-companies/index.html",
       "kind": "html",
-      "sha256": "bfbe4a9a722a1096e27736bb8cbf17a3937ce0548bdbd17157f15d20abad870a"
+      "sha256": "4a5651f8a072418c1c494b450d43ee3fbc5516f0115b3c1dfe2a423793630d76"
     },
     {
       "path": "industries/family-inheritance-lawyers/index.html",
       "kind": "html",
-      "sha256": "ca918122966d63a4b81908308336f5e49f2784c46b545d63770b6c61c6561bf7"
+      "sha256": "f7b95517dd6bb09d3ba713bb41cc06bd8824321cdf77a4cd42194a48e07cd95a"
     },
     {
       "path": "industries/fashion-apparel-brands/index.html",
       "kind": "html",
-      "sha256": "cc07dd93506892b6a12e212b9d8d9c5f5339baf7a838cb9f5d605fea0ccce284"
+      "sha256": "d22f7d3e0909426db51cad0f0c51ce1b82ecef3fd5999a6823b889fd676072ab"
     },
     {
       "path": "industries/finance-insurance-accounting/index.html",
       "kind": "html",
-      "sha256": "a486d8974e43efbed1da41d663b19209527f278f496c6a1fd3667fe69fd32fa6"
+      "sha256": "f6c9dc5cd244e64f90cda32a2e0beb3405015e428073652dee1f66544bd05fe5"
     },
     {
       "path": "industries/financial-investment-advisers/index.html",
       "kind": "html",
-      "sha256": "0c1cfcceb1c95b8952602c66f65527c06c20b1ceebd666ccf8199f9463025007"
+      "sha256": "205e2d9d89a7384b7c1662b7a509244326074f6be9ba98e0770ef1c2bc850493"
     },
     {
       "path": "industries/fintech-payment-services/index.html",
       "kind": "html",
-      "sha256": "a73d8d173a087a2d15d2da82001deddb84195e44d259860a3ed1debafdf09f22"
+      "sha256": "830675e60fcfaa82bf2cc4897aacb4d500588800979375ac60e4fe9152b206b8"
     },
     {
       "path": "industries/food-processing-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "d6a0f2f2dcd201fbfb656a364a500a425b707ed6618c6159ca94d6faa33eb06e"
+      "sha256": "4e06f1f6bc67036cf1037d6c7061dd699037c6044b4c63d331a88c5875fa2189"
     },
     {
       "path": "industries/food-producers-retailers/index.html",
       "kind": "html",
-      "sha256": "e4d53f86e6dfe99fd9e052354065c882e591b8e3db929928873eb1be3b444a98"
+      "sha256": "811e1e8189266add98f258d308031405577a26fa64641134211245992137db78"
     },
     {
       "path": "industries/fulfillment/index.html",
@@ -5588,7 +5613,7 @@
     {
       "path": "industries/furniture/index.html",
       "kind": "html",
-      "sha256": "932e9c0792c7f230b0c5b275f4f00aee7c91672cdabbf8e5999c61fab89d4db0"
+      "sha256": "e2c21d34790099a17837036c51ab5436234fa1838fbc056a9964eb2444dc5d42"
     },
     {
       "path": "industries/highload-it/index.html",
@@ -5598,27 +5623,27 @@
     {
       "path": "industries/home-appliance-repair-services/index.html",
       "kind": "html",
-      "sha256": "e89905063f3b02436982560aca6297c0a944ce25e22c862b3eaad54d61ff16a7"
+      "sha256": "a1a74f38e399c366e2ec66682aa694dd3e5c106a24d98f50c8dabf91b8a2b107"
     },
     {
       "path": "industries/home-improvement-online-stores/index.html",
       "kind": "html",
-      "sha256": "4f356aac42598ac0a690fefafa516e3b9821164806d22dfc3d90cd93d62c38db"
+      "sha256": "68108a1b6897d5d88737a1ddc82d38cbb169e57710f31943a2008780662860fe"
     },
     {
       "path": "industries/hotels-country-resorts/index.html",
       "kind": "html",
-      "sha256": "0fe8da7e68797cdb87507440c38c166e784cac9d19e67a4fcddec2d550fc7d6f"
+      "sha256": "38b7d7bb73c9000da29eb7098d27512011baba961cd9f9dff44b60530b126fc4"
     },
     {
       "path": "industries/household-chemistry-brands/index.html",
       "kind": "html",
-      "sha256": "0c151ba512083357b88644200047ae3639632b179b804eb6db55bc47bc922ff1"
+      "sha256": "d69196cc00e303a81a6218f1a8a09fa768fd807bb14f845ff64f77182fffa8dc"
     },
     {
       "path": "industries/import-trade-support/index.html",
       "kind": "html",
-      "sha256": "99175d3967793f8079e5bb8bf3eef88cac50a965e27e7a7599f1c5a3604fb9df"
+      "sha256": "ea61c7173608f8cbce520b34df6854e80189445f6ce782ac1bde2ce014bbabe7"
     },
     {
       "path": "industries/index.html",
@@ -5628,37 +5653,37 @@
     {
       "path": "industries/industrial-automation-service-companies/index.html",
       "kind": "html",
-      "sha256": "e8cfb3ea7a521b0fe1478735e45425f5ecaded14866a585ec46e40403d79d21d"
+      "sha256": "13c55fe86a9b53a349b810deea226fe32bd534593e77c775f6b92cfd2ec6883f"
     },
     {
       "path": "industries/industrial-chemical-suppliers/index.html",
       "kind": "html",
-      "sha256": "11fb944d9fdbbebca1e963fc47a875925a2e64c7be91c3b9409172e3d90e6c5e"
+      "sha256": "db0d66c41618b49ef6c6954114642e574818760be96f0273019616211bb1cd4e"
     },
     {
       "path": "industries/industrial-equipment-manufacturers/index.html",
       "kind": "html",
-      "sha256": "c5fd03b750590462f666bd3a0a4391f2c79e20a8adf859cc1bf06e0822c9c99d"
+      "sha256": "89de71a2ffc50627083487cfac6ea7e2994608f6810dc04326149f2c0208082f"
     },
     {
       "path": "industries/insurance-brokers/index.html",
       "kind": "html",
-      "sha256": "b5aaea78613fd2584f4cefbcf0b33110f27d378b84bc5cae8d015b8c2a068182"
+      "sha256": "5b0a50f9c178d1b20851d1b04d89d5a575fdf099d2e13fa77a78d28d3ccdd2e1"
     },
     {
       "path": "industries/intellectual-property-lawyers/index.html",
       "kind": "html",
-      "sha256": "484aec31718303a220f311ee79c46fd9b1e812c6874febb527efbe19e08050c9"
+      "sha256": "b8cff60964c01a70498c37bc727fe0e43abd82e77e219a6c47bece9d358cc306"
     },
     {
       "path": "industries/interior-design-studios/index.html",
       "kind": "html",
-      "sha256": "76ff19bdcd0feee812f510e8ed40a98ef8755dc0bb1dd44a6ce2de6e78351a04"
+      "sha256": "8f90b2d948f88f838df3b40c657fcffb289ecfde620087c21c0821dab4306c95"
     },
     {
       "path": "industries/international-freight-forwarders/index.html",
       "kind": "html",
-      "sha256": "174fabb3b552bf34f8388b79fbf4a44273a51a22a7e62606f89bff909baa26ec"
+      "sha256": "1da0a2647a01d3e9297fef39eff32138e253960d2f723b888894ab2d52fdc3d9"
     },
     {
       "path": "industries/international-logistics/index.html",
@@ -5668,22 +5693,22 @@
     {
       "path": "industries/jewelry-brands-workshops/index.html",
       "kind": "html",
-      "sha256": "c2e7b3534218cace426e830f6b707a798b60c04023ef36065bffa4afa115c28c"
+      "sha256": "0c64dc7fc9293f4395639b3b6a5f0a9d52398a51d80735d84ce8c43bd12147e7"
     },
     {
       "path": "industries/laboratory-measurement-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "786ea6d9410c2370b4070b8e2b8bd8e1398093d2649c040cf0b3c2725333b456"
+      "sha256": "2225a49ebf4dab765d5e642fad65600eb4ba006d97e9a622a9a39a740e239aa9"
     },
     {
       "path": "industries/landscape-site-improvement-contractors/index.html",
       "kind": "html",
-      "sha256": "001164138db564732082f959c867e4791d9df4639b57b536f4dea874cdea39d1"
+      "sha256": "21711ceb5d4dde354bb201f5aa0b709e0869f2eccac466824f9e3edd9db384c8"
     },
     {
       "path": "industries/leasing-companies/index.html",
       "kind": "html",
-      "sha256": "1639df757c20e887dfe073530a1eb9ba8ba6eedc69eba49170a478444e1942c4"
+      "sha256": "94838f501f280a70c253145420195d9371c7c897533d1d248af2135bb80d7dfb"
     },
     {
       "path": "industries/legal/index.html",
@@ -5698,7 +5723,7 @@
     {
       "path": "industries/luxury-real-estate-agencies/index.html",
       "kind": "html",
-      "sha256": "205cc4bae4a9af8a8f1b099f5d3995ae767e7449a3cd216a52975e2449e4f341"
+      "sha256": "3cff82749f82ae8b0cb5beedffaf4780aa094e2c0ceeb4f91e7b01149b2e9c0a"
     },
     {
       "path": "industries/medical-care-providers/index.html",
@@ -5708,12 +5733,12 @@
     {
       "path": "industries/medical-device-manufacturers/index.html",
       "kind": "html",
-      "sha256": "1001ade8dd40f81b6599301ce788fc5d05c25e8fde933592b6104fdd2a4ae4f9"
+      "sha256": "5f1c0291aface687a7775876314bbf6ef906e5960346ccca0f9cf5d96ec25efc"
     },
     {
       "path": "industries/medical-supplies-online-stores/index.html",
       "kind": "html",
-      "sha256": "c58b339ccea29d9a2511843c2025a0301c31227de5e7e97225dd718a12b07b79"
+      "sha256": "09011b3d0bbd1c59e1dc0cf4e4e89dce934b70057086714b044ace7686413f6d"
     },
     {
       "path": "industries/metal-structures/index.html",
@@ -5723,37 +5748,37 @@
     {
       "path": "industries/motor-insurance-lawyers/index.html",
       "kind": "html",
-      "sha256": "1f91715898cca250f961f82bc390bfd0fdf74c0e3738dbf342991a8c5d435a8a"
+      "sha256": "eb3ea18279bdc0cad49f4f63aa981f1ce4298ab0772c8d92b2cc7e5bd0d4b43a"
     },
     {
       "path": "industries/motorcycle-powersports-dealers/index.html",
       "kind": "html",
-      "sha256": "a1277c869c2e2eb6ac3a9e05a1ad32f9a4391f3bceb2a826e6479433f56d66cd"
+      "sha256": "d3f57449f4143057f79d129b4901169cdfdbdcb696ecdced2b4945474a2f1cc1"
     },
     {
       "path": "industries/online-schools-edtech/index.html",
       "kind": "html",
-      "sha256": "f98a9e998050eb8c3ac842aadebf0d3555d17b239738513f664ba7f2d9bd4561"
+      "sha256": "8eb10523a84757420ea3bdd5bb8b1a2eaebdb970899f4bbee38cf5b49a62b934"
     },
     {
       "path": "industries/ophthalmology-clinics/index.html",
       "kind": "html",
-      "sha256": "7a5f55932d0e39fd48d8fe79902a3aa58e3b4355e565ef94a49f0bc19b808c0e"
+      "sha256": "dd24733d66f55df3831a2f19898f80244c22f1ba6bb69d374b564ecb3a6ac946"
     },
     {
       "path": "industries/outsourced-accounting-services/index.html",
       "kind": "html",
-      "sha256": "2188d9e4405aadb1d6b6b39e866fd00d7ac93ffbea12f6b10b74e241c21d3eaf"
+      "sha256": "29b74817f27969796217cad50a7ec6d68fb543a9b5dc582cf3c4b46a7b991adc"
     },
     {
       "path": "industries/packaging-container-label-manufacturers/index.html",
       "kind": "html",
-      "sha256": "123e250cfb2bbf7ff6f97a1db4573eb864c2e3ae27b7cc26fd6df446437f259f"
+      "sha256": "8d8a4f3062c39bd4e9328ad0918042cb5f1e1bde71db68601df1fbb747941e25"
     },
     {
       "path": "industries/pet-supplies-online-stores/index.html",
       "kind": "html",
-      "sha256": "32695a7ef9fcdac678640b6b796332707e5c318022eb53c0670f051ce31deaf9"
+      "sha256": "53b6cad09112ff5e6c852eb6009d70f897759e831a0beb39eb14baaac4204186"
     },
     {
       "path": "industries/pharma/index.html",
@@ -5763,92 +5788,92 @@
     {
       "path": "industries/plastic-surgery-clinics/index.html",
       "kind": "html",
-      "sha256": "f7af3a88066226cd63c9640825f5f70605f640943871ae8ac3c66cc19a4e5772"
+      "sha256": "374e266f5d8c634c53e92385d6d5b2d967200f192762413334ac933615869c87"
     },
     {
       "path": "industries/private-medical-clinics/index.html",
       "kind": "html",
-      "sha256": "ade437f5a0b65ddfc32136e8bfce3de79dd5c3246bd42e625ebf26e37eae4663"
+      "sha256": "9e9229b1d12170e939ad693c32e1265a4c85c9ab293721b52b099b025eff2b1e"
     },
     {
       "path": "industries/private-psychologists-psychotherapists/index.html",
       "kind": "html",
-      "sha256": "b71c0b27606b3afc2c0147affaf8be2226e7cddf9310686b2a8ab4eb83b9fdb3"
+      "sha256": "d36b1beec1190b072721c03e4a57bd89eeb85019b7aeb72f94c0515a51cf6a34"
     },
     {
       "path": "industries/private-schools/index.html",
       "kind": "html",
-      "sha256": "dd31b3fcd36e9d47ca3d88c5e499f0f54028e6d7f63bf206d0b5e44759272fa8"
+      "sha256": "9d93b9bedeeaa504a8d68e8d8f8dfe1b4b20110649f6da53ceae30ff1eeab62d"
     },
     {
       "path": "industries/property-management-companies/index.html",
       "kind": "html",
-      "sha256": "166d10d2eea7bedc6c7db40613214b80da9bfb0c107d7495f686c7a8b6aa0392"
+      "sha256": "2499df8321aee983fb85f5e3ab3efd7f243f2a66c4020f73b4e92f7c5e06006e"
     },
     {
       "path": "industries/pump-compressor-suppliers/index.html",
       "kind": "html",
-      "sha256": "c74808e1a988f7c0998ff7444bfd3daf50060958b2690e863a220b094e192511"
+      "sha256": "3dbd5047eb6a3ddc951c643c125d0f688a63c668ab102a99aa86ac8396dc4000"
     },
     {
       "path": "industries/real-estate-transaction-lawyers/index.html",
       "kind": "html",
-      "sha256": "00c159eba8545fcc26c8457de86b2852e4cc0ca3c1679c46aca8453f84f22283"
+      "sha256": "3b862963374fdf63f177b2dfd9f92fb93d26f8f165f0992743dfc107a66dfb17"
     },
     {
       "path": "industries/recruitment-agencies-recruiters/index.html",
       "kind": "html",
-      "sha256": "985eb88d764a0d90e58c2f08a91a320b25b7fd26c175c845b26b2941dacb8faf"
+      "sha256": "4587e5501208f0836f3da2d7b4c834a9ad652b19cc3a4c646aa6dc65ba458cac"
     },
     {
       "path": "industries/rehabilitation-centres/index.html",
       "kind": "html",
-      "sha256": "d0509a373f6577304fffb8627f6b235de59bb8b9102e964a76fc02ba99d35454"
+      "sha256": "b391ab53c7261c3084bcadbf52f570c6ab5d727f34f4cee434ea34f4953f923b"
     },
     {
       "path": "industries/reproductive-medicine-clinics/index.html",
       "kind": "html",
-      "sha256": "ba9392696f51383f8d43bef8ca1178395487ccc312efd158634ff29881977d07"
+      "sha256": "641025305c46d6f28e098c97eac3926a7e1e4847a515c51531b569a181b70baa"
     },
     {
       "path": "industries/residential-property-agencies/index.html",
       "kind": "html",
-      "sha256": "8c39cc2eae46ca4b9cf9d288796b7d0ceeb10d2f1c91bfeae7e0380e25ba565c"
+      "sha256": "1ec8ea79c55a867b8bcec7070163734ef6bb479e8ec84b488b3a509b1cb184d7"
     },
     {
       "path": "industries/residential-renovation-contractors/index.html",
       "kind": "html",
-      "sha256": "77f2e66a6d08f7ebef7cbf44baf5f971391d64e0b847f285f0fd0d8ca653dca2"
+      "sha256": "74cc0668878d1a5ca9210b40f5900c18f91bdf694754f003ed538500236cacb7"
     },
     {
       "path": "industries/restaurants-coffee-chains/index.html",
       "kind": "html",
-      "sha256": "9c54f4e3b2d77c0d9b90fab96b669d8bf30942be00a28f23faa4b958de88a1dc"
+      "sha256": "20652447302017aec0369ffec1dbe02d3d9d61389b4f36494a8934db75cacbb1"
     },
     {
       "path": "industries/security-cctv-companies/index.html",
       "kind": "html",
-      "sha256": "0f210772316b7ad36d902bab810001a2a1ad81023866a3991647bb3e97eedc03"
+      "sha256": "48c50c7a8bccedbf0d658403e99d067f197374c5940e31f5fb3a36333cf68313"
     },
     {
       "path": "industries/self-storage-services/index.html",
       "kind": "html",
-      "sha256": "f89d71b0cdb02c7f715d7b599a8eaca7aadf7da6f3bab19de617d253886dad37"
+      "sha256": "8bf8b779081e5d6a34b6c5acd639459883683b14caaeb6cbf1ac6651b0a4e607"
     },
     {
       "path": "industries/sports-goods-nutrition-stores/index.html",
       "kind": "html",
-      "sha256": "af9c73d4d676eb1e16be46987d68018d6ad0ec1a38433297a6c0b2320b67b253"
+      "sha256": "708ef19023c2b41097896f5e7baa9c40b6f0b3cb257ced15795365fdb3e6dc1f"
     },
     {
       "path": "industries/systems-integrators-it-outsourcers/index.html",
       "kind": "html",
-      "sha256": "cb257528f901c812c0fe3fa2fc7891be06de801a5fadfa4190496090ae27dadc"
+      "sha256": "201eaeddcea7f4b1fd11d5b56ac6ec2d602de061de4596b2060a416dc3f2d116"
     },
     {
       "path": "industries/tax-lawyers/index.html",
       "kind": "html",
-      "sha256": "5074ff5410e207b625a8543dfac051b88f10dea8b695b72d41ba5c1642285756"
+      "sha256": "540df9ab8c39dc46bd3c1ed229a9121eade5b37abbb43b1618ab44ea7d5f59fe"
     },
     {
       "path": "industries/tourism/index.html",
@@ -5858,42 +5883,42 @@
     {
       "path": "industries/universities-business-schools/index.html",
       "kind": "html",
-      "sha256": "9fde1d0c119aa7fd6923937991a53c100a87e671587bddc76067460157e4ce5b"
+      "sha256": "3ac2681e2fa96587d36322164ffae7b84d3eb9a5d009ba15a2e4d4e2ca598732"
     },
     {
       "path": "industries/vehicle-sourcing-import/index.html",
       "kind": "html",
-      "sha256": "bb100791cc6b94bf02557ec71dbaa2ded8c527f22ef5fefc34eb5702f458f8b5"
+      "sha256": "25d10d10029cb08679144378fba7d986f9806d175053a2c43047af011f59b976"
     },
     {
       "path": "industries/warehouse-equipment-suppliers/index.html",
       "kind": "html",
-      "sha256": "2535f7233eed434a00897ed701b1a21bf16d96e7a9635dacfbf6fecbe85f19f3"
+      "sha256": "9a677bc954bbcb106cd078d4a98d41aa4fa24bef8687fad3ff161827ed6dbd12"
     },
     {
       "path": "industries/warehouse-industrial-parks/index.html",
       "kind": "html",
-      "sha256": "b7459cae82cfb033e9c0a1cf38fbe0c3a67cd5e9269b484662c865e53c2c6f85"
+      "sha256": "825514f305a79eead98ec92bb42e4b74412b7d8c6f9350201820053f206fa74d"
     },
     {
       "path": "industries/warehouse-storage-3pl/index.html",
       "kind": "html",
-      "sha256": "8a2da57353bef691e9356cd2cdf357002c345f8dd1bf334b0b5ae2869389cb3a"
+      "sha256": "ef908e1cfabfed41331187f787c7e371f740d1f3da870e6a266f98351f3dcc48"
     },
     {
       "path": "industries/window-manufacturers-installers/index.html",
       "kind": "html",
-      "sha256": "f002c6f0a8c8a0009c5c5e2f3474280f799238509f317d7d3b4f7d4a557fcc80"
+      "sha256": "3cde6d36546a3144f19111da7f2d90593486a45da6a3b28b8f85e07ce1a7257a"
     },
     {
       "path": "industries/wms-tms/index.html",
       "kind": "html",
-      "sha256": "5eaef7eec38fcb84f0e3956bf1a2273b53e74a395bdec848f8437527508d1da0"
+      "sha256": "d2888f557aae602c1edbe30477cfc2fc8f7e8f642aa6f9aaeeff62612fd45c7c"
     },
     {
       "path": "industries/workwear-ppe-suppliers/index.html",
       "kind": "html",
-      "sha256": "fbe22e9bdfc1b368c6192493c27f2e2d67517022fb57fd10f94f04dd9aad4efb"
+      "sha256": "77c592c18fa485de74771a7da05994d0af1bbe96dd2c271e04636a31d063d345"
     },
     {
       "path": "personal-data-consent/index.html",
@@ -5908,32 +5933,32 @@
     {
       "path": "professional-biography/index.html",
       "kind": "html",
-      "sha256": "3df7465c98ddd7d3e38343b51281664f235c8c5b5b4e8b72ceba62bf40df6e61"
+      "sha256": "0d3564dafda5e94e1cc54b3c593717de541bf160f52e152eb701912fb789032b"
     },
     {
       "path": "publications/articles/index.html",
       "kind": "html",
-      "sha256": "5347a3906a2d8b62ba43b018b10dff20be327fa6a86099de440cf56a71810d63"
+      "sha256": "5d67ffcdc67544ba33bb1903aeef29aac89dd4661ba2e75986241fa47eabd4ab"
     },
     {
       "path": "publications/cases/index.html",
       "kind": "html",
-      "sha256": "e2bdc9c4da0fd8ccdd00b86f569dc216dc9a0190a29be23e33df7d3e514b324c"
+      "sha256": "a36df68ac514075ea4744d939bd22fc89fdcaf02d7447ca9b126bf80125c2b48"
     },
     {
       "path": "publications/index.html",
       "kind": "html",
-      "sha256": "b6dd56f2b9016ea3cbc618a77b2a733581233b609731dfd952980be394e089c5"
+      "sha256": "3c173554724c268483ffb9053be01ad7a4a653f6060240764558c557c95a4961"
     },
     {
       "path": "publications/interviews/index.html",
       "kind": "html",
-      "sha256": "0853b8bd603dde0cfb75cecb60422196e3b796d7c06f6bc576c9545f4f81e663"
+      "sha256": "020866b21813e03ac7faae8d8b2430d1515f2669839c790f4191c1dc91a145e2"
     },
     {
       "path": "publications/ratings/index.html",
       "kind": "html",
-      "sha256": "36fdab2e0f8ccb7a8c7040d3a400b448a48dadc8734a470811cd8ad92969db30"
+      "sha256": "5065d82965220395169f727d58036cad390404c505d3804e547868dd0588d886"
     },
     {
       "path": "rankings/branding/best-branding-agencies-russia-2026/index.html",
@@ -6303,7 +6328,7 @@
     {
       "path": "reviews/index.html",
       "kind": "html",
-      "sha256": "6853d7e79b78fbc8069ee259711b9142f2ad3474fefa99ca7267001c2dfb6599"
+      "sha256": "57511d359e21ca1dc5449f7366b577d6a25a579af710ce4429a31b9147927455"
     },
     {
       "path": "robots.production.txt",
@@ -6318,67 +6343,67 @@
     {
       "path": "services/additional-platforms/index.html",
       "kind": "html",
-      "sha256": "677083fd3e0c33a5eec5da25c72bb627b589daa65996373a8ccbdefa2ce4a2e0"
+      "sha256": "318b3f6319e8bd81fdf989ac9c8340397b174e63a29c301ef64a6a90d8e8a77c"
     },
     {
       "path": "services/additional-prompts/index.html",
       "kind": "html",
-      "sha256": "6d6eaee147d22d396d32bb7d1b4f9a0bb2043a530c49770c88cc6b6b76d2a764"
+      "sha256": "eb551bc08a04b067f2fc547bb7c26bbe73b67084747af3398085f08db812120e"
     },
     {
       "path": "services/free-audit/index.html",
       "kind": "html",
-      "sha256": "47c420475f63d2ae3a4c1de77a05cd207a100a087538213083eeff16e4887c09"
+      "sha256": "efefa9e5fb79eca6974d162ddec3b3345ebf6549028f9e9f13ed2aefb4297d36"
     },
     {
       "path": "services/geo-audit/index.html",
       "kind": "html",
-      "sha256": "6977da7cc054ab6b0a67dc470bdc7b252bb14d476ecec03c318f4fcaf9611587"
+      "sha256": "a306887698b4f8b9d06e0dce81e6a7aa8b3fc897203a56df3e7ca46301a39e76"
     },
     {
       "path": "services/geo-content/index.html",
       "kind": "html",
-      "sha256": "819ac09e6533e118bba430437835a0f7088aac116d85aaea5e39780ded73c5aa"
+      "sha256": "f2fe4b9f43ea450acb067524baf69c5a82e5014da59a559d52910b9aa48f2b7b"
     },
     {
       "path": "services/geo-guarantee/index.html",
       "kind": "html",
-      "sha256": "32307db4e6b467d8fab1d9c623445e381fc66ecdb49edbf3320ae0f3d760fe58"
+      "sha256": "761972f57d3098a5c2162878cd3b360ab2d6cdac6884e8b2962c804a73781196"
     },
     {
       "path": "services/geo-promotion/index.html",
       "kind": "html",
-      "sha256": "b9f373f001b4f3ec92bb9aab7d7638d03ff32d9229f0603694b9ffb6c1eb4a81"
+      "sha256": "3e9905c8cf0f5ec8004b9a9917910ff12a4cf154e6c901d0dd1aec0b1c87beea"
     },
     {
       "path": "services/index.html",
       "kind": "html",
-      "sha256": "c89fbf426465f548a66f1f015e23c88d9c7eaa2664f9550d60a4ad812c5087bc"
+      "sha256": "e4627a2d8381d3630bc4d028d8bebd4c90523283dd728d98ce76e1ed4313610b"
     },
     {
       "path": "services/website-development/index.html",
       "kind": "html",
-      "sha256": "5def03373a9ae7f90ab19ae2bbd02e344f940ee0d447f59cdfc335fafab9a531"
+      "sha256": "51323297ec7387dace11d3a33a5e4dc02b7054dc5b691032861a4767b10725a1"
     },
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "53c10a01ca4068019cf5c1e0f1a74d2341c097b922fc192c448d74bf89d8422a"
+      "sha256": "dc9c67b002ae84d5f95ee63b06c3decb66c23b371de6700535b6280e3718563d"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
       "kind": "html",
-      "sha256": "d2faa49f737975ac6891d40b79f3a6de0109f5fcf13c0afe284b0a998994f217"
+      "sha256": "a2b880e612b0c366d45e4e830387afd28d6674e993cf03ed483523c47b82c51d"
     },
     {
       "path": "strategies/b2b-law-firm-matter-fit/index.html",
       "kind": "html",
-      "sha256": "2ef10b9fda824a76e0c8ed5d4946c40946c798c226156b90da537032001cc639"
+      "sha256": "e1726e1c63758d1ea1a739ae6f0f5a914e26358765208bf8cdc81eca4812f405"
     },
     {
       "path": "strategies/developer-project-evidence-checklist/index.html",
       "kind": "html",
-      "sha256": "47db22b76ae312fb5719653f4dda1b2dc7b2a0eed0fa93a4ccf20a18cb8483f0"
+      "sha256": "7b8d1eb76c40b664e9402deef355279c8e2324a00b1d59178214e35cb9573d8d"
     },
     {
       "path": "strategies/ecommerce-catalog/index.html",
@@ -6393,7 +6418,7 @@
     {
       "path": "strategies/financial-services-evidence/index.html",
       "kind": "html",
-      "sha256": "711da7f0076bedee555aa0fa6ea8d600e497925f72c42412530a77a4c0a1bf0f"
+      "sha256": "cef8a92dc18fd46b8a263bf81c9bdd5298045731774982e1937c64a5f867f3e4"
     },
     {
       "path": "strategies/fulfillment-provider-selection/index.html",
@@ -6408,12 +6433,12 @@
     {
       "path": "strategies/industrial-equipment-evidence/index.html",
       "kind": "html",
-      "sha256": "945c62941d95df6d15799201f5e27ed333193cd4f4ddb4731dc6686d82f0c7ef"
+      "sha256": "7b8f1d29746b31b1857b097b8b83dbae068b031ef7776f179b9e00412d3ffbec"
     },
     {
       "path": "strategies/industrial-equipment-rfq-checklist/index.html",
       "kind": "html",
-      "sha256": "e13d1ffd2d62f37930052406b166afe88ccaed09b6d496b315a01d7559583637"
+      "sha256": "077196e6aa568eb71938292eee19101a3e1379863fac3f52aa07af27b2c2397c"
     },
     {
       "path": "strategies/industrial-supplier-evidence/index.html",
@@ -6423,12 +6448,12 @@
     {
       "path": "strategies/international-logistics-route-evidence/index.html",
       "kind": "html",
-      "sha256": "e0068db78959400cfe869086328a30a522578f996a037105240d21806a5b0deb"
+      "sha256": "1b2d6a26f8b950bfea7eae60fd68ebf1dc99691089ee1b65cf8d237ecd73ae9d"
     },
     {
       "path": "strategies/international-logistics-tender-checklist/index.html",
       "kind": "html",
-      "sha256": "4e10da7be4ffb5521e192a89ae5af1a4735ef436b614d4acb4db33a8e996f129"
+      "sha256": "40939464a5913f153c80c9919ad9c604535b786f4065f340289c71f5f07645e5"
     },
     {
       "path": "strategies/legal-recommendations/index.html",
@@ -6438,7 +6463,7 @@
     {
       "path": "strategies/load-testing-vendor-proof/index.html",
       "kind": "html",
-      "sha256": "af249cd15322b89466f2dfeac2eebc69fee96a1aec501586480c26ff6a5cc05d"
+      "sha256": "05f5a9c38c220d73670a15326ddcdbae84094e6a91c25feb2a84b7f6a5e96818"
     },
     {
       "path": "strategies/measurement/index.html",
@@ -6448,12 +6473,12 @@
     {
       "path": "strategies/packaging-material-evidence/index.html",
       "kind": "html",
-      "sha256": "16b0b3ab6c5f86d6fbfed2d01ae61ed9db5d0fae52ea54971cc4312cdde29381"
+      "sha256": "39243c68629aac21461b2bd940d8f31ef55d29c76372984e05928d75648e5409"
     },
     {
       "path": "strategies/packaging-supplier-brief-checklist/index.html",
       "kind": "html",
-      "sha256": "08e8402db7642845aea6faf53cc10946398512ea1109a1a37f80b8f16e2dd13b"
+      "sha256": "a5f0c3d490768a0a60f7ea02d7f5fff68f5638d2f2a09ad0dbb2707c4da32470"
     },
     {
       "path": "strategies/pharma-geo-evidence/index.html",
@@ -6463,17 +6488,17 @@
     {
       "path": "strategies/private-clinic-branch-facts-checklist/index.html",
       "kind": "html",
-      "sha256": "1e082747378e695176bf26a785643b4603ce82d7667fe96ec8dcac07b16138f3"
+      "sha256": "6042e5a156df4b6acb788a47943fca2a07155d9e1a4f0eb091cdabb558066669"
     },
     {
       "path": "strategies/private-clinics-service-evidence/index.html",
       "kind": "html",
-      "sha256": "805283db7e44747af5c16b25af14b89a6d4d7b8ea9d57dc85fb17ea3636ee865"
+      "sha256": "0c4e7ef589265adef2ffb60ee5fe1485bde0336d10ee7bca611ee7f22f06a666"
     },
     {
       "path": "strategies/sector-geo-case-proof/index.html",
       "kind": "html",
-      "sha256": "4880ba2f9ac0db63fbf8b192303d249522ce3d0c463634c3bc191196b60f713b"
+      "sha256": "5bd9564229b9c12269ad89b4dbe0b33c30d39ff9bb823aea2e42fe9953da91c3"
     },
     {
       "path": "strategies/technical-b2b-vendor-evidence/index.html",
@@ -6488,7 +6513,7 @@
     {
       "path": "tarify/index.html",
       "kind": "html",
-      "sha256": "76fc63df3d5fce1ef5703f18236b4379f43fbff19a0bad4496682ba4083184dd"
+      "sha256": "c69f57ff595d6a2964aa9b264986a9e4b57c816f89f9ebdac6aaed9aab53ae91"
     }
   ]
 }
