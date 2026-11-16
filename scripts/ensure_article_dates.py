@@ -83,7 +83,12 @@ def node_types(node: dict) -> set[str]:
 
 
 def article_matches_page(node: dict, canonical: str) -> bool:
-    if not node_types(node).intersection({"Article", "NewsArticle", "BlogPosting"}):
+    types = node_types(node)
+    editorial = bool(types.intersection({"Article", "NewsArticle", "BlogPosting"}))
+    # The legacy EN MethodLab case is a CreativeWork rather than an Article.
+    # It is still a dated editorial case, not a commercial landing page.
+    case_study = "CreativeWork" in types and "/cases/" in urlparse(canonical).path
+    if not (editorial or case_study):
         return False
     url = str(node.get("url") or "").split("#", 1)[0].rstrip("/") + "/"
     canon = canonical.split("#", 1)[0].rstrip("/") + "/"
