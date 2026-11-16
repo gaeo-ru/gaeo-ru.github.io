@@ -19,7 +19,9 @@ ARTICLE_META_RE = re.compile(
     r'<div\b[^>]*class=["\'][^"\']*\barticle-meta\b[^"\']*["\'][^>]*>[\s\S]*?</div>',
     re.I,
 )
-SPAN_RE = re.compile(r'<span\b[^>]*>([\s\S]*?)</span>', re.I)
+SPAN_TAG_RE = re.compile(r'<span\b[^>]*>[\s\S]*?</span>', re.I)
+DATE_SLOT_RE = re.compile(r'^(?:Опубликовано|Обновлено|Published|Updated)\s*[:：]', re.I)
+DATE_CLASS_RE = re.compile(r'\bclass=["\'][^"\']*\barticle-date\b', re.I)
 CANONICAL_RE = re.compile(
     r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*\bhref=["\']([^"\']+)["\'][^>]*>',
     re.I,
@@ -81,7 +83,7 @@ def node_types(node: dict) -> set[str]:
 
 
 def article_matches_page(node: dict, canonical: str) -> bool:
-    if "Article" not in node_types(node):
+    if not node_types(node).intersection({"Article", "NewsArticle", "BlogPosting"}):
         return False
     url = str(node.get("url") or "").split("#", 1)[0].rstrip("/") + "/"
     canon = canonical.split("#", 1)[0].rstrip("/") + "/"
@@ -138,26 +140,50 @@ def set_meta_property(text: str, prop: str, value: str) -> str:
     return text.replace(marker, tag + "\n" + marker, 1)
 
 
+def visible_date_text(published: str, modified: str, lang: str) -> str:
+    """Return one editorial date, using a label only after an actual update."""
+    if modified > published:
+        return ("Updated " if lang.startswith("en") else "Обновлено ") + format_date(modified, lang)
+    return format_date(published, lang)
+
+
 def normalized_article_meta(text: str, published: str, modified: str, lang: str) -> str:
+    """Keep the author / reading time / badges; collapse two dates into one."""
     match = ARTICLE_META_RE.search(text)
     if not match:
         raise RuntimeError("Article page has no visible .article-meta block.")
 
-    spans = SPAN_RE.findall(match.group(0))
-    author = clean_text(spans[0]) if spans else ""
-    if not author:
-        raise RuntimeError("Article page .article-meta has no author/name span.")
-
-    pub_label = "Published" if lang.startswith("en") else "Опубликовано"
-    mod_label = "Updated" if lang.startswith("en") else "Обновлено"
-    rendered = (
-        '<div class="article-meta">'
-        f'<span>{escape(author)}</span>'
-        f'<span>{pub_label}: {escape(format_date(published, lang))}</span>'
-        f'<span>{mod_label}: {escape(format_date(modified, lang))}</span>'
-        '</div>'
+    display_date = modified if modified > published else published
+    date_markup = (
+        '<span class="article-date">'
+        f'<time datetime="{display_date}">{escape(visible_date_text(published, modified, lang))}</time>'
+        '</span>'
     )
-    return text[:match.start()] + rendered + text[match.end():]
+    seen_date = False
+
+    def replace_span(span_match):
+        nonlocal seen_date
+        span = span_match.group(0)
+        content = clean_text(span)
+        is_date = bool(
+            DATE_SLOT_RE.match(content)
+            or DATE_CLASS_RE.search(span.split(">", 1)[0])
+            or re.search(r"<time\b", span, re.I)
+        )
+        if not is_date:
+            return span
+        if seen_date:
+            return ""
+        seen_date = True
+        return date_markup
+
+    block = SPAN_TAG_RE.sub(replace_span, match.group(0))
+    if not seen_date:
+        closing = block.rfind("</div>")
+        if closing < 0:
+            raise RuntimeError("Malformed .article-meta block.")
+        block = block[:closing] + date_markup + block[closing:]
+    return text[:match.start()] + block + text[match.end():]
 
 
 def normalize(path: Path) -> tuple[bool, bool]:
