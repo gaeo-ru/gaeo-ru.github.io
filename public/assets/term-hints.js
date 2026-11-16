@@ -233,7 +233,6 @@ export const TERM_DEFINITIONS = Object.freeze({
     ...RU_EXTRA_GLOSSARY,
     Indexing: 'Индексация — обработка найденных поисковыми роботами страниц и добавление сведений о них в поисковый индекс. Наличие страницы в индексе не гарантирует показ в поиске.',
     Feed: 'Фид — структурированная выгрузка данных (например, товаров, цен, остатков) из сайта или учетной системы для автоматической передачи поисковым сервисам, торговым площадкам и другим системам.',
-    CaseStudy: 'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата',
     Content: 'Контент - это любое информационное наполнение сайта: то, что пользователь видит, читает, слушает или с чем взаимодействует',
     Repository: 'Репозиторий — хранилище файлов проекта и истории их изменений. Обычно используется с системой контроля версий Git для отслеживания правок и совместной разработки.',
     SchemaOrg: 'Schema.org - общий словарь типов и свойств для структурированной разметки страниц: организаций, товаров, статей и других сущностей.',
@@ -375,7 +374,7 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|кейс(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?|репозитори(?:ями|ям|ях|ев|ем|й|я|ю|и))(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?|репозитори(?:ями|ям|ях|ев|ем|й|я|ю|и))(?![\p{L}\p{N}_])/giu;
 // Russian spellings of GEO in editorial headings, without confusing geographic terms.
 const RU_GEO_TERMS = /(?<![\p{L}\p{N}_])(?:гео[-‐‑–](?:продвижени|специалист|эксперт|аудит|агентств|консультант|оптимизаци)[\p{L}]*|геопродвижени[\p{L}]*|геоспециалист[\p{L}]*|гео(?![-‐‑–]))(?![\p{L}\p{N}_])/giu;
 const RU_GEO_QUICK_TERMS = new RegExp(RU_GEO_TERMS.source, 'iu');
@@ -419,7 +418,6 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Shortlist') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?короткий\s+список/u.test(after) || /^\s*\(\s*short\s+list\s*\)/i.test(after);
   if (term === 'Indexing') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:обработк|процесс\s+(?:обработки|включения)|включени)[\p{L}\s-]*\s+(?:страниц|сайтов|документов|в\s+поисковый\s+индекс)/iu.test(after);
   if (term === 'Feed') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:структурированн|файл|выгрузк)[\p{L}\s-]*\s+(?:данных|товаров|каталога)/iu.test(after);
-  if (term === 'CaseStudy') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?подробное\s+описание\s+реальной\s+ситуации/iu.test(after);
   if (term === 'Content') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?любое\s+информационное\s+наполнение\s+сайта/iu.test(after);
   if (term === 'Repository') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?хранилище\s+файлов\s+проекта/iu.test(after);
   const extraDefinition = RU_EXTRA_GLOSSARY[term];
@@ -471,7 +469,6 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
       : /^промпт/iu.test(value) ? 'Prompt'
       : /^индексаци/iu.test(value) ? 'Indexing'
       : /^фид/iu.test(value) ? 'Feed'
-      : /^кейс/iu.test(value) ? 'CaseStudy'
       : /^контент/iu.test(value) ? 'Content'
       : /^репозитори/iu.test(value) ? 'Repository'
       : /^гео/iu.test(value) ? 'GEO'
@@ -815,6 +812,14 @@ export function installTermHints(doc = document) {
     if (!trigger) return;
     event.preventDefault();
     event.stopPropagation();
+    // On touch screens a second tap on the SAME underlined term or ? closes
+    // its tooltip immediately, including multi-term links. A fresh tap reopens it.
+    const touchInteraction = lastInput === 'touch' ||
+      (lastInput !== 'mouse' && win.matchMedia('(hover: none) and (pointer: coarse)').matches);
+    if (touchInteraction && active === trigger && !tooltip.hidden) {
+      hide();
+      return;
+    }
     if (lastInput === 'mouse') {
       if (active !== trigger && trigger.matches(':hover')) show(trigger, 'hover');
     } else show(trigger);
@@ -856,7 +861,9 @@ export function installTermHints(doc = document) {
   }, { passive: true });
   doc.addEventListener('focusin', event => {
     const trigger = event.target.closest?.('[data-gaeo-term]');
-    if (trigger && lastInput !== 'mouse') show(trigger);
+    // Touch focus can precede click. Let the click open the tooltip so the
+    // first tap is never mistaken for a second tap; retain keyboard focus help.
+    if (trigger && lastInput !== 'mouse' && lastInput !== 'touch' && lastInput !== 'pen') show(trigger);
     else if (!trigger && active) hide();
   });
   doc.addEventListener('keydown', event => {
