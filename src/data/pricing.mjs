@@ -71,7 +71,7 @@ export function offerNode(id,lang='ru'){
 }
 export function serviceNodes(id,lang='ru'){
  const p=getPlan(id,lang),url='https://gaeo.ru'+p.href;
- const cases=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
+ const cases=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours','razrabotka-sajta-prep-center'];
   const proof=p.id==='development'?{subjectOf:cases.map(slug=>({'@id':'https://gaeo.ru'+(lang==='en'?'/en':'')+'/cases/'+slug+'/#article'}))}:{};
   return [{'@type':'Service','@id':url+'#service',url,name:p.name,description:p.summary+' '+p.items.join('. '),serviceType:p.name,provider:{'@id':'https://gaeo.ru/#business'},offers:{'@id':url+'#offer'},...proof},offerNode(id,lang)];
 }

@@ -32,9 +32,9 @@
 .site-service .site-service__step p{font-size:15px;line-height:1.65;margin:0;color:#415268}
 
 /* Cases use the same separated-column pattern as the homepage. */
-.site-service__cases{grid-template-columns:repeat(3,minmax(0,1fr));margin:22px 0 36px}
+.site-service__cases{grid-template-columns:repeat(2,minmax(0,1fr));margin:22px 0 36px}
 .site-service__case{min-width:0;box-sizing:border-box;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding:25px 21px 28px 0}
-.site-service__case+.site-service__case{border-left:1px solid var(--line);padding-left:22px}
+.site-service__case:nth-child(even){border-left:1px solid var(--line);padding-left:22px}
 .site-service__case h3{font-family:Manrope,Arial,sans-serif!important;font-weight:700;font-size:17px!important;line-height:1.4!important;margin:0 0 10px!important}
 .site-service__case p{font-size:14px!important;line-height:1.65!important;margin:0 0 16px!important}
 .site-service__case a{display:inline-block;overflow-wrap:anywhere;font-size:14px;font-weight:700}

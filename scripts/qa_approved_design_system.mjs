@@ -8,7 +8,7 @@ import {phase3AClusters} from '../src/data/industry-clusters-phase-3a.mjs';
 
 const ROOT=process.cwd();
 const src=resolve(ROOT,'src/legacy/pages'),dist=resolve(ROOT,'dist');
-const caseSlugs=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
+const caseSlugs=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours','razrabotka-sajta-prep-center'];
 const approved={
  'index.html':['FAQ'],'en/index.html':['FAQ'],
  'strategies/fulfillment-provider-selection/index.html':['FAQ','CONTACT'],
@@ -30,8 +30,8 @@ for(const cluster of phase3AClusters)for(const kind of ['hub','method'])for(cons
 }
 for(const entry of phase3BMethods)for(const route of Object.values(entry.routes.method))approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
 for(const slug of caseSlugs){
- approved['cases/'+slug+'/index.html']=['FAQ'];
- approved['en/cases/'+slug+'/index.html']=['FAQ'];
+ approved['cases/'+slug+'/index.html']=slug==='razrabotka-sajta-prep-center'?['FAQ','CONTACT']:['FAQ'];
+ approved['en/cases/'+slug+'/index.html']=slug==='razrabotka-sajta-prep-center'?['FAQ','CONTACT']:['FAQ'];
 }
 const allFiles=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(item=>{
  const path=resolve(dir,item.name);

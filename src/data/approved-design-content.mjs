@@ -104,6 +104,12 @@ export const designPageContent = {
         "text": "Большой туристический каталог с турами, странами, местами, экскурсиями, многострановыми маршрутами и поиском.",
         "href": "/cases/razrabotka-sajta-adatours/",
         "cta": "Читать кейс AdaTours.ru"
+      },
+      {
+        "title": "Восстановление сайта Преп-Центра",
+        "text": "После сбоя хостинга восстановили 45 страниц из сохраненных копий, вернули калькулятор и прием заявок. Исходники и общие элементы перенесли в GitHub.",
+        "href": "/cases/razrabotka-sajta-prep-center/",
+        "cta": "Читать кейс Преп-Центра"
       }
     ]
   },
@@ -158,6 +164,12 @@ export const designPageContent = {
         "text": "An extensive travel catalog connecting tours, countries, places, excursions, multi-country itineraries and search.",
         "href": "/en/cases/razrabotka-sajta-adatours/",
         "cta": "Read the AdaTours.ru case"
+      },
+      {
+        "title": "Prep-Center website recovery",
+        "text": "Recovered 45 pages from saved copies after a hosting outage, restored the calculator and email enquiries, and moved the source and shared components to GitHub.",
+        "href": "/en/cases/razrabotka-sajta-prep-center/",
+        "cta": "Read the Prep-Center case"
       }
     ]
   }

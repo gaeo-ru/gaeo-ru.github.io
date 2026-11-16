@@ -19,7 +19,7 @@ function nodesAt(route){
 function findId(route,id){return nodesAt(route).find(x=>x['@id']===id);}
 function serviceAt(route){return findId(route,base+route.replace(/^\//,'')+'#service');}
 
-const cases=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
+const cases=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours','razrabotka-sajta-prep-center'];
 const hubs=['/industries/','/strategies/','/services/','/tarify/','/en/industries/','/en/strategies/','/en/services/','/en/pricing/'];
 
 for(const lang of ['ru','en']){
@@ -90,4 +90,4 @@ for(const route of [
 ]){
   assert.equal(serviceAt(route)?.provider?.['@id'],base+'#business','Legacy provider '+route);
 }
-console.log('ENTITY_SCHEMA_QA=PASS: expert entities, 8 offers, 107 sector services, 3 development cases, RU/EN');
+console.log('ENTITY_SCHEMA_QA=PASS: expert entities, 8 offers, 107 sector services, 4 development cases, RU/EN');
