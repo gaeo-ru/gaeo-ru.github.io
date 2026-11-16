@@ -3,6 +3,7 @@ import {resolve,relative,sep} from 'node:path';
 import {createHash} from 'node:crypto';
 import {industrySpecializations} from '../src/data/industry-specializations.mjs';
 import {injectTermHintAssets} from '../src/lib/term-hint-assets.mjs';
+import {enhanceEditorialLabels} from '../src/lib/legacy.mjs';
 const ROOT=process.cwd(),ORIGINAL=resolve(ROOT,'src/legacy/pages'),PUBLIC=resolve(ROOT,'public'),OUTPUT=resolve(ROOT,'dist');
 const walk=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(x=>{
  const abs=resolve(dir,x.name);
@@ -45,7 +46,7 @@ for(const original of originals){
  if(!existsSync(generated)){problems.push('Missing route: '+path);continue;}
  // The shared glossary adds exactly the canonical, content-hashed assets.
  // Comparing against the same explicit injection retains full page parity.
- const before=normalize(injectTermHintAssets(readFileSync(original,'utf8')));
+ const before=normalize(injectTermHintAssets(enhanceEditorialLabels(readFileSync(original,'utf8'))));
  const after=normalize(readFileSync(generated,'utf8'));
  for(const attribute of ['data-gaeo-term-styles','data-gaeo-term-script']){
   if((after.match(new RegExp(attribute,'g'))||[]).length!==1)problems.push('Expected one glossary asset '+attribute+' in '+path);
