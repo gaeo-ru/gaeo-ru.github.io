@@ -29,9 +29,10 @@ for(const cluster of phase3AClusters)for(const kind of ['hub','method'])for(cons
  approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
 }
 for(const entry of phase3BMethods)for(const route of Object.values(entry.routes.method))approved[route.slice(1)+'index.html']=['FAQ','CONTACT'];
+// All development cases use the shared FAQ; their in-article CTA matches the established case template.
 for(const slug of caseSlugs){
- approved['cases/'+slug+'/index.html']=slug==='razrabotka-sajta-prep-center'?['FAQ','CONTACT']:['FAQ'];
- approved['en/cases/'+slug+'/index.html']=slug==='razrabotka-sajta-prep-center'?['FAQ','CONTACT']:['FAQ'];
+ approved['cases/'+slug+'/index.html']=['FAQ'];
+ approved['en/cases/'+slug+'/index.html']=['FAQ'];
 }
 const allFiles=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(item=>{
  const path=resolve(dir,item.name);
@@ -115,6 +116,15 @@ for(const [rel,blocks] of Object.entries(approved)){
   if(!blocks.includes(block)){
    assert.equal(count(source,'<!-- GAEO_DESIGN:'+block+' -->'),0,'Unexpected component on '+rel);
   }
+ }
+ if(/^(?:en\/)?cases\/razrabotka-sajta-prep-center\/index\.html$/.test(rel)){
+  const ctaStart=source.indexOf('<div class="page-cta">');
+  assert.ok(ctaStart>source.indexOf('<!-- GAEO_DESIGN:FAQ -->'),'Prep-Center CTA comes after shared FAQ '+rel);
+  assert.equal(count(source,'class="page-cta"'),1,'One source CTA '+rel);
+  assert.equal(count(html,'class="page-cta"'),1,'One rendered CTA '+rel);
+  assert.ok(source.slice(ctaStart).includes('</div></div></section></main>'),'CTA remains inside article-wrap '+rel);
+  assert.ok(source.slice(ctaStart).includes('href="'+(rel.startsWith('en/')?'/en/#lead':'/#lead')+'"'),'Localized CTA target '+rel);
+  assert.equal(count(html,'<!-- GAEO_DESIGN:CONTACT_START -->'),0,'No duplicate contact section '+rel);
  }
  console.log('DESIGN_COMPONENT_QA=PASS '+rel+' '+blocks.join(','));
 }

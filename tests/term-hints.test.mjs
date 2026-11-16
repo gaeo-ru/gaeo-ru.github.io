@@ -3,6 +3,14 @@ import assert from 'node:assert/strict';
 import { findTermMatches, TERM_DEFINITIONS, TERM_HINT_DURATION } from '../public/assets/term-hints.js';
 import { injectTermHintAssets, linkBrandFoundMentions } from '../src/lib/term-hint-assets.mjs';
 
+test('sitemap explains XML URL discovery in Russian and English', () => {
+  assert.deepEqual(findTermMatches('Сформировали sitemap.', {language:'ru'}).map(m => m.term), ['sitemap']);
+  assert.deepEqual(findTermMatches('The Sitemap lists important pages.', {language:'en'}).map(m => m.term), ['sitemap']);
+  assert.deepEqual(findTermMatches('mysitemap sitemap2026', {language:'ru'}), []);
+  assert.match(TERM_DEFINITIONS.ru.sitemap,/XML-файл/);
+  assert.match(TERM_DEFINITIONS.en.sitemap,/website URLs/);
+});
+
 test('standalone terms in normal copy, headings and metric labels', () => {
   const source = 'GEO-продвижение: BMR 22%, SoV 15%. SEO/AEO и GAEO.ru. SOV';
   assert.deepEqual(findTermMatches(source).map(match => match.term), ['GEO', 'BMR', 'SoV', 'SEO', 'AEO', 'SoV']);
