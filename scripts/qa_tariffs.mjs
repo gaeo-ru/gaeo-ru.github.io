@@ -165,6 +165,18 @@ for(const lang of ['ru','en']){
   assert.equal(read(route).split(identity).length-1,1,'Business IDs shown exactly once in shared footer '+route);
  }
 }
+// Evidence references belong near the MethodLab measurements, not in an orphan
+// full-height section after the final lead prompt (both languages).
+for(const [lang,caseSlug] of [['ru','/cases/methodlab-rost-neyrovidimosti-19-52-procenta/'],['en','/en/cases/methodlab-ai-visibility-growth/']]){
+ const route=(lang==='ru'?'/':'/en/')+'industries/highload-it/';
+ const html=read(route);
+ const pricing=html.indexOf('id="industry-pricing"');
+ const proof=html.indexOf('href="'+caseSlug+'"');
+ assert.ok(pricing>0&&proof>0&&proof<pricing,'MethodLab evidence linked above pricing on '+route);
+ const afterPricing=html.slice(pricing,html.indexOf('</main>',pricing));
+ assert.doesNotMatch(afterPricing,/Подробные результаты по 6 сценариям|For the complete fixed-matrix analysis/,'No orphaned one-line MethodLab section after CTA on '+route);
+}
+
 console.log('GAEO_SHARED_TARIFF_AND_IDENTITY_QA=PASS; priced pages='+pricingPaths.length+'; industry pages='+industryPricingPaths.length);
 
 console.log('TARIFF_STATIC_QA=PASS; 6 plans; 2 extras; 13 platforms; 107 categories; RU/EN; prices; schema; links');
