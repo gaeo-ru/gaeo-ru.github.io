@@ -79,17 +79,13 @@ const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-'
   cursor:pointer;text-align:left;text-decoration:none;
 }
 .industry-related-specializations__toggle::after{
-  content:'';display:block;flex:0 0 26px;width:26px;height:26px;
-  border:1px solid #c8dde7;border-radius:50%;
-  background: #f3f9fc;
-  background-image:linear-gradient(45deg,transparent 42%,#075e80 42%,#075e80 58%,transparent 58%),
-    linear-gradient(-45deg,transparent 42%,#075e80 42%,#075e80 58%,transparent 58%);
-  background-size:6px 6px,6px 6px;
-  background-position:calc(50% - 2px) calc(50% + 1px),calc(50% + 2px) calc(50% + 1px);
-  background-repeat:no-repeat;
-  transition:transform .18s ease,background-color .18s ease,border-color .18s ease;
+  content:'↓';display:inline-grid;place-items:center;
+  flex:0 0 28px;width:28px;height:28px;
+  border:1px solid #c8dde7;border-radius:50%;background:#f3f9fc;
+  color:#075e80;font:600 18px/1 Manrope,Arial,sans-serif;
+  transition:background-color .18s ease,border-color .18s ease;
 }
-.industry-related-specializations.is-expanded .industry-related-specializations__toggle::after{transform:rotate(180deg)}
+.industry-related-specializations.is-expanded .industry-related-specializations__toggle::after{content:'↑'}
 .industry-related-specializations__toggle:hover{color:#054c69;text-decoration:underline;text-underline-offset:3px}
 .industry-related-specializations__toggle:hover::after{border-color:#9ac8d9;background-color:#e9f5fa}
 .industry-related-specializations__toggle:focus-visible{outline:2px solid #075e80;outline-offset:3px;border-radius:5px}
