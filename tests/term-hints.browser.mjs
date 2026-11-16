@@ -130,7 +130,7 @@ try {
   assert.equal(await page.locator('#content-linked > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
   assert.equal(await page.locator('#content-linked .gaeo-term-link-help').count(), 1);
   assert.equal(await page.locator('#content-linked .gaeo-term-link-help').getAttribute('data-gaeo-term'), 'Content');
-  assert.equal(await page.locator('#case-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
+  assert.equal(await page.locator('#case-link > .gaeo-term-link-inline').count(), 0);
   assert.equal(await page.locator('#case-link .gaeo-term-link-help').count(), 0);
   assert.equal(await page.locator('#case-link > a').getAttribute('href'), '#destination');
 
