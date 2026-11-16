@@ -6,6 +6,7 @@ const RU_EXTRA_GLOSSARY = Object.freeze({
   "Title": "Title (HTML-тег title) — заголовок страницы, который показывается во вкладке браузера и может использоваться поисковыми системами как заголовок результата поиска.",
   "description": "description (meta description) — краткое описание страницы в метатеге HTML; поисковая система может использовать его при создании сниппета.",
   "hreflang": "hreflang — атрибут, который указывает язык и при необходимости регион альтернативной версии страницы, помогая поисковым системам выбрать подходящую версию.",
+  "sitemap": "sitemap (карта сайта) - XML-файл со списком адресов страниц для поисковых роботов. Помогает поисковым системам находить страницы, но не гарантирует их индексацию.",
   "Postbox": "Yandex Cloud Postbox — облачный сервис Яндекса для отправки электронных писем, в том числе заявок и уведомлений с сайта.",
   "CTA": "CTA (Call to Action) — призыв к действию: кнопка, ссылка или текст, предлагающие посетителю выполнить целевое действие, например оставить заявку.",
   "Core Web Vitals": "Core Web Vitals (основные веб-показатели) — метрики Google, оценивающие загрузку, отзывчивость и визуальную стабильность веб-страницы: LCP, INP и CLS.",
@@ -277,6 +278,7 @@ export const TERM_DEFINITIONS = Object.freeze({
   }),
   en: Object.freeze({
     SchemaOrg: 'Schema.org - a shared vocabulary of types and properties for structured data describing organizations, products, articles and other entities.',
+    sitemap: 'sitemap (XML sitemap) - a file listing website URLs to help search engines discover pages. Inclusion does not guarantee indexing.',
     GEO: 'GEO (Generative Engine Optimization) - promotion in AI recommendations',
     SEO: 'SEO (Search Engine Optimization) - website promotion in search engines',
     GitHubPages: 'GitHub Pages is a GitHub service for hosting static websites directly from a repository.',
@@ -345,12 +347,13 @@ const FULL_NAMES = {
   BIM: 'Building\\s+Information\\s+Modeling'
 };
 // Both Russian case forms and English spelling map to one glossary entry.
-const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|BMR|SoV|SOV|WMS|(?:[Gg][Ii][Tt][Hh][Uu][Bb]\s+[Pp][Aa][Gg][Ee][Ss]|[Gg][Ii][Tt][Hh][Uu][Bb])|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
+const TERMS = /(?<![\p{L}\p{N}_])(?:[Bb]rand\s+[Mm]ention\s+[Rr]ate|[Ss]hare\s+of\s+[Vv]oice|[Ss][Cc][Hh][Ee][Mm][Aa]\.[Oo][Rr][Gg]|GEO|AEO|SEO|[Ss]itemap|BMR|SoV|SOV|WMS|(?:[Gg][Ii][Tt][Hh][Uu][Bb]\s+[Pp][Aa][Gg][Ee][Ss]|[Gg][Ii][Tt][Hh][Uu][Bb])|[Ff][Rr][Ss]|[Ss][Hh][Oo][Rr][Tt][Ll][Ii][Ss][Tt][Ss]?|SKU|PRR|SCR|RAR|RRR|PPSR|DMC|MICE|КМД|КМ|KMD|KM|СКУД|SKUD|VIN|ЭПТС|EPTS|PSI|[Aa][Ss][Tt][Rr][Oo]|ТЗ|TZ|СРО|SRO|BIM|[Ee][-‐‑–]?(?:[Cc]ommerce|COMMERCE)|[Сс][Тт][Мм]|(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)(?:ами|ах|ам|ов|ом|а|у|е|ы)?|[Ff]ulfill?ment(?:s)?|[Bb]rand[Ff]ound|BRANDFOUND)(?![\p{L}\p{N}_])/gu;
 
 // Longest-match-first Russian glossary; works on source text without changing URLs or links.
 const EXTRA_ALIASES = Object.freeze({
   'ВМиК': 'ВМК',
   'Canonical': 'canonical',
+  'Sitemap': 'sitemap',
   'Javascript': 'JavaScript',
   'javascript': 'JavaScript',
   'JAVASCRIPT': 'JavaScript',
