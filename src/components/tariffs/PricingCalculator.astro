@@ -2,7 +2,7 @@
 import {platforms,getPlan,priceLabel,money,PRICES,pricingHref,serviceHref} from '../../data/pricing.mjs';
 const {lang='ru'}=Astro.props;const en=lang==='en';
 const monthly=['geo','content','guarantee'].map(id=>getPlan(id,lang));
-const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:PRICES.platform,promptPrice:PRICES.prompts,plans:monthly.map(p=>({id:p.id,name:p.name,amount:p.amount}))};
+const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:PRICES.platform,promptPrice:PRICES.prompts,plans:monthly.map(p=>({id:p.id,name:p.name,amount:p.amount,label:priceLabel(p,lang)}))};
 ---
 <section class="section-sm tariff-calculator-section" id="calculator">
  <div class="container">
@@ -17,7 +17,7 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
      <select name="plan" aria-labelledby={'tariff-plan-label-'+lang}>{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select>
      <div class="tariff-plan-picker" data-plan-picker hidden>
       <button type="button" class="tariff-plan-picker__trigger" data-plan-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls={'tariff-plan-options-'+lang} aria-labelledby={'tariff-plan-label-'+lang+' tariff-plan-current-'+lang}>
-       <span id={'tariff-plan-current-'+lang} data-plan-current>{monthly[0].name}</span>
+       <span id={'tariff-plan-current-'+lang} data-plan-current><span class="tariff-plan-picker__name" data-plan-name>{monthly[0].name}</span><span class="tariff-plan-picker__price" data-plan-price>{priceLabel(monthly[0],lang)}</span></span>
       </button>
       <div class="tariff-plan-picker__options" id={'tariff-plan-options-'+lang} data-plan-options role="listbox" aria-labelledby={'tariff-plan-label-'+lang} hidden>
        {monthly.map((p,i)=><button type="button" class="tariff-plan-picker__option" role="option" aria-selected={i===0?'true':'false'} data-plan-choice={p.id}><span class="tariff-plan-picker__name">{p.name}</span><span class="tariff-plan-picker__price">{priceLabel(p,lang)}</span></button>)}
