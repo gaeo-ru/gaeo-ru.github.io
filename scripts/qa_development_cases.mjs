@@ -134,7 +134,7 @@ function caseSeoAudit(route,listing=false){
   assert.ok(!headings.some(x=>/границы доказанного|пределы кейса|evidence limits|verifiable public output|моя роль/i.test(x)),'No artificial editorial headings '+route);
   const visibleFaq=[...html.replace(/>\s+</g,'><').matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
   assert.equal(visibleFaq.length,3,'Three homepage-style FAQ rows '+route);
-  assert.ok(html.includes('<div class="eyebrow">FAQ</div>'),'FAQ label like homepage '+route);
+  assert.ok(html.includes('<div class="eyebrow faq-kicker">FAQ</div>'),'FAQ label like homepage '+route);
   assert.ok(html.includes('<div class="faq">'),'FAQ wrapper like homepage '+route);
   assert.deepEqual(faq.mainEntity.map(x=>x.name),visibleFaq.map(x=>x[1]),'FAQ schema equals visible questions '+route);
   assert.deepEqual(faq.mainEntity.map(x=>x.acceptedAnswer.text),visibleFaq.map(x=>x[2]),'FAQ answers equal schema '+route);

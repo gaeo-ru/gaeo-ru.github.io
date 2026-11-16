@@ -11,7 +11,7 @@
 .review-carousel__controls button:disabled{opacity:.32;cursor:default}
 .review-carousel__track{display:flex;align-items:stretch;gap:24px;width:100%;max-width:100%;min-width:0;margin-top:32px;padding:3px 0 16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#7e91ac transparent;-webkit-overflow-scrolling:touch}
 .review-carousel__card{display:flex;flex:0 0 calc((100% - 48px)/3);flex-direction:column;min-width:0;min-height:278px;margin:0;padding:25px 24px 24px;border:1px solid var(--line,rgba(2,22,65,.14));border-top:3px solid var(--navy,#021641);border-radius:0 0 8px 8px;background:var(--paper,#fff);scroll-snap-align:start;overflow-wrap:break-word}
-.review-carousel__card blockquote{flex:1 0 auto;margin:0 0 24px;color:var(--navy,#021641);font:500 19px/1.5 Literata,Georgia,serif}
+.review-carousel__card blockquote{flex:1 0 auto;margin:0 0 24px;color:var(--navy,#021641);font:500 19px/1.5 Manrope,Arial,sans-serif}
 .review-carousel__card blockquote p{margin:0;font:inherit;line-height:inherit}
 .review-carousel__author{margin:0 0 6px;color:var(--navy,#021641);font-size:14px;font-weight:700;line-height:1.45}
 .review-carousel__context{margin:0 0 16px;color:#566170;font-size:12px;line-height:1.55}

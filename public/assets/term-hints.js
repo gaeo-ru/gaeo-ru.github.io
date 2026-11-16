@@ -268,6 +268,7 @@ export const TERM_DEFINITIONS = Object.freeze({
     STM: 'СТМ - собственная торговая марка. Товары, производимые или импортируемые под брендом правообладателя. Обычно зарегистрирована в Роспатенте.',
     AEO: 'AEO (Answer Engine Optimization) - продвижение контента в источники ответов нейросетей',
     BMR: 'BMR (Brand Mention Rate) - доля упоминаний бренда в ответах нейросетей',
+    PP: 'п.п. - процентные пункты, разница между значениями, выраженными в процентах. Например, 50% + 5 п.п. = 55%, а рост на 5% от 50% дает 52,5%.',
     SoV: 'SoV (Share of Voice) - доля упоминаний бренда среди всех брендов, упомянутых в ответах нейросети',
     WMS: 'WMS (Warehouse Management System) — система управления складом.',
     Fulfillment: 'Фулфилмент (Fulfillment) — комплекс логистических услуг в сфере интернет-торговли, который включает полный цикл работы с заказами: от приёмки товара на склад до отправки покупателю и обработки возвратов.',
@@ -376,7 +377,7 @@ const extraPattern = extraSpelling.sort((a, b) => b.length - a.length)
 const EXTRA_TERMS = new RegExp('(?<![\\p{L}\\p{N}_])(?:' + extraPattern +
   ')(?![\\p{L}\\p{N}_])', 'gu');
 // Russian inflected words are matched only on Russian pages.
-const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?|репозитори(?:ями|ям|ях|ев|ем|й|я|ю|и))(?![\p{L}\p{N}_])/giu;
+const RU_WORD_TERMS = /(?<![\p{L}\p{N}_])(?:п\.\s*п\.|перелинковк(?:а|и|е|у|ой|ою|ам|ами|ах)|перелинковок|дистрибуци(?:я|и|ю|ей|ею|й|ям|ями|ях)|интент(?:ами|ам|ах|ов|ом|а|у|е|ы)?|промпт(?:ами|ам|ах|ов|ом|а|у|е|ы)?|индексаци(?:я|и|ю|ей|ею|й|ям|ями|ях)|фид(?:ами|ов|ом|ам|ах|а|у|е|ы)?|контент(?:ами|ов|ом|ам|ах|а|у|е|ы)?|репозитори(?:ями|ям|ях|ев|ем|й|я|ю|и))(?![\p{L}\p{N}_])/giu;
 // Russian spellings of GEO in editorial headings, without confusing geographic terms.
 const RU_GEO_TERMS = /(?<![\p{L}\p{N}_])(?:гео[-‐‑–](?:продвижени|специалист|эксперт|аудит|агентств|консультант|оптимизаци)[\p{L}]*|геопродвижени[\p{L}]*|геоспециалист[\p{L}]*|гео(?![-‐‑–]))(?![\p{L}\p{N}_])/giu;
 const RU_GEO_QUICK_TERMS = new RegExp(RU_GEO_TERMS.source, 'iu');
@@ -409,6 +410,7 @@ function alreadyExplained(context, start, end, term, spelling) {
   if (term === 'Fulfillment' && (/(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\(\s*$/u.test(before) || /^\s*\(\s*(?:[Фф]улфилмент|ФУЛФИЛМЕНТ)\s*\)/u.test(after))) return true;
   if (term === 'SchemaOrg') return /^\s*(?:[(:—–-]\s*)?(?:(?:общий|единый)\s+)?словарь\s+(?:типов|структурированн|данных)/iu.test(after) ||
     /^\s*(?:[(:—–-]\s*)?(?:a\s+)?(?:shared\s+)?vocabulary\s+(?:of|for)\b/i.test(after);
+  if (term === 'PP') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?процентн(?:ые|ых)\s+пункт/iu.test(after);
   if (term === 'Interlinking') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:система\s+внутренних\s+ссылок|внутренние\s+ссылки)/iu.test(after);
   if (term === 'ContentDistribution') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?распространение\s+(?:контента|материалов|публикаций|статей)/iu.test(after);
   if (term === 'Intent') return /^\s*(?:[(:—–-]\s*)?(?:это\s+)?(?:цель|потребность)\s+(?:пользователя|человека|поискового\s+запроса)/iu.test(after);
@@ -466,7 +468,8 @@ export function findTermMatches(text, { context = text, offset = 0, language = '
     if (start < consumedUntil) continue;
     consumedUntil = end;
     const value = match[0];
-    const term = /^schema\.org$/i.test(value) ? 'SchemaOrg'
+    const term = /^п\.\s*п\.$/iu.test(value) ? 'PP'
+      : /^schema\.org$/i.test(value) ? 'SchemaOrg'
       : /^перелинковк|^перелинковок/iu.test(value) ? 'Interlinking'
       : /^дистрибуци/iu.test(value) ? 'ContentDistribution'
       : /^интент/iu.test(value) ? 'Intent'

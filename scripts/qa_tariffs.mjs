@@ -40,9 +40,17 @@ for(const lang of ['ru','en']){
   'I implement and improve the website myself','Prepayment for the current month'
  ])) assert.ok(html.includes(phrase),'Tariff comparison must match the approved responsibilities: '+phrase);
  assert.equal(list?.itemListElement?.length,107,'All 107 visible categories in ItemList');
+ const comparison=html.match(/<div class="tariff-comparison"[\s\S]*?<\/table>/)?.[0]||'';
+ assert.ok(comparison,'Tariff comparison table exists');
+ assert.ok(comparison.includes('class="tariff-comparison__price-row"'),'Comparison prices are in the last row');
+ const row=comparison.match(/<tr class="tariff-comparison__price-row">([\s\S]*?)<\/tr><\/tbody>/)?.[1]||'';
+ for(const number of ['79','99','114'])assert.ok(row.includes(number),'Missing price in final comparison row: '+number);
+ const heading=comparison.match(/<thead>([\s\S]*?)<\/thead>/)?.[1]||'';
+ assert.ok(!/79[\s\u00a0\u202f]?900|99[\s\u00a0\u202f]?900|114[\s\u00a0\u202f]?900/.test(heading),'Plan headings must not repeat the prices');
  assert.equal((html.match(/\bdata-gaeo-request=/g)||[]).length>=107,true,'Industry context is passed to inquiry form');
 const industryItems=getIndustryCatalog(lang);
  assert.equal(industryItems.length,107,'The tariff catalogue must retain all 107 business categories');
+ assert.equal(industryItems.filter(item=>item.hubLink).length,65,'65 categories have verified industry material links');
  for(const item of industryItems){
   assert.ok(html.includes('id="'+item.id+'"'),'Addressable category '+item.id);
   assert.ok(item.detailLink?.startsWith('/'),'Every catalogue title needs a real page, never an in-page anchor: '+item.id);
@@ -52,6 +60,10 @@ const industryItems=getIndustryCatalog(lang);
   const itemListEntry=list.itemListElement.find(x=>x.position===item.number);
   assert.equal(itemListEntry?.url,'https://gaeo.ru'+item.detailLink,'The ItemList should link to the actual industry page: '+item.id);
   for(const image of [item.image.small,item.image.large])assert.ok(existsSync(resolve(dist,image.slice(1))),'Missing image '+image);
+  if(item.hubLink){
+   assert.ok(html.includes('href="'+item.hubLink.href+'"'),'Industry resource link exists '+item.id);
+   assert.ok(existsSync(resolve(dist,item.hubLink.href.slice(1),'index.html')),'Missing industry resource page '+item.id+' '+item.hubLink.href);
+  }
  }
  for(const number of [1,19,39,47,54,67,80]){
   const original=industryItems.find(i=>i.number===number);
@@ -126,7 +138,16 @@ for(const path of pricingPaths){
  if(path.includes('/industries/'))assert.ok(html.includes('/assets/tariffs.js'),'Every industry pricing grid loads CTA alignment script: '+path);
  assert.ok(html.includes('class="tariff-actions"'),'Tariff CTAs exist on '+path);
  const details=(html.match(/<details class="price tariff-plan"/g)||[]).length;
- assert.ok(details===3||details===6,'Expected 3 industry or 6 pricing plan cards on '+path);
+ const staticCards=(html.match(/<article class="price tariff-plan"/g)||[]).length;
+ const fullTariffs=path.endsWith('/tarify/index.html')||path.endsWith('/en/pricing/index.html');
+ if(fullTariffs){
+  assert.equal(staticCards,6,'All 6 plans must be static and non-collapsible '+path);
+  assert.equal(details,0,'No collapsible cards on the tariff directory '+path);
+  assert.ok(!html.match(/<article class="price tariff-plan"[\s\S]*?class="price-toggle"/),'No collapse controls on tariff directory '+path);
+ }else{
+  assert.equal(staticCards,0,'Keep existing accordions on non-directory pages '+path);
+  assert.ok(details===3||details===6,'Expected 3 industry or 6 homepage plan accordions on '+path);
+ }
 }
 for(const [route,lang] of [['/','ru'],['/en/','en']]){
  const html=read(route);
@@ -144,6 +165,18 @@ for(const lang of ['ru','en']){
   assert.equal(read(route).split(identity).length-1,1,'Business IDs shown exactly once in shared footer '+route);
  }
 }
+// Evidence references belong near the MethodLab measurements, not in an orphan
+// full-height section after the final lead prompt (both languages).
+for(const [lang,caseSlug] of [['ru','/cases/methodlab-rost-neyrovidimosti-19-52-procenta/'],['en','/en/cases/methodlab-ai-visibility-growth/']]){
+ const route=(lang==='ru'?'/':'/en/')+'industries/highload-it/';
+ const html=read(route);
+ const pricing=html.indexOf('id="industry-pricing"');
+ const proof=html.indexOf('href="'+caseSlug+'"');
+ assert.ok(pricing>0&&proof>0&&proof<pricing,'MethodLab evidence linked above pricing on '+route);
+ const afterPricing=html.slice(pricing,html.indexOf('</main>',pricing));
+ assert.doesNotMatch(afterPricing,/Подробные результаты по 6 сценариям|For the complete fixed-matrix analysis/,'No orphaned one-line MethodLab section after CTA on '+route);
+}
+
 console.log('GAEO_SHARED_TARIFF_AND_IDENTITY_QA=PASS; priced pages='+pricingPaths.length+'; industry pages='+industryPricingPaths.length);
 
 console.log('TARIFF_STATIC_QA=PASS; 6 plans; 2 extras; 13 platforms; 107 categories; RU/EN; prices; schema; links');
@@ -271,7 +304,7 @@ try{
     const visual=await page.evaluate(()=>{
       const terms=document.querySelector('.industry-catalog__terms')?.getBoundingClientRect();
       const lead=document.querySelector('.tariff-page > .tariff-page__contact #contact h2')?.getBoundingClientRect();
-      const cards=[...document.querySelectorAll('#pricing .tariff-plans > details.tariff-plan[open]')];
+      const cards=[...document.querySelectorAll('#pricing .tariff-plans > article.tariff-plan')];
       const groups=[];
       for(const card of cards){
         const y=card.getBoundingClientRect().top;

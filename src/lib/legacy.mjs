@@ -30,9 +30,19 @@ function langHref(html,lang){
  }
  return lang==='en'?'/en/':'/';
 }
+
+/** Annotate editorial FAQ kickers and descriptive links in the canonical build output. */
+export function enhanceEditorialLabels(html){
+ return html
+  .replace(/(<(?:div|span)\b[^>]*\bclass=")([^"]*\beyebrow\b[^"]*)(">FAQ<\/(?:div|span)>)/giu,
+    (_,start,classes,end)=>start+(classes.includes('faq-kicker')?classes:classes+' faq-kicker')+end)
+  .replace(/(<a\b[^>]*\bhref=["'](?:https:\/\/gaeo\.ru)?\/services\/website-development\/["'][^>]*>\s*)(Разработка сайт(?:а|ов))(\s*<\/a>)/giu,
+    '$1$2 под нейросети$3');
+}
+
 function chrome(original,kind,lang){
  const file=(kind==='header'?'site-header':'site-footer')+(lang==='en'?'-en':'')+'.html';
- let t=readFileSync(resolve(PARTIALS,file),'utf8').trim();
+ let t=enhanceEditorialLabels(readFileSync(resolve(PARTIALS,file),'utf8').trim());
  for(const id of ['ru','en']){
   const re=new RegExp('(<a class="lang-link lang-'+id+'" href=")[^"]*(")','g');
   t=t.replace(re,(_,a,b)=>a+langHref(original,id)+b);
@@ -43,7 +53,7 @@ function chrome(original,kind,lang){
 export function tokenizeLegacyPage(rel){
  const file=resolve(PAGES,rel);
  if(!file.startsWith(PAGES+sep))throw Error('Invalid legacy path '+rel);
- const src=injectTermHintAssets(readFileSync(file,'utf8')),lang=rel.startsWith('en/')?'en':'ru';
+ const src=injectTermHintAssets(enhanceEditorialLabels(readFileSync(file,'utf8'))),lang=rel.startsWith('en/')?'en':'ru';
  const hasIndustrySlot=src.includes('<!-- ASTRO_INDUSTRY_COMMERCIAL_SLOT -->')||src.includes('<!-- ASTRO_INDUSTRY_SPECIALIZATION_SLOT -->');
  const hasApprovedContact=src.includes('<!-- GAEO_DESIGN:CONTACT -->');
  // A managed Astro contact component is the sole lead block on new pages.

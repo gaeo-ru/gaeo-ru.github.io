@@ -18,6 +18,15 @@ test('standalone terms in normal copy, headings and metric labels', () => {
   assert.deepEqual(findTermMatches('профулфилмент, фулфилментный, WMS123, otherWMS, Фулфилмент24'), []);
 });
 
+test('percentage points have the agreed Russian glossary explanation', () => {
+  const hits=findTermMatches('Рост на 5 п.п. и затем на 10 п. п.').filter(hit=>hit.term==='PP');
+  assert.deepEqual(hits.map(hit=>hit.text),['п.п.','п. п.']);
+  assert.deepEqual(findTermMatches('5 п.п.', { language:'en' }),[]);
+  assert.equal(findTermMatches('п.п. - процентные пункты').filter(hit=>hit.term==='PP').length,0);
+  assert.match(TERM_DEFINITIONS.ru.PP,/50% \+ 5 п\.п\. = 55%/);
+  assert.match(TERM_DEFINITIONS.ru.PP,/52,5%/);
+});
+
 test('GEO glossary hints are consistent in hyphenated publication headings', () => {
   const latinHeadings = [
     'Безопасное и агрессивное GEO-продвижение в нейросетях: вождение и работа в кепке',

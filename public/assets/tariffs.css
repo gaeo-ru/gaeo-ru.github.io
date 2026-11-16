@@ -215,3 +215,13 @@
  .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions{position:absolute;left:26px;right:26px;bottom:26px;margin:0;transform:none!important}
  .industry-pricing-section .tariff-plans details.tariff-plan[open] .tariff-actions .button{display:flex;align-items:center;justify-content:center;height:56px;min-height:56px;padding:8px 10px;line-height:1.25}
 }
+
+
+/* On the full pricing page cards are semantic static articles, not accordions. */
+.tariff-plans > article.tariff-plan .price-summary{cursor:default;user-select:text}
+@media(min-width:721px){
+ .tariff-plans > article.tariff-plan{min-height:100%;display:flex;flex-direction:column}
+ .tariff-plans > article.tariff-plan > .price-details{min-height:0;flex:1 1 auto;display:flex;flex-direction:column}
+ .tariff-plans > article.tariff-plan > .price-details > ul{flex:1 1 auto}
+ .tariff-plans > article.tariff-plan > .price-details > .tariff-actions{margin-top:auto}
+}
