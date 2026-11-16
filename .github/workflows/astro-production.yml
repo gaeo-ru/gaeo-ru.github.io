@@ -138,6 +138,7 @@ jobs:
             python scripts/site_qa.py --mode production
           )
           python -m unittest discover -s tests -p 'test_ensure_site_metadata.py'
+          python -m unittest discover -s tests -p 'test_article_date_policy.py'
           node scripts/qa_contract_wording.mjs
       - name: Browser smoke test changed pages at desktop and mobile widths
         if: steps.scope.outputs.focused_browser == 'true'

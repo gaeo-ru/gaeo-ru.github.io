@@ -48,3 +48,8 @@ Only the **slow, specialized browser/sector suites** are change-gated. Run workf
 - If an expected link title changes, update its canonical source, not generated main/dist. Confirm that dependent lists/structured data are consistent and rerun publication.
 - Tests should be extended when new page generators, shared data dependencies, or specialized validators are added. Unknown paths automatically trigger full mode until mapped.
 - Standard GitHub concurrency and parallel-edit protection remain in place.
+
+
+## Политика дат для всех типов страниц
+
+Правила дат публикации и обновления описаны в [DATE_POLICY.md](DATE_POLICY.md). Перед деплоем обязательны нормализация в scripts/ensure_article_dates.py, проверка во всем готовом HTML через scripts/site_qa.py, проверка метаданных Article и sitemap lastmod, а также новые регрессионные тесты. Даты не должны меняться только из-за повторной сборки.
