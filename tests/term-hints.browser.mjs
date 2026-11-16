@@ -122,16 +122,17 @@ try {
   assert.equal(await page.locator('#technical-link .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
 
   assert.deepEqual(await page.locator('#case-inflections [data-gaeo-term]').evaluateAll(
-    els => els.map(el => el.dataset.gaeoTerm)), Array(10).fill('CaseStudy'));
+    els => els.map(el => el.dataset.gaeoTerm)), []);
   assert.equal(await page.locator('#case-defined [data-gaeo-term]').count(), 0);
   assert.deepEqual(await page.locator('#content-inflections [data-gaeo-term]').evaluateAll(
     els => els.map(el => el.dataset.gaeoTerm)), Array(10).fill('Content'));
   assert.equal(await page.locator('#content-defined [data-gaeo-term]').count(), 0);
   assert.equal(await page.locator('#content-linked > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
   assert.equal(await page.locator('#content-linked .gaeo-term-link-help').count(), 1);
-  assert.equal(await page.locator('#content-linked .gaeo-term-link-help').getAttribute('data-gaeo-term'), 'Content|CaseStudy');
+  assert.equal(await page.locator('#content-linked .gaeo-term-link-help').getAttribute('data-gaeo-term'), 'Content');
   assert.equal(await page.locator('#case-link > .gaeo-term-link-inline > a').getAttribute('href'), '#destination');
-  assert.equal(await page.locator('#case-link .gaeo-term-link-help[data-gaeo-term="CaseStudy"]').count(), 1);
+  assert.equal(await page.locator('#case-link .gaeo-term-link-help').count(), 0);
+  assert.equal(await page.locator('#case-link > a').getAttribute('href'), '#destination');
 
   assert.deepEqual(await page.locator('#glossary-added [data-gaeo-term]').evaluateAll(
     elements => elements.map(element => element.dataset.gaeoTerm)),
@@ -454,6 +455,28 @@ try {
     assert.ok(await touchTip.isVisible(), `Touch: ${terms.length} definitions stay visible before ${duration} ms`);
     await touch.clock.fastForward(1000);
     assert.equal(await touchTip.isVisible(), false, `Touch: ${terms.length} definitions close after ${duration} ms`);
+  }
+  // Mobile touch: a second tap on the same trigger closes before timeout.
+  // Verify single-term text and the one-question-mark control for grouped terms.
+  for (const [selector, count] of [
+    ['p [data-gaeo-term="BMR"]', 1],
+    ['#two-terms .gaeo-term-link-help', 2],
+    ['#five-terms .gaeo-term-link-help', 5]
+  ]) {
+    const trigger = touch.locator(selector);
+    await trigger.tap();
+    assert.ok(await touchTip.isVisible(), 'Touch: first tap opens '+selector);
+    assert.equal(await trigger.getAttribute('aria-expanded'), 'true');
+    assert.equal(await touchTip.locator('.gaeo-term-tooltip-entry').count(), count);
+    await trigger.tap();
+    assert.equal(await touchTip.isVisible(), false, 'Touch: second tap closes '+selector);
+    assert.equal(await trigger.getAttribute('aria-expanded'), 'false');
+    await touch.clock.fastForward(26000);
+    assert.equal(await touchTip.isVisible(), false, 'Touch: cancelled timer does not reopen '+selector);
+    await trigger.tap();
+    assert.ok(await touchTip.isVisible(), 'Touch: next tap reopens '+selector);
+    await touchTip.tap();
+    assert.equal(await touchTip.isVisible(), false, 'Touch: tooltip tap still closes '+selector);
   }
   await touch.locator('#five-terms .gaeo-term-link-help').tap();
   assert.ok(await touchTip.isVisible(), 'Touch: question icon opens definition');
