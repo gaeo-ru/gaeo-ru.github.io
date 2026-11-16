@@ -1,11 +1,11 @@
 ---
 import {getPlan,priceLabel,planIds} from '../../data/pricing.mjs';
-const {lang='ru',ids=planIds,open=false}=Astro.props;
+const {lang='ru',ids=planIds,open=false,staticCards=false}=Astro.props;
 const en=lang==='en';
 ---
 <div class="pricing tariff-plans">
- {ids.map(id=>{const plan=getPlan(id,lang);const Card=open?'article':'details';const Heading=open?'div':'summary';return <Card class="price tariff-plan" data-plan={id}>
-  <Heading class="price-summary"><div><span class="tariff-period">{plan.kind==='monthly'?(en?'Monthly service':'Ежемесячно'):(en?'One-time service':'Разово')}</span><h3>{plan.name}</h3><div class="amount">{priceLabel(plan,lang)}</div><p class="tariff-summary">{plan.summary}</p></div>{!open&&<span class="price-toggle" aria-hidden="true">+</span>}</Heading>
+ {ids.map(id=>{const plan=getPlan(id,lang);const Card=staticCards?'article':'details';const Heading=staticCards?'div':'summary';return <Card class="price tariff-plan" open={staticCards?undefined:open} data-plan={id}>
+  <Heading class="price-summary"><div><span class="tariff-period">{plan.kind==='monthly'?(en?'Monthly service':'Ежемесячно'):(en?'One-time service':'Разово')}</span><h3>{plan.name}</h3><div class="amount">{priceLabel(plan,lang)}</div><p class="tariff-summary">{plan.summary}</p></div>{!staticCards&&<span class="price-toggle" aria-hidden="true">+</span>}</Heading>
   <div class="price-details"><ul>{plan.items.map(item=><li>{item}</li>)}</ul><div class="tariff-actions"><a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-intent={plan.id==='free'?'audit':'service'} data-gaeo-request={plan.name+' · '+priceLabel(plan,lang)}>{plan.cta}</a><a class="tariff-text-link" href={plan.href}>{en?'Scope and conditions':'Состав и условия'} →</a></div></div>
  </Card>})}
 </div>
