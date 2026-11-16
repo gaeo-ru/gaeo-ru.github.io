@@ -144,7 +144,7 @@ for(const path of pricingPaths){
   assert.equal(staticCards,6,'All 6 plans must be static and non-collapsible '+path);
   assert.equal(details,0,'No collapsible cards on the tariff directory '+path);
   assert.ok(!html.match(/<article class="price tariff-plan"[\s\S]*?class="price-toggle"/),'No collapse controls on tariff directory '+path);
- }else if(path.includes('/industries/')){
+ }else if(html.includes('id="industry-pricing"')){
   assert.equal(staticCards,3,'All 3 industry plans must stay permanently expanded '+path);
   assert.equal(details,0,'No collapsible tariff cards on industry pages '+path);
   assert.equal((html.match(/class="price-toggle"/g)||[]).length,0,'No collapse crosses on industry tariff cards '+path);
