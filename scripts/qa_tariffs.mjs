@@ -231,7 +231,7 @@ try{
      assert.ok(dropdown.left>=0&&dropdown.right<=width+1,'Industry menu fits viewport '+width+' '+route+' '+JSON.stringify(dropdown));
      assert.equal(dropdown.scrollable,true,'Long industry list scrolls within its popup');
      if(width===390||width===1440)
-      await industryPicker.screenshot({path:'visual-tariffs/industry-open-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
+      await page.screenshot({path:'visual-tariffs/industry-open-'+(route.startsWith('/en/')?'en':'ru')+'-'+width+'.png'});
      await industryTrigger.press('Escape');
      assert.equal(await industryOptions.isHidden(),true,'Escape closes industry list');
     }
