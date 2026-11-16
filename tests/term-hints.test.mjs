@@ -261,15 +261,15 @@ test('Ambiguous PR is excluded without affecting PRR', () => {
 });
 
 
-test('«кейс»: singular/plural cases, site context, boundaries and exact approved definition', () => {
-  assert.equal(TERM_DEFINITIONS.ru.CaseStudy,
-    'Кейс - подробное описание реальной ситуации, проблемы или задачи, с которой столкнулась компания или её клиент, пути её решения и достигнутого результата');
-  const forms = ['Кейс', 'кейса', 'кейсу', 'кейсом', 'кейсе', 'кейсы', 'кейсов', 'кейсам', 'кейсами', 'кейсах'];
-  assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'CaseStudy'));
-  assert.deepEqual(findTermMatches('кейсовый кейсик Кейс24 антикейс').map(hit => hit.term), []);
-  assert.deepEqual(findTermMatches('Кейсы — подробное описание реальной ситуации'), []);
-  assert.deepEqual(findTermMatches('кейс и кейсы').map(hit => hit.term), ['CaseStudy','CaseStudy']);
+test('«кейс» is excluded in every form while other glossary terms remain active', () => {
+  assert.equal(TERM_DEFINITIONS.ru.CaseStudy, undefined);
+  const forms = ['Кейс', 'кейса', 'кейсу', 'кейсом', 'кейсе',
+    'кейсы', 'кейсов', 'кейсам', 'кейсами', 'кейсах'];
+  assert.deepEqual(findTermMatches(forms.join(', ')), []);
+  assert.deepEqual(findTermMatches('Кейсы и кейсы клиентов'), []);
   assert.deepEqual(findTermMatches('кейс и кейсы', { language: 'en' }), []);
+  assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content']);
+  assert.deepEqual(findTermMatches('Кейс GEO и SEO').map(hit => hit.term), ['GEO', 'SEO']);
 });
 
 
@@ -282,7 +282,7 @@ test('«контент»: approved meaning, singular/plural declensions, boundar
     forms.map(() => 'Content'));
   assert.deepEqual(findTermMatches('Контент — это любое информационное наполнение сайта'), []);
   assert.deepEqual(findTermMatches('контентный контентщик контент24 контентность'), []);
-  assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content','CaseStudy']);
+  assert.deepEqual(findTermMatches('Контент и кейсы').map(hit => hit.term), ['Content']);
   assert.deepEqual(findTermMatches('контент и кейсы', {language:'en'}), []);
 });
 
@@ -294,7 +294,7 @@ test('«репозиторий»: singular and plural cases, safe boundaries and
     'репозитории', 'репозиториев', 'репозиториям', 'репозиториями', 'репозиториях'];
   assert.deepEqual(findTermMatches(forms.join(', ')).map(hit => hit.term), forms.map(() => 'Repository'));
   assert.deepEqual(findTermMatches('Кейсы, контент и репозитории').map(hit => hit.term),
-    ['CaseStudy','Content','Repository']);
+    ['Content','Repository']);
   assert.deepEqual(findTermMatches('Репозиторий — хранилище файлов проекта'), []);
   assert.deepEqual(findTermMatches('репозиториальный антирепозиторий репозиторий2'), []);
   assert.deepEqual(findTermMatches('/docs/репозиторий/index.html'), []);
