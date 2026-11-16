@@ -507,15 +507,26 @@ def check_page(path: Path, mode: str, page_texts: dict[Path, str]) -> None:
             if not visible_meta:
                 errors.append(f"{page}: Article page is missing visible .article-meta.")
             else:
-                visible_text = clean_text(visible_meta.group(1))
-                pub_label = "Published" if lang_code == "en" else "Опубликовано"
-                mod_label = "Updated" if lang_code == "en" else "Обновлено"
-                expected_pub = f"{pub_label}: {format_date(published, lang_code)}"
-                expected_mod = f"{mod_label}: {format_date(modified, lang_code)}"
-                if expected_pub not in visible_text:
-                    errors.append(f"{page}: visible publication date does not match datePublished {published}.")
-                if expected_mod not in visible_text:
-                    errors.append(f"{page}: visible update date does not match dateModified {modified}.")
+                visible_block = visible_meta.group(1)
+                date_spans = re.findall(
+                    r'<span\b[^>]*class=["\'][^"\']*\barticle-date\b[^"\']*["\'][^>]*>[\s\S]*?</span>',
+                    visible_block, re.I,
+                )
+                time_tags = re.findall(
+                    r'<time\b[^>]*datetime=["\']([^"\']+)["\'][^>]*>([\s\S]*?)</time>',
+                    visible_block, re.I,
+                )
+                expected_date = modified if modified > published else published
+                expected_text = (
+                    (("Updated " if lang_code == "en" else "Обновлено ") + format_date(modified, lang_code))
+                    if modified > published else format_date(published, lang_code)
+                )
+                if len(date_spans) != 1 or len(time_tags) != 1:
+                    errors.append(f"{page}: expected one .article-date with <time>; found {len(date_spans)} / {len(time_tags)}.")
+                elif time_tags[0][0] != expected_date or clean_text(time_tags[0][1]) != expected_text:
+                    errors.append(f"{page}: visible date {time_tags[0]!r} != {expected_date!r}, {expected_text!r}.")
+                if re.search(r"(?:Опубликовано|Published|Обновлено|Updated)\s*:", clean_text(visible_block), re.I):
+                    errors.append(f"{page}: legacy two-date labels remain in .article-meta.")
 
             og_pub = meta_values(text, "property", "article:published_time")
             og_mod = meta_values(text, "property", "article:modified_time")
