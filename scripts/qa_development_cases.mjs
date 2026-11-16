@@ -4,7 +4,7 @@ import {readFileSync,existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
 
-const slugs=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours'];
+const slugs=['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours','razrabotka-sajta-prep-center'];
 const root=resolve(process.cwd(),'dist');
 let count=0;
 for(const slug of slugs)for(const lang of ['ru','en']){
@@ -24,11 +24,16 @@ for(const slug of slugs)for(const lang of ['ru','en']){
  const entities=JSON.parse(data[1])['@graph'];
  const article=entities.find(x=>x['@type']==='Article');
  const faq=entities.find(x=>x['@type']==='FAQPage');
- assert.equal(article.dateModified,'2026-10-26','Date modified '+route);
+ assert.match(article.datePublished,/^\d{4}-\d{2}-\d{2}$/,'Publication date '+route);
+ assert.match(article.dateModified,/^\d{4}-\d{2}-\d{2}$/,'Modified date '+route);
+ assert.ok(article.dateModified>=article.datePublished,'Dates ordered '+route);
  assert.ok(article.image && !article.image.endsWith('gaeo-social-preview.jpg'),'Cover '+route);
  assert.equal(faq.mainEntity.length,3,'FAQ length '+route);
- const updated=lang==='en'?'Updated: October 26, 2026':'Обновлено: 26 октября 2026';
- assert.ok(html.includes(updated),'Visible date '+route);
+ const date=new Date(article.dateModified+'T12:00:00Z');
+ const updated=lang==='en'
+  ?date.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'})
+  :date.toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).replace(/ г\.$/,'');
+ assert.ok(html.includes(updated),'Visible date matches Article '+route);
  count++;
 }
 
@@ -54,13 +59,13 @@ for(const lang of ['ru','en']){
  const nodes=JSON.parse(data[1])['@graph'];
  const list=nodes.find(x=>x['@type']==='ItemList');
  const collection=nodes.find(x=>x['@type']==='CollectionPage');
- assert.equal(list.numberOfItems,7,'Seven case list entries '+lang);
- assert.equal(list.itemListElement.length,7,'List item count '+lang);
- assert.equal(collection.hasPart.length,7,'Collection membership count '+lang);
+ assert.equal(list.numberOfItems,8,'Eight case list entries '+lang);
+ assert.equal(list.itemListElement.length,8,'List item count '+lang);
+ assert.equal(collection.hasPart.length,8,'Collection membership count '+lang);
  assert.equal(list.itemListElement[0].position,1,'List starts at 1 '+lang);
 }
 
-// Editorial and technical SEO checks for all six development cases and both catalogs.
+// Editorial and technical SEO checks for all eight development pages and both catalogs.
 // Compare rendered content with metadata and JSON-LD to catch stale titles after edits.
 function readMeta(html,key){
  const tag=[...html.matchAll(/<meta\b[^>]*>/g)].map(m=>m[0])
@@ -103,15 +108,15 @@ function caseSeoAudit(route,listing=false){
   assert.equal(collection.name,h1s[0],'Catalog schema name '+route);
   assert.equal(collection.description,desc,'Catalog schema description '+route);
   assert.equal(list.name,h1s[0],'Catalog list schema name '+route);
-  assert.equal(list.numberOfItems,7,'Catalog item count '+route);
+  assert.equal(list.numberOfItems,8,'Catalog item count '+route);
   assert.equal((html.match(/<h2\b/g)||[]).length,2,'Two category H2 only '+route);
-  assert.equal((html.match(/<h3\b/g)||[]).length,7,'Seven case H3 '+route);
+  assert.equal((html.match(/<h3\b/g)||[]).length,8,'Eight case H3 '+route);
   for(const item of list.itemListElement){
    const path=new URL(item.url).pathname;
    assert.ok(html.includes('href="'+path+'"'),'Visible case matches schema '+path);
    assert.ok(existsSync(resolve(root,path.slice(1),'index.html')),'Catalog links to built case '+path);
   }
-  assert.equal(collection.hasPart.length,7,'Catalog collection membership '+route);
+  assert.equal(collection.hasPart.length,8,'Catalog collection membership '+route);
  }else{
   const article=graph.find(n=>n['@type']==='Article');
   const webPage=graph.find(n=>n['@type']==='WebPage');
@@ -125,7 +130,7 @@ function caseSeoAudit(route,listing=false){
   assert.equal(readMeta(html,'article:published_time'),article.datePublished,'Publication date '+route);
   assert.equal(readMeta(html,'article:modified_time'),article.dateModified,'Modified date '+route);
   const headings=[...html.matchAll(/<h2\b[^>]*>([^<]+)<\/h2>/g)].map(m=>m[1]);
-  assert.equal(headings.length,7,'Seven editorial sections '+route);
+  assert.equal(headings.length,html.includes('<!-- GAEO_DESIGN:CONTACT_START -->')?8:7,'Editorial sections and shared contact '+route);
   assert.ok(!headings.some(x=>/границы доказанного|пределы кейса|evidence limits|verifiable public output|моя роль/i.test(x)),'No artificial editorial headings '+route);
   const visibleFaq=[...html.replace(/>\s+</g,'><').matchAll(/<details class="faq-item"><summary class="faq-q"><span>([^<]+)<\/span><span class="faq-toggle" aria-hidden="true">\+<\/span><\/summary><div class="faq-a">([\s\S]*?)<\/div><\/details>/g)];
   assert.equal(visibleFaq.length,3,'Three homepage-style FAQ rows '+route);
@@ -140,7 +145,7 @@ for(const lang of ['ru','en']){
  caseSeoAudit(prefix+'/cases/',true);
  for(const slug of slugs)caseSeoAudit(prefix+'/cases/'+slug+'/');
 }
-console.log('CASE_SEO_QA=PASS; pages=8');
+console.log('CASE_SEO_QA=PASS; pages='+((slugs.length+1)*2));
 
 console.log('DEVELOPMENT_CASE_QA=PASS; pages='+count);
 
@@ -174,7 +179,7 @@ try{
   await faq.locator('.faq-q').click();
   assert.ok(await faq.evaluate(el=>el.open),'FAQ interaction '+route);
   assert.equal(await faq.locator('.faq-toggle').textContent(),'+','FAQ icon '+route);
-  await page.locator('.page-cta .button[href$="#lead"]').click();
+  await page.locator('.page-cta .button[href$="#lead"], #contact .button[href$="#lead"]').click();
   await page.locator('[role="dialog"]').waitFor({state:'visible',timeout:6000});
   await page.locator('.gaeo-modal-close').click();
   assert.equal(await page.locator('[role="dialog"]').count(),0,'Modal teardown '+route);
@@ -219,7 +224,7 @@ try{
   assert.ok(await sub.isVisible(),'Keyboard focus must reveal case submenu '+lang);
   await sub.locator('a[href$="#website-development"]').click();
   await desktop.waitForURL(url=>url.hash==='#website-development');
-  assert.equal(await desktop.locator('#website-development .list-card').count(),3,'Development group '+lang);
+  assert.equal(await desktop.locator('#website-development .list-card').count(),4,'Development group '+lang);
   assert.equal(await desktop.locator('#geo-promotion .list-card').count(),4,'GEO group '+lang);
   await desktop.close();
   for(const width of [390,320]){

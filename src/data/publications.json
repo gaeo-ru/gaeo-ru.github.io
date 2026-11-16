@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-16",
   "entities": {
     "ru": [
       {
@@ -4634,11 +4634,11 @@
       "id": "ada-tours-astro-case",
       "category": "cases",
       "datePublished": "2026-10-26",
-      "dateModified": null,
-      "sortDate": "2026-10-26",
+      "dateModified": "2026-11-16",
+      "sortDate": "2026-11-16",
       "ru": {
         "title": "Разработка AdaTours.ru: каталог туров на Astro для поиска и нейросетей",
-        "meta": "GAEO.ru · 26 октября 2026",
+        "meta": "GAEO.ru · 26 октября 2026 · обновлено 16 ноября",
         "paragraphs": [
           "Кейс разработки туристического сайта на Astro: отдельные модели туров, стран, мест и экскурсий, связи маршрутов, поиск и автоматическое формирование SEO и микроразметки. Ссылка на работу также размещена в разделе публикаций клиента Ada Tours."
         ],
@@ -4647,6 +4647,10 @@
           {
             "label": "Читать кейс",
             "url": "/cases/razrabotka-sajta-adatours/"
+          },
+          {
+            "label": "Подробный кейс на Workspace",
+            "url": "https://workspace.ru/cases/adatours-ru-za-29-dney-6-129-stranic-3-940-ii-izobrazheniy-i-arhitektura-dlya-geo/?customer=gaeo-ru"
           },
           {
             "label": "Упоминание на сайте Ada Tours",
@@ -4675,12 +4679,16 @@
           "publisher": {
             "@id": "https://gaeo.ru/#business"
           },
-          "citation": "https://adatours.ru/press/"
+          "citation": [
+            "https://adatours.ru/press/",
+            "https://workspace.ru/cases/adatours-ru-za-29-dney-6-129-stranic-3-940-ii-izobrazheniy-i-arhitektura-dlya-geo/?customer=gaeo-ru"
+          ],
+          "dateModified": "2026-11-16"
         }
       },
       "en": {
         "title": "AdaTours.ru: an Astro tour catalog built for SEO and GEO",
-        "meta": "GAEO.ru · October 26, 2026",
+        "meta": "GAEO.ru · October 26, 2026 · updated November 16",
         "paragraphs": [
           "A website development case covering tour, country, place and excursion models, connected itineraries, search and automatically generated SEO metadata and structured data. Ada Tours also links to this work from its own press page."
         ],
@@ -4689,6 +4697,10 @@
           {
             "label": "Read the case",
             "url": "/en/cases/razrabotka-sajta-adatours/"
+          },
+          {
+            "label": "Detailed case on Workspace (Russian)",
+            "url": "https://workspace.ru/cases/adatours-ru-za-29-dney-6-129-stranic-3-940-ii-izobrazheniy-i-arhitektura-dlya-geo/?customer=gaeo-ru"
           },
           {
             "label": "Mention on the Ada Tours website",
@@ -4717,7 +4729,11 @@
           "publisher": {
             "@id": "https://gaeo.ru/#business"
           },
-          "citation": "https://adatours.ru/press/"
+          "citation": [
+            "https://adatours.ru/press/",
+            "https://workspace.ru/cases/adatours-ru-za-29-dney-6-129-stranic-3-940-ii-izobrazheniy-i-arhitektura-dlya-geo/?customer=gaeo-ru"
+          ],
+          "dateModified": "2026-11-16"
         }
       }
     },
@@ -5184,6 +5200,97 @@
           "contributor": {
             "@id": "https://gaeo.ru/#person"
           }
+        }
+      }
+    },
+    {
+      "id": "prep-center-recovery-case",
+      "category": "cases",
+      "datePublished": "2026-11-16",
+      "dateModified": null,
+      "sortDate": "2026-11-16",
+      "ru": {
+        "title": "Как восстановили сайт Преп-Центра: 45 страниц и прием заявок",
+        "meta": "GAEO.ru · 16 ноября 2026",
+        "paragraphs": [
+          "После сбоя хостинга восстановили 45 страниц из сохраненных копий, вернули калькулятор и прием заявок. Исходники и общие элементы перенесли в GitHub."
+        ],
+        "result": null,
+        "links": [
+          {
+            "label": "Читать кейс",
+            "url": "/cases/razrabotka-sajta-prep-center/"
+          },
+          {
+            "label": "Сайт Преп-Центра",
+            "url": "https://prep-center.ru/"
+          }
+        ],
+        "schema": {
+          "@type": "Article",
+          "@id": "https://gaeo.ru/cases/razrabotka-sajta-prep-center/#article",
+          "url": "https://gaeo.ru/cases/razrabotka-sajta-prep-center/",
+          "name": "Как восстановили сайт Преп-Центра: 45 страниц и прием заявок",
+          "description": "После сбоя хостинга восстановили 45 страниц из сохраненных копий, вернули калькулятор и прием заявок. Исходники и общие элементы перенесли в GitHub.",
+          "inLanguage": "ru",
+          "about": [
+            {
+              "@id": "https://gaeo.ru/#person"
+            },
+            {
+              "@id": "https://gaeo.ru/#business"
+            }
+          ],
+          "datePublished": "2026-11-16",
+          "author": {
+            "@id": "https://gaeo.ru/#person"
+          },
+          "publisher": {
+            "@id": "https://gaeo.ru/#business"
+          },
+          "citation": "https://prep-center.ru/"
+        }
+      },
+      "en": {
+        "title": "Restoring Prep-Center: 45 pages and working enquiry forms",
+        "meta": "GAEO.ru · November 16, 2026",
+        "paragraphs": [
+          "Recovered 45 pages from saved copies after a hosting outage, restored the calculator and email enquiries, and moved the source and shared components to GitHub."
+        ],
+        "result": null,
+        "links": [
+          {
+            "label": "Read the case",
+            "url": "/en/cases/razrabotka-sajta-prep-center/"
+          },
+          {
+            "label": "Prep-Center website",
+            "url": "https://prep-center.ru/"
+          }
+        ],
+        "schema": {
+          "@type": "Article",
+          "@id": "https://gaeo.ru/en/cases/razrabotka-sajta-prep-center/#article",
+          "url": "https://gaeo.ru/en/cases/razrabotka-sajta-prep-center/",
+          "name": "Restoring Prep-Center: 45 pages and working enquiry forms",
+          "description": "Recovered 45 pages from saved copies after a hosting outage, restored the calculator and email enquiries, and moved the source and shared components to GitHub.",
+          "inLanguage": "en",
+          "about": [
+            {
+              "@id": "https://gaeo.ru/#person"
+            },
+            {
+              "@id": "https://gaeo.ru/#business"
+            }
+          ],
+          "datePublished": "2026-11-16",
+          "author": {
+            "@id": "https://gaeo.ru/#person"
+          },
+          "publisher": {
+            "@id": "https://gaeo.ru/#business"
+          },
+          "citation": "https://prep-center.ru/"
         }
       }
     }

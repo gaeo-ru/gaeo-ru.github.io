@@ -66,7 +66,7 @@ for(const route of routes){
   assert.deepEqual(faq?.mainEntity?.map(n=>n.name),visible.map(x=>x[1]),'FAQ/schema question parity '+route);
   const decodeHtmlEntities=s=>s.replace(/&#39;|&#x27;/gi,"'").replace(/&quot;/g,'"').replace(/&amp;/g,'&');
   assert.deepEqual(faq?.mainEntity?.map(n=>n.acceptedAnswer.text),visible.map(x=>decodeHtmlEntities(x[2])),'FAQ/schema answer parity '+route);
-  for(const slug of ['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours']){
+  for(const slug of ['razrabotka-sajta-gaeo','razrabotka-sajta-indexresearch','razrabotka-sajta-adatours','razrabotka-sajta-prep-center']){
    const link=(dir==='en'?'/en':'')+'/cases/'+slug+'/';
    assert.ok(html.includes('href="'+link+'"'),'Missing evidence case link '+link);
    assert.ok(existsSync(resolve(root,link.slice(1),'index.html')),'Case does not exist '+link);
@@ -138,7 +138,7 @@ try{
    await faqRoot.locator('.faq-q').first().click();
    assert.ok(await faqRoot.locator('details.faq-item').first().evaluate(el=>el.open),'Native FAQ toggles '+route);
    assert.equal(await faqRoot.locator('.faq-q .faq-toggle').first().textContent(),'+','FAQ icon text '+route);
-   assert.equal(await page.locator('.site-service__case').count(),3,'Three case links '+route);
+   assert.equal(await page.locator('.site-service__case').count(),4,'Four case links '+route);
   }else{
    assert.equal(await page.locator('.site-service__directory-cards article').count(),2,'Two services '+route);
   }
