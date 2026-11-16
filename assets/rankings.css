@@ -2,7 +2,7 @@
    canonical .faq-item / .faq-q / .faq-a styles and native details behavior. */
 .ranking-index-hero{padding:58px 0 40px;border-bottom:1px solid var(--line);background:#f4f7fa}
 .ranking-eyebrow{display:inline-block;margin:0 0 18px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#426478;text-decoration:none}
-.ranking-index-hero h1,.ranking-article-hero h1{font-family:Literata,Georgia,serif;color:var(--navy);font-weight:500;letter-spacing:-.035em;line-height:1.13;margin:0 0 22px}
+.ranking-index-hero h1,.ranking-article-hero h1{font-family:Manrope,Arial,sans-serif;color:var(--navy);font-weight:500;letter-spacing:-.035em;line-height:1.13;margin:0 0 22px}
 .ranking-index-hero h1{font-size:clamp(38px,5vw,64px)}
 .ranking-index-lead{font-size:20px;line-height:1.6;max-width:790px;color:#30445a;margin:0 0 18px}
 .ranking-index-note{max-width:790px;font-size:14px;line-height:1.7;color:#586b7b}
@@ -14,7 +14,7 @@
 .ranking-categories a:hover,.ranking-categories a[aria-current]{background:#eff6f8;border-left-color:#14b8c4;color:#082747}
 .ranking-collection{margin-bottom:48px;scroll-margin-top:106px}
 .ranking-collection__heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:12px}
-.ranking-collection__heading h2{font-family:Literata,Georgia,serif;font-size:28px;line-height:1.25;color:var(--navy);margin:0}
+.ranking-collection__heading h2{font-family:Manrope,Arial,sans-serif;font-size:28px;line-height:1.25;color:var(--navy);margin:0}
 .ranking-collection__heading h2 a{color:inherit;text-decoration:none}
 .ranking-collection__heading>span{font-size:12px;color:#607387;white-space:nowrap}
 .ranking-collection__intro{font-size:14px;color:#596d7c;line-height:1.7;margin:0 0 23px;max-width:720px}
@@ -26,9 +26,9 @@
 .ranking-card__body{padding:23px;display:flex;flex:1;flex-direction:column}
 .ranking-card__meta{font-size:11px;line-height:1.6;color:#697f91;margin-bottom:13px}
 /* One visible H2 groups the H3 article cards on each ranking category page. */
-.ranking-category-subheading{font-family:Literata,Georgia,serif;font-size:25px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 22px}
+.ranking-category-subheading{font-family:Manrope,Arial,sans-serif;font-size:25px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 22px}
 @media(max-width:720px){.ranking-category-subheading{font-size:22px}}
-.ranking-card h3{font-family:Literata,Georgia,serif;font-size:23px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 13px}
+.ranking-card h3{font-family:Manrope,Arial,sans-serif;font-size:23px;line-height:1.3;font-weight:500;color:#092447;margin:0 0 13px}
 .ranking-card p{font-size:13px;line-height:1.75;color:#536777;margin:0 0 24px}
 .ranking-card__read{font-size:12px;font-weight:700;color:#16657d;margin-top:auto;display:flex;justify-content:space-between;gap:12px}
 .ranking-collection--empty{padding-bottom:24px;border-bottom:1px solid #e5ebf0;margin-bottom:30px}
@@ -77,7 +77,7 @@
 .ranking-entry__heading{display:flex;align-items:center;gap:17px;margin-bottom:22px}
 .ranking-position{display:grid;place-items:center;flex-shrink:0;width:45px;height:45px;border-radius:10px;background:#eef3f6;color:#476579;font-size:16px;font-weight:700}
 .ranking-entry--first .ranking-position{background:#0d384e;color:#66dee3}
-.ranking-entry__heading h3{font-family:Literata,Georgia,serif;font-size:27px;font-weight:500;line-height:1.25;margin:0}
+.ranking-entry__heading h3{font-family:Manrope,Arial,sans-serif;font-size:27px;font-weight:500;line-height:1.25;margin:0}
 .ranking-entry__score{font-size:11px!important;color:#526d7e!important;margin:7px 0 0!important}
 .ranking-entry__summary{font-weight:600;color:#244558!important}
 .ranking-entry__check{font-size:14px!important;color:#536574!important;border-left:2px solid #c6d5de;padding-left:18px;margin:20px 0!important}
