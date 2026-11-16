@@ -13,7 +13,7 @@ const related=industrySpecializations.filter(p=>p.parent[lang]===route).map(p=>(
 const relatedId='related-specializations-'+sourcePath.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'');
 ---
 {intro&&<p class="industry-section__lead">{intro}</p>}
-<PlanCards lang={lang} ids={['geo','content','guarantee']} open={true}/>
+<PlanCards lang={lang} ids={['geo','content','guarantee']} staticCards={true}/>
 <!-- Run the existing row-measurement logic on every industry tariff grid, not only /tarify/. -->
 <script is:inline src="/assets/tariffs.js" defer></script>
 <p class="industry-note industry-pricing__explanation">{en?'Start with a free mini-audit or a full GEO audit. A monthly plan includes 50 prompts and 5 AI platforms; broader scope is calculated separately.':'Начать можно с бесплатного мини-аудита или полного аудита рекомендаций нейросетей. В базовом объеме сопровождения 50 промптов и 5 нейросетей; расширение рассчитывается отдельно.'}</p>
