@@ -117,7 +117,7 @@
     The baseline is recalculated after font loading, resizing, and card toggles. */
  const alignTariffRows=()=>{
   for(const grid of document.querySelectorAll('.tariff-plans')){
-   const cards=[...grid.children].filter(el=>el.matches('details.tariff-plan[open]'));
+   const cards=[...grid.children].filter(el=>el.matches('details.tariff-plan[open], article.tariff-plan'));
    for(const card of cards)card.querySelector('.tariff-actions').style.transform='';
    if(window.innerWidth>720){
     const rows=[];
