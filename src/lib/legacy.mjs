@@ -32,7 +32,7 @@ function langHref(html,lang){
 }
 
 /** Annotate editorial FAQ kickers and descriptive links in the canonical build output. */
-function enhanceEditorialLabels(html){
+export function enhanceEditorialLabels(html){
  return html
   .replace(/(<(?:div|span)\b[^>]*\bclass=")([^"]*\beyebrow\b[^"]*)(">FAQ<\/(?:div|span)>)/giu,
     (_,start,classes,end)=>start+(classes.includes('faq-kicker')?classes:classes+' faq-kicker')+end)
