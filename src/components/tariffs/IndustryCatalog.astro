@@ -72,11 +72,20 @@ const copy = en ? {
         <input type="search" id={`${id}-search`} name="industry-search" placeholder={copy.placeholder} autocomplete="off" aria-describedby={`${id}-hint`} aria-controls={`${id}-results`} data-catalog-search />
       </div>
       <div class="industry-catalog__field">
-        <label for={`${id}-group`}>{copy.group}</label>
-        <select id={`${id}-group`} name="industry-group" aria-controls={`${id}-results`} data-catalog-group>
+        <label id={id+'-group-label'} for={id+'-group'}>{copy.group}</label>
+        <select id={id+'-group'} name="industry-group" aria-controls={id+'-results'} data-catalog-group>
           <option value="">{copy.all}</option>
           {groups.map(group => <option value={group.id}>{group.name} ({group.count})</option>)}
         </select>
+        <div class="industry-catalog__picker" data-industry-picker hidden>
+          <button type="button" class="industry-catalog__picker-trigger" data-industry-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls={id+'-group-options'} aria-labelledby={id+'-group-label '+id+'-group-current'}>
+            <span id={id+'-group-current'} data-industry-current>{copy.all}</span>
+          </button>
+          <div class="industry-catalog__picker-options" id={id+'-group-options'} data-industry-options role="listbox" aria-labelledby={id+'-group-label'} hidden>
+            <button type="button" class="industry-catalog__picker-option" role="option" aria-selected="true" data-industry-choice="">{copy.all}</button>
+            {groups.map(group => <button type="button" class="industry-catalog__picker-option" role="option" aria-selected="false" data-industry-choice={group.id}>{group.name} ({group.count})</button>)}
+          </div>
+        </div>
       </div>
       <button type="reset" class="button outline industry-catalog__reset">{copy.reset}</button>
       <p class="industry-catalog__hint" id={`${id}-hint`}>{copy.hint}</p>

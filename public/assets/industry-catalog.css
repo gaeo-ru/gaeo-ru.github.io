@@ -84,6 +84,53 @@
 .industry-catalog input:focus-visible,
 .industry-catalog select:focus-visible,
 .industry-catalog summary:focus-visible { outline: 3px solid var(--blue, #0e5ed7); outline-offset: 3px; }
+
+/* Match the calculator's accessible dropdown instead of the Android native picker.
+   Keep the underlying select as the no-JS fallback and filtering source of truth. */
+.industry-catalog__picker { position: relative; min-width: 0; font-weight: 500; }
+.industry-catalog__picker-trigger {
+  position: relative; display: flex; align-items: center; box-sizing: border-box;
+  width: 100%; min-height: 62px; padding: 11px 50px 11px 12px;
+  border: 1px solid #a2adbb; border-radius: 7px; background: #fff;
+  color: var(--navy, #021641); font: inherit; font-size: 16px;
+  font-weight: 500; line-height: 1.35; text-align: left; cursor: pointer;
+}
+.industry-catalog__picker-trigger [data-industry-current] {
+  display: block; min-width: 0; white-space: normal; overflow-wrap: break-word;
+}
+.industry-catalog__picker-trigger::after {
+  content: ""; position: absolute; right: 18px; top: 50%; width: 0; height: 0;
+  border-left: 8px solid transparent; border-right: 8px solid transparent;
+  border-top: 9px solid var(--navy, #021641); transform: translateY(-35%);
+  pointer-events: none;
+}
+.industry-catalog__picker-trigger[aria-expanded="true"]::after {
+  transform: translateY(-70%) rotate(180deg);
+}
+.industry-catalog__picker-options {
+  position: absolute; z-index: 20; top: calc(100% + 6px); left: 0; right: 0;
+  display: grid; box-sizing: border-box; max-height: min(50vh, 360px);
+  overflow-y: auto; overscroll-behavior: contain;
+  border: 1px solid #a2adbb; border-radius: 8px; background: #fff;
+  box-shadow: 0 8px 24px rgba(2, 22, 65, .16);
+}
+.industry-catalog__picker-option {
+  display: block; width: 100%; min-height: 46px; padding: 12px 14px;
+  border: 0; border-radius: 0; background: #fff;
+  color: var(--navy, #021641); font: inherit; font-size: 16px;
+  font-weight: 500; line-height: 1.35; text-align: left;
+  white-space: normal; overflow-wrap: break-word; cursor: pointer;
+}
+.industry-catalog__picker-option + .industry-catalog__picker-option {
+  border-top: 1px solid var(--line, #dbe3eb);
+}
+.industry-catalog__picker-option:hover,
+.industry-catalog__picker-option:focus-visible { background: #edf4ff; }
+.industry-catalog__picker-option[aria-selected="true"] { background: #eaf7fa; }
+@media (max-width: 720px) {
+  .industry-catalog__picker-trigger { min-height: 68px; }
+}
+
 @media (max-width: 1199px) {
   .industry-catalog__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

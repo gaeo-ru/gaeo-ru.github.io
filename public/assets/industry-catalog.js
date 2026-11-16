@@ -29,6 +29,81 @@
     }));
     if (!form || !search || !group || !count || !empty || !cards.length) return;
 
+    // Follow the calculator's picker pattern; native select remains the source of truth.
+    const picker = root.querySelector('[data-industry-picker]');
+    let syncGroupPicker = () => {};
+    if (picker) {
+      const trigger = picker.querySelector('[data-industry-trigger]');
+      const panel = picker.querySelector('[data-industry-options]');
+      const current = picker.querySelector('[data-industry-current]');
+      const choices = Array.from(picker.querySelectorAll('[data-industry-choice]'));
+      const nativeOptions = Array.from(group.options);
+      syncGroupPicker = () => {
+        const selected = nativeOptions.find(option => option.value === group.value) || nativeOptions[0];
+        current.textContent = selected.textContent;
+        choices.forEach(choice => {
+          choice.setAttribute('aria-selected', String(choice.dataset.industryChoice === selected.value));
+        });
+      };
+      const closePicker = (restoreFocus = false) => {
+        panel.hidden = true;
+        trigger.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) trigger.focus();
+      };
+      const openPicker = (focusChoice = false) => {
+        panel.hidden = false;
+        trigger.setAttribute('aria-expanded', 'true');
+        if (focusChoice) (choices.find(choice => choice.dataset.industryChoice === group.value) || choices[0]).focus();
+      };
+      trigger.addEventListener('click', () => {
+        if (panel.hidden) openPicker();
+        else closePicker();
+      });
+      picker.addEventListener('click', event => {
+        const choice = event.target.closest('[data-industry-choice]');
+        if (!choice || !picker.contains(choice)) return;
+        group.value = choice.dataset.industryChoice;
+        syncGroupPicker();
+        closePicker(true);
+        group.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      picker.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          if (!panel.hidden) { event.preventDefault(); closePicker(true); }
+          return;
+        }
+        if (event.key === 'Tab') { closePicker(); return; }
+        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        if (panel.hidden) openPicker();
+        const focused = choices.indexOf(document.activeElement);
+        const selected = choices.findIndex(choice => choice.dataset.industryChoice === group.value);
+        const index = focused < 0 ? Math.max(0, selected) : focused;
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? choices.length - 1 :
+          focused < 0 ? index : event.key === 'ArrowDown' ? (index + 1) % choices.length :
+          (index + choices.length - 1) % choices.length;
+        choices[next].focus();
+      });
+      picker.addEventListener('focusout', () => {
+        requestAnimationFrame(() => {
+          if (!picker.contains(document.activeElement)) closePicker();
+        });
+      });
+      document.addEventListener('pointerdown', event => {
+        if (!picker.contains(event.target)) closePicker();
+      });
+      const label = root.querySelector('label[for="' + group.id + '"]');
+      label?.addEventListener('click', event => {
+        if (!group.hidden) return;
+        event.preventDefault();
+        trigger.click();
+      });
+      group.addEventListener('change', syncGroupPicker);
+      syncGroupPicker();
+      group.hidden = true;
+      picker.hidden = false;
+    }
+
     const render = () => {
       const terms = normalize(search.value).split(' ').filter(Boolean).map(variants);
       let visible = 0;
@@ -102,6 +177,7 @@
       window.clearTimeout(timer);
       search.value = '';
       group.value = '';
+      syncGroupPicker();
       render();
       reportFilter();
       search.focus();
@@ -113,6 +189,7 @@
       window.clearTimeout(timer);
       search.value = '';
       group.value = '';
+      syncGroupPicker();
       render();
       lastReportedFilter = normalize(search.value) + '|' + group.value;
       target.element.scrollIntoView({ block: 'start' });
