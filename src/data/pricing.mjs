@@ -51,7 +51,7 @@ export function serviceHref(slug,lang='ru'){return (lang==='en'?'/en':'')+'/serv
 export function pricingHref(lang='ru'){return lang==='en'?'/en/pricing/':'/tarify/';}
 export function money(amount,lang='ru'){return lang==='en'?'RUB '+new Intl.NumberFormat('en-US').format(amount):new Intl.NumberFormat('ru-RU').format(amount)+' ₽';}
 export function priceLabel(p,lang='ru'){
- if(p.id==='free')return lang==='en'?'Free':'Бесплатно';
+ if(p.id==='free')return lang==='en'?'Free':'0 р.';
  return (p.from?(lang==='en'?'from ':'от '):optionIds.includes(p.id)?'+':'')+money(p.amount,lang)+(p.kind==='monthly'?(lang==='en'?'/month':'/мес.'):'');
 }
 export function imagePath(number,size=480){return '/assets/tariffs/services/'+String(number).padStart(2,'0')+'-'+size+'.webp';}

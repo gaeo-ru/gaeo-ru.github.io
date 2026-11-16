@@ -4321,20 +4321,38 @@ export function getIndustryGroups(lang = 'ru') {
   return groups.map(group => ({ ...group, name: lang === 'en' ? group.labelEn : group.label }));
 }
 
+// Editorial material pages already published on GAEO.ru but absent from the 107-row import.
+// Add links only where a page addresses the specific business category; retain existing links.
+const ADDITIONAL_MATERIAL_HUBS = [
+  { ids: [5, 6, 7], ru: '/geo-prodvizhenie-nedvizhimosti/', en: '/en/geo-for-real-estate/' },
+  { ids: [55, 56, 57], ru: '/industries/international-logistics/', en: '/en/industries/international-logistics/' },
+  { ids: [59, 60, 61, 62, 63, 64, 65], ru: '/industries/medical-care-providers/', en: '/en/industries/medical-care-providers/' },
+  { ids: [68, 69, 70, 73], ru: '/industries/education-providers/', en: '/en/industries/education-providers/' },
+  { ids: [72], ru: '/articles/prodvizhenie-lichnogo-brenda-eksperta-v-neyrosetyah/', en: '/en/articles/personal-brand-promotion-in-ai/' },
+  { ids: [100, 101, 102, 103], ru: '/industries/local-services/', en: '/en/industries/local-services/' },
+];
 export function getIndustryCatalog(lang = 'ru') {
   const en = lang === 'en';
-  return industries.map(industry => ({
-    ...industry,
-    name: en ? industry.categoryEn : industry.category,
-    serviceName: en ? industry.titleEn : industry.title,
-    description: en ? industry.introEn : industry.intro,
-    groupName: en ? industry.groupEn : industry.group,
-    examples: en ? industry.specialtiesEn : industry.specialties,
-    detailLink: industrySpecializations.find(page=>page.id===industry.number)?.routes[lang] || (industry.hub?.relation==='existing_service' ? (en ? industry.hub.hrefEn : industry.hub.href) : null),
-    hubLink: industry.hub ? {
-      href: en ? industry.hub.hrefEn : industry.hub.href,
-      label: en ? industry.hub.labelEn : industry.hub.label,
-      relation: industry.hub.relation,
-    } : null,
-  }));
+  return industries.map(industry => {
+    const newMaterial = ADDITIONAL_MATERIAL_HUBS.find(entry => entry.ids.includes(industry.number));
+    const hub = industry.hub || (newMaterial ? {
+      href: newMaterial.ru, hrefEn: newMaterial.en,
+      label: 'Материалы по отрасли', labelEn: 'Related industry resources',
+      relation: 'related_methodology',
+    } : null);
+    return {
+      ...industry,
+      name: en ? industry.categoryEn : industry.category,
+      serviceName: en ? industry.titleEn : industry.title,
+      description: en ? industry.introEn : industry.intro,
+      groupName: en ? industry.groupEn : industry.group,
+      examples: en ? industry.specialtiesEn : industry.specialties,
+      detailLink: industrySpecializations.find(page=>page.id===industry.number)?.routes[lang] || (hub?.relation==='existing_service' ? (en ? hub.hrefEn : hub.href) : null),
+      hubLink: hub ? {
+        href: en ? hub.hrefEn : hub.href,
+        label: en ? hub.labelEn : hub.label,
+        relation: hub.relation,
+      } : null,
+    };
+  });
 }
