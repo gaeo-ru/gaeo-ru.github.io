@@ -108,7 +108,7 @@ const copy = en ? {
         <dl class="industry-catalog__prices">
           {prices.map(offer => <div>
             <dt>{offer.label}</dt>
-            <dd><span>{copy.from} </span><strong>{price(offer.value)}</strong><span> {copy.period}</span></dd>
+            <dd class="tariff-price tariff-price--compact"><span>{copy.from} </span><strong>{price(offer.value)}</strong><span> {copy.period}</span></dd>
           </div>)}
         </dl>
         <details class="industry-catalog__examples">

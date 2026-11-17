@@ -76,6 +76,7 @@ const industryItems=getIndustryCatalog(lang);
  for(const route of [lang==='en'?'/en/':'/',catalogue]){
   const source=read(route);
   assert.equal((source.match(/data-plan="/g)||[]).length,6,'All 6 main plans on '+route);
+  assert.ok(source.includes('<div class="amount tariff-price">'+(lang==='ru'?'0 ₽':'Free')+'</div>'),'Free mini-audit price on '+route);
   assert.equal((source.match(/data-tariff-calculator/g)||[]).length,1,'One scope calculator on '+route);
   assert.equal((source.match(/name="platform"/g)||[]).length,13,'All 13 available platforms');
   const config=JSON.parse(source.match(/<script type="application\/json" data-tariff-config>([\s\S]*?)<\/script>/)[1]);
@@ -91,6 +92,7 @@ const industryItems=getIndustryCatalog(lang);
  for(const p of allPlans(lang)){
   const source=read(p.href),nodes=graph(source),offer=nodes.find(n=>types(n).includes('Offer')&&n['@id']==='https://gaeo.ru'+p.href+'#offer');
   assert.ok(offer,'Canonical offer '+p.href);
+  if(p.id==='free')assert.ok(source.includes('<div class="tariff-detail__price tariff-price">'+(lang==='ru'?'0 ₽':'Free')+'</div>'),'Free mini-audit price on its service page '+p.href);
   assert.equal(offer.priceSpecification[p.from?'minPrice':'price'],p.amount,'Visible starting/exact price semantics '+p.href);
   assert.equal(offer.priceSpecification.priceCurrency,'RUB');
   if(p.kind==='monthly')assert.equal(offer.priceSpecification.referenceQuantity?.unitCode,'MON');
@@ -139,6 +141,7 @@ for(const path of pricingPaths){
  assert.ok(html.includes('class="tariff-actions"'),'Tariff CTAs exist on '+path);
  const details=(html.match(/<details class="price tariff-plan"/g)||[]).length;
  const staticCards=(html.match(/<article class="price tariff-plan"/g)||[]).length;
+ assert.equal((html.match(/class="amount tariff-price"/g)||[]).length,details+staticCards,'Every tariff card has a price badge on '+path);
  const fullTariffs=path.endsWith('/tarify/index.html')||path.endsWith('/en/pricing/index.html');
  if(fullTariffs){
   assert.equal(staticCards,6,'All 6 plans must be static and non-collapsible '+path);

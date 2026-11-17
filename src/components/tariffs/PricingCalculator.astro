@@ -17,10 +17,10 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
      <select name="plan" aria-labelledby={'tariff-plan-label-'+lang}>{monthly.map(p=><option value={p.id}>{p.name} · {priceLabel(p,lang)}</option>)}</select>
      <div class="tariff-plan-picker" data-plan-picker hidden>
       <button type="button" class="tariff-plan-picker__trigger" data-plan-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls={'tariff-plan-options-'+lang} aria-labelledby={'tariff-plan-label-'+lang+' tariff-plan-current-'+lang}>
-       <span id={'tariff-plan-current-'+lang} data-plan-current><span class="tariff-plan-picker__name" data-plan-name>{monthly[0].name}</span><span class="tariff-plan-picker__price" data-plan-price>{priceLabel(monthly[0],lang)}</span></span>
+       <span id={'tariff-plan-current-'+lang} data-plan-current><span class="tariff-plan-picker__name" data-plan-name>{monthly[0].name}</span><span class="tariff-plan-picker__price tariff-price tariff-price--compact" data-plan-price>{priceLabel(monthly[0],lang)}</span></span>
       </button>
       <div class="tariff-plan-picker__options" id={'tariff-plan-options-'+lang} data-plan-options role="listbox" aria-labelledby={'tariff-plan-label-'+lang} hidden>
-       {monthly.map((p,i)=><button type="button" class="tariff-plan-picker__option" role="option" aria-selected={i===0?'true':'false'} data-plan-choice={p.id}><span class="tariff-plan-picker__name">{p.name}</span><span class="tariff-plan-picker__price">{priceLabel(p,lang)}</span></button>)}
+       {monthly.map((p,i)=><button type="button" class="tariff-plan-picker__option" role="option" aria-selected={i===0?'true':'false'} data-plan-choice={p.id}><span class="tariff-plan-picker__name">{p.name}</span><span class="tariff-plan-picker__price tariff-price tariff-price--compact">{priceLabel(p,lang)}</span></button>)}
       </div>
      </div>
     </div>
@@ -40,7 +40,7 @@ const config={lang,basePlatforms:5,basePrompts:50,promptBlock:10,platformPrice:P
    <div class="tariff-calculator__result" aria-live="polite" aria-atomic="true">
     <h3>{en?'Monthly estimate':'Предварительный расчет в месяц'}</h3>
     <dl><div><dt>{en?'Plan, from':'Тариф, от'}</dt><dd data-base>{money(PRICES.geo,lang)}</dd></div><div><dt>{en?'Additional platforms':'Дополнительные нейросети'}</dt><dd data-platform-price>{money(0,lang)}</dd></div><div><dt>{en?'Additional prompts':'Дополнительные запросы'}</dt><dd data-prompt-price>{money(0,lang)}</dd></div></dl>
-    <div class="tariff-total"><span>{en?'Total, from':'Итого от'}</span><output data-total>{money(PRICES.geo,lang)}</output><span>{en?'per month':'в месяц'}</span></div>
+    <div class="tariff-total"><span>{en?'Total, from':'Итого от'}</span><output class="tariff-price" data-total>{money(PRICES.geo,lang)}</output><span>{en?'per month':'в месяц'}</span></div>
     <p class="tariff-note" data-scope>{en?'50 prompts · 5 platforms':'50 запросов · 5 нейросетей'}</p>
     <a class="button" href={en?'/en/#lead':'/#lead'} data-gaeo-intent="service" data-quote-inquiry>{en?'Discuss this scope':'Обсудить этот расчет'}</a>
     <p class="tariff-note">{en?'This is a scope estimate. The agreed plan, prompt set, platforms and financial guarantee conditions are recorded in the contract. Website development and the full audit are one-time services.':'Это расчет выбранного объема. Состав работ, запросы, нейросети и условия финансовых гарантий закрепляем в договоре. Разработка сайта и полный аудит оплачиваются разово.'}</p>
