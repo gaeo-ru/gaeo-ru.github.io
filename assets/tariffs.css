@@ -1,3 +1,16 @@
+.tariff-price{
+ display:inline-block;
+ max-width:100%;
+ padding:6px 12px;
+ border:1px solid #e1e6ed;
+ border-radius:8px;
+ background:#f0f3f7;
+ color:var(--navy);
+ font-weight:700;
+ font-variant-numeric:tabular-nums;
+ overflow-wrap:anywhere;
+}
+.tariff-price--compact{padding:3px 8px;border-radius:6px}
 .tariff-overview h2,.tariff-calculator-section h2{max-width:1040px}
 .tariff-lead{max-width:870px;color:#3d4858;font-size:18px;line-height:1.65;margin:22px 0 32px}
 .tariff-plans{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch!important;margin-top:30px;border:0}
@@ -8,7 +21,7 @@
 .tariff-plans .price-summary::-webkit-details-marker{display:none}
 .tariff-plans .price-summary>div{min-width:0;flex:1}
 .tariff-plans .price h3{font-size:23px;line-height:1.3;min-height:60px;margin:10px 0 18px;overflow-wrap:anywhere}
-.tariff-plans .price .amount{font-size:24px!important;line-height:1.35;letter-spacing:-.03em;white-space:normal;overflow-wrap:normal}
+.tariff-plans .price .amount{font-size:24px!important;line-height:1.35;font-weight:700;letter-spacing:-.03em;white-space:normal}
 .tariff-plans .price-toggle{flex:0 0 auto;line-height:1;font-size:22px;margin-top:8px}
 .tariff-period{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}
 .tariff-summary{font-size:14px;line-height:1.55;color:var(--muted);margin:16px 0 0}
@@ -94,7 +107,7 @@
 .tariff-plan-picker__option:hover,.tariff-plan-picker__option:focus-visible{background:#edf4ff}
 .tariff-plan-picker__option[aria-selected="true"]{background:#eaf7fa}
 .tariff-plan-picker__name{font-size:16px;line-height:1.35;white-space:normal;overflow-wrap:break-word}
-.tariff-plan-picker__price{font-size:13px;line-height:1.35;color:var(--muted);white-space:normal}
+.tariff-plan-picker__price{font-size:13px;line-height:1.35;white-space:normal}
 @media(max-width:720px){.tariff-plan-picker__trigger{min-height:68px}}
 .tariff-field :is(input,select):focus-visible,.tariff-platform-options input:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .tariff-platforms{border:0;padding:0;margin:28px 0 0;min-width:0}
@@ -110,7 +123,7 @@
 .tariff-calculator__result dl>div{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
 .tariff-calculator__result dd{margin:0;font-weight:700;white-space:nowrap}
 .tariff-total{display:flex;flex-direction:column;gap:5px;color:var(--navy)}
-.tariff-total output{font-weight:800;font-size:38px;line-height:1.3;letter-spacing:-.04em}
+.tariff-total output{align-self:flex-start;font-weight:800;font-size:38px;line-height:1.3;letter-spacing:-.04em}
 .tariff-calculator__result .button{width:100%;margin-top:12px}
 .tariff-guarantee{margin:36px 0;padding:28px;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;background:#fff}
 .tariff-guarantee>h2{font-size:23px;line-height:1.3;font-weight:600;margin:0 0 12px}
@@ -126,7 +139,7 @@
 .tariff-detail{padding:65px 0 80px}.tariff-detail__hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.7fr);gap:50px;align-items:start}
 .tariff-detail__hero h1{font-size:43px;line-height:1.15}.tariff-detail__hero figure{margin:0}
 .tariff-detail__image{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
-.tariff-detail__price{font-size:31px;font-weight:800;color:var(--navy);margin:25px 0 12px;line-height:1.3}
+.tariff-detail__price{font-size:clamp(24px, 5vw, 31px);font-weight:800;color:var(--navy);margin:25px 0 12px;line-height:1.3}
 .tariff-detail__chapter{max-width:980px;padding-top:42px;margin-top:34px;border-top:1px solid var(--line)}
 .tariff-detail__chapter h2{font-size:29px;margin-bottom:22px}.tariff-detail__chapter ul{padding-left:22px;line-height:1.75}
 .tariff-detail__chapter li+li{margin-top:8px}
