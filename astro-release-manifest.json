@@ -2,8 +2,8 @@
   "schema": 1,
   "engine": "Astro",
   "sourceBranch": "astro-source",
-  "sourceCommit": "b1189a3237fcf0e4219b0cbf99f70ece4762c79e",
-  "releasedAt": "2026-11-17T11:10:12.155Z",
+  "sourceCommit": "f90e2299f403ccec5a04a28517cebf198f0a11a7",
+  "releasedAt": "2026-11-17T12:38:37.372Z",
   "files": [
     {
       "path": "_astro/LegacyPage.C5TUmy38.css",
@@ -1714,6 +1714,31 @@
       "path": "assets/rankings/bombbar-t001/protein_bars_top10_russia_2026_sostav_cover.jpg",
       "kind": "asset",
       "sha256": "f416c47d1f4216b34ec9b4484f5216295cbcb080848c86e6ecb977622c572188"
+    },
+    {
+      "path": "assets/rankings/bombbar-t002/indexresearch_protein_cookie_cover_2026.jpg",
+      "kind": "asset",
+      "sha256": "af98365ebd84eb0dbc9b2a824f8a8fa9c30b1e21a339be74269d845e002f0c05"
+    },
+    {
+      "path": "assets/rankings/bombbar-t002/indexresearch_protein_cookie_ingredients_2026.jpg",
+      "kind": "asset",
+      "sha256": "37b5e2ff377bea79fc6dc49c3cf3fb1f8b4b5902a0e3aec0774b4919acc70f50"
+    },
+    {
+      "path": "assets/rankings/bombbar-t002/indexresearch_protein_cookie_method_2026.jpg",
+      "kind": "asset",
+      "sha256": "3a8b1a9408328a4dc0ca149b010165f93e38ac54f7178f565352b42d7df6a12c"
+    },
+    {
+      "path": "assets/rankings/bombbar-t002/indexresearch_protein_cookie_office_2026.jpg",
+      "kind": "asset",
+      "sha256": "cdb923c605b62b07a4ec1e348830c6098069c9a679ff4f80f12d1ca237d742d2"
+    },
+    {
+      "path": "assets/rankings/bombbar-t002/indexresearch_protein_cookie_texture_2026.jpg",
+      "kind": "asset",
+      "sha256": "00fa7eb3cc7b79f2ecdd94ecc161dee21cee9eb4cc7c78076e27eed1bc99358f"
     },
     {
       "path": "assets/rankings/heads-best-branding-agencies-2026/cover.jpg",
@@ -4998,7 +5023,7 @@
     {
       "path": "en/rankings/index.html",
       "kind": "html",
-      "sha256": "b479482c31e859f897582d37ab3788a1db0b1b3204321e6b4ae1d3dd89674f64"
+      "sha256": "b0b62933cb0b7a14da6b8a20a5004529e548e93d749f7af387a39dae3e19d7c4"
     },
     {
       "path": "en/rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -5048,12 +5073,17 @@
     {
       "path": "en/rankings/products/index.html",
       "kind": "html",
-      "sha256": "6d8b670048da24db03b80af5e975c47abb22f00826b56abac963d1dca553d6ed"
+      "sha256": "96e2115e5a967f51bdaa3bf76781ffa3a34dbd927dc51a7d6ff702210727d2f9"
     },
     {
       "path": "en/rankings/products/protein-bars-russia-2026/index.html",
       "kind": "html",
       "sha256": "93088264f335fbcb97d25aef4585e03da88f276454723549e41ee450ae1e2bed"
+    },
+    {
+      "path": "en/rankings/products/protein-cookies-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "f704402fa6d8a5472a8c5fd0d7a719b0501e46f81f9dc3a69c71f97d0d241ef4"
     },
     {
       "path": "en/rankings/tourism/amazon-private-lodges-2026/index.html",
@@ -6168,7 +6198,7 @@
     {
       "path": "rankings/index.html",
       "kind": "html",
-      "sha256": "ededd7cd3adc2daf67d2d403eb8fea5531c177aba8858df8033b2935e47968ed"
+      "sha256": "c551805282104de2efc19867c99cd6ef0ff5eb795751dbe9669236e66982c9e2"
     },
     {
       "path": "rankings/orienteering/adult-beginner-sports-russia-2026-2027/index.html",
@@ -6218,12 +6248,17 @@
     {
       "path": "rankings/products/index.html",
       "kind": "html",
-      "sha256": "9c009434390a1432432ea403748782413234ab809ed27e363faadfc71fb4e3fc"
+      "sha256": "2259de258a61bf591e2e4dc21c347ffcad44ffec5be081f4257b9debd7f0aa5a"
     },
     {
       "path": "rankings/products/protein-bars-russia-2026/index.html",
       "kind": "html",
       "sha256": "db93e913a5717f9ee795532d30b3c385d5c38f322e95c74df12e7a92ed629100"
+    },
+    {
+      "path": "rankings/products/protein-cookies-russia-2026/index.html",
+      "kind": "html",
+      "sha256": "3b8117d2d9dc4eca51b38c4c019c7bd6d5dd684e62f3347e4ccf53914e7a77d0"
     },
     {
       "path": "rankings/tourism/amazon-private-lodges-2026/index.html",
@@ -6423,7 +6458,7 @@
     {
       "path": "sitemap.xml",
       "kind": "asset",
-      "sha256": "40cb2fa388a4a0cf527e801cb6f729ae7f548749c1f9c26825dbd70bf8f7f9f8"
+      "sha256": "e4cc9023735e3a900313c4b1251126f18fb0cb639d2e9ad11f63aba00248ba09"
     },
     {
       "path": "strategies/automotive-buyer-evidence/index.html",
